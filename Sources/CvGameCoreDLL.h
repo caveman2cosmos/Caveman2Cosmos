@@ -180,12 +180,16 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
+// Toffer
 int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
 int64_t intSqrt64(const uint64_t iValue);
+
 int intPow(const int x, const int p);
 int64_t intPow64(const int64_t x, const int p);
 
 int getModifiedIntValue(const int iValue, const int iMod);
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
+// ! Toffer
 
 const std::string getModDir();
 

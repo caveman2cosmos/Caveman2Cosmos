@@ -13375,7 +13375,7 @@
 			<Type>BUILDING_SILK_FARM</Type>
 			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_SILK_FARM</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -78,9 +78,9 @@ public:
 	int getMaxPlayerInstances() const				{ return m_iMaxPlayerInstances; }
 	int getExtraPlayerInstances() const				{ return m_iExtraPlayerInstances; }
 	int getVictoryPrereq() const					{ return m_iVictoryPrereq; }
-	int getFreeStartEra() const						{ return m_iFreeStartEra; }
+	EraTypes getFreeStartEra() const				{ return m_iFreeStartEra; }
 	int getMaxStartEra() const						{ return m_iMaxStartEra; }
-	int getObsoleteTech() const						{ return m_iObsoleteTech; }
+	TechTypes getObsoleteTech() const				{ return m_iObsoleteTech; }
 	int getPrereqAndTech() const					{ return m_iPrereqAndTech; }
 	int getNoBonus() const							{ return m_iNoBonus; }
 	int getPowerBonus() const						{ return m_iPowerBonus; }
@@ -134,7 +134,6 @@ public:
 	int getForeignTradeRouteModifier() const		{ return m_iForeignTradeRouteModifier; }
 	int getAssetValue() const						{ return m_iAssetValue * 100; }
 	int getPowerValue() const						{ return m_iPowerValue * 100; }
-	int getSpecialBuildingType() const				{ return m_iSpecialBuildingType; }
 	int getAdvisorType() const						{ return m_iAdvisorType; }
 	int getPrereqGameOption() const					{ return m_iPrereqGameOption; }
 	int getNotGameOption() const					{ return m_iNotGameOption; }
@@ -214,7 +213,7 @@ public:
 	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
 	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
 	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	int getNationalCaptureProbabilityModifier() const;
 	int getNationalCaptureResistanceModifier() const;
 	int getLocalCaptureProbabilityModifier() const;
@@ -237,6 +236,7 @@ public:
 
 	float getVisibilityPriority() const				{ return m_fVisibilityPriority; }
 
+	SpecialBuildingTypes getSpecialBuilding() const	{ return m_eSpecialBuilding; }
 	TechTypes getFreeSpecialTech() const			{ return m_eFreeSpecialTech; }
 	UnitTypes getPropertySpawnUnit() const;
 	PropertyTypes getPropertySpawnProperty() const;
@@ -299,7 +299,6 @@ public:
 	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
-	//int getBuildingHappinessChanges(BuildingTypes e) const;
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
@@ -307,7 +306,8 @@ public:
 	bool isCommerceFlexible(int i) const;
 	bool isCommerceChangeOriginalOwner(int i) const;
 
-	int getPrereqNumOfBuilding(int i) const;
+	int getPrereqNumOfBuilding(BuildingTypes e) const;
+	const IDValueMap<BuildingTypes, int>& getPrereqNumOfBuildings() const { return m_aPrereqNumOfBuilding; }
 
 	int getPrereqOrBuilding(const int i) const;
 	short getNumPrereqOrBuilding() const;
@@ -598,9 +598,9 @@ private:
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
 	int m_iVictoryPrereq;
-	int m_iFreeStartEra;
+	EraTypes m_iFreeStartEra;
 	int m_iMaxStartEra;
-	int m_iObsoleteTech;
+	TechTypes m_iObsoleteTech;
 	int m_iPrereqAndTech;
 	int m_iNoBonus;
 	int m_iPowerBonus;
@@ -653,7 +653,7 @@ private:
 	int m_iForeignTradeRouteModifier;
 	int m_iAssetValue;
 	int m_iPowerValue;
-	int m_iSpecialBuildingType;
+	SpecialBuildingTypes m_eSpecialBuilding;
 	int m_iAdvisorType;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
@@ -757,7 +757,6 @@ private:
 	int* m_piCommerceAttacks;
 	int* m_piBonusDefenseChanges;
 	int* m_piGlobalBuildingCostModifier;
-	int* m_piPrereqNumOfBuilding;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -836,6 +835,7 @@ private:
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
+	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingHappinessChanges;

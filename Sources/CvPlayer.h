@@ -186,6 +186,8 @@ public:
 	void doTurn();
 	void doTurnUnits();
 
+	void recordHistory();
+
 	//	Dump stats to BBAI log
 	void dumpStats() const;
 	void NoteAnimalSubdued();

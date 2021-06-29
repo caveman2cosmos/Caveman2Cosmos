@@ -415,12 +415,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
-		}
-
 		doSetUnitCombats();
 		doSetFreePromotions(true);
 		doSetDefaultStatuses();
@@ -436,8 +430,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		}
 		else
 		{
-			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
+			GET_PLAYER(getOwner()).changeAssets(m_pUnitInfo->getAssetValue());
+			GET_PLAYER(getOwner()).changeUnitPower(m_pUnitInfo->getPowerValue());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -676,8 +670,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iUpkeepModifier = 0;
 	m_iUpkeepMultiplierSM = 0;
 	m_iUpkeep100 = 0;
-	m_iExtraPowerValue = 0;
-	m_iExtraAssetValue = 0;
 	m_iSMAssetValue = 0;
 	m_iSMPowerValue = 0;
 	m_iSMHPValue = 0;
@@ -6999,7 +6991,7 @@ bool CvUnit::canScrap() const
 // No need to let return value exceed MAX_INT, shouldn't really happen unless one of the most expensive units is merged many times.
 int CvUnit::calculateScrapValue() const
 {
-	int64_t iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+	int64_t iCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
@@ -10515,7 +10507,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /************************************************************************************************/
 	if (GC.getCorporationInfo(eCorporation).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(GET_PLAYER(pCity->getOwner()).getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
+		if (GET_TEAM(GET_PLAYER(pCity->getOwner()).getTeam()).isHasTech(GC.getCorporationInfo(eCorporation).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -10810,18 +10802,15 @@ TechTypes CvUnit::getDiscoveryTech() const
 
 int CvUnit::getDiscoverResearch(TechTypes eTech) const
 {
-	int iResearch;
+	int iResearch = m_pUnitInfo->getBaseDiscover() + m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation();
 
-	iResearch = (m_pUnitInfo->getBaseDiscover() + (m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation()));
-
-	iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitDiscoverPercent();
+	iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iResearch /= 100;
 
     if (eTech != NO_TECH)
     {
         iResearch = std::min(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
     }
-
 	return std::max(0, iResearch);
 }
 
@@ -10876,7 +10865,7 @@ int CvUnit::getMaxHurryProduction(const CvCity* pCity) const
 {
 	int iProduction = (m_pUnitInfo->getBaseHurry() + (m_pUnitInfo->getHurryMultiplier() * pCity->getPopulation()));
 
-	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitHurryPercent();
+	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iProduction /= 100;
 
 	return std::max(0, iProduction);
@@ -10951,30 +10940,19 @@ bool CvUnit::hurry()
 
 int CvUnit::getTradeGold(const CvPlot* pPlot) const
 {
-	CvCity* pCapitalCity;
-	CvCity* pCity;
-	int iGold;
+	CvCity* pCity = pPlot->getPlotCity();
 
-	pCity = pPlot->getPlotCity();
-	pCapitalCity = GET_PLAYER(pPlot->getOwner()).getCapitalCity();
-	CvCity* pOriginCity = getCityOfOrigin();
-
-	if (pCity == NULL)
+	if (pCity == NULL || pCity == getCityOfOrigin())
 	{
 		return 0;
 	}
-
-	if (pCity == pOriginCity)
-	{
-		return 0;
-	}
+	CvCity* pCapitalCity = GET_PLAYER(pPlot->getOwner()).getCapitalCity();
 
 	int iMult = m_pUnitInfo->getTradeMultiplier();
 
+	int iGold = m_pUnitInfo->getBaseTrade() + iMult * ((pCapitalCity != NULL) ? pCity->calculateTradeProfit(pCapitalCity) : 0);
 
-	iGold = (m_pUnitInfo->getBaseTrade() + ( iMult * ((pCapitalCity != NULL) ? pCity->calculateTradeProfit(pCapitalCity) : 0)));
-
-	iGold *= ((pPlot->getOwner() != getOwner()) ? iMult : 1);
+	iGold *= (pPlot->getOwner() != getOwner() ? iMult : 1);
 
 	iGold *= pCity->getPopulation();
 	iGold /= 10;
@@ -10987,14 +10965,10 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
 		iGold /= iMaxDistance;
 	}
 
-	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitTradePercent();
-	iGold /= 100;
+	iGold = getModifiedIntValue(iGold, GC.getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() + GET_TEAM(getTeam()).getTradeMissionModifier());
 
-	iGold *= (GET_TEAM(getTeam()).getTradeMissionModifier() + 100);
+	iGold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iGold /= 100;
-
-	int iTradeModifier = (GC.getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() * iGold)/100;
-	iGold += iTradeModifier;
 
 	return std::max(0, iGold);
 }
@@ -11097,11 +11071,9 @@ bool CvUnit::trade()
 
 int CvUnit::getGreatWorkCulture(const CvPlot* pPlot) const
 {
-	int iCulture;
+	int iCulture = m_pUnitInfo->getGreatWorkCulture();
 
-	iCulture = m_pUnitInfo->getGreatWorkCulture();
-
-	iCulture *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+	iCulture *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iCulture /= 100;
 
 	return std::max(0, iCulture);
@@ -11151,7 +11123,7 @@ bool CvUnit::greatWork()
 		pCity->setOccupationTimer(0);
 
 		int iCultureToAdd = 100 * getGreatWorkCulture(plot());
-		int iNumTurnsApplied = (GC.getDefineINT("GREAT_WORKS_CULTURE_TURNS") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent()) / 100;
+		int iNumTurnsApplied = GC.getDefineINT("GREAT_WORKS_CULTURE_TURNS") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 
 		for (int i = 0; i < iNumTurnsApplied; ++i)
 		{
@@ -11225,7 +11197,7 @@ int CvUnit::getEspionagePoints(const CvPlot* pPlot) const
 {
 	int iEspionagePoints = m_pUnitInfo->getEspionagePoints();
 
-	iEspionagePoints *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent();
+	iEspionagePoints *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iEspionagePoints /= 100;
 
 	return std::max(0, iEspionagePoints);
@@ -12829,7 +12801,7 @@ namespace CvUnitInternal
 			const CvBuildInfo& info = GC.getBuildInfo(eBuild);
 			if (info.getRoute() > NO_ROUTE && team.isHasTech((TechTypes)info.getTechPrereq()))
 			{
-				const TechTypes obsoleteTech = (TechTypes)info.getObsoleteTech();
+				const TechTypes obsoleteTech = info.getObsoleteTech();
 				if (obsoleteTech == NO_TECH || !team.isHasTech(obsoleteTech))
 					return true;
 			}
@@ -16306,18 +16278,17 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	// If a unit moves we need to flush any combat str cache entries relating to it
 	FlushCombatStrCache(this);
 
+	/*
 	// OOS!! Temporary for Out-of-Sync madness debugging...
 	if (GC.getLogging())
 	{
 		PROFILE("CvUnit::setXY.OOSLogging");
 
-		if (gDLL->getChtLvl() > 0)
-		{
-			char szOut[1024];
-			sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", eMyPlayer, getID(), myPlayer.getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
-			gDLL->messageControlLog(szOut);
-		}
+		char szOut[1024];
+		sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", eMyPlayer, getID(), myPlayer.getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
+		gDLL->messageControlLog(szOut);
 	}
+	*/
 
 	if (isFighting())
 	{
@@ -16749,23 +16720,11 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			if (atWar(getTeam(), GET_PLAYER(pNewPlot->getOwner()).getTeam()))
 			{
-				long lPillageGold = 0;
+				int iPillageGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pNewPlot << this);
+
+				if (iPillageGold > 0)
 				{
-					CyPlot* pyPlot = new CyPlot(pNewPlot);
-					CyUnit* pyUnit = new CyUnit(this);
-
-					CyArgsList argsList;
-					argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-					argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-
-					gDLL->getPythonIFace()->callFunction(PYGameModule, "doPillageGold", argsList.makeFunctionArgs(), &lPillageGold);
-
-					delete pyPlot; // python fxn must not hold on to this pointer
-					delete pyUnit; // python fxn must not hold on to this pointer
-				}
-				if (lPillageGold > 0)
-				{
-					const int iPillageGold = lPillageGold * getPillageChange() / 100;
+					iPillageGold = iPillageGold * getPillageChange() / 100;
 					myPlayer.changeGold(iPillageGold);
 
 					AddDLLMessage(
@@ -20826,7 +20785,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (kPromotion.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+	if (kPromotion.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kPromotion.getObsoleteTech()))
 	{
 		return false;
 	}
@@ -22804,26 +22763,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	}
 #endif
 
-	int iAsset = m_pUnitInfo->getAssetValue();
-	int iModifier = kPromotion.getAssetMultiplier();
-	if (iModifier != 0)
-	{
-		iAsset *= iModifier;
-		iAsset /= 100;
-		changeExtraAssetValue(iAsset * iChange);
-		bSMrecalc = true;
-	}
-
-	int iPower = m_pUnitInfo->getPowerValue();
-	iModifier = kPromotion.getPowerMultiplier();
-	if (iModifier != 0)
-	{
-		iPower *= iModifier;
-		iPower /= 100;
-		changeExtraPowerValue(iPower * iChange);
-		bSMrecalc = true;
-	}
-
 	if (kPromotion.isZoneOfControl())
 	{
 		changeZoneOfControlCount(iChange > 0 ? 1 : -1);
@@ -24500,8 +24439,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSpecialCargo);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMSpecialCargo);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMNotSpecialCargo);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerValue);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraAssetValue);
+	// SAVEBREAK - Toffer - Remove
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraPowerValue, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraAssetValue, SAVE_VALUE_TYPE_INT);
+	// ! SAVEBREAK
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraQuality);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraGroup);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraSize);
@@ -25481,8 +25422,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSpecialCargo);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSMSpecialCargo);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, m_eNewSMNotSpecialCargo);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPowerValue);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraAssetValue);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraQuality);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraGroup);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraSize);
@@ -29467,7 +29406,7 @@ bool CvUnit::performInquisition()
 						&& kLoopBuilding.getPrereqReligion() == (ReligionTypes)iJ)
 						{
 							pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-							iCompensationGold += kLoopBuilding.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
+							iCompensationGold += kLoopBuilding.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
 						}
 					}
 				}
@@ -30016,7 +29955,7 @@ void CvUnit::changeCanLeadThroughPeaksCount(int iChange)
 
 int CvUnit::getMaxHurryFood(CvCity* pCity) const
 {
-	return std::max(0, m_pUnitInfo->getBaseFoodChange() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitHurryPercent() / 100);
+	return std::max(0, m_pUnitInfo->getBaseFoodChange() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100);
 }
 
 int CvUnit::getHurryFood(const CvPlot* pPlot) const
@@ -33985,7 +33924,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	if (GC.getPromotionInfo(ePromotion).getObsoleteTech() != NO_TECH)
 	{// TB Debug: was
 		//if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(ePromotion).getTechPrereq()))))
-		if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(ePromotion).getObsoleteTech()))))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getObsoleteTech()))
 		{
 			if (bPromo && !bIsFreePromotion)
 			{
@@ -34688,7 +34627,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	if (GC.getPromotionInfo(eEquipment).getObsoleteTech() != NO_TECH)
 	{
-		if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(eEquipment).getObsoleteTech()))))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(eEquipment).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -37808,96 +37747,26 @@ void CvUnit::setSMHPValue()
 	FASSERT_NOT_NEGATIVE(m_iSMHPValue)
 }
 
-int CvUnit::getExtraPowerValue() const
-{
-	return m_iExtraPowerValue;
-}
-
-void CvUnit::changeExtraPowerValue(int iChange)
-{
-	GET_PLAYER(getOwner()).changePower(iChange);
-	m_iExtraPowerValue += iChange;
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		setSMPowerValue();
-	}
-}
-
 int CvUnit::getPowerValueTotal() const
 {
-	int iPower = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) || getSMPowerValue() == 0)
-	{
-		iPower = getSMPowerValueTotalBase();
-	}
-	else
-	{
-		iPower = getSMPowerValue();
-	}
-	return std::max(1, iPower);
-}
-
-int CvUnit::getSMPowerValueTotalBase() const
-{
-	return std::max(1, m_pUnitInfo->getPowerValue() + getExtraPowerValue());
-}
-
-int CvUnit::getSMPowerValue() const
-{
-	return m_iSMPowerValue;
+	return GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) ? m_iSMPowerValue : m_pUnitInfo->getPowerValue();
 }
 
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
-	const int m_iSMPowerValue = applySMRank(
-		getSMPowerValueTotalBase(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER()
-		);
+	const int m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FASSERT_NOT_NEGATIVE(m_iSMPowerValue)
 	if (!bForLoad)
 	{
 		const int iChange = m_iSMPowerValue - oldSMPowerValue;
-		GET_PLAYER(getOwner()).changePower(iChange);
-	}
-}
-
-int CvUnit::getExtraAssetValue() const
-{
-	return m_iExtraAssetValue;
-}
-
-void CvUnit::changeExtraAssetValue(int iChange)
-{
-	GET_PLAYER(getOwner()).changeAssets(iChange);
-	m_iExtraAssetValue += iChange;
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		setSMAssetValue();
+		GET_PLAYER(getOwner()).changeUnitPower(iChange);
 	}
 }
 
 int CvUnit::assetValueTotal() const
 {
-	int iAsset = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) || getSMAssetValue() == 0)
-	{
-		iAsset = assetValueTotalPreCheck();
-	}
-	else
-	{
-		iAsset = getSMAssetValue();
-	}
-	return std::max(1, iAsset);
-}
-
-int CvUnit::assetValueTotalPreCheck() const
-{
-	return std::max(1, m_pUnitInfo->getAssetValue() + getExtraAssetValue());
-}
-
-int CvUnit::getSMAssetValue() const
-{
-	return m_iSMAssetValue;
+	return GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) ? m_iSMAssetValue : m_pUnitInfo->getAssetValue();
 }
 
 void CvUnit::setSMAssetValue(bool bForLoad)
@@ -37906,7 +37775,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
 		const int oldSMAssetValue = m_iSMAssetValue;
-		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(), offsetValue, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+		m_iSMAssetValue = applySMRank(m_pUnitInfo->getAssetValue(), offsetValue, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 		if (!bForLoad)
 		{
 			const int iChange = m_iSMAssetValue - oldSMAssetValue;

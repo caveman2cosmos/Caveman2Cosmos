@@ -884,7 +884,7 @@ void CvCityAI::AI_chooseProduction()
 		if (getProduction() > 0)
 		{
 			// If nearly done, keep building current item (Turns equal/less than: 21=Eternity, 3=Normal, 2=Blitz)
-			if (getProductionTurnsLeft() <= 1 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 50)
+			if (getProductionTurnsLeft() <= 1 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 50)
 			{
 				return;
 			}
@@ -1186,7 +1186,7 @@ void CvCityAI::AI_chooseProduction()
 
 		if (!bDanger && (2 * iExistingWorkers < iNeededWorkers) && (AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 		{
-			if (getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100))
+			if (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 			{
 				if (AI_chooseUnit("barbarian worker for established city", UNITAI_WORKER))
 				{
@@ -1860,11 +1860,11 @@ void CvCityAI::AI_chooseProduction()
 				if (player.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) < iSettlerSeaNeeded)
 				{
 					/* financial trouble: 2/3; */
-					if (!bDanger && bFinancialTrouble && (iExistingWorkers < ((2 * iNeededWorkers) + 2) / 3))
+					if (!bDanger && bFinancialTrouble && iExistingWorkers < (2 * iNeededWorkers + 2) / 3)
 					{
 						if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 						{
-							if (getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100))
+							if (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 							{
 								if (!bChooseWorker && AI_chooseUnit("worker needed", UNITAI_WORKER))
 								{
@@ -1889,11 +1889,11 @@ void CvCityAI::AI_chooseProduction()
 					if (GC.getGame().getSorenRandNum(2, "settler training decision") < (bLandWar ? 1 : 2))
 					{
 						/* financial trouble: 2/3; */
-						if (!bDanger && bFinancialTrouble && (iExistingWorkers < ((2 * iNeededWorkers) + 2) / 3))
+						if (!bDanger && bFinancialTrouble && iExistingWorkers < (2 * iNeededWorkers + 2) / 3)
 						{
 							if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 							{
-								if (getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100))
+								if (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 								{
 									if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
 									{
@@ -2104,7 +2104,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	// Early game worker logic
-	if (!bInhibitUnits && isCapital() && (GC.getGame().getElapsedGameTurns() < ((30 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100)))
+	if (!bInhibitUnits && isCapital() && GC.getGame().getElapsedGameTurns() < 30 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 	{
 		if (!bDanger && !(player.AI_isDoStrategy(AI_STRATEGY_TURTLE)))
 		{
@@ -2594,9 +2594,9 @@ void CvCityAI::AI_chooseProduction()
 			|| (((iExistingWorkers < ((2 * iNeededWorkers) + 2) / 3) || (bFinancialTrouble && (iExistingWorkers < (((3 * iNeededWorkers) + 3) / 4))))
 				&& (((happyLevel() - unhappyLevel()) <= 0) && (foodDifference(false) > 0 || (foodDifference(false) == 0 && happyLevel() - unhappyLevel() < 0)))))
 		{
-			if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
+			if (AI_getWorkersNeeded() > 0 && AI_getWorkersHave() == 0)
 			{
-				if (getPopulation() > 2 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100))
+				if (getPopulation() > 2 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100)
 				{
 					if (!bChooseWorker && AI_chooseUnit("worker for established city", UNITAI_WORKER))
 					{
@@ -2758,7 +2758,7 @@ void CvCityAI::AI_chooseProduction()
 
 	if (!bChooseWorker && !bInhibitUnits && !bDanger && (!bLandWar || iWarSuccessRatio >= -30)
 		&& iExistingWorkers < iNeededWorkers && AI_getWorkersNeeded() > 0 && AI_getWorkersHave() == 0
-		&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100))
+		&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100))
 	{
 		if (AI_chooseUnit("established city needs more workers", UNITAI_WORKER))
 		{
@@ -3514,7 +3514,7 @@ void CvCityAI::AI_chooseProduction()
 		int iWonderRand = 8 + GC.getGame().getSorenRandNum(player.getWonderConstructRand(), "Wonder Construction Rand");
 
 		// increase chance of going for an early wonder
-		if (GC.getGame().getElapsedGameTurns() < (100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100) && iNumCitiesInArea > 1)
+		if (GC.getGame().getElapsedGameTurns() < GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() && iNumCitiesInArea > 1)
 		{
 			iWonderRand *= 35;
 			iWonderRand /= 100;
@@ -3834,12 +3834,12 @@ bool CvCityAI::AI_chooseExperienceBuilding(const UnitAITypes eUnitAI, const int 
 	if (eBestUnit != NO_UNIT)
 	{
 		const int perTurnLossesCost =
-			(
-				area()->getRecentCombatDeathRate(getOwner(), eUnitAI)
-				* GC.getUnitInfo(eBestUnit).getProductionCost()
-				* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()
-				/ 10000
-				);
+		(
+			area()->getRecentCombatDeathRate(getOwner(), eUnitAI)
+			* GC.getUnitInfo(eBestUnit).getProductionCost()
+			* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent()
+			/ 10000
+		);
 
 		if (gCityLogLevel >= 2)
 		{
@@ -4249,9 +4249,9 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 						continue;
 					}
 					bool bFound = false;
-					for (int iK = 0; iK < unit.getNumSubCombatTypes(); iK++)
+					foreach_(const UnitCombatTypes eSubCombat, unit.getSubCombatTypes())
 					{
-						if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(unit.getSubCombatType(iK)))
+						if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(eSubCombat))
 						{
 							iPromotionValue += 15;
 							bFound = true;
@@ -4426,7 +4426,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// We can actually build the building
 			&& canConstruct(eBuilding)
 			// Automated production doesn't look at buildings with prerequisites?
-			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0))
+			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
 		{
 			// Toffer - ToDo - Change iValue type to int64_t,
 			//	or reduce scoring as it gets dangerously close to overflowing as it is.
@@ -4588,7 +4588,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 				// Apply final checks based on how many turns to build
 				if (iMaxTurns <= 0
-					|| iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent())
+					|| iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())
 					|| AI_canRushBuildingConstruction(eBuilding))
 				{
 					FAssert(MAX_INT / 100 >= iValue);
@@ -5368,17 +5368,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), ((UnitAITypes)(kUnit.getDefaultUnitAIType()))) == 0)
+									if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(area(), kUnit.getDefaultUnitAIType()) == 0)
 									{
 										iValue += iNumCitiesInArea;
 									}
-									//This forces the AI to build necessary buildings for units.
-
-									UnitAITypes eUnitAI = (UnitAITypes)(kUnit.getDefaultUnitAIType());
 
 									int iAllowedUnitsValue = 0;
 
-									switch (eUnitAI)
+									// This forces the AI to build necessary buildings for units.
+									switch (kUnit.getDefaultUnitAIType())
 									{
 									case UNITAI_UNKNOWN:
 										break;
@@ -5821,9 +5819,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					if (kBuilding.getGlobalPopulationChange() != 0)
 					{
 						// "Food to grow" divided by "food per turn" (min 1 per turn)
-						int	iGrowthTurns = growthThreshold() / std::max(1, foodDifference(false));
+						const int iGrowthTurns = growthThreshold() / std::max(1, foodDifference(false));
 
-						int	iValueMultiplier = 400 * iNumCities * iGrowthTurns / (20 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent());
+						const int iValueMultiplier = 20 * iNumCities * iGrowthTurns / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
 						iValue += kBuilding.getGlobalPopulationChange() * iValueMultiplier;
 					}
@@ -5876,8 +5874,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (canTrain(eLoopUnit))
 						{
 							const int iModifier = modifier.second;
-							const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
+							const UnitAITypes eUnitAI = GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+							const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType(GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
 							int iBuildCost = 0;
 							if (eBestUnit == NO_UNIT)
@@ -6072,7 +6070,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							// BBAI TODO: Smarter monastary construction, better support for mods
 
-							if (kOwner.AI_totalAreaUnitAIs(area(), ((UnitAITypes)(GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()))) == 0)
+							if (kOwner.AI_totalAreaUnitAIs(area(), GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 							{
 								religiousBuildingValue += iNumCitiesInArea;
 							}
@@ -6527,9 +6525,9 @@ ProjectTypes CvCityAI::AI_bestProject() const
 
 				const int iTurnsLeft = getProductionTurnsLeft(((ProjectTypes)iI), 0);
 
-				if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent())) || !(GET_TEAM(getTeam()).isHuman()))
+				if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())) || !(GET_TEAM(getTeam()).isHuman()))
 				{
-					if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(20, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent())) || (iProductionRank <= std::max(3, (GET_PLAYER(getOwner()).getNumCities() / 2))))
+					if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(20, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())) || (iProductionRank <= std::max(3, (GET_PLAYER(getOwner()).getNumCities() / 2))))
 					{
 						if (iProductionRank == 1)
 						{
@@ -6935,10 +6933,14 @@ int CvCityAI::AI_neededDefenders()
 		);
 	}
 
+	const int iTurn = GC.getGame().getGameTurn();
+	const int iTurnsThreshold = 8 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
 	int iDefenders = 1;
+	const bool bCapital = isCapital();
 
-	if (!GC.getGame().isEarlyGame() && (hasActiveWorldWonder() || isCapital() || isHolyCity()))
+	if (iTurn > iTurnsThreshold && (bCapital || hasActiveWorldWonder() || isHolyCity()))
 	{
 		iDefenders++;
 
@@ -6965,20 +6967,21 @@ int CvCityAI::AI_neededDefenders()
 		iDefenders++;
 	}
 
-	if (!GC.getGame().isEarlyGame() && (GC.getGame().getGameTurn() - getGameTurnAcquired()) < 10)
+	// If city recently aquired, 80 turns on eternity, 8 turns on Normal, 4 turns on Blitz.
+	if (iTurn > 2 * iTurnsThreshold && iTurn - getGameTurnAcquired() <= iTurnsThreshold)
 	{
 		iDefenders = std::max(2, iDefenders);
 
 		// When on the offensive, halve defenders.
 		if ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
-			&& !hasActiveWorldWonder() && !isHolyCity())
+		&& !hasActiveWorldWonder() && !isHolyCity())
 		{
 			iDefenders /= 2;
 		}
 
 		if (AI_isDanger())
 		{
-			iDefenders++;
+			iDefenders += 3;
 		}
 
 		if (bDefenseWar)
@@ -7005,7 +7008,7 @@ int CvCityAI::AI_neededDefenders()
 
 	if (player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE3))
 	{
-		if (isCapital() || isProductionProject())
+		if (bCapital || isProductionProject())
 		{
 			iDefenders += 4;
 
@@ -7015,7 +7018,7 @@ int CvCityAI::AI_neededDefenders()
 			}
 		}
 
-		if (isCapital() && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
+		if (bCapital && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 		{
 			iDefenders += 6;
 		}
@@ -9334,19 +9337,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 		}
 		// adjust for game speed
-		if (NO_UNIT != getProductionUnit())
+		if (NO_UNIT != getProductionUnit() || NO_BUILDING != getProductionBuilding() || NO_PROJECT != getProductionProject())
 		{
-			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-			iMinTurns /= 100;
-		}
-		else if (NO_BUILDING != getProductionBuilding())
-		{
-			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-			iMinTurns /= 100;
-		}
-		else if (NO_PROJECT != getProductionProject())
-		{
-			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent();
+			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 			iMinTurns /= 100;
 		}
 
@@ -9881,7 +9874,7 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 
 	std::vector<ScoredBuilding> bestBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, false, NO_ADVISOR, bMaximizeFlaggedValue, eProperty);
 
-	const int maxQueueTurnsForSpeed = 5 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100;
+	const int maxQueueTurnsForSpeed = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 20;
 	const int desiredQueueTurns = std::max(3, std::min(maxQueueTurnsForSpeed, iMaxTurns));
 	bool enqueuedBuilding = false;
 	for (size_t i = 0; i < bestBuildings.size() && getTotalProductionQueueTurnsLeft() < desiredQueueTurns; ++i)
@@ -11652,7 +11645,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 				if ((impUpg.isImprovementBonusTrade(eNonObsoleteBonus) || impUpg.isUniversalTradeBonusProvider())
 					&& pPlot->getUpgradeTimeLeft(ePlotImp, getOwner())
 					<=
-					1 + 9 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent() * GC.getEraInfo(GC.getGame().getCurrentEra()).getImprovementPercent() / 10000)
+					1 + 9 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() * GC.getEraInfo(GC.getGame().getCurrentEra()).getImprovementPercent() / 10000)
 				{
 					bHasBonusImprovement = true;
 				}
@@ -13148,7 +13141,7 @@ int CvCityAI::AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtr
 							//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
 							//	we do not ALREADY have an obsoleting tech
 							if (kBuild.getTechPrereq() == eExtraTech &&
-								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
+								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 							{
 								iCount++;
 								break;
@@ -13996,9 +13989,9 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 			else
 			{
 				//TB SubCombat Mod Begin
-				for (int iJ = 0; iJ < kUnit.getNumSubCombatTypes(); iJ++)
+				foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 				{
-					if (GC.getPromotionInfo(ePromotion).getUnitCombat((UnitCombatTypes)kUnit.getSubCombatType(iJ)))
+					if (GC.getPromotionInfo(ePromotion).getUnitCombat(eSubCombat))
 					{
 						bUnitCanGetPromotion = true;
 						break;
@@ -15177,7 +15170,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								if (pLoopUnit->getUnitCombatType() == modifier.first
 								//TB - May cause some unexpected imbalance though it could also imbalance to bypass... a place to watch
-								|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), (int)modifier.first))
+								|| algo::contains(pLoopUnit->getUnitInfo().getSubCombatTypes(), modifier.first))
 								{
 									iValue += modifier.second / 6;
 								}
@@ -15598,17 +15591,15 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								PROFILE("CalculateAllBuildingValues.IsUnitPrereq");
 
-								if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, ((UnitAITypes)(kUnit.getDefaultUnitAIType()))) == 0)
+								if (kUnit.getDefaultUnitAIType() != NO_UNITAI && kOwner.AI_totalAreaUnitAIs(pArea, kUnit.getDefaultUnitAIType()) == 0)
 								{
 									iValue += iNumCitiesInArea;
 								}
-								//This forces the AI to build necessary buildings for units.
-
-								UnitAITypes eUnitAI = (UnitAITypes)(kUnit.getDefaultUnitAIType());
 
 								int unitsEnabledValue = 0;
 
-								switch (eUnitAI)
+								//This forces the AI to build necessary buildings for units.
+								switch (kUnit.getDefaultUnitAIType())
 								{
 								case UNITAI_UNKNOWN:
 									break;
@@ -16095,8 +16086,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					if (canTrain(eLoopUnit))
 					{
 						const int iModifier = modifier.second;
-						const UnitAITypes eUnitAI = (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-						const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
+						const UnitAITypes eUnitAI = GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
+						const UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType(GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
 						int iBuildCost = GC.getUnitInfo(eLoopUnit).getProductionCost();
 
@@ -16280,7 +16271,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						// BBAI TODO: Smarter monastary construction, better support for mods
 
-						if (kOwner.AI_totalAreaUnitAIs(pArea, (UnitAITypes)GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
+						if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
 						{
 							religiousBuildingValue += iNumCitiesInArea;
 						}
@@ -17218,7 +17209,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 					if (!bSuccessful)
 					{
 						//First try for a building that's quick to build and has a
-						int iMaxTurns = (5 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()) / 100;
+						int iMaxTurns = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 20;
 						if (AI_chooseBuilding(BUILDINGFOCUS_PROPERTY, iMaxTurns, 0, -1, true, eProperty))
 						{
 							if (gCityLogLevel >= 2) logBBAI("      City %S selects a property control building", getName().GetCString());
@@ -17647,7 +17638,7 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 	{
 		//First try for a building that's quick to build and has investigation
 		int iMaxTurns = iNumLocalCriminals * 5;
-		iMaxTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+		iMaxTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 		iMaxTurns /= 100;
 		if (AI_chooseBuilding(BUILDINGFOCUS_INVESTIGATION, iMaxTurns, 0, -1, true))
 		{

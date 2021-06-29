@@ -419,7 +419,7 @@ def canApplyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	for i in xrange(GC.getNumBuildingInfos()):
 		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1:
@@ -441,7 +441,7 @@ def applyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
@@ -2625,7 +2625,7 @@ def getHelpGreed1(argsList):
 	CyPlayerOther = GC.getPlayer(data.eOtherPlayer)
 	iBonus = GC.getMap().plot(data.iPlotX, data.iPlotY).getBonusType(CyPlayer.getTeam())
 
-	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_GREED_HELP_1", (CyPlayerOther.getCivilizationShortDescriptionKey(), GC.getBonusInfo(iBonus).getTextKey(), iTurns))
 
@@ -2637,7 +2637,7 @@ def expireGreed1(argsList):
 	if iOwner == -1 or iOwner == data.ePlayer:
 		return False
 
-	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent():
+	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent():
 		return True
 
 	if iOwner != data.eOtherPlayer:

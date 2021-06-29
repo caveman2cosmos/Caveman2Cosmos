@@ -711,7 +711,7 @@ void CvPlot::doImprovement()
 			int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
 			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
 			{
-				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 				iOdds /= 100;
 				// Bonus density normalization
 				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
@@ -753,7 +753,7 @@ void CvPlot::doImprovement()
 		int iOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
 		if (iOdds < 0)
 		{
-			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 			iOdds /= 100;
 			// Bonus density normalization.
 			iOdds *= 2 * (GC.getMap().getWorldSize() + 9);
@@ -3070,7 +3070,7 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 	iTime *= std::max(0, GC.getTerrainInfo(eTerrain).getBuildModifier() + 100);
 	iTime /= 100;
 
-	iTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
+	iTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iTime /= 100;
 
 	iTime *= GC.getEraInfo(GC.getGame().getStartEra()).getBuildPercent();
@@ -3151,13 +3151,14 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 		return 0;
 	}
 
+	if (!GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(getFeatureType())))
+	{
+		return 0;
+	}
 	int iProduction = GC.getBuildInfo(eBuild).getFeatureProduction(getFeatureType());
 	iProduction -= std::max(0, plotDistance(getX(), getY(), (*ppCity)->getX(), (*ppCity)->getY()) - 2) * 5;
 
 	iProduction *= std::max(0, (GET_PLAYER((*ppCity)->getOwner()).getFeatureProductionModifier() + 100));
-	iProduction /= 100;
-
-	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getFeatureProductionPercent();
 	iProduction /= 100;
 
 	iProduction *= std::min((GC.getDefineINT("BASE_FEATURE_PRODUCTION_PERCENT") + (GC.getDefineINT("FEATURE_PRODUCTION_PERCENT_MULTIPLIER") * (*ppCity)->getPopulation())), 100);
@@ -3169,10 +3170,8 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 		iProduction /= 100;
 	}
 
-	if (!GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(getFeatureType())))
-	{
-		return 0;
-	}
+	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+	iProduction /= 100;
 
 	return std::max(0, iProduction);
 }
@@ -6460,7 +6459,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				verifyUnitValidPlot();
 			}
 
-			if (isOwned())
+			if (isOwned() && !GET_PLAYER(getOwner()).isNPC())
 			{
 				if (isGoody())
 				{
@@ -10966,9 +10965,6 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 	if (pCity != NULL)
 	{
 		const PlayerTypes eOwner = pCity->getOwner();
-		// XXX make sure all of this (esp. the changePower()) syncs up...
-		pArea->changePower(eOwner, iChange * pCity->getPopulation());
-
 		pArea->changeCitiesPerPlayer(eOwner, iChange);
 		pArea->changePopulationPerPlayer(eOwner, (pCity->getPopulation() * iChange));
 
