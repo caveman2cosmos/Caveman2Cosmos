@@ -1587,7 +1587,8 @@ class Pedia:
 										print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2])))
 
 			#Check replacements of bonus producers
-			if bCheckPotentialReplacements and (CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS))): # Check Manufactured bonuses, that aren't Culture or Techno-culture types.
+			if bCheckPotentialReplacements and (CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS) or (BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER))): 
+			# Check Manufactured bonuses, that aren't Culture or Techno-culture types.
 				aNumBonusManufacturers = [] # Count manufacturers and add their locations
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
@@ -1610,8 +1611,8 @@ class Pedia:
 								else:
 									aBuildingObsoletions.append(999) #Never obsolete
 				
-				# Check all bonus producers
-				if len(aNumBonusManufacturers) > 0:
+				# Check all bonus producers, that don't obsolete
+				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):				
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
@@ -1625,14 +1626,10 @@ class Pedia:
 							
 							if CvBuildingInfo.getFreeBonus() == iBonus:						
 								print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
-								if len(aNumBonusManufacturers) == 1 and (isWorldWonder(iBuilding) or isNationalWonder(iBuilding)):								
-									print "Wonder Bonus: "+CvBonusInfo.getType()+" "+CvBuildingInfo.getType()
 								
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									print CvBonusInfo.getType()+" "+str(self.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
-									if len(aNumBonusManufacturers) == 1 and (isWorldWonder(iBuilding) or isNationalWonder(iBuilding)):								
-										print "Wonder Bonus: "+CvBonusInfo.getType()+" "+CvBuildingInfo.getType()
 							
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
