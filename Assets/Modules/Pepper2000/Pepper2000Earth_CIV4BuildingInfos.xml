@@ -3311,22 +3311,6 @@
 				<iYield>20</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_SALT</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-				<BonusYieldModifier>
-					<BonusType>BONUS_WAX</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -3391,10 +3375,6 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_PELTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TANNIN</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3471,6 +3451,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HONEY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ICE_CREAM</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -4020,7 +4004,27 @@
 					<FreeBonus>BONUS_SOAP</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TANNIN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SALT</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_WAX</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8453,8 +8457,6 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_ICE_CREAM</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -14318,9 +14320,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TANNIN_FACTORY</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14348,7 +14350,7 @@
 			<Type>BUILDING_ICECREAM_PARLOR</Type>
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
