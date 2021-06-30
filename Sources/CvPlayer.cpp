@@ -9405,9 +9405,10 @@ int CvPlayer::greatPeopleThresholdMilitary() const
 	int64_t iThreshold = GC.getDefineINT("GREAT_GENERALS_THRESHOLD") * GC.getEraInfo(GC.getGame().getStartEra()).getGreatPeoplePercent();
 
 	iThreshold = getModifiedIntValue64(iThreshold, getGreatGeneralsThresholdModifier());
+	// Weaker than standard scaling.
+	iThreshold = iThreshold * (GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()+50) / 150;
 
-	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	iThreshold /= 10000;
+	iThreshold /= 100;
 
 	if (iThreshold >= MAX_INT)
 	{

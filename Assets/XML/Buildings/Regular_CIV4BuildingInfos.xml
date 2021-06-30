@@ -158,11 +158,6 @@
 			<ObsoleteTech>TECH_BARBED_WIRE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FIRE_ABATIS</BuildingType>
-				<BuildingType>BUILDING_BARBWIRE_FENCE</BuildingType>
-				<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
-				<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<CommerceChanges>
@@ -1025,7 +1020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
 			</ReplacementBuildings>
@@ -3971,9 +3966,6 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
-				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
-				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 			</ReplacementBuildings>
 			<iCost>320</iCost>
@@ -4117,7 +4109,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<iHealth>-1</iHealth>
@@ -4761,9 +4752,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
 				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>830</iCost>
 			<CommerceChanges>
@@ -4867,7 +4855,6 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>830</iCost>
 			<iHealth>1</iHealth>
@@ -5567,9 +5554,6 @@
 			<ObsoleteTech>TECH_RAILGUN</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1180</iCost>
 			<CommerceChanges>
@@ -6307,7 +6291,6 @@
 			<ObsoleteTech>TECH_REALISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<iHealth>-1</iHealth>
@@ -6552,12 +6535,6 @@
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
-				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
 			<CommerceChanges>
@@ -6835,9 +6812,6 @@
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
-				<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>770</iCost>
 			<iHappiness>-1</iHappiness>
@@ -7147,12 +7121,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>535</iCost>
 			<CommerceChanges>
@@ -7198,7 +7169,6 @@
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<CommerceModifiers>
@@ -10067,14 +10037,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_RAILGUN</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>410</iCost>
 			<CommerceChanges>
@@ -10258,7 +10223,6 @@
 				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
 				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
 				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1030</iCost>
 			<BonusProductionModifiers>
@@ -12247,12 +12211,6 @@
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
-				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<CommerceChanges>
@@ -15174,7 +15132,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
+			<ObsoleteTech>TECH_SPACE_TOURISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_CARTOGRAPHER</BuildingType>
 			</ReplacementBuildings>
@@ -15999,7 +15957,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1180</iCost>
 			<iHappiness>-2</iHappiness>
@@ -19058,7 +19015,6 @@
 			<ObsoleteTech>TECH_WEATHER_FORECASTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WEATHER_VEINS</BuildingType>
-				<BuildingType>BUILDING_METEOROLOGY_LAB</BuildingType>
 			</ReplacementBuildings>
 			<iCost>200</iCost>
 			<YieldChanges>
@@ -19784,7 +19740,6 @@
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<iHealth>-1</iHealth>
@@ -21711,7 +21666,6 @@
 			<ObsoleteTech>TECH_BANKING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>74</iCost>
 			<iHappiness>-1</iHappiness>
@@ -22519,7 +22473,6 @@
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GALLOWS</BuildingType>
-				<BuildingType>BUILDING_GUILLOTINE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>225</iCost>
 			<iHealth>-1</iHealth>
@@ -23292,7 +23245,6 @@
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<iHappiness>1</iHappiness>
@@ -25245,7 +25197,7 @@
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
 			</ReplacementBuildings>
@@ -26332,11 +26284,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>104</iCost>
 			<BonusProductionModifiers>
@@ -26864,8 +26811,6 @@
 			<ObsoleteTech>TECH_SHIELDING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1080</iCost>
 			<iHappiness>-2</iHappiness>
@@ -28477,7 +28422,6 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1130</iCost>
 			<CommerceChanges>
@@ -30240,8 +30184,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARENA</BuildingType>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<iHappiness>1</iHappiness>
@@ -30364,10 +30306,6 @@
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARBWIRE_FENCE</BuildingType>
-				<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
-				<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<CommerceChanges>
@@ -31876,14 +31814,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
-				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<CommerceChanges>
@@ -32372,15 +32302,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FORTIFIED_OUTPOST</BuildingType>
 				<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
-				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
-				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
 			<CommerceChanges>
@@ -33237,7 +33158,6 @@
 			<ObsoleteTech>TECH_ORGANIC_PHOTONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STREET_LIGHTS</BuildingType>
-				<BuildingType>BUILDING_ORGANIC_LAMPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>680</iCost>
 			<iHappiness>1</iHappiness>
@@ -33885,7 +33805,6 @@
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1180</iCost>
 			<iHealth>-3</iHealth>
@@ -36161,7 +36080,6 @@
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-				<BuildingType>BUILDING_CITY_PARK</BuildingType>
 			</ReplacementBuildings>
 			<iCost>216</iCost>
 			<iHealth>1</iHealth>
@@ -36255,12 +36173,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
 				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<CommerceChanges>
@@ -36308,9 +36220,6 @@
 			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
-				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>368</iCost>
 			<CommerceChanges>
@@ -36480,7 +36389,6 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ELECTRIC_CHAIR</BuildingType>
-				<BuildingType>BUILDING_LETHAL_INJECTION</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>440</iCost>
@@ -36658,7 +36566,6 @@
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WIND_PUMP</BuildingType>
-				<BuildingType>BUILDING_STATION_PUMP</BuildingType>
 			</ReplacementBuildings>
 			<iCost>332</iCost>
 			<iHealth>1</iHealth>
@@ -37030,7 +36937,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<iHealth>1</iHealth>
@@ -37994,14 +37900,10 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_OLD_CITY_WALLS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -38164,7 +38066,6 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1130</iCost>
 			<CommerceChanges>
@@ -38557,10 +38458,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHARIOT_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TOURNAMENTS</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TOURNAMENT</BuildingType>
-				<BuildingType>BUILDING_SPEEDWAY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>139</iCost>
 			<iHealth>-1</iHealth>
@@ -42770,7 +42670,7 @@
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SPEEDWAY</BuildingType>
 			</ReplacementBuildings>
@@ -43321,12 +43221,6 @@
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
@@ -44114,9 +44008,6 @@
 				<BuildingType>BUILDING_BOOBY_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
 				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
-				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>515</iCost>
 			<BonusProductionModifiers>
@@ -46008,12 +45899,6 @@
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
-				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<CommerceChanges>
@@ -46103,13 +45988,6 @@
 			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
-				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
-				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
-				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
-				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -48350,12 +48228,6 @@
 			<ObsoleteTech>TECH_GUERRILLA_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LANDMINES_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BOOBY_TRAPS</BuildingType>
-				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
-				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>270</iCost>
 			<iHappiness>-1</iHappiness>
@@ -49840,7 +49712,6 @@
 			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>2505</iCost>
 			<iHappiness>-3</iHappiness>
@@ -56182,8 +56053,6 @@
 			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAS_LAMPS</BuildingType>
-				<BuildingType>BUILDING_STREET_LIGHTS</BuildingType>
-				<BuildingType>BUILDING_ORGANIC_LAMPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
@@ -57435,8 +57304,6 @@
 			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GARDEROBE</BuildingType>
-				<BuildingType>BUILDING_PUBLIC_RESTROOMS</BuildingType>
-				<BuildingType>BUILDING_SANITATION_CHAMBER</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
 			<iHealth>1</iHealth>
@@ -57911,11 +57778,6 @@
 				<BuildingType>BUILDING_EARTHWALL</BuildingType>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
 			<iHappiness>1</iHappiness>
@@ -58951,7 +58813,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>280</iCost>
 			<CommerceChanges>
@@ -60317,7 +60178,7 @@
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PIERCING_SHOP</BuildingType>
 			</ReplacementBuildings>
@@ -60749,14 +60610,6 @@
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SPIKED_PIT_TRAPS</BuildingType>
-				<BuildingType>BUILDING_MECHANICAL_TRAPS</BuildingType>
-				<BuildingType>BUILDING_LANDMINES_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BOOBY_TRAPS</BuildingType>
-				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
-				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>40</iCost>
 			<iHappiness>-1</iHappiness>
@@ -63655,9 +63508,6 @@
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TREADMILL_CRANE</BuildingType>
-				<BuildingType>BUILDING_STEAM_CRANE</BuildingType>
-				<BuildingType>BUILDING_MODERN_CRANE</BuildingType>
-				<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<YieldModifiers>
@@ -66281,7 +66131,6 @@
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
-				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>225</iCost>
 			<RiverPlotYieldChanges>
@@ -66333,8 +66182,6 @@
 			<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RIVER_AUTHORITY</BuildingType>
-				<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
-				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>74</iCost>
 			<RiverPlotYieldChanges>
@@ -66475,7 +66322,6 @@
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>225</iCost>
 			<CommerceChanges>
@@ -66572,8 +66418,6 @@
 			<ObsoleteTech>TECH_NANOELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
-				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1685</iCost>
 			<iHappiness>-3</iHappiness>
@@ -66996,12 +66840,6 @@
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
-				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<CommerceChanges>
@@ -69235,7 +69073,7 @@
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
@@ -70048,7 +69886,6 @@
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>630</iCost>
 			<CommerceChanges>
@@ -70211,7 +70048,6 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</ReplacementBuildings>
 			<iCost>216</iCost>
 			<iHealth>-1</iHealth>
@@ -71163,7 +70999,7 @@
 			<PrereqTech>TECH_SKYROADS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_COSMIC_LIFESTYLE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
@@ -72048,7 +71884,6 @@
 			<ObsoleteTech>TECH_EXOCORTEX_NETWORKS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
-				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>2105</iCost>
 			<iHappiness>2</iHappiness>
@@ -72721,9 +72556,6 @@
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
-			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -72913,13 +72745,6 @@
 			<ObsoleteTech>TECH_MINE_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MECHANICAL_TRAPS</BuildingType>
-				<BuildingType>BUILDING_LANDMINES_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BOOBY_TRAPS</BuildingType>
-				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
-				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
-				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
-				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<iHappiness>-1</iHappiness>
@@ -73693,7 +73518,6 @@
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_CRANE</BuildingType>
-				<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>630</iCost>
 			<YieldModifiers>
@@ -73745,7 +73569,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SUBMARINE_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
 			</ReplacementBuildings>
@@ -74313,12 +74137,6 @@
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
-				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>104</iCost>
 			<CommerceChanges>
@@ -79055,9 +78873,6 @@
 			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OIL_LAMPS</BuildingType>
-				<BuildingType>BUILDING_GAS_LAMPS</BuildingType>
-				<BuildingType>BUILDING_STREET_LIGHTS</BuildingType>
-				<BuildingType>BUILDING_ORGANIC_LAMPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<iHappiness>1</iHappiness>
@@ -79277,10 +79092,6 @@
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
-				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
-				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<CommerceChanges>
@@ -79340,11 +79151,6 @@
 			<ObsoleteTech>TECH_WARRANTS_AND_DECREES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
-				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
-				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
-				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>168</iCost>
 			<CommerceChanges>
@@ -79746,10 +79552,6 @@
 			<ObsoleteTech>TECH_PAVED_ROADS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ROADS</BuildingType>
-				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
-				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
@@ -79975,8 +79777,6 @@
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-				<BuildingType>BUILDING_CARRIAGE</BuildingType>
-				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<YieldChanges>
@@ -80008,8 +79808,6 @@
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STEAM_CRANE</BuildingType>
-				<BuildingType>BUILDING_MODERN_CRANE</BuildingType>
-				<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>270</iCost>
 			<YieldModifiers>
@@ -82148,11 +81946,6 @@
 			<ObsoletesToBuilding>BUILDING_OLD_CITY_WALLS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -82617,12 +82410,6 @@
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
 				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
-				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
-				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
-				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
-				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>216</iCost>
 			<BonusProductionModifiers>
@@ -83706,7 +83493,6 @@
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CARRIAGE</BuildingType>
-				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
 			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<YieldChanges>
@@ -85518,8 +85304,6 @@
 				<Bonus>BONUS_AMMUNITION</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
-				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
@@ -85566,7 +85350,6 @@
 				<Bonus>BONUS_AMMUNITION</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_WEAPONIZED_LASERS</ObsoleteTech>
@@ -86614,8 +86397,6 @@
 			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>455</iCost>
 			<CommerceChanges>
