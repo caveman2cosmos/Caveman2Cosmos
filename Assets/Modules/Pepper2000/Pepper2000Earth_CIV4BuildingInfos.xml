@@ -430,18 +430,9 @@
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RAW_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DRIED_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NETS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DRIED_FISH</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NETS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_RAW_FISH</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -449,10 +440,7 @@
 			<FreeBonus>BONUS_CAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DOG</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DOG</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -460,14 +448,8 @@
 			<FreeBonus>BONUS_ALGAE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VEGETABLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DRUGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DRUGS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_VEGETABLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -475,14 +457,8 @@
 			<FreeBonus>BONUS_NUTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BERRIES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANNED_FOOD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BERRIES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CANNED_FOOD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -490,14 +466,8 @@
 			<FreeBonus>BONUS_FRUIT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAINS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DRIED_FRUIT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DRIED_FRUIT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GRAINS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -850,62 +820,20 @@
 			<FreeBonus>BONUS_BORAX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRICKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CEMENT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHALK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CINNABAR_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLAY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEAT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTASH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PYRITE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SAND</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLINT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUMICE_STONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BRICKS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CEMENT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CHALK</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CINNABAR_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CLAY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FLINT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PEAT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_POTASH</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PUMICE_STONE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PYRITE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SAND</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TAR</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1006,62 +934,20 @@
 			<FreeBonus>BONUS_BERLINITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CAESIUM_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHROMITE_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GEMSTONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAPHITE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LAZULITE_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LITHIUM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MANGANESE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MASCAGNITE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TUNGSTEN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ZINC_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RARE_EARTH_MINERALS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CAESIUM_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CHROMITE_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COBALT_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GEMSTONE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GRAPHITE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LAZULITE_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LITHIUM</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MANGANESE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MASCAGNITE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NICKEL_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_RARE_EARTH_MINERALS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TUNGSTEN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ZINC_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1172,78 +1058,24 @@
 			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRONZE_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTRUM_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTRUM_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GOLD_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEAD_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEAD_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLATINUM_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILVER_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILVER_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIN_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BRASS_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BRASS_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BRONZE_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ELECTRUM_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ELECTRUM_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GOLD_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GOLD_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LEAD_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LEAD_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PLATINUM_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SILVER_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SILVER_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TIN_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TIN_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TITANIUM_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1336,62 +1168,20 @@
 			<FreeBonus>BONUS_MICROGENERATORS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EXOSKELETONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MECHS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SERVICE_BOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOGENERATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLASMA_GENERATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HOLOGRAPHIC_PROJECTORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ORGANIC_COMPUTERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHOCKWAVE_ENGINES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOACTUATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BIONIC_SUITS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DIGITIZED_MEMBRANES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ANDROIDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEVITATION_GENERATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ANDROIDS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BIONIC_SUITS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DIGITIZED_MEMBRANES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_EXOSKELETONS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HOLOGRAPHIC_PROJECTORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LEVITATION_GENERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MECHS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NANOACTUATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NANOGENERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ORGANIC_COMPUTERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PLASMA_GENERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SERVICE_BOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SHOCKWAVE_ENGINES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -1420,82 +1210,25 @@
 			<FreeBonus>BONUS_METAMATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METALLIC_HYDROGEN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAPHENE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOTUBES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOBOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METAL_FOAM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FULLERENE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_QUANTUM_DOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AEROGEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TRANSPARENT_ALUMINUM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARBYNE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_AEROGEL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CARBYNE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FULLERENE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GRAPHENE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LIQUID_METAL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_METALLIC_HYDROGEN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_METAL_FOAM</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NANOBOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NANOTRUSSES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NANOTUBES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_QUANTUM_DOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TRANSPARENT_ALUMINUM</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -1524,50 +1257,17 @@
 			<FreeBonus>BONUS_PLASTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CERMET</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARBON_FIBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KEVLAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIBERGLASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NYLON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VULCANIZED_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ECSTASY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LSD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CARBON_FIBER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CERMET</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ECSTASY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FERTILIZERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FIBERGLASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_KEVLAR</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LSD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NYLON</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_VULCANIZED_RUBBER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -1616,10 +1316,7 @@
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REPLICATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1680,10 +1377,7 @@
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REPLICATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1743,10 +1437,7 @@
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REPLICATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1803,10 +1494,7 @@
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REPLICATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1880,18 +1568,9 @@
 			<FreeBonus>BONUS_WOODWIND_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERCUSSION_INSTRUMENTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PERCUSSION_INSTRUMENTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
@@ -2298,82 +1977,25 @@
 			<FreeBonus>BONUS_BLENDER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CELLPHONES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CALCULATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COMPUTERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DISHWASHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MICROWAVE_OVENS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POWER_TOOLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RADIOS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REFRIGERATORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TELEVISIONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WASHER_DRYER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_ELECTRONICS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TRANSISTORS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUNCH_CARDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MICROCHIPS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DISKETTES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VIDEO_GAMES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIBER_OPTIC_CABLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLASH_MEMORY_DEVICES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CALCULATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CELLPHONES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COMPUTERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DISHWASHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DISKETTES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FIBER_OPTIC_CABLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FLASH_MEMORY_DEVICES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MICROCHIPS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MICROWAVE_OVENS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PERSONAL_ELECTRONICS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_POWER_TOOLS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PUNCH_CARDS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_RADIOS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REFRIGERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TELEVISIONS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TRANSISTORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_VIDEO_GAMES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WASHER_DRYER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
@@ -2417,114 +2039,33 @@
 			<FreeBonus>BONUS_BARRELS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BASKETS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BEADS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FURNITURE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GLASSWARE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LACQUERWARE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PORCELAIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTTERY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ROPE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SCULPTURES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIRES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TOYS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATER_BOTTLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANDLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BOOKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NEWSPAPERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BICYCLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PENCILS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIRECRACKERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MASKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_JEWELRY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SAILS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SADDLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TOOLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TYPEWRITERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PHONOGRAPHS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SKIS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BASKETS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BEADS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BICYCLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BOOKS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CANDLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FIRECRACKERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FURNITURE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GLASSWARE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_JEWELRY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LACQUERWARE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MASKS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NEWSPAPERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PENCILS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PHONOGRAPHS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PORCELAIN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_POTTERY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ROPE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SADDLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SAILS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SCULPTURES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SKIS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TERRACOTTA</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TIRES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TOOLS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TOYS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TYPEWRITERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WATER_BOTTLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
@@ -2576,42 +2117,15 @@
 			<FreeBonus>BONUS_CARPETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TAPESTRIES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLOTH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLOTHING</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HATS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHOES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COTTON_FIBERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLAX_FIBERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HEMP_FIBERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILK_FIBERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CLOTH</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CLOTHING</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COTTON_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FLAX_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HATS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HEMP_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SHOES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SILK_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TAPESTRIES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
@@ -2691,34 +2205,13 @@
 			<FreeBonus>BONUS_UNMANNED_AIRCRAFTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_JET_ENGINES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HELICOPTERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HOVERCRAFTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIREARMS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AMMUNITION</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TANKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_AIRCRAFT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_AMMUNITION</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FIREARMS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HELICOPTERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HOVERCRAFTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_JET_ENGINES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TANKS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Properties>
 				<Property>
@@ -3216,14 +2709,8 @@
 			<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_WIRES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COPPER_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COPPER_WIRES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3269,18 +2756,9 @@
 			<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IRON_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_IRON_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_STEEL_INGOTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_STEEL_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3333,78 +2811,24 @@
 			<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EGGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEATHER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HIDE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TANNIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PELTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FUR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LARD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MILK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FEATHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GHEE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OSTRICH_LEATHER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BONE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_EGGS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FISH_OIL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FUR</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GHEE_OIL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HIDE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LARD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LEATHER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MILK</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_OSTRICH_LEATHER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PELTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TANNIN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WHALE_OIL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WOOL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3441,74 +2865,23 @@
 			<FreeBonus>BONUS_DRIED_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ALCOHOL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BREAD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHEESE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHOCOLATE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ENERGY_DRINK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HONEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MARZIPAN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NUTELLA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PASTA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATO_CHIPS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SAUSAGE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SODA_POP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SEASONING</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLOUR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ROASTED_COFFEE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANDY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ALCOHOL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BREAD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CANDY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CHEESE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CHOCOLATE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ENERGY_DRINK</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_FLOUR</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HONEY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_MARZIPAN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NUTELLA</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PASTA</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_POTATO_CHIPS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ROASTED_COFFEE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SAUSAGE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SEASONING</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SODA_POP</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WAX</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3964,62 +3337,20 @@
 			<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERFUME</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SOAP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LYE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DYE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KEROSENE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHEMICALS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HYDROGEN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ENZYMES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OMEGA_FATTY_ACID</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTROLYTIC_CELLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BIOPOLYMERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ORGANIC_PHOTONIC_CELLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTROACTIVE_POLYMERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BIOPOLYMERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CHEMICALS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_DYE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ELECTROACTIVE_POLYMERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ELECTROLYTIC_CELLS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ENZYMES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HYDROGEN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_KEROSENE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_LYE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_OMEGA_FATTY_ACID</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ORGANIC_PHOTONIC_CELLS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PERFUME</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_ROCKET_FUEL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SOAP</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -8093,34 +7424,13 @@
 			<FreeBonus>BONUS_MEDICAL_TRICORDERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HYPOSPRAYS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REPLACEMENT_ORGANS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STIM_PACKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IMMUNITY_DRUGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CELLULASE_CAPSULES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NEUROIMPLANTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_CELLULASE_CAPSULES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HYPOSPRAYS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_IMMUNITY_DRUGS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NEUROIMPLANTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REPLACEMENT_ORGANS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SMART_MEDICINE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_STIM_PACKS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -14753,14 +14063,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_ANTIQUE_SHOP</Type>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TABLETS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SCROLLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SCROLLS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TABLETS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15291,14 +14595,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_ULTRAFUEL_REFINERY</Type>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BIOFUEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BIOFUEL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15397,38 +14695,14 @@
 			<FreeBonus>BONUS_BUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BARK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BAMBOO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REEDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRAW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VINES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BAMBOO</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_BARK</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GRASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_OLIVE_OIL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_REEDS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_STRAW</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_VINES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WOOD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23741,22 +23015,10 @@
 			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_COBALT_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_NICKEL_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TIN_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_TITANIUM_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23921,14 +23183,8 @@
 			<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GOLD_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILVER_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_GOLD_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SILVER_ORE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>

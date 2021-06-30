@@ -984,14 +984,8 @@
 			<FreeBonus>BONUS_PLASTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATER_BOTTLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_WATER_BOTTLES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2006,10 +2000,7 @@
 			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HYDROGEN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
+				<ExtraFreeBonus><FreeBonus>BONUS_HYDROGEN</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
