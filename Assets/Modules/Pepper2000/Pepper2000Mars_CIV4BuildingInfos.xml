@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
@@ -582,7 +581,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
@@ -719,7 +717,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
@@ -1909,7 +1906,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_TERRA_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>

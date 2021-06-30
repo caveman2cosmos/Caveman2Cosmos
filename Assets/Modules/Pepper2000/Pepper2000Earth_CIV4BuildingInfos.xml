@@ -6091,7 +6091,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -24272,7 +24271,6 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NASA</Type>

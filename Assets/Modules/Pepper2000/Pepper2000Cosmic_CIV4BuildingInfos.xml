@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
@@ -2537,7 +2536,6 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>200</iYield>

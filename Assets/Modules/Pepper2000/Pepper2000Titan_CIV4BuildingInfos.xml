@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
