@@ -397,6 +397,8 @@ void CyInfoPythonInterface1()
 		.def("getVoteSourceType", &CvBuildingInfo::getVoteSourceType, "int ()")
 		.def("getPrereqVicinityBonus", &CvBuildingInfo::getPrereqVicinityBonus, "int ()")
 		.def("getPrereqRawVicinityBonus", &CvBuildingInfo::getPrereqRawVicinityBonus, "int ()")
+		.def("getHurryCostModifier", &CvBuildingInfo::getHurryCostModifier, "int ()")
+		.def("getHurryAngerModifier", &CvBuildingInfo::getHurryAngerModifier, "int ()")
 
 		.def("isAutoBuild", &CvBuildingInfo::isAutoBuild, "bool ()")
 		.def("isWater", &CvBuildingInfo::isWater, "bool ()")

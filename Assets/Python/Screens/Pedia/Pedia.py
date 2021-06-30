@@ -1286,16 +1286,7 @@ class Pedia:
 			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.checkTechRequirementLocation(CvBuildingInfo)[1]
 			
-			#Check if free building has tech requirement
 			"""
-			if CvBuildingInfo.getFreeBuilding() != None:
-				CvFreeBuilding = GC.getBuildingInfo(CvBuildingInfo.getFreeBuilding())
-				if CvFreeBuilding != None:
-					iFreeBuildingTechLoc = self.checkTechRequirementLocation(CvFreeBuilding)[0]
-					if iFreeBuildingTechLoc == 0:
-						print CvBuildingInfo.getType()+" has free building with no tech "+CvFreeBuilding.getType()
-			
-			
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
@@ -1305,13 +1296,18 @@ class Pedia:
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
+			"""
+					
+			#Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
+			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
+				print CvBuildingInfo.getType()+" can't be hurried at first place"
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-			self.checkTechMods(iTechLoc, CvBuildingInfo)
+			#self.checkTechMods(iTechLoc, CvBuildingInfo)
 			
 			#Check if building needs bonus before is available	
-			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
-			"""
+			#self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
 			if bCheckBonusManufacturerTech:
