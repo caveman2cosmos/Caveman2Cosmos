@@ -290,8 +290,14 @@
 			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_COPPER_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_PLASTIC</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>

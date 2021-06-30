@@ -358,8 +358,14 @@
 			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_COPPER_WARES</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_PLASTIC</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -824,12 +830,30 @@
 			<FreeBonus>BONUS_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_ALGAE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_CLAM</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_CRAB</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_LOBSTER</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_SHRIMP</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_WHALE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALGAE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CLAM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRAB</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LOBSTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SHRIMP</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WHALE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1339,7 +1363,10 @@
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_MARTIAN_FRUIT</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MARTIAN_FRUIT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>

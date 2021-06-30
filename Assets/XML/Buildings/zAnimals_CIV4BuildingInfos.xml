@@ -13991,7 +13991,10 @@
 			<FreeBonus>BONUS_BISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14198,8 +14201,14 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CAMEL</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CAMEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14356,7 +14365,10 @@
 			<FreeBonus>BONUS_COW</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14421,7 +14433,10 @@
 			<FreeBonus>BONUS_DEER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14509,7 +14524,10 @@
 			<FreeBonus>BONUS_DONKEY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14541,8 +14559,14 @@
 			<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14619,7 +14643,10 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -14757,7 +14784,10 @@
 			<FreeBonus>BONUS_HORSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15110,7 +15140,10 @@
 			<FreeBonus>BONUS_PIG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15132,8 +15165,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_POULTRY_HERD</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_EGGS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_POULTRY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_EGGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_POULTRY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15192,9 +15231,18 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_EGGS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_EGGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15292,8 +15340,14 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ROO_HERD</ArtDefineTag>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
-				<ExtraFreeBonus><FreeBonus>BONUS_KANGAROO</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_KANGAROO</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15440,7 +15494,10 @@
 			<FreeBonus>BONUS_SHEEP</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
@@ -15832,7 +15889,10 @@
 			<FreeBonus>BONUS_LLAMA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_CARCASS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>

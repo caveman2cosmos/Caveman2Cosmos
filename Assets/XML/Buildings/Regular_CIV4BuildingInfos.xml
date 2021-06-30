@@ -2959,7 +2959,10 @@
 			<FreeBonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_LEVITATION_GENERATORS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LEVITATION_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -3278,7 +3281,10 @@
 			<FreeBonus>BONUS_WAX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_HONEY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HONEY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<Flavors>
 				<Flavor>
@@ -13263,7 +13269,10 @@
 			<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_LARD</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LARD</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<BonusYieldChanges>
 				<BonusYieldChange>
@@ -14236,7 +14245,10 @@
 			<FreeBonus>BONUS_DRUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_HEMP_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HEMP_FIBERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
@@ -16830,7 +16842,10 @@
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_POISON</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_POISON</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -17053,7 +17068,10 @@
 			<FreeBonus>BONUS_EGGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
@@ -26045,7 +26063,10 @@
 			<FreeBonus>BONUS_EGGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
@@ -27385,7 +27406,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -31144,7 +31168,10 @@
 			<FreeBonus>BONUS_FLOWERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_FLAX_FIBERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FLAX_FIBERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
@@ -44433,7 +44460,10 @@
 			<FreeBonus>BONUS_OBSIDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_PUMICE_STONE</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PUMICE_STONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
@@ -47148,7 +47178,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -53591,7 +53624,10 @@
 			<FreeBonus>BONUS_FIREARMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_AMMUNITION</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_AMMUNITION</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -54444,7 +54480,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -57296,7 +57335,10 @@
 			<FreeBonus>BONUS_OSTRICH_LEATHER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -65933,7 +65975,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -80373,7 +80418,10 @@
 			<FreeBonus>BONUS_EGGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_FEATHERS</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
@@ -82206,7 +82254,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -84545,7 +84596,10 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus><FreeBonus>BONUS_IVORY</FreeBonus><iNumFreeBonuses>1</iNumFreeBonuses></ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
