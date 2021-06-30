@@ -6,7 +6,8 @@ import os
 import fnmatch
 
 def find_all_functions(py_file):
-    with open(py_file).read() as code:
+    with open(py_file) as f:
+        code = f.read()
         a = ast.parse(code, py_file)
         #return [n.name for n in ast.walk(a) if type(n) == ast.FunctionDef]
         return [n.name for n in ast.iter_child_nodes(a) if type(n) == ast.FunctionDef]
