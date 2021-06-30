@@ -1294,7 +1294,7 @@ class Pedia:
 					iFreeBuildingTechLoc = self.checkTechRequirementLocation(CvFreeBuilding)[0]
 					if iFreeBuildingTechLoc == 0:
 						print CvBuildingInfo.getType()+" has free building with no tech "+CvFreeBuilding.getType()
-			"""
+			
 			
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1307,10 +1307,11 @@ class Pedia:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-			#self.checkTechMods(iTechLoc, CvBuildingInfo)
+			self.checkTechMods(iTechLoc, CvBuildingInfo)
 			
 			#Check if building needs bonus before is available	
-			#self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+			self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+			"""
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
 			if bCheckBonusManufacturerTech:
@@ -1324,15 +1325,15 @@ class Pedia:
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
 						
-				for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
-						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-						if GC.getTechInfo(bonusTechReq) != None:
-							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-							if bonuslist[bonus] == -1:
-								bonuslist[bonus] = iTechLoc
-							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-								bonuslist[bonus] = iTechLoc
+					for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+						if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
+							bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+							if GC.getTechInfo(bonusTechReq) != None:
+								bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+								if bonuslist[bonus] == -1:
+									bonuslist[bonus] = iTechLoc
+								elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+									bonuslist[bonus] = iTechLoc
 								
 			# Check if building obsoletion isn't too close to tech unlock.
 			if CvBuildingInfo.getObsoleteTech() != -1:
@@ -1355,7 +1356,7 @@ class Pedia:
 				
 				if iObsoleteTechLoc <= iReplacTechLoc:
 					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
-								
+			
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
@@ -1522,7 +1523,7 @@ class Pedia:
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
 		bCheckProductivity = 0 # Checking productivity of improvements is slow
-		bCheckPotentialReplacements = 1 # Checking potential replacements is slow
+		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
