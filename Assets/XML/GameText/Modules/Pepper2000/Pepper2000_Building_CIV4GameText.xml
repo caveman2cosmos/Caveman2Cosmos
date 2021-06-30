@@ -9953,6 +9953,14 @@
 		<Russian>Óëüòðàñîâðåìåííûé çàâîä ïî ïðîèçâîäñòâó íàíîìàòåðèàëîâ è äðóãèõ ñîâðåìåííûõ ìàòåðèàëîâ.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NANOTECH_COMPLEX</Tag>
+		<English>Nanotech Complex</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NANOTECH_COMPLEX_PEDIA</Tag>
+		<English>An ultra-high tech factory that produces various products with atomic scale precision.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLANETARY_AWARENESS</Tag>
 		<English>Interstellar Planetary Awareness</English>
 		<Russian>Планетарная сеть слежения</Russian>
