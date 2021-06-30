@@ -109,7 +109,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_TERRA_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -382,7 +381,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>3</iHealth>
 			<CommerceChanges>
