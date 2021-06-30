@@ -1582,13 +1582,13 @@
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
 		<English>Become Bulldozer</English>
 		<French>Convertir en Bulldozer</French>
 		<Russian>Ñáîðêà Êîìáàéíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
 		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
 		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
 		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
@@ -3016,16 +3016,6 @@
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
-		<English>Lunar Supply Ship</English>
-		<French>Vaisseau de ravitaillement</French>
-		<Russian>Êîðàáëü ñíàáæåíèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
-		<English>Early space unit dedicated to supply of Lunar colonies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
