@@ -4079,15 +4079,15 @@ class StartingPlotFinder:
 
 
 	def setupOldWorldAreaList(self):
-		gc = CyGlobalContext()
+		GC = CyGlobalContext()
+		MAP = GC.getMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = gameMap.areas()
 		areaOldWorld = list()
-		for i in range(len(areas)):
+		for CyArea in MAP.areas():
 			for pI in range(em.length):
-				plot = gameMap.plotByIndex(pI)
-				if plot.getArea() == areas[i].getID():
+				plot = MAP.plotByIndex(pI)
+				if plot.getArea() == CyArea.getID():
 					if mc.AllowNewWorld and continentMap.areaMap.data[pI] == continentMap.newWorldID:
 						areaOldWorld.append(False)#new world True = old world False
 					else:
