@@ -13485,7 +13485,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_MILL</Type>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_MILL</Type>
@@ -13505,7 +13505,6 @@
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14089,7 +14088,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEAPON_FACTORY</Type>
-			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14097,9 +14096,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_GUNSMITH</Type>
 			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JET_AIRCRAFT_FACTORY</Type>
@@ -14564,7 +14560,6 @@
 			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15478,7 +15473,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHALERS</Type>
-			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -25134,12 +25129,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JAPANESE_SHALE_PLANT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_HYDROCARBON_REFINERY</Type>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
@@ -25208,7 +25197,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANDY_STORE</Type>
-			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
