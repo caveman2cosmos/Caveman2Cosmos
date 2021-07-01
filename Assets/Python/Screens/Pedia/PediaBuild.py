@@ -89,7 +89,7 @@ class PediaBuild:
 			if fTime:
 				if CyPlayer:
 					G = GC.getGame()
-					fGameSpeedMod = GC.getGameSpeedInfo(G.getGameSpeedType()).getBuildPercent() / 100.0
+					fGameSpeedMod = GC.getGameSpeedInfo(G.getGameSpeedType()).getHammerCostPercent() / 100.0
 					fEraMod = GC.getEraInfo(G.getStartEra()).getBuildPercent() / 100.0
 				szTime = str(fTime) + "00"
 				index = szTime.find(".")

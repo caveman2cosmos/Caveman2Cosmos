@@ -347,13 +347,8 @@ class CvInfoScreen:
 
 	def computeHistory(self, scoreType, iPlayer, iTurn):
 
-		iScore = GC.getPlayer(iPlayer).getScoreHistory(iTurn)
-
-		if iScore == 0: # for some reason only the score is 0 when you're dead..?
-			return 0
-
 		if scoreType == 0:
-			return iScore
+			return GC.getPlayer(iPlayer).getScoreHistory(iTurn)
 
 		if scoreType == 1:
 			return GC.getPlayer(iPlayer).getEconomyHistory(iTurn)
@@ -381,7 +376,7 @@ class CvInfoScreen:
 		year = GAME.getTurnYear(turn)
 		if year < 0:
 			return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
-		else: return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
+		return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 
 	def drawGraphs(self):

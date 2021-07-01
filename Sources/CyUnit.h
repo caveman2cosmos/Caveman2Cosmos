@@ -52,7 +52,7 @@ public:
 	int /*SpecialUnitTypes*/ getSpecialUnitType() const;
 	int /*UnitTypes*/ getCaptureUnitType() const;
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
-	int /*DomainTypes*/ getDomainType() const;
+	DomainTypes getDomainType() const;
 
 	bool isBarbarian() const;
 	bool isNPC() const;

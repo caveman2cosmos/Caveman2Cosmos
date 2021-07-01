@@ -132,7 +132,7 @@ int /*UnitCombatTypes*/ CyUnit::getUnitCombatType() const
 	return m_pUnit ? m_pUnit->getUnitCombatType() : NO_UNITCOMBAT;
 }
 
-int /*DomainTypes*/ CyUnit::getDomainType() const
+DomainTypes CyUnit::getDomainType() const
 {
 	return m_pUnit ? m_pUnit->getDomainType() : NO_DOMAIN;
 }

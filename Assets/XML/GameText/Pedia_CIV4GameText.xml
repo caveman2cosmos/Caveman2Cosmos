@@ -178,13 +178,12 @@
 		<English>Technocultural Bonuses</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
+		<English>Unique Bonuses</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
-		<English>Other Bonuses</English>
-		<French>Autres Bonus</French>
-		<German>Güter</German>
-		<Spanish>Otros recursos</Spanish>
-		<Polish>Inne Bonusy</Polish>
-		<Russian>Òîâàðû</Russian>
+		<English>Manufactured Bonuses</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>

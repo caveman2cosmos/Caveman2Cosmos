@@ -177,6 +177,7 @@ class Pedia:
 		szCatBonusesMan			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED", ())
 		szCatBonusesCult		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE", ())
 		szCatBonusesTech		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD", ())
+		szCatBonusesWonder		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER", ())
 		szCatImprovements		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ())
 		szCatRoutes				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_ROUTES", ())
 		szCatCivs				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())
@@ -239,7 +240,7 @@ class Pedia:
 		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
 		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
 		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
-		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech]
+		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech, szCatBonusesWonder]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
 		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions]
 		PEDIA_SUB_SPECIAL		= [szCatUnitCombat, szCatSpecialists, szCatProjects, szCatCorporations, szCatBuilds]
@@ -347,6 +348,7 @@ class Pedia:
 			szCatBonusesMan			: self.placeManufacturedBonuses,
 			szCatBonusesCult		: self.placeCulturalBonuses,
 			szCatBonusesTech		: self.placeTechnoculturalBonuses,
+			szCatBonusesWonder		: self.placeWonderBonuses,
 			szCatBuildingTree		: self.placeBuildingTree,
 			szCatUnitTree			: self.placeUnitTree,
 			szCatPromotionTree		: self.placePromotionTree,
@@ -540,14 +542,17 @@ class Pedia:
 				if CvBonusInfo.getConstAppearance() > 0:
 					## Map resource
 					szSubCat = self.mapSubCat.get(iCategory)[0]
-				elif CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_GENMODS"):
+				elif CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_GENMODS") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_WONDER"):
 					## Manufactured resource
 					szSubCat = self.mapSubCat.get(iCategory)[1]
 				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
 					## Culture resource
 					szSubCat = self.mapSubCat.get(iCategory)[2]
-				else: ## Genmod resource
+				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_GENMODS"): 
+					## Genmod resources
 					szSubCat = self.mapSubCat.get(iCategory)[3]
+				else: ## Wonder resource
+					szSubCat = self.mapSubCat.get(iCategory)[4]
 				print "Selected: %s", CvBonusInfo.getDescription()
 
 		elif iCategory == self.PEDIA_LANDSCAPE:
@@ -802,7 +807,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() > 0:
 				if bWorld:
 					bValid = True
 				else:
@@ -1076,16 +1081,25 @@ class Pedia:
 		print "Category: Genmod Bonuses"
 		self.aList = self.getBonusList(3)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
+		
+	def placeWonderBonuses(self):
+		print "Category: Wonder Bonuses"
+		self.aList = self.getBonusList(4)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
 
 	def getBonusList(self, iType):
 		aList = []
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
+		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:
+					aList.append((szName, iBonus))
+			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:
+				if iType == 4:
 					aList.append((szName, iBonus))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:

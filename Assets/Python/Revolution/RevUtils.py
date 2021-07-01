@@ -40,10 +40,8 @@ def getGameSpeedMod():
 	global gameSpeedMod
 	if gameSpeedMod == None:
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		gameSpeedMod = CvGameSpeedInfo.getSpeedPercent()
-		gameSpeedMod += CvGameSpeedInfo.getTrainPercent()
-		gameSpeedMod += CvGameSpeedInfo.getConstructPercent()
-		gameSpeedMod = 300.0 / gameSpeedMod
+		gameSpeedMod = CvGameSpeedInfo.getSpeedPercent() + CvGameSpeedInfo.getHammerCostPercent()
+		gameSpeedMod = 200.0 / gameSpeedMod
 	return gameSpeedMod
 
 

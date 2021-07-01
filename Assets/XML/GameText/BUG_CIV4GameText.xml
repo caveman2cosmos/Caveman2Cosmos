@@ -2130,7 +2130,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAIRAUTOMATIONS_HOVER</Tag>
 		<English>Hides the Automate Air Strike and Automate Air Bomb icons from the unit interface.</English>
-		<French>Masque l’icône des Opérations Aériennes automatisées de la liste des actions des unités.</French>
+		<French>Masque l'icône des Opérations Aériennes automatisées de la liste des actions des unités.</French>
 		<German>Die Auto-Luftschlag- und Auto-Bombardierungs-Icons werden im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta los botones de "Ataque aéreo automatizado" y "Bombardeo aéreo automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò ëþáûå äåéñòâèÿ ñâÿçàííûå ñ àâòî-âîçä. íàëåòîì è àâòî-áîìáàðäèðîâêîé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2146,7 +2146,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOCARAVAN_HOVER</Tag>
 		<English>Hides the Automate Caravan icon from the unit interface.</English>
-		<French>Masque l’icône des Caravanes automatisées de la liste des actions des unités.</French>
+		<French>Masque l'icône des Caravanes automatisées de la liste des actions des unités.</French>
 		<German>Das Auto-Transport-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Caravana automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-êîíâîèðîâàíèÿ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2162,7 +2162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOEXPLORE_HOVER</Tag>
 		<English>Hides the Automate Explore icon from the unit interface.</English>
-		<French>Masque l’icône de l'exploration automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de l'exploration automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Erkundungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Explorar (automatizado)" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü äåéñòâèå àâòî-ðàçâåäêè â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2178,7 +2178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEDEFENSE_HOVER</Tag>
 		<English>Hides the Automate City Defense icon from the unit interface.</English>
-		<French>Masque l’icône de Défense automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de Défense automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Stadtverteidigungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Defensa de ciudad automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò àâòî-çàùèòó ãîðîäà èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2194,7 +2194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEHUNT_HOVER</Tag>
 		<English>Hides the Automate Hunt icon from the unit interface.</English>
-		<French>Masque l’icône de Traque automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de Traque automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Jagd-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Caza automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-îõîòó èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2210,7 +2210,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEPATROL_HOVER</Tag>
 		<English>Hides the Automate Patrol icon from the unit interface.</English>
-		<French>Masque l’icône de patrouille automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de patrouille automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Patrouille-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Patrulla automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-ïàòðóëèðîâàíèå èç ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2226,7 +2226,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOMATEPILLAGE_HOVER</Tag>
 		<English>Hides the Automate Pillage icon from the unit interface.</English>
-		<French>Masque l’icône de Pillage automatisé de la liste des actions des unités.</French>
+		<French>Masque l'icône de Pillage automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Plündern-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Saqueo automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü àâòî-ãðàáåæ íà ïàíåëè äåéñòâèé äëÿ þíèòîâ.</Russian>
@@ -2242,7 +2242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPIRATE_HOVER</Tag>
 		<English>Hides the Automate Pirate icon from the unit interface.</English>
-		<French>Masque l’icône de piratage automatisé de la liste des actions des unités.</French>
+		<French>Masque l'icône de piratage automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Piraterie-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Piratería automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûòü äåéñòâèÿ, ñâÿçàííûå ñ àâòî-ïèðàòñòâîì è ãðàáåæîì ìîðñêèõ óëó÷øåíèé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2258,7 +2258,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPROMOTE_HOVER</Tag>
 		<English>Hides the Automate Promote icon from the unit interface.</English>
-		<French>Masquer l’icône de Promotion automatisée de la liste des Actions des unités.</French>
+		<French>Masquer l'icône de Promotion automatisée de la liste des Actions des unités.</French>
 		<German>Das Auto-Beförderungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Ascenso automatizado" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèÿ ïî àâòî-àïãðåéäó êâàëèôèêàöèé â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2274,7 +2274,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOPROTECT_HOVER</Tag>
 		<English>Hides the Automate Protect icon from the unit interface.</English>
-		<French>Masque l’icône de Protection automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de Protection automatisée de la liste des actions des unités.</French>
 		<German>Das Auto-Verteidigungs-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Protección automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-îáîðîíû â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>
@@ -2290,7 +2290,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOSPREAD_HOVER</Tag>
 		<English>Hides the Automate Missionary and Automate Corporation Spread icons from the unit interface.</English>
-		<French>Masque l’icône de la Propagation automatisée de la liste des actions des unités.</French>
+		<French>Masque l'icône de la Propagation automatisée de la liste des actions des unités.</French>
 		<German>Die Auto-Missionierungs- und Auto-Expandierungs-Icons werden im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta los botones de "Expandir religión (automatizado)" y "Expandir corporación (automatizado)" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò ëþáûå äåéñòâèÿ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ, çàòðàãèâàþùèå àâòî-ðàñïðîñòðàíåíèå ðåëèãèé ìèññèîíåðàìè, ëèáî àâòî-îñíîâàíèå îôèñîâ êîðïîðàöèé èõ ìåíåäæåðàìè è àãåíòàìè.</Russian>
@@ -2306,7 +2306,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__HIDEAUTOUPGRADE_HOVER</Tag>
 		<English>Hides the Automate Upgrade icon from the unit interface.</English>
-		<French>Masque l’icône d'amélioration automatisé de la liste des actions des unités.</French>
+		<French>Masque l'icône d'amélioration automatisé de la liste des actions des unités.</French>
 		<German>Das Auto-Upgrade-Icon wird im Befehlsmenü der Einheiten nicht angezeigt.</German>
 		<Spanish>Oculta el botón de "Mejora automatizada" de la vista de unidad.</Spanish>
 		<Russian>Ñêðûâàåò äåéñòâèå àâòî-àïãðåéäà óñòàðåâøèõ îòðÿäîâ äî íîâûõ â ïàíåëè ïðèêàçîâ äëÿ þíèòîâ.</Russian>

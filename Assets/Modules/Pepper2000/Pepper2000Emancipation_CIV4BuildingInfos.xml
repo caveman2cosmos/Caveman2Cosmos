@@ -124,12 +124,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_WV_CANNIBALISM</Type>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
