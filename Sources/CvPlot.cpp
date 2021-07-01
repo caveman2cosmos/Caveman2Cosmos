@@ -1714,7 +1714,7 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	if (algo::any_of(rect(1, 1), bind(CvPlot::isWaterAndIsFresh, _1)))
+	if (algo::any_of(rect(1, 1), bind(&CvPlot::isWaterAndIsFresh, _1)))
 	{
 		return true;
 	}
@@ -2320,7 +2320,7 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 	const int iRange = GC.getMAX_UNIT_VISIBILITY_RANGE() + 1;
 
 	algo::for_each(rect(iRange, iRange),
-		bind(CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups)
+		bind(&CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups)
 	);
 }
 
@@ -3322,7 +3322,7 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 
 	// Can't use this as it requires more than 9 args, and bind only supports 9
 	//CvUnit* pBestUnit = scoring::max_score(units(),
-	//	bst::bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
+	//	bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
 	//).get_value_or(nullptr);
 
 	foreach_ (CvUnit* unit, units())
@@ -6487,7 +6487,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 		// Plot danger cache
 		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE),
-			bind(CvPlot::invalidateIsTeamBorderCache, _1)
+			bind(&CvPlot::invalidateIsTeamBorderCache, _1)
 		);
 
 		updateSymbols();

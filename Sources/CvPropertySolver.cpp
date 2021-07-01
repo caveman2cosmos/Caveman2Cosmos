@@ -370,7 +370,7 @@ std::vector<int>& CvPropertySolver::getCache2()
 	return m_aiCache2;
 }
 
-int CvPropertySolver::getPredictValue(const CvGameObject *pObject, PropertyTypes eProperty) const
+int CvPropertySolver::getPredictValue(const CvGameObject *pObject, PropertyTypes eProperty)
 {
 	return m_mapProperties.getPredictValue(pObject, eProperty);
 }

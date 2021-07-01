@@ -116,7 +116,7 @@ public:
 
 	// Passed on to the solver map
 	void addChange(const CvGameObject* pObject, PropertyTypes eProperty, int iChange);
-	int getPredictValue(const CvGameObject* pObject, PropertyTypes eProperty) const;
+	int getPredictValue(const CvGameObject* pObject, PropertyTypes eProperty);
 
 protected:
 	void gatherGlobalManipulators();

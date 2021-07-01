@@ -15590,7 +15590,7 @@ namespace scoring {
 		std::sort(scores.begin(), scores.end(), ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
 
 		// Find the first city we can path to safely
-		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bst::bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
+		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
 
 		if (foundItr != scores.end())
 		{
@@ -15717,9 +15717,9 @@ namespace {
 			findBestScore<CvCity, LeastScore>(
 				player.beginCities(), player.endCities(),
 				// scoring the city for inquisition attractiveness
-				bst::bind(scoreInquisitionTarget, unit, _1),
+				bind(scoreInquisitionTarget, unit, _1),
 				// final validation is that we can actually path to the city
-				bst::bind(canSafePathToCity, unit, _1)
+				bind(canSafePathToCity, unit, _1)
 			)
 		);
 		return bestCityScore.found? bestCityScore.result.item : nullptr;
@@ -30225,7 +30225,7 @@ int CvUnitAI::AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyType
 	//void unitSourcesValueToCity(CvGameObject * pObject, CvPropertyManipulators * pMani, const CvUnit * pUnit, const CvCityAI * pCity, int* iValue, PropertyTypes eProperty)
 
 	this->getGameObject()->foreachManipulator(
-		bst::bind(unitSourcesValueToCity, this->getGameObject(), _1, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty)
+		bind(unitSourcesValueToCity, this->getGameObject(), _1, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty)
 	);
 
 	return iValue;
@@ -30426,8 +30426,8 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(const CvPlot* pPlot)
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		bst::bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
-		bst::bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
+		bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
+		bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
 	);
 
 	if (bestCityScore.found)
@@ -30557,8 +30557,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		bst::bind(scorePropertyControlNeed, propertyScores, this, _1),
-		bst::bind(canSafePathToCity, this, _1)
+		bind(scorePropertyControlNeed, propertyScores, this, _1),
+		bind(canSafePathToCity, this, _1)
 	);
 
 	if(bestCityScore.found)
