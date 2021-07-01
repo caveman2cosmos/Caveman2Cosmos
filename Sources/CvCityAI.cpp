@@ -7910,7 +7910,7 @@ void CvCityAI::AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMult
 						eBuild = scoring::min_score(pLoopPlot->units()
 							| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
 							| transformed(CvUnit::fn::getBuildType()),
-							bst::bind(score_build_type, _1, pLoopPlot)
+							bind(score_build_type, _1, pLoopPlot)
 						).get_value_or(NO_BUILD);
 					}
 
@@ -8303,7 +8303,7 @@ BuildTypes CvCityAI::GetShortestBuildTimeOnPlot(const CvPlot* plot) const
 	return scoring::min_score(plot->units()
 		| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
 		| transformed(CvUnit::fn::getBuildType()),
-		bst::bind(score_build_type, _1, plot)
+		bind(score_build_type, _1, plot)
 	).get_value_or(NO_BUILD);
 }
 
@@ -8555,7 +8555,7 @@ void CvCityAI::AI_updateBestBuildForPlots()
 						eBuild = scoring::min_score(pLoopPlot->units()
 							| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
 							| transformed(CvUnit::fn::getBuildType()),
-							bst::bind(score_build_type, _1, pLoopPlot)
+							bind(score_build_type, _1, pLoopPlot)
 						).get_value_or(NO_BUILD);
 					}
 					//if something is currently being built

@@ -220,7 +220,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				int iCount = pPopupReturn->getButtonClicked();
 
 				const CvPlot* pPlot = pSelectionGroup->plot();
-				foreach_ (const CvUnit* unit, pPlot->units() | filtered(bst::bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
+				foreach_ (const CvUnit* unit, pPlot->units() | filtered(bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
 				{
 					if (--iCount == 0)
 					{

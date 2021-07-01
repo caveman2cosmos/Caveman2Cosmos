@@ -175,7 +175,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("isResearchingTech", &CyPlayer::isResearchingTech, "bool (int /*TechTypes*/ iIndex)")
 		.def("getCivics", &CyPlayer::getCivics, "int /*CivicTypes*/ (int /*CivicOptionTypes*/ iIndex)")
 		.def("getSingleCivicUpkeep", &CyPlayer::getSingleCivicUpkeep, "int (int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy)")
-		.def("getCivicUpkeep", &CyPlayer::getCivicUpkeep, "int (int* /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy)")
+		.def("getCivicUpkeep", &CyPlayer::getCivicUpkeep, "int (bool bIgnoreAnarchy)")
 		.def("setCivics", &CyPlayer::setCivics, "void (int iCivicOptionType, int iCivicType) - Used to forcibly set civics with no anarchy")
 
 		.def("getCombatExperience", &CyPlayer::getCombatExperience, "int () - Combat experience used to produce Warlords")

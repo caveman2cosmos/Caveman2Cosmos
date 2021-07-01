@@ -895,7 +895,7 @@ protected:
 
 	// AIAndy: Properties
 	CvProperties m_Properties;
-	CvMainPropertySolver m_PropertySolver;
+	CvPropertySolver m_PropertySolver;
 
 	//	Super forts adaptation to C2C - record whether this game has had its choke
 	//	points evaluated

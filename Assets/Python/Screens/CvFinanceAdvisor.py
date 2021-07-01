@@ -243,7 +243,7 @@ class CvFinanceAdvisor:
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
 		iTreasuryUpkeep = CyPlayer.getTreasuryUpkeep()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
-		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
+		totalCivicUpkeep = CyPlayer.getCivicUpkeep(False)
 
 		iInflation = CyPlayer.getFinalExpense() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()

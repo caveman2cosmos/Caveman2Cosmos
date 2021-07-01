@@ -6363,8 +6363,8 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										CvUnit::normalizeUnitPromotions(
 											pUnit,
 											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase(),
-											bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
-											bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
+											bind(Game::isGroupUpgradePromotion, pUnit, _2),
+											bind(Game::isGroupDowngradePromotion, pUnit, _2)
 										);
 									}
 								}
