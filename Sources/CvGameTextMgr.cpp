@@ -23358,10 +23358,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	}
 	
 	bFirst = true;
-	foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		const BuildingTypes eLoopBuilding = modifier.first;
-
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+		
 		if (GC.getBuildingInfo(eLoopBuilding).getPrereqNumOfBuilding(eBuilding)
 		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
