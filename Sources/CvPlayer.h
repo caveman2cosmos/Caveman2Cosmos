@@ -186,6 +186,8 @@ public:
 	void doTurn();
 	void doTurnUnits();
 
+	void recordHistory();
+
 	//	Dump stats to BBAI log
 	void dumpStats() const;
 	void NoteAnimalSubdued();
@@ -1019,7 +1021,7 @@ public:
 
 	CivicTypes getCivics(CivicOptionTypes eIndex) const;
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const;
-	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const;
+	int getCivicUpkeep(bool bIgnoreAnarchy = false) const;
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue);
 
 	int64_t getTreasuryUpkeep() const;

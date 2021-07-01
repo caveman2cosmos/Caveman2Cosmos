@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HYPESPACE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>

@@ -470,9 +470,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -643,9 +643,9 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -802,9 +802,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -959,9 +959,9 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -1050,7 +1050,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eUnitType > NO_UNIT && !bUnitToCity)
 	{
-		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 		if (pUnit != NULL)
 		{
@@ -1169,7 +1169,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 			if (bUnitToCity && m_eUnitType > NO_UNIT)
 			{
-				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 				if (pUnit != NULL)
 				{
@@ -1378,7 +1378,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 	if (m_eUnitType > NO_UNIT)
 	{
-		iValue += kPlayer.AI_unitValue(m_eUnitType, (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), kPlot.area());
+		iValue += kPlayer.AI_unitValue(m_eUnitType, GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), kPlot.area());
 	}
 
 	// Calculate the actual yields and commerces, if the expression tries to include the plot the result will be incorrect

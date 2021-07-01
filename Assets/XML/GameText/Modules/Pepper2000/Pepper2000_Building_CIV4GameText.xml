@@ -2212,7 +2212,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER</Tag>
 		<English>Cislunar O'Neill Cylinder</English>
-		<Russian>Цилиндр О’Нила (Лун. орб.)</Russian>
+		<Russian>Цилиндр О'Нила (Лун. орб.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_PEDIA</Tag>
@@ -7137,7 +7137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE</Tag>
-		<English>Space Colony - Lunar Chemical Storage</English>
+		<English>Lunar Chemical Storage</English>
 		<Russian>Ëóí. öèñòåðíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -7184,7 +7184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE</Tag>
-		<English>Space Colony - Lunar Fertilizer Storage</English>
+		<English>Lunar Fertilizer Storage</English>
 		<Russian>Õðàíèëèùå óäîáðåíèé</Russian>
 	</TEXT>
 	<TEXT>
@@ -7312,7 +7312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Tag>
-		<English>Space Colony - Lunar Organic Material Storage</English>
+		<English>Lunar Organic Material Storage</English>
 		<Russian>Ëóí. ñêëàä îðã. ìàòåðèàëîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -7425,7 +7425,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS</Tag>
-		<English>Space Colony - Lunar Solar Panels</English>
+		<English>Lunar Solar Panels</English>
 		<Russian>Ñîëíå÷íûå ïàíåëè (Ëóíà)</Russian>
 	</TEXT>
 	<TEXT>
@@ -9951,6 +9951,14 @@
 		<Tag>TXT_KEY_BUILDING_PICOTECH_COMPLEX_PEDIA</Tag>
 		<English>An ultra-high tech factory that produces nanomaterials and other advanced materials.</English>
 		<Russian>Óëüòðàñîâðåìåííûé çàâîä ïî ïðîèçâîäñòâó íàíîìàòåðèàëîâ è äðóãèõ ñîâðåìåííûõ ìàòåðèàëîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NANOTECH_COMPLEX</Tag>
+		<English>Nanotech Complex</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NANOTECH_COMPLEX_PEDIA</Tag>
+		<English>An ultra-high tech factory that produces various products with atomic scale precision.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLANETARY_AWARENESS</Tag>

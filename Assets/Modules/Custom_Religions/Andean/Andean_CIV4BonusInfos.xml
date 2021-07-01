@@ -11,7 +11,7 @@
 			<Type>BONUS_MACHU_PICCHU_PLANS</Type>
 			<Description>TXT_KEY_BONUS_MACHU_PICCHU_PLANS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MACHU_PICCHU_PLANS</ArtDefineTag>
 			<TechReveal>TECH_MOUNTAINEERING</TechReveal>
 			<TechCityTrade>TECH_MOUNTAINEERING</TechCityTrade>

@@ -419,7 +419,7 @@ def canApplyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	for i in xrange(GC.getNumBuildingInfos()):
 		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1:
@@ -441,7 +441,7 @@ def applyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):

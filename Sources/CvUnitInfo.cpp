@@ -29,8 +29,8 @@
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
-m_iMaxGlobalInstances(-1),
-m_iMaxPlayerInstances(-1),
+m_iMaxGlobalInstances(0),
+m_iMaxPlayerInstances(0),
 m_bUnlimitedException(false),
 m_iInstanceCostModifier(0),
 m_iDCMBombRange(0),
@@ -806,12 +806,12 @@ int CvUnitInfo::getUnitCombatType() const
 	return m_iUnitCombatType;
 }
 
-int CvUnitInfo::getDomainType() const
+DomainTypes CvUnitInfo::getDomainType() const
 {
 	return m_iDomainType;
 }
 
-int CvUnitInfo::getDefaultUnitAIType() const
+UnitAITypes CvUnitInfo::getDefaultUnitAIType() const
 {
 	return m_iDefaultUnitAIType;
 }
@@ -1901,7 +1901,7 @@ void CvUnitInfo::setReligionSubCombat()
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getReligionType())
 			{
-				m_aiSubCombatTypes.push_back(iI);
+				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
 				break;
 			}
 		}
@@ -1912,7 +1912,7 @@ void CvUnitInfo::setReligionSubCombat()
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getStateReligion())
 			{
-				m_aiSubCombatTypes.push_back(iI);
+				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
 				break;
 			}
 		}
@@ -1923,7 +1923,7 @@ void CvUnitInfo::setReligionSubCombat()
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getPrereqReligion())
 			{
-				m_aiSubCombatTypes.push_back(iI);
+				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
 				break;
 			}
 		}
@@ -1945,7 +1945,7 @@ void CvUnitInfo::setCultureSubCombat()
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getCulture() == (BonusTypes)getPrereqAndBonus())
 			{
-				m_aiSubCombatTypes.push_back(iI);
+				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
 				break;
 			}
 		}
@@ -1989,7 +1989,7 @@ void CvUnitInfo::setEraSubCombat()
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() == getEraInfo())
 		{
-			m_aiSubCombatTypes.push_back(iI);
+			m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
 			break;
 		}
 	}
@@ -2611,7 +2611,7 @@ bool CvUnitInfo::isGatherHerd() const
 
 
 //boolean vectors without delayed resolution
-int CvUnitInfo::getSubCombatType(int i) const
+UnitCombatTypes CvUnitInfo::getSubCombatType(int i) const
 {
 	return m_aiSubCombatTypes[i];
 }
@@ -2623,11 +2623,11 @@ int CvUnitInfo::getNumSubCombatTypes() const
 
 bool CvUnitInfo::isSubCombatType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
-	return find(m_aiSubCombatTypes.begin(), m_aiSubCombatTypes.end(), i) != m_aiSubCombatTypes.end();
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiSubCombatTypes, (UnitCombatTypes)i);
 }
 
-const std::vector<int>& CvUnitInfo::getSubCombatTypes() const
+const std::vector<UnitCombatTypes>& CvUnitInfo::getSubCombatTypes() const
 {
 	return m_aiSubCombatTypes;
 }
@@ -4182,10 +4182,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	int iIndexVal;
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
-	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
+	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException");
+	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -4197,10 +4197,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iUnitCombatType = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Domain");
-	m_iDomainType = pXML->GetInfoClass(szTextVal);
+	m_iDomainType = static_cast<DomainTypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DefaultUnitAI", "UNITAI_UNKNOWN");
-	m_iDefaultUnitAIType = pXML->GetInfoClass(szTextVal);
+	m_iDefaultUnitAIType = static_cast<UnitAITypes>(pXML->GetInfoClass(szTextVal));
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Invisible");
 	m_iInvisibleType = pXML->GetInfoClass(szTextVal);
@@ -5144,8 +5144,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	const int iTextDefault = -1;
 	const CvString cDefault = CvString::format("").GetCString();
 
-	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if ( m_iMaxGlobalInstances == 0) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if ( m_iMaxPlayerInstances == 0) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();

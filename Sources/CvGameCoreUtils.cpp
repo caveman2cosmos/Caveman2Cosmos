@@ -480,7 +480,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		return true;
 	}
 
-	const SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
+	const SpecialBuildingTypes eSpecial = info.getSpecialBuilding();
 	if (NO_SPECIALBUILDING != eSpecial && GC.getSpecialBuildingInfo(eSpecial).getTechPrereq() == eTech)
 	{
 		return true;
@@ -501,11 +501,11 @@ bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject)
 
 bool isWorldUnit(UnitTypes eUnit)
 {
-	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() != -1;
+	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() > 0;
 }
 bool isNationalUnit(UnitTypes eUnit)
 {
-	return GC.getUnitInfo(eUnit).getMaxPlayerInstances() != -1;
+	return GC.getUnitInfo(eUnit).getMaxPlayerInstances() > 0;
 }
 bool isLimitedUnit(UnitTypes eUnit)
 {
@@ -514,28 +514,28 @@ bool isLimitedUnit(UnitTypes eUnit)
 
 bool isWorldWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;
+	return GC.getBuildingInfo(building).getMaxGlobalInstances() > 0;
 }
 
 bool isTeamWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxTeamInstances() != -1;
+	return GC.getBuildingInfo(building).getMaxTeamInstances() > 0;
 }
 
 bool isNationalWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxPlayerInstances() != -1;
+	return GC.getBuildingInfo(building).getMaxPlayerInstances() > 0;
 }
 
 bool isNationalWonderGroup(BuildingTypes building)
 {
-	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(GC.getBuildingInfo(building).getSpecialBuildingType());
-	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
+	const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(building).getSpecialBuilding();
+	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() > 0;
 }
 
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
 {
-	return GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
+	return GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() > 0;
 }
 
 bool isLimitedWonder(BuildingTypes eBuilding)
@@ -545,58 +545,34 @@ bool isLimitedWonder(BuildingTypes eBuilding)
 
 int limitedWonderLimit(BuildingTypes eBuilding)
 {
-	int iCount = 0;
-	bool bIsLimited = false;
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	int iMax = kBuilding.getMaxGlobalInstances();
-	if (iMax != -1)
-	{
-		iCount += iMax;
-		bIsLimited = true;
-	}
+	int iCount = kBuilding.getMaxGlobalInstances();
+	iCount += kBuilding.getMaxTeamInstances();
+	iCount += kBuilding.getMaxPlayerInstances();
 
-	iMax = kBuilding.getMaxTeamInstances();
-	if (iMax != -1)
-	{
-		iCount += iMax;
-		bIsLimited = true;
-	}
-
-	iMax = kBuilding.getMaxPlayerInstances();
-	if (iMax != -1)
-	{
-		iCount += iMax;
-		bIsLimited = true;
-	}
-
-	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(kBuilding.getSpecialBuildingType());
+	const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 	if (eSpecialBuilding != NO_SPECIALBUILDING)
 	{
-		iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
-		if (iMax != -1)
-		{
-			iCount += iMax;
-			bIsLimited = true;
-		}
+		iCount += GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
 	}
 
-	return bIsLimited ? iCount : -1;
+	return iCount;
 }
 
 bool isWorldProject(ProjectTypes eProject)
 {
-	return (GC.getProjectInfo(eProject).getMaxGlobalInstances() != -1);
+	return GC.getProjectInfo(eProject).getMaxGlobalInstances() > 0;
 }
 
 bool isTeamProject(ProjectTypes eProject)
 {
-	return (GC.getProjectInfo(eProject).getMaxTeamInstances() != -1);
+	return GC.getProjectInfo(eProject).getMaxTeamInstances() > 0;
 }
 
 bool isLimitedProject(ProjectTypes eProject)
 {
-	return (isWorldProject(eProject) || isTeamProject(eProject));
+	return isWorldProject(eProject) || isTeamProject(eProject);
 }
 
 // FUNCTION: getBinomialCoefficient

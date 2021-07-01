@@ -2043,8 +2043,6 @@ protected:
 	int m_iUpkeepMultiplierSM;
 	int m_iUpkeep100;
 
-	int m_iExtraPowerValue;
-	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
 	int m_iSMPowerValue;
 	int m_iSMHPValue;
@@ -2674,18 +2672,10 @@ public:
 	int getSMHPValue() const;
 	void setSMHPValue();
 
-	int getExtraPowerValue() const;
-	void changeExtraPowerValue(int iChange);
 	int getPowerValueTotal() const;
-	int getSMPowerValueTotalBase() const;
-	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 
-	int getExtraAssetValue() const;
-	void changeExtraAssetValue(int iChange);
 	int assetValueTotal() const;
-	int assetValueTotalPreCheck() const;
-	int getSMAssetValue() const;
 	void setSMAssetValue(bool bForLoad = false);
 
 	int getCargoVolumeModifier() const;

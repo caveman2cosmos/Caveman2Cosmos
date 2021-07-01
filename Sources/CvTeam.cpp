@@ -2670,8 +2670,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 
 	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
 	{
-		iCost *= 100 + GC.getUPSCALED_RESEARCH_COST_MODIFIER();
-		iCost /= 100;
+		iCost = getModifiedIntValue64(iCost, GC.getUPSCALED_RESEARCH_COST_MODIFIER());
 	}
 	iCost /= 100;
 
@@ -5445,7 +5444,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 
 					CvWString szBuffer;
-					for (int iI = 0; iI < MAX_PLAYERS; iI++)
+					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
@@ -5460,9 +5459,11 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
 						}
 					}
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getName(), GC.getTechInfo(eIndex).getTextKeyWide());
-					GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, ePlayer, szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
+					if (!GET_PLAYER(ePlayer).isNPC())
+					{
+						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getName(), GC.getTechInfo(eIndex).getTextKeyWide());
+						GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, ePlayer, szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
+					}
 				}
 
 				if (bClearResearchQueueAI)
@@ -5957,8 +5958,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		{
 			changeObsoleteBuildingCount((BuildingTypes)iI, iChange);
 		}
-		if (GC.getBuildingInfo((BuildingTypes) iI).getSpecialBuildingType() != NO_SPECIALBUILDING
-		&& GC.getSpecialBuildingInfo((SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)iI).getSpecialBuildingType()).getObsoleteTech() == eTech)
+		if (GC.getBuildingInfo((BuildingTypes) iI).getSpecialBuilding() != NO_SPECIALBUILDING
+		&& GC.getSpecialBuildingInfo(GC.getBuildingInfo((BuildingTypes)iI).getSpecialBuilding()).getObsoleteTech() == eTech)
 		{
 			changeObsoleteBuildingCount((BuildingTypes)iI, iChange);
 		}

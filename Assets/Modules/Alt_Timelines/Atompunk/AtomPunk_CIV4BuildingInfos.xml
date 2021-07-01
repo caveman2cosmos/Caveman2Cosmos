@@ -424,7 +424,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>

@@ -2933,10 +2933,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH)
 					{
-						if (GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+						if (GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
 						{
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getObsoleteTech()).getType()).GetCString(), GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getObsoleteTech()).getTextKeyWide()));
+							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getType()).GetCString(), GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getTextKeyWide()));
 						}
 					}
 
@@ -3009,7 +3009,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								{
 									// If the base never obsoletes OR we don't have the tech which obsoletes it
 									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
 									{
 										szBuffer.append(NEWLINE);
 
@@ -3047,7 +3047,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 									&& terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
 									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
 									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech())))
 								{
 									szBuffer.append(NEWLINE);
 									// If the terrain blocks the improvement from ever being constructable or not, different messages
@@ -3721,7 +3721,7 @@ void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStr
 
 				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
 				&& pHeadSelectedCity->getNumActiveBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
-				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
+				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuilding() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
 					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
