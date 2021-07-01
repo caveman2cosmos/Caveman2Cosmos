@@ -526,9 +526,9 @@ bool CyPlayer::canDoCivics(int /*CivicTypes*/ eCivic) const
 	return m_pPlayer->canDoCivics((CivicTypes)eCivic);
 }
 
-bool CyPlayer::canRevolution(int /*CivicTypes*/ paeNewCivics) const
+bool CyPlayer::canRevolution() const
 {
-	return m_pPlayer->canRevolution((CivicTypes*)paeNewCivics);
+	return m_pPlayer->canRevolution(NULL);
 }
 
 bool CyPlayer::canChangeReligion() const
@@ -1341,13 +1341,9 @@ int CyPlayer::getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarch
 	return m_pPlayer->getSingleCivicUpkeep((CivicTypes) eCivic, bIgnoreAnarchy);
 }
 
-int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy) const
+int CyPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
-	int iRet = m_pPlayer->getCivicUpkeep((CivicTypes*)pCivics, bIgnoreAnarchy);
-	delete [] pCivics;
-	return iRet;
+	return m_pPlayer->getCivicUpkeep(bIgnoreAnarchy);
 }
 
 void CyPlayer::setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue)
