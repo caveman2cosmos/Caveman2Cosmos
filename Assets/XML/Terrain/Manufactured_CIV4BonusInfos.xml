@@ -255,8 +255,8 @@
 			<Civilopedia>TXT_KEY_BONUS_BONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BONE</ArtDefineTag>
-			<TechReveal>TECH_COOKING</TechReveal>
-			<TechCityTrade>TECH_COOKING</TechCityTrade>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Books -->
