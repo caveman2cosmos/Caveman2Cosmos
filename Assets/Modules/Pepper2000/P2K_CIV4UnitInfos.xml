@@ -90,7 +90,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Actions>
 				<Action>
-					<MissionType>MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</MissionType>
+					<MissionType>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</MissionType>
 					<iCost>
 						<Adapt>
 							<ID>ADAPT_DEFAULT</ID>
@@ -129,69 +129,6 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_SUPPLY_SHIP</Type>
-			<Capture>UNIT_GATHERER</Capture>
-			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_GARGANTUAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUPPLY_SHIP</Description>
-			<Civilopedia>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_WORKER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<Buildings>
-				<BuildingType>BUILDING_LUNAR_CHEMICAL_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_FERTILIZER_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_SOLAR_PANELS</BuildingType>
-			</Buildings>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>5000</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>24</iMoves>
-			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
-			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<iWorkRate>500</iWorkRate>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SPACECRAFT_SETTLER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<!-- Lunar Rover-->
 		<UnitInfo>

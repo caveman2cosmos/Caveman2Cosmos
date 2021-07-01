@@ -677,8 +677,6 @@ public:
 	int getControlPoints() const;
 	int getCommandRange() const;
 	bool isZoneOfControl() const;
-	int getAssetMultiplier() const;
-	int getPowerMultiplier() const;
 	int getIgnoreTerrainDamage() const;
 
 	void getCheckSum(uint32_t& iSum) const;
@@ -1093,8 +1091,6 @@ protected:
 	int m_iControlPoints;
 	int m_iCommandRange;
 	bool m_bZoneOfControl;
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 public:
@@ -1727,8 +1723,8 @@ public:
 	int getSpecialUnitType() const;
 	int getUnitCaptureType() const;
 	int getUnitCombatType() const;
-	int getDomainType() const;
-	int getDefaultUnitAIType() const;
+	DomainTypes getDomainType() const;
+	UnitAITypes getDefaultUnitAIType() const;
 	int getInvisibleType() const;
 	int getSeeInvisibleType(int i) const;
 	int getNumSeeInvisibleTypes() const;
@@ -1939,10 +1935,10 @@ public:
 	bool isNoNonTypeProdMods() const;
 	bool isGatherHerd() const;
 
-	// boolean vectors without delayed resolution
-	int getSubCombatType(int i) const;
+	UnitCombatTypes getSubCombatType(int i) const;
 	int getNumSubCombatTypes() const;
 	bool isSubCombatType(int i) const;
+	const std::vector<UnitCombatTypes>& getSubCombatTypes() const;
 
 	int getCureAfflictionType(int i) const;
 	int getNumCureAfflictionTypes() const;
@@ -2111,8 +2107,6 @@ public:
 	bool isVisibilityIntensityRangeType(int iInvisibility) const;
 	const InvisibilityArray& getVisibilityIntensityRangeTypes() const;
 
-	//Team Project (4)
-		//WorkRateMod
 	int getNumTerrainWorkRateModifierTypes() const;
 	int getTerrainWorkRateModifierType(int iTerrain) const;
 	bool isTerrainWorkRateModifierType(int iTerrain) const;
@@ -2154,7 +2148,7 @@ public:
 
 	virtual const wchar_t* getExtraHoverText() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -2308,8 +2302,6 @@ public:
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	const std::vector<int>& getSubCombatTypes() const;
-
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -2381,8 +2373,8 @@ protected:
 	int m_iSpecialUnitType;
 	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
-	int m_iDomainType;
-	int m_iDefaultUnitAIType;
+	DomainTypes m_iDomainType;
+	UnitAITypes m_iDefaultUnitAIType;
 	int m_iInvisibleType;
 	int m_iAdvisorType;
 	int m_iMaxStartEra;
@@ -2622,8 +2614,8 @@ protected:
 	bool m_bCanAnimalIgnoresCities;
 	bool m_bNoNonTypeProdMods;
 	bool m_bGatherHerd;
-	//boolean vectors without delayed resolution
-	std::vector<int> m_aiSubCombatTypes;
+
+	std::vector<UnitCombatTypes> m_aiSubCombatTypes;
 	std::vector<int> m_aiCureAfflictionTypes;
 	std::vector<int> m_aiHealAsTypes;
 	std::vector<int> m_aiTerrainImpassableTypes;
@@ -3827,17 +3819,7 @@ public:
 	virtual ~CvGameSpeedInfo();
 
 	int getSpeedPercent() const;
-	int getTrainPercent() const;
-	int getConstructPercent() const;
-	int getCreatePercent() const;
-	int getBuildPercent() const;
-	int getImprovementPercent() const;
-	int getBarbPercent() const;
-	int getFeatureProductionPercent() const;
-	int getUnitDiscoverPercent() const;
-	int getUnitHurryPercent() const;
-	int getUnitTradePercent() const;
-	int getUnitGreatWorkPercent() const;
+	int getHammerCostPercent() const;
 	int getNumTurnIncrements() const;
 
 	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
@@ -3858,17 +3840,6 @@ public:
 protected:
 
 	int m_iSpeedPercent;
-	int m_iTrainPercent;
-	int m_iConstructPercent;
-	int m_iCreatePercent;
-	int m_iBuildPercent;
-	int m_iImprovementPercent;
-	int m_iBarbPercent;
-	int m_iFeatureProductionPercent;
-	int m_iUnitDiscoverPercent;
-	int m_iUnitHurryPercent;
-	int m_iUnitTradePercent;
-	int m_iUnitGreatWorkPercent;
 	int m_iNumTurnIncrements;
 
 	CvString m_szGameSpeedName;
@@ -3938,10 +3909,8 @@ public:
 	int getTerrainChange() const;
 	int getFeatureChange() const;
 	TechTypes getObsoleteTech() const;
-	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
-	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
 	DllExport int getEntityEvent() const;
 	DllExport int getMissionType() const;
@@ -3982,9 +3951,7 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	bool m_bMine;
 	bool m_bDisabled;
-	bool m_bHideObsoleteExempt;
 	bool m_bKill;
 
 	int m_iTime;
@@ -8816,8 +8783,6 @@ public:
 	BonusTypes getCulture() const;
 	EraTypes getEra() const;
 	// integers
-	int getAssetMultiplier() const;
-	int getPowerMultiplier() const;
 	int getVisibilityChange() const;
 	int getMovesChange() const;
 	int getMoveDiscountChange() const;
@@ -9177,8 +9142,6 @@ protected:
 	BonusTypes m_eCulture;
 	EraTypes m_eEra;
 	//Integers
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 	int m_iVisibilityChange;

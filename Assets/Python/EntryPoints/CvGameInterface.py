@@ -18,9 +18,6 @@ def canBuild(argsList):
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
 
-def AI_unitUpdate(argsList):
-	return GameUtils.AI_unitUpdate(argsList)
-
 def calculateScore(argsList):
 	return GameUtils.calculateScore(argsList)
 

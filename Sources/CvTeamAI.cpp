@@ -3967,13 +3967,13 @@ void CvTeamAI::AI_doWar()
 			iTimeModifier /= iThreshold;
 		}
 
-		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 		iTimeModifier /= 150;
 		FASSERT_NOT_NEGATIVE(iTimeModifier)
 	}
 
 	int iAbandonTimeModifier = 100;
-	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iAbandonTimeModifier /= 150;
 
 	//Afforess - abandon plans more quickly in financial distress

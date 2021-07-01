@@ -8572,13 +8572,15 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			const int iCulture = GC.getInfoTypeForString("BONUSCLASS_CULTURE");
 			const int iProduce = GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED");
 			const int iGenmod = GC.getInfoTypeForString("BONUSCLASS_GENMODS");
+			const int iWonder = GC.getInfoTypeForString("BONUSCLASS_WONDER");
 			bool bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
 				if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI))
 				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iCulture
 				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iGenmod)
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iGenmod
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iWonder)
 				{
 					if (bFirst)
 					{
@@ -19320,7 +19322,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			int iCulture = kUnit.getGreatWorkCulture();
 			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iCulture *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
+				iCulture *= GC.getGameSpeedInfo(game.getGameSpeedType()).getSpeedPercent();
 				iCulture /= 100;
 			}
 
@@ -19334,7 +19336,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			int iEspionage = kUnit.getEspionagePoints();
 			if (NO_GAMESPEED != game.getGameSpeedType())
 			{
-				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getUnitGreatWorkPercent();
+				iEspionage *= GC.getGameSpeedInfo(game.getGameSpeedType()).getSpeedPercent();
 				iEspionage /= 100;
 			}
 
@@ -20083,9 +20085,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				{
 					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 					iExperience = kBuilding.getUnitCombatFreeExperience(eCombatType);
-					for (int iJ = 0; iJ < kUnit.getNumSubCombatTypes(); iJ++)
+					foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 					{
-						iExperience += kBuilding.getUnitCombatFreeExperience((UnitCombatTypes)kUnit.getSubCombatType(iJ));
+						iExperience += kBuilding.getUnitCombatFreeExperience(eSubCombat);
 					}
 					iExperience += kBuilding.getDomainFreeExperience(eDomainType);
 
@@ -20307,9 +20309,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				iPotentialDisplays++;
 			}
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 			{
-				if (game.isValidByGameOption(GC.getUnitCombatInfo((UnitCombatTypes)kUnit.getSubCombatType(iI)))
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombat))
 				&& ++iPotentialDisplays > iDisplayCount)
 				{
 					break;
@@ -20367,13 +20369,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			setUnitCombatHelp(szBuffer, (UnitCombatTypes)kUnit.getUnitCombatType(), bCivilopediaText, true);
 			szBuffer.append(DOUBLE_SEPARATOR);
 
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 			{
-				UnitCombatTypes eSubCombatType = (UnitCombatTypes)kUnit.getSubCombatType(iI);
-
-				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombatType)))
+				if (game.isValidByGameOption(GC.getUnitCombatInfo(eSubCombat)))
 				{
-					setUnitCombatHelp(szBuffer, eSubCombatType, bCivilopediaText, true);
+					setUnitCombatHelp(szBuffer, eSubCombat, bCivilopediaText, true);
 					szBuffer.append(DOUBLE_SEPARATOR);
 				}
 			}
@@ -23355,10 +23355,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	}
 	
 	bFirst = true;
-	foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		const BuildingTypes eLoopBuilding = modifier.first;
-
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+		
 		if (GC.getBuildingInfo(eLoopBuilding).getPrereqNumOfBuilding(eBuilding)
 		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
@@ -35511,7 +35511,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 			const CvCity* pCity = pPlot->getPlotCity();
 
 			int iTurns = 6;
-			iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+			iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 			iTurns /= 100;
 
 			if (NULL != pCity)

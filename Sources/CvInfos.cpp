@@ -2104,8 +2104,6 @@ m_bCanMovePeaks(false)
 ,m_iObsoleteTech(NO_TECH)
 ,m_iControlPoints(0)
 ,m_iCommandRange(0)
-,m_iAssetMultiplier(0)
-,m_iPowerMultiplier(0)
 ,m_iIgnoreTerrainDamage(NO_TERRAIN)
 ,m_bZoneOfControl(false)
 
@@ -2832,16 +2830,6 @@ int CvPromotionInfo::getControlPoints() const
 int CvPromotionInfo::getCommandRange() const
 {
 	return m_iCommandRange;
-}
-
-int CvPromotionInfo::getAssetMultiplier() const
-{
-	return m_iAssetMultiplier;
-}
-
-int CvPromotionInfo::getPowerMultiplier() const
-{
-	return m_iPowerMultiplier;
 }
 
 int CvPromotionInfo::getIgnoreTerrainDamage() const
@@ -5099,8 +5087,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iControlPoints, L"iControlPoints");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
 	pXML->GetOptionalChildXmlValByName(&m_bZoneOfControl, L"bZoneOfControl");
-	pXML->GetOptionalChildXmlValByName(&m_iAssetMultiplier, L"iAssetMultiplierPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iPowerMultiplier, L"iPowerMultiplierPercent");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"IgnoreTerrainDamage");
 	m_iIgnoreTerrainDamage = pXML->GetInfoClass(szTextVal);
@@ -6577,8 +6563,6 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (getControlPoints() == iDefault) m_iControlPoints = pClassInfo->getControlPoints();
 	if (getCommandRange() == iDefault) m_iCommandRange = pClassInfo->getCommandRange();
 	if (isZoneOfControl() == bDefault) m_bZoneOfControl = pClassInfo->isZoneOfControl();
-	if (getAssetMultiplier() == iDefault) m_iAssetMultiplier = pClassInfo->getAssetMultiplier();
-	if (getPowerMultiplier() == iDefault) m_iPowerMultiplier = pClassInfo->getPowerMultiplier();
 	if (getIgnoreTerrainDamage() == NO_TERRAIN) m_iIgnoreTerrainDamage = pClassInfo->getIgnoreTerrainDamage();
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
@@ -6696,8 +6680,6 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iControlPoints);
 	CheckSum(iSum, m_iCommandRange);
-	CheckSum(iSum, m_iAssetMultiplier);
-	CheckSum(iSum, m_iPowerMultiplier);
 	CheckSum(iSum, m_iIgnoreTerrainDamage);
 	CheckSum(iSum, m_bZoneOfControl);
 	m_PropertyManipulators.getCheckSum(iSum);
@@ -11374,7 +11356,7 @@ CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
 	m_iObsoleteTech(NO_TECH),
 	m_iTechPrereq(NO_TECH),
 	m_iTechPrereqAnyone(NO_TECH),
-	m_iMaxPlayerInstances(-1),
+	m_iMaxPlayerInstances(0),
 	m_bValid(false)
 {}
 
@@ -11428,7 +11410,7 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereqAnyone");
 	m_iTechPrereqAnyone = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
 
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
 
@@ -11445,7 +11427,7 @@ void CvSpecialBuildingInfo::copyNonDefaults(const CvSpecialBuildingInfo* pClassI
 	if (getObsoleteTech() == iDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getTechPrereq() == iDefault) m_iTechPrereq = pClassInfo->getTechPrereq();
 	if (getTechPrereqAnyone() == iDefault) m_iTechPrereqAnyone = pClassInfo->getTechPrereqAnyone();
-	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if (getMaxPlayerInstances() == 0) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
 }
@@ -13238,17 +13220,6 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 //------------------------------------------------------------------------------------------------------
 CvGameSpeedInfo::CvGameSpeedInfo() :
 m_iSpeedPercent(0),
-m_iTrainPercent(0),
-m_iConstructPercent(0),
-m_iCreatePercent(0),
-m_iBuildPercent(0),
-m_iImprovementPercent(0),
-m_iBarbPercent(0),
-m_iFeatureProductionPercent(0),
-m_iUnitDiscoverPercent(0),
-m_iUnitHurryPercent(0),
-m_iUnitTradePercent(0),
-m_iUnitGreatWorkPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
@@ -13272,59 +13243,13 @@ int CvGameSpeedInfo::getSpeedPercent() const
 	return m_iSpeedPercent;
 }
 
-int CvGameSpeedInfo::getTrainPercent() const
+int CvGameSpeedInfo::getHammerCostPercent() const
 {
-	return m_iTrainPercent;
-}
-
-int CvGameSpeedInfo::getConstructPercent() const
-{
-	return m_iConstructPercent;
-}
-
-int CvGameSpeedInfo::getCreatePercent() const
-{
-	return m_iCreatePercent;
-}
-
-int CvGameSpeedInfo::getBuildPercent() const
-{
-	return m_iBuildPercent;
-}
-
-int CvGameSpeedInfo::getImprovementPercent() const
-{
-	return m_iImprovementPercent;
-}
-
-int CvGameSpeedInfo::getBarbPercent() const
-{
-	return m_iBarbPercent;
-}
-
-int CvGameSpeedInfo::getFeatureProductionPercent() const
-{
-	return m_iFeatureProductionPercent;
-}
-
-int CvGameSpeedInfo::getUnitDiscoverPercent() const
-{
-	return m_iUnitDiscoverPercent;
-}
-
-int CvGameSpeedInfo::getUnitHurryPercent() const
-{
-	return m_iUnitHurryPercent;
-}
-
-int CvGameSpeedInfo::getUnitTradePercent() const
-{
-	return m_iUnitTradePercent;
-}
-
-int CvGameSpeedInfo::getUnitGreatWorkPercent() const
-{
-	return m_iUnitGreatWorkPercent;
+	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS))
+	{
+		return getModifiedIntValue(m_iSpeedPercent, GC.getUPSCALED_HAMMER_COST_MODIFIER());
+	}
+	return m_iSpeedPercent;
 }
 
 int CvGameSpeedInfo::getNumTurnIncrements() const
@@ -13374,17 +13299,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 	pXML->GetOptionalChildXmlValByName(&m_iSpeedPercent, L"iSpeedPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iTrainPercent, L"iTrainPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iConstructPercent, L"iConstructPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iCreatePercent, L"iCreatePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iBuildPercent, L"iBuildPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iImprovementPercent, L"iImprovementPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iBarbPercent, L"iBarbPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionPercent, L"iFeatureProductionPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitDiscoverPercent, L"iUnitDiscoverPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitHurryPercent, L"iUnitHurryPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitTradePercent, L"iUnitTradePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUnitGreatWorkPercent, L"iUnitGreatWorkPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
 	{
@@ -13435,17 +13349,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
 	if (m_iSpeedPercent == iDefault) m_iSpeedPercent = pClassInfo->getSpeedPercent();
-	if (getTrainPercent() == iDefault) m_iTrainPercent = pClassInfo->getTrainPercent();
-	if (getConstructPercent() == iDefault) m_iConstructPercent = pClassInfo->getConstructPercent();
-	if (getCreatePercent() == iDefault) m_iCreatePercent = pClassInfo->getCreatePercent();
-	if (getBuildPercent() == iDefault) m_iBuildPercent = pClassInfo->getBuildPercent();
-	if (getImprovementPercent() == iDefault) m_iImprovementPercent = pClassInfo->getImprovementPercent();
-	if (getBarbPercent() == iDefault) m_iBarbPercent = pClassInfo->getBarbPercent();
-	if (getFeatureProductionPercent() == iDefault) m_iFeatureProductionPercent = pClassInfo->getFeatureProductionPercent();
-	if (getUnitDiscoverPercent() == iDefault) m_iUnitDiscoverPercent = pClassInfo->getUnitDiscoverPercent();
-	if (getUnitHurryPercent() == iDefault) m_iUnitHurryPercent = pClassInfo->getUnitHurryPercent();
-	if (getUnitTradePercent() == iDefault) m_iUnitTradePercent = pClassInfo->getUnitTradePercent();
-	if (getUnitGreatWorkPercent() == iDefault) m_iUnitGreatWorkPercent = pClassInfo->getUnitGreatWorkPercent();
 
 	if (getNumTurnIncrements() == iDefault)
 	{
@@ -13465,17 +13368,6 @@ void CvGameSpeedInfo::copyNonDefaults(const CvGameSpeedInfo* pClassInfo)
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iSpeedPercent);
-	CheckSum(iSum, m_iTrainPercent);
-	CheckSum(iSum, m_iConstructPercent);
-	CheckSum(iSum, m_iCreatePercent);
-	CheckSum(iSum, m_iBuildPercent);
-	CheckSum(iSum, m_iImprovementPercent);
-	CheckSum(iSum, m_iBarbPercent);
-	CheckSum(iSum, m_iFeatureProductionPercent);
-	CheckSum(iSum, m_iUnitDiscoverPercent);
-	CheckSum(iSum, m_iUnitHurryPercent);
-	CheckSum(iSum, m_iUnitTradePercent);
-	CheckSum(iSum, m_iUnitGreatWorkPercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)
 	{
@@ -13602,9 +13494,7 @@ m_pabFeatureRemove(NULL)
 ,m_iTerrainChange(NO_TERRAIN)
 ,m_iFeatureChange(NO_FEATURE)
 ,m_iObsoleteTech(NO_TECH)
-,m_bMine(false)
 ,m_bDisabled(false)
-,m_bHideObsoleteExempt(false)
 { }
 
 //------------------------------------------------------------------------------------------------------
@@ -13663,11 +13553,6 @@ int CvBuildInfo::getRoute() const
 	return m_iRoute;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/13/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvBuildInfo::getTerrainChange() const
 {
 	return m_iTerrainChange;
@@ -13683,34 +13568,19 @@ TechTypes CvBuildInfo::getObsoleteTech() const
 	return m_iObsoleteTech;
 }
 
-bool CvBuildInfo::isMine() const
-{
-	return m_bMine;
-}
-
 bool CvBuildInfo::isDisabled() const
 {
 	return m_bDisabled;
 }
-
-bool CvBuildInfo::isHideObsoleteExempt() const
-{
-	return m_bHideObsoleteExempt;
-}
-
 void CvBuildInfo::setDisabled(bool bNewVal)
 {
 	m_bDisabled = bNewVal;
 }
-
 bool CvBuildInfo::isNoTechCanRemoveWithNoProductionGain(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pabNoTechCanRemoveWithNoProductionGain ? m_pabNoTechCanRemoveWithNoProductionGain[i] : false;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 int CvBuildInfo::getEntityEvent() const
 {
@@ -13847,9 +13717,6 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FeatureChange");
 	m_iFeatureChange = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_bMine, L"bMine");
-	pXML->GetOptionalChildXmlValByName(&m_bHideObsoleteExempt, L"bHideObsoleteExempt");
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EntityEvent");
 	m_iEntityEvent = pXML->GetInfoClass(szTextVal);
 
@@ -13936,21 +13803,11 @@ void CvBuildInfo::copyNonDefaults(const CvBuildInfo* pClassInfo)
 
 	if (getImprovement() == iTextDefault) m_iImprovement = pClassInfo->getImprovement();
 	if (getRoute() == iTextDefault) m_iRoute = pClassInfo->getRoute();
-	/************************************************************************************************/
-	/* JOOYO_ADDON, Added by Jooyo, 06/13/09														*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	if (getTerrainChange() == iTextDefault) m_iTerrainChange = pClassInfo->getTerrainChange();
 	if (getFeatureChange() == iTextDefault) m_iFeatureChange = pClassInfo->getFeatureChange();
 	//TB Team Project
 	if (getObsoleteTech() == iTextDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 
-	if (isMine() == bDefault) m_bMine = pClassInfo->isMine();
-	if (isHideObsoleteExempt() == bDefault) m_bHideObsoleteExempt = pClassInfo->isHideObsoleteExempt();
-	/************************************************************************************************/
-	/* JOOYO_ADDON						  END													 */
-	/************************************************************************************************/
 	if (getEntityEvent() == iTextDefault) m_iEntityEvent = pClassInfo->getEntityEvent();
 
 	for ( int i = 0; i < GC.getNumFeatureInfos(); i++)
@@ -13982,9 +13839,7 @@ void CvBuildInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iTerrainChange);
 	CheckSum(iSum, m_iFeatureChange);
 	CheckSum(iSum, m_iObsoleteTech);
-	CheckSum(iSum, m_bMine);
 	CheckSum(iSum, m_bDisabled);
-	CheckSum(iSum, m_bHideObsoleteExempt);
 
 	CheckSum(iSum, m_iEntityEvent);
 	CheckSum(iSum, m_iMissionType);
@@ -19019,8 +18874,8 @@ CvProjectInfo::CvProjectInfo() :
 	m_iVictoryPrereq(NO_VICTORY),
 	m_iTechPrereq(NO_TECH),
 	m_iAnyoneProjectPrereq(NO_PROJECT),
-	m_iMaxGlobalInstances(-1),
-	m_iMaxTeamInstances(-1),
+	m_iMaxGlobalInstances(0),
+	m_iMaxTeamInstances(0),
 	m_iProductionCost(0),
 	m_iNukeInterception(0),
 	m_iTechShare(0),
@@ -19279,7 +19134,6 @@ int CvProjectInfo::getProjectsNeededValuesVectorElement(int i) const		{ return m
 
 bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -19292,8 +19146,8 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost");
 	pXML->GetOptionalChildXmlValByName(&m_iNukeInterception, L"iNukeInterception");
 	pXML->GetOptionalChildXmlValByName(&m_iTechShare, L"iTechShare");
@@ -19395,8 +19249,8 @@ void CvProjectInfo::copyNonDefaults(const CvProjectInfo* pClassInfo)
 	if (getEveryoneSpecialUnit() == iTextDefault) m_iEveryoneSpecialUnit = pClassInfo->getEveryoneSpecialUnit();
 	if (getEveryoneSpecialBuilding() == iTextDefault) m_iEveryoneSpecialBuilding = pClassInfo->getEveryoneSpecialBuilding();
 
-	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
+	if (getMaxGlobalInstances() == 0) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if (getMaxTeamInstances() == 0) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
 	if (getProductionCost() == iDefault) m_iProductionCost = pClassInfo->getProductionCost();
 	if (getNukeInterception() == iDefault) m_iNukeInterception = pClassInfo->getNukeInterception();
 	if (getTechShare() == iDefault) m_iTechShare = pClassInfo->getTechShare();
@@ -35110,8 +34964,6 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_eCulture(NO_BONUS)
 	, m_eEra(NO_ERA)
 	//Integers
-	, m_iAssetMultiplier(0)
-	, m_iPowerMultiplier(0)
 	, m_iIgnoreTerrainDamage(0)
 	, m_iVisibilityChange(0)
 	, m_iMovesChange(0)
@@ -35411,16 +35263,6 @@ EraTypes CvUnitCombatInfo::getEra() const
 	return m_eEra;
 }
 //Integers
-int CvUnitCombatInfo::getAssetMultiplier() const
-{
-	return m_iAssetMultiplier;
-}
-
-int CvUnitCombatInfo::getPowerMultiplier() const
-{
-	return m_iPowerMultiplier;
-}
-
 int CvUnitCombatInfo::getVisibilityChange() const
 {
 	return m_iVisibilityChange;
@@ -37148,8 +36990,6 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 		m_eEra = NO_ERA;
 
 	//Integers
-	pXML->GetOptionalChildXmlValByName(&m_iAssetMultiplier, L"iAssetMultiplierPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iPowerMultiplier, L"iPowerMultiplierPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iVisibilityChange, L"iVisibilityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMovesChange, L"iMovesChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMoveDiscountChange, L"iMoveDiscountChange");
@@ -38361,8 +38201,6 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 	if (getCulture() == NO_BONUS) m_eCulture = pClassInfo->getCulture();
 	if (getEra() == NO_ERA) m_eEra = pClassInfo->getEra();
 	//Integers
-	if (getAssetMultiplier() == iDefault) m_iAssetMultiplier = pClassInfo->getAssetMultiplier();
-	if (getPowerMultiplier() == iDefault) m_iPowerMultiplier = pClassInfo->getPowerMultiplier();
 	if (getVisibilityChange() == iDefault) m_iVisibilityChange = pClassInfo->getVisibilityChange();
 	if (getMovesChange() == iDefault) m_iMovesChange = pClassInfo->getMovesChange();
 	if (getMoveDiscountChange() == iDefault) m_iMoveDiscountChange = pClassInfo->getMoveDiscountChange();
@@ -38976,8 +38814,6 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_eCulture);
 	CheckSum(iSum, m_eEra);
 	//Integers
-	CheckSum(iSum, m_iAssetMultiplier);
-	CheckSum(iSum, m_iPowerMultiplier);
 	CheckSum(iSum, m_iVisibilityChange);
 	CheckSum(iSum, m_iMovesChange);
 	CheckSum(iSum, m_iMoveDiscountChange);

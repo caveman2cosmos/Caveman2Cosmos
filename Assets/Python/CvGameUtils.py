@@ -79,10 +79,6 @@ class CvGameUtils:
 				bFound = True
 		return False
 
-	def AI_unitUpdate(self, argsList):
-		pUnit = argsList[0]
-		return False
-
 	def calculateScore(self, argsList):
 		iEndTurn = GAME.getEstimateEndTurn()
 		if not iEndTurn: return 0
