@@ -1788,14 +1788,14 @@ void CvNetChooseMergeUnit::Execute()
 				}
 			}
 			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
-				bst::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-				bst::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+				bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+				bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 			);
 			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
 			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-				bst::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-				bst::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+				bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+				bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 			);
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 			
@@ -1948,14 +1948,14 @@ void CvNetConfirmSplitUnit::Execute()
 			newUnits.push_back(pUnit3);
 
 			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-				bst::bind(NetChooseMergeUnit::isGroupUpgradePromotion, pUnit1, _2),
-				bst::bind(NetChooseMergeUnit::isGroupDowngradePromotion, pUnit1, _2)
+				bind(NetChooseMergeUnit::isGroupUpgradePromotion, pUnit1, _2),
+				bind(NetChooseMergeUnit::isGroupDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-				bst::bind(NetChooseMergeUnit::isQualityUpgradePromotion, pUnit1, _2),
-				bst::bind(NetChooseMergeUnit::isQualityDowngradePromotion, pUnit1, _2)
+				bind(NetChooseMergeUnit::isQualityUpgradePromotion, pUnit1, _2),
+				bind(NetChooseMergeUnit::isQualityDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
