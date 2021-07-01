@@ -145,7 +145,7 @@ public:
 
 	bool isCivic(int /*CivicTypes*/ eCivic) const;
 	bool canDoCivics(int /*CivicTypes*/ eCivic) const;
-	bool canRevolution(int /*CivicTypes**/ paeNewCivics) const;
+	bool canRevolution() const;
 
 	bool canChangeReligion() const;
 	bool canConvert(int /*ReligionTypes*/ iIndex) const;
@@ -343,7 +343,7 @@ public:
 	bool isResearchingTech(int /*TechTypes*/ iIndex) const;
 	int /*CivicTypes*/ getCivics(int /*CivicOptionTypes*/ iIndex) const;
 	int getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy) const;
-	int getCivicUpkeep(boost::python::list&  /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy) const;
+	int getCivicUpkeep(bool bIgnoreAnarchy) const;
 	void setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue);
 
 	int getCombatExperience() const;
