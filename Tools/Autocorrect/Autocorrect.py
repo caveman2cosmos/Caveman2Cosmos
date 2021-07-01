@@ -31,10 +31,8 @@ class Mode:
     INTERACTIVE = 2
 
 def load_string_list(filename):
-    try:
-        return [line.strip() for line in open(os.path.join(script_dir, filename))]
-    except:
-        return []
+    with open(os.path.join(script_dir, filename)) as f:
+        return [line.strip() for line in f]
 
 def save_string_list(filename, strings):
     with open(os.path.join(script_dir, filename), 'w') as f:
