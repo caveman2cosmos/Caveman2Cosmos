@@ -1099,6 +1099,34 @@ class Pedia:
 		if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 			print CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"
 			
+	def checkBuildingRequirements(self, iTechLoc, CvBuildingInfo):
+		#<PrereqInCityBuildings> - require all buildings in list
+		BuildingTechLocList = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.isPrereqInCityBuilding(iBuilding):			
+				BuildingInCityReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+				BuildingTechLocList.append(BuildingInCityReqTechLoc)
+		if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+			print CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(BuildingTechLocList)+" "+str(iTechLoc)
+			
+		#<PrereqOrBuildings> - require one building in list
+		BuildingTechLocList = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.isPrereqOrBuilding(iBuilding):			
+				BuildingOrReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+				BuildingTechLocList.append(BuildingOrReqTechLoc)
+		if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+			print CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
+			
+		#<PrereqAmountBuildings> - require all buildings in empire in list
+		BuildingTechLocList = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.getPrereqNumOfBuilding(iBuilding):			
+				BuildingEmpireReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+				BuildingTechLocList.append(BuildingEmpireReqTechLoc)
+		if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+			print CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
+			
 	def checkTechRequirementLocation(self, CvBuildingInfo):
 		#Main tech requirement
 		TechMainReq = CvBuildingInfo.getPrereqAndTech()
@@ -1307,6 +1335,9 @@ class Pedia:
 			
 			#Check if building needs bonus before is available	
 			#self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+			
+			#Check if building needs building before is available	
+			self.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
 
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column

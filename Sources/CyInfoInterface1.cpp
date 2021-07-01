@@ -474,6 +474,7 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqOrBuilding", &CvBuildingInfo::getPrereqOrBuilding, "int (int i)")
 		.def("getNumPrereqOrBuilding", &CvBuildingInfo::getNumPrereqOrBuilding, "short ()")
+		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
 
 		.def("getReplacementBuilding", &CvBuildingInfo::getReplacementBuilding, "int (int i)")
 		.def("getNumReplacementBuilding", &CvBuildingInfo::getNumReplacementBuilding, "short ()")
@@ -484,6 +485,9 @@ void CyInfoPythonInterface1()
 
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
+		
+		.def("getPrereqInCityBuilding", &CvBuildingInfo::getPrereqInCityBuilding, "int (int i)")
+		.def("getNumPrereqInCityBuildings", &CvBuildingInfo::getNumPrereqInCityBuildings, "short ()")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")
