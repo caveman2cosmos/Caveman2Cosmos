@@ -2310,8 +2310,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOID_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_INTERGALACTIC_EMPIRE</PrereqTech>
-			<iCost>3531</iCost>
+			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_EMPIRE</PrereqTech>
+			</TechTypes>
+			<iCost>4004</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
