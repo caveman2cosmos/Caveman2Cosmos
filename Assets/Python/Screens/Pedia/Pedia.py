@@ -1126,6 +1126,48 @@ class Pedia:
 				BuildingTechLocList.append(BuildingEmpireReqTechLoc)
 		if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 			print CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
+	
+	def checkBuildingRequirementObsoletion(self, CvBuildingInfo):
+		BuildingObsoleteTech = CvBuildingInfo.getObsoleteTech()
+		BuildingObsoleteTechLoc = 999
+		if BuildingObsoleteTech != -1:
+			BuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+	
+		#<PrereqInCityBuildings> - require all buildings in list	
+		BuildingRequirementObsoleteTechLoc = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.isPrereqInCityBuilding(iBuilding):			
+				BuildingInCityReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingInCityReqTechObsLoc = 999
+				if BuildingInCityReqTechObs != -1:
+					BuildingInCityReqTechObsLoc = GC.getTechInfo(BuildingInCityReqTechObs).getGridX()
+				BuildingRequirementObsoleteTechLoc.append(BuildingInCityReqTechObsLoc)
+		if len(BuildingRequirementObsoleteTechLoc) > 0 and min(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
+			print CvBuildingInfo.getType()+" has AND requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
+			
+		#<PrereqOrBuildings> - require one building in list
+		BuildingRequirementObsoleteTechLoc = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.isPrereqOrBuilding(iBuilding):			
+				BuildingOrReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingOrReqTechObsLoc = 999
+				if BuildingOrReqTechObs != -1:
+					BuildingOrReqTechObsLoc = GC.getTechInfo(BuildingOrReqTechObs).getGridX()
+				BuildingRequirementObsoleteTechLoc.append(BuildingOrReqTechObsLoc)
+		if len(BuildingRequirementObsoleteTechLoc) > 0 and max(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
+			print CvBuildingInfo.getType()+" has latest OR requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
+			
+		#<PrereqAmountBuildings> - require all buildings in empire in list
+		BuildingRequirementObsoleteTechLoc = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			if CvBuildingInfo.getPrereqNumOfBuilding(iBuilding):
+				BuildingEmpireReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingEmpireReqTechObsLoc = 999
+				if BuildingEmpireReqTechObs != -1:
+					BuildingEmpireReqTechObsLoc = GC.getTechInfo(BuildingEmpireReqTechObs).getGridX()
+				BuildingRequirementObsoleteTechLoc.append(BuildingEmpireReqTechObsLoc)
+		if len(BuildingRequirementObsoleteTechLoc) > 0 and min(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
+			print CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
 			
 	def checkTechRequirementLocation(self, CvBuildingInfo):
 		#Main tech requirement
@@ -1337,8 +1379,10 @@ class Pedia:
 			#self.checkBonusRequirements(iTechLoc, CvBuildingInfo)
 			
 			#Check if building needs building before is available	
-			self.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
+			#self.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
 
+			#Check if building requirements obsolete before building
+			self.checkBuildingRequirementObsoletion(CvBuildingInfo)
 			
 			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
 			if bCheckBonusManufacturerTech:
