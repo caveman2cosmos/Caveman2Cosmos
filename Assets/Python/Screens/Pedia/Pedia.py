@@ -1135,39 +1135,48 @@ class Pedia:
 	
 		#<PrereqInCityBuildings> - require all buildings in list	
 		BuildingRequirementObsoleteTechLoc = []
+		BuildingRequirementName = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			if CvBuildingInfo.isPrereqInCityBuilding(iBuilding):			
 				BuildingInCityReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingInCityReqName = GC.getBuildingInfo(iBuilding).getType()
 				BuildingInCityReqTechObsLoc = 999
 				if BuildingInCityReqTechObs != -1:
 					BuildingInCityReqTechObsLoc = GC.getTechInfo(BuildingInCityReqTechObs).getGridX()
 				BuildingRequirementObsoleteTechLoc.append(BuildingInCityReqTechObsLoc)
+				BuildingRequirementName.append(BuildingInCityReqName)
 		if len(BuildingRequirementObsoleteTechLoc) > 0 and min(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
-			print CvBuildingInfo.getType()+" has AND requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
+			print CvBuildingInfo.getType()+" has AND requirements obsolete before itself "+str(BuildingRequirementName)+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
 			
 		#<PrereqOrBuildings> - require one building in list
 		BuildingRequirementObsoleteTechLoc = []
+		BuildingRequirementName = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			if CvBuildingInfo.isPrereqOrBuilding(iBuilding):			
 				BuildingOrReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingOrReqName = GC.getBuildingInfo(iBuilding).getType()
 				BuildingOrReqTechObsLoc = 999
 				if BuildingOrReqTechObs != -1:
 					BuildingOrReqTechObsLoc = GC.getTechInfo(BuildingOrReqTechObs).getGridX()
 				BuildingRequirementObsoleteTechLoc.append(BuildingOrReqTechObsLoc)
+				BuildingRequirementName.append(BuildingOrReqName)
 		if len(BuildingRequirementObsoleteTechLoc) > 0 and max(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
-			print CvBuildingInfo.getType()+" has latest OR requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
+			print CvBuildingInfo.getType()+" has latest OR requirements obsolete before itself "+str(BuildingRequirementName)+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
 			
 		#<PrereqAmountBuildings> - require all buildings in empire in list
 		BuildingRequirementObsoleteTechLoc = []
+		BuildingRequirementName = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			if CvBuildingInfo.getPrereqNumOfBuilding(iBuilding):
 				BuildingEmpireReqTechObs = GC.getBuildingInfo(iBuilding).getObsoleteTech()
+				BuildingEmpireReqName = GC.getBuildingInfo(iBuilding).getType()
 				BuildingEmpireReqTechObsLoc = 999
 				if BuildingEmpireReqTechObs != -1:
 					BuildingEmpireReqTechObsLoc = GC.getTechInfo(BuildingEmpireReqTechObs).getGridX()
 				BuildingRequirementObsoleteTechLoc.append(BuildingEmpireReqTechObsLoc)
+				BuildingRequirementName.append(BuildingEmpireReqName)
 		if len(BuildingRequirementObsoleteTechLoc) > 0 and min(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
-			print CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
+			print CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(BuildingRequirementName)+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
 			
 	def checkTechRequirementLocation(self, CvBuildingInfo):
 		#Main tech requirement
