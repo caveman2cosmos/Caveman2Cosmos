@@ -995,14 +995,14 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 		checkFreetoCombatClass();
 
 		const bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
-			bst::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
-			bst::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
+			bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
 
 		const bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
-			bst::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
-			bst::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
+			bind(&CvUnit::isQualityUpgradePromotion, this, _2),
+			bind(&CvUnit::isQualityDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on converted unit");
 
@@ -2039,12 +2039,12 @@ namespace {
 
 	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bst::bind(unitsAtWar, ourTeam, _1)));
+		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bind(unitsAtWar, ourTeam, _1)));
 	}
 
 	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return algo::any_of(plot->adjacent() | filtered(bst::bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
+		return algo::any_of(plot->adjacent() | filtered(bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
 	}
 
 	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
@@ -37307,14 +37307,14 @@ void CvUnit::doMerge()
 		}
 
 		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
-			bst::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-			bst::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+			bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
 		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-			bst::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-			bst::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+			bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+			bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 
@@ -37461,14 +37461,14 @@ void CvUnit::doSplit()
 		newUnits.push_back(pUnit3);
 
 		const bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-			bst::bind(isGroupUpgradePromotion, pUnit1, _2),
-			bst::bind(isGroupDowngradePromotion, pUnit1, _2)
+			bind(isGroupUpgradePromotion, pUnit1, _2),
+			bind(isGroupDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 		const bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-			bst::bind(isQualityUpgradePromotion, pUnit1, _2),
-			bst::bind(isQualityDowngradePromotion, pUnit1, _2)
+			bind(isQualityUpgradePromotion, pUnit1, _2),
+			bind(isQualityDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 

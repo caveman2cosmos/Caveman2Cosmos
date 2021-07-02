@@ -422,8 +422,8 @@ bool CvSelectionGroup::doDelayedDeath()
 
 	// Get list of the units to delete *first* then delete them. Iterators would be invalidated
 	// if we tried to delete while iterating over the group itself
-	//std::vector<CvUnit*> toDelete = get_if(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwner())), _1));
-	foreach_ (CvUnit* unit, units_safe() | filtered(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwner())), _1)))
+	//std::vector<CvUnit*> toDelete = get_if(bind(canDelete, bst::ref(GET_PLAYER(getOwner())), _1));
+	foreach_ (CvUnit* unit, units_safe() | filtered(bind(canDelete, bst::ref(GET_PLAYER(getOwner())), _1)))
 		//std::vector<CvUnit*>::iterator itr = toDelete.begin(); itr != toDelete.end(); ++itr)
 	{
 		unit->doDelayedDeath();
@@ -1213,7 +1213,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				if (pShadowPlot != NULL)
 				{
 					int iValidShadowUnits = std::count_if(pShadowPlot->beginUnits(), pShadowPlot->endUnits(),
-						bst::bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
+						bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
 
 					if (iValidShadowUnits > 0)
 					{
@@ -5909,7 +5909,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	if (pOldHeadUnit == pNewHeadUnit)
 	{
 		// try to find remainder head with same AI as head, if we cannot find one, we will leave the remaining units in this group
-		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bst::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
+		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
 		if (fitr != endUnits())
 		{
 			pRemainderHeadUnit = *fitr;

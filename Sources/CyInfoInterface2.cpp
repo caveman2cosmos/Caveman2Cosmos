@@ -82,8 +82,6 @@ void CyInfoPythonInterface2()
 		.def("getAIUnitUpgradePercent", &CvHandicapInfo::getAIUnitUpgradePercent, "int ()")
 		.def("getAIPerEraModifier", &CvHandicapInfo::getAIPerEraModifier, "int ()")
 		.def("getRevolutionIndexPercent", &CvHandicapInfo::getRevolutionIndexPercent, "int ()")
-
-		// Arrays
 	;
 
 	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo")

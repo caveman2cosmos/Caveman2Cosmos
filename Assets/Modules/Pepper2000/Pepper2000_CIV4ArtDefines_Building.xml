@@ -279,7 +279,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM/>
-			<Button>Art/interface/buttons/buildings/picotech_complex.dds</Button>
+			<Button>Art/interface/buttons/buildings/nanotech_complex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHEMICAL_CONGLOMERATE</Type>

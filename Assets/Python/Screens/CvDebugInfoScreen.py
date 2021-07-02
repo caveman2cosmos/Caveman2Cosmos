@@ -255,7 +255,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 					pPlayer.getPower(), pPlayer.getAssets(), pPlayer.getGold(),
 					pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD),
 					pPlayer.calculateResearchRate(TechTypes.NO_TECH),
-					pPlayer.getTotalMaintenance(), pPlayer.getCivicUpkeep([], False),
+					pPlayer.getTotalMaintenance(), pPlayer.getCivicUpkeep(False),
 					pPlayer.calculateUnitCost(), pPlayer.calculateUnitSupply(),
 					pPlayer.getNumCities(), pPlayer.getNumUnits(),
 					pPlayer.getTotalPopulation(), pPlayer.getTotalLand(),

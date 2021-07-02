@@ -8201,11 +8201,19 @@
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -10170,6 +10178,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<iCost>56</iCost>
@@ -15069,9 +15078,16 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23397,11 +23413,19 @@
 			</PrereqVicinityBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -30522,6 +30546,7 @@
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FIRE_BRIGADES</ObsoleteTech>
 			<ReplacementBuildings>
@@ -46114,11 +46139,19 @@
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -46135,6 +46168,53 @@
 			<FreeBonus>BONUS_WOOD</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_LUMBER</Type>
+			<EnabledCivilizationTypes>
+				<EnabledCivilizationType>
+					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+				</EnabledCivilizationType>
+			</EnabledCivilizationTypes>
+			<Description>TXT_KEY_BUILDING_GATHERER_LUMBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_LUMBER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_LUMBER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<iCost>15</iCost>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<FreeBonus>BONUS_WOOD</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -67678,11 +67758,19 @@
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -73975,11 +74063,19 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -79843,11 +79939,19 @@
 			<PrereqTech>TECH_CARVING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -79967,11 +80071,19 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>

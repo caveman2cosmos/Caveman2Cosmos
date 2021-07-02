@@ -8356,11 +8356,19 @@
 			<Bonus>BONUS_BARK</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -9316,11 +9324,19 @@
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -10019,15 +10035,23 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -10058,15 +10082,23 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -11017,7 +11049,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>

@@ -2620,7 +2620,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	if (bTrade)
 	{
 		algo::for_each(pCityPlot->rect(1, 1),
-			bind(CvPlot::setCulture, _1, eOldOwner, 0, false, false)
+			bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false)
 		);
 	}
 
@@ -14703,18 +14703,13 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 }
 
 
-int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
+int CvPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 {
-	if (paeCivics == NULL)
-	{
-		paeCivics = m_paeCivics;
-	}
-
 	int iTotalUpkeep = 0;
 
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
-		iTotalUpkeep += getSingleCivicUpkeep(paeCivics[iI], bIgnoreAnarchy);
+		iTotalUpkeep += getSingleCivicUpkeep(m_paeCivics[iI], bIgnoreAnarchy);
 	}
 
 	if (isRebel()) iTotalUpkeep /= 2;
