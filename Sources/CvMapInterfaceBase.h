@@ -135,9 +135,9 @@ public:
 	virtual int getNumCustomMapOptions() const = 0;
 	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const = 0;
 
-	virtual CvPlot* plotByIndex(int iIndex) const = 0;
-	virtual CvPlot* plot(int iX, int iY) const = 0;
-	virtual CvPlot* pointToPlot(float fX, float fY) const = 0;
+	virtual CvPlot* plotByIndex(int iIndex) = 0;
+	virtual CvPlot* plot(int iX, int iY) = 0;
+	virtual CvPlot* pointToPlot(float fX, float fY) = 0;
 
 	virtual int getNumAreas() const = 0;
 	virtual int getNumLandAreas() const = 0;

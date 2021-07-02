@@ -52,7 +52,6 @@ CvMap::CvMap(MapTypes eType) /* Parallel Maps */
 	, m_paiNumBonusOnLand(NULL)
 	, m_bCitiesDisplayed(true)
 	, m_bUnitsDisplayed(true)
-	, m_pMapPlots(NULL)
 {
 	OutputDebugString("Calling constructor for Map: Start\n");
 
@@ -101,7 +100,7 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 	//--------------------------------
 	// Init other game data
 	gDLL->logMemState("CvMap before init plots");
-	m_pMapPlots = new CvPlot[numPlots()];
+	m_pMapPlots.resize(numPlots());
 	for (int iX = 0; iX < getGridWidth(); iX++)
 	{
 		gDLL->callUpdater();
@@ -122,13 +121,13 @@ void CvMap::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonusOnLand);
 
-	SAFE_DELETE_ARRAY(m_pMapPlots);
+	m_pMapPlots.clear();
 
 	m_areas.uninit();
 
-	for(int iI = 0; iI < (int)m_viewports.size(); iI++)
+	foreach_(const CvViewport* viewport, m_viewports)
 	{
-		delete m_viewports[iI];
+		delete viewport;
 	}
 
 	m_viewports.clear();
@@ -299,7 +298,7 @@ void CvMap::setupGraphical()
 {
 	PROFILE_FUNC();
 
-	if (GC.IsGraphicsInitialized() && m_pMapPlots != NULL)
+	if (GC.IsGraphicsInitialized() && !m_pMapPlots.empty())
 	{
 		for (int iI = 0; iI < numPlots(); iI++)
 		{
@@ -1006,7 +1005,7 @@ void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 }
 
 
-CvPlot* CvMap::pointToPlot(float fX, float fY) const
+CvPlot* CvMap::pointToPlot(float fX, float fY)
 {
 	return plot(pointXToPlotX(fX), pointYToPlotY(fY));
 }
@@ -1212,14 +1211,11 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	if (numPlots() > 0)
-	{
-		m_pMapPlots = new CvPlot[numPlots()];
+	m_pMapPlots.resize(numPlots());
 
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			m_pMapPlots[iI].read(pStream);
-		}
+	for (int iI = 0; iI < numPlots(); iI++)
+	{
+		m_pMapPlots[iI].read(pStream);
 	}
 
 	// call the read of the free list CvArea class allocations
@@ -1258,10 +1254,7 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		m_pMapPlots[iI].write(pStream);
-	}
+	algo::for_each(m_pMapPlots, bind(CvPlot::write, _1, pStream));
 
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
@@ -1331,7 +1324,7 @@ void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (m_pMapPlots == NULL)		// if it hasn't been initialized yet...
+	if (m_pMapPlots.empty())		// if it hasn't been initialized yet...
 	{
 		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
 		{
@@ -1517,7 +1510,7 @@ const char* CvMap::getMapScript() const
 
 bool CvMap::plotsInitialized() const
 {
-	return m_pMapPlots != NULL;
+	return !m_pMapPlots.empty();
 }
 
 //

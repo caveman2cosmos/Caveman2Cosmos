@@ -239,7 +239,7 @@ void CvPlotPaging::UpdatePaging()
 
 		// Gather and sort all plots by distance to view center
 		std::vector<PlotDist> plots;
-		const CvMap& map = GC.getMap();
+		CvMap& map = GC.getMap();
 		plots.reserve(map.numPlots());
 		for (int i = 0; i < map.numPlots(); i++)
 		{

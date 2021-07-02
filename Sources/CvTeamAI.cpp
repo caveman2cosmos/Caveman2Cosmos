@@ -540,7 +540,7 @@ int CvTeamAI::AI_calculateAdjacentLandPlots(const TeamTypes eTeam) const
 	PROFILE_FUNC();
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	const CvMap& map = GC.getMap();
+	CvMap& map = GC.getMap();
 	int iCount = 0;
 
 	// Toffer - looping backwards like this is more performance friendly,
@@ -548,7 +548,7 @@ int CvTeamAI::AI_calculateAdjacentLandPlots(const TeamTypes eTeam) const
 	//	instead of being called before each iteration in the iteration if statement stage.
 	for (int iI = map.numPlots()-1; iI > -1; iI--)
 	{
-		const CvPlot* plot = map.plotByIndex(iI);
+		CvPlot* plot = map.plotByIndex(iI);
 
 		if (!plot->isWater() && plot->getTeam() == eTeam && plot->isAdjacentTeam(getID(), true))
 		{
@@ -563,7 +563,7 @@ int CvTeamAI::AI_calculatePlotWarValue(const TeamTypes eTeam) const
 {
 	FAssert(eTeam != getID());
 
-	const CvMap& map = GC.getMap();
+	CvMap& map = GC.getMap();
 	int iValue = 0;
 
 	for (int iI = map.numPlots()-1; iI > -1; iI--)
@@ -592,7 +592,7 @@ int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 {
 	FAssert(eTeam != getID());
 
-	const CvMap& map = GC.getMap();
+	CvMap& map = GC.getMap();
 	int iValue = 0;
 
 	for (int iI = map.numPlots()-1; iI > -1; iI--)
