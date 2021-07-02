@@ -529,7 +529,7 @@ bool isNationalWonder(BuildingTypes building)
 
 bool isNationalWonderGroup(BuildingTypes building)
 {
-	const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(building).getSpecialBuildingType();
+	const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(building).getSpecialBuilding();
 	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
 }
 
