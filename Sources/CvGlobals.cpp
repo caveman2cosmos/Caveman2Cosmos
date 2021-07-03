@@ -2120,17 +2120,6 @@ CvVictoryInfo& cvInternalGlobals::getVictoryInfo(VictoryTypes eVictoryNum) const
 	return *(m_paVictoryInfo[eVictoryNum]);
 }
 
-int cvInternalGlobals::getNumQuestInfos() const
-{
-	return (int)m_paQuestInfo.size();
-}
-
-CvQuestInfo& cvInternalGlobals::getQuestInfo(int iIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumQuestInfos(), iIndex)
-	return *(m_paQuestInfo[iIndex]);
-}
-
 int cvInternalGlobals::getNumTutorialInfos() const
 {
 	return (int)m_paTutorialInfo.size();
@@ -2712,7 +2701,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
-	deleteInfoArray(m_paQuestInfo);
 	deleteInfoArray(m_paTutorialInfo);
 
 	deleteInfoArray(m_paEventInfo);
