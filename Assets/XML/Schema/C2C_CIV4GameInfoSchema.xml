@@ -973,7 +973,6 @@
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoCapitalUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTaxRateUnhappiness" content="textOnly" dt:type="int"/>
-	<ElementType name="iRealCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflation" content="textOnly" dt:type="int"/>
 	<ElementType name="bChooseCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
@@ -1228,7 +1227,6 @@
 		<element type="bAllowSlaves" minOccurs="0"/>
 		<element type="iFreedomFighterChange" minOccurs="0"/>
 		<element type="bFreedomFighter" minOccurs="0"/>
-		<element type="iRealCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iInflation" minOccurs="0"/>
 		<element type="bChooseCurrency" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>

@@ -3001,7 +3001,6 @@ public:
 	int getHurryCostModifier() const;
 	int getSharedCivicTradeRouteModifier() const;
 	int getCorporationSpreadRate() const;
-	int getRealCorporationMaintenanceModifier() const;
 	int getFreedomFighterChange() const;
 
 	float getRevIdxNationalityMod() const;
@@ -3125,7 +3124,6 @@ protected:
 	int m_iSharedCivicTradeRouteModifier;
 	int m_iLandmarkHappiness;
 	int m_iCorporationSpreadRate;
-	int m_iRealCorporationMaintenanceModifier;
 	int m_iCityLimit;
 	int m_iCityOverLimitUnhappy;
 	int m_iForeignerUnhappyPercent;
