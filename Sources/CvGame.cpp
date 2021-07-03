@@ -4001,7 +4001,7 @@ void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 }
 
 
-
+// Toffer - Unused, but I spared it in my M.A.D. purge as it looks somewhat useful
 CvPlot* CvGame::getLastNukeStrikePlot() const
 {
 	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
@@ -4023,6 +4023,7 @@ void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 		}
 	}
 }
+// ! Toffer
 
 
 unsigned int CvGame::getInitialTime() const

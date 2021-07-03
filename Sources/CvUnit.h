@@ -544,18 +544,6 @@ protected:
 		m_worker;
 
 public:
-	bool isMADEnabled() const;
-	void setMADEnabled(bool bValue);
-	CvPlot* getMADTargetPlot() const;
-	int getMADTargetPlotX() const;
-	int getMADTargetPlotY() const;
-	void setMADTargetPlot(const CvPlot* pPlot);
-	bool setMADTargetPlot(int iX, int iY);
-	bool clearMADTargetPlot();
-	PlayerTypes getMADTargetPlotOwner() const;
-	void setMADTargetPlotOwner(PlayerTypes pPlayer);
-	void doMADNukes(bool bForceRetarget);
-
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
 	void changeIdentity(UnitTypes eUnit);
@@ -750,7 +738,7 @@ public:
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
 	bool canNuke(const CvPlot* pPlot) const;
-	bool canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar = true) const;
+	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
 	bool canRecon(const CvPlot* pPlot) const;
@@ -1788,11 +1776,6 @@ public:
 	bool isWorker() const;
 
 protected:
-	bool m_bMADEnabled;
-	int m_iMADTargetPlotX;
-	int m_iMADTargetPlotY;
-	PlayerTypes m_pMADTargetPlotOwner;
-
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	int m_iHealUnitCombatCount;
@@ -3171,7 +3154,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);

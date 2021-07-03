@@ -114,7 +114,6 @@ public:
 	void setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow);
 	CyPlot* plot() const;
 	CyArea* area() const;
-	CyPlot* getMADTargetPlot() const;
 
 	int getDamage() const;
 	void setDamage(int iNewValue, int /*PlayerTypes*/ ePlayer);

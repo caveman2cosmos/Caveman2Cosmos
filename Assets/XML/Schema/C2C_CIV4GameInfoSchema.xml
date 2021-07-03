@@ -983,7 +983,6 @@
 	<ElementType name="iCityOverLimitUnhappy" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignerUnhappyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLandmarkAnger" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bEnablesMADNukes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoForeignTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCorporations" content="textOnly" dt:type="boolean"/>
@@ -1233,7 +1232,6 @@
 		<element type="iHurryInflationModifier" minOccurs="0"/>
 		<element type="iSharedCivicTradeRouteModifier" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
-		<element type="bEnablesMADNukes" minOccurs="0"/>
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
 		<element type="iTradeRoutes" minOccurs="0"/>

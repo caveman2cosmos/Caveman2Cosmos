@@ -898,13 +898,6 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
-		# MAD Nukes Mod
-		btn = "MADScreenWidget0"
-		artPath = CyArtFileMgr().getInterfaceArtInfo("BUG_PROJECT_OFF").getPath()
-		x += dx
-		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, 1, 1)
-		screen.hide(btn)
-
 		# Minimap Panel
 		panel = "MiniMapPanel"
 		screen.addPanel(panel, "", "", True, True, xMinimap - 6, yMinimap - 18, xRes - xMinimap + 8, yRes - yMinimap + 20, ePanelSTD)
@@ -1563,7 +1556,6 @@ class CvMainInterface:
 				screen.hide("OptionsBtnBUG0")
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
-				screen.hide("MADScreenWidget0")
 				screen.hide("BuildListBtn0")
 			else:
 				screen.show("InterfaceTopLeft")
@@ -1588,10 +1580,6 @@ class CvMainInterface:
 				else:
 					screen.hide("FoVSliderText")
 					screen.hide("FoVSlider")
-				if CyPlayerAct.isMADNukesEnabled():
-					screen.show("MADScreenWidget0")
-				else:
-					screen.hide("MADScreenWidget0")
 				screen.show("BuildListBtn0")
 
 		elif IFT == InterfaceVisibility.INTERFACE_HIDE:
@@ -1625,8 +1613,6 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
-			if CyPlayerAct.isMADNukesEnabled():
-				screen.hide("MADScreenWidget0")
 
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1673,7 +1659,6 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
-			screen.hide("MADScreenWidget0")
 			screen.hide("ResearchBar")
 			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
@@ -1716,7 +1701,6 @@ class CvMainInterface:
 			screen.hide("CityScrollPlus")
 			screen.hide("OptionsBtnBUG0")
 			screen.hide("BuildListBtn0")
-			screen.hide("MADScreenWidget0")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
 				screen.show("FoVSlider")
@@ -5396,10 +5380,6 @@ class CvMainInterface:
 				szTxt = TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ())
 				self.updateTooltip(screen, szTxt)
 
-			elif NAME == "MADScreenWidget":
-				szTxt = TRNSLTR.getText("TXT_KEY_MAD_SCREEN_HOVER", ())
-				self.updateTooltip(screen, szTxt)
-
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
 
@@ -5744,10 +5724,6 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
-
-			elif NAME == "MADScreenWidget":
-				import CvMADNukesManager
-				CvMADNukesManager.CvMADNukesManager(CvScreenEnums.MAD_NUKES_MANAGER).interfaceScreen()
 
 			elif NAME == "GreatPersonBar":
 				# Zoom to next GP city

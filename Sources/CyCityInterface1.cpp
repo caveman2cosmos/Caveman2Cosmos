@@ -207,9 +207,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("changeOccupationTimer", &CyCity::changeOccupationTimer, "void (iChange) - adjusts the Occupation Timer by iChange")
 		.def("isNeverLost", &CyCity::isNeverLost, "bool ()")
 		.def("setNeverLost", &CyCity::setNeverLost, "void (iNewValue)")
-		// < M.A.D. Nukes Start >
-		.def("getMADIncoming", &CyCity::getMADIncoming, "int ()")
-		// < M.A.D. Nukes End   >
 		.def("isBombarded", &CyCity::isBombarded, "bool ()")
 		.def("setBombarded", &CyCity::setBombarded, "void (iNewValue)")
 		.def("isDrafted", &CyCity::isDrafted, "bool ()")

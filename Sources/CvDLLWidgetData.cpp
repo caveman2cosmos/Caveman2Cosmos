@@ -3472,7 +3472,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 
 			MissionTypes eMission = (MissionTypes) GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType();
-			if ( eMission > MISSION_PRETARGET_NUKE) // Outcome missions
+			if (eMission > MISSION_GOTO) // Outcome missions
 			{
 				for (CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 					pSelectedUnitNode != NULL;

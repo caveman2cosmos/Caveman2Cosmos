@@ -906,10 +906,6 @@ public:
 	int getCitySizeBoost() const;
 	void setCitySizeBoost(int iBoost);
 
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
-
 	bool isNeverLost() const;
 	void setNeverLost(bool bNewValue);
 
@@ -1832,9 +1828,7 @@ protected:
 	int m_iSpecialistInvestigation;
 	// Mutable as its used in caching
 	mutable int m_icachedPropertyNeedsTurn;
-	// < M.A.D. Nukes Start >
-	int m_iMADIncoming;
-	// < M.A.D. Nukes Start >
+
 	int m_iQuarantinedCount;
 
 	bool m_bNeverLost;

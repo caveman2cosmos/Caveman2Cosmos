@@ -1483,10 +1483,6 @@
 		</InterfaceArtInfo>
 		<!-- BUG - Main Interface - BUG Options Screen - end -->
 		<InterfaceArtInfo>
-			<Type>MAD_NUKES_MANAGER_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/MADNukesManagerBackground.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>QUESTION_MARK</Type>
 			<Path>Art/BUG/QuestionMark.dds</Path>
 		</InterfaceArtInfo>

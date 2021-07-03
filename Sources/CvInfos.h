@@ -3025,7 +3025,6 @@ public:
 	bool IsFixedBorders() const;
 	bool isNoCapitalUnhappiness() const;
 	bool isNoLandmarkAnger() const;
-	bool isEnablesMAD() const;
 	bool isAllReligionsActive() const;
 	bool isBansNonStateReligions() const;
 	bool isFreedomFighter() const;
@@ -3187,7 +3186,6 @@ protected:
 	bool m_bFixedBorders;
 	bool m_bNoCapitalUnhappiness;
 	bool m_bNoLandmarkAnger;
-	bool m_bEnablesMAD;
 	bool m_bUpgradeAnywhere;
 	bool m_bAllowInquisitions;
 	bool m_bDisallowInquisitions;
