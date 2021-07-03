@@ -170,10 +170,10 @@ public:
 	virtual int getNumCustomMapOptions() const;
 	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const;
 
-	virtual CvPlot* plotByIndex(int iIndex);
-	virtual CvPlot* plot(int iX, int iY);
-	virtual CvPlot* pointToPlot(float fX, float fY);
-	inline CvPlot* plotSorenINLINE(int iX, int iY)
+	virtual CvPlot* plotByIndex(int iIndex) const;
+	virtual CvPlot* plot(int iX, int iY) const;
+	virtual CvPlot* pointToPlot(float fX, float fY) const;
+	inline CvPlot* plotSorenINLINE(int iX, int iY) const
 	{
 		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
 		{

@@ -10,7 +10,10 @@
 #include "CvGameObject.h"
 #include "CvUnit.h"
 #include "idinfo_iterator_base.h"
+
 #include "CvPlotPaging.h"
+
+class CvSelectionGroup;
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -23,7 +26,6 @@ class CvCity;
 class CvPlotGroup;
 class CvFeature;
 class CvUnit;
-class CvSelectionGroup;
 class CvSymbol;
 class CvFlagEntity;
 class CvPathGeneratorPlotInfo;
@@ -130,7 +132,7 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot
+class CvPlot : bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
