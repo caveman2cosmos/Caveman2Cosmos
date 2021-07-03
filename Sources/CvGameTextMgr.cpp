@@ -10175,18 +10175,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	szString.append(NEWLINE);
 	szString.append(gDLL->getText("INTERFACE_CITY_MAINTENANCE"));
-// BUG - Base Values - start
-	int iMaintenance;
-	if (bBaseValues)
-	{
-		iMaintenance = pCity->calculateBaseMaintenanceTimes100();
-	}
-	else
-	{
-		// unchanged
-		iMaintenance = pCity->getMaintenanceTimes100();
-	}
-// BUG - Base Values - end
+
+	int iMaintenance = bBaseValues ? pCity->calculateBaseMaintenanceTimes100() : pCity->getMaintenanceTimes100();
+
 	szString.append(CvWString::format(L" -%d.%02d %c", iMaintenance/100, iMaintenance%100, GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 
 // BUG - Building Icons - start
@@ -11856,45 +11847,21 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		//	Distance Maintenance Modifer...
 		if (GC.getTraitInfo(eTrait).getDistanceMaintenanceModifier() != 0)
 		{
-			//if (GC.getTraitInfo(eTrait).getDistanceMaintenanceModifier() <= -100)
-			//{
-			//	szHelpString.append(NEWLINE);
-			//	szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT"));
-			//}
-			//else
-			//{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT_MOD", GC.getTraitInfo(eTrait).getDistanceMaintenanceModifier()));
-			//}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT_MOD", GC.getTraitInfo(eTrait).getDistanceMaintenanceModifier()));
 		}
 
 		//	Num Cities Maintenance Modifer...
 		if (GC.getTraitInfo(eTrait).getNumCitiesMaintenanceModifier() != 0)
 		{
-			//if (GC.getTraitInfo(eTrait).getNumCitiesMaintenanceModifier() <= -100)
-			//{
-			//	szHelpString.append(NEWLINE);
-			//	szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES"));
-			//}
-			//else
-			//{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES_MOD", GC.getTraitInfo(eTrait).getNumCitiesMaintenanceModifier()));
-			//}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES_MOD", GC.getTraitInfo(eTrait).getNumCitiesMaintenanceModifier()));
 		}
 		//	Corporations Maintenance Modifer...
 		if (GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier() != 0)
 		{
-			//if (GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier() <= -100)
-			//{
-			//	szHelpString.append(NEWLINE);
-			//	szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION"));
-			//}
-			//else
-			//{
-				szHelpString.append(NEWLINE);
-				szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION_MOD", GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier()));
-			//}
+			szHelpString.append(NEWLINE);
+			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION_MOD", GC.getTraitInfo(eTrait).getCorporationMaintenanceModifier()));
 		}
 
 		//	Worker speed modifier positive
@@ -15622,16 +15589,9 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Distance Maintenance Modifer...
 	if (GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier() != 0)
 	{
-		if (GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier() <= -100)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT"));
-		}
-		else
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT_MOD", GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier()));
-		}
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_DISTANCE_MAINT_MOD", GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier()));
+
 		//Afforess: Actual civic effects
 		if (bPlayerContext)
 		{
@@ -15652,16 +15612,9 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Num Cities Maintenance Modifer...
 	if (GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier() != 0)
 	{
-		if (GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier() <= -100)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES"));
-		}
-		else
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES_MOD", GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier()));
-		}
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_NUM_CITIES_MOD", GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier()));
+
 		//Afforess: Actual civic effects
 		if (bPlayerContext)
 		{
@@ -15679,32 +15632,11 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getCivicInfo(eCivic).getCorporationMaintenanceModifier() != 0)
 	{
-		if (GC.getCivicInfo(eCivic).getRealCorporationMaintenanceModifier() < -100)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_CORPORATION_TAXES", abs( 100 + GC.getCivicInfo(eCivic).getRealCorporationMaintenanceModifier())));
-		}
-		else if (GC.getCivicInfo(eCivic).getRealCorporationMaintenanceModifier() > -100 && GC.getCivicInfo(eCivic).getRealCorporationMaintenanceModifier() != 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_SUBSIDY", 100 + GC.getCivicInfo(eCivic).getRealCorporationMaintenanceModifier()));
-		}
-	}
-	else if (GC.getCivicInfo(eCivic).getCorporationMaintenanceModifier() != 0)
-	{
-		//	Corporations Maintenance Modifer...
-		if (GC.getCivicInfo(eCivic).getCorporationMaintenanceModifier() <= -100)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION"));
-		}
-		else
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION_MOD", GC.getCivicInfo(eCivic).getCorporationMaintenanceModifier()));
-		}
+		// Corporations Maintenance Modifer...
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_NO_MAINT_CORPORATION_MOD", GC.getCivicInfo(eCivic).getCorporationMaintenanceModifier()));
 	}
 
 	if (GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier() != 0)
@@ -22025,44 +21957,20 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (kBuilding.getDistanceMaintenanceModifier() != 0)
 		{
-			if (kBuilding.getDistanceMaintenanceModifier() <= -100)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DISTANCE_MAINT"));
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DISTANCE_MAINT_MOD", kBuilding.getDistanceMaintenanceModifier()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DISTANCE_MAINT_MOD", kBuilding.getDistanceMaintenanceModifier()));
 		}
 
 		if (kBuilding.getNumCitiesMaintenanceModifier() != 0)
 		{
-			if (kBuilding.getNumCitiesMaintenanceModifier() <= -100)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES"));
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES_MOD", kBuilding.getNumCitiesMaintenanceModifier()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES_MOD", kBuilding.getNumCitiesMaintenanceModifier()));
 		}
 
 		if (kBuilding.getCoastalDistanceMaintenanceModifier() != 0)
 		{
-			if (kBuilding.getCoastalDistanceMaintenanceModifier() <= -100)
-			{
-				szBuffer.append(NEWLINE);
-			   szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT"));
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-			   szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT_MOD", kBuilding.getCoastalDistanceMaintenanceModifier()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT_MOD", kBuilding.getCoastalDistanceMaintenanceModifier()));
 		}
 
 		if (kBuilding.getConnectedCityMaintenanceModifier() != 0)
@@ -26888,8 +26796,8 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 			if (i == COMMERCE_GOLD)
 			{
 				iMaintenance += pCity->calculateCorporationMaintenanceTimes100(eCorporation);
-				iMaintenance *= 100 + pCity->getMaintenanceModifier();
-				iMaintenance /= 100;
+				iMaintenance = getModifiedIntValue(iMaintenance, pCity->getMaintenanceModifier());
+
 				iCommerce -= iMaintenance;
 			}
 		}
@@ -32307,34 +32215,21 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 
 	const CvPlayer& player = GET_PLAYER(ePlayer);
 
-	const int iBase = std::max(0, GC.getEraInfo(player.getCurrentEra()).getInitialCityMaintenancePercent());
-
-	const bool bRebel = player.isRebel();
+	const int iBase = GC.getEraInfo(player.getCurrentEra()).getInitialCityMaintenancePercent();
 
 	foreach_(const CvCity* pLoopCity, player.cities())
 	{
 		iBaseMaint += iBase;
 
-		if (!pLoopCity->isDisorder() && !pLoopCity->isWeLoveTheKingDay() && (pLoopCity->getPopulation() > 0))
+		if (!pLoopCity->isDisorder() && !pLoopCity->isWeLoveTheKingDay() && pLoopCity->getPopulation() > 0)
 		{
-			iDistanceMaint += pLoopCity->calculateDistanceMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
-			iNumCityMaint += pLoopCity->calculateNumCitiesMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
-			iColonyMaint += pLoopCity->calculateColonyMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
-			iCorporationMaint += pLoopCity->calculateCorporationMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
-			iBuildingMaint += pLoopCity->calculateBuildingMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+			const int iMod = pLoopCity->getEffectiveMaintenanceModifier();
 
-			if (bRebel)
-			{
-				iDistanceMaint /= 2;
-				iNumCityMaint /= 2;
-				iColonyMaint /= 2;
-				iCorporationMaint /= 2;
-				iBuildingMaint /= 2;
-			}
-		}
-		if (bRebel)
-		{
-			iBaseMaint /= 2;
+			iDistanceMaint += getModifiedIntValue(pLoopCity->calculateDistanceMaintenanceTimes100(), iMod);
+			iNumCityMaint += getModifiedIntValue(pLoopCity->calculateNumCitiesMaintenanceTimes100(), iMod);
+			iColonyMaint += getModifiedIntValue(pLoopCity->calculateColonyMaintenanceTimes100(), iMod);
+			iCorporationMaint += getModifiedIntValue(pLoopCity->calculateCorporationMaintenanceTimes100(), iMod);
+			iBuildingMaint += getModifiedIntValue(pLoopCity->calculateBuildingMaintenanceTimes100(), iMod);
 		}
 	}
 
@@ -33063,94 +32958,90 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	bool bNeedSubtotal = false;
 
 	//STEP 2 : Commerce Changes from specialists
-	//city.getSpecialistCommerce(eCommerceType) = The individual commerce changes introduced by the definitions of the specialists themselves - processed in saved total commerce changes from specialists (Specialist: iCommerceChange) added to the city modified by the player's getSpecialistCommercePercentChanges value (from traits and civics).
-	//city.getExtraSpecialistCommerceTotal(eCommerceType) = The commerce changes stemming from the total of sweeping changes to all specialists of a particular type.
-	//Ok, yeah, so city.getExtraSpecialistCommerceTotal(eCommerceType) is already totalling the proper # of specialists so to multiply it by the amount of specialists here is redundant.
-	//int iSpecialistCommerce = city.getSpecialistCommerce(eCommerceType) + /*(city.getSpecialistPopulation() + city.getNumGreatPeople()) * */city.getExtraSpecialistCommerceTotal(eCommerceType);
-	int iSpecialistCommerce = city.getSpecialistCommerce(eCommerceType) + city.getExtraSpecialistCommerceTotal(eCommerceType);
-	//Another missing piece is here below, which was part of the confusion.
-	//getSpecialistExtraCommerce(eCommerceType) = +/- Commerce for EVERY specialist regardless of type.
-	iSpecialistCommerce += ((city.getSpecialistPopulation() + city.getNumGreatPeople()) * owner.getSpecialistExtraCommerce(eCommerceType));
-	if (0 != iSpecialistCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += 100 * iSpecialistCommerce;
-		bNeedSubtotal = true;
+		const int iSpecialistCommerce = city.getSpecialistCommerce(eCommerceType) + city.getExtraSpecialistCommerceTotal(eCommerceType);
+		if (0 != iSpecialistCommerce)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iSpecialistCommerce;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 3 : Religion Commerce
-	int iReligionCommerce = city.getReligionCommerce(eCommerceType);
-	if (0 != iReligionCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_RELIGION_COMMERCE", iReligionCommerce, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += 100 * iReligionCommerce;
-// BUG - Base Commerce - start
-		bNeedSubtotal = true;
-// BUG - Base Commerce - end
+		const int iReligionCommerce = city.getReligionCommerce(eCommerceType);
+		if (0 != iReligionCommerce)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_RELIGION_COMMERCE", iReligionCommerce, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iReligionCommerce;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 4 : Corporation Commerce
-	int iCorporationCommerce = city.getCorporationCommerce(eCommerceType);
-	if (0 != iCorporationCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationCommerce, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += 100 * iCorporationCommerce;
-		bNeedSubtotal = true;
+		const int iCorporationCommerce = city.getCorporationCommerce(eCommerceType);
+		if (0 != iCorporationCommerce)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationCommerce, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iCorporationCommerce;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 5 : Building Commerce Changes
-	int iBuildingCommerce = city.getBuildingCommerce(eCommerceType);
-	iBuildingCommerce *= 100;
-	iBuildingCommerce += city.getBonusCommercePercentChanges(eCommerceType);
-	int fBuildingCommerce = iBuildingCommerce/100;
-	if (0 != iBuildingCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", fBuildingCommerce, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += iBuildingCommerce;
-		bNeedSubtotal = true;
+		const int iBuildingCommerce = city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
+		if (0 != iBuildingCommerce)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingCommerce, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iBuildingCommerce;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
-	int iFreeCityCommerce = owner.getFreeCityCommerce(eCommerceType);
-	if (0 != iFreeCityCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE", iFreeCityCommerce, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += 100 * iFreeCityCommerce;
-		bNeedSubtotal = true;
+		const int iFreeCityCommerce = owner.getFreeCityCommerce(eCommerceType);
+		if (0 != iFreeCityCommerce)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE", iFreeCityCommerce, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iFreeCityCommerce;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 7 : Commerce Attacks
-	int iCommerceAttacks = city.getCommerceAttacks(eCommerceType);
-	if (0 != iCommerceAttacks)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += 100 * iCommerceAttacks;
-		bNeedSubtotal = true;
+		const int iCommerceAttacks = city.getCommerceAttacks(eCommerceType);
+		if (0 != iCommerceAttacks)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += 100 * iCommerceAttacks;
+			bNeedSubtotal = true;
+		}
 	}
-
 	//STEP 8 : Minted Commerce
 	if (eCommerceType == COMMERCE_GOLD)
 	{
-		int iMintedCommerce = city.getMintedCommerceTimes100() / 100;
-		if (0 != iMintedCommerce)
+		const int iMintedCommerce100 = city.getMintedCommerceTimes100();
+		if (0 != iMintedCommerce100)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_MINTED_COMMERCE", iMintedCommerce, info.getChar()));
-			szBuffer.append(NEWLINE);
-			bNeedSubtotal = true;
+			if (0 != iMintedCommerce100 / 100)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_MINTED_COMMERCE", iMintedCommerce100 / 100, info.getChar()));
+				szBuffer.append(NEWLINE);
+				bNeedSubtotal = true;
+			}
+			iBaseCommerceRate += iMintedCommerce100;
 		}
-		iBaseCommerceRate += city.getMintedCommerceTimes100();
 	}
-
 	//STEP 9 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
 	if (owner.isGoldenAge())
 	{
-		int iGoldenAgeCommerce = owner.getGoldenAgeCommerce(eCommerceType);
+		const int iGoldenAgeCommerce = owner.getGoldenAgeCommerce(eCommerceType);
 		if (0 != iGoldenAgeCommerce)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE", iGoldenAgeCommerce, info.getChar()));
@@ -33160,17 +33051,15 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iBaseCommerceRate += 100 * iGoldenAgeCommerce;
 	}
 
-// BUG - Base Commerce - start
 	if (bNeedSubtotal && city.getTotalCommerceRateModifier(eCommerceType) != 0 && getBugOptionBOOL("MiscHover__BaseCommerce", true, "BUG_CITY_SCREEN_BASE_COMMERCE_HOVER"))
 	{
 		CvWString szYield = CvWString::format(L"%d.%02d", iBaseCommerceRate/100, iBaseCommerceRate%100);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_SUBTOTAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
 		szBuffer.append(NEWLINE);
 	}
-// BUG - Base Commerce - end
+
 	//Debug check to make sure Base in display matches base in programming
 	FAssertMsg(city.getBaseCommerceRateTimes100(eCommerceType) == iBaseCommerceRate, "Base Commerce rate does not agree with actual value");
-
 
 	//% MODIFIER TALLY
 	//In the city coding the final modifier value appears to be processed in and out and stored on m_totalCommerceRateModifier[eIndex]
@@ -33187,7 +33076,6 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 
 	//STEP 2 : Buildings (split into projects and everything else)
-	// Buildings
 	int iBuildingMod = city.getCommerceRateModifier(eCommerceType);
 	iBuildingMod += city.calculateBuildingCommerceModifier(eCommerceType);
 
@@ -37409,14 +37297,7 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		{
 			szBuffer.append(NEWLINE);
 		}
-		if (GC.getTechInfo(eTech).getDistanceMaintenanceModifier() <= -100)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_DISTANCE_MAINT"));
-		}
-		else
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getDistanceMaintenanceModifier()));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getDistanceMaintenanceModifier()));
 	}
 
 	if (GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() != 0)
@@ -37425,14 +37306,7 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		{
 			szBuffer.append(NEWLINE);
 		}
-		if (GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() <= -100)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_CITIES_MAINT"));
-		}
-		else
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_CITIES_MAINT_MOD", GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier()));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_CITIES_MAINT_MOD", GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier()));
 	}
 
 	if (GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() != 0)
@@ -37441,14 +37315,7 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 		{
 			szBuffer.append(NEWLINE);
 		}
-		if (GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() <= -100)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT"));
-		}
-		else
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier()));
-		}
+		szBuffer.append(gDLL->getText("TXT_KEY_COASTAL_DISTANCE_MAINT_MOD", GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier()));
 	}
 }
 

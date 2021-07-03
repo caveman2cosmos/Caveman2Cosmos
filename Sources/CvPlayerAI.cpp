@@ -5821,7 +5821,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 				if (bFinancialTrouble)
 				{
-					iBuildingValue += (-kLoopBuilding.getMaintenanceModifier()) * 15;
+					iBuildingValue -= kLoopBuilding.getMaintenanceModifier() * 15;
 					iBuildingValue += kLoopBuilding.getYieldModifier(YIELD_COMMERCE) * 8;
 					iBuildingValue += kLoopBuilding.getCommerceModifier(COMMERCE_GOLD) * 15;
 				}
@@ -13726,29 +13726,25 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	//Fuyu: Only if wars ongoing, as suggested by Munch - modified by Koshling to just be an increase then
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S GG modifier value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S GG modifier value %d", kCivic.getDescription(), iTempValue);
 	}
-	iValue += iTempValue/((bWarPlan || isMinorCiv()) ? 3 : 1);
-	iTempValue = -((kCivic.getDistanceMaintenanceModifier() * std::max(0, (getNumCities() - 3))) / 8);
+	iValue += iTempValue / (bWarPlan || isMinorCiv() ? 3 : 1);
+	iTempValue = -(kCivic.getDistanceMaintenanceModifier() * std::max(0, getNumCities() - 3) / 8);
+
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S distance maintenance modifier value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S distance maintenance modifier value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
-	iTempValue = -((kCivic.getNumCitiesMaintenanceModifier() * std::max(0, (getNumCities() - 3))) / 8);
+	iTempValue = -(kCivic.getNumCitiesMaintenanceModifier() * std::max(0, getNumCities() - 3) / 8);
+
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S #cities maintenance modifier value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S #cities maintenance modifier value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 
-	if( kCivic.getFreeExperience() > 0 )
+	if (kCivic.getFreeExperience() > 0)
 	{
 		// Free experience increases value of hammers spent on units, population is an okay measure of base hammer production
 		iTempValue = (kCivic.getFreeExperience() * getTotalPopulation() * (bWarPlan ? 30 : 12))/100;
@@ -13758,9 +13754,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue /= 100;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S free experience value %d",
-					 kCivic.getDescription(),
-					 iTempValue);
+			logBBAI("Civic %S free experience value %d", kCivic.getDescription(), iTempValue);
 		}
 		iValue += iTempValue;
 	}
@@ -13768,9 +13762,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = ((kCivic.getWorkerSpeedModifier() * AI_getNumAIUnits(UNITAI_WORKER)) / 15);
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S worker speed value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S worker speed value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 	iTempValue = ((kCivic.getImprovementUpgradeRateModifier() * getNumCities()) / 50);
@@ -14737,16 +14729,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iTempValue;
 
-	int iCorpMaintenanceMod;
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
-	{
-		iCorpMaintenanceMod = kCivic.getRealCorporationMaintenanceModifier() + 100;
-	}
-	else
-	{
-		iCorpMaintenanceMod = kCivic.getCorporationMaintenanceModifier();
-	}
-
 	iTempValue = ( AI_RevCalcCivicRelEffect(eCivic) );
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
@@ -15398,23 +15380,18 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
 		}
 	}
+	else if (kCivic.isNoForeignTrade())
+	{
+		iTempValue -= iConnectedForeignCities * 3;
+		iTempValue += (kCivic.getTradeRoutes() * (/*std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + */ (getNumCities() * 2)));
+	}
 	else
 	{
-		if (kCivic.isNoForeignTrade())
-		{
-			iTempValue -= iConnectedForeignCities * 3;
-			iTempValue += (kCivic.getTradeRoutes() * (/*std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + */ (getNumCities() * 2)));
-		}
-		else
-		{
-			iTempValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
-		}
+		iTempValue += (kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) * 6 + (getNumCities() * 2)));
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S foreign trade value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S foreign trade value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 
@@ -15428,6 +15405,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	//#4: Corporations
 
+	int iCorpMaintenanceMod = kCivic.getCorporationMaintenanceModifier();
 	iTempValue = 0;
 	if (kCivic.isNoCorporations() || kCivic.isNoForeignCorporations() || iCorpMaintenanceMod != 0)
 	{
@@ -15508,7 +15486,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			if ((getCorporationMaintenanceModifier() + iCorpMaintenanceMod) != 0)
 			{
 				iTempCorporationValue = 0;
-				iTempCorporationValue -= (-(getCorporationMaintenanceModifier() + iCorpMaintenanceMod) * (iForeignCorpCount * 7)) / 25;
+				iTempCorporationValue -= -(getCorporationMaintenanceModifier() + iCorpMaintenanceMod) * iForeignCorpCount * 7 / 25;
 				iTempValue += iTempCorporationValue/(2*(1 + iTempNoForeignCorporationsCount + iTempNoCorporationsCount));
 			}
 		}

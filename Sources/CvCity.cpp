@@ -7691,46 +7691,37 @@ int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
+	if (isDisorder() || isWeLoveTheKingDay())
+	{
+		return 0;
+	}
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	int iModifier = kBuilding.getMaintenanceModifier();
-	int iDirectMaintenance = 0;
-	iModifier += kBuilding.getGlobalMaintenanceModifier();
-	iModifier += kBuilding.getAreaMaintenanceModifier();
-	if (isConnectedToCapital() && !(isCapital()))
-	{
-		iModifier += kBuilding.getConnectedCityMaintenanceModifier();
-	}
-	if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-	{
-		iDirectMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
-	}
-	if ((iModifier != 0 || iDirectMaintenance > 0) && !isDisorder() && !isWeLoveTheKingDay())
-	{
-		//	Koshling - the calculation below was incorrect because calculateBaseMaintenanceTimes100() itself includes
-		//	num cities and distance maintainence effects
-		int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		int iNewBaseMaintenance = iOldBaseMaintenance + iDirectMaintenance;
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
-		//int iNumCitiesMaintenanceTimes100 = calculateNumCitiesMaintenanceTimes100();
-		//iNumCitiesMaintenanceTimes100 *= std::max(0, 100 + kBuilding.getNumCitiesMaintenanceModifier());
-		//iNumCitiesMaintenanceTimes100 /= 100;
-		//iNumCitiesMaintenanceTimes100 -= calculateNumCitiesMaintenanceTimes100();
-		//iNewMaintenance += iNumCitiesMaintenanceTimes100;
-		//iNewMaintenance += calculateDistanceMaintenanceTimes100(0, 0) - calculateDistanceMaintenanceTimes100(kBuilding.getDistanceMaintenanceModifier(), kBuilding.getCoastalDistanceMaintenanceModifier());
-/************************************************************************************************/
-/* Afforess	                  Start		 6/20/11                                                */
-/*                                                                                              */
-/*   Protect against negative maintenance                                                       */
-/************************************************************************************************/
-		//return getMaintenanceTimes100() - std::max(0, iNewMaintenance);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	}
 
-	return 0;
+	const int iModifier =
+	(
+		kBuilding.getMaintenanceModifier() +
+		kBuilding.getGlobalMaintenanceModifier() +
+		kBuilding.getAreaMaintenanceModifier() +
+		(
+			(isConnectedToCapital() && !isCapital())
+			?
+			kBuilding.getConnectedCityMaintenanceModifier() : 0
+		)
+	);
+	const int iDirectMaintenance = 
+	(
+		(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+		?
+		-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100 : 0
+	);
+	if (iModifier == 0 && iDirectMaintenance == 0)
+	{
+		return 0;
+	}
+	const int iModOld = getEffectiveMaintenanceModifier();
+	const int iBaseOld = calculateBaseMaintenanceTimes100();
+
+	return getModifiedIntValue(iBaseOld, iModOld) - getModifiedIntValue(iBaseOld + iDirectMaintenance, iModOld + iModifier);
 }
 // BUG - Building Saved Maintenance - end
 
@@ -7738,79 +7729,93 @@ int CvCity::getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getDistanceMaintenanceModifier();
-
-	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay())
 	{
-		const int iOldBaseMaintenance = calculateDistanceMaintenanceTimes100();
-		const int iNewBaseMaintenance = calculateDistanceMaintenanceTimes100(iModifier);
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iFinalMod = getEffectiveMaintenanceModifier();
+
+	return (
+		getModifiedIntValue(calculateDistanceMaintenanceTimes100(), iFinalMod)
+		-
+		getModifiedIntValue(calculateDistanceMaintenanceTimes100(iMod), iFinalMod)
+	);
 }
 
 int CvCity::getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
-
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getNumCitiesMaintenanceModifier();
-
-	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay())
 	{
-		int iOldBaseMaintenance = calculateNumCitiesMaintenanceTimes100();
-		int iNewBaseMaintenance = calculateNumCitiesMaintenanceTimes100(iModifier);
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iFinalMod = getEffectiveMaintenanceModifier();
+
+	return (
+		getModifiedIntValue(calculateNumCitiesMaintenanceTimes100(), iFinalMod)
+		-
+		getModifiedIntValue(calculateNumCitiesMaintenanceTimes100(iMod), iFinalMod)
+	);
 }
 
 int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
+	if (isDisorder() || isWeLoveTheKingDay() || !area()->isHomeArea(getOwner()))
+	{
+		return 0;
+	}
 	const int iMod = GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier();
 
-	if (iMod != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (iMod == 0)
 	{
-		const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iEffectiveMaintenanceMod = 100 + getEffectiveMaintenanceModifier();
-		return // The difference
-		(
-			(
-				std::max(0, iBaseMaintenance * iEffectiveMaintenanceMod)
-				-
-				std::max(0, iBaseMaintenance *(iEffectiveMaintenanceMod + iMod))
-			)
-			/ 100
-		);
+		return 0;
 	}
-	return 0;
+	const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+	const int iEffectiveMaintenanceMod = getEffectiveMaintenanceModifier();
+	return // The difference
+	(
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod)
+		-
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod + iMod)
+	);
 }
 
 int CvCity::getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getOtherAreaMaintenanceModifier();
-
-	if (iModifier != 0 && !area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay() || area()->isHomeArea(getOwner()))
 	{
-		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getOtherAreaMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+	const int iEffectiveMaintenanceMod = getEffectiveMaintenanceModifier();
+	return // The difference
+	(
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod)
+		-
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod + iMod)
+	);
 }
 
 int CvCity::getMaintenance() const
@@ -7819,7 +7824,6 @@ int CvCity::getMaintenance() const
 	{
 		updateMaintenance();
 	}
-
 	return m_iMaintenance / 100;
 }
 
@@ -7829,7 +7833,6 @@ int CvCity::getMaintenanceTimes100() const
 	{
 		updateMaintenance();
 	}
-
 	return m_iMaintenance;
 }
 
@@ -7857,32 +7860,23 @@ void CvCity::updateMaintenance() const
 {
 	setMaintenanceDirty(false);
 
-	int iNewMaintenance = 0;
-
-	iNewMaintenance += std::max(0, GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getInitialCityMaintenancePercent());
-
-	if (!isDisorder() && !isWeLoveTheKingDay() && (getPopulation() > 0))
+	int iNewMaintenance = GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getInitialCityMaintenancePercent();
+	if (!isDisorder() && !isWeLoveTheKingDay() && getPopulation() > 0)
 	{
-		iNewMaintenance += (calculateBaseMaintenanceTimes100() * std::max(0, (getEffectiveMaintenanceModifier() + 100))) / 100;
+		iNewMaintenance += getModifiedIntValue(calculateBaseMaintenanceTimes100(), getEffectiveMaintenanceModifier());
 	}
 
-	// Rebels pay less maintenance
-	if (GET_PLAYER(getOwner()).isRebel())
-	{
-		iNewMaintenance /= 2;
-	}
-
-	if (getMaintenanceTimes100() != iNewMaintenance)
+	if (m_iMaintenance != iNewMaintenance)
 	{
 		FASSERT_NOT_NEGATIVE(iNewMaintenance)
 
-		m_iMaintenance = std::max(0, iNewMaintenance);
+		m_iMaintenance = iNewMaintenance;
 	}
 }
 
 int CvCity::calculateDistanceMaintenance() const
 {
-	return (calculateDistanceMaintenanceTimes100() / 100);
+	return calculateDistanceMaintenanceTimes100() / 100;
 }
 
 int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int iExtraCoastalDistanceModifier) const
@@ -7906,13 +7900,18 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			iValue *= getPopulation() + 5;
 			iValue /= 10;
 
-			iValue *= std::max(0, (kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier + 100));
-			iValue /= 100;
-
 			if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
-				iValue *= std::max(0, (kOwner.getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier + 100));
-				iValue /= 100;
+				iValue = getModifiedIntValue(
+					iValue,
+					kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier
+					+
+					kOwner.getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier
+				);
+			}
+			else
+			{
+				iValue = getModifiedIntValue(iValue, kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier);
 			}
 
 			// Toffer: Is this scaling rational?
@@ -7925,13 +7924,14 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			iValue *= GC.getHandicapInfo(getHandicapType()).getDistanceMaintenancePercent();
 			iValue /= 100;
 
-			iValue = std::max(0, std::min(iValue, MAX_INT));
+			iValue = std::max(0, iValue);
 
 			iDistMaint = std::min(iDistMaint, iValue);
 			bFound = true;
 		}
 	}
-	return bFound ? iDistMaint : 0;
+	// Rebels pay less maintenance
+	return bFound ? iDistMaint / (1 + kOwner.isRebel()) : 0;
 }
 
 int CvCity::calculateNumCitiesMaintenance() const
@@ -7942,7 +7942,8 @@ int CvCity::calculateNumCitiesMaintenance() const
 int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 {
 	// Toffer: Single city civs gets a free pass, and allows early second city founding without economical collapse.
-	const int iCities = GET_PLAYER(getOwner()).getNumCities() - 1;
+	const CvPlayer& owner = GET_PLAYER(getOwner());
+	const int iCities = owner.getNumCities() - 1;
 	if (iCities < 1)
 	{
 		return 0;
@@ -7977,12 +7978,16 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 		iNumCitiesMaint += iNumVassalCities * iNumCitiesPercent / (3 + iVassals);
 	}
 
-	iNumCitiesMaint *= std::max(1, GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100);
-	iNumCitiesMaint /= 100;
+	iNumCitiesMaint = getModifiedIntValue(iNumCitiesMaint, owner.getNumCitiesMaintenanceModifier() + iExtraModifier);
 
 	iNumCitiesMaint *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
 	iNumCitiesMaint /= 100;
 
+	// Rebels pay less maintenance
+	if (owner.isRebel())
+	{
+		iNumCitiesMaint /= 2;
+	}
 	// Toffer - ToDo: Max value should perhaps be a global define.
 	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
 	FASSERT_NOT_NEGATIVE(iNumCitiesMaint)
@@ -8002,8 +8007,9 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 	{
 		return 0;
 	}
+	const CvPlayer& owner = GET_PLAYER(getOwner());
+	const CvCity* pCapital = owner.getCapitalCity();
 
-	const CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 	if (pCapital && pCapital->area() == area())
 	{
 		return 0;
@@ -8011,7 +8017,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	int iNumCitiesPercent = 100;
 
-	iNumCitiesPercent *= (getPopulation() + 17);
+	iNumCitiesPercent *= 17 + getPopulation();
 	iNumCitiesPercent /= 18;
 
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getColonyMaintenancePercent();
@@ -8022,13 +8028,14 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	int iNumCities = (area()->getCitiesPerPlayer(getOwner()) - 1) * iNumCitiesPercent;
 
-	int iMaintenance = (iNumCities * iNumCities) / 100;
+	int iMaintenance = iNumCities * iNumCities / 100;
 
-	iMaintenance = std::min(iMaintenance, (GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100()) / 100);
+	iMaintenance = std::min(iMaintenance, GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100() / 100);
 
 	FASSERT_NOT_NEGATIVE(iMaintenance)
 
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return owner.isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 
@@ -8048,8 +8055,8 @@ int CvCity::calculateCorporationMaintenanceTimes100() const
 			iMaintenance += calculateCorporationMaintenanceTimes100((CorporationTypes)iCorporation);
 		}
 	}
-
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return GET_PLAYER(getOwner()).isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporation) const
@@ -8094,19 +8101,18 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 		iMaintenance /= 100;
 	}
 
+	const CvPlayer& owner = GET_PLAYER(getOwner());
 	// National Modifier
-	iMaintenance *= std::max(0, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100);
-	iMaintenance /= 100;
+	iMaintenance = getModifiedIntValue(iMaintenance, owner.getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
+	// Toffer - Huh, not sure why inflation here reduce corporation maintenance, does it make sense?
 	iMaintenance *= 100;
-	iMaintenance /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
-
-	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
-	iMaintenance /= 100;
+	iMaintenance /= 100 + owner.calculateInflationRate();
 
 	FASSERT_NOT_NEGATIVE(iMaintenance)
 
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return owner.isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 int CvCity::calculateBuildingMaintenanceTimes100() const
@@ -8123,14 +8129,25 @@ int CvCity::calculateBuildingMaintenanceTimes100() const
 				iResult -= GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD);
 			}
 		}
-		return 100 * iResult;
+		// Rebels pay less maintenance
+		return GET_PLAYER(getOwner()).isRebel() ? 50 * iResult : 100 * iResult;
 	}
 	return 0;
 }
 
 int CvCity::calculateBaseMaintenanceTimes100() const
 {
-	return (calculateBuildingMaintenanceTimes100() + calculateDistanceMaintenanceTimes100() + calculateNumCitiesMaintenanceTimes100() + calculateColonyMaintenanceTimes100() + calculateCorporationMaintenanceTimes100());
+	return (
+		calculateBuildingMaintenanceTimes100()
+		+
+		calculateDistanceMaintenanceTimes100()
+		+
+		calculateNumCitiesMaintenanceTimes100()
+		+
+		calculateColonyMaintenanceTimes100()
+		+
+		calculateCorporationMaintenanceTimes100()
+	);
 }
 
 
@@ -8144,8 +8161,7 @@ void CvCity::changeMaintenanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iMaintenanceModifier = (m_iMaintenanceModifier + iChange);
-
+		m_iMaintenanceModifier += iChange;
 		setMaintenanceDirty(true);
 	}
 }
@@ -12052,8 +12068,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate(YIELD_COMMERCE) * 100);
 
 	//STEP 2 : Commerce Changes from specialists
-	int iSpecialistCommerce = getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex);
-	iBaseCommerceRate += 100 * iSpecialistCommerce;
+	iBaseCommerceRate += 100 * (getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex));
 
 	//STEP 3 : Religion Commerce
 	iBaseCommerceRate += 100 * getReligionCommerce(eIndex);
@@ -12062,11 +12077,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	iBaseCommerceRate += 100 * getCorporationCommerce(eIndex);
 
 	//STEP 5 : Building Commerce
-	int iBuildingCommerce = getBuildingCommerce(eIndex);
-	iBuildingCommerce *= 100;
-	iBuildingCommerce += getBonusCommercePercentChanges(eIndex);
-
-	iBaseCommerceRate += iBuildingCommerce;
+	iBaseCommerceRate += 100 * getBuildingCommerce(eIndex) + getBonusCommercePercentChanges(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
@@ -21825,9 +21836,9 @@ int CvCity::calculateCorporateTaxes() const
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-			iTaxes *= std::max(0, 100 + GET_PLAYER(getOwner()).getCorporationMaintenanceModifier());
-			iTaxes /= 100;
+			iTaxes = getModifiedIntValue(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
+			// Toffer - Huh, not sure why inflation here reduce corporation tax, does it make sense?
 			iTaxes *= 100;
 			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 

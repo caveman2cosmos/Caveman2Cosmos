@@ -5498,26 +5498,28 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				{
 					PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Maintenance");
 
-					int iExtraMaintenance = 0;
-					if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-					{
-						iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
-					}
+					const int iExtraMaintenance =
+					(
+						(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+						?
+						-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100
+						:
+						0
+					);
+					const int iBaseMaintenance = getMaintenanceTimes100();
+					const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-					int iBaseMaintenance = getMaintenanceTimes100();
-					int iExistingUpkeep = (iBaseMaintenance * std::max(0, 100 + getEffectiveMaintenanceModifier())) / 100;
-					int iNewUpkeep = ((iBaseMaintenance + iExtraMaintenance) * std::max(0, 100 + getEffectiveMaintenanceModifier() + kBuilding.getMaintenanceModifier())) / 100;
-
-					int iTempValue = (iExistingUpkeep - iNewUpkeep) / 16;
-
+					int iTempValue = (
+						(
+							getModifiedIntValue(iBaseMaintenance, iMaintenanceMod)
+							-
+							getModifiedIntValue(iBaseMaintenance + iExtraMaintenance, iMaintenanceMod + kBuilding.getMaintenanceModifier())
+						) / 16
+					);
 					if (bFinancialTrouble)
-					{
 						iTempValue *= 2;
-					}
-					else
-					{
-						iTempValue = (iGoldValueAssessmentModifier * iTempValue) / 100;
-					}
+					else iTempValue = iTempValue * iGoldValueAssessmentModifier / 100;
+
 					iValue += iTempValue;
 				}
 
@@ -15713,28 +15715,30 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Maintenance");
-				int iValue = 0;
-				int iExtraMaintenance = 0;
-				if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-				{
-					iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
-				}
 
-				int iBaseMaintenance = getMaintenanceTimes100();
-				int iExistingUpkeep = (iBaseMaintenance * std::max(0, 100 + getEffectiveMaintenanceModifier())) / 100;
-				int iNewUpkeep = ((iBaseMaintenance + iExtraMaintenance) * std::max(0, 100 + getEffectiveMaintenanceModifier() + kBuilding.getMaintenanceModifier())) / 100;
+				const int iExtraMaintenance =
+				(
+					(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+					?
+					-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100
+					:
+					0
+				);
+				const int iBaseMaintenance = getMaintenanceTimes100();
+				const int iMaintenanceMod = getEffectiveMaintenanceModifier();
 
-				int maintainanceValue = (iExistingUpkeep - iNewUpkeep) / 16;
-
+				int maintainanceValue = (
+					(
+						getModifiedIntValue(iBaseMaintenance, iMaintenanceMod)
+						-
+						getModifiedIntValue(iBaseMaintenance + iExtraMaintenance, iMaintenanceMod + kBuilding.getMaintenanceModifier())
+					) / 16
+				);
 				if (bFinancialTrouble)
-				{
 					maintainanceValue *= 2;
-				}
-				else maintainanceValue = iGoldValueAssessmentModifier * maintainanceValue / 100;
+				else maintainanceValue = maintainanceValue * iGoldValueAssessmentModifier / 100;
 
-				iValue += maintainanceValue;
-
-				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, iValue);
+				valuesCache->Accumulate(BUILDINGFOCUSINDEX_GOLDANDMAINTENANCE, maintainanceValue);
 			}
 			{
 				PROFILE("CalculateAllBuildingValues.Specialist");
