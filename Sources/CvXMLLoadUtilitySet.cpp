@@ -1135,7 +1135,6 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	// Specail Case Diplomacy Info due to double vectored nature and appending of Responses
 	LoadDiplomacyInfo(GC.m_paDiplomacyInfo, "CIV4DiplomacyInfos", "GameInfo", L"/Civ4DiplomacyInfos/DiplomacyInfos/DiplomacyInfo", true);
 
-	LoadGlobalClassInfo(GC.m_paQuestInfo, "CIV4QuestInfos", "Misc", L"/Civ4QuestInfos/QuestInfo", false);
 	LoadGlobalClassInfo(GC.m_paTutorialInfo, "CIV4TutorialInfos", "Misc", L"/Civ4TutorialInfos/TutorialInfo", false);
 
 	LoadGlobalClassInfo(GC.m_paEspionageMissionInfo, "CIV4EspionageMissionInfo", "GameInfo", L"/Civ4EspionageMissionInfo/EspionageMissionInfos/EspionageMissionInfo", false);
