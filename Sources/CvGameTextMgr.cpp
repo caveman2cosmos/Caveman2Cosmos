@@ -24675,10 +24675,8 @@ void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProc
 
 void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	CvPlot* pLoopPlot;
 	FeatureTypes eFeature;
 	int iHealth;
-	int iI;
 
 	if (city.badHealth() > 0)
 	{
@@ -24687,26 +24685,19 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			eFeature = NO_FEATURE;
 
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
 			{
-				pLoopPlot = plotCity(city.getX(), city.getY(), iI);
-
-				if (pLoopPlot != NULL)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE
+				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
 				{
-					if (pLoopPlot->getFeatureType() != NO_FEATURE)
+					if (eFeature == NO_FEATURE)
 					{
-						if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
-						{
-							if (eFeature == NO_FEATURE)
-							{
-								eFeature = pLoopPlot->getFeatureType();
-							}
-							else if (eFeature != pLoopPlot->getFeatureType())
-							{
-								eFeature = NO_FEATURE;
-								break;
-							}
-						}
+						eFeature = pLoopPlot->getFeatureType();
+					}
+					else if (eFeature != pLoopPlot->getFeatureType())
+					{
+						eFeature = NO_FEATURE;
+						break;
 					}
 				}
 			}
@@ -24721,7 +24712,7 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 /*																							  */
 /************************************************************************************************/
 		iHealth = -(city.getImprovementBadHealth()) / 100;
-		CvPlayer &kPlayer = GET_PLAYER(city.getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
 		if (iHealth > 0)
 		{
 			ImprovementTypes eImprovement = NO_IMPROVEMENT;
@@ -24733,21 +24724,16 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() < 0)
 				{
-					for (int iJ = 0; iJ < city.getNumCityPlots(); ++iJ)
+					foreach_(const CvPlot* pLoopPlot, city.plots())
 					{
-						pLoopPlot = plotCity(city.getX(), city.getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						if (pLoopPlot->getImprovementType() == iI)
 						{
-							if (pLoopPlot->getImprovementType() == iI)
+							iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 							{
-								iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-								for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 								{
-									if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-									{
-										iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-									}
+									iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 								}
 							}
 						}
@@ -24889,10 +24875,8 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	CvPlot* pLoopPlot;
 	FeatureTypes eFeature;
 	int iHealth;
-	int iI;
 
 	if (city.goodHealth() > 0)
 	{
@@ -24908,26 +24892,19 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			eFeature = NO_FEATURE;
 
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
 			{
-				pLoopPlot = plotCity(city.getX(), city.getY(), iI);
-
-				if (pLoopPlot != NULL)
+				if (pLoopPlot->getFeatureType() != NO_FEATURE
+				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
 				{
-					if (pLoopPlot->getFeatureType() != NO_FEATURE)
+					if (eFeature == NO_FEATURE)
 					{
-						if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
-						{
-							if (eFeature == NO_FEATURE)
-							{
-								eFeature = pLoopPlot->getFeatureType();
-							}
-							else if (eFeature != pLoopPlot->getFeatureType())
-							{
-								eFeature = NO_FEATURE;
-								break;
-							}
-						}
+						eFeature = pLoopPlot->getFeatureType();
+					}
+					else if (eFeature != pLoopPlot->getFeatureType())
+					{
+						eFeature = NO_FEATURE;
+						break;
 					}
 				}
 			}
@@ -24936,7 +24913,7 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 		iHealth = city.getImprovementGoodHealth() / 100;
-		CvPlayer &kPlayer = GET_PLAYER(city.getOwner());
+		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
 		if (iHealth > 0)
 		{
 			ImprovementTypes eImprovement = NO_IMPROVEMENT;
@@ -24948,21 +24925,16 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() > 0)
 				{
-					for (int iJ = 0; iJ < city.getNumCityPlots(); ++iJ)
+					foreach_(const CvPlot* pLoopPlot, city.plots())
 					{
-						pLoopPlot = plotCity(city.getX(), city.getY(), iJ);
-
-						if (pLoopPlot != NULL)
+						if (pLoopPlot->getImprovementType() == iI)
 						{
-							if (pLoopPlot->getImprovementType() == iI)
+							iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 							{
-								iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-								for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 								{
-									if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-									{
-										iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-									}
+									iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 								}
 							}
 						}

@@ -1182,7 +1182,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	}
 
 	algo::for_each(
-		plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this),
+		plots(NUM_CITY_PLOTS) | filtered(CvPlot::fn::getWorkingCityOverride() == this),
 		CvPlot::fn::setWorkingCityOverride(NULL)
 	);
 	setCultureLevel(NO_CULTURELEVEL, false);
@@ -1685,15 +1685,7 @@ bool CvCity::canBeSelected() const
 
 void CvCity::updateSelectedCity(bool bTestProduction)
 {
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->updateShowCitySymbols();
-		}
-	}
+	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 
 	if (bTestProduction)
 	{
@@ -1707,15 +1699,7 @@ void CvCity::updateSelectedCity(bool bTestProduction)
 
 void CvCity::updateYield()
 {
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->updateYield();
-		}
-	}
+	algo::for_each(plots(), bind(CvPlot::updateYield, _1));
 }
 
 
@@ -1990,11 +1974,9 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+		if (pLoopPlot->getWorkingCity() == this)
 		{
 			if (eImprovement != NO_IMPROVEMENT)
 			{
@@ -2017,36 +1999,14 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 
 int CvCity::countNumWaterPlots() const
 {
-	int iCount = 0;
-
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isWater())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(plots(),
+		bind(CvPlot::getWorkingCity, _1) == this && bind(CvPlot::isWater, _1));
 }
 
 int CvCity::countNumRiverPlots() const
 {
-	int iCount = 0;
-
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isRiver())
-		{
-			++iCount;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(plots(),
+		bind(CvPlot::getWorkingCity, _1) == this && bind(CvPlot::isRiver, _1));
 }
 
 
@@ -8347,7 +8307,7 @@ void CvCity::updateFeatureHealth()
  */
 void CvCity::calculateFeatureHealthPercent(int& iGood, int& iBad) const
 {
-	foreach_(const CvPlot* loopPlot, plots())
+	foreach_(const CvPlot* loopPlot, plots(NUM_CITY_PLOTS))
 	{
 		const FeatureTypes eFeature = loopPlot->getFeatureType();
 
@@ -8383,7 +8343,7 @@ namespace {
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	foreach_ (const CvPlot* loopPlot, plots())
+	foreach_(const CvPlot* loopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
 			continue;
@@ -8998,7 +8958,7 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 
 			if (iTempHappy != 0)
 			{
-				iHappy += iTempHappy * algo::count_if(plots(), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
+				iHappy += iTempHappy * algo::count_if(plots(NUM_CITY_PLOTS), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
 			}
 		}
 	}
@@ -9635,50 +9595,45 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	int iNewFeatureGoodHappiness = 0;
 	int iNewFeatureBadHappiness = 0;
 
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 
-		if (pLoopPlot != NULL)
+		if (eFeature != NO_FEATURE)
 		{
-			FeatureTypes eFeature = pLoopPlot->getFeatureType();
-
-			if (eFeature != NO_FEATURE)
+			int iHappy = GET_PLAYER(getOwner()).getFeatureHappiness(eFeature);
+			if (iHappy > 0)
 			{
-				int iHappy = GET_PLAYER(getOwner()).getFeatureHappiness(eFeature);
-				if (iHappy > 0)
+				iNewFeatureGoodHappiness += iHappy;
+			}
+			else
+			{
+				iNewFeatureBadHappiness += iHappy;
+			}
+		}
+
+		const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+		if (NO_IMPROVEMENT != eImprovement)
+		{
+			int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
+
+			const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+			for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
+			{
+				if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
 				{
-					iNewFeatureGoodHappiness += iHappy;
-				}
-				else
-				{
-					iNewFeatureBadHappiness += iHappy;
+					iHappy += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHappinessChanges(eImprovement);
 				}
 			}
 
-			ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
-
-			if (NO_IMPROVEMENT != eImprovement)
+			if (iHappy > 0)
 			{
-				int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
-
-				CvPlayer& kPlayer = GET_PLAYER(getOwner());
-				for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-				{
-					if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
-					{
-						iHappy += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHappinessChanges(eImprovement);
-					}
-				}
-
-				if (iHappy > 0)
-				{
-					iNewFeatureGoodHappiness += iHappy;
-				}
-				else
-				{
-					iNewFeatureBadHappiness += iHappy;
-				}
+				iNewFeatureGoodHappiness += iHappy;
+			}
+			else
+			{
+				iNewFeatureBadHappiness += iHappy;
 			}
 		}
 	}
@@ -13256,15 +13211,7 @@ void CvCity::setRevealed(TeamTypes eIndex, bool bNewValue)
 
 		if (eIndex == GC.getGame().getActiveTeam())
 		{
-			for (int iI = 0; iI < getNumCityPlots(); iI++)
-			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->updateSymbols();
-				}
-			}
+			algo::for_each(plots(), bind(CvPlot::updateSymbols, _1));
 		}
 	}
 }
@@ -19818,11 +19765,9 @@ void CvCity::updateImprovementHealth()
 
 	int iNewGoodHealthPercent = 0;
 	int iNewBadHealthPercent = 0;
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getOwner() != NO_PLAYER && pLoopPlot->getOwner() == getOwner())
+		if (pLoopPlot->getOwner() != NO_PLAYER && pLoopPlot->getOwner() == getOwner())
 		{
 			const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 
@@ -20301,32 +20246,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			const bool bPeak = iI == iTerrainPeak;
 			const bool bHill = iI == iTerrainHill;
 
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			foreach_(const CvPlot* plotX, plots())
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL)
+				if (bPeak)
 				{
-					if (bPeak)
-					{
-						if (plotX->isAsPeak())
-						{
-							bValidTerrain = true;
-							break;
-						}
-					}
-					else if (bHill)
-					{
-						if (plotX->isHills())
-						{
-							bValidTerrain = true;
-							break;
-						}
-					}
-					else if (plotX->getTerrainType() == iI)
+					if (plotX->isAsPeak())
 					{
 						bValidTerrain = true;
 						break;
 					}
+				}
+				else if (bHill)
+				{
+					if (plotX->isHills())
+					{
+						bValidTerrain = true;
+						break;
+					}
+				}
+				else if (plotX->getTerrainType() == iI)
+				{
+					bValidTerrain = true;
+					break;
 				}
 			}
 		}
@@ -20338,32 +20279,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 			//Checks the city plots for a valid terrain
 			bool bHasAndTerrain = false;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			foreach_(const CvPlot* plotX, plots())
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL)
+				if (bPeak)
 				{
-					if (bPeak)
-					{
-						if (plotX->isAsPeak())
-						{
-							bHasAndTerrain = true;
-							break;
-						}
-					}
-					else if (bHill)
-					{
-						if (plotX->isHills())
-						{
-							bHasAndTerrain = true;
-							break;
-						}
-					}
-					else if (plotX->getTerrainType() == iI)
+					if (plotX->isAsPeak())
 					{
 						bHasAndTerrain = true;
 						break;
 					}
+				}
+				else if (bHill)
+				{
+					if (plotX->isHills())
+					{
+						bHasAndTerrain = true;
+						break;
+					}
+				}
+				else if (plotX->getTerrainType() == iI)
+				{
+					bHasAndTerrain = true;
+					break;
 				}
 			}
 			if (!bHasAndTerrain)
@@ -20384,14 +20321,9 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		if (kBuilding.isPrereqOrImprovement(iI))
 		{
 			bRequiresOrImprovement = true;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == iI))
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL && plotX->getImprovementType() == iI)
-				{
-					bHasValidImprovement = true;
-					break;
-				}
+				bHasValidImprovement = true;
 			}
 		}
 	}
@@ -20407,14 +20339,9 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		if (kBuilding.isPrereqOrFeature(iI))
 		{
 			bRequiresOrFeature = true;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL && plotX->getFeatureType() == iI)
-				{
-					bHasValidFeature = true;
-					break;
-				}
+				bHasValidFeature = true;
 			}
 		}
 	}
@@ -20435,14 +20362,8 @@ void CvCity::changeFreshWater(int iChange)
 
 		if (bDidHaveFreshWater != hasFreshWater())
 		{
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
-			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->updateIrrigated();
-				}
-			}
+			algo::for_each(plots(), bind(CvPlot::updateIrrigated, _1));
+
 			updateFreshWaterHealth();
 		}
 	}

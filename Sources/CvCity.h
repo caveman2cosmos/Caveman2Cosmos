@@ -204,8 +204,8 @@ public:
 	struct city_plot_iterator_base :
 		public bst::iterator_facade<city_plot_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
-		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit city_plot_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
+		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0), m_numPlots(0) {}
+		explicit city_plot_iterator_base(int centerX, int centerY, int numPlots, int idx) : m_centerX(centerX), m_centerY(centerY), m_numPlots(numPlots), m_curr(nullptr), m_idx(idx)
 		{
 			increment();
 		}
@@ -215,7 +215,7 @@ public:
 		void increment()
 		{
 			m_curr = nullptr;
-			while (m_curr == nullptr && m_idx < NUM_CITY_PLOTS)
+			while (m_curr == nullptr && m_idx < m_numPlots/*NUM_CITY_PLOTS*/)
 			{
 				m_curr = plotCity(m_centerX, m_centerY, m_idx);
 				++m_idx;
@@ -231,18 +231,20 @@ public:
 
 		Value_* dereference() const { return m_curr; }
 
-		int m_centerX;
-		int m_centerY;
+		const int m_centerX;
+		const int m_centerY;
+		const int m_numPlots;
 		Value_* m_curr;
 		int m_idx;
 	};
 	typedef city_plot_iterator_base<CvPlot> city_plot_iterator;
 
-	city_plot_iterator beginPlots() const { return city_plot_iterator(getX(), getY()); }
+	city_plot_iterator beginPlots(int numPlots, bool skipCityHomePlot) const { return city_plot_iterator(getX(), getY(), numPlots, skipCityHomePlot); }
 	city_plot_iterator endPlots() const { return city_plot_iterator(); }
 
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
-	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
+ 	city_plot_range plots(int numPlots, bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(numPlots, skipCityHomePlot), endPlots()); }
+	city_plot_range plots(bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(getNumCityPlots(), skipCityHomePlot), endPlots()); }
 
 	int getCityPlotIndex(const CvPlot* pPlot) const;
 	// Prefer to use plots() range instead of this for loops, searching etc.
