@@ -90,6 +90,11 @@ class CvMainInterface:
 		self.iTimeTextCounter = 0
 		self.cityOptions = None
 
+	def pythonDebugToggle(self, bNewValue):
+		self.bDebugModePython = bNewValue
+		if bNewValue:
+			CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("DebugBtn0")
+		else: CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).hide("DebugBtn0")
 
 	def interfaceScreen(self):
 		if GAME.isPitbossHost(): return
@@ -105,6 +110,8 @@ class CvMainInterface:
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
+			import DebugUtils
+			self.bDebugModePython = DebugUtils.bDebugMode
 			self.bDebugMode = GAME.isDebugMode()
 			# FOV
 			if MainOpt.isRememberFieldOfView():
@@ -875,24 +882,34 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDLog_Style")
 		screen.hide(btn)
 		x += dx
+
 		btn = "VictoryAdvBtn"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_VICTORY_SCREEN).getActionInfoIndex(), -1)
 		screen.setStyle(btn, "Button_HUDAdvisorVictory_Style")
 		screen.hide(btn)
 		x += dx
+
 		btn = "InfoAdvBtn"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_INFO).getActionInfoIndex(), -1)
 		screen.setStyle(btn, "Button_HUDAdvisorRecord_Style")
 		screen.hide(btn)
+
+		btn = "BuildListBtn0"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_POPUPBUTTON_PRODUCTION").getPath()
+		x += dx
+		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
+		screen.hide(btn)
+
 		btn = "OptionsBtnBUG0"
 		artPathButtonOptionBUG = CyArtFileMgr().getInterfaceArtInfo("BUG_OPTIONS_SCREEN_BUTTON").getPath()
 		x += dx
 		screen.setImageButton(btn, artPathButtonOptionBUG, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
-		# Build List Button
-		btn = "BuildListBtn0"
-		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_POPUPBUTTON_PRODUCTION").getPath()
+		btn = "DebugBtn0"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_DEBUG_SCREEN_BUTTON").getPath()
 		x += dx
 		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
 		screen.setStyle(btn, "Button_HUDSmall_Style")
@@ -1554,6 +1571,7 @@ class CvMainInterface:
 				screen.hide("VictoryAdvBtn")
 				screen.hide("InfoAdvBtn")
 				screen.hide("OptionsBtnBUG0")
+				screen.hide("DebugBtn0")
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
 				screen.hide("BuildListBtn0")
@@ -1574,6 +1592,9 @@ class CvMainInterface:
 				screen.show("VictoryAdvBtn")
 				screen.show("InfoAdvBtn")
 				screen.show("OptionsBtnBUG0")
+				if self.bDebugModePython:
+					screen.show("DebugBtn0")
+
 				if MainOpt.isShowFieldOfView():
 					screen.show("FoVSliderText")
 					screen.show("FoVSlider")
@@ -1610,6 +1631,7 @@ class CvMainInterface:
 			screen.hide("VictoryAdvBtn")
 			screen.hide("InfoAdvBtn")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
@@ -1656,6 +1678,7 @@ class CvMainInterface:
 			screen.hide("CityScrollMinus")
 			screen.hide("CityScrollPlus")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
@@ -1700,6 +1723,7 @@ class CvMainInterface:
 			screen.hide("CityScrollMinus")
 			screen.hide("CityScrollPlus")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("BuildListBtn0")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
