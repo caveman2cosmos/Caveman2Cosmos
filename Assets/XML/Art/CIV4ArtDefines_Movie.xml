@@ -3425,5 +3425,53 @@
 			<Type>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</Type>
 			<Path>Art/Movies/wonders/AZTEC_SACRIFICIAL_ALTAR_TLALOC.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_AQUARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_PISCES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_TAURUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_GEMINI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SCORPIO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CAPRICORN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_ARIES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_CANCER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LEO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_VIRGO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<Path>Art/Movies/group_wonders/ASTROLOGICAL_INFLUENCE_OF_LIBRA.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
