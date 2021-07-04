@@ -1041,9 +1041,9 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-		bCheckBonusManufacturerTech = 0 #Checking if tech earliest bonus manufacturer is on bonus tech reveal is slow.
-		if bCheckBonusManufacturerTech:
-			bonuslist = [-1]*GC.getNumBonusInfos()
+		
+		#Checking if earliest bonus manufacturer is on bonus tech reveal.
+		self.debug.checkBonusManufacturerTech()
 
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
@@ -1052,7 +1052,7 @@ class Pedia:
 			iTechLoc = self.debug.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.debug.checkTechRequirementLocation(CvBuildingInfo)[1]
 
-			"""
+
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
@@ -1062,45 +1062,23 @@ class Pedia:
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
-			"""
+
 
 			#Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				print CvBuildingInfo.getType()+" can't be hurried at first place"
 
 			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-			self.debug.checkTechMods(iTechLoc, CvBuildingInfo)
+			#self.debug.checkTechMods(iTechLoc, CvBuildingInfo)
 
 			#Check if building needs bonus before is available
-			self.debug.checkBonusRequirements(iTechLoc, CvBuildingInfo)
+			#self.debug.checkBonusRequirements(iTechLoc, CvBuildingInfo)
 
 			#Check if building needs building before is available
-			self.debug.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
+			#self.debug.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
 
 			#Check if building requirements obsolete before building
-			self.debug.checkBuildingRequirementObsoletion(CvBuildingInfo)
-
-			#Finds if earliest resource producer tech requirement and tech enable of resource are in same column
-			if bCheckBonusManufacturerTech:
-				for bonus in xrange(GC.getNumBonusInfos()):
-					if CvBuildingInfo.getFreeBonus() == bonus:
-						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-						if GC.getTechInfo(bonusTechReq) != None:
-							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-							if bonuslist[bonus] == -1:
-								bonuslist[bonus] = iTechLoc
-							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-								bonuslist[bonus] = iTechLoc
-
-					for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-						if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
-							bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-							if GC.getTechInfo(bonusTechReq) != None:
-								bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-								if bonuslist[bonus] == -1:
-									bonuslist[bonus] = iTechLoc
-								elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-									bonuslist[bonus] = iTechLoc
+			#self.debug.checkBuildingRequirementObsoletion(CvBuildingInfo)
 
 			# Check if building obsoletion isn't too close to tech unlock.
 			if CvBuildingInfo.getObsoleteTech() != -1:
@@ -1145,11 +1123,6 @@ class Pedia:
 			key = aList[i]
 			aList[i] = aListDict[key]
 
-		if bCheckBonusManufacturerTech:
-			for bonustype in xrange(len(bonuslist)):
-				if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
-					if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
-						print GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype])
 		return aList
 
 	def getBuildingType(self, CvBuildingInfo, iBuilding):

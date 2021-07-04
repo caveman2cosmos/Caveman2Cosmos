@@ -328,3 +328,35 @@ class Debug:
 							print CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType()
 					i += 1
 				iTechMod += 1
+	
+	#Building earliest manufacturer on resource tech reveal
+	def checkBonusManufacturerTech(self):
+		bonuslist = [-1]*GC.getNumBonusInfos()
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			
+			for bonus in xrange(GC.getNumBonusInfos()):
+				if CvBuildingInfo.getFreeBonus() == bonus:
+					bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+					if GC.getTechInfo(bonusTechReq) != None:
+						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+						if bonuslist[bonus] == -1:
+							bonuslist[bonus] = iTechLoc
+						elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+							bonuslist[bonus] = iTechLoc
+
+				for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
+						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+						if GC.getTechInfo(bonusTechReq) != None:
+							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+							if bonuslist[bonus] == -1:
+								bonuslist[bonus] = iTechLoc
+							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+								bonuslist[bonus] = iTechLoc
+								
+		for bonustype in xrange(len(bonuslist)):
+			if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
+				if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
+					print GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype])
