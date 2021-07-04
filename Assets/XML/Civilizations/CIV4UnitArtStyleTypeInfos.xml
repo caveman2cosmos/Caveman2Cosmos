@@ -49510,9 +49510,9 @@
 				<StyleUnit>
 					<UnitType>UNIT_MODERN_INFANTRY</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_MOUNTED_INFANTRY_OTTOMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_MOUNTED_INFANTRY_OTTOMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_MOUNTED_INFANTRY_OTTOMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_INFANTRY_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MODERN_INFANTRY_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MODERN_INFANTRY_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>

@@ -277,8 +277,6 @@ public:
 
 	bool isStrike() const;
 
-	bool isMADNukesEnabled() const;
-
 	int getID() const;
 	int /* HandicapTypes */ getHandicapType() const;
 	int /* CivilizationTypes */ getCivilizationType() const;

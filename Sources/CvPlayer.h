@@ -64,29 +64,6 @@ protected:
 	CvGameObjectPlayer m_GameObject;
 
 public:
-	// M.A.D. Nukes
-	int getMADDeterrent() const;
-	void setMADDeterrent(int iValue);
-	void changeMADDeterrent(int iValue);
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
-	int getMADOutgoing() const;
-	void setMADOutgoing(int iValue);
-	void changeMADOutgoing(int iValue);
-	bool getMADTrigger(int iValue) const;
-	void setMADTrigger(int iValue, bool bValue);
-	int getMADNukesCount() const;
-	bool isEnabledMAD() const;
-	void changeMADNukesCount(int iChange);
-protected:
-	int m_iMADDeterrent;
-	int m_iMADIncoming;
-	int m_iMADOutgoing;
-	int m_iMADNukesCount;
-	bool m_bMADTrigger[MAX_PLAYERS];
-
-public:
 
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();

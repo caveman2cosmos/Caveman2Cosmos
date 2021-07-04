@@ -1811,7 +1811,6 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
 			<UnitUpgrades>
@@ -1831,7 +1830,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>125</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1877,7 +1876,6 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
@@ -1898,7 +1896,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>440</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1949,7 +1947,6 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
 			<bInvisible>1</bInvisible>
@@ -1971,7 +1968,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>760</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1000</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>500</iEspionagePoints>
 			<iAsset>1</iAsset>
@@ -2032,7 +2029,6 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bStealPlans>1</bStealPlans>
 			<bInvestigate>1</bInvestigate>
 			<bCounterSpy>1</bCounterSpy>
@@ -2058,7 +2054,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>4320</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
 			<iAsset>1</iAsset>
@@ -2134,7 +2130,6 @@
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bSpy>1</bSpy>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bSabotage>1</bSabotage>
 			<bDestroy>1</bDestroy>
 			<bStealPlans>1</bStealPlans>
@@ -2160,7 +2155,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>3800</iCost>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>10000</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>20</iDropRange>
 			<iEspionagePoints>500</iEspionagePoints>
@@ -36280,7 +36275,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bGoldenAge>1</bGoldenAge>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bInvisible>1</bInvisible>
 			<UnitAIs>
 				<UnitAI>
@@ -36306,7 +36300,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
 			<iAsset>1</iAsset>

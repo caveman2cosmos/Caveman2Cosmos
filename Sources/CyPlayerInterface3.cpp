@@ -105,12 +105,10 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
 		.def("isMinorCiv", &CyPlayer::isMinorCiv, "bool ()")
+
 		.def("isAlive", &CyPlayer::isAlive, "bool ()")
 		.def("isEverAlive", &CyPlayer::isEverAlive, "bool ()")
 		.def("isFoundedFirstCity", &CyPlayer::isFoundedFirstCity, "bool ()")
-
-		.def("isMADNukesEnabled", &CyPlayer::isMADNukesEnabled, "bool ()")
-
 		.def("isStrike", &CyPlayer::isStrike, "bool ()")
 
 		.def("getID", &CyPlayer::getID, "int ()")

@@ -4326,23 +4326,6 @@
 		<Russian>Ïðèêàçàòü âûáðàíûì ïîäðàçäåëåíèÿì èäòè â óêàçàííîå ìåñòî ìåñòî. Ïîäðàçäåëåíèå îñòàíîâèòñÿ íå äîñòèãíóâ òî÷êè íàçíà÷åíèÿ â ñëó÷àå, åñëè âðàæåñêèå âîéñêà âûáðàííîãî òèïà ïîÿâÿòñÿ â çîíå âèäèìîñòè. </Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_PRETARGET_NUKE</Tag>
-		<English>Pretarget Nuke Mode</English>
-		<French>Mode Verrouillage des Cibles nucléaires</French>
-		<Italian>Modalità di pre-attacco nucleare</Italian>
-		<Spanish>Modo 'Fijar objetivo'</Spanish>
-		<Polish>Tryb Celu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_PRETARGET_NUKE_HELP</Tag>
-		<English>Set the selected tile as the target for nuclear missile strike</English>
-		<French>Définit la case sélectionnée en tant que cible pour une attaque de missile nucléaire</French>
-		<Italian>Seleziona la casella evidenziata come bersaglio per un attacco missilistico nucleare</Italian>
-		<Spanish>Establece la casilla seleccionada como objetivo del ataque con misiles nucleares.</Spanish>
-		<Polish>Wybierz dane pole jako cel nuklearny</Polish>
-		<Russian>Óêàæèòå âûáðàííóþ êëåòêó â êà÷åñòâå öåëè äëÿ ðàêåòíî-ÿäåðíîãî óäàðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INTERFACE_CITY_BAR_SPECIALIST_ADDENDUM</Tag>
 		<English>(%d1)</English>
 	</TEXT>
@@ -5112,13 +5095,6 @@
 		<French>Luxe</French>
 		<Spanish>Lujuria</Spanish>
 		<Russian>Роскошь</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAD_SCREEN_HOVER</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]MAD Nukes Screen (ALT-N)[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Ecran MAD-Nucléaire (ALT-N)[COLOR_REVERT]</French>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Vista de Armas nucleares DMA (ALT-N)[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Ekran MAD Nukes(ALT-N)[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_CITY_GREAT_WONDERS</Tag>
@@ -9468,60 +9444,6 @@
 		<Spanish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 con Religión oficial[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 z Religi Państwowej[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 XP íà ãîñ. ðåëèãèþ[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_CITY</Tag>
-		<English>Currently targetting: %s1</English>
-		<French>Cible actuellement verrouillée: %s1</French>
-		<Italian>Bersaglio attuale: %s1</Italian>
-		<Spanish>Objetivo actual: %s1</Spanish>
-		<Polish>Aktualny Cel: %s1</Polish>
-		<Russian>Â íàñòîÿùèé ìîìåíò ïðèöåëèâàíèå: %s1</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_FAILED</Tag>
-		<English>Target Failed</English>
-		<French>Cible échouée</French>
-		<Italian>Bersaglio mancato</Italian>
-		<Spanish>Objetivo fallido</Spanish>
-		<Polish>Cel Nietrafiony</Polish>
-		<Russian>Íåâåðíàÿ öåëü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_FRIENDLY_CITY</Tag>
-		<English>%s1 has targetted %s2 with a nuke!</English>
-		<French>%s1 a ciblé %s2 avec une arme nucléaire!</French>
-		<Italian>%s1 ha scelto come bersaglio %s2!</Italian>
-		<Spanish>¡%s1 ha apuntado a %s2 con un arma nuclear!</Spanish>
-		<Polish>%s1 został trafiony pociskiem nuklearnym przez %s2!</Polish>
-		<Russian>%s1 ïîä ïðèöåëîì %s2 ÿäåðíîé ðàêåòû!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_LOST</Tag>
-		<English>Target Lost</English>
-		<French>Cible perdue</French>
-		<Italian>Bersaglio perso</Italian>
-		<Spanish>Objetivo perdido</Spanish>
-		<Polish>Cel Zgubiony</Polish>
-		<Russian>Öåëü ïîòåðÿíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_RESET</Tag>
-		<English>%s1 Target Reset</English>
-		<French>%s1 Cible Réinitialisée</French>
-		<Italian>%s1 bersaglio resettato</Italian>
-		<Spanish>Objetivo %s1 reiniciado</Spanish>
-		<Polish>%s1 Cel zresetowany</Polish>
-		<Russian>%s1 ñáðîñ öåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUKE_TARGET_SET_ON</Tag>
-		<English>%s1 target set on %s2</English>
-		<French>Cible de %s1 définie sur %s2</French>
-		<Italian>Il bersaglio di %s1 è %s2</Italian>
-		<Spanish>Objetivo de %s1 definido sobre %s2</Spanish>
-		<Polish>%s1 wyznaczył cel na %s2</Polish>
-		<Russian>%s1 íàöåëåíà íà %s2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ORBITAL</Tag>

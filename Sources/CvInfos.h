@@ -3001,7 +3001,6 @@ public:
 	int getHurryCostModifier() const;
 	int getSharedCivicTradeRouteModifier() const;
 	int getCorporationSpreadRate() const;
-	int getRealCorporationMaintenanceModifier() const;
 	int getFreedomFighterChange() const;
 
 	float getRevIdxNationalityMod() const;
@@ -3026,7 +3025,6 @@ public:
 	bool IsFixedBorders() const;
 	bool isNoCapitalUnhappiness() const;
 	bool isNoLandmarkAnger() const;
-	bool isEnablesMAD() const;
 	bool isAllReligionsActive() const;
 	bool isBansNonStateReligions() const;
 	bool isFreedomFighter() const;
@@ -3125,7 +3123,6 @@ protected:
 	int m_iSharedCivicTradeRouteModifier;
 	int m_iLandmarkHappiness;
 	int m_iCorporationSpreadRate;
-	int m_iRealCorporationMaintenanceModifier;
 	int m_iCityLimit;
 	int m_iCityOverLimitUnhappy;
 	int m_iForeignerUnhappyPercent;
@@ -3189,7 +3186,6 @@ protected:
 	bool m_bFixedBorders;
 	bool m_bNoCapitalUnhappiness;
 	bool m_bNoLandmarkAnger;
-	bool m_bEnablesMAD;
 	bool m_bUpgradeAnywhere;
 	bool m_bAllowInquisitions;
 	bool m_bDisallowInquisitions;
@@ -7483,71 +7479,6 @@ public:
 private:
 	CvString m_szPath;
 	float m_fUpdateRate;
-};
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvQuestInfo
-//
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvQuestInfo :
-	public CvInfoBase
-{
-public:
-	struct QuestLink
-	{
-		// Stores the QuestLinks Type and Name
-		QuestLink() :
-		m_szQuestLinkType("No Type"),
-		m_szQuestLinkName("No Name")
-		{
-		}
-
-	CvString m_szQuestLinkType;
-	CvString m_szQuestLinkName;
-	};
-
-	CvQuestInfo();
-	virtual ~CvQuestInfo();
-
-	void reset();
-	bool initQuestLinks(int iNum);
-
-	int getNumQuestMessages() const;
-	int getNumQuestLinks() const;
-	int getNumQuestSounds() const;
-	const TCHAR* getQuestObjective() const;
-	const TCHAR* getQuestBodyText() const;
-	const TCHAR* getQuestMessages(int iIndex) const;
-	const TCHAR* getQuestLinkType(int iIndex) const;
-	const TCHAR* getQuestLinkName(int iIndex) const;
-	const TCHAR* getQuestSounds(int iIndex) const;
-	const TCHAR* getQuestScript() const;
-
-	void setNumQuestMessages(int iNum);
-	void setNumQuestSounds(int iNum);
-	void setQuestObjective(const TCHAR* szText);
-	void setQuestBodyText(const TCHAR* szText);
-	void setQuestMessages(int iIndex, const TCHAR* szText);
-	void setQuestSounds(int iIndex, const TCHAR* szText);
-	void setQuestScript(const TCHAR* szText);
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(const CvQuestInfo* pClassInfo);
-
-private:
-	int m_iNumQuestMessages;
-	int m_iNumQuestLinks;
-	int m_iNumQuestSounds;
-
-	CvString m_szQuestObjective;
-	CvString m_szQuestBodyText;
-	CvString m_szQuestScript;
-
-	CvString* m_paszQuestMessages;
-	QuestLink* m_pQuestLinks;
-	CvString* m_paszQuestSounds;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

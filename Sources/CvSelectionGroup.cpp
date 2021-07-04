@@ -654,10 +654,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 // BUG - Sentry Actions - end
 		case MISSION_AIRLIFT:
 		case MISSION_NUKE:
-		// < M.A.D. Nukes Start >
-		case MISSION_PRETARGET_NUKE:
-		// < M.A.D. Nukes End   >
-
 		case MISSION_RECON:
 		case MISSION_PARADROP:
 		case MISSION_AIRBOMB:
@@ -901,14 +897,6 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				return true;
 			}
 			break;
-		// < M.A.D. Nukes Start >
-		case MISSION_PRETARGET_NUKE:
-			if (pPlot->isCity() && GET_PLAYER(pLoopUnit->getOwner()).isEnabledMAD() && pLoopUnit->canNukeAt(pPlot, iData1, iData2, false) && !getHeadUnit()->isMADEnabled() && getHeadUnit()->getUnitInfo().getUnitAIType(UNITAI_ICBM))
-			{
-				return true;
-			}
-			break;
-		// < M.A.D. Nukes End   >
 		case MISSION_RECON:
 			if (pLoopUnit->canReconAt(pPlot, iData1, iData2))
 			{
@@ -1430,9 +1418,6 @@ bool CvSelectionGroup::startMission()
 
 		case MISSION_AIRLIFT:
 		case MISSION_NUKE:
-		// < M.A.D. Nukes Start >
-		case MISSION_PRETARGET_NUKE:
-		// < M.A.D. Nukes End   >
 		case MISSION_RECON:
 		case MISSION_PARADROP:
 		case MISSION_AIRBOMB:
@@ -1473,11 +1458,7 @@ bool CvSelectionGroup::startMission()
 /************************************************************************************************/
 /* DCM                                     END                                                  */
 /************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		case MISSION_CLAIM_TERRITORY:
 		case MISSION_HURRY_FOOD:
 		case MISSION_INQUISITION:
@@ -1491,9 +1472,7 @@ bool CvSelectionGroup::startMission()
 			break;
 		case MISSION_SHADOW:
 			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FAssert(false);
@@ -1660,15 +1639,6 @@ bool CvSelectionGroup::startMission()
 							}
 						}
 						break;
-				// < M.A.D. Nukes Start >
-					case MISSION_PRETARGET_NUKE:
-						if (pLoopUnit->setMADTargetPlot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							gDLL->getInterfaceIFace()->clearSelectionList();
-							bAction = true;
-						}
-						break;
-				// < M.A.D. Nukes End   >
 					case MISSION_RECON:
 						if (pLoopUnit->recon(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
 						{
@@ -2349,9 +2319,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 		case MISSION_AIRLIFT:
 		case MISSION_NUKE:
-		// < M.A.D. Nukes Start >
-		case MISSION_PRETARGET_NUKE:
-		// < M.A.D. Nukes End   >
 		case MISSION_RECON:
 		case MISSION_PARADROP:
 		case MISSION_AIRBOMB:
@@ -2480,9 +2447,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 			case MISSION_AIRLIFT:
 			case MISSION_NUKE:
-			// < M.A.D. Nukes Start >
-			case MISSION_PRETARGET_NUKE:
-			// < M.A.D. Nukes End   >
 
 			case MISSION_RECON:
 			case MISSION_PARADROP:
@@ -2831,23 +2795,11 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_NUKE:
-			// < M.A.D. Nukes Start >
 			if (pLoopUnit->canNuke(pLoopUnit->plot()) && pLoopUnit->canMove())
-			// < M.A.D. Nukes End   >
 			{
 				return true;
 			}
 			break;
-
-		// < M.A.D. Nukes Start >
-		case INTERFACEMODE_PRETARGET_NUKE:
-			if (pLoopUnit->canNuke(pLoopUnit->plot()) && GET_PLAYER(pLoopUnit->getOwner()).isEnabledMAD() && !pLoopUnit->isMADEnabled() && getHeadUnit()->getUnitInfo().getUnitAIType(UNITAI_ICBM) && pLoopUnit->canMove())
-			{
-				return true;
-			}
-			break;
-		// < M.A.D. Nukes End   >
-
 		case INTERFACEMODE_RECON:
 			if (pLoopUnit->canRecon(pLoopUnit->plot()))
 			{
@@ -2980,14 +2932,6 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 				return true;
 			}
 			break;
-		// < M.A.D. Nukes Start >
-		case INTERFACEMODE_PRETARGET_NUKE:
-			if (pLoopUnit != NULL && pPlot->isRevealed(pLoopUnit->getTeam(), false) && pPlot->isCity() && pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY(), false) && GET_PLAYER(pLoopUnit->getOwner()).isEnabledMAD() && !pLoopUnit->isMADEnabled() && getHeadUnit()->getUnitInfo().getUnitAIType(UNITAI_ICBM) && pLoopUnit->canMove())
-			{
-				return true;
-			}
-			break;
-		// < M.A.D. Nukes End   >
 		case INTERFACEMODE_RECON:
 			if (pLoopUnit != NULL && pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
 			{
@@ -6359,7 +6303,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 			case MISSION_RBOMBARD:
 			case MISSION_FENGAGE:
 			case MISSION_CLAIM_TERRITORY:
-			case MISSION_PRETARGET_NUKE:
 				//	Fixup for viewports, old versions of which can leave things un-normalized
 				pNode->m_data.iData1 = (pNode->m_data.iData1 + GC.getMap().getGridWidth()) % GC.getMap().getGridWidth();
 				pNode->m_data.iData2 = (pNode->m_data.iData2 + GC.getMap().getGridHeight()) % GC.getMap().getGridHeight();

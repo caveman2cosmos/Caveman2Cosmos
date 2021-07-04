@@ -128,9 +128,6 @@ void CyGamePythonInterface()
 		.def("getInitTech", &CyGame::getInitTech)
 		.def("getInitWonders", &CyGame::getInitWonders)
 
-		.def("getLastNukeStrikePlot", &CyGame::getLastNukeStrikePlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setLastNukeStrikePlot", &CyGame::setLastNukeStrikePlot, "void (CyPlot* pPlot)")
-
 		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
 		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
 		.def("isForcedAIAutoPlay", &CyGame::isForcedAIAutoPlay, "bool (int iPlayer)")
