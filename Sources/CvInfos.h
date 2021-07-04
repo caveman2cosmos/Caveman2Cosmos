@@ -7483,64 +7483,6 @@ private:
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
-//  class : CvTutorialInfo
-//
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTutorialMessage
-{
-public:
-	CvTutorialMessage();
-	virtual ~CvTutorialMessage();
-
-	const TCHAR* getText() const;
-	const TCHAR* getImage() const;
-	const TCHAR* getSound() const;
-
-	void setText(const TCHAR* szText);
-	void setImage(const TCHAR* szText);
-	void setScript(int iIndex, const TCHAR* szText);
-
-	int getNumTutorialScripts() const;
-	const TCHAR* getTutorialScriptByIndex(int i) const;
-	bool read(CvXMLLoadUtility* pXML);
-
-private:
-	int m_iNumTutorialScripts;
-	CvString m_szTutorialMessageText;
-	CvString m_szTutorialMessageImage;
-	CvString m_szTutorialMessageSound;
-	CvString* m_paszTutorialScripts;
-};
-
-class CvTutorialMessage;
-class CvTutorialInfo :
-	public CvInfoBase
-{
-public:
-	CvTutorialInfo();
-	virtual ~CvTutorialInfo();
-
-	const TCHAR* getNextTutorialInfoType() const;
-	void setNextTutorialInfoType(const TCHAR* szVal);
-
-	bool initTutorialMessages(int iNum);
-	void resetMessages();
-
-	int getNumTutorialMessages() const;
-	const CvTutorialMessage* getTutorialMessage(int iIndex) const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(const CvTutorialInfo* pClassInfo);
-
-private:
-	CvString m_szNextTutorialInfoType;
-	int m_iNumTutorialMessages;
-	CvTutorialMessage* m_paTutorialMessages;
-};
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
 //  class : CvGameOptionInfo
 //
 //
@@ -7562,7 +7504,7 @@ public:
 
 	void copyNonDefaults(const CvGameOptionInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
