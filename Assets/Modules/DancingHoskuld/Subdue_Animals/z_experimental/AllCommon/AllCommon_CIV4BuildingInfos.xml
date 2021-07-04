@@ -5,7 +5,6 @@
 			<Type>BUILDING_AMPHIBIAN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -49,7 +48,6 @@
 			<Type>BUILDING_AMPHIBIAN_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -59,9 +57,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -96,9 +94,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -136,7 +134,6 @@
 			<Type>BUILDING_AMPHIBIAN_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -165,7 +162,6 @@
 			<Type>BUILDING_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -209,7 +205,6 @@
 			<Type>BUILDING_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -219,9 +214,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -256,9 +251,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -296,7 +291,6 @@
 			<Type>BUILDING_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -325,7 +319,6 @@
 			<Type>BUILDING_BUG_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BUG_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -360,19 +353,16 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUG_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -382,9 +372,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -419,9 +409,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -459,7 +449,6 @@
 			<Type>BUILDING_BUG_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -488,7 +477,6 @@
 			<Type>BUILDING_FISH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FISH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -532,7 +520,6 @@
 			<Type>BUILDING_FISH_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -542,9 +529,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISH_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FISH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -579,9 +566,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISH_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FISH_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -619,7 +606,6 @@
 			<Type>BUILDING_FISH_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -648,7 +634,6 @@
 			<Type>BUILDING_LOCAL_FISH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOCAL_FISH_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
@@ -698,7 +683,6 @@
 			<Type>BUILDING_LOCAL_FISH_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_LOCAL_FISH_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOCAL_FISH_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -728,7 +712,6 @@
 			<Type>BUILDING_FLIGHTLESS_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -772,7 +755,6 @@
 			<Type>BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -782,9 +764,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -819,9 +801,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -859,7 +841,6 @@
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -888,7 +869,6 @@
 			<Type>BUILDING_OWL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OWL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -932,7 +912,6 @@
 			<Type>BUILDING_OWL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -942,9 +921,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OWL_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OWL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -979,9 +958,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OWL_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OWL_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1019,7 +998,6 @@
 			<Type>BUILDING_OWL_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1048,7 +1026,6 @@
 			<Type>BUILDING_PENGUIN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1098,7 +1075,6 @@
 			<Type>BUILDING_PENGUIN_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1108,9 +1084,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PENGUIN_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1145,9 +1121,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PENGUIN_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1185,7 +1161,6 @@
 			<Type>BUILDING_PENGUIN_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1214,7 +1189,6 @@
 			<Type>BUILDING_RAPTOR_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1266,7 +1240,6 @@
 			<Type>BUILDING_RAPTOR_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1276,9 +1249,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAPTOR_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1313,9 +1286,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAPTOR_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1353,7 +1326,6 @@
 			<Type>BUILDING_RAPTOR_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1382,7 +1354,6 @@
 			<Type>BUILDING_REPTILE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1426,7 +1397,6 @@
 			<Type>BUILDING_REPTILE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1436,9 +1406,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1473,9 +1443,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1513,7 +1483,6 @@
 			<Type>BUILDING_REPTILE_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1542,7 +1511,6 @@
 			<Type>BUILDING_RODENT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1586,7 +1554,6 @@
 			<Type>BUILDING_RODENT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1596,9 +1563,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODENT_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1633,9 +1600,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODENT_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1673,7 +1640,6 @@
 			<Type>BUILDING_RODENT_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1702,7 +1668,6 @@
 			<Type>BUILDING_SEA_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1746,7 +1711,6 @@
 			<Type>BUILDING_SEA_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1756,9 +1720,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1793,9 +1757,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1833,7 +1797,6 @@
 			<Type>BUILDING_SEA_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1862,7 +1825,6 @@
 			<Type>BUILDING_WOLF_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
@@ -1918,7 +1880,6 @@
 			<Type>BUILDING_WOLF_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -1928,9 +1889,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WOLF_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -1965,9 +1926,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WOLF_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
@@ -2005,7 +1966,6 @@
 			<Type>BUILDING_WOLF_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>

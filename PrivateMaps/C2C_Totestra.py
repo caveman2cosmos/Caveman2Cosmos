@@ -261,15 +261,12 @@
 IsStandAlone = False
 if __name__ != "__main__":
     from CvPythonExtensions import *
-    import CvUtil
     import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed
 import math
 import sys
-import time
-import os
 
 # Options
 OPTION_MapSeed = 10
@@ -5080,16 +5077,13 @@ class StartingPlotFinder :
                     featureInfo = gc.getFeatureInfo(featureEnum)
                     if debugOut: print "Removing feature %(s)s" % {"s":featureInfo.getType()}
                     impCommerce -= (featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE))
 
                     impFood -= (featureInfo.getYieldChange(YieldTypes.YIELD_FOOD) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD))
 
                     impProduction -= (featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION))
 
                 imp = Improvement(impEnum,impFood,impProduction,impCommerce,0)
                 improvementList.append(imp)

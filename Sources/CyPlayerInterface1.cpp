@@ -122,7 +122,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("isCivic", &CyPlayer::isCivic, "bool (int (CivicTypes) eCivic)")
 		.def("canDoCivics", &CyPlayer::canDoCivics, "bool (int (CivicTypes) eCivic)")
-		.def("canRevolution", &CyPlayer::canRevolution, "bool (int (CivicTypes*) paeNewCivics)")
+		.def("canRevolution", &CyPlayer::canRevolution, "bool ()")
 
 		.def("canChangeReligion", &CyPlayer::canChangeReligion, "bool ()")
 		.def("canConvert", &CyPlayer::canConvert, "bool (int /*ReligionTypes*/ iIndex)")

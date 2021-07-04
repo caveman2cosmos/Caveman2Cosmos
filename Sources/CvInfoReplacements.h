@@ -21,11 +21,11 @@ class CvInfoReplacement
 protected:
 	const uint m_uiID;
 	const uint m_uiReplID;
-	BoolExpr* m_pCondition;
+	const BoolExpr* m_pCondition;
 	T* m_pInfo;
 
 public:
-	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL):
+	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, const BoolExpr* pCondition = NULL, T* pInfo = NULL):
 		m_uiID(uiID), m_uiReplID(uiReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
 
 	void read(FDataStreamBase* pStream)
@@ -57,7 +57,7 @@ public:
 
 	bool checkCondition()
 	{
-		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGame().getGameObject());
+		return m_pCondition->evaluate(GC.getGame().getGameObject());
 	}
 
 	T* getInfo() const
@@ -70,7 +70,7 @@ public:
 		m_pInfo = pInfo;
 	}
 
-//	void updateInfo(BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+//	void updateInfo(const BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
 //	{
 //		if (bPassTwo)
 //		{
@@ -134,7 +134,7 @@ public:
 	}
 	
 	// This adds a replacement or updates an existing one
-	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+	void addReplacement(uint uiID, uint uiReplID, const BoolExpr* pCondition, T* pInfo/*, bool bPassTwo = false*/)
 	{
 //		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
 //		if (pExisting)

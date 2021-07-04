@@ -5,7 +5,6 @@
 			<Type>TECH_ANDEANISM</Type>
 			<Description>TXT_KEY_TECH_ANDEANISM</Description>
 			<Civilopedia>TXT_KEY_TECH_ANDEANISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_ANDEANISM_STRATEGY</Strategy>
 			<bGlobal>1</bGlobal>
 			<iCost>242</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -13,7 +12,6 @@
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_STARGAZING</PrereqTech>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>

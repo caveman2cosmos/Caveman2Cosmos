@@ -36,7 +36,7 @@ CvOutcomeMission::~CvOutcomeMission()
 	SAFE_DELETE(m_pUnitCondition);
 }
 
-//IntExpr* CvOutcomeMission::getCost()
+//const IntExpr* CvOutcomeMission::getCost() const
 //{
 //	return m_iCost;
 //}
@@ -108,7 +108,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 			}
 			else
 			{
-				pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+				pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 			}
 
 			if (!pPayer)
@@ -192,7 +192,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)

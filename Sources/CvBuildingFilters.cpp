@@ -108,19 +108,15 @@ bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *
 
 bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	//TB Note: isn't the following checking only buildings already built?
 	if (pCity)
 	{
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) > 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (buildingInfo.getNumTechHappinessTypes() > 0)
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (buildingInfo.getTechHappinessType(iI) > 0)
-				return true;
-		}
+		if (modifier.second > 0)
+			return true;
 	}
 	return buildingInfo.getHappiness() > 0
 		|| buildingInfo.getAreaHappiness() > 0
@@ -134,13 +130,10 @@ bool BuildingFilterIsHealth::isFilteredBuilding(const CvPlayer *pPlayer, CvCity 
 		return pCity->getAdditionalHealthByBuilding(eBuilding) > 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (buildingInfo.getNumTechHealthTypes() > 0)
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (buildingInfo.getTechHealthType(iI) > 0)
-				return true;
-		}
+		if (modifier.second > 0)
+			return true;
 	}
 	return buildingInfo.getHealth() > 0
 		|| buildingInfo.getAreaHealth() > 0
@@ -154,13 +147,10 @@ bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) < 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (buildingInfo.getNumTechHappinessTypes() > 0)
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (buildingInfo.getTechHappinessType(iI) < 0)
-				return true;
-		}
+		if (modifier.second < 0)
+			return true;
 	}
 	return buildingInfo.getHappiness() < 0
 		|| buildingInfo.getAreaHappiness() < 0
@@ -174,13 +164,10 @@ bool BuildingFilterIsUnhealthiness::isFilteredBuilding(const CvPlayer *pPlayer, 
 		return pCity->getAdditionalHealthByBuilding(eBuilding) < 0;
 	}
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (buildingInfo.getNumTechHealthTypes() > 0)
+	foreach_(const TechModifier& modifier, buildingInfo.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (buildingInfo.getTechHealthType(iI) < 0)
-				return true;
-		}
+		if (modifier.second < 0)
+			return true;
 	}
 	return buildingInfo.getHealth() < 0
 		|| buildingInfo.getAreaHealth() < 0
@@ -197,7 +184,7 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getFreePromotion_3() != NO_PROMOTION
 		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
-		|| buildingInfo.getNumFreePromoTypes() > 0
+		|| !buildingInfo.getFreePromoTypes().empty()
 		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
 		|| buildingInfo.isAnyUnitCombatFreeExperience()
 		|| buildingInfo.isAnyDomainFreeExperience();

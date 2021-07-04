@@ -153,8 +153,8 @@ class CvReligionScreen:
 		screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_RELIGION_SCREEN_TITLE", ()).upper() + u"</font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Make the scrollable areas for the city list...
-
-		if (CyGame().isDebugMode()):
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			self.szDropdownName = self.DEBUG_DROPDOWN_ID
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			for j in range(GC.getMAX_PLAYERS()):
@@ -218,7 +218,7 @@ class CvReligionScreen:
 			szName = self.getReligionTextName(iRel)
 			szLabel = GC.getReligionInfo(iRel).getDescription()
 #			if (self.iReligionSelected == iRel):
-#				szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+#				szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 			screen.setLabelAt(szName, szArea, szLabel, 1<<2, self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
@@ -228,7 +228,7 @@ class CvReligionScreen:
 		szName = self.getReligionTextName(self.NUM_RELIGIONS)
 		szLabel = localText.getText("TXT_KEY_RELIGION_SCREEN_NO_STATE", ())
 #		if (self.iReligionSelected == self.NUM_RELIGIONS):
-#			szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+#			szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 		screen.setLabelAt(szName, szArea, szLabel, 1<<2,  self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 
@@ -375,12 +375,12 @@ class CvReligionScreen:
 		self.objectUnderConstruction = self.hammerIcon
 
 		# add the colors dependant on the statuses
-		self.objectHave = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_GREEN")) #"x"
-		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_RED")) #"-"
-		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_BLUE")) #"o"
-		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_WHITE")) #"x"
-		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_YELLOW")) #"-"
-		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_YELLOW")) #"o"
+		self.objectHave = localText.changeTextColor (self.objectIsPresent, GC.getCOLOR_GREEN()) #"x"
+		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, GC.getCOLOR_RED()) #"-"
+		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, GC.getCOLOR_BLUE()) #"o"
+		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, GC.getCOLOR_WHITE()) #"x"
+		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, GC.getCOLOR_YELLOW()) #"-"
+		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, GC.getCOLOR_YELLOW()) #"o"
 
 		self.szCities = localText.getText("TXT_KEY_BUG_RELIGIOUS_CITY", ())
 		self.szTemples = localText.getText("TXT_KEY_BUG_RELIGIOUS_TEMPLE", ())
@@ -418,7 +418,6 @@ class CvReligionScreen:
 			screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_CITY1_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 			screen.addPanel(self.AREA2_ID, "", "", True, True, self.X_CITY2_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 
-		szArea = self.RELIGION_PANEL_ID
 		for iRel in self.RELIGIONS:
 			if (self.iReligionSelected == iRel):
 				screen.setState(self.getReligionButtonName(iRel), True)
@@ -550,7 +549,6 @@ class CvReligionScreen:
 # end of BUG indent of original code
 
 		# Convert Button....
-		iLink = 0
 		if (GC.getPlayer(self.iActivePlayer).canChangeReligion()):
 			iLink = 1
 
@@ -584,13 +582,8 @@ class CvReligionScreen:
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-
 		screen = self.getScreen()
-
 		szWidgetName = inputClass.getFunctionName()
-		szFullWidgetName = szWidgetName + str(inputClass.getID())
-		code = inputClass.getNotifyCode()
-
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED
 		and szWidgetName != self.TABLE_ID):
 			screen = self.getScreen()
@@ -599,7 +592,6 @@ class CvReligionScreen:
 			self.drawReligionInfo()
 			self.drawCityInfo(self.iReligionSelected)
 			return 1
-
 		# BUG Zoom to City
 		elif (szWidgetName == self.TABLE_ID):
 			if (inputClass.getMouseX() == 0):
@@ -641,14 +633,13 @@ class CvReligionScreen:
 
 	def ReligionConvert(self, inputClass):
 		screen = self.getScreen()
-		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
 			screen.hideScreen()
 
 	def ReligionCancel(self, inputClass):
-		screen = self.getScreen()
-		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
 			self.iReligionSelected = self.iReligionOriginal
-			if (-1 == self.iReligionSelected):
+			if -1 == self.iReligionSelected:
 				self.iReligionSelected = self.NUM_RELIGIONS
 			self.drawCityInfo(self.iReligionSelected)
 

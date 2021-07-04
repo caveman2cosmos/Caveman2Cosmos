@@ -707,7 +707,7 @@
 			</DiploVotes>
 		</VoteInfo>
 		<VoteInfo>
-			<Type>VOTE_DEFENSIVE_PACT</Type>
+			<Type>VOTE_DEFENSIVE_PACT_CV</Type>
 			<Description>TXT_KEY_VOTE_CONGVIENNA_DEFENSIVE_PACT</Description>
 			<iPopulationThreshold>62</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>

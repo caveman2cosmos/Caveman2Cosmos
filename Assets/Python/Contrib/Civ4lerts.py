@@ -571,19 +571,23 @@ class AbstractCanHurry(AbstractCityTestAlert):
 		self.keHurryType = GC.getInfoTypeForString(szHurryType)
 
 	def onCityBuildingUnit(self, argsList):
-		city, iUnit = argsList
+		city = argsList[0]
+		#iUnit = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingBuilding(self, argsList):
-		city, iBuilding = argsList
+		city = argsList[0]
+		#iBuilding = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingProject(self, argsList):
-		city, iProject = argsList
+		city = argsList[0]
+		#iProject = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingProcess(self, argsList):
-		city, iProcess = argsList
+		city = argsList[0]
+		#iProcess = argsList[1]
 		self._onItemStarted(city)
 
 	def _onItemStarted(self, city):
@@ -632,13 +636,13 @@ class CanHurryPopulation(AbstractCanHurry):
 		if Civ4lertsOpt.isWhipAssistOverflowCountCurrentProduction():
 			iOverflow = iOverflow + city.getCurrentProductionDifference(True, False)
 		iAnger = city.getHurryAngerTimer() + city.flatHurryAngerLength()
-		iMaxOverflow = min(city.getProductionNeeded(), iOverflow)
+		iMaxOverflow = city.getMaxProductionOverflow()
 		iOverflowGold = max(0, iOverflow - iMaxOverflow) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT") / 100
-		iOverflow =  100 * iMaxOverflow / city.getBaseYieldRateModifier(GC.getInfoTypeForString("YIELD_PRODUCTION"), city.getProductionModifier())
+		iOverflow = 100 * iMaxOverflow / city.getBaseYieldRateModifier(YieldTypes.YIELD_PRODUCTION, 0)
 		if iOverflowGold > 0:
 			return TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_POP_PLUS_GOLD", (city.getName(), info.getDescription(), iPop, iOverflow, iAnger, iOverflowGold))
-		else:
-			return TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_POP", (city.getName(), info.getDescription(), iPop, iOverflow, iAnger))
+
+		return TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_POP", (city.getName(), info.getDescription(), iPop, iOverflow, iAnger))
 
 class CanHurryGold(AbstractCanHurry):
 	"""
@@ -839,7 +843,9 @@ class WorstEnemy(AbstractStatefulAlert):
 		self.checkIfIsAnyOrHasMetAllTeams(eTeam, eRivalTeam)
 
 	def onChangeWar(self, argsList):
-		bIsWar, eTeam, eRivalTeam = argsList
+		#bIsWar = argsList[0]
+		eTeam = argsList[1]
+		eRivalTeam = argsList[2]
 		self.checkIfIsAnyOrHasMetAllTeams(eTeam, eRivalTeam)
 
 	def onCityRazed(self, argsList):
@@ -847,12 +853,10 @@ class WorstEnemy(AbstractStatefulAlert):
 		self.checkIfIsAnyOrHasMetAllTeams(city.getTeam(), GC.getPlayer(ePlayer).getTeam())
 
 	def onVassalState(self, argsList):
-		eMaster, eVassal, bVassal = argsList
+		eMaster = argsList[0]
+		eVassal = argsList[1]
+		#bVassal = argsList[2]
 		self.checkIfIsAnyOrHasMetAllTeams(eMaster, eVassal)
-
-	def onPlayerChangeStateReligion(self, argsList):
-		ePlayer, eNewReligion, eOldReligion = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(GC.getPlayer(ePlayer).getTeam())
 
 	def checkIfIsAnyOrHasMetAllTeams(self, *eTeams):
 		"""

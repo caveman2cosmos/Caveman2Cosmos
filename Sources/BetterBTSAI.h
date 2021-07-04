@@ -27,5 +27,6 @@ extern int gUnitLogLevel;
 #endif
 
 void logBBAI(char* format, ... );
+void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message);
 
 #endif  //BETTERBTSAI_H

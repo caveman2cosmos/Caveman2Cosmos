@@ -13,11 +13,11 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>ExtraDiplomacy</Directory>
+					<Directory>DanceTheory</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>DanceTheory</Directory>
+					<Directory>Herds</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 			</Modules>

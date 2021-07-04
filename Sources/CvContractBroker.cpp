@@ -405,7 +405,7 @@ void CvContractBroker::finalizeTenderContracts()
 									}
 
 									//	Decrease the value 10% per (standard speed) turn
-									iValue *= 100 - 10*std::min((iTurns*100)/GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(),10);
+									iValue *= 100 - 10 * std::min(iTurns * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent(), 10);
 									iValue /= 100;
 
 									if ( iValue > 0 )

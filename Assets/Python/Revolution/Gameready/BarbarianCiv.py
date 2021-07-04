@@ -26,7 +26,6 @@ class BarbarianCiv:
 		self.customEM = customEM
 		self.BARBARIAN_PLAYER = GC.getBARBARIAN_PLAYER()
 		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
-		self.NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 
 		self.customEM.addEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
@@ -64,7 +63,7 @@ class BarbarianCiv:
 		# Increase odds per barb city within reason.
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
@@ -144,6 +143,7 @@ class BarbarianCiv:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
 			if not bNewWorld:
+				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				for iTech in xrange(iNumTechs):
 					if CyTeam.isHasTech(iTech):
 						techsOwned.append(iTech)
@@ -467,9 +467,8 @@ class BarbarianCiv:
 			iTech = CvUnitInfo.getPrereqAndTech()
 			if iTech > -1 and not CyTeam.isHasTech(iTech):
 				continue
-			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
-				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech):
+			for iTech in CvUnitInfo.getPrereqAndTechs():
+				if not CyTeam.isHasTech(iTech):
 					break
 			else:
 				aList.append(iUnit); break
@@ -603,7 +602,7 @@ class BarbarianCiv:
 		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
 		if odds < 512: return
 
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
 		iX = CyCity1.getX(); iY = CyCity1.getY()

@@ -6,12 +6,10 @@
 #include <boost155/type_traits.hpp>
 #include <boost155/utility/enable_if.hpp>
 
-//#include "FAssert.h"
-//#include "CvString.h"
+#include "FAssert.h"
+#include "CvString.h"
 #include "CyArgsList.h"
 #include "CvGlobals.h"
-
-class cvInternalGlobals;
 
 #define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 
@@ -45,6 +43,15 @@ namespace Cy											\
 
 namespace Cy
 {
+	template <class Item_>
+	const python::list makeList(const std::vector<Item_>& vector)
+	{
+		python::list list = python::list();
+		foreach_(const Item_& i, vector)
+			list.append((int)i);
+		return list;
+	}
+
 	template < class Ty_ >
 	struct base_type
 	{
@@ -228,7 +235,6 @@ namespace Cy
 	inline void call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
@@ -241,7 +247,6 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName);
 	}
 
@@ -249,7 +254,6 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
@@ -259,7 +263,6 @@ namespace Cy
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
@@ -275,7 +278,6 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy))
 		{
@@ -298,7 +300,6 @@ namespace Cy
 	>::type call_override(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
@@ -313,7 +314,6 @@ namespace Cy
 	inline void call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
@@ -325,7 +325,6 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 	}
 
@@ -333,7 +332,6 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs()) 
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
@@ -343,7 +341,6 @@ namespace Cy
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
@@ -358,7 +355,6 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy))
 		{
@@ -373,7 +369,6 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
 		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
@@ -395,5 +390,50 @@ namespace Cy
 	};
 
 	std::vector<StackFrame> get_stack_trace();
+
+	namespace call_policy
+	{
+		template <typename T>
+		void registerAllowPyIntAsType()
+		{
+			python::converter::registry::push_back(&PyIntConverter::convertible, &PyIntConverter::fromPython<T>, python::type_id<T>());
+			python::converter::registry::insert(PyIntConverter::toPython, python::type_id<T>());
+			python::converter::registry::insert(ContainerConverter<std::vector<T> >::toPython, python::type_id<std::vector<T> >());
+		}
+
+		const struct PyIntConverter
+		{
+			static void* convertible(PyObject* obj)
+			{
+				return PyInt_Check(obj) ? obj : nullptr;
+			}
+
+			template <typename T>
+			static void fromPython(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
+			{
+				void* const storage = reinterpret_cast<python::converter::rvalue_from_python_storage<int>*>(data)->storage.bytes;
+				new (storage) T(static_cast<T>(PyInt_AS_LONG(obj)));
+				data->convertible = storage;
+			}
+
+			static PyObject* toPython(const void* p)
+			{
+				return PyInt_FromLong(*static_cast<const long*>(p));  
+			}
+		};
+
+		template <typename Container_T>
+		struct ContainerConverter
+		{
+			static PyObject* toPython(const void* p)
+			{
+				python::list l = python::list();
+				foreach_(const Container_T::value_type& i, *static_cast<const Container_T*>(p))
+					l += python::handle<>(PyInt_FromLong(static_cast<long>(i)));
+				return l.ptr();
+			}
+		};
+	}
 }
+
 #endif // CvPython_h__

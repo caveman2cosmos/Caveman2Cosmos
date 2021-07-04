@@ -132,7 +132,7 @@ int /*UnitCombatTypes*/ CyUnit::getUnitCombatType() const
 	return m_pUnit ? m_pUnit->getUnitCombatType() : NO_UNITCOMBAT;
 }
 
-int /*DomainTypes*/ CyUnit::getDomainType() const
+DomainTypes CyUnit::getDomainType() const
 {
 	return m_pUnit ? m_pUnit->getDomainType() : NO_DOMAIN;
 }
@@ -212,14 +212,14 @@ bool CyUnit::isFighting() const
 	return m_pUnit ? m_pUnit->isFighting() : false;
 }
 
-int CyUnit::maxHitPoints() const
+int CyUnit::getMaxHP() const
 {
-	return m_pUnit ? m_pUnit->maxHitPoints() : -1;
+	return m_pUnit ? m_pUnit->getMaxHP() : -1;
 }
 
-int CyUnit::currHitPoints() const
+int CyUnit::getHP() const
 {
-	return m_pUnit ? m_pUnit->currHitPoints() : -1;
+	return m_pUnit ? m_pUnit->getHP() : -1;
 }
 
 bool CyUnit::isHurt() const
@@ -711,10 +711,6 @@ float CyUnit::getRealExperience() const
 	return m_pUnit ? (float)m_pUnit->getExperience100() / 100 : -1;
 }
 
-CyPlot* CyUnit::getMADTargetPlot() const
-{
-	return m_pUnit ? new CyPlot(m_pUnit->getMADTargetPlot()) : false;
-}
 
 bool CyUnit::isHiddenNationality() const
 {

@@ -16,7 +16,6 @@
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
 			<RiverYieldChange/>
-			<HillsYieldChange/>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-100</iHealthPercent>
@@ -112,7 +111,6 @@
 			<ArtDefineTag>ART_DEF_FEATURE_SEA_FUNGUS</ArtDefineTag>
 			<YieldChanges/>
 			<RiverYieldChange/>
-			<HillsYieldChange/>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-50</iHealthPercent>
@@ -220,7 +218,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverYieldChange>
-			<HillsYieldChange/>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-50</iHealthPercent>

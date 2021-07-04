@@ -8,7 +8,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
@@ -582,11 +581,9 @@ def assignStartingPlots():
 
 	# Find the oceans. We want all civs to start along the coast of a salt water body.
 	oceans = []
-	for i in range(map.getIndexAfterLastArea()):
-		area = map.getArea(i)
-		if not area.isNone():
-			if area.isWater() and not area.isLake():
-				oceans.append(area)
+	for area in map.areas():
+		if area.isWater() and not area.isLake():
+			oceans.append(area)
 
 	# Now assign the start plots!
 	plot_assignments = {}

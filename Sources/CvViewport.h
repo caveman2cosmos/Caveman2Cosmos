@@ -131,7 +131,6 @@ public:
 	virtual CvArea* findBiggestArea(bool bWater) const;
 
 	virtual int getMapFractalFlags() const;
-	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;
 
 	virtual bool isPlot(int iX, int iY) const;
 	virtual int numPlots() const;

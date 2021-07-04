@@ -52,7 +52,7 @@ public:
 	int /*SpecialUnitTypes*/ getSpecialUnitType() const;
 	int /*UnitTypes*/ getCaptureUnitType() const;
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
-	int /*DomainTypes*/ getDomainType() const;
+	DomainTypes getDomainType() const;
 
 	bool isBarbarian() const;
 	bool isNPC() const;
@@ -73,8 +73,8 @@ public:
 	bool isGoldenAge() const;
 
 	bool isFighting() const;
-	int maxHitPoints() const;
-	int currHitPoints() const;
+	int getMaxHP() const;
+	int getHP() const;
 	bool isHurt() const;
 	bool isDead() const;
 	void setBaseCombatStr(int iCombat);
@@ -114,7 +114,6 @@ public:
 	void setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow);
 	CyPlot* plot() const;
 	CyArea* area() const;
-	CyPlot* getMADTargetPlot() const;
 
 	int getDamage() const;
 	void setDamage(int iNewValue, int /*PlayerTypes*/ ePlayer);

@@ -10,6 +10,9 @@ def toggleDebugMode():
 	bDebugMode = not bDebugMode
 	CyInterface().addImmediateMessage("Python Debug Mode: %s" % bDebugMode, "AS2D_ERROR")
 
+def isAnyDebugMode():
+	return bDebugMode or GC.getGame().isDebugMode()
+
 class DebugUtils:
 	def __init__(self):
 		self.iLastUnitPicker = -1
@@ -132,14 +135,11 @@ debugUtils = DebugUtils()
 
 # Event 1000
 def initEffectViewer(px, py):
-	pPlot = GC.getMap().plot(px,py)
 	popup = PyPopup.PyPopup(1000, EventContextTypes.EVENTCONTEXT_SELF)
 	popup.setSize(550,300)
 	popup.setUserData((px,py))
 	popup.setHeaderString("Python Debug Tools: Object Placer")
 	# Pulldown0 - Player Selection
-	numEffects = GC.getNumEffectInfos()	# get total # of units from Game
-
 	popup.createPythonPullDown("Choose an Effect")
 	for i in xrange(GC.getNumEffectInfos()):
 		popup.addPullDownString(GC.getEffectInfo(i).getType(), i)
@@ -197,7 +197,7 @@ def applyWonderMovie(iPlayer, userData, popupReturn):
 
 
 # Event 1002
-def initTechsCheat(argsList):
+def initTechsCheat():
 	popup = PyPopup.PyPopup(1002, EventContextTypes.EVENTCONTEXT_ALL)
 	popup.setHeaderString("Tech & Gold Cheat!")
 	popup.createPullDown()

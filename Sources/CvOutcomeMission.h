@@ -26,7 +26,7 @@ public:
 	const CvOutcomeList* getOutcomeList() const;
 	const CvProperties* getPropertyCost() const;
 	bool isKill() const;
-//	IntExpr* getCost();
+//	const IntExpr* getCost() const;
 	GameObjectTypes getPayerType() const;
 
 	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
@@ -44,9 +44,9 @@ protected:
 	CvProperties m_PropertyCost;
 	GameObjectTypes m_ePayerType;
 	bool m_bKill;
-	IntExpr* m_iCost;
-	BoolExpr* m_pPlotCondition;
-	BoolExpr* m_pUnitCondition;
+	const IntExpr* m_iCost;
+	const BoolExpr* m_pPlotCondition;
+	const BoolExpr* m_pUnitCondition;
 };
 
 #endif

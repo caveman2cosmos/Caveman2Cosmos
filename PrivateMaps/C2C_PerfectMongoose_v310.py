@@ -208,16 +208,12 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 import BugUtil
 
 from array	import array
 from random import random, randint, seed, shuffle
 import math
-import sys
-import time
-import os
 #import profile
 
 
@@ -3660,8 +3656,8 @@ class BonusPlacer:
 
 	def AssignBonusAreas(self):
 		gc = CyGlobalContext()
-		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
+		self.areas = gameMap.areas()
 		self.bonusList = list()
 
 		#Create and shuffle the bonus list and keep tally on
@@ -3965,7 +3961,7 @@ class StartingPlotFinder:
 			gameMap = CyMap()
 			iPlayers = gc.getGame().countCivPlayersEverAlive()
 			gameMap.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = gameMap.areas()
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
@@ -4083,16 +4079,15 @@ class StartingPlotFinder:
 
 
 	def setupOldWorldAreaList(self):
-		gc = CyGlobalContext()
-		gameMap = CyMap()
+		GC = CyGlobalContext()
+		MAP = GC.getMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = CvMapGeneratorUtil.getAreas()
 		areaOldWorld = list()
-		for i in range(len(areas)):
+		for CyArea in MAP.areas():
 			for pI in range(em.length):
-				plot = gameMap.plotByIndex(pI)
-				if plot.getArea() == areas[i].getID():
+				plot = MAP.plotByIndex(pI)
+				if plot.getArea() == CyArea.getID():
 					if mc.AllowNewWorld and continentMap.areaMap.data[pI] == continentMap.newWorldID:
 						areaOldWorld.append(False)#new world True = old world False
 					else:
@@ -4222,9 +4217,9 @@ class StartingPlotFinder:
 				bProceed = True
 				if featureEnum != FeatureTypes.NO_FEATURE and buildInfo.isFeatureRemove(featureEnum):
 					if buildInfo.getFeatureTech(featureEnum) == TechTypes.NO_TECH or gc.getTechInfo(buildInfo.getFeatureTech(featureEnum)).getEra() <= max(game.getStartEra(), 1):
-						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)		+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE)
-						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)				+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD)
-						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION)
+						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)
+						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)
+						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION)
 					else:
 						bProceed = False
 				if bProceed:
@@ -4715,7 +4710,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 
 	def isRiverSide(self):

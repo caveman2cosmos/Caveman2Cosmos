@@ -5,6 +5,7 @@
 			<Type>TRAIT_PHILOSOPHICAL</Type>
 			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
 			<Flavors>
@@ -267,6 +268,7 @@
 			<Type>TRAIT_SPIRITUAL</Type>
 			<Description>TXT_KEY_TRAIT_SPIRITUAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SPIRITUAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
 			<Flavors>
@@ -487,6 +489,7 @@
 			<Type>TRAIT_ORGANIZED</Type>
 			<Description>TXT_KEY_TRAIT_ORGANIZED</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ORGANIZED_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
 			<Flavors>
@@ -590,6 +593,7 @@
 			<Type>TRAIT_INDUSTRIOUS</Type>
 			<Description>TXT_KEY_TRAIT_INDUSTRIOUS</Description>
 			<ShortDescription>TXT_KEY_TRAIT_INDUSTRIOUS_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
 			<bImpurePropertyManipulators>1</bImpurePropertyManipulators>
@@ -804,6 +808,7 @@
 			<Type>TRAIT_CREATIVE</Type>
 			<Description>TXT_KEY_TRAIT_CREATIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CREATIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CREATIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
 			<Flavors>
@@ -1008,6 +1013,7 @@
 			<Type>TRAIT_FINANCIAL</Type>
 			<Description>TXT_KEY_TRAIT_FINANCIAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FINANCIAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
 			<Flavors>
@@ -1099,6 +1105,7 @@
 			<Type>TRAIT_EXPANSIVE</Type>
 			<Description>TXT_KEY_TRAIT_EXPANSIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXPANSIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
 			<Flavors>
@@ -1219,6 +1226,7 @@
 			<Type>TRAIT_CHARISMATIC</Type>
 			<Description>TXT_KEY_TRAIT_CHARISMATIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CHARISMATIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
 			<Flavors>
@@ -1320,6 +1328,7 @@
 			<Type>TRAIT_PROTECTIVE</Type>
 			<Description>TXT_KEY_TRAIT_PROTECTIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROTECTIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
 			<Flavors>
@@ -1493,6 +1502,7 @@
 			<Type>TRAIT_IMPERIALIST</Type>
 			<Description>TXT_KEY_TRAIT_IMPERIALIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IMPERIALIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
 			<Flavors>
@@ -1549,6 +1559,7 @@
 			<Type>TRAIT_SEAFARING</Type>
 			<Description>TXT_KEY_TRAIT_SEAFARING</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SEAFARING_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SEAFARING_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<Flavors>
@@ -1723,6 +1734,7 @@
 			<Type>TRAIT_NOMAD</Type>
 			<Description>TXT_KEY_TRAIT_NOMAD</Description>
 			<ShortDescription>TXT_KEY_TRAIT_NOMAD_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_NOMAD_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMAD</PromotionLine>
 			<bImpurePropertyManipulators>1</bImpurePropertyManipulators>
@@ -2087,6 +2099,7 @@
 			<Type>TRAIT_DECEIVER</Type>
 			<Description>TXT_KEY_TRAIT_DECEIVER</Description>
 			<ShortDescription>TXT_KEY_TRAIT_DECEIVER_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_DECEIVER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceptive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
 			<Flavors>
@@ -2215,6 +2228,7 @@
 			<Type>TRAIT_SCIENTIFIC</Type>
 			<Description>TXT_KEY_TRAIT_SCIENTIFIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
 			<Flavors>
@@ -2305,6 +2319,7 @@
 			<Type>TRAIT_HUMANITARIAN</Type>
 			<Description>TXT_KEY_TRAIT_HUMANITARIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
 			<Flavors>
@@ -2430,6 +2445,7 @@
 			<Type>TRAIT_PROGRESSIST</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROGRESSIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIST</PromotionLine>
 			<Flavors>
@@ -2567,6 +2583,7 @@
 			<Type>TRAIT_POLITICIAN</Type>
 			<Description>TXT_KEY_TRAIT_POLITICIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POLITICIAN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
 			<Flavors>
@@ -2659,6 +2676,7 @@
 			<Type>TRAIT_ANTI_CLERICAL</Type>
 			<Description>TXT_KEY_TRAIT_ANTI_CLERICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANTI_CLERICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -2808,6 +2826,7 @@
 			<Type>TRAIT_CRUEL</Type>
 			<Description>TXT_KEY_TRAIT_CRUEL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CRUEL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CRUEL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -2866,6 +2885,7 @@
 			<Type>TRAIT_IDEALISTIC</Type>
 			<Description>TXT_KEY_TRAIT_IDEALISTIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IDEALISTIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -2897,6 +2917,7 @@
 			<Type>TRAIT_MEGALOMANIAC</Type>
 			<Description>TXT_KEY_TRAIT_MEGALOMANIAC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_MEGALOMANIAC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -2945,6 +2966,7 @@
 			<Type>TRAIT_BARBARIC</Type>
 			<Description>TXT_KEY_TRAIT_BARBARIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_BARBARIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3017,6 +3039,7 @@
 			<Type>TRAIT_ISOLATIONIST</Type>
 			<Description>TXT_KEY_TRAIT_ISOLATIONIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3069,6 +3092,7 @@
 			<Type>TRAIT_FANATICAL</Type>
 			<Description>TXT_KEY_TRAIT_FANATICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FANATICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FANATICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFanatical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FANATICAL</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3125,6 +3149,7 @@
 			<Type>TRAIT_POPULIST</Type>
 			<Description>TXT_KEY_TRAIT_POPULIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POPULIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_POPULIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3172,6 +3197,7 @@
 			<Type>TRAIT_EXCESSIVE</Type>
 			<Description>TXT_KEY_TRAIT_EXCESSIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXCESSIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3238,6 +3264,7 @@
 			<Type>TRAIT_FOREIGN</Type>
 			<Description>TXT_KEY_TRAIT_FOREIGN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FOREIGN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FOREIGN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeign.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGN</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3310,6 +3337,7 @@
 			<Type>TRAIT_TEMPERAMENTAL</Type>
 			<Description>TXT_KEY_TRAIT_TEMPERAMENTAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_TEMPERAMENTAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3346,6 +3374,7 @@
 			<Type>TRAIT_REVOLUTIONARY</Type>
 			<Description>TXT_KEY_TRAIT_REVOLUTIONARY</Description>
 			<ShortDescription>TXT_KEY_TRAIT_REVOLUTIONARY_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3416,6 +3445,7 @@
 			<Type>TRAIT_HUNTER_GATHERER</Type>
 			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUNTER_GATHERER_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
 			<bNegativeTrait>1</bNegativeTrait>
@@ -3461,6 +3491,7 @@
 			<Type>TRAIT_BARBARIAN</Type>
 			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIAN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbarian.dds</Button>
 			<bBarbarianSelectionOnly>1</bBarbarianSelectionOnly>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -3486,6 +3517,7 @@
 			<Type>TRAIT_PHILOSOPHICAL1</Type>
 			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -3565,6 +3597,7 @@
 			<Type>TRAIT_AGGRESSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_AGGRESSIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_AGGRESSIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -3724,6 +3757,7 @@
 			<Type>TRAIT_SPIRITUAL1</Type>
 			<Description>TXT_KEY_TRAIT_SPIRITUAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SPIRITUAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -3933,6 +3967,7 @@
 			<Type>TRAIT_ORGANIZED1</Type>
 			<Description>TXT_KEY_TRAIT_ORGANIZED</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ORGANIZED_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4042,6 +4077,7 @@
 			<Type>TRAIT_INDUSTRIOUS1</Type>
 			<Description>TXT_KEY_TRAIT_INDUSTRIOUS</Description>
 			<ShortDescription>TXT_KEY_TRAIT_INDUSTRIOUS_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious.dds</Button>
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4245,6 +4281,7 @@
 			<Type>TRAIT_CREATIVE1</Type>
 			<Description>TXT_KEY_TRAIT_CREATIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CREATIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CREATIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4455,6 +4492,7 @@
 			<Type>TRAIT_FINANCIAL1</Type>
 			<Description>TXT_KEY_TRAIT_FINANCIAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FINANCIAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4543,6 +4581,7 @@
 			<Type>TRAIT_EXPANSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_EXPANSIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXPANSIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4664,6 +4703,7 @@
 			<Type>TRAIT_CHARISMATIC1</Type>
 			<Description>TXT_KEY_TRAIT_CHARISMATIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CHARISMATIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4754,6 +4794,7 @@
 			<Type>TRAIT_PROTECTIVE1</Type>
 			<Description>TXT_KEY_TRAIT_PROTECTIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROTECTIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4909,6 +4950,7 @@
 			<Type>TRAIT_IMPERIALIST1</Type>
 			<Description>TXT_KEY_TRAIT_IMPERIALIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IMPERIALIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -4970,6 +5012,7 @@
 			<Type>TRAIT_SEAFARING1</Type>
 			<Description>TXT_KEY_TRAIT_SEAFARING</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SEAFARING_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SEAFARING_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5145,6 +5188,7 @@
 			<Type>TRAIT_NOMAD1</Type>
 			<Description>TXT_KEY_TRAIT_NOMAD</Description>
 			<ShortDescription>TXT_KEY_TRAIT_NOMAD_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_NOMAD_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_NOMAD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5357,6 +5401,7 @@
 			<Type>TRAIT_AGRICULTURAL1</Type>
 			<Description>TXT_KEY_TRAIT_AGRICULTURAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggricultural.dds</Button>
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5501,6 +5546,7 @@
 			<Type>TRAIT_DECEIVER1</Type>
 			<Description>TXT_KEY_TRAIT_DECEIVER</Description>
 			<ShortDescription>TXT_KEY_TRAIT_DECEIVER_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_DECEIVER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceptive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5630,6 +5676,7 @@
 			<Type>TRAIT_SCIENTIFIC1</Type>
 			<Description>TXT_KEY_TRAIT_SCIENTIFIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific.dds</Button>
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5722,6 +5769,7 @@
 			<Type>TRAIT_HUMANITARIAN1</Type>
 			<Description>TXT_KEY_TRAIT_HUMANITARIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5846,6 +5894,7 @@
 			<Type>TRAIT_PROGRESSIST1</Type>
 			<Description>TXT_KEY_TRAIT_PROGRESSIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROGRESSIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_PROGRESSIST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -5984,6 +6033,7 @@
 			<Type>TRAIT_POLITICIAN1</Type>
 			<Description>TXT_KEY_TRAIT_POLITICIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POLITICIAN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -6077,6 +6127,7 @@
 			<Type>TRAIT_ANTI_CLERICAL1</Type>
 			<Description>TXT_KEY_TRAIT_ANTI_CLERICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANTI_CLERICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6227,6 +6278,7 @@
 			<Type>TRAIT_CRUEL1</Type>
 			<Description>TXT_KEY_TRAIT_CRUEL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CRUEL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_CRUEL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel.dds</Button>
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6287,6 +6339,7 @@
 			<Type>TRAIT_IDEALISTIC1</Type>
 			<Description>TXT_KEY_TRAIT_IDEALISTIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IDEALISTIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic.dds</Button>
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6319,6 +6372,7 @@
 			<Type>TRAIT_MEGALOMANIAC1</Type>
 			<Description>TXT_KEY_TRAIT_MEGALOMANIAC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_MEGALOMANIAC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac.dds</Button>
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6368,6 +6422,7 @@
 			<Type>TRAIT_BARBARIC1</Type>
 			<Description>TXT_KEY_TRAIT_BARBARIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIC_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_BARBARIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric.dds</Button>
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6444,6 +6499,7 @@
 			<Type>TRAIT_ISOLATIONIST1</Type>
 			<Description>TXT_KEY_TRAIT_ISOLATIONIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6497,6 +6553,7 @@
 			<Type>TRAIT_FANATICAL1</Type>
 			<Description>TXT_KEY_TRAIT_FANATICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FANATICAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FANATICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFanatical.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FANATICAL</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6554,6 +6611,7 @@
 			<Type>TRAIT_POPULIST1</Type>
 			<Description>TXT_KEY_TRAIT_POPULIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POPULIST_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_POPULIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist.dds</Button>
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6601,6 +6659,7 @@
 			<Type>TRAIT_EXCESSIVE1</Type>
 			<Description>TXT_KEY_TRAIT_EXCESSIVE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXCESSIVE_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive.dds</Button>
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6669,6 +6728,7 @@
 			<Type>TRAIT_FOREIGN1</Type>
 			<Description>TXT_KEY_TRAIT_FOREIGN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FOREIGN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_FOREIGN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeign.dds</Button>
 			<PromotionLine>PROMOTIONLINE_FOREIGN</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6744,6 +6804,7 @@
 			<Type>TRAIT_TEMPERAMENTAL1</Type>
 			<Description>TXT_KEY_TRAIT_TEMPERAMENTAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_TEMPERAMENTAL_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental.dds</Button>
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6782,6 +6843,7 @@
 			<Type>TRAIT_REVOLUTIONARY1</Type>
 			<Description>TXT_KEY_TRAIT_REVOLUTIONARY</Description>
 			<ShortDescription>TXT_KEY_TRAIT_REVOLUTIONARY_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -6853,6 +6915,7 @@
 			<Type>TRAIT_HUNTER_GATHERER1</Type>
 			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUNTER_GATHERER_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
@@ -7136,6 +7199,296 @@
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfAquariusTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_SATURN</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfPiscesTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_JUPITER</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfAriesTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_MARS</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfTaurusTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_VENUS</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+						<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfGeminiTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_MERCURY</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfCancerTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_THE_MOON</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_HEALS_PEOPLE</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfLeoTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_THE_SUN</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfVirgoTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_MERCURY</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfLibraTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_VENUS</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+						<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfScorpioTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_MARS</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfSagittariusTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_JUPITER</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<Description>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Description>
+			<ShortDescription>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_SHORT</ShortDescription>
+			<Civilopedia>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Civilopedia>
+			<Button>Art/Buttons/Traits/InfluenceOfCapricornTrait.dds</Button>
+			<bCivilizationTrait>1</bCivilizationTrait>
+			<iMaxAnarchy>-1</iMaxAnarchy>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_INFLUENCE_OF_SATURN</PromotionType>
+					<UnitCombatTypes>
+						<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
+					</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 		</TraitInfo>
 	</TraitInfos>
 </Civ4TraitInfos>

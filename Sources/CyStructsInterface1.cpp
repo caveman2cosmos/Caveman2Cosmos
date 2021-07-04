@@ -187,4 +187,9 @@ void CyStructsPythonInterface1()
 		.def_readwrite("eVisualOwner", &CombatDetails::eVisualOwner)
 		.def_readwrite("sUnitName", &CombatDetails::sUnitName)
 		;
+
+	python::class_<std::pair<int, int> >("CyPair")
+		.def_readwrite("id", &std::pair<int, int>::first)
+		.def_readwrite("value", &std::pair<int, int>::second)
+	;
 }

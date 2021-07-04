@@ -1522,7 +1522,7 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 			{
 				int iNoTechTradeThreshold = AI_noTechTradeThreshold();
 
-				iNoTechTradeThreshold *= GC.getGameSpeedInfo(game.getGameSpeedType()).getResearchPercent();
+				iNoTechTradeThreshold *= GC.getGameSpeedInfo(game.getGameSpeedType()).getSpeedPercent();
 				iNoTechTradeThreshold /= 100;
 
 				iNoTechTradeThreshold *= std::max(0, 100 + GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getNoTechTradeModifier());
@@ -3240,8 +3240,6 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 
 			if (playerA.isAliveAndTeam(getID()))
 			{
-				const TeamTypes eTeamA = playerA.getTeam();
-
 				for (int iB = 0; iB < MAX_PC_PLAYERS; iB++)
 				{
 					if (GET_PLAYER((PlayerTypes)iB).isAliveAndTeam(eIndex))
@@ -3474,9 +3472,6 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iLimitedWarPowerRatio);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iDogpileWarRand);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iMakePeaceRand);
-
-	int iID = getID();
-
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 /* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
@@ -3972,13 +3967,13 @@ void CvTeamAI::AI_doWar()
 			iTimeModifier /= iThreshold;
 		}
 
-		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 		iTimeModifier /= 150;
 		FASSERT_NOT_NEGATIVE(iTimeModifier)
 	}
 
 	int iAbandonTimeModifier = 100;
-	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iAbandonTimeModifier /= 150;
 
 	//Afforess - abandon plans more quickly in financial distress
@@ -4194,7 +4189,7 @@ void CvTeamAI::AI_doWar()
 				FAssert(!GET_TEAM((TeamTypes)iI).isMinorCiv());
 
 				if (isAtWar((TeamTypes)iI) && AI_isChosenWar((TeamTypes)iI)
-				&& AI_getAtWarCounter((TeamTypes)iI) > std::max(10, 14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent()/100))
+				&& AI_getAtWarCounter((TeamTypes)iI) > std::max(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() * 14/100))
 				{
 					// If nothing is happening in war
 					if (AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getWAR_SUCCESS_ATTACKING()
@@ -4233,7 +4228,7 @@ void CvTeamAI::AI_doWar()
 					}
 
 					// Fought to a long draw
-					if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
+					if (AI_getAtWarCounter((TeamTypes)iI) > (AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100)
 					{
 						int iOurValue = AI_endWarVal((TeamTypes)iI);
 						int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
