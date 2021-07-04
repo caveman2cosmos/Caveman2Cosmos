@@ -2263,7 +2263,7 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 				if (!bValuable)
 				{
 					// Valuable terrain bonuses
-					foreach_(const CvPlot* loopPlot, pLoopCity->plots())
+					foreach_(const CvPlot* loopPlot, pLoopCity->plots(NUM_CITY_PLOTS))
 					{
 						const BonusTypes eBonus = loopPlot->getNonObsoleteBonusType(getID());
 

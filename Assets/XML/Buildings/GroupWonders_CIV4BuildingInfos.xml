@@ -47,6 +47,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_PISCES</Type>
@@ -98,6 +99,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_PISCES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_TAURUS</Type>
@@ -151,6 +153,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_TAURUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_GEMINI</Type>
@@ -201,6 +204,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_GEMINI</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
@@ -253,6 +257,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
@@ -302,6 +307,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
@@ -352,6 +358,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_ARIES</Type>
@@ -399,6 +406,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_ARIES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_CANCER</Type>
@@ -450,6 +458,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CANCER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_LEO</Type>
@@ -497,6 +506,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LEO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_VIRGO</Type>
@@ -544,6 +554,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_VIRGO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_LIBRA</Type>
@@ -595,6 +606,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LIBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FIST</Type>

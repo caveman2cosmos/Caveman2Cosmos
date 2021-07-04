@@ -4001,7 +4001,7 @@ void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 }
 
 
-
+// Toffer - Unused, but I spared it in my M.A.D. purge as it looks somewhat useful
 CvPlot* CvGame::getLastNukeStrikePlot() const
 {
 	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
@@ -4023,6 +4023,7 @@ void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 		}
 	}
 }
+// ! Toffer
 
 
 unsigned int CvGame::getInitialTime() const
@@ -6363,8 +6364,8 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										CvUnit::normalizeUnitPromotions(
 											pUnit,
 											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase(),
-											bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
-											bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
+											bind(Game::isGroupUpgradePromotion, pUnit, _2),
+											bind(Game::isGroupDowngradePromotion, pUnit, _2)
 										);
 									}
 								}

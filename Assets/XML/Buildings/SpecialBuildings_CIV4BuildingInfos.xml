@@ -11049,7 +11049,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>

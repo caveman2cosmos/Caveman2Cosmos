@@ -501,11 +501,11 @@ bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject)
 
 bool isWorldUnit(UnitTypes eUnit)
 {
-	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() > 0;
+	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() != -1;
 }
 bool isNationalUnit(UnitTypes eUnit)
 {
-	return GC.getUnitInfo(eUnit).getMaxPlayerInstances() > 0;
+	return GC.getUnitInfo(eUnit).getMaxPlayerInstances() != -1;
 }
 bool isLimitedUnit(UnitTypes eUnit)
 {
@@ -514,28 +514,28 @@ bool isLimitedUnit(UnitTypes eUnit)
 
 bool isWorldWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxGlobalInstances() > 0;
+	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;
 }
 
 bool isTeamWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxTeamInstances() > 0;
+	return GC.getBuildingInfo(building).getMaxTeamInstances() != -1;
 }
 
 bool isNationalWonder(BuildingTypes building)
 {
-	return GC.getBuildingInfo(building).getMaxPlayerInstances() > 0;
+	return GC.getBuildingInfo(building).getMaxPlayerInstances() != -1;
 }
 
 bool isNationalWonderGroup(BuildingTypes building)
 {
 	const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(building).getSpecialBuilding();
-	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() > 0;
+	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
 }
 
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
 {
-	return GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() > 0;
+	return GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
 }
 
 bool isLimitedWonder(BuildingTypes eBuilding)
@@ -545,34 +545,58 @@ bool isLimitedWonder(BuildingTypes eBuilding)
 
 int limitedWonderLimit(BuildingTypes eBuilding)
 {
+	int iCount = 0;
+	bool bIsLimited = false;
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	int iCount = kBuilding.getMaxGlobalInstances();
-	iCount += kBuilding.getMaxTeamInstances();
-	iCount += kBuilding.getMaxPlayerInstances();
+	int iMax = kBuilding.getMaxGlobalInstances();
+	if (iMax != -1)
+	{
+		iCount += iMax;
+		bIsLimited = true;
+	}
+
+	iMax = kBuilding.getMaxTeamInstances();
+	if (iMax != -1)
+	{
+		iCount += iMax;
+		bIsLimited = true;
+	}
+
+	iMax = kBuilding.getMaxPlayerInstances();
+	if (iMax != -1)
+	{
+		iCount += iMax;
+		bIsLimited = true;
+	}
 
 	const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 	if (eSpecialBuilding != NO_SPECIALBUILDING)
 	{
-		iCount += GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
+		iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
+		if (iMax != -1)
+		{
+			iCount += iMax;
+			bIsLimited = true;
+		}
 	}
 
-	return iCount;
+	return bIsLimited ? iCount : -1;
 }
 
 bool isWorldProject(ProjectTypes eProject)
 {
-	return GC.getProjectInfo(eProject).getMaxGlobalInstances() > 0;
+	return (GC.getProjectInfo(eProject).getMaxGlobalInstances() != -1);
 }
 
 bool isTeamProject(ProjectTypes eProject)
 {
-	return GC.getProjectInfo(eProject).getMaxTeamInstances() > 0;
+	return (GC.getProjectInfo(eProject).getMaxTeamInstances() != -1);
 }
 
 bool isLimitedProject(ProjectTypes eProject)
 {
-	return isWorldProject(eProject) || isTeamProject(eProject);
+	return (isWorldProject(eProject) || isTeamProject(eProject));
 }
 
 // FUNCTION: getBinomialCoefficient
@@ -4443,7 +4467,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_SHADOW: szString = L"MISSION_SHADOW"; break;
 	case MISSION_WAIT_FOR_TECH: szString = L"MISSION_WAIT_FOR_TECH"; break;
 	case MISSION_GOTO: szString = L"MISSION_GOTO"; break;
-	case MISSION_PRETARGET_NUKE: szString = L"MISSION_PRETARGET_NUKE"; break;
 	case MISSION_BUTCHER: szString = L"MISSION_BUTCHER"; break;
 	case MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE: szString = L"MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE"; break;
 	case MISSION_DIPLOMAT_PRAISE_IND_PEOPLE: szString = L"MISSION_DIPLOMAT_PRAISE_IND_PEOPLE"; break;

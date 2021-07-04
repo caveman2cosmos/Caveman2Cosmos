@@ -12278,11 +12278,9 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 						//	Guard a good spot outside the city but in its vicinity
 						int iBestValue = 0;
 
-						for(int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+						foreach_(CvPlot* pLoopPlot, pPlot->rect(NUM_CITY_PLOTS_2, NUM_CITY_PLOTS_2))
 						{
-							CvPlot* pLoopPlot = plotCity(pPlot->getX(),pPlot->getY(),iI);
-
-							if (pLoopPlot != NULL && AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
+							if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
 							{
 								if (pLoopPlot->getOwner() == getOwner() &&
 									pLoopPlot->getNumVisibleEnemyUnits(getOwner()) == 0)
@@ -14447,6 +14445,12 @@ bool CvUnitAI::AI_discover(bool bThisTurnOnly, bool bFirstResearchOnly)
 }
 
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD & RevDCM					 09/03/10						jdog5000	  */
+/*																				phungus420	*/
+/* Great People AI, Unit AI																	 */
+/************************************************************************************************/
+
 namespace {
 	// Helper function to determine if a unit looks legendaryish
 	bool isLegendary(const CvUnit* unit)
@@ -14526,6 +14530,9 @@ bool CvUnitAI::AI_leadLegend()
 	return false;
 }
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
@@ -14539,6 +14546,11 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 	const CvPlayer& kOwner = GET_PLAYER(getOwner());
 
 	bool bNeedLeader = false;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD & RevDCM					 09/03/10						jdog5000	  */
+/*																				phungus420	*/
+/* Great People AI, Unit AI																	 */
+/************************************************************************************************/
 	bool bBestUnitLegend = false;
 
 	CvUnit* pBestUnit = NULL;
@@ -14689,6 +14701,9 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_WEIGHT_3);
 		}
 	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 
 	return false;
 }
@@ -14708,6 +14723,11 @@ bool CvUnitAI::AI_join(int iMaxCount)
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
 	int iCount = 0;
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  09/03/10								jdog5000	  */
+/*																				phungus420	*/
+/* Unit AI, Efficiency																		  */
+/************************************************************************************************/
 	if( iMaxCount && (GC.getGame().getSorenRandNum(11, "Settle GG") < iMaxCount + 5) )
 	{
 		return false;
@@ -14966,7 +14986,15 @@ bool CvUnitAI::enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvU
 				return true;
 			}
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  03/09/09								jdog5000	  */
+/*																							  */
+/* Unit AI																					  */
+/************************************************************************************************/
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_CONSTRUCT, pBestConstructPlot);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 		}
 	}
 
@@ -15336,7 +15364,15 @@ bool CvUnitAI::AI_outcomeMission()
 				}
 			}
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  03/09/09								jdog5000	  */
+/*																							  */
+/* Unit AI																					  */
+/************************************************************************************************/
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, NO_MISSIONAI, pBestMissionPlot);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 		}
 	}
 
@@ -15421,9 +15457,18 @@ bool CvUnitAI::AI_hurry(bool bAny)
 
 	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
+/*																							  */
+/* Unit AI, Efficiency																		  */
+/************************************************************************************************/
+		// BBAI efficiency: check same area
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 		{
-			if (canHurry(pLoopCity->plot()))
+			if ( canHurry(pLoopCity->plot()))
 			{
 				if (bAny || GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_HURRY, getGroup()) == 0)
 				{
@@ -15590,7 +15635,7 @@ namespace scoring {
 		std::sort(scores.begin(), scores.end(), ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
 
 		// Find the first city we can path to safely
-		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bst::bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
+		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
 
 		if (foundItr != scores.end())
 		{
@@ -15717,9 +15762,9 @@ namespace {
 			findBestScore<CvCity, LeastScore>(
 				player.beginCities(), player.endCities(),
 				// scoring the city for inquisition attractiveness
-				bst::bind(scoreInquisitionTarget, unit, _1),
+				bind(scoreInquisitionTarget, unit, _1),
 				// final validation is that we can actually path to the city
-				bst::bind(canSafePathToCity, unit, _1)
+				bind(canSafePathToCity, unit, _1)
 			)
 		);
 		return bestCityScore.found? bestCityScore.result.item : nullptr;
@@ -15760,6 +15805,7 @@ bool CvUnitAI::AI_greatWork()
 {
 	PROFILE_FUNC();
 
+	int iValue;
 	int iPathTurns = 0;
 
 	int iBestValue = 0;
@@ -15768,7 +15814,16 @@ bool CvUnitAI::AI_greatWork()
 
 	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
+/*																							  */
+/* Unit AI, Efficiency																		  */
+/************************************************************************************************/
+		// BBAI efficiency: check same area
 		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 		{
 			if (canGreatWork(pLoopCity->plot()))
 			{
@@ -15776,7 +15831,7 @@ bool CvUnitAI::AI_greatWork()
 				{
 					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
 					{
-						int iValue = pLoopCity->AI_calculateCulturePressure(true);
+						iValue = pLoopCity->AI_calculateCulturePressure(true);
 						iValue -= ((100 * pLoopCity->getCulture(pLoopCity->getOwner())) / std::max(1, getGreatWorkCulture(pLoopCity->plot())));
 						if (iValue > 0)
 						{
@@ -16003,6 +16058,11 @@ bool CvUnitAI::AI_paradrop(int iRange)
 }
 
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					  09/01/09								jdog5000	  */
+/*																							  */
+/* Unit AI, Efficiency																		  */
+/************************************************************************************************/
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_protect(int iOddsThreshold, int iMaxPathTurns)
 {
@@ -16076,6 +16136,9 @@ bool CvUnitAI::AI_protect(int iOddsThreshold, int iMaxPathTurns)
 
 	return false;
 }
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD					   END												  */
+/************************************************************************************************/
 
 //	This routine effectively parallel the test in CvCityAI for building see attack/reserve units
 //	in response to a sea invader in the same sea area (but not necessarily local)
@@ -18084,7 +18147,7 @@ bool CvUnitAI::AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueTh
 	CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestPillagePlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots())
+	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots(NUM_CITY_PLOTS))
 	{
 		if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
 		{
@@ -30225,7 +30288,7 @@ int CvUnitAI::AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyType
 	//void unitSourcesValueToCity(CvGameObject * pObject, CvPropertyManipulators * pMani, const CvUnit * pUnit, const CvCityAI * pCity, int* iValue, PropertyTypes eProperty)
 
 	this->getGameObject()->foreachManipulator(
-		bst::bind(unitSourcesValueToCity, this->getGameObject(), _1, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty)
+		bind(unitSourcesValueToCity, this->getGameObject(), _1, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty)
 	);
 
 	return iValue;
@@ -30426,8 +30489,8 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(const CvPlot* pPlot)
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		bst::bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
-		bst::bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
+		bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
+		bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
 	);
 
 	if (bestCityScore.found)
@@ -30557,8 +30620,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		bst::bind(scorePropertyControlNeed, propertyScores, this, _1),
-		bst::bind(canSafePathToCity, this, _1)
+		bind(scorePropertyControlNeed, propertyScores, this, _1),
+		bind(canSafePathToCity, this, _1)
 	);
 
 	if(bestCityScore.found)

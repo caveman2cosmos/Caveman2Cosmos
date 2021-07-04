@@ -510,16 +510,6 @@ void CyGame::setForcedAIAutoPlay(int iPlayer, int iNewValue, bool bForced)
 	m_pGame.setForcedAIAutoPlay((PlayerTypes)iPlayer, iNewValue, bForced);
 }
 
-CyPlot* CyGame::getLastNukeStrikePlot() const
-{
-	return new CyPlot(m_pGame.getLastNukeStrikePlot());
-}
-
-void CyGame::setLastNukeStrikePlot(CyPlot* pPlot)
-{
-	m_pGame.setLastNukeStrikePlot(pPlot->getPlot());
-}
-
 bool CyGame::isScoreDirty() const
 {
 	return m_pGame.isScoreDirty();

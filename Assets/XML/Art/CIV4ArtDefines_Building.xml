@@ -11112,7 +11112,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Craft/art/lumbercamp.dds</Button>
+			<Button>art/Craft/art/woodgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CARPENTERS_WORKSHOP</Type>

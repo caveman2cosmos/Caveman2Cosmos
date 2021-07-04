@@ -1046,11 +1046,6 @@ void CyPlayer::changeTechScore(int iChange)
 	m_pPlayer->changeTechScore(iChange);
 }
 
-bool CyPlayer::isMADNukesEnabled() const
-{
-	return m_pPlayer->isEnabledMAD();
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();

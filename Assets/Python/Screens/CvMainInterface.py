@@ -90,6 +90,11 @@ class CvMainInterface:
 		self.iTimeTextCounter = 0
 		self.cityOptions = None
 
+	def pythonDebugToggle(self, bNewValue):
+		self.bDebugModePython = bNewValue
+		if bNewValue:
+			CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("DebugBtn0")
+		else: CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).hide("DebugBtn0")
 
 	def interfaceScreen(self):
 		if GAME.isPitbossHost(): return
@@ -105,6 +110,8 @@ class CvMainInterface:
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
+			import DebugUtils
+			self.bDebugModePython = DebugUtils.bDebugMode
 			self.bDebugMode = GAME.isDebugMode()
 			# FOV
 			if MainOpt.isRememberFieldOfView():
@@ -875,22 +882,18 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDLog_Style")
 		screen.hide(btn)
 		x += dx
+
 		btn = "VictoryAdvBtn"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_VICTORY_SCREEN).getActionInfoIndex(), -1)
 		screen.setStyle(btn, "Button_HUDAdvisorVictory_Style")
 		screen.hide(btn)
 		x += dx
+
 		btn = "InfoAdvBtn"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_INFO).getActionInfoIndex(), -1)
 		screen.setStyle(btn, "Button_HUDAdvisorRecord_Style")
 		screen.hide(btn)
-		btn = "OptionsBtnBUG0"
-		artPathButtonOptionBUG = CyArtFileMgr().getInterfaceArtInfo("BUG_OPTIONS_SCREEN_BUTTON").getPath()
-		x += dx
-		screen.setImageButton(btn, artPathButtonOptionBUG, x, y, iSize, iSize, eWidGen, -1, -1)
-		screen.hide(btn)
 
-		# Build List Button
 		btn = "BuildListBtn0"
 		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_POPUPBUTTON_PRODUCTION").getPath()
 		x += dx
@@ -898,11 +901,18 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
-		# MAD Nukes Mod
-		btn = "MADScreenWidget0"
-		artPath = CyArtFileMgr().getInterfaceArtInfo("BUG_PROJECT_OFF").getPath()
+		btn = "OptionsBtnBUG0"
+		artPathButtonOptionBUG = CyArtFileMgr().getInterfaceArtInfo("BUG_OPTIONS_SCREEN_BUTTON").getPath()
 		x += dx
-		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, 1, 1)
+		screen.setImageButton(btn, artPathButtonOptionBUG, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
+		screen.hide(btn)
+
+		btn = "DebugBtn0"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_DEBUG_SCREEN_BUTTON").getPath()
+		x += dx
+		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
 		# Minimap Panel
@@ -922,8 +932,8 @@ class CvMainInterface:
 		dx = 28
 		x -= dx
 		y += 8
-		aBtn = "ScoresVisible"
-		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_SCORES).getActionInfoIndex(), -1, eBtnLabel)
+		aBtn = "MMB|ScoreToggle0"
+		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, eWidGen, -1, -1, eBtnLabel)
 		screen.setStyle(aBtn, "Button_HUDBtnRank_Style")
 		aMinimapBtnList.append(aBtn)
 
@@ -1561,9 +1571,9 @@ class CvMainInterface:
 				screen.hide("VictoryAdvBtn")
 				screen.hide("InfoAdvBtn")
 				screen.hide("OptionsBtnBUG0")
+				screen.hide("DebugBtn0")
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
-				screen.hide("MADScreenWidget0")
 				screen.hide("BuildListBtn0")
 			else:
 				screen.show("InterfaceTopLeft")
@@ -1582,16 +1592,15 @@ class CvMainInterface:
 				screen.show("VictoryAdvBtn")
 				screen.show("InfoAdvBtn")
 				screen.show("OptionsBtnBUG0")
+				if self.bDebugModePython:
+					screen.show("DebugBtn0")
+
 				if MainOpt.isShowFieldOfView():
 					screen.show("FoVSliderText")
 					screen.show("FoVSlider")
 				else:
 					screen.hide("FoVSliderText")
 					screen.hide("FoVSlider")
-				if CyPlayerAct.isMADNukesEnabled():
-					screen.show("MADScreenWidget0")
-				else:
-					screen.hide("MADScreenWidget0")
 				screen.show("BuildListBtn0")
 
 		elif IFT == InterfaceVisibility.INTERFACE_HIDE:
@@ -1622,11 +1631,10 @@ class CvMainInterface:
 			screen.hide("VictoryAdvBtn")
 			screen.hide("InfoAdvBtn")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
-			if CyPlayerAct.isMADNukesEnabled():
-				screen.hide("MADScreenWidget0")
 
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1670,10 +1678,10 @@ class CvMainInterface:
 			screen.hide("CityScrollMinus")
 			screen.hide("CityScrollPlus")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
-			screen.hide("MADScreenWidget0")
 			screen.hide("ResearchBar")
 			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
@@ -1715,8 +1723,8 @@ class CvMainInterface:
 			screen.hide("CityScrollMinus")
 			screen.hide("CityScrollPlus")
 			screen.hide("OptionsBtnBUG0")
+			screen.hide("DebugBtn0")
 			screen.hide("BuildListBtn0")
-			screen.hide("MADScreenWidget0")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
 				screen.show("FoVSlider")
@@ -4711,7 +4719,7 @@ class CvMainInterface:
 			screen.setState("Grid", CyUserProfile().getGrid())
 			screen.setState("BareMap", CyUserProfile().getMap())
 			screen.setState("Yields", CyUserProfile().getYields())
-			screen.setState("ScoresVisible", CyUserProfile().getScores())
+			screen.setState("MMB|ScoreToggle0", CyUserProfile().getScores())
 
 			screen.hide("InterfaceGlobeLayerPanel")
 			screen.setState("GlobeToggle", False)
@@ -5366,6 +5374,11 @@ class CvMainInterface:
 				elif TYPE == "Defense":
 					self.updateTooltip(screen, CyGameTextMgr().getDefenseHelp(self.InCity.CyCity))
 
+			elif BASE == "MMB":
+				if TYPE == "ScoreToggle":
+					szTxt = TRNSLTR.getText("TXT_KEY_BUTTON_TOGGLE_SCORE", ())
+					self.updateTooltip(screen, szTxt)
+
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)
 
@@ -5394,10 +5407,6 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				szTxt = TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ())
-				self.updateTooltip(screen, szTxt)
-
-			elif NAME == "MADScreenWidget":
-				szTxt = TRNSLTR.getText("TXT_KEY_MAD_SCREEN_HOVER", ())
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "EraIndicator":
@@ -5713,6 +5722,10 @@ class CvMainInterface:
 					if self.InCity.iPlayer == self.iPlayer:
 						RevInstances.RevolutionInst.showBribeCityPopup(self.InCity.CyCity)
 
+			elif BASE == "MMB":
+				if TYPE == "ScoreToggle":
+					CyIF.toggleScoresVisible()
+
 			elif NAME == "AdvisorButton":
 				if not ID:
 					UP.showDomesticAdvisor(-1)
@@ -5744,10 +5757,6 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
-
-			elif NAME == "MADScreenWidget":
-				import CvMADNukesManager
-				CvMADNukesManager.CvMADNukesManager(CvScreenEnums.MAD_NUKES_MANAGER).interfaceScreen()
 
 			elif NAME == "GreatPersonBar":
 				# Zoom to next GP city

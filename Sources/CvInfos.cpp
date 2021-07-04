@@ -8761,14 +8761,12 @@ CvCivicInfo::CvCivicInfo()
 	, m_iSharedCivicTradeRouteModifier(0)
 	, m_iLandmarkHappiness(0)
 	, m_iCorporationSpreadRate(0)
-	, m_iRealCorporationMaintenanceModifier(0)
 	, m_iForeignerUnhappyPercent(0)
 	, m_iCityLimit(0)
 	, m_iCityOverLimitUnhappy(0)
 	, m_bFixedBorders(false)
 	, m_bNoCapitalUnhappiness(false)
 	, m_bNoLandmarkAnger(false)
-	, m_bEnablesMAD(false)
 	, m_piBonusMintedPercent(NULL)
 	, m_piImprovementHappinessChanges(NULL)
 	, m_piImprovementHealthPercentChanges(NULL)
@@ -9182,11 +9180,6 @@ int CvCivicInfo::getCorporationSpreadRate() const
 	return m_iCorporationSpreadRate;
 }
 
-int CvCivicInfo::getRealCorporationMaintenanceModifier() const
-{
-	return m_iRealCorporationMaintenanceModifier;
-}
-
 int CvCivicInfo::getFreedomFighterChange() const
 {
 	return m_iFreedomFighterChange;
@@ -9297,11 +9290,6 @@ bool CvCivicInfo::isNoCapitalUnhappiness() const
 bool CvCivicInfo::isNoLandmarkAnger() const
 {
 	return m_bNoLandmarkAnger;
-}
-
-bool CvCivicInfo::isEnablesMAD() const
-{
-	return m_bEnablesMAD;
 }
 
 bool CvCivicInfo::isAllReligionsActive() const
@@ -9682,7 +9670,6 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iSharedCivicTradeRouteModifier);
 	CheckSum(iSum, m_iLandmarkHappiness);
 	CheckSum(iSum, m_iCorporationSpreadRate);
-	CheckSum(iSum, m_iRealCorporationMaintenanceModifier);
 	CheckSum(iSum, m_iForeignerUnhappyPercent);
 	CheckSum(iSum, m_iCityLimit);
 	CheckSum(iSum, m_iNationalCaptureProbabilityModifier);
@@ -9711,7 +9698,6 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bFixedBorders);
 	CheckSum(iSum, m_bNoCapitalUnhappiness);
 	CheckSum(iSum, m_bNoLandmarkAnger);
-	CheckSum(iSum, m_bEnablesMAD);
 	CheckSum(iSum, m_bAllReligionsActive);
 	CheckSum(iSum, m_bBansNonStateReligions);
 	CheckSum(iSum, m_bFreedomFighter);
@@ -9883,7 +9869,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCivicHappiness, L"iCivicHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iDistantUnitSupportCostModifier, L"iDistantUnitSupportCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iExtraCityDefense, L"iExtraCityDefense");
-	pXML->GetOptionalChildXmlValByName(&m_iRealCorporationMaintenanceModifier, L"iRealCorporationMaintenanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iForeignTradeRouteModifier, L"iForeignTradeRouteModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iTaxRateUnhappiness, L"iTaxRateUnhappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationModifier, L"iInflation");
@@ -9913,7 +9898,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFixedBorders, L"bFixedBorders");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCapitalUnhappiness, L"bNoCapitalUnhappiness");
 	pXML->GetOptionalChildXmlValByName(&m_bNoLandmarkAnger, L"bNoLandmarkAnger");
-	pXML->GetOptionalChildXmlValByName(&m_bEnablesMAD, L"bEnablesMADNukes");
 	pXML->GetOptionalChildXmlValByName(&m_bAllReligionsActive, L"bAllReligionsActive");
 	pXML->GetOptionalChildXmlValByName(&m_bBansNonStateReligions, L"bBansNonStateReligions");
 	pXML->GetOptionalChildXmlValByName(&m_bFreedomFighter, L"bFreedomFighter");
@@ -10686,8 +10670,6 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 	if (getLandmarkHappiness() == iDefault) m_iLandmarkHappiness = pClassInfo->getLandmarkHappiness();
 	if (getCorporationSpreadRate() == iDefault) m_iCorporationSpreadRate = pClassInfo->getCorporationSpreadRate();
 	if (isNoLandmarkAnger() == bDefault) m_bNoLandmarkAnger = pClassInfo->isNoLandmarkAnger();
-	if (isEnablesMAD() == bDefault) m_bEnablesMAD = pClassInfo->isEnablesMAD();
-	if (getRealCorporationMaintenanceModifier() == iDefault) m_iRealCorporationMaintenanceModifier = pClassInfo->getRealCorporationMaintenanceModifier();
 	if (getCityLimit(NO_PLAYER) == iDefault) m_iCityLimit = pClassInfo->getCityLimit(NO_PLAYER);
 	if (getCityOverLimitUnhappy() == iDefault) m_iCityOverLimitUnhappy = pClassInfo->getCityOverLimitUnhappy();
 	if (getForeignerUnhappyPercent() == iDefault) m_iForeignerUnhappyPercent = pClassInfo->getForeignerUnhappyPercent();
@@ -11356,7 +11338,7 @@ CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
 	m_iObsoleteTech(NO_TECH),
 	m_iTechPrereq(NO_TECH),
 	m_iTechPrereqAnyone(NO_TECH),
-	m_iMaxPlayerInstances(0),
+	m_iMaxPlayerInstances(-1),
 	m_bValid(false)
 {}
 
@@ -11410,7 +11392,7 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereqAnyone");
 	m_iTechPrereqAnyone = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
 
@@ -11427,7 +11409,7 @@ void CvSpecialBuildingInfo::copyNonDefaults(const CvSpecialBuildingInfo* pClassI
 	if (getObsoleteTech() == iDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getTechPrereq() == iDefault) m_iTechPrereq = pClassInfo->getTechPrereq();
 	if (getTechPrereqAnyone() == iDefault) m_iTechPrereqAnyone = pClassInfo->getTechPrereqAnyone();
-	if (getMaxPlayerInstances() == 0) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
 }
@@ -18874,8 +18856,8 @@ CvProjectInfo::CvProjectInfo() :
 	m_iVictoryPrereq(NO_VICTORY),
 	m_iTechPrereq(NO_TECH),
 	m_iAnyoneProjectPrereq(NO_PROJECT),
-	m_iMaxGlobalInstances(0),
-	m_iMaxTeamInstances(0),
+	m_iMaxGlobalInstances(-1),
+	m_iMaxTeamInstances(-1),
 	m_iProductionCost(0),
 	m_iNukeInterception(0),
 	m_iTechShare(0),
@@ -19134,6 +19116,7 @@ int CvProjectInfo::getProjectsNeededValuesVectorElement(int i) const		{ return m
 
 bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 {
+
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -19146,8 +19129,8 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost");
 	pXML->GetOptionalChildXmlValByName(&m_iNukeInterception, L"iNukeInterception");
 	pXML->GetOptionalChildXmlValByName(&m_iTechShare, L"iTechShare");
@@ -19249,8 +19232,8 @@ void CvProjectInfo::copyNonDefaults(const CvProjectInfo* pClassInfo)
 	if (getEveryoneSpecialUnit() == iTextDefault) m_iEveryoneSpecialUnit = pClassInfo->getEveryoneSpecialUnit();
 	if (getEveryoneSpecialBuilding() == iTextDefault) m_iEveryoneSpecialBuilding = pClassInfo->getEveryoneSpecialBuilding();
 
-	if (getMaxGlobalInstances() == 0) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if (getMaxTeamInstances() == 0) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
+	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
 	if (getProductionCost() == iDefault) m_iProductionCost = pClassInfo->getProductionCost();
 	if (getNukeInterception() == iDefault) m_iNukeInterception = pClassInfo->getNukeInterception();
 	if (getTechShare() == iDefault) m_iTechShare = pClassInfo->getTechShare();
@@ -27384,7 +27367,6 @@ LightTypes CvArtInfoFeature::getLightType() const
 
 bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
 		return false;
@@ -27705,7 +27687,6 @@ int CvEmphasizeInfo::getCommerceChange(int i) const
 //
 bool CvEmphasizeInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -27798,7 +27779,6 @@ int CvUpkeepInfo::getCityPercent() const
 
 bool CvUpkeepInfo::read(CvXMLLoadUtility* pXml)
 {
-
 	if (!CvInfoBase::read(pXml))
 	{
 		return false;
@@ -27907,7 +27887,6 @@ int CvCultureLevelInfo::getPrereqGameOption() const
 
 bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 {
-
 	if (!CvInfoBase::read(pXml))
 	{
 		return false;
@@ -28183,7 +28162,6 @@ int CvEraInfo::getCitySoundscapeSciptId(int i) const
 
 bool CvEraInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -28217,6 +28195,11 @@ bool CvEraInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szAudioUnitDefeatScript, L"AudioUnitDefeatScript");
 	pXML->GetOptionalChildXmlValByName(&m_iInitialCityMaintenancePercent, L"iInitialCityMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iBeelineStingsTechCostModifier, L"iBeelineStingsTechCostModifier");
+
+	if (m_iInitialCityMaintenancePercent < 0)
+	{
+		m_iInitialCityMaintenancePercent = 0;
+	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"EraInfoSoundtracks"))
 	{
@@ -28285,7 +28268,12 @@ void CvEraInfo::copyNonDefaults(const CvEraInfo* pClassInfo)
 	if (isFirstSoundtrackFirst() == bDefault) m_bFirstSoundtrackFirst = pClassInfo->isFirstSoundtrackFirst();
 	if (getAudioUnitVictoryScript() == cDefault) m_szAudioUnitVictoryScript = pClassInfo->getAudioUnitVictoryScript();
 	if (getAudioUnitDefeatScript() == cDefault) m_szAudioUnitDefeatScript = pClassInfo->getAudioUnitDefeatScript();
-	if (getInitialCityMaintenancePercent() == iDefault) m_iInitialCityMaintenancePercent = pClassInfo->getInitialCityMaintenancePercent();
+	if (m_iInitialCityMaintenancePercent == iDefault) m_iInitialCityMaintenancePercent = pClassInfo->getInitialCityMaintenancePercent();
+
+	if (m_iInitialCityMaintenancePercent < 0)
+	{
+		m_iInitialCityMaintenancePercent = 0;
+	}
 
 	if ( pClassInfo->getNumSoundtracks() != 0 )
 	{
@@ -28385,7 +28373,6 @@ const NiColorA& CvColorInfo::getColor() const
 
 bool CvColorInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -28455,7 +28442,6 @@ int CvPlayerColorInfo::getTextColorType() const
 
 bool CvPlayerColorInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -28606,7 +28592,6 @@ bool CvLandscapeInfo::isRandomMap() const
 //
 bool CvLandscapeInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -28719,7 +28704,6 @@ void CvGameText::setText(const wchar_t* szText)
 
 bool CvGameText::read(CvXMLLoadUtility* pXML)
 {
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -28929,7 +28913,6 @@ const TCHAR* CvDiplomacyTextInfo::getDiplomacyText(int i, int j) const
 
 bool CvDiplomacyTextInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -28996,7 +28979,6 @@ CvEffectInfo::~CvEffectInfo() {}
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -29058,7 +29040,6 @@ CvAttachableInfo::~CvAttachableInfo()
 
 bool CvAttachableInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -29081,467 +29062,6 @@ void CvAttachableInfo::copyNonDefaults(const CvAttachableInfo* pClassInfo)
 	CvScalableInfo::copyNonDefaults(pClassInfo);
 
 	if (getPath() == cDefault) setPath(pClassInfo->getPath());
-}
-
-//////////////////////////////////////////////////////////////////////////
-//
-//	CvQuestInfo			Misc\CIV4QuestInfos.xml
-//
-//
-CvQuestInfo::CvQuestInfo() :
-m_iNumQuestMessages(0),
-m_iNumQuestLinks(0),
-m_iNumQuestSounds(0),
-m_paszQuestMessages(NULL),
-m_pQuestLinks(NULL),
-m_paszQuestSounds(NULL)
-{
-	m_szQuestScript = "NONE";
-}
-
-CvQuestInfo::~CvQuestInfo()
-{
-	reset();
-}
-
-
-void CvQuestInfo::reset()
-{
-	CvInfoBase::reset();
-	SAFE_DELETE_ARRAY(m_paszQuestMessages);
-	SAFE_DELETE_ARRAY(m_pQuestLinks);
-	SAFE_DELETE_ARRAY(m_paszQuestSounds);
-}
-
-bool CvQuestInfo::initQuestLinks(int iNum)
-{
-	reset();
-	if ( iNum > 0 )
-	{
-		m_pQuestLinks = new QuestLink[iNum];
-		m_iNumQuestLinks = iNum;
-		return true;
-	}
-	return false;
-}
-
-const TCHAR* CvQuestInfo::getQuestObjective() const
-{
-	return m_szQuestObjective;
-}
-
-const TCHAR* CvQuestInfo::getQuestBodyText() const
-{
-	return m_szQuestBodyText;
-}
-
-int CvQuestInfo::getNumQuestMessages() const
-{
-	return m_iNumQuestMessages;
-}
-
-const TCHAR* CvQuestInfo::getQuestMessages(int iIndex) const
-{
-	return m_paszQuestMessages ? m_paszQuestMessages[iIndex] : "";
-}
-
-int CvQuestInfo::getNumQuestLinks() const
-{
-	return m_iNumQuestLinks;
-}
-
-const TCHAR* CvQuestInfo::getQuestLinkType(int iIndex)  const
-{
-	return m_pQuestLinks[iIndex].m_szQuestLinkType;
-}
-
-const TCHAR* CvQuestInfo::getQuestLinkName(int iIndex)  const
-{
-	return m_pQuestLinks[iIndex].m_szQuestLinkName;
-}
-
-int CvQuestInfo::getNumQuestSounds() const
-{
-	return m_iNumQuestSounds;
-}
-
-const TCHAR* CvQuestInfo::getQuestSounds(int iIndex) const
-{
-	return m_paszQuestSounds ? m_paszQuestSounds[iIndex] : "";
-}
-
-const TCHAR* CvQuestInfo::getQuestScript() const
-{
-	return m_szQuestScript;
-}
-
-void CvQuestInfo::setQuestObjective(const TCHAR* szText)
-{
-	m_szQuestObjective = szText;
-}
-
-void CvQuestInfo::setQuestBodyText(const TCHAR* szText)
-{
-	m_szQuestBodyText = szText;
-}
-
-void CvQuestInfo::setNumQuestMessages(int iNum)
-{
-	m_iNumQuestMessages = iNum;
-}
-
-void CvQuestInfo::setQuestMessages(int iIndex, const TCHAR* szText)
-{
-	m_paszQuestMessages[iIndex] = szText;
-}
-
-void CvQuestInfo::setNumQuestSounds(int iNum)
-{
-	m_iNumQuestSounds = iNum;
-}
-
-void CvQuestInfo::setQuestSounds(int iIndex, const TCHAR* szText)
-{
-	m_paszQuestSounds[iIndex] = szText;
-}
-
-void CvQuestInfo::setQuestScript(const TCHAR* szText)
-{
-	m_szQuestScript = szText;
-}
-
-bool CvQuestInfo::read(CvXMLLoadUtility* pXML)
-{
-
-	CvString szTextVal;
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	pXML->GetChildXmlValByName(szTextVal, L"QuestObjective");
-	setQuestObjective(szTextVal);
-
-	pXML->GetChildXmlValByName(szTextVal, L"QuestBodyText");
-	setQuestBodyText(szTextVal);
-
-	if (pXML->TryMoveToXmlFirstChild(L"QuestMessages"))
-	{
-		pXML->SetStringList(&m_paszQuestMessages, &m_iNumQuestMessages);
-		pXML->MoveToXmlParent();
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"QuestLinks"))
-	{
-		int iNum;
-		iNum = pXML->GetXmlChildrenNumber(L"QuestLink");
-
-		if (initQuestLinks(iNum))
-		{
-			int i;
-			for (i=0; i<m_iNumQuestLinks; i++)
-			{
-				pXML->GetChildXmlValByName(szTextVal, L"QuestLinkType");
-				m_pQuestLinks[i].m_szQuestLinkType = szTextVal;
-
-				pXML->GetChildXmlValByName(szTextVal, L"QuestLinkName");
-				m_pQuestLinks[i].m_szQuestLinkName = szTextVal;
-
-				if (!pXML->TryMoveToXmlNextSibling())
-				{
-					break;
-				}
-			}
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"QuestSounds"))
-	{
-		pXML->SetStringList(&m_paszQuestSounds, &m_iNumQuestSounds);
-		pXML->MoveToXmlParent();
-	}
-
-	pXML->GetChildXmlValByName(szTextVal, L"QuestScript");
-	setQuestScript(szTextVal);
-
-	return true;
-}
-void CvQuestInfo::copyNonDefaults(const CvQuestInfo* pClassInfo)
-{
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
-
-	CvInfoBase::copyNonDefaults(pClassInfo);
-
-	if (getQuestObjective() == cDefault) setQuestObjective(pClassInfo->getQuestObjective());
-	if (getQuestBodyText() == cDefault) setQuestBodyText(pClassInfo->getQuestBodyText());
-
-	// Add new QuestMessages
-	if ( pClassInfo->getNumQuestMessages() != 0 )
-	{
-		CvString* m_paszNewMessages = new CvString[pClassInfo->getNumQuestMessages()];
-		for ( int i = 0; i < pClassInfo->getNumQuestMessages(); i++)
-		{
-			m_paszNewMessages[i] = pClassInfo->getQuestMessages(i);
-		}
-
-		CvXMLLoadUtilityModTools* pCurrentInfoClass = new CvXMLLoadUtilityModTools;
-		pCurrentInfoClass->StringArrayExtend(&m_paszQuestMessages, &m_iNumQuestMessages,
-										 &m_paszNewMessages, pClassInfo->getNumQuestMessages());
-		delete pCurrentInfoClass;
-		SAFE_DELETE_ARRAY(m_paszNewMessages)
-	}
-
-	if ( pClassInfo->getNumQuestLinks() > 0 )
-	{
-		int m_iNumQuestSoundsTemp = m_iNumQuestSounds + pClassInfo->getNumQuestLinks();
-		QuestLink* m_pQuestLinksTemp = new QuestLink[m_iNumQuestSoundsTemp];
-		int iCurrentClass = 0;
-
-		for ( int i = 0; i < m_iNumQuestSoundsTemp; i++ )
-		{
-			if ( i < pClassInfo->getNumQuestLinks() )
-			{
-				m_pQuestLinksTemp[i].m_szQuestLinkType = pClassInfo->getQuestLinkType(i);
-				m_pQuestLinksTemp[i].m_szQuestLinkName = pClassInfo->getQuestLinkName(i);
-			}
-			else
-			{
-				m_pQuestLinksTemp[i].m_szQuestLinkType = getQuestLinkType(iCurrentClass);
-				m_pQuestLinksTemp[i].m_szQuestLinkName = getQuestLinkName(iCurrentClass);
-				iCurrentClass++;
-			}
-		}
-		SAFE_DELETE_ARRAY(m_pQuestLinks);
-		m_pQuestLinks = new QuestLink[m_iNumQuestSoundsTemp];
-
-		for ( int i = 0; i < m_iNumQuestSoundsTemp; i++)
-		{
-			m_pQuestLinks[i].m_szQuestLinkType = m_pQuestLinksTemp[i].m_szQuestLinkType;
-			m_pQuestLinks[i].m_szQuestLinkName = m_pQuestLinksTemp[i].m_szQuestLinkName;
-		}
-		SAFE_DELETE_ARRAY(m_pQuestLinksTemp);
-	}
-
-	// Add new QuestSounds
-	if ( pClassInfo->getNumQuestSounds() != 0 )
-	{
-		CvString* m_paszNewSounds = new CvString[pClassInfo->getNumQuestSounds()];
-		for ( int i = 0; i < pClassInfo->getNumQuestSounds(); i++)
-		{
-			m_paszNewSounds[i] = pClassInfo->getQuestSounds(i);
-		}
-
-		CvXMLLoadUtilityModTools* pCurrentInfoClass = new CvXMLLoadUtilityModTools;
-		pCurrentInfoClass->StringArrayExtend(&m_paszQuestSounds, &m_iNumQuestSounds,
-										 &m_paszNewSounds, pClassInfo->getNumQuestSounds());
-		delete pCurrentInfoClass;
-		SAFE_DELETE_ARRAY(m_paszNewSounds)
-	}
-
-	if (getQuestScript() == cDefault) setQuestScript(pClassInfo->getQuestScript());
-}
-
-//////////////////////////////////////////////////////////////////////////
-//
-//	CvTutorialMessage
-//
-CvTutorialMessage::CvTutorialMessage() :
-m_iNumTutorialScripts(0),
-m_paszTutorialScripts(NULL)
-{
-	m_szTutorialMessageText = "No Text";
-	m_szTutorialMessageImage = "No Text";
-	m_szTutorialMessageSound = "No Text";
-}
-
-CvTutorialMessage::~CvTutorialMessage()
-{
-	SAFE_DELETE_ARRAY(m_paszTutorialScripts);
-}
-
-const TCHAR* CvTutorialMessage::getText() const
-{
-	return m_szTutorialMessageText;
-}
-
-const TCHAR* CvTutorialMessage::getImage() const
-{
-	return m_szTutorialMessageImage;
-}
-
-const TCHAR* CvTutorialMessage::getSound() const
-{
-	return m_szTutorialMessageSound;
-}
-
-void CvTutorialMessage::setText(const TCHAR* szText)
-{
-	m_szTutorialMessageText = szText;
-}
-
-void CvTutorialMessage::setImage(const TCHAR* szText)
-{
-	m_szTutorialMessageImage = szText;
-}
-
-int CvTutorialMessage::getNumTutorialScripts() const
-{
-	return m_iNumTutorialScripts;
-}
-
-const TCHAR* CvTutorialMessage::getTutorialScriptByIndex(int i) const
-{
-	return m_paszTutorialScripts[i];
-}
-
-bool CvTutorialMessage::read(CvXMLLoadUtility* pXML)
-{
-
-	CvString szTextVal;
-
-	if (pXML->GetChildXmlValByName(szTextVal, L"TutorialMessageText"))
-		setText(szTextVal);
-
-	if (pXML->GetChildXmlValByName(szTextVal, L"TutorialMessageImage"))
-		setImage(szTextVal);
-
-	if (pXML->GetChildXmlValByName(szTextVal, L"TutorialMessageSound"))
-		m_szTutorialMessageSound = szTextVal;
-
-	if (pXML->TryMoveToXmlFirstChild(L"TutorialScripts"))
-	{
-		pXML->SetStringList(&m_paszTutorialScripts, &m_iNumTutorialScripts);
-		pXML->MoveToXmlParent();
-	}
-
-	return true;
-}
-
-
-CvTutorialInfo::CvTutorialInfo() :
-m_iNumTutorialMessages(0),
-m_paTutorialMessages(NULL)
-{
-	m_szNextTutorialInfoType = "NONE";
-}
-
-CvTutorialInfo::~CvTutorialInfo()
-{
-	resetMessages();
-}
-
-const TCHAR* CvTutorialInfo::getNextTutorialInfoType() const
-{
-	return m_szNextTutorialInfoType;
-}
-
-void CvTutorialInfo::setNextTutorialInfoType(const TCHAR* szVal)
-{
-	m_szNextTutorialInfoType = szVal;
-}
-
-bool CvTutorialInfo::initTutorialMessages(int iNum)
-{
-	resetMessages();
-	m_paTutorialMessages = new CvTutorialMessage[iNum];
-	m_iNumTutorialMessages = iNum;
-	return true;
-}
-
-void CvTutorialInfo::resetMessages()
-{
-	SAFE_DELETE_ARRAY(m_paTutorialMessages);
-	m_iNumTutorialMessages = 0;
-}
-
-int CvTutorialInfo::getNumTutorialMessages() const
-{
-	return m_iNumTutorialMessages;
-}
-
-const CvTutorialMessage* CvTutorialInfo::getTutorialMessage(int iIndex) const
-{
-	return &m_paTutorialMessages[iIndex];
-}
-
-bool CvTutorialInfo::read(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	CvString szTextVal;
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"NextTutorialInfoType");
-	setNextTutorialInfoType(szTextVal);
-
-	if (pXML->TryMoveToXmlFirstChild(L"TutorialMessages"))
-	{
-		int iNum = pXML->GetXmlChildrenNumber(L"TutorialMessage");
-		if ( iNum > 0 )
-		{
-			if(pXML->TryMoveToXmlFirstChild(L"TutorialMessage"))
-			{
-				initTutorialMessages(iNum);
-				for (int i = 0; i < m_iNumTutorialMessages; i++)
-				{
-					if (!m_paTutorialMessages[i].read(pXML))
-					{
-						FErrorMsg("");
-						return false;
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-				pXML->MoveToXmlParent();
-			}
-		}
-		pXML->MoveToXmlParent();
-	}
-	return true;
-}
-void CvTutorialInfo::copyNonDefaults(const CvTutorialInfo* pClassInfo)
-{
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
-
-	CvInfoBase::copyNonDefaults(pClassInfo);
-
-	if (getNextTutorialInfoType() == cDefault) setNextTutorialInfoType(pClassInfo->getNextTutorialInfoType());
-
-/*	if ( pClassInfo->getNumTutorialMessages() > 0 )
-	{
-		int m_iNumTutorialMessagesTemp = m_iNumTutorialMessages + pClassInfo->getNumTutorialMessages();
-		CvTutorialMessage* m_paTutorialMessagesTemp = new CvTutorialMessage[m_iNumTutorialMessagesTemp];
-		int iCurrentClass = 0;
-
-		for ( int i = 0; i < m_iNumTutorialMessagesTemp; i++ )
-		{
-			if ( i < pClassInfo->getNumTutorialMessages() )
-			{
-				m_paTutorialMessagesTemp[i] = pClassInfo->getTutorialMessage(i);
-			}
-			else
-			{
-				m_paTutorialMessagesTemp[i] = getTutorialMessage(iCurrentClass);
-				iCurrentClass++;
-			}
-		}
-		SAFE_DELETE_ARRAY(m_paTutorialMessages);
-		m_paTutorialMessages = new CvTutorialMessage[m_iNumTutorialMessagesTemp];
-
-		for ( int i = 0; i < m_iNumTutorialMessagesTemp; i++ )
-		{
-			m_paTutorialMessages[i] = m_paTutorialMessagesTemp[i];
-		}
-		SAFE_DELETE_ARRAY(m_paTutorialMessagesTemp);
-	}
-*/
 }
 
 //////////////////////////////////////////////////////////////////////////

@@ -504,7 +504,7 @@ class CvDomesticAdvisor:
 		# add National Wonders
 		for i in xrange(GC.getNumBuildingInfos()):
 			info = GC.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == 0 and info.getMaxPlayerInstances() == 1 and CyCity.getNumRealBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += unichr(8854)
 
@@ -631,11 +631,11 @@ class CvDomesticAdvisor:
 				if city.isProductionBuilding():
 					szColorKey = "WONDER"
 					pInfo = GC.getBuildingInfo(city.getProductionBuilding())
-					if pInfo.getMaxGlobalInstances() > 0:
+					if pInfo.getMaxGlobalInstances() != -1:
 						szIcon = unichr(8858)
-					elif pInfo.getMaxTeamInstances() > 0:
+					elif pInfo.getMaxTeamInstances() != -1:
 						szIcon = unichr(8859)
-					elif pInfo.getMaxPlayerInstances() > 0:
+					elif pInfo.getMaxPlayerInstances() != -1:
 						szIcon = unichr(8859)
 					else:
 						szColorKey = "BUILDING"
@@ -653,9 +653,9 @@ class CvDomesticAdvisor:
 				elif city.isProductionProject():
 					szColorKey = "PROJECT"
 					pInfo = GC.getProjectInfo(city.getProductionProject())
-					if pInfo.getMaxGlobalInstances() > 0:
+					if pInfo.getMaxGlobalInstances() != -1:
 						szIcon = unichr(8858)
-					elif pInfo.getMaxTeamInstances() > 0:
+					elif pInfo.getMaxTeamInstances() != -1:
 						szIcon = unichr(8859)
 				elif city.isProductionUnit():
 					szColorKey = "UNIT"

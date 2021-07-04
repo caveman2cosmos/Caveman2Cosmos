@@ -1024,11 +1024,6 @@ void CyCity::setNeverLost(int iNewValue)
 	m_pCity->setNeverLost(iNewValue);
 }
 
-int CyCity::getMADIncoming() const
-{
-	return m_pCity->getMADIncoming();
-}
-
 bool CyCity::isBombarded() const
 {
 	return m_pCity->isBombarded();

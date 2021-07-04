@@ -509,11 +509,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iDCMBombRange = 0;
 	m_iDCMBombAccuracy = 0;
 
-	m_bMADEnabled = false;
-	m_iMADTargetPlotX = INVALID_PLOT_COORD;
-	m_iMADTargetPlotY = INVALID_PLOT_COORD;
-	m_pMADTargetPlotOwner = NO_PLAYER;
-
 	m_iID = iID;
 	if (!bIdentityChange)
 	{
@@ -995,14 +990,14 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 		checkFreetoCombatClass();
 
 		const bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
-			bst::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
-			bst::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
+			bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
 
 		const bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
-			bst::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
-			bst::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
+			bind(&CvUnit::isQualityUpgradePromotion, this, _2),
+			bind(&CvUnit::isQualityDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on converted unit");
 
@@ -1138,11 +1133,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
-	}
-
-	if (isMADEnabled())
-	{
-		setMADEnabled(false);
 	}
 
 	const PlayerTypes eOwner = getOwner();
@@ -1618,12 +1608,6 @@ void CvUnit::doTurn()
 	}
 
 	setMoves(0);
-
-	if(isMADEnabled())
-	{
-		doMADNukes(false);
-		finishMoves();
-	}
 }
 
 
@@ -2039,12 +2023,12 @@ namespace {
 
 	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bst::bind(unitsAtWar, ourTeam, _1)));
+		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bind(unitsAtWar, ourTeam, _1)));
 	}
 
 	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return algo::any_of(plot->adjacent() | filtered(bst::bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
+		return algo::any_of(plot->adjacent() | filtered(bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
 	}
 
 	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
@@ -5309,17 +5293,10 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 
 	case COMMAND_CANCEL:
 	case COMMAND_CANCEL_ALL:
-		if (!isAutomated() && (getGroup()->getLengthMissionQueue() > 0))
+		if (!isAutomated() && getGroup()->getLengthMissionQueue() > 0)
 		{
 			return true;
 		}
-		// < M.A.D. Nukes Start >
-		if(isMADEnabled() && getUnitInfo().getUnitAIType(UNITAI_ICBM))
-		{
-			return true;
-		}
-		// < M.A.D. Nukes End   >
-
 		break;
 
 	case COMMAND_STOP_AUTOMATION:
@@ -5479,14 +5456,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		case COMMAND_CANCEL:
-			// < M.A.D. Nukes Start >
-			if(isMADEnabled() && getUnitInfo().getUnitAIType(UNITAI_ICBM))
-			{
-				clearMADTargetPlot();
-				setMoves(0);
-			}
 			getGroup()->popMission();
-			// < M.A.D. Nukes End   >
 			break;
 
 		case COMMAND_CANCEL_ALL:
@@ -8372,7 +8342,7 @@ bool CvUnit::canNuke(const CvPlot* pPlot) const
 }
 
 
-bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) const
+bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 {
 	if (!canNuke(pPlot))
 	{
@@ -8386,136 +8356,26 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 	}
 	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
-	if (bTestAtWar)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
+		if (iI != getTeam() && isNukeVictim(pTargetPlot, (TeamTypes)iI) && !isEnemy((TeamTypes)iI))
 		{
-			if (iI != getTeam() && isNukeVictim(pTargetPlot, (TeamTypes)iI) && !isEnemy((TeamTypes)iI))
-			{
-				return false;
-			}
-		}
-	}
-	return true;
-}
-
-// < M.A.D. Nukes Start >
-bool CvUnit::setMADTargetPlot(int iX, int iY)
-{
-	CvPlot* pPlot;
-	CvCity* pCity;
-	CvWString szBuffer;
-
-	if(!GC.getMap().isPlot(iX, iY))
-	{
-		return false;
-	}
-
-	pPlot = GC.getMap().plot(iX, iY);
-
-	pCity = pPlot->getPlotCity();
-
-	if(pCity == NULL)
-	{
-		return false;
-	}
-
-	if(/*!(atWar(getTeam(), pCity->getTeam())) &&*/ (!isMADEnabled() || pPlot != getMADTargetPlot()))
-	{
-		if(isMADEnabled() && getMADTargetPlot() != NULL)
-		{
-			GET_PLAYER(getOwner()).changeMADOutgoing(-1);
-			GET_PLAYER(getMADTargetPlotOwner()).changeMADIncoming(-1);
-			getMADTargetPlot()->getPlotCity()->changeMADIncoming(-1);
-
-		}
-
-		setMADEnabled(true);			// Dale - MAD: turn MAD on for unit
-		setMADTargetPlot(pPlot);		// Dale - MAD: set target
-		setMADTargetPlotOwner(pCity->getOwner());
-		//getGroup()->setActivityType(ACTIVITY_SLEEP);
-		finishMoves();
-		GET_PLAYER(getOwner()).changeMADOutgoing(1);
-		GET_PLAYER(pCity->getOwner()).changeMADIncoming(1);
-		getMADTargetPlot()->getPlotCity()->changeMADIncoming(1);
-
-		{
-
-			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_SET_ON", getNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY(), true, true);
-
-			szBuffer = gDLL->getText("Someone has targetted %s1 with a nuke!", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true);
-		}
-
-		finishMoves();
-		return true;
-	}
-
-	return false;
-}
-
-bool CvUnit::clearMADTargetPlot()
-{
-	CvWString szBuffer;
-
-	if(!isMADEnabled())
-	{
-		return false;
-	}
-
-	setMADEnabled(false);
-
-	{
-
-		szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_RESET", getNameKey());
-		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-	}
-
-	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-	gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-
-	return true;
-}
-// < M.A.D. Nukes End   >
-
-bool CvUnit::nuke(int iX, int iY, bool bTrap)
-{
-
-	if (!canNukeAt(plot(), iX, iY, !isMADEnabled()))
-	{
-		return false;
-	}
-
-	if (!isHuman() && !isMADEnabled()
-	&& GET_PLAYER(getOwner()).isEnabledMAD()
-	&& GET_PLAYER(getOwner()).getMADDeterrent() > 0
-	&& GET_PLAYER(getOwner()).getMADIncoming() >= GET_PLAYER(getOwner()).getMADOutgoing())
-	{
-		GET_PLAYER(getOwner()).changeMADDeterrent(-1);
-		return false;
-	}
-
-	// Dale - Check validity of target before blowing it up
-	if (isMADEnabled() && !bTrap)
-	{
-		const CvCity* pCity = getMADTargetPlot()->getPlotCity();
-		if (pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
-		{
-			setMADEnabled(false);
-
-			AddDLLMessage(
-				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText("TXT_KEY_NUKE_TARGET_FAILED"),
-				"AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(),
-				GC.getCOLOR_WHITE(), getX(), getY(), true, true
-			);
 			return false;
 		}
 	}
+	return true;
+}
 
+bool CvUnit::nuke(int iX, int iY, bool bTrap)
+{
+	if (!canNukeAt(plot(), iX, iY))
+	{
+		return false;
+	}
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+
 	bool abTeamsAffected[MAX_TEAMS];
+
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		abTeamsAffected[iI] = isNukeVictim(pPlot, ((TeamTypes)iI));
@@ -8577,27 +8437,6 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 			kill(true, NO_PLAYER, true);
 
 			return true; // Intercepted!!! (XXX need special event for this...)
-		}
-	}
-	// < M.A.D. Nukes Start >
-	// MAD: the guts of MAD.  Here is what happens:
-	//		1. Ascertain the teams affected.
-	//		2. Ascertain players in the teams affected.
-	//		3. Set the MAD trigger to true for the players affected to the agressor.
-	if (GET_PLAYER(getOwner()).isEnabledMAD())
-	{
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if (abTeamsAffected[iI] && GET_TEAM((TeamTypes)iI).isAlive() && iI != getTeam())
-			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
-				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
-					{
-						GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwner(), true);
-					}
-				}
-			}
 		}
 	}
 
@@ -12865,9 +12704,6 @@ BuildTypes CvUnit::getBuildType() const
 // BUG - Sentry Actions - end
 		case MISSION_AIRLIFT:
 		case MISSION_NUKE:
-		// < M.A.D. Nukes Start >
-		case MISSION_PRETARGET_NUKE:
-		// < M.A.D. Nukes End   >
 
 		case MISSION_RECON:
 		case MISSION_PARADROP:
@@ -23277,10 +23113,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombAccuracy);
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_bMADEnabled);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotX);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iMADTargetPlotY);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_pMADTargetPlotOwner);
+	// @SAVEBREAK DELETE - Toffer
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_bMADEnabled, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotX, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotY, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_pMADTargetPlotOwner, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
@@ -24874,11 +24712,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDCMBombAccuracy);
-
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bMADEnabled);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotX);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iMADTargetPlotY);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_pMADTargetPlotOwner);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupID);
@@ -30791,180 +30624,11 @@ bool CvUnit::isAutoUpgrading() const
 {
 	return m_bAutoUpgrading;
 }
+
 void CvUnit::setAutoUpgrading(bool bNewValue)
 {
 	m_bAutoUpgrading = bNewValue;
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-
-// < M.A.D. Nukes Start >
-bool CvUnit::isMADEnabled() const
-{
-	return m_bMADEnabled;
-}
-
-void CvUnit::setMADEnabled(bool bValue)
-{
-	if (m_bMADEnabled != bValue)
-	{
-		m_bMADEnabled = bValue;
-
-		if (!isMADEnabled())
-		{
-			GET_PLAYER(getOwner()).changeMADOutgoing(-1);
-			if(getMADTargetPlotOwner() != NO_PLAYER)
-			{
-				GET_PLAYER(getMADTargetPlotOwner()).changeMADIncoming(-1);
-				getMADTargetPlot()->getPlotCity()->changeMADIncoming(-1);
-			}
-
-			setMADTargetPlot(NULL);
-			setMADTargetPlotOwner(NO_PLAYER);
-			getGroup()->setActivityType(ACTIVITY_AWAKE);
-		}
-	}
-}
-
-// Dale - MAD: get MAD plot
-CvPlot* CvUnit::getMADTargetPlot() const
-{
-	return GC.getMap().plot(m_iMADTargetPlotX, m_iMADTargetPlotY);
-}
-
-int CvUnit::getMADTargetPlotX() const
-{
-	return m_iMADTargetPlotX;
-}
-
-int CvUnit::getMADTargetPlotY() const
-{
-	return m_iMADTargetPlotY;
-}
-
-// Dale - MAD: set MAD plot
-void CvUnit::setMADTargetPlot(const CvPlot* pPlot)
-{
-	if(pPlot)
-	{
-		m_iMADTargetPlotX = pPlot->getX();
-		m_iMADTargetPlotY = pPlot->getY();
-		setMADTargetPlotOwner(pPlot->getPlotCity()->getOwner());
-	}
-	else
-	{
-		m_iMADTargetPlotX = INVALID_PLOT_COORD;
-		m_iMADTargetPlotY = INVALID_PLOT_COORD;
-		m_pMADTargetPlotOwner = NO_PLAYER;
-	}
-}
-
-PlayerTypes CvUnit::getMADTargetPlotOwner() const
-{
-	return m_pMADTargetPlotOwner;
-}
-
-void CvUnit::setMADTargetPlotOwner(PlayerTypes pPlayer)
-{
-	m_pMADTargetPlotOwner = pPlayer;
-}
-
-void CvUnit::doMADNukes(bool bForceRetarget)
-{
-	CvWString szBuffer;
-
-	// Dale - MAD: check validity of Human nuke targets
-	if(isMADEnabled())
-	{
-		FAssertMsg(GET_PLAYER(getOwner()).isEnabledMAD(), "Nukes Should Not Be Targeted!");
-
-		const CvCity* pCity = getMADTargetPlot()->getPlotCity();
-		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
-		{
-			setMADEnabled(false);
-
-
-			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_LOST");
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
-		}
-	}
-	if (!isHuman())
-	{
-		if ((!isMADEnabled() || bForceRetarget) && getUnitInfo().getUnitAIType(UNITAI_ICBM))
-		{
-			// Dale - MAD: code to make AI select target from potential enemys
-			//		1. AI finds a random player each turn (till a target is set)
-			//		2. AI checks that not at war and a potential enemy
-			//		3. AI picks a random city of player to target
-
-			//Clear existing targets
-			CvCity* pOldTarget = NULL;
-			if (bForceRetarget && isMADEnabled())
-			{
-				pOldTarget = getMADTargetPlot()->getPlotCity();
-				setMADEnabled(false);
-			}
-			const CvCity* pBestCity = NULL;
-			int iBestValue = 0;
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
-			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getOwner())
-				{
-					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwner()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
-					{
-						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
-						{
-							if (pLoopCity->isRevealed(getTeam(), false))
-							{
-								if (canNukeAt(plot(), pLoopCity->getX(), pLoopCity->getY(), false))
-								{
-									const int iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
-									if (iValue > iBestValue)
-									{
-										iBestValue = iValue;
-										pBestCity = pLoopCity;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			if(pBestCity != NULL)
-			{
-				setMADTargetPlot(pBestCity->plot());
-				setMADEnabled(true);
-				setMADTargetPlotOwner(pBestCity->getOwner());
-				GET_PLAYER(getOwner()).changeMADOutgoing(1);
-				GET_PLAYER(pBestCity->getOwner()).changeMADIncoming(1);
-				getMADTargetPlot()->getPlotCity()->changeMADIncoming(1);
-
-				if (pOldTarget != pBestCity)
-				{
-
-					szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_FRIENDLY_CITY", GET_PLAYER(getOwner()).getCivilizationAdjective(), pBestCity->getNameKey());
-					AddDLLMessage(pBestCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pBestCity->getX(), pBestCity->getY(), true, true);
-				}
-			}
-		}
-	}
-	// Dale - MAD: if unit has a target, and trigger active for that player, then NUKE!
-	if(isMADEnabled() && !bForceRetarget)
-	{
-		if(canNuke(getMADTargetPlot()))
-		{
-			const CvCity* pCity = getMADTargetPlot()->getPlotCity();
-			if(pCity != NULL && (GET_PLAYER(getOwner()).getMADTrigger(pCity->getOwner()) || atWar(getTeam(), pCity->getTeam())))
-			{
-				nuke(getMADTargetPlot()->getX(), getMADTargetPlot()->getY());
-			}
-		}
-	}
-}
-// < M.A.D. Nukes End   >
 
 
 bool CvUnit::canShadow() const
@@ -37307,14 +36971,14 @@ void CvUnit::doMerge()
 		}
 
 		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
-			bst::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-			bst::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+			bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
 		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-			bst::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-			bst::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+			bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+			bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 
@@ -37461,14 +37125,14 @@ void CvUnit::doSplit()
 		newUnits.push_back(pUnit3);
 
 		const bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-			bst::bind(isGroupUpgradePromotion, pUnit1, _2),
-			bst::bind(isGroupDowngradePromotion, pUnit1, _2)
+			bind(isGroupUpgradePromotion, pUnit1, _2),
+			bind(isGroupDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 		const bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-			bst::bind(isQualityUpgradePromotion, pUnit1, _2),
-			bst::bind(isQualityDowngradePromotion, pUnit1, _2)
+			bind(isQualityUpgradePromotion, pUnit1, _2),
+			bind(isQualityDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 

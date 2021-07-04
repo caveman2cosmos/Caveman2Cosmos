@@ -256,8 +256,6 @@ public:
 	bool isNeverLost() const;
 	void setNeverLost(int iNewValue);
 
-	int getMADIncoming() const;
-
 	bool isBombarded() const;
 	void setBombarded(int iNewValue);
 	bool isDrafted() const;

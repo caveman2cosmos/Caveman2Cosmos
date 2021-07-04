@@ -135,9 +135,6 @@ public:
 	int getInitTech() const;
 	int getInitWonders() const;
 
-	CyPlot* getLastNukeStrikePlot() const;
-	void setLastNukeStrikePlot(CyPlot* pPlot);
-
 	int getAIAutoPlay(int iPlayer) const;
 	void setAIAutoPlay(int iPlayer, int iNewValue);
 
