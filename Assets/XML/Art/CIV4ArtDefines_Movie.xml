@@ -2742,6 +2742,10 @@
 			<Path>Art/Movies/national_wonders/NATIONAL_LEGAL_DATABASE.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
+			<Path>Art/Movies/national_wonders/NATIONAL_LIBRARY_SERVICE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NATIONAL_MINT</Type>
 			<Path>Art/Movies/national_wonders/NATIONAL_MINT.dds</Path>
 		</MovieArtInfo>
