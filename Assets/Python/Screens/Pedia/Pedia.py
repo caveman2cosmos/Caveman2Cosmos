@@ -1042,16 +1042,18 @@ class Pedia:
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		
-		#Checking if earliest bonus manufacturer is on bonus tech reveal.
-		self.debug.checkBonusManufacturerTech()
-
+		#self.debug.checkBonusManufacturerTech() #Checking if earliest bonus manufacturer is on bonus tech reveal.
+		#self.debug.checkTechMods() #Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
+		#self.debug.checkBonusRequirements() #Check if building needs bonus before is available
+		#self.debug.checkBuildingRequirements() #Check if building needs building before is available
+		#self.debug.checkBuildingRequirementObsoletion() #Check if building requirements obsolete before building
+		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 
 			#Check location of building on X and Y grid.
 			iTechLoc = self.debug.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.debug.checkTechRequirementLocation(CvBuildingInfo)[1]
-
 
 			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1063,22 +1065,9 @@ class Pedia:
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
 
-
 			#Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				print CvBuildingInfo.getType()+" can't be hurried at first place"
-
-			#Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-			#self.debug.checkTechMods(iTechLoc, CvBuildingInfo)
-
-			#Check if building needs bonus before is available
-			#self.debug.checkBonusRequirements(iTechLoc, CvBuildingInfo)
-
-			#Check if building needs building before is available
-			#self.debug.checkBuildingRequirements(iTechLoc, CvBuildingInfo)
-
-			#Check if building requirements obsolete before building
-			#self.debug.checkBuildingRequirementObsoletion(CvBuildingInfo)
 
 			# Check if building obsoletion isn't too close to tech unlock.
 			if CvBuildingInfo.getObsoleteTech() != -1:
