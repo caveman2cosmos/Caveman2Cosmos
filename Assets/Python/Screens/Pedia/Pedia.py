@@ -1047,6 +1047,11 @@ class Pedia:
 		#self.debug.checkBonusRequirements() #Check if building needs bonus before is available
 		#self.debug.checkBuildingRequirements() #Check if building needs building before is available
 		#self.debug.checkBuildingRequirementObsoletion() #Check if building requirements obsolete before building
+		#self.debug.checkBuildingCommerceDoubleTime() #Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
+		#self.debug.checkCommerceChangeOriginalOwners() #Check if CommerceChangeOriginalOwners is on buildings with flat commerce changes
+		#self.debug.checkHurryModifier() #Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
+		#self.debug.checkBuildingUnlockObsoletion() #Check if building obsoletion isn't too close to tech unlock.
+		#self.debug.checkReplacementObsoletion() #Check obsoletion of replacements
 		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
@@ -1054,42 +1059,6 @@ class Pedia:
 			#Check location of building on X and Y grid.
 			iTechLoc = self.debug.checkTechRequirementLocation(CvBuildingInfo)[0]
 			iTechRow = self.debug.checkTechRequirementLocation(CvBuildingInfo)[1]
-
-			#Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
-			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
-					print CvBuildingInfo.getType()+" has commerce change double time"
-
-			#Check if CommerceChangeOriginalOwners is on buildings with flat commerce changes
-			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
-					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
-
-			#Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
-			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
-				print CvBuildingInfo.getType()+" can't be hurried at first place"
-
-			# Check if building obsoletion isn't too close to tech unlock.
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-				if iObsoleteTechLoc - iTechLoc <= 5:
-					print CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc)
-
-			# Check obsoletion of replacements
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-			else:
-				iObsoleteTechLoc = 999
-			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-				iReplacTechLoc = self.debug.checkTechRequirementLocation(CvBuildingReplacement)[0]
-				if CvBuildingReplacement.getObsoleteTech() != -1:
-					iReplacObsoleteTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
-				else:
-					iReplacObsoleteTechLoc = 999
-
-				if iObsoleteTechLoc <= iReplacTechLoc:
-					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
 
 			if CvBuildingInfo.isGraphicalOnly():
 				continue

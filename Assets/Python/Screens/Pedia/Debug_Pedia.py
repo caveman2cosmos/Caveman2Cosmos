@@ -372,3 +372,60 @@ class Debug:
 			if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
 				if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
 					print GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype])
+					
+	#Building commerce double time - wonders only, and ensure flat change exists
+	def checkBuildingCommerceDoubleTime(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
+					print CvBuildingInfo.getType()+" Non-wonder has commerce change double time"
+					
+			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
+					print CvBuildingInfo.getType()+" has commerce change double time but no relevant flat commerce change"
+	
+	#Building owner change - ensure flat commerce change exists
+	def checkCommerceChangeOriginalOwners(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
+					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
+					
+	#Building hurry modifiers work only on buildable buildings
+	def checkHurryModifier(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
+				print CvBuildingInfo.getType()+" can't be hurried at first place"
+	
+	#Buildings shouldn't obsolete too fast in relation of tech unlock
+	def checkBuildingUnlockObsoletion(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+				if iObsoleteTechLoc - iTechLoc <= 5:
+					print CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc)
+					
+	#Building replacements shouldn't obsolete too fast for sanity of beeliners
+	def checkReplacementObsoletion(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			else:
+				iObsoleteTechLoc = 999
+			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
+				iReplacTechLoc = self.checkTechRequirementLocation(CvBuildingReplacement)[0]
+				if CvBuildingReplacement.getObsoleteTech() != -1:
+					iReplacObsoleteTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
+				else:
+					iReplacObsoleteTechLoc = 999
+
+				if iObsoleteTechLoc <= iReplacTechLoc:
+					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
