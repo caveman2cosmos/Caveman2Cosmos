@@ -9,14 +9,6 @@ void CyInfoPythonInterface4()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface4\n");
 
-	python::class_<CvTutorialMessage>("CvTutorialMessage")
-		.def("getText", &CvTutorialMessage::getText, "string ()")
-		.def("getSound", &CvTutorialMessage::getSound, "string ()")
-		;
-
-	python::class_<CvTutorialInfo, python::bases<CvInfoBase> >("CvTutorialInfo")
-		;
-
 	python::class_<CvAutomateInfo, python::bases<CvInfoBase> >("CvAutomateInfo")
 		;
 

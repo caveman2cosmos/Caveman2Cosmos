@@ -109,7 +109,6 @@ class CvMPOptionInfo;
 class CvForceControlInfo;
 class CvPlayerOptionInfo;
 class CvGraphicOptionInfo;
-class CvTutorialInfo;
 class CvEventTriggerInfo;
 class CvEventInfo;
 class CvEspionageMissionInfo;
@@ -618,9 +617,6 @@ public:
 	int getNumVictoryInfos() const;
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
 
-	int getNumTutorialInfos() const;
-	CvTutorialInfo& getTutorialInfo(int i) const;
-
 	int getNumEventTriggerInfos() const;
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
 
@@ -1045,7 +1041,6 @@ protected:
 	std::vector<CvUnitFormationInfo*> m_paUnitFormationInfo;
 	std::vector<CvEffectInfo*> m_paEffectInfo;
 	std::vector<CvAttachableInfo*> m_paAttachableInfo;
-	std::vector<CvTutorialInfo*> m_paTutorialInfo;
 	std::vector<CvEventTriggerInfo*> m_paEventTriggerInfo;
 	CvInfoReplacements<CvEventTriggerInfo> m_EventTriggerInfoReplacements;
 	std::vector<CvEventInfo*> m_paEventInfo;
