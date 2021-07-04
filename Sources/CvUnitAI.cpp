@@ -12278,7 +12278,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 						//	Guard a good spot outside the city but in its vicinity
 						int iBestValue = 0;
 
-						foreach_(CvPlot* pLoopPlot, CvPlot::rect(pPlot->getX(), pPlot->getY(), NUM_CITY_PLOTS_2, NUM_CITY_PLOTS_2))
+						foreach_(CvPlot* pLoopPlot, pPlot->rect(NUM_CITY_PLOTS_2, NUM_CITY_PLOTS_2))
 						{
 							if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
 							{

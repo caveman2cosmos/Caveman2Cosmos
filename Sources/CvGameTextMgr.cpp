@@ -24875,10 +24875,8 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	CvPlot* pLoopPlot;
 	FeatureTypes eFeature;
 	int iHealth;
-	int iI;
 
 	if (city.goodHealth() > 0)
 	{
