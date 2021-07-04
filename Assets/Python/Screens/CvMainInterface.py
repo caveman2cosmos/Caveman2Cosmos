@@ -932,8 +932,8 @@ class CvMainInterface:
 		dx = 28
 		x -= dx
 		y += 8
-		aBtn = "ScoresVisible"
-		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_SCORES).getActionInfoIndex(), -1, eBtnLabel)
+		aBtn = "MMB|ScoreToggle0"
+		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, eWidGen, -1, -1, eBtnLabel)
 		screen.setStyle(aBtn, "Button_HUDBtnRank_Style")
 		aMinimapBtnList.append(aBtn)
 
@@ -4719,7 +4719,7 @@ class CvMainInterface:
 			screen.setState("Grid", CyUserProfile().getGrid())
 			screen.setState("BareMap", CyUserProfile().getMap())
 			screen.setState("Yields", CyUserProfile().getYields())
-			screen.setState("ScoresVisible", CyUserProfile().getScores())
+			screen.setState("MMB|ScoreToggle0", CyUserProfile().getScores())
 
 			screen.hide("InterfaceGlobeLayerPanel")
 			screen.setState("GlobeToggle", False)
@@ -5374,6 +5374,11 @@ class CvMainInterface:
 				elif TYPE == "Defense":
 					self.updateTooltip(screen, CyGameTextMgr().getDefenseHelp(self.InCity.CyCity))
 
+			elif BASE == "MMB":
+				if TYPE == "ScoreToggle":
+					szTxt = TRNSLTR.getText("TXT_KEY_BUTTON_TOGGLE_SCORE", ())
+					self.updateTooltip(screen, szTxt)
+
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)
 
@@ -5716,6 +5721,10 @@ class CvMainInterface:
 				elif TYPE == "RevBar":
 					if self.InCity.iPlayer == self.iPlayer:
 						RevInstances.RevolutionInst.showBribeCityPopup(self.InCity.CyCity)
+
+			elif BASE == "MMB":
+				if TYPE == "ScoreToggle":
+					CyIF.toggleScoresVisible()
 
 			elif NAME == "AdvisorButton":
 				if not ID:
