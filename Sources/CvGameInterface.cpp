@@ -1504,7 +1504,6 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_PING:
 	case CONTROL_SIGN:
 	case CONTROL_GRID:
-	case CONTROL_BARE_MAP:
 	case CONTROL_YIELDS:
 	case CONTROL_RESOURCE_ALL:
 	case CONTROL_UNIT_ICONS:
@@ -1829,10 +1828,6 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_GRID:
 		gDLL->getEngineIFace()->SetGridMode(!(gDLL->getEngineIFace()->GetGridMode()));
-		break;
-
-	case CONTROL_BARE_MAP:
-		gDLL->getInterfaceIFace()->toggleBareMapMode();
 		break;
 
 	case CONTROL_YIELDS:

@@ -830,5 +830,12 @@
 			<fBlue>0.30</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_GREEN_LIGHT</Type>
+			<fRed>.56</fRed>
+			<fGreen>1</fGreen>
+			<fBlue>.28</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>
