@@ -17315,20 +17315,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Guardar partida</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ACTION_SCORES</Tag>
-		<English>Toggle Scores Display</English>
-		<French>Afficher/masquer les scores</French>
-		<German>Punkteanzeige ein/aus</German>
-		<Italian>Abilita/disabilita la 'Finestra dei punteggi'</Italian>
-		<Spanish>Activar visor de puntuaciones</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ACTION_SCORES_HELP</Tag>
-		<English>Toggle Score Visibility</English>
-		<French>Afficher/masquer les scores.</French>
-		<German>Punktestand ein-/ausblenden.</German>
-		<Italian>Attiva/disattiva la visibilità del punteggio.</Italian>
-		<Spanish>Activa la visibilidad de la puntuación</Spanish>
+		<Tag>TXT_KEY_BUTTON_TOGGLE_SCORE</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_SELECT_UNIT_TYPE</Tag>

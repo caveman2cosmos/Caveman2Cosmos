@@ -1509,7 +1509,6 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_RESOURCE_ALL:
 	case CONTROL_UNIT_ICONS:
 	case CONTROL_GLOBELAYER:
-	case CONTROL_SCORES:
 	case CONTROL_FREE_COLONY:
 		if (!gDLL->getInterfaceIFace()->isFocusedWidget())
 		{
@@ -1851,10 +1850,6 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_GLOBELAYER:
 		gDLL->getEngineIFace()->toggleGlobeview();
-		break;
-
-	case CONTROL_SCORES:
-		gDLL->getInterfaceIFace()->toggleScoresVisible();
 		break;
 
 	case CONTROL_LOAD_GAME:
