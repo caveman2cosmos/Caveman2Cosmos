@@ -787,9 +787,6 @@ class Pedia:
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		
-		#self.debug.CheckUnitUpgrades() #Checks unit upgrades
-		#self.debug.CheckUnitBonusRequirements() #Checks unit bonus requirements
-		
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
@@ -881,7 +878,7 @@ class Pedia:
 			szPromoName = CvPromotionInfo.getDescription()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
 
-			#Check promotion location on X and Y grid
+			#Check location of promotion on X and Y grid
 			iTechLoc = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[0]
 			iTechRow = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[1]
 
@@ -975,6 +972,12 @@ class Pedia:
 		#self.debug.checkBuildingUnlockObsoletion() #Check if building obsoletion isn't too close to tech unlock.
 		#self.debug.checkReplacementObsoletion() #Check obsoletion of replacements
 		#self.debug.checkWonderMovies() #Check patch location of wonders movie file
+		#self.debug.CheckUnitUpgrades() #Checks unit upgrades
+		#self.debug.CheckUnitBonusRequirements() #Checks unit bonus requirements
+		#self.debug.checkBonusImprovementProductivity() #Check improvement productivity - map bonuses
+		#self.debug.checkBonusProducerReplacements() #Check bonus producer replacements - manufactured bonuses
+		#self.debug.checkImprovementTechYieldBoosts() #Check if tech yield boosts are between improvvement upgrade and unlock
+		#self.debug.listCivics() #Lists civics and their tech requirements
 		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
@@ -1143,12 +1146,7 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
-		
-		self.debug.checkBonusImprovementProductivity() #Check improvement productivity - map bonuses
-		self.debug.checkBonusProducerReplacements() #Check bonus producer replacements - manufactured bonuses
-		self.debug.checkImprovementTechYieldBoosts() #Check if tech yield boosts are between improvvement upgrade and unlock
-		self.debug.listCivics() #Lists civics and their tech requirements
-		
+
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1398,23 +1396,25 @@ class Pedia:
 			item = getInfo(i)
 
 			# Tech requirement of infotype - they are always singular.
+			# Location of improvement, civic or build on X and Y Grid
 			if getInfo == GC.getImprovementInfo:
-				TechReq = item.getPrereqTech()
-			elif getInfo == GC.getCivicInfo or getInfo == GC.getBuildInfo:
-				TechReq = item.getTechPrereq()
+				iTechLoc = self.debug.checkImprovementTechRequirementLocation(item)[0]
+				iTechRow = self.debug.checkImprovementTechRequirementLocation(item)[1]
+			elif getInfo == GC.getCivicInfo:
+				iTechLoc = self.debug.checkCivicTechRequirementLocation(item)[0]
+				iTechRow = self.debug.checkCivicTechRequirementLocation(item)[1]
+			elif getInfo == GC.getBuildInfo:
+				iTechLoc = self.debug.checkBuildTechRequirementLocation(item)[0]
+				iTechRow = self.debug.checkBuildTechRequirementLocation(item)[1]
 			else:
-				TechReq = -1
+				iTechLoc = -1
+				iTechRow = -1
 
-			# Xgrid of tech requirement
-			if TechReq != -1:
-				iTechLoc = GC.getTechInfo(TechReq).getGridX()
-				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			else:
-				iTechLoc = 0
-				iTechRow = 0
-
-			if item:
+			if item and iTechLoc != -1:
 				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
+				list.append((iTechLoc, iTechRow, item.getDescription()))
+			elif item and iTechLoc == -1:
+				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (item.getDescription(), i)
 				list.append((iTechLoc, iTechRow, item.getDescription()))
 		list.sort()
 		for i in xrange(len(list)):

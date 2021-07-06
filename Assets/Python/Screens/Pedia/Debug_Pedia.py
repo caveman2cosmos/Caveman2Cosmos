@@ -159,6 +159,45 @@ class Debug:
 			iTechEnableRow = 0
 			
 		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow
+		
+	#Improvement tech location
+	def checkImprovementTechRequirementLocation(self, CvImprovementInfo):
+		#Improvements have one tech requirement
+		TechReq = CvImprovementInfo.getPrereqTech()
+		if TechReq != -1:
+			iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechLoc = 0
+			iTechRow = 0
+			
+		return iTechLoc, iTechRow
+		
+	#Civic tech location
+	def checkCivicTechRequirementLocation(self, CvCivicnfo):
+		#Civics have one tech requirement.
+		TechReq = CvCivicInfo.getTechPrereq()
+		if TechReq != -1:
+			iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechLoc = 0
+			iTechRow = 0
+			
+		return iTechLoc, iTechRow
+		
+	#Build tech location
+	def checkBuildTechRequirementLocation(self, CvBuildInfo):
+		#Builds have one tech requirement
+		TechReq = CvBuildInfo.getTechPrereq()
+		if TechReq != -1:
+			iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechLoc = 0
+			iTechRow = 0
+			
+		return iTechLoc, iTechRow
 	
 	#Building bonus requirements
 	def checkBonusRequirements(self):
@@ -754,7 +793,7 @@ class Debug:
 		for iCivic in xrange(GC.getNumCivicInfos()):
 			CvCivicInfo = GC.getCivicInfo(iCivic)
 			TechReq = CvCivicInfo.getTechPrereq()
-			iTechLoc = self.checkCivicTechRequirementLocation(CvImprovementInfo)[0]
+			iTechLoc = self.checkCivicTechRequirementLocation(CvCivicInfo)[0]
 
 			if TechReq == -1:
 				TechReq = "None"
