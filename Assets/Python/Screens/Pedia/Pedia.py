@@ -978,6 +978,9 @@ class Pedia:
 		#self.debug.checkBonusProducerReplacements() #Check bonus producer replacements - manufactured bonuses
 		#self.debug.checkImprovementTechYieldBoosts() #Check if tech yield boosts are between improvvement upgrade and unlock
 		#self.debug.listCivics() #Lists civics and their tech requirements
+		#self.debug.listBuildingTechRequirements() #Lists tech requirements of buildings
+		#self.debug.listUnitTechRequirements() #Lists tech requirements of units
+		#self.debug.listTechRequirements() #Lists tech requirements of techs
 		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)

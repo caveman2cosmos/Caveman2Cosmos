@@ -23,10 +23,9 @@ class Debug:
 		TechTypeLocList = []
 		TechTypeRowList = []
 		for techType in CvBuildingInfo.getPrereqAndTechs():
-			TechTypeReq = techType
-			if GC.getTechInfo(TechTypeReq) > -1:
-				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+			if GC.getTechInfo(techType) != -1:
+				TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
+				TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
 			else:
 				TechTypeLocList.append(0)
 				TechTypeRowList.append(0)
@@ -87,10 +86,10 @@ class Debug:
 	#Unit tech location
 	def checkUnitTechRequirementLocation(self, CvUnitInfo):
 		#Main tech
-		TechReq = CvUnitInfo.getPrereqAndTech()
-		if TechReq != -1:
-			iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
-			iTechMainRow = GC.getTechInfo(TechReq).getGridY()
+		TechMainReq = CvUnitInfo.getPrereqAndTech()
+		if TechMainReq != -1:
+			iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
+			iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
 		else:
 			iTechMainLoc = 0
 			iTechMainRow = 0
@@ -99,10 +98,9 @@ class Debug:
 		TechTypeLocList = []
 		TechTypeRowList = []
 		for techType in CvUnitInfo.getPrereqAndTechs():
-			TechTypeReq = techType
-			if GC.getTechInfo(TechTypeReq) > -1:
-				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+			if GC.getTechInfo(techType) != -1:
+				TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
+				TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
 			else:
 				TechTypeLocList.append(0)
 				TechTypeRowList.append(0)
@@ -198,7 +196,88 @@ class Debug:
 			iTechRow = 0
 			
 		return iTechLoc, iTechRow
-	
+
+	#Building tech requirement list
+	def listBuildingTechRequirements(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			techList = []
+			#Main tech requirement
+			TechMainReq = CvBuildingInfo.getPrereqAndTech()
+			if GC.getTechInfo(TechMainReq) != None:
+				TechMain = GC.getTechInfo(TechMainReq).getType()
+				techList.append(TechMain)
+
+			#Tech Type requirement
+			for techType in CvBuildingInfo.getPrereqAndTechs():
+				if GC.getTechInfo(techType) != -1:
+					techList.append(GC.getTechInfo(techType).getType())
+
+			#Tech requirement as defined in special building infos (core tech)
+			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+			if iSpecialBuilding != -1:
+				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
+				if TechSpecialReq != -1:
+					TechSpecial = GC.getTechInfo(TechSpecialReq).getType()
+					techList.append(TechSpecial)
+
+			#tech requirement derived from location of religion in tech tree
+			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
+			iRelPrereq2 = CvBuildingInfo.getReligionType()
+			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
+			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
+				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
+				if iReligionBuilding != -1:
+					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
+					if TechReligionReq != -1:
+						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
+						techList.append(TechReligionLoc)
+		
+			if len(techList) > 0:
+				print CvBuildingInfo.getType()+" requires: "+str(techList)
+		
+	#Unit tech requirement list
+	def listUnitTechRequirements(self):
+		for i in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(i)
+			techList = []
+			#Main tech
+			TechMainReq = CvUnitInfo.getPrereqAndTech()
+			if TechMainReq != -1:
+				TechMain = GC.getTechInfo(TechMainReq).getType()
+				techList.append(TechMain)
+
+			#Tech Type requirement
+			for techType in CvUnitInfo.getPrereqAndTechs():
+				if GC.getTechInfo(techType) != -1:
+					techList.append(GC.getTechInfo(techType).getType())
+		
+			if len(techList) > 0:
+				print CvUnitInfo.getType()+" requires: "+str(techList)
+				
+	#Tech requirement list
+	def listTechRequirements(self):
+		for i in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(i)
+			techList = []
+			#AND techs
+			for techType in CvTechInfo.getPrereqAndTechs():
+				if GC.getTechInfo(techType) != -1:
+					techList.append(GC.getTechInfo(techType).getType())
+			
+			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
+				techList.append("one of: ")
+			if len(CvTechInfo.getPrereqAndTechs()) > 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
+				techList.append(" and one of: ")
+
+			#OR techs
+			for techType in CvTechInfo.getPrereqOrTechs():
+				if GC.getTechInfo(techType) != -1:
+					techList.append(GC.getTechInfo(techType).getType())
+		
+			if len(techList) > 0:
+				print CvTechInfo.getType()+" requires: "+str(techList)
+		
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
