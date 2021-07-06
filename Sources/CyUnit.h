@@ -20,7 +20,6 @@ public:
 
 	CvUnit* getUnit() const { return m_pUnit; };	// Call from C++
 	const CvUnit* getUnitConst() const { return m_pUnit; };	// Call from C++
-	bool isNone() const { return m_pUnit == NULL; }
 
 	void convert(const CyUnit& kUnit, bool bKillOriginal);
 	void kill(bool bDelay, int /*PlayerTypes*/ ePlayer);
