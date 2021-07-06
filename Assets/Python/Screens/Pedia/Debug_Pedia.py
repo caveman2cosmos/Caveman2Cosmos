@@ -200,7 +200,7 @@ class Debug:
 		return iTechLoc, iTechRow
 	
 	#Building bonus requirements
-	def checkBonusRequirements(self):
+	def checkBuildingBonusRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
@@ -358,7 +358,7 @@ class Debug:
 				print CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(BuildingRequirementName)+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc)
 			
 	#Building tech changes and modifiers
-	def checkTechMods(self):
+	def checkBuildingTechMods(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
@@ -457,7 +457,7 @@ class Debug:
 					iTechMod += 1
 	
 	#Building earliest manufacturer on resource tech reveal
-	def checkBonusManufacturerTech(self):
+	def checkBuildingBonusManufacturerTech(self):
 		#Index of array - Bonus ID, array value at index - producers highest tech requirement location
 		bonuslist = [-1]*GC.getNumBonusInfos()
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -504,7 +504,7 @@ class Debug:
 					print CvBuildingInfo.getType()+" has commerce change double time but no relevant flat commerce change"
 	
 	#Building owner change - ensure flat commerce change exists
-	def checkCommerceChangeOriginalOwners(self):
+	def checkBuildingCommerceChangeOriginalOwners(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -512,7 +512,7 @@ class Debug:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
 					
 	#Building hurry modifiers works only on buildable buildings
-	def checkHurryModifier(self):
+	def checkBuildingHurryModifier(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
@@ -529,7 +529,7 @@ class Debug:
 					print CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc)
 					
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners
-	def checkReplacementObsoletion(self):
+	def checkBuildingReplacementObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
@@ -549,7 +549,7 @@ class Debug:
 					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
 	
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
-	def checkWonderMovies(self):
+	def checkBuildingWonderMovies(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
@@ -572,7 +572,7 @@ class Debug:
 					print CvProjectInfo.getType()+" is missing a wonder movie!"
 
 	#Unit - Check unit upgrades
-	def CheckUnitUpgrades(self):
+	def checkUnitUpgrades(self):
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
@@ -597,7 +597,7 @@ class Debug:
 						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList)
 						
 	#Unit - Check unit bonus requirements
-	def CheckUnitBonusRequirements(self):
+	def checkUnitBonusRequirements(self):
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
