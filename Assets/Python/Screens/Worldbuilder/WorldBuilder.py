@@ -1200,7 +1200,7 @@ class WorldBuilder:
 			if len(self.lMoveUnit) > 0:
 				for item in self.lMoveUnit:
 					loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-					if loopUnit.isNone(): continue
+					if loopUnit is None: continue
 					loopUnit.setXY(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), True, True, False)
 				pUnitX = GC.getPlayer(self.lMoveUnit[0][0]).getUnit(self.lMoveUnit[0][1])
 				self.lMoveUnit = []
@@ -1221,7 +1221,7 @@ class WorldBuilder:
 				if self.iPlayerAddMode == "MoveCityPlus":
 					for item in self.lMoveUnit:
 						loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-						if loopUnit.isNone(): continue
+						if loopUnit is None: continue
 						loopUnit.setXY(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), True, True, False)
 					self.lMoveUnit = []
 			self.iPlayerAddMode = "CityDataI"
@@ -1235,7 +1235,7 @@ class WorldBuilder:
 				if self.iPlayerAddMode == "DuplicateCityPlus":
 					for item in self.lMoveUnit:
 						loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
-						if loopUnit.isNone(): continue
+						if loopUnit is None: continue
 						pNewUnit = pPlayer.initUnit(loopUnit.getUnitType(), self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						pNewUnit.setName(loopUnit.getNameNoDesc())
 						pNewUnit.setLevel(loopUnit.getLevel())

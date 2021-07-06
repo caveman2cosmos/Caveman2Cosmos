@@ -252,7 +252,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 			pUnit.setXY(iMoveToX, iMoveToY, False, False, False)
 
 	for pUnit in toKillList :
-		if not pUnit.isNone() and not pUnit.plot().isNone():
+		if pUnit is not None:
 			pUnit.kill(False,iEnemyOfPlayer)
 
 

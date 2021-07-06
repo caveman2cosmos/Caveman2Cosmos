@@ -14,7 +14,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 	OutputDebugString("Python Extension Module - CyUnitPythonInterface1\n");
 
 	x
-		.def("isNone", &CyUnit::isNone, "bool () - Is this a valid unit instance?")
 		.def("convert", &CyUnit::convert, "void (CyUnit* pUnit, bool bKillOriginal)")
 		.def("kill", &CyUnit::kill, "void (bool bDelay, int /*PlayerTypes*/ ePlayer)")
 		.def("NotifyEntity", &CyUnit::NotifyEntity, "void (int EntityEventType)")

@@ -856,7 +856,7 @@ def canTriggerChampionUnit(argsList):
 
   unit = GC.getPlayer(ePlayer).getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getDamage() > 0:
@@ -2448,7 +2448,7 @@ def canTriggerExperiencedCaptain(argsList):
   player = GC.getPlayer(data.ePlayer)
   unit = player.getUnit(data.iUnitId)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 7:
@@ -3385,7 +3385,7 @@ def canTriggerRubiconUnit(argsList):
   pPlayer = GC.getPlayer(ePlayer)
   unit = pPlayer.getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 25:
@@ -3549,7 +3549,7 @@ def canTriggerCarnationUnit(argsList):
 
   unit = GC.getPlayer(ePlayer).getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 50:

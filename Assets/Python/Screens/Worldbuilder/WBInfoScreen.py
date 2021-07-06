@@ -188,7 +188,7 @@ class WBInfoScreen:
 				iUnit = lPlots[1]
 				pPlayer = GC.getPlayer(iPlayer)
 				pUnit = pPlayer.getUnit(iUnit)
-				if pUnit.isNone(): continue
+				if pUnit is None: continue
 				pPlot = pUnit.plot()
 				iX = pPlot.getX()
 				iY = pPlot.getY()

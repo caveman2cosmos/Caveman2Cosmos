@@ -133,7 +133,8 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")));
+	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 void CyPlayer::killUnits()
@@ -1477,7 +1478,8 @@ int CyPlayer::getNumUnits() const
 
 CyUnit* CyPlayer::getUnit(int iID) const
 {
-	return new CyUnit(m_pPlayer->getUnit(iID));
+	CvUnit* unit = m_pPlayer->getUnit(iID);
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 python::list CyPlayer::groups() const
