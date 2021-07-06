@@ -1052,6 +1052,7 @@ class Pedia:
 		#self.debug.checkHurryModifier() #Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
 		#self.debug.checkBuildingUnlockObsoletion() #Check if building obsoletion isn't too close to tech unlock.
 		#self.debug.checkReplacementObsoletion() #Check obsoletion of replacements
+		self.debug.checkWonderMovies() #Check patch location of wonders movie file
 		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)

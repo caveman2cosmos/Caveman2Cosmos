@@ -1,4 +1,4 @@
-# Debug functions 
+#Debug functions 
 
 from CvPythonExtensions import *
 GC = CyGlobalContext()
@@ -343,11 +343,13 @@ class Debug:
 	
 	#Building earliest manufacturer on resource tech reveal
 	def checkBonusManufacturerTech(self):
+		#Index of array - Bonus ID, array value at index - producers highest tech requirement location
 		bonuslist = [-1]*GC.getNumBonusInfos()
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
 			
+			#Singular <FreeBonus>
 			for bonus in xrange(GC.getNumBonusInfos()):
 				if CvBuildingInfo.getFreeBonus() == bonus:
 					bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
@@ -358,6 +360,7 @@ class Debug:
 						elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 							bonuslist[bonus] = iTechLoc
 
+				#<ExtraFreeBonuses>
 				for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
 						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
@@ -393,7 +396,7 @@ class Debug:
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					print CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change"
 					
-	#Building hurry modifiers work only on buildable buildings
+	#Building hurry modifiers works only on buildable buildings
 	def checkHurryModifier(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
@@ -429,3 +432,26 @@ class Debug:
 
 				if iObsoleteTechLoc <= iReplacTechLoc:
 					print CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc)
+	
+	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
+	def checkWonderMovies(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+			bCultural = 0
+			if iSpecialBuilding != -1 and iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
+				bCultural = 1
+			
+			if isNationalWonder(i) or (isWorldWonder(i) and not bCultural) or CvBuildingInfo.getHolyCity() != -1:
+				if CvBuildingInfo.getMovie() != None:
+					print CvBuildingInfo.getType()+" has movie in "+CvBuildingInfo.getMovie()
+				else:
+					print CvBuildingInfo.getType()+" is missing a wonder movie!"
+				
+		for i in xrange(GC.getNumProjectInfos()):
+			CvProjectInfo = GC.getProjectInfo(i)
+			if not CvProjectInfo.isSpaceship():
+				if CvProjectInfo.getMovieArtDef() != "":
+					print CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef()
+				else:
+					print CvProjectInfo.getType()+" is missing a wonder movie!"
