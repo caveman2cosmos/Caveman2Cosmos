@@ -879,10 +879,9 @@ class Pedia:
 		for iPromotion in xrange(GC.getNumPromotionInfos()):
 			CvPromotionInfo = GC.getPromotionInfo(iPromotion)
 			szPromoName = CvPromotionInfo.getDescription()
-			TechReq = CvPromotionInfo.getTechPrereq()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
 
-			if TechReq != -1:
+			if CvPromotionInfo.getTechPrereq() != -1:
 				iTechLoc = GC.getTechInfo(TechReq).getGridX()
 				iTechRow = GC.getTechInfo(TechReq).getGridY()
 			else:
@@ -984,8 +983,8 @@ class Pedia:
 			CvBuildingInfo = GC.getBuildingInfo(i)
 
 			#Check location of building on X and Y grid.
-			iTechLoc = self.debug.checkTechRequirementLocation(CvBuildingInfo)[0]
-			iTechRow = self.debug.checkTechRequirementLocation(CvBuildingInfo)[1]
+			iTechLoc = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechRow = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[1]
 
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
@@ -1221,7 +1220,7 @@ class Pedia:
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
-							aNumBonusManufacturers.append(self.debug.checkTechRequirementLocation(CvBuildingInfo)[0])
+							aNumBonusManufacturers.append(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
 							if CvBuildingInfo.getObsoleteTech() != -1:
 								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 								aBuildingObsoletions.append(iObsoleteTechLoc)
@@ -1230,7 +1229,7 @@ class Pedia:
 
 						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-								aNumBonusManufacturers.append(self.debug.checkTechRequirementLocation(CvBuildingInfo)[0])
+								aNumBonusManufacturers.append(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
 								if CvBuildingInfo.getObsoleteTech() != -1:
 									iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 									aBuildingObsoletions.append(iObsoleteTechLoc)
@@ -1251,11 +1250,11 @@ class Pedia:
 								aBuildingReplacements.append(CvBuildingReplacement.getType())
 
 							if CvBuildingInfo.getFreeBonus() == iBonus:
-								print CvBonusInfo.getType()+" "+str(self.debug.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+								print CvBonusInfo.getType()+" "+str(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
 
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-									print CvBonusInfo.getType()+" "+str(self.debug.checkTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
+									print CvBonusInfo.getType()+" "+str(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
 
 			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
 				if not iType:

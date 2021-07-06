@@ -9,7 +9,7 @@ class Debug:
 		self.bDebug = True
 
 	#Building tech location
-	def checkTechRequirementLocation(self, CvBuildingInfo):
+	def checkBuildingTechRequirementLocation(self, CvBuildingInfo):
 		#Main tech requirement
 		TechMainReq = CvBuildingInfo.getPrereqAndTech()
 		if GC.getTechInfo(TechMainReq) != None:
@@ -84,11 +84,51 @@ class Debug:
 
 		return iTechLoc, iTechRow
 		
+	#Unit tech location
+	def checkUnitTechRequirementLocation(self, CvUnitInfo):
+		#Main tech
+		TechReq = CvUnitInfo.getPrereqAndTech()
+		if TechReq != -1:
+			iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechMainRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechMainLoc = 0
+			iTechMainRow = 0
+
+		#Tech Type requirement
+		TechTypeLocList = []
+		TechTypeRowList = []
+		for techType in CvUnitInfo.getPrereqAndTechs():
+			TechTypeReq = techType
+			if GC.getTechInfo(TechTypeReq) > -1:
+				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
+				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+			else:
+				TechTypeLocList.append(0)
+				TechTypeRowList.append(0)
+		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
+			iTechTypeLoc = max(TechTypeLocList)
+			for t in xrange(len(TechTypeLocList)):
+				if TechTypeLocList[t] == max(TechTypeLocList):
+					iTechTypeRow = TechTypeRowList[t]
+		else:
+			iTechTypeLoc = 0
+			iTechTypeRow = 0
+
+		#Pick most advanced tech
+		iTechLoc = max(iTechMainLoc, iTechTypeLoc)
+		if iTechLoc == iTechMainLoc:
+			iTechRow = iTechMainRow
+		if iTechLoc == iTechTypeLoc:
+			iTechRow = iTechTypeRow
+			
+		return iTechLoc, iTechRow
+		
 	#Building bonus requirements
 	def checkBonusRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
 			if GC.getBonusInfo(iBuildingBonusReq) != None:
@@ -159,12 +199,12 @@ class Debug:
 	def checkBuildingRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#<PrereqInCityBuildings> - require all buildings in list
 			BuildingTechLocList = []
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if CvBuildingInfo.isPrereqInCityBuilding(iBuilding):
-					BuildingInCityReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+					BuildingInCityReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
 					BuildingTechLocList.append(BuildingInCityReqTechLoc)
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				print CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(BuildingTechLocList)+" "+str(iTechLoc)
@@ -173,7 +213,7 @@ class Debug:
 			BuildingTechLocList = []
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if CvBuildingInfo.isPrereqOrBuilding(iBuilding):
-					BuildingOrReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+					BuildingOrReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
 					BuildingTechLocList.append(BuildingOrReqTechLoc)
 			if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				print CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
@@ -182,7 +222,7 @@ class Debug:
 			BuildingTechLocList = []
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if CvBuildingInfo.getPrereqNumOfBuilding(iBuilding):
-					BuildingEmpireReqTechLoc = self.checkTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
+					BuildingEmpireReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
 					BuildingTechLocList.append(BuildingEmpireReqTechLoc)
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				print CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
@@ -246,7 +286,7 @@ class Debug:
 	def checkTechMods(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessChanges():
 				iTech = pair.id
@@ -347,7 +387,7 @@ class Debug:
 		bonuslist = [-1]*GC.getNumBonusInfos()
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			
 			#Singular <FreeBonus>
 			for bonus in xrange(GC.getNumBonusInfos()):
@@ -407,7 +447,7 @@ class Debug:
 	def checkBuildingUnlockObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 				if iObsoleteTechLoc - iTechLoc <= 5:
@@ -417,14 +457,14 @@ class Debug:
 	def checkReplacementObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			iTechLoc = self.checkTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 			else:
 				iObsoleteTechLoc = 999
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-				iReplacTechLoc = self.checkTechRequirementLocation(CvBuildingReplacement)[0]
+				iReplacTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacement)[0]
 				if CvBuildingReplacement.getObsoleteTech() != -1:
 					iReplacObsoleteTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
 				else:
@@ -455,47 +495,7 @@ class Debug:
 					print CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef()
 				else:
 					print CvProjectInfo.getType()+" is missing a wonder movie!"
-					
-	#Unit tech location
-	def checkUnitTechRequirementLocation(self, CvUnitInfo):
-		#Main tech
-		TechReq = CvUnitInfo.getPrereqAndTech()
-		if TechReq != -1:
-			iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
-			iTechMainRow = GC.getTechInfo(TechReq).getGridY()
-		else:
-			iTechMainLoc = 0
-			iTechMainRow = 0
 
-		#Tech Type requirement
-		TechTypeLocList = []
-		TechTypeRowList = []
-		for techType in CvUnitInfo.getPrereqAndTechs():
-			TechTypeReq = techType
-			if GC.getTechInfo(TechTypeReq) > -1:
-				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
-			else:
-				TechTypeLocList.append(0)
-				TechTypeRowList.append(0)
-		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
-			iTechTypeLoc = max(TechTypeLocList)
-			for t in xrange(len(TechTypeLocList)):
-				if TechTypeLocList[t] == max(TechTypeLocList):
-					iTechTypeRow = TechTypeRowList[t]
-		else:
-			iTechTypeLoc = 0
-			iTechTypeRow = 0
-
-		#Pick most advanced tech
-		iTechLoc = max(iTechMainLoc, iTechTypeLoc)
-		if iTechLoc == iTechMainLoc:
-			iTechRow = iTechMainRow
-		if iTechLoc == iTechTypeLoc:
-			iTechRow = iTechTypeRow
-			
-		return iTechLoc, iTechRow
-					
 	#Unit - Check unit upgrades
 	def CheckUnitUpgrades(self):
 		for i in xrange(GC.getNumUnitInfos()):
