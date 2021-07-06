@@ -292,17 +292,18 @@ class CvMainInterface:
 			self.szFieldOfView				= obj.getText("TXT_KEY_BUG_OPT_MAININTERFACE__FIELDOFVIEW_TEXT", ())
 			self.szDeadCiv					= obj.getText("TXT_KEY_BUG_DEAD_CIV", ())
 			self.szMinorCiv					= obj.getText("TXT_KEY_MINOR_CIV_DISPLAY", ())
-			self.AdvisorButtonTip = [
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_DOMESTIC", ()) ,	"F1"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_FINANCE", ()),		"F2"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_CIVICS", ()),		"F3"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_FOREIGN", ()),		"F4"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_MILITARY", ()),	"F5"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_TECHNOLOGY", ()),	"F6"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_RELIGIOUS", ()),	"F7"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_CORPORATE", ()),	"Shift+F7"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_INTELLIGENCE", ()),"Ctrl+E"),
-				(obj.getText("TXT_BUTTONTIP_ADVISOR_PARTISAN", ()),	"Ctrl+Shift+G")]
+			self.advisorButtonTip = [
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_DOMESTIC", ()) ,		"F1"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_FINANCE", ()),			"F2"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_CIVICS", ()),			"F3"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_FOREIGN", ()),			"F4"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_MILITARY", ()),		"F5"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_TECHNOLOGY", ()),		"F6"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_RELIGIOUS", ()),		"F7"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_CORPORATE", ()),		"Shift+F7"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE", ()),	"Ctrl+E"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN", ()),		"Ctrl+Shift+G")
+			]
 			# Building infos:
 			aBuildingList0 = []
 			aBuildingList1 = []
@@ -944,8 +945,8 @@ class CvMainInterface:
 		aMinimapBtnList.append(aBtn)
 
 		x -= dx
-		aBtn = "BareMap"
-		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, iWidAction, GC.getControlInfo(ControlTypes.CONTROL_BARE_MAP).getActionInfoIndex(), -1, eBtnLabel)
+		aBtn = "MMB|BareMap0"
+		screen.addCheckBoxGFC(aBtn, "", "", x, y, dx, dx, eWidGen, -1, -1, eBtnLabel)
 		screen.setStyle(aBtn, "Button_HUDBtnClearMap_Style")
 		aMinimapBtnList.append(aBtn)
 
@@ -4717,7 +4718,7 @@ class CvMainInterface:
 				screen.setState("UnitIcons", False)
 
 			screen.setState("Grid", CyUserProfile().getGrid())
-			screen.setState("BareMap", CyUserProfile().getMap())
+			screen.setState("MMB|BareMap0", CyUserProfile().getMap())
 			screen.setState("Yields", CyUserProfile().getYields())
 			screen.setState("MMB|ScoreToggle0", CyUserProfile().getScores())
 
@@ -5135,6 +5136,10 @@ class CvMainInterface:
 						else:
 							self.openCityTab(screen, iTab)
 						return 1
+			elif iData == 14:
+				if bCtrl:
+					CyIF.toggleBareMapMode()
+					screen.setState("MMB|BareMap0", CyUserProfile().getMap())
 
 			elif iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
@@ -5376,7 +5381,10 @@ class CvMainInterface:
 
 			elif BASE == "MMB":
 				if TYPE == "ScoreToggle":
-					szTxt = TRNSLTR.getText("TXT_KEY_BUTTON_TOGGLE_SCORE", ())
+					szTxt = TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_SCORE", ())
+					self.updateTooltip(screen, szTxt)
+				elif TYPE == "BareMap":
+					szTxt = TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP", ())
 					self.updateTooltip(screen, szTxt)
 
 			elif NAME == "GreatPersonBar":
@@ -5390,8 +5398,8 @@ class CvMainInterface:
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 
 			elif NAME == "AdvisorButton":
-				advisorTip = self.AdvisorButtonTip[ID]
-				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
+				advisorTip = self.advisorButtonTip[ID]
+				szTxt = "<color=102,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
 				if ID == 1:
 					self.treasuryHelp(screen, szTxt)
 				else:
@@ -5725,6 +5733,8 @@ class CvMainInterface:
 			elif BASE == "MMB":
 				if TYPE == "ScoreToggle":
 					CyIF.toggleScoresVisible()
+				elif TYPE == "BareMap":
+					CyIF.toggleBareMapMode()
 
 			elif NAME == "AdvisorButton":
 				if not ID:

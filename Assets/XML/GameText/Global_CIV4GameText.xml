@@ -466,76 +466,6 @@
 		<Russian>Óõóäøàåòñÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_CIVICS</Tag>
-		<English>Civics Advisor</English>
-		<French>Conseiller des Doctrines</French>
-		<German>Gesellschaft</German>
-		<Russian>Парадигмы</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_CORPORATE</Tag>
-		<English>Corporate Advisor</English>
-		<French>Conseiller des Corporations</French>
-		<German>Kapitalgesellschaften</German>
-		<Russian>Корпорации</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_DOMESTIC</Tag>
-		<English>Domestic Advisor</English>
-		<French>Conseiller Interne</French>
-		<German>Inland</German>
-		<Russian>Главный советник</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_FINANCE</Tag>
-		<English>Finance Advisor</English>
-		<French>Conseiller Financier</French>
-		<German>Finanzen</German>
-		<Russian>Советник по финансам</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_FOREIGN</Tag>
-		<English>Foreign Advisor</English>
-		<French>Conseiller des Affaires Etrangères</French>
-		<German>Ausland</German>
-		<Russian>Советник МИД</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_INTELLIGENCE</Tag>
-		<English>Intelligence Advisor</English>
-		<French>Conseiller d'Espionnage</French>
-		<German>Geheimdienst</German>
-		<Russian>Советник по шпионажу</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_MILITARY</Tag>
-		<English>Military Advisor</English>
-		<French>Conseiller Militaire</French>
-		<German>Militär</German>
-		<Russian>Военный советник</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_PARTISAN</Tag>
-		<English>Partisan Advisor</English>
-		<French>Conseiller des Partis</French>
-		<German>Revolutionen</German>
-		<Russian>Революции</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_RELIGIOUS</Tag>
-		<English>Religious Advisor</English>
-		<French>Conseiller Religieux</French>
-		<German>Glaube</German>
-		<Russian>Советник по религиям</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BUTTONTIP_ADVISOR_TECHNOLOGY</Tag>
-		<English>Technology Advisor</English>
-		<French>Conseiller Technologique</French>
-		<German>Technologien</German>
-		<Russian>Научный советник</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
 		<English>Research:</English>
 		<French>Recherche :</French>
@@ -17091,14 +17021,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Activa todos los movimientos automatizados</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ACTION_BARE_MAP</Tag>
-		<English>Toggle Bare Map</English>
-		<French>Afficher/masquer la carte vierge</French>
-		<German>Leere Karte ein/aus</German>
-		<Italian>Abilita/disabilita la mappa semplificata</Italian>
-		<Spanish>Activar mapa limpio</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ACTION_BARE_MAP_HELP</Tag>
 		<English>Makes it easier to see the landscape</English>
 		<French>Facilite l'inspection du terrain</French>
@@ -17313,10 +17235,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Spiel speichern</German>
 		<Italian>Salva partita</Italian>
 		<Spanish>Guardar partida</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUTTON_TOGGLE_SCORE</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_SELECT_UNIT_TYPE</Tag>
