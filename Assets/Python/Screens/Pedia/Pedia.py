@@ -786,91 +786,17 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-		bCheckUnitUpgrades = 0 #This lists all units that can upgrade, it is spammy in logs
+		
+		#self.debug.CheckUnitUpgrades() #Checks unit upgrades
+		#self.debug.CheckUnitBonusRequirements() #Checks unit bonus requirements
+		
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
-
-			#Main tech
-			TechReq = CvUnitInfo.getPrereqAndTech()
-			if TechReq != -1:
-				iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
-				iTechMainRow = GC.getTechInfo(TechReq).getGridY()
-			else:
-				iTechMainLoc = 0
-				iTechMainRow = 0
-
-			#Tech Type requirement
-			TechTypeLocList = []
-			TechTypeRowList = []
-			for techType in CvUnitInfo.getPrereqAndTechs():
-				TechTypeReq = techType
-				if GC.getTechInfo(TechTypeReq) > -1:
-					TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-					TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
-				else:
-					TechTypeLocList.append(0)
-					TechTypeRowList.append(0)
-			if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
-				iTechTypeLoc = max(TechTypeLocList)
-				for t in xrange(len(TechTypeLocList)):
-					if TechTypeLocList[t] == max(TechTypeLocList):
-						iTechTypeRow = TechTypeRowList[t]
-			else:
-				iTechTypeLoc = 0
-				iTechTypeRow = 0
-
-			#Pick most advanced tech
-			iTechLoc = max(iTechMainLoc, iTechTypeLoc)
-			if iTechLoc == iTechMainLoc:
-				iTechRow = iTechMainRow
-			if iTechLoc == iTechTypeLoc:
-				iTechRow = iTechTypeRow
-
-			#<BonusType>Bonus_X
-			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()
-			if GC.getBonusInfo(iUnitBonusReq) != None:
-				bonusTechReq = GC.getBonusInfo(iUnitBonusReq).getTechCityTrade()
-				if GC.getTechInfo(bonusTechReq) != None:
-					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-				else:
-					bonusTechLoc = 0
-				if bonusTechLoc > iTechLoc:
-					print CvUnitInfo.getType()+" - Singular AND bonus prereq late!"
-
-			#<PrereqBonuses>
-			bonusTechLocList = []
-			for bonusOr in CvUnitInfo.getPrereqOrBonuses():
-				bonusTechReq = GC.getBonusInfo(bonusOr).getTechCityTrade()
-				if bonusTechReq > -1:
-					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
-				else:
-					bonusTechLocList.append(0)
-			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				print CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"
-
-			#Write down info about units with upgrades
-			if bCheckUnitUpgrades and CvUnitInfo.getNumUnitUpgrades() > 0:
-				iCost = CvUnitInfo.getProductionCost()
-				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
-					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
-					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
-					upgradedTech = GC.getTechInfo(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getPrereqAndTech())
-					if upgradedTech != -1:
-						upgradedTechLoc = upgradedTech.getGridX()
-					else:
-						upgradedTechLoc = 0
-					dist = upgradedTechLoc - iTechLoc
-					costdiff = upgradedCost - iCost
-
-					upgradedUnit = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u))
-					secondUpgradeList = []
-					for u2 in xrange(upgradedUnit.getNumUnitUpgrades()):
-						secondUpgradeList.append(GC.getUnitInfo(upgradedUnit.getUnitUpgrade(u2)).getType())
-					if CvUnitInfo.getNumUnitUpgrades() == 1:
-						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade: "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)
-					elif CvUnitInfo.getNumUnitUpgrades() > 1:
-						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade"+str(secondUpgradeList)
+			
+			#Check location of building on X and Y grid.
+			iTechLoc = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			iTechRow = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[1]
 
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
@@ -1052,7 +978,7 @@ class Pedia:
 		#self.debug.checkHurryModifier() #Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
 		#self.debug.checkBuildingUnlockObsoletion() #Check if building obsoletion isn't too close to tech unlock.
 		#self.debug.checkReplacementObsoletion() #Check obsoletion of replacements
-		self.debug.checkWonderMovies() #Check patch location of wonders movie file
+		#self.debug.checkWonderMovies() #Check patch location of wonders movie file
 		
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)

@@ -455,3 +455,97 @@ class Debug:
 					print CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef()
 				else:
 					print CvProjectInfo.getType()+" is missing a wonder movie!"
+					
+	#Unit tech location
+	def checkUnitTechRequirementLocation(self, CvUnitInfo):
+		#Main tech
+		TechReq = CvUnitInfo.getPrereqAndTech()
+		if TechReq != -1:
+			iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechMainRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechMainLoc = 0
+			iTechMainRow = 0
+
+		#Tech Type requirement
+		TechTypeLocList = []
+		TechTypeRowList = []
+		for techType in CvUnitInfo.getPrereqAndTechs():
+			TechTypeReq = techType
+			if GC.getTechInfo(TechTypeReq) > -1:
+				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
+				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
+			else:
+				TechTypeLocList.append(0)
+				TechTypeRowList.append(0)
+		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
+			iTechTypeLoc = max(TechTypeLocList)
+			for t in xrange(len(TechTypeLocList)):
+				if TechTypeLocList[t] == max(TechTypeLocList):
+					iTechTypeRow = TechTypeRowList[t]
+		else:
+			iTechTypeLoc = 0
+			iTechTypeRow = 0
+
+		#Pick most advanced tech
+		iTechLoc = max(iTechMainLoc, iTechTypeLoc)
+		if iTechLoc == iTechMainLoc:
+			iTechRow = iTechMainRow
+		if iTechLoc == iTechTypeLoc:
+			iTechRow = iTechTypeRow
+			
+		return iTechLoc, iTechRow
+					
+	#Unit - Check unit upgrades
+	def CheckUnitUpgrades(self):
+		for i in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(i)
+			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			
+			if CvUnitInfo.getNumUnitUpgrades() > 0:
+				iCost = CvUnitInfo.getProductionCost()
+				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
+					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
+					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
+					upgradedTechLoc = self.checkUnitTechRequirementLocation(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)))[0]
+					
+					dist = upgradedTechLoc - iTechLoc
+					costdiff = upgradedCost - iCost
+
+					upgradedUnit = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u))
+					secondUpgradeList = []
+					for u2 in xrange(upgradedUnit.getNumUnitUpgrades()):
+						secondUpgradeList.append(GC.getUnitInfo(upgradedUnit.getUnitUpgrade(u2)).getType())
+					if CvUnitInfo.getNumUnitUpgrades() == 1:
+						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade: "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList)
+					elif CvUnitInfo.getNumUnitUpgrades() > 1:
+						print str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList)
+						
+	#Unit - Check unit bonus requirements
+	def CheckUnitBonusRequirements(self):
+		for i in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(i)
+			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			
+			#<BonusType>BONUS_X
+			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()
+			if GC.getBonusInfo(iUnitBonusReq) != None:
+				bonusTechReq = GC.getBonusInfo(iUnitBonusReq).getTechCityTrade()
+				if GC.getTechInfo(bonusTechReq) != None:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+				else:
+					bonusTechLoc = 0
+				if bonusTechLoc > iTechLoc:
+					print CvUnitInfo.getType()+" - Singular AND bonus prereq late!"
+
+			#<PrereqBonuses>
+			bonusTechLocList = []
+			for bonusOr in CvUnitInfo.getPrereqOrBonuses():
+				bonusTechReq = GC.getBonusInfo(bonusOr).getTechCityTrade()
+				if bonusTechReq > -1:
+					bonusTechLocList.append(GC.getTechInfo(bonusTechReq).getGridX())
+				else:
+					bonusTechLocList.append(0)
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				print CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"
+	
