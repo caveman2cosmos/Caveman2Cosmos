@@ -285,11 +285,6 @@ void CyCity::changeProduction(int iChange)
 	m_pCity->changeProduction(iChange);
 }
 
-int CyCity::getProductionModifier() const
-{
-	return m_pCity->getProductionModifier();
-}
-
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
 	return m_pCity->getCurrentProductionDifference(
@@ -565,7 +560,8 @@ CyArea* CyCity::area() const
 
 CyArea* CyCity::waterArea() const
 {
-	return new CyArea(m_pCity->waterArea());
+	CvArea* waterArea = m_pCity->waterArea();
+	return waterArea ? new CyArea(waterArea) : NULL;
 }
 
 CyPlot* CyCity::getRallyPlot() const
@@ -873,6 +869,11 @@ int CyCity::getFoodKept() const
 	return m_pCity->getFoodKept();
 }
 
+int CyCity::getMaxProductionOverflow() const
+{
+	return m_pCity->getMaxProductionOverflow();
+}
+
 int CyCity::getOverflowProduction() const
 {
 	return m_pCity->getOverflowProduction();
@@ -1021,11 +1022,6 @@ bool CyCity::isNeverLost() const
 void CyCity::setNeverLost(int iNewValue)
 {
 	m_pCity->setNeverLost(iNewValue);
-}
-
-int CyCity::getMADIncoming() const
-{
-	return m_pCity->getMADIncoming();
 }
 
 bool CyCity::isBombarded() const

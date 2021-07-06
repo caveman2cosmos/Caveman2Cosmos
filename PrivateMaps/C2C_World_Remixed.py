@@ -489,7 +489,7 @@ class MapConstants:
 				self.fLandPercent = .35
 			else:
 				self.fLandPercent = .55
-		print "Land percent = %f" % self.fLandPercent
+		print("Land percent = %f" % self.fLandPercent)
 
 mc = None
 
@@ -1101,7 +1101,7 @@ class ElevationMap(FloatMap):
 					self.data[i] += detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
 		self.Normalize()
 		if bAttenuate:
-			print "	Attenuating"
+			print("Attenuating")
 			fMinY = 0.05 * iHeightLoc
 			fMaxY = 0.95 * iHeightLoc
 			fSouthRange	 = mc.southAttenuationRange
@@ -1155,7 +1155,7 @@ class ElevationMap(FloatMap):
 		self.fLandHeight = FindThresholdFromPercent(self.data, fLandPercent)
 		timer.log()
 		# Handle Pangea and fill in random lakes.
-		print "\n", "Elevation Map - Post Process"
+		print("\n", "Elevation Map - Post Process")
 		timer = BugUtil.Timer('Elevation Map - Post Process')
 		if mc.bPangeaBreaker:
 			pb.breakPangeas()
@@ -1197,7 +1197,7 @@ class ElevationMap(FloatMap):
 					self.relAltMap3x3[i] = (myAlt - minAlt) * 0.2
 				else:
 					self.relAltMap3x3[i] = (myAlt - minAlt)
-		print "	Pits Found: %d" % n
+		print("Pits Found: %d" % n)
 		# Create a delta map version that excludes water tiles so hill and peak percent is relative to land.
 		# Also create a list of ocean elevations for later use in defining trenches.
 		bTrench = True
@@ -3175,12 +3175,7 @@ class BonusPlacer:
 	def AssignBonusAreas(self, numBonuses, bonusListLoc):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
-		# Build area list
-		self.areas = areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		self.areas = areas = MAP.areas()
 
 		bonusDictLoc = self.bonusDict
 		for i in xrange(numBonuses):
@@ -3426,12 +3421,8 @@ class StartingPlotFinder:
 				iNumPlayers += 1
 		shuffle(player_list)
 		print "Number of players: %d" % iNumPlayers
-		# Build area list
-		areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+
+		areas = MAP.areas()
 		# old/new world status
 		# Get official areas and make corresponding lists that determines
 		# old world vs. new world and also the pre-settled value.
@@ -3874,7 +3865,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()

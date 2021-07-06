@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Basic Infos -->
+<Civ4SeasonInfos xmlns="x-schema:../Schema/C2C_CIV4BasicInfoSchema.xml">
+	<SeasonInfos>
+		<SeasonInfo>
+			<Type>SEASON_WINTER</Type>
+			<Description>TXT_KEY_SEASON_WINTER</Description>
+		</SeasonInfo>
+		<SeasonInfo>
+			<Type>SEASON_SPRING</Type>
+			<Description>TXT_KEY_SEASON_SPRING</Description>
+		</SeasonInfo>
+		<SeasonInfo>
+			<Type>SEASON_SUMMER</Type>
+			<Description>TXT_KEY_SEASON_SUMMER</Description>
+		</SeasonInfo>
+		<SeasonInfo>
+			<Type>SEASON_FALL</Type>
+			<Description>TXT_KEY_SEASON_FALL</Description>
+		</SeasonInfo>
+	</SeasonInfos>
+</Civ4SeasonInfos>

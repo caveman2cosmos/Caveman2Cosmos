@@ -6891,9 +6891,6 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
-			<UnitUpgrades>
-				<UnitType>UNIT_CG_CUTTER</UnitType>
-			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -8250,6 +8247,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_COG_MERCHANT</Type>

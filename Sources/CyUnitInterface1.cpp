@@ -14,8 +14,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 	OutputDebugString("Python Extension Module - CyUnitPythonInterface1\n");
 
 	x
-		.def("getMADTargetPlot", &CyUnit::getMADTargetPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-
 		.def("convert", &CyUnit::convert, "void (CyUnit* pUnit, bool bKillOriginal)")
 		.def("kill", &CyUnit::kill, "void (bool bDelay, int /*PlayerTypes*/ ePlayer)")
 		.def("NotifyEntity", &CyUnit::NotifyEntity, "void (int EntityEventType)")
@@ -65,8 +63,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("isGoldenAge", &CyUnit::isGoldenAge, "bool ()")
 		.def("isFighting", &CyUnit::isFighting, "bool ()")
-		.def("maxHitPoints", &CyUnit::maxHitPoints, "int ()")
-		.def("currHitPoints", &CyUnit::currHitPoints, "int ()")
+		.def("getMaxHP", &CyUnit::getMaxHP, "int ()")
+		.def("getHP", &CyUnit::getHP, "int ()")
 		.def("isHurt", &CyUnit::isHurt, "bool ()")
 		.def("isDead", &CyUnit::isDead, "bool ()")
 		.def("setBaseCombatStr", &CyUnit::setBaseCombatStr, "void (int)")

@@ -92,7 +92,7 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 	if (m_aiYield[eYield])
 	{
-		return m_aiYield[eYield]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+		return m_aiYield[eYield]->evaluate(kUnit.getGameObject());
 	}
 	else
 	{
@@ -106,7 +106,7 @@ int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 
 	if (m_aiCommerce[eCommerce])
 	{
-		return m_aiCommerce[eCommerce]->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+		return m_aiCommerce[eCommerce]->evaluate(kUnit.getGameObject());
 	}
 	else
 	{
@@ -129,7 +129,7 @@ bool CvOutcome::getUnitToCity(const CvUnit& kUnit) const
 	if (m_bUnitToCity)
 	{
 		// evaluate does not actually change the object so const_cast is fine
-		return m_bUnitToCity->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+		return m_bUnitToCity->evaluate(kUnit.getGameObject());
 	}
 	return false;
 }
@@ -173,7 +173,7 @@ int CvOutcome::getReduceAnarchyLength(const CvUnit &kUnit) const
 {
 	if (m_iReduceAnarchyLength)
 	{
-		return m_iReduceAnarchyLength->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+		return m_iReduceAnarchyLength->evaluate(kUnit.getGameObject());
 	}
 	return 0;
 }
@@ -327,7 +327,7 @@ void CvOutcome::compilePython()
 
 int CvOutcome::getChance(const CvUnit &kUnit) const
 {
-	int iChance = m_iChance->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+	int iChance = m_iChance->evaluate(kUnit.getGameObject());
 	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	const CvCity* pCity = kUnit.plot()->getPlotCity();
@@ -470,9 +470,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -556,7 +556,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_pPlotCondition)
 	{
-		if (!m_pPlotCondition->evaluate(const_cast<CvPlot*>(kUnit.plot())->getGameObject()))
+		if (!m_pPlotCondition->evaluate(kUnit.plot()->getGameObject()))
 		{
 			return false;
 		}
@@ -564,7 +564,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_pUnitCondition)
 	{
-		if (!m_pUnitCondition->evaluate(const_cast<CvUnit&>(kUnit).getGameObject()))
+		if (!m_pUnitCondition->evaluate(kUnit.getGameObject()))
 		{
 			return false;
 		}
@@ -643,9 +643,9 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -678,7 +678,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 
 	if (m_pUnitCondition)
 	{
-		if (!m_pUnitCondition->evaluate(const_cast<CvUnit&>(kUnit).getGameObject()))
+		if (!m_pUnitCondition->evaluate(kUnit.getGameObject()))
 		{
 			return false;
 		}
@@ -802,9 +802,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -888,7 +888,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_pPlotCondition)
 	{
-		if (!m_pPlotCondition->evaluate(const_cast<CvPlot&>(kPlot).getGameObject()))
+		if (!m_pPlotCondition->evaluate(kPlot.getGameObject()))
 		{
 			return false;
 		}
@@ -896,7 +896,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_pUnitCondition)
 	{
-		if (!m_pUnitCondition->evaluate(const_cast<CvUnit&>(kUnit).getGameObject()))
+		if (!m_pUnitCondition->evaluate(kUnit.getGameObject()))
 		{
 			return false;
 		}
@@ -959,9 +959,9 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 		{
 			return false;
 		}
-		if ((TechTypes)kPromotion.getObsoleteTech() != NO_TECH)
+		if (kPromotion.getObsoleteTech() != NO_TECH)
 		{
-			if (kTeam.isHasTech((TechTypes)kPromotion.getObsoleteTech()))
+			if (kTeam.isHasTech(kPromotion.getObsoleteTech()))
 			{
 				return false;
 			}
@@ -1050,7 +1050,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eUnitType > NO_UNIT && !bUnitToCity)
 	{
-		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 		if (pUnit != NULL)
 		{
@@ -1169,7 +1169,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 			if (bUnitToCity && m_eUnitType > NO_UNIT)
 			{
-				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 				if (pUnit != NULL)
 				{
@@ -1378,7 +1378,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 	if (m_eUnitType > NO_UNIT)
 	{
-		iValue += kPlayer.AI_unitValue(m_eUnitType, (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), kPlot.area());
+		iValue += kPlayer.AI_unitValue(m_eUnitType, GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), kPlot.area());
 	}
 
 	// Calculate the actual yields and commerces, if the expression tries to include the plot the result will be incorrect

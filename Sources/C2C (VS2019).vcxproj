@@ -195,6 +195,7 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
@@ -273,6 +274,7 @@
     <ClCompile Include="CvTeamAI.cpp" />
     <ClCompile Include="CvUnit.cpp" />
     <ClCompile Include="CvUnitAI.cpp" />
+    <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
@@ -393,6 +395,7 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
+    <ClInclude Include="CvImprovementInfo.h" />
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
@@ -451,6 +454,7 @@
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
     <ClInclude Include="CvUnitAI.h" />
+    <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />

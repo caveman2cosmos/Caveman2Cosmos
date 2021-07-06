@@ -40,10 +40,8 @@ def getGameSpeedMod():
 	global gameSpeedMod
 	if gameSpeedMod == None:
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		gameSpeedMod = CvGameSpeedInfo.getGrowthPercent()
-		gameSpeedMod += CvGameSpeedInfo.getTrainPercent()
-		gameSpeedMod += CvGameSpeedInfo.getConstructPercent()
-		gameSpeedMod = 300.0 / gameSpeedMod
+		gameSpeedMod = CvGameSpeedInfo.getSpeedPercent() + CvGameSpeedInfo.getHammerCostPercent()
+		gameSpeedMod = 200.0 / gameSpeedMod
 	return gameSpeedMod
 
 
@@ -358,7 +356,7 @@ def getHandoverUnitTypes(CyCity):
 	if iCounter == UnitTypes.NO_UNIT: iCounter = iBestDefender
 	if iAttack == UnitTypes.NO_UNIT: iAttack = iCounter
 
-	return [GC.getInfoTypeForString("UNIT_WORKER"), iBestDefender, iCounter, iAttack]
+	return [GC.getUNIT_WORKER(), iBestDefender, iCounter, iAttack]
 
 def getUprisingUnitTypes(CyCity):
 	# Returns list of units that can be given to violent rebel uprisings, odds of giving are set by the relative number of times a unit type appears in list
@@ -588,7 +586,7 @@ def computeBribeCosts(CyCity):
 	fBaseCost = (iRevIdx + 16*localRevIdx + 3*CyCity.getNumRevolts(iPlayer)) * (iPop**1.1)/8.0
 
 	fMod = (1 + CyPlayer.getCurrentEra() - 9 / (8.1 + iPop**1.3)) / 3
-	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent() / 100.0
+	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() / 100.0
 
 	if not CyPlayer.isHuman():
 		fMod /= 2

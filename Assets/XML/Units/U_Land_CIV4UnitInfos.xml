@@ -409,7 +409,6 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>1280</iCost>
 			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<iAsset>1</iAsset>
@@ -1831,7 +1830,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>125</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1897,7 +1896,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>440</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1969,7 +1968,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>760</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1000</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>500</iEspionagePoints>
 			<iAsset>1</iAsset>
@@ -2055,7 +2054,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>4320</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
 			<iAsset>1</iAsset>
@@ -2156,7 +2155,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>3800</iCost>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>10000</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>20</iDropRange>
 			<iEspionagePoints>500</iEspionagePoints>
@@ -6492,7 +6491,7 @@
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
-				<UnitType>UNIT_OXYBELES</UnitType>
+				<UnitType>UNIT_SCORPION</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -10098,7 +10097,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_CHARIOT</UnitType>
-				<UnitType>UNIT_CHARIOTARCHER</UnitType>
+				<UnitType>UNIT_HORSE_ARCHER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -12842,139 +12841,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_URBAN_HORSEMAN</Type>
-			<Combat>UNITCOMBAT_MOUNTED</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ARMOR_MODERN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_RIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOUNT_HORSE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_URBAN_HORSEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitUpgrades>
-				<UnitType>UNIT_CUIRASSIER</UnitType>
-			</UnitUpgrades>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<UnitType>UNIT_CATAPULT</UnitType>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<UnitType>UNIT_TREBUCHET</UnitType>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<BonusType>BONUS_HORSE</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_IRON_WARES</BonusType>
-			</PrereqBonuses>
-			<iCost>930</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>2</iMoves>
-			<iCombat>18</iCombat>
-			<iXPValueAttack>3</iXPValueAttack>
-			<iXPValueDefense>1</iXPValueDefense>
-			<iWithdrawalProb>20</iWithdrawalProb>
-			<iPursuit>20</iPursuit>
-			<TerrainAttacks>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<iTerrainAttack>25</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<iTerrainAttack>25</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<iTerrainAttack>25</iTerrainAttack>
-				</TerrainAttack>
-			</TerrainAttacks>
-			<FeatureAttacks>
-				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iFeatureAttack>-25</iFeatureAttack>
-				</FeatureAttack>
-				<FeatureAttack>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iFeatureAttack>-25</iFeatureAttack>
-				</FeatureAttack>
-				<FeatureAttack>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<iFeatureAttack>-25</iFeatureAttack>
-				</FeatureAttack>
-			</FeatureAttacks>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_SIEGE_WOODEN</UnitCombatType>
-					<iUnitCombatMod>25</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
-			<iAsset>3</iAsset>
-			<iPower>18</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>3</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>3</iMeleeWaveSize>
-				<iRangedWaveSize>3</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_URBAN_HORSEMAN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
 			<Type>UNIT_ELEPHANT_RIDER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -14367,7 +14233,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARMOR_M60</UnitType>
-				<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -14471,7 +14336,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARMOR_M60</UnitType>
-				<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -27131,10 +26995,6 @@
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_THIEF</UnitType>
-				<UnitType>UNIT_ROGUE</UnitType>
-				<UnitType>UNIT_BURGLAR</UnitType>
-				<UnitType>UNIT_ASSASSIN</UnitType>
-				<UnitType>UNIT_CUTTHROAT</UnitType>
 			</UnitUpgrades>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
@@ -29976,7 +29836,6 @@
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CUTTHROAT</UnitType>
-				<UnitType>UNIT_PARTISAN</UnitType>
 			</UnitUpgrades>
 			<iCost>200</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
@@ -32724,46 +32583,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
@@ -32876,54 +32704,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_HYBRID_FOREST</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
@@ -33167,6 +32958,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NOBLE</Type>
@@ -36465,7 +36257,6 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SPY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -36509,7 +36300,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
 			<iAsset>1</iAsset>
@@ -39363,7 +39154,6 @@
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
-				<UnitType>UNIT_MEDIC</UnitType>
 			</UnitUpgrades>
 			<iCost>310</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -42122,7 +41912,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Description>
+			<Description>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FOOD_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
@@ -42445,7 +42235,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EARLY_MERCHANT_C2C</Description>
+			<Description>TXT_KEY_UNIT_EARLY_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TRADE_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
@@ -43565,188 +43355,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROAD_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HIGHWAY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUMPLANE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINDMILL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANTATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORT_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
@@ -43764,8 +43372,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>400</iWorkRate>
 			<iBaseHurry>25</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -44419,7 +44025,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bWorkerTrade>1</bWorkerTrade>
 			<iBaseHurry>100</iBaseHurry>
 			<iHurryMultiplier>5</iHurryMultiplier>
@@ -44608,7 +44213,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<UnitMeshGroups>
 				<iGroupSize>4</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -44676,7 +44280,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>90</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>

@@ -4318,7 +4318,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_MARLIN_NATIVE</Type>
+			<Type>SPAWN_MARLIN_NATIVE2</Type>
 			<UnitType>UNIT_MARLIN</UnitType>
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>

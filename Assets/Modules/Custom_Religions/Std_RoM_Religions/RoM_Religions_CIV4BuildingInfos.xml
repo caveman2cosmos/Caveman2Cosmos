@@ -191,7 +191,7 @@
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
 			<FreePromotion>PROMOTION_COASTAL_GUARD1</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -283,10 +283,10 @@
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<iCost>1104</iCost>
+			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -376,9 +376,6 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</TechTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>

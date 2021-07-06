@@ -335,26 +335,11 @@ namespace algo {
 	// Custom
 	// FUNCTION TEMPLATE contains
 	// test if an element exists in a range
-	template<class Item_>
-	bool contains(const std::vector<Item_>& rng, const Item_& item) {
+	template< class _Range, class Item_ >
+	bool contains(const _Range& rng, const Item_& item) {
 		foreach_(const Item_& element, rng)
 			if (element == item)
 				return true;
-		return false;
-	}
-
-	// FUNCTION TEMPLATE contains
-	// test if an element exists in a range
-	template< class _Range, class Item_ >
-	bool contains(const _Range& rng, const Item_& item) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First == item) {
-				return true;
-			}
-		}
 		return false;
 	}
 

@@ -967,9 +967,6 @@
 			<Type>PROMOTIONLINE_HUNTING_SIGHT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_SIGHT</Description>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,10</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SEA_CREATURE</Type>
@@ -3278,17 +3275,6 @@
 			<Type>PROMOTIONLINE_MASTER_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_MASTER_HUNTER</Description>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
-		</PromotionLineInfo>
-		<PromotionLineInfo>
-			<Type>PROMOTIONLINE_SEA_MASTER_HUNTER</Type>
-			<Description>TXT_KEY_PROMOTIONLINE_SEA_MASTER_HUNTER</Description>
-			<Button>Art/Interface/Buttons/Promotions/Master_seahunter1.dds</Button>
-			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
-			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<!-- Is that TB experiment? -->
 		<PromotionLineInfo>

@@ -582,7 +582,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		}
 		else
 		{
-			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN");
+			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN");
 		}
 		stream.Read(&iType);
 		m_eWorldSize = (WorldSizeTypes)iType;

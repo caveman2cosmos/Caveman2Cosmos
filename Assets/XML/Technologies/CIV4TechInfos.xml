@@ -6,10 +6,10 @@
 Current techs which are not in this file:-
 	Modules\Custom_Religions
 	( X, Y ) TECH_Z
-	( 014, 17 ) TECH_SHAMANISM
+	( 014, 15 ) TECH_SHAMANISM
 	( 014, 19 ) TECH_DRUIDIC_TRADITIONS
-	( 017, 05 ) TECH_TENGRIISM
-	( 022, 19 ) TECH_MESOPOTAMISM
+	( 017, 15 ) TECH_TENGRIISM
+	( 023, 15 ) TECH_MESOPOTAMISM
 	( 026, 15 ) TECH_YORUBA
 	( 028, 03 ) TECH_SHINTO
 	( 028, 13 ) TECH_NGAIISM
@@ -3080,7 +3080,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_NOCTURNALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_Nocturnalism.dds</Button>
 		</TechInfo>
-		<!-- (014, 17) TECH_SHAMANISM -->
+		<!-- (014, 15) TECH_SHAMANISM -->
 		<!-- (014, 19) TECH_DRUIDIC_TRADITIONS -->
 		<TechInfo>
 			<Type>TECH_HARPOON_MAKING</Type>
@@ -3554,7 +3554,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Horseback_Riding.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,4</Button>
 		</TechInfo>
-		<!-- (017, 05) TECH_TENGRIISM -->
+		<!-- (017, 15) TECH_TENGRIISM -->
 		<TechInfo>
 			<Type>TECH_MYSTICISM</Type>
 			<Description>TXT_KEY_TECH_MYSTICISM</Description>
@@ -4343,6 +4343,42 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/thewheel2.dds</Button>
 		</TechInfo>
 		<TechInfo>
+			<Type>TECH_POLYTHEISM</Type>
+			<Description>TXT_KEY_TECH_POLYTHEISM</Description>
+			<Civilopedia>TXT_KEY_TECH_POLYTHEISM_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<iCost>110</iCost>
+			<Era>C2C_ERA_ANCIENT</Era>
+			<iAsset>8</iAsset>
+			<bTrade>1</bTrade>
+			<iGridX>22</iGridX>
+			<iGridY>13</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>9</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_TAXONOMY</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_POLYTHEISM_QUOTE</Quote>
+			<Sound>AS2D_TECH_POLYTHEISM</Sound>
+			<SoundMP>AS2D_TECH_MP_POLYTHEISM</SoundMP>
+			<Button>,Art/Interface/Buttons/TechTree/Polytheism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,6</Button>
+		</TechInfo>
+		<TechInfo>
 			<Type>TECH_ANCESTOR_WORSHIP</Type>
 			<Description>TXT_KEY_TECH_ANCESTOR_WORSHIP</Description>
 			<Civilopedia>TXT_KEY_TECH_ANCESTOR_WORSHIP_PEDIA</Civilopedia>
@@ -4353,7 +4389,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>22</iGridX>
-			<iGridY>15</iGridY>
+			<iGridY>17</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -4365,14 +4401,65 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_POTTERY</PrereqTech>
+				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
 			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_POTTERY</PrereqTech>
+				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
+				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANCESTOR_WORSHIP_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANCESTOR_WORSHIP</Sound>
 			<SoundMP>AS2D_TECH_ANCESTOR_WORSHIP</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/ancestorworship.dds</Button>
 		</TechInfo>
-		<!-- (022, 19) TECH_MESOPOTAMISM -->
+		<TechInfo>
+			<Type>TECH_SACRIFICE_CULT</Type>
+			<Description>TXT_KEY_TECH_SACRIFICE_CULT</Description>
+			<Civilopedia>TXT_KEY_TECH_SACRIFICE_CULT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>110</iCost>
+			<Era>C2C_ERA_ANCIENT</Era>
+			<iAsset>8</iAsset>
+			<iPower>6</iPower>
+			<bTrade>1</bTrade>
+			<bGoodyTech>1</bGoodyTech>
+			<iGridX>22</iGridX>
+			<iGridY>19</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_POTTERY</PrereqTech>
+				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_SACRIFICE_CULT_QUOTE</Quote>
+			<Sound>AS2D_TECH_SACRIFICE_CULT</Sound>
+			<SoundMP>AS2D_TECH_SACRIFICE_CULT</SoundMP>
+			<Button>,Art/Interface/Buttons/TechTree/BloodCult.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,6,3</Button>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ORCHARDS</Type>
 			<Description>TXT_KEY_TECH_ORCHARDS</Description>
@@ -4570,6 +4657,7 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_STANDARDIZATION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/standardization2.dds</Button>
 		</TechInfo>
+		<!--	(023, 15) TECH_MESOPOTAMISM	-->
 		<TechInfo>
 			<Type>TECH_HERITAGE</Type>
 			<Description>TXT_KEY_TECH_HERITAGE</Description>
@@ -4581,7 +4669,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>23</iGridX>
-			<iGridY>15</iGridY>
+			<iGridY>17</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -4599,52 +4687,6 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_HERITAGE</Sound>
 			<SoundMP>AS2D_TECH_HERITAGE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/heritage.dds</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_SACRIFICE_CULT</Type>
-			<Description>TXT_KEY_TECH_SACRIFICE_CULT</Description>
-			<Civilopedia>TXT_KEY_TECH_SACRIFICE_CULT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>126</iCost>
-			<Era>C2C_ERA_ANCIENT</Era>
-			<iAsset>8</iAsset>
-			<iPower>6</iPower>
-			<bTrade>1</bTrade>
-			<bGoodyTech>1</bGoodyTech>
-			<iGridX>23</iGridX>
-			<iGridY>17</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_COMMUNITY</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_SACRIFICE_CULT_QUOTE</Quote>
-			<Sound>AS2D_TECH_SACRIFICE_CULT</Sound>
-			<SoundMP>AS2D_TECH_SACRIFICE_CULT</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/BloodCult.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,6,3</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_MUMMIFICATION</Type>
@@ -4673,8 +4715,11 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MUMMIFICATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_MUMMIFICATION</Sound>
 			<SoundMP>AS2D_TECH_MUMMIFICATION</SoundMP>
@@ -4990,6 +5035,44 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/Boardgames.dds</Button>
 		</TechInfo>
 		<TechInfo>
+			<Type>TECH_KEMETISM</Type>
+			<Description>TXT_KEY_TECH_KEMETISM</Description>
+			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<iCost>309</iCost>
+			<bGlobal>1</bGlobal>
+			<Era>C2C_ERA_ANCIENT</Era>
+			<iAsset>8</iAsset>
+			<iGridX>24</iGridX>
+			<iGridY>19</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_HERITAGE</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_KEMETISM_QUOTE</Quote>
+			<Sound>AS2D_TECH_KEMETISM</Sound>
+			<SoundMP>AS2D_TECH_KEMETISM</SoundMP>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
+			<Button>Art/Interface/Buttons/TechTree/Kemetism.dds</Button>
+		</TechInfo>
+		<TechInfo>
 			<Type>TECH_FOLK_MEDICINE</Type>
 			<Description>TXT_KEY_TECH_FOLK_MEDICINE</Description>
 			<Civilopedia>TXT_KEY_TECH_FOLK_MEDICINE_PEDIA</Civilopedia>
@@ -5275,7 +5358,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
+				<PrereqTech>TECH_HERITAGE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CEREMONY_QUOTE</Quote>
 			<Sound>AS2D_TECH_CEREMONY</Sound>
@@ -5516,7 +5599,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CEREMONY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PRIESTHOOD_QUOTE</Quote>
 			<Sound>AS2D_TECH_PRIESTHOOD</Sound>
@@ -5774,7 +5857,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+				<PrereqTech>TECH_STARGAZING</PrereqTech>
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DIVINATION_QUOTE</Quote>
@@ -6010,9 +6093,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_HERITAGE</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MATRIARCHY_QUOTE</Quote>
 			<Sound>AS2D_TECH_MATRIARCHY</Sound>
 			<SoundMP>AS2D_TECH_MATRIARCHY</SoundMP>
@@ -6056,9 +6136,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_STARGAZING</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RESURRECTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_RESURRECTION</Sound>
 			<SoundMP>AS2D_TECH_RESURRECTION</SoundMP>
@@ -6372,51 +6449,12 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 				<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MAGIC_QUOTE</Quote>
 			<Sound>AS2D_TECH_MAGIC</Sound>
 			<SoundMP>AS2D_TECH_MAGIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/magic.dds</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_POLYTHEISM</Type>
-			<Description>TXT_KEY_TECH_POLYTHEISM</Description>
-			<Civilopedia>TXT_KEY_TECH_POLYTHEISM_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>274</iCost>
-			<Era>C2C_ERA_ANCIENT</Era>
-			<iAsset>8</iAsset>
-			<bTrade>1</bTrade>
-			<iGridX>29</iGridX>
-			<iGridY>19</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>9</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_RESURRECTION</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_SCULPTURE</PrereqTech>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_POLYTHEISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_POLYTHEISM</Sound>
-			<SoundMP>AS2D_TECH_MP_POLYTHEISM</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Polytheism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,6</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SEAFARING</Type>
@@ -6709,8 +6747,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MAGIC</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HERITAGE</PrereqTech>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_KARMA_QUOTE</Quote>
 			<Sound>AS2D_TECH_KARMA</Sound>
@@ -6719,43 +6756,46 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<!-- (030, 17) TECH_CANAANISM -->
 		<TechInfo>
-			<Type>TECH_KEMETISM</Type>
-			<Description>TXT_KEY_TECH_KEMETISM</Description>
-			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_RELIGION</Advisor>
+			<Type>TECH_ASTROLOGY</Type>
+			<Description>TXT_KEY_TECH_ASTROLOGY</Description>
+			<Civilopedia>TXT_KEY_TECH_ASTROLOGY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>309</iCost>
-			<bGlobal>1</bGlobal>
 			<Era>C2C_ERA_ANCIENT</Era>
-			<iAsset>8</iAsset>
+			<iAsset>16</iAsset>
+			<bTrade>1</bTrade>
+			<bGoodyTech>1</bGoodyTech>
 			<iGridX>30</iGridX>
 			<iGridY>19</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_MAGIC</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
-				<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
-				<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_KEMETISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_KEMETISM</Sound>
-			<SoundMP>AS2D_TECH_KEMETISM</SoundMP>
-			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
-			<Button>Art/Interface/Buttons/TechTree/Kemetism.dds</Button>
+			<Quote>TXT_KEY_TECH_ASTROLOGY_QUOTE</Quote>
+			<Sound>AS2D_TECH_ASTROLOGY</Sound>
+			<SoundMP>AS2D_TECH_ASTROLOGY</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/astrology.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CLOUD_PATTERNS</Type>
@@ -7522,6 +7562,7 @@ Current techs which are not in this file:-
 			<iPower>6</iPower>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
+			<bMapCentering>1</bMapCentering>
 			<iGridX>34</iGridX>
 			<iGridY>9</iGridY>
 			<Flavors>
@@ -7896,9 +7937,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HELLENISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_HELLENISM</Sound>
 			<SoundMP>AS2D_TECH_HELLENISM</SoundMP>
@@ -7942,6 +7980,9 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_GEOMETRY</PrereqTech>
 			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CALENDAR_QUOTE</Quote>
 			<Sound>AS2D_TECH_CALENDAR</Sound>
 			<SoundMP>AS2D_TECH_MP_CALENDAR</SoundMP>
@@ -8190,9 +8231,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NAGHUALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NAGHUALISM</Sound>
 			<SoundMP>AS2D_TECH_NAGHUALISM</SoundMP>
@@ -8236,51 +8274,6 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_SPICE_TRADE</Sound>
 			<SoundMP>AS2D_TECH_SPICE_TRADE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/spice_trade.dds</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_ASTROLOGY</Type>
-			<Description>TXT_KEY_TECH_ASTROLOGY</Description>
-			<Civilopedia>TXT_KEY_TECH_ASTROLOGY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>614</iCost>
-			<Era>C2C_ERA_CLASSICAL</Era>
-			<iAsset>16</iAsset>
-			<bTrade>1</bTrade>
-			<bGoodyTech>1</bGoodyTech>
-			<iGridX>36</iGridX>
-			<iGridY>7</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_MAGIC</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_ASTROLOGY_QUOTE</Quote>
-			<Sound>AS2D_TECH_ASTROLOGY</Sound>
-			<SoundMP>AS2D_TECH_ASTROLOGY</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/astrology.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CALLIGRAPHY</Type>
@@ -8892,7 +8885,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DRAMA_QUOTE</Quote>
@@ -9122,9 +9114,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_DRAMA</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MUSICAL_NOTATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_MUSICAL_NOTATION</Sound>
 			<SoundMP>AS2D_TECH_MP_MUSIC</SoundMP>
@@ -9297,7 +9286,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WEATHER_LORE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 				<PrereqTech>TECH_MACHINERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GEOCENTRISM_QUOTE</Quote>
@@ -11003,15 +10991,15 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
@@ -12357,11 +12345,11 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>55</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>25</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -12541,7 +12529,7 @@ Current techs which are not in this file:-
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12737,7 +12725,7 @@ Current techs which are not in this file:-
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13427,7 +13415,7 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>35</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21329,7 +21317,7 @@ Current techs which are not in this file:-
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>15</iFlavor>
+					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>

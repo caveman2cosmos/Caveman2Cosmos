@@ -93,7 +93,7 @@ def displayMessageBox(argsList):
 	app.displayMessageBox(szTitle, szDesc)
 	
 def sendEmail(argsList):
-	import sys, smtplib, MimeWriter, base64, StringIO
+	import smtplib, MimeWriter, base64, StringIO
 			
 	szAddr = argsList[0]	
 	szHost = argsList[1]	

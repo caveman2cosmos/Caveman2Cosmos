@@ -8,15 +8,22 @@
 	<ImprovementInfos>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>
+			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
+			<bPeakMakesValid>1</bPeakMakesValid>
+			<bPeakImprovement>1</bPeakImprovement>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
 			<bPermanent>1</bPermanent>
+			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>

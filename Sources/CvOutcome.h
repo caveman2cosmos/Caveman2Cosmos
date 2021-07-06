@@ -59,12 +59,12 @@ public:
 	void getCheckSum(unsigned int& iSum) const;
 protected:
 	OutcomeTypes m_eType;
-	IntExpr* m_iChance;
+	const IntExpr* m_iChance;
 	int m_iChancePerPop;
-	IntExpr* m_aiYield[NUM_YIELD_TYPES];
-	IntExpr* m_aiCommerce[NUM_COMMERCE_TYPES];
+	const IntExpr* m_aiYield[NUM_YIELD_TYPES];
+	const IntExpr* m_aiCommerce[NUM_COMMERCE_TYPES];
 	UnitTypes m_eUnitType;
-	BoolExpr* m_bUnitToCity;
+	const BoolExpr* m_bUnitToCity;
 	PromotionTypes m_ePromotionType;
 	BonusTypes m_eBonusType;
 	int m_iGPP;
@@ -72,10 +72,10 @@ protected:
 	CvProperties m_Properties;
 	int m_iHappinessTimer;
 	int m_iPopulationBoost;
-	IntExpr* m_iReduceAnarchyLength;
+	const IntExpr* m_iReduceAnarchyLength;
 	EventTriggerTypes m_eEventTrigger;
-	BoolExpr* m_pPlotCondition;
-	BoolExpr* m_pUnitCondition;
+	const BoolExpr* m_pPlotCondition;
+	const BoolExpr* m_pUnitCondition;
 	CvString m_szPythonCallback;
 	bool m_bKill;
 	CvString m_szPythonCode;

@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
@@ -22,21 +21,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-5</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
-					<TechYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -201,9 +185,9 @@
 				<iYield>50</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -227,9 +211,9 @@
 				<iYield>100</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -249,9 +233,9 @@
 				<iYield>3</iYield>
 				<iYield>35</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -273,9 +257,9 @@
 				<iYield>5</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -298,19 +282,19 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLASTIC</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<FreeBonus>BONUS_PLASTIC</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -333,9 +317,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -356,9 +340,9 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>2</iHealth>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</Type>
@@ -399,9 +383,9 @@
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<iHappiness>1</iHappiness>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -447,9 +431,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_ROCKET_FUEL</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -499,9 +483,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -913,7 +897,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_VENUS_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>

@@ -117,10 +117,9 @@ class EventTriggerScreen:
 			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
-
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
-		ID		= inputClass.iItemID
+		#iData	= inputClass.iData
+		#ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		iData1	= inputClass.iData1
 

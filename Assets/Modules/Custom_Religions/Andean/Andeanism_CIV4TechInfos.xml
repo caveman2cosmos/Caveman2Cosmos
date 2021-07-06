@@ -12,7 +12,6 @@
 				<PrereqTech>TECH_DIVINATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_STARGAZING</PrereqTech>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
 			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TUSK</Tag>
+		<English>%s1_civ_adjective whalers are now hunting narwhals.</English>
+		<French>Les baleiniers %s1_civ_adjective chassent des narvals.</French>
+		<Italian>Le baleniere %s1_civ_adjective danno la caccia ai narvali.</Italian>
+		<Polish>Wielorybnicy z %s1_civ_adjective poluja od teraz na narwale.</Polish>
+		<Russian>Ó %s1_civ_adjective êèòîáîåâ îòêðûëñÿ ñåçîí ïðîìûñëà íàðâàëîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TUSK_1</Tag>
+		<English>Whalers have figured out the migration cycles of the narwhal. They have begun to hunt the male narwhals, in a way that does not endanger the long term survival of the creatures.</English>
+		<French>Les baleiniers ont compris le cycle de migration des narvals de la région. Ils chassent les plus gros males, pour récupérer leurs défenses sans compromettre la survie de ces créatures.</French>
+		<Polish>Wielorybnicy poznali cykle migracyjne narwali i rozpoczeli polowania na samce tych wielkich ssaków tak by nie zmniejszyc populacji w dluzszym okresie czasu.</Polish>
+		<Russian>Êèòîáîè âìåøàëèñü â öèêëû ìèãðàöèè íàðâàëîâ. Îíè íà÷àëè îõîòèòüñÿ íà ñàìöîâ íàðâàëîâ, òàêèì îáðàçîì, ÷òîáû íå ïîñòàâèòü ïîä óãðîçó äîëãîñðî÷íîå âûæèâàíèå ýòèõ ñóùåñòâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TUSK_1</Tag>
+		<English>We can sell the precious tusk for additional profit.</English>
+		<French>Nous pouvons vendre les précieuses défenses pour un bon prix.</French>
+		<Polish>Mozemy sprzedwac cenne kly z niezlym zyskiem!</Polish>
+		<Russian>Ìû ìîæåì ïðîäàòü äðàãîöåííûå áèâíè è ïîëó÷àòü äîïîëíèòåëüíóþ ïðèáûëü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_TUSK_1</Tag>
+		<English>narwhal tusk</English>
+		<French>défense de narval</French>
+		<Polish>Kiel Narwala</Polish>
+		<Russian>áèâíè íàðâàëà</Russian>
+	</TEXT>
+</Civ4GameText>

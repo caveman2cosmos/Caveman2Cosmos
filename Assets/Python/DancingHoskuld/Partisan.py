@@ -113,8 +113,8 @@ def onCityAcquired(argsList):
 ### set Partisan Units ###
 ##########################
 
-						ft_forest = GC.getInfoTypeForString('FEATURE_FOREST')
-						ft_jungle = GC.getInfoTypeForString( 'FEATURE_JUNGLE' )
+						ft_forest = GC.getFEATURE_FOREST()
+						ft_jungle = GC.getFEATURE_JUNGLE()
 						it_fort = GC.getInfoTypeForString("IMPROVEMENT_FORT")
 						# Check all city radius plots
 						iX = CyCity.getX()
@@ -331,7 +331,7 @@ def onCityAcquired(argsList):
 										iRand = GAME.getSorenRandNum(16, "rand damage") + 15
 
 										# Check to not kill the unit
-										iMaxDamage = ppUnit.currHitPoints() - 1
+										iMaxDamage = ppUnit.getHP() - 1
 										if iMaxDamage:
 											if iRand > iMaxDamage:
 												iRand = iMaxDamage
