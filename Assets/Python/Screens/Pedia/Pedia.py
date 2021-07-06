@@ -281,8 +281,8 @@ class Pedia:
 		import PediaTerrain
 		import PediaEra
 		
-		import Debug_Pedia
-		self.debug	= Debug_Pedia.Debug()
+		import TestCode
+		self.debug	= TestCode.TestCode([0])
 
 		self.mapScreenFunctions = {
 			PEDIA_TECHS				: PediaTech.PediaTech(self, H_BOT_ROW),
@@ -960,29 +960,7 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-		
-		#self.debug.checkBuildingBonusManufacturerTech() #Checking if earliest bonus manufacturer is on bonus tech reveal.
-		#self.debug.checkBuildingTechMods() #Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
-		#self.debug.checkBuildingBonusRequirements() #Check if building needs bonus before is available
-		#self.debug.checkBuildingRequirements() #Check if building needs building before is available
-		#self.debug.checkBuildingCivicRequirements() #Check if building needs civics before their availability
-		#self.debug.checkBuildingRequirementObsoletion() #Check if building requirements obsolete before building
-		#self.debug.checkBuildingCommerceDoubleTime() #Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
-		#self.debug.checkBuildingCommerceChangeOriginalOwners() #Check if CommerceChangeOriginalOwners is on buildings with flat commerce changes
-		#self.debug.checkBuildingHurryModifier() #Check if iHurryAngerModifier and iHurryCostModifier aren't on buildings that aren't normally buildable
-		#self.debug.checkBuildingUnlockObsoletion() #Check if building obsoletion isn't too close to tech unlock.
-		#self.debug.checkBuildingReplacementObsoletion() #Check obsoletion of replacements
-		#self.debug.checkBuildingWonderMovies() #Check patch location of wonders movie file
-		#self.debug.checkUnitUpgrades() #Checks unit upgrades
-		#self.debug.checkUnitBonusRequirements() #Checks unit bonus requirements
-		#self.debug.checkBonusImprovementProductivity() #Check improvement productivity - map bonuses
-		#self.debug.checkBonusProducerReplacements() #Check bonus producer replacements - manufactured bonuses
-		#self.debug.checkImprovementTechYieldBoosts() #Check if tech yield boosts are between improvvement upgrade and unlock
-		#self.debug.listCivics() #Lists civics and their tech requirements
-		#self.debug.listBuildingTechRequirements() #Lists tech requirements of buildings
-		#self.debug.listUnitTechRequirements() #Lists tech requirements of units
-		#self.debug.listTechRequirements() #Lists tech requirements of techs
-		
+
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 
