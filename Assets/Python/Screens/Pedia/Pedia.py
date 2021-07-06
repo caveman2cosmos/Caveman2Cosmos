@@ -794,7 +794,7 @@ class Pedia:
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
 			
-			#Check location of building on X and Y grid.
+			#Check location of unit on X and Y grid
 			iTechLoc = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[0]
 			iTechRow = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[1]
 
@@ -881,6 +881,7 @@ class Pedia:
 			szPromoName = CvPromotionInfo.getDescription()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
 
+			#Check promotion location on X and Y grid
 			iTechLoc = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[0]
 			iTechRow = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[1]
 
@@ -1142,134 +1143,37 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
-		bCheckProductivity = 0 # Checking productivity of improvements is slow
-		bCheckPotentialReplacements = 0 # Checking potential replacements is slow
+		
+		self.debug.checkBonusImprovementProductivity() #Check improvement productivity - map bonuses
+		self.debug.checkBonusProducerReplacements() #Check bonus producer replacements - manufactured bonuses
+		
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
-			TechReq = CvBonusInfo.getTechReveal()
+			
+			#Check location of resource of tech reveal/enable
+			iTechReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]
+			iTechEnable = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]
 
-			if TechReq != -1:
-				iTechLoc = GC.getTechInfo(TechReq).getGridX()
-				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			else:
-				iTechLoc = 0
-				iTechRow = 0
-
-			#Check total productivity: from resource, improvement and improvement+resource coupling.
-			if bCheckProductivity and CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
-				for CvImprovement in xrange(GC.getNumImprovementInfos()):
-					CvImprovementInfo = GC.getImprovementInfo(CvImprovement)
-					if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: # Only care about improvements, that can upgrade or downgrade.
-						if CvImprovementInfo.isImprovementBonusTrade(iBonus) and not CvImprovementInfo.isActsAsCity(): # Only care about improvements, that can improve bonus
-							#Zero out data
-							aBonusYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aTechImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aBonusImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aFinalYield = [0]*YieldTypes.NUM_YIELD_TYPES
-
-							aImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aBonusImprovementUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							aFinalImpUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
-								aBonusYield[iYield] = CvBonusInfo.getYieldChange(iYield) # Bonus yields
-								aImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
-								aBonusImprovementYield[iYield] = CvImprovementInfo.getImprovementBonusYield(iBonus, iYield) # Bonus-Improvement coupling yields
-
-								for iTech in xrange(GC.getNumTechInfos()):  # Find techs, that boost base improvement
-									if CvImprovementInfo.getTechYieldChanges(iTech, iYield) != 0:
-										aTechImprovementYield[iYield] += CvImprovementInfo.getTechYieldChanges(iTech, iYield)
-
-								aFinalYield[iYield] = aBonusYield[iYield] + aImprovementYield[iYield] + aTechImprovementYield[iYield] + aBonusImprovementYield[iYield]
-
-								CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
-								if CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus):
-									aImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getYieldChange(iYield)
-									aBonusImprovementUpgradeYield[iYield] = CvImprovementUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
-									aFinalImpUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementUpgradeYield[iYield] + aBonusImprovementUpgradeYield[iYield]
-
-							# Upgrades
-							if (CvImprovementInfo.getImprovementUpgrade() != -1 and CvImprovementUpgradeInfo.isImprovementBonusTrade(iBonus)) and (aFinalImpUpgradeYield[0] < aFinalYield[0] or aFinalImpUpgradeYield[1] < aFinalYield[1] or aFinalImpUpgradeYield[2] < aFinalYield[2]):
-								print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" upgrade: "+CvImprovementUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpUpgradeYield, (aFinalImpUpgradeYield[0]-aFinalYield[0], aFinalImpUpgradeYield[1]-aFinalYield[1], aFinalImpUpgradeYield[2]-aFinalYield[2])))
-
-							# Alt upgrades
-							for i in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
-								CvImprovementAltUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(i))
-								if CvImprovementAltUpgradeInfo.isImprovementBonusTrade(iBonus):
-									aImprovementAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-									aBonusImprovementAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-									aFinalImpAltUpgradeYield = [0]*YieldTypes.NUM_YIELD_TYPES
-									for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-										aImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
-										aBonusImprovementAltUpgradeYield[iYield] = CvImprovementAltUpgradeInfo.getImprovementBonusYield(iBonus, iYield)
-										aFinalImpAltUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementAltUpgradeYield[iYield] + aBonusImprovementAltUpgradeYield[iYield]
-									if (aFinalImpAltUpgradeYield[0] < aFinalYield[0] or aFinalImpAltUpgradeYield[1] < aFinalYield[1] or aFinalImpAltUpgradeYield[2] < aFinalYield[2]):
-										print CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2])))
-
-			#Check replacements of bonus producers
-			if bCheckPotentialReplacements and (CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS) or (BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER))):
-			# Check Manufactured bonuses, that aren't Culture or Techno-culture types.
-				aNumBonusManufacturers = [] # Count manufacturers and add their locations
-				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
-				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
-					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
-						if CvBuildingInfo.getFreeBonus() == iBonus:
-							aNumBonusManufacturers.append(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
-							if CvBuildingInfo.getObsoleteTech() != -1:
-								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-								aBuildingObsoletions.append(iObsoleteTechLoc)
-							else:
-								aBuildingObsoletions.append(999) #Never obsolete
-
-						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-								aNumBonusManufacturers.append(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
-								if CvBuildingInfo.getObsoleteTech() != -1:
-									iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-									aBuildingObsoletions.append(iObsoleteTechLoc)
-								else:
-									aBuildingObsoletions.append(999) #Never obsolete
-
-				# Check all bonus producers, that don't obsolete
-				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
-					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
-							aBuildingReplacements = [] # List building replacements
-							iObsoleteTechLoc = 999 # Never obsolete
-							if CvBuildingInfo.getObsoleteTech() != -1:
-								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-								aBuildingReplacements.append(CvBuildingReplacement.getType())
-
-							if CvBuildingInfo.getFreeBonus() == iBonus:
-								print CvBonusInfo.getType()+" "+str(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
-
-							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-									print CvBonusInfo.getType()+" "+str(self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements)
-
-			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
+			if CvBonusInfo.getConstAppearance() > 0: # A map resource, only those have different iTechReveal and iTechEnable
 				if not iType:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, iTechRow, szName))
+					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+"/"+str(iTechEnable)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechEnable, szName))
 			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:
 				if iType == 4:
-					aList.append((iTechLoc, iTechRow, szName))
+					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechEnable, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, iTechRow, szName))
+					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechEnable, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-					aList.append((iTechLoc, iTechRow, szName))
+					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechEnable, szName))
 			elif iType == 1:
-				ListDict[(iTechLoc, iTechRow, szName)] = (str(iTechLoc)+": "+szName, iBonus)
-				aList.append((iTechLoc, iTechRow,szName))
+				ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+				aList.append((iTechReveal, iTechEnable,szName))
 		aList.sort()
 		for iBonus in xrange(len(aList)):
 			key = aList[iBonus]
