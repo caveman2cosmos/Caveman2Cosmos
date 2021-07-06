@@ -113,11 +113,11 @@ class UnitNameEventManager:
 		self.eventMgr = eventManager
 
 		self.UnitNameConv = "^ut^ ^cntu[n]^ of ^ct^"
-		self.Prompt = localText.getText("TXT_KEY_UNIT_NAME_EM_PROMPT_1",())
+		self.Prompt = localText.getText("TXT_KEY_UNITHELP_NAME_EM_PROMPT_1",())
 		#~ self.Prompt = "Enter a rename convention"
 
 	def __eventUnitRenameBegin(self, argsList):
-		header = localText.getText("TXT_KEY_UNIT_NAME_EM_HEADER_1",())
+		header = localText.getText("TXT_KEY_UNITHELP_NAME_EM_HEADER_1",())
 		prompt = self.Prompt   #"Enter a rename convention"
 		#ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
 		cancel = BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL")
@@ -127,8 +127,8 @@ class UnitNameEventManager:
 		popup.createPythonEditBox(self.UnitNameConv, "Enter the unit name convention that you want to test.", 0)
 #		popup.createPythonCheckBoxes(1, 0)
 #		popup.setPythonCheckBoxText(0, "Check to increment counters", "Note: if checked, units named in-game commence from counter used in testing.", 0)
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_DONT_INCREMENT_COUNTER",()))
-		popup.addButton(localText.getText("TXT_KEY_UNIT_NAME_EM_INCREMENT_COUNTER",()))
+		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_DONT_INCREMENT_COUNTER",()))
+		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_INCREMENT_COUNTER",()))
 		#~ popup.addButton("Ok, don't increment counter")
 		#~ popup.addButton("Ok, increment counter")
 		popup.addButton(cancel)
@@ -206,7 +206,7 @@ class BuildUnitName(AbstractBuildUnitName):
 		pUnit = argsList[1]
 		iPlayer = pUnit.getOwner()
 
-		if not pUnit or pUnit.isNone():
+		if pUnit is None:
 			return
 		if iPlayer != gc.getGame().getActivePlayer() or not UnitNamingOpt.isEnabled():
 			# Not having the same name for a unit will cause OOS issues if unit names are considered part of the game-state.
@@ -383,8 +383,7 @@ class UnitReName(object):
 	def getUnitCombat(self, pUnit):
 
 # Return immediately if the unit passed in is invalid
-		if (pUnit == None
-		or pUnit.isNone()):
+		if pUnit is None:
 			return "UNITCOMBAT_None"
 
 		iUnitCombat = pUnit.getUnitCombatType()

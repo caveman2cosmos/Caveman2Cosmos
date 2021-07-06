@@ -238,7 +238,7 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 	const CvString& refcstrRootDirectory,
 	const CvString& refcstrModularDirectory,
 	const CvString& refcstrExtension,
-	bool							bSearchSubdirectories)
+	bool bSearchSubdirectories)
 {
 	CvString		strFilePath;		// Filepath
 	CvString		strModPath;			// Modules path
@@ -289,19 +289,9 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						strExtension = strExtension.substr(strExtension.rfind("_civ4") + 1);
 					}
-					/*	 - old buggy rules, just left here for history reminder
-										if ( strExtension.rfind("civ4") != std::string::npos )
-										{
-											strExtension = strExtension.substr(strExtension.rfind("civ4") + 4);
-										}
-					*/
 					else if (strExtension.rfind("globaldefines") != std::string::npos)
 					{
 						strExtension = strExtension.substr(strExtension.rfind("globaldefines"));
-					}
-					else if (strExtension.rfind("pythoncallbackdefines") != std::string::npos)
-					{
-						strExtension = strExtension.substr(strExtension.rfind("pythoncallbackdefines"));
 					}
 
 					//force lowercase for comparison
@@ -311,16 +301,11 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						compareCStrExtension[i] = tolower(compareCStrExtension[i]);
 					}
+
 					if (compareCStrExtension.rfind("_civ4") != std::string::npos)
 					{
 						compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("_civ4") + 1);
 					}
-					/*	 - old buggy rules, just left here for history reminder
-										if ( compareCStrExtension.rfind("civ4") != std::string::npos )
-										{
-											compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("civ4") + 4);
-										}
-					*/
 
 					if (!strcmp(strExtension.c_str(), compareCStrExtension.c_str()))
 					{

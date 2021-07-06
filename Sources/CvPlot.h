@@ -828,9 +828,10 @@ public:
 	DllExport void setLayoutStateToCurrent();
 	bool updatePlotBuilder();
 
-	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
-	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
-	bool shouldUsePlotBuilder();
+	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) const; // determines how the improvement state is shown in the engine
+	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked) const; // determines how the bonus state is shown in the engine
+
+	bool shouldUsePlotBuilder() const;
 	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;

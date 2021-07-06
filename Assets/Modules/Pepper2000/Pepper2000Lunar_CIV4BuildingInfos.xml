@@ -109,7 +109,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_TERRA_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -382,7 +381,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>3</iHealth>
 			<CommerceChanges>
@@ -1561,10 +1559,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1576,7 +1571,7 @@
 			</ConstructCondition>
 			<FreeBonus>BONUS_ANDROIDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>1300</iCost>
+			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -1630,7 +1625,7 @@
 			</PrereqBonuses>
 			<FreeBuilding>BUILDING_LUNAR_SOLAR_PANELS</FreeBuilding>
 			<bPower>1</bPower>
-			<iCost>19500</iCost>
+			<iCost>7800</iCost>
 			<iHurryCostModifier>1000000</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<YieldChanges>
@@ -1832,9 +1827,9 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>200</iCost>
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1843,6 +1838,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Type>
@@ -1854,7 +1856,7 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
+			<iCost>200</iCost>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1863,6 +1865,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_FERTILIZER_STORAGE</Type>
@@ -1874,9 +1883,9 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>200</iCost>
 			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>-1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -1886,6 +1895,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_PANELS</Type>
@@ -1897,8 +1913,8 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<iCost>200</iCost>
 			<bPower>1</bPower>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1911,6 +1927,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 			</PrereqInCityBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_BUG_FARM</Type>

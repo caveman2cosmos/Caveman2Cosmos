@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PLANETARY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
@@ -1828,7 +1827,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BRACEWELL_PROBES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
@@ -1992,7 +1990,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -2193,14 +2190,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_ANTIMATTER_HARVESTER</FreeBuilding>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>

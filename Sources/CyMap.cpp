@@ -133,7 +133,8 @@ CyPlot* CyMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 
 CyArea* CyMap::findBiggestArea(bool bWater)
 {
-	return m_pMap ? new CyArea(m_pMap->findBiggestArea(bWater)) : NULL;
+	CvArea* area = m_pMap->findBiggestArea(bWater);
+	return area ? new CyArea(area) : NULL;
 }
 
 int CyMap::getMapFractalFlags()
@@ -307,11 +308,6 @@ CyPlot* CyMap::pointToPlot(float fX, float fY)
 	return m_pMap ? new CyPlot(m_pMap->pointToPlot(fX, fY)) : NULL;
 }
 
-int CyMap::getIndexAfterLastArea()
-{
-	return m_pMap ? m_pMap->getIndexAfterLastArea() : -1;
-}
-
 int CyMap::getNumAreas()
 {
 	return m_pMap ? m_pMap->getNumAreas() : -1;
@@ -325,6 +321,17 @@ int CyMap::getNumLandAreas()
 CyArea* CyMap::getArea(int iID)
 {
 	return m_pMap ? new CyArea(m_pMap->getArea(iID)) : NULL;
+}
+
+python::list CyMap::areas() const
+{
+	python::list list = python::list();
+
+	foreach_(CvArea* area, m_pMap->areas())
+	{
+		list.append(new CyArea(area));
+	}
+	return list;
 }
 
 void CyMap::recalculateAreas()

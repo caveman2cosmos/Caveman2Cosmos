@@ -19,9 +19,9 @@ class WoodlandCycle:
 		self.TERRAIN_LUSH = GC.getInfoTypeForString('TERRAIN_LUSH')
 		self.FEATURE_FOREST_BURNT = GC.getInfoTypeForString('FEATURE_FOREST_BURNT')
 		self.FEATURE_FOREST_YOUNG = GC.getInfoTypeForString('FEATURE_FOREST_YOUNG')
-		self.FEATURE_FOREST = GC.getFEATURE_FOREST()
+		self.FEATURE_FOREST = GC.getInfoTypeForString('FEATURE_FOREST')
 		self.FEATURE_FOREST_ANCIENT = GC.getInfoTypeForString('FEATURE_FOREST_ANCIENT')
-		self.FEATURE_JUNGLE = GC.getFEATURE_JUNGLE()
+		self.FEATURE_JUNGLE = GC.getInfoTypeForString('FEATURE_JUNGLE')
 		self.FEATURE_BAMBOO = GC.getInfoTypeForString('FEATURE_BAMBOO')
 
 	def onGameStart(self, argsList): self.cache()
@@ -33,7 +33,7 @@ class WoodlandCycle:
 			if plot.isWater() or plot.isPeak(): continue
 			plots.append(plot)
 		self.iMaxIndex = len(plots)
-		self.iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		self.iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 
 	# Called at the beginning of the end of each turn
 	def onBeginGameTurn(self, argsList):
@@ -140,7 +140,7 @@ class WoodlandCycle:
 
 				for CyUnit in plot.units():
 					if CyUnit.canFight():
-						iHP = CyUnit.currHitPoints()
+						iHP = CyUnit.getHP()
 						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")
 						if iHP > iDamage:
 							CyUnit.changeDamage(iDamage, -1)

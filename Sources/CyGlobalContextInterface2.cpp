@@ -1,5 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CyGlobalContext.h"
+#include "CvImprovementInfo.h"
+#include "CvInfos.h"
 
 //
 // published python interface for CyGlobalContext
@@ -33,8 +35,6 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		.def("setDefineINT", &CyGlobalContext::setDefineINT, "void ( string szName, int iValue )" )
 		.def("setDefineFLOAT", &CyGlobalContext::setDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )" )
 		.def("setNoUpdateDefineFLOAT", &CyGlobalContext::setNoUpdateDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )" )
-
-		.def("getNUM_BUILDING_PREREQ_OR_BONUSES", &CyGlobalContext::getNUM_BUILDING_PREREQ_OR_BONUSES, "int ()")
 
 		.def("getMAX_PC_PLAYERS", &CyGlobalContext::getMAX_PC_PLAYERS, "int ()")
 		.def("getMAX_PLAYERS", &CyGlobalContext::getMAX_PLAYERS, "int ()")

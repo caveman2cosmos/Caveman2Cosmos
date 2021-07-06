@@ -238,7 +238,7 @@ void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 		if (iChangePercent)
 		{
 			const int iPropChange = (iChange * iChangePercent) / 100;
-			m_pGameObject->foreach((GameObjectTypes)iI, bst::bind(callChangeValueByProperty, _1, eProp, iPropChange));
+			m_pGameObject->foreach((GameObjectTypes)iI, bind(callChangeValueByProperty, _1, eProp, iPropChange));
 		}
 	}
 }

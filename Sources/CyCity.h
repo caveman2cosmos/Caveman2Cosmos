@@ -93,7 +93,6 @@ public:
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
 	void setProduction(int iNewValue);
 	void changeProduction(int iChange);
-	int getProductionModifier() const;
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;
 
 	bool canHurry(int /*HurryTypes*/ iHurry, bool bTestVisible) const;
@@ -224,6 +223,7 @@ public:
 	void setFood(int iNewValue);
 	void changeFood(int iChange);
 	int getFoodKept() const;
+	int getMaxProductionOverflow() const;
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
 	int getFeatureProduction() const;
@@ -255,8 +255,6 @@ public:
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
 	void setNeverLost(int iNewValue);
-
-	int getMADIncoming() const;
 
 	bool isBombarded() const;
 	void setBombarded(int iNewValue);

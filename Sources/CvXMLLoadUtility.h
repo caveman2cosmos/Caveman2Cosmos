@@ -16,9 +16,9 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
+#include "CvGlobals.h"
 #include "FVariableSystem.h"
 
-class CvInternalGlobals;
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
@@ -100,11 +100,6 @@ public:
 	static int GetNumProgressSteps();
 	void RegisterProgressCB(ProgressCB cbFxn) { m_pCBFxn = cbFxn; }
 
-	// moves the current xml node from where it is now to the next non-comment node, returns false if it can't find one
-	// CHANGE 2013-10-15 (n47): now stored node is always an XML element, so it can't be a comment, thus we do not really need this method
-	// Change 2013-11-24 (alberts2): removed all references
-	bool SkipToNextVal() {return true;}
-
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	// TODO 2013-11-21 (alberts2): check if this can be done with xerxes or remove all references.
@@ -157,23 +152,6 @@ public:
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetChildXmlValByName(bool* pbVal, const wchar_t* szName, bool bDefault = false)	{ return GetChildXmlValByName<bool> (pbVal, szName, bDefault); }
-
-	
-	bool GetChildXmlValByName(std::string& pszVal, const char* szName, char* pszDefault = NULL)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(std::string& pszVal, const char* szName, char* pszDefault = NULL)");	FAssert(false); return false; }
-	bool GetChildXmlValByName(std::wstring& pszVal, const char* szName, wchar_t* pszDefault = NULL)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(std::wstring& pszVal, const char* szName, wchar* pszDefault = NULL)");	FAssert(false); return false; }
-	bool GetChildXmlValByName(char* pszVal, const char* szName, char* pszDefault = NULL) // TO DO - unsafe
-	{ OutputDebugString("Call: GetChildXmlValByName(char* pszVal, const char* szName, char* pszDefault = NULL)");				FAssert(false); return false; }
-	bool GetChildXmlValByName(wchar_t* pszVal, const char* szName, wchar_t* pszDefault = NULL) // TO DO - unsafe
-	{ OutputDebugString("Call: bool GetChildXmlValByName(wchar* pszVal, const char* szName, wchar* pszDefault = NULL)");		FAssert(false); return false; }
-	bool GetChildXmlValByName(int* piVal, const char* szName, int iDefault = 0)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(int* piVal, const char* szName, int iDefault = 0)");					FAssert(false); return false; }
-	bool GetChildXmlValByName(float* pfVal, const char* szName, float fDefault = 0.0f)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(float* pfVal, const char* szName, float fDefault = 0.0f)");			FAssert(false); return false; }
-	bool GetChildXmlValByName(bool* pbVal, const char* szName, bool bDefault = false)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(bool* pbVal, const char* szName, bool bDefault = false)");				FAssert(false); return false; }
-
 
 	template<typename T>
 	bool GetXmlVal(T* pVal, T pDefault)
@@ -530,8 +508,6 @@ public:
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
 
-	// Change 2013-11-21 (alberts2): we don't use this anymore use GetInfoClass(const TCHAR* pszVal)!
-	static int FindInfoClass(const TCHAR* pszVal, bool hideAssert = false);
 	//Searches the InfoClass for the pszVal and returns the location if a match
 	//				is found.
 	static int GetInfoClass(const TCHAR* pszVal);
@@ -609,10 +585,6 @@ public:
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
-
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
-
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template <class T>
 	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
@@ -713,8 +685,8 @@ public:
 				{
 					for (int j = 0; j < iNumSibs; j++)
 					{
-						T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && find(aInfos->begin(), aInfos->end(), value) == aInfos->end())
+						const T value = static_cast<T>(GetInfoClass(szTextVal));
+						if (value > -1  && !algo::contains(*aInfos, value))
 						{
 							aInfos->push_back(value);
 						}
@@ -736,9 +708,6 @@ public:
 
 	// create a hot key from a description
 	CvWString CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift = false, bool bAlt = false, bool bCtrl = false);
-
-	// set the variable to a default and load it from the xml if there are any children
-	bool SetAndLoadVar(int** ppiVar, int iDefault=0);
 
 	// function that sets the number of strings in a list, initializes the string to the correct length, and fills it from the
 	// current xml file, it assumes that the current node is the parent node of the string list children

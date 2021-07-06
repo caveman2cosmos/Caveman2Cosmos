@@ -78,9 +78,6 @@ void CyGamePythonInterface()
 		.def("isModem", &CyGame::isModem, "bool () - Using a modem? ")
 		.def("setModem", &CyGame::setModem, "void (bool bModem) - Use a modem! (or don't)")
 
-		.def("reviveActivePlayer", &CyGame::reviveActivePlayer, "void ()")
-		.def("revivePlayer", &CyGame::revivePlayer, "void ()")
-
 		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
 		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
 		.def("getTurnYear", &CyGame::getTurnYear, "int (iGameTurn) - turn Time")
@@ -130,9 +127,6 @@ void CyGamePythonInterface()
 		.def("getInitLand", &CyGame::getInitLand)
 		.def("getInitTech", &CyGame::getInitTech)
 		.def("getInitWonders", &CyGame::getInitWonders)
-
-		.def("getLastNukeStrikePlot", &CyGame::getLastNukeStrikePlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setLastNukeStrikePlot", &CyGame::setLastNukeStrikePlot, "void (CyPlot* pPlot)")
 
 		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
 		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
@@ -291,7 +285,6 @@ void CyGamePythonInterface()
 		.def("getDiplomaticVictoryAchieved", &CyGame::getDiplomaticVictoryAchieved, "bool ()")
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
-		.def("cheatCodesEnabled", &CyGame::cheatCodesEnabled)
 		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")

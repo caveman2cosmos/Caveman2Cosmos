@@ -33,8 +33,10 @@ struct plotInfo
 	int index;
 	bool worked;
 	bool owned;
+	bool bonusImproved;
 	int yieldValue;
 	short yields[NUM_YIELD_TYPES];
+	BonusTypes currentBonus;
 	ImprovementTypes currentImprovement;
 	FeatureTypes currentFeature;
 	BuildTypes currentBuild;
@@ -84,7 +86,7 @@ struct PlotTeamVisibilityIntensity
 struct FreePromoTypes
 {	
 	PromotionTypes ePromotion;
-	BoolExpr* m_pExprFreePromotionCondition;
+	const BoolExpr* m_pExprFreePromotionCondition;
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
@@ -154,12 +156,12 @@ struct DomainModifier
 	operator int() const {return (int)eDomain;}
 	bool operator< (const DomainModifier& rhs) const {return (int)eDomain < (int)rhs.eDomain;}
 };
-struct TechModifier
+struct TechModifier2
 {	
 	TechTypes eTech;
 	int iModifier;
 	operator int() const {return (int)eTech;}
-	bool operator< (const TechModifier& rhs) const {return (int)eTech < (int)rhs.eTech;}
+	bool operator< (const TechModifier2& rhs) const {return (int)eTech < (int)rhs.eTech;}
 };
 struct BuildingModifier
 {	
@@ -221,6 +223,13 @@ struct GroupSpawnUnitCombat
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const GroupSpawnUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
+struct ImprovementBuildTypes
+{
+	BuildTypes eBuildType;
+	operator int() const { return eBuildType; }
+	bool operator< (const ImprovementBuildTypes& rhs) const { return (int)eBuildType < (int)rhs.eBuildType; }
+};
+
 struct InvisibleTerrainChanges
 {	
 	InvisibleTypes eInvisible;

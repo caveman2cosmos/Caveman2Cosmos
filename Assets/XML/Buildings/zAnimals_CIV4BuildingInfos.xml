@@ -23,7 +23,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_STORIES_REQUIRE</Type>
@@ -35,7 +35,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
@@ -10201,10 +10201,8 @@
 			</PrereqNotInCityBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PLATYPUS_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MONOTREMES_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13701,7 +13699,7 @@
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
@@ -15122,24 +15120,15 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIG_HERD</Type>
@@ -15177,11 +15166,11 @@
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POULTRY</FreeBonus>
+					<FreeBonus>BONUS_EGGS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EGGS</FreeBonus>
+					<FreeBonus>BONUS_POULTRY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -15235,17 +15224,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATITE_HERD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RATITE_HERD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -15253,7 +15240,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -15453,15 +15440,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALRUS_CAGE</Type>
@@ -15498,15 +15476,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEEP_HERD</Type>
@@ -26947,10 +26916,8 @@
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>

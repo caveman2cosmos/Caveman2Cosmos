@@ -60,7 +60,7 @@ class CvUnVictoryScreen:
 
 	def interfaceScreen (self):
 	
-		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
+		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper() + u"</font>"
 
 		self.iActiveLeader = CyGame().getActivePlayer()
 		

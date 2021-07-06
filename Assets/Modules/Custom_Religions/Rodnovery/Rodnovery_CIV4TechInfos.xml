@@ -29,9 +29,6 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RODNOVERA_QUOTE</Quote>
 			<Sound>AS2D_TECH_RODNOVERA</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>

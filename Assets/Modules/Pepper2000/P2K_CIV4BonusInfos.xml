@@ -64,6 +64,7 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ABANDONED_MEGASTRUCTURE</Type>
@@ -108,6 +109,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_EXOTIC_LIFEFORMS</Type>
@@ -148,6 +150,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_EXTRATERRESTRIAL_MICROBES</Type>
@@ -216,6 +219,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_BLUEBERRIES</Type>
@@ -272,6 +276,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_METALLIC_ASTEROID</Type>
@@ -337,6 +342,7 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ORGANIC_VOLATILES</Type>
@@ -401,6 +407,7 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XENOFAUNA</Type>
@@ -465,6 +472,7 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XENOFLORA</Type>
@@ -529,6 +537,7 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARBON_DIOXIDE_ICE</Type>
@@ -558,6 +567,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HELIUM3</Type>
@@ -597,6 +607,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUANTONIUM_CRYSTAL</Type>
@@ -630,6 +641,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRON_ORE</Type>

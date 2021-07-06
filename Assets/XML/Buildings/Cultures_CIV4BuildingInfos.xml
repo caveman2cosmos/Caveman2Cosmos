@@ -1195,7 +1195,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<iCost>800</iCost>
+			<iCost>3480</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2362,7 +2362,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2507,7 +2519,19 @@
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2662,7 +2686,19 @@
 			<RawVicinityBonus>BONUS_PUMPKIN</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3192,7 +3228,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3228,7 +3276,19 @@
 			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3306,7 +3366,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -3324,7 +3384,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3379,7 +3439,19 @@
 			<RawVicinityBonus>BONUS_APPLE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3636,7 +3708,19 @@
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3770,7 +3854,19 @@
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4011,7 +4107,19 @@
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4391,7 +4499,19 @@
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4508,7 +4628,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>1104</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4669,7 +4789,19 @@
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4821,7 +4953,19 @@
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -5188,7 +5332,19 @@
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -5851,7 +6007,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6127,7 +6283,90 @@
 			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_STONE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_CAVES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM4</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -6252,7 +6491,19 @@
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6847,7 +7098,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>3480</iCost>
+			<iCost>1104</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7055,7 +7306,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -7131,11 +7394,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -7379,7 +7650,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7659,7 +7930,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -7769,7 +8052,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -7781,7 +8064,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>708</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7921,7 +8204,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8599,7 +8882,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>4260</iCost>
+			<iCost>4440</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8633,7 +8916,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -8907,7 +9202,19 @@
 			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -9421,7 +9728,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10010,7 +10317,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11901,7 +12208,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13048,7 +13355,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>834</iCost>
+			<iCost>792</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14257,7 +14564,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>836</iCost>
+			<iCost>876</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

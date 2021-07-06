@@ -96,7 +96,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	# define known terrains
 	etOcean		= GC.getInfoTypeForString('TERRAIN_OCEAN')
 	etCoast		= GC.getInfoTypeForString('TERRAIN_COAST')
-	etDesert	= GC.getTERRAIN_DESERT()	# FlatArid, RockyArid
+	etDesert	= GC.getInfoTypeForString('TERRAIN_DESERT')	# FlatArid, RockyArid
 	etPlains	= GC.getInfoTypeForString('TERRAIN_PLAINS')	# FlatMoist, RockyMoist
 	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASSLAND')	# FlatRainy, RockyRainy
 	etTundra	= GC.getInfoTypeForString('TERRAIN_TAIGA')	# RockyMoist, FlatPolar
@@ -110,8 +110,8 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 
 	# define known features
 	efIce			= GC.getInfoTypeForString('FEATURE_ICE')
-	efForest		= GC.getFEATURE_FOREST()
-	efJungle		= GC.getFEATURE_JUNGLE()
+	efForest		= GC.getInfoTypeForString('FEATURE_FOREST')
+	efJungle		= GC.getInfoTypeForString('FEATURE_JUNGLE')
 	efKelp			= GC.getInfoTypeForString('FEATURE_KELP') # coast
 
 	################################
@@ -940,7 +940,6 @@ def getTerrainPercentage( eTerrain, bPercent=True ):
 # area = MAP.getArea( areaID )
 # area = MAP.findBiggestArea( bWater )
 # bTest = plot.isAdjacentToArea( area )
-# areaList = CvMapGeneratorUtil.getAreas()
 ################################################################################
 
 # get region from area
@@ -1089,7 +1088,7 @@ def getContinentDistance(areaID, otherAreaID=None):
 def getBigAreas( iTop, bCoord=True, noGoAreaPlots=None, iMinPlots=30 ):
 	CyMap().recalculateAreas()
 	continentArea = []
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = GC.getMap().areas()
 	if not (noGoAreaPlots == None):
 		if len( noGoAreaPlots ) == 0:
 			noGoAreaPlotList = []
@@ -2096,7 +2095,7 @@ class MapRegions:
 
 		# get continents and islands
 		MAP.recalculateAreas()
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		isleList = []
 
 		# make Lost Isle
@@ -3483,7 +3482,7 @@ class BonusBalancer:
 		# make lists of relevant areas
 		minContinentPlots = 12
 		MAP.recalculateAreas()
-		self.areas = CvMapGeneratorUtil.getAreas()
+		self.areas = GC.getMap().areas()
 		self.continentArea = []
 		self.startArea = []
 		for area in self.areas:
@@ -4212,7 +4211,7 @@ class RiverMaker:
 		print "[MST] ===== RiverMaker:islandRivers()"
 		sprint = ""
 		chNoHills = 66
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		cnt = 0
 		for area in areas:
 			if areaID != None:
@@ -4286,7 +4285,7 @@ class RiverMaker:
 			print "[MST] ===== RiverMaker:buildRiversFromLake()"
 			# build rivers from all lakes
 			MAP.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = GC.getMap().areas()
 			for area in areas:
 				if area.isLake():
 					iAreaID = area.getID()
@@ -4924,7 +4923,6 @@ class MapPrint:
 	__mapText      = ""
 	__mapLegend    = ""
 	__diffMaps     = {}
-	manaDict       = {}				# for mana boni; for use by 'CrystallMana' module or 'WildMana' mod
 
 	# initialize dictionaries
 	def initialize( self ):
@@ -5237,7 +5235,7 @@ class MapPrint:
 		self.__mapRegion = [x0, x1, y0, y1]
 
 		# get all areas
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		aList = [ (area.getNumTiles(), area.getID(), area.isWater()) for area in areaList ]
 		aList.sort()
 		aList.reverse()
@@ -5956,7 +5954,7 @@ class MapStats:
 			sprint += "[MST] ####################################################################### MapScriptTools:MapStats ### \n\n"
 		elif txt	!= "":
 			sprint += "[MST] " + txt + "\n\n"
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		areaValue = {}
 		sprint += "[MST] Continent Areas \n"
 		sprint += "[MST] --------------- \n"
@@ -6120,18 +6118,7 @@ class MapStats:
 
 	# get technology prerequisites
 	def getTechPrereqLists( self, iTech ):
-		andTech = []
-		orTech = []
-		if iTech in range( GC.getNumTechInfos() ):
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqAndTechs(i) in range( GC.getNumTechInfos() ):
-				andTech.append( GC.getTechInfo(iTech).getPrereqAndTechs(i) )
-				i += 1
-			i = 0
-			while GC.getTechInfo(iTech).getPrereqOrTechs(i) in range( GC.getNumTechInfos() ):
-				orTech.append( GC.getTechInfo(iTech).getPrereqOrTechs(i) )
-				i += 1
-		return andTech, orTech
+		return GC.getTechInfo(iTech).getPrereqAndTechs(), GC.getTechInfo(iTech).getPrereqOrTechs()
 
 	# get technology level
 	def getTechLevel( self, iTech ):

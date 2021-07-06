@@ -109,9 +109,9 @@ class CvInfoScreen:
 
 		sTemp1 = [
 			TRNSLTR.getText("TXT_KEY_GAME_SCORE", ()),
-			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ()),
-			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ()),
-			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ()),
+			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY", ()),
+			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY", ()),
+			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE", ()),
 			TRNSLTR.getText("TXT_KEY_POWER", ()),
 			TRNSLTR.getText("TXT_WORD_CULTURE", ()),
 			TRNSLTR.getText("TXT_WORD_ESPIONAGE", ()),
@@ -176,7 +176,7 @@ class CvInfoScreen:
 		screen.addPanel("Info_TopPanel", "", "", True, False, 0, -2, xRes, 40, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("Info_BotPanel", "", "", True, False, 0, yRes - H_BOT_PANEL, xRes, H_BOT_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("Info_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_INFO_SCREEN",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("Info_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("Info_Exit", "", uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Add tab control
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ())
@@ -194,7 +194,7 @@ class CvInfoScreen:
 		screen.setText("VS_Tab_Act1", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
 		screen.hide("VS_Tab_Act1")
 
-		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", ())
+		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iYellow)
 		x += dX
 		screen.setText("VS_Tab2", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
@@ -209,7 +209,8 @@ class CvInfoScreen:
 		screen.hide("VS_Tab_Act3")
 
 		# Debug DropDown
-		if self.bDebug:
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			DD = "Info_DebugDD"
 			screen.addDropDownBoxGFC(DD, 8, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
@@ -346,13 +347,8 @@ class CvInfoScreen:
 
 	def computeHistory(self, scoreType, iPlayer, iTurn):
 
-		iScore = GC.getPlayer(iPlayer).getScoreHistory(iTurn)
-
-		if iScore == 0: # for some reason only the score is 0 when you're dead..?
-			return 0
-
 		if scoreType == 0:
-			return iScore
+			return GC.getPlayer(iPlayer).getScoreHistory(iTurn)
 
 		if scoreType == 1:
 			return GC.getPlayer(iPlayer).getEconomyHistory(iTurn)
@@ -380,7 +376,7 @@ class CvInfoScreen:
 		year = GAME.getTurnYear(turn)
 		if year < 0:
 			return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
-		else: return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
+		return self.aFontList[4] + TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 
 	def drawGraphs(self):
@@ -777,30 +773,30 @@ class CvInfoScreen:
 		self.demographicsTable = table = "DemographicsTable"
 		screen.addTableControlGFC(table, 6, 45, 80, 934, 600, True, True, 32,32, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader(table, 0, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ()), 224) # Total graph width is 430
-		screen.setTableColumnHeader(table, 1, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_VALUE_TEXT", ()), 155)
+		screen.setTableColumnHeader(table, 1, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_VALUE", ()), 155)
 		screen.setTableColumnHeader(table, 2, TRNSLTR.getText("TXT_KEY_INFO_RIVAL_BEST", ()), 155)
 		screen.setTableColumnHeader(table, 3, TRNSLTR.getText("TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE", ()), 155)
 		screen.setTableColumnHeader(table, 4, TRNSLTR.getText("TXT_KEY_INFO_RIVAL_WORST", ()), 155)
-		screen.setTableColumnHeader(table, 5, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_RANK_TEXT", ()), 90)
+		screen.setTableColumnHeader(table, 5, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_RANK", ()), 90)
 
 		for i in xrange(23): # 18 normal items + 5 lines for spacing
 			screen.appendTableRow(table)
 
 		charBullet = u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)
-		screen.setTableText(table, 0, 0, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 0, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 1, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 3, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 3, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 4, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 6, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 6, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 7, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 9, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 11, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 9, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_MILITARY", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 11, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 12, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 14, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 16, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 18, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 14, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 16, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 18, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 19, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 21, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 21, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS", ()), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 0, 22, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
 
 		screen.setTableText(table, 1, 0, str(iEconomy), "", eWidGen, 1, 2, 1<<0)

@@ -42,11 +42,6 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -100,11 +95,6 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -143,7 +133,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>74</iCost>
+			<iCost>80</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -160,11 +150,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -206,7 +191,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -246,12 +231,12 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -286,7 +271,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -326,12 +311,12 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -366,12 +351,12 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 			</PrereqInCityBuildings>
@@ -433,11 +418,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -458,7 +438,7 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>55</iCost>
+			<iCost>80</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -469,22 +449,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -511,7 +481,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -548,12 +518,12 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -585,7 +555,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -622,12 +592,12 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -659,12 +629,12 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqVicinityBonuses>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -699,7 +669,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -739,7 +709,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -779,7 +749,7 @@
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -816,7 +786,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -853,7 +823,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -890,7 +860,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
-			<iCost>28</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>

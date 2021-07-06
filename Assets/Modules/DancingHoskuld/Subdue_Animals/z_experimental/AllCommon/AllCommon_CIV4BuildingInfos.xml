@@ -57,6 +57,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -93,6 +94,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -212,6 +214,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -248,6 +251,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -349,13 +353,11 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUG_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TARANTULA_MYTH_EFFECT</BuildingType>
-			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_MYTH_EFFECT</Type>
@@ -370,6 +372,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -406,6 +409,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BUG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -525,6 +529,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISH_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FISH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -561,6 +566,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISH_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FISH_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -758,6 +764,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -794,6 +801,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -913,6 +921,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OWL_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OWL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -949,6 +958,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OWL_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OWL_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1074,6 +1084,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PENGUIN_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1110,6 +1121,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PENGUIN_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1237,6 +1249,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAPTOR_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1273,6 +1286,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAPTOR_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1392,6 +1406,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1428,6 +1443,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1547,6 +1563,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODENT_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1583,6 +1600,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RODENT_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1702,6 +1720,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_BIRD_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1738,6 +1757,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_BIRD_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1869,6 +1889,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_STORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WOLF_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1905,6 +1926,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_STORIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_STORIES</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WOLF_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>

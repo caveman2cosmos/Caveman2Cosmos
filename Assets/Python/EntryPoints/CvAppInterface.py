@@ -59,10 +59,8 @@ def preGameStart():
 	CvScreensInterface.showMainInterface()
 
 def recalculateModifiers():
-	import BugGameUtils
-	BugGameUtils.getDispatcher().getBaseUtils().reset()
-	#import CvEventInterface
-	#CvEventInterface.getEventManager().reset()
+	import CvRandomEventInterface
+	CvRandomEventInterface.recalculateModifiers()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO

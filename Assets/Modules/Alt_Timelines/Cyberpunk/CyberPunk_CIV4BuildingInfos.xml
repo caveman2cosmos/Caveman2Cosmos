@@ -10,12 +10,11 @@
 			<Type>BUILDING_CYBERPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -33,12 +32,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DREAM_SIMULATION_CENTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_SIMULATION_CENTER</ArtDefineTag>
-			<!-- RevolutionDCM End -->
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -47,9 +45,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-15</iHealth>
 			<iHappiness>-5</iHappiness>
-			<!-- RevolutionDCM Building Effects -->
 			<iRevIdxLocal>25</iRevIdxLocal>
-			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -62,7 +58,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -74,12 +70,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DREAM_ARTIST</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DREAM_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_ARTIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_ARTIST</ArtDefineTag>
-			<!-- RevolutionDCM End -->
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -87,7 +82,6 @@
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>5</iHappiness>
-			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -104,23 +98,21 @@
 				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBER_INSECT_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CYBER_INSECT_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYBER_INSECT_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBER_INSECT_LAB</ArtDefineTag>
-			<!-- RevolutionDCM End -->
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CYBERPUNK</Bonus>
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -132,58 +124,19 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FLASH_MEMORY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INSECT_MANIPULATION_LAB</ArtDefineTag>
-			<!-- RevolutionDCM End -->
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -198,7 +151,6 @@
 					<iHeal>20</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -206,20 +158,19 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqOrBuildings>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CYBER_INSECT_LAB</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DREAM_PROPAGANDA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DREAM_PROPAGANDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_PROPAGANDA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DREAM_PROPAGANDA</ArtDefineTag>
-			<!-- RevolutionDCM End -->
-			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -229,7 +180,6 @@
 			<iCost>5455</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>-3</iHappiness>
-			<!-- RevolutionDCM End -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
@@ -241,7 +191,7 @@
 				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
