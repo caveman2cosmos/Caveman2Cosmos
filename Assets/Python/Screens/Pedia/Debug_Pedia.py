@@ -380,6 +380,30 @@ class Debug:
 					BuildingTechLocList.append(BuildingEmpireReqTechLoc)
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				print CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc)
+	
+	#Building - Civic requirements
+	def checkBuildingCivicRequirements(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			
+			#<PrereqAndCivics> - require all civics in list
+			BuildingAndCivicTechLocList = []
+			for iCivic in xrange(GC.getNumCivicInfos()):
+				if CvBuildingInfo.isPrereqAndCivics(iCivic):
+					BuildingAndCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					BuildingAndCivicTechLocList.append(BuildingAndCivicTechLoc)
+			if len(BuildingAndCivicTechLocList) > 0 and max(BuildingAndCivicTechLocList) > iTechLoc and iTechLoc > 0:
+				print CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(BuildingAndCivicTechLocList)+" "+str(iTechLoc)
+				
+			#<PrereqOrCivics> - require one civics in list
+			BuildingOrCivicTechLocList = []
+			for iCivic in xrange(GC.getNumCivicInfos()):
+				if CvBuildingInfo.isPrereqOrCivics(iCivic):
+					BuildingOrCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					BuildingOrCivicTechLocList.append(BuildingOrCivicTechLoc)
+			if len(BuildingOrCivicTechLocList) > 0 and min(BuildingOrCivicTechLocList) > iTechLoc and iTechLoc > 0:
+				print CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(BuildingOrCivicTechLocList)+" "+str(iTechLoc)
 			
 	#Building obsoletion of requirements
 	def checkBuildingRequirementObsoletion(self):

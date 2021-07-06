@@ -965,6 +965,7 @@ class Pedia:
 		#self.debug.checkBuildingTechMods() #Check if various tech modifications aren't earlier than building most advanced tech requirement or later than building obsoletion XGrid
 		#self.debug.checkBuildingBonusRequirements() #Check if building needs bonus before is available
 		#self.debug.checkBuildingRequirements() #Check if building needs building before is available
+		#self.debug.checkBuildingCivicRequirements() #Check if building needs civics before their availability
 		#self.debug.checkBuildingRequirementObsoletion() #Check if building requirements obsolete before building
 		#self.debug.checkBuildingCommerceDoubleTime() #Check if Commerce Change Double Time is on wonders and not on regular or -1 cost buildings
 		#self.debug.checkBuildingCommerceChangeOriginalOwners() #Check if CommerceChangeOriginalOwners is on buildings with flat commerce changes
