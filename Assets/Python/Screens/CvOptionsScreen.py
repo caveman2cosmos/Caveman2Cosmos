@@ -336,7 +336,7 @@ class CvOptionsScreen:
 		szWidgetName = "GameOptionsResetButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
 		
-		szOptionDesc = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szOptionDesc = localText.getText("TXT_WORD_EXIT", ())
 		szCallbackFunction = "handleExitButtonInput"
 		szWidgetName = "GameOptionsExitButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
@@ -513,7 +513,7 @@ class CvOptionsScreen:
 		szWidgetName = "GraphicOptionsResetButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
 		
-		szOptionDesc = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szOptionDesc = localText.getText("TXT_WORD_EXIT", ())
 		szCallbackFunction = "handleExitButtonInput"
 		szWidgetName = "GraphicOptionsExitButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
@@ -754,7 +754,7 @@ class CvOptionsScreen:
 		szWidgetName = "AudioOptionsResetButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
 		
-		szOptionDesc = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szOptionDesc = localText.getText("TXT_WORD_EXIT", ())
 		szCallbackFunction = "handleExitButtonInput"
 		szWidgetName = "AudioOptionsExitButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
@@ -940,7 +940,7 @@ class CvOptionsScreen:
 		szWidgetName = "OtherOptionsResetButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)
 		
-		szOptionDesc = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szOptionDesc = localText.getText("TXT_WORD_EXIT", ())
 		szCallbackFunction = "handleExitButtonInput"
 		szWidgetName = "OtherOptionsExitButton"
 		tab.attachButton("LowerHBox", szWidgetName, szOptionDesc, self.callbackIFace, szCallbackFunction, szWidgetName)

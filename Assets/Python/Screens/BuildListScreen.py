@@ -65,7 +65,7 @@ class BuildListScreen:
 
 
     # set the standard "exit" text
-    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>", 1<<0, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
+    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper() + u"</font>", 1<<0, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
 
     # set the text button to add a list
     screen.setText("BuildListAddButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_ADD", ()).upper() + u"</font>", 1<<0, iAddButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)

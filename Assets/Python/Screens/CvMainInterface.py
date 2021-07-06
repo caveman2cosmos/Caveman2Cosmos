@@ -5381,11 +5381,9 @@ class CvMainInterface:
 
 			elif BASE == "MMB":
 				if TYPE == "ScoreToggle":
-					szTxt = TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_SCORE", ())
-					self.updateTooltip(screen, szTxt)
+					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_SCORE", ()))
 				elif TYPE == "BareMap":
-					szTxt = TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP", ())
-					self.updateTooltip(screen, szTxt)
+					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP", ()))
 
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)
@@ -5414,11 +5412,13 @@ class CvMainInterface:
 				self.updateTooltip(screen, szTxt)
 
 			elif NAME == "BuildListBtn":
-				szTxt = TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ())
-				self.updateTooltip(screen, szTxt)
+				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ()))
 
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
+
+			elif NAME == "DebugBtn":
+				self.updateTooltip(screen, "Debug screen")
 
 		elif not iCode: # click
 			if BASE == "WID":
@@ -5767,6 +5767,9 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
+
+			elif NAME == "DebugBtn":
+				UP.showDebugScreen()
 
 			elif NAME == "GreatPersonBar":
 				# Zoom to next GP city

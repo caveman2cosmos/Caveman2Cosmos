@@ -90,7 +90,7 @@ class CvReplayScreen:
 		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
+		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper() + u"</font>"
 		self.PLAY_TEXT = u"<font=4>" + localText.getText("TXT_KEY_REPLAY_SCREEN_PLAY", ()).upper() + u"</font>"
 		self.FORWARD_TEXT = u"<font=4>" + localText.getText("TXT_KEY_REPLAY_SCREEN_NEXT", ()).upper() + u"</font>"
 		self.STOP_TEXT = u"<font=4>" + localText.getText("TXT_KEY_REPLAY_SCREEN_STOP", ()).upper() + u"</font>"

@@ -823,7 +823,7 @@ class RevolutionWatchAdvisor:
 		#screen.addDDSGFC( self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("SCREEN_BG").getPath(), 0, 29, 1024, 592, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Text Buttons
-		screen.setText(self.EXIT_NAME, "Background", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(), 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText(self.EXIT_NAME, "Background", localText.getText("TXT_WORD_EXIT", ()).upper(), 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		x = self.X_SPECIAL + self.PAGES_DD_W + 10
 

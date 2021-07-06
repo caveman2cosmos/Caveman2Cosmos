@@ -128,7 +128,7 @@ class CvCivicsScreen:
 
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (self.CyPlayer.getCivicUpkeep(True), ))
 		screen.setLabel("", "", szTxt, 1<<2, xMid, 2, 0, eFontTitle, eWidGen, 1, 1)
-		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		szTxt = uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		screen.setText("CivicExit", "", szTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		szTxt = aFontList[1] + TRNSLTR.getText("TXT_KEY_SCREEN_CANCEL", ())
