@@ -881,12 +881,8 @@ class Pedia:
 			szPromoName = CvPromotionInfo.getDescription()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
 
-			if CvPromotionInfo.getTechPrereq() != -1:
-				iTechLoc = GC.getTechInfo(TechReq).getGridX()
-				iTechRow = GC.getTechInfo(TechReq).getGridY()
-			else:
-				iTechLoc = 0
-				iTechRow = 0
+			iTechLoc = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[0]
+			iTechRow = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[1]
 
 			if iType == iPromotionType:
 				ListDict[(iTechLoc, iTechRow, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)

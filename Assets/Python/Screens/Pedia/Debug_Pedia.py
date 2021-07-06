@@ -124,6 +124,19 @@ class Debug:
 			
 		return iTechLoc, iTechRow
 		
+	#Promotion tech location
+	def checkPromotionTechRequirementLocation(self, CvPromotionInfo):
+		#Promotions have one tech requirement.
+		TechReq = CvPromotionInfo.getTechPrereq()
+		if TechReq != -1:
+			iTechLoc = GC.getTechInfo(TechReq).getGridX()
+			iTechRow = GC.getTechInfo(TechReq).getGridY()
+		else:
+			iTechLoc = 0
+			iTechRow = 0
+			
+		return iTechLoc, iTechRow
+	
 	#Building bonus requirements
 	def checkBonusRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
