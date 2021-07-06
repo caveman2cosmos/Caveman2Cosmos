@@ -174,7 +174,7 @@ class Debug:
 		return iTechLoc, iTechRow
 		
 	#Civic tech location
-	def checkCivicTechRequirementLocation(self, CvCivicnfo):
+	def checkCivicTechRequirementLocation(self, CvCivicInfo):
 		#Civics have one tech requirement.
 		TechReq = CvCivicInfo.getTechPrereq()
 		if TechReq != -1:
