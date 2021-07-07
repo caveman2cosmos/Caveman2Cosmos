@@ -90,6 +90,9 @@ CvImprovementInfo::~CvImprovementInfo()
 	SAFE_DELETE_ARRAY2(m_ppiTechYieldChanges, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppiRouteYieldChanges, GC.getNumRouteInfos());
 	//	SAFE_DELETE_ARRAY2(m_ppiTraitYieldChanges, GC.getNumTraitInfos());
+	GC.removeDelayedResolution((int*)&m_iImprovementPillage);
+	GC.removeDelayedResolution((int*)&m_iImprovementUpgrade);
+	GC.removeDelayedResolution((int*)&m_iBonusChange);
 	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
 	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
 	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
@@ -143,16 +146,6 @@ int CvImprovementInfo::getPillageGold() const
 bool CvImprovementInfo::isOutsideBorders() const
 {
 	return m_bOutsideBorders;
-}
-
-int CvImprovementInfo::getImprovementPillage() const
-{
-	return m_iImprovementPillage;
-}
-
-int CvImprovementInfo::getImprovementUpgrade() const
-{
-	return m_iImprovementUpgrade;
 }
 
 BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
@@ -427,13 +420,12 @@ const TCHAR* CvImprovementInfo::getButton() const
 	/*																							  */
 	/* Catch non-existing tag																	   */
 	/************************************************************************************************/
-	CvString cDefault = CvString::format("").GetCString();
+	const CvString cDefault = CvString::format("").GetCString();
 	if (getArtDefineTag() == cDefault)
 	{
 		return NULL;
 	}
-	const CvArtInfoImprovement* pImprovementArtInfo;
-	pImprovementArtInfo = getArtInfo();
+	const CvArtInfoImprovement* pImprovementArtInfo = getArtInfo();
 	if (pImprovementArtInfo != NULL)
 	{
 		return pImprovementArtInfo->getButton();
@@ -490,15 +482,6 @@ int CvImprovementInfo::getPrereqTech() const
 //	return m_ppiTraitYieldChanges ? m_ppiTraitYieldChanges[i] : NULL;
 //}
 
-
-//TB Improvements
-//Object Indexes
-int CvImprovementInfo::getBonusChange() const
-{
-	return m_iBonusChange;
-}
-
-//booleans
 bool CvImprovementInfo::isCanMoveSeaUnits() const
 {
 	return m_bCanMoveSeaUnits;
@@ -586,7 +569,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	return m_iHighestCost;
 //}
 
-void CvImprovementInfo::getCheckSum(unsigned int& iSum) const
+void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
 
@@ -688,7 +671,6 @@ void CvImprovementInfo::getCheckSum(unsigned int& iSum) const
 
 bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -944,35 +926,16 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 	m_PropertyManipulators.read(pXML);
 
-	//TB Improvements
-	//booleans
 	pXML->GetOptionalChildXmlValByName(&m_bCanMoveSeaUnits, L"bCanMoveSeaUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bChangeRemove, L"bChangeRemove");
 	pXML->GetOptionalChildXmlValByName(&m_bNotOnAnyBonus, L"bNotOnAnyBonus");
 	pXML->GetOptionalChildXmlValByName(&m_bNational, L"bNational");
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iImprovementPillage, L"ImprovementPillage");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iImprovementUpgrade, L"ImprovementUpgrade");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iBonusChange, L"BonusChange");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiAlternativeImprovementUpgradeTypes, L"AlternativeImprovementUpgradeTypes");
 	pXML->SetOptionalVector(&m_aiFeatureChangeTypes, L"FeatureChangeTypes");
-
-	return true;
-}
-
-bool CvImprovementInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementPillage");
-	m_iImprovementPillage = GC.getInfoTypeForString(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ImprovementUpgrade");
-	m_iImprovementUpgrade = GC.getInfoTypeForString(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusChange");
-	m_iBonusChange = GC.getInfoTypeForString(szTextVal);
 
 	return true;
 }
@@ -1153,9 +1116,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	}
 
 	if (m_iWorldSoundscapeScriptId == iTextDefault) m_iWorldSoundscapeScriptId = pClassInfo->getWorldSoundscapeScriptId();
-	//Readpass2 stuff
-	if (m_iImprovementPillage == iTextDefault) m_iImprovementPillage = pClassInfo->getImprovementPillage();
-	if (m_iImprovementUpgrade == iTextDefault) m_iImprovementUpgrade = pClassInfo->getImprovementUpgrade();
 
 	if (isPeakMakesValid() == bDefault) m_bPeakMakesValid = pClassInfo->isPeakMakesValid();
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
@@ -1200,15 +1160,10 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 		}
 	}
 
+	GC.copyNonDefaultDelayedResolution((int*)&m_iImprovementPillage, (int*)&pClassInfo->m_iImprovementPillage);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iImprovementUpgrade, (int*)&pClassInfo->m_iImprovementUpgrade);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iBonusChange, (int*)&pClassInfo->m_iBonusChange);
+
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
-
-}
-
-void CvImprovementInfo::copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	if (bOver || m_iImprovementPillage == iTextDefault) m_iImprovementPillage = pClassInfo->getImprovementPillage();
-	if (bOver || m_iImprovementUpgrade == iTextDefault) m_iImprovementUpgrade = pClassInfo->getImprovementUpgrade();
-	if (bOver || m_iBonusChange == iTextDefault) m_iBonusChange = pClassInfo->getBonusChange();
 }

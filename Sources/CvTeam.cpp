@@ -7769,7 +7769,7 @@ bool CvTeam::isAnyVassal() const
 
 ImprovementTypes CvTeam::getImprovementUpgrade(ImprovementTypes eImprovement) const
 {
-	const ImprovementTypes eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+	const ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 
 	if (eUpgrade != NO_IMPROVEMENT && GC.getImprovementInfo(eUpgrade).getPrereqTech() != NO_TECH
 	&& !isHasTech((TechTypes)GC.getImprovementInfo(eUpgrade).getPrereqTech()))

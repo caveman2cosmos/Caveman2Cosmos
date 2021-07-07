@@ -870,7 +870,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	shouldHaveType = true;
 	LoadGlobalClassInfo(GC.m_paRouteInfo, "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, &GC.m_RouteInfoReplacements);
 	shouldHaveType = false;
-	LoadGlobalClassInfo(GC.m_paImprovementInfo, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, &GC.m_ImprovementInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paImprovementInfo, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", false, &GC.m_ImprovementInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paUnitCombatInfo, "CIV4UnitCombatInfos", "Units", L"/Civ4UnitCombatInfos/UnitCombatInfos/UnitCombatInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.m_paPromotionLineInfo, "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
@@ -2308,7 +2308,6 @@ bool sortHotkeyPriority(const OrderIndex& orderIndex1, const OrderIndex& orderIn
 
 void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength)
 {
-	int iI;
 	int* piSortedIndex;
 	std::vector<OrderIndex> viOrderPriority;
 
@@ -2316,7 +2315,7 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	piSortedIndex = *ppiSortedIndex;
 
 	// set up vector
-	for(iI=0;iI<iLength;iI++)
+	for (int iI = 0; iI < iLength; iI++)
 	{
 		viOrderPriority[iI].m_iPriority = pHotkeyIndex[iI];
 		viOrderPriority[iI].m_iIndex = iI;
@@ -2326,7 +2325,7 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	std::sort(viOrderPriority.begin(), viOrderPriority.end(), sortHotkeyPriority);
 
 	// insert new order into the array to return
-	for (iI=0;iI<iLength;iI++)
+	for (int iI = 0; iI < iLength; iI++)
 	{
 		piSortedIndex[iI] = viOrderPriority[iI].m_iIndex;
 	}

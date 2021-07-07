@@ -10355,22 +10355,14 @@ bool CvCityAI::AI_foodAvailable(int iExtra) const
 		int iBestValue = 0;
 		int iBestPlot = CITY_HOME_PLOT;
 
-		/************************************************************************************************/
-		/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
 		for (int iI = 0; iI < getNumCityPlots(); iI++)
-			/************************************************************************************************/
-			/* JOOYO_ADDON                          END                                                     */
-			/************************************************************************************************/
 		{
 			if (abPlotAvailable[iI])
 			{
 				const CvPlot* pPlot = getCityIndexPlot(iI);
 				if (pPlot)
 				{
-					int iValue = pPlot->getYield(YIELD_FOOD);
+					const int iValue = pPlot->getYield(YIELD_FOOD);
 
 					if (iValue > iBestValue)
 					{
@@ -11623,7 +11615,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 		if (!plotImp->isImprovementBonusTrade(eNonObsoleteBonus) && !plotImp->isUniversalTradeBonusProvider())
 		{
 			// Fuyu - patience. We can wait 10 turns for upgrade
-			const ImprovementTypes eUpgrade = (ImprovementTypes)plotImp->getImprovementUpgrade();
+			const ImprovementTypes eUpgrade = plotImp->getImprovementUpgrade();
 
 			if (eUpgrade != NO_IMPROVEMENT)
 			{

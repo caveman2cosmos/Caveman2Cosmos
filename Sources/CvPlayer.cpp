@@ -16993,7 +16993,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_NEAR_CITY", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription(), pNearCity->getNameKey()).GetCString();
-					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+					pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 					bSomethingHappened = true;
 				}
 				else if (pPlot->getRouteType() != NO_ROUTE)
@@ -17006,7 +17006,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription()).GetCString();
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 				bSomethingHappened = true;
 			}
 			else if (pPlot->getRouteType() != NO_ROUTE)
