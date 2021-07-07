@@ -46,7 +46,7 @@ class TestCode:
 	def checkBuildingTechRequirementLocation(self, CvBuildingInfo):
 		#Main tech requirement
 		TechMainReq = CvBuildingInfo.getPrereqAndTech()
-		if GC.getTechInfo(TechMainReq) != None:
+		if TechMainReq != -1:
 			iTechMainLoc = GC.getTechInfo(TechMainReq).getGridX()
 			iTechMainRow = GC.getTechInfo(TechMainReq).getGridY()
 		else:
@@ -57,12 +57,13 @@ class TestCode:
 		TechTypeLocList = []
 		TechTypeRowList = []
 		for techType in CvBuildingInfo.getPrereqAndTechs():
-			if GC.getTechInfo(techType) != -1:
-				TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
-			else:
-				TechTypeLocList.append(0)
-				TechTypeRowList.append(0)
+			#if GC.getTechInfo(techType) != -1:
+			assert(techType != -1) # delete?
+			TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
+			TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
+			#else:
+			#	TechTypeLocList.append(0)
+			#	TechTypeRowList.append(0)
 		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
 			iTechTypeLoc = max(TechTypeLocList)
 			for t in xrange(len(TechTypeLocList)):
@@ -132,12 +133,13 @@ class TestCode:
 		TechTypeLocList = []
 		TechTypeRowList = []
 		for techType in CvUnitInfo.getPrereqAndTechs():
-			if GC.getTechInfo(techType) != -1:
-				TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
-			else:
-				TechTypeLocList.append(0)
-				TechTypeRowList.append(0)
+			#if GC.getTechInfo(techType) != -1:
+			assert(techType != -1) # delete?
+			TechTypeLocList.append(GC.getTechInfo(techType).getGridX())
+			TechTypeRowList.append(GC.getTechInfo(techType).getGridY())
+			#else:
+			#	TechTypeLocList.append(0)
+			#	TechTypeRowList.append(0)
 		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
 			iTechTypeLoc = max(TechTypeLocList)
 			for t in xrange(len(TechTypeLocList)):
@@ -240,14 +242,15 @@ class TestCode:
 			techList = []
 			#Main tech requirement
 			TechMainReq = CvBuildingInfo.getPrereqAndTech()
-			if GC.getTechInfo(TechMainReq) != None:
+			if TechMainReq != -1:
 				TechMain = GC.getTechInfo(TechMainReq).getType()
 				techList.append(TechMain)
 
 			#Tech Type requirement
 			for techType in CvBuildingInfo.getPrereqAndTechs():
-				if GC.getTechInfo(techType) != -1:
-					techList.append(GC.getTechInfo(techType).getType())
+				#if GC.getTechInfo(techType) != -1:
+				assert(techType != -1) # delete?
+				techList.append(GC.getTechInfo(techType).getType())
 
 			#Tech requirement as defined in special building infos (core tech)
 			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
@@ -285,8 +288,9 @@ class TestCode:
 
 			#Tech Type requirement
 			for techType in CvUnitInfo.getPrereqAndTechs():
-				if GC.getTechInfo(techType) != -1:
-					techList.append(GC.getTechInfo(techType).getType())
+				#if GC.getTechInfo(techType) != -1:
+				assert(techType != -1) # delete?
+				techList.append(GC.getTechInfo(techType).getType())
 		
 			if len(techList) > 0:
 				self.log(CvUnitInfo.getType()+" requires: "+str(techList))
@@ -298,8 +302,9 @@ class TestCode:
 			techList = []
 			#AND techs
 			for techType in CvTechInfo.getPrereqAndTechs():
-				if GC.getTechInfo(techType) != -1:
-					techList.append(GC.getTechInfo(techType).getType())
+				#if GC.getTechInfo(techType) != -1:
+				assert(techType != -1) # delete?
+				techList.append(GC.getTechInfo(techType).getType())
 			
 			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
 				techList.append("one of: ")
@@ -308,8 +313,9 @@ class TestCode:
 
 			#OR techs
 			for techType in CvTechInfo.getPrereqOrTechs():
-				if GC.getTechInfo(techType) != -1:
-					techList.append(GC.getTechInfo(techType).getType())
+				#if GC.getTechInfo(techType) != -1:
+				assert(techType != -1) # delete?
+				techList.append(GC.getTechInfo(techType).getType())
 		
 			if len(techList) > 0:
 				self.log(CvTechInfo.getType()+" requires: "+str(techList))
@@ -321,9 +327,9 @@ class TestCode:
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#<Bonus>BONUS_X
 			iBuildingBonusReq = CvBuildingInfo.getPrereqAndBonus()
-			if GC.getBonusInfo(iBuildingBonusReq) != None:
+			if iBuildingBonusReq != -1:
 				bonusTechReq = GC.getBonusInfo(iBuildingBonusReq).getTechCityTrade()
-				if GC.getTechInfo(bonusTechReq) != None:
+				if bonusTechReq != -1:
 					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
 				else:
 					bonusTechLoc = 0
@@ -332,9 +338,9 @@ class TestCode:
 
 			#<VicinityBonus>BONUS_X
 			iBuildingVicinityBonusReq = CvBuildingInfo.getPrereqVicinityBonus()
-			if GC.getBonusInfo(iBuildingVicinityBonusReq) != None:
+			if iBuildingVicinityBonusReq != -1:
 				bonusTechReq = GC.getBonusInfo(iBuildingVicinityBonusReq).getTechCityTrade()
-				if GC.getTechInfo(bonusTechReq) != None:
+				if bonusTechReq != -1:
 					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
 				else:
 					bonusTechLoc = 0
@@ -343,9 +349,9 @@ class TestCode:
 
 			#<RawVicinityBonus>BONUS_X
 			iBuildingRawVicinityBonusReq = CvBuildingInfo.getPrereqRawVicinityBonus()
-			if GC.getBonusInfo(iBuildingRawVicinityBonusReq) != None:
+			if iBuildingRawVicinityBonusReq != -1:
 				bonusTechReq = GC.getBonusInfo(iBuildingRawVicinityBonusReq).getTechReveal()
-				if GC.getTechInfo(bonusTechReq) != None:
+				if bonusTechReq != -1:
 					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
 				else:
 					bonusTechLoc = 0
@@ -504,8 +510,10 @@ class TestCode:
 			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessChanges():
 				iTech = pair.id
+				assert(iTech != -1) # delete?
 				iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+				#if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+				if iTechTLoc <= iTechLoc:
 					self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 					self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
@@ -513,8 +521,10 @@ class TestCode:
 			#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHealthChanges():
 				iTech = pair.id
+				assert(iTech != -1) # delete?
 				iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+				#if GC.getTechInfo(iTech) != None and iTechTLoc <= iTechLoc:
+				if iTechTLoc <= iTechLoc:
 					self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 					self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
@@ -528,7 +538,7 @@ class TestCode:
 					while i < YieldTypes.NUM_YIELD_TYPES:
 						if CvBuildingInfo.getTechYieldChange(iTechMod, i):
 							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
-							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+							if iTechMLoc <= iTechLoc:
 								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
@@ -543,7 +553,7 @@ class TestCode:
 					while i < YieldTypes.NUM_YIELD_TYPES:
 						if CvBuildingInfo.getTechYieldModifier(iTechMod, i):
 							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
-							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+							if iTechMLoc <= iTechLoc:
 								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
@@ -558,7 +568,7 @@ class TestCode:
 					while i < CommerceTypes.NUM_COMMERCE_TYPES:
 						if CvBuildingInfo.getTechCommerceChange(iTechMod, i):
 							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
-							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+							if iTechMLoc <= iTechLoc:
 								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
@@ -573,7 +583,7 @@ class TestCode:
 					while i < CommerceTypes.NUM_COMMERCE_TYPES:
 						if CvBuildingInfo.getTechCommerceModifier(iTechMod, i):
 							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
-							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+							if iTechMLoc <= iTechLoc:
 								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
@@ -588,7 +598,7 @@ class TestCode:
 					while i < GC.getNumSpecialistInfos():
 						if CvBuildingInfo.getTechSpecialistChange(iTechMod, i):
 							iTechMLoc = GC.getTechInfo(iTechMod).getGridX()
-							if GC.getTechInfo(iTechMod) != None and iTechMLoc <= iTechLoc:
+							if iTechMLoc <= iTechLoc:
 								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Specialist Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
@@ -604,29 +614,29 @@ class TestCode:
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			
 			#Singular <FreeBonus>
-			for bonus in xrange(GC.getNumBonusInfos()):
-				if CvBuildingInfo.getFreeBonus() == bonus:
-					bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-					if GC.getTechInfo(bonusTechReq) != None:
-						bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-						if bonuslist[bonus] == -1:
-							bonuslist[bonus] = iTechLoc
-						elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-							bonuslist[bonus] = iTechLoc
+			bonus = CvBuildingInfo.getFreeBonus()
+			if bonus != -1:
+				bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+				if bonusTechReq != -1:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+					if bonuslist[bonus] == -1:
+						bonuslist[bonus] = iTechLoc
+					elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+						bonuslist[bonus] = iTechLoc
 
-				#<ExtraFreeBonuses>
-				for bonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					if CvBuildingInfo.getExtraFreeBonus(bonuses) == bonus:
-						bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
-						if GC.getTechInfo(bonusTechReq) != None:
-							bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
-							if bonuslist[bonus] == -1:
-								bonuslist[bonus] = iTechLoc
-							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
-								bonuslist[bonus] = iTechLoc
+			#<ExtraFreeBonuses>
+			for j in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+				bonus = CvBuildingInfo.getExtraFreeBonus(j)
+				bonusTechReq = GC.getBonusInfo(bonus).getTechCityTrade()
+				if bonusTechReq != -1:
+					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
+					if bonuslist[bonus] == -1:
+						bonuslist[bonus] = iTechLoc
+					elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
+						bonuslist[bonus] = iTechLoc
 								
 		for bonustype in xrange(len(bonuslist)):
-			if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
+			if bonuslist[bonustype] != -1 and GC.getBonusInfo(bonustype).getTechCityTrade() != -1 and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
 				if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
 					self.log(GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype]))
 					
@@ -743,9 +753,9 @@ class TestCode:
 			
 			#<BonusType>BONUS_X
 			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()
-			if GC.getBonusInfo(iUnitBonusReq) != None:
+			if iUnitBonusReq != -1:
 				bonusTechReq = GC.getBonusInfo(iUnitBonusReq).getTechCityTrade()
-				if GC.getTechInfo(bonusTechReq) != None:
+				if bonusTechReq != -1:
 					bonusTechLoc = GC.getTechInfo(bonusTechReq).getGridX()
 				else:
 					bonusTechLoc = 0
@@ -834,7 +844,7 @@ class TestCode:
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
+					if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
 							aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
 							if CvBuildingInfo.getObsoleteTech() != -1:
@@ -856,7 +866,7 @@ class TestCode:
 				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")): # Exclude space based
+						if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
 							aBuildingReplacements = [] # List building replacements
 							iObsoleteTechLoc = 999 # Never obsolete
 							if CvBuildingInfo.getObsoleteTech() != -1:
