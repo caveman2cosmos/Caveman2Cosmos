@@ -25,7 +25,7 @@ def handleUserResponse(argsList):
 def dealCanceled():
 	diploClass = CvDiplomacy.CvDiplomacy()
 	diploClass.dealCanceled()
-	
+
 def refresh(argsList):
 	diploClass = CvDiplomacy.CvDiplomacy()
 	diploClass.determineResponses(argsList[0])

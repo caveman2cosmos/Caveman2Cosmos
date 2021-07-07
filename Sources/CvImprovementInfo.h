@@ -54,7 +54,7 @@ public:
 	int getSeeFrom() const;
 	int getUniqueRange() const;
 	int getWorldSoundscapeScriptId() const;
-	
+
 	ImprovementTypes getImprovementPillage() const	{ return m_iImprovementPillage; }
 	ImprovementTypes getImprovementUpgrade() const	{ return m_iImprovementUpgrade; }
 	BonusTypes getBonusChange() const				{ return m_iBonusChange; }
@@ -68,7 +68,7 @@ public:
 	int getRiverSideYieldChange(int i) const;
 	int* getRiverSideYieldChangeArray() const;
 	int getIrrigatedYieldChange(int i) const;
-	int* getIrrigatedYieldChangeArray() const;		
+	int* getIrrigatedYieldChangeArray() const;
 
 	bool getTerrainMakesValid(int i) const;
 	bool getFeatureMakesValid(int i) const;
@@ -76,7 +76,7 @@ public:
 	int getTechYieldChanges(int i, int j) const;
 	int* getTechYieldChangesArray(int i) const;
 	int getRouteYieldChanges(int i, int j) const;
-	int* getRouteYieldChangesArray(int i) const;		
+	int* getRouteYieldChangesArray(int i) const;
 
 	int getImprovementBonusYield(int i, int j) const;
 	bool isImprovementBonusMakesValid(int i) const;

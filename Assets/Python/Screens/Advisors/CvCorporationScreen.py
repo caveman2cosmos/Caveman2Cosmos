@@ -398,4 +398,3 @@ class CvCorporationScreen:
 			self.drawCityInfo(self.iCorporationSelected)
 		return 0
 
-				

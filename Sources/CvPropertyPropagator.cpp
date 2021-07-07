@@ -13,7 +13,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
-CvPropertyPropagator::CvPropertyPropagator() : 
+CvPropertyPropagator::CvPropertyPropagator() :
 									m_eProperty(NO_PROPERTY),
 									m_eObjectType(NO_GAMEOBJECT),
 									m_eRelation(NO_RELATION),
@@ -481,13 +481,13 @@ void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAm
 				//use half of extra to base diffusion on
 				iDiff -= iExtra / 2;
 			}
-			
+
 			iChange = std::max(0, (iDiff * m_iPercent) / 100);
 			aiCorrect[iI] = iChange;
 			aiCorrect[0] -= iChange;
 		}
 	}
-	
+
 	if (iPredictedTotalSelf < iPredictedSelf)
 	{
 		const int iSelfChangeByOthers = iPredictedTotalSelf - iPredictedSelf;
@@ -513,7 +513,7 @@ void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAm
 					//use half of extra to base diffusion on
 					iDiff -= iExtra / 2;
 				}
-				
+
 				iChange = std::max(0, (iDiff * m_iPercent) / 100);
 				aiCorrect[iI] = iChange;
 				aiCorrect[0] -= iChange;

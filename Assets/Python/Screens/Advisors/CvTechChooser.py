@@ -134,7 +134,7 @@ class CvTechChooser:
 
 		# Era backgrounds and buttons that can jump directly to an era
 		lastPosX = 0
-		
+
 		self.backdropPanelPos = []
 		for i in xrange(self.iNumEras - 1):
 			posX = self.treeToMinimapX(self.minEraXPos[i] - self.minX) # SLIDER_BORDER + self.minEraXPos[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
@@ -145,7 +145,7 @@ class CvTechChooser:
 				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			if i > 0:
 				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
-			
+
 			# Backdrop
 			panelStartX = self.minEraXPos[i] - self.minX + self.xCellDist / 2
 			panelEndX = self.minEraXPos[i+1] - self.minX + self.xCellDist / 2 + 4
@@ -355,7 +355,7 @@ class CvTechChooser:
 			else:
 				if not self.cellDetails[iTech]:
 					self.cellDetails[iTech] = True
-					
+
 					iEra = CvTechInfo.getEra()
 					bY = iY
 					bH = self.hCell + CELL_BORDER_H * 2
@@ -675,7 +675,7 @@ class CvTechChooser:
 			screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
 			if iCost > iProgress + iOverflow:
 				screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
-		
+
 		# Queue labels
 		if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
 			screen.show(QUEUE_LABEL_PANEL + iTechStr)
@@ -931,10 +931,10 @@ class CvTechChooser:
 		if self.updates:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
 			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-			
+
 			remaining_updates = self.updates[:TECH_PAGING_RATE]
 
-			# remaining_updates = [] 
+			# remaining_updates = []
 			# for el in self.updates:
 			# 	dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
 			# 	if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
@@ -1233,7 +1233,7 @@ class CvTechChooser:
 			12: "Button_TechForeground_12_Style",
 			13: "Button_TechForeground_13_Style",
 		}.get(era, "Button_TechForeground_0_Style")
-	
+
 	def getIntroStyleForEra(self, era):
 		return {
 			0: "Panel_TechIntro_0_Style",

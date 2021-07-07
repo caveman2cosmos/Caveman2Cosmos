@@ -116,7 +116,7 @@ class TestCode:
 			iTechRow = iTechReligionRow
 
 		return iTechLoc, iTechRow
-		
+
 	#Unit tech location
 	def checkUnitTechRequirementLocation(self, CvUnitInfo):
 		#Main tech
@@ -153,9 +153,9 @@ class TestCode:
 			iTechRow = iTechMainRow
 		if iTechLoc == iTechTypeLoc:
 			iTechRow = iTechTypeRow
-			
+
 		return iTechLoc, iTechRow
-		
+
 	#Promotion tech location
 	def checkPromotionTechRequirementLocation(self, CvPromotionInfo):
 		#Promotions have one tech requirement.
@@ -166,9 +166,9 @@ class TestCode:
 		else:
 			iTechLoc = 0
 			iTechRow = 0
-			
+
 		return iTechLoc, iTechRow
-		
+
 	#Bonus tech locations
 	def checkBonusTechRequirementLocation(self, CvBonusInfo):
 		#TechReveal - bonus shown on map, improvements and buildings can't provide it for empire yet, RawVicinity accesses resource like feature on map.
@@ -182,16 +182,16 @@ class TestCode:
 		else:
 			iTechRevealLoc = 0
 			iTechRevealRow = 0
-			
+
 		if TechReqEnable != -1:
 			iTechEnableLoc = GC.getTechInfo(TechReqEnable).getGridX()
 			iTechEnableRow = GC.getTechInfo(TechReqEnable).getGridY()
 		else:
 			iTechEnableLoc = 0
 			iTechEnableRow = 0
-			
+
 		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow
-		
+
 	#Improvement tech location
 	def checkImprovementTechRequirementLocation(self, CvImprovementInfo):
 		#Improvements have one tech requirement
@@ -202,9 +202,9 @@ class TestCode:
 		else:
 			iTechLoc = 0
 			iTechRow = 0
-			
+
 		return iTechLoc, iTechRow
-		
+
 	#Civic tech location
 	def checkCivicTechRequirementLocation(self, CvCivicInfo):
 		#Civics have one tech requirement.
@@ -215,9 +215,9 @@ class TestCode:
 		else:
 			iTechLoc = 0
 			iTechRow = 0
-			
+
 		return iTechLoc, iTechRow
-		
+
 	#Build tech location
 	def checkBuildTechRequirementLocation(self, CvBuildInfo):
 		#Builds have one tech requirement
@@ -228,11 +228,11 @@ class TestCode:
 		else:
 			iTechLoc = 0
 			iTechRow = 0
-			
+
 		return iTechLoc, iTechRow
-		
+
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
-	
+
 	#Building tech requirement list
 	def listBuildingTechRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -268,10 +268,10 @@ class TestCode:
 					if TechReligionReq != -1:
 						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
 						techList.append(TechReligionLoc)
-		
+
 			if len(techList) > 0:
 				self.log(CvBuildingInfo.getType()+" requires: "+str(techList))
-				
+
 	#Unit tech requirement list
 	def listUnitTechRequirements(self):
 		for i in xrange(GC.getNumUnitInfos()):
@@ -287,10 +287,10 @@ class TestCode:
 			for techType in CvUnitInfo.getPrereqAndTechs():
 				if GC.getTechInfo(techType) != -1:
 					techList.append(GC.getTechInfo(techType).getType())
-		
+
 			if len(techList) > 0:
 				self.log(CvUnitInfo.getType()+" requires: "+str(techList))
-				
+
 	#Tech requirement list
 	def listTechRequirements(self):
 		for i in xrange(GC.getNumTechInfos()):
@@ -300,7 +300,7 @@ class TestCode:
 			for techType in CvTechInfo.getPrereqAndTechs():
 				if GC.getTechInfo(techType) != -1:
 					techList.append(GC.getTechInfo(techType).getType())
-			
+
 			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
 				techList.append("one of: ")
 			if len(CvTechInfo.getPrereqAndTechs()) > 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
@@ -310,10 +310,10 @@ class TestCode:
 			for techType in CvTechInfo.getPrereqOrTechs():
 				if GC.getTechInfo(techType) != -1:
 					techList.append(GC.getTechInfo(techType).getType())
-		
+
 			if len(techList) > 0:
 				self.log(CvTechInfo.getType()+" requires: "+str(techList))
-		
+
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -384,7 +384,7 @@ class TestCode:
 					bonusTechLocList.append(0)
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				self.log(CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!")
-			
+
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -416,13 +416,13 @@ class TestCode:
 					BuildingTechLocList.append(BuildingEmpireReqTechLoc)
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc))
-	
+
 	#Building - Civic requirements
 	def checkBuildingCivicRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
-			
+
 			#<PrereqAndCivics> - require all civics in list
 			BuildingAndCivicTechLocList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
@@ -431,7 +431,7 @@ class TestCode:
 					BuildingAndCivicTechLocList.append(BuildingAndCivicTechLoc)
 			if len(BuildingAndCivicTechLocList) > 0 and max(BuildingAndCivicTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(BuildingAndCivicTechLocList)+" "+str(iTechLoc))
-				
+
 			#<PrereqOrCivics> - require one civics in list
 			BuildingOrCivicTechLocList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
@@ -440,12 +440,12 @@ class TestCode:
 					BuildingOrCivicTechLocList.append(BuildingOrCivicTechLoc)
 			if len(BuildingOrCivicTechLocList) > 0 and min(BuildingOrCivicTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(BuildingOrCivicTechLocList)+" "+str(iTechLoc))
-			
+
 	#Building obsoletion of requirements
 	def checkBuildingRequirementObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
-			
+
 			BuildingObsoleteTech = CvBuildingInfo.getObsoleteTech()
 			BuildingObsoleteTechLoc = 999
 			if BuildingObsoleteTech != -1:
@@ -495,7 +495,7 @@ class TestCode:
 					BuildingRequirementName.append(BuildingEmpireReqName)
 			if len(BuildingRequirementObsoleteTechLoc) > 0 and min(BuildingRequirementObsoleteTechLoc) < BuildingObsoleteTechLoc:
 				self.log(CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(BuildingRequirementName)+str(BuildingRequirementObsoleteTechLoc)+" "+str(BuildingObsoleteTechLoc))
-			
+
 	#Building tech changes and modifiers
 	def checkBuildingTechMods(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -594,7 +594,7 @@ class TestCode:
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTechMod).getType())
 						i += 1
 					iTechMod += 1
-	
+
 	#Building earliest manufacturer on resource tech reveal
 	def checkBuildingBonusManufacturerTech(self):
 		#Index of array - Bonus ID, array value at index - producers highest tech requirement location
@@ -602,7 +602,7 @@ class TestCode:
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
-			
+
 			#Singular <FreeBonus>
 			for bonus in xrange(GC.getNumBonusInfos()):
 				if CvBuildingInfo.getFreeBonus() == bonus:
@@ -624,12 +624,12 @@ class TestCode:
 								bonuslist[bonus] = iTechLoc
 							elif bonuslist[bonus] != -1 and bonuslist[bonus] > iTechLoc:
 								bonuslist[bonus] = iTechLoc
-								
+
 		for bonustype in xrange(len(bonuslist)):
 			if bonuslist[bonustype] != -1 and GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()) != None and not GC.getBonusInfo(bonustype).getConstAppearance() > 0:
 				if bonuslist[bonustype] - GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX() != 0:
 					self.log(GC.getBonusInfo(bonustype).getType()+" "+str(GC.getTechInfo(GC.getBonusInfo(bonustype).getTechCityTrade()).getGridX())+" Earliest bonus producer located at: "+str(bonuslist[bonustype]))
-					
+
 	#Building commerce double time - wonders only, and ensure flat change exists
 	def checkBuildingCommerceDoubleTime(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -637,11 +637,11 @@ class TestCode:
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(i) or isNationalWonder(i) or  CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" Non-wonder has commerce change double time")
-					
+
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has commerce change double time but no relevant flat commerce change")
-	
+
 	#Building owner change - ensure flat commerce change exists
 	def checkBuildingCommerceChangeOriginalOwners(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -649,14 +649,14 @@ class TestCode:
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change")
-					
+
 	#Building hurry modifiers works only on buildable buildings
 	def checkBuildingHurryModifier(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				self.log(CvBuildingInfo.getType()+" can't be hurried at first place")
-	
+
 	#Buildings shouldn't obsolete too fast in relation of tech unlock
 	def checkBuildingUnlockObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -666,7 +666,7 @@ class TestCode:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 				if iObsoleteTechLoc - iTechLoc <= 5:
 					self.log(CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc))
-					
+
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners
 	def checkBuildingReplacementObsoletion(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -686,7 +686,7 @@ class TestCode:
 
 				if iObsoleteTechLoc <= iReplacTechLoc:
 					self.log(CvBuildingInfo.getType()+": "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" -> "+CvBuildingReplacement.getType()+": "+str(iReplacTechLoc)+"/"+str(iReplacObsoleteTechLoc))
-	
+
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -695,13 +695,13 @@ class TestCode:
 			bCultural = 0
 			if iSpecialBuilding != -1 and iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				bCultural = 1
-			
+
 			if isNationalWonder(i) or (isWorldWonder(i) and not bCultural) or CvBuildingInfo.getHolyCity() != -1:
 				if CvBuildingInfo.getMovie() != None:
 					self.log(CvBuildingInfo.getType()+" has movie in "+CvBuildingInfo.getMovie())
 				else:
 					self.log(CvBuildingInfo.getType()+" is missing a wonder movie!")
-				
+
 		for i in xrange(GC.getNumProjectInfos()):
 			CvProjectInfo = GC.getProjectInfo(i)
 			if not CvProjectInfo.isSpaceship():
@@ -715,14 +715,14 @@ class TestCode:
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
-			
+
 			if CvUnitInfo.getNumUnitUpgrades() > 0:
 				iCost = CvUnitInfo.getProductionCost()
 				for u in xrange(CvUnitInfo.getNumUnitUpgrades()):
 					upgradedDesc = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getType()
 					upgradedCost = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)).getProductionCost()
 					upgradedTechLoc = self.checkUnitTechRequirementLocation(GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(u)))[0]
-					
+
 					dist = upgradedTechLoc - iTechLoc
 					costdiff = upgradedCost - iCost
 
@@ -734,13 +734,13 @@ class TestCode:
 						self.log(str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade: "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList))
 					elif CvUnitInfo.getNumUnitUpgrades() > 1:
 						self.log(str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList))
-						
+
 	#Unit - Check unit bonus requirements
 	def checkUnitBonusRequirements(self):
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
-			
+
 			#<BonusType>BONUS_X
 			iUnitBonusReq = CvUnitInfo.getPrereqAndBonus()
 			if GC.getBonusInfo(iUnitBonusReq) != None:
@@ -762,7 +762,7 @@ class TestCode:
 					bonusTechLocList.append(0)
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				self.log(CvUnitInfo.getType()+" - Earliest OR bonus prereq late!")
-				
+
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
@@ -817,16 +817,16 @@ class TestCode:
 										aFinalImpAltUpgradeYield[iYield] = aBonusYield[iYield] + aImprovementAltUpgradeYield[iYield] + aBonusImprovementAltUpgradeYield[iYield]
 									if (aFinalImpAltUpgradeYield[0] < aFinalYield[0] or aFinalImpAltUpgradeYield[1] < aFinalYield[1] or aFinalImpAltUpgradeYield[2] < aFinalYield[2]):
 										self.log(CvImprovementInfo.getType()+" with "+CvBonusInfo.getType()+": F/P/C -> "+str(aFinalYield)+" Alt upgrade: "+CvImprovementAltUpgradeInfo.getType()+": F/P/C -> "+str((aFinalImpAltUpgradeYield, (aFinalImpAltUpgradeYield[0]-aFinalYield[0], aFinalImpAltUpgradeYield[1]-aFinalYield[1], aFinalImpAltUpgradeYield[2]-aFinalYield[2]))))
-										
+
 	#Bonus - check potential bonus producer replacements
 	def checkBonusProducerReplacements(self):
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
-	
+
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			
+
 			#Check replacements of bonus producers
 			if CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS) or (BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER)):
 			# Check Manufactured bonuses, that aren't Culture or Techno-culture types.
@@ -871,13 +871,13 @@ class TestCode:
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
-	
+
 	#Improvement - yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoosts(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 			iTechLoc = self.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]
-			
+
 			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
 				aTechBoost = []
 				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
@@ -926,7 +926,7 @@ class TestCode:
 						aBaseAltUpgradeImprovementYield[iYield] = CvImprovementAltUpgradeInfo.getYieldChange(iYield)
 					if aTotalImprovementYield[0] > aBaseAltUpgradeImprovementYield[0] or aTotalImprovementYield[1] > aBaseAltUpgradeImprovementYield[1] or aTotalImprovementYield[2] > aBaseAltUpgradeImprovementYield[2]:
 						self.log(CvImprovementInfo.getType()+" Total F/P/C: "+str(aTotalImprovementYield)+", "+CvImprovementAltUpgradeInfo.getType()+" Alt Upgrade F/P/C: "+str(aBaseAltUpgradeImprovementYield))
-	
+
 	#Civic - list civics and civic categories
 	def listCivics(self):
 		for iCivic in xrange(GC.getNumCivicInfos()):

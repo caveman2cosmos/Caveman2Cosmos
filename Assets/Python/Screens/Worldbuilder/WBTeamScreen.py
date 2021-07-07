@@ -32,7 +32,7 @@ class WBTeamScreen:
 		sText = "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_TEAM_DATA",()).upper() + " (ID: " + str(iTeam) + ")</font>"
 		screen.setLabel("TeamHeader", "Background", sText, 1<<2, screen.getXResolution()/2, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setText("TeamExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
-		
+
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth - 20, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_PLAYER_DATA", ()), 0, 0, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_TEAM_DATA", ()), 1, 1, True)
@@ -158,7 +158,7 @@ class WBTeamScreen:
 
 	def placeStats(self):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
-		
+
 		iY = self.iTable_Y
 		screen.setButtonGFC("NukeInterceptionPlus", u"", "", 20, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("NukeInterceptionMinus", u"", "", 45, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
@@ -206,7 +206,7 @@ class WBTeamScreen:
 			if pTeam.isForceTeamVoteEligible(iVoteSource):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 			screen.setTableText("WBTeamVotes", 0, iRow, "<font=3>" + sColor + item[0] + "</font></color>", GC.getBuildingInfo(item[1]).getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], -1, 1<<0 )
-		
+
 	def placeRoutes(self):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
 		iWidth = screen.getXResolution() *3/8 - 20
@@ -228,7 +228,7 @@ class WBTeamScreen:
 			if iChange != 0:
 				sText = u"%+d%s %s" %(iChange, CyTranslator().getText("[ICON_MOVES]", ()), CyTranslator().getText("TXT_KEY_ESPIONAGE_SCREEN_COST", ()))
 				screen.setTableInt("WBTeamRoutes", 1, iRow, "<font=3>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 6788, item[1], 1<<1)
-		
+
 	def placeDomains(self):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
 		iWidth = screen.getXResolution() *3/8 - 20
@@ -248,7 +248,7 @@ class WBTeamScreen:
 			if iChange != 0:
 				sText = u"%+d%s" %(iChange, CyTranslator().getText("[ICON_MOVES]", ()))
 				screen.setTableInt("WBTeamDomainMoves", 1, i, "<font=3>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, i, 1<<1 )
-		
+
 	def placeImprovements(self):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
 		iWidth = screen.getXResolution() *3/8 - 20
@@ -318,7 +318,7 @@ class WBTeamScreen:
 			iRow = screen.appendTableRow("WBTeamMembers")
 			screen.setTableText("WBTeamMembers", 0, iRow, item[5], GC.getCivilizationInfo(item[3]).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, item[2] * 10000 + item[3], 1<<0)
 			screen.setTableText("WBTeamMembers", 1, iRow, item[1], GC.getLeaderHeadInfo(item[4]).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, item[2] * 10000 + item[4], 1<<0)
-		
+
 	def placeAbilities(self):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
 		iWidth = screen.getXResolution() /4 - 40
@@ -326,11 +326,11 @@ class WBTeamScreen:
 		iY = self.iTable_Y + 150
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + " (+/-)</color></font>"
 		screen.setText("AbilitiesAll", "Background", sText, 1<<1, iX + iWidth, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		iY += 30
 		screen.addTableControlGFC("WBAbilities", 1, iX, iY, iWidth, 13 * 24 + 2, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader( "WBAbilities", 0, "", iWidth)
-	
+
 		iRow = screen.appendTableRow("WBAbilities")
 		sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 		if pTeam.isMapCentering():
@@ -408,7 +408,7 @@ class WBTeamScreen:
 		if pTeam.isExtraWaterSeeFrom():
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setTableText("WBAbilities", 0, iRow, "<font=3>" + sColor + CyTranslator().getText("TXT_KEY_WB_EXTRA_WATER_SIGHT",()) + "</font></color>", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), lAbilities[12][0], lAbilities[12][1], -1, 1<<0 )
-	
+
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen("WBTeamScreen", CvScreenEnums.WB_TEAM)
 		global iChange
