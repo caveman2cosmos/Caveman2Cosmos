@@ -4784,10 +4784,10 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 						{
 							pLoopCity->setNumRealBuilding(eIndex, 0);
 
-							const int iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
-							if (iObsoletesToBuilding != -1 && pLoopCity->getNumRealBuilding((BuildingTypes)iObsoletesToBuilding) == 0)
+							const BuildingTypes iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
+							if (iObsoletesToBuilding != NO_BUILDING && pLoopCity->getNumRealBuilding(iObsoletesToBuilding) == 0)
 							{
-								pLoopCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+								pLoopCity->setNumRealBuilding(iObsoletesToBuilding, 1);
 							}
 						}
 					}
