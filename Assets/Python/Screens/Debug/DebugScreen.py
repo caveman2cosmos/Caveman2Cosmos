@@ -124,9 +124,8 @@ class DebugScreen:
 		screen.addPanel("TestCodelogPnlB", "", "", True, True, -8, -8, self.xRes+16, self.yRes+16, PanelStyles.PANEL_STYLE_HUD_HELP)
 
 		self.testCodeLog = self.aFontList[3] + "Running Test " + str(iTest) + self.aFontList[4] + " - " + self.testCodes[iTest][1] + self.aFontList[6]
-		screen.addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
-
 		self.testCodes[iTest][0]()
+		screen.addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
 
 		screen.moveToFront("TestCodeLogExit0")
 		screen.show("TestCodeLogExit0")
@@ -135,7 +134,6 @@ class DebugScreen:
 	def testCodelog(self, text):
 		print "[TEST] " + text
 		self.testCodeLog = self.testCodeLog + "\n* " + text
-		self.getScreen().addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
 
 	def closeLog(self, screen):
 		screen.deleteWidget("TestCodelog"); screen.deleteWidget("TestCodelogPnlB"); screen.deleteWidget("TestCodelogPnlA")
