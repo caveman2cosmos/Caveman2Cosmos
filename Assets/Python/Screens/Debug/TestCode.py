@@ -671,7 +671,7 @@ class TestCode:
 				else:
 					self.log(CvProjectInfo.getType()+" is missing a wonder movie!")
 
-	#Building - ensure that building religiius tags always reference same religion
+	#Building - ensure that building religious tags always reference same religion
 	def checkBuildingReligionRequirement(self):
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
