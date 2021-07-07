@@ -33,6 +33,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building replacements obsoletion", "Checks when replacements are unlocked and obsoleted")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
+		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - Check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - Check unit bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
@@ -669,6 +670,21 @@ class TestCode:
 					self.log(CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef())
 				else:
 					self.log(CvProjectInfo.getType()+" is missing a wonder movie!")
+
+	#Building - ensure that building religious tags always reference same religion
+	def checkBuildingReligionRequirement(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
+			iRelPrereq2 = CvBuildingInfo.getReligionType()
+			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
+
+			if iRelPrereq1 != -1 and iRelPrereq2 != -1 and iRelPrereq1 != iRelPrereq2:
+				self.log(CvBuildingInfo.getType()+" mismatch between getPrereqReligion and getReligionType: "+GC.getReligionType(iRelPrereq1).getType()+" "+GC.getReligionType(iRelPrereq2).getType())
+			if iRelPrereq2 != -1 and iRelPrereq3 != -1 and iRelPrereq2 != iRelPrereq3:
+				self.log(CvBuildingInfo.getType()+" mismatch between getReligionType and getPrereqStateReligion: "+GC.getReligionType(iRelPrereq2).getType()+" "+GC.getReligionType(iRelPrereq3).getType())
+			if iRelPrereq3 != -1 and iRelPrereq1 != -1 and iRelPrereq3 != iRelPrereq1:
+				self.log(CvBuildingInfo.getType()+" mismatch between getPrereqStateReligion and getPrereqReligion: "+GC.getReligionType(iRelPrereq3).getType()+" "+GC.getReligionType(iRelPrereq1).getType())
 
 	#Unit - Check unit upgrades
 	def checkUnitUpgrades(self):
