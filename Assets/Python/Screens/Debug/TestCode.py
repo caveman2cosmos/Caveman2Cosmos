@@ -37,7 +37,8 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - Check unit bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
-		self.main.addTestCode(screen, self.checkImprovementTechYieldBoosts, "Improvement - yield boosts", "Checks if yield boosts happen within tech unlock and replacement of improvements")
+		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
+		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.listCivics, "Civic - list civics and civic categories", "Creates list civics and civic options")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
@@ -718,7 +719,7 @@ class TestCode:
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			#Check total productivity: from resource, improvement and improvement+resource coupling.
+			#Check total productivity: from resource, improvement, improvement+resource coupling, and with all tech boosts.
 			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
 				for i in xrange(GC.getNumImprovementInfos()):
 					CvImprovementInfo = GC.getImprovementInfo(i)
@@ -824,7 +825,7 @@ class TestCode:
 									self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
 	#Improvement - yield boosts should be between improvement unlock and upgrade
-	def checkImprovementTechYieldBoosts(self):
+	def checkImprovementTechYieldBoostLocation(self):
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 			iTechLoc = self.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]
@@ -853,11 +854,19 @@ class TestCode:
 						if iImpAltUpgradeTechLoc and aTechBoost and iImpAltUpgradeTechLoc <= max(aTechBoost):
 							self.log(CvImprovementInfo.getType()+" Xgrid: "+str(iTechLoc)+" Tech boosts location: "+str(aTechBoost)+" Alt Upgrade: "+CvImprovementAltUpgradeInfo.getType()+": "+str(iImpAltUpgradeTechLoc))
 
+	#Improvement - base + tech improvement yields compared to upgraded improvement
+	def checkImprovementYieldValues(self):
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
+				iTechLoc = self.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]			
 				#Improvement yield with all techs
 				aBaseImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseUpgradeImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aTechImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aTotalImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
+				
+				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
 					aBaseImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
 					for iTech in xrange(GC.getNumTechInfos()):  # Find techs, that boost base improvement
