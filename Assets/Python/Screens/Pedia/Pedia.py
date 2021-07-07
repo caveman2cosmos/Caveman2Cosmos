@@ -792,7 +792,7 @@ class Pedia:
 
 			#Check location of unit on X and Y grid
 			iTechLoc = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[0]
-			iTechRow = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[1]
+			iTechXY = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[2]
 
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
@@ -835,8 +835,8 @@ class Pedia:
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
-				aListDict[(iTechLoc, iTechRow, CvUnitInfo.getDescription())] = (str(iTechLoc)+": "+CvUnitInfo.getDescription(), i)
-				aList.append((iTechLoc, iTechRow, CvUnitInfo.getDescription()))
+				aListDict[(iTechXY, CvUnitInfo.getDescription())] = (str(iTechLoc)+": "+CvUnitInfo.getDescription(), i)
+				aList.append((iTechXY, CvUnitInfo.getDescription()))
 				bValid = False
 		aList.sort()
 		for i in xrange(len(aList)):
@@ -880,11 +880,11 @@ class Pedia:
 
 			#Check location of promotion on X and Y grid
 			iTechLoc = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[0]
-			iTechRow = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[1]
+			iTechXY = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[2]
 
 			if iType == iPromotionType:
-				ListDict[(iTechLoc, iTechRow, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)
-				aList.append((iTechLoc, iTechRow, szPromoName))
+				ListDict[(iTechXY, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)
+				aList.append((iTechXY, szPromoName))
 		aList.sort()
 		for iPromotion in xrange(len(aList)):
 			key = aList[iPromotion]
@@ -965,7 +965,7 @@ class Pedia:
 
 			#Check location of building on X and Y grid.
 			iTechLoc = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
-			iTechRow = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[1]
+			iTechXY = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[2]
 
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
@@ -980,8 +980,8 @@ class Pedia:
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
-				aListDict[(iTechLoc, iTechRow, CvBuildingInfo.getDescription())] = (str(iTechLoc)+": "+CvBuildingInfo.getDescription(), i)
-				aList.append((iTechLoc, iTechRow, CvBuildingInfo.getDescription()))
+				aListDict[(iTechXY, CvBuildingInfo.getDescription())] = (str(iTechLoc)+": "+CvBuildingInfo.getDescription(), i)
+				aList.append((iTechXY, CvBuildingInfo.getDescription()))
 				bValid = False
 		aList.sort()
 		for i in xrange(len(aList)):
@@ -1131,30 +1131,31 @@ class Pedia:
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
 
-			#Check location of resource of tech reveal/enable
-			iTechReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]
-			iTechRowReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[1]
-			iTechEnable = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+			#Check location of resource tech reveal/enable
+			iTechRevealX = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]			
+			iTechEnableX = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+			iTechRevealXY = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[4]
+			iTechEnableXY = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[5]
 
 			if CvBonusInfo.getConstAppearance() > 0: # A map resource, only those have different iTechReveal and iTechEnable
 				if not iType:
-					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+"/"+str(iTechEnable)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechEnable, szName))
+					ListDict[(iTechRevealXY, iTechEnableXY, szName)] = (str(iTechRevealX)+"/"+str(iTechEnableX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, iTechEnableXY, szName))
 			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:
 				if iType == 4:
-					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechRowReveal, szName))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechRowReveal, szName))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechRowReveal, szName))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif iType == 1:
-				ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-				aList.append((iTechReveal, iTechRowReveal,szName))
+				ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+				aList.append((iTechRevealXY, szName))
 		aList.sort()
 		for iBonus in xrange(len(aList)):
 			key = aList[iBonus]
@@ -1382,23 +1383,23 @@ class Pedia:
 			# Location of improvement, civic or build on X and Y Grid
 			if getInfo == GC.getImprovementInfo:
 				iTechLoc = self.debug.checkImprovementTechRequirementLocation(item)[0]
-				iTechRow = self.debug.checkImprovementTechRequirementLocation(item)[1]
+				iTechXY = self.debug.checkImprovementTechRequirementLocation(item)[2]
 			elif getInfo == GC.getCivicInfo:
 				iTechLoc = self.debug.checkCivicTechRequirementLocation(item)[0]
-				iTechRow = self.debug.checkCivicTechRequirementLocation(item)[1]
+				iTechXY = self.debug.checkCivicTechRequirementLocation(item)[2]
 			elif getInfo == GC.getBuildInfo:
 				iTechLoc = self.debug.checkBuildTechRequirementLocation(item)[0]
-				iTechRow = self.debug.checkBuildTechRequirementLocation(item)[1]
+				iTechXY = self.debug.checkBuildTechRequirementLocation(item)[2]
 			else:
 				iTechLoc = -1
-				iTechRow = -1
+				iTechXY = 0
 
 			if item and iTechLoc != -1:
-				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
-				list.append((iTechLoc, iTechRow, item.getDescription()))
+				ListDict[(iTechXY, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
+				list.append((iTechXY, item.getDescription()))
 			elif item and iTechLoc == -1:
-				ListDict[(iTechLoc, iTechRow, item.getDescription())] = (item.getDescription(), i)
-				list.append((iTechLoc, iTechRow, item.getDescription()))
+				ListDict[(iTechXY, item.getDescription())] = (item.getDescription(), i)
+				list.append((iTechXY, item.getDescription()))
 		list.sort()
 		for i in xrange(len(list)):
 			key = list[i]
