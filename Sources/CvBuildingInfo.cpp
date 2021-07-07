@@ -422,6 +422,13 @@ CvBuildingInfo::~CvBuildingInfo()
 		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
 	}
 
+	GC.removeDelayedResolution((int*)&m_iFreeBuilding);
+	GC.removeDelayedResolution((int*)&m_iFreeAreaBuilding);
+	GC.removeDelayedResolution((int*)&m_iProductionContinueBuilding);
+	GC.removeDelayedResolution((int*)&m_iPrereqAnyoneBuilding);
+	GC.removeDelayedResolution((int*)&m_iExtendsBuilding);
+	GC.removeDelayedResolution((int*)&m_iObsoletesToBuilding);
+
 	m_aBuildingHappinessChanges.removeDelayedResolution();
 	m_aUnitProductionModifier.removeDelayedResolution();
 	m_aBuildingProductionModifier.removeDelayedResolution();
@@ -3632,6 +3639,13 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iFreeBuilding, L"FreeBuilding");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iFreeAreaBuilding, L"FreeAreaBuilding");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iProductionContinueBuilding, L"ProductionContinueBuilding");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqAnyoneBuilding, L"PrereqAnyoneBuilding");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iExtendsBuilding, L"ExtendsBuilding");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iObsoletesToBuilding, L"ObsoletesToBuilding");
+
 	m_aBuildingHappinessChanges.readWithDelayedResolution(pXML, L"BuildingHappinessChanges");
 	m_aUnitProductionModifier.readWithDelayedResolution(pXML, L"UnitProductionModifiers");
 	m_aBuildingProductionModifier.readWithDelayedResolution(pXML, L"BuildingProductionModifiers");
@@ -3649,12 +3663,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	}
 
 	CvString szTextVal;
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBuilding");
-	m_iFreeBuilding = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeAreaBuilding");
-	m_iFreeAreaBuilding = pXML->GetInfoClass(szTextVal);
 
 	m_aGlobalBuildingCommerceChanges.clear();
 	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
@@ -3691,18 +3699,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ProductionContinueBuilding");
-	m_iProductionContinueBuilding = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqAnyoneBuilding");
-	m_iPrereqAnyoneBuilding = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ExtendsBuilding");
-	m_iExtendsBuilding = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoletesToBuilding");
-	m_iObsoletesToBuilding = pXML->GetInfoClass(szTextVal);
 
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingCostModifier, L"GlobalBuildingCostModifiers",  GC.getNumBuildingInfos());
 
@@ -4996,6 +4992,13 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_piVictoryThreshold[i] = pClassInfo->getVictoryThreshold(i);
 		}
 	}
+	GC.copyNonDefaultDelayedResolution((int*)&m_iFreeBuilding, (int*)&pClassInfo->m_iFreeBuilding);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iFreeAreaBuilding, (int*)&pClassInfo->m_iFreeAreaBuilding);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iProductionContinueBuilding, (int*)&pClassInfo->m_iProductionContinueBuilding);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqAnyoneBuilding, (int*)&pClassInfo->m_iPrereqAnyoneBuilding);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iExtendsBuilding, (int*)&pClassInfo->m_iExtendsBuilding);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iObsoletesToBuilding, (int*)&pClassInfo->m_iObsoletesToBuilding);
+
 	m_aBuildingHappinessChanges.copyNonDefaultDelayedResolution(pClassInfo->getBuildingHappinessChanges());
 	m_aUnitProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getUnitProductionModifiers());
 	m_aBuildingProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getBuildingProductionModifiers());
@@ -5008,13 +5011,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	int iDefault = 0;
 	int iTextDefault = -1;
 	bool bNoDuplicate = true;
-
-	if (getFreeBuilding() == iTextDefault) m_iFreeBuilding = pClassInfo->getFreeBuilding();
-	if (getFreeAreaBuilding() == iTextDefault) m_iFreeAreaBuilding = pClassInfo->getFreeAreaBuilding();
-	if (getProductionContinueBuilding() == NO_BUILDING) m_iProductionContinueBuilding = pClassInfo->getProductionContinueBuilding();
-	if (getPrereqAnyoneBuilding() == NO_BUILDING) m_iPrereqAnyoneBuilding = pClassInfo->getPrereqAnyoneBuilding();
-	if (getExtendsBuilding() == NO_BUILDING) m_iExtendsBuilding = pClassInfo->getExtendsBuilding();
-	if (getObsoletesToBuilding() == NO_BUILDING) m_iObsoletesToBuilding = pClassInfo->getObsoletesToBuilding();
 
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 	{

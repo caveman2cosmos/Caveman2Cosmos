@@ -128,7 +128,31 @@ public:
 	// value of that name
 	// TO DO - unsafe
 	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
-	
+
+	template <typename T>
+	void GetOptionalTypeEnum(T& pVal, const wchar_t* szName)
+	{
+		if (TryMoveToXmlFirstChild(szName))
+		{
+			CvString szTextVal;
+			GetXmlVal(szTextVal);
+			pVal = static_cast<T>(GC.getInfoTypeFromString(szTextVal));
+			MoveToXmlParent();
+		}
+	}
+
+	template <typename T>
+	void GetOptionalTypeEnumWithDelayedResolution(T& pVal, const wchar_t* szName)
+	{
+		if (TryMoveToXmlFirstChild(szName))
+		{
+			CvString szTextVal;
+			GetXmlVal(szTextVal);
+			GC.addDelayedResolution((int*)&pVal, szTextVal);
+			MoveToXmlParent();
+		}
+	}
+
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetChildXmlValByName(std::string& pszVal, const wchar_t* szName, char* pszDefault = NULL);
