@@ -5935,8 +5935,8 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 	{
 		return;
 	}
-	const TechTypes ePrereqTech = spawnInfo.getPrereqTechType();
-	const TechTypes eObsoleteTech = spawnInfo.getObsoleteTechType();
+	const TechTypes ePrereqTech = spawnInfo.getPrereqTech();
+	const TechTypes eObsoleteTech = spawnInfo.getObsoleteTech();
 
 	if (ePrereqTech != NO_TECH || eObsoleteTech != NO_TECH)
 	{

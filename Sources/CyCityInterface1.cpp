@@ -25,7 +25,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("canTrain", &CyCity::canTrain, "bool (int eUnit, bool bContinue, bool bTestVisible)")
 		.def("canConstruct", &CyCity::canConstruct, "bool (int eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)")
 		.def("canCreate", &CyCity::canCreate, "bool (int eProject, bool bContinue, bool bTestVisible)")
-		.def("canMaintain", &CyCity::canMaintain, "bool (int eProcess, bool bContinue)")
+		.def("canMaintain", &CyCity::canMaintain, "bool (int eProcess)")
 		.def("getFoodTurnsLeft", &CyCity::getFoodTurnsLeft, "int () - how many food turns remain?")
 		.def("isProduction", &CyCity::isProduction, "bool () - is city producing?")
 		.def("isProductionUnit", &CyCity::isProductionUnit, "bool () - is city training a unit?")
@@ -237,5 +237,5 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getTradeYield", &CyCity::getTradeYield, "int (int /*YieldTypes*/) - trade adjustment to YieldType")
 
 		.def("isEventOccured", &CyCity::isEventOccured, "bool (int /*EventTypes*/)")
-		;
+	;
 }

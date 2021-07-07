@@ -535,6 +535,7 @@ public:
 
 	int getNumBuildInfos() const;
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
+	const std::vector<CvBuildInfo*>& getBuildInfos() const { return m_paBuildInfo; }
 
 	int getNumHandicapInfos() const;
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
@@ -583,6 +584,7 @@ public:
 
 	int getNumReligionInfos() const;
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
+	const std::vector<CvReligionInfo*>& getReligionInfos() const { return m_paReligionInfo; }
 
 	int getNumCorporationInfos() const;
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;

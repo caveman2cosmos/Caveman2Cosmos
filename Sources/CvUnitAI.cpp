@@ -30127,34 +30127,32 @@ bool CvUnitAI::AI_foundReligion()
 {
 	PROFILE_FUNC();
 
-	ReligionTypes eBestReligion;
 	ReligionTypes eReligion;
 	int iI;
 	int iJ;
 	int value;
 	int bestValue;
-	int iProphetCount;
 
-	eBestReligion = NO_RELIGION;
-	iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
+	ReligionTypes eBestReligion = NO_RELIGION;
+	int iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
 
-	ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
+	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
 	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
-		if (canSpread(plot(), eFavorite))
+		if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
 		{
-		//if favorite religion of current player was not founded:
-			if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
+			if (canSpread(plot(), eFavorite))
 			{
+		//if favorite religion of current player was not founded:
 //	push mission 'found religion' with parameter 'favorite religion' and return true
 				getGroup()->pushMission(MISSION_SPREAD, eFavorite);
 				return true;
 			}
 		}
 //if favorite religion was not founded and CAN'T yet be, hold on to one prophet.			   GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion()(GC.getTechInfo((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechCityTrade())).getEra()
-		if ((eFavorite != NO_RELIGION) &&
-			(!GC.getGame().isReligionFounded(eFavorite)) &&
-			(((int)(GC.getTechInfo((TechTypes)GC.getReligionInfo((ReligionTypes)eFavorite).getTechPrereq()).getEra()) - (int)(GET_PLAYER(getOwner()).getCurrentEra()) < 2)) &&
+		if (eFavorite != NO_RELIGION &&
+			!GC.getGame().isReligionFounded(eFavorite) &&
+			(((int)(GC.getTechInfo(GC.getReligionInfo(eFavorite).getTechPrereq()).getEra()) - (int)(GET_PLAYER(getOwner()).getCurrentEra()) < 2)) &&
 			(iProphetCount == 1))
 		{
 			getGroup()->pushMission(MISSION_SKIP);

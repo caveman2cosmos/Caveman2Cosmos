@@ -7154,9 +7154,9 @@ bool CvPlayer::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisibl
 }
 
 
-bool CvPlayer::canMaintain(ProcessTypes eProcess, bool bContinue) const
+bool CvPlayer::canMaintain(ProcessTypes eProcess) const
 {
-	return GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getProcessInfo(eProcess).getTechPrereq());
+	return GET_TEAM(getTeam()).isHasTech(GC.getProcessInfo(eProcess).getTechPrereq());
 }
 
 
@@ -7404,7 +7404,7 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 	{
 		if (GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
 		{
-			eEra = (EraTypes)GC.getTechInfo((TechTypes)GC.getProjectInfo(eProject).getTechPrereq()).getEra();
+			eEra = (EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra();
 		}
 		iModifier = GC.getEraInfo(eEra).getCreatePercent();
 	}
@@ -7763,9 +7763,9 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 
 		// check tech prereq, allow if bTests within same era
-		if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()))
+		if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()))
 		{
-			if (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra())
+			if (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTechPrereq()).getEra())
 			{
 				return false;
 			}
@@ -7895,7 +7895,7 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvP
 	// Player in general; have tech reqs and not obsolete?
 	if (pPlot == NULL)
     {
-        if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq())
+        if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
         || GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
         && GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
         {
@@ -8517,9 +8517,9 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 	// Religion techs are global and can thus only be invented once by one player in a game.
 	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && !canFoundReligion())
 	{
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
-			if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
+			if (info->getTechPrereq() == eTech)
 			{
 				return false;
 			}
@@ -8704,7 +8704,7 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 	&& GC.getCivicInfo(eCivic).getCityOverLimitUnhappy() == 0
 	&& GC.getCivicInfo(eCivic).getCityLimit(getID()) < getNumCities()
 	|| !isHasCivicOption((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType())
-	&& !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getCivicInfo(eCivic).getTechPrereq()))
+	&& !GET_TEAM(getTeam()).isHasTech(GC.getCivicInfo(eCivic).getTechPrereq()))
 	{
 		return false;
 	}
@@ -9002,11 +9002,11 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
 	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 	{
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
-			if (isResearchingTech(TechTypes(GC.getReligionInfo(ReligionTypes(iI)).getTechPrereq())))
+			if (isResearchingTech(info->getTechPrereq()))
 			{
-				popResearch(TechTypes(GC.getReligionInfo(ReligionTypes(iI)).getTechPrereq()));
+				popResearch(info->getTechPrereq());
 			}
 		}
 	}
@@ -9028,7 +9028,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	}
 
 	// Limited religion GO
-	const TechTypes eTechReq = TechTypes(GC.getReligionInfo(eSlotReligion).getTechPrereq());
+	const TechTypes eTechReq = GC.getReligionInfo(eSlotReligion).getTechPrereq();
 	const bool bStarting = eTechReq == NO_TECH || GC.getGame().isGameStart();
 
 	// Find founding city
@@ -9131,7 +9131,7 @@ void CvPlayer::foundCorporation(CorporationTypes eCorporation)
 		return;
 	}
 
-	const bool bStarting = ((GC.getCorporationInfo(eCorporation).getTechPrereq() == NO_TECH) || (GC.getTechInfo((TechTypes) GC.getCorporationInfo(eCorporation).getTechPrereq()).getEra() < GC.getGame().getStartEra()));
+	const bool bStarting = GC.getCorporationInfo(eCorporation).getTechPrereq() == NO_TECH || GC.getTechInfo(GC.getCorporationInfo(eCorporation).getTechPrereq()).getEra() < GC.getGame().getStartEra();
 
 	int iBestValue = 0;
 	CvCity* pBestCity = NULL;
@@ -16133,7 +16133,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	// Need Tech Prereq, if applicable
-	if (kMission.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kMission.getTechPrereq()))
+	if (kMission.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kMission.getTechPrereq()))
 	{
 		return false;
 	}
@@ -18160,16 +18160,16 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 	}
 
 	// Tech requirement
-	for (int iBuildLoop = 0; iBuildLoop < GC.getNumBuildInfos(); iBuildLoop++)
+	foreach_(const CvBuildInfo* info, GC.getBuildInfos())
 	{
-		if (GC.getBuildInfo((BuildTypes) iBuildLoop).getRoute() == eRoute)
+		if (info->getRoute() == eRoute)
 		{
-			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
+			if (!GET_TEAM(getTeam()).isHasTech(info->getTechPrereq()))
 			{
 				return -1;
 			}
-			if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH
-			&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo((BuildTypes) iBuildLoop).getObsoleteTech()))
+			if (info->getObsoleteTech() != NO_TECH
+			&& GET_TEAM(getTeam()).isHasTech(info->getObsoleteTech()))
 			{
 				return -1;
 			}
@@ -18255,7 +18255,7 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 	{
 		if (GC.getBuildInfo((BuildTypes) iBuildLoop).getImprovement() == eImprovement)
 		{
-			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
+			if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
 			{
 				return -1;
 			}
@@ -21871,15 +21871,15 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (NO_TECH != kEvent.getPrereqTech())
 	{
-		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kEvent.getPrereqTech()))
+		if (!GET_TEAM(getTeam()).isHasTech(kEvent.getPrereqTech()))
 		{
 			return false;
 		}
 	}
 
-	if (NO_BONUS != kEvent.getBonusGift())
+	const BonusTypes eBonus = (BonusTypes)kEvent.getBonusGift();
+	if (NO_BONUS != eBonus)
 	{
-		BonusTypes eBonus = (BonusTypes)kEvent.getBonusGift();
 		if (NO_PLAYER == kTriggeredData.m_eOtherPlayer)
 		{
 			return false;
@@ -21903,7 +21903,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kEvent.isCityEffect())
 	{
-		CvCity* pCity =	getCity(kTriggeredData.m_iCityId);
+		const CvCity* pCity = getCity(kTriggeredData.m_iCityId);
 		if (NULL == pCity || !pCity->canApplyEvent(eEvent, kTriggeredData))
 		{
 			return false;
@@ -21916,7 +21916,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 
-		CvCity* pCity = GET_PLAYER(kTriggeredData.m_eOtherPlayer).getCity(kTriggeredData.m_iOtherPlayerCityId);
+		const CvCity* pCity = GET_PLAYER(kTriggeredData.m_eOtherPlayer).getCity(kTriggeredData.m_iOtherPlayerCityId);
 		if (NULL == pCity || !pCity->canApplyEvent(eEvent, kTriggeredData))
 		{
 			return false;
@@ -21925,23 +21925,17 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kTriggeredData.m_eTrigger > NO_EVENTTRIGGER && ::isPlotEventTrigger(kTriggeredData.m_eTrigger))
 	{
-		CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
-		if (NULL != pPlot)
-		{
-			if (!pPlot->canApplyEvent(eEvent))
-			{
-				return false;
-			}
-		}
-	}
-
-	CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
-	if (NULL != pUnit)
-	{
-		if (!pUnit->canApplyEvent(eEvent))
+		const CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+		if (NULL != pPlot && !pPlot->canApplyEvent(eEvent))
 		{
 			return false;
 		}
+	}
+
+	const CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
+	if (NULL != pUnit && !pUnit->canApplyEvent(eEvent))
+	{
+		return false;
 	}
 
 	if (NO_BONUS != kEvent.getBonusRevealed())
@@ -28038,7 +28032,7 @@ int CvPlayer::getCorporationInfluence(CorporationTypes eIndex) const
 	iInfluence += GET_TEAM(getTeam()).getCorporationRevenueModifier() / 2;
 
 	//Find the prereq tech for corporate HQ
-	TechTypes ePrereqTech = (TechTypes)GC.getCorporationInfo(eIndex).getTechPrereq();
+	TechTypes ePrereqTech = GC.getCorporationInfo(eIndex).getTechPrereq();
 
 	for (int i = 0; ePrereqTech == NO_TECH && i < GC.getNumBuildingInfos(); i++)
 	{
@@ -29942,17 +29936,12 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 
 	const CvTraitInfo& kTrait = GC.getTraitInfo(eIndex);
 
-	if (kTrait.getLinePriority() == 0)
-	{
-		return false;
-	}
-
-	if (!kTrait.isValidTrait()) return false;
+	if (kTrait.getLinePriority() == 0 || !kTrait.isValidTrait()) return false;
 
 
-	TraitTypes eTraitPrerequisite = (TraitTypes)kTrait.getPrereqTrait();
-	TraitTypes eTraitPrerequisite1 = (TraitTypes)kTrait.getPrereqOrTrait1();
-	TraitTypes eTraitPrerequisite2 = (TraitTypes)kTrait.getPrereqOrTrait2();
+	const TraitTypes eTraitPrerequisite = kTrait.getPrereqTrait();
+	const TraitTypes eTraitPrerequisite1 = kTrait.getPrereqOrTrait1();
+	const TraitTypes eTraitPrerequisite2 = kTrait.getPrereqOrTrait2();
 
 	bool bbypass = true;
 	if (eTraitPrerequisite != NO_TRAIT)
@@ -29990,7 +29979,7 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 		}
 	}
 
-	if (kTrait.getPrereqTech() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes) kTrait.getPrereqTech()))
+	if (kTrait.getPrereqTech() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kTrait.getPrereqTech()))
 	{
 		return false;
 	}
@@ -29998,14 +29987,13 @@ bool CvPlayer::canLearnTrait(TraitTypes eIndex, bool isSelectingNegative) const
 	if (kTrait.getPromotionLine() != NO_PROMOTIONLINE)
 	{
 		if (GC.getPromotionLineInfo((PromotionLineTypes) kTrait.getPromotionLine()).getPrereqTech() != NO_TECH
-		&& !GET_TEAM(getTeam()).isHasTech((TechTypes) GC.getPromotionLineInfo((PromotionLineTypes) kTrait.getPromotionLine()).getPrereqTech()))
+		&& !GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo((PromotionLineTypes) kTrait.getPromotionLine()).getPrereqTech()))
 		{
 			return false;
 		}
-		TraitTypes ePrereq;
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			ePrereq = ((TraitTypes)iI);
+			const TraitTypes ePrereq = ((TraitTypes)iI);
 			if (!hasTrait(ePrereq) && GC.getTraitInfo(ePrereq).getPromotionLine() != NO_PROMOTIONLINE)
 			{
 				if (!kTrait.isNegativeTrait() && kTrait.getLinePriority() > 1)

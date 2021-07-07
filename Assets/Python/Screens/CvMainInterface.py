@@ -3382,7 +3382,7 @@ class CvMainInterface:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		x = 0
 		for i in xrange(self.iNumProcessInfos):
-			if CyCity.canMaintain(i, False):
+			if CyCity.canMaintain(i):
 				BTN = GC.getProcessInfo(i).getButton()
 				Btn = "WID|PROCESS|CityWork" + str(i)
 				screen.setImageButtonAt(Btn, Pnl, BTN, x, 0, iSize, iSize, eWidGen, 1, 1)

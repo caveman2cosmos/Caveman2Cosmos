@@ -2321,7 +2321,7 @@ int CvPromotionInfo::getPrereqOrPromotion2() const
 	return m_iPrereqOrPromotion2;
 }
 
-int CvPromotionInfo::getTechPrereq() const
+TechTypes CvPromotionInfo::getTechPrereq() const
 {
 	if (m_iTechPrereq == NO_TECH)
 	{
@@ -4985,8 +4985,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"LayerAnimationPath");
 	m_iLayerAnimationPath = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"StateReligionPrereq");
 	m_iStateReligionPrereq = pXML->GetInfoClass(szTextVal);
@@ -7809,7 +7808,7 @@ std::wstring CvActionInfo::getHotKeyDescription() const
 CvSpawnInfo::CvSpawnInfo()
 	:
 	m_eUnitType(NO_UNIT),
-	m_ePrereqTechType(NO_TECH),
+	m_ePrereqTech(NO_TECH),
 	m_eObsoleteTechType(NO_TECH),
 	m_iPlayerType(-1),
 	m_iTurns(-1),
@@ -7855,7 +7854,7 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	m_eUnitType = (UnitTypes)pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-	m_ePrereqTechType = (TechTypes) pXML->GetInfoClass(szTextVal);
+	m_ePrereqTech = (TechTypes) pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_eObsoleteTechType = (TechTypes) pXML->GetInfoClass(szTextVal);
@@ -8118,16 +8117,6 @@ UnitTypes CvSpawnInfo::getUnitType() const
 	return m_eUnitType;
 }
 
-TechTypes CvSpawnInfo::getPrereqTechType() const
-{
-	return m_ePrereqTechType;
-}
-
-TechTypes CvSpawnInfo::getObsoleteTechType() const
-{
-	return m_eObsoleteTechType;
-}
-
 PlayerTypes	CvSpawnInfo::getPlayer() const
 {
 	return (PlayerTypes)m_iPlayerType;
@@ -8210,7 +8199,7 @@ int CvSpawnInfo::getRateOverride() const
 void CvSpawnInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eUnitType);
-	CheckSum(iSum, m_ePrereqTechType);
+	CheckSum(iSum, m_ePrereqTech);
 	CheckSum(iSum, m_eObsoleteTechType);
 	CheckSum(iSum, m_iPlayerType);
 	CheckSum(iSum, m_iTurns);
@@ -8984,11 +8973,6 @@ int CvCivicInfo::getFreeSpecialist() const
 int CvCivicInfo::getTradeRoutes() const
 {
 	return m_iTradeRoutes;
-}
-
-int CvCivicInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
 }
 
 int CvCivicInfo::getCivicPercentAnger() const
@@ -9799,8 +9783,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOptionType");
 	m_iCivicOptionType = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 
 	pXML->GetOptionalChildXmlValByName(&m_iAnarchyLength, L"iAnarchyLength");
 
@@ -11352,11 +11335,6 @@ TechTypes CvSpecialBuildingInfo::getObsoleteTech() const
 	return m_iObsoleteTech;
 }
 
-int CvSpecialBuildingInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvSpecialBuildingInfo::getTechPrereqAnyone() const
 {
 	return m_iTechPrereqAnyone;
@@ -11382,8 +11360,7 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_iObsoleteTech = static_cast<TechTypes>(pXML->GetInfoClass(szTextVal));
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereqAnyone");
 	m_iTechPrereqAnyone = pXML->GetInfoClass(szTextVal);
@@ -13479,11 +13456,6 @@ int CvBuildInfo::getCost() const
 	return m_iCost;
 }
 
-int CvBuildInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvBuildInfo::getImprovement() const
 {
 	return m_iImprovement;
@@ -13638,9 +13610,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"PrereqTech");
 	pXML->GetOptionalChildXmlValByName(&m_iTime, L"iTime");
 	pXML->GetOptionalChildXmlValByName(&m_iCost, L"iCost");
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
@@ -18485,13 +18455,6 @@ CvProcessInfo::~CvProcessInfo()
 	SAFE_DELETE_ARRAY(m_paiProductionToCommerceModifier);
 }
 
-int CvProcessInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
-// Arrays
-
 int CvProcessInfo::getProductionToCommerceModifier(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
@@ -18500,15 +18463,13 @@ int CvProcessInfo::getProductionToCommerceModifier(int i) const
 
 bool CvProcessInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 
 	if (pXML->TryMoveToXmlFirstChild(L"ProductionToCommerceModifiers"))
 	{
@@ -18867,11 +18828,6 @@ int CvProjectInfo::getVictoryPrereq() const
 	return m_iVictoryPrereq;
 }
 
-int CvProjectInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvProjectInfo::getAnyoneProjectPrereq() const
 {
 	return m_iAnyoneProjectPrereq;
@@ -19085,20 +19041,16 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VictoryPrereq");
 	m_iVictoryPrereq = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost");
 	pXML->GetOptionalChildXmlValByName(&m_iNukeInterception, L"iNukeInterception");
 	pXML->GetOptionalChildXmlValByName(&m_iTechShare, L"iTechShare");
-	//DPII < Maintenance Modifiers >
 	pXML->GetOptionalChildXmlValByName(&m_iGlobalMaintenanceModifier, L"iGlobalMaintenanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenanceModifier, L"iDistanceMaintenanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenanceModifier, L"iNumCitiesMaintenanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iConnectedCityMaintenanceModifier, L"iConnectedCityMaintenanceModifier");
-	//DPII < Maintenance Modifiers >
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EveryoneSpecialUnit");
 	m_iEveryoneSpecialUnit = pXML->GetInfoClass(szTextVal);
 
@@ -19465,11 +19417,6 @@ void CvReligionInfo::setHolyCityChar(int i)
 /************************************************************************************************/
 }
 
-int CvReligionInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvReligionInfo::getFreeUnit() const
 {
 	return m_iFreeUnit;
@@ -19592,19 +19539,15 @@ int CvReligionInfo::getFlavorValue(int i) const
 //
 bool CvReligionInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
 	GC.addDelayedResolution((int*)&m_iFreeUnit, szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(&m_iNumFreeUnits, L"iFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iSpreadFactor, L"iSpreadFactor");
 /************************************************************************************************/
@@ -19868,11 +19811,6 @@ void CvCorporationInfo::setHeadquarterChar(int i)
 /************************************************************************************************/
 }
 
-int CvCorporationInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvCorporationInfo::getFreeUnit() const
 {
 	return m_iFreeUnit;
@@ -20048,15 +19986,13 @@ int* CvCorporationInfo::getYieldProducedArray() const
 //
 bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
 	m_aszExtraXMLforPass3.push_back(szTextVal);
@@ -20630,7 +20566,6 @@ CvTraitInfo::~CvTraitInfo()
 		GC.removeDelayedResolution((int*)&(m_aCivicOptionNoUpkeepTypes[i]));
 	}
 
-	//for Pure Traits
 	SAFE_DELETE_ARRAY(m_paiExtraYieldThresholdFiltered);
 	SAFE_DELETE_ARRAY(m_paiTradeYieldModifierFiltered);
 	SAFE_DELETE_ARRAY(m_paiCommerceChangeFiltered);
@@ -20638,14 +20573,6 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChangesFiltered);
 	SAFE_DELETE_ARRAY(m_piGoldenAgeYieldChangesFiltered);
 	SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChangesFiltered);
-	if (m_ppaiSpecialistYieldChangeFiltered != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChangeFiltered[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChangeFiltered);
-	}
 	SAFE_DELETE_ARRAY(m_piYieldModifierFiltered);
 	SAFE_DELETE_ARRAY(m_piCapitalYieldModifierFiltered);
 	SAFE_DELETE_ARRAY(m_piCapitalCommerceModifierFiltered);
@@ -20653,23 +20580,13 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY(m_piSpecialistExtraYieldFiltered);
 	SAFE_DELETE_ARRAY(m_piYieldChangeFiltered);
 	SAFE_DELETE_ARRAY(m_paiLessYieldThresholdFiltered);
-	if (m_ppaiSpecialistCommerceChangeFiltered != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChangeFiltered[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChangeFiltered);
-	}
-	if (m_ppaiImprovementYieldChangeFiltered != NULL)
-	{
-		for(int i=0;i<GC.getNumImprovementInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiImprovementYieldChangeFiltered[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiImprovementYieldChangeFiltered);
-	}
-	//TB Traits end
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChangeFiltered, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChangeFiltered, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiImprovementYieldChangeFiltered, GC.getNumImprovementInfos());
+
+	GC.removeDelayedResolution((int*)&m_iPrereqTrait);
+	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait1);
+	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait2);
 }
 
 int CvTraitInfo::getHealth() const
@@ -21131,23 +21048,6 @@ bool CvTraitInfo::isFreePromotionUnitCombats(int i, int j) const
 
 //TB Traits Mods begin
 
-//Textual References
-
-int CvTraitInfo::getPrereqTrait() const
-{
-	return m_iPrereqTrait;
-}
-
-int CvTraitInfo::getPrereqOrTrait1() const
-{
-	return m_iPrereqOrTrait1;
-}
-
-int CvTraitInfo::getPrereqOrTrait2() const
-{
-	return m_iPrereqOrTrait2;
-}
-
 PromotionLineTypes CvTraitInfo::getPromotionLine() const
 {
 	return m_ePromotionLine;
@@ -21158,13 +21058,6 @@ int CvTraitInfo::getGreatPeopleUnitType() const
 	return m_iGreatPeopleUnitType;
 }
 
-TechTypes CvTraitInfo::getPrereqTech() const
-{
-	return m_ePrereqTech;
-}
-
-
-//Team Project (6)
 SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -21189,7 +21082,6 @@ int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 	return m_iGoldenAgeonBirthofGreatPeopleType;
 }
 
-//integers
 int CvTraitInfo::getWarWearinessAccumulationModifier() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -21885,7 +21777,6 @@ int CvTraitInfo::getCoastalTradeRoutes() const
 	return m_iCoastalTradeRoutes;
 }
 
-//Team Project (6)
 int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -22066,7 +21957,6 @@ int CvTraitInfo::getMissileCargoSpace() const
 	return m_iMissileCargoSpace;
 }
 
-//Team Project (3)
 int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -22099,7 +21989,6 @@ int CvTraitInfo::getNationalCaptureResistanceModifier() const
 	return m_iNationalCaptureResistanceModifier;
 }
 
-//Team Project (6)
 int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -22147,7 +22036,6 @@ int CvTraitInfo::getFreedomFighterChange() const
 	}
 	return m_iFreedomFighterChange;
 }
-//booleans
 
 bool CvTraitInfo::isMilitaryFoodProduction() const
 {
@@ -22203,7 +22091,6 @@ bool CvTraitInfo::isBarbarianSelectionOnly() const
 	return m_bBarbarianSelectionOnly;
 }
 
-//Team Project (6)
 bool CvTraitInfo::isCitiesStartwithStateReligion() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -22282,7 +22169,6 @@ bool CvTraitInfo::isExtraGoody() const
 	return m_bExtraGoody;
 }
 
-//Team Project (5)
 bool CvTraitInfo::isAllReligionsActive() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
@@ -22947,7 +22833,6 @@ int* CvTraitInfo::getImprovementYieldChangeArray(int i) const
 	return (m_ppaiImprovementYieldChange) ? m_ppaiImprovementYieldChange[i] : 0;
 }
 
-//Team Project (7)
 int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
@@ -23422,7 +23307,6 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 
 bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	CvString szTextVal2;
 	if (!CvInfoBase::read(pXML))
@@ -23610,7 +23494,7 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_ePrereqTech = (TechTypes) pXML->GetInfoClass(szTextVal);
-//Team Project (6)
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EraAdvanceFreeSpecialistType");
 	m_eEraAdvanceFreeSpecialistType = (SpecialistTypes) pXML->GetInfoClass(szTextVal);
 
@@ -23734,12 +23618,8 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					break;
 				}
 			}
-
-			// set the current xml node to it's parent node
 			pXML->MoveToXmlParent();
 		}
-
-		// set the current xml node to it's parent node
 		pXML->MoveToXmlParent();
 	}
 
@@ -23847,12 +23727,8 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					break;
 				}
 			}
-
-			// set the current xml node to it's parent node
 			pXML->MoveToXmlParent();
 		}
-
-		// set the current xml node to it's parent node
 		pXML->MoveToXmlParent();
 	}
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
@@ -23901,16 +23777,11 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					break;
 				}
 			}
-
-			// set the current xml node to it's parent node
 			pXML->MoveToXmlParent();
 		}
-
-		// set the current xml node to it's parent node
 		pXML->MoveToXmlParent();
 	}
 
-//Team Project (7)
 	if (pXML->TryMoveToXmlFirstChild(L"GoldenAgeYieldChanges"))
 	{
 		pXML->SetYields(&m_piGoldenAgeYieldChanges);
@@ -24213,7 +24084,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-//Team Project (8)
 	if(pXML->TryMoveToXmlFirstChild(L"UnitCombatFreeExperiences"))
 	{
 		int i = 0;
@@ -24525,16 +24395,11 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 					break;
 				}
 			}
-
-			// set the current xml node to it's parent node
 			pXML->MoveToXmlParent();
 		}
-
-		// set the current xml node to it's parent node
 		pXML->MoveToXmlParent();
 	}
 
-//Team Project (7)
 	if (pXML->TryMoveToXmlFirstChild(L"GoldenAgeYieldChanges"))
 	{
 		pXML->SetYields(&m_piGoldenAgeYieldChangesFiltered);
@@ -24555,26 +24420,10 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChangesFiltered);
 	}
 
-	//TB Traits Mods end
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqTrait, L"TraitPrereq");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqOrTrait1, L"TraitPrereqOr1");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iPrereqOrTrait2, L"TraitPrereqOr2");
 
-	return true;
-}
-
-bool CvTraitInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TraitPrereq");
-	m_iPrereqTrait = GC.getInfoTypeForString(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TraitPrereqOr1");
-	m_iPrereqOrTrait1 = GC.getInfoTypeForString(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TraitPrereqOr2");
-	m_iPrereqOrTrait2 = GC.getInfoTypeForString(szTextVal);
 	return true;
 }
 
@@ -24687,9 +24536,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 	if (m_iGreatPeopleUnitType == NO_UNIT) m_iGreatPeopleUnitType = pClassInfo->m_iGreatPeopleUnitType;
 	if (m_iGoldenAgeonBirthofGreatPeopleType == NO_UNIT) m_iGoldenAgeonBirthofGreatPeopleType = pClassInfo->m_iGoldenAgeonBirthofGreatPeopleType;
 	if (getPrereqTech() == NO_TECH) m_ePrereqTech = pClassInfo->getPrereqTech();
-//Team Project (6)
 	if (getEraAdvanceFreeSpecialistType() == NO_SPECIALIST) m_eEraAdvanceFreeSpecialistType = pClassInfo->getEraAdvanceFreeSpecialistType();
-	//integers
 	if (getWarWearinessAccumulationModifier() == iDefault) m_iWarWearinessAccumulationModifier = pClassInfo->getWarWearinessAccumulationModifier();
 	if (getCivicAnarchyTimeModifier() == iDefault) m_iCivicAnarchyTimeModifier = pClassInfo->getCivicAnarchyTimeModifier();
 	if (getReligiousAnarchyTimeModifier() == iDefault) m_iReligiousAnarchyTimeModifier = pClassInfo->getReligiousAnarchyTimeModifier();
@@ -24733,7 +24580,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 	if (getBombardDefense() == iDefault) m_iBombardDefense = pClassInfo->getBombardDefense();
 	if (getUnitUpgradePriceModifier() == iDefault) m_iUnitUpgradePriceModifier = pClassInfo->getUnitUpgradePriceModifier();
 	if (getCoastalTradeRoutes() == iDefault) m_iCoastalTradeRoutes = pClassInfo->getCoastalTradeRoutes();
-//Team Project (6)
 	if (getGlobalPopulationgrowthratepercentage() == iDefault) m_iGlobalPopulationgrowthratepercentage = pClassInfo->getGlobalPopulationgrowthratepercentage();
 	if (getCityStartCulture(true) == iDefault) m_iCityStartCulture = pClassInfo->getCityStartCulture(true);
 	if (getGlobalAirUnitCapacity() == iDefault) m_iGlobalAirUnitCapacity = pClassInfo->getGlobalAirUnitCapacity();
@@ -24969,7 +24815,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 			m_piSpecialistExtraCommerceFiltered[i] = pClassInfo->getSpecialistExtraCommerce(i);
 		}
 
-//Team Project (7)
 		if ( m_piGoldenAgeCommerceChanges[i] == iDefault )
 		{
 			m_piGoldenAgeCommerceChanges[i] = pClassInfo->getGoldenAgeCommerceChanges(i);
@@ -25141,24 +24986,12 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo)
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aBonusHappinessChanges, pClassInfo->m_aBonusHappinessChanges);
 	}
 
-	// Readpass2 stuff
-	if (getPrereqTrait() == iTextDefault) m_iPrereqTrait = pClassInfo->getPrereqTrait();
-	if (getPrereqOrTrait1() == iTextDefault) m_iPrereqOrTrait1 = pClassInfo->getPrereqOrTrait1();
-	if (getPrereqOrTrait2() == iTextDefault) m_iPrereqOrTrait2 = pClassInfo->getPrereqOrTrait2();
-
-	//TB Traits Mods end
+	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqTrait, (int*)&pClassInfo->m_iPrereqTrait);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait1, (int*)&pClassInfo->m_iPrereqOrTrait1);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iPrereqOrTrait2, (int*)&pClassInfo->m_iPrereqOrTrait2);
 }
 
-void CvTraitInfo::copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-
-	if (bOver || getPrereqTrait() == iTextDefault) m_iPrereqTrait = pClassInfo->getPrereqTrait();
-	if (bOver || getPrereqOrTrait1() == iTextDefault) m_iPrereqOrTrait1 = pClassInfo->getPrereqOrTrait1();
-	if (bOver || getPrereqOrTrait2() == iTextDefault) m_iPrereqOrTrait2 = pClassInfo->getPrereqOrTrait2();
-}
-
-void CvTraitInfo::getCheckSum(unsigned int& iSum) const
+void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 {
 	for ( int j = 0; j < GC.getNumPromotionInfos(); j++ )
 	{
@@ -30561,11 +30394,6 @@ int CvEventInfo::getTechMinTurnsLeft() const
 	return m_iTechMinTurnsLeft;
 }
 
-int CvEventInfo::getPrereqTech() const
-{
-	return m_iPrereqTech;
-}
-
 int CvEventInfo::getFreeUnit() const
 {
 	return m_iFreeUnit;
@@ -31111,8 +30939,7 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTechPercent, L"iTechPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTechCostPercent, L"iTechCostPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTechMinTurnsLeft, L"iTechMinTurnsLeft");
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-	m_iPrereqTech = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iPrereqTech, L"PrereqTech");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
 	m_iFreeUnit = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iNumUnits, L"iNumFreeUnits");
@@ -31975,11 +31802,6 @@ bool CvEspionageMissionInfo::isSelectPlot() const
 	return m_bSelectPlot;
 }
 
-int CvEspionageMissionInfo::getTechPrereq() const
-{
-	return m_iTechPrereq;
-}
-
 int CvEspionageMissionInfo::getVisibilityLevel() const
 {
 	return m_iVisibilityLevel;
@@ -32147,7 +31969,6 @@ int CvEspionageMissionInfo::getRemoveCorporationsCostFactor() const
 
 bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -32159,16 +31980,12 @@ bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bIsTwoPhases, L"bIsTwoPhases");
 	pXML->GetOptionalChildXmlValByName(&m_bTargetsCity, L"bTargetsCity");
 	pXML->GetOptionalChildXmlValByName(&m_bSelectPlot, L"bSelectPlot");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
-	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
-
+	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iVisibilityLevel, L"iVisibilityLevel");
 	pXML->GetOptionalChildXmlValByName(&m_bInvestigateCity, L"bInvestigateCity");
 	pXML->GetOptionalChildXmlValByName(&m_bSeeDemographics, L"bSeeDemographics");
 	pXML->GetOptionalChildXmlValByName(&m_bNoActiveMissions, L"bNoActiveMissions");
 	pXML->GetOptionalChildXmlValByName(&m_bSeeResearch, L"bSeeResearch");
-
 	pXML->GetOptionalChildXmlValByName(&m_bDestroyImprovement, L"bDestroyImprovement");
 	pXML->GetOptionalChildXmlValByName(&m_iDestroyBuildingCostFactor, L"iDestroyBuildingCostFactor");
 	pXML->GetOptionalChildXmlValByName(&m_iDestroyUnitCostFactor, L"iDestroyUnitCostFactor");
@@ -32257,7 +32074,7 @@ void CvEspionageMissionInfo::copyNonDefaults(const CvEspionageMissionInfo* pClas
 	if (getRemoveCorporationsCostFactor() == iDefault) m_iRemoveCorporationsCostFactor = pClassInfo->getRemoveCorporationsCostFactor();
 }
 
-void CvEspionageMissionInfo::getCheckSum(unsigned int &iSum) const
+void CvEspionageMissionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iCost);
 	CheckSum(iSum, m_bIsPassive);
@@ -33680,11 +33497,6 @@ bool CvOutcomeInfo::isCapture() const
 	return m_bCapture;
 }
 
-TechTypes CvOutcomeInfo::getPrereqTech() const
-{
-	return m_ePrereqTech;
-}
-
 TechTypes CvOutcomeInfo::getObsoleteTech() const
 {
 	return m_eObsoleteTech;
@@ -34006,11 +33818,6 @@ void CvPromotionLineInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatOvercomeChanges);
 	CheckSumC(iSum, m_aTechContractChanceChanges);
 	CheckSumC(iSum, m_aTechOvercomeChanges);
-}
-
-TechTypes CvPromotionLineInfo::getPrereqTech() const
-{
-	return m_ePrereqTech;
 }
 
 TechTypes CvPromotionLineInfo::getObsoleteTech() const

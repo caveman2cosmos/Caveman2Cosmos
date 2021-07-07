@@ -2596,7 +2596,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		for (int iJ = 0; iJ < GC.getNumProcessInfos(); iJ++)
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq())
+			if (GET_TEAM(getTeam()).isHasTech(GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq())
 			&& GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_CULTURE) > 0)
 			{
 				bEasyCulture = true;
@@ -5430,7 +5430,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		bool bHaveGoodProcess = false;
 		for (int iJ = 0; iJ < GC.getNumProcessInfos(); iJ++)
 		{
-			if (kTeam.isHasTech((TechTypes)GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq()))
+			if (kTeam.isHasTech(GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq()))
 			{
 				bHaveGoodProcess = (GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_GOLD) + GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_RESEARCH)) > 0;
 				if (bHaveGoodProcess)
@@ -5495,7 +5495,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			int iPotentialReligions = 0;
 			for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 			{
-				const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+				const TechTypes eReligionTech = GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 
 				if (kTeam.isHasTech(eReligionTech) && !GC.getGame().isReligionSlotTaken((ReligionTypes)iJ) && canFoundReligion())
 				{
@@ -9386,18 +9386,18 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								//	Without some more checks we are over-assessing religious buildings a lot
 								//	so if there is a religion pre-req make some basic checks on the availability of
 								//	the religion
-								if ( kLoopUnit.getPrereqReligion() != NO_RELIGION )
+								if (kLoopUnit.getPrereqReligion() != NO_RELIGION)
 								{
 									const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
 
-									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
+									iTechDistance = std::max(iTechDistance, findPathLength(kReligion.getTechPrereq(), false));
 								}
 								//	Similarly corporations
-								if ( kLoopUnit.getPrereqCorporation() != NO_RELIGION )
+								if (kLoopUnit.getPrereqCorporation() != NO_RELIGION)
 								{
 									const CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
 
-									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
+									iTechDistance = std::max(iTechDistance, findPathLength(kCorporation.getTechPrereq(), false));
 								}
 
 								iTempValue = (iTempValue*15)/(10+iTechDistance);
@@ -9616,7 +9616,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 										//	the cities that have the religion already
 										iTempTradeValue = (iTempTradeValue*getHasReligionCount(eReligion))/std::max(1, iCityCount);
 
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
+										iTechDistance = std::max(iTechDistance, findPathLength(kReligion.getTechPrereq(), false));
 									}
 
 									//	Similarly corporations
@@ -9629,7 +9629,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 										//	the cities that have the religion already
 										iTempTradeValue = (iTempTradeValue*getHasCorporationCount(eCorporation))/std::max(1, iCityCount);
 
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
+										iTechDistance = std::max(iTechDistance, findPathLength(kCorporation.getTechPrereq(), false));
 									}
 
 									if ( iTempNonTradeValue > 0 && !bCanConstruct )
@@ -9704,7 +9704,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 						if (kLoopProject.getTechPrereq() != NO_TECH)
 						{
-							iDiff = abs(GC.getTechInfo((TechTypes)(kLoopProject.getTechPrereq())).getEra() - getCurrentEra());
+							iDiff = abs(GC.getTechInfo(kLoopProject.getTechPrereq()).getEra() - getCurrentEra());
 
 							if (iDiff == 0)
 							{
@@ -18156,13 +18156,13 @@ void CvPlayerAI::AI_doCivics()
 
 					for(int iOptionType = 0; iOptionType < GC.getNumCivicOptionInfos(); iOptionType++ )
 					{
-						bool	bTestSwitched = false;
+						bool bTestSwitched = false;
 
 						for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
 						{
 							if ( GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == iOptionType && !canDoCivics((CivicTypes)iI) )
 							{
-								TechTypes eTech = (TechTypes)GC.getCivicInfo((CivicTypes)iI).getTechPrereq();
+								const TechTypes eTech = GC.getCivicInfo((CivicTypes)iI).getTechPrereq();
 
 								if ( !GET_TEAM(getTeam()).isHasTech(eTech) )
 								{
@@ -22434,9 +22434,9 @@ int CvPlayerAI::AI_getSpaceVictoryStage() const
 			}
 			else
 			{
-				if( !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()) )
+				if (!GET_TEAM(getTeam()).isHasTech(GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()))
 				{
-					if( !isResearchingTech((TechTypes)GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()) )
+					if (!isResearchingTech(GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()))
 					{
 						bNearAllTechs = false;
 					}
@@ -37499,7 +37499,7 @@ int CvPlayerAI::AI_religiousTechValue(TechTypes eTech) const
 	{
 		for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 		{
-			const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+			const TechTypes eReligionTech = GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 			if (eReligionTech == eTech)
 			{
 				if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iJ)))

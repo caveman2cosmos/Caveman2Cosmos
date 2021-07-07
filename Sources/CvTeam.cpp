@@ -7772,7 +7772,7 @@ ImprovementTypes CvTeam::getImprovementUpgrade(ImprovementTypes eImprovement) co
 	const ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 
 	if (eUpgrade != NO_IMPROVEMENT && GC.getImprovementInfo(eUpgrade).getPrereqTech() != NO_TECH
-	&& !isHasTech((TechTypes)GC.getImprovementInfo(eUpgrade).getPrereqTech()))
+	&& !isHasTech(GC.getImprovementInfo(eUpgrade).getPrereqTech()))
 	{
 		return NO_IMPROVEMENT;
 	}

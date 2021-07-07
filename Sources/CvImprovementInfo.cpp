@@ -465,11 +465,6 @@ int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 		return m_paImprovementBonus[i].m_iDepletionRand;
 }
 
-int CvImprovementInfo::getPrereqTech() const
-{
-	return m_iPrereqTech;
-}
-
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
 //{
 //	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
@@ -877,8 +872,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPeakMakesValid, L"bPeakMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_iDepletionRand, L"iDepletionRand");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-	m_iPrereqTech = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iPrereqTech, L"PrereqTech");
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	//FAssertMsg((GC.getNumTraitInfos() > 0) && (NUM_YIELD_TYPES > 0),"either the number of trait infos is zero or less or the number of yield types is zero or less");
