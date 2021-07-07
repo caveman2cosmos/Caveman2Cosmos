@@ -113,7 +113,13 @@ class TestCode:
 		elif iTechLoc == iTechReligionLoc:
 			iTechRow = iTechReligionRow
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#Unit tech location
 	def checkUnitTechRequirementLocation(self, CvUnitInfo):
@@ -148,7 +154,13 @@ class TestCode:
 		if iTechLoc == iTechTypeLoc:
 			iTechRow = iTechTypeRow
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#Promotion tech location
 	def checkPromotionTechRequirementLocation(self, CvPromotionInfo):
@@ -161,7 +173,13 @@ class TestCode:
 			iTechLoc = 0
 			iTechRow = 0
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#Bonus tech locations
 	def checkBonusTechRequirementLocation(self, CvBonusInfo):
@@ -183,8 +201,16 @@ class TestCode:
 		else:
 			iTechEnableLoc = 0
 			iTechEnableRow = 0
+			
+			
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechRevealXY = 100*iTechRevealLoc + iTechRevealRow
+		iTechEnableXY = 100*iTechEnableLoc + iTechEnableRow
 
-		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow
+		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow, iTechRevealXY, iTechEnableXY
 
 	#Improvement tech location
 	def checkImprovementTechRequirementLocation(self, CvImprovementInfo):
@@ -197,7 +223,13 @@ class TestCode:
 			iTechLoc = 0
 			iTechRow = 0
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#Civic tech location
 	def checkCivicTechRequirementLocation(self, CvCivicInfo):
@@ -210,7 +242,13 @@ class TestCode:
 			iTechLoc = 0
 			iTechRow = 0
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#Build tech location
 	def checkBuildTechRequirementLocation(self, CvBuildInfo):
@@ -223,7 +261,13 @@ class TestCode:
 			iTechLoc = 0
 			iTechRow = 0
 
-		return iTechLoc, iTechRow
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
+		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechXY = 100*iTechLoc + iTechRow
+
+		return iTechLoc, iTechRow, iTechXY
 
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
 
