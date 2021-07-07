@@ -9373,7 +9373,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 									}
 									continue;
 								}
-								const TechTypes eTechPrereq = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
+								const TechTypes eTechPrereq = GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
 
 								if (eTechPrereq == NO_TECH || GET_TEAM(eActiveTeam).isHasTech(eTechPrereq))
 								{
@@ -15490,12 +15490,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		if (!bPlayerContext || !(GET_PLAYER(GC.getGame().getActivePlayer()).canDoCivics(eCivic)))
 		{
-			if (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isHasTech((TechTypes)(GC.getCivicInfo(eCivic).getTechPrereq()))))
+			if (!bPlayerContext || !GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(GC.getCivicInfo(eCivic).getTechPrereq()))
 			{
 				if (GC.getCivicInfo(eCivic).getTechPrereq() != NO_TECH)
 				{
 					szHelpText.append(NEWLINE);
-					szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_REQUIRES", CvWString(GC.getTechInfo((TechTypes)GC.getCivicInfo(eCivic).getTechPrereq()).getType()).GetCString(), GC.getTechInfo((TechTypes)GC.getCivicInfo(eCivic).getTechPrereq()).getTextKeyWide()));
+					szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_REQUIRES", CvWString(GC.getTechInfo(GC.getCivicInfo(eCivic).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getCivicInfo(eCivic).getTechPrereq()).getTextKeyWide()));
 				}
 			}
 		}
@@ -26291,8 +26291,8 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 		szBuffer.append(
 			gDLL->getText(
 				"TXT_KEY_RELIGION_FOUNDED_FIRST",
-				CvWString(GC.getTechInfo((TechTypes)religion.getTechPrereq()).getType()).GetCString(),
-				GC.getTechInfo((TechTypes)religion.getTechPrereq()).getTextKeyWide()
+				CvWString(GC.getTechInfo(religion.getTechPrereq()).getType()).c_str(),
+				GC.getTechInfo(religion.getTechPrereq()).getTextKeyWide()
 			)
 		);
 	}
@@ -26340,7 +26340,7 @@ void CvGameTextMgr::setReligionHelpCity(CvWStringBuffer &szBuffer, ReligionTypes
 		{
 			if (GC.getReligionInfo(eReligion).getTechPrereq() != NO_TECH)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDED_FIRST", GC.getTechInfo((TechTypes)(GC.getReligionInfo(eReligion).getTechPrereq())).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDED_FIRST", GC.getTechInfo(GC.getReligionInfo(eReligion).getTechPrereq()).getTextKeyWide()));
 			}
 		}
 	}
@@ -26537,16 +26537,13 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 	if (!szTempBuffer.empty())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_ALL_CITIES", szTempBuffer.GetCString()));
+		szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_ALL_CITIES", szTempBuffer.c_str()));
 	}
 
-	if (!bCivilopedia)
+	if (!bCivilopedia && kCorporation.getTechPrereq() != NO_TECH)
 	{
-		if (kCorporation.getTechPrereq() != NO_TECH)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_FOUNDED_FIRST", CvWString(GC.getTechInfo((TechTypes)kCorporation.getTechPrereq()).getType()).GetCString(), GC.getTechInfo((TechTypes)kCorporation.getTechPrereq()).getTextKeyWide()));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_FOUNDED_FIRST", CvWString(GC.getTechInfo(kCorporation.getTechPrereq()).getType()).c_str(), GC.getTechInfo(kCorporation.getTechPrereq()).getTextKeyWide()));
 	}
 
 	bool bFirst = true;
@@ -26680,8 +26677,8 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 		if (!GC.getGame().isCorporationFounded(eCorporation) && kCorporation.getTechPrereq() != NO_TECH)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_FOUNDED_FIRST",
-				CvWString(GC.getTechInfo((TechTypes)kCorporation.getTechPrereq()).getType()).GetCString(),
-				GC.getTechInfo((TechTypes)(kCorporation.getTechPrereq())).getTextKeyWide()));
+				CvWString(GC.getTechInfo(kCorporation.getTechPrereq()).getType()).c_str(),
+				GC.getTechInfo(kCorporation.getTechPrereq()).getTextKeyWide()));
 		}
 	}
 
@@ -31051,8 +31048,8 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 			{
 				const CvBuildInfo& build = GC.getBuildInfo((BuildTypes)iI);
 
-				if ((ImprovementTypes)build.getImprovement() == eImprovement
-				&& GET_TEAM(eTeam).isHasTech((TechTypes)build.getTechPrereq()))
+				if (build.getImprovement() == eImprovement
+				&& GET_TEAM(eTeam).isHasTech(build.getTechPrereq()))
 				{
 					if (build.isFeatureRemove(eFeature))
 					{

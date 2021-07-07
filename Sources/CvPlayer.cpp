@@ -6885,7 +6885,7 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
-			const TechTypes eRequiredTech = (TechTypes)(GC.getSpecialBuildingInfo(eSpecialBuilding).getTechPrereq());
+			const TechTypes eRequiredTech = GC.getSpecialBuildingInfo(eSpecialBuilding).getTechPrereq();
 			if (eIgnoreTechReq != eRequiredTech && !currentTeam.isHasTech(eRequiredTech))
 			{
 				return false;
@@ -7080,7 +7080,7 @@ bool CvPlayer::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisibl
 		return false;
 	}
 
-	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kProject.getTechPrereq()))
+	if (!GET_TEAM(getTeam()).isHasTech(kProject.getTechPrereq()))
 	{
 		return false;
 	}
@@ -7125,12 +7125,9 @@ bool CvPlayer::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisibl
 			return false;
 		}
 
-		if (GC.getGame().isNoNukes())
+		if (GC.getGame().isNoNukes() && kProject.isAllowsNukes())
 		{
-			if (kProject.isAllowsNukes())
-			{
-				return false;
-			}
+			return false;
 		}
 
 		if (kProject.getAnyoneProjectPrereq() != NO_PROJECT)

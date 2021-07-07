@@ -466,7 +466,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -639,7 +639,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -798,7 +798,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -955,7 +955,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}

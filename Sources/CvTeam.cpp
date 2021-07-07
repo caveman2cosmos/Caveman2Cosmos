@@ -4626,10 +4626,10 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 					player.changeProjectHappiness(kProject.getGlobalHappiness());
 					player.changeProjectHealth(kProject.getGlobalHealth());
 					player.changeProjectInflation(kProject.getInflationModifier());
-					player.changeMaintenanceModifier(GC.getProjectInfo(eIndex).getGlobalMaintenanceModifier());
-					player.changeDistanceMaintenanceModifier(GC.getProjectInfo(eIndex).getDistanceMaintenanceModifier());
-					player.changeNumCitiesMaintenanceModifier(GC.getProjectInfo(eIndex).getNumCitiesMaintenanceModifier());
-					player.changeConnectedCityMaintenanceModifier(GC.getProjectInfo(eIndex).getConnectedCityMaintenanceModifier());
+					player.changeMaintenanceModifier(kProject.getGlobalMaintenanceModifier());
+					player.changeDistanceMaintenanceModifier(kProject.getDistanceMaintenanceModifier());
+					player.changeNumCitiesMaintenanceModifier(kProject.getNumCitiesMaintenanceModifier());
+					player.changeConnectedCityMaintenanceModifier(kProject.getConnectedCityMaintenanceModifier());
 
 					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{

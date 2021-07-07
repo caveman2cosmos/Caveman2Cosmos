@@ -874,8 +874,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		}
 		for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
-			TechTypes eIndex = TechTypes(GC.getReligionInfo((ReligionTypes)iI).getTechPrereq());
-			m_abTechCanFoundReligion[eIndex] = true;
+			m_abTechCanFoundReligion[GC.getReligionInfo((ReligionTypes)iI).getTechPrereq()] = true;
 		}
 
 		FAssertMsg(m_paiCorporationGameTurnFounded==NULL, "about to leak memory, CvGame::m_paiCorporationGameTurnFounded");
@@ -5307,9 +5306,9 @@ int CvGame::countNumReligionsFounded() const
 int CvGame::countNumReligionTechsDiscovered() const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 	{
-		if (countKnownTechNumTeams((TechTypes)GC.getReligionInfo((ReligionTypes)iI).getTechPrereq()) > 0)
+		if (countKnownTechNumTeams(info.getTechPrereq()) > 0)
 		{
 			iCount++;
 		}
@@ -6688,7 +6687,7 @@ void CvGame::doHeadquarters()
 		const CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)iI);
 		if (!isCorporationFounded((CorporationTypes)iI))
 		{
-			const TechTypes eTechPrereq = (TechTypes)kCorporation.getTechPrereq();
+			const TechTypes eTechPrereq = kCorporation.getTechPrereq();
 			if (NO_TECH == eTechPrereq)
 			{
 				continue;
@@ -8434,8 +8433,8 @@ void CvGame::read(FDataStreamBase* pStream)
 
 			if (bReligionIsNew)
 			{
-				const CvReligionInfo&	newReligion = GC.getReligionInfo((ReligionTypes)iI);
-				const TechTypes eFoundingTech = (TechTypes)newReligion.getTechPrereq();
+				const CvReligionInfo& newReligion = GC.getReligionInfo((ReligionTypes)iI);
+				const TechTypes eFoundingTech = newReligion.getTechPrereq();
 
 				setTechCanFoundReligion(eFoundingTech, false);
 			}
@@ -11129,7 +11128,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 			}
 		}
 	}
-	TechTypes ePrereqTech = (TechTypes)GC.getCorporationInfo(eCorporation).getTechPrereq();
+	TechTypes ePrereqTech = GC.getCorporationInfo(eCorporation).getTechPrereq();
 	//Find the prereq tech for corporate HQ
 	if (ePrereqTech == NO_TECH)
 	{

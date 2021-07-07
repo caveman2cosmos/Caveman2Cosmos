@@ -20790,7 +20790,7 @@ BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 		{
 			if (kBuild.isFeatureRemove(eFeature) &&
 				kBuild.getFeatureProduction(eFeature) != 0 &&
-				GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()) &&
+				GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()) &&
 				(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 			{
 				return (BuildTypes)iI;

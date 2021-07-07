@@ -5301,12 +5301,10 @@ public:
 	int getProductionCost() const;
 	int getNukeInterception() const;
 	int getTechShare() const;
-	//DPII < Maintenance Modifier >
 	int getGlobalMaintenanceModifier() const;
 	int getDistanceMaintenanceModifier() const;
 	int getNumCitiesMaintenanceModifier() const;
 	int getConnectedCityMaintenanceModifier() const;
-	//DPII < Maintenance Modifier >
 	int getEveryoneSpecialUnit() const;
 	int getEveryoneSpecialBuilding() const;
 	int getVictoryDelayPercent() const;
@@ -5369,12 +5367,10 @@ protected:
 	int m_iProductionCost;
 	int m_iNukeInterception;
 	int m_iTechShare;
-	//DPII < Maintenance Modifiers >
 	int m_iGlobalMaintenanceModifier;
 	int m_iDistanceMaintenanceModifier;
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iConnectedCityMaintenanceModifier;
-	//DPII < Maintenance Modifiers >
 	int m_iEveryoneSpecialUnit;
 	int m_iEveryoneSpecialBuilding;
 	int m_iVictoryDelayPercent;
@@ -7783,7 +7779,6 @@ private:
 	CvString m_szPythonCanDoCity;
 	CvString m_szPythonCanDoUnit;
 
-	// bool vector without delayed resolution
 	std::vector<int> m_aiNotOnGameOptions;
 	std::vector<int> m_aiOnGameOptions;
 };
