@@ -8883,7 +8883,7 @@ bool CvUnit::airBomb(int iX, int iY)
 						);
 					}
 				}
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 			}
 			else
 			{
@@ -9392,7 +9392,7 @@ bool CvUnit::pillage()
 							if (isPillageMarauder())
 							{
 								player.changeGold(iPillageGold);
-								pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+								pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 								if (isHuman())
 								{
 									AddDLLMessage(
@@ -9484,7 +9484,7 @@ bool CvUnit::pillage()
 				GET_PLAYER(ePlayerPillaged).addPlotDangerSource(pPlot, 100);
 			}
 		}
-		pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+		pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 	}
 	else if (pPlot->isRoute())
 	{
@@ -9709,7 +9709,7 @@ bool CvUnit::sabotage()
 
 	if (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") <= sabotageProb(pPlot))
 	{
-		pPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
+		pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 
 		finishMoves();
 
@@ -16568,7 +16568,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 								if (isPillageMarauder())
 								{
 									myPlayer.changeGold(iPillageGold);
-									pNewPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
+									pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
 
 									AddDLLMessage(
 										eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
@@ -16638,7 +16638,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			if (pNewPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				pNewPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
+				pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
 			}
 		}
 	}
@@ -27282,7 +27282,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pPlot->isHominid()), true, pPlot->getOwner() == getOwner());
 				}
 
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 				//Afflict
@@ -28424,7 +28424,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
 					}
 				}
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 				changeExperience100(100, -1, true);
 			}
 			else

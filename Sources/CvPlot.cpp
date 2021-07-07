@@ -809,7 +809,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	// Evaluate potential upgrades
 	ImprovementTypes eUpgrade = NO_IMPROVEMENT;
 	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
-	const ImprovementTypes eMainUpgrade = (ImprovementTypes)GC.getImprovementInfo(eType).getImprovementUpgrade();
+	const ImprovementTypes eMainUpgrade = GC.getImprovementInfo(eType).getImprovementUpgrade();
 
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
@@ -7211,7 +7211,7 @@ bool CvPlot::isImprovementDestructible() const
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
-	ImprovementTypes eOldImprovement = getImprovementType();
+	const ImprovementTypes eOldImprovement = getImprovementType();
 
 	if (eOldImprovement != eNewImprovement)
 	{
@@ -7222,7 +7222,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		if (eOldImprovement != NO_IMPROVEMENT && eNewImprovement != NO_IMPROVEMENT)
 		{
 			//Charge for Upgrade but be careful not to charge for a downgrade (pillage).
-			if ((ImprovementTypes)GC.getImprovementInfo(eOldImprovement).getImprovementUpgrade() == eNewImprovement)
+			if (GC.getImprovementInfo(eOldImprovement).getImprovementUpgrade() == eNewImprovement)
 			{
 				GET_PLAYER(getOwner()).changeGold(-GC.getImprovementInfo(eNewImprovement).getHighestCost());
 			}
@@ -7268,7 +7268,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			}
 			if (GC.getImprovementInfo(eNewImprovement).getBonusChange() != NO_BONUS)
 			{
-				BonusTypes eAddingBonus = (BonusTypes)GC.getImprovementInfo(eNewImprovement).getBonusChange();
+				const BonusTypes eAddingBonus = GC.getImprovementInfo(eNewImprovement).getBonusChange();
 				if (canHaveBonus(eAddingBonus, false))
 				{
 					setBonusType(eAddingBonus);
@@ -12044,13 +12044,13 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 		{
 			//in the case that improvements upgrade, use 2 upgrade levels higher for the
 			//yield calculations.
-			ImprovementTypes eUpgradeImprovement = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+			ImprovementTypes eUpgradeImprovement = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 			if (eUpgradeImprovement != NO_IMPROVEMENT)
 			{
 				//unless it's commerce on a low food tile, in which case only use 1 level higher
 				if ((eYield != YIELD_COMMERCE) || (getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION()))
 				{
-					ImprovementTypes eUpgradeImprovement2 = (ImprovementTypes)GC.getImprovementInfo(eUpgradeImprovement).getImprovementUpgrade();
+					const ImprovementTypes eUpgradeImprovement2 = GC.getImprovementInfo(eUpgradeImprovement).getImprovementUpgrade();
 					if (eUpgradeImprovement2 != NO_IMPROVEMENT)
 					{
 						eUpgradeImprovement = eUpgradeImprovement2;

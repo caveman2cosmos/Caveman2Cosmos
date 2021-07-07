@@ -4430,7 +4430,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
 
 				// If the building also gives a free building then factor that in as well
-				const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(buildingInfo.getFreeBuilding());
+				const BuildingTypes eFreeBuilding = buildingInfo.getFreeBuilding();
 				if (eFreeBuilding != NO_BUILDING && eFreeBuilding != NO_BUILDING)
 				{
 					// Add value of the free building taking into account our focus, and scale it by the number of cities that don't
@@ -4519,11 +4519,11 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			}
 
 			// If the buildings provides a free area building as well then adjust the score up
-			const BuildingTypes eFreeAreaBuilding = (BuildingTypes)buildingInfo.getFreeAreaBuilding();
+			const BuildingTypes eFreeAreaBuilding = buildingInfo.getFreeAreaBuilding();
 			if (eFreeAreaBuilding != NO_BUILDING)
 			{
 				// Score is weighted by the number of cities that don't have the free building
-				int weighting = player.getNumCities() - player.getBuildingCountPlusMaking((BuildingTypes)buildingInfo.getFreeAreaBuilding());
+				int weighting = player.getNumCities() - player.getBuildingCountPlusMaking(eFreeAreaBuilding);
 				// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
 				weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
 				// If we have none of the free buildings at all then also increase the score weighting
@@ -10355,22 +10355,14 @@ bool CvCityAI::AI_foodAvailable(int iExtra) const
 		int iBestValue = 0;
 		int iBestPlot = CITY_HOME_PLOT;
 
-		/************************************************************************************************/
-		/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
 		for (int iI = 0; iI < getNumCityPlots(); iI++)
-			/************************************************************************************************/
-			/* JOOYO_ADDON                          END                                                     */
-			/************************************************************************************************/
 		{
 			if (abPlotAvailable[iI])
 			{
 				const CvPlot* pPlot = getCityIndexPlot(iI);
 				if (pPlot)
 				{
-					int iValue = pPlot->getYield(YIELD_FOOD);
+					const int iValue = pPlot->getYield(YIELD_FOOD);
 
 					if (iValue > iBestValue)
 					{
@@ -11623,7 +11615,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int &piBestValue, BuildTypes &peB
 		if (!plotImp->isImprovementBonusTrade(eNonObsoleteBonus) && !plotImp->isUniversalTradeBonusProvider())
 		{
 			// Fuyu - patience. We can wait 10 turns for upgrade
-			const ImprovementTypes eUpgrade = (ImprovementTypes)plotImp->getImprovementUpgrade();
+			const ImprovementTypes eUpgrade = plotImp->getImprovementUpgrade();
 
 			if (eUpgrade != NO_IMPROVEMENT)
 			{

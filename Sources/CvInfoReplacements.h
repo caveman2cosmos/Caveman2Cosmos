@@ -70,21 +70,12 @@ public:
 		m_pInfo = pInfo;
 	}
 
-//	void updateInfo(const BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+//	void updateInfo(const BoolExpr* pCondition, T* pInfo)
 //	{
-//		if (bPassTwo)
-//		{
-//			SAFE_DELETE(pCondition);
-//			m_pInfo->copyNonDefaultsReadPass2(pInfo, NULL);
-//			SAFE_DELETE(pInfo);
-//		}
-//		else
-//		{
-//			m_pCondition = pCondition;
-//			pInfo->copyNonDefaults(m_pInfo, NULL);
-//			SAFE_DELETE(m_pInfo);
-//			m_pInfo = pInfo;
-//		}
+//		m_pCondition = pCondition;
+//		pInfo->copyNonDefaults(m_pInfo, NULL);
+//		SAFE_DELETE(m_pInfo);
+//		m_pInfo = pInfo;
 //	}
 };
 

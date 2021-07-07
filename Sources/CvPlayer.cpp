@@ -2653,11 +2653,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				if (team.isObsoleteBuilding((BuildingTypes)iI))
 				{
-					const int iObsoletesToBuilding = GC.getBuildingInfo((BuildingTypes)iI).getObsoletesToBuilding();
+					const BuildingTypes iObsoletesToBuilding = GC.getBuildingInfo((BuildingTypes)iI).getObsoletesToBuilding();
 
-					if (iObsoletesToBuilding != -1 && paiNumRealBuilding[iObsoletesToBuilding] == 0)
+					if (iObsoletesToBuilding != NO_BUILDING && paiNumRealBuilding[iObsoletesToBuilding] == 0)
 					{
-						pNewCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+						pNewCity->setNumRealBuilding(iObsoletesToBuilding, 1);
 						continue;
 					}
 				}
@@ -7598,13 +7598,13 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 
 	if (!bReligiouslyDisabling)
 	{
-		const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(kBuilding.getFreeBuilding());
+		const BuildingTypes eFreeBuilding = kBuilding.getFreeBuilding();
 		if (eFreeBuilding != NO_BUILDING)
 		{
 			changeFreeBuildingCount(eFreeBuilding, iChange);
 		}
 
-		const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.getFreeAreaBuilding());
+		const BuildingTypes eFreeAreaBuilding = kBuilding.getFreeAreaBuilding();
 		if (eFreeAreaBuilding != NO_BUILDING)
 		{
 			algo::for_each(cities() | filtered(CvCity::fn::area() == pArea), CvCity::fn::changeFreeAreaBuildingCount(eFreeAreaBuilding, iChange));
@@ -16993,7 +16993,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_NEAR_CITY", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription(), pNearCity->getNameKey()).GetCString();
-					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+					pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 					bSomethingHappened = true;
 				}
 				else if (pPlot->getRouteType() != NO_ROUTE)
@@ -17006,7 +17006,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription()).GetCString();
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 				bSomethingHappened = true;
 			}
 			else if (pPlot->getRouteType() != NO_ROUTE)
