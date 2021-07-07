@@ -275,8 +275,8 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	unsigned int getAssetCheckSum() const;
-	unsigned int getSavegameAssetCheckSum() const;
+	uint32_t getAssetCheckSum() const;
+	uint32_t getSavegameAssetCheckSum() const;
 	void calculateAssetCheckSum();
 	void checkVersions();
 	void endGameSetup();
@@ -417,9 +417,9 @@ protected:
 	bool m_bRecalcRequestProcessed;
 
 	// Asset checksum of the current build
-	unsigned int m_uiAssetCheckSum;
+	uint32_t m_uiAssetCheckSum;
 	// Asset checksum of the build which performed the save of the loaded game
-	unsigned int m_uiSavegameAssetCheckSum;
+	uint32_t m_uiSavegameAssetCheckSum;
 };
 
 #endif
