@@ -379,7 +379,7 @@ class Pedia:
 		INDEX_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_INDEX", ())
 		BACK_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_BACK", ())
 		NEXT_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_FORWARD", ())
-		EXIT_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		EXIT_TEXT		= szfontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		# Build Pedia screen.
 		screen.setRenderInterfaceOnly(True)
 		screen.setScreenGroup(1)

@@ -374,7 +374,7 @@ class CvDomesticAdvisor:
 
 		stText = szfontEdge + TRNSLTR.getText("TXT_KEY_DOMESTIC_ADVISOR_TITLE", ())
 		screen.setText("DomHeader", "", stText, 1<<2, xMid, 0, 0, eFontTitle, eWidGen, 1, 1)
-		stText = szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		stText = szfontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		screen.setText("DomExit", "", stText, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Buttons to switch screens
