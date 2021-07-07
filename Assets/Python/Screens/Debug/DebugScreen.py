@@ -118,7 +118,7 @@ class DebugScreen:
 
 
 	def runTestCode(self, iTest):
-		print "----------------------------------------------\nTest " + str(iTest) + " - " + self.testCodes[iTest][1] + "\n\n\t" + self.testCodes[iTest][2] + "\n----------------------------------------------"
+		print "----------------------------------------------\n Test " + str(iTest) + " - " + self.testCodes[iTest][1] + "\n\n:: " + self.testCodes[iTest][2] + "\n----------------------------------------------"
 		screen = self.getScreen()
 		screen.addPanel("TestCodelogPnlA", "", "", True, True, -8, -8, self.xRes+16, self.yRes+16, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel("TestCodelogPnlB", "", "", True, True, -8, -8, self.xRes+16, self.yRes+16, PanelStyles.PANEL_STYLE_HUD_HELP)
@@ -134,7 +134,7 @@ class DebugScreen:
 
 		screen.moveToFront("TestCodeLogExit0")
 		screen.show("TestCodeLogExit0")
-		print "----------------------------------------------\nTest " + str(iTest) + "done\n----------------------------------------------"
+		print "----------------------------------------------\n Finished Test %d - %s\n----------------------------------------------" % (iTest, self.testCodes[iTest][1])
 
 	def testCodelog(self, text):
 		print "[TEST] " + text
@@ -160,7 +160,7 @@ class DebugScreen:
 			i -= 1
 		self.nWidgetCount = 0
 
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		screen = self.getScreen()
 
 		iCode	= inputClass.eNotifyCode
