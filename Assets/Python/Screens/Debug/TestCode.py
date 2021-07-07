@@ -859,13 +859,13 @@ class TestCode:
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
-				iTechLoc = self.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]			
+				iTechLoc = self.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]
 				#Improvement yield with all techs
 				aBaseImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseUpgradeImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aTechImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aTotalImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
-				
+
 				CvImprovementUpgradeInfo = GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade())
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES): # Food, Production, Commerce
 					aBaseImprovementYield[iYield] = CvImprovementInfo.getYieldChange(iYield) # Improvement yields
