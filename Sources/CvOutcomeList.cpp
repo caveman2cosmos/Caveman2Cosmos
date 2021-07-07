@@ -130,7 +130,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
@@ -185,7 +185,7 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
@@ -278,7 +278,7 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())

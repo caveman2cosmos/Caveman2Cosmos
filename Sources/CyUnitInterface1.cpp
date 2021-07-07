@@ -83,7 +83,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isFortifyable", &CyUnit::isFortifyable, "bool ()")
 		//TB Combat Mods begin
 		//TB Combat Mods end
-		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()") 
+		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()")
 
 		.def("isInvisible", &CyUnit::isInvisible, "bool (int (TeamTypes) eTeam, bool bDebug)")
 		.def("isNukeImmune", &CyUnit::isNukeImmune, "bool ()")
@@ -93,10 +93,10 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		//TB Combat Mods End
 
 
-		.def("bombardRate", &CyUnit::bombardRate, "int ()") 
+		.def("bombardRate", &CyUnit::bombardRate, "int ()")
 
-		.def("specialCargo", &CyUnit::specialCargo, "int ()") 
-		.def("domainCargo", &CyUnit::domainCargo, "int ()") 
+		.def("specialCargo", &CyUnit::specialCargo, "int ()")
+		.def("domainCargo", &CyUnit::domainCargo, "int ()")
 		.def("cargoSpace", &CyUnit::cargoSpace, "int ()")
 		.def("changeCargoSpace", &CyUnit::changeCargoSpace, "void (int)")
 		.def("isFull", &CyUnit::isFull, "bool ()")

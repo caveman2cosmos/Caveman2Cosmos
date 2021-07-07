@@ -25,7 +25,7 @@ def recalculateModifiers():
 		pInterstateEventTriggerData = GC.getPlayer(i).getEventOccured(eInterstateEvent)
 		if pInterstateEventTriggerData is not None:
 			applyInterstate((eInterstateEvent, pInterstateEventTriggerData))
-			
+
 
 ######## BLESSED SEA ###########
 
@@ -6704,7 +6704,7 @@ def doGlobalWarming(argsList):
 		elif iFeature in (
 			GC.getInfoTypeForString("FEATURE_FOREST_YOUNG"),
 			GC.getInfoTypeForString("FEATURE_SAVANNA")
-		): 
+		):
 			iGW -= 1
 		elif iFeature in (
 			GC.getFEATURE_FOREST(),
@@ -6892,7 +6892,7 @@ def doGlobalWarming(argsList):
 			plot.setRouteType(-1)
 			if GC.getInfoTypeForString("TERRAIN_LAKE_SHORE"):
 				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-			else: 
+			else:
 				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
 			plot.setPlotType(PlotTypes.PLOT_LAND, True, True)
 

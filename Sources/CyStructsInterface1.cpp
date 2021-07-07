@@ -124,7 +124,7 @@ void CyStructsPythonInterface1()
 		.def("getOptionAt", &PBGameSetupData::getOptionAt)
 		.def("getMPOptionAt", &PBGameSetupData::getMPOptionAt)
 		;
-		
+
 	python::class_<PBPlayerSetupData>("PBPlayerSetupData")
 		.def_readwrite("iWho", &PBPlayerSetupData::iWho)
 		.def_readwrite("iCiv", &PBPlayerSetupData::iCiv)

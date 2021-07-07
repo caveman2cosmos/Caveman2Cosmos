@@ -236,7 +236,7 @@ bool CvUnit::isUsingDummyEntities() const
 
 void CvUnit::reloadEntity(bool bForceLoad)
 {
-	const bool bNeedsRealEntity = 
+	const bool bNeedsRealEntity =
 	(
 		!g_bUseDummyEntities || bForceLoad
 		||
@@ -8883,7 +8883,7 @@ bool CvUnit::airBomb(int iX, int iY)
 						);
 					}
 				}
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 			}
 			else
 			{
@@ -9359,7 +9359,7 @@ bool CvUnit::pillage()
 
 			if (iPillageGold > 0)
 			{
-				const float fInfluenceRatio = 
+				const float fInfluenceRatio =
 				(
 					GC.isIDW_ENABLED() && GC.isIDW_PILLAGE_INFLUENCE_ENABLED() && atWar(pPlot->getTeam(), getTeam())
 					?
@@ -9392,7 +9392,7 @@ bool CvUnit::pillage()
 							if (isPillageMarauder())
 							{
 								player.changeGold(iPillageGold);
-								pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+								pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 								if (isHuman())
 								{
 									AddDLLMessage(
@@ -9484,7 +9484,7 @@ bool CvUnit::pillage()
 				GET_PLAYER(ePlayerPillaged).addPlotDangerSource(pPlot, 100);
 			}
 		}
-		pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+		pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 	}
 	else if (pPlot->isRoute())
 	{
@@ -9709,7 +9709,7 @@ bool CvUnit::sabotage()
 
 	if (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") <= sabotageProb(pPlot))
 	{
-		pPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
+		pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 
 		finishMoves();
 
@@ -16568,7 +16568,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 								if (isPillageMarauder())
 								{
 									myPlayer.changeGold(iPillageGold);
-									pNewPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
+									pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
 
 									AddDLLMessage(
 										eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
@@ -16638,7 +16638,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			if (pNewPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				pNewPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
+				pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
 			}
 		}
 	}
@@ -21098,7 +21098,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			||	promotionInfo.getLungeChange() != 0
 			||	promotionInfo.getDynamicDefenseChange() != 0
 			)
-		) 
+		)
 		return false;
 
 	//Disable via NotOnGameOption tag:
@@ -21227,7 +21227,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	// ! SUPER_SPIES
 
 	//TB Note: changing the rule that completely bans such promotions but adding to these situations an automatic msg
-//	if (noDefensiveBonus() && 
+//	if (noDefensiveBonus() &&
 		//(
 		//		promotionInfo.getDefenseCombatModifierChange() != 0
 		//	||	promotionInfo.getFortRepelChange() != 0
@@ -22181,7 +22181,7 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 		// Disable spy promotions mechanism, exempt commando promotion
 		&& (!isSpy() || GC.isSS_ENABLED() || info.isEnemyRoute()))
 		{
-			UnitCombatKeyedInfo* infoKeyed = 
+			UnitCombatKeyedInfo* infoKeyed =
 			(
 				bNewValue
 				?
@@ -22862,7 +22862,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 			))
 		{
 			// When trying to add a promotion: check we are allowed to have it.
-			// Note - this check filters out attempts to set lower priority equipment 
+			// Note - this check filters out attempts to set lower priority equipment
 			//	or afflication promotions from the same line as an existing one that has a higher priority
 			PromotionRequirements::flags promoFlags = PromotionRequirements::None;
 			if (kPromotion.isEquipment()) promoFlags |= PromotionRequirements::Equip;
@@ -27282,7 +27282,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pPlot->isHominid()), true, pPlot->getOwner() == getOwner());
 				}
 
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 				//Afflict
@@ -28424,7 +28424,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
 					}
 				}
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 				changeExperience100(100, -1, true);
 			}
 			else
@@ -34265,7 +34265,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	for (iI = 0; iI < GC.getPromotionInfo(eEquipment).getNumPrereqBonusTypes(); iI++)
 	{
-		const BonusTypes ePrereqBonus = (BonusTypes)GC.getPromotionInfo(eEquipment).getPrereqBonusType(iI); 
+		const BonusTypes ePrereqBonus = (BonusTypes)GC.getPromotionInfo(eEquipment).getPrereqBonusType(iI);
 		if (ePrereqBonus != NO_BONUS && !pCity->hasBonus(ePrereqBonus))
 		{
 			return false;
@@ -37549,7 +37549,7 @@ int CvUnit::getCargoCapacitybyType(int iValue) const
 
 bool CvUnit::isCarrier() const
 {
-	return 
+	return
 	(
 		getSpecialCargo() != NO_SPECIALUNIT
 		||
@@ -38316,7 +38316,7 @@ void CvUnit::establishBuildups()
 			for (int iJ = 0; iJ < kPromotionLine.getNumPromotions(); iJ++)
 			{
 				const PromotionTypes ePromotion = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
 					&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLine);
@@ -38442,7 +38442,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 			for (int iI = 0; iI < kPotentialPromotionLine.getNumPromotions(); iI++)
 			{
 				const PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
 				&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					const int iValue = std::max(1, GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));

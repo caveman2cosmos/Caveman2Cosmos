@@ -43,7 +43,7 @@ class CvArea;
 #ifdef YIELD_VALUE_CACHING
 struct yieldValueCacheEntry
 {
-	yieldValueCacheEntry() 
+	yieldValueCacheEntry()
 		: aiYields()
 		, aiCommerceYields()
 		, bAvoidGrowth(false)

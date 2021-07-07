@@ -122,7 +122,7 @@ unsigned int FDataIOStream::WriteString(int count, std::wstring values[])
 	}
 	return 0;
 }
-	
+
 unsigned int FDataIOStream::ReadString(char *szName)
 {
 	char c;
@@ -193,8 +193,8 @@ unsigned int FDataIOStream::ReadString(int count, std::wstring values[])
 	}
 	return 0;
 }
-	
-char* FDataIOStream::ReadString()		// allocates memory 
+
+char* FDataIOStream::ReadString()		// allocates memory
 {
 	CvString s;
 	ReadString(s);
@@ -203,7 +203,7 @@ char* FDataIOStream::ReadString()		// allocates memory
 	return szName;
 }
 
-wchar_t* FDataIOStream::ReadWideString()	// allocates memory 
+wchar_t* FDataIOStream::ReadWideString()	// allocates memory
 {
 	CvWString s;
 	ReadString(s);

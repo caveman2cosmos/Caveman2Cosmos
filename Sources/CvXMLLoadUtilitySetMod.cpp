@@ -43,7 +43,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 
 	DEBUG_LOG("MLF.log", "\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
 
-	// Initialization of a temp LoadArray 
+	// Initialization of a temp LoadArray
 	std::vector< std::vector<bool> > aabLoaded(GC.getNumModLoadControlInfos()); //allocate the rows
 
 	for (int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
@@ -66,7 +66,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 	bool bContinue = true;
 	while (bContinue)	//we start with iDirDepth at the highest value(set during the MLF loading)
 	{
-		int iDirDepthTemp = 0;		//we don't want to change the global value	
+		int iDirDepthTemp = 0;		//we don't want to change the global value
 		int iInfosLoad = 0;
 		int iLoad = 0;
 
@@ -102,7 +102,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 								iInfosLoad = iiInfos;
 								iLoad = ii;
 
-								//The first valid we find on this level will be the first to load, 
+								//The first valid we find on this level will be the first to load,
 								//so we abord further search inside this class, and Continue the loop to the next level
 								//To see if this new Module itself has another MLF the next level
 								bHitDeepestDepthLoop = true;
@@ -126,7 +126,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		//load the deepest file
 		if (aabLoaded[iInfosLoad][iLoad])
 		{
-			// check for valid xml files			
+			// check for valid xml files
 			if (isValidModule(bModuleExist, (szModDirectory + GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()).c_str(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str(), CvString::format(".xml").c_str())/*(int)aszValidFilesVerification.size() > 0*/)	// does ANY valid xml file exist?
 			{
 				// if valid, module XML file(s) exist

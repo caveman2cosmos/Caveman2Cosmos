@@ -150,7 +150,7 @@ void UnitFilterList::init()
 		m_apUnitFilters[UNIT_FILTER_SHOW_MISSIONARY] = new UnitFilterIsCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_MISSIONARY"));
 
 		m_apUnitFilters[UNIT_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
-		
+
 		m_bInit = true;
 	}
 }

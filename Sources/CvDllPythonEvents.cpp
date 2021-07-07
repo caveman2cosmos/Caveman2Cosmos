@@ -278,7 +278,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 	eventData.pyArgs << gDLL->shiftKey();
 	eventData.pyArgs << (gDLL->getChtLvl() > 0);
 
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
+#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
 
@@ -312,7 +312,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 		pSample = itr->second;
 	}
 
-	CProfileScope detailedScope(pSample);		
+	CProfileScope detailedScope(pSample);
 #endif
 #endif
 

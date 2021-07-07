@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Button.thm
 Content		:	Civ4 - GButton control theme
@@ -136,7 +136,7 @@ with GFC_Control_Button
 				.InactiveTogglePress			=	.TogglePress;
 				.InactiveToggleDisable			=	.ToggleDisable;
 				.InactiveToggleRollover			=	.ToggleRollover;
-													
+
 				.Winoff							=	.Inactive;
 				.WinoffPress					=	.InactivePress;
 				.WinoffDisable					=	.InactiveDisable;
@@ -286,7 +286,7 @@ with GFC_Control_Button
 
 
 	// *** Normal button style
-	// This style is used for the default stone style of buttons. 
+	// This style is used for the default stone style of buttons.
 	// This uses the default text, which is mapped to a custom alt text style defined in common.
 
 	GFC_Control_StandardButton_Style
@@ -433,7 +433,7 @@ with GFC_Control_Button
 			.InactiveToggleRollover	= .ToggleRollover;
 			.InactiveTogglePress	= .TogglePress;
 			.InactiveToggleDisable	= .ToggleDisable;
-									
+
 			.Winoff					= .Default;
 			.WinoffRollover			= .Rollover;
 			.WinoffPress			= .Press;
@@ -586,7 +586,7 @@ with GFC_Control_Button
 			.ToggleDisable					=	.Disable;
 			.ToggleRollover					=	.Rollover;
 			.ToggleFocus					=	.Focus;
-			.ToggleFocusRollover			=	.FocusRollover;	
+			.ToggleFocusRollover			=	.FocusRollover;
 		}
 		with .Color_TextShadow
 		{
@@ -601,7 +601,7 @@ with GFC_Control_Button
 			.ToggleDisable					=	.Disable;
 			.ToggleRollover					=	.Rollover;
 			.ToggleFocus					=	.Focus;
-			.ToggleFocusRollover			=	.FocusRollover;	
+			.ToggleFocusRollover			=	.FocusRollover;
 		}
 		// Image skins
 		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -728,7 +728,7 @@ with GFC_Control_Button
 	GFC_Control_LinkButton_Style
 	{
 		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlLink;
-		
+
 		.Renderer_Text								=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_TextLink;
 		.Flag_DownOffset							=	0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
 
@@ -975,14 +975,14 @@ with GFC_Control_Button
 			.Press
 			{
 				layer { Inherit = .Default; }
-				layer {	
+				layer {
 					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 1);
 				}
 			}
 			.Rollover
 			{
 				layer { Inherit = .Default; }
-				layer {	
+				layer {
 					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
 				}
 			}
@@ -1102,7 +1102,7 @@ with GFC_Control_Button
 				layer {
 					DestCombine			=	GColorCombine(BlendSource,Disable);
 					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
-				}	
+				}
 				layer {
 					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 				}

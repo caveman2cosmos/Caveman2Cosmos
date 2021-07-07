@@ -14,7 +14,7 @@
 #include "CheckSum.h"
 #include "IntExpr.h"
 
-CvPropertySource::CvPropertySource() 
+CvPropertySource::CvPropertySource()
 	: m_eProperty(NO_PROPERTY)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -23,7 +23,7 @@ CvPropertySource::CvPropertySource()
 {
 }
 
-CvPropertySource::CvPropertySource(PropertyTypes eProperty) 
+CvPropertySource::CvPropertySource(PropertyTypes eProperty)
 	: m_eProperty(eProperty)
 	, m_eObjectType(NO_GAMEOBJECT)
 	, m_eRelation(NO_RELATION)
@@ -145,7 +145,7 @@ CvPropertySourceConstant::CvPropertySourceConstant()
 {
 }
 
-CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty) 
+CvPropertySourceConstant::CvPropertySourceConstant(PropertyTypes eProperty)
 	: CvPropertySource(eProperty)
 	, m_pAmountPerTurn(NULL)
 {
@@ -221,7 +221,7 @@ void CvPropertySourceConstant::getCheckSum(uint32_t& iSum) const
 }
 
 
-CvPropertySourceConstantLimited::CvPropertySourceConstantLimited() 
+CvPropertySourceConstantLimited::CvPropertySourceConstantLimited()
 	: CvPropertySource()
 	, m_iAmountPerTurn(0)
 	, m_iLimit(0)
@@ -302,7 +302,7 @@ void CvPropertySourceConstantLimited::getCheckSum(uint32_t& iSum) const
 
 
 
-CvPropertySourceDecay::CvPropertySourceDecay() 
+CvPropertySourceDecay::CvPropertySourceDecay()
 	: CvPropertySource()
 	, m_iPercent(0)
 	, m_iNoDecayAmount(0)
