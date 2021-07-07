@@ -5585,7 +5585,7 @@ public:
 
 	void copyNonDefaults(const CvCorporationInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -7019,7 +7019,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvUpkeepInfo* pClassInfo);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7046,7 +7046,6 @@ public:
 
 	int getCityDefenseModifier() const;
 
-	// JOOYO_ADDON, Added by Jooyo, 06/17/09
 	int getCityRadius() const;
 	int getMaxWorldWonders() const;
 	int getMaxTeamWonders() const;
@@ -7060,7 +7059,7 @@ public:
 
 	void copyNonDefaults(const CvCultureLevelInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7074,7 +7073,6 @@ protected:
 	int m_iPrereqGameOption;
 
 	int* m_paiSpeedThreshold;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7113,8 +7111,7 @@ public:
 	int getSoundtrackSpace() const;
 	int getNumSoundtracks() const;
 	int getBeelineStingsTechCostModifier() const;
-
-	int getInitialCityMaintenancePercent() const; // Afforess 09/12/10
+	int getInitialCityMaintenancePercent() const;
 
 	const TCHAR* getAudioUnitVictoryScript() const;
 	const TCHAR* getAudioUnitDefeatScript() const;
@@ -7132,7 +7129,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvEraInfo* pClassInfo);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -7157,8 +7154,7 @@ protected:
 	int m_iSoundtrackSpace;
 	int m_iNumSoundtracks;
 	int m_iBeelineStingsTechCostModifier;
-
-	int m_iInitialCityMaintenancePercent; // Afforess 09/12/10
+	int m_iInitialCityMaintenancePercent;
 
 	CvString m_szAudioUnitVictoryScript;
 	CvString m_szAudioUnitDefeatScript;
@@ -7292,7 +7288,6 @@ class CvLandscapeInfo :
 		float m_fTextureScaleX;
 		float m_fTextureScaleY;
 		float m_fZScale;
-
 		float m_fPeakScale;
 		float m_fHillScale;
 
@@ -7305,7 +7300,6 @@ class CvLandscapeInfo :
 		CvString m_szTerrainMap;
 		CvString m_szNormalMap;
 		CvString m_szBlendMap;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7391,7 +7385,7 @@ public:
 	};
 
 	CvDiplomacyTextInfo();
-	virtual ~CvDiplomacyTextInfo() { uninit(); }	// free memory - MT
+	virtual ~CvDiplomacyTextInfo() { uninit(); }
 
 	// note - Response member vars allocated by CvXmlLoadUtility
 	void init(int iNum);
@@ -7413,9 +7407,8 @@ public:
 
 private:
 
-	int m_iNumResponses;			// set by init
+	int m_iNumResponses;
 	Response* m_pResponses;
-
 };
 
 
@@ -7741,7 +7734,7 @@ public:
 
 	void copyNonDefaults(const CvEventTriggerInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	int m_iPercentGamesActive;
@@ -7969,7 +7962,7 @@ public:
 
 	void copyNonDefaults(const CvEventInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	int m_iPrereqGameOption;
@@ -8123,7 +8116,7 @@ public:
 
 	void copyNonDefaults(const CvEspionageMissionInfo* pClassInfo);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -8249,8 +8242,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvVoteSourceInfo* pClassInfo);
-
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iVoteInterval;
@@ -8449,7 +8441,7 @@ public:
 	void copyNonDefaults(const CvOutcomeInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -8501,7 +8493,7 @@ public:
 	int getOutbreakModifier() const;
 	int getOvercomeModifier() const;
 	bool isAffliction() const { return m_bAffliction; }
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	bool isEquipment() const;
 	bool isCritical() const;
 	bool isNoSpreadonBattle() const;
@@ -8566,14 +8558,10 @@ public:
 	void setBuildings();
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvPromotionLineInfo* pClassInfo);
-
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
-
 	TechTypes m_ePrereqTech;
 	TechTypes m_eObsoleteTech;
 	PropertyTypes m_ePropertyType;
@@ -8589,7 +8577,7 @@ protected:
 	int m_iOutbreakModifier;
 	int m_iOvercomeModifier;
 	bool m_bAffliction;
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	bool m_bEquipment;
 	bool m_bCritical;
 	bool m_bNoSpreadonBattle;
@@ -8636,7 +8624,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitCombatInfo* pClassInfo);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -9091,7 +9079,7 @@ protected:
 	int m_iMediumRangeSupportPercentChange;
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	int m_iDodgeModifierChange;
 	int m_iPrecisionModifierChange;
 	int m_iPowerShotsChange;
@@ -9241,7 +9229,8 @@ protected:
 	std::vector<int> m_aiCureAfflictionChangeTypes;
 	std::vector<PromotionLineModifier> m_aAfflictionFortitudeChangeModifiers;
 	std::vector<AfflictOnAttackChange> m_aAfflictOnAttackChangeTypes;
-#endif
+	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	std::vector<InvisibleTerrainChanges> m_aInvisibleTerrainChanges;
 	std::vector<InvisibleFeatureChanges> m_aInvisibleFeatureChanges;
 	std::vector<InvisibleImprovementChanges> m_aInvisibleImprovementChanges;
@@ -9250,7 +9239,6 @@ protected:
 	std::vector<InvisibleTerrainChanges> m_aVisibleTerrainChanges;
 	std::vector<InvisibleFeatureChanges> m_aVisibleFeatureRangeChanges;
 	std::vector<InvisibleImprovementChanges> m_aVisibleImprovementRangeChanges;
-	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
 	std::vector<InvisibleTerrainChanges> m_aVisibleTerrainRangeChanges;
 };
 
@@ -9270,18 +9258,12 @@ public:
 	virtual ~CvIdeaClassInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvIdeaClassInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
 
-	void getCheckSum(unsigned int& iSum) const;
-
-	//bools
 	bool isInitialized();
 
 protected:
-	//bools
 	bool m_bInitialized;
 };
 
@@ -9301,24 +9283,13 @@ public:
 	virtual ~CvIdeaInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvIdeaInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(uint32_t& iSum) const;
 
-	void getCheckSum(unsigned int& iSum) const;
-
-	//References
 	IdeaClassTypes getIdeaClass() const;
-	//bools
-	/*bool isInitialized();*/
 
 protected:
-	//References
 	IdeaClassTypes m_eIdeaClass;
-
-	//bools
-	/*bool m_bInitialized;*/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9337,24 +9308,14 @@ public:
 	virtual ~CvInvisibleInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(const CvInvisibleInfo* pClassInfo);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
-	//References
-	//bools
-	//integers
-
-	//Processes
 	int getChar() const;
 	void setChar(int i);
 	int getFontButtonIndex() const;
 
 protected:
-	//References
-	//bools
-	//Processes
 	int m_iChar;
 	int m_iFontButtonIndex;
 };
