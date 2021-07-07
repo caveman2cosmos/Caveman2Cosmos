@@ -37,7 +37,7 @@ public:
 	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	
+
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
@@ -67,7 +67,7 @@ public:
 	virtual std::pair<int,int> getCorrect(int iCurrentAmountSource, int iCurrentAmountTarget, int iPredictedAmountSource, int iPredictedAmountTarget) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	
+
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 

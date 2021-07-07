@@ -4,7 +4,7 @@
 #define CyMap_h
 
 //
-// Python wrapper class for CvMap 
+// Python wrapper class for CvMap
 //
 
 class CyPlot;

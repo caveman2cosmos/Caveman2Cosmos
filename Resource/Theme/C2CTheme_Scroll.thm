@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Scroll.thm
 Content		:	Civ4 - GScroll control theme
@@ -104,7 +104,7 @@ with GFC_Control_Scroll
 				.Left				=	"Scroll Left";
 				.Right				=	"Scroll Right";
 				.HStepTo			=	"Scroll Here";
-				
+
 				.FullTop			=	"Top";
 				.FullBottom			=	"Bottom";
 				.PageUp				=	"Page Up";
@@ -158,7 +158,7 @@ with GFC_Control_Scroll
 // Up - button style
 style SF_CtrlTheme_Civ4_Control_Scroll_UpButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 	GFC_Control_Button_Size_Default	= GSize(16,19);
 
 	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -209,7 +209,7 @@ style SF_CtrlTheme_Civ4_Control_Scroll_UpButton_Style
 				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 0, 1);
 				Margin		= GRectMargin(0,0,0,0);
 				Indent		= GRectMargin(0,0,0,6);
-			}	
+			}
 		}
 		.Disable
 		{
@@ -235,7 +235,7 @@ style SF_CtrlTheme_Civ4_Control_Scroll_UpButton_Style
 // Down - button style
 style SF_CtrlTheme_Civ4_Control_Scroll_DownButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 	GFC_Control_Button_Size_Default	= GSize(16,19);
 
 	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -312,7 +312,7 @@ style SF_CtrlTheme_Civ4_Control_Scroll_DownButton_Style
 // Left - button style
 style SF_CtrlTheme_Civ4_Control_Scroll_LeftButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 	GFC_Control_Button_Size_Default	= GSize(19,16);
 
 	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -389,7 +389,7 @@ style SF_CtrlTheme_Civ4_Control_Scroll_LeftButton_Style
 // Right - button style
 style SF_CtrlTheme_Civ4_Control_Scroll_RightButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 	GFC_Control_Button_Size_Default	= GSize(19,16);
 
 	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -694,7 +694,7 @@ style SF_CtrlTheme_Civ4_Control_Scroll_HGripButton_Style
 			.Winoff			= .Default;
 			.WinoffPress	= .Press;
 			.WinoffRollover	= .Rollover;
-			.WinoffDisable	= .Disable;	
+			.WinoffDisable	= .Disable;
 		}
 		map GFC_CtrlTheme_Bitmap_Control_Scroll	= GFC_Control_DefaultScroll_Style;
 		map GFC_Control							= GFC_Control_DefaultScroll_Style;

@@ -280,7 +280,7 @@ class Pedia:
 		import PediaTrait
 		import PediaTerrain
 		import PediaEra
-		
+
 		import TestCode
 		self.debug	= TestCode.TestCode([0])
 
@@ -786,11 +786,11 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-		
+
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
-			
+
 			#Check location of unit on X and Y grid
 			iTechLoc = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[0]
 			iTechRow = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[1]
@@ -1132,7 +1132,7 @@ class Pedia:
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
-			
+
 			#Check location of resource of tech reveal/enable
 			iTechReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]
 			iTechEnable = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]

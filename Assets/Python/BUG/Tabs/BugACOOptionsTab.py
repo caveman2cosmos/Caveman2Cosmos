@@ -62,4 +62,3 @@ class BugACOOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addSpacer(screen, rightR, "ACO_Tab4.2")
 		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowDefenseModifiers")
 		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowTotalDefenseModifier")
-		

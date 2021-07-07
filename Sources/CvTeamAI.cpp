@@ -1504,7 +1504,7 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 	const CvGame& game = GC.getGame();
 	const bool bTechBrokering = !game.isOption(GAMEOPTION_NO_TECH_BROKERING);
 
-	// Afforess - Don't Sell Military Secrets when gearing for war 
+	// Afforess - Don't Sell Military Secrets when gearing for war
 	if (getAnyWarPlanCount(true) > 0 && GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3
 	// Only worry about the receiving team if there is no tech brokering.
 	&& (bTechBrokering || AI_getWarPlan(eTeam) != NO_WARPLAN))
@@ -3046,7 +3046,7 @@ void CvTeamAI::AI_updateWorstEnemy()
 		if (teamX.isAlive() && iI != getID() && !teamX.isVassal(getID()) && isHasMet(eTeamX)
 		&& AI_getAttitude(eTeamX) < (bRuthless ? ATTITUDE_FRIENDLY : ATTITUDE_CAUTIOUS))
 		{
-			const int iValue = 
+			const int iValue =
 			(
 				AI_getAttitudeVal(eTeamX) +
 				// Our Worst enemy isn't just the person we hate the most,

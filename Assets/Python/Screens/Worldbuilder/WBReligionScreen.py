@@ -27,7 +27,7 @@ class WBReligionScreen:
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		screen.setText("WBReligionExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 		screen.setLabel("ReligionHeader", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ()) + "</font>", 1<<2, screen.getXResolution()/2, 20, -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setLabel("HolyCityHeader", "Background", "<font=3b>" + CyTranslator().getText("TXT_KEY_RELIGION_SCREEN_HOLY_CITY", ())[:-1] + "</font>", 1<<2, screen.getXResolution()/8, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -64,7 +64,7 @@ class WBReligionScreen:
 		if bHoly:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("SetHoly", "Background", sColor + sText + "</color>", 1<<1, screen.getXResolution() - 20, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		self.placeHolyCities()
 		self.placeStateReligion()
 		self.sortCities()
@@ -101,7 +101,7 @@ class WBReligionScreen:
 			screen.setTableColumnHeader("WBAllReligions", i + 1, "", (iWidth - 150) / GC.getNumReligionInfos())
 			screen.setTableText("WBAllReligions", i + 1, 0, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_HELP_RELIGION, i, 1, 1<<2)
 			screen.setTableText("WBAllReligions", i + 1, 1, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_HELP_RELIGION, i, 2, 1<<2)
-			
+
 		screen.addTableControlGFC("WBCityReligions", 3 + GC.getNumReligionInfos(), iX, iY + 60, iWidth, iHeight, False, True, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBCityReligions", 0, "", 24)
 		screen.setTableColumnHeader("WBCityReligions", 1, "", 24)
@@ -149,8 +149,8 @@ class WBReligionScreen:
 				iLeader = pPlayerX.getLeaderType()
 				screen.setTableText("WBHolyCity", 1, iRow, "", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayerX * 10000 + iLeader, 1<<0)
 				screen.setTableText("WBHolyCity", 2, iRow, "<font=3>" + sColor + pHolyCity.getName() + "</color></font>", GC.getCivilizationInfo(pHolyCity.getCivilizationType()).getButton(), WidgetTypes.WIDGET_PYTHON, 7200 + iPlayerX, pHolyCity.getID(), 1<<0)
-	
-	def placeStateReligion(self):				
+
+	def placeStateReligion(self):
 		screen = CyGInterfaceScreen("WBReligionScreen", CvScreenEnums.WB_RELIGION)
 		iX = 20
 		iY = screen.getYResolution()/2 + 30
@@ -161,7 +161,7 @@ class WBReligionScreen:
 		screen.setTableColumnHeader("WBStateReligion", 0, "", 24)
 		screen.setTableColumnHeader("WBStateReligion", 1, "", 24)
 		screen.setTableColumnHeader("WBStateReligion", 2, "", iWidth - 48)
-		
+
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if not pPlayerX.isAlive(): continue
@@ -176,7 +176,7 @@ class WBReligionScreen:
 			screen.setTableText("WBStateReligion", 0, iRow, "", sButton, WidgetTypes.WIDGET_HELP_RELIGION, iStateReligion, 1, 1<<0)
 			screen.setTableText("WBStateReligion", 1, iRow, "", GC.getCivilizationInfo(iCivilization).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, iPlayerX * 10000 + iCivilization, 1<<0)
 			screen.setTableText("WBStateReligion", 2, iRow, "<font=3>" + sColor + pPlayerX.getName() + "</font></color>", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayerX * 10000 + iLeader, 1<<0)
-				
+
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen("WBReligionScreen", CvScreenEnums.WB_RELIGION)
 		global bHoly

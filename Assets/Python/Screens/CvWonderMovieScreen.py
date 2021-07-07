@@ -154,7 +154,7 @@ class CvWonderMovieScreen:
 				return 1
 		return 0
 
-	def update(self, fDelta): 
+	def update(self, fDelta):
 		if self.bTimer:
 			self.fTime -= fDelta
 			if self.fTime < 0:

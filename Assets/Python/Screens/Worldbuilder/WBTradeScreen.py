@@ -17,7 +17,7 @@ class WBTradeScreen:
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel("MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		screen.setLabel("TradeHeader", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ()), 1<<2, screen.getXResolution()/2, 20, -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setText("WBTradeExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper(), 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 		screen.setText("TradeCancel", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_SCREEN_CANCEL", ()).upper(), 1<<2, screen.getXResolution()/2, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )

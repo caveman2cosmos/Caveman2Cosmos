@@ -89,7 +89,7 @@ void CvDLLPythonIFaceBase::setSeqFromArray(const T* aSrc, int size, PyObject* ds
 #ifdef FASSERT_ENABLE
 		int ret=
 #endif
-			PySequence_SetItem(dst, i, x); 
+			PySequence_SetItem(dst, i, x);
 		FAssertMsg(ret!=-1, "PySequence_SetItem failed");
 		Py_DECREF(x);
 	}
@@ -106,7 +106,7 @@ void CvDLLPythonIFaceBase::setSeqFromArray(const T* aSrc, int size, PyObject* ds
 }
 
 //
-// static 
+// static
 // convert python list to array
 // allocates array
 //
@@ -131,7 +131,7 @@ int CvDLLPythonIFaceBase::putSeqInArray(PyObject* src, T** aDst)
 }
 
 //
-// static 
+// static
 // convert python list to array
 // allocates array
 //
@@ -156,7 +156,7 @@ int CvDLLPythonIFaceBase::putFloatSeqInArray(PyObject* src, T** aDst)
 }
 
 //
-// static 
+// static
 // convert python list to array
 // allocates array
 //

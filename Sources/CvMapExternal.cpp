@@ -171,7 +171,7 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 
 
 CvPlot* CvMapExternal::plot(int iX, int iY) const
-{	
+{
 	if (!m_bMapCoordinates)
 	{
 		return m_proxiedMap->getUnderlyingMap()->plot(iX, iY);

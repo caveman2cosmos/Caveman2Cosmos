@@ -33,7 +33,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getLiberationPlayer", &CyCity::getLiberationPlayer, "int ()")
 		//.def("liberate", &CyCity::liberate, "void ()")
-		
+
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		.def("calculateTradeProfitTimes100", &CyCity::calculateTradeProfitTimes100, "int (CyCity) - returns the unrounded trade profit created by CyCity")

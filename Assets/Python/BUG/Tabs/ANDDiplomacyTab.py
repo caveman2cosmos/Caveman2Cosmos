@@ -89,4 +89,3 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 
 
 
-		

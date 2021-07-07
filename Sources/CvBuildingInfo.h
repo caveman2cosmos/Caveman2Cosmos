@@ -87,8 +87,8 @@ public:
 	int getFreeBonus() const						{ return m_iFreeBonus; }
 	int getNumFreeBonuses() const					{ return m_iNumFreeBonuses; }
 	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
-	int getFreeBuilding() const						{ return m_iFreeBuilding; }
-	int getFreeAreaBuilding() const					{ return m_iFreeAreaBuilding; }
+	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
+	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
 	int getFreePromotion() const					{ return m_iFreePromotion; }
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
@@ -191,12 +191,12 @@ public:
 	int getInvasionChance() const					{ return m_iInvasionChance; }
 	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
 	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
-	int getProductionContinueBuilding() const		{ return m_iProductionContinueBuilding; }
+	BuildingTypes getProductionContinueBuilding() const	{ return m_iProductionContinueBuilding; }
 	int getPrereqCultureLevel() const				{ return m_iPrereqCultureLevel; }
 	int getWorkableRadius() const					{ return m_iWorkableRadius; }
-	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
-	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
-	int getObsoletesToBuilding() const				{ return m_iObsoletesToBuilding; }
+	BuildingTypes getPrereqAnyoneBuilding() const	{ return m_iPrereqAnyoneBuilding; }
+	BuildingTypes getExtendsBuilding() const		{ return m_iExtendsBuilding; }
+	BuildingTypes getObsoletesToBuilding() const	{ return m_iObsoletesToBuilding; }
 	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
 	int getNoEntryDefenseLevel() const;
 	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
@@ -587,13 +587,13 @@ private:
 	int m_iPrereqPopulation;
 	int m_iPrereqCultureLevel;
 	int m_iWorkableRadius;
-	int m_iPrereqAnyoneBuilding;
-	int m_iExtendsBuilding;
-	int m_iObsoletesToBuilding;
+	BuildingTypes m_iPrereqAnyoneBuilding;
+	BuildingTypes m_iExtendsBuilding;
+	BuildingTypes m_iObsoletesToBuilding;
 	int m_iOccupationTimeModifier;
 	int m_iNoEntryDefenseLevel;
 	int m_iNumUnitFullHeal;
-	int m_iProductionContinueBuilding;
+	BuildingTypes m_iProductionContinueBuilding;
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
@@ -606,8 +606,8 @@ private:
 	int m_iPowerBonus;
 	int m_iFreeBonus;
 	int m_iNumFreeBonuses;
-	int m_iFreeBuilding;
-	int m_iFreeAreaBuilding;
+	BuildingTypes m_iFreeBuilding;
+	BuildingTypes m_iFreeAreaBuilding;
 	int m_iFreePromotion;
 	int m_iCivicOption;
 	int m_iAIWeight;

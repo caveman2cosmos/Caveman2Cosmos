@@ -80,7 +80,7 @@ void CvGame::updateColoredPlots()
 					if (NO_BUILD != eBestBuild && GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement())
 					{
 						gDLL->getEngineIFace()->addColoredPlot(
-							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), 
+							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
 							GC.getColorInfo(GC.getCOLOR_RED()).getColor(),
 							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE
 						);

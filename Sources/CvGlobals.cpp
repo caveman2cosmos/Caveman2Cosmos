@@ -19,7 +19,7 @@
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
-#include <time.h> 
+#include <time.h>
 #include <sstream>
 
 static char gVersionString[1024] = { 0 };
@@ -81,7 +81,7 @@ ProxyTracker::~ProxyTracker()
 //
 // CONSTRUCTOR
 //
-cvInternalGlobals::cvInternalGlobals() 
+cvInternalGlobals::cvInternalGlobals()
 	: m_paszAnimationOperatorTypes(NULL)
 	, m_paszFunctionTypes(NULL)
 	, m_paszFlavorTypes(NULL)
@@ -242,7 +242,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 							  FILE_ATTRIBUTE_NORMAL,
 							  NULL);
 
-	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) 
+	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE))
 	{
 		return;
 	}
@@ -416,7 +416,7 @@ void cvInternalGlobals::init()
 	gDLL->initGlobals();	// some globals need to be allocated outside the dll
 
 	m_game = new CvGameAI;
-	
+
 	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_maps[i] = new CvMap((MapTypes)i);
@@ -462,7 +462,7 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
 
 	SAFE_DELETE(m_game);
-	
+
 	foreach_(const CvMap* map, m_maps)
 	{
 		SAFE_DELETE(map);
@@ -769,17 +769,17 @@ void cvInternalGlobals::updateReplacements()
 	m_CorporationInfoReplacements.updateReplacements(m_paCorporationInfo);
 
 	m_RouteInfoReplacements.updateReplacements(m_paRouteInfo);
-	
+
 	m_ProjectInfoReplacements.updateReplacements(m_paProjectInfo);
 
 	m_BuildInfoReplacements.updateReplacements(m_paBuildInfo);
-	
+
 	m_SpawnInfoReplacements.updateReplacements(m_paSpawnInfo);
 	m_GameSpeedInfoReplacements.updateReplacements(m_paGameSpeedInfo);
 	m_EraInfoReplacements.updateReplacements(m_aEraInfo);
-	
+
 	m_SpecialBuildingInfoReplacements.updateReplacements(m_paSpecialBuildingInfo);
-	
+
 	m_HandicapInfoReplacements.updateReplacements(m_paHandicapInfo);
 //ReplacementStep: search down here for 'CvInfoReplacements'
 }
@@ -2835,7 +2835,7 @@ void cvInternalGlobals::cacheInfoTypes()
 /*********************************/
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
-{	
+{
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	FAssert(eMap != CURRENT_MAP);
 
@@ -2936,7 +2936,7 @@ void cvInternalGlobals::copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTy
 		}
 	}
 }
-	
+
 void cvInternalGlobals::resolveDelayedResolution()
 {
 	for (DelayedResolutionMap::iterator it = m_delayedResolutionMap.begin(); it != m_delayedResolutionMap.end(); ++it)
@@ -2948,7 +2948,7 @@ void cvInternalGlobals::resolveDelayedResolution()
 }
 
 int cvInternalGlobals::getNumMissionInfos() const
-{ 
+{
 	return (int) m_paMissionInfo.size();
 }
 

@@ -5662,7 +5662,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						// Toffer - Note: Doesn't take into account that some units ignore this limit.
 						if (pDefender->isNPC())
 						{
-							const int iPotential = 
+							const int iPotential =
 							(
 								(
 									pDefender->isAnimal()
@@ -8660,7 +8660,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(CvWString::format(L"\nCurrent improvement value: %d\n",
 					pCity->AI_getImprovementValue(pPlot, eImprovement, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
 
-				ImprovementTypes eUpgrade = (ImprovementTypes) GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+				ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 				bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
 
 				szString.append(CvWString::format(L"AI improvement upgrade values:\nMain: %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
@@ -9420,7 +9420,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					else if (eMostRecentObsoletingTech != NO_TECH)
 					{
 						szString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH",
-							CvWString(GC.getTechInfo(eMostRecentObsoletingTech).getType()).GetCString(), 
+							CvWString(GC.getTechInfo(eMostRecentObsoletingTech).getType()).GetCString(),
 							GC.getTechInfo(eMostRecentObsoletingTech).getTextKeyWide()));
 					}
 				}
@@ -9470,7 +9470,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					const ImprovementTypes eUpgradeX =
 					(
-						iI == -1 ? (ImprovementTypes)impInfo.getImprovementUpgrade()
+						iI == -1 ? impInfo.getImprovementUpgrade()
 						:
 						(ImprovementTypes)impInfo.getAlternativeImprovementUpgradeType(iI)
 					);
@@ -9497,7 +9497,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				}
 				else
 				{
-					const bool bUpgrading = 
+					const bool bUpgrading =
 					(
 						impInfo.isUpgradeRequiresFortify()
 						?
@@ -17311,7 +17311,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		if (GC.getImprovementInfo((ImprovementTypes)iI).getPrereqTech() == eTech && GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage() != NO_IMPROVEMENT)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE", GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage()).getTextKeyWide(), GC.getImprovementInfo((ImprovementTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE", GC.getImprovementInfo(GC.getImprovementInfo((ImprovementTypes)iI).getImprovementPillage()).getTextKeyWide(), GC.getImprovementInfo((ImprovementTypes)iI).getTextKeyWide()));
 		}
 	}
 
@@ -17736,7 +17736,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	int iX = 0;
 	if ((TechTypes)kUnit.getPrereqAndTech() != -1)
 		iX = GC.getTechInfo((TechTypes)kUnit.getPrereqAndTech()).getGridX();
-	 
+
 	TechTypes eMostAdvancedTech = (TechTypes)kUnit.getPrereqAndTech();
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -21359,13 +21359,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(kBuilding.getFreeBuilding());
+	const BuildingTypes eFreeBuilding = kBuilding.getFreeBuilding();
 	if (eFreeBuilding != NO_BUILDING)
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
-	
+
 	bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
@@ -21381,7 +21381,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.getFreeAreaBuilding());
+	const BuildingTypes eFreeAreaBuilding = kBuilding.getFreeAreaBuilding();
 	if (eFreeAreaBuilding != NO_BUILDING)
 	{
 		szBuffer.append(NEWLINE);
@@ -23145,7 +23145,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				bFirst = false;
 			}
 		}
-		
+
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
@@ -23237,8 +23237,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bFirst = false;
 		}
 	}
-	
-	bFirst = true;	
+
+	bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
@@ -23252,12 +23252,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bFirst = false;
 		}
 	}
-	
+
 	bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-		
+
 		if (GC.getBuildingInfo(eLoopBuilding).getPrereqNumOfBuilding(eBuilding)
 		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
@@ -23628,10 +23628,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo(kBuilding.getObsoleteTech()).getType()).GetCString(), GC.getTechInfo(kBuilding.getObsoleteTech()).getTextKeyWide()));
 
-			const int iObsoletesToBuilding = kBuilding.getObsoletesToBuilding();
-			if (iObsoletesToBuilding != -1)
+			const BuildingTypes iObsoletesToBuilding = kBuilding.getObsoletesToBuilding();
+			if (iObsoletesToBuilding != NO_BUILDING)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO", CvWString(GC.getBuildingInfo((BuildingTypes)iObsoletesToBuilding).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iObsoletesToBuilding).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO", CvWString(GC.getBuildingInfo(iObsoletesToBuilding).getType()).GetCString(), GC.getBuildingInfo(iObsoletesToBuilding).getDescription()));
 			}
 		}
 
@@ -24043,7 +24043,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_CULTURE", GC.getCultureLevelInfo((CultureLevelTypes)kBuilding.getPrereqCultureLevel()).getDescription()));
 		}
 
-		const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(GC.getBuildingInfo(eBuilding).getPrereqAnyoneBuilding());
+		const BuildingTypes ePrereqBuilding = GC.getBuildingInfo(eBuilding).getPrereqAnyoneBuilding();
 		if (ePrereqBuilding != NO_BUILDING
 		&& (pCity == NULL || GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0))
 		{
@@ -30813,7 +30813,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 		{
 			const ImprovementTypes eUpgradeX =
 			(
-				iI == -1 ? (ImprovementTypes)info.getImprovementUpgrade()
+				iI == -1 ? info.getImprovementUpgrade()
 				:
 				(ImprovementTypes)info.getAlternativeImprovementUpgradeType(iI)
 			);
@@ -30985,10 +30985,10 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE", GC.getFeatureInfo((FeatureTypes)info.getFeatureChangeType(iI)).getTextKeyWide()));
 		}
 	}
-	if (info.getBonusChange() != NO_FEATURE)
+	if (info.getBonusChange() != NO_BONUS)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE", GC.getBonusInfo((BonusTypes)info.getBonusChange()).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE", GC.getBonusInfo(info.getBonusChange()).getTextKeyWide()));
 	}
 	if (info.isNotOnAnyBonus())
 	{
@@ -37141,7 +37141,7 @@ void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			continue;
 		}
 		const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
-		if (!building.isDamageAttackerCapable() 
+		if (!building.isDamageAttackerCapable()
 		|| building.getDamageAttackerChance() <= 0
 		|| building.getDamageToAttacker() <= 0)
 		{

@@ -13,7 +13,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
-CvPropertyInteraction::CvPropertyInteraction() : 
+CvPropertyInteraction::CvPropertyInteraction() :
 									m_eSourceProperty(NO_PROPERTY),
 									m_eTargetProperty(NO_PROPERTY),
 									m_eObjectType(NO_GAMEOBJECT),
