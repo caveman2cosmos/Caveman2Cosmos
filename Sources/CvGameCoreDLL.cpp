@@ -91,7 +91,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-		logging::createLogsFolder();
 		logging::deleteLogs();
 		}
 		break;
