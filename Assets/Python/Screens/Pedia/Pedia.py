@@ -481,21 +481,21 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() == 0: # 42 = UNITAI_SUBDUED_ANIMAL
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
-			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() == 0:
+			elif (iDefaultUnitAIType in aListAI):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
-			elif CvUnitInfo.getMaxGlobalInstances() == 1 and CvUnitInfo.getNumUnitUpgrades() == 0: ## World Unit
-				iCategory = self.PEDIA_UNITS_2
-				szSubCat = self.mapSubCat.get(iCategory)[0]
-			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() == 0:
-				iCategory = self.PEDIA_UNITS_2
-				szSubCat = self.mapSubCat.get(iCategory)[1]
-			elif CvUnitInfo.getNumUnitUpgrades() == 0:
+			elif iCost <= 0:
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[4]
+			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
+				iCategory = self.PEDIA_UNITS_2
+				szSubCat = self.mapSubCat.get(iCategory)[0]
+			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
+				iCategory = self.PEDIA_UNITS_2
+				szSubCat = self.mapSubCat.get(iCategory)[1]
 			else:
 				iCategory = self.PEDIA_UNITS_1
 				if self.SECTION == [iCategory, self.szCatAllEras]:
@@ -786,7 +786,6 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
@@ -801,28 +800,29 @@ class Pedia:
 				iBonusClassType = None
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42) and CvUnitInfo.getNumUnitUpgrades() == 0: # 42 = UNITAI_SUBDUED_ANIMAL
+			iCost = CvUnitInfo.getProductionCost()
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
 				if bAnimals:
 					bValid = True
 				else:
 					continue
-			elif (iDefaultUnitAIType in aListAI) and CvUnitInfo.getNumUnitUpgrades() == 0:
+			elif (iDefaultUnitAIType in aListAI):
 				if bSpread:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getMaxGlobalInstances() != -1 and CvUnitInfo.getNumUnitUpgrades() == 0:
+			elif iCost <= 0:
+				if bMisc:
+					bValid = True
+				else:
+					continue
+			elif CvUnitInfo.getMaxGlobalInstances() != -1:
 				if bWorld:
 					bValid = True
 				else:
 					continue
-			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvUnitInfo.getNumUnitUpgrades() == 0:
+			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
 				if bCultural:
-					bValid = True
-				else:
-					continue
-			elif CvUnitInfo.getNumUnitUpgrades() == 0:
-				if bMisc:
 					bValid = True
 				else:
 					continue
@@ -960,7 +960,6 @@ class Pedia:
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
-
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
 
@@ -995,20 +994,20 @@ class Pedia:
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 
-		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
 			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
-		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (B) -", 0, 10) + szStrat.find("Myth (L) -", 0, 10) + szStrat.find("Myth Effect -", 0, 13) + szStrat.find("Story -", 0, 7) + szStrat.find("Story (B) -", 0, 11) + szStrat.find("Stories -", 0, 9) + szStrat.find("Stories (B) -", 0, 13) + szStrat.find("Stories Effect -", 0, 16) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -11:
 			return 6
-		elif (CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1 or CvBuildingInfo.getPrereqStateReligion() != -1) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
 			return 5
-		elif (CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild()) and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
-		elif isWorldWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1:
+		elif isWorldWonder(iBuilding):
 			return 1
 		elif isNationalWonder(iBuilding):
 			return 0
@@ -1128,7 +1127,6 @@ class Pedia:
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
-
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
@@ -1161,6 +1159,7 @@ class Pedia:
 			key = aList[iBonus]
 			aList[iBonus] = ListDict[key]
 		return aList
+
 
 	def placeImprovements(self):
 		print "Category: Improvements"
@@ -1354,6 +1353,7 @@ class Pedia:
 		szName = "PediaMainWidget" + str(self.nWidgetCount)
 		self.nWidgetCount += 1
 		return szName
+
 
 	def getSortedList(self, numInfos, getInfo):
 		list = []
