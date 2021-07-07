@@ -104,7 +104,7 @@ def toposort(tList, tDict):
       temp += 1
     # escape even if tech is ill formed
     if temp == 0:
-      print ('emergencyBreak')
+      print 'emergencyBreak'
       break
   #print [(target.node.name, target.fullPreqsLeft() , target.hasFullPreqs, target.node.fullPreq, target.hasPartialPreqs, target.node.partialPreq) for target in targets]
   return results
