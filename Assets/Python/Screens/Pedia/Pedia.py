@@ -1133,6 +1133,7 @@ class Pedia:
 
 			#Check location of resource of tech reveal/enable
 			iTechReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]
+			iTechRowReveal = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[1]
 			iTechEnable = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]
 
 			if CvBonusInfo.getConstAppearance() > 0: # A map resource, only those have different iTechReveal and iTechEnable
@@ -1141,19 +1142,19 @@ class Pedia:
 					aList.append((iTechReveal, iTechEnable, szName))
 			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:
 				if iType == 4:
-					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechEnable, szName))
+					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechRowReveal, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechEnable, szName))
+					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechRowReveal, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-					aList.append((iTechReveal, iTechEnable, szName))
+					ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+					aList.append((iTechReveal, iTechRowReveal, szName))
 			elif iType == 1:
-				ListDict[(iTechReveal, iTechEnable, szName)] = (str(iTechReveal)+": "+szName, iBonus)
-				aList.append((iTechReveal, iTechEnable,szName))
+				ListDict[(iTechReveal, iTechRowReveal, szName)] = (str(iTechReveal)+": "+szName, iBonus)
+				aList.append((iTechReveal, iTechRowReveal,szName))
 		aList.sort()
 		for iBonus in xrange(len(aList)):
 			key = aList[iBonus]
