@@ -3,11 +3,11 @@
 //
 //  FILE:    CvInfoWater.cpp
 //
-//  AUTHOR:	
-//					
-//					
+//  AUTHOR:
 //
-//  PURPOSE: The base class for all info classes to inherit from.  
+//
+//
+//  PURPOSE: The base class for all info classes to inherit from.
 //
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
@@ -28,7 +28,7 @@
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvWaterPlaneInfo::CvWaterPlaneInfo() 
+CvWaterPlaneInfo::CvWaterPlaneInfo()
 	: m_fMaterialAlpha(0.0f)
 	, m_BaseTextureScale(0.0f)
 	, m_fURate(0.0f)
@@ -154,7 +154,7 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 			pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 			m_szTransitionTexture = szTextVal;
 		}
-		
+
 		pXML->MoveToXmlParent();
 	}
 
@@ -373,7 +373,7 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 
 	pXML->GetChildXmlValByName( &m_bVisible, L"bVisible");
-	
+
 	pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 	m_szBaseTexture = szTextVal;
 
@@ -405,5 +405,5 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
 	if ( getCameraOverlayType() == CAMERA_OVERLAY_DECAL )
 	{
 		m_eCameraOverlayType = pClassInfo->getCameraOverlayType();
-	}	
+	}
 }

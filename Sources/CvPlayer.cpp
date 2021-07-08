@@ -349,7 +349,7 @@ void CvPlayer::init(PlayerTypes eID)
 		m_plotGroups[i]->init();
 		m_cities[i]->init();
 		m_units[i]->init();
-		m_selectionGroups[i]->init(); 
+		m_selectionGroups[i]->init();
 	}
 	m_eventsTriggered.init();
 	//--------------------------------
@@ -483,7 +483,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		m_plotGroups[i]->init();
 		m_cities[i]->init();
 		m_units[i]->init();
-		m_selectionGroups[i]->init(); 
+		m_selectionGroups[i]->init();
 	}
 	m_eventsTriggered.init();
 
@@ -2653,11 +2653,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				if (team.isObsoleteBuilding((BuildingTypes)iI))
 				{
-					const int iObsoletesToBuilding = GC.getBuildingInfo((BuildingTypes)iI).getObsoletesToBuilding();
+					const BuildingTypes iObsoletesToBuilding = GC.getBuildingInfo((BuildingTypes)iI).getObsoletesToBuilding();
 
-					if (iObsoletesToBuilding != -1 && paiNumRealBuilding[iObsoletesToBuilding] == 0)
+					if (iObsoletesToBuilding != NO_BUILDING && paiNumRealBuilding[iObsoletesToBuilding] == 0)
 					{
-						pNewCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+						pNewCity->setNumRealBuilding(iObsoletesToBuilding, 1);
 						continue;
 					}
 				}
@@ -4879,7 +4879,7 @@ int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlo
 			GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)
 		|| // Unreachable?
 			pFromPlot != NULL
-			&& 
+			&&
 			!gDLL->getFAStarIFace()->GeneratePath(&GC.getBorderFinder(), pFromPlot->getX(), pFromPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY(), false, getID(), true))
 		{
 			continue;
@@ -5376,7 +5376,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isBonusObsolete((BonusTypes)item.m_iData)
 			&& !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)item.m_iData))
 			{
-				const bool bCanTradeAll = 
+				const bool bCanTradeAll =
 				(
 					isHuman()
 					||
@@ -6416,7 +6416,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 					&& !pLoopPlot->isImpassable(getTeam()) && pLoopPlot->getNumUnits() == 0
 					&& (iPass > 0 || GC.getGame().getSorenRandNum(100, "Goody Barbs") < GC.getGoodyInfo(eGoody).getBarbarianUnitProb()))
 					{
-						GET_PLAYER(BARBARIAN_PLAYER).initUnit(eUnit, pLoopPlot->getX(), pLoopPlot->getY(), 
+						GET_PLAYER(BARBARIAN_PLAYER).initUnit(eUnit, pLoopPlot->getX(), pLoopPlot->getY(),
 							(pLoopPlot->isWater() ? UNITAI_ATTACK_SEA : UNITAI_ATTACK), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 						iBarbCount++;
 
@@ -7598,13 +7598,13 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 
 	if (!bReligiouslyDisabling)
 	{
-		const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(kBuilding.getFreeBuilding());
+		const BuildingTypes eFreeBuilding = kBuilding.getFreeBuilding();
 		if (eFreeBuilding != NO_BUILDING)
 		{
 			changeFreeBuildingCount(eFreeBuilding, iChange);
 		}
 
-		const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.getFreeAreaBuilding());
+		const BuildingTypes eFreeAreaBuilding = kBuilding.getFreeAreaBuilding();
 		if (eFreeAreaBuilding != NO_BUILDING)
 		{
 			algo::for_each(cities() | filtered(CvCity::fn::area() == pArea), CvCity::fn::changeFreeAreaBuildingCount(eFreeAreaBuilding, iChange));
@@ -8016,7 +8016,7 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 				// Extra movement is dependant on unit speed; iMovement != iFlatMovement, so this isn't a very useful measure...
 				// iValue += std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1);
 			}
-			
+
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
@@ -16993,7 +16993,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_NEAR_CITY", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription(), pNearCity->getNameKey()).GetCString();
-					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+					pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 					bSomethingHappened = true;
 				}
 				else if (pPlot->getRouteType() != NO_ROUTE)
@@ -17006,7 +17006,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription()).GetCString();
-				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 				bSomethingHappened = true;
 			}
 			else if (pPlot->getRouteType() != NO_ROUTE)

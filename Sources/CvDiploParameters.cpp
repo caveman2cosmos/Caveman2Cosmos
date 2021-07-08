@@ -17,7 +17,7 @@ CvDiploParameters::CvDiploParameters(PlayerTypes ePlayer) :
 	m_theirOffer.clear();
 }
 
-CvDiploParameters::~CvDiploParameters() 
+CvDiploParameters::~CvDiploParameters()
 {
 	m_ourOffer.clear();
 	m_theirOffer.clear();

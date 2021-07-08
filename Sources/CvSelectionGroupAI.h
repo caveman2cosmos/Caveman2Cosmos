@@ -46,7 +46,7 @@ public:
 
 	bool AI_isForceSeparate() const;
 	void AI_makeForceSeparate();
-	
+
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity);
 
@@ -60,7 +60,7 @@ public:
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const;
 
 	CvUnit* AI_getMissionAIUnit() const;
-	
+
 	bool AI_isFull() const;
 
 	void read(FDataStreamBase* pStream);

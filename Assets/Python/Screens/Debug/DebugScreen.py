@@ -111,35 +111,39 @@ class DebugScreen:
 		Lbl = self.getName()
 		screen.setLabelAt(Lbl, Btn, self.aFontList[4] + label, 1<<0, 8, 3, 0, FontTypes.GAME_FONT, self.eWidGen, 1, 2)
 		screen.setHitTest(Lbl, HitTestTypes.HITTEST_NOHIT)
-		self.testCodes.append((pTest, tip))
+		self.testCodes.append((pTest, label, tip))
 		self.iTestNum += 1
 		if not (self.iTestNum % self.iTestCodeColumns):
 			self.yTestBtn += self.hTestBtn + 16
 
 
 	def runTestCode(self, iTest):
-		print "----------------------------------------------\n[TEST] Running Test " + str(iTest) + " - " + self.testCodes[iTest][1] + "\n----------------------------------------------"
+		print "----------------------------------------------\n Test " + str(iTest) + " - " + self.testCodes[iTest][1] + "\n\n:: " + self.testCodes[iTest][2] + "\n----------------------------------------------"
 		screen = self.getScreen()
 		screen.addPanel("TestCodelogPnlA", "", "", True, True, -8, -8, self.xRes+16, self.yRes+16, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel("TestCodelogPnlB", "", "", True, True, -8, -8, self.xRes+16, self.yRes+16, PanelStyles.PANEL_STYLE_HUD_HELP)
 
-		self.testCodeLog = self.aFontList[3] + "Running Test " + str(iTest) + self.aFontList[4] + " - " + self.testCodes[iTest][1] + self.aFontList[6]
-		screen.addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
-
+		# On-Screen-Log Header
+		self.testCodeLog = (
+			self.aFontList[3] + "Test " + str(iTest) + " - " + self.testCodes[iTest][1]
+			+ self.aFontList[5] + "\n:: " + self.testCodes[iTest][2]
+			+ self.aFontList[6] + "\n----------------------------------------------"
+		)
 		self.testCodes[iTest][0]()
+		screen.addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
 
 		screen.moveToFront("TestCodeLogExit0")
 		screen.show("TestCodeLogExit0")
-		print "----------------------------------------------\n[TEST] Test " + str(iTest) +  " done\n----------------------------------------------"
+		print "----------------------------------------------\n Finished Test %d - %s\n----------------------------------------------" % (iTest, self.testCodes[iTest][1])
 
 	def testCodelog(self, text):
 		print "[TEST] " + text
 		self.testCodeLog = self.testCodeLog + "\n* " + text
-		self.getScreen().addMultilineText("TestCodelog", self.testCodeLog, 8, 24, self.xRes - 14, self.yRes - 40, self.eWidGen, 1, 2, 1<<0)
 
 	def closeLog(self, screen):
 		screen.deleteWidget("TestCodelog"); screen.deleteWidget("TestCodelogPnlB"); screen.deleteWidget("TestCodelogPnlA")
 		screen.hide("TestCodeLogExit0")
+		self.testCodeLog = ""
 
 
 	# returns a unique ID for a widget in this screen
@@ -156,7 +160,7 @@ class DebugScreen:
 			i -= 1
 		self.nWidgetCount = 0
 
-	def handleInput (self, inputClass):
+	def handleInput(self, inputClass):
 		screen = self.getScreen()
 
 		iCode	= inputClass.eNotifyCode
@@ -169,7 +173,7 @@ class DebugScreen:
 
 			if self.iTab == 0:
 				if NAME == "TestCode":
-					self.tooltip.handle(screen, self.testCodes[ID][1])
+					self.tooltip.handle(screen, self.testCodes[ID][2])
 
 		elif not iCode: # Click
 			if NAME == "DS_Tab":

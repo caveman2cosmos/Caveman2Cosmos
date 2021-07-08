@@ -11,7 +11,7 @@
 #include "CyArgsList.h"
 #include "CvGlobals.h"
 
-#define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
+#define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str())
 
 #define DECLARE_PY_WRAPPER(_wrapper, _class)			\
 namespace Cy											\
@@ -86,7 +86,7 @@ namespace Cy
 
 	// Default implementation
 	template < class Ty_ >
-	struct ArgTraits //: ArgTraitsBase<Ty_> 
+	struct ArgTraits //: ArgTraitsBase<Ty_>
 	{
 		template < class RealTy_ >
 		static void add(Args& args, const RealTy_& arg) { args.args().add(arg); }
@@ -150,11 +150,11 @@ namespace Cy
 
 		template < class Ty_ >
 		Args& add(const Ty_& arg)
-		{ 
+		{
 			ArgTraits<
 				typename Cy::base_type<Ty_>::type
 			>::add(*this, arg);
-			return *this; 
+			return *this;
 		}
 
 		//template < class Ty_ >
@@ -203,7 +203,7 @@ namespace Cy
 		std::vector< bst::shared_ptr< PyWrapBase > > m_wrapped;
 	};
 
-	// These classes allows mappings between C++ types and python types to be defined for 
+	// These classes allows mappings between C++ types and python types to be defined for
 	// Python function return values.
 	template < class DesiredTy_, class PyTy_ >
 	struct PythonReturnVarMappingBase
@@ -267,7 +267,7 @@ namespace Cy
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
-		{ 
+		{
 			*bSucceeded = bOK;
 		}
 		return PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
@@ -289,7 +289,7 @@ namespace Cy
 
 	// Check for success and default impl flag
 	template < class ReturnValueTy_ >
-	// inline 
+	// inline
 	// Make sure to disallow Cy::Args matching ReturnValueTy_
 	typename bst::enable_if_c<
 		!bst::is_convertible<
@@ -332,7 +332,7 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
 		FPythonAssert(gDLL->getPythonIFace()->isInitialized(), moduleName, functionName);
-		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs()) 
+		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs())
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
 	}
 
@@ -345,7 +345,7 @@ namespace Cy
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
-		{ 
+		{
 			*bSucceeded = bOK;
 		}
 		return PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
@@ -418,7 +418,7 @@ namespace Cy
 
 			static PyObject* toPython(const void* p)
 			{
-				return PyInt_FromLong(*static_cast<const long*>(p));  
+				return PyInt_FromLong(*static_cast<const long*>(p));
 			}
 		};
 

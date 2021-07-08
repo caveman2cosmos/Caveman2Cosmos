@@ -87,7 +87,7 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 
 	//	Add the zobrist contribution of this plot to the hash
 	m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
-	if ( pPlot->isCity() || 
+	if ( pPlot->isCity() ||
 		 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
 	{
 		m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
@@ -130,7 +130,7 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 
 			//	Remove the zobrist contribution of this plot to the hash
 			m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
-			if ( pPlot->isCity() || 
+			if ( pPlot->isCity() ||
 				 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
 			{
 				m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
@@ -744,7 +744,7 @@ static bool zobristHashSetter(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* 
 	plotGroupHashInfo* parm = (plotGroupHashInfo*)params;
 
 	parm->allNodesHash ^= pLoopPlot->getZobristContribution();
-	if ( pLoopPlot->isCity() || 
+	if ( pLoopPlot->isCity() ||
 		 (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getBonusType() != NO_BONUS) )
 	{
 		parm->resourceNodesHash ^= pLoopPlot->getZobristContribution();
@@ -774,7 +774,7 @@ static bool plotGroupMerger(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* pa
 
 	return true;
 }
-	
+
 void CvPlotGroup::mergeIn(CvPlotGroup* from, bool bRecalculateBonuses)
 {
 	PROFILE_FUNC();
@@ -785,7 +785,7 @@ void CvPlotGroup::mergeIn(CvPlotGroup* from, bool bRecalculateBonuses)
 	params.bRecalculateBonuses = bRecalculateBonuses;
 
 	from->plotEnumerator(plotGroupMerger, &params);
-	
+
 	GET_PLAYER(getOwner()).deletePlotGroup(from->getID());
 }
 

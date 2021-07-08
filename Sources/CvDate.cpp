@@ -159,7 +159,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 	{
 		calculateEndDates(eActualGameSpeed);
 	}
-	
+
 
 	for (int i=0; i<(int)aIncrements.size(); i++)
 	{

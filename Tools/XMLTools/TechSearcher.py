@@ -29,8 +29,8 @@ class TechNode:
     self.partialPreqOf = []
     self.loadPreq()
 
-    
- 
+
+
 def loadData(files, prefix = ''):
   trees = []
   for f in files:
@@ -163,7 +163,7 @@ class TechTree:
     def dictCons():
        for baseTech in self.orderedTech:
          yield (baseTech.name, self.listRedudantDependanciesOf(baseTech))
-    return { k: v for k, v in dictCons() if len(v) > 0}     
+    return { k: v for k, v in dictCons() if len(v) > 0}
 
 with open('techOut.txt','w') as f:
   tree = TechTree()

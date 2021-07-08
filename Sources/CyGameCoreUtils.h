@@ -4,7 +4,7 @@
 #define CyGameCoreUtils_h
 
 //
-// Python wrapper functions for DLL 
+// Python wrapper functions for DLL
 //
 
 class CyCity;

@@ -15,7 +15,7 @@
 #include "CyUnit.h"
 
 //
-// Python wrapper class for CvPlayer 
+// Python wrapper class for CvPlayer
 //
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL) {}
@@ -98,7 +98,7 @@ CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
 	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
 
-CyCity* CyPlayer::initCity(int x, int y) 
+CyCity* CyPlayer::initCity(int x, int y)
 {
 	return new CyCity(m_pPlayer->initCity(x, y, true, true));
 }
@@ -362,7 +362,7 @@ bool CyPlayer::canFound(int iX, int iY) const
 	return m_pPlayer->canFound(iX, iY);
 }
 
-void CyPlayer::found(int x, int y) 
+void CyPlayer::found(int x, int y)
 {
 	m_pPlayer->found(x,y);
 }

@@ -291,7 +291,7 @@ void CvProperties::read(FDataStreamBase *pStream)
 	int num;
 	int eProp;
 	int iVal;
-	
+
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
