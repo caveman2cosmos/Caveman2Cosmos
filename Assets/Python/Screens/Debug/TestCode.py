@@ -371,8 +371,8 @@ class TestCode:
 				self.getGOMReqs(CyBoolExpr.getSecondExpr(), GOMType, GOMReqList, eExpr)
 
 			elif eExpr == BoolExprTypes.BOOLEXPR_HAS and CyBoolExpr.getGOMType() == GOMType:
-				print str(eParentExpr)+" "+str(BoolExprTypes.NO_BOOLEXPR)+" "+str(CyBoolExpr)+" "+str(GOMType)+" "+str(GOMReqList)
-				assert(eParentExpr > BoolExprTypes.NO_BOOLEXPR)
+				if eParentExpr <= BoolExprTypes.NO_BOOLEXPR:
+					print "WARN: potentially malformed Construct/Train Condition. Likely its just one GOM tag within Construct/Train tag."
 				GOMReqList[eParentExpr].append(CyBoolExpr.getID())
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#

@@ -92,7 +92,6 @@ class PediaBonus:
 			aGOMBonusReqList = []
 			for i in range(2):
 				aGOMBonusReqList.append([])
-			print CvBuildingInfo.getType()
 			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
