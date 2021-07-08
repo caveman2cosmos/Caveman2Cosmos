@@ -959,3 +959,18 @@ class TestCode:
 			else:
 				TechReq = GC.getTechInfo(TechReq).getType()
 			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
+
+
+def getGOMAndBonuses(CyBoolExpr, l):
+	if CyBoolExpr is not None:
+		type = CyBoolExpr.getType()
+		if type == BoolExprTypes.BOOLEXPR_AND:
+			getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
+			getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
+		elif type == BoolExprTypes.BOOLEXPR_HAS \
+		and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
+			l += CyBoolExpr.getID()
+
+#andBonusReq = []
+#getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusReq)
+
