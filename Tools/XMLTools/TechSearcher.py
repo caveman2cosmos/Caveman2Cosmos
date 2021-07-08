@@ -140,7 +140,7 @@ class TechTree:
     return deps[-1]
   def dependance(self, firstName, secondName):
     if self.orderDifference(firstName, secondName) < 0:
-      return self.dependance(secondName,firstName)
+      return self.strictDependance(secondName,firstName)
     return self.strictDependance(firstName,secondName)
   def listRedudantDependanciesOf(self, baseTech):
     fulls = sorted(lookup(self.orderDict)(baseTech.fullPreq))
