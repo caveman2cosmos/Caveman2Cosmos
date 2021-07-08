@@ -11,8 +11,6 @@
 #ifndef BOOLEXPR_H
 #define BOOLEXPR_H
 
-void CyBoolExprPythonInterface();
-
 class CvGameObject;
 class IntExpr;
 
