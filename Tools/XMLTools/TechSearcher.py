@@ -163,7 +163,7 @@ class TechTree:
     def dictCons() -> generator:
        for baseTech in self.orderedTech:
          yield (baseTech.name, self.listRedudantDependanciesOf(baseTech))
-    return { k: v for k, v in dictCons() if len(v) > 0}     
+    return { k: v for k, v in dictCons() if len(v) > 0}
 
 with open('techOut.txt','w') as f:
   tree = TechTree(defaultData)

@@ -631,7 +631,7 @@ class DynamicCivNames:
 		and pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys()
 		):
 		'''
-		if (not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV) 
+		if (not GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
 		and pPlayer.getLeaderType() in LeaderCivNames.LeaderCivNames.keys()
 		):
 			origDesc, origShort, origAdj = LeaderCivNames.LeaderCivNames[pPlayer.getLeaderType()]

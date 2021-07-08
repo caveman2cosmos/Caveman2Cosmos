@@ -123,7 +123,7 @@ uint32_t FDataIOStream::WriteString(int count, std::wstring values[])
 	return 0;
 }
 	
-uint32_t FDataIOStream::ReadString(char *szName)
+uint32_t FDataIOStream::ReadString(char* szName)
 {
 	char c;
 	do
@@ -193,8 +193,8 @@ uint32_t FDataIOStream::ReadString(int count, std::wstring values[])
 	}
 	return 0;
 }
-	
-char* FDataIOStream::ReadString()		// allocates memory 
+
+char* FDataIOStream::ReadString()		// allocates memory
 {
 	CvString s;
 	ReadString(s);
@@ -203,7 +203,7 @@ char* FDataIOStream::ReadString()		// allocates memory
 	return szName;
 }
 
-wchar_t* FDataIOStream::ReadWideString()	// allocates memory 
+wchar_t* FDataIOStream::ReadWideString()	// allocates memory
 {
 	CvWString s;
 	ReadString(s);

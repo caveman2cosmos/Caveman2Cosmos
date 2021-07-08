@@ -2154,7 +2154,7 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 			if (iNumEdges != 0)
 			{
 				// the avg distance between team edges is the team score
-				iScore += iTeamTotalDist / iNumEdges; 
+				iScore += iTeamTotalDist / iNumEdges;
 			}
 		}
 	}
@@ -3647,7 +3647,7 @@ void CvGame::changeNumCities(int iChange)
 
 int CvGame::getNumCivCities() const
 {
-	return 
+	return
 	(
 		getNumCities()
 		- GET_PLAYER(BARBARIAN_PLAYER).getNumCities()
@@ -4712,7 +4712,7 @@ UnitTypes CvGame::getBestLandUnit() const
 {
 	if (m_eBestLandUnit == NO_UNIT)
 	{
-		// This can occur after a load in which the previous best land unit was deleted from the assets 
+		// This can occur after a load in which the previous best land unit was deleted from the assets
 		// Just recalculate on demand
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -6491,7 +6491,7 @@ void CvGame::doGlobalWarming()
 		iGlobalWarmingDefense *= GC.getDefineINT("GLOBAL_WARMING_FOREST");
 		iGlobalWarmingDefense /= std::max(1, GC.getMap().getLandPlots());
 
-		int iGlobalWarmingProb = 
+		int iGlobalWarmingProb =
 		(
 			100 * (GC.getDefineINT("GLOBAL_WARMING_PROB") - iGlobalWarmingDefense)
 			/ GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent()
@@ -6554,7 +6554,7 @@ void CvGame::doGlobalWarming()
 			{
 				if (pPlot->getTerrainType() == eBarrenTerrain)
 				{
-					if (GC.getDefineINT("GW_MOD_ENABLED") && pPlot->isCoastalLand() 
+					if (GC.getDefineINT("GW_MOD_ENABLED") && pPlot->isCoastalLand()
 					&& !pPlot->isHills() && !pPlot->isAsPeak())
 					{
 						pPlot->setTerrainType(eShallowsTerrain);

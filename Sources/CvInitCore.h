@@ -70,7 +70,7 @@ public:
 	const CvWString & getAdminPassword() const	{ return m_szAdminPassword; }
 	DllExport void setAdminPassword(const CvWString & szAdminPassword, bool bEncrypt = true);
 
-	DllExport CvWString getMapScriptName() const;		
+	DllExport CvWString getMapScriptName() const;
 	DllExport void setMapScriptName(const CvWString & szMapScriptName);
 	DllExport bool getWBMapScript() const;
 
@@ -260,7 +260,7 @@ public:
 
 	DllExport const CvString & getXMLCheck(PlayerTypes eID) const;
 	DllExport void setXMLCheck(PlayerTypes eID, const CvString & iXMLCheck);
-									
+
 	DllExport void resetAdvancedStartPoints();
 
 	virtual void read(FDataStreamBase* pStream);

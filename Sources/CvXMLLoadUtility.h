@@ -208,7 +208,7 @@ public:
 					char* filePath = xercesc::XMLString::transcode(
 						m_pParser->getDocument()->getDocumentURI());
 					sprintf(szLog, "XML error: %s : Expected an %s or "
-						"a name of %s global definition, found '%s'\n", 
+						"a name of %s global definition, found '%s'\n",
 						filePath, typeid(T).name(), typeid(T).name(), nodeTextC);
 					xercesc::XMLString::release(&filePath);
 					logging::logMsg("xml.log", szLog);
@@ -264,8 +264,8 @@ public:
 	bool LoadCivXml(FXml* pFXml, const TCHAR* szFilename);
 
 	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
-	int  GetXmlSiblingsNumber() 
-	{ 
+	int  GetXmlSiblingsNumber()
+	{
 		if (xercesc::DOMNode* node = m_pCurrentXmlElement->getParentNode())
 		{
 			FAssert(node->getNodeType() == xercesc::DOMNode::ELEMENT_NODE);
@@ -277,14 +277,14 @@ public:
 		}
 	}
 
-	const XMLCh* GetXmlTagName()        
-	{ 
+	const XMLCh* GetXmlTagName()
+	{
 		// WARINING : here can be a problem, when we turn on namespaces
-		return m_pCurrentXmlElement->getNodeName(); 
+		return m_pCurrentXmlElement->getNodeName();
 	}
 
-	int  GetXmlChildrenNumber(const XMLCh* name) 
-	{ 
+	int  GetXmlChildrenNumber(const XMLCh* name)
+	{
 		int number = 0;
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
 			child;
@@ -296,8 +296,8 @@ public:
 		return number;
 	}
 
-	int  GetXmlSiblingsNumber(const XMLCh* name) 
-	{ 
+	int  GetXmlSiblingsNumber(const XMLCh* name)
+	{
 		int number = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
 			sibling;
@@ -317,7 +317,7 @@ public:
 		return number;
 	}
 
-	const XMLCh* GetXmlFirstText()      
+	const XMLCh* GetXmlFirstText()
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -337,7 +337,7 @@ public:
 		return NULL;
 	}
 
-	const XMLCh* TryGetXmlFirstText()      
+	const XMLCh* TryGetXmlFirstText()
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -352,7 +352,7 @@ public:
 	bool  HasXmlNextSibling()    { return m_pCurrentXmlElement->getNextElementSibling(); }
 
 	bool  TryMoveToXmlFirstChild()
-	{ 
+	{
 		if (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild())
 		{
 			m_pCurrentXmlElement = child;
@@ -365,10 +365,10 @@ public:
 	}
 
 	bool  TryMoveToXmlNextSibling()
-	{ 
+	{
 		if (xercesc::DOMElement* sibling = m_pCurrentXmlElement->getNextElementSibling())
 		{
-			m_pCurrentXmlElement = sibling; 
+			m_pCurrentXmlElement = sibling;
 			return true;
 		}
 		else
@@ -516,7 +516,7 @@ public:
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
-	
+
 /*************************************************************************************************/
 /**	New Tag Defs	(XMLInfos)				08/09/08								Xienwolf	**/
 /**																								**/
@@ -793,8 +793,8 @@ private:
 
 	template <class T>
 	void SetGlobalDefine(const char* szDefineName, T*& piDefVal)
-	{ 
-		GC.getDefinesVarSystem()->GetValue(szDefineName, piDefVal); 
+	{
+		GC.getDefinesVarSystem()->GetValue(szDefineName, piDefVal);
 	}
 	//
 	// template which can handle all info classes
@@ -852,7 +852,7 @@ void CvXMLLoadUtility::InitList(T **ppList, int iListLen, T val)
 	*ppList = new T[iListLen];
 
 	for (int i=0;i<iListLen;i++)
-		(*ppList)[i] = val;	
+		(*ppList)[i] = val;
 }
 
 template <class T>

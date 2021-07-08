@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Custom.thm
 Content		:	Custom Civ4 interface properties
@@ -325,7 +325,7 @@ with GFC_Control_Label
 		.Font_Text_Default = SF_CtrlTheme_Civ4_Control_Font_Size2_Bold;
 
 		map GFC_CtrlTheme_Bitmap_Control_Label	= GFC_Control_DefaultLabel_Style;
-		map GFC_Control							= GFC_Control_DefaultLabel_Style; 
+		map GFC_Control							= GFC_Control_DefaultLabel_Style;
 	}
 
 
@@ -346,7 +346,7 @@ with GFC_Control_Label
 		.Font_Text_Default = SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
 
 		map GFC_CtrlTheme_Bitmap_Control_Label					= GFC_Control_DefaultLabel_Style;
-		map GFC_Control											= GFC_Control_DefaultLabel_Style; 
+		map GFC_Control											= GFC_Control_DefaultLabel_Style;
 	}
 } //End Label Control
 
@@ -503,7 +503,7 @@ with GFC_Control_Scroll
 	// Left - button style
 	style SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_LeftButton_Style
 	{
-		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 		GFC_Control_Button_Size_Default	= GSize(12,8);
 
 		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -553,7 +553,7 @@ with GFC_Control_Scroll
 	// Right - button style
 	style SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_RightButton_Style
 	{
-		GFC_Control_Renderer_Control		= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Renderer_Control		= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 		GFC_Control_Button_Size_Default		= GSize(12,8);
 
 		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
@@ -792,7 +792,7 @@ with GFC_Control_Scroll
 			.Winoff				= .Default;
 			.WinoffPress		= .Press;
 			.WinoffRollover		= .Rollover;
-			.WinoffDisable		= .Disable;	
+			.WinoffDisable		= .Disable;
 		}
 		GFC_Control_Scroll_StyleId_UpButton			= GPropertyId(SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_UpButton_Style);
 		GFC_Control_Scroll_StyleId_DownButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_DownButton_Style);
@@ -2243,7 +2243,7 @@ with GFC_Control_Panel
 					Margin			= GRectMargin(0,32,0,32);
 					Indent			= GRectMargin(14,5,14,5);
 				}
-				layer 
+				layer
 				{
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
@@ -2738,7 +2738,7 @@ with GFC_Control_Panel
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL);
 					DestCombine		= GColorCombine(BlendSource, Disable);
 					FactorCombine	= GColorCombine(Modulate,Modulate);
-					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Modal; 
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Modal;
 				}
 			}
 			.Disable				= .Default;
@@ -2800,14 +2800,14 @@ with GFC_Control_Button
 			.Text				= SF_CtrlTheme_Civ4_Control_Font_Size2_Bold;
 		}
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_LabelButton_Style;
-		map GFC_Control							= GFC_Control_LabelButton_Style; 
+		map GFC_Control							= GFC_Control_LabelButton_Style;
 	}
 
 
 	// City - Plus Minus buttons (Plus)
 	style SF_CtrlTheme_Civ4_Control_Button_Plus_Style
 	{
-		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
 		.Size_BorderMargin						= GRectMargin(6,6,6,6);
 
@@ -2890,7 +2890,7 @@ with GFC_Control_Button
 	// City - Plus Minus buttons (Minus)
 	style SF_CtrlTheme_Civ4_Control_Button_Minus_Style
 	{
-		GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 		GFC_Control_Flag_Mask_InvalidateControl		= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
 		.Size_BorderMargin							= GRectMargin(6,6,6,6);
 
@@ -3796,7 +3796,7 @@ with GFC_Control_Button
 	}
 
 
-	// Main Menu - Toggle Radio Button 
+	// Main Menu - Toggle Radio Button
 	style SF_CtrlTheme_Civ4_Control_Button_ToggleRadio_Style
 	{
 		.Flag_Crop				= GFlags(GButtonCtrl, GFC_CF_BUTTON_CROP_CHAR);
@@ -3818,7 +3818,7 @@ with GFC_Control_Button
 	}
 
 
-	// Tab Close 
+	// Tab Close
 	style SF_CtrlTheme_Civ4_Control_Button_TabClose_Style
 	{
 		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
@@ -3941,7 +3941,7 @@ with GFC_Control_Button
 	}
 
 
-	// Main Menu text selection 
+	// Main Menu text selection
 	style SF_CtrlTheme_Civ4_Control_Button_MainMenuSelection_Style
 	{
 		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlLabel;
@@ -4102,7 +4102,7 @@ with GFC_Control_Button
 	// City title arrow buttons
 	style SF_CtrlTheme_Civ4_Control_Button_CityArrowR_Style
 	{
-		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
 		.Size_BorderMargin						= GRectMargin(0,0,0,0);
 

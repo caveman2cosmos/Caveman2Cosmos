@@ -9,7 +9,7 @@
 #include "CyUnit.h"
 
 //
-// Python wrapper class for CvPlot 
+// Python wrapper class for CvPlot
 //
 
 CyPlot::CyPlot(CvPlot* pPlot, bool bInViewportSpace) : m_pPlot(pPlot), m_bIsInViewportSpace(bInViewportSpace) {}

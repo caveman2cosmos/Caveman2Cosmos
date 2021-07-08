@@ -30,12 +30,12 @@ public:
 	bool execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer = NO_PLAYER, UnitTypes eDefeatedUnitType = NO_UNIT);
 
 	int AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
-	
+
 	bool isEmpty() const;
 	void clear();
 
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
-	
+
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
 	void copyNonDefaults(CvOutcomeList* pOutcomeList);
 	void getCheckSum(uint32_t& iSum) const;

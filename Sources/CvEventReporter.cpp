@@ -133,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()

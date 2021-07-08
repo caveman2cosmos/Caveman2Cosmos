@@ -5860,7 +5860,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					bEnablesWonder = true;
 
 					if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1)
-					&& 
+					&&
 						(
 							kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) >= 3
 							||
@@ -7588,7 +7588,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 			if (eBestCivic != NO_CIVIC && eBestCivic != eCivic)
 			{
 				const int iBestCivicValue = AI_civicValue(eBestCivic);
-				const int iNewCivicValue = 
+				const int iNewCivicValue =
 				(
 					bFriendlyToSecretary
 					?
@@ -7832,7 +7832,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 
 			if (ePeaceTeam == getTeam())
 			{
-				const int iPeaceRand = 
+				const int iPeaceRand =
 				(
 					GC.getLeaderHeadInfo(getPersonalityType()).getBasePeaceWeight()
 					/
@@ -7874,7 +7874,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 			else if (GET_TEAM(ePeaceTeam).isAtWar(getTeam()))
 			{
 				// Do we want to end this war?
-				bValid = 
+				bValid =
 				(
 					GET_TEAM(getTeam()).AI_endWarVal(ePeaceTeam) > 3 * GET_TEAM(ePeaceTeam).AI_endWarVal(getTeam()) / 2
 					&&
@@ -14877,7 +14877,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	//#1: Happiness
 	if (getNumCities() > 0
-	&& (kCivic.getCivicPercentAnger() != 0 || kCivic.getCivicHappiness() != 0 
+	&& (kCivic.getCivicPercentAnger() != 0 || kCivic.getCivicHappiness() != 0
 	|| kCivic.getHappyPerMilitaryUnit() != 0 || kCivic.getLargestCityHappiness() != 0
 	|| kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyFeatureHappinessChange()
 	|| kCivic.getNonStateReligionHappiness() != 0
@@ -23180,7 +23180,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 					bHasMobileArtillery = true;
 				}
 			}
-			if (unit.getAirRange() > 1 && !unit.isSuicide() 
+			if (unit.getAirRange() > 1 && !unit.isSuicide()
 			&& unit.getBombRate() > 10 && unit.getAirCombat() > 0)
 			{
 				bHasBomber = true;

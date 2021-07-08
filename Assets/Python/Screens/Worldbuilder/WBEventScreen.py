@@ -26,13 +26,13 @@ class WBEventScreen:
 
 	def interfaceScreen(self, pPlotX):
 		screen = CyGInterfaceScreen( "WBEventScreen", CvScreenEnums.WB_EVENT)
-		
+
 		global pPlot
 		global iWidth
 
 		pPlot = pPlotX
 		iWidth = screen.getXResolution()/5 - 20
-		
+
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
@@ -116,7 +116,7 @@ class WBEventScreen:
 				iLeader = pPlayerX.getLeaderType()
 				screen.setTableText("WBEventPlayer", 0, iRow, "", GC.getCivilizationInfo(iCivilization).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, iPlayerX * 10000 + iCivilization, 1<<0 )
 				screen.setTableText("WBEventPlayer", 1, iRow, "<font=3>" + sColor + pPlayerX.getName() + "</font></color>", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayerX * 10000 + iLeader, 1<<0 )
-		
+
 		screen.setLabel("EventPlayerText", "Background", "<font=3b>" + sHeader + "</font>", 1<<2, screen.getXResolution() * 3/10, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 
@@ -219,7 +219,7 @@ class WBEventScreen:
 				sHeader = loopCity.getName()
 			screen.setTableText("WBOtherCity", 0, iRow, "<font=3>" + sColor + loopCity.getName() + "</font></color>", "", WidgetTypes.WIDGET_PYTHON, 7200 + iOtherPlayer, loopCity.getID(), 1<<0)
 		screen.setLabel("OtherCityText", "Background", "<font=3b>" + sHeader + "</font>", 1<<2, screen.getXResolution() *7/10, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		
+
 	def placeOtherPlayers(self):
 		screen = CyGInterfaceScreen("WBEventScreen", CvScreenEnums.WB_EVENT)
 		iHeight = (screen.getYResolution()/2 - self.iTable_Y - 2) / 24 * 24 + 2
@@ -242,7 +242,7 @@ class WBEventScreen:
 				iLeader = pPlayerX.getLeaderType()
 				screen.setTableText("WBOtherPlayer", 0, iRow, "", GC.getCivilizationInfo(iCivilization).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, iPlayerX * 10000 + iCivilization, 1<<0 )
 				screen.setTableText("WBOtherPlayer", 1, iRow, "<font=3>" + sColor + pPlayerX.getName() + "</font></color>", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iPlayerX * 10000 + iLeader, 1<<0 )
-		
+
 		screen.setLabel("OtherPlayerText", "Background", "<font=3b>" + sHeader + "</font>", 1<<2, screen.getXResolution()/2, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 	def placeEvents(self):

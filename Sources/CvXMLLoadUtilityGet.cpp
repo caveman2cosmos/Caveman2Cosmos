@@ -133,9 +133,9 @@ bool CvXMLLoadUtility::GetXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   
+//  FUNCTION:
 //
-//  PURPOSE :   
+//  PURPOSE :
 //
 //------------------------------------------------------------------------------------------------------
 
@@ -174,7 +174,7 @@ bool CvXMLLoadUtility::GetXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 //
 //  FUNCTION:   GetNextXmlVal(std::string& pszVal, char* pszDefault = NULL)
 //
-//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next 
+//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next
 //				non-comment xml node if the current node is a comment node
 //
 //------------------------------------------------------------------------------------------------------
@@ -206,7 +206,7 @@ bool CvXMLLoadUtility::GetNextXmlVal(std::string& pszVal, char* pszDefault)
 //
 //  FUNCTION:   GetNextXmlVal(std::wstring& pszVal, wchar_t* pszDefault = NULL)
 //
-//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next 
+//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next
 //				non-comment xml node if the current node is a comment node
 //
 //------------------------------------------------------------------------------------------------------
@@ -237,7 +237,7 @@ bool CvXMLLoadUtility::GetNextXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 //
 //  FUNCTION:   GetNextXmlVal(char* pszVal, char* pszDefault = NULL)
 //
-//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next 
+//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next
 //				non-comment xml node if the current node is a comment node
 //
 //------------------------------------------------------------------------------------------------------
@@ -267,7 +267,7 @@ bool CvXMLLoadUtility::GetNextXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 //
 //  FUNCTION:   GetNextXmlVal(wchar_t* pszVal, wchar_t* pszDefault = NULL)
 //
-//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next 
+//  PURPOSE :   Get the string value of the next sibling of the current xml node or the next
 //				non-comment xml node if the current node is a comment node
 //
 //------------------------------------------------------------------------------------------------------
@@ -366,7 +366,7 @@ bool CvXMLLoadUtility::GetNextXmlVal(bool* pbVal, bool bDefault)
 //
 //  FUNCTION:   GetChildXmlVal(std::string& pszVal, char* pszDefault = NULL)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's string value
 //
 //------------------------------------------------------------------------------------------------------
@@ -398,7 +398,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(std::string& pszVal, char* pszDefault)
 //
 //  FUNCTION:   GetChildXmlVal(std::wstring& pszVal, wchar_t* pszDefault = NULL)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's string value
 //
 //------------------------------------------------------------------------------------------------------
@@ -431,7 +431,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(std::wstring& pszVal, wchar_t* pszDefault)
 //
 //  FUNCTION:   GetChildXmlVal(char* pszVal, char* pszDefault = NULL)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's string value
 //
 //------------------------------------------------------------------------------------------------------
@@ -463,7 +463,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(char* pszVal, char* pszDefault)
 //
 //  FUNCTION:   GetChildXmlVal(wchar_t* pszVal, wchar_t* pszDefault = NULL)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's string value
 //
 //------------------------------------------------------------------------------------------------------
@@ -495,7 +495,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(wchar_t* pszVal, wchar_t* pszDefault)
 //
 //  FUNCTION:   GetChildXmlVal(int* piVal, int iDefault = 0)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's integer value
 //
 //------------------------------------------------------------------------------------------------------
@@ -521,7 +521,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(int* piVal, int iDefault)
 //
 //  FUNCTION:   GetChildXmlVal(float* pfVal, float fDefault = 0.0f)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's float value
 //
 //------------------------------------------------------------------------------------------------------
@@ -537,7 +537,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(float* pfVal, float fDefault)
 	{
 		// set the value to the default
 		*pfVal = fDefault;
-	
+
 		FErrorMsg("Error in GetChildXmlVal function, unable to find a child node");
 		return false;
 	}
@@ -547,7 +547,7 @@ bool CvXMLLoadUtility::GetChildXmlVal(float* pfVal, float fDefault)
 //
 //  FUNCTION:   GetChildXmlVal(bool* pbVal, bool bDefault = false)
 //
-//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node 
+//  PURPOSE :   overloaded function that sets the current xml node to it's first non-comment child node
 //				and then that node's boolean value
 //
 //------------------------------------------------------------------------------------------------------
@@ -637,7 +637,7 @@ bool CvXMLLoadUtility::GetChildXmlValByName(char* pszVal, const wchar_t* szName,
 		{
 			strcpy(pszVal, "");
 		}
-		
+
 		return false;
 	}
 }
@@ -661,13 +661,13 @@ bool CvXMLLoadUtility::GetOptionalChildXmlValByName(char* pszVal, const wchar_t*
 		{
 			strcpy(pszVal, "");
 		}
-		
+
 		return false;
 	}
 }
 
-bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::string& pszVal, 
-													const wchar_t* szName, 
+bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::string& pszVal,
+													const wchar_t* szName,
 													char* pszDefault)
 {
 	if (TryMoveToXmlFirstChild(szName))
@@ -693,8 +693,8 @@ bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::string& pszVal,
 	}
 }
 
-bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::wstring& pszVal, 
-													const wchar_t* szName, 
+bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::wstring& pszVal,
+													const wchar_t* szName,
 													wchar_t* pszDefault)
 {
 	if (TryMoveToXmlFirstChild(szName))
@@ -858,7 +858,7 @@ int CvXMLLoadUtility::GetHotKeyInt(const TCHAR* pszHotKeyVal)
 		{"KB_7",FInputDevice::KB_7},
 		{"KB_8",FInputDevice::KB_8},
 		{"KB_9",FInputDevice::KB_9},
-		{"KB_MINUS",FInputDevice::KB_MINUS},	    /* - on main keyboard */	
+		{"KB_MINUS",FInputDevice::KB_MINUS},	    /* - on main keyboard */
 		{"KB_A",FInputDevice::KB_A},
 		{"KB_B",FInputDevice::KB_B},
 		{"KB_C",FInputDevice::KB_C},
@@ -929,7 +929,7 @@ int CvXMLLoadUtility::GetHotKeyInt(const TCHAR* pszHotKeyVal)
 		{"KB_NUMPAD2",FInputDevice::KB_NUMPAD2},
 		{"KB_NUMPAD3",FInputDevice::KB_NUMPAD3},
 		{"KB_NUMPAD0",FInputDevice::KB_NUMPAD0},
-		{"KB_NUMPADPERIOD",FInputDevice::KB_NUMPADPERIOD}, 
+		{"KB_NUMPADPERIOD",FInputDevice::KB_NUMPADPERIOD},
 		{"KB_F11",FInputDevice::KB_F11},
 		{"KB_F12",FInputDevice::KB_F12},
 		{"KB_NUMPADEQUALS",FInputDevice::KB_NUMPADEQUALS},

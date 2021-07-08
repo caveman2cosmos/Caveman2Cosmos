@@ -1029,14 +1029,19 @@ CyReplayInfo* CyGame::getReplayInfo() const
 	return new CyReplayInfo(m_pGame.getReplayInfo());
 }
 
+void CyGame::saveReplay(PlayerTypes ePlayer)
+{
+	m_pGame.saveReplay(ePlayer);
+}
+
+void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std::wstring pszText, int iPlotX, int iPlotY, ColorTypes eColor)
+{
+	m_pGame.addReplayMessage(eType, ePlayer, pszText, iPlotX, iPlotY, eColor);
+}
+
 bool CyGame::hasSkippedSaveChecksum() const
 {
 	return m_pGame.hasSkippedSaveChecksum();
-}
-
-void CyGame::saveReplay(int iPlayer)
-{
-	m_pGame.saveReplay((PlayerTypes)iPlayer);
 }
 
 void CyGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
@@ -1054,14 +1059,13 @@ void CyGame::logw(std::wstring str)
 	logging::logMsgW("C2C.log", (wchar_t*)(CvString(str) + "\n").c_str());
 }
 
-void CyGame::log(TCHAR* str)
+void CyGame::log(const char* file, char* str)
 {
-	logging::logMsg("C2C.log", str);
-}
-
-void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std::wstring pszText, int iPlotX, int iPlotY, ColorTypes eColor)
-{
-	m_pGame.addReplayMessage(eType, ePlayer, pszText, iPlotX, iPlotY, eColor);
+	gDLL->logMsg(file, str, false, false);
+#ifdef _DEBUG
+	strcat(str, "\n");
+	OutputDebugString(str);
+#endif
 }
 
 int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const

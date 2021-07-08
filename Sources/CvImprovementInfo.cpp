@@ -814,7 +814,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-	
+
 	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
 
 	// initialize the boolean list to the correct size and all the booleans to false

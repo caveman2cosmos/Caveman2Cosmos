@@ -5158,7 +5158,7 @@ class CvMainInterface:
 					return 1
 			return 0
 
-		elif iCode == 17: # Key Up
+		if iCode == 17: # Key Up
 			if iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
 				if dataTT:

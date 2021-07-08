@@ -893,7 +893,7 @@ class CvInfoScreen:
 				iPop = cityX.getPopulation()
 				# Filter out small cities, after the first 5, as an optimization.
 				if topCities[4] and iPop < iMedianPop:
-					continue 
+					continue
 				if iPop / 2 > iMedianPop:
 					iMedianPop = iPop / 2
 				# City Value, could expand this one...
