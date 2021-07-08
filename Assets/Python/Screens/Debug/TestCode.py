@@ -499,6 +499,26 @@ class TestCode:
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				self.log(CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!")
 
+			#<ConstructCondition>
+			BonusGOMReqList = []
+			for i in range(2):
+				BonusGOMReqList.append([])
+			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, BonusGOMReqList)
+
+			#Analyze GOM AND Bonus reqs
+			bonusTechLocList = []
+			for bonusGOMAnd in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND][bonusGOMAnd]))[2])
+			if len(bonusTechLocList) > 0 and max(bonusTechLocList) > iTechLoc:
+				self.log(CvBuildingInfo.getType()+" - GOM AND bonus requirements are late!")
+
+			#Analyze GOM OR Bonus reqs
+			bonusTechLocList = []
+			for bonusGOMOr in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR][bonusGOMOr]))[2])
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				self.log(CvBuildingInfo.getType()+" - GOM OR bonus requirements are late!")
+
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -878,6 +898,26 @@ class TestCode:
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(bonusOr))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				self.log(CvUnitInfo.getType()+" - Earliest OR bonus prereq late!")
+
+			#<TrainCondition>
+			BonusGOMReqList = []
+			for i in range(2):
+				BonusGOMReqList.append([])
+			self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, BonusGOMReqList)
+
+			#Analyze GOM AND Bonus reqs
+			bonusTechLocList = []
+			for bonusGOMAnd in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND][bonusGOMAnd]))[2])
+			if len(bonusTechLocList) > 0 and max(bonusTechLocList) > iTechLoc:
+				self.log(CvUnitInfo.getType()+" - GOM AND bonus requirements are late!")
+
+			#Analyze GOM OR Bonus reqs
+			bonusTechLocList = []
+			for bonusGOMOr in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR][bonusGOMOr]))[2])
+			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
+				self.log(CvUnitInfo.getType()+" - GOM OR bonus requirements are late!")
 
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
