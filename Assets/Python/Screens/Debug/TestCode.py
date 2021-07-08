@@ -527,28 +527,25 @@ class TestCode:
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#<PrereqInCityBuildings> - require all buildings in list
 			BuildingTechLocList = []
-			for iBuilding in xrange(GC.getNumBuildingInfos()):
-				if CvBuildingInfo.isPrereqInCityBuilding(iBuilding):
-					BuildingInCityReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
-					BuildingTechLocList.append(BuildingInCityReqTechLoc)
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuilding)
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(BuildingTechLocList)+" "+str(iTechLoc))
 
 			#<PrereqOrBuildings> - require one building in list
 			BuildingTechLocList = []
-			for iBuilding in xrange(GC.getNumBuildingInfos()):
-				if CvBuildingInfo.isPrereqOrBuilding(iBuilding):
-					BuildingOrReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
-					BuildingTechLocList.append(BuildingOrReqTechLoc)
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuilding)
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
 			if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirement "+str(BuildingTechLocList)+" "+str(iTechLoc))
 
 			#<PrereqAmountBuildings> - require all buildings in empire in list
 			BuildingTechLocList = []
-			for iBuilding in xrange(GC.getNumBuildingInfos()):
-				if CvBuildingInfo.getPrereqNumOfBuilding(iBuilding):
-					BuildingEmpireReqTechLoc = self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0]
-					BuildingTechLocList.append(BuildingEmpireReqTechLoc)
+			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
+				iBuilding = pair.id
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0])
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc))
 				
