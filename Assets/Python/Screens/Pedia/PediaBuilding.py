@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaBuilding:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+	
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -396,6 +399,18 @@ class PediaBuilding:
 		# Or building requirements
 		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
 			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
+			
+		# GOM building requirements 
+		aGOMBuildingReqList = []
+		for i in range(2):
+			aGOMBuildingReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
+			aList1.append(GOMBuilding)
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList2.append(GOMBuilding)
 
 		if aList1 or aList2 or aList3:
 			if bPlus:
