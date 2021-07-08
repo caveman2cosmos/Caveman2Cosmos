@@ -270,6 +270,75 @@ class TestCode:
 		return iTechLoc, iTechRow, iTechXY
 
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
+	
+	##### GOM REQUIREMENT READER FUNCTIONS #####
+	
+	#Example use:
+	#andBonusReq = []
+	#getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusReq)
+	#getGOMAndBonuses(CvUnitInfo.getTrainCondition(), andBonusReq)
+	
+	def getGOMAndBonuses(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_AND:
+				getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
+				getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
+				l += CyBoolExpr.getID()
+				
+	def getGOMOrBonuses(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_OR:
+				getGOMOrBonuses(CyBoolExpr.getFirstExpr(), l)
+				getGOMOrBonuses(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
+				l += CyBoolExpr.getID()
+				
+	def getGOMAndBuildings(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_AND:
+				getGOMAndBuildings(CyBoolExpr.getFirstExpr(), l)
+				getGOMAndBuildings(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
+				l += CyBoolExpr.getID()
+				
+	def getGOMOrBuildings(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_OR:
+				getGOMOrBuildings(CyBoolExpr.getFirstExpr(), l)
+				getGOMOrBuildings(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
+				l += CyBoolExpr.getID()
+				
+	def getGOMAndTechs(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_AND:
+				getGOMAndTechs(CyBoolExpr.getFirstExpr(), l)
+				getGOMAndTechs(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
+				l += CyBoolExpr.getID()
+				
+	def getGOMOrTechs(self, CyBoolExpr, l):
+		if CyBoolExpr is not None:
+			type = CyBoolExpr.getType()
+			if type == BoolExprTypes.BOOLEXPR_OR:
+				getGOMOrTechs(CyBoolExpr.getFirstExpr(), l)
+				getGOMOrTechs(CyBoolExpr.getSecondExpr(), l)
+			elif type == BoolExprTypes.BOOLEXPR_HAS \
+			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
+				l += CyBoolExpr.getID()
+
+	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
 
 	#Building tech requirement list
 	def listBuildingTechRequirements(self):
@@ -959,18 +1028,3 @@ class TestCode:
 			else:
 				TechReq = GC.getTechInfo(TechReq).getType()
 			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
-
-
-def getGOMAndBonuses(CyBoolExpr, l):
-	if CyBoolExpr is not None:
-		type = CyBoolExpr.getType()
-		if type == BoolExprTypes.BOOLEXPR_AND:
-			getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
-			getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
-		elif type == BoolExprTypes.BOOLEXPR_HAS \
-		and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
-			l += CyBoolExpr.getID()
-
-#andBonusReq = []
-#getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusReq)
-
