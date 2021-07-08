@@ -355,6 +355,27 @@ class TestCode:
 	##### GOM REQUIREMENT READER FUNCTIONS #####
 	
 	#Example use:
+	#GOMReqList = []
+	#for i in range(2):
+	#	GOMReqList.append([])
+	#getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, GOMReqList) - for buildings
+	#getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, GOMReqList) - for units
+	#Array is filled with enums - GC.getBonusInfo(GOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getType() will extract type of bonus at i-th place.
+	#Array is filled with enums - GC.getBonusInfo(GOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getType() will extract type of bonus at i-th place.
+
+	def getGOMReqs(self, CyBoolExpr, GOMType, GOMReqList, eParentExpr = BoolExprTypes.NO_BOOLEXPR):
+		if CyBoolExpr is not None:
+			eExpr = CyBoolExpr.getType()
+			if eExpr == BoolExprTypes.BOOLEXPR_AND \
+			or eExpr == BoolExprTypes.BOOLEXPR_OR:
+				self.getGOMReqs(CyBoolExpr.getFirstExpr(), GOMType, GOMReqList, eExpr)
+				self.getGOMReqs(CyBoolExpr.getSecondExpr(), GOMType, GOMReqList, eExpr)
+
+			elif eExpr == BoolExprTypes.BOOLEXPR_HAS and CyBoolExpr.getGOMType() == GOMType:
+				assert(eParentExpr > BoolExprTypes.NO_BOOLEXPR)
+				GOMReqList[eParentExpr].append(CyBoolExpr.getID())
+
+	#Example use:
 	#andBonusReq = []
 	#getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusReq) - for buildings
 	#getGOMAndBonuses(CvUnitInfo.getTrainCondition(), andBonusReq) - for units
