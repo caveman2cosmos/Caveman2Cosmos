@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaUnit:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+	
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -194,6 +197,7 @@ class PediaUnit:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
 		# Bonus Req
+		# TODO: Rework it, so it supports GOM AND/OR requirements
 		szChild = PF + "BONUS"
 		nOr = 0
 		for iType in CvTheUnitInfo.getPrereqOrBonuses():
@@ -255,11 +259,22 @@ class PediaUnit:
 			aList0.append(CvTheUnitInfo.getPrereqAndBuilding(i))
 
 		for i in xrange(CvTheUnitInfo.getPrereqOrBuildingsNum()):
-			iType = CvTheUnitInfo.getPrereqOrBuilding(i)
-			if iType == -1:
-				break
-			aList1.append(iType)
+			aList1.append(CvTheUnitInfo.getPrereqOrBuilding(i))
 			nOr += 1
+			
+		# GOM building requirements 
+		aGOMBUnitReqList = []
+		for i in range(2):
+			aGOMBUnitReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
+			aList0.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList1.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+			nOr += 1
+		# TODO: Change it, so those are treated as separate requirement groups
 
 		if aList0 or aList1:
 			if aReqList:

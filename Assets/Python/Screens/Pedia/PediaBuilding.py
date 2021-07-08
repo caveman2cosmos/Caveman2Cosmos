@@ -333,6 +333,7 @@ class PediaBuilding:
 				bPlus = True
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getCorporationInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 		# Bonus Req
+		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus 
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
@@ -407,10 +408,11 @@ class PediaBuilding:
 		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
 		# GOM AND requirements are treated as regular AND requirements
 		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
-			aList1.append(GOMBuilding)
+			aList1.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
 		# GOM OR requirements are treated as regular OR requirements
 		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR])):
-			aList2.append(GOMBuilding)
+			aList2.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+		# TODO: Change it, so those are treated as separate requirement groups
 
 		if aList1 or aList2 or aList3:
 			if bPlus:
