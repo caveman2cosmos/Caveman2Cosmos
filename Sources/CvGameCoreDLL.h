@@ -67,7 +67,7 @@
 #include <sparsehash/type_traits.h>
 
 
-#define DllExport   __declspec( dllexport ) 
+#define DllExport   __declspec( dllexport )
 
 #include "NiPoint.h"
 

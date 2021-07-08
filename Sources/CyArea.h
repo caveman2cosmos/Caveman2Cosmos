@@ -10,7 +10,7 @@
 class CyCity;
 class CvArea;
 
-class CyArea 
+class CyArea
 {
 public:
 	CyArea();

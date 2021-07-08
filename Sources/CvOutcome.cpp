@@ -290,7 +290,7 @@ void CvOutcome::compilePython()
 	{
 		return;
 	}
-	
+
 	PyObject* pDictionary = PyModule_GetDict(pModule);   // borrowed reference
 
 	PyObject* pFunc = PyDict_GetItemString(pDictionary, "isPossible");     // borrowed reference
@@ -576,10 +576,10 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
 		CyPlot cyPlot(const_cast<CvPlot*>(kUnit.plot()));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
-		
+
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonPossibleFunc, pyUnit, pyPlot, NULL);
 		bool bResult = boost::python::extract<bool>(pyResult);
-		
+
 		Py_XDECREF(pyResult);
 		Py_DECREF(pyUnit);
 		Py_DECREF(pyPlot);
@@ -1372,7 +1372,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		{
 			iValue += iTempValue;
 		}
-		
+
 		kPlayer.deleteEventTriggered(pTriggerData->getID());
 	}
 
@@ -1510,13 +1510,13 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
 	pXML->GetOptionalChildXmlValByName(m_szPythonModuleName, L"PythonName");
 	pXML->GetOptionalChildXmlValByName(m_szPythonCode, L"Python");
-	
+
 	if (!m_szPythonCode.empty())
 	{
 		preparePython(m_szPythonCode);
 		compilePython();
 	}
-	
+
 	if(pXML->TryMoveToXmlFirstChild(L"Yields"))
 	{
 		if(pXML->TryMoveToXmlFirstChild())
@@ -1715,8 +1715,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
-		m_eUnitType > NO_UNIT && 
+	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) &&
+		m_eUnitType > NO_UNIT &&
 		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
 		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))
 	{
@@ -1854,7 +1854,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 	//iGoldTimes100 += m_aiCommerce[COMMERCE_GOLD] * 100;
 	//iResearchTimes100 += m_aiCommerce[COMMERCE_RESEARCH] * 100;
-	
+
 	//if (iGoldTimes100)
 	if (m_aiCommerce[COMMERCE_GOLD])
 	{

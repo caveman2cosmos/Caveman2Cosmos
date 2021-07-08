@@ -291,7 +291,7 @@ T* FFreeListTrashArray<T>::add()
 {
 	int iIndex;
 
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
@@ -336,7 +336,7 @@ T* FFreeListTrashArray<T>::add()
 		{
 			//    Didn't find one - just take the free list head node
 			if (m_iFreeListHead == FFreeList::INVALID_INDEX)
-			{					
+			{
 				m_iCorruptedAdjustment++;
 				m_iLastIndex++;
 				iIndex = m_iLastIndex;
@@ -393,7 +393,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 	FASSERT_NOT_NEGATIVE(iIndex)
 
-	if ((iIndex <= m_iLastIndex) && 
+	if ((iIndex <= m_iLastIndex) &&
 		(m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))
@@ -438,7 +438,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 
 	FAssertMsg(iIndex >= 0, "FFreeListTrashArray::removeAt - index part of iID is not a valid index");
 
-	if ((iIndex <= m_iLastIndex) && 
+	if ((iIndex <= m_iLastIndex) &&
 		(m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))

@@ -53,7 +53,7 @@ public:
 
 protected:
 	CvPath();
-	
+
 	void Set(CvPathNode* startNode);
 
 public:
@@ -228,7 +228,7 @@ public:
 	bool generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit = -1);
 	bool generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns);
 	bool haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen);
-	
+
 	virtual const CvPlot* getTerminalPlot() const;
 
 	const CvPath& getLastPath() const;
