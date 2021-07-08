@@ -102,15 +102,20 @@ class TestCode:
 			iTechReligionLoc = 0
 			iTechReligionRow = 0
 
-		#Tech GOM AND requirements
-		andGOMTechReq = []
-		self.getGOMAndTechs(CvBuildingInfo.getConstructCondition(), andGOMTechReq)
-
+		#Tech GOM requirements
+		TechGOMReqList = []
 		iTechGOMAndLocList = []
 		iTechGOMAndRowList = []
-		for i in xrange(len(andGOMTechReq)):
-			iTechGOMAndLocList.append(GC.getTechInfo(andGOMTechReq[i]).getGridX())
-			iTechGOMAndRowList.append(GC.getTechInfo(andGOMTechReq[i]).getGridY())
+		iTechGOMOrLocList = []
+		iTechGOMOrRowList = []
+		for i in range(2):
+			TechGOMReqList.append([])
+		self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, TechGOMReqList)
+
+		#Extract GOM AND requirements
+		for i in xrange(len(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+			iTechGOMAndLocList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getGridX())
+			iTechGOMAndRowList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getGridY())
 		if len(iTechGOMAndLocList) > 0 and len(iTechGOMAndRowList) > 0:
 			iTechGOMAndLoc = max(iTechGOMAndLocList)
 			for t in xrange(len(iTechGOMAndLocList)):
@@ -120,24 +125,18 @@ class TestCode:
 			iTechGOMAndLoc = 0
 			iTechGOMAndRow = 0
 
-		#Tech GOM OR requirements
-		orGOMTechReq = []
-		self.getGOMOrTechs(CvBuildingInfo.getConstructCondition(), orGOMTechReq)
-
-		iTechGOMOrLocList = []
-		iTechGOMOrRowList = []
-		for i in xrange(len(orGOMTechReq)):
-			iTechGOMOrLocList.append(GC.getTechInfo(orGOMTechReq[i]).getGridX())
-			iTechGOMOrRowList.append(GC.getTechInfo(orGOMTechReq[i]).getGridY())
+		#Extract GOM OR requirements
+		for i in xrange(len(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+			iTechGOMOrLocList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getGridX())
+			iTechGOMOrRowList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getGridY())
 		if len(iTechGOMOrLocList) > 0 and len(iTechGOMOrRowList) > 0:
-			iTechGOMOrLoc = min(iTechGOMOrLocList)
+			iTechGOMOrLoc = max(iTechGOMOrLocList)
 			for t in xrange(len(iTechGOMOrLocList)):
-				if iTechGOMOrLocList[t] == min(iTechGOMOrLocList):
+				if iTechGOMOrLocList[t] == max(iTechGOMOrLocList):
 					iTechGOMOrRow = iTechGOMOrRowList[t]
 		else:
 			iTechGOMOrLoc = 0
 			iTechGOMOrRow = 0
-
 
 		#Pick most advanced tech
 		iTechLoc = max(iTechMainLoc, iTechTypeLoc, iTechSpecialLoc, iTechReligionLoc, iTechGOMAndLoc, iTechGOMOrLoc)
@@ -188,15 +187,20 @@ class TestCode:
 			iTechTypeLoc = 0
 			iTechTypeRow = 0
 
-		#Tech GOM AND requirements
-		andGOMTechReq = []
-		self.getGOMAndTechs(CvUnitInfo.getTrainCondition(), andGOMTechReq)
-
+		#Tech GOM requirements
+		TechGOMReqList = []
 		iTechGOMAndLocList = []
 		iTechGOMAndRowList = []
-		for i in xrange(len(andGOMTechReq)):
-			iTechGOMAndLocList.append(GC.getTechInfo(andGOMTechReq[i]).getGridX())
-			iTechGOMAndRowList.append(GC.getTechInfo(andGOMTechReq[i]).getGridY())
+		iTechGOMOrLocList = []
+		iTechGOMOrRowList = []
+		for i in range(2):
+			TechGOMReqList.append([])
+		self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, TechGOMReqList)
+
+		#Extract GOM AND requirements
+		for i in xrange(len(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+			iTechGOMAndLocList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getGridX())
+			iTechGOMAndRowList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getGridY())
 		if len(iTechGOMAndLocList) > 0 and len(iTechGOMAndRowList) > 0:
 			iTechGOMAndLoc = max(iTechGOMAndLocList)
 			for t in xrange(len(iTechGOMAndLocList)):
@@ -206,19 +210,14 @@ class TestCode:
 			iTechGOMAndLoc = 0
 			iTechGOMAndRow = 0
 
-		#Tech GOM OR requirements
-		orGOMTechReq = []
-		self.getGOMOrTechs(CvUnitInfo.getTrainCondition(), orGOMTechReq)
-
-		iTechGOMOrLocList = []
-		iTechGOMOrRowList = []
-		for i in xrange(len(orGOMTechReq)):
-			iTechGOMOrLocList.append(GC.getTechInfo(orGOMTechReq[i]).getGridX())
-			iTechGOMOrRowList.append(GC.getTechInfo(orGOMTechReq[i]).getGridY())
+		#Extract GOM OR requirements
+		for i in xrange(len(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+			iTechGOMOrLocList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getGridX())
+			iTechGOMOrRowList.append(GC.getTechInfo(TechGOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getGridY())
 		if len(iTechGOMOrLocList) > 0 and len(iTechGOMOrRowList) > 0:
-			iTechGOMOrLoc = min(iTechGOMOrLocList)
+			iTechGOMOrLoc = max(iTechGOMOrLocList)
 			for t in xrange(len(iTechGOMOrLocList)):
-				if iTechGOMOrLocList[t] == min(iTechGOMOrLocList):
+				if iTechGOMOrLocList[t] == max(iTechGOMOrLocList):
 					iTechGOMOrRow = iTechGOMOrRowList[t]
 		else:
 			iTechGOMOrLoc = 0
@@ -355,70 +354,24 @@ class TestCode:
 	##### GOM REQUIREMENT READER FUNCTIONS #####
 
 	#Example use:
-	#andBonusReq = []
-	#getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), andBonusReq) - for buildings
-	#getGOMAndBonuses(CvUnitInfo.getTrainCondition(), andBonusReq) - for units
-	#Array is filled with enums - GC.getBonusInfo(andBonusReq[i]).getType() will extract type of bonus at i-th place.
+	#GOMReqList = []
+	#for i in range(2):
+	#	GOMReqList.append([])
+	#getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, GOMReqList) - for buildings
+	#getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, GOMReqList) - for units
+	#Array is filled with enums - GC.getBonusInfo(GOMReqList[BoolExprTypes.BOOLEXPR_AND][i]).getType() will extract type of bonus at i-th place.
+	#Array is filled with enums - GC.getBonusInfo(GOMReqList[BoolExprTypes.BOOLEXPR_OR][i]).getType() will extract type of bonus at i-th place.
 
-	def getGOMAndBonuses(self, CyBoolExpr, l):
+	def getGOMReqs(self, CyBoolExpr, GOMType, GOMReqList, eParentExpr = BoolExprTypes.NO_BOOLEXPR):
 		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_AND:
-				self.getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
-				l.append(CyBoolExpr.getID())
+			eExpr = CyBoolExpr.getType()
+			if eExpr == BoolExprTypes.BOOLEXPR_AND \
+			or eExpr == BoolExprTypes.BOOLEXPR_OR:
+				self.getGOMReqs(CyBoolExpr.getFirstExpr(), GOMType, GOMReqList, eExpr)
+				self.getGOMReqs(CyBoolExpr.getSecondExpr(), GOMType, GOMReqList, eExpr)
 
-	def getGOMOrBonuses(self, CyBoolExpr, l):
-		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_OR:
-				self.getGOMOrBonuses(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMOrBonuses(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
-				l.append(CyBoolExpr.getID())
-
-	def getGOMAndBuildings(self, CyBoolExpr, l):
-		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_AND:
-				self.getGOMAndBuildings(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMAndBuildings(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
-				l.append(CyBoolExpr.getID())
-
-	def getGOMOrBuildings(self, CyBoolExpr, l):
-		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_OR:
-				self.getGOMOrBuildings(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMOrBuildings(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
-				l.append(CyBoolExpr.getID())
-
-	def getGOMAndTechs(self, CyBoolExpr, l):
-		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_AND:
-				self.getGOMAndTechs(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMAndTechs(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
-				l.append(CyBoolExpr.getID())
-
-	def getGOMOrTechs(self, CyBoolExpr, l):
-		if CyBoolExpr is not None:
-			type = CyBoolExpr.getType()
-			if type == BoolExprTypes.BOOLEXPR_OR:
-				self.getGOMOrTechs(CyBoolExpr.getFirstExpr(), l)
-				self.getGOMOrTechs(CyBoolExpr.getSecondExpr(), l)
-			elif type == BoolExprTypes.BOOLEXPR_HAS \
-			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
-				l.append(CyBoolExpr.getID())
+			elif eExpr == BoolExprTypes.BOOLEXPR_HAS and CyBoolExpr.getGOMType() == GOMType:
+				GOMReqList[eParentExpr].append(CyBoolExpr.getID())
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
 
