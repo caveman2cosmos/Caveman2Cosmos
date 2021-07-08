@@ -196,6 +196,24 @@ class PediaUnit:
 		for iType in CvTheUnitInfo.getPrereqAndTechs():
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
+			
+		# GOM tech requirements 
+		aGOMTechReqList = []
+		for i in range(2):
+			aGOMTechReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
+			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
+			n += 1
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
+			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
+			n += 1
+		# TODO: Change it, so those are treated as separate requirement groups
+				
 		# Bonus Req
 		# TODO: Rework it, so it supports GOM AND/OR requirements
 		szChild = PF + "BONUS"

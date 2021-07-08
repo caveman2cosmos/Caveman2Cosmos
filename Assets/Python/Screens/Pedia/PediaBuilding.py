@@ -314,6 +314,26 @@ class PediaBuilding:
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 			i += 1
+			
+		# GOM tech requirements 
+		aGOMTechReqList = []
+		for i in range(2):
+			aGOMTechReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
+			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+			bPlus = True
+			i += 1
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
+			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+			bPlus = True
+			i += 1
+		# TODO: Change it, so those are treated as separate requirement groups
+		
 		# Religion Req
 		szChild = PF + "REL"
 		iType = CvTheBuildingInfo.getPrereqReligion()

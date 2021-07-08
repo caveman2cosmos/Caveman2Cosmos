@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaTech:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+		
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -149,7 +152,12 @@ class PediaTech:
 		aList2 = []
 		aList3 = []
 		for iBuilding in range(GC.getNumBuildingInfos()):
-			if isTechRequiredForBuilding(iTheTech, iBuilding):
+			#Supports GOM type tech requirement
+			aGOMTechReqList = []
+			for i in range(2):
+				aGOMTechReqList.append([])
+			self.GOMReqs.getGOMReqs(GC.getBuildingInfo(iBuilding).getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			if isTechRequiredForBuilding(iTheTech, iBuilding) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iBuilding)
 		for iProject in range(GC.getNumProjectInfos()):
 			if isTechRequiredForProject(iTheTech, iProject):
@@ -174,7 +182,12 @@ class PediaTech:
 			H_SPECIAL += H_BOT_ROW
 		# Units Enabled
 		for iUnit in range(GC.getNumUnitInfos()):
-			if isTechRequiredForUnit(iTheTech, iUnit):
+			#Supports GOM type tech requirement
+			aGOMTechReqList = []
+			for i in range(2):
+				aGOMTechReqList.append([])
+			self.GOMReqs.getGOMReqs(GC.getUnitInfo(iUnit).getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			if isTechRequiredForUnit(iTheTech, iUnit) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iUnit)
 		if aList1:
 			Pnl = aName()
