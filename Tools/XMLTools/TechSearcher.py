@@ -31,13 +31,13 @@ class TechNode:
 
 
 
-def loadData(files, prefix = '') -> list[ElementTree]:
+def loadData(files, prefix = '') -> list:
   trees = []
   for f in files:
     trees.append(ET.parse(f))
   return trees
 
-def generateTechList(trees) -> list[TechNode]:
+def generateTechList(trees) -> list:
   techList = []
   for tree in trees:
     techList.extend([TechNode(tech) for tech in tree.getroot()[0]])
@@ -67,7 +67,7 @@ def updatePreqsOf(node, isFull, nodeDict, targets) -> None:
       node.represented = True
       heapq.heappush(targets,node)
 
-def nextNode(targets) -> generator:
+def nextNode(targets):
   while targets and targets[0].linksLeft() == 0:
     yield heapq.heappop(targets)
 
@@ -85,7 +85,7 @@ def toposort(tList, tDict) -> list:
       return 0 if self.hasPartialPreqs else preqs
     def linksLeft(self) -> int:
       return self.fullPreqsLeft() + max(len(self.node.partialPreq) - self.hasPartialPreqs,0)#+ self.partialPreqsLeft()
-    def getCompareValue(self) -> tuple[int, Any, Any, Any]:
+    def getCompareValue(self) -> tuple:
       return (self.linksLeft(),self.node.find('iCost'),self.node.find('iGridX'),self.node.find('iGridY'))
     def __cmp__(self,other):
       return cmp(self.getCompareValue(),other.getCompareValue())
@@ -112,7 +112,7 @@ def toposort(tList, tDict) -> list:
 
 def lookup(dic):
   return lambda keys: map(lambda key: dic[key],keys)
-def iterDic(dic) -> generator:
+def iterDic(dic):
   for key in dic.keys():
     yield (key, dic[key])
 class TechTree:
@@ -159,7 +159,7 @@ class TechTree:
            self.strictDependance(gName(s),gName(o)),
            partials)),fulls))). union(redundantPartials)))
   def listRedudantDependancies(self) -> dict:
-    def dictCons() -> generator:
+    def dictCons():
        for baseTech in self.orderedTech:
          yield (baseTech.name, self.listRedudantDependanciesOf(baseTech))
     return { k: v for k, v in dictCons() if len(v) > 0}
