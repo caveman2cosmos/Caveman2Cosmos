@@ -89,10 +89,11 @@ class PediaBonus:
 		aSourceOfBonus = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			aGOMandBonusReq = []
-			aGOMorBonusReq = []
-			self.GOMReqs.getGOMAndBonuses(CvBuildingInfo.getConstructCondition(), aGOMandBonusReq)
-			self.GOMReqs.getGOMOrBonuses(CvBuildingInfo.getConstructCondition(), aGOMorBonusReq)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			print CvBuildingInfo.getType()
+			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
@@ -120,7 +121,7 @@ class PediaBonus:
 			if bValid:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
 				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses() \
-				or iTheBonus in aGOMandBonusReq or iTheBonus in aGOMorBonusReq:
+				or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 					aNeededByBuildings.append(iBuilding)
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
@@ -128,15 +129,15 @@ class PediaBonus:
 		bValid = True
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			aGOMandBonusReq = []
-			aGOMorBonusReq = []
-			self.GOMReqs.getGOMAndBonuses(CvUnitInfo.getTrainCondition(), aGOMandBonusReq)
-			self.GOMReqs.getGOMOrBonuses(CvUnitInfo.getTrainCondition(), aGOMorBonusReq)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			self.GOMReqs.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
 			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses() \
-			or iTheBonus in aGOMandBonusReq or iTheBonus in aGOMorBonusReq:
+			or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
