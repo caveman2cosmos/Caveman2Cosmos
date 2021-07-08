@@ -531,4 +531,12 @@
 		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
 		<iDefineIntVal>12</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
 </Civ4Defines>

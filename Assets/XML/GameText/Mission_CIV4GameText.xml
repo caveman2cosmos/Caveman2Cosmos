@@ -530,24 +530,6 @@
 		<Russian>Повредите энергосистему</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_PRETARGET_NUKE</Tag>
-		<English>Pretarget Nuke</English>
-		<French>Verrouillage des Cibles nucléaires</French>
-		<Italian>Prestabilisci un bersaglio</Italian>
-		<Spanish>Fijar objetivo</Spanish>
-		<Polish>Cel</Polish>
-		<Russian>Предварительная цель МБР</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_PRETARGET_NUKE_HELP</Tag>
-		<English>Pretargets a nuclear device onto the selected space.</English>
-		<French>Permet de Verrouiller la cible d'un missile nucléaire sur l'espace sélectionné.</French>
-		<Italian>Stabilisce il bersaglio di un attacco nucleare sullo spazio selezionato.</Italian>
-		<Spanish>Fija el objetivo de un misil nuclear sobre el sitio seleccionado.</Spanish>
-		<Polish>Wybierz cel pocisku nuklearnego.</Polish>
-		<Russian>Предварительные цели ядерного устройства на выбранном поле.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_RANGE_ATTACK</Tag>
 		<English>Range Attack</English>
 		<French>Attaque à Distance</French>

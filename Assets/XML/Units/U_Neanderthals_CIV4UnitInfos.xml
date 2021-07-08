@@ -854,90 +854,27 @@
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<Builds>
 				<!-- C2C_ERA_PREHISTORIC -->
-				<Build>
-					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
+				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
+				<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
+				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
+				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 			</Builds>
 			<iCost>24</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -1999,38 +1936,19 @@
 			<iCost>96</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
+				<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_CORAL</BuildType>
+				<BuildType>BUILD_BEACON_REEF</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
@@ -3547,7 +3465,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iBaseHurry>20</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>

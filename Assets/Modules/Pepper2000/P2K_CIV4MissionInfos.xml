@@ -620,10 +620,9 @@
 			<Button>art/interface/buttons/units/captured_asteroid.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Type>
-			<Description>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Description>
-			<Help/>
-			<Help>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Help>
+			<Type>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Type>
+			<Description>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Description>
+			<Help>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Help>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>

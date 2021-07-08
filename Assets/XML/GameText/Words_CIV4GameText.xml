@@ -58,6 +58,14 @@
 		<Russian>Øïèîíàæ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_WORD_EXIT</Tag>
+		<English>Exit</English>
+		<French>Quitter</French>
+		<German>Beenden</German>
+		<Italian>Esci</Italian>
+		<Spanish>Salir</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_WORD_FOOD</Tag>
 		<English>Food</English>
 		<French>Nourriture</French>

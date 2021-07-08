@@ -165,11 +165,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			return false;
 		}
 
-		if (!ReadGlobalDefines("xml\\PythonCallbackDefines.xml", cache))
-		{
-			return false;
-		}
-
 		//	Parallel maps
 		if (!ReadGlobalDefines("xml\\ParallelMaps_GlobalDefines.xml", cache))
 		{
@@ -230,18 +225,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					return false;
 				}
 			}
-
-			std::vector<CvString> aszModularFiles;
-			gDLL->enumerateFiles(aszModularFiles, "modules\\*_PythonCallbackDefines.xml");
-
-			foreach_(const CvString& szFile, aszModularFiles)
-			{
-				if (!ReadGlobalDefines(szFile, cache))
-				{
-					OutputDebugString("Setting Global Defines: End\n");
-					return false;
-				}
-			}
 		}
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
@@ -250,9 +233,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 		else
 		{
-			std::vector<CvString> aszFiles;		
+			std::vector<CvString> aszFiles;
 			CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-			//aszFiles.reserve(10000);
+
 			pModEnumVector->loadModControlArray(aszFiles, "globaldefines");
 
 			foreach_(const CvString& szFile, aszFiles)
@@ -264,22 +247,8 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					return false;
 				}
 			}
-
-			std::vector<CvString> aszModularFiles;
-			//aszModularFiles.reserve(10000);
-			pModEnumVector->loadModControlArray(aszModularFiles, "pythoncallbackdefines");
 			SAFE_DELETE(pModEnumVector);
-
-			foreach_(const CvString& szFile, aszModularFiles)
-			{
-				if (!ReadGlobalDefines(szFile, cache))
-				{
-					OutputDebugString("Setting Global Defines: End\n");
-					return false;
-				}
-			}
 			aszFiles.clear();
-			aszModularFiles.clear();
 		}
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -885,7 +854,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paPropertyInfo, "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
 	LoadGlobalClassInfo(GC.m_paSpecialistInfo, "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, &GC.m_SpecialistInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paVoteSourceInfo, "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
-	LoadGlobalClassInfo(GC.m_paTechInfo, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, &GC.m_TechInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paTechInfo, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", false, &GC.m_TechInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paFeatureInfo, "CIV4FeatureInfos", "Terrain", L"/Civ4FeatureInfos/FeatureInfos/FeatureInfo", false, &GC.m_FeatureInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paReligionInfo, "CIV4ReligionInfo", "GameInfo", L"/Civ4ReligionInfo/ReligionInfos/ReligionInfo", false, &GC.m_ReligionInfoReplacements);
 	// TGA indexation - important must do before anything else
@@ -1163,14 +1132,11 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	// Load the attachable infos
 	LoadGlobalClassInfo(GC.m_paAttachableInfo, "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo", false);
 
-	// Specail Case Diplomacy Info due to double vectored nature and appending of Responses
+	// Special Case Diplomacy Info due to double vectored nature and appending of Responses
 	LoadDiplomacyInfo(GC.m_paDiplomacyInfo, "CIV4DiplomacyInfos", "GameInfo", L"/Civ4DiplomacyInfos/DiplomacyInfos/DiplomacyInfo", true);
 
-	LoadGlobalClassInfo(GC.m_paQuestInfo, "CIV4QuestInfos", "Misc", L"/Civ4QuestInfos/QuestInfo", false);
-	LoadGlobalClassInfo(GC.m_paTutorialInfo, "CIV4TutorialInfos", "Misc", L"/Civ4TutorialInfos/TutorialInfo", false);
-
 	LoadGlobalClassInfo(GC.m_paEspionageMissionInfo, "CIV4EspionageMissionInfo", "GameInfo", L"/Civ4EspionageMissionInfo/EspionageMissionInfos/EspionageMissionInfo", false);
-	
+
 	// TB: Moved to enable PlayerTypes to load with Spawn Infos.  Spawn infos aren't called by any other class anyhow.
 	LoadGlobalClassInfo(GC.m_paSpawnInfo, "CIV4SpawnInfos", "Units", L"/Civ4SpawnInfos/SpawnInfos/SpawnInfo", false, &GC.m_SpawnInfoReplacements);
 	DestroyFXml();
@@ -1737,7 +1703,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 
 				// (4) Read off the Replacement condition
-				uint uiReplacementID = 0;
+				uint32_t uiReplacementID = 0;
 				std::auto_ptr<const BoolExpr> pReplacementCondition;
 				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
 				{
@@ -1763,7 +1729,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 					if (GC.getInfoTypeForString(szTypeName, true) == -1)
 					{
 						// (5-1) Does not exist
-						uint uiAppendPosition = aInfos.size();
+						const uint32_t uiAppendPosition = aInfos.size();
 						if (szTypeReplace.empty())
 						{
 							aInfos.push_back(pClassInfo.release());
@@ -1784,7 +1750,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 					else
 					{
 						// (5-2) Found at uiExistPosition
-						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						const uint32_t uiExistPosition = GC.getInfoTypeForString(szTypeName);
 						FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 						if (szTypeReplace.empty())
 						{
@@ -1845,7 +1811,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			{
 				char* tmp = xercesc::XMLString::transcode(GetCurrentXMLElement()->getNodeName());
 				char* tmp2 = xercesc::XMLString::transcode(GetCurrentXMLElement()->getTextContent());
-				CvString errorMsg = CvString::format("Missing Element, %s, %s", tmp, tmp2);
+				const CvString errorMsg = CvString::format("Missing Element, %s, %s", tmp, tmp2);
 				xercesc::XMLString::release(&tmp);
 				xercesc::XMLString::release(&tmp2);
 				FErrorMsg(errorMsg)
@@ -2639,54 +2605,6 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 		// set the current xml node to it's parent node
 		MoveToXmlParent();
 	}
-}
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetAndLoadVar(int** ppiVar, int iDefault)
-//
-//  PURPOSE :   set the variable to a default and load it from the xml if there are any children
-//
-//------------------------------------------------------------------------------------------------------
-bool CvXMLLoadUtility::SetAndLoadVar(int** ppiVar, int iDefault)
-{
-	int iNumChildren;
-	int* piVar;
-	bool bReturn = false;
-	int i; // loop counter
-
-	bReturn = true;
-
-	// get the total number of children the current xml node has
-	iNumChildren = GetXmlChildrenNumber();
-
-	// allocate memory
-	InitList(ppiVar, iNumChildren, iDefault);
-
-	// set the a local pointer to the newly allocated memory
-	piVar = *ppiVar;
-
-	// if the call to the function that sets the current xml node to it's first non-comment
-	// child and sets the parameter with the new node's value succeeds
-	if (GetChildXmlVal(&piVar[0]))
-	{
-		// loop through all the siblings, we start at 1 since we already got the first sibling
-		for (i=1;i<iNumChildren;i++)
-		{
-			// if the call to the function that sets the current xml node to it's next non-comment
-			// sibling and sets the parameter with the new node's value does not succeed
-			// we will break out of this for loop
-			if (!GetNextXmlVal(&piVar[i]))
-			{
-				break;
-			}
-		}
-
-		// set the current xml node to it's parent node
-		MoveToXmlParent();
-	}
-
-	return bReturn;
 }
 
 //------------------------------------------------------------------------------------------------------

@@ -4,23 +4,14 @@
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WORKBOAT</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GONE_DAU</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 		</UnitInfo>
 	</UnitInfos>

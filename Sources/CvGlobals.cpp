@@ -1669,7 +1669,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_SHADOW);
 	REGISTER_MISSION(MISSION_WAIT_FOR_TECH);
 	REGISTER_MISSION(MISSION_GOTO);
-	REGISTER_MISSION(MISSION_PRETARGET_NUKE);
 	REGISTER_MISSION(MISSION_BUTCHER);
 	REGISTER_MISSION(MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE);
 	REGISTER_MISSION(MISSION_DIPLOMAT_PRAISE_IND_PEOPLE);
@@ -2118,28 +2117,6 @@ CvVictoryInfo& cvInternalGlobals::getVictoryInfo(VictoryTypes eVictoryNum) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictoryNum)
 	return *(m_paVictoryInfo[eVictoryNum]);
-}
-
-int cvInternalGlobals::getNumQuestInfos() const
-{
-	return (int)m_paQuestInfo.size();
-}
-
-CvQuestInfo& cvInternalGlobals::getQuestInfo(int iIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumQuestInfos(), iIndex)
-	return *(m_paQuestInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumTutorialInfos() const
-{
-	return (int)m_paTutorialInfo.size();
-}
-
-CvTutorialInfo& cvInternalGlobals::getTutorialInfo(int iIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTutorialInfos(), iIndex)
-	return *(m_paTutorialInfo[iIndex]);
 }
 
 int cvInternalGlobals::getNumEventTriggerInfos() const
@@ -2712,8 +2689,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
-	deleteInfoArray(m_paQuestInfo);
-	deleteInfoArray(m_paTutorialInfo);
 
 	deleteInfoArray(m_paEventInfo);
 	deleteInfoArray(m_paEventTriggerInfo);

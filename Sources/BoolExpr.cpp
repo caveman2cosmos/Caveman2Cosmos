@@ -988,7 +988,7 @@ BoolExprIntegrateOr::~BoolExprIntegrateOr()
 bool BoolExprIntegrateOr::evaluate(const CvGameObject* pObject) const
 {
 	bool bAcc = false;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
 	return bAcc;
 }
 
@@ -1021,7 +1021,7 @@ void evalExprChangeIntegrateOr(const CvGameObject* pObject, const BoolExpr* pExp
 BoolExprChange BoolExprIntegrateOr::evaluateChange(const CvGameObject* pObject, const std::vector<GOMOverride>& overrides) const
 {
 	BoolExprChange bAcc = BOOLEXPR_CHANGE_REMAINS_FALSE;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, overrides));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, overrides));
 	return bAcc;
 }
 

@@ -163,7 +163,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 
 	const int iUniqueRange = GC.getImprovementInfo(eImprovement).getGoodyUniqueRange();
 	return algo::none_of(pPlot->rect(iUniqueRange, iUniqueRange),
-		bind(CvPlot::getImprovementType, _1) == eImprovement
+		bind(&CvPlot::getImprovementType, _1) == eImprovement
 	);
 }
 

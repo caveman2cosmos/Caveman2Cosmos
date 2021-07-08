@@ -1172,11 +1172,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_MAPSTER</FoundsCorporation>
@@ -1472,11 +1467,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_SAFARI</FoundsCorporation>
@@ -1515,11 +1505,6 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<FoundsCorporation>CORPORATION_ULTSOLDIER</FoundsCorporation>
@@ -6554,12 +6539,12 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_SACRIFICE_CULT</TechType>
-					<iModifier>1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -7972,11 +7957,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<PropertyManipulators>
 				<PropertySource>
@@ -8376,11 +8356,19 @@
 			<Bonus>BONUS_BARK</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -9336,11 +9324,19 @@
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -10039,15 +10035,23 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -10078,15 +10082,23 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -11037,7 +11049,7 @@
 			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
@@ -13846,73 +13858,24 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+					<iHappiness>-2</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_HUMANISM</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-1</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-2</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHappiness>-1</iHappiness>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
 		<!-- Should be given by python when butchering units.
 		<BuildingInfo>
@@ -14004,6 +13967,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_HELP</Help>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<iTradeRoutes>3</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -14980,6 +14944,10 @@
 					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FACTORY</BuildingType>
+					<iProductionModifier>-100</iProductionModifier>
+				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -15014,32 +14982,32 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_HUMANISM</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_ENLIGHTENMENT</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_EMANCIPATION</TechType>
-					<iModifier>-2</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_LABOR_UNIONS</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_COMMUNISM</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_MINORITY_RIGHTS</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_HUMANISM</PrereqTech>
+					<iHappiness>-5</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+					<iHappiness>-2</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_COMMUNISM</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+				<TechHappinessChange>
+					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
+					<iHappiness>-5</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
@@ -15179,12 +15147,6 @@
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<iProductionModifier>-100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
@@ -15217,6 +15179,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iHappiness>-3</iHappiness>
 			<bAutoBuild>1</bAutoBuild>

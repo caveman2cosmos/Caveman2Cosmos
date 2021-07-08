@@ -133,7 +133,8 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")));
+	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 void CyPlayer::killUnits()
@@ -526,9 +527,9 @@ bool CyPlayer::canDoCivics(int /*CivicTypes*/ eCivic) const
 	return m_pPlayer->canDoCivics((CivicTypes)eCivic);
 }
 
-bool CyPlayer::canRevolution(int /*CivicTypes*/ paeNewCivics) const
+bool CyPlayer::canRevolution() const
 {
-	return m_pPlayer->canRevolution((CivicTypes*)paeNewCivics);
+	return m_pPlayer->canRevolution(NULL);
 }
 
 bool CyPlayer::canChangeReligion() const
@@ -1046,11 +1047,6 @@ void CyPlayer::changeTechScore(int iChange)
 	m_pPlayer->changeTechScore(iChange);
 }
 
-bool CyPlayer::isMADNukesEnabled() const
-{
-	return m_pPlayer->isEnabledMAD();
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();
@@ -1341,13 +1337,9 @@ int CyPlayer::getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarch
 	return m_pPlayer->getSingleCivicUpkeep((CivicTypes) eCivic, bIgnoreAnarchy);
 }
 
-int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy) const
+int CyPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
-	int iRet = m_pPlayer->getCivicUpkeep((CivicTypes*)pCivics, bIgnoreAnarchy);
-	delete [] pCivics;
-	return iRet;
+	return m_pPlayer->getCivicUpkeep(bIgnoreAnarchy);
 }
 
 void CyPlayer::setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue)
@@ -1486,7 +1478,8 @@ int CyPlayer::getNumUnits() const
 
 CyUnit* CyPlayer::getUnit(int iID) const
 {
-	return new CyUnit(m_pPlayer->getUnit(iID));
+	CvUnit* unit = m_pPlayer->getUnit(iID);
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 python::list CyPlayer::groups() const

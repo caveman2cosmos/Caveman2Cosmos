@@ -8824,7 +8824,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>-2</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
@@ -9037,7 +9037,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
@@ -9068,7 +9067,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>2</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>20</iWorkerSpeedModifier>
@@ -9235,7 +9234,6 @@
 			<iNationalCaptureResistanceModifier>10</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>10</iRealCorporationMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -10796,7 +10794,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-50</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -10876,7 +10874,6 @@
 			<BuildingProductionModifiers/>
 			<iHurryCostModifier>10</iHurryCostModifier>
 			<iHurryInflationModifier>5</iHurryInflationModifier>
-			<iRealCorporationMaintenanceModifier>-50</iRealCorporationMaintenanceModifier>
 			<SpecialistCommercePercentChanges>
 				<SpecialistCommercePercentChange>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -10941,7 +10938,7 @@
 			<iNumCitiesMaintenanceModifier>7</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-50</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11028,7 +11025,6 @@
 			<iInflation>20</iInflation>
 			<iHurryCostModifier>-50</iHurryCostModifier>
 			<iHurryInflationModifier>20</iHurryInflationModifier>
-			<iRealCorporationMaintenanceModifier>-50</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11174,7 +11170,7 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>6</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-33</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-75</iCorporationMaintenanceModifier>
 			<iExtraHealth>-1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11264,7 +11260,6 @@
 			<Flavors/>
 			<iInflation>15</iInflation>
 			<bNoLandmarkAnger>0</bNoLandmarkAnger>
-			<iRealCorporationMaintenanceModifier>-75</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11285,7 +11280,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>7</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-75</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11411,7 +11406,6 @@
 			<iInflation>-10</iInflation>
 			<iHurryCostModifier>-33</iHurryCostModifier>
 			<iSharedCivicTradeRouteModifier>0</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-75</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11432,7 +11426,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11563,7 +11557,6 @@
 			<Flavors/>
 			<iInflation>-10</iInflation>
 			<iSharedCivicTradeRouteModifier>5</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11751,7 +11744,6 @@
 			<Flavors/>
 			<iInflation>5</iInflation>
 			<iLandmarkHappiness>1</iLandmarkHappiness>
-			<iRealCorporationMaintenanceModifier>15</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11772,7 +11764,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11856,7 +11848,6 @@
 			<Flavors/>
 			<iHurryCostModifier>33</iHurryCostModifier>
 			<iSharedCivicTradeRouteModifier>0</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12591,7 +12582,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-45</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -12740,7 +12731,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-45</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -12761,7 +12751,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>4</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>25</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -12882,7 +12872,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-55</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -12903,7 +12892,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-45</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -13004,7 +12993,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-45</iRealCorporationMaintenanceModifier>
 			<!-- Wrong Civic for these Modifiers
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -13056,7 +13044,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>30</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -13185,7 +13173,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-125</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -13935,7 +13922,7 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-55</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -14026,7 +14013,6 @@
 				</Flavor>
 			</Flavors>
 			<iInflation>0</iInflation>
-			<iRealCorporationMaintenanceModifier>-55</iRealCorporationMaintenanceModifier>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -15502,7 +15488,6 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>0</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
@@ -16080,7 +16065,6 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-85</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>

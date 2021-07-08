@@ -29,30 +29,6 @@
 			</PropertyManipulators>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
@@ -1564,18 +1540,6 @@
 			</CommerceChanges>
 			<iGlobalHealth>1</iGlobalHealth>
 			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_RAILROAD</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-				<TechHealthChange>
-					<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-				<TechHealthChange>
-					<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
 				<TechHealthChange>
 					<PrereqTech>TECH_ANDROIDS</PrereqTech>
 					<iHealth>1</iHealth>
@@ -3200,11 +3164,19 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3958,6 +3930,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5241,13 +5214,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 					<TechCommerce>

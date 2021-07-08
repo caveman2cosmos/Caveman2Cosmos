@@ -5615,6 +5615,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT</Tag>
 		<English>Subdued Wombat</English>
 		<French>Wombat (App.)</French>
+		<German>
+			<Text>Gefangener Wombat:Gefangenen Wombats:Gefangenen Wombat:Gefangenen Wombat:Gefangene Wombats:Gefangenen Wombats:Gefangenen Wombats:Gefangenen Wombats</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Âîìáàò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5636,6 +5641,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangenes Zebra:Gefangenen Zebras:Gefangenen Zebra:Gefangene Zebra:Gefangene Zebras:Gefangenen Zebras:Gefangenen Zebras:Gefangenen Zebras</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Zebra addomesticata</Italian>
 		<Spanish>Cebra</Spanish>
 		<Polish>Poskromiona Zebra</Polish>
@@ -5657,6 +5667,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmter Baird-Tapir:Gezähmten Baird-Tapirs:Gezähmten Baird-Tapir:Gezähmten Baird-Tapir:Gezähmte Baird-Tapire:Gezähmten Baird-Tapire:Gezähmten Baird-Tapiren:Gezähmte Baird-Tapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Baird's Tapir</Polish>
 		<Russian>Òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -5664,6 +5679,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Tag>
 		<English>Tamed Black Rhinoceros</English>
 		<French>Rhinocéros noir dompté</French>
+		<German>
+			<Text>Gezähmtes Spitzmaulnashorn:Gezähmten Spitzmaulnashorns:Gezähmten Spitzmaulnashorn:Gezähmte Spitzmaulnashorn:Gezähmte Spitzmaulnashörner:Gezähmten Spitzmaulnashörner:Gezähmten Spitzmaulnashörnern:Gezähmten Spitzmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Nosorożec Czarny</Polish>
 		<Russian>Íîñîðîã (äîì.)</Russian>
 	</TEXT>
@@ -5675,6 +5695,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmter Flachlandtapir:Gezähmten Flachlandtapirs:Gezähmten Flachlandtapir:Gezähmten Flachlandtapir:Gezähmte Flachlandtapire:Gezähmten Flachlandtapire:Gezähmten Flachlandtapiren:Gezähmten Flachlandtapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Tapir Brazylijski</Polish>
 		<Russian>Áðàçèëüñêèé òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -5824,7 +5849,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_PEDIA</Tag>
 		<English>The Viperidae are a family of venomous snakes found all over the world, except in Antarctica, Australia, Ireland, Madagascar, Hawaii, various other isolated islands, and above the Arctic Circle. All have relatively long, hinged fangs that permit deep penetration and injection of venom. Four subfamilies are currently recognized. They are commonly known as vipers or viperids.[PARAGRAPH:2]All viperids have a pair of relatively long solenoglyphous (hollow) fangs that are used to inject venom from glands located towards the rear of the upper jaws. Each of the two fangs is at the front of the mouth on a short maxillary bone that can rotate back and forth. When not in use, the fangs fold back against the roof of the mouth and are enclosed in a membranous sheath. The left and right fangs can be rotated together or independently. During a strike, the mouth can open nearly 180° and the maxilla rotates forward, erecting the fangs as late as possible so as the fangs do not become damaged. The jaws close on impact and powerful muscles that surround the venom glands contract to inject the venom as the fangs penetrate. This action is very fast; in defensive strikes it can be more a stab than a bite. Viperids use this mechanism primarily for immobilization and digestion of prey. Secondarily it is used for self-defense, though in most cases with non-prey items such as humans they are more likely to give a dry bite (not inject any venom).[PARAGRAPH:2]Almost all vipers have keeled scales, a stocky build with a short tail, and, due to the location of the venom glands, a triangular-shaped head distinct from the neck. The great majority have vertically elliptical, or slit-shaped, pupils that can open wide to cover most of the eye or close almost completely, which helps them to see in a wide range of light levels. Typically, vipers are nocturnal and ambush their prey.[PARAGRAPH:2]Compared to many other snakes, vipers often appear rather sluggish. Most are ovoviviparous, giving birth to live young, but a few lay eggs; the word "viper" is derived from Latin vivo = "I live" and pario = "I give birth".</English>
-		<German>Mit Ottern oder Vipern bezeichnet man eine über Amerika, Afrika und Eurasien verbreitete Familie von Schlangen, die allesamt giftig sind. Bei Viperngiften handelt es sich hauptsächlich um Blutgifte, die die Blutzellen und das umgebende Gewebe schädigen oder zerstören können und sehr schmerzhaft sind. Das Gift mancher Ottern greift auch das Nervensystem des Opfers an und kann Lähmungen hervorrufen.[PARAGRAPH:2]Ottern erreichen Längen von 30 cm bis über 3 m. Sie haben einen gedrungenen, massigen Körper une einen auffälligen, dreieckigen Kopf, der sich deutlich vom Hals absetzt. Falls alle Vipern haben senkrecht geschlitzte Pupillen, die auf eine dämmerungs- und nachtaktive Lebensweise hindeuten.[PARAGRAPH:2]Ottern verfügen über einen komplexen Giftapparat mit beweglichen, röhrenartigen Giftzähnen. Solange das Maul geschlossen ist, liegen sie eingeklappt in einer Bindegewebsfalte im Gaumendach. Beim Aufreißen des Mauls werden sie durch die Drehung zweier Knochen aufgerichtet, wodurch ein tiefes Eindringen in das Beutetier ermöglicht wird. Gift wird aber nicht immer injiziert. Die Schlangen können auch einen sogenannten trockenen Biss anbringen, wenn sie Angreifer abschrecken wollen, die nicht als Beute geeignet sind. Die meisten Ottern gebären ihre Jungtiere lebend, es gibt aber auch eierlegende Arten.</German>
+		<German>Mit Ottern oder [COLOR_UNIT_TEXT]Vipern[COLOR_REVERT] bezeichnet man eine über Amerika, Afrika und Eurasien verbreitete Familie von Schlangen, die allesamt giftig sind. Der in Deutschland häufigste Vertreter ist die Kreuzotter. Ottern erreichen Längen von 30 cm bis über 3 m. Sie haben einen gedrungenen, massigen Körper une einen auffälligen, dreieckigen Kopf, der sich deutlich vom Hals absetzt. Fast alle Vipern haben senkrecht geschlitzte Pupillen, die auf eine dämmerungs- und nachtaktive Lebensweise hindeuten. Sie sind meist unauffällig in Erd- und Olivtönen gefärbt.[NEWLINE]Ottern verfügen über einen komplexen Giftapparat mit beweglichen, röhrenartigen Giftzähnen. Solange das Maul geschlossen ist, liegen sie eingeklappt in einer Bindegewebsfalte im Gaumendach. Beim Aufreißen des Mauls werden sie durch die Drehung zweier Knochen aufgerichtet, wodurch ein tiefes Eindringen in das Beutetier ermöglicht wird. Gift wird aber nicht immer injiziert. Die Schlangen können auch einen sogenannten trockenen Biss anbringen, wenn sie Angreifer abschrecken wollen, die nicht als Beute geeignet sind. Die meisten Ottern gebären ihre Jungtiere lebend (ovovivipar), es gibt aber auch eierlegende Arten.[NEWLINE]Bei Viperngiften handelt es sich hauptsächlich um Blutgifte, die die Blutzellen und das umgebende Gewebe schädigen oder zerstören können und sehr schmerzhaft sind. Das Gift mancher Ottern greift auch das Nervensystem des Opfers an und kann Lähmungen hervorrufen.</German>
 		<Polish>Żmija właściwa (Viperinae) podrodzina w obrębie rodziny żmijowatych, w podrzędzie węży. Do podrodziny tej należy 12 rodzajów i około 60 gatunków stosunkowo niewielkich węży, o długości od kilkunastu do 200 centymetrów. W podrodzinie tej przeważa jajożyworodność, choć występują też gatunki jajorodne. Żmije zamieszkują różne środowiska i rejony geograficzne, również subarktyczny.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5851,6 +5876,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_PEDIA</Tag>
 		<English>A wallaby is any of about thirty species of macropod (Family Macropodidae). It is an informal designation generally used for any macropod that is smaller than a kangaroo or wallaroo that has not been given some other name.[PARAGRAPH:2]Very small forest-dwelling wallabies are known as "pademelons" (genus Thylogale) and "dorcopsises" (genera Dorcopsis and Dorcopsulus). The name "wallaby" comes from the Eora, who were the first human inhabitants of the Sydney area. Young wallabies are known as "joeys," like many other marsupials. Adult male wallabies are referred to as "bucks," "boomers," or "jacks." An adult female wallaby is known as a "doe," "flyer," or "jill." A group or congregation of wallabies is called a "court," "mob," or "troup." Although members of most wallaby species are small, some can grow up to six feet in length (from head to tail).[PARAGRAPH:2]Wallabies are herbivores whose diet consists of a wide range of grasses, vegetables, leaves, and other foliage. Due to recent urbanization, many wallabies now feed in rural and urban areas. Wallabies cover vast distances for food and water, which is often scarce in their environment. Mobs of wallabies often congregate around the same water hole during the dry season.</English>
+		<German>Als [COLOR_UNIT_TEXT]Wallaby[COLOR_REVERT] bezeichnet man eine kleine Kängurugattung mit acht Arten. Ein erwachsenes Wallaby misst je nach Art maximal 70 bis 80 cm, der Schwanz ist mit 60 bis 70 cm fast genauso lang. Das Maximalgewicht beträgt 20 kg, die Weibchen sind deutlich leichter. Das Fell ist grau oder braun und bei einigen Arten mit Streifen oder anderen Mustern versehen. Wie bei allen Kängurus sind die Hinterbeine länger und kräftiger ausgebildet, der Schwanz dient als Stütze.[NEWLINE]Verbreitet sind Wallabys vor allem in den nördlichen und östlichen Küstenregionen Australiens, das Flinkwallaby zusätzlich in Neuguinea. Einzelne Wallaby-Populationen gibt es nahe der französischen Stadt Rambouillet sowie im Norden der Isle of Man. Es handelt sich dabei um Ausreißer von nahegelegenen Tierparks. Sie bevorzugen eher bewaldete Gebiete und sind in der Regel dämmerungs- oder nachtaktiv. Als Pflanzenfresser ernähren sie sich u.a. von Knospen, Rinde, Gräsern und Blättern. In Trockenperioden kauen sie saftige Wurzeln gegen den Durst. Wie alle Kängurus bringen auch Wallabys nicht vollständig entwickelte Junge zur Welt, die anschließend noch mehr als ein halbes Jahr im Beutel der Mutter verbringen.[NEWLINE]Der Lebensraum der Wallabys wird durch die Landwirtschaft zunehmend eingeschränkt. Auch Bejagung und eingeschleppte Raubtiere wie der Rotfuchs dezimieren die Bestände, wodurch das Östliche Irmawallaby bereits ausgestorben ist, zwei weitere Arten sind sehr selten. Beobachtungen zufolge treten Wallabys Kornkreise in Opiumfelder. Das ist die Folge des Mohnverzehrs, woraufhin die Tiere im Rausch bis zur Erschöpfung im Kreis laufen. Wallabys sind das Wappentier der Australischen Rugby-Union-Nationalmannschaft.</German>
 		<Polish>Walabia (Protemnodon), ssaki z rodzaju zaliczanego do rodziny kangurowatych, zamieszkujące zarośla, busz oraz zadrzewione stepy Australii, Tasmanii oraz niektórych przyległych wysp.[PARAGRAPH:2]Osiągają 60-90 cm długości, są przeważnie jaśniej ubarwione niż duże gatunki kangurowatych. Żyją parami. Niektóre gatunki, z uwagi na liczne występowanie, są tępione jako szkodniki upraw. Żywią się głównie trawą, ziołami i liśćmi. Aktywne głównie o wschodzie i o zachodzie słońca, podobnie jak większość kangurowatych.[PARAGRAPH:2]Do walabii zaliczanych jest 6 gatunków, m.in. walabia dama (Protemnodon eugenii), występująca w południowej części Australii, walabia pasmowa (Protemnodon dorsalis), zamieszkująca wschodnie rejony Australii, oraz walabia Bennetta (Protemnodon rufogrisea), występująca w południowo-wschodniej Australii oraz na Tasmanii, w niektórych rejonach tępiona jako szkodnik, stanowiąca także obiekt polowań dla cennego futra.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5878,6 +5904,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLAROO_PEDIA</Tag>
 		<English>A Wallaroo is any of three closely related species of moderately large macropod, intermediate in size between the kangaroos and the wallabies. The name "wallaroo" is a portmanteau of wallaby and kangaroo. The term is not generally used by Australians. In general, a large, slim-bodied macropod of the open plains is called a "kangaroo"; a small to medium-sized one, particularly if it is relatively thick-set, is a "wallaby": most wallaroos are only a little smaller than a kangaroo, fairly thickset, and are found in open country. All share a particular habit of stance: wrists raised, elbows tucked close into the body, and shoulders thrown back, and all have a large, black-skinned rhinarium.[PARAGRAPH:2]The best-known species is Macropus robustus, which is known as the Eastern Wallaroo, Common Wallaroo or just Wallaroo on the slopes of the Great Dividing Range (which runs for more than 3,000 km around the eastern and south-eastern coast of Australia), and as the Euro in most of the rest of the continent. There are four subspecies: the Eastern Wallaroo and the Euro, which are both widespread, and two of more restricted range, one from Barrow Island, the other from the Kimberley.[PARAGRAPH:2]The Black Wallaroo (Macropus bernardus) occupies an area of steep, rocky ground in Arnhem Land. At around 60 to 70 cm in length (excluding tail) it is the smallest wallaroo and the most heavily built. Males weigh 19 to 22 kg, females about 13 kg. Because it is very wary and is found only in a small area of remote and very rugged country, it is remarkably little known.[PARAGRAPH:2]The Antilopine Wallaroo (Macropus antilopinus) is the exception among wallaroos. It is, essentially, the far-northern equivalent of the Eastern and Western Grey Kangaroos. Like them, it is a creature of the grassy plains and woodlands, and gregarious, where the other wallaroos are solitary. Because of this difference, it is sometimes called the Antilopine Kangaroo.</English>
+		<German>Das [COLOR_UNIT_TEXT]Bergkänguru[COLOR_REVERT] (Osphranter robustus) ist ein in Australien beheimatetes Beuteltier. Auch der englische Name Wallaroo ist geläufig. Bergkängurus sind etwas kleiner und schwerfälliger gebaut als die Riesenkängurus. Das Fell ist meist dunkler und an der Oberseite dunkelgrau bis schwarz. Wie alle Kängurus haben sie gut ausgebildete Hinterbeine, kurze Vordergliedmaßen und einen kräftigen Schwanz. Die Männchen sind mit einer maximalen Kopf-Rumpf-Länge von 140 cm und bis zu 36 kg Gewicht deutlich größer und schwerer als die Weibchen.[NEWLINE]Die robusten Tiere besiedeln trockene und gebirgige Regionen und können auch mit spärlichem Pflanzenwuchs überleben. Sie begnügen sich mit Gestrüpp, Gräsern und Kräutern, was in der Regel ihren Wasserbedarf deckt. Da ihr Urin hochkonzentriert ist, verlieren sie wenig Flüssigkeit und können zwei bis drei Monate ohne Trinken auskommen. Die Einzelgänger sind eher nachtaktiv und verbringen den Tag in Felshöhlen oder -spalten. Manchmal graben sie Baue, in denen sie aufrecht ruhen. Bei den Bergkängurus erfolgt die für viele Kängurus übliche verzögerte Geburt, wobei sich das Weibchen gleich nach der Geburt des Jungtiers erneut paart. Der Embryo wächst aber erst heran, wenn das Jungtier entwöhnt ist.[NEWLINE]Durch den abgeschiedenen Lebensraum sind Bergkängurus im Gegensatz zu anderen Känguruarten kaum durch menschliche Einflüsse bedroht. Lediglich Schafe und andere eingeschleppte Tiere sind in geringem Maße Nahrungskonkurrenten.</German>
 		<Polish>Kangur górski (Macropus robustus) ssak z rodziny kangurowatych (Macropodidae). Długość ciała: 55-90 cm, masa 6-25 kg (samice), 7-46 kg (samce). Wierzch ciała ciemnoszary, spód jaśniejszy. Sierść kosmata.[PARAGRAPH:2]Występuje w prawie całej Australii. Istnieją dwa podgatunki - wallaroo (M. r. robustus) zamieszkujący wschodnie i zachodnie zbocza Gór Wododziałowych, o ubarwieniu ciemnoszarym, oraz euro (M. r. erubescens) występujący na zachód od tego regionu na całym kontynencie, o krótkim czerwonawym futrze.[PARAGRAPH:2]Wyruszają na żer wieczorem, kiedy temperatura powietrza jest niższa. Żyją pojedynczo. Kangury górskie doskonale obywają się bez wody, nawet podczas dużych upałów. Im mniej piją, tym lepiej mogą wykorzystać ubogi w azot pokarm roślinny. Z drugiej strony potrafią jednak kopać głębokie doły w poszukiwaniu wody, które wykorzystywane są przez inne gatunki zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5946,12 +5973,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT</Tag>
 		<English>Wombat</English>
+		<German>
+			<Text>Wombat:Wombats:Wombat:Wombat:Wombats:Wombats:Wombats:Wombats</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Âîìáàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT_PEDIA</Tag>
 		<English>The Wombat, grey parrot or Congo Wombat (Psittacus erithacus) is an Old World parrot in the family Psittacidae.[PARAGRAPH:2]The Wombat is a medium-sized, predominantly grey, black-billed parrot which weighs 400 g, with a length of 33 cm and an average wingspan of 4652 cm. The tail and undertail coverts are red, in comparison to the maroon of the smaller Timneh Parrot. Both sexes appear similar.[PARAGRAPH:2]The colouration of juveniles similar to that of adults, however the eye is typically dark grey to black, in comparison to the greyish eyes of the adult birds. The undertail coverts are also tinged with grey.</English>
 		<French>Le wombat est un marsupial, de la famille des vombatidés, qui vit dans les forêts montagneuses dAustralie, où il creuse de vastes terriers. C'est un animal pesant de 15 à 40 kg.</French>
+		<German>Beim [COLOR_UNIT_TEXT]Wombat[COLOR_REVERT] handelt es sich um eine Familie der Beutelsäuger, die im Osten und Süden Australiens lebt. Es gibt zwei Gattungen mit insgesamt drei Arten. Die Kopf-Rumpf-Länge beträgt 70 bis 120 cm beim Gewicht von 20 bis 40 kg, wobei die Weibchen größer und schwerer sind als die Männchen. Wombats sind stämmig gebaut mit kurzen, kräftigen Gliedmaßen, die Zehen sind mit Grabkrallen ausgestattet. Die Augen sind klein, der Bereich um die Nase ist je nach Art nackt oder behaart. Der Schwanz ist stummelförmig. Das recht feste Haar variiert je nach Art von Gelb-, Grau- bis Schwarzbraun. Das Gebiss ähnelt dem der Nagetiere. Wombats haben mit 24 Zähnen die wenigsten aller Beuteltiere. Die Zähne sind wurzellos und wachsen ständig nach, Eckzähne fehlen gänzlich.[NEWLINE]Wombats sind Einzelgänger und leben in teilweise komplexen Höhlen, die miteinander verbunden sein können, sodass Kolonien entstehen. Die nachtaktiven Tiere ernähren sich vorwiegend von verschiedenen Grasarten, bei der Nahrungsauswahl spielt vermutlich auch der Geruchssinn eine große Rolle. Durch den langsamen Stoffwechsel verdaut eine Mahlzeit bis zu drei Tage. Auch Wasser benötigen sie relativ wenig. Der Kot ist würfelförmig und dient auch der Markierung des Futterplatzes. Dieser wird aggressiv verteidigt mit Drohgebärden, Zähneknirschen und Knurren.[NEWLINE]Die größte Bedrohung für die Wombats ist der Mensch, der seit der Besiedlung Australiens das Verbreitungsgebiet der Tiere durch die Zerstörung des Lebensraums, Nahrungskonkurrenz durch eingeschleppte Arten und die Bejagung einschränkt. Der Haarnasenwombat ist deshalb stark bedroht, ca. 110 Exemplare leben in einem Naturpark in Queensland. Die anderen Arten sind nicht gefährdet.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA</Tag>
@@ -5961,6 +5994,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Zebra:Zebras:Zebra:Zebra:Zebras:Zebras:Zebras:Zebras</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Spanish>Cebra</Spanish>
 		<Russian>Çåáðà</Russian>
 	</TEXT>

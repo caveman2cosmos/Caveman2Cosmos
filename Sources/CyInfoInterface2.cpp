@@ -11,7 +11,6 @@ void CyInfoPythonInterface2()
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface2\n");
 
 	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
-
 	;
 
 	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo")
@@ -19,7 +18,6 @@ void CyInfoPythonInterface2()
 		.def("getArtStyleType", &CvCivilizationInfo::getArtStyleType, "int ()")
 		.def("getNumCityNames", &CvCivilizationInfo::getNumCityNames, "int ()")
 		.def("getNumLeaders", &CvCivilizationInfo::getNumLeaders, "int ()")
-
 
 		.def("isAIPlayable", &CvCivilizationInfo::isAIPlayable, "bool ()")
 		.def("isPlayable", &CvCivilizationInfo::isPlayable, "bool ()")
@@ -84,25 +82,14 @@ void CyInfoPythonInterface2()
 		.def("getAIUnitUpgradePercent", &CvHandicapInfo::getAIUnitUpgradePercent, "int ()")
 		.def("getAIPerEraModifier", &CvHandicapInfo::getAIPerEraModifier, "int ()")
 		.def("getRevolutionIndexPercent", &CvHandicapInfo::getRevolutionIndexPercent, "int ()")
-
-		// Arrays
 	;
 
 	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo")
 
-		.def("getGrowthPercent", &CvGameSpeedInfo::getGrowthPercent, "int ()")
-		.def("getTrainPercent", &CvGameSpeedInfo::getTrainPercent, "int ()")
-		.def("getConstructPercent", &CvGameSpeedInfo::getConstructPercent, "int ()")
-		.def("getCreatePercent", &CvGameSpeedInfo::getCreatePercent, "int ()")
-		.def("getResearchPercent", &CvGameSpeedInfo::getResearchPercent, "int ()")
-		.def("getBuildPercent", &CvGameSpeedInfo::getBuildPercent, "int ()")
-		.def("getImprovementPercent", &CvGameSpeedInfo::getImprovementPercent, "int ()")
-		.def("getGreatPeoplePercent", &CvGameSpeedInfo::getGreatPeoplePercent, "int ()")
-		.def("getAnarchyPercent", &CvGameSpeedInfo::getAnarchyPercent, "int ()")
-		.def("getUnitTradePercent", &CvGameSpeedInfo::getUnitTradePercent, "int ()")
-		.def("getVictoryDelayPercent", &CvGameSpeedInfo::getVictoryDelayPercent, "int ()")
-		.def("getNumTurnIncrements", &CvGameSpeedInfo::getNumTurnIncrements, "int ()")
+		.def("getSpeedPercent", &CvGameSpeedInfo::getSpeedPercent, "int ()")
+		.def("getHammerCostPercent", &CvGameSpeedInfo::getHammerCostPercent, "int ()")
 
+		.def("getNumTurnIncrements", &CvGameSpeedInfo::getNumTurnIncrements, "int ()")
 		.def("getGameTurnInfo", &CvGameSpeedInfo::getGameTurnInfo, python::return_value_policy<python::reference_existing_object>(), "GameTurnInfo ()")
 		.def("getDateIncrement", &CvGameSpeedInfo::getDateIncrement, python::return_value_policy<python::reference_existing_object>(), "CvDateIncrement ()")
 	;
@@ -151,14 +138,10 @@ void CyInfoPythonInterface2()
 		// Arrays
 		.def("getYieldChange", &CvRouteInfo::getYieldChange, "int (int i)")
 		.def("getTechMovementChange", &CvRouteInfo::getTechMovementChange, "int (int i)")
-		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)")
+		.def("getPrereqOrBonuses", &CvRouteInfo::cyGetPrereqOrBonuses)
 	;
 
 	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo")
-
-
-
-		// Arrays
 		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
 	;
 
@@ -171,7 +154,9 @@ void CyInfoPythonInterface2()
 		.def("getDefenseModifier", &CvImprovementInfo::getDefenseModifier, "int ()")
 		.def("getHappiness", &CvImprovementInfo::getHappiness, "int ()")
 		.def("getPillageGold", &CvImprovementInfo::getPillageGold, "int ()")
+		.def("getImprovementPillage", &CvImprovementInfo::getImprovementPillage, "int ()")
 		.def("getImprovementUpgrade", &CvImprovementInfo::getImprovementUpgrade, "int ()")
+		.def("getNumAlternativeImprovementUpgradeTypes", &CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes, "int ()")
 		.def("getPrereqTech", &CvImprovementInfo::getPrereqTech, "int ()")
 
 		.def("isActsAsCity", &CvImprovementInfo::isActsAsCity, "bool ()")
@@ -194,9 +179,11 @@ void CyInfoPythonInterface2()
 		.def("getYieldChange", &CvImprovementInfo::getYieldChange, "int (int i)")
 		.def("getRiverSideYieldChange", &CvImprovementInfo::getRiverSideYieldChange, "int (int i)")
 		.def("getIrrigatedYieldChange", &CvImprovementInfo::getIrrigatedYieldChange, "int (int i)")
+		.def("getAlternativeImprovementUpgradeType", &CvImprovementInfo::getAlternativeImprovementUpgradeType, "int (int i)")
 
 		.def("getTerrainMakesValid", &CvImprovementInfo::getTerrainMakesValid, "bool (int i)")
 		.def("getFeatureMakesValid", &CvImprovementInfo::getFeatureMakesValid, "bool (int i)")
+		.def("isAlternativeImprovementUpgradeType", &CvImprovementInfo::isAlternativeImprovementUpgradeType, "bool (int i)")
 
 		.def("getImprovementBonusYield", &CvImprovementInfo::getImprovementBonusYield, "int (int i, int j)")
 		.def("isImprovementBonusMakesValid", &CvImprovementInfo::isImprovementBonusMakesValid, "bool (int i)")
@@ -284,6 +271,5 @@ void CyInfoPythonInterface2()
 
 	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo")
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
-
 	;
 }

@@ -431,15 +431,15 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RAW_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_DRIED_FISH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_NETS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -461,11 +461,11 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VEGETABLES</FreeBonus>
+					<FreeBonus>BONUS_DRUGS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DRUGS</FreeBonus>
+					<FreeBonus>BONUS_VEGETABLES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -491,11 +491,11 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAINS</FreeBonus>
+					<FreeBonus>BONUS_DRIED_FRUIT</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DRIED_FRUIT</FreeBonus>
+					<FreeBonus>BONUS_GRAINS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -871,6 +871,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FLINT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -883,6 +887,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PUMICE_STONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_PYRITE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -892,6 +900,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TAR</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -920,6 +932,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
 			<iCost>1410</iCost>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -949,6 +962,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_RARE_EARTH_MINERALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -1032,6 +1048,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RARE_EARTH_MINERALS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1157,11 +1177,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS_WARES</FreeBonus>
+					<FreeBonus>BONUS_BRASS_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS_INGOTS</FreeBonus>
+					<FreeBonus>BONUS_BRASS_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1169,11 +1189,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTRUM_WARES</FreeBonus>
+					<FreeBonus>BONUS_ELECTRUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELECTRUM_INGOTS</FreeBonus>
+					<FreeBonus>BONUS_ELECTRUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1193,15 +1213,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PLATINUM_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILVER_WARES</FreeBonus>
+					<FreeBonus>BONUS_PLATINUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1209,7 +1225,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIN_WARES</FreeBonus>
+					<FreeBonus>BONUS_SILVER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1217,11 +1233,15 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
+					<FreeBonus>BONUS_TIN_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1251,6 +1271,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROCKET_FUEL_REFINERY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<BonusYieldChanges>
 				<BonusYieldChange>
 					<BonusType>BONUS_METALLIC_HYDROGEN</BonusType>
@@ -1287,6 +1311,91 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_NANOTECH_COMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_NANOTECH_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NANOTECH_COMPLEX_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NANOTECH_COMPLEX</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
+			<iCost>9105</iCost>
+			<CommerceChanges>
+				<iCommerce>50</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqInCityBuildings>
+			<FreeBonus>BONUS_MICROGENERATORS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANDROIDS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BIONIC_SUITS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DIGITIZED_MEMBRANES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_EXOSKELETONS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HOLOGRAPHIC_PROJECTORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LEVITATION_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MECHS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOACTUATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOGENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ORGANIC_COMPUTERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLASMA_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SERVICE_BOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SHOCKWAVE_ENGINES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_PICOTECH_COMPLEX</Type>
 			<Description>TXT_KEY_BUILDING_PICOTECH_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PICOTECH_COMPLEX_PEDIA</Civilopedia>
@@ -1312,27 +1421,19 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METALLIC_HYDROGEN</FreeBonus>
+					<FreeBonus>BONUS_AEROGEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
+					<FreeBonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAPHENE</FreeBonus>
+					<FreeBonus>BONUS_CARBYNE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOTUBES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NANOBOTS</FreeBonus>
+					<FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1340,7 +1441,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METAL_FOAM</FreeBonus>
+					<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1348,11 +1449,51 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus>
+					<FreeBonus>BONUS_GRAPHENE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_METALLIC_HYDROGEN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_METAL_FOAM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOBOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NANOTUBES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_QUANTUM_DOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TRANSPARENT_ALUMINUM</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1384,11 +1525,23 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARBON_FIBER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CERMET</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARBON_FIBER</FreeBonus>
+					<FreeBonus>BONUS_ECSTASY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FIBERGLASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1396,7 +1549,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIBERGLASS</FreeBonus>
+					<FreeBonus>BONUS_LSD</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1409,26 +1566,6 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_VULCANIZED_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ECSTASY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LSD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1744,15 +1881,15 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_PERCUSSION_INSTRUMENTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1865,6 +2002,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEMICONDUCTOR_FACTORY</Type>
+			<ObsoleteTech>TECH_ADVANCED_COMPUTERS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<BonusYieldChanges>
 				<BonusYieldChange>
 					<BonusType>BONUS_CERMET</BonusType>
@@ -1993,6 +2134,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2305</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -2029,6 +2171,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -2065,6 +2208,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>9105</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -2076,6 +2220,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BETA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2152,11 +2299,11 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CELLPHONES</FreeBonus>
+					<FreeBonus>BONUS_CALCULATORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CALCULATORS</FreeBonus>
+					<FreeBonus>BONUS_CELLPHONES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2168,11 +2315,35 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DISKETTES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FIBER_OPTIC_CABLES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FLASH_MEMORY_DEVICES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MICROCHIPS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_MICROWAVE_OVENS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PERSONAL_ELECTRONICS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_POWER_TOOLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PUNCH_CARDS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2188,19 +2359,19 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TRANSISTORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_VIDEO_GAMES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_WASHER_DRYER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_ELECTRONICS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TRANSISTORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2255,6 +2426,22 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BICYCLES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BOOKS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CANDLES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FIRECRACKERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_FURNITURE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -2263,7 +2450,27 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_JEWELRY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_LACQUERWARE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MASKS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NEWSPAPERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PENCILS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PHONOGRAPHS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2279,7 +2486,19 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SADDLES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SAILS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SCULPTURES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SKIS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2291,43 +2510,19 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TOOLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TOYS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TYPEWRITERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_WATER_BOTTLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANDLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BOOKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NEWSPAPERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BICYCLES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PENCILS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIRECRACKERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MASKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_JEWELRY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2382,23 +2577,11 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TAPESTRIES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CLOTH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CLOTHING</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HATS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHOES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2410,11 +2593,23 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HATS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HEMP_FIBERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SHOES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SILK_FIBERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TAPESTRIES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2501,7 +2696,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_JET_ENGINES</FreeBonus>
+					<FreeBonus>BONUS_AMMUNITION</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FIREARMS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2513,11 +2712,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIREARMS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AMMUNITION</FreeBonus>
+					<FreeBonus>BONUS_JET_ENGINES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3022,11 +3217,11 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_WIRES</FreeBonus>
+					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WIRES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3116,22 +3311,6 @@
 				<iYield>20</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_SALT</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-				<BonusYieldModifier>
-					<BonusType>BONUS_WAX</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -3139,7 +3318,19 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_EGGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3147,39 +3338,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEATHER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HIDE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TANNIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PELTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_FUR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LARD</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MILK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BONE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3187,7 +3346,27 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
+					<FreeBonus>BONUS_HIDE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LARD</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LEATHER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MILK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3195,7 +3374,15 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
+					<FreeBonus>BONUS_PELTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WOOL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3243,6 +3430,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CANDY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CHEESE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -3255,7 +3446,15 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FLOUR</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HONEY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ICE_CREAM</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3275,11 +3474,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SAUSAGE</FreeBonus>
+					<FreeBonus>BONUS_ROASTED_COFFEE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SODA_POP</FreeBonus>
+					<FreeBonus>BONUS_SAUSAGE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3287,11 +3486,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLOUR</FreeBonus>
+					<FreeBonus>BONUS_SODA_POP</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ROASTED_COFFEE</FreeBonus>
+					<FreeBonus>BONUS_WAX</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3535,12 +3734,6 @@
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
@@ -3752,19 +3945,39 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
+			<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERFUME</FreeBonus>
+					<FreeBonus>BONUS_BIOPOLYMERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
+					<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SOAP</FreeBonus>
+					<FreeBonus>BONUS_DYE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ELECTROACTIVE_POLYMERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ELECTROLYTIC_CELLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ENZYMES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HYDROGEN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_KEROSENE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3772,10 +3985,46 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DYE</FreeBonus>
+					<FreeBonus>BONUS_OMEGA_FATTY_ACID</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ORGANIC_PHOTONIC_CELLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PERFUME</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SOAP</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TANNIN</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SALT</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_WAX</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3987,6 +4236,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>4145</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4006,6 +4256,9 @@
 					</Has>
 				</And>
 			</ConstructCondition>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_CARBYNE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4252,6 +4505,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4266,6 +4520,9 @@
 			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4286,6 +4543,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4299,6 +4557,9 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_TRANSPARENT_ALUMINUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4319,6 +4580,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4330,6 +4592,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4352,6 +4617,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4388,6 +4654,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4424,6 +4691,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LIQUID_METALS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4706,6 +4974,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>6155</iCost>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -4718,6 +4987,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAMMA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4745,6 +5017,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>6155</iCost>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
@@ -4757,6 +5030,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAMMA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4793,6 +5069,9 @@
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<FreeBonus>BONUS_SEASONING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -5232,17 +5511,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -5269,17 +5537,6 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -5305,12 +5562,12 @@
 			<iCost>830</iCost>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
 			<iHappiness>-5</iHappiness>
-			<TechHappinessTypes>
-				<TechHappinessType>
+			<TechHappinessChanges>
+				<TechHappinessChange>
 					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENETIC_PROFILING</BuildingType>
 			</ReplacementBuildings>
@@ -5580,17 +5837,6 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-3</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAVITY_CROWD_CONTROL</BuildingType>
 			</ReplacementBuildings>
@@ -5845,7 +6091,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -6997,6 +7242,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENCRYPTION_MACHINES</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<iCost>990</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -7007,8 +7253,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_DISKETTE_FACTORY</BuildingType>
-				<BuildingType>BUILDING_FLASH_MEMORY_FACTORY</BuildingType>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
@@ -7852,7 +8097,19 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CELLULASE_CAPSULES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_HYPOSPRAYS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IMMUNITY_DRUGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NEUROIMPLANTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -7860,15 +8117,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STIM_PACKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IMMUNITY_DRUGS</FreeBonus>
+					<FreeBonus>BONUS_STIM_PACKS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -8203,8 +8456,6 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_ICE_CREAM</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -9317,12 +9568,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SPACETIME_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<PrereqTech>TECH_MULTIDIMENSIONAL_TIME</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
@@ -9352,14 +9597,6 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</PrereqInCityBuildings>
@@ -12829,6 +13066,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_APIARY</Type>
 			<ObsoleteTech>TECH_NUTRACEUTICAL_ANIMALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APPRENTICE_WORKSHOP</Type>
@@ -12845,10 +13085,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_BAKERY</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAMBOO_GROVE</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARREL_FACTORY</Type>
@@ -12899,6 +13145,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_BRICK_FACTORY</Type>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRICK_MASON</Type>
@@ -12918,6 +13167,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CANNERY</Type>
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CASINO</Type>
@@ -12962,6 +13214,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CIDERHOUSE</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_MINE</Type>
@@ -12980,10 +13235,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_COCA_PLANTATION</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COFFEE_FACTORY</Type>
 			<ObsoleteTech>TECH_NEURON_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMMUNITY_GARDEN</Type>
@@ -13011,6 +13272,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CORMORANT_TRAINER</Type>
 			<ObsoleteTech>TECH_BIOMIMETICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_ADVERTISING_FIRM</Type>
@@ -13019,6 +13283,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_DISTILLERY</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRAFT_OFFICE</Type>
@@ -13027,10 +13294,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_DRIED_FISH</Type>
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRIED_FRUIT</Type>
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
@@ -13058,14 +13331,23 @@
 		<BuildingInfo>
 			<Type>BUILDING_FIREWORKS_SHOP</Type>
 			<ObsoleteTech>TECH_HOLOGRAPHICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISHOIL_MAKER</Type>
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLY_AGARIC</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROMAN_FORUM</Type>
@@ -13082,6 +13364,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_GHEE_FACTORY</Type>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLD_VAULT</Type>
@@ -13090,6 +13375,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_GRASS</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREEN_BELTS</Type>
@@ -13106,6 +13394,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_HEMATITE_PIT</Type>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIGEON_COOP</Type>
@@ -13193,10 +13484,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_MILL</Type>
-			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_MILL</Type>
@@ -13216,7 +13504,6 @@
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13238,6 +13525,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_PAPER_FACTORY</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARTS_MAKER</Type>
@@ -13257,6 +13547,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_PENCIL_FACTORY</Type>
 			<ObsoleteTech>TECH_HOLOGRAPHICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PORT</Type>
@@ -13355,6 +13648,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_SILK_FARM</Type>
 			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKE_OIL</Type>
@@ -13404,6 +13700,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_TOBACCO_PLANTATION</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOY_STORE</Type>
@@ -13412,6 +13711,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_WINERY</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BREWERY</Type>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INCINERATOR_PLANT</Type>
@@ -13623,6 +13932,7 @@
 			<Type>BUILDING_TOYCARVER</Type>
 			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_TOY_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -13777,7 +14087,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEAPON_FACTORY</Type>
-			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -13785,9 +14095,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_GUNSMITH</Type>
 			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JET_AIRCRAFT_FACTORY</Type>
@@ -14008,9 +14315,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TANNIN_FACTORY</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14038,7 +14345,7 @@
 			<Type>BUILDING_ICECREAM_PARLOR</Type>
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14127,18 +14434,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAMATERIAL_FOUNDRY</Type>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUID_METALS_FOUNDRY</Type>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAPHENE_FACTORY</Type>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14187,6 +14497,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERSTRONG_ALLOY_FOUNDRY</Type>
+			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14248,7 +14559,6 @@
 			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14438,7 +14748,16 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIQUE_SHOP</Type>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SCROLLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TABLETS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ART_STORE</Type>
@@ -14503,10 +14822,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_ECSTASY_LAB</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LSD_LAB</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLORIST</Type>
@@ -14519,6 +14844,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_METH_LAB</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RECORD_STORE</Type>
@@ -14986,6 +15314,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_SKINNER</Type>
 			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATTAN_GROVE</Type>
@@ -15043,7 +15374,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUG_CATCHER</Type>
-			<ObsoleteTech>TECH_CROP_ROTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARBORETUM</Type>
@@ -15060,7 +15394,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOD</FreeBonus>
+					<FreeBonus>BONUS_BAMBOO</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -15068,11 +15402,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BAMBOO</FreeBonus>
+					<FreeBonus>BONUS_GRASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRASS</FreeBonus>
+					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -15088,7 +15422,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
+					<FreeBonus>BONUS_WOOD</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -15117,6 +15451,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_FERTILIZER_PLANT</Type>
 			<ObsoleteTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRRIGATION_CANALS</Type>
@@ -15135,7 +15472,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHALERS</Type>
-			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISHTRAPS</Type>
@@ -15318,15 +15658,24 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANDLE_FACTORY</Type>
-			<ObsoleteTech>TECH_ORGANIC_PHOTONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEWSPAPER_FACTORY</Type>
-			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
+			<ObsoleteTech>TECH_MEDIA_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSISTOR_FACTORY</Type>
 			<ObsoleteTech>TECH_ADVANCED_COMPUTERS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLAZE_MAKER</Type>
@@ -15879,6 +16228,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_BORAX_MINE</Type>
 			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URANIUM_MINE</Type>
@@ -15975,6 +16327,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_BIRDOFPARADISE</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAMEL_FARM</Type>
@@ -15983,10 +16338,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_CANARY</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COW_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DONKEY_FARM</Type>
@@ -15995,14 +16356,23 @@
 		<BuildingInfo>
 			<Type>BUILDING_DUCK</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOSE_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERBIL_BREEDER</Type>
@@ -16011,6 +16381,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_GOAT_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUINEAPIG_BREEDER</Type>
@@ -16035,18 +16408,30 @@
 		<BuildingInfo>
 			<Type>BUILDING_OSTRICH_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARROT</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIG_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RABBIT_BREEDER</Type>
@@ -16059,14 +16444,23 @@
 		<BuildingInfo>
 			<Type>BUILDING_REINDEER_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEEP_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURKEY_FARM</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOOLY_PIG_BREEDER</Type>
@@ -16079,90 +16473,156 @@
 		<BuildingInfo>
 			<Type>BUILDING_ABALONE_DIGGERS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCHOVY_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLAM_DIGGERS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONCH_DIVER</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_TRAPS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EEL_TRAPS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLOUNDER_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIANTCLAM_DIVER</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOBSTER_TRAPS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACKEREL_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARLIN_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUREX_DIVER</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARROTFISH_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEARL_DIVERS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRAWN_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SALMON_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SARDINE_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEABASS_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHARK_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHRIMP_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAPPER_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPONGE_GATHERER</Type>
@@ -16171,342 +16631,597 @@
 		<BuildingInfo>
 			<Type>BUILDING_SQUID_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SWORDFISH_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TUNA_NETS</Type>
 			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACACIA_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALGAE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALLSPICE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APPLE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APRICOT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTICHOKE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATEMOYA_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AVOCADO_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BANANA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARLEY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEARBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELLPEPPER_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLUEBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOARD_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRAZILNUT_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BREADFRUIT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BROCCOLI_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CABBAGE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEMP_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANTALOUPE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARDONCACTUS_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARROT_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CASHEW_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CASSAVA_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAULIFLOWER_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CELERY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHERIMOYA_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHERRY_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHESTNUT_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEPPER_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHILI_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIVES_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CINNAMOMUM_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPICE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOVES_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COCOA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COCONUT_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COFFEE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLA_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORN_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COTTON_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRANBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CUCUMBER_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DATEPALM_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DURIAN_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EGGPLANT_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INCENSE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GARLIC_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEVUINA_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOSEBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAZELNUT_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HONEYDEW_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUJUBE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KAVA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KIWIFRUIT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELDERBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIG_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAX_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GINGER_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GINKGO_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAPEFRUIT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUAVA_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KALE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KUMQUAT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEEK_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEMON_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LETTUCE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUORICE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LONGAN_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOQUAT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LYCHE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACADAMIA_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANGO_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAPLE_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARSHMALLOW_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILLET_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MONGONGO_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYRH_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUTMEG_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACORN_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OAT_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLIVE_ORCHARD</Type>
@@ -16515,226 +17230,394 @@
 		<BuildingInfo>
 			<Type>BUILDING_OLIVE_PRESS</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONION_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAPAYA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAWPAW_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACH_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEANUT_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEAR_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PECAN_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINT_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSIMMON_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEYOTE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PINENUT_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PINEAPPLE_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PISTACHIO_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PITAYA_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANTAIN_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLUM_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POMEGRANATE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POPPY_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POTATO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUMPKIN_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUINOA_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADISH_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RASBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RHUBARB_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RICE_PADDY</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUTABAGA_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RYE_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAFFRON_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAPOTE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SASSAFRAS_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SESAME_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SORGHUM_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPINACH_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SQUASH_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARFRUIT_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRAWBERRY_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUGAR_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SWEETPOTATO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TANGERINE_ORCHARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TARO_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOMATILLO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOMATO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VANILLA_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VINEYARD</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDIGO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALNUT_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WASABI_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WATERMELON_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHEAT_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZUCCHINI_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIME_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CACTUS_PLANTATION</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALMOND_GROVE</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AGAVE_PLANTATION</Type>
@@ -16743,14 +17626,23 @@
 		<BuildingInfo>
 			<Type>BUILDING_ASSASSINBUG</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASSASSINBUGX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAMBOOWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAN_FARM</Type>
@@ -16759,22 +17651,37 @@
 		<BuildingInfo>
 			<Type>BUILDING_BEGONIA_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLUEBELL_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOGONG</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUTTERFLY</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUTTERFLYX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COCHINEAL_FARM</Type>
@@ -16783,186 +17690,324 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTIPEDE</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CICADA</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CICADAX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRICKET</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRICKETX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DAISY_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRAGONFLY</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRAGONFLYX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUNGBEETLE</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_EARTHWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIREFLY</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIREFLYX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOXGLOVE_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARNATION_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COCKROACH</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLIATH</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLIATHX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRASSHOPPER</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEMP_FARM</Type>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HENNA_PLANTATION</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERCULES</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERCULESX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIBISCUS_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRIS_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUMILES</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUNEBUG</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUNEBUGX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LADYBUG</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LADYBUGX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LILY_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MADDER_PLANTATION</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEALWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEZCALWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOPANE</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCHID_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALMWEEVIL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PANSY_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PILLBUG</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRAYINGMANTIS</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRAYINGMANTISX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RICEBEETLE</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROSE_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCARAB_BEETLE</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCARAB_BEETLEX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCORPION</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCORPIONX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLED_DOGS</Type>
@@ -16971,38 +18016,65 @@
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_SNAIL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAPDRAGON_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUNFLOWER_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TARANTULA</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TULIP_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIOLET_FARM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEAVINGSPIDER</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEAVINGSPIDERX</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHICKEN_COOP</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RICE_TERRACE</Type>
@@ -17011,6 +18083,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_EGG_GATHERER</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOY_FARM</Type>
@@ -17397,6 +18472,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINIUM_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COPPER_RECLAMATION_PLANT</Type>
@@ -17405,10 +18483,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_GLASS_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLD_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRON_RECLAMATION_PLANT</Type>
@@ -17417,26 +18501,44 @@
 		<BuildingInfo>
 			<Type>BUILDING_LEAD_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAPER_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLASTIC_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUM_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUBBER_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILVER_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEEL_RECLAMATION_PLANT</Type>
@@ -17445,10 +18547,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_TIN_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUM_RECLAMATION_PLANT</Type>
 			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APPLIANCE_STORE</Type>
@@ -22630,19 +23738,19 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM_ORE</FreeBonus>
+					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TITANIUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -23163,7 +24271,6 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NASA</Type>
@@ -23917,21 +25024,18 @@
 		<BuildingInfo>
 			<Type>BUILDING_EIFFEL_TOWER</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSAMERICA_PYRAMID</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INSURANCE_OFFICE</BuildingType>
 				<BuildingType>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HNIC</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<GlobalBuildingExtraCommerces>
@@ -23946,6 +25050,383 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BICYCLE_SHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BOOK_FACTORY</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ANTHILL</Type>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TERMITE_MOUND</Type>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FIRE_PIT</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BONFIRE</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_IMU</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FURRIER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_JADE_MINE</Type>
+			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_JEWELER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MASK_CARVER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PERSONAL_ELECTRONICS_FACTORY</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HYDROCARBON_REFINERY</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BELLADONNA</Type>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CURARE</Type>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DEATHCAP_MUSHROOM</Type>
+			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SAIL_FACTORY</Type>
+			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TAPESTRY_MAKER_WORKSHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WHALEOIL_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FLINT_QUARRY</Type>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SADDLER</Type>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TABLET_MAKER</Type>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CANDY_STORE</Type>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FORGE</Type>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SCROLL_MAKER</Type>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WATERPROOF_CEMENT_MAKER</Type>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_KEROSENE_DISTILLERY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHEMICAL_PLANT</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HYDROGEN_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TYPEWRITER_FACTORY</Type>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PHONOGRAPH_FACTORY</Type>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SKIS_FACTORY</Type>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DISKETTE_FACTORY</Type>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FATTY_ACID_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OXIDATION_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FIBEROPTICS_FACTORY</Type>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BIOPOLYMER_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FLASH_MEMORY_FACTORY</Type>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ORGANIC_PHOTONICS_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ELECTROACTIVE_POLYMER_FACTORY</Type>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CELLULASE_CAPSULE_FACTORY</Type>
+			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MEDICAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CYBERNETIC_FACTORY</Type>
+			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MEDICAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MICROGENERATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MECH_ASSEMBLY_PLANT</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SERVICE_BOT_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NANOGENERATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PLASMA_GENERATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HOLOGRAPHIC_PROJECTOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ORGANIC_COMPUTER_LAB</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ORGANIC_COMPUTER_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SHOCKWAVE_ENGINE_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NANOACTUATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BIONICS_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DIGITIZED_MEMBRANE_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ANTIGRAV_GENERATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ANTI_GRAVITY_FIELD_GENERATOR_FACTORY</Type>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

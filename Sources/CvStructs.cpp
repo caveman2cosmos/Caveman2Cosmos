@@ -798,7 +798,7 @@ bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 {
 	FASSERT_BOUNDS(0, BATTLE_UNIT_COUNT, unitType)
 	FAssertMsg(getUnit(unitType) != NULL, "[Jason] Invalid battle unit type.");
-	return getDamage(unitType) >= getUnit(unitType)->maxHitPoints();
+	return getDamage(unitType) >= getUnit(unitType)->getMaxHP();
 }
 
 PBGameSetupData::PBGameSetupData()

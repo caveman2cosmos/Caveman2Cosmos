@@ -424,7 +424,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -750,13 +749,6 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 					<TechCommerce>
