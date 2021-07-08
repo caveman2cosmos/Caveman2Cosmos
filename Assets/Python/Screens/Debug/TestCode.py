@@ -34,8 +34,9 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building replacements obsoletion", "Checks when replacements are unlocked and obsoleted")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
-		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - Check unit upgrades", "Checks unit upgrades")
-		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - Check unit bonus requirements", "Checks bonus requirements of units")
+		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
+		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
+		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
@@ -550,6 +551,26 @@ class TestCode:
 					BuildingTechLocList.append(BuildingEmpireReqTechLoc)
 			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(BuildingTechLocList)+" "+str(iTechLoc))
+				
+			#<ConstructCondition>
+			BuildingGOMReqList = []
+			for i in range(2):
+				BuildingGOMReqList.append([])
+			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, BuildingGOMReqList)
+
+			#Analyze GOM AND Building reqs
+			BuildingTechLocList = []
+			for iBuilding in xrange(len(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
+			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" - GOM AND building requirements are late!"+str(BuildingTechLocList)+" "+str(iTechLoc))
+
+			#Analyze GOM OR Building reqs
+			BuildingTechLocList = []
+			for iBuilding in xrange(len(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
+			if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" - GOM OR building requirements are late!"+str(BuildingTechLocList)+" "+str(iTechLoc))
 
 	#Building - Civic requirements
 	def checkBuildingCivicRequirements(self):
@@ -854,7 +875,7 @@ class TestCode:
 			if iRelPrereq3 != -1 and iRelPrereq1 != -1 and iRelPrereq3 != iRelPrereq1:
 				self.log(CvBuildingInfo.getType()+" mismatch between getPrereqStateReligion and getPrereqReligion: "+GC.getReligionType(iRelPrereq3).getType()+" "+GC.getReligionType(iRelPrereq1).getType())
 
-	#Unit - Check unit upgrades
+	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
@@ -879,7 +900,7 @@ class TestCode:
 					elif CvUnitInfo.getNumUnitUpgrades() > 1:
 						self.log(str(iTechLoc)+" - "+str(CvUnitInfo.getType())+"; Upgrade #"+str(u+1)+"/"+str(CvUnitInfo.getNumUnitUpgrades())+": "+str(upgradedTechLoc)+" - "+str(upgradedDesc)+" -> Distance: "+str(dist)+", Cost difference: "+str(costdiff)+" Upgrade of upgrade "+str(secondUpgradeList))
 
-	#Unit - Check unit bonus requirements
+	#Unit - check unit bonus requirements
 	def checkUnitBonusRequirements(self):
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
@@ -919,6 +940,46 @@ class TestCode:
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
 				self.log(CvUnitInfo.getType()+" - GOM OR bonus requirements are late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
+	#Unit - check building requirements
+	def checkUnitRequirements(self):
+		for i in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(i)
+			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			
+			#<PrereqAndBuildings> - require all buildings in list
+			BuildingTechLocList = []
+			for iBuilding in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0])
+			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvUnitInfo.getType()+" is unlocked before its AND building requirements "+str(BuildingTechLocList)+" "+str(iTechLoc))
+
+			#<PrereqOrBuildings> - require one building in list
+			BuildingTechLocList = []
+			for iBuilding in xrange(CvUnitInfo.getPrereqOrBuildingsNum()):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iBuilding))[0])
+			if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvUnitInfo.getType()+" is unlocked before its earliest OR building requirement "+str(BuildingTechLocList)+" "+str(iTechLoc))
+
+			#<TrainCondition>
+			BuildingGOMReqList = []
+			for i in range(2):
+				BuildingGOMReqList.append([])
+			self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, BuildingGOMReqList)
+
+			#Analyze GOM AND Building reqs
+			BuildingTechLocList = []
+			for iBuilding in xrange(len(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
+			if len(BuildingTechLocList) > 0 and max(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvUnitInfo.getType()+" - GOM AND building requirements are late!"+str(BuildingTechLocList)+" "+str(iTechLoc))
+
+			#Analyze GOM OR Building reqs
+			BuildingTechLocList = []
+			for iBuilding in xrange(len(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				BuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(BuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
+			if len(BuildingTechLocList) > 0 and min(BuildingTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvUnitInfo.getType()+" - GOM OR building requirements are late!"+str(BuildingTechLocList)+" "+str(iTechLoc))
+				
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
