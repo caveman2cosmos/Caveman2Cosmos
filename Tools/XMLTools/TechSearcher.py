@@ -8,7 +8,7 @@ class TechNode:
 
   def find(self,text):
     return self.ET.find('t:' + text,self.ns)
-  def loadPreq(self):
+  def loadPreq(self) -> None:
     self.fullPreq = []
     self.partialPreq = []
     ands = self.find('AndPreReqs')
@@ -21,7 +21,7 @@ class TechNode:
       else:
         self.partialPreq = [preq.text for preq in ors]
 
-  def __init__(self, node):
+  def __init__(self, node) -> None:
     self.ET = node
     self.ns = {'t': re.search('\{(.*)\}\s*TechInfo',node.tag).group(1)}
     self.name = self.find('Type').text
@@ -31,22 +31,22 @@ class TechNode:
 
 
 
-def loadData(files, prefix = ''):
+def loadData(files, prefix = '') -> list[ElementTree]:
   trees = []
   for f in files:
     trees.append(ET.parse(f))
   return trees
 
-def generateTechList(trees):
+def generateTechList(trees) -> list[TechNode]:
   techList = []
   for tree in trees:
     techList.extend([TechNode(tech) for tech in tree.getroot()[0]])
   return techList
 
-def generateTechLookup(techList):
+def generateTechLookup(techList) -> dict:
   return {techList[i].name : i for i in range(len(techList))}
 
-def applyReverseConnections(tList, tDict):
+def applyReverseConnections(tList, tDict) -> None:
   for tech in tList:
     for preq in tech.fullPreq:
       if preq in tDict:
@@ -55,7 +55,7 @@ def applyReverseConnections(tList, tDict):
       if preq in tDict:
         tList[tDict[preq]].partialPreqOf.append(tech.name)
 
-def updatePreqsOf(node, isFull, nodeDict, targets):
+def updatePreqsOf(node, isFull, nodeDict, targets) -> None:
   updates = node.node.fullPreqOf if isFull else node.node.partialPreqOf
   for update in updates:
     node = nodeDict[update]
@@ -67,25 +67,25 @@ def updatePreqsOf(node, isFull, nodeDict, targets):
       node.represented = True
       heapq.heappush(targets,node)
 
-def nextNode(targets):
+def nextNode(targets) -> generator:
   while targets and targets[0].linksLeft() == 0:
     yield heapq.heappop(targets)
 
-def toposort(tList, tDict):
+def toposort(tList, tDict) -> list:
   class TopoNode:
-    def __init__(self, node):
+    def __init__(self, node) -> None:
       self.node = node
       self.represented = False
       self.hasFullPreqs = 0
       self.hasPartialPreqs = 0
-    def fullPreqsLeft(self):
+    def fullPreqsLeft(self) -> int:
       return max(len(self.node.fullPreq) - self.hasFullPreqs,0)
-    def partialPreqsLeft(self):
+    def partialPreqsLeft(self) -> int:
       preqs = len(self.node.partialPreq)
       return 0 if self.hasPartialPreqs else preqs
-    def linksLeft(self):
+    def linksLeft(self) -> int:
       return self.fullPreqsLeft() + max(len(self.node.partialPreq) - self.hasPartialPreqs,0)#+ self.partialPreqsLeft()
-    def getCompareValue(self):
+    def getCompareValue(self) -> tuple[int, Any, Any, Any]:
       return (self.linksLeft(),self.node.find('iCost'),self.node.find('iGridX'),self.node.find('iGridY'))
     def __cmp__(self,other):
       return cmp(self.getCompareValue(),other.getCompareValue())
@@ -112,19 +112,19 @@ def toposort(tList, tDict):
 
 def lookup(dic):
   return lambda keys: map(lambda key: dic[key],keys)
-def iterDic(dic):
+def iterDic(dic) -> generator:
   for key in dic.keys():
     yield (key, dic[key])
 class TechTree:
-  def __init__(self, xmlFiles = defaultData, prefix = ''):
+  def __init__(self, xmlFiles, prefix = '') -> None:
     self.techList = generateTechList(loadData(xmlFiles,prefix))
     self.techLookup = generateTechLookup(self.techList)
     applyReverseConnections(self.techList, self.techLookup)
     self.orderedTech = toposort(self.techList, self.techLookup)
     self.orderDict = {self.orderedTech[i].name : i for i in range(len(self.orderedTech))}
-  def orderDifference(self, firstName, secondName):
+  def orderDifference(self, firstName, secondName) -> int:
     return self.orderDict[secondName] - self.orderDict[firstName]
-  def strictDependance(self, firstName, secondName):
+  def strictDependance(self, firstName, secondName) -> int:
     diff = self.orderDifference(firstName, secondName)
     if self.orderDifference(firstName, secondName) < 0:
       return 0
@@ -138,11 +138,11 @@ class TechTree:
       if test(any,node.fullPreq) or (test(all,node.partialPreq) and len(node.partialPreq) > 0):
         deps[i] = 1
     return deps[-1]
-  def dependance(self, firstName, secondName):
+  def dependance(self, firstName, secondName) -> int:
     if self.orderDifference(firstName, secondName) < 0:
       return self.strictDependance(secondName,firstName)
     return self.strictDependance(firstName,secondName)
-  def listRedudantDependanciesOf(self, baseTech):
+  def listRedudantDependanciesOf(self, baseTech) -> map:
     fulls = sorted(lookup(self.orderDict)(baseTech.fullPreq))
     partials = sorted(lookup(self.orderDict)(baseTech.partialPreq))
     gName = lambda i: self.orderedTech[i].name
@@ -158,13 +158,13 @@ class TechTree:
            set(filter(lambda s: len(partials) > 0 and all(map(lambda o: o > s and
            self.strictDependance(gName(s),gName(o)),
            partials)),fulls))). union(redundantPartials)))
-  def listRedudantDependancies(self):
-    def dictCons():
+  def listRedudantDependancies(self) -> dict:
+    def dictCons() -> generator:
        for baseTech in self.orderedTech:
          yield (baseTech.name, self.listRedudantDependanciesOf(baseTech))
     return { k: v for k, v in dictCons() if len(v) > 0}
 
 with open('techOut.txt','w') as f:
-  tree = TechTree()
+  tree = TechTree(defaultData)
   for k, v in iterDic(tree.listRedudantDependancies()):
     f.write(k + ': ' + ''.join([v[0]] + map(lambda s: ', ' + s, v[1:])) + '\n')
