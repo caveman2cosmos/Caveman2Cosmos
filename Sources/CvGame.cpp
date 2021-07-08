@@ -5308,7 +5308,7 @@ int CvGame::countNumReligionTechsDiscovered() const
 	int iCount = 0;
 	foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 	{
-		if (countKnownTechNumTeams(info.getTechPrereq()) > 0)
+		if (countKnownTechNumTeams(info->getTechPrereq()) > 0)
 		{
 			iCount++;
 		}
