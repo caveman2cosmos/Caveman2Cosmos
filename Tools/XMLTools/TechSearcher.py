@@ -94,7 +94,7 @@ def toposort(tList, tDict):
   targets = filter(lambda n: n.linksLeft() == 0, nodeDict.values())
 
   while targets:
-    #print [target.node.name for target in targets]
+    #print([target.node.name for target in targets])
     heapq.heapify(targets)
     temp = 0
     for targs in nextNode(targets):
@@ -104,9 +104,9 @@ def toposort(tList, tDict):
       temp += 1
     # escape even if tech is ill formed
     if temp == 0:
-      print 'emergencyBreak'
+      print('emergencyBreak')
       break
-  #print [(target.node.name, target.fullPreqsLeft() , target.hasFullPreqs, target.node.fullPreq, target.hasPartialPreqs, target.node.partialPreq) for target in targets]
+  #print([(target.node.name, target.fullPreqsLeft() , target.hasFullPreqs, target.node.fullPreq, target.hasPartialPreqs, target.node.partialPreq) for target in targets])
   return results
 
 
