@@ -11,6 +11,8 @@
 #ifndef BOOLEXPR_H
 #define BOOLEXPR_H
 
+void CyBoolExprPythonInterface();
+
 class CvGameObject;
 class IntExpr;
 
@@ -96,13 +98,10 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 
-protected:
-	friend CyBoolExprPythonInterface;
-
 	virtual BoolExprTypes getType() const	{ return BOOLEXPR_HAS; }
 	GOMTypes getGOMType() const				{ return m_eGOM; }
 	int getID() const						{ return m_iID; }
-
+protected:
 	GOMTypes m_eGOM;
 	int m_iID;
 };
@@ -148,13 +147,10 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 
-protected:
-	friend CyBoolExprPythonInterface;
-
 	virtual BoolExprTypes getType() const	{ return BOOLEXPR_AND; }
 	const BoolExpr* getFirstExpr() const	{ return m_pExpr1; }
 	const BoolExpr* getSecondExpr() const	{ return m_pExpr2; }
-
+protected:
 	const BoolExpr* m_pExpr1;
 	const BoolExpr* m_pExpr2;
 };
