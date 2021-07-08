@@ -462,42 +462,42 @@ class TestCode:
 			if iBuildingBonusReq != -1:
 				bonusTechLoc = self.checkBonusTechRequirementLocation(GC.getBonusInfo(iBuildingBonusReq))[2]
 				if bonusTechLoc > iTechLoc:
-					self.log(CvBuildingInfo.getType()+" - Singular AND bonus prereq late!")
+					self.log(CvBuildingInfo.getType()+" - Singular AND bonus prereq late!"+str(bonusTechLoc)+" "+str(iTechLoc))
 
 			#<VicinityBonus>BONUS_X
 			iBuildingVicinityBonusReq = CvBuildingInfo.getPrereqVicinityBonus()
 			if iBuildingVicinityBonusReq != -1:
 				bonusTechLoc = self.checkBonusTechRequirementLocation(GC.getBonusInfo(iBuildingVicinityBonusReq))[2]
 				if bonusTechLoc > iTechLoc:
-					self.log(CvBuildingInfo.getType()+" - Singular AND vicinity bonus prereq late!")
+					self.log(CvBuildingInfo.getType()+" - Singular AND vicinity bonus prereq late!"+str(bonusTechLoc)+" "+str(iTechLoc))
 
 			#<RawVicinityBonus>BONUS_X
 			iBuildingRawVicinityBonusReq = CvBuildingInfo.getPrereqRawVicinityBonus()
 			if iBuildingRawVicinityBonusReq != -1:
 				bonusTechLoc = self.checkBonusTechRequirementLocation(GC.getBonusInfo(iBuildingRawVicinityBonusReq))[0]
 				if bonusTechLoc > iTechLoc:
-					self.log(CvBuildingInfo.getType()+" - Singular AND raw vicinity bonus prereq late!")
+					self.log(CvBuildingInfo.getType()+" - Singular AND raw vicinity bonus prereq late!"+str(bonusTechLoc)+" "+str(iTechLoc))
 
 			#<PrereqBonuses>
 			bonusTechLocList = []
 			for bonusOr in CvBuildingInfo.getPrereqOrBonuses():
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(bonusOr))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - Earliest OR bonus prereq late!")
+				self.log(CvBuildingInfo.getType()+" - Earliest OR bonus prereq late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#<PrereqVicinityBonuses>
 			bonusTechLocList = []
 			for bonusOrVic in CvBuildingInfo.getPrereqOrVicinityBonuses():
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(bonusOrVic))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!")
+				self.log(CvBuildingInfo.getType()+" - Earliest OR vicinity bonus prereq late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#<PrereqRawVicinityBonuses>
 			bonusTechLocList = []
 			for bonusOrVicRaw in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(bonusOrVicRaw))[0])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!")
+				self.log(CvBuildingInfo.getType()+" - Earliest OR raw vicinity bonus prereq late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#<ConstructCondition>
 			BonusGOMReqList = []
@@ -510,14 +510,14 @@ class TestCode:
 			for bonusGOMAnd in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND][bonusGOMAnd]))[2])
 			if len(bonusTechLocList) > 0 and max(bonusTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - GOM AND bonus requirements are late!")
+				self.log(CvBuildingInfo.getType()+" - GOM AND bonus requirements are late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#Analyze GOM OR Bonus reqs
 			bonusTechLocList = []
 			for bonusGOMOr in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR][bonusGOMOr]))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - GOM OR bonus requirements are late!")
+				self.log(CvBuildingInfo.getType()+" - GOM OR bonus requirements are late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -890,14 +890,14 @@ class TestCode:
 			if iUnitBonusReq != -1:
 				bonusTechLoc = self.checkBonusTechRequirementLocation(GC.getBonusInfo(iUnitBonusReq))[2]
 				if bonusTechLoc > iTechLoc:
-					self.log(CvUnitInfo.getType()+" - Singular AND bonus prereq late!")
+					self.log(CvUnitInfo.getType()+" - Singular AND bonus prereq late!"+str(bonusTechLoc)+" "+str(iTechLoc))
 
 			#<PrereqBonuses>
 			bonusTechLocList = []
 			for bonusOr in CvUnitInfo.getPrereqOrBonuses():
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(bonusOr))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvUnitInfo.getType()+" - Earliest OR bonus prereq late!")
+				self.log(CvUnitInfo.getType()+" - Earliest OR bonus prereq late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#<TrainCondition>
 			BonusGOMReqList = []
@@ -910,14 +910,14 @@ class TestCode:
 			for bonusGOMAnd in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_AND][bonusGOMAnd]))[2])
 			if len(bonusTechLocList) > 0 and max(bonusTechLocList) > iTechLoc:
-				self.log(CvUnitInfo.getType()+" - GOM AND bonus requirements are late!")
+				self.log(CvUnitInfo.getType()+" - GOM AND bonus requirements are late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 			#Analyze GOM OR Bonus reqs
 			bonusTechLocList = []
 			for bonusGOMOr in xrange(len(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
 				bonusTechLocList.append(self.checkBonusTechRequirementLocation(GC.getBonusInfo(BonusGOMReqList[BoolExprTypes.BOOLEXPR_OR][bonusGOMOr]))[2])
 			if len(bonusTechLocList) > 0 and min(bonusTechLocList) > iTechLoc:
-				self.log(CvUnitInfo.getType()+" - GOM OR bonus requirements are late!")
+				self.log(CvUnitInfo.getType()+" - GOM OR bonus requirements are late!"+str(bonusTechLocList)+" "+str(iTechLoc))
 
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
