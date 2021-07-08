@@ -282,8 +282,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_AND:
-				getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
-				getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMAndBonuses(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMAndBonuses(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
 				l += CyBoolExpr.getID()
@@ -292,8 +292,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_OR:
-				getGOMOrBonuses(CyBoolExpr.getFirstExpr(), l)
-				getGOMOrBonuses(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMOrBonuses(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMOrBonuses(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BONUS:
 				l += CyBoolExpr.getID()
@@ -302,8 +302,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_AND:
-				getGOMAndBuildings(CyBoolExpr.getFirstExpr(), l)
-				getGOMAndBuildings(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMAndBuildings(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMAndBuildings(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
 				l += CyBoolExpr.getID()
@@ -312,8 +312,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_OR:
-				getGOMOrBuildings(CyBoolExpr.getFirstExpr(), l)
-				getGOMOrBuildings(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMOrBuildings(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMOrBuildings(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_BUILDING:
 				l += CyBoolExpr.getID()
@@ -322,8 +322,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_AND:
-				getGOMAndTechs(CyBoolExpr.getFirstExpr(), l)
-				getGOMAndTechs(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMAndTechs(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMAndTechs(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
 				l += CyBoolExpr.getID()
@@ -332,8 +332,8 @@ class TestCode:
 		if CyBoolExpr is not None:
 			type = CyBoolExpr.getType()
 			if type == BoolExprTypes.BOOLEXPR_OR:
-				getGOMOrTechs(CyBoolExpr.getFirstExpr(), l)
-				getGOMOrTechs(CyBoolExpr.getSecondExpr(), l)
+				self.getGOMOrTechs(CyBoolExpr.getFirstExpr(), l)
+				self.getGOMOrTechs(CyBoolExpr.getSecondExpr(), l)
 			elif type == BoolExprTypes.BOOLEXPR_HAS \
 			and CyBoolExpr.getGOMType() == GOMTypes.GOM_TECH:
 				l += CyBoolExpr.getID()
