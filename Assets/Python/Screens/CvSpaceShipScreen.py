@@ -200,7 +200,7 @@ class CvSpaceShipScreen:
 
 
 		#exit button
-		screen.setButtonGFC("ExitButton", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
+		screen.setButtonGFC("ExitButton", localText.getText("TXT_WORD_EXIT", ()), "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 	def removeComponentsPanel(self):
 		screen = CyGInterfaceScreen( "SpaceShipScreen", CvScreenEnums.SPACE_SHIP_SCREEN)

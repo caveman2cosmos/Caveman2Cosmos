@@ -64,29 +64,6 @@ protected:
 	CvGameObjectPlayer m_GameObject;
 
 public:
-	// M.A.D. Nukes
-	int getMADDeterrent() const;
-	void setMADDeterrent(int iValue);
-	void changeMADDeterrent(int iValue);
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
-	int getMADOutgoing() const;
-	void setMADOutgoing(int iValue);
-	void changeMADOutgoing(int iValue);
-	bool getMADTrigger(int iValue) const;
-	void setMADTrigger(int iValue, bool bValue);
-	int getMADNukesCount() const;
-	bool isEnabledMAD() const;
-	void changeMADNukesCount(int iChange);
-protected:
-	int m_iMADDeterrent;
-	int m_iMADIncoming;
-	int m_iMADOutgoing;
-	int m_iMADNukesCount;
-	bool m_bMADTrigger[MAX_PLAYERS];
-
-public:
 
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
@@ -185,6 +162,8 @@ public:
 
 	void doTurn();
 	void doTurnUnits();
+
+	void recordHistory();
 
 	//	Dump stats to BBAI log
 	void dumpStats() const;
@@ -338,7 +317,6 @@ public:
 	int calculateResearchRate(TechTypes eTech = NO_TECH) const;
 	int calculateTotalCommerce() const;
 
-	bool isResearch() const;
 	bool canEverResearch(TechTypes eTech) const;
 	bool canResearch(TechTypes eTech) const;
 	TechTypes getCurrentResearch() const;
@@ -1020,7 +998,7 @@ public:
 
 	CivicTypes getCivics(CivicOptionTypes eIndex) const;
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const;
-	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const;
+	int getCivicUpkeep(bool bIgnoreAnarchy = false) const;
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue);
 
 	int64_t getTreasuryUpkeep() const;

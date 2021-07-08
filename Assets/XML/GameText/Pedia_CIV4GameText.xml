@@ -178,13 +178,12 @@
 		<English>Technocultural Bonuses</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
+		<English>Unique Bonuses</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
-		<English>Other Bonuses</English>
-		<French>Autres Bonus</French>
-		<German>Güter</German>
-		<Spanish>Otros recursos</Spanish>
-		<Polish>Inne Bonusy</Polish>
-		<Russian>Òîâàðû</Russian>
+		<English>Manufactured Bonuses</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
@@ -1065,13 +1064,5 @@
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>
 		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_SCREEN_EXIT</Tag>
-		<English>Exit</English>
-		<French>Quitter</French>
-		<German>Beenden</German>
-		<Italian>Esci</Italian>
-		<Spanish>Salir</Spanish>
 	</TEXT>
 </Civ4GameText>

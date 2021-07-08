@@ -108,7 +108,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 			}
 			else
 			{
-				pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+				pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 			}
 
 			if (!pPayer)
@@ -134,7 +134,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 		szBuffer.append(L"Cost: ");
 		m_PropertyCost.buildCompactChangesString(szBuffer);
 	}
-	
+
 	if (m_iCost)
 	{
 		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
@@ -192,7 +192,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)
@@ -267,7 +267,7 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission)
 		m_pUnitCondition = pOutcomeMission->m_pUnitCondition;
 		pOutcomeMission->m_pUnitCondition = NULL;
 	}
-	
+
 	if (!m_iCost)
 	{
 		m_iCost = pOutcomeMission->m_iCost;

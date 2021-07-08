@@ -591,7 +591,7 @@ IntExprIntegrateOp::~IntExprIntegrateOp()
 int IntExprIntegrateOp::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(getOp(), _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(getOp(), _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
@@ -648,7 +648,7 @@ int IntExprIntegrateAvg::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
 	int iCount = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
 	return iCount ? iAcc/iCount : 0;
 }
 
@@ -674,7 +674,7 @@ IntExprIntegrateCount::~IntExprIntegrateCount()
 int IntExprIntegrateCount::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 

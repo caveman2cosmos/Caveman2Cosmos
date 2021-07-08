@@ -4,62 +4,35 @@
 		<UnitInfo>
 			<Type>UNIT_WORKBOAT</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKBOAT_CLASSIC</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKBOAT_MIDDLE</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKBOAT_MODERN</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARINE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_MARINE_PRESERVE</BuildType>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CONSTRUCT_SHIP</Type>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARINE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_MARINE_PRESERVE</BuildType>
 			</Builds>
 		</UnitInfo>
 	</UnitInfos>

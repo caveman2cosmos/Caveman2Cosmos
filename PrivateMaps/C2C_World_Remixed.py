@@ -205,7 +205,7 @@ class MapConstants:
 		self.northAttenuationRange	= .06
 		self.southAttenuationFactor = .80
 		self.southAttenuationRange	= .16
-		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps. 
+		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps.
 		self.eastAttenuationFactor	= .0
 		self.eastAttenuationRange	= .0
 		self.westAttenuationFactor	= .0
@@ -272,7 +272,7 @@ class MapConstants:
 		self.bEarthlike = False
 		self.bArchipelago = False
 		self.bWaterworld = False
-		self.bAttenuate = True 
+		self.bAttenuate = True
 		if not selectionID:
 			self.bDryland = True
 			self.bAttenuate = False
@@ -932,7 +932,7 @@ class SimplexNoise4D:
 		else:
 			k1 = 0
 		if Simplex[c][3] >= 3:
-			l1 = 1  
+			l1 = 1
 		else:
 			l1 = 0
 		# The number 2 in the "simplex" array is at the second largest coordinate.
@@ -1541,7 +1541,7 @@ class ClimateMap:
 				upLiftDest = value1
 			else:
 				upLiftDest = value2
-			value = cost + upLiftDest - upLiftSource 
+			value = cost + upLiftDest - upLiftSource
 			if cost < value:
 				cost = value
 			if boolGeostrophic:
@@ -3175,12 +3175,7 @@ class BonusPlacer:
 	def AssignBonusAreas(self, numBonuses, bonusListLoc):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
-		# Build area list
-		self.areas = areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		self.areas = areas = MAP.areas()
 
 		bonusDictLoc = self.bonusDict
 		for i in xrange(numBonuses):
@@ -3426,12 +3421,8 @@ class StartingPlotFinder:
 				iNumPlayers += 1
 		shuffle(player_list)
 		print "Number of players: %d" % iNumPlayers
-		# Build area list
-		areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+
+		areas = MAP.areas()
 		# old/new world status
 		# Get official areas and make corresponding lists that determines
 		# old world vs. new world and also the pre-settled value.
@@ -3874,7 +3865,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()

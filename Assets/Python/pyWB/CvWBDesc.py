@@ -42,7 +42,7 @@ class CvWBParser:
 			return l[1]
 
 	# Find the next line that contains token, breakpoints should be a token without value.
-	# returns token with value if 
+	# returns token with value if
 	def findToken(self, f, token, breakPoint=None):
 		if token:
 			while True:

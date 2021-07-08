@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Progress.thm
 Content		:	Civ4 - GProgress control theme
@@ -9,7 +9,7 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 
 **********************************************************************/
 
-// Main Progress control namespace 
+// Main Progress control namespace
 with GFC_Control_Progress
 {
 	GFC_Control_DefaultProgress_Style
@@ -106,7 +106,7 @@ with GFC_Control_Progress
 
 skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Default
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -117,7 +117,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Default
 }
 skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Disable
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -128,7 +128,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Disable
 }
 skin SF_CtrlTheme_Civ4_Control_Progress_VInner_Default
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -136,7 +136,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_VInner_Default
 		Indent			= GRectMargin(3,0,0,0);
 		Margin			= GRectMargin(5,5,8,5);
 	}
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -150,7 +150,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_VInner_Default
 
 skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Default
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -161,7 +161,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Default
 }
 skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Disable
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -172,7 +172,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Disable
 }
 skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 {
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -180,7 +180,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 		Indent			= GRectMargin(0,3,0,0);
 		Margin			= GRectMargin(5,5,5,8);
 	}
-	layer 
+	layer
 	{
 		DestCombine		= GColorCombine(BlendSource,Disable);
 		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -199,7 +199,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 		{// Progress border and inner bitmap skins
 			.HInner_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -210,7 +210,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			}
 			.HInner_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -223,7 +223,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			.HInner_WinoffDisable	= 	.HInner_Disable;
 			.HFillLeft_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -231,7 +231,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(0,3,0,0);
 					Margin			= GRectMargin(5,5,5,8);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -244,7 +244,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			}
 			.HFillLeft_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -252,7 +252,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(0,3,0,0);
 					Margin			= GRectMargin(5,5,5,8);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -267,7 +267,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			.HFillLeft_WinoffDisable	=	.HFillLeft_Disable;
 			.HFillRight_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -275,7 +275,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(0,3,0,0);
 					Margin			= GRectMargin(5,5,5,8);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -288,7 +288,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			}
 			.HFillRight_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -296,7 +296,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(0,3,0,0);
 					Margin			= GRectMargin(5,5,5,8);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -318,7 +318,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 		{
 			.VInner_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -329,7 +329,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			}
 			.VInner_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -342,7 +342,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			.VInner_WinoffDisable	= 	.VInner_Disable;
 			.VFillUp_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -350,7 +350,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(3,0,0,0);
 					Margin			= GRectMargin(5,5,8,5);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -363,7 +363,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			}
 			.VFillUp_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -371,7 +371,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(3,0,0,0);
 					Margin			= GRectMargin(5,5,8,5);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -386,7 +386,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 			.VFillUp_WinoffDisable	=	.VFillUp_Disable;
 			.VFillDown_Default
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -394,7 +394,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(3,0,0,0);
 					Margin			= GRectMargin(5,5,8,5);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -405,9 +405,9 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Margin			= GRectMargin(5,5,8,5);
 				}
 			}
-			.VFillDown_Disable	
+			.VFillDown_Disable
 			{
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
@@ -415,7 +415,7 @@ skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
 					Indent			= GRectMargin(3,0,0,0);
 					Margin			= GRectMargin(5,5,8,5);
 				}
-				layer 
+				layer
 				{
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);

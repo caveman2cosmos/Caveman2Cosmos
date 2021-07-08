@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -22,12 +21,6 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iHealth>-5</iHealth>
-			<TechHealthChanges>
-				<TechHealthChange>
-					<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-					<iHealth>1</iHealth>
-				</TechHealthChange>
-			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
@@ -837,7 +830,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>

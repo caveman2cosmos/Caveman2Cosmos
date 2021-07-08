@@ -90,71 +90,47 @@ protected:
 	std::vector<int> m_aiCurrentAmount;
 };
 
-class CvMainPropertySolver;
-
 class CvPropertySolver
 {
 public:
+	void doTurn();
+
 	void instantiateSource(const CvGameObject* pObject, CvPropertySource* pSource);
 	void instantiateInteraction(const CvGameObject* pObject, CvPropertyInteraction* pInteraction);
 	void instantiatePropagator(const CvGameObject* pObject, CvPropertyPropagator* pPropagator);
 	void instantiateManipulators(const CvGameObject* pObject, const CvPropertyManipulators* pMani);
 	void instantiateGlobalManipulators(const CvGameObject* pObject);
 	void gatherActiveManipulators();
-	
+
 	void predictSources();
 	void correctSources();
-	void clearSources();
-	
+
 	void predictInteractions();
 	void correctInteractions();
-	void clearInteractions();
 
 	void predictPropagators();
 	void correctPropagators();
-	void clearPropagators();
-
-	void setMainSolver(CvMainPropertySolver* pMainSolver);
 
 	std::vector<int>& getCache1();
 	std::vector<int>& getCache2();
 
 	// Passed on to the solver map
 	void addChange(const CvGameObject* pObject, PropertyTypes eProperty, int iChange);
-	int getPredictValue(const CvGameObject* pObject, PropertyTypes eProperty) const;
+	int getPredictValue(const CvGameObject* pObject, PropertyTypes eProperty);
 
 protected:
+	void gatherGlobalManipulators();
+	void resetPropertyChanges();
+	void gatherAndSolve();
+
 	std::vector<PropertySourceContext> m_aSourceContexts;
 	std::vector<PropertyInteractionContext> m_aInteractionContexts;
 	std::vector<PropertyPropagatorContext> m_aPropagatorContexts;
-	CvMainPropertySolver* m_pMainSolver;
 	std::vector<int> m_aiCache1;
 	std::vector<int> m_aiCache2;
-};
 
-class CvMainPropertySolver
-{
-public:
-	CvMainPropertySolver();
-
-	PropertySolverMap* getSolverMap();
-
-	void addGlobalManipulators(const CvPropertyManipulators* pMani);
-	void gatherGlobalManipulators();
-	int getNumGlobalManipulators() const;
-	const CvPropertyManipulators* getGlobalManipulator(int index) const;
-
-	void resetPropertyChanges();
-
-	void gatherAndSolve();
-
-	void doTurn();
-
-protected:
 	std::vector<const CvPropertyManipulators*> m_apGlobalManipulators;
-	CvPropertySolver m_Solver;
 	PropertySolverMap m_mapProperties;
 };
-
 
 #endif

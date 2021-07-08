@@ -16,9 +16,9 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
+#include "CvGlobals.h"
 #include "FVariableSystem.h"
 
-class CvInternalGlobals;
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
@@ -100,11 +100,6 @@ public:
 	static int GetNumProgressSteps();
 	void RegisterProgressCB(ProgressCB cbFxn) { m_pCBFxn = cbFxn; }
 
-	// moves the current xml node from where it is now to the next non-comment node, returns false if it can't find one
-	// CHANGE 2013-10-15 (n47): now stored node is always an XML element, so it can't be a comment, thus we do not really need this method
-	// Change 2013-11-24 (alberts2): removed all references
-	bool SkipToNextVal() {return true;}
-
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	// TODO 2013-11-21 (alberts2): check if this can be done with xerxes or remove all references.
@@ -133,7 +128,31 @@ public:
 	// value of that name
 	// TO DO - unsafe
 	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
-	
+
+	template <typename T>
+	void GetOptionalTypeEnum(T& pVal, const wchar_t* szName)
+	{
+		if (TryMoveToXmlFirstChild(szName))
+		{
+			CvString szTextVal;
+			GetXmlVal(szTextVal);
+			pVal = static_cast<T>(GC.getInfoTypeFromString(szTextVal));
+			MoveToXmlParent();
+		}
+	}
+
+	template <typename T>
+	void GetOptionalTypeEnumWithDelayedResolution(T& pVal, const wchar_t* szName)
+	{
+		if (TryMoveToXmlFirstChild(szName))
+		{
+			CvString szTextVal;
+			GetXmlVal(szTextVal);
+			GC.addDelayedResolution((int*)&pVal, szTextVal);
+			MoveToXmlParent();
+		}
+	}
+
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetChildXmlValByName(std::string& pszVal, const wchar_t* szName, char* pszDefault = NULL);
@@ -157,23 +176,6 @@ public:
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetChildXmlValByName(bool* pbVal, const wchar_t* szName, bool bDefault = false)	{ return GetChildXmlValByName<bool> (pbVal, szName, bDefault); }
-
-	
-	bool GetChildXmlValByName(std::string& pszVal, const char* szName, char* pszDefault = NULL)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(std::string& pszVal, const char* szName, char* pszDefault = NULL)");	FAssert(false); return false; }
-	bool GetChildXmlValByName(std::wstring& pszVal, const char* szName, wchar_t* pszDefault = NULL)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(std::wstring& pszVal, const char* szName, wchar* pszDefault = NULL)");	FAssert(false); return false; }
-	bool GetChildXmlValByName(char* pszVal, const char* szName, char* pszDefault = NULL) // TO DO - unsafe
-	{ OutputDebugString("Call: GetChildXmlValByName(char* pszVal, const char* szName, char* pszDefault = NULL)");				FAssert(false); return false; }
-	bool GetChildXmlValByName(wchar_t* pszVal, const char* szName, wchar_t* pszDefault = NULL) // TO DO - unsafe
-	{ OutputDebugString("Call: bool GetChildXmlValByName(wchar* pszVal, const char* szName, wchar* pszDefault = NULL)");		FAssert(false); return false; }
-	bool GetChildXmlValByName(int* piVal, const char* szName, int iDefault = 0)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(int* piVal, const char* szName, int iDefault = 0)");					FAssert(false); return false; }
-	bool GetChildXmlValByName(float* pfVal, const char* szName, float fDefault = 0.0f)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(float* pfVal, const char* szName, float fDefault = 0.0f)");			FAssert(false); return false; }
-	bool GetChildXmlValByName(bool* pbVal, const char* szName, bool bDefault = false)
-	{ OutputDebugString("Call: bool GetChildXmlValByName(bool* pbVal, const char* szName, bool bDefault = false)");				FAssert(false); return false; }
-
 
 	template<typename T>
 	bool GetXmlVal(T* pVal, T pDefault)
@@ -206,7 +208,7 @@ public:
 					char* filePath = xercesc::XMLString::transcode(
 						m_pParser->getDocument()->getDocumentURI());
 					sprintf(szLog, "XML error: %s : Expected an %s or "
-						"a name of %s global definition, found '%s'\n", 
+						"a name of %s global definition, found '%s'\n",
 						filePath, typeid(T).name(), typeid(T).name(), nodeTextC);
 					xercesc::XMLString::release(&filePath);
 					logging::logMsg("xml.log", szLog);
@@ -262,8 +264,8 @@ public:
 	bool LoadCivXml(FXml* pFXml, const TCHAR* szFilename);
 
 	int  GetXmlChildrenNumber() { return m_pCurrentXmlElement->getChildElementCount(); }
-	int  GetXmlSiblingsNumber() 
-	{ 
+	int  GetXmlSiblingsNumber()
+	{
 		if (xercesc::DOMNode* node = m_pCurrentXmlElement->getParentNode())
 		{
 			FAssert(node->getNodeType() == xercesc::DOMNode::ELEMENT_NODE);
@@ -275,14 +277,14 @@ public:
 		}
 	}
 
-	const XMLCh* GetXmlTagName()        
-	{ 
+	const XMLCh* GetXmlTagName()
+	{
 		// WARINING : here can be a problem, when we turn on namespaces
-		return m_pCurrentXmlElement->getNodeName(); 
+		return m_pCurrentXmlElement->getNodeName();
 	}
 
-	int  GetXmlChildrenNumber(const XMLCh* name) 
-	{ 
+	int  GetXmlChildrenNumber(const XMLCh* name)
+	{
 		int number = 0;
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
 			child;
@@ -294,8 +296,8 @@ public:
 		return number;
 	}
 
-	int  GetXmlSiblingsNumber(const XMLCh* name) 
-	{ 
+	int  GetXmlSiblingsNumber(const XMLCh* name)
+	{
 		int number = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
 			sibling;
@@ -315,7 +317,7 @@ public:
 		return number;
 	}
 
-	const XMLCh* GetXmlFirstText()      
+	const XMLCh* GetXmlFirstText()
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -335,7 +337,7 @@ public:
 		return NULL;
 	}
 
-	const XMLCh* TryGetXmlFirstText()      
+	const XMLCh* TryGetXmlFirstText()
 	{
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
@@ -350,7 +352,7 @@ public:
 	bool  HasXmlNextSibling()    { return m_pCurrentXmlElement->getNextElementSibling(); }
 
 	bool  TryMoveToXmlFirstChild()
-	{ 
+	{
 		if (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild())
 		{
 			m_pCurrentXmlElement = child;
@@ -363,10 +365,10 @@ public:
 	}
 
 	bool  TryMoveToXmlNextSibling()
-	{ 
+	{
 		if (xercesc::DOMElement* sibling = m_pCurrentXmlElement->getNextElementSibling())
 		{
-			m_pCurrentXmlElement = sibling; 
+			m_pCurrentXmlElement = sibling;
 			return true;
 		}
 		else
@@ -514,7 +516,7 @@ public:
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
-	
+
 /*************************************************************************************************/
 /**	New Tag Defs	(XMLInfos)				08/09/08								Xienwolf	**/
 /**																								**/
@@ -530,8 +532,6 @@ public:
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
 
-	// Change 2013-11-21 (alberts2): we don't use this anymore use GetInfoClass(const TCHAR* pszVal)!
-	static int FindInfoClass(const TCHAR* pszVal, bool hideAssert = false);
 	//Searches the InfoClass for the pszVal and returns the location if a match
 	//				is found.
 	static int GetInfoClass(const TCHAR* pszVal);
@@ -733,9 +733,6 @@ public:
 	// create a hot key from a description
 	CvWString CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift = false, bool bAlt = false, bool bCtrl = false);
 
-	// set the variable to a default and load it from the xml if there are any children
-	bool SetAndLoadVar(int** ppiVar, int iDefault=0);
-
 	// function that sets the number of strings in a list, initializes the string to the correct length, and fills it from the
 	// current xml file, it assumes that the current node is the parent node of the string list children
 	bool SetStringList(CvString** ppszStringArray, int* piSize);
@@ -796,8 +793,8 @@ private:
 
 	template <class T>
 	void SetGlobalDefine(const char* szDefineName, T*& piDefVal)
-	{ 
-		GC.getDefinesVarSystem()->GetValue(szDefineName, piDefVal); 
+	{
+		GC.getDefinesVarSystem()->GetValue(szDefineName, piDefVal);
 	}
 	//
 	// template which can handle all info classes
@@ -855,7 +852,7 @@ void CvXMLLoadUtility::InitList(T **ppList, int iListLen, T val)
 	*ppList = new T[iListLen];
 
 	for (int i=0;i<iListLen;i++)
-		(*ppList)[i] = val;	
+		(*ppList)[i] = val;
 }
 
 template <class T>

@@ -9,7 +9,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSTELLAR_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -759,14 +758,6 @@
 				<iCommerce>175</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
 			</PrereqInCityBuildings>
@@ -1405,7 +1396,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
@@ -1430,7 +1420,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
@@ -2148,14 +2137,6 @@
 				<iYield>50</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
-					<TechCommerce>
-						<iCommerce>10</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
@@ -2596,13 +2577,6 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>10</iYield>
-					</TechYield>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
@@ -2886,16 +2860,6 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_EXOTIC_STARS</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
 			</PrereqInCityBuildings>
@@ -6244,7 +6208,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
@@ -6451,7 +6414,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
-			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>

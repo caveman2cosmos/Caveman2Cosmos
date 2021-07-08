@@ -10,6 +10,9 @@ def toggleDebugMode():
 	bDebugMode = not bDebugMode
 	CyInterface().addImmediateMessage("Python Debug Mode: %s" % bDebugMode, "AS2D_ERROR")
 
+def isAnyDebugMode():
+	return bDebugMode or GC.getGame().isDebugMode()
+
 class DebugUtils:
 	def __init__(self):
 		self.iLastUnitPicker = -1

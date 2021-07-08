@@ -12,12 +12,12 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-	FErrorMsg("CyCity constructor should not be called with a no parameter");
+	FErrorMsg("Error");
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-	FAssertMsg(m_pCity != NULL, "CyCity constructor should not be called with a NULL parameter");
+	FAssert(m_pCity != NULL);
 }
 
 void CyCity::kill()
@@ -1022,11 +1022,6 @@ bool CyCity::isNeverLost() const
 void CyCity::setNeverLost(int iNewValue)
 {
 	m_pCity->setNeverLost(iNewValue);
-}
-
-int CyCity::getMADIncoming() const
-{
-	return m_pCity->getMADIncoming();
 }
 
 bool CyCity::isBombarded() const

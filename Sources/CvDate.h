@@ -50,7 +50,7 @@ protected:
 
 struct CvDateIncrement
 {
-	CvDateIncrement() 
+	CvDateIncrement()
 		: m_iendTurn(0)
 		, m_iIncrementMonth(0)
 		, m_iIncrementDay(0)

@@ -7562,6 +7562,7 @@ Current techs which are not in this file:-
 			<iPower>6</iPower>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
+			<bMapCentering>1</bMapCentering>
 			<iGridX>34</iGridX>
 			<iGridY>9</iGridY>
 			<Flavors>
@@ -22405,7 +22406,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FUEL_CELLS</PrereqTech>
 				<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AUTONOMOUS_VEHICLES_QUOTE</Quote>

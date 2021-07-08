@@ -25,7 +25,7 @@ def recalculateModifiers():
 		pInterstateEventTriggerData = GC.getPlayer(i).getEventOccured(eInterstateEvent)
 		if pInterstateEventTriggerData is not None:
 			applyInterstate((eInterstateEvent, pInterstateEventTriggerData))
-			
+
 
 ######## BLESSED SEA ###########
 
@@ -419,7 +419,7 @@ def canApplyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	for i in xrange(GC.getNumBuildingInfos()):
 		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1:
@@ -441,7 +441,7 @@ def applyLooters3(argsList):
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(data.iOtherPlayerCityId)
 	iEra = CyPlayer.getCurrentEra()
-	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
@@ -856,7 +856,7 @@ def canTriggerChampionUnit(argsList):
 
   unit = GC.getPlayer(ePlayer).getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getDamage() > 0:
@@ -2448,7 +2448,7 @@ def canTriggerExperiencedCaptain(argsList):
   player = GC.getPlayer(data.ePlayer)
   unit = player.getUnit(data.iUnitId)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 7:
@@ -2625,7 +2625,7 @@ def getHelpGreed1(argsList):
 	CyPlayerOther = GC.getPlayer(data.eOtherPlayer)
 	iBonus = GC.getMap().plot(data.iPlotX, data.iPlotY).getBonusType(CyPlayer.getTeam())
 
-	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_GREED_HELP_1", (CyPlayerOther.getCivilizationShortDescriptionKey(), GC.getBonusInfo(iBonus).getTextKey(), iTurns))
 
@@ -2637,7 +2637,7 @@ def expireGreed1(argsList):
 	if iOwner == -1 or iOwner == data.ePlayer:
 		return False
 
-	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent():
+	if GAME.getGameTurn() >= data.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent():
 		return True
 
 	if iOwner != data.eOtherPlayer:
@@ -2673,18 +2673,12 @@ def getGreedUnit(CyPlayer, CyPlot):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
 		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
 			continue
-		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
-			iValue = 0
-			if CvUnitInfo.getPrereqAndBonus() == iBonus:
+		if CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
+			if CvUnitInfo.getPrereqAndBonus() == iBonus or iBonus in CvUnitInfo.getPrereqOrBonuses():
 				iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
-			else:
-				for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
-					if CvUnitInfo.getPrereqOrBonuses(j) == iBonus:
-						iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
-						break
-			if iValue > iBestValue:
-				iBestValue = iValue
-				iBestUnit = iUnit
+				if iValue > iBestValue:
+					iBestValue = iValue
+					iBestUnit = iUnit
 	return iBestUnit
 
 
@@ -3391,7 +3385,7 @@ def canTriggerRubiconUnit(argsList):
   pPlayer = GC.getPlayer(ePlayer)
   unit = pPlayer.getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 25:
@@ -3555,7 +3549,7 @@ def canTriggerCarnationUnit(argsList):
 
   unit = GC.getPlayer(ePlayer).getUnit(iUnit)
 
-  if unit.isNone():
+  if unit is None:
     return False
 
   if unit.getExperience() < 50:
@@ -6710,7 +6704,7 @@ def doGlobalWarming(argsList):
 		elif iFeature in (
 			GC.getInfoTypeForString("FEATURE_FOREST_YOUNG"),
 			GC.getInfoTypeForString("FEATURE_SAVANNA")
-		): 
+		):
 			iGW -= 1
 		elif iFeature in (
 			GC.getFEATURE_FOREST(),
@@ -6898,7 +6892,7 @@ def doGlobalWarming(argsList):
 			plot.setRouteType(-1)
 			if GC.getInfoTypeForString("TERRAIN_LAKE_SHORE"):
 				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_MUDDY"), True, True)
-			else: 
+			else:
 				plot.setTerrainType(GC.getInfoTypeForString("TERRAIN_SALT_FLATS"), True, True)
 			plot.setPlotType(PlotTypes.PLOT_LAND, True, True)
 
@@ -7286,19 +7280,10 @@ def doRemoveWVCannibalism(argsList):
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
 			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
-			iType1 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_I")
-			iType2 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_II")
-			iType3 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_III")
 			for CyCity in CyPlayer.cities():
 				CyCity.setNumRealBuilding(iType, 0)
 				if iType0 > -1:
 					CyCity.setNumRealBuilding(iType0, 0)
-				if iType1 > -1:
-					CyCity.setNumRealBuilding(iType1, 0)
-				if iType2 > -1:
-					CyCity.setNumRealBuilding(iType2, 0)
-				if iType3 > -1:
-					CyCity.setNumRealBuilding(iType3, 0)
 
 			if iPlayer == GC.getGame().getActivePlayer():
 				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_NO_CANNIBALISM", ()))

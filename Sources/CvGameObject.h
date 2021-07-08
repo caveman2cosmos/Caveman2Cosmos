@@ -126,7 +126,7 @@ public:
 	virtual void foreachManipulator(ManipCallbackFn func) const {}
 
 	virtual bool hasGOM(GOMTypes eType, int iID) const;
-	
+
 	virtual CvGameObjectPlayer* getOwner() const;
 	virtual CvGameObjectPlot* getPlot() const;
 	virtual CvGameObjectTeam* getTeam() const;
@@ -151,7 +151,7 @@ public:
 
 	virtual bool hasGOM(GOMTypes eType, int iID) const;
 	virtual bool isTag(TagTypes eTag) const;
-	
+
 	virtual CvGameObjectPlayer* getOwner() const;
 	virtual CvGameObjectPlot* getPlot() const;
 	virtual CvGameObjectTeam* getTeam() const;
@@ -182,7 +182,7 @@ public:
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID) const;
-	
+
 	virtual CvGameObjectPlayer* getOwner() const;
 	virtual CvGameObjectPlot* getPlot() const;
 	virtual CvGameObjectTeam* getTeam() const;
@@ -211,7 +211,7 @@ public:
 
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID) const;
-	
+
 	virtual CvGameObjectPlayer* getOwner() const;
 	virtual CvGameObjectPlot* getPlot() const;
 	virtual CvGameObjectTeam* getTeam() const;
@@ -241,7 +241,7 @@ public:
 
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID) const;
-	
+
 	virtual CvGameObjectPlayer* getOwner() const;
 	virtual CvGameObjectPlot* getPlot() const;
 	virtual CvGameObjectTeam* getTeam() const;

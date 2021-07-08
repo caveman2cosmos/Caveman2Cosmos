@@ -1,11 +1,12 @@
 #include "CvGameCoreDLL.h"
+#include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
 #include "CyPlayer.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
-#include "Win32.h"
 #include "SCyDebug.h"
+#include "Win32.h"
 
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
@@ -43,7 +44,48 @@ void CyBoolExprPythonInterface();
 
 DllExport void DLLPublishToPython()
 {
-	OutputDebugString("Publishing to Python: Start");
+	OutputDebugString("Publishing to Python: Start\n");
+
+	using namespace Cy::call_policy;
+
+	registerAllowPyIntAsType<TechTypes>();
+	registerAllowPyIntAsType<BuildingTypes>();
+	registerAllowPyIntAsType<MultiplayerOptionTypes>();
+	registerAllowPyIntAsType<CorporationTypes>();
+	registerAllowPyIntAsType<GameOptionTypes>();
+	registerAllowPyIntAsType<PlayerTypes>();
+	registerAllowPyIntAsType<VictoryTypes>();
+	registerAllowPyIntAsType<VoteTypes>();
+	registerAllowPyIntAsType<VoteSourceTypes>();
+	registerAllowPyIntAsType<ReligionTypes>();
+	registerAllowPyIntAsType<ImprovementTypes>();
+	registerAllowPyIntAsType<CivilizationTypes>();
+	registerAllowPyIntAsType<TeamTypes>();
+	registerAllowPyIntAsType<ProjectTypes>();
+	registerAllowPyIntAsType<SpecialUnitTypes>();
+	registerAllowPyIntAsType<CivicOptionTypes>();
+	registerAllowPyIntAsType<CivicTypes>();
+	registerAllowPyIntAsType<SpecialBuildingTypes>();
+	registerAllowPyIntAsType<ControlTypes>();
+	registerAllowPyIntAsType<ForceControlTypes>();
+	registerAllowPyIntAsType<EventTriggerTypes>();
+	registerAllowPyIntAsType<LeaderHeadTypes>();
+	registerAllowPyIntAsType<CultureLevelTypes>();
+	registerAllowPyIntAsType<ReplayMessageTypes>();
+	registerAllowPyIntAsType<ModderGameOptionTypes>();
+	registerAllowPyIntAsType<UnitTypes>();
+	registerAllowPyIntAsType<YieldTypes>();
+	registerAllowPyIntAsType<CultureLevelTypes>();
+	registerAllowPyIntAsType<CommerceTypes>();
+	registerAllowPyIntAsType<ColorTypes>();
+	registerAllowPyIntAsType<EraTypes>();
+	registerAllowPyIntAsType<ForceControlTypes>();
+	registerAllowPyIntAsType<BonusTypes>();
+	registerAllowPyIntAsType<HurryTypes>();
+	registerAllowPyIntAsType<MapTypes>();
+	registerAllowPyIntAsType<UnitAITypes>();
+	registerAllowPyIntAsType<DomainTypes>();
+	registerAllowPyIntAsType<PropertyTypes>();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
@@ -86,13 +128,13 @@ DllExport void DLLPublishToPython()
 	python::class_<CyPlot> plot ("CyPlot");		// define plot class
 	CyPlotPythonInterface1(plot);				// publish it's methods
 
-	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class 
-	CyGlobalContextPythonInterface1(gc);					// publish it's methods 
+	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class
+	CyGlobalContextPythonInterface1(gc);					// publish it's methods
 	CyGlobalContextPythonInterface2(gc);					// publish it's methods
 	CyGlobalContextPythonInterface3(gc);					// publish it's methods
-	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
-	
+	CyGlobalContextPythonInterface4(gc);					// publish it's methods
+
 	Win32::pythonPublish();
 
-	OutputDebugString("Publishing to Python: End");
+	OutputDebugString("Publishing to Python: End\n");
 }

@@ -13,7 +13,7 @@
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 
-CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity) 
+CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity)
 	: m_bFilteringValid(false)
 	, m_bGroupingValid(false)
 	, m_bSortingValid(false)
@@ -151,7 +151,7 @@ void CvBuildingList::doGroup()
 	{
 		mmap_Buildings.insert(std::pair<int, BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
 	}
-	
+
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, BuildingTypes>::iterator it = mmap_Buildings.begin(); it != mmap_Buildings.end(); ++it)
 	{

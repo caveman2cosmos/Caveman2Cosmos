@@ -78,9 +78,9 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
 	OutputDebugString("Initializing Map: Start\n");
 	PROFILE("CvMap::init");
-	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6", 
-		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(), 
-		GC.getClimateInfo(GC.getInitCore().getClimate()).getDescription(), 
+	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6",
+		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(),
+		GC.getClimateInfo(GC.getInitCore().getClimate()).getDescription(),
 		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
 		GC.getInitCore().getNumCustomMapOptions()).c_str() );
 
@@ -189,7 +189,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	}
 	else
 	{
-		// Check map script for latitude override (map script beats ini file)	
+		// Check map script for latitude override (map script beats ini file)
 		long resultTop = 0, resultBottom = 0;
 		if(Cy::call_override(getMapScript(), "getTopLatitude", resultTop)
 			&& Cy::call_override(getMapScript(), "getBottomLatitude", resultBottom))
@@ -368,7 +368,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 	//mark minimap as dirty
 	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-	
+
 	//float endTime = (float) timeGetTime();
 	//OutputDebugString(CvString::format("[Jason] setAllPlotTypes: %f\n", endTime - startTime).c_str());
 }
@@ -442,7 +442,7 @@ void CvMap::updateSymbols()
 	PROFILE_FUNC();
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
-	
+
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateSymbols();
@@ -599,18 +599,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 
 	while (iCount < iTimeout)
 	{
-/*************************************************************************************************/
-/**	Xienwolf Tweak							12/13/08											**/
-/**																								**/
-/**					Reduction in massive Random Spam in Logger files by using Map				**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-		pTestPlot = plotSorenINLINE(GC.getGame().getSorenRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getSorenRandNum(getGridHeight(), "Rand Plot Height"));
-/**								----  End Original Code  ----									**/
 		CvPlot* pTestPlot = plotSorenINLINE(GC.getGame().getMapRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getMapRandNum(getGridHeight(), "Rand Plot Height"));
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
 
 		FAssertMsg(pTestPlot != NULL, "TestPlot is not assigned a valid value");
 
@@ -619,7 +608,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 			bool bValid = true;
 
 			if (iMinUnitDistance != -1
-			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(CvPlot::isUnit, _1)))
+			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(&CvPlot::isUnit, _1)))
 			{
 				bValid = false;
 			}
@@ -883,13 +872,13 @@ float CvMap::plotYToPointY(int iY) const
 }
 
 
-float CvMap::getWidthCoords() const																	
+float CvMap::getWidthCoords() const
 {
 	return (GC.getPLOT_SIZE() * (float)getGridWidth());
 }
 
 
-float CvMap::getHeightCoords() const																	
+float CvMap::getHeightCoords() const
 {
 	return (GC.getPLOT_SIZE() * (float)getGridHeight());
 }
@@ -1329,7 +1318,7 @@ void CvMap::beforeSwitch()
 			}
 		}
 	}
-	
+
 	GC.clearSigns();
 
 	for (i = 0; i < numPlots(); i++)
@@ -1368,7 +1357,7 @@ void CvMap::afterSwitch()
 			kGenerator.addGameElements();
 		}
 	}
-	
+
 	gDLL->getInterfaceIFace()->clearSelectionList();
 	gDLL->getInterfaceIFace()->makeSelectionListDirty();
 
@@ -1379,7 +1368,7 @@ void CvMap::afterSwitch()
 	gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
-	
+
 	int iWidth = GC.getMapInfo(getType()).getGridWidth();
 	if (iWidth == 0)
 	{
@@ -1405,7 +1394,7 @@ void CvMap::afterSwitch()
 			plotByIndex(i)->setFlagDirty(true);
 		}
 	}
-	
+
 	{
 		PROFILE("CvMap::afterSwitch.RebuildAll");
 
@@ -1421,7 +1410,7 @@ void CvMap::afterSwitch()
 				//gDLL->getEntityIFace()->createCityEntity(pLoopCity);
 				pLoopCity->setupGraphical();
 			}
-			
+
 			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
 				if ( !pLoopUnit->isUsingDummyEntities() )
@@ -1509,7 +1498,7 @@ CvViewport* CvMap::getCurrentViewport() const
 
 	return (m_iCurrentViewportIndex == -1 ? NULL : m_viewports[m_iCurrentViewportIndex]);
 }
-	
+
 MapTypes CvMap::getType() const
 {
 	return m_eType;
@@ -1728,7 +1717,7 @@ void CvMap::toggleUnitsDisplay()
 	CvWString szBuffer = "Unit entities destroyed";
 	if (m_bUnitsDisplayed)
 		szBuffer = "Unit entities created";
-			
+
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }

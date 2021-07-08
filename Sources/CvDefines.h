@@ -179,7 +179,6 @@
 #define PYPerfTestModule								"CvPerfTest"
 #define PYDebugScriptsModule							"DebugScripts"
 #define PYPitBossModule									"PbMain"
-#define PYTranslatorModule								"CvTranslator"
 #define PYGameModule									"CvGameInterface"
 #define PYEventModule									"CvEventInterface"
 #define PYRandomEventModule								"CvRandomEventInterface"
