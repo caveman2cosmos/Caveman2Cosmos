@@ -378,14 +378,17 @@ class PediaBuilding:
 		# Building Req
 		szChild = PF + "BUILDING"
 		szChild1 = szChild + "|Own"
-		for j in range(GC.getNumBuildingInfos()):
-			iPrereqNumOfBuilding = CvTheBuildingInfo.getPrereqNumOfBuilding(j)
+		# And building requirements
+		for j in xrange(CvTheBuildingInfo.getNumPrereqInCityBuildings()):
+			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
+
+		# Empire building requirements
+		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
+			j = pair.id
+			iPrereqNumOfBuilding = pair.value
 			if CyPlayer:
 				if iPrereqNumOfBuilding > 0:
-					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
-			if CvTheBuildingInfo.isPrereqInCityBuilding(j):
-				aList1.append(j)
-				if iPrereqNumOfBuilding > 1:
+					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)			
 					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
