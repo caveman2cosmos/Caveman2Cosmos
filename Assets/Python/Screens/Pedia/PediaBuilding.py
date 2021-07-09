@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaBuilding:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+	
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -311,6 +314,26 @@ class PediaBuilding:
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 			i += 1
+			
+		# GOM tech requirements 
+		aGOMTechReqList = []
+		for i in range(2):
+			aGOMTechReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
+			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+			bPlus = True
+			i += 1
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
+			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
+			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+			bPlus = True
+			i += 1
+		# TODO: Change it, so those are treated as separate requirement groups
+		
 		# Religion Req
 		szChild = PF + "REL"
 		iType = CvTheBuildingInfo.getPrereqReligion()
@@ -330,6 +353,7 @@ class PediaBuilding:
 				bPlus = True
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getCorporationInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 		# Bonus Req
+		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus 
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
@@ -378,14 +402,17 @@ class PediaBuilding:
 		# Building Req
 		szChild = PF + "BUILDING"
 		szChild1 = szChild + "|Own"
-		for j in range(GC.getNumBuildingInfos()):
-			iPrereqNumOfBuilding = CvTheBuildingInfo.getPrereqNumOfBuilding(j)
+		# And building requirements
+		for j in xrange(CvTheBuildingInfo.getNumPrereqInCityBuildings()):
+			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
+
+		# Empire building requirements
+		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
+			j = pair.id
+			iPrereqNumOfBuilding = pair.value
 			if CyPlayer:
 				if iPrereqNumOfBuilding > 0:
-					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
-			if CvTheBuildingInfo.isPrereqInCityBuilding(j):
-				aList1.append(j)
-				if iPrereqNumOfBuilding > 1:
+					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)			
 					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
@@ -393,6 +420,19 @@ class PediaBuilding:
 		# Or building requirements
 		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
 			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
+			
+		# GOM building requirements 
+		aGOMBuildingReqList = []
+		for i in range(2):
+			aGOMBuildingReqList.append([])
+		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
+		# GOM AND requirements are treated as regular AND requirements
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
+			aList1.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
+		# GOM OR requirements are treated as regular OR requirements
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList2.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+		# TODO: Change it, so those are treated as separate requirement groups
 
 		if aList1 or aList2 or aList3:
 			if bPlus:
