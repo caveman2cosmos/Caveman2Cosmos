@@ -20713,7 +20713,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_CONTROL_CENTER</FreeBuilding>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CONTROL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>

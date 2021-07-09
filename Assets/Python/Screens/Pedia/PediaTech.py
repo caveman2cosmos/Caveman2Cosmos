@@ -7,7 +7,7 @@ class PediaTech:
 	def __init__(self, parent, H_BOT_ROW):
 		import TestCode
 		self.GOMReqs = TestCode.TestCode([0])
-		
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE

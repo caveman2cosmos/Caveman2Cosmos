@@ -25464,7 +25464,7 @@
 			<PrereqTech>TECH_DRAMA</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_THEATRE</BuildingType>				
+				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -30471,7 +30471,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RESERVOIR</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -49173,7 +49173,7 @@
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MEGATOWER</BuildingType>				
+				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
@@ -70286,7 +70286,7 @@
 			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_QUALITY_CONTROL</BuildingType>				
+				<BuildingType>BUILDING_ADVANCED_QUALITY_CONTROL</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
@@ -86932,7 +86932,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>			
+			</PrereqOrBuildings>
 			<iCost>168</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>

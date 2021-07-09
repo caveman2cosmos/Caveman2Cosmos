@@ -353,7 +353,7 @@
 			<PrereqTech>TECH_BOTANY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>		
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

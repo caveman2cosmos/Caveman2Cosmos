@@ -7963,7 +7963,7 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>				
+				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -14481,7 +14481,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>

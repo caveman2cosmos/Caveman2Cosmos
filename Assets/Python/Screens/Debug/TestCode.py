@@ -411,7 +411,7 @@ class TestCode:
 					if TechReligionReq != -1:
 						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
 						aTechList.append(TechReligionLoc)
-			
+
 			#Tech requirement as defined by <ConstructCondition>
 			aTechGOMReqList = []
 			for i in range(2):
@@ -439,7 +439,7 @@ class TestCode:
 			#Tech Type requirement
 			for iTechType in CvUnitInfo.getPrereqAndTechs():
 				aTechList.append(GC.getTechInfo(iTechType).getType())
-				
+
 			#Tech requirement as defined by <TrainCondition>
 			aTechGOMReqList = []
 			for i in range(2):
@@ -569,7 +569,7 @@ class TestCode:
 				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
 			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-				
+
 			#<ConstructCondition>
 			aBuildingGOMReqList = []
 			for i in range(2):
@@ -829,13 +829,13 @@ class TestCode:
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
 				self.log(CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-				
+
 			#<ConstructCondition>
 			aBuildingGOMReqList = []
 			for i in range(2):
 				aBuildingGOMReqList.append([])
 			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
-			
+
 			#Analyze GOM AND Building reqs
 			aBuildingRequirementObsoleteTechLocList = []
 			aBuildingRequirementNameList = []
@@ -850,7 +850,7 @@ class TestCode:
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
 				self.log(CvBuildingInfo.getType()+" has GOM AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-				
+
 			#Analyze GOM OR Building reqs
 			aBuildingRequirementObsoleteTechLocList = []
 			aBuildingRequirementNameList = []
@@ -874,7 +874,7 @@ class TestCode:
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 
-			iFreeBuilding = CvBuildingInfo.getFreeBuilding()			
+			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
 			if iFreeBuilding != -1:
 				CvFreeBuilding = GC.getBuildingInfo(iFreeBuilding)
 				iObsoleteFreeBuildingTechLoc = 999 # Never obsolete
@@ -882,7 +882,7 @@ class TestCode:
 					iObsoleteFreeBuildingTechLoc = GC.getTechInfo(CvFreeBuilding.getObsoleteTech()).getGridX()
 				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free building "+CvFreeBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeBuildingTechLoc))
-					
+
 			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
 			if iFreeAreaBuilding != -1:
 				CvFreeAreaBuilding = GC.getBuildingInfo(iFreeAreaBuilding)
@@ -892,7 +892,7 @@ class TestCode:
 				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
-	
+
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -1001,7 +1001,7 @@ class TestCode:
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			iTechLoc = self.checkUnitTechRequirementLocation(CvUnitInfo)[0]
-			
+
 			#<PrereqAndBuildings> - require all buildings in list
 			aBuildingTechLocList = []
 			for iBuilding in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
@@ -1035,7 +1035,7 @@ class TestCode:
 				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
 			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" - GOM OR building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-				
+
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):

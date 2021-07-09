@@ -164,7 +164,7 @@ public:
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
-	
+
 	virtual BoolExprTypes getType() const	{ return BOOLEXPR_OR; }
 	const BoolExpr* getFirstExpr() const	{ return m_pExpr1; }
 	const BoolExpr* getSecondExpr() const	{ return m_pExpr2; }
