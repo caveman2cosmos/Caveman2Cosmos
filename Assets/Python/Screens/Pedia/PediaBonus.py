@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaBonus:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -86,6 +89,10 @@ class PediaBonus:
 		aSourceOfBonus = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
@@ -105,7 +112,6 @@ class PediaBonus:
 						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
-			#Trigger this loop only if building has Or Vicinity prereq at first place!
 			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
 				aVicinityBuildings.append(iBuilding)
 			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
@@ -113,7 +119,8 @@ class PediaBonus:
 					aVicinityBuildings.append(iBuilding)
 			if bValid:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
-				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses():
+				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses() \
+				or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 					aNeededByBuildings.append(iBuilding)
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
@@ -121,10 +128,15 @@ class PediaBonus:
 		bValid = True
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			self.GOMReqs.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
-			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses():
+			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses() \
+			or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)
