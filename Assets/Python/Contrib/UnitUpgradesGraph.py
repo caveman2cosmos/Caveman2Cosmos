@@ -8,6 +8,15 @@ from CvPythonExtensions import *
 # globals
 GC = CyGlobalContext()
 
+#SplitOutgoing is similar, but for a unit that holds together two trees by what it upgrades to.  For instance,
+#you might have a commoner unit that upgrades to Scout, Warrior, and Worker, while otherwise those units have
+#their own trees.  Using the SplitOutgoing list will just put a commoner at the start of each of the 3 trees
+unitSplitOutgoing = ["UNIT_SUBDUED_AFRICANELEPHANT", "UNIT_SUBDUED_ELEPHANT", "UNIT_SHAOLINMK", "UNIT_ROGUE", "UNIT_ARSONIST", "UNIT_POST_APOCALYPTIC_GRENADIER", "UNIT_CLUBMAN"]
+
+#The same concepts apply to the promotions graphs as to the unit graphs
+promotionsSplitIncoming = ["PROMOTION_BLITZ", "PROMOTION_KAMIKAZE", "PROMOTION_CHARGE", "PROMOTION_SPEED", "PROMOTION_MARCH", "PROMOTION_AMBUSH", "PROMOTION_FORMATION", "PROMOTION_COVER", "PROMOTION_PINCH", "PROMOTION_SHOCK", "PROMOTION_SENTRY", "PROMOTION_URBAN_TACTICS1", "PROMOTION_SENSORS", "PROMOTION_NANOIDS"]
+
+
 class Node:
 	"This node holds all necessary information for a single unit"
 
@@ -47,9 +56,15 @@ class UnitUpgradesGraph:
 		self.pediaScreen = pediaScreen
 		self.upgradesList = UPGRADES_GRAPH_ID
 		self.buttonSize = 64
+		self.splitIncoming = []
+		self.splitOutgoing = unitSplitOutgoing
 
+		self.promotionsSplitIncoming = promotionsSplitIncoming
+		self.promotionsSplitOutgoing = []
 		self.bUnit = True
 
+		self.BuildingSplitIncoming = []
+		self.BuildingSplitOutgoing = []
 		self.bBuilding = False
 
 	def getNumberOfUnits(self):
@@ -157,6 +172,16 @@ class UnitUpgradesGraph:
 						if node.x != level:
 							continue
 
+						if self.bUnit:
+							if GC.getUnitInfo(unit).getType() in self.splitOutgoing:
+								continue
+						elif self.bBuilding:
+							if GC.getBuildingInfo(unit) in self.BuildingSplitOutgoing:
+								continue
+						else:
+							if self.getPromotionType(unit) in self.promotionsSplitOutgoing:
+								continue
+
 						for u in node.upgradesTo:
 							if not mGraph.graph.has_key(u):
 								for i in xrange(mGraphIndex - 1, -1, -1):
@@ -175,6 +200,16 @@ class UnitUpgradesGraph:
 						node = mGraph.graph[unit]
 						if node.x != level:
 							continue
+
+						if self.bUnit:
+							if GC.getUnitInfo(unit).getType() in self.splitIncoming:
+								continue
+						elif self.bBuilding:
+							if GC.getBuildingInfo(unit) in self.BuildingSplitIncoming:
+								continue
+						else:
+							if self.getPromotionType(unit) in self.promotionsSplitIncoming:
+								continue
 
 						for u in node.upgradesFrom:
 							if not mGraph.graph.has_key(u):
@@ -485,7 +520,11 @@ class PromotionsGraph(UnitUpgradesGraph):
 		self.pediaScreen = pediaScreen
 		self.upgradesList = UPGRADES_GRAPH_ID
 		self.buttonSize = 64
+		self.splitIncoming = []
+		self.splitOutgoing = unitSplitOutgoing
 
+		self.promotionsSplitIncoming = promotionsSplitIncoming
+		self.promotionsSplitOutgoing = []
 		self.bUnit = False
 		self.bBuilding = False
 
@@ -522,6 +561,10 @@ class BuildingsGraph(UnitUpgradesGraph):
 		self.pediaScreen = pediaScreen
 		self.upgradesList = UPGRADES_GRAPH_ID
 		self.buttonSize = 64
+		self.splitIncoming = []
+		self.splitOutgoing = unitSplitOutgoing
+		self.BuildingSplitIncoming = []
+		self.BuildingSplitOutgoing = []
 		self.bUnit = False
 		self.bBuilding = True
 
