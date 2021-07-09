@@ -12,6 +12,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -59,6 +60,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>

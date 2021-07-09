@@ -927,6 +927,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>

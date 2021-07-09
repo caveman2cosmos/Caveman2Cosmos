@@ -14751,7 +14751,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
+			<ObsoleteTech>TECH_UNMANNED_AIR_VEHICLES</ObsoleteTech>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>

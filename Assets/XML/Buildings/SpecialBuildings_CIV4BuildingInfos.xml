@@ -6538,7 +6538,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
+			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
@@ -8143,7 +8143,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_BURROW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BURROW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_STONE_BUILDING</ObsoleteTech>
+			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
@@ -13779,21 +13779,12 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LASCAUX_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
+			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LITERATURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15286,6 +15277,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>

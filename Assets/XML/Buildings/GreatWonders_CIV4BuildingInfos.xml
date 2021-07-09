@@ -2539,7 +2539,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
