@@ -19,6 +19,9 @@ localText = CyTranslator()
 class SevoPediaUnitChart:
 
 	def __init__(self, main):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+		
 		self.iGroup = -1
 		self.top = main
 
@@ -30,62 +33,10 @@ class SevoPediaUnitChart:
 		self.DY_UNITS = 40
 		self.Y_TEXT_MARGIN = 6
 
-
-
 	def interfaceScreen(self, iGroup):
 		self.iGroup = iGroup
 		screen = self.top.getScreen()
 		self.placeUnitTable()
-
-
-	def getTechStats(self, CvUnitInfo):
-		#Main tech
-		TechReq = CvUnitInfo.getPrereqAndTech()
-		if TechReq != -1:
-			iTechMainLoc = GC.getTechInfo(TechReq).getGridX()
-			iTechMainRow = GC.getTechInfo(TechReq).getGridY()
-			iTechMainDesc = GC.getTechInfo(TechReq).getDescription()
-		else:
-			iTechMainLoc = 0
-			iTechMainRow = 0
-			iTechMainDesc = ""
-			
-		#Tech Type requirement
-		TechTypeLocList = []
-		TechTypeRowList = []
-		TechTypeDescList = []
-		for techType in CvUnitInfo.getPrereqAndTechs():
-			TechTypeReq = techType
-			if GC.getTechInfo(TechTypeReq) > -1:
-				TechTypeLocList.append(GC.getTechInfo(TechTypeReq).getGridX())
-				TechTypeRowList.append(GC.getTechInfo(TechTypeReq).getGridY())
-				TechTypeDescList.append(GC.getTechInfo(TechTypeReq).getDescription())
-			else:
-				TechTypeLocList.append(0)
-				TechTypeRowList.append(0)
-				TechTypeDescList.append("")
-		if len(TechTypeLocList) > 0 and len(TechTypeRowList) > 0:
-			iTechTypeLoc = max(TechTypeLocList)
-			for t in xrange(len(TechTypeLocList)):
-				if TechTypeLocList[t] == max(TechTypeLocList):
-					iTechTypeRow = TechTypeRowList[t]
-					TechTypeDesc = TechTypeDescList[t]
-		else:
-			iTechTypeLoc = 0
-			iTechTypeRow = 0
-			TechTypeDesc = 0
-			
-		#Pick most advanced tech
-		iTechLoc = max(iTechMainLoc, iTechTypeLoc)
-		if iTechLoc == iTechMainLoc:
-			iTechRow = iTechMainRow
-			iTechDesc = iTechMainDesc
-		if iTechLoc == iTechTypeLoc:
-			iTechRow = iTechTypeRow
-			iTechDesc = TechTypeDesc		
-			
-		return iTechLoc, iTechDesc
-
 
 	def placeUnitTable(self):
 		screen = self.top.getScreen()
@@ -117,10 +68,10 @@ class SevoPediaUnitChart:
 		for j in range(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(j)
 			if (self.iGroup == CvUnitInfo.getUnitCombatType() or CvUnitInfo.isSubCombatType(self.iGroup) or self.iGroup == GC.getNumUnitCombatInfos()):
-				if self.getTechStats(CvUnitInfo)[0] == 0:
+				if self.GOMReqs.checkUnitTechRequirementLocation(CvUnitInfo)[0] == 0:
 					szTechLevel = localText.getText("TXT_KEY_NON_APPLICABLE", ())
 				else:
-					szTechLevel = unicode(self.getTechStats(CvUnitInfo)[0])
+					szTechLevel = unicode(self.GOMReqs.checkUnitTechRequirementLocation(CvUnitInfo)[0])
 				if (CvUnitInfo.getAirCombat() > 0 and CvUnitInfo.getCombat() == 0):
 					unitsList[i] = (unicode(CvUnitInfo.getAirCombat()), CvUnitInfo.getAirRange(), szTechLevel, CvUnitInfo.getDescription(), j)
 				else:
