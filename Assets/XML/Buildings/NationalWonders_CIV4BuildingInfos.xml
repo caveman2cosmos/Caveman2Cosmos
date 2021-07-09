@@ -352,12 +352,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_BOTANICAL_GARDENS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BOTANY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_ARBORETUM</BuildingType>
-					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>		
+			</PrereqOrBuildings>
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>

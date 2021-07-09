@@ -25,13 +25,13 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingRequirements, "Building requirements of buildings", "Checks if building requirements aren't unlocked after building itself")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - Civic requirements", "Checks if various civics aren't unlocked after building")
-		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingCommerceDoubleTime, "Building commerce double time", "Checks if commerce double time exists on wonders, that have relevant flat commerce change")
 		self.main.addTestCode(screen, self.checkBuildingCommerceChangeOriginalOwners, "Building commerce owner change", "Checks if Commerce Change has relevant flat commerce changes")
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
-		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building replacements obsoletion", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe.")
+		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe")
+		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
@@ -613,97 +613,6 @@ class TestCode:
 			if len(aCivicTechLocList) > 0 and min(aCivicTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(aCivicTechLocList)+" "+str(iTechLoc))
 
-	#Building obsoletion of requirements
-	def checkBuildingRequirementObsoletion(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-
-			BuildingObsoleteTech = CvBuildingInfo.getObsoleteTech()
-			BuildingObsoleteTechLoc = 999
-			if BuildingObsoleteTech != -1:
-				BuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-
-			#<PrereqInCityBuildings> - require all buildings in list
-			aBuildingRequirementObsoleteTechLocList = []
-			aBuildingRequirementNameList = []
-			for iBuilding in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
-				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuilding)
-				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
-				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
-				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
-				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
-				self.log(CvBuildingInfo.getType()+" has AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-
-			#<PrereqOrBuildings> - require one building in list
-			aBuildingRequirementObsoleteTechLocList = []
-			aBuildingRequirementNameList = []
-			for iBuilding in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
-				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuilding)
-				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
-				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
-				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
-				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
-				self.log(CvBuildingInfo.getType()+" has latest OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-
-			#<PrereqAmountBuildings> - require all buildings in empire in list
-			aBuildingRequirementObsoleteTechLocList = []
-			aBuildingRequirementNameList = []
-			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
-				iPrereqBuilding = pair.id
-				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
-				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
-				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
-				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
-				self.log(CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-				
-			#<ConstructCondition>
-			aBuildingGOMReqList = []
-			for i in range(2):
-				aBuildingGOMReqList.append([])
-			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
-			
-			#Analyze GOM AND Building reqs
-			aBuildingRequirementObsoleteTechLocList = []
-			aBuildingRequirementNameList = []
-			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]
-				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
-				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
-				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
-				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
-				self.log(CvBuildingInfo.getType()+" has GOM AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-				
-			#Analyze GOM OR Building reqs
-			aBuildingRequirementObsoleteTechLocList = []
-			aBuildingRequirementNameList = []
-			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]
-				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
-				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
-				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
-				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
-				self.log(CvBuildingInfo.getType()+" has GOM OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
-
 	#Building tech changes and modifiers
 	def checkBuildingTechMods(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -864,6 +773,97 @@ class TestCode:
 
 				if (iObsoleteTechLoc - iReplacTechLoc) <= 5:
 					self.log(CvBuildingInfo.getType()+" -> "+CvBuildingReplacement.getType()+": "+str(iObsoleteTechLoc)+"/"+str(iReplacTechLoc))
+
+	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
+	def checkBuildingRequirementObsoletion(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			BuildingObsoleteTech = CvBuildingInfo.getObsoleteTech()
+			BuildingObsoleteTechLoc = 999
+			if BuildingObsoleteTech != -1:
+				BuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+
+			#<PrereqInCityBuildings> - require all buildings in list
+			aBuildingRequirementObsoleteTechLocList = []
+			aBuildingRequirementNameList = []
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuilding)
+				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
+				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
+				BuildingReqTechObsLoc = 999
+				if BuildingReqTechObs != -1:
+					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
+				aBuildingRequirementNameList.append(BuildingReqName)
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+				self.log(CvBuildingInfo.getType()+" has AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
+
+			#<PrereqOrBuildings> - require one building in list
+			aBuildingRequirementObsoleteTechLocList = []
+			aBuildingRequirementNameList = []
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuilding)
+				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
+				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
+				BuildingReqTechObsLoc = 999
+				if BuildingReqTechObs != -1:
+					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
+				aBuildingRequirementNameList.append(BuildingReqName)
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+				self.log(CvBuildingInfo.getType()+" has latest OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
+
+			#<PrereqAmountBuildings> - require all buildings in empire in list
+			aBuildingRequirementObsoleteTechLocList = []
+			aBuildingRequirementNameList = []
+			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
+				iPrereqBuilding = pair.id
+				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
+				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
+				BuildingReqTechObsLoc = 999
+				if BuildingReqTechObs != -1:
+					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
+				aBuildingRequirementNameList.append(BuildingReqName)
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+				self.log(CvBuildingInfo.getType()+" has Empire AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
+				
+			#<ConstructCondition>
+			aBuildingGOMReqList = []
+			for i in range(2):
+				aBuildingGOMReqList.append([])
+			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
+			
+			#Analyze GOM AND Building reqs
+			aBuildingRequirementObsoleteTechLocList = []
+			aBuildingRequirementNameList = []
+			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]
+				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
+				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
+				BuildingReqTechObsLoc = 999
+				if BuildingReqTechObs != -1:
+					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
+				aBuildingRequirementNameList.append(BuildingReqName)
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+				self.log(CvBuildingInfo.getType()+" has GOM AND requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
+				
+			#Analyze GOM OR Building reqs
+			aBuildingRequirementObsoleteTechLocList = []
+			aBuildingRequirementNameList = []
+			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]
+				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
+				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
+				BuildingReqTechObsLoc = 999
+				if BuildingReqTechObs != -1:
+					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
+				aBuildingRequirementNameList.append(BuildingReqName)
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+				self.log(CvBuildingInfo.getType()+" has GOM OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
 
 	#Buildings - noncultural wonders, religious shrines and projects should have wonder movie tag, preferably in DDS format
 	def checkBuildingWonderMovies(self):

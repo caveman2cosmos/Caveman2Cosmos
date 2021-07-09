@@ -14856,7 +14856,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_UNMANNED_AIR_VEHICLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</ReplacementBuildings>
@@ -14916,7 +14916,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_UNMANNED_AIR_VEHICLES</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

@@ -339,9 +339,10 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCULPTOR</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

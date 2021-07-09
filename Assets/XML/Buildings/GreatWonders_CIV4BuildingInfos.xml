@@ -413,6 +413,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AON_CENTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -5193,8 +5194,10 @@
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5766,7 +5769,7 @@
 				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 				<BuildingType>BUILDING_FRESCO</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>270</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -7221,6 +7224,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -7959,10 +7963,14 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_POTTER</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>				
 				<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1200</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -11083,12 +11091,9 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
@@ -12332,9 +12337,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHAMPAGNE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -12370,9 +12375,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_RED_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -12407,9 +12412,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -14476,10 +14481,13 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+			<PrereqInCityBuildings>				
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
 			<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
@@ -14532,9 +14540,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2550</iCost>
 			<iHappiness>1</iHappiness>
 			<FreeBonus>BONUS_MING_VASE</FreeBonus>
@@ -14591,9 +14602,11 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POTTER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1296</iCost>
 			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
@@ -16614,6 +16627,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ELCAMINODESANTIAGO</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -17030,6 +17044,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HNIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HNIC</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
