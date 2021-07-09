@@ -8171,11 +8171,12 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<Bonus>BONUS_HIDE</Bonus>
-			<PrereqOrCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
-			</PrereqOrCityBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 			</ReplacementBuildings>
@@ -9289,11 +9290,11 @@
 			<Civilopedia>TXT_KEY_BUILDING_LEANTO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
-			<PrereqOrCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
-			</PrereqOrCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
 				<BuildingType>BUILDING_NEANDERTHAL_CAVES</BuildingType>
