@@ -29,15 +29,15 @@ class TechNode:
     self.partialPreqOf = []
     self.loadPreq()
 
-    
- 
-def loadData(files, prefix = '') -> list[ElementTree]:
+
+
+def loadData(files, prefix = '') -> list:
   trees = []
   for f in files:
     trees.append(ET.parse(f))
   return trees
 
-def generateTechList(trees) -> list[TechNode]:
+def generateTechList(trees) -> list:
   techList = []
   for tree in trees:
     techList.extend([TechNode(tech) for tech in tree.getroot()[0]])
@@ -67,7 +67,7 @@ def updatePreqsOf(node, isFull, nodeDict, targets) -> None:
       node.represented = True
       heapq.heappush(targets,node)
 
-def nextNode(targets) -> generator:
+def nextNode(targets):
   while targets and targets[0].linksLeft() == 0:
     yield heapq.heappop(targets)
 
@@ -83,9 +83,9 @@ def toposort(tList, tDict) -> list:
     def partialPreqsLeft(self) -> int:
       preqs = len(self.node.partialPreq)
       return 0 if self.hasPartialPreqs else preqs
-    def linksLeft(self):
+    def linksLeft(self) -> int:
       return self.fullPreqsLeft() + max(len(self.node.partialPreq) - self.hasPartialPreqs,0)#+ self.partialPreqsLeft()
-    def getCompareValue(self) -> tuple[int, Any, Any, Any]:
+    def getCompareValue(self) -> tuple:
       return (self.linksLeft(),self.node.find('iCost'),self.node.find('iGridX'),self.node.find('iGridY'))
     def __cmp__(self,other):
       return cmp(self.getCompareValue(),other.getCompareValue())
@@ -94,7 +94,7 @@ def toposort(tList, tDict) -> list:
   targets = filter(lambda n: n.linksLeft() == 0, nodeDict.values())
 
   while targets:
-    #print [target.node.name for target in targets]
+    #print([target.node.name for target in targets])
     heapq.heapify(targets)
     temp = 0
     for targs in nextNode(targets):
@@ -106,13 +106,13 @@ def toposort(tList, tDict) -> list:
     if temp == 0:
       print('emergencyBreak')
       break
-  #print [(target.node.name, target.fullPreqsLeft() , target.hasFullPreqs, target.node.fullPreq, target.hasPartialPreqs, target.node.partialPreq) for target in targets]
+  #print([(target.node.name, target.fullPreqsLeft() , target.hasFullPreqs, target.node.fullPreq, target.hasPartialPreqs, target.node.partialPreq) for target in targets])
   return results
 
 
 def lookup(dic):
   return lambda keys: map(lambda key: dic[key],keys)
-def iterDic(dic) -> generator:
+def iterDic(dic):
   for key in dic.keys():
     yield (key, dic[key])
 class TechTree:
@@ -140,9 +140,8 @@ class TechTree:
     return deps[-1]
   def dependance(self, firstName, secondName) -> int:
     if self.orderDifference(firstName, secondName) < 0:
-      return self.dependance(secondName,firstName)
-    else:
-      return self.strictDependance(firstName,secondName)
+      return self.strictDependance(secondName,firstName)
+    return self.strictDependance(firstName,secondName)
   def listRedudantDependanciesOf(self, baseTech) -> map:
     fulls = sorted(lookup(self.orderDict)(baseTech.fullPreq))
     partials = sorted(lookup(self.orderDict)(baseTech.partialPreq))
@@ -160,7 +159,7 @@ class TechTree:
            self.strictDependance(gName(s),gName(o)),
            partials)),fulls))). union(redundantPartials)))
   def listRedudantDependancies(self) -> dict:
-    def dictCons() -> generator:
+    def dictCons():
        for baseTech in self.orderedTech:
          yield (baseTech.name, self.listRedudantDependanciesOf(baseTech))
     return { k: v for k, v in dictCons() if len(v) > 0}
