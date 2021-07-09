@@ -11890,7 +11890,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
-			<ObsoleteTech>TECH_COSMIC_LIFESTYLE</ObsoleteTech>
 			<iCost>3245</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -13459,10 +13458,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_SATELLITES</Type>
 			<ObsoleteTech>TECH_PHOTONIC_SATELLITES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MINOR_LEAGUE_STADIUM</Type>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_MILL</Type>
@@ -15219,10 +15214,6 @@
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MODERN_STABLE</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_ULTRAFUEL_REFINERY</Type>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -15377,10 +15368,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_INCAN_TERRACE</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HUNTERS_CAMP</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARM_SUPPLY</Type>
@@ -15720,10 +15707,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_HERPETOLOGY_LAB</Type>
 			<ObsoleteTech>TECH_BIOMIMETICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MARINEBIOLOGY_LAB</Type>
-			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUSSEL_RAFTS</Type>

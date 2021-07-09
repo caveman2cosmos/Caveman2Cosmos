@@ -8169,19 +8169,15 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_WOODWORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<Bonus>BONUS_HIDE</Bonus>
-			<PrereqInCityBuildings>
+			<PrereqOrCityBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
+			</PrereqOrCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9292,21 +9288,17 @@
 			<Description>TXT_KEY_BUILDING_LEANTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEANTO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_WOODWORKING</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
+			<PrereqOrCityBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
+			</PrereqOrCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
 				<BuildingType>BUILDING_NEANDERTHAL_CAVES</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<bAutoBuild>1</bAutoBuild>
