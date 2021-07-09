@@ -380,7 +380,6 @@ public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
 								m_iSubCombatTypeCount(0),
-								m_iOngoingTrainingCount(0),
 								m_iRemovesUnitCombatTypeCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
@@ -409,7 +408,6 @@ public:
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
 			m_iSubCombatTypeCount == 0 &&
-			m_iOngoingTrainingCount == 0 &&
 			m_iRemovesUnitCombatTypeCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
@@ -435,7 +433,6 @@ public:
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
 	int m_iSubCombatTypeCount;
-	int m_iOngoingTrainingCount;
 	int m_iRemovesUnitCombatTypeCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
@@ -2341,10 +2338,6 @@ public:
 	void ClearSupports();
 #endif
 
-	int getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const;
-	void changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-	void setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-
 	void checkPromotionObsoletion();
 	void processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial = false);
 
@@ -3055,15 +3048,14 @@ private:
 	static int* g_paiTempDistanceAttackCommunicability;
 	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
 	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
-//Team Project (4)
-	//WorkRateMod
-	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool*	g_pabTempHasPromotion;
 	static bool*	g_pabTempHasUnitCombat;
 	static int* g_paiTempSubCombatTypeCount;
+#ifndef BREAK_SAVES
 	static int* g_paiTempOngoingTrainingCount;
+#endif // !BREAK_SAVES
 	static int* g_paiTempRemovesUnitCombatTypeCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;

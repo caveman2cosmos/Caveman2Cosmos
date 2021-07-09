@@ -185,7 +185,6 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
 		|| !buildingInfo.getFreePromoTypes().empty()
-		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
 		|| buildingInfo.isAnyUnitCombatFreeExperience()
 		|| buildingInfo.isAnyDomainFreeExperience();
 }
@@ -210,7 +209,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 			return true;
 		}
 	}
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	return buildingInfo.getDefenseModifier() > 0
 		|| buildingInfo.getAllCityDefenseModifier() > 0
 		|| buildingInfo.getAdjacentDamagePercent() > 0

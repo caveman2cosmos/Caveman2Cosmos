@@ -537,12 +537,6 @@ public:
 	void changeTotalFlankSupportPercentModifier(int iChange);
 #endif // STRENGTH_IN_NUMBERS
 
-	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
-	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);
-	int getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const;
-	void setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange);
-	void updateOngoingTraining(UnitCombatTypes eCombat);
-	void assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot);
 	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
 	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
@@ -1865,20 +1859,22 @@ protected:
 	int m_iTotalMediumRangeSupportPercentModifier;
 	int m_iTotalLongRangeSupportPercentModifier;
 	int m_iTotalFlankSupportPercentModifier;
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	int* m_paiNewAfflictionTypeCount;
 	int* m_paiAidRate;
 	int** m_ppaaiExtraBonusAidModifier;
 	int* m_paiNewExtraAfflictionOutbreakLevelChange;
 	int* m_paiNewAfflictionToleranceChange;
+	int* m_paiPromotionLineAfflictionAttackCommunicability;
 	int* m_paiNewCurrentOvercomeChange;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiUnitCombatRepelModifier;
 	int* m_paiUnitCombatRepelAgainstModifier;
 	int* m_paiUnitCombatDefenseAgainstModifier;
-	int* m_paiPromotionLineAfflictionAttackCommunicability;
+#ifndef BREAK_SAVES
 	int* m_paiUnitCombatOngoingTrainingTimeCount;
 	int* m_paiUnitCombatOngoingTrainingTimeIncrement;
+#endif // !BREAK_SAVES
 	//TB Building Tags
 	int m_iExtraLocalCaptureProbabilityModifier;
 	int m_iExtraLocalCaptureResistanceModifier;

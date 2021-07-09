@@ -5182,16 +5182,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							iValue += 20;
 						}
-
-						if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
-						{
-							int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
-
-							if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI))
-							{
-								iValue = 10 * (20 - iDuration);
-							}
-						}
 					}
 
 					for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -5467,20 +5457,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							{
 								iValue += 20;
 							}
-
-							if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
-							{
-								int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType);
-								if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iCombatType))
-								{
-									iValue = 10 * (20 - iDuration);
-								}
-							}
 						}
 					}
 
 					iValue += (kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8));
-
 					iValue += (kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4);
 				}
 
@@ -14662,7 +14642,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			!kBuilding.getFreePromoTypes().empty() ||
 			kBuilding.getNumUnitCombatRetrainTypes() > 0 ||
 			kBuilding.getNationalCaptureProbabilityModifier() > 0 ||
-			kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0 ||
 			kBuilding.isAnyUnitCombatFreeExperience() ||
 			kBuilding.isAnyDomainFreeExperience())
 		{
@@ -15363,13 +15342,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						iValue += 20;
 					}
-
-					if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0
-						&& kBuilding.getUnitCombatOngoingTrainingDuration(iI) > 0
-						&& kBuilding.getUnitCombatOngoingTrainingDuration(iI) < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI))
-					{
-						iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(iI)) * 10;
-					}
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -15662,18 +15634,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						{
 							iValue += 20;
 						}
-
-						if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType) > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType) < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iCombatType))
-						{
-							iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType)) * 10;
-						}
 					}
 				}
 
 				iValue += kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8);
-
 				iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);

@@ -432,9 +432,6 @@ public:
 	int getNumUnitCombatProdModifiers() const;
 	int getUnitCombatProdModifier(int iUnitCombat) const;
 
-	int getNumUnitCombatOngoingTrainingDurations() const;
-	int getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad = false) const;
-
 	int getNumAfflictionOutbreakLevelChanges() const;
 	int getAfflictionOutbreakLevelChange(int iAfflictionLine) const;
 
@@ -712,7 +709,7 @@ private:
 	int m_iMediumRangeSupportPercentModifier;
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;
@@ -829,7 +826,6 @@ private:
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatProdModifiers;
-	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;

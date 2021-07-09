@@ -22405,35 +22405,19 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FLANK_SUPPORT_PERCENT_MODIFIER", kBuilding.getFlankSupportPercentModifier()));
 		}
+		//TB Combat Mod (Buildings) end
 	}
 #endif
 	if (!bRelDisabled)
 	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (kBuilding.getUnitCombatOngoingTrainingDuration(iI) > 0)
-			{
-				UnitCombatTypes eCombat = ((UnitCombatTypes)iI);
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_UNIT_COMBAT_ONGOING_TRAINING_DURATION", GC.getUnitCombatInfo(eCombat).getDescription(), kBuilding.getUnitCombatOngoingTrainingDuration(iI)));
-			}
-		}
-		//TB Combat Mod (Buildings) end
-
 		setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDINGHELP_WATER_PLOTS").c_str(), L": ", L"", kBuilding.getSeaPlotYieldChangeArray());
-
 		setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDINGHELP_RIVER_PLOTS").c_str(), L": ", L"", kBuilding.getRiverPlotYieldChangeArray());
-
 		setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDINGHELP_WATER_PLOTS_ALL_CITIES").c_str(), L": ", L"", kBuilding.getGlobalSeaPlotYieldChangeArray());
-
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDINGHELP_WITH_POWER").c_str(), kBuilding.getPowerYieldModifierArray(), true, true);
-
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDINGHELP_ALL_CITIES_THIS_CONTINENT").c_str(), kBuilding.getAreaYieldModifierArray(), true, true);
-
 		setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDINGHELP_ALL_CITIES").c_str(), kBuilding.getGlobalYieldModifierArray(), true, true);
 
 		setCommerceChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDINGHELP_ALL_CITIES").c_str(), kBuilding.getGlobalCommerceModifierArray(), true);
-
 		setCommerceChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDINGHELP_PER_SPECIALIST_ALL_CITIES").c_str(), kBuilding.getSpecialistExtraCommerceArray());
 
 		if (player != NULL && player->getStateReligion() != NO_RELIGION)
