@@ -176,7 +176,7 @@ class CvInfoScreen:
 		screen.addPanel("Info_TopPanel", "", "", True, False, 0, -2, xRes, 40, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("Info_BotPanel", "", "", True, False, 0, yRes - H_BOT_PANEL, xRes, H_BOT_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("Info_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_INFO_SCREEN",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("Info_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("Info_Exit", "", uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Add tab control
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ())
@@ -893,7 +893,7 @@ class CvInfoScreen:
 				iPop = cityX.getPopulation()
 				# Filter out small cities, after the first 5, as an optimization.
 				if topCities[4] and iPop < iMedianPop:
-					continue 
+					continue
 				if iPop / 2 > iMedianPop:
 					iMedianPop = iPop / 2
 				# City Value, could expand this one...

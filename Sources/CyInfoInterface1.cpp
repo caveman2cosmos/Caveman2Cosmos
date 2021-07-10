@@ -265,6 +265,8 @@ void CyInfoPythonInterface1()
 		.def("isQualifiedPromotionType", &CvUnitInfo::isQualifiedPromotionType, "bool (int i)")
 		.def("hasUnitCombat", &CvUnitInfo::hasUnitCombat, "bool (UnitCombatTypes eUnitCombat)")
 		//TB Combat Mods End  TB SubCombat Mod end
+
+		.def("getTrainCondition", &CvUnitInfo::getTrainCondition, python::return_value_policy<python::reference_existing_object>())
 		;
 
 	python::class_<CvSpecialUnitInfo, python::bases<CvInfoBase> >("CvSpecialUnitInfo")
@@ -342,6 +344,7 @@ void CyInfoPythonInterface1()
 		.def("getNumExtraFreeBonuses", &CvBuildingInfo::getNumExtraFreeBonuses, "int ()")
 		.def("getExtraFreeBonus", &CvBuildingInfo::getExtraFreeBonus, "int (int i)")
 		.def("getFreeBuilding", &CvBuildingInfo::getFreeBuilding, "int ()")
+		.def("getFreeAreaBuilding", &CvBuildingInfo::getFreeAreaBuilding, "int ()")
 		.def("getFreePromotion", &CvBuildingInfo::getFreePromotion, "int ()")
 		.def("getCivic", &CvBuildingInfo::getCivicOption, "int ()")
 		.def("getProductionCost", &CvBuildingInfo::getProductionCost, "int ()")
@@ -397,6 +400,8 @@ void CyInfoPythonInterface1()
 		.def("getVoteSourceType", &CvBuildingInfo::getVoteSourceType, "int ()")
 		.def("getPrereqVicinityBonus", &CvBuildingInfo::getPrereqVicinityBonus, "int ()")
 		.def("getPrereqRawVicinityBonus", &CvBuildingInfo::getPrereqRawVicinityBonus, "int ()")
+		.def("getHurryCostModifier", &CvBuildingInfo::getHurryCostModifier, "int ()")
+		.def("getHurryAngerModifier", &CvBuildingInfo::getHurryAngerModifier, "int ()")
 
 		.def("isAutoBuild", &CvBuildingInfo::isAutoBuild, "bool ()")
 		.def("isWater", &CvBuildingInfo::isWater, "bool ()")
@@ -436,6 +441,7 @@ void CyInfoPythonInterface1()
 		.def("getCommerceModifier", &CvBuildingInfo::getCommerceModifier, "int (int i)")
 		.def("getGlobalCommerceModifier", &CvBuildingInfo::getGlobalCommerceModifier, "int (int i)")
 		.def("getCommerceHappiness", &CvBuildingInfo::getCommerceHappiness, "int (int i)")
+		.def("getCommerceChangeDoubleTime", &CvBuildingInfo::getCommerceChangeDoubleTime, "int (int i)")
 		.def("getSpecialistCount", &CvBuildingInfo::getSpecialistCount, "int (int i)")
 		.def("getFreeSpecialistCount", &CvBuildingInfo::getFreeSpecialistCount, "int (int i)")
 		.def("getBonusHealthChanges", &CvBuildingInfo::getBonusHealthChanges, "int (int i)")
@@ -457,6 +463,7 @@ void CyInfoPythonInterface1()
 
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
 		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
+		.def("getPrereqNumOfBuildings", &CvBuildingInfo::cyGetPrereqNumOfBuildings)
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 
@@ -471,6 +478,7 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqOrBuilding", &CvBuildingInfo::getPrereqOrBuilding, "int (int i)")
 		.def("getNumPrereqOrBuilding", &CvBuildingInfo::getNumPrereqOrBuilding, "short ()")
+		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
 
 		.def("getReplacementBuilding", &CvBuildingInfo::getReplacementBuilding, "int (int i)")
 		.def("getNumReplacementBuilding", &CvBuildingInfo::getNumReplacementBuilding, "short ()")
@@ -480,14 +488,20 @@ void CyInfoPythonInterface1()
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
 
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
+		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
+
+		.def("getPrereqInCityBuilding", &CvBuildingInfo::getPrereqInCityBuilding, "int (int i)")
+		.def("getNumPrereqInCityBuildings", &CvBuildingInfo::getNumPrereqInCityBuildings, "short ()")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")
 
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
-		
+
 		//Extract map category of building
 		.def("isMapType", &CvBuildingInfo::isMapType, "bool (int i)")
+
+		.def("getConstructCondition", &CvBuildingInfo::getConstructCondition, python::return_value_policy<python::reference_existing_object>())
 
 		//TB Combat Mods (Buildings) begin
 		//integers

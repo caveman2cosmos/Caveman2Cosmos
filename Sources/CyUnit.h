@@ -20,7 +20,6 @@ public:
 
 	CvUnit* getUnit() const { return m_pUnit; };	// Call from C++
 	const CvUnit* getUnitConst() const { return m_pUnit; };	// Call from C++
-	bool isNone() const { return m_pUnit == NULL; }
 
 	void convert(const CyUnit& kUnit, bool bKillOriginal);
 	void kill(bool bDelay, int /*PlayerTypes*/ ePlayer);
@@ -114,7 +113,6 @@ public:
 	void setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow);
 	CyPlot* plot() const;
 	CyArea* area() const;
-	CyPlot* getMADTargetPlot() const;
 
 	int getDamage() const;
 	void setDamage(int iNewValue, int /*PlayerTypes*/ ePlayer);

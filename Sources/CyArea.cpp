@@ -129,4 +129,4 @@ int CyArea::getNumTotalBonuses() const
 void CyArea::changeCleanPowerCount(TeamTypes eIndex, int iChange) const
 {
     m_pArea->changeCleanPowerCount(eIndex, iChange);
-}  
+}

@@ -405,6 +405,7 @@ class CvEventManager:
 				# key down event for the 'D' in 'ctrl+shift+alt+D' seems to be consumed by the exe in some cases
 				if key == 16: # D
 					DebugUtils.toggleDebugMode()
+					CvScreensInterface.mainInterface.pythonDebugToggle(DebugUtils.bDebugMode)
 					return 1
 
 		elif eventType == 6: # Key down
@@ -1489,11 +1490,10 @@ class CvEventManager:
 						break
 		# NANITE DEFUSER - destroyes all nukes from all players
 		elif iBuilding == mapBuildingType["NANITE_DEFUSER"]:
-
 			for iPlayerX in xrange(self.MAX_PLAYERS):
 				for CyUnit in GC.getPlayer(iPlayerX).units():
-					if CyUnit.isNone() or CyUnit.isDead():
-						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead()), ("CyUnit.isNone()", CyUnit.isNone())
+					if CyUnit.isDead():
+						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead())
 					elif CyUnit.nukeRange() > -1:
 						CyUnit.kill(0, -1)
 				# Global message
@@ -2257,7 +2257,7 @@ class CvEventManager:
 				# Message
 				if iPlayer == GAME.getActivePlayer():
 					CvUtil.sendMessage(
-						TRNSLTR.getText("TXT_KEY_BARBCIV_DISCOVER_WRITING", ()), iPlayer, 16, 
+						TRNSLTR.getText("TXT_KEY_BARBCIV_DISCOVER_WRITING", ()), iPlayer, 16,
 						eColor = GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"),
 						eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, bForce = False
 					)

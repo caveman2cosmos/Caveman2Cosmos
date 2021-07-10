@@ -123,7 +123,7 @@ class CvCorporationScreen:
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
 
 		self.SCREEN_ART = ArtFileMgr.getInterfaceArtInfo("TECH_BG").getPath()
-		self.EXIT_TEXT = "<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper()
+		self.EXIT_TEXT = "<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper()
 
 		self.iActivePlayer = GC.getGame().getActivePlayer()
 
@@ -398,4 +398,3 @@ class CvCorporationScreen:
 			self.drawCityInfo(self.iCorporationSelected)
 		return 0
 
-				

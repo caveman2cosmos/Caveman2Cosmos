@@ -80,7 +80,7 @@ void CvGame::updateColoredPlots()
 					if (NO_BUILD != eBestBuild && GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement())
 					{
 						gDLL->getEngineIFace()->addColoredPlot(
-							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), 
+							pLoopPlot->getViewportX(), pLoopPlot->getViewportY(),
 							GC.getColorInfo(GC.getCOLOR_RED()).getColor(),
 							PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE
 						);
@@ -1238,7 +1238,6 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 						case MISSION_RBOMBARD:
 						case MISSION_FENGAGE:
 						case MISSION_CLAIM_TERRITORY:
-						case MISSION_PRETARGET_NUKE:
 						{
 							iData3 = GC.getCurrentViewport()->getMapXFromViewportX(iData3);
 							iData4 = GC.getCurrentViewport()->getMapYFromViewportY(iData4);
@@ -1505,12 +1504,10 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_PING:
 	case CONTROL_SIGN:
 	case CONTROL_GRID:
-	case CONTROL_BARE_MAP:
 	case CONTROL_YIELDS:
 	case CONTROL_RESOURCE_ALL:
 	case CONTROL_UNIT_ICONS:
 	case CONTROL_GLOBELAYER:
-	case CONTROL_SCORES:
 	case CONTROL_FREE_COLONY:
 		if (!gDLL->getInterfaceIFace()->isFocusedWidget())
 		{
@@ -1833,10 +1830,6 @@ void CvGame::doControl(ControlTypes eControl)
 		gDLL->getEngineIFace()->SetGridMode(!(gDLL->getEngineIFace()->GetGridMode()));
 		break;
 
-	case CONTROL_BARE_MAP:
-		gDLL->getInterfaceIFace()->toggleBareMapMode();
-		break;
-
 	case CONTROL_YIELDS:
 		gDLL->getInterfaceIFace()->toggleYieldVisibleMode();
 		break;
@@ -1852,10 +1845,6 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_GLOBELAYER:
 		gDLL->getEngineIFace()->toggleGlobeview();
-		break;
-
-	case CONTROL_SCORES:
-		gDLL->getInterfaceIFace()->toggleScoresVisible();
 		break;
 
 	case CONTROL_LOAD_GAME:

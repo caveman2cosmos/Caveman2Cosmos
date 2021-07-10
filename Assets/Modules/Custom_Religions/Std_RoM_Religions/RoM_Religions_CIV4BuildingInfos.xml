@@ -21,7 +21,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
+			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -339,9 +339,10 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCULPTOR</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -927,6 +928,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>

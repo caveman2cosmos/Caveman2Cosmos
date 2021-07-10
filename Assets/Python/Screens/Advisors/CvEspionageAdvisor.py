@@ -134,7 +134,7 @@ class TheScreen:
 		screen.addPanel("EA_TopPanel", "", "", True, False, 0, 0, iResX, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("EA_BotPanel", "", "", True, False, 0, iResY - H_EDGE_PANEL, iResX, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("EA_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN",()), 1<<2, iResX / 2, 0, 0, iFontTitle, iWidGen, 0, 0)
-		screen.setText("EA_Btn_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, iResX - 16, 0, 0, iFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("EA_Btn_Exit", "", uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, iResX - 16, 0, 0, iFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		iCol = GC.getCOLOR_YELLOW()
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_ESPIONAGE_MISSIONS_TAB", ())

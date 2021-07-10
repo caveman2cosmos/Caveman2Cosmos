@@ -119,7 +119,7 @@ class CvForeignAdvisor:
 		screen.addPanel("TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("BottomPanel", "", "", True, False, 0, yRes - H_EDGE_PANEL, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 
-		stTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		stTxt = uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		screen.setText("ForeignAdvExit", "", stTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 		stTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_FOREIGN_ADVISOR_TITLE", ())
 		screen.setLabel("ForeignAdvHeader", "", stTxt, 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 1)

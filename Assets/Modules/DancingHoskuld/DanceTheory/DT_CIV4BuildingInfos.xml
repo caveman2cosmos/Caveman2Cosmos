@@ -12,6 +12,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -59,6 +64,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>

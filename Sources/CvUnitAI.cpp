@@ -257,7 +257,7 @@ bool CvUnitAI::AI_update()
 						break;
 					}
 				case NO_DOMAIN:
-				case DOMAIN_IMMOBILE: 
+				case DOMAIN_IMMOBILE:
 				case NUM_DOMAIN_TYPES:
 				default:
 					{
@@ -797,7 +797,7 @@ bool CvUnitAI::AI_promote()
 	PROFILE_FUNC();
 
 	if (!isPromotionReady()) return false;
-	
+
 	int iBestValue = 0;
 	PromotionTypes eBestPromotion = NO_PROMOTION;
 
@@ -1745,8 +1745,8 @@ void CvUnitAI::AI_settleMove()
 	// Don't found new cities if that would cause more unhappiness when we already have happiness issues
 	bool bInhibitFounding = false;
 
-	
-	
+
+
 	if (GET_PLAYER(getOwner()).getCityLimit() > 0)
 	{
 		if (GET_PLAYER(getOwner()).getCityOverLimitUnhappy() > 0)
@@ -2055,7 +2055,7 @@ void CvUnitAI::AI_workerMove()
 			return;
 		}
 	}
-		
+
 	if (!isHuman() && !isNPC())
 	{
 		if (AI_workerReleaseDefenderIfNotNeeded())
@@ -2118,7 +2118,7 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated 
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
@@ -12278,11 +12278,9 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 						//	Guard a good spot outside the city but in its vicinity
 						int iBestValue = 0;
 
-						for(int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+						foreach_(CvPlot* pLoopPlot, pPlot->rect(NUM_CITY_PLOTS_2, NUM_CITY_PLOTS_2))
 						{
-							CvPlot* pLoopPlot = plotCity(pPlot->getX(),pPlot->getY(),iI);
-
-							if (pLoopPlot != NULL && AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
+							if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
 							{
 								if (pLoopPlot->getOwner() == getOwner() &&
 									pLoopPlot->getNumVisibleEnemyUnits(getOwner()) == 0)
@@ -13667,7 +13665,7 @@ bool CvUnitAI::AI_spreadReligion()
 	const ReligionTypes eStateReligion = owner.getStateReligion();
 
 	// More often than not, it is the state religion the AI spreads.
-	ReligionTypes eReligion = 
+	ReligionTypes eReligion =
 	(
 		(eStateReligion != NO_RELIGION && m_pUnitInfo->getReligionSpreads(eStateReligion) > 0)
 		?
@@ -18149,7 +18147,7 @@ bool CvUnitAI::AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueTh
 	CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestPillagePlot = NULL;
 
-	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots())
+	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots(NUM_CITY_PLOTS))
 	{
 		if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
 		{
@@ -23587,7 +23585,7 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 				}
 			}
 			int iClosestCityPathTurns;
-			const CvPlot* pThisTurnPlotForAirlift = 
+			const CvPlot* pThisTurnPlotForAirlift =
 			(
 				generatePath(pClosestCity->plot(), 0, true, &iClosestCityPathTurns)
 				?
@@ -27974,7 +27972,7 @@ bool CvUnitAI::AI_StrategicForts()
 				if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
 				{
 					//	Koshling - adjusted a bit to take advantage of super forts choke calculations
-					const int iValue = 
+					const int iValue =
 					(
 						1000
 						*

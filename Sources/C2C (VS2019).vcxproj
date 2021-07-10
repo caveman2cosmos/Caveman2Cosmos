@@ -292,6 +292,7 @@
     <ClCompile Include="CyArgsList.cpp" />
     <ClCompile Include="CyArtFileMgr.cpp" />
     <ClCompile Include="CyArtFileMgrInterface.cpp" />
+    <ClCompile Include="CyBoolExprInterface.cpp" />
     <ClCompile Include="CyCity.cpp" />
     <ClCompile Include="CyCityInterface1.cpp" />
     <ClCompile Include="CyCityInterface2.cpp" />

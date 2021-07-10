@@ -101,10 +101,10 @@ public:
 	void instantiateManipulators(const CvGameObject* pObject, const CvPropertyManipulators* pMani);
 	void instantiateGlobalManipulators(const CvGameObject* pObject);
 	void gatherActiveManipulators();
-	
+
 	void predictSources();
 	void correctSources();
-	
+
 	void predictInteractions();
 	void correctInteractions();
 

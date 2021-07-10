@@ -92,7 +92,7 @@ class CvMilitaryAdvisor:
 		screen.addPanel("MA_BG", "", "", True, True, 0, 0, xRes, yRes, ePnlBlue50)
 		screen.setStyle("MA_BG", "Panel_Game_HudMap_Style")
 		screen.addPanel("TopPanel", "", "", True, False, -2, -2, xRes+4, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
-		stTxt = uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		stTxt = uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		screen.setText("MA_Exit", "", stTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Header...

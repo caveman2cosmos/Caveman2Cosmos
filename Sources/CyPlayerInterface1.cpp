@@ -12,7 +12,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 {
 	OutputDebugString("Python Extension Module - CyPlayerPythonInterface1\n");
 
-	// set the docstring of the current module scope 
+	// set the docstring of the current module scope
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
 		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader) - change leader of player")

@@ -413,6 +413,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AON_CENTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -1170,7 +1171,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<iCost>4620</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2530,16 +2530,14 @@
 			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CASTLE</BuildingType>
+				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2820,8 +2818,11 @@
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>408</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3339,7 +3340,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
+			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3871,6 +3872,8 @@
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
 				<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
+				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
@@ -4967,6 +4970,7 @@
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE2</BuildingType>
+				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>516</iCost>
@@ -5193,8 +5197,10 @@
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5702,6 +5708,7 @@
 				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 			</PrereqOrBuildings>
@@ -5766,7 +5773,7 @@
 				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 				<BuildingType>BUILDING_FRESCO</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>270</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6011,16 +6018,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NINEVEH</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
-			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PAPER</ObsoleteTech>
+			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>708</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -7221,13 +7222,12 @@
 			<TechTypes>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1404</iCost>
 			<iHappiness>10</iHappiness>
 			<CommerceChanges>
@@ -7960,9 +7960,13 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_POTTER</BuildingType>
 				<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1200</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -11083,12 +11087,9 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
@@ -12332,9 +12333,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHAMPAGNE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -12370,9 +12371,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_RED_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -12407,9 +12408,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -14477,9 +14478,13 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BEADMAKER</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
 			<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
@@ -14532,9 +14537,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2550</iCost>
 			<iHappiness>1</iHappiness>
 			<FreeBonus>BONUS_MING_VASE</FreeBonus>
@@ -14591,9 +14599,11 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POTTER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1296</iCost>
 			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
@@ -15649,12 +15659,10 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MAX_PRISON</ConstructSound>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iNumBuildingNeeded>6</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
 			</PrereqInCityBuildings>
@@ -15763,6 +15771,7 @@
 			</PropertyManipulators>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -15983,7 +15992,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BERLIN_WALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BERLIN_WALL</MovieDefineTag>
-			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
+			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
@@ -16614,6 +16623,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ELCAMINODESANTIAGO</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -16646,6 +16656,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
 			<bNoHolyCity>1</bNoHolyCity>
 			<PropertyManipulators>
@@ -17030,6 +17041,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HNIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HNIC</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -17239,9 +17251,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_BARRICADES</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -17518,7 +17531,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAGINOTLINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
-			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

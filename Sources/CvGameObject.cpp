@@ -592,15 +592,11 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	{
 		if (eType == GAMEOBJECT_PLOT)
 		{
-			for (int iI = 0; iI < m_pCity->getNumCityPlots(); iI++)
+			foreach_(const CvPlot* pLoopPlot, m_pCity->plots())
 			{
-				CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
-				if (pLoopPlot)
+				if (pLoopPlot->getWorkingCity() == m_pCity)
 				{
-					if (pLoopPlot->getWorkingCity() == m_pCity)
-					{
-						func(pLoopPlot->getGameObject());
-					}
+					func(pLoopPlot->getGameObject());
 				}
 			}
 		}
@@ -979,7 +975,7 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 
 int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 {
-	int iCount = 0; 
+	int iCount = 0;
 
 	switch (eAttribute)
 	{
@@ -1027,7 +1023,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the entire game, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -1127,7 +1123,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the entire team, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -1235,7 +1231,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the player, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if this player has the trait
@@ -1340,7 +1336,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pCity->isFreePromotion(ePromotion);
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
@@ -1471,7 +1467,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pUnit->isHasPromotion(ePromotion);
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
@@ -1593,7 +1589,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_UNIT, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait

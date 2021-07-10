@@ -20,42 +20,29 @@ namespace logging
 
 	void logMsg(const char* file, const char* msg, ...)
 	{
-		if (GC.isXMLLogging())
-		{
-			static char buf[2048];
-			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
-			strcat(buf, "\n");
+		//if (!GC.isXMLLogging())
+		//	return;
 
-			const std::string path = getModDir() + "\\Logs\\" + file;
-			std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
-			FAssert(stream.is_open())
-			stream << buf;
-			stream.close();
-
-			OutputDebugString(buf);
-		}
+		static char buf[2048];
+		_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+		gDLL->logMsg(file, buf, false, false);
+#ifdef _DEBUG
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+#endif
 	}
 
 	void logMsgW(const char* file, const wchar_t* msg, ...)
 	{
-			static wchar_t buf[2048];
-			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
-			static char buf2[2048];
-			wcstombs(buf2, buf, 2048 -4);
-			strcat(buf2, "\n");
-
-			const std::string path = getModDir() + "\\Logs\\" + file;
-			std::fstream stream(path.c_str(), std::ios::out | std::ios::app);
-			FAssert(stream.is_open())
-			stream << buf2;
-			stream.close();
-			OutputDebugString(buf2);
-	}
-
-	void createLogsFolder()
-	{
-		const std::string logsDir = getModDir() + "\\Logs";
-		CreateDirectory(logsDir.c_str(), NULL);
+		static wchar_t buf[2048];
+		_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+		static char buf2[2048];
+		wcstombs(buf2, buf, 2048 -4);
+		gDLL->logMsg(file, buf2, false, false);
+#ifdef _DEBUG
+		strcat(buf2, "\n");
+		OutputDebugString(buf2);
+#endif
 	}
 
 	void deleteLogs()

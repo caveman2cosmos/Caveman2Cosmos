@@ -22406,7 +22406,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FUEL_CELLS</PrereqTech>
 				<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AUTONOMOUS_VEHICLES_QUOTE</Quote>

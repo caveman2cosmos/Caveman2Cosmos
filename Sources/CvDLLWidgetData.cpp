@@ -640,7 +640,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		if ((PropertyTypes)widgetDataStruct.m_iData1 != NO_PROPERTY)
 		{
 			szBuffer.append(GC.getPropertyInfo((PropertyTypes)widgetDataStruct.m_iData1).getText());
-			CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+			const CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 			if (NULL != pCity)
 			{
 				szBuffer.append(NEWLINE);
@@ -653,8 +653,8 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 	case WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE:
 		if (widgetDataStruct.m_iData1 != NO_IMPROVEMENT)
 		{
-			ImprovementTypes eNewImprovement = (ImprovementTypes)widgetDataStruct.m_iData1;
-			ImprovementTypes eOldImprovement = (ImprovementTypes)GC.getImprovementInfo(eNewImprovement).getImprovementPillage();
+			const ImprovementTypes eNewImprovement = (ImprovementTypes)widgetDataStruct.m_iData1;
+			const ImprovementTypes eOldImprovement = GC.getImprovementInfo(eNewImprovement).getImprovementPillage();
 
 			if (eOldImprovement != NO_IMPROVEMENT)
 			{
@@ -1180,9 +1180,7 @@ void CvDLLWidgetData::doLiberateCity()
 
 void CvDLLWidgetData::doRenameCity()
 {
-	CvCity* pHeadSelectedCity;
-
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
 	{
@@ -1562,10 +1560,8 @@ void CvDLLWidgetData::doBuildingFilter(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doGoToCity(CvWidgetDataStruct &widgetDataStruct)
 {
-	CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(widgetDataStruct.m_iData1);
-	CvPlot* pPlot = pCity->plot();
-
-	GC.getGame().selectionListMove(pPlot, false, false, false);
+	const CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(widgetDataStruct.m_iData1);
+	GC.getGame().selectionListMove(pCity->plot(), false, false, false);
 }
 
 // This is not triggered
@@ -1795,16 +1791,14 @@ void CvDLLWidgetData::doPediaDescription(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	ImprovementTypes eImprovement = NO_IMPROVEMENT;
-	BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
+	const BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
 	if (NO_BUILD != eBuild)
 	{
-		eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
-	}
-
-	if (NO_IMPROVEMENT != eImprovement)
-	{
-		Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
+		const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+		if (NO_IMPROVEMENT != eImprovement)
+		{
+			Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
+		}
 	}
 }
 
@@ -1820,7 +1814,7 @@ void CvDLLWidgetData::doGotoTurnEvent(CvWidgetDataStruct &widgetDataStruct)
 	}
 }
 
-void CvDLLWidgetData::doMenu( void )
+void CvDLLWidgetData::doMenu()
 {
 	if (!gDLL->isGameInitializing())
 	{
@@ -3304,30 +3298,17 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (GC.getImprovementInfo(eImprovement).getDefenseModifier() != 0)
 					{
 						szBuffer.append(NEWLINE);
-						// Super Forts begin *bombard* *text*
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", (GC.getImprovementInfo(eImprovement).getDefenseModifier() - pMissionPlot->getDefenseDamage())));
-						// szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", GC.getImprovementInfo(eImprovement).getDefenseModifier())); - Original Code
-						// Super Forts end
 					}
-					/************************************************************************************************/
-					/* Afforess	                  Start		 05/23/10                                               */
-					/*                                                                                              */
-					/*                                                                                              */
-					/************************************************************************************************/
-					/*
-					if (GC.getImprovementInfo(eImprovement).getImprovementUpgrade() != NO_IMPROVEMENT)
-					*/
+
 					if (GET_TEAM(pHeadSelectedUnit->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
-					/************************************************************************************************/
-					/* Afforess	                     END                                                            */
-					/************************************************************************************************/
 					{
-						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
+						const int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP",
-							CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
-							GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
+							CvWString(GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
+							GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
 							iTurns));
 					}
 				}
@@ -3472,7 +3453,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 
 			MissionTypes eMission = (MissionTypes) GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType();
-			if ( eMission > MISSION_PRETARGET_NUKE) // Outcome missions
+			if (eMission > MISSION_GOTO) // Outcome missions
 			{
 				for (CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 					pSelectedUnitNode != NULL;
@@ -5268,37 +5249,35 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 		}
 		else
 		{
-			//		szBuffer = "Maintenance represents the total cost of governing this city.\n";
 			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_MAINT_INFO"));
 			szBuffer.append(NEWLINE);
 
 			int iMaintenanceValue = GC.getEraInfo(GET_PLAYER(pHeadSelectedCity->getOwner()).getCurrentEra()).getInitialCityMaintenancePercent();
-			if (iMaintenanceValue != 0 && !pHeadSelectedCity->isDisorder() && !GET_PLAYER(pHeadSelectedCity->getOwner()).isAnarchy())
+			if (iMaintenanceValue > 0 && !pHeadSelectedCity->isDisorder() && !GET_PLAYER(pHeadSelectedCity->getOwner()).isAnarchy())
 			{
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_BASE_MAINTENANCE", szMaint.GetCString()));
 			}
+			const int iMod = pHeadSelectedCity->getEffectiveMaintenanceModifier();
 
-			iMaintenanceValue = (pHeadSelectedCity->calculateDistanceMaintenanceTimes100()* std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
+			iMaintenanceValue = getModifiedIntValue(pHeadSelectedCity->calculateDistanceMaintenanceTimes100(), iMod);
 			if (iMaintenanceValue != 0)
 			{
-				//			swprintf(szTempBuffer, "\n%s%d%c: %s", ((iMaintenanceValue > 0) ?  "+" : ""), iMaintenanceValue, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), ((GET_PLAYER(pHeadSelectedCity->getOwner()).getNumGovernmentCenters() > 0) ? "Distance from Palace" : "No Palace Penalty"));
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NUM_MAINT_FLOAT", szMaint.GetCString()) + ((GET_PLAYER(pHeadSelectedCity->getOwner()).getNumGovernmentCenters() > 0) ? gDLL->getText("TXT_KEY_MISC_DISTANCE_FROM_PALACE") : gDLL->getText("TXT_KEY_MISC_NO_PALACE_PENALTY")));
 			}
 
-			iMaintenanceValue = (pHeadSelectedCity->calculateNumCitiesMaintenanceTimes100() * std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
+			iMaintenanceValue = getModifiedIntValue(pHeadSelectedCity->calculateNumCitiesMaintenanceTimes100(), iMod);
 			if (iMaintenanceValue != 0)
 			{
-				//			swprintf(szTempBuffer, "\n%s%d%c: Number of Cities", ((iMaintenanceValue > 0) ? "+" : ""), iMaintenanceValue, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NUM_CITIES_FLOAT", szMaint.GetCString()));
 			}
 
-			iMaintenanceValue = (pHeadSelectedCity->calculateColonyMaintenanceTimes100() * std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
+			iMaintenanceValue = getModifiedIntValue(pHeadSelectedCity->calculateColonyMaintenanceTimes100(), iMod);
 			if (iMaintenanceValue != 0)
 			{
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
@@ -5306,7 +5285,7 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_COLONY_MAINT_FLOAT", szMaint.GetCString()));
 			}
 
-			iMaintenanceValue = (pHeadSelectedCity->calculateCorporationMaintenanceTimes100() * std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
+			iMaintenanceValue = getModifiedIntValue(pHeadSelectedCity->calculateCorporationMaintenanceTimes100(), iMod);
 			if (iMaintenanceValue != 0)
 			{
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
@@ -5314,7 +5293,7 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CORPORATION_MAINT_FLOAT", szMaint.GetCString()));
 			}
 
-			iMaintenanceValue = (pHeadSelectedCity->calculateBuildingMaintenanceTimes100() * std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
+			iMaintenanceValue = getModifiedIntValue(pHeadSelectedCity->calculateBuildingMaintenanceTimes100(), iMod);
 			if (iMaintenanceValue != 0)
 			{
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
@@ -5324,27 +5303,17 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 
 			szBuffer.append(SEPARATOR);
 			int iTotal = pHeadSelectedCity->getMaintenanceTimes100();
-			//		swprintf(szTempBuffer, "\n%d%c Total Maintenance", pHeadSelectedCity->getMaintenance(), GC.getCommerceInfo(COMMERCE_GOLD).getChar());
+
 			CvWString szMaint = CvWString::format(L"%d.%02d", iTotal/100, iTotal%100);
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_MAINT_FLOAT", szMaint.GetCString()));
-/************************************************************************************************/
-/* Afforess	                  Start		 09/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-			iMaintenanceValue = pHeadSelectedCity->getMaintenanceModifier();
-*/
+
 			iMaintenanceValue = pHeadSelectedCity->getMaintenanceModifier() + GET_PLAYER(pHeadSelectedCity->getOwner()).getMaintenanceModifier() + pHeadSelectedCity->area()->getTotalAreaMaintenanceModifier(GET_PLAYER(pHeadSelectedCity->getOwner()).getID());
 
 			if (pHeadSelectedCity->isConnectedToCapital() && !(pHeadSelectedCity->isCapital()))
 			{
 				iMaintenanceValue += GET_PLAYER(pHeadSelectedCity->getOwner()).getConnectedCityMaintenanceModifier();
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 			if (iMaintenanceValue != 0)
 			{
 				wchar_t szTempBuffer[1024];

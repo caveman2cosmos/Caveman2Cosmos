@@ -15,7 +15,7 @@
 #include "CyUnit.h"
 
 //
-// Python wrapper class for CvPlayer 
+// Python wrapper class for CvPlayer
 //
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL) {}
@@ -98,7 +98,7 @@ CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
 	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
 
-CyCity* CyPlayer::initCity(int x, int y) 
+CyCity* CyPlayer::initCity(int x, int y)
 {
 	return new CyCity(m_pPlayer->initCity(x, y, true, true));
 }
@@ -133,7 +133,8 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")));
+	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 void CyPlayer::killUnits()
@@ -361,7 +362,7 @@ bool CyPlayer::canFound(int iX, int iY) const
 	return m_pPlayer->canFound(iX, iY);
 }
 
-void CyPlayer::found(int x, int y) 
+void CyPlayer::found(int x, int y)
 {
 	m_pPlayer->found(x,y);
 }
@@ -1046,11 +1047,6 @@ void CyPlayer::changeTechScore(int iChange)
 	m_pPlayer->changeTechScore(iChange);
 }
 
-bool CyPlayer::isMADNukesEnabled() const
-{
-	return m_pPlayer->isEnabledMAD();
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();
@@ -1482,7 +1478,8 @@ int CyPlayer::getNumUnits() const
 
 CyUnit* CyPlayer::getUnit(int iID) const
 {
-	return new CyUnit(m_pPlayer->getUnit(iID));
+	CvUnit* unit = m_pPlayer->getUnit(iID);
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 python::list CyPlayer::groups() const

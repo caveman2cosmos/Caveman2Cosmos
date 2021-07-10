@@ -128,9 +128,6 @@ void CyGamePythonInterface()
 		.def("getInitTech", &CyGame::getInitTech)
 		.def("getInitWonders", &CyGame::getInitWonders)
 
-		.def("getLastNukeStrikePlot", &CyGame::getLastNukeStrikePlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setLastNukeStrikePlot", &CyGame::setLastNukeStrikePlot, "void (CyPlot* pPlot)")
-
 		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
 		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
 		.def("isForcedAIAutoPlay", &CyGame::isForcedAIAutoPlay, "bool (int iPlayer)")
@@ -262,7 +259,7 @@ void CyGamePythonInterface()
 		//.def("addPlayer", &CyGame::addPlayer, "void (int eNewPlayer, int eLeader, int eCiv, [bool bSetAlive = true]) - if bSetAlive = false new player isn't set to be alive and won't die if not given units or cities")
 		.def("changeHumanPlayer", &CyGame::changeHumanPlayer, "void ( int /*PlayerTypes*/ eOldHuman, int /*PlayerTypes*/ eNewHuman )" )
 		.def("addReplayMessage", &CyGame::addReplayMessage, "void (int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)" )
-		.def("log", &CyGame::log, "void log(str)")
+		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")

@@ -73,7 +73,7 @@ class CvFinanceAdvisor:
 		screen.addPanel("FinAdv_TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("FinAdv_BotPanel", "", "", True, False, 0, yRes - H_EDGE_PANEL, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("FinAdv_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_TITLE",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("FinAdv_Exit", "", uFontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("FinAdv_Exit", "", uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		import DebugUtils
 		if DebugUtils.isAnyDebugMode():

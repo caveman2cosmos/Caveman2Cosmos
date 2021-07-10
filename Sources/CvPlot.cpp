@@ -809,7 +809,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	// Evaluate potential upgrades
 	ImprovementTypes eUpgrade = NO_IMPROVEMENT;
 	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
-	const ImprovementTypes eMainUpgrade = (ImprovementTypes)GC.getImprovementInfo(eType).getImprovementUpgrade();
+	const ImprovementTypes eMainUpgrade = GC.getImprovementInfo(eType).getImprovementUpgrade();
 
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
@@ -1387,9 +1387,9 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = oldUnits.next(pUnitNode);
 
-			if (pLoopUnit != NULL && pLoopUnit != pNukeUnit && !pLoopUnit->isMADEnabled() && !pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
+			if (pLoopUnit != NULL && pLoopUnit != pNukeUnit && !pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
 			{
-				int iNukeDamage = 
+				int iNukeDamage =
 				(
 					GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE")
 					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1")
@@ -2809,7 +2809,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		{
 			const PlaceBonusTypes& obj = info.getPlaceBonusType(iI);
 
-			bInvalid = 
+			bInvalid =
 			(
 				obj.bRequiresAccess && !GET_PLAYER(getOwner()).hasBonus(obj.eBonus)
 			||
@@ -5838,7 +5838,7 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 		-
 		((getImprovementType() == eImprovement) ? getImprovementUpgradeProgress() : 0)
 	);
-	const int iUpgradeRate = 
+	const int iUpgradeRate =
 	(
 		ePlayer == NO_PLAYER ? 100
 		:
@@ -7211,7 +7211,7 @@ bool CvPlot::isImprovementDestructible() const
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
-	ImprovementTypes eOldImprovement = getImprovementType();
+	const ImprovementTypes eOldImprovement = getImprovementType();
 
 	if (eOldImprovement != eNewImprovement)
 	{
@@ -7222,7 +7222,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		if (eOldImprovement != NO_IMPROVEMENT && eNewImprovement != NO_IMPROVEMENT)
 		{
 			//Charge for Upgrade but be careful not to charge for a downgrade (pillage).
-			if ((ImprovementTypes)GC.getImprovementInfo(eOldImprovement).getImprovementUpgrade() == eNewImprovement)
+			if (GC.getImprovementInfo(eOldImprovement).getImprovementUpgrade() == eNewImprovement)
 			{
 				GET_PLAYER(getOwner()).changeGold(-GC.getImprovementInfo(eNewImprovement).getHighestCost());
 			}
@@ -7268,7 +7268,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			}
 			if (GC.getImprovementInfo(eNewImprovement).getBonusChange() != NO_BONUS)
 			{
-				BonusTypes eAddingBonus = (BonusTypes)GC.getImprovementInfo(eNewImprovement).getBonusChange();
+				const BonusTypes eAddingBonus = GC.getImprovementInfo(eNewImprovement).getBonusChange();
 				if (canHaveBonus(eAddingBonus, false))
 				{
 					setBonusType(eAddingBonus);
@@ -7412,112 +7412,73 @@ RouteTypes CvPlot::getRouteType() const
 
 void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 {
-	bool bOldRoute;
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool bOldSeaRoute;
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
-	int iI;
+	const RouteTypes eOldRoute = getRouteType();
 
-	RouteTypes eOldRoute = getRouteType();
-
-	if (eOldRoute != eNewValue)
+	if (eOldRoute == eNewValue)
 	{
-		bOldRoute = isRoute(); // XXX is this right???
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		bOldSeaRoute = isCanMoveLandUnits();
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
+		return;
+	}
+	const bool bOldRoute = eOldRoute != NO_ROUTE;
+	const bool bNewRoute = eNewValue != NO_ROUTE;
+	const bool bOldSeaRoute = isCanMoveLandUnits();
 
-		if ( isOwned() )
-		{
-			GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
-			updatePlotGroupBonus(false);
-		}
+	if (isOwned())
+	{
+		GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
+		updatePlotGroupBonus(false);
+	}
 
-		if ( eOldRoute != NO_ROUTE )
-		{
-			m_movementCharacteristicsHash ^= GC.getRouteInfo(eOldRoute).getZobristValue();
-		}
-		if ( eNewValue != NO_ROUTE )
-		{
-			m_movementCharacteristicsHash ^= GC.getRouteInfo(eNewValue).getZobristValue();
-		}
+	if (bOldRoute)
+	{
+		m_movementCharacteristicsHash ^= GC.getRouteInfo(eOldRoute).getZobristValue();
+	}
+	if (bNewRoute)
+	{
+		m_movementCharacteristicsHash ^= GC.getRouteInfo(eNewValue).getZobristValue();
+	}
 
-		m_eRouteType = eNewValue;
-		if ( isOwned() )
-		{
-			updatePlotGroupBonus(true);
-			GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
-		}
+	m_eRouteType = eNewValue;
 
-		for (iI = 0; iI < MAX_TEAMS; ++iI)
+	if (isOwned())
+	{
+		updatePlotGroupBonus(true);
+		GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
+	}
+
+	for (int iI = 0; iI < MAX_TEAMS; ++iI)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive() && isVisible((TeamTypes)iI, false))
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			setRevealedRouteType((TeamTypes)iI, eNewValue);
+		}
+	}
+	updateYield();
+
+	if (bUpdatePlotGroups && bOldRoute != bNewRoute)
+	{
+		updatePlotGroup();
+	}
+
+	if (GC.getGame().isDebugMode())
+	{
+		updateRouteSymbol(true, true);
+	}
+
+	if (bNewRoute)
+	{
+		CvEventReporter::getInstance().routeBuilt(eNewValue, getX(), getY());
+	}
+	else if (bOldSeaRoute)
+	{
+		foreach_(CvUnit* pLoopUnit, units())
+		{
+			// MIGHT need to also specify if the unit isn't cargo of a land unit that isn't cargo itself.
+			//	Shouldn't have to though because if the carrier would die, then that would dunk the carrier's units, likely in a fatal manner.
+			if (pLoopUnit->getDomainType() == DOMAIN_LAND && !pLoopUnit->isCargo() && !pLoopUnit->canMoveAllTerrain())
 			{
-				if (isVisible((TeamTypes)iI, false))
-				{
-					setRevealedRouteType((TeamTypes)iI, getRouteType());
-				}
+				pLoopUnit->kill(true);
 			}
 		}
-
-		updateYield();
-
-		if (bUpdatePlotGroups)
-		{
-			if (bOldRoute != isRoute())
-			{
-				updatePlotGroup();
-			}
-		}
-
-		if (GC.getGame().isDebugMode())
-		{
-			updateRouteSymbol(true, true);
-		}
-
-		if (getRouteType() != NO_ROUTE)
-		{
-			CvEventReporter::getInstance().routeBuilt(getRouteType(), getX(), getY());
-		}
-		// < M.A.D. Nukes Start >
-		else
-		{
-			setLayoutDirty(true);
-		}
-		// < M.A.D. Nukes End   >
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		if (eNewValue == NO_ROUTE && bOldSeaRoute)
-		{
-			foreach_(CvUnit* pLoopUnit, units())
-			{
-				if (pLoopUnit->getDomainType() == DOMAIN_LAND)
-				{
-					if (!pLoopUnit->isCargo() && !pLoopUnit->canMoveAllTerrain())
-					{
-						pLoopUnit->kill(true);//MIGHT need to also specify if the unit isn't cargo of a land unit that isn't cargo itself.  Shouldn't have to though because if the carrier would die, then that would dunk the carrier's units, likely in a fatal manner.
-					}
-				}
-			}
-		}
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	}
 }
 
@@ -8053,7 +8014,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	}
 	else
 	{
-		const RouteTypes eRoute = 
+		const RouteTypes eRoute =
 		(
 			bBestRoute && ePlayer != NO_PLAYER
 			?
@@ -9925,7 +9886,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			{
 				pCity->clearCultureDistanceCache();
 			}
-			
+
 			bFinished = true;
 		}
 	}
@@ -12083,13 +12044,13 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 		{
 			//in the case that improvements upgrade, use 2 upgrade levels higher for the
 			//yield calculations.
-			ImprovementTypes eUpgradeImprovement = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+			ImprovementTypes eUpgradeImprovement = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 			if (eUpgradeImprovement != NO_IMPROVEMENT)
 			{
 				//unless it's commerce on a low food tile, in which case only use 1 level higher
 				if ((eYield != YIELD_COMMERCE) || (getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION()))
 				{
-					ImprovementTypes eUpgradeImprovement2 = (ImprovementTypes)GC.getImprovementInfo(eUpgradeImprovement).getImprovementUpgrade();
+					const ImprovementTypes eUpgradeImprovement2 = GC.getImprovementInfo(eUpgradeImprovement).getImprovementUpgrade();
 					if (eUpgradeImprovement2 != NO_IMPROVEMENT)
 					{
 						eUpgradeImprovement = eUpgradeImprovement2;

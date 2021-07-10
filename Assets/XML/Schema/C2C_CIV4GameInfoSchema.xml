@@ -973,7 +973,6 @@
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoCapitalUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTaxRateUnhappiness" content="textOnly" dt:type="int"/>
-	<ElementType name="iRealCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflation" content="textOnly" dt:type="int"/>
 	<ElementType name="bChooseCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
@@ -984,7 +983,6 @@
 	<ElementType name="iCityOverLimitUnhappy" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignerUnhappyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLandmarkAnger" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bEnablesMADNukes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoForeignTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCorporations" content="textOnly" dt:type="boolean"/>
@@ -1228,14 +1226,12 @@
 		<element type="bAllowSlaves" minOccurs="0"/>
 		<element type="iFreedomFighterChange" minOccurs="0"/>
 		<element type="bFreedomFighter" minOccurs="0"/>
-		<element type="iRealCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iInflation" minOccurs="0"/>
 		<element type="bChooseCurrency" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iHurryInflationModifier" minOccurs="0"/>
 		<element type="iSharedCivicTradeRouteModifier" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
-		<element type="bEnablesMADNukes" minOccurs="0"/>
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
 		<element type="iTradeRoutes" minOccurs="0"/>

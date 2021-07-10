@@ -66,7 +66,7 @@ namespace MemTrack
 #endif
 
 //
-// operator global new and delete override for gamecore DLL 
+// operator global new and delete override for gamecore DLL
 //
 
 //void* __cdecl operator new(size_t size)
