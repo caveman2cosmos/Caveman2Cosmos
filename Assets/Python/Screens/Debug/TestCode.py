@@ -703,19 +703,20 @@ class TestCode:
 
 			#Singular <FreeBonus>
 			iBonus = CvBuildingInfo.getFreeBonus()
-			if iBonus != -1:
+			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1:
 				if aBonusList[iBonus] == -1:
 					aBonusList[iBonus] = iTechLoc
 				elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
 					aBonusList[iBonus] = iTechLoc
 
 			#<ExtraFreeBonuses>
-			for iBuilding in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-				iBonus = CvBuildingInfo.getExtraFreeBonus(iBuilding)
-				if aBonusList[iBonus] == -1:
-					aBonusList[iBonus] = iTechLoc
-				elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
-					aBonusList[iBonus] = iTechLoc
+			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1:
+				for iBuilding in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+					iBonus = CvBuildingInfo.getExtraFreeBonus(iBuilding)
+					if aBonusList[iBonus] == -1:
+						aBonusList[iBonus] = iTechLoc
+					elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
+						aBonusList[iBonus] = iTechLoc
 
 		for iBonus in xrange(len(aBonusList)):
 			iBonusTechLoc = self.checkBonusTechRequirementLocation(GC.getBonusInfo(iBonus))[2]
