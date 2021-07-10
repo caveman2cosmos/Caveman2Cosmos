@@ -21335,7 +21335,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>15750</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -21359,7 +21358,6 @@
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
-				<BuildingType>BUILDING_MONORAIL_STATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>

@@ -32,7 +32,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe")
 		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself")
-		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Buildings free building", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free")
+		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
@@ -866,7 +866,7 @@ class TestCode:
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
 				self.log(CvBuildingInfo.getType()+" has GOM OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
 
-	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building, that gives it for free
+	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -880,7 +880,7 @@ class TestCode:
 				iObsoleteFreeBuildingTechLoc = 999 # Never obsolete
 				if CvFreeBuilding.getObsoleteTech() != -1:
 					iObsoleteFreeBuildingTechLoc = GC.getTechInfo(CvFreeBuilding.getObsoleteTech()).getGridX()
-				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc:
+				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc and CvFreeBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free building "+CvFreeBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeBuildingTechLoc))
 
 			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
@@ -889,7 +889,7 @@ class TestCode:
 				iObsoleteFreeAreaBuildingTechLoc = 999 # Never obsolete
 				if CvFreeAreaBuilding.getObsoleteTech() != -1:
 					iObsoleteFreeAreaBuildingTechLoc = GC.getTechInfo(CvFreeAreaBuilding.getObsoleteTech()).getGridX()
-				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc:
+				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc and CvFreeAreaBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeAreaBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
 

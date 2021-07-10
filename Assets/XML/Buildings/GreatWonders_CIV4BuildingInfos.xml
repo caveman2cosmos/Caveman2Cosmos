@@ -1171,7 +1171,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<iCost>4620</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3340,7 +3339,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
+			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6023,7 +6022,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PAPER</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>708</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -15996,7 +15995,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BERLIN_WALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BERLIN_WALL</MovieDefineTag>
-			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
+			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
@@ -17533,7 +17532,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAGINOTLINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
-			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
