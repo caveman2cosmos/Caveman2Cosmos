@@ -1604,6 +1604,11 @@ OrderData CyCity::getOrderFromQueue(int iIndex) const
 	return m_pCity->getOrderAt(iIndex);
 }
 
+bool CyCity::AI_isEmphasizeSpecialist(int /*SpecialistTypes*/ iIndex) const
+{
+	return m_pCity->AI_isEmphasizeSpecialist((SpecialistTypes)iIndex);
+}
+
 bool CyCity::AI_isEmphasize(int iEmphasizeType) const
 {
 	return m_pCity->AI_isEmphasize((EmphasizeTypes)iEmphasizeType);

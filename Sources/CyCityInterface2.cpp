@@ -15,6 +15,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
 		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::return_by_value>(), "OrderData* (int iIndex)")  // only use local
 
+		.def("AI_isEmphasizeSpecialist", &CyCity::AI_isEmphasizeSpecialist, "bool (int /*SpecialistTypes*/ eIndex)")
 		.def("AI_isEmphasize", &CyCity::AI_isEmphasize, "bool (int iEmphasizeType)")
 		.def("AI_countBestBuilds", &CyCity::AI_countBestBuilds, "int (CyArea* pArea)")
 		.def("AI_cityValue", &CyCity::AI_cityValue, "int ()")

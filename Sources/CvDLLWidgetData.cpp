@@ -769,13 +769,11 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		break;
 
 	case WIDGET_CITIZEN:
-	case WIDGET_DISABLED_CITIZEN:
 		doEmphasizeSpecialist(widgetDataStruct);
 		break;
 
+	case WIDGET_DISABLED_CITIZEN:
 	case WIDGET_FREE_CITIZEN:
-		break;
-
 	case WIDGET_ANGRY_CITIZEN:
 		break;
 

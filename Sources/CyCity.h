@@ -424,6 +424,7 @@ public:
 
 	int getLiberationPlayer(bool bConquest) const;
 
+	bool AI_isEmphasizeSpecialist(int /*SpecialistTypes*/ iIndex) const;
 	bool AI_isEmphasize(int iEmphasizeType) const;
 	int AI_countBestBuilds(const CyArea& kArea) const;
 	int AI_cityValue() const;
