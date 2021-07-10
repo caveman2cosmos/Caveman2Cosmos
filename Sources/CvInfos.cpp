@@ -22094,14 +22094,7 @@ bool CvTraitInfo::isCivilizationTrait() const
 
 bool CvTraitInfo::isAllowsInquisitions() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bAllowsInquisitions)
-		{
-				return false;
-		}
-	}
-	return m_bAllowsInquisitions;
+	return m_bAllowsInquisitions && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isCoastalAIInfluence() const
@@ -22114,120 +22107,49 @@ bool CvTraitInfo::isBarbarianSelectionOnly() const
 	return m_bBarbarianSelectionOnly;
 }
 
-//Team Project (6)
 bool CvTraitInfo::isCitiesStartwithStateReligion() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bCitiesStartwithStateReligion)
-		{
-				return false;
-		}
-	}
-
-	return m_bCitiesStartwithStateReligion;
+	return m_bCitiesStartwithStateReligion && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isDraftsOnCityCapture() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bDraftsOnCityCapture)
-		{
-				return false;
-		}
-	}
-
-	return m_bDraftsOnCityCapture;
+	return m_bDraftsOnCityCapture && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperWorldWonder() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bFreeSpecialistperWorldWonder)
-		{
-				return false;
-		}
-	}
-
-	return m_bFreeSpecialistperWorldWonder;
+	return m_bFreeSpecialistperWorldWonder && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperNationalWonder() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bFreeSpecialistperNationalWonder)
-		{
-				return false;
-		}
-	}
-
-	return m_bFreeSpecialistperNationalWonder;
+	return m_bFreeSpecialistperNationalWonder && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperTeamProject() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bFreeSpecialistperTeamProject)
-		{
-				return false;
-		}
-	}
-
-	return m_bFreeSpecialistperTeamProject;
+	return m_bFreeSpecialistperTeamProject && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isExtraGoody() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bExtraGoody)
-		{
-				return false;
-		}
-	}
-
-	return m_bExtraGoody;
+	return m_bExtraGoody && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
-//Team Project (5)
 bool CvTraitInfo::isAllReligionsActive() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bAllReligionsActive)
-		{
-				return false;
-		}
-	}
-	return m_bAllReligionsActive;
+	return m_bAllReligionsActive && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isBansNonStateReligions() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (!isNegativeTrait() && m_bBansNonStateReligions)
-		{
-				return false;
-		}
-	}
-	return m_bBansNonStateReligions;
+	return m_bBansNonStateReligions && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreedomFighter() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
-	{
-		if (isNegativeTrait() && m_bFreedomFighter)
-		{
-				return false;
-		}
-	}
-	return m_bFreedomFighter;
+	return m_bFreedomFighter && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
 }
 
 // bool vector without delayed resolution
