@@ -653,6 +653,13 @@ class TestCode:
 				if aBuildingRequirementReplacementList[i] not in aBuildingRequirementList:
 					aBuildingRequirementReplacementUniqueList.append(aBuildingRequirementReplacementList[i])
 					
+			#Get replacements of base building
+			aBuildingBaseReplacementList = []
+			sReplacedBaseBuilding = ""
+			for iBuildingReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(iBuildingReplacement)
+				aBuildingBaseReplacementList.append(GC.getBuildingInfo(iReplacementBuilding).getType())
+					
 			#Check if tech unlock of replacement is earlier than building obsoletion. Replacements listed aren't part of building requirements
 			for i in xrange(len(aBuildingRequirementReplacementUniqueList)):
 				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingRequirementReplacementUniqueList[i])
@@ -660,8 +667,9 @@ class TestCode:
 				iTechReplacementObsLoc = 999
 				if CvBuildingReplacementInfo.getObsoleteTech() != -1:
 					iTechReplacementObsLoc = GC.getTechInfo(CvBuildingReplacementInfo.getObsoleteTech()).getGridX()
-				if iTechObsLoc > iTechLoc and iTechLoc > 0:
-					self.log(CvBuildingInfo.getType()+" requir. replaced by "+CvBuildingReplacementInfo.getType()+" base obsoletion: "+str(iTechObsLoc)+", requirement replacement unlock/obsoletion: "+str(iTechLoc)+"/"+str(iTechReplacementObsLoc)+", replacements involved: "+str(aBuildingReplacementList))
+				#Log if requirement is replaced before building obsoletes, if replacement of requirement doesn't replace building itself, and if there isn't common replacement of building requirement and base building replacement.
+				if iTechObsLoc > iTechLoc and iTechLoc > 0 and CvBuildingInfo.getType()!= CvBuildingReplacementInfo.getType() and CvBuildingReplacementInfo.getType() not in aBuildingBaseReplacementList:
+					self.log(CvBuildingInfo.getType()+" requir. replaced by "+CvBuildingReplacementInfo.getType()+" base obsoletion: "+str(iTechObsLoc)+", requirement replacement unlock/obsoletion: "+str(iTechLoc)+"/"+str(iTechReplacementObsLoc)+", replacements involved: "+str(aBuildingReplacementList)+" Base replacements: "+str(aBuildingBaseReplacementList))
 
 	#Building - Civic requirements
 	def checkBuildingCivicRequirements(self):
