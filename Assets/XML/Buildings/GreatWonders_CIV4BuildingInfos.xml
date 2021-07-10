@@ -3873,6 +3873,7 @@
 				<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>

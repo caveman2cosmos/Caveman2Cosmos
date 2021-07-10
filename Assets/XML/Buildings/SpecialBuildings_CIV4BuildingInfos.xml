@@ -15290,6 +15290,7 @@
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
@@ -15504,9 +15505,16 @@
 				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
+				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
+				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
+				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
+				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
+				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>

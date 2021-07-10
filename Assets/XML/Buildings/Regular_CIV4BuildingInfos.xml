@@ -1727,6 +1727,10 @@
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_DOCTOR</ID>
 					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SURGICAL_OFFICE</ID>
+					</Has>
 				</Or>
 			</ConstructCondition>
 			<PrereqOrBuildings>
@@ -9668,6 +9672,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SOCIAL_NETWORKS</BuildingType>
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
+				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2205</iCost>
 			<iHappiness>4</iHappiness>

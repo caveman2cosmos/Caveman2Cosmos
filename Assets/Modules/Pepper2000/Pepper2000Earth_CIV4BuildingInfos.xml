@@ -25417,7 +25417,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
