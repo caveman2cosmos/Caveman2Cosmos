@@ -655,7 +655,6 @@ class TestCode:
 					
 			#Get replacements of base building
 			aBuildingBaseReplacementList = []
-			sReplacedBaseBuilding = ""
 			for iBuildingReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(iBuildingReplacement)
 				aBuildingBaseReplacementList.append(GC.getBuildingInfo(iReplacementBuilding).getType())
