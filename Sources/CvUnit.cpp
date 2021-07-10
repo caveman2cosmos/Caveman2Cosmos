@@ -20281,7 +20281,7 @@ int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	return info == NULL ? 0 : info->m_iExtraTerrainWorkPercent + info->m_iTerrainWorkPercent;
+	return info == NULL ? 0 : info->m_iExtraTerrainWorkPercent;
 }
 
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
@@ -20305,7 +20305,7 @@ int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	return info == NULL ? 0 : info->m_iExtraFeatureWorkPercent + info->m_iFeatureWorkPercent;
+	return info == NULL ? 0 : info->m_iExtraFeatureWorkPercent;
 }
 
 void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
@@ -23280,7 +23280,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainWorkPercent, "terrainWorkPercent");
+				// SAVEBREAK - Toffer - Remove
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainWorkPercent, SAVE_VALUE_TYPE_INT);
+				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 			}
@@ -23302,7 +23304,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
+				// SAVEBREAK - Toffer - Remove
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureWorkPercent, SAVE_VALUE_TYPE_INT);
+				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 			}
@@ -24801,7 +24805,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainDefensePercent, "extraDefensePercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainWorkPercent, "terrainWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 		}
@@ -24815,7 +24818,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureDefensePercent, "extraDefensePercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureWorkPercent, "featureWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 		}
