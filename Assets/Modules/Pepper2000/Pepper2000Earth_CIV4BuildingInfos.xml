@@ -15130,10 +15130,6 @@
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AEROSPACE_COMPLEX</Type>
-			<ObsoleteTech>TECH_ENDOGENOUS_EUCLIDEAN_PROPULSION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_AIRFIELD</Type>
 			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 		</BuildingInfo>
@@ -15724,7 +15720,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FALCONRY_SCHOOL</Type>
-			<ObsoleteTech>TECH_UNMANNED_AIR_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHT_SCHOOL</Type>
@@ -15904,10 +15900,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BREEDING_ELEPHANT</Type>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_BREEDING_EMU</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17784,14 +17776,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LADYBUG</Type>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LADYBUGX</Type>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 			</ReplacementBuildings>

@@ -2877,7 +2877,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LEVITATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -7462,7 +7461,7 @@
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
 				<BuildingType>BUILDING_HYPOCAUSTS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>252</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -28777,7 +28776,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAPES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ObsoleteTech>TECH_UNMANNED_AIR_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 			</ReplacementBuildings>
@@ -33671,7 +33670,7 @@
 				<BuildingType>BUILDING_CASINO</BuildingType>
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
@@ -33925,7 +33924,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_APOCALYPTIC_PATHOGENS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
 			</ReplacementBuildings>
@@ -40967,7 +40966,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATED_URBANIZATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_DYE</Bonus>
@@ -40982,6 +40980,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_HIGHWAY</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3805</iCost>
 			<YieldChanges>
@@ -87867,7 +87866,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAST_BREEDER_REACTOR</ArtDefineTag>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
