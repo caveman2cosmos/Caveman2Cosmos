@@ -22606,7 +22606,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTerrainDefensePercent(((TerrainTypes)iI), (kPromotion.getTerrainDefensePercent(iI) * iChange));
 
 		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkPercent(iI) * iChange));
-		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkRateModifierChangeType(iI) * iChange));
 
 		changeTerrainDoubleMoveCount(((TerrainTypes)iI), ((kPromotion.getTerrainDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnTerrainType(((TerrainTypes)iI), (kPromotion.getWithdrawOnTerrainTypeChange(iI) * iChange));

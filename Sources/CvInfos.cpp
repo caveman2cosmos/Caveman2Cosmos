@@ -4579,35 +4579,6 @@ bool CvPromotionInfo::isAidChange(int iProperty) const
 }
 #endif
 
-int CvPromotionInfo::getNumTerrainWorkRateModifierChangeTypes() const
-{
-	return m_aTerrainWorkRateModifierChangeTypes.size();
-}
-
-int CvPromotionInfo::getTerrainWorkRateModifierChangeType(int iTerrain) const
-{
-	for (TerrainModifierArray::const_iterator it = m_aTerrainWorkRateModifierChangeTypes.begin(); it != m_aTerrainWorkRateModifierChangeTypes.end(); ++it)
-	{
-		if ((*it).first == (TerrainTypes)iTerrain)
-		{
-			return (*it).second;
-		}
-	}
-	return 0;
-}
-
-bool CvPromotionInfo::isTerrainWorkRateModifierChangeType(int iTerrain) const
-{
-	for (TerrainModifierArray::const_iterator it = m_aTerrainWorkRateModifierChangeTypes.begin(); it != m_aTerrainWorkRateModifierChangeTypes.end(); ++it)
-	{
-		if ((*it).first == (TerrainTypes)iTerrain)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
 int CvPromotionInfo::getNumBuildWorkRateModifierChangeTypes() const
 {
 	return m_aBuildWorkRateModifierChangeTypes.size();
@@ -5296,10 +5267,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalPairVector<AidArray, PropertyTypes, int>(&m_aAidChanges, L"AidChanges");
 #endif
 	//pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(m_aAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes");
-
-//Team Project (4)
-		//WorkRateMod
-	pXML->SetOptionalPairVector<TerrainModifierArray, TerrainTypes, int>(&m_aTerrainWorkRateModifierChangeTypes, L"TerrainWorkRateModifierChangeTypes");
 
 	pXML->SetOptionalPairVector<BuildModifierArray, BuildTypes, int>(&m_aBuildWorkRateModifierChangeTypes, L"BuildWorkRateModifierChangeTypes");
 
@@ -6344,19 +6311,6 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 		}
 	}
 
-
-//Team Project (4)
-		//WorkRateMod
-	if (getNumTerrainWorkRateModifierChangeTypes()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumTerrainWorkRateModifierChangeTypes(); i++)
-		{
-			TerrainTypes eTerrain = ((TerrainTypes)i);
-			int iChange = pClassInfo->getTerrainWorkRateModifierChangeType(i);
-			m_aTerrainWorkRateModifierChangeTypes.push_back(std::make_pair(eTerrain, iChange));
-		}
-	}
-
 	if (getNumBuildWorkRateModifierChangeTypes()==0)
 	{
 		for (int i=0; i < pClassInfo->getNumBuildWorkRateModifierChangeTypes(); i++)
@@ -6855,7 +6809,6 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 #endif
 //Team Project (4)
 		//WorkRateMod
-	CheckSumC(iSum, m_aTerrainWorkRateModifierChangeTypes);
 	CheckSumC(iSum, m_aBuildWorkRateModifierChangeTypes);
 	CheckSumC(iSum, m_aVisibilityIntensityChangeTypes);
 	CheckSumC(iSum, m_aInvisibilityIntensityChangeTypes);

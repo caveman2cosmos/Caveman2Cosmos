@@ -1001,11 +1001,6 @@ public:
 	int getAidChange(int iProperty) const;
 	bool isAidChange(int iProperty) const;
 #endif
-	//Team Project (4)
-	//WorkRateMod
-	int getNumTerrainWorkRateModifierChangeTypes() const;
-	int getTerrainWorkRateModifierChangeType(int iTerrain) const;
-	bool isTerrainWorkRateModifierChangeType(int iTerrain) const;
 
 	int getNumBuildWorkRateModifierChangeTypes() const;
 	int getBuildWorkRateModifierChangeType(int iBuild) const;
@@ -1391,9 +1386,7 @@ protected:
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	AidArray m_aAidChanges;
 #endif
-	//Team Project (4)
-		//WorkRateMod
-	TerrainModifierArray m_aTerrainWorkRateModifierChangeTypes;
+
 	BuildModifierArray m_aBuildWorkRateModifierChangeTypes;
 	InvisibilityArray m_aVisibilityIntensityChangeTypes;
 	InvisibilityArray m_aInvisibilityIntensityChangeTypes;

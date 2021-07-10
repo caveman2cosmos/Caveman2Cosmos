@@ -14896,7 +14896,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iTerrainAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTerrainAttackPercent(iI);
 			iTerrainDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTerrainDefensePercent(iI);
 			iTerrainWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTerrainWorkPercent(iI);
-			iTerrainWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTerrainWorkRateModifierChangeType(iI);
 			iWithdrawOnTerrain += GC.getPromotionInfo(linePromotionsOwned[iJ]).getWithdrawOnTerrainTypeChange(iI);
 		}
 		if (bIsTerrainDoubleMove)
