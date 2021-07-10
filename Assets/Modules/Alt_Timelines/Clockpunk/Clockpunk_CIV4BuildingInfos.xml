@@ -146,7 +146,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

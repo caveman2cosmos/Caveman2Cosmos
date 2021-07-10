@@ -7,7 +7,23 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUXURY_FURNITURE_WORKSHOP</Type>
-			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TERRACOTTA_WORKSHOP</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TERRACOTTA_FACTORY</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MANUFACTURING_DISTRICT</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORGAN_HALL</Type>
@@ -27,10 +43,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSMOTIC_POWER_PLANT</Type>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WIND_FARM</Type>
 			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -160,6 +172,7 @@
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -932,7 +945,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<iCost>1410</iCost>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -1841,6 +1854,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -2134,7 +2148,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2305</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -2171,7 +2185,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -2208,7 +2222,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>9105</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -4236,7 +4250,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>4145</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4505,7 +4519,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4543,7 +4557,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4580,7 +4594,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4592,9 +4605,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
-			</ReplacementBuildings>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4617,7 +4627,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4654,7 +4664,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4691,7 +4701,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LIQUID_METALS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -4974,7 +4984,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>6155</iCost>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -5017,7 +5027,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iCost>6155</iCost>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
@@ -5072,7 +5082,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<FreeBonus>BONUS_SEASONING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -5571,9 +5581,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENETIC_PROFILING</BuildingType>
 			</ReplacementBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5633,9 +5644,10 @@
 				<iCommerce>-2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8146,7 +8158,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MICROGENERATORS</PrereqTech>
 			<iCost>2625</iCost>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
@@ -11912,9 +11924,11 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGHWAY</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12173,6 +12187,7 @@
 			<iHealth>3</iHealth>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
@@ -13105,21 +13120,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRACOTTA_WORKSHOP</Type>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POTTERS_WORKSHOP</Type>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POTTER</Type>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
@@ -13166,25 +13181,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNERY</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CASINO</Type>
-			<ObsoleteTech>TECH_EXOCORTEX_NETWORKS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_CAT_BREEDER</Type>
-			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
+			<ObsoleteTech>TECH_MYTHOLOCIAL_BEASTIARY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOG_BREEDER</Type>
-			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
+			<ObsoleteTech>TECH_MYTHOLOCIAL_BEASTIARY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
 			</ReplacementBuildings>
@@ -13195,7 +13206,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CEMENT_MILL</Type>
-			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
@@ -13248,7 +13259,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMMUNITY_GARDEN</Type>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoleteTech>TECH_ORGANIC_CITIES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPOST_DUMP</Type>
@@ -13256,7 +13267,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONCRETE_MASON</Type>
-			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
@@ -13300,7 +13311,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRIED_FRUIT</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</ReplacementBuildings>
@@ -13315,6 +13326,13 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FAMILY_FARM</Type>
@@ -13337,7 +13355,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISHOIL_MAKER</Type>
-			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -13417,10 +13435,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERNATIONAL_PORT</Type>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_INTERROGATION_BUILDING</Type>
 			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 		</BuildingInfo>
@@ -13439,10 +13453,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_LIQUORSTORE</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MAJOR_LEAGUE_STADIUM</Type>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
@@ -13477,10 +13487,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_SATELLITES</Type>
 			<ObsoleteTech>TECH_PHOTONIC_SATELLITES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MINOR_LEAGUE_STADIUM</Type>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_MILL</Type>
@@ -13657,10 +13663,6 @@
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLAR_SATELLITE</Type>
-			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SPEAKEASY</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 		</BuildingInfo>
@@ -13714,6 +13716,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BREWERY</Type>
@@ -14322,49 +14327,49 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURGER_JOINT</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAFE</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CITY_BISTRO</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ICECREAM_PARLOR</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PANCAKE_HOUSE</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIZZA_PARLOR</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TACO_HUT</Type>
-			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_RESTAURANT</BuildingType>
 			</ReplacementBuildings>
@@ -14434,21 +14439,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAMATERIAL_FOUNDRY</Type>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUID_METALS_FOUNDRY</Type>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAPHENE_FACTORY</Type>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14497,7 +14502,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERSTRONG_ALLOY_FOUNDRY</Type>
-			<ObsoleteTech>TECH_FEMTOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14529,14 +14534,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRONIC_SECURITY_SYSTEM</Type>
-			<ObsoleteTech>TECH_MASS_SURVEILLANCE</ObsoleteTech>
+			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COCK_FIGHTING</Type>
-			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLF_COURSE</Type>
@@ -14563,7 +14571,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARPENTERS_WORKSHOP</Type>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SURVEYOR</Type>
@@ -14581,7 +14589,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COAST_GUARD_STATION</Type>
-			<ObsoleteTech>TECH_ADVANCED_WARMACHINES</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_DEFENSES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 			</ReplacementBuildings>
@@ -14603,22 +14611,18 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REEDUCATION_CENTER</Type>
-			<ObsoleteTech>TECH_ORGANIC_CITIES</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CYBERNETIC_PRISON</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOCKSMITH</Type>
-			<ObsoleteTech>TECH_AUTOMATED_URBANIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CUSTOM_HOUSE</Type>
-			<ObsoleteTech>TECH_HYPERSONIC_FLIGHT</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLING_PLACE</Type>
@@ -14713,6 +14717,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_AUGMENTED_EQUIPMENT_CENTER</Type>
 			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DELIVERY_DRONE_CONTROL_CENTER</Type>
@@ -14721,14 +14728,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SHOPPING_DRONE_CONTROL_CENTER</Type>
 			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_JADE_MERCHANT_IMPORTER</Type>
-			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_JADE_MERCHANT_VICINITY</Type>
-			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COFFEE_SHOP</Type>
@@ -14810,6 +14809,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CIGAR_ROLLER</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COPY_STORE</Type>
@@ -14902,7 +14904,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WINTER_LODGE</Type>
-			<ObsoleteTech>TECH_LUNAR_TOURISM</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNDERWATER_HOTEL</Type>
@@ -14919,10 +14921,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_TRAFFIC_CAMERAS</Type>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_LIGHTHOUSE</Type>
-			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHAMBER_OF_COMMERCE</Type>
@@ -14953,6 +14951,10 @@
 			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_TATTOO_PARLOR</Type>
+			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_ART_MUSEUM</Type>
 			<ObsoleteTech>TECH_WHOLE_BRAIN_EMULATION</ObsoleteTech>
 		</BuildingInfo>
@@ -14962,7 +14964,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHICA_APPAREL_SHOP</Type>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEON_BOTIQUE</Type>
@@ -14974,23 +14976,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIERCING_SHOP</Type>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMATRONICS_WORKSHOP</Type>
 			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ART_GALLERY</Type>
-			<ObsoleteTech>TECH_HOLOGRAPHICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_ART_PATRONAGE</Type>
 			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RECORDING_STUDIO</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAMP_GROUNDS</Type>
@@ -15003,18 +14997,13 @@
 		<BuildingInfo>
 			<Type>BUILDING_COUNTRY_CLUB</Type>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHIC_THEATER</Type>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MOVIETHEATRE</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_OPERA_HOUSE</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VR_THEATER</Type>
@@ -15039,10 +15028,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_WAVE_RACING</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_RACETRACK</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GO_KART_TRACK</Type>
@@ -15150,7 +15135,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AIRFIELD</Type>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHT_SIMULATOR</Type>
@@ -15257,10 +15242,6 @@
 			<ObsoleteTech>TECH_AMPHIBIOUS_WARFARE</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HARBORMASTER_OFFICE</Type>
-			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_POLICE_DOG</Type>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 		</BuildingInfo>
@@ -15275,14 +15256,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_FANATIC_COMPOUND</Type>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MODERN_STABLE</Type>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NAVAL_ACADEMY</Type>
-			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ULTRAFUEL_REFINERY</Type>
@@ -15320,49 +15293,49 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATTAN_GROVE</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_REED</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUBBER_PLANTATION</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_STRAW</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_BARK</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATHERER_VINE</Type>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_EVOLUTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISHMONGER</Type>
-			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERDING_DOGS</Type>
@@ -15441,10 +15414,6 @@
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HUNTERS_CAMP</Type>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FARM_SUPPLY</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 		</BuildingInfo>
@@ -15479,7 +15448,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FISHTRAPS</Type>
-			<ObsoleteTech>TECH_AQUACULTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEIR</Type>
@@ -15508,10 +15477,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_SERVICES</Type>
 			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WELFARE_OFFICE</Type>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVEYARD</Type>
@@ -15593,12 +15558,8 @@
 			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GARBAGE_DUMP</Type>
-			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_RECYCLING_CENTER</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WASTE_COMPACTOR</Type>
@@ -15607,18 +15568,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_WASTE_OFFICE</Type>
 			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AQUEDUCT</Type>
-			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STATION_PUMP</Type>
-			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WATER_TOWER</Type>
-			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUMBER_CAMP</Type>
@@ -15678,10 +15627,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GLAZE_MAKER</Type>
-			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_BIOFUEL_PLANT</Type>
 			<ObsoleteTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</ObsoleteTech>
 		</BuildingInfo>
@@ -15718,7 +15663,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLARVOLT_ROOF</Type>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_QUANTUM_DOTS</BonusType>
@@ -15755,10 +15699,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_LEARNING_CENTER</Type>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_ACTORS</Type>
 			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULINARY_SCHOOL</Type>
@@ -15791,26 +15741,17 @@
 		<BuildingInfo>
 			<Type>BUILDING_TELECOURSE_STUDIO</Type>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WIKIA</Type>
-			<ObsoleteTech>TECH_KNOWLEDGE_MERCANTILISM</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLOGS</Type>
 			<ObsoleteTech>TECH_BINARY_SEMIOTICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PRESS_AGENCY</Type>
-			<ObsoleteTech>TECH_BINARY_SEMIOTICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_PROPAGANDA_OFFICE</Type>
 			<ObsoleteTech>TECH_BINARY_SEMIOTICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AQUARIUM</Type>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENTOMOLOGY_LAB</Type>
@@ -15819,14 +15760,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_HERPETOLOGY_LAB</Type>
 			<ObsoleteTech>TECH_BIOMIMETICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MARINEBIOLOGY_LAB</Type>
-			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MARINE_INSTITUTE</Type>
-			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUSSEL_RAFTS</Type>
@@ -15841,20 +15774,8 @@
 			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ACCELERATOR</Type>
-			<ObsoleteTech>TECH_UNIFICATION_PHYSICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ANTHROPOLOGY_LAB</Type>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_ARCHAEOLOGY_LAB</Type>
 			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DEEPSEA_LAB</Type>
-			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARABIAN_MADRASSA</Type>
@@ -15904,12 +15825,8 @@
 			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_QUANTUM_LAB</Type>
-			<ObsoleteTech>TECH_UNIFICATION_PHYSICS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_DRYING_FRAME</Type>
-			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
@@ -15941,18 +15858,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROGRAMMABLE_PLANT_FARM</Type>
 			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CHEMOSYNTHESIS_PLANT_FARM</Type>
-			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WATER_TREATMENT_PLANT</Type>
-			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEWER_SYSTEM</Type>
-			<ObsoleteTech>TECH_LUMINAL_BEINGS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRONICS_STORE</Type>
@@ -16114,10 +16019,6 @@
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EMU_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_CAMP</Type>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 		</BuildingInfo>
@@ -16167,7 +16068,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSTRICH_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARAKEET</Type>
@@ -16223,7 +16124,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAUXITE_MINE</Type>
-			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BORAX_MINE</Type>
@@ -16231,10 +16132,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_URANIUM_MINE</Type>
-			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_TRUFFLE</Type>
@@ -16319,6 +16216,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_ANGORA_GOAT_BREEDER</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANGORA_RABBIT_BREEDER</Type>
@@ -16326,7 +16226,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRDOFPARADISE</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16337,14 +16237,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANARY</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COW_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16355,21 +16255,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUCK</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOSE_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16380,7 +16280,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOAT_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SYNTHETIC_SENTIENCE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16407,28 +16307,28 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSTRICH_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARROT</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIG_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16443,21 +16343,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REINDEER_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEEP_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURKEY_FARM</Type>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -16465,6 +16365,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_WOOLY_PIG_BREEDER</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YAK_FARM</Type>
@@ -16472,179 +16375,179 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ABALONE_DIGGERS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCHOVY_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLAM_DIGGERS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONCH_DIVER</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_TRAPS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EEL_TRAPS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLOUNDER_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIANTCLAM_DIVER</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOBSTER_TRAPS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACKEREL_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARLIN_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUREX_DIVER</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARROTFISH_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEARL_DIVERS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRAWN_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SALMON_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SARDINE_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEABASS_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHARK_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHRIMP_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAPPER_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPONGE_GATHERER</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SQUID_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SWORDFISH_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TUNA_NETS</Type>
-			<ObsoleteTech>TECH_UNMANNED_NAVAL_VEHICLES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</ReplacementBuildings>
@@ -17559,6 +17462,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_INDIGO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
 			</ReplacementBuildings>
@@ -18093,385 +17999,403 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINUM_FACTORY</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINUMSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_BRASS</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRASSSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRONZESMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_ELECTRUM</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRUMSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_GOLD</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLDSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_PLATINUM</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUMSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILVERSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_SILVER</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_TITANIUM</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUMSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_LEAD</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEADSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_TIN</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TINSMITH</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOSSIL_AMBER</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMETHYST_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAESIUM_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROMITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CITRINE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBALT_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIAMOND_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMERALD_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLUORITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GARNET_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEODE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLD_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAPHITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JET_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BERLINITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAZULILTE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEAD_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LITHIUM_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGNESIUM_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGNETITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANGANESE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MASCAGNITE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NICKLE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONYX_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUM_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUARTZ_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUBY_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAPPIRE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILVER_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIN_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUM_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOPAZ_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TUNGSTEN_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURQOISE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZINC_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINIUM_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18489,7 +18413,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLD_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18500,7 +18424,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEAD_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18521,7 +18445,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUM_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18535,7 +18459,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILVER_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18546,14 +18470,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIN_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUM_RECLAMATION_PLANT</Type>
-			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18626,10 +18550,6 @@
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERNET_TV_STATION</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_LOCAL_RADIO_STATION</Type>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
@@ -18641,286 +18561,274 @@
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TV_STUDIO</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ANIMATION_STUDIO</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CGI_ANIMATION_STUDIO</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_LAW_FIRM</Type>
-			<ObsoleteTech>TECH_SOCIAL_CALCULUS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AI_LAWYER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAW_SCHOOL</Type>
-			<ObsoleteTech>TECH_SOCIAL_CALCULUS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AI_LAWYER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOCAL_COURTHOUSE</Type>
-			<ObsoleteTech>TECH_SOCIAL_CALCULUS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AI_LAWYER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLICE_DRONE_CONTROL_CENTER</Type>
-			<ObsoleteTech>TECH_PHOTONIC_SATELLITES</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BASE_JUMPING_SITE</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BASKETBALL_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOSSABALL_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOWLING_ALLEY</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOXING_RING</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUNGEE_JUMPING_SITE</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRICKET_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROQUET_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CURLING_SHEET</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DROP_ZONE</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GYM</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOCKEY_RINK</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAIALAI_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LACROSSE_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASER_TAG_ARENA</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINI_GOLF_COURSE</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOUNTAIN_CLIMBING</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAINTBALL_ARENA</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PING_PONG_ARENA</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUBLIC_POOL</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RECREATION_CENTER</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RIVER_RAFTING_DOCK</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROLLER_DERBY</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUGBY_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SKATE_PARK</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SKI_RESORT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAMBALL_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOCCER_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOFTBALL_FIELD</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TENNIS_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VELODROME</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOLLEYBALL_COURT</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WATER_POLO_POOL</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOGA_SCHOOL</Type>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -18943,6 +18851,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEWARDS_OFFICE</Type>
+			<ObsoleteTech>TECH_MARXISM</ObsoleteTech>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SPYMASTERS_OFFICE</Type>
 			<ObsoleteTech>TECH_MARXISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20882,9 +20794,12 @@
 			</YieldChanges>
 			<FreeBuilding>BUILDING_CONTROL_CENTER</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LIQUID_METALS_FOUNDRY</BuildingType>
 				<BuildingType>BUILDING_CONTROL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LIQUID_METALS_FOUNDRY</BuildingType>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_NANOTRUSSES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -21523,7 +21438,6 @@
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
-				<BuildingType>BUILDING_MONORAIL_STATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
@@ -21617,9 +21531,10 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SELF_CONSTRUCTION_FIRM</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25103,7 +25018,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JADE_MINE</Type>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
@@ -25155,7 +25070,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAIL_FACTORY</Type>
-			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
@@ -25195,7 +25110,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANDY_STORE</Type>
-			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
@@ -25427,6 +25341,104 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BOTANICAL_GARDENS</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHAMPAGNE_WINERY</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VINTAGE_RED_WINERY</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VINTAGE_WHITE_WINERY</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FIDIAS</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HARAPPAN_FAKE_GEMS</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_JADE_MASK</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MING_VASE_WORKSHOP</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_RED_AND_BLACK</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DYE_MAKER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ELEPHANT_TRAINER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NINEVEH</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

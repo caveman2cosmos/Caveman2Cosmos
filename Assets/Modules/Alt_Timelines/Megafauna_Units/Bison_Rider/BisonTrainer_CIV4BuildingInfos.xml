@@ -11,7 +11,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BISON_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -53,7 +53,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -94,7 +94,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

@@ -32,7 +32,7 @@ void CyBoolExprPythonInterface()
 		.def("getFirstExpr", &BoolExprAnd::getFirstExpr, python::return_value_policy<python::reference_existing_object>())
 		.def("getSecondExpr", &BoolExprAnd::getSecondExpr, python::return_value_policy<python::reference_existing_object>())
 	;
-	
+
 	python::class_<BoolExprOr, python::bases<BoolExpr> >("CyBoolExprOr")
 		.def("getType", &BoolExprOr::getType)
 		.def("getFirstExpr", &BoolExprOr::getFirstExpr, python::return_value_policy<python::reference_existing_object>())
