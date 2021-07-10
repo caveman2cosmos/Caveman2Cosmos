@@ -32475,7 +32475,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -38984,11 +38984,11 @@
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
-				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
+				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3525</iCost>
 			<CommerceChanges>
@@ -61795,7 +61795,7 @@
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -75660,7 +75660,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -82412,7 +82412,7 @@
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>				
+				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
