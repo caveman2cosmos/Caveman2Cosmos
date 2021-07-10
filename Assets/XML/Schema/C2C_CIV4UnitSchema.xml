@@ -829,13 +829,6 @@
 	<ElementType name="FeatureWorkRateModifierTypes" content="eltOnly">
 		<element type="FeatureWorkRateModifierType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="FeatureWorkRateModifierChangeType" content="eltOnly">
-		<element type="FeatureType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="FeatureWorkRateModifierChangeTypes" content="eltOnly">
-		<element type="FeatureWorkRateModifierChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="BuildWorkRateModifierType" content="eltOnly">
 		<element type="BuildType"/>
 		<element type="iModifier"/>
@@ -2476,7 +2469,6 @@
 		<element type="CriticalVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="RoundStunVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="TerrainWorkRateModifierChangeTypes" minOccurs="0"/>
-		<element type="FeatureWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="AddsBuildTypes" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>

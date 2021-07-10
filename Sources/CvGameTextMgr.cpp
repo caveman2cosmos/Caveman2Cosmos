@@ -14949,7 +14949,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iFeatureAttackPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getFeatureAttackPercent(iI);
 			iFeatureDefensePercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getFeatureDefensePercent(iI);
 			iFeatureWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getFeatureWorkPercent(iI);
-			iFeatureWorkPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getFeatureWorkRateModifierChangeType(iI);
 			iWithdrawOnFeature += GC.getPromotionInfo(linePromotionsOwned[iJ]).getWithdrawOnFeatureTypeChange(iI);
 		}
 		if (bIsFeatureDoubleMove)

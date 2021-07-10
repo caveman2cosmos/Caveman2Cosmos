@@ -1007,10 +1007,6 @@ public:
 	int getTerrainWorkRateModifierChangeType(int iTerrain) const;
 	bool isTerrainWorkRateModifierChangeType(int iTerrain) const;
 
-	int getNumFeatureWorkRateModifierChangeTypes() const;
-	int getFeatureWorkRateModifierChangeType(int iFeature) const;
-	bool isFeatureWorkRateModifierChangeType(int iFeature) const;
-
 	int getNumBuildWorkRateModifierChangeTypes() const;
 	int getBuildWorkRateModifierChangeType(int iBuild) const;
 	bool isBuildWorkRateModifierChangeType(int iBuild) const;
@@ -1398,7 +1394,6 @@ protected:
 	//Team Project (4)
 		//WorkRateMod
 	TerrainModifierArray m_aTerrainWorkRateModifierChangeTypes;
-	FeatureModifierArray m_aFeatureWorkRateModifierChangeTypes;
 	BuildModifierArray m_aBuildWorkRateModifierChangeTypes;
 	InvisibilityArray m_aVisibilityIntensityChangeTypes;
 	InvisibilityArray m_aInvisibilityIntensityChangeTypes;

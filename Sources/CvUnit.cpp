@@ -22618,7 +22618,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraFeatureDefensePercent(((FeatureTypes)iI), (kPromotion.getFeatureDefensePercent(iI) * iChange));
 
 		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkPercent(iI) * iChange));
-		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkRateModifierChangeType(iI) * iChange));
 
 		changeFeatureDoubleMoveCount(((FeatureTypes)iI), ((kPromotion.getFeatureDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnFeatureType(((FeatureTypes)iI), (kPromotion.getWithdrawOnFeatureTypeChange(iI) * iChange));
