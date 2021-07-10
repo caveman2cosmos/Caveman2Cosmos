@@ -6526,6 +6526,8 @@
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
+				<BuildingType>BUILDING_IMU</BuildingType>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -15239,6 +15241,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GARRISON</BuildingType>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
@@ -15284,6 +15287,9 @@
 				<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_ACTORS_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_ARENA</BuildingType>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
@@ -15495,7 +15501,12 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
+				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
+				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
+				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
+				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>

@@ -2530,12 +2530,10 @@
 			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CASTLE</BuildingType>
+				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 			</PrereqInCityBuildings>
@@ -2819,9 +2817,12 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>				
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>408</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3871,6 +3872,7 @@
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
 				<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
+				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
@@ -4967,6 +4969,7 @@
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE2</BuildingType>
+				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>516</iCost>
@@ -5704,6 +5707,7 @@
 				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 			</PrereqOrBuildings>
@@ -6013,15 +6017,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NINEVEH</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
-			</PrereqInCityBuildings>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>708</iCost>
 			<CommerceModifiers>
@@ -7225,12 +7223,10 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1404</iCost>
 			<iHappiness>10</iHappiness>
 			<CommerceChanges>
@@ -14485,6 +14481,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
@@ -15661,12 +15658,10 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MAX_PRISON</ConstructSound>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iNumBuildingNeeded>6</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
 			</PrereqInCityBuildings>
@@ -15775,6 +15770,7 @@
 			</PropertyManipulators>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -16659,6 +16655,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
 			<bNoHolyCity>1</bNoHolyCity>
 			<PropertyManipulators>
@@ -17253,9 +17250,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_BARRICADES</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>

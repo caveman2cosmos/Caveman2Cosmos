@@ -8,6 +8,22 @@
 		<BuildingInfo>
 			<Type>BUILDING_LUXURY_FURNITURE_WORKSHOP</Type>
 			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TERRACOTTA_WORKSHOP</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TERRACOTTA_FACTORY</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MANUFACTURING_DISTRICT</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORGAN_HALL</Type>
@@ -156,6 +172,7 @@
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1837,6 +1854,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -5563,9 +5581,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENETIC_PROFILING</BuildingType>
 			</ReplacementBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5625,9 +5644,10 @@
 				<iCommerce>-2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11907,6 +11927,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGHWAY</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12166,6 +12187,7 @@
 			<iHealth>3</iHealth>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
@@ -13304,6 +13326,13 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FAMILY_FARM</Type>
@@ -13687,6 +13716,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BREWERY</Type>
@@ -13948,7 +13980,7 @@
 			<Type>BUILDING_CERAMICS_FACTORY</Type>
 			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_TERRA_SIGILLATA_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14510,6 +14542,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_COCK_FIGHTING</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLF_COURSE</Type>
@@ -14682,6 +14717,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_AUGMENTED_EQUIPMENT_CENTER</Type>
 			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DELIVERY_DRONE_CONTROL_CENTER</Type>
@@ -14771,6 +14809,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CIGAR_ROLLER</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COPY_STORE</Type>
@@ -14956,6 +14997,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_COUNTRY_CLUB</Type>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHIC_THEATER</Type>
@@ -15655,10 +15699,16 @@
 		<BuildingInfo>
 			<Type>BUILDING_LEARNING_CENTER</Type>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_ACTORS</Type>
 			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULINARY_SCHOOL</Type>
@@ -15691,6 +15741,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_TELECOURSE_STUDIO</Type>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLOGS</Type>
@@ -16163,6 +16216,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_ANGORA_GOAT_BREEDER</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANGORA_RABBIT_BREEDER</Type>
@@ -16309,6 +16365,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_WOOLY_PIG_BREEDER</Type>
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YAK_FARM</Type>
@@ -17403,6 +17462,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_INDIGO_FARM</Type>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
 			</ReplacementBuildings>
@@ -17990,6 +18052,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOLDSMITH</Type>
@@ -18004,6 +18069,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLATINUMSMITH</Type>
@@ -18025,6 +18093,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMELTER_TITANIUM</Type>
@@ -18032,6 +18103,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITANIUMSMITH</Type>
@@ -18046,6 +18120,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEADSMITH</Type>
@@ -18060,6 +18137,9 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TINSMITH</Type>
@@ -21451,9 +21531,10 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SELF_CONSTRUCTION_FIRM</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25331,6 +25412,32 @@
 			<Type>BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DYE_MAKER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ELEPHANT_TRAINER</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NINEVEH</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
