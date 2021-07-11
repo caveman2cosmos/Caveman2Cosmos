@@ -35,7 +35,6 @@ public:
 	void doTurn();
 
 	void updateYield();
-	void updatePowerHealth();
 	void updateCommerce();
 
 	bool canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal = false) const;

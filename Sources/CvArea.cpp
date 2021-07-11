@@ -944,16 +944,10 @@ void CvArea::changeNumRevealedTiles(TeamTypes eIndex, int iChange)
 }
 
 
-int CvArea::getCleanPowerCount(TeamTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
-	return m_aiCleanPowerCount[eIndex];
-}
-
-
 bool CvArea::isCleanPower(TeamTypes eIndex) const
 {
-	return (getCleanPowerCount(eIndex) > 0);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
+	return m_aiCleanPowerCount[eIndex] > 0;
 }
 
 
@@ -963,15 +957,13 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		const bool bWasCleanPower = isCleanPower(eIndex);
+		const bool bWasCleanPower = m_aiCleanPowerCount[eIndex] > 0;
 
 		m_aiCleanPowerCount[eIndex] += iChange;
 
-		// cppcheck-suppress knownConditionTrueFalse
-		if (bWasCleanPower != isCleanPower(eIndex))
+		if (bWasCleanPower != (m_aiCleanPowerCount[eIndex] > 0))
 		{
 			GET_TEAM(eIndex).updateCommerce();
-			GET_TEAM(eIndex).updatePowerHealth();
 
 			if (eIndex == GC.getGame().getActiveTeam())
 			{

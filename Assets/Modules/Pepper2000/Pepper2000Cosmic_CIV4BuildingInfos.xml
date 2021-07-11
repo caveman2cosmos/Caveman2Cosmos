@@ -17,9 +17,6 @@
 				<iYield>1000</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
-			</ReplacementBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
@@ -42,8 +39,8 @@
 			</YieldChanges>
 			<iMaintenanceModifier>-3</iMaintenanceModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
 				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -762,7 +759,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
 				<BuildingType>BUILDING_DIMENSION_X</BuildingType>
-				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

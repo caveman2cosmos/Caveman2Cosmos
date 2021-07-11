@@ -455,6 +455,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BIOPUNK</Bonus>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>3665</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>2</iHappiness>

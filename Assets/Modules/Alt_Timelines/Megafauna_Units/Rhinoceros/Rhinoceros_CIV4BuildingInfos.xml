@@ -14,7 +14,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -40,6 +40,12 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -49,7 +55,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -91,7 +97,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

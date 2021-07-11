@@ -1192,7 +1192,7 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTER_GATHERER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTER_GATHERER</Description>
-			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
+			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARBARIAN</Type>

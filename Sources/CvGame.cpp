@@ -6435,7 +6435,6 @@ void CvGame::doGlobalWarming()
 	//Global Warming
 	const int iUnhealthWeight = GC.getDefineINT("GLOBAL_WARMING_UNHEALTH_WEIGHT");
 	const int iBonusWeight = GC.getDefineINT("GLOBAL_WARMING_BONUS_WEIGHT");
-	const int iPowerWeight = GC.getDefineINT("GLOBAL_WARMING_POWER_WEIGHT");
 	int iGlobalWarmingValue = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -6447,8 +6446,7 @@ void CvGame::doGlobalWarming()
 				iGlobalWarmingValue -=
 				(
 					pCity->totalBadBuildingHealth() * iUnhealthWeight +
-					pCity->getBonusBadHealth() * iBonusWeight +
-					pCity->getPowerBadHealth() * iPowerWeight
+					pCity->getBonusBadHealth() * iBonusWeight
 				);
 			}
 		}

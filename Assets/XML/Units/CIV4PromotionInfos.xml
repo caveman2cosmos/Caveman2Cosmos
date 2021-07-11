@@ -19597,6 +19597,51 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/ByTheHorns.dds</Button>
 		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_WAR_CRY</Type>
+			<Description>TXT_KEY_PROMOTION_WAR_CRY</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<iCombatPercent>5</iCombatPercent>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>Art/Interface/Buttons/Promotions/WarCry.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CACOPHONY</Type>
+			<Description>TXT_KEY_PROMOTION_CACOPHONY</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<iCombatPercent>5</iCombatPercent>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>Art/Interface/Buttons/Promotions/Cacophony.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_HAKA</Type>
+			<Description>TXT_KEY_PROMOTION_HAKA</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<iCombatPercent>5</iCombatPercent>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>Art/Interface/Buttons/Promotions/Haka.dds</Button>
+		</PromotionInfo>
 		<!--ONLY BUILDUPS (AND LATER STATUSES) PAST THIS POINT!-->
 		<PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_CHASE_PLANS1</Type>

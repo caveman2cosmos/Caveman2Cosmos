@@ -179,7 +179,6 @@ public:
 	void updateYield();
 	void updateMaintenance() const;
 	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
-	void updatePowerHealth();
 
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
