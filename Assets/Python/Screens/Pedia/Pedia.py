@@ -281,6 +281,9 @@ class Pedia:
 		import PediaTerrain
 		import PediaEra
 
+		import TestCode
+		self.debug	= TestCode.TestCode([0])
+
 		self.mapScreenFunctions = {
 			PEDIA_TECHS				: PediaTech.PediaTech(self, H_BOT_ROW),
 			PEDIA_UNITS_0			: PediaUnit.PediaUnit(self, H_BOT_ROW),
@@ -719,7 +722,7 @@ class Pedia:
 					continue
 				iX = CvTechInfo.getGridX()
 				iY = CvTechInfo.getGridY()
-				aListDict[(iX, iY)] = (CvTechInfo.getDescription(), i)
+				aListDict[(iX, iY)] = (str(iX)+": "+CvTechInfo.getDescription(), i)
 				aList.append((iX, iY))
 		else:
 			if szSubCat == self.szCatAllEras:
@@ -779,12 +782,18 @@ class Pedia:
 
 	def getSortedUnitList(self, bWorld, bAnimals, bCultural, bSpread, bMisc):
 		aList = []
+		aListDict = {}
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		for i in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(i)
 			CvBonusInfo = GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus())
+
+			#Check location of unit on X and Y grid
+			iTechLoc = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			iTechXY = self.debug.checkUnitTechRequirementLocation(CvUnitInfo)[2]
+
 			if CvBonusInfo:
 				iBonusClassType = CvBonusInfo.getBonusClassType()
 			else:
@@ -826,9 +835,13 @@ class Pedia:
 				if szSubCat == aSubCatList[iEra]:
 					bValid = True
 			if bValid:
-				aList.append((CvUnitInfo.getDescription(), i))
+				aListDict[(iTechXY, CvUnitInfo.getDescription())] = (str(iTechLoc)+": "+CvUnitInfo.getDescription(), i)
+				aList.append((iTechXY, CvUnitInfo.getDescription()))
 				bValid = False
 		aList.sort()
+		for i in xrange(len(aList)):
+			key = aList[i]
+			aList[i] = aListDict[key]
 		return aList
 
 	# Promotion Lists
@@ -859,13 +872,23 @@ class Pedia:
 
 	def getPromotionList(self, iType):
 		aList = []
+		ListDict = {}
 		for iPromotion in xrange(GC.getNumPromotionInfos()):
 			CvPromotionInfo = GC.getPromotionInfo(iPromotion)
 			szPromoName = CvPromotionInfo.getDescription()
 			iPromotionType = self.getPromotionType(CvPromotionInfo)
+
+			#Check location of promotion on X and Y grid
+			iTechLoc = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[0]
+			iTechXY = self.debug.checkPromotionTechRequirementLocation(CvPromotionInfo)[2]
+
 			if iType == iPromotionType:
-				aList.append((szPromoName, iPromotion))
+				ListDict[(iTechXY, szPromoName)] = (str(iTechLoc)+": "+szPromoName, iPromotion)
+				aList.append((iTechXY, szPromoName))
 		aList.sort()
+		for iPromotion in xrange(len(aList)):
+			key = aList[iPromotion]
+			aList[iPromotion] = ListDict[key]
 		return aList
 
 	def getPromotionType(self, CvPromotionInfo):
@@ -933,11 +956,17 @@ class Pedia:
 
 	def getBuildingList(self, iBuildingType):
 		aList = []
+		aListDict = {}
 		iCategory, szSubCat = self.SECTION
 		aSubCatList = self.mapSubCat.get(iCategory)
 		bValid = False
 		for i in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(i)
+
+			#Check location of building on X and Y grid.
+			iTechLoc = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechXY = self.debug.checkBuildingTechRequirementLocation(CvBuildingInfo)[2]
+
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
@@ -951,9 +980,14 @@ class Pedia:
 					if szSubCat == aSubCatList[iEra]:
 						bValid = True
 			if bValid:
-				aList.append((CvBuildingInfo.getDescription(), i))
+				aListDict[(iTechXY, CvBuildingInfo.getDescription())] = (str(iTechLoc)+": "+CvBuildingInfo.getDescription(), i)
+				aList.append((iTechXY, CvBuildingInfo.getDescription()))
 				bValid = False
 		aList.sort()
+		for i in xrange(len(aList)):
+			key = aList[i]
+			aList[i] = aListDict[key]
+
 		return aList
 
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
@@ -1089,33 +1123,49 @@ class Pedia:
 
 	def getBonusList(self, iType):
 		aList = []
+		ListDict = {}
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
 		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
 		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
-			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
+
+			#Check location of resource tech reveal/enable
+			iTechRevealX = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[0]			
+			iTechEnableX = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+			iTechRevealXY = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[4]
+			iTechEnableXY = self.debug.checkBonusTechRequirementLocation(CvBonusInfo)[5]
+
+			if CvBonusInfo.getConstAppearance() > 0: # A map resource, only those have different iTechReveal and iTechEnable
 				if not iType:
-					aList.append((szName, iBonus))
+					ListDict[(iTechRevealXY, iTechEnableXY, szName)] = (str(iTechRevealX)+"/"+str(iTechEnableX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, iTechEnableXY, szName))
 			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:
 				if iType == 4:
-					aList.append((szName, iBonus))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS:
 				if iType == 3:
-					aList.append((szName, iBonus))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE:
 				if iType == 2:
-					aList.append((szName, iBonus))
+					ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+					aList.append((iTechRevealXY, szName))
 			elif iType == 1:
-				aList.append((szName, iBonus))
+				ListDict[(iTechRevealXY, szName)] = (str(iTechRevealX)+": "+szName, iBonus)
+				aList.append((iTechRevealXY, szName))
 		aList.sort()
+		for iBonus in xrange(len(aList)):
+			key = aList[iBonus]
+			aList[iBonus] = ListDict[key]
 		return aList
 
 
 	def placeImprovements(self):
 		print "Category: Improvements"
-		self.aList = self.getSortedList(GC.getNumImprovementInfos(), GC.getImprovementInfo)
+		self.aList = self.getTimeSortedList(GC.getNumImprovementInfos(), GC.getImprovementInfo)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT, GC.getImprovementInfo)
 
 	def placeRoutes(self):
@@ -1125,7 +1175,7 @@ class Pedia:
 
 	def placeBuilds(self):
 		print "Category: Worker Builds"
-		self.aList = self.getSortedList(GC.getNumBuildInfos(), GC.getBuildInfo)
+		self.aList = self.getTimeSortedList(GC.getNumBuildInfos(), GC.getBuildInfo)
 		self.placeItems("Builds", GC.getBuildInfo)
 
 	def placeCivs(self):
@@ -1148,7 +1198,7 @@ class Pedia:
 
 	def placeCivics(self):
 		print "Category: Civics"
-		self.aList = self.getSortedList(GC.getNumCivicInfos(), GC.getCivicInfo)
+		self.aList = self.getTimeSortedList(GC.getNumCivicInfos(), GC.getCivicInfo)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, GC.getCivicInfo)
 
 	def placeReligions(self):
@@ -1320,6 +1370,40 @@ class Pedia:
 				if (bValid):
 					list.append((item.getDescription(), i))
 		list.sort()
+		return list
+
+	def getTimeSortedList(self, numInfos, getInfo):
+		list = []
+		ListDict = {}
+
+		for i in xrange(numInfos):
+			item = getInfo(i)
+
+			# Tech requirement of infotype - they are always singular.
+			# Location of improvement, civic or build on X and Y Grid
+			if getInfo == GC.getImprovementInfo:
+				iTechLoc = self.debug.checkImprovementTechRequirementLocation(item)[0]
+				iTechXY = self.debug.checkImprovementTechRequirementLocation(item)[2]
+			elif getInfo == GC.getCivicInfo:
+				iTechLoc = self.debug.checkCivicTechRequirementLocation(item)[0]
+				iTechXY = self.debug.checkCivicTechRequirementLocation(item)[2]
+			elif getInfo == GC.getBuildInfo:
+				iTechLoc = self.debug.checkBuildTechRequirementLocation(item)[0]
+				iTechXY = self.debug.checkBuildTechRequirementLocation(item)[2]
+			else:
+				iTechLoc = -1
+				iTechXY = 0
+
+			if item and iTechLoc != -1:
+				ListDict[(iTechXY, item.getDescription())] = (str(iTechLoc)+": "+item.getDescription(), i)
+				list.append((iTechXY, item.getDescription()))
+			elif item and iTechLoc == -1:
+				ListDict[(iTechXY, item.getDescription())] = (item.getDescription(), i)
+				list.append((iTechXY, item.getDescription()))
+		list.sort()
+		for i in xrange(len(list)):
+			key = list[i]
+			list[i] = ListDict[key]
 		return list
 
 	def getItsEra(self, CvItsInfo):

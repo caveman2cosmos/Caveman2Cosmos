@@ -12,13 +12,16 @@
 
 from CvPythonExtensions import *
 
-gc = CyGlobalContext()
+GC = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
 
 class SevoPediaUnitChart:
 
 	def __init__(self, main):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+		
 		self.iGroup = -1
 		self.top = main
 
@@ -30,14 +33,10 @@ class SevoPediaUnitChart:
 		self.DY_UNITS = 40
 		self.Y_TEXT_MARGIN = 6
 
-
-
 	def interfaceScreen(self, iGroup):
 		self.iGroup = iGroup
 		screen = self.top.getScreen()
 		self.placeUnitTable()
-
-
 
 	def placeUnitTable(self):
 		screen = self.top.getScreen()
@@ -53,30 +52,30 @@ class SevoPediaUnitChart:
 		iColWidth = int(iTableWidth * (4 / 19.0))
 		screen.setTableColumnHeader(szTable, 1, u"%c" % CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR), iColWidth)
 		screen.setTableColumnHeader(szTable, 2, u"%c" % CyGame().getSymbolID(FontSymbols.MOVES_CHAR), iColWidth)
-		screen.setTableColumnHeader(szTable, 3, u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), iColWidth)
+		screen.setTableColumnHeader(szTable, 3, u"%c" % GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar(), iColWidth)
 		nUnits = 0
-		for j in range(gc.getNumUnitInfos()):
-			if (self.iGroup == gc.getUnitInfo(j).getUnitCombatType() or gc.getUnitInfo(j).isSubCombatType(self.iGroup) or self.iGroup == gc.getNumUnitCombatInfos()):
+		for j in range(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(j)
+			if (self.iGroup == CvUnitInfo.getUnitCombatType() or CvUnitInfo.isSubCombatType(self.iGroup) or self.iGroup == GC.getNumUnitCombatInfos()):
 				nUnits += 1
 		dy = self.DY_UNITS
 		yTextMargin = self.Y_TEXT_MARGIN
-		if (self.iGroup == gc.getNumUnitCombatInfos()):
+		if (self.iGroup == GC.getNumUnitCombatInfos()):
 			dy = self.DY_UNITS/2
 			yTextMargin = 0
 		i = 0
 		unitsList=[(0,0,0,0,0)]*nUnits
-		for j in range(gc.getNumUnitInfos()):
-			if (self.iGroup == gc.getUnitInfo(j).getUnitCombatType() or gc.getUnitInfo(j).isSubCombatType(self.iGroup) or self.iGroup == gc.getNumUnitCombatInfos()):
-				if (gc.getUnitInfo(j).getProductionCost() < 0):
-					szCost = localText.getText("TXT_KEY_NON_APPLICABLE", ())
+		for j in range(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(j)
+			if (self.iGroup == CvUnitInfo.getUnitCombatType() or CvUnitInfo.isSubCombatType(self.iGroup) or self.iGroup == GC.getNumUnitCombatInfos()):
+				if self.GOMReqs.checkUnitTechRequirementLocation(CvUnitInfo)[0] == 0:
+					szTechLevel = localText.getText("TXT_KEY_NON_APPLICABLE", ())
 				else:
-					szCost = unicode(gc.getUnitInfo(j).getProductionCost())# + u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
-# Rise of Mankind 2.6 fix
-				if (gc.getUnitInfo(j).getAirCombat() > 0 and gc.getUnitInfo(j).getCombat() == 0):
-					unitsList[i] = (unicode(gc.getUnitInfo(j).getAirCombat()), gc.getUnitInfo(j).getAirRange(), szCost, gc.getUnitInfo(j).getDescription(), j)
+					szTechLevel = unicode(self.GOMReqs.checkUnitTechRequirementLocation(CvUnitInfo)[0])
+				if (CvUnitInfo.getAirCombat() > 0 and CvUnitInfo.getCombat() == 0):
+					unitsList[i] = (unicode(CvUnitInfo.getAirCombat()), CvUnitInfo.getAirRange(), szTechLevel, CvUnitInfo.getDescription(), j)
 				else:
-					unitsList[i] = (gc.getUnitInfo(j).getCombat(), gc.getUnitInfo(j).getMoves(), szCost, gc.getUnitInfo(j).getDescription(), j)
-# Rise of Mankind 2.6 fix
+					unitsList[i] = (CvUnitInfo.getCombat(), CvUnitInfo.getMoves(), szTechLevel, CvUnitInfo.getDescription(), j)
 				i += 1
 		for i in range(nUnits):
 			iRow = screen.appendTableRow(szTable)
