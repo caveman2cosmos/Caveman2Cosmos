@@ -25838,14 +25838,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>%D1_Change [ICON_HEALTHY] por nivel de dificultad</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_GOOD_HEALTH_FROM_POWER</Tag>
-		<English>%D1_Change[ICON_HEALTHY] from Power</English>
-		<French>%D1_Change[ICON_HEALTHY] (électricité)</French>
-		<German>%D1_Change[ICON_HEALTHY] durch Energie</German>
-		<Italian>%D1_Change[ICON_HEALTHY] per l'energia</Italian>
-		<Spanish>%D1_Change [ICON_HEALTHY] por energía</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_GP_BORN</Tag>
 		<English>%s1_GPName has been born in %s2_CityName!</English>
 		<French>Naissance de %s1_GPName à %s2_CityName !</French>
@@ -25956,14 +25948,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%D1_Change[ICON_UNHEALTHY] durch Bevölkerung</German>
 		<Italian>%D1_Change[ICON_UNHEALTHY] per la popolazione</Italian>
 		<Spanish>%D1_Change [ICON_UNHEALTHY] por población</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HEALTH_FROM_POWER</Tag>
-		<English>%D1_Change[ICON_UNHEALTHY] from Power</English>
-		<French>%D1_Change[ICON_UNHEALTHY] (électricité)</French>
-		<German>%D1_Change[ICON_UNHEALTHY] durch Energie</German>
-		<Italian>%D1_Change[ICON_UNHEALTHY] per l'energia</Italian>
-		<Spanish>%D1_Change [ICON_UNHEALTHY] por energía</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TRAIT</Tag>

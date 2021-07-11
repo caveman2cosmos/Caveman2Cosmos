@@ -5546,17 +5546,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						foreach_(const CvCity * pLoopCity, kOwner.cities())
 						{
-							if (pLoopCity->area() == area())
+							if (pLoopCity->area() == area() && !pLoopCity->isPower())
 							{
-								if (pLoopCity->isDirtyPower())
-								{
-									//Fuyu: less value for cities that don't already have power
-									iValue += 8;
-								}
-								else if (!pLoopCity->isPower())
-								{
-									iValue += 12;
-								}
+								iValue += 12;
 							}
 						}
 					}
@@ -15707,16 +15699,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				{
 					foreach_(const CvCity * pLoopCity, kOwner.cities())
 					{
-						if (pLoopCity->area() == pArea)
+						if (pLoopCity->area() == pArea && !pLoopCity->isPower())
 						{
-							if (pLoopCity->isDirtyPower())
-							{
-								iValue += 8;
-							}
-							else if (!pLoopCity->isPower())
-							{
-								iValue += 12;
-							}
+							iValue += 12;
 						}
 					}
 				}

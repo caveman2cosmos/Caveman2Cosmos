@@ -4385,11 +4385,6 @@ void CvPlayer::updateMaintenance() const
 }
 
 
-void CvPlayer::updatePowerHealth()
-{
-	algo::for_each(cities(), CvCity::fn::updatePowerHealth());
-}
-
 void CvPlayer::updateFeatureHappiness(bool bLimited)
 {
 	algo::for_each(cities(), CvCity::fn::updateFeatureHappiness(bLimited));

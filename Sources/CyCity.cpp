@@ -323,9 +323,9 @@ int CyCity::getBonusHappiness(int /*BonusTypes*/ iBonus) const
 	return m_pCity->getBonusHappiness((BonusTypes) iBonus);
 }
 
-int CyCity::getBonusPower(int /*BonusTypes*/ eBonus, bool bDirty) const
+int CyCity::getBonusPower(int /*BonusTypes*/ eBonus) const
 {
-	return m_pCity->getBonusPower((BonusTypes)eBonus, bDirty);
+	return m_pCity->getBonusPower((BonusTypes)eBonus);
 }
 
 int CyCity::getBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int /*BonusTypes*/ eBonus) const
@@ -962,11 +962,6 @@ bool CyCity::isPower() const
 bool CyCity::isAreaCleanPower() const
 {
 	return m_pCity->isAreaCleanPower();
-}
-
-bool CyCity::isDirtyPower() const
-{
-	return m_pCity->isDirtyPower();
 }
 
 int CyCity::getDefenseDamage() const
@@ -1704,9 +1699,9 @@ int CyCity::calculateCorporateTaxes() const
 	return m_pCity->calculateCorporateTaxes();
 }
 
-void CyCity::changePowerCount(int iChange, bool bDirty)
+void CyCity::changePowerCount(int iChange)
 {
-	m_pCity->changePowerCount(iChange, bDirty);
+	m_pCity->changePowerCount(iChange);
 }
 
 void CyCity::changeEventAnger(int iChange)

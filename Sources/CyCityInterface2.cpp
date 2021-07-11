@@ -190,7 +190,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setWeLoveTheKingDay", &CyCity::setWeLoveTheKingDay, "void (bool bWeLoveTheKingDay)")
 		.def("calculateCorporateTaxes", &CyCity::calculateCorporateTaxes, "int ()")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
-		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange, bool bDirty)")
+		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange)")
 
 		.def("changeEventAnger", &CyCity::changeEventAnger, "void (int iChange)")
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")

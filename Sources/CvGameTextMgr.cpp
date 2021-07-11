@@ -21711,12 +21711,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_PROVIDES_POWER"));
-
-		if (kBuilding.isDirtyPower() && (GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE") != 0))
-		{
-			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDIRTY_POWER_HEALTH_CHANGE()), ((GC.getDIRTY_POWER_HEALTH_CHANGE() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
-			szBuffer.append(szTempBuffer);
-		}
 	}
 
 	if (kBuilding.isAreaCleanPower())
@@ -23210,12 +23204,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_PROVIDES_POWER_WITH", CvWString(GC.getBonusInfo((BonusTypes)kBuilding.getPowerBonus()).getType()).GetCString(), GC.getBonusInfo((BonusTypes)kBuilding.getPowerBonus()).getTextKeyWide()));
-
-		if (kBuilding.isDirtyPower() && (GC.getDIRTY_POWER_HEALTH_CHANGE() != 0))
-		{
-			szTempBuffer.Format(L" (+%d%c)", abs(GC.getDIRTY_POWER_HEALTH_CHANGE()), ((GC.getDIRTY_POWER_HEALTH_CHANGE() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR): gDLL->getSymbolID(UNHEALTHY_CHAR)));
-			szBuffer.append(szTempBuffer);
-		}
 	}
 
 	bFirst = true;
@@ -24773,13 +24761,6 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 
-		iHealth = -(city.getPowerBadHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_POWER", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
 		iHealth = -(city.getBonusBadHealth());
 		if (iHealth > 0)
 		{
@@ -24951,13 +24932,6 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		if (iHealth > 0)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.getPowerGoodHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_POWER", iHealth));
 			szBuffer.append(NEWLINE);
 		}
 

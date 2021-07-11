@@ -606,7 +606,7 @@ class RevolutionWatchAdvisor:
 				info.getAirModifier() < 0:
 				icon += self.defenseIcon
 
-			if info.isPower() or info.isDirtyPower() or info.isAreaCleanPower():
+			if info.isPower() or info.isAreaCleanPower():
 				icon += self.powerIcon
 
 			if info.getWarWearinessModifier() < 0 or info.getAnarchyModifier() > 0 or info.getGlobalWarWearinessModifier() < 0:
@@ -1621,7 +1621,7 @@ class RevolutionWatchAdvisor:
 #				elif (iEffect > 1 or iEffect < 0):
 #					szEffects += u"%d%s " % (iEffect, self.commerceIcons[eCommerceType])
 
-		iEffect = city.getBonusPower(arg, False) + city.getBonusPower(arg, True)
+		iEffect = city.getBonusPower(arg)
 		if (iEffect == 1):
 			szEffects += u"%s " % (self.powerIcon)
 		elif (iEffect > 1):

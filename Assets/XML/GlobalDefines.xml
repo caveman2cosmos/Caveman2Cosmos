@@ -409,14 +409,6 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DIRTY_POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-4</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS</DefineName>
 		<iDefineIntVal>64</iDefineIntVal>
 	</Define>
@@ -766,10 +758,6 @@
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_BONUS_WEIGHT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>GLOBAL_WARMING_POWER_WEIGHT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>

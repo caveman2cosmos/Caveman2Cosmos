@@ -147,7 +147,6 @@ m_bWater(false),
 m_bRiver(false),
 m_bFreshWater(false),
 m_bPower(false),
-m_bDirtyPower(false),
 m_bAreaCleanPower(false),
 m_bOrbital(false),
 m_bOrbitalInfrastructure(false),
@@ -1874,7 +1873,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bRiver);
 	CheckSum(iSum, m_bFreshWater);
 	CheckSum(iSum, m_bPower);
-	CheckSum(iSum, m_bDirtyPower);
 	CheckSum(iSum, m_bAreaCleanPower);
 	CheckSum(iSum, m_bOrbital);
 	CheckSum(iSum, m_bOrbitalInfrastructure);
@@ -2321,7 +2319,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bRiver, L"bRiver");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWater, L"bFreshWater");
 	pXML->GetOptionalChildXmlValByName(&m_bPower, L"bPower");
-	pXML->GetOptionalChildXmlValByName(&m_bDirtyPower, L"bDirtyPower");
 	pXML->GetOptionalChildXmlValByName(&m_bAreaCleanPower, L"bAreaCleanPower");
 	pXML->GetOptionalChildXmlValByName(&m_bOrbital, L"bOrbital");
 	pXML->GetOptionalChildXmlValByName(&m_bOrbitalInfrastructure, L"bOrbitalInfrastructure");
@@ -3854,7 +3851,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (isWater() == bDefault) m_bWater = pClassInfo->isWater();
 	if (isRiver() == bDefault) m_bRiver = pClassInfo->isRiver();
 	if (isPower() == bDefault) m_bPower = pClassInfo->isPower();
-	if (isDirtyPower() == bDefault) m_bDirtyPower = pClassInfo->isDirtyPower();
 	if (isAreaCleanPower() == bDefault) m_bAreaCleanPower = pClassInfo->isAreaCleanPower();
 	if (isOrbital() == bDefault) m_bOrbital = pClassInfo->isOrbital();
 	if (isOrbitalInfrastructure() == bDefault) m_bOrbitalInfrastructure = pClassInfo->isOrbitalInfrastructure();
