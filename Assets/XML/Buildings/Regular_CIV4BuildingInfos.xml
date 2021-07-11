@@ -10742,6 +10742,7 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<FreePromotion>PROMOTION_CACOPHONY</FreePromotion>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
@@ -87900,4 +87901,151 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
+	<BuildingInfo>
+			<Type>BUILDING_BIRD_DANCE</Type>
+			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<iAsset>1</iAsset>
+			<iPower>1</iPower>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+			</PrereqOrBuildings>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FOX_DANCE</Type>
+			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<iAsset>1</iAsset>
+			<iPower>1</iPower>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+			</PrereqOrBuildings>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HAKA</Type>
+			<Description>TXT_KEY_BUILDING_HAKA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAKA_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<!-- Graphical and interface -->
+			<ArtDefineTag>ART_DEF_BUILDING_HAKA</ArtDefineTag>
+			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<!-- Obsolescence -->
+			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
+			<!-- Construction cost -->
+			<iCost>30</iCost>
+			<!-- Main effects -->
+			<FreePromotion>PROMOTION_HAKA</FreePromotion>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<!-- Misc. Effects -->
+			<iWarWearinessModifier>-5</iWarWearinessModifier>
+			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqBonuses>
+				<BonusType>BONUS_ABORIGINE</BonusType>
+				<BonusType>BONUS_FIJIAN</BonusType>
+				<BonusType>BONUS_HAWAIIAN</BonusType>
+				<BonusType>BONUS_MAORI</BonusType>
+				<BonusType>BONUS_NEW_ZEALANDER</BonusType>
+				<BonusType>BONUS_POLYNESIAN</BonusType>
+				<BonusType>BONUS_RAPA_NUI</BonusType>
+				<BonusType>BONUS_SAMOAN</BonusType>
+				<BonusType>BONUS_TAHITIAN</BonusType>
+				<BonusType>BONUS_TONGAN</BonusType>
+			</PrereqBonuses>
+		</BuildingInfo>
 </Civ4BuildingInfos>

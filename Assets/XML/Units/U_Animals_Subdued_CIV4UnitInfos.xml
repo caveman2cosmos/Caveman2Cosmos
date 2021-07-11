@@ -269,6 +269,7 @@
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_FOX_DANCE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -4054,6 +4055,7 @@
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_FOX_DANCE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -10302,6 +10304,7 @@
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_FOX_DANCE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -11971,6 +11974,7 @@
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_BIRD_DANCE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -13264,6 +13268,7 @@
 				<BuildingType>BUILDING_SKY_MYTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_BIRD_DANCE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>

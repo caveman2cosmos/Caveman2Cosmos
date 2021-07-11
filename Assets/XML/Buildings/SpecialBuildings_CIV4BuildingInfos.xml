@@ -6797,6 +6797,7 @@
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
+			<FreePromotion>PROMOTION_WAR_CRY</FreePromotion>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
