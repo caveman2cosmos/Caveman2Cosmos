@@ -744,12 +744,6 @@ const python::list CvBuildingInfo::cyGetPrereqAndTechs() const
 	return Cy::makeList(m_piPrereqAndTechs);
 }
 
-//int CvBuildingInfo::getBuildingHappinessChanges(BuildingTypes e) const
-//{
-//	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), e)
-//	return m_aBuildingHappinessChanges.getValue(e);
-//}
-
 int CvBuildingInfo::getPrereqNumOfBuilding(BuildingTypes e) const
 {
 	return m_aPrereqNumOfBuilding.getValue(e);

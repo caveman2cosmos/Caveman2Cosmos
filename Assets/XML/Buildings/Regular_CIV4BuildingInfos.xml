@@ -73375,6 +73375,7 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>98</iCost>
