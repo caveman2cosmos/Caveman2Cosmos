@@ -5459,6 +5459,7 @@
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>

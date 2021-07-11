@@ -12,9 +12,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SPOTTED_CAT_MYTH</DependencyType>
-			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>

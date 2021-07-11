@@ -28,10 +28,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_MYTH</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DEER_MYTH</DependencyType>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
