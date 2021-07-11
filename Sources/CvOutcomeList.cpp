@@ -252,7 +252,7 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 	}
 }
 
-void CvOutcomeList::getCheckSum(unsigned int& iSum) const
+void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 {
 	const int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)

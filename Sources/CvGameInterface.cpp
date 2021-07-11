@@ -2528,7 +2528,7 @@ void CvGame::cheatSpaceship() const
 			}
 
 			//cheat required techs
-			TechTypes eRequiredTech = (TechTypes) kProject.getTechPrereq();
+			const TechTypes eRequiredTech = kProject.getTechPrereq();
 			if (!kTeam.isHasTech(eRequiredTech))
 			{
 				kTeam.setHasTech(eRequiredTech, true, getActivePlayer(), true, true);

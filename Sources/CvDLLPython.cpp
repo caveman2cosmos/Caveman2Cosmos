@@ -86,6 +86,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<UnitAITypes>();
 	registerAllowPyIntAsType<DomainTypes>();
 	registerAllowPyIntAsType<PropertyTypes>();
+	registerAllowPyIntAsType<ProcessTypes>();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();

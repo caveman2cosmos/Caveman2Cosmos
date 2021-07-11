@@ -331,7 +331,7 @@ class WBCityEditScreen:
 				iRow += 1
 
 		for i in xrange(GC.getNumProcessInfos()):
-			if pCity.canMaintain(i, True):
+			if pCity.canMaintain(i):
 				if iRow > iMaxRow:
 					screen.appendTableRow("WBCityProduction")
 					iMaxRow = iRow
