@@ -11192,7 +11192,7 @@ int CvCity::getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, Building
 	{
 		iExtraModifier += kBuilding.getPowerYieldModifier(eIndex);
 	}
-	else if (kBuilding.isPower() || kBuilding.isAreaCleanPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
+	else if (kBuilding.isPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
 	{
 		for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 		{

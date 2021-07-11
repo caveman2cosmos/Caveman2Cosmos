@@ -20284,14 +20284,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Proporciona energía ([ICON_POWER])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_AREA_CLEAN_POWER</Tag>
-		<English>[ICON_BULLET]Provides Power ([ICON_POWER]) for All Cities on this Continent</English>
-		<French>[ICON_BULLET]Fournit de l'énergie à toutes les villes de ce continent</French>
-		<German>[ICON_BULLET]Liefert Energie für alle Städte auf diesem Kontinent</German>
-		<Italian>[ICON_BULLET]Fornisce energia a tutte le città in questo continente</Italian>
-		<Spanish>[ICON_BULLET]Proporciona energía a todas las ciudades de este continente</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REDUCES_MAINTENANCE</Tag>
 		<English>[ICON_BULLET]Reduces [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK] in Nearby Cities</English>
 		<French>[ICON_BULLET]Réduit le coût [LINK=CONCEPT_MAINTENANCE]d'entretien[\LINK] des villes voisines</French>

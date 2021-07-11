@@ -21713,12 +21713,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_PROVIDES_POWER"));
 	}
 
-	if (kBuilding.isAreaCleanPower())
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_PROVIDES_AREA_CLEAN_POWER"));
-	}
-
 	if (kBuilding.isAreaBorderObstacle())
 	{
 		szBuffer.append(NEWLINE);

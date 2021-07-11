@@ -606,7 +606,7 @@ class RevolutionWatchAdvisor:
 				info.getAirModifier() < 0:
 				icon += self.defenseIcon
 
-			if info.isPower() or info.isAreaCleanPower():
+			if info.isPower():
 				icon += self.powerIcon
 
 			if info.getWarWearinessModifier() < 0 or info.getAnarchyModifier() > 0 or info.getGlobalWarWearinessModifier() < 0:

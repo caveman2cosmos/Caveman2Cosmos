@@ -959,11 +959,6 @@ bool CyCity::isPower() const
 	return m_pCity->isPower();
 }
 
-bool CyCity::isAreaCleanPower() const
-{
-	return m_pCity->isAreaCleanPower();
-}
-
 int CyCity::getDefenseDamage() const
 {
 	return m_pCity->getDefenseDamage();

@@ -4630,8 +4630,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
 
-	//bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower());
-
 	//Don't consider a building if it causes the city to immediately start shrinking from unhealthiness
 	//For that purpose ignore bad health and unhappiness from Espionage.
 	int iBuildingActualHappiness = getAdditionalHappinessByBuilding(eBuilding);
@@ -5542,17 +5540,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					iValue -= kBuilding.getRiverDefensePenalty() / 4;
 
-					if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
-					{
-						foreach_(const CvCity * pLoopCity, kOwner.cities())
-						{
-							if (pLoopCity->area() == area() && !pLoopCity->isPower())
-							{
-								iValue += 12;
-							}
-						}
-					}
-
 					if (kBuilding.getDomesticGreatGeneralRateModifier() != 0)
 					{
 						iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
@@ -6405,7 +6392,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 		iValue += kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots() * 4;
 	}
 
-	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus()) || kBuilding.isAreaCleanPower()))
+	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
 	{
 		iValue += iBaseRate * getPowerYieldRateModifier(eYield) / 20;
 	}
@@ -14315,7 +14302,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		return true;
 	}
-	if (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower())
+	if (kBuilding.isPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))))
 	{
 		return true;
 	}
@@ -15694,17 +15681,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 				iValue -= kBuilding.getRiverDefensePenalty() / 4;
-
-				if (kBuilding.isAreaCleanPower() && !bCleanPower)
-				{
-					foreach_(const CvCity * pLoopCity, kOwner.cities())
-					{
-						if (pLoopCity->area() == pArea && !pLoopCity->isPower())
-						{
-							iValue += 12;
-						}
-					}
-				}
 
 				if (kBuilding.getDomesticGreatGeneralRateModifier() != 0)
 				{

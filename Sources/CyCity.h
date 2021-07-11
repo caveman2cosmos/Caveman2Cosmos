@@ -241,7 +241,6 @@ public:
 	int getAirModifier() const;
 	int getNukeModifier() const;
 	bool isPower() const;
-	bool isAreaCleanPower() const;
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
 	int getNaturalDefense() const;
