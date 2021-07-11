@@ -33331,7 +33331,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		int iSpecialistYield = 0;
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
-			const int iCount = city.getSpecialistCount((SpecialistTypes)iI); 
+			const int iCount = city.getSpecialistCount((SpecialistTypes)iI);
 			if (iCount > 0)
 			{
 				iSpecialistYield += iCount * city.specialistYield((SpecialistTypes)iI, eYieldType);
