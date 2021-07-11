@@ -242,10 +242,8 @@ void CvCityAI::AI_doTurn()
 		{
 			setForceSpecialistCount(((SpecialistTypes)iI), 0);
 		}
-
 		AI_stealPlots();
 	}
-
 	AI_updateBestBuild();
 	AI_updateWorkersNeededHere();
 
@@ -253,21 +251,12 @@ void CvCityAI::AI_doTurn()
 
 	if (isHuman())
 	{
-		if (isProductionAutomated())
-		{
-			AI_doHurry();
-		}
 		return;
 	}
-
 	AI_doPanic();
-
 	AI_doDraft();
-
 	AI_doHurry();
-
 	AI_doEmphasize();
-
 	AI_doContractFloatingDefenders();
 }
 
@@ -9044,11 +9033,6 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 			if (eProductionBuilding != NO_BUILDING)
 			{
-				// City governor hard limitation.
-				if (player.isHuman() && player.getHurriedCount() > 32)
-				{
-					continue;
-				}
 				// If it doesn't reduce time to completion, it isn't worth the inflation.
 				// (ToDo) Inflation may in the future be based on gold amount spent
 				// rather than e.g. hurry count, making this check obsolete.
