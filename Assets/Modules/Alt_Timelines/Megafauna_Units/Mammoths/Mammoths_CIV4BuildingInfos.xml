@@ -166,24 +166,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MASTER_HUNTER</Type>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_MAMMOTH</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_MAMMOTH</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SHEARING_BARN</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>

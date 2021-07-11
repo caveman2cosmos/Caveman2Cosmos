@@ -12916,6 +12916,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRISTIAN_SHRINE</Type>
@@ -13078,6 +13079,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HINDU_SHRINE</Type>

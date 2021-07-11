@@ -14932,6 +14932,10 @@
 					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_MAMMOTH</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
@@ -15002,6 +15006,10 @@
 				</BonusHappinessChange>
 				<BonusHappinessChange>
 					<BonusType>BONUS_ELEPHANTS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_MAMMOTH</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
