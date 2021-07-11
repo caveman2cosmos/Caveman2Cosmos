@@ -19717,7 +19717,6 @@ void CvCity::changeSpecialistGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistGoodHealth += iChange;
-		FASSERT_NOT_NEGATIVE(getSpecialistGoodHealth());
 
 		AI_setAssignWorkDirty(true);
 
@@ -19733,7 +19732,6 @@ void CvCity::changeSpecialistBadHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistBadHealth += iChange;
-		FAssert(getSpecialistBadHealth() <= 0);
 
 		AI_setAssignWorkDirty(true);
 
@@ -19749,7 +19747,6 @@ void CvCity::changeSpecialistHappiness(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistHappiness += iChange;
-		FASSERT_NOT_NEGATIVE(getSpecialistHappiness());
 
 		AI_setAssignWorkDirty(true);
 
