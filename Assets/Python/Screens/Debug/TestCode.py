@@ -37,6 +37,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
+		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
@@ -1019,6 +1020,59 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" mismatch between getReligionType and getPrereqStateReligion: "+GC.getReligionType(iRelPrereq2).getType()+" "+GC.getReligionType(iRelPrereq3).getType())
 			if iRelPrereq3 != -1 and iRelPrereq1 != -1 and iRelPrereq3 != iRelPrereq1:
 				self.log(CvBuildingInfo.getType()+" mismatch between getPrereqStateReligion and getPrereqReligion: "+GC.getReligionType(iRelPrereq3).getType()+" "+GC.getReligionType(iRelPrereq1).getType())
+
+	#Bonus must be unlocked before building obsoletion so it can affect building at first place
+	def checkBuildingBonusTags(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iBuildingObsoleteTechLoc = 999 # Never obsolete
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iBuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			for iBonus in xrange(GC.getNumBonusInfos()):
+				CvBonusInfo = GC.getBonusInfo(iBonus)
+				iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+				if iBuildingObsoleteTechLoc < iBonusTechEnable:
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						#<BonusYieldChanges>
+						if CvBuildingInfo.getBonusYieldChanges(iBonus, iYield) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldChanges")
+
+						#<BonusYieldModifiers>
+						if CvBuildingInfo.getBonusYieldModifier(iBonus, iYield) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldModifiers")
+
+						#<VicinityBonusYieldChanges>
+						if CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - VicinityBonusYieldChanges")
+
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						#<BonusCommerceModifiers>
+						if CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusCommerceModifiers")
+
+						#<BonusCommercePercentChanges>
+						if CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - getBonusCommercePercentChanges")
+
+					#<BonusHappinessChanges>
+					if CvBuildingInfo.getBonusHappinessChanges(iBonus) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHappinessChanges")
+
+					#<BonusHealthChanges>
+					if CvBuildingInfo.getBonusHealthChanges(iBonus) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHealthChanges")
+
+					#<BonusProductionModifiers>
+					if CvBuildingInfo.getBonusProductionModifier(iBonus) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusProductionModifiers")
+
+					#<BonusAidModifiers>
+					#if CvBuildingInfo.getBonusAidModifiers(iBonus) != 0:
+					#	self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusAidModifiers")
+
+					#<BonusDefenseChanges>
+					if CvBuildingInfo.getBonusDefenseChanges(iBonus) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusDefenseChanges")
 
 	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):

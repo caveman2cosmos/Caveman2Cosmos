@@ -40822,10 +40822,6 @@
 			</CommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_SMART_MEDICINE</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
 					<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
@@ -46747,12 +46743,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
-					<BonusType>BONUS_CHEMICALS</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_BOOKS</BonusType>
 					<CommerceModifiers>
@@ -56156,12 +56146,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_HIT_SINGLES</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -60039,10 +60023,6 @@
 				</BonusHealthChange>
 				<BonusHealthChange>
 					<BonusType>BONUS_DRUGS</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_SMART_MEDICINE</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -65329,10 +65309,6 @@
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<BonusHealthChanges>
-				<BonusHealthChange>
-					<BonusType>BONUS_SMART_MEDICINE</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
 				<BonusHealthChange>
 					<BonusType>BONUS_HEMP</BonusType>
 					<iHealthChange>1</iHealthChange>
