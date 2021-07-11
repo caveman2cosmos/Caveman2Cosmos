@@ -692,7 +692,7 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 	node->m_firstChild = NULL;
 }
 
-bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
+bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum)
 {
 	iGroupMembershipChecksum = 0;
 
@@ -709,9 +709,9 @@ bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, u
 	return (m_iTurn == GC.getGame().getGameTurn() && m_currentGroupMembershipChecksum == iGroupMembershipChecksum && m_iFlags == iFlags);
 }
 
-bool	CvPathGenerator::haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen)
+bool CvPathGenerator::haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen)
 {
-	unsigned int dummy;
+	uint32_t dummy;
 	//	Only consider flags that effect the calculated path
 	iFlags &= SIGNIFICANT_PATHING_FLAGS;
 
@@ -882,7 +882,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			iFlags |= MOVE_TERMINUS_DECLARES_WAR;
 		}
 
-		unsigned int iGroupMembershipChecksum;
+		uint32_t iGroupMembershipChecksum;
 		const bool bSameGroup = groupMatches(pGroup, iFlags, iGroupMembershipChecksum);
 
 		if (!bSameGroup)
