@@ -8147,10 +8147,8 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
-				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -8412,7 +8410,6 @@
 			</TechTypes>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIDE_HUT</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
@@ -9298,8 +9295,6 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -10060,7 +10055,6 @@
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -11126,9 +11120,6 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
-			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>

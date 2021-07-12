@@ -1168,8 +1168,8 @@ class TestCode:
 				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
 				aReplacementBuildingList.append(iReplacementBuilding)
 				iReplacementTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
-				if iBaseTechLoc > iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
-					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
+				if iBaseTechLoc >= iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after or concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
 				
 			#Replacements of replacements
 			aReplacement2BuildingList = []
