@@ -251,6 +251,12 @@ void CvCityAI::AI_doTurn()
 
 	if (isHuman())
 	{
+		/* Toffer - Disabled governors ability to rush.
+		if (isProductionAutomated())
+		{
+			AI_doHurry();
+		}
+		*/
 		return;
 	}
 	AI_doPanic();
@@ -8969,7 +8975,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 {
 	PROFILE_FUNC();
 
-	FAssert(!isHuman() || isProductionAutomated());
+	FAssert(!isHuman() /*|| isProductionAutomated()*/); // Toffer - Disabled governors ability to rush.
 
 	if (isNPC() || getProduction() == 0 && !bForce)
 	{
@@ -9033,6 +9039,13 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 			if (eProductionBuilding != NO_BUILDING)
 			{
+				/* Toffer - Disabled governors ability to rush.
+				// City governor hard limitation.
+				if (player.isHuman() && player.getHurriedCount() > 32)
+				{
+					continue;
+				}
+				*/
 				// If it doesn't reduce time to completion, it isn't worth the inflation.
 				// (ToDo) Inflation may in the future be based on gold amount spent
 				// rather than e.g. hurry count, making this check obsolete.
@@ -9250,7 +9263,8 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 			if (getProductionTurnsLeft() > iMinTurns)
 			{
-				bool bWait = isHuman() || 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
+				// Toffer - Disabled governors ability to rush. 'isHuman() not needed here for now'
+				bool bWait = /*isHuman() ||*/ 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
 
 				if (!bWait && iHurryAngerLength > 0)
 				{
