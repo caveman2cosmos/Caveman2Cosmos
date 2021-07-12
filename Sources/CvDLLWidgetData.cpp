@@ -769,13 +769,11 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		break;
 
 	case WIDGET_CITIZEN:
-	case WIDGET_DISABLED_CITIZEN:
 		doEmphasizeSpecialist(widgetDataStruct);
 		break;
 
+	case WIDGET_DISABLED_CITIZEN:
 	case WIDGET_FREE_CITIZEN:
-		break;
-
 	case WIDGET_ANGRY_CITIZEN:
 		break;
 
@@ -2919,10 +2917,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 					}
-					if (!(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq())))
+					if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getTechPrereq()).getType()).GetCString(), GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
 					}
 
 					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH)
@@ -2998,7 +2996,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (featureTechRequired != NO_TECH)
 							{
 								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-								if ((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+								if (GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
 									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
 								{
 									// If the base never obsoletes OR we don't have the tech which obsoletes it
@@ -3038,7 +3036,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
 								if (terrainTechRequired != NO_TECH
 									&& terrainTechRequired != featureTechRequired
-									&& terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+									&& terrainTechRequired != GC.getBuildInfo(eBuild).getTechPrereq()
 									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
 									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
 										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech())))

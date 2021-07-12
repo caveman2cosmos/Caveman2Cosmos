@@ -99,7 +99,7 @@ public:
 	int getHealthPercent() const;
 	bool isPeakMakesValid() const;
 	int getImprovementBonusDepletionRand(int i) const;
-	int getPrereqTech() const;
+	TechTypes getPrereqTech() const	{ return m_iPrereqTech; }
 	//int getTraitYieldChanges(int i, int j) const;
 	//int* getTraitYieldChangesArray(int i) const;
 
@@ -150,7 +150,6 @@ private:
 
 	int m_iHealthPercent;
 	int m_iDepletionRand;
-	int m_iPrereqTech;
 	int m_iAdvancedStartCost;
 	int m_iTilesPerGoody;
 	int m_iGoodyUniqueRange;
@@ -170,6 +169,7 @@ private:
 	BonusTypes m_iBonusChange;
 	ImprovementTypes m_iImprovementPillage;
 	ImprovementTypes m_iImprovementUpgrade;
+	TechTypes m_iPrereqTech;
 
 	CvString m_szArtDefineTag;
 

@@ -364,7 +364,6 @@
 	<ElementType name="bRiver" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPower" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bDirtyPower" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAreaCleanPower" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DiploVoteType" content="textOnly"/>
 	<ElementType name="bForceTeamVoteEligible" content="textOnly" dt:type="boolean"/>
@@ -799,7 +798,6 @@
 		<element type="bWater" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
 		<element type="bPower" minOccurs="0"/>
-		<element type="bDirtyPower" minOccurs="0"/>
 		<element type="bAreaCleanPower" minOccurs="0"/>
 		<element type="bOrbital" minOccurs="0"/>
 		<element type="bOrbitalInfrastructure" minOccurs="0"/>

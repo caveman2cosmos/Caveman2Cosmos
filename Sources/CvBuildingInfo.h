@@ -46,8 +46,6 @@ public:
 	bool isRiver() const							{ return m_bRiver; }
 	bool isFreshWater() const						{ return m_bFreshWater; }
 	bool isPower() const							{ return m_bPower; }
-	bool isDirtyPower() const						{ return m_bDirtyPower; }
-	bool isAreaCleanPower() const					{ return m_bAreaCleanPower; }
 	bool isOrbital() const							{ return m_bOrbital; }
 	bool isOrbitalInfrastructure() const			{ return m_bOrbitalInfrastructure; }
 	bool isNoHolyCity() const						{ return m_bNoHolyCity; }
@@ -299,6 +297,7 @@ public:
 	const python::list cyGetPrereqAndTechs() const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingHappinessChanges() const { return m_aBuildingHappinessChanges; }
+	const python::list cyGetBuildingHappinessChanges() const { return m_aBuildingHappinessChanges.makeList(); }
 
 	int getFlavorValue(int i) const;
 	int getImprovementFreeSpecialist(int i) const;
@@ -348,7 +347,10 @@ public:
 	bool isPrereqOrFeature(int i) const;
 
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
+	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
+	const python::list cyGetGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier.makeList(); }
+	
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
 
@@ -544,8 +546,6 @@ private:
 	bool m_bRiver;
 	bool m_bPower;
 	bool m_bFreshWater;
-	bool m_bDirtyPower;
-	bool m_bAreaCleanPower;
 	bool m_bOrbital;
 	bool m_bOrbitalInfrastructure;
 	bool m_bNoHolyCity;

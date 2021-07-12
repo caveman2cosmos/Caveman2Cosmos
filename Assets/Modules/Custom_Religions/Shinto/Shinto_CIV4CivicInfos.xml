@@ -7,16 +7,6 @@
 	<CivicInfos>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_FOLKLORE</Type>
-			<BuildingHappinessChanges>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-			</BuildingHappinessChanges>
-		</CivicInfo>
-		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_STATE_CHURCH</Type>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>

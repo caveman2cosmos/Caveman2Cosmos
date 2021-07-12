@@ -2596,7 +2596,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		for (int iJ = 0; iJ < GC.getNumProcessInfos(); iJ++)
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq())
+			if (GET_TEAM(getTeam()).isHasTech(GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq())
 			&& GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_CULTURE) > 0)
 			{
 				bEasyCulture = true;
@@ -5430,7 +5430,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		bool bHaveGoodProcess = false;
 		for (int iJ = 0; iJ < GC.getNumProcessInfos(); iJ++)
 		{
-			if (kTeam.isHasTech((TechTypes)GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq()))
+			if (kTeam.isHasTech(GC.getProcessInfo((ProcessTypes)iJ).getTechPrereq()))
 			{
 				bHaveGoodProcess = (GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_GOLD) + GC.getProcessInfo((ProcessTypes)iJ).getProductionToCommerceModifier(COMMERCE_RESEARCH)) > 0;
 				if (bHaveGoodProcess)
@@ -5495,7 +5495,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			int iPotentialReligions = 0;
 			for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 			{
-				const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+				const TechTypes eReligionTech = GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 
 				if (kTeam.isHasTech(eReligionTech) && !GC.getGame().isReligionSlotTaken((ReligionTypes)iJ) && canFoundReligion())
 				{
@@ -9386,18 +9386,18 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								//	Without some more checks we are over-assessing religious buildings a lot
 								//	so if there is a religion pre-req make some basic checks on the availability of
 								//	the religion
-								if ( kLoopUnit.getPrereqReligion() != NO_RELIGION )
+								if (kLoopUnit.getPrereqReligion() != NO_RELIGION)
 								{
 									const CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
 
-									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
+									iTechDistance = std::max(iTechDistance, findPathLength(kReligion.getTechPrereq(), false));
 								}
 								//	Similarly corporations
-								if ( kLoopUnit.getPrereqCorporation() != NO_RELIGION )
+								if (kLoopUnit.getPrereqCorporation() != NO_RELIGION)
 								{
 									const CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
 
-									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
+									iTechDistance = std::max(iTechDistance, findPathLength(kCorporation.getTechPrereq(), false));
 								}
 
 								iTempValue = (iTempValue*15)/(10+iTechDistance);
@@ -9616,7 +9616,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 										//	the cities that have the religion already
 										iTempTradeValue = (iTempTradeValue*getHasReligionCount(eReligion))/std::max(1, iCityCount);
 
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
+										iTechDistance = std::max(iTechDistance, findPathLength(kReligion.getTechPrereq(), false));
 									}
 
 									//	Similarly corporations
@@ -9629,7 +9629,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 										//	the cities that have the religion already
 										iTempTradeValue = (iTempTradeValue*getHasCorporationCount(eCorporation))/std::max(1, iCityCount);
 
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
+										iTechDistance = std::max(iTechDistance, findPathLength(kCorporation.getTechPrereq(), false));
 									}
 
 									if ( iTempNonTradeValue > 0 && !bCanConstruct )
@@ -9704,7 +9704,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 						if (kLoopProject.getTechPrereq() != NO_TECH)
 						{
-							iDiff = abs(GC.getTechInfo((TechTypes)(kLoopProject.getTechPrereq())).getEra() - getCurrentEra());
+							iDiff = abs(GC.getTechInfo(kLoopProject.getTechPrereq()).getEra() - getCurrentEra());
 
 							if (iDiff == 0)
 							{
@@ -18156,13 +18156,13 @@ void CvPlayerAI::AI_doCivics()
 
 					for(int iOptionType = 0; iOptionType < GC.getNumCivicOptionInfos(); iOptionType++ )
 					{
-						bool	bTestSwitched = false;
+						bool bTestSwitched = false;
 
 						for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
 						{
 							if ( GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == iOptionType && !canDoCivics((CivicTypes)iI) )
 							{
-								TechTypes eTech = (TechTypes)GC.getCivicInfo((CivicTypes)iI).getTechPrereq();
+								const TechTypes eTech = GC.getCivicInfo((CivicTypes)iI).getTechPrereq();
 
 								if ( !GET_TEAM(getTeam()).isHasTech(eTech) )
 								{
@@ -22434,9 +22434,9 @@ int CvPlayerAI::AI_getSpaceVictoryStage() const
 			}
 			else
 			{
-				if( !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()) )
+				if (!GET_TEAM(getTeam()).isHasTech(GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()))
 				{
-					if( !isResearchingTech((TechTypes)GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()) )
+					if (!isResearchingTech(GC.getProjectInfo((ProjectTypes)iI).getTechPrereq()))
 					{
 						bNearAllTechs = false;
 					}
@@ -32207,7 +32207,6 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		if ( kPromotion.getTerrainAttackPercent(iI) != 0 ||
 			 kPromotion.getTerrainDefensePercent(iI) != 0 ||
 			 kPromotion.getTerrainWorkPercent(iI) != 0 ||
-			 kPromotion.getTerrainWorkRateModifierChangeType(iI) != 0 ||
 			 kPromotion.getTerrainDoubleMove(iI) ||
 			 kPromotion.getIgnoreTerrainDamage() == iI ||
 			 kPromotion.getWithdrawOnTerrainTypeChange(iI) != 0)
@@ -32297,9 +32296,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					iTempValue += iTerrainWeight/250;
 				}
 			}
-//Team Project (4)
-	//WorkRateMod
-			//ls612: Terrain work Modifiers //TB Edited for WorkRateMod (THANK you for thinking this out ls!)
+
 			iTemp = kPromotion.getTerrainWorkPercent(iI);
 			if (iTemp != 0)
 			{
@@ -32307,22 +32304,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 				{
 					iTempValue += (iTerrainWeight * iTemp) / 250;
 				}
-				else
-				{
-					iTempValue++;
-				}
-			}
-			iTemp = kPromotion.getTerrainWorkRateModifierChangeType(iI);
-			if (iTemp != 0)
-			{
-				if (eUnitAI == UNITAI_WORKER)
-				{
-					iTempValue += (iTerrainWeight * iTemp) / 250;
-				}
-				else
-				{
-					iTempValue++;
-				}
+				else iTempValue++;
 			}
 
 			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE) && kPromotion.getIgnoreTerrainDamage() == iI)
@@ -32348,39 +32330,42 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iTemp = kPromotion.getWithdrawOnTerrainTypeChange(iI);
 			if (iTemp != 0)
 			{
-
 				iExtra = pUnit == NULL ? kUnit.getWithdrawOnTerrainType(iI) : pUnit->getExtraWithdrawOnTerrainType((TerrainTypes)iI);
 				iTemp *= (100 + iExtra);
 				iTemp /= 100;
 
-				if (eUnitAI == UNITAI_ANIMAL ||
-					eUnitAI == UNITAI_COLLATERAL ||
-					eUnitAI == UNITAI_PILLAGE ||
-					eUnitAI == UNITAI_EXPLORE ||
-					eUnitAI == UNITAI_ATTACK_SEA ||
-					eUnitAI == UNITAI_EXPLORE_SEA ||
-					eUnitAI == UNITAI_CARRIER_SEA ||
-					eUnitAI == UNITAI_PIRATE_SEA ||
-					eUnitAI == UNITAI_SUBDUED_ANIMAL)
+				switch (eUnitAI)
 				{
-					if (pUnit != NULL && pUnit->plot()->getTerrainType() == (TerrainTypes)iI && pUnit->withdrawalProbability() > 0)
+					case UNITAI_ANIMAL:
+					case UNITAI_COLLATERAL:
+					case UNITAI_PILLAGE:
+					case UNITAI_EXPLORE:
+					case UNITAI_ATTACK_SEA:
+					case UNITAI_EXPLORE_SEA:
+					case UNITAI_CARRIER_SEA:
+					case UNITAI_PIRATE_SEA:
+					case UNITAI_SUBDUED_ANIMAL:
 					{
-						iTempValue += (iTerrainWeight * iTemp) / 2500;
+						if (pUnit != NULL && pUnit->plot()->getTerrainType() == (TerrainTypes)iI && pUnit->withdrawalProbability() > 0)
+						{
+							iTempValue += iTerrainWeight * iTemp / 2500;
+						}
+						else
+						{
+							iTempValue += iTerrainWeight * iTemp / 5000;
+						}
+						break;
 					}
-					else
+					default:
 					{
-						iTempValue += (iTerrainWeight * iTemp ) / 5000;
-					}
-				}
-				else
-				{
-					if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
-					{
-						iTempValue += (iTerrainWeight * iTemp)/75500;
-					}
-					else
-					{
-						iTempValue += (iTerrainWeight * iTemp)/12500;
+						if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
+						{
+							iTempValue += iTerrainWeight * iTemp / 75500;
+						}
+						else
+						{
+							iTempValue += iTerrainWeight * iTemp / 12500;
+						}
 					}
 				}
 			}
@@ -32399,7 +32384,6 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		if ( kPromotion.getFeatureAttackPercent(iI) != 0 ||
 			 kPromotion.getFeatureDefensePercent(iI) != 0 ||
 			 kPromotion.getFeatureWorkPercent(iI) != 0 ||
-			 kPromotion.getFeatureWorkRateModifierChangeType(iI) != 0 ||
 			 kPromotion.getFeatureDoubleMove(iI) != 0 ||
 			 kPromotion.getWithdrawOnFeatureTypeChange(iI))
 		{
@@ -32499,70 +32483,52 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iTemp = kPromotion.getWithdrawOnFeatureTypeChange(iI);
 			if (iTemp != 0)
 			{
-
 				iExtra = pUnit == NULL ? kUnit.getWithdrawOnFeatureType(iI) : pUnit->getExtraWithdrawOnFeatureType((FeatureTypes)iI);
 				iTemp *= (100 + iExtra);
 				iTemp /= 100;
 
-				if (eUnitAI == UNITAI_ANIMAL ||
-					eUnitAI == UNITAI_COLLATERAL ||
-					eUnitAI == UNITAI_PILLAGE ||
-					eUnitAI == UNITAI_EXPLORE ||
-					eUnitAI == UNITAI_ATTACK_SEA ||
-					eUnitAI == UNITAI_EXPLORE_SEA ||
-					eUnitAI == UNITAI_CARRIER_SEA ||
-					eUnitAI == UNITAI_PIRATE_SEA ||
-					eUnitAI == UNITAI_SUBDUED_ANIMAL)
+				switch (eUnitAI)
 				{
-					if (pUnit != NULL && pUnit->plot()->getFeatureType() == (FeatureTypes)iI && pUnit->withdrawalProbability() > 0)
+					case UNITAI_ANIMAL:
+					case UNITAI_COLLATERAL:
+					case UNITAI_PILLAGE:
+					case UNITAI_EXPLORE:
+					case UNITAI_ATTACK_SEA:
+					case UNITAI_EXPLORE_SEA:
+					case UNITAI_CARRIER_SEA:
+					case UNITAI_PIRATE_SEA:
+					case UNITAI_SUBDUED_ANIMAL:
 					{
-						iTempValue += (iFeatureWeight * iTemp) / 1200;
+						if (pUnit != NULL && pUnit->plot()->getFeatureType() == (FeatureTypes)iI && pUnit->withdrawalProbability() > 0)
+						{
+							iTempValue += iFeatureWeight * iTemp / 1200;
+						}
+						else
+						{
+							iTempValue += iFeatureWeight * iTemp / 1600;
+						}
+						break;
 					}
-					else
+					default:
 					{
-						iTempValue += (iFeatureWeight * iTemp ) / 1600;
-					}
-				}
-				else
-				{
-					if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
-					{
-						iTempValue += (iFeatureWeight * iTemp)/2000;
-					}
-					else
-					{
-						iTempValue++;
+						if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
+						{
+							iTempValue += (iFeatureWeight * iTemp)/2000;
+						}
+						else iTempValue++;
 					}
 				}
 			}
 
-//Team Project (4)
-	//WorkRateMod
 			//ls612: Terrain Work Modifiers //TB Edited for WorkRateMod (THANK you for thinking this out ls!)
 			iTemp = kPromotion.getFeatureWorkPercent(iI);
 			if (iTemp != 0)
 			{
 				if (eUnitAI == UNITAI_WORKER)
 				{
-					iTempValue += (iFeatureWeight * iTemp) / 100;
+					iTempValue += iFeatureWeight * iTemp / 100;
 				}
-				else
-				{
-					iTempValue++;
-				}
-			}
-
-			iTemp = kPromotion.getFeatureWorkRateModifierChangeType(iI);
-			if (iTemp != 0)
-			{
-				if (eUnitAI == UNITAI_WORKER)
-				{
-					iTempValue += (iFeatureWeight * iTemp) / 100;
-				}
-				else
-				{
-					iTempValue++;
-				}
+				else iTempValue++;
 			}
 		}
 	}
@@ -37499,7 +37465,7 @@ int CvPlayerAI::AI_religiousTechValue(TechTypes eTech) const
 	{
 		for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 		{
-			const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+			const TechTypes eReligionTech = GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 			if (eReligionTech == eTech)
 			{
 				if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iJ)))

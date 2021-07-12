@@ -17,10 +17,6 @@
 					<Directory>Custom_Religions</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module> <!-- Subdued animals and stuff by DH -->
-					<Directory>DancingHoskuld</Directory>
-					<bLoad>1</bLoad>
-				</Module>
 				<Module> <!-- Great Farmer with bonus placing ability -->
 					<Directory>NotSoGood</Directory>
 					<bLoad>1</bLoad>
@@ -49,7 +45,7 @@
 					<Directory>Bad_Karma</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module> <!-- This module contains unfinished/early stage work -->
+				<Module> <!-- This module contains unfinished/early stage work, and things meant to be templates -->
 					<Directory>zWIP</Directory>
 					<bLoad>0</bLoad>
 				</Module>

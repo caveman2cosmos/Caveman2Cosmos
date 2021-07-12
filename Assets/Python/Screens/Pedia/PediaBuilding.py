@@ -7,7 +7,7 @@ class PediaBuilding:
 	def __init__(self, parent, H_BOT_ROW):
 		import TestCode
 		self.GOMReqs = TestCode.TestCode([0])
-	
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -314,8 +314,8 @@ class PediaBuilding:
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 			i += 1
-			
-		# GOM tech requirements 
+
+		# GOM tech requirements
 		aGOMTechReqList = []
 		for i in range(2):
 			aGOMTechReqList.append([])
@@ -333,7 +333,7 @@ class PediaBuilding:
 			bPlus = True
 			i += 1
 		# TODO: Change it, so those are treated as separate requirement groups
-		
+
 		# Religion Req
 		szChild = PF + "REL"
 		iType = CvTheBuildingInfo.getPrereqReligion()
@@ -353,7 +353,7 @@ class PediaBuilding:
 				bPlus = True
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getCorporationInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 		# Bonus Req
-		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus 
+		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
@@ -412,7 +412,7 @@ class PediaBuilding:
 			iPrereqNumOfBuilding = pair.value
 			if CyPlayer:
 				if iPrereqNumOfBuilding > 0:
-					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)			
+					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
 					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
@@ -420,8 +420,8 @@ class PediaBuilding:
 		# Or building requirements
 		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
 			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
-			
-		# GOM building requirements 
+
+		# GOM building requirements
 		aGOMBuildingReqList = []
 		for i in range(2):
 			aGOMBuildingReqList.append([])

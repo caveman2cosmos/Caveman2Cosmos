@@ -1123,18 +1123,6 @@ void CvTeam::updateYield()
 }
 
 
-void CvTeam::updatePowerHealth()
-{
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
-		{
-			GET_PLAYER((PlayerTypes)iI).updatePowerHealth();
-		}
-	}
-}
-
-
 void CvTeam::updateCommerce()
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -4626,10 +4614,10 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 					player.changeProjectHappiness(kProject.getGlobalHappiness());
 					player.changeProjectHealth(kProject.getGlobalHealth());
 					player.changeProjectInflation(kProject.getInflationModifier());
-					player.changeMaintenanceModifier(GC.getProjectInfo(eIndex).getGlobalMaintenanceModifier());
-					player.changeDistanceMaintenanceModifier(GC.getProjectInfo(eIndex).getDistanceMaintenanceModifier());
-					player.changeNumCitiesMaintenanceModifier(GC.getProjectInfo(eIndex).getNumCitiesMaintenanceModifier());
-					player.changeConnectedCityMaintenanceModifier(GC.getProjectInfo(eIndex).getConnectedCityMaintenanceModifier());
+					player.changeMaintenanceModifier(kProject.getGlobalMaintenanceModifier());
+					player.changeDistanceMaintenanceModifier(kProject.getDistanceMaintenanceModifier());
+					player.changeNumCitiesMaintenanceModifier(kProject.getNumCitiesMaintenanceModifier());
+					player.changeConnectedCityMaintenanceModifier(kProject.getConnectedCityMaintenanceModifier());
 
 					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
@@ -7772,7 +7760,7 @@ ImprovementTypes CvTeam::getImprovementUpgrade(ImprovementTypes eImprovement) co
 	const ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 
 	if (eUpgrade != NO_IMPROVEMENT && GC.getImprovementInfo(eUpgrade).getPrereqTech() != NO_TECH
-	&& !isHasTech((TechTypes)GC.getImprovementInfo(eUpgrade).getPrereqTech()))
+	&& !isHasTech(GC.getImprovementInfo(eUpgrade).getPrereqTech()))
 	{
 		return NO_IMPROVEMENT;
 	}

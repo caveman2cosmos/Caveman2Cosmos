@@ -286,7 +286,7 @@ public:
 	void NoteBuildingNoLongerConstructable(BuildingTypes eBuilding) const;
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
-	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 
 	int getFoodTurnsLeft() const;
 	bool isProduction() const;
@@ -367,7 +367,7 @@ public:
 
 	int getBonusHealth(BonusTypes eBonus) const;
 	int getBonusHappiness(BonusTypes eBonus) const;
-	int getBonusPower(BonusTypes eBonus, bool bDirty) const;
+	int getBonusPower(BonusTypes eBonus) const;
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
@@ -719,10 +719,6 @@ public:
 	void changeBuildingGoodHealth(int iChange);
 	void changeBuildingBadHealth(int iChange);
 
-	int getPowerGoodHealth() const;
-	int getPowerBadHealth() const;
-	void updatePowerHealth();
-
 	int getBonusGoodHealth() const;
 	int getBonusBadHealth() const;
 	void changeBonusGoodHealth(int iChange);
@@ -880,9 +876,7 @@ public:
 	int getPowerCount() const;
 	bool isPower() const;
 	bool isAreaCleanPower() const;
-	int getDirtyPowerCount() const;
-	bool isDirtyPower() const;
-	void changePowerCount(int iChange, bool bDirty);
+	void changePowerCount(int iChange);
 
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
@@ -1174,6 +1168,7 @@ public:
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
 	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);
 
+	int getMaxSpecialistCount() const;
 	int getMaxSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;
 	void changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange);
@@ -1181,7 +1176,6 @@ public:
 	int getForceSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistForced() const;
 	void setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue);
-	void changeForceSpecialistCount(SpecialistTypes eIndex, int iChange);
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
@@ -1705,8 +1699,6 @@ protected:
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
-	int m_iPowerGoodHealth;
-	int m_iPowerBadHealth;
 	int m_iBonusGoodHealth;
 	int m_iBonusBadHealth;
 	int m_iHurryAngerTimer;
@@ -1818,7 +1810,6 @@ protected:
 	int m_iNukeModifier;
 	int m_iFreeSpecialist;
 	int m_iPowerCount;
-	int m_iDirtyPowerCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;
@@ -2214,7 +2205,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);

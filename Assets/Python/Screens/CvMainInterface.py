@@ -1069,11 +1069,14 @@ class CvMainInterface:
 
 				x -= iSize + 2
 				ID = "CitizenDisabledButton" + szInc
-				screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
+				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
+				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidDisabledCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, False)
 				screen.hide(ID)
 				ID = "CitizenButton" + szInc
-				screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
+				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
+				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
+				screen.enable(ID, True)
 				screen.hide(ID)
 				n += 1
 		self.yTopCitizen = y
@@ -3382,7 +3385,7 @@ class CvMainInterface:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		x = 0
 		for i in xrange(self.iNumProcessInfos):
-			if CyCity.canMaintain(i, False):
+			if CyCity.canMaintain(i):
 				BTN = GC.getProcessInfo(i).getButton()
 				Btn = "WID|PROCESS|CityWork" + str(i)
 				screen.setImageButtonAt(Btn, Pnl, BTN, x, 0, iSize, iSize, eWidGen, 1, 1)
@@ -4831,8 +4834,7 @@ class CvMainInterface:
 			bOwnCity = InCity.iPlayer == self.iPlayer
 
 		bAutomated = CyCity.isCitizensAutomated()
-		if not bAutomated:
-			iFreeSpecialistPopulationRatio = CyCity.getPopulation() + CyCity.totalFreeSpecialists()
+		iMinCount = 0
 
 		for i in xrange(self.iNumSpecialistInfos):
 			szInc = str(i)
@@ -4840,26 +4842,28 @@ class CvMainInterface:
 			if GC.getSpecialistInfo(i).isVisible():
 
 				iCount = CyCity.getSpecialistCount(i)
-				bAvailable = False
 				if bOwnCity:
 					if bAutomated:
-						iCount = max(iCount, CyCity.getForceSpecialistCount(i))
+						iMinCount = iCount - CyCity.getForceSpecialistCount(i)
 
-					if CyCity.isSpecialistValid(i, 1) and (bAutomated or iCount < iFreeSpecialistPopulationRatio):
-						bAvailable = True
+					if CyCity.isSpecialistValid(i, 1):
 						screen.show("IncreaseSpecialist" + szInc)
 
-					if iCount > 0:
-						bAvailable = True
+					if iCount > iMinCount:
 						screen.show("DecreaseSpecialist" + szInc)
 
 				ID = "CitizenCount" + szInc
 				screen.modifyLabel(ID, uFont + str(iCount), 1<<1)
 				screen.show(ID)
-				if bAvailable:
-					screen.show("CitizenButton" + szInc)
+
+				if bOwnCity and CyCity.isSpecialistValid(i, 0):
+					ID = "CitizenButton" + szInc
+					screen.show(ID)
+					screen.setState(ID, CyCity.AI_isEmphasizeSpecialist(i))
 				else:
-					screen.show("CitizenDisabledButton" + szInc)
+					ID = "CitizenDisabledButton" + szInc
+					screen.show(ID)
+					screen.setState(ID, CyCity.AI_isEmphasizeSpecialist(i))
 
 	# FoV
 	def setFieldofView(self, iFoV):

@@ -136,7 +136,7 @@ public:
 		{
 			CvString szTextVal;
 			GetXmlVal(szTextVal);
-			pVal = static_cast<T>(GC.getInfoTypeFromString(szTextVal));
+			pVal = static_cast<T>(GC.getInfoTypeForString(szTextVal));
 			MoveToXmlParent();
 		}
 	}

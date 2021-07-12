@@ -3337,41 +3337,6 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_MAMMAL_URSINE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_URSINE</Description>
-			<iPursuitChange>10</iPursuitChange>
-			<FeatureAttacks>
-				<FeatureAttack>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iFeatureAttack>10</iFeatureAttack>
-				</FeatureAttack>
-			</FeatureAttacks>
-			<FeatureDefenses>
-				<FeatureDefense>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iFeatureDefense>20</iFeatureDefense>
-				</FeatureDefense>
-			</FeatureDefenses>
-			<InvisibleFeatureChanges>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-			</InvisibleFeatureChanges>
-			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RACCOON</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RACCOON</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
@@ -3436,11 +3401,6 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_TAPIR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_TAPIR</Description>
-			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
-			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RHINO</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6641,12 +6601,6 @@
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wild.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_SUBDUED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_SUBDUED</Description>
-			<bCannotMergeSplit>1</bCannotMergeSplit>
-			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_IDEA</Type>

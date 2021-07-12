@@ -637,8 +637,13 @@ void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuilt")
-		.arg("pCity", pCity)
-		.arg("pUnit", pUnit);
+		.arg("pCity", pCity);
+
+	if (pUnit)
+		eventData.arg("pUnit", pUnit);
+	else
+		eventData.arg("pUnit", NULL);
+
 	postEvent(eventData, "cityBuilt");
 }
 
