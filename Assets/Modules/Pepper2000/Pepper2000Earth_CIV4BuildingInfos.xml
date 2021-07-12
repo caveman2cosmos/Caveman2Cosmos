@@ -25528,12 +25528,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANDLEMAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_CHEESE_SHOP</Type>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
@@ -25639,12 +25633,6 @@
 			<Type>BUILDING_PERFUME_MAKER</Type>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PERFUME_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
