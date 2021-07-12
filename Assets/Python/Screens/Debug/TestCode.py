@@ -39,6 +39,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
+		self.main.addTestCode(screen, self.checkBuildingCivicInfluences, "Building - check civic tags", "Check if building is available when civic is active")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
@@ -1158,6 +1159,35 @@ class TestCode:
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
+
+	#Check if building doesn't obsolete before civic is available
+	def checkBuildingCivicInfluences(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iBuildingObsoleteTechLoc = 999 # Never obsolete
+			if CvBuildingInfo.getObsoleteTech() != -1:
+				iBuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			for iCivic in xrange(GC.getNumCivicInfos()):
+				CvCivicInfo = GC.getCivicInfo(iCivic)
+				iCivicTechUnlock = self.checkCivicTechRequirementLocation(CvCivicInfo)[0]
+				if iBuildingObsoleteTechLoc < iCivicTechUnlock:
+				
+					#<BuildingHappinessChanges>
+					if CvCivicInfo.getBuildingHappinessChanges(iBuilding) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHappinessChanges")
+					
+					#<BuildingHealthChanges>
+					if CvCivicInfo.getBuildingHealthChanges(iBuilding) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHealthChanges")
+					
+					#<BuildingProductionModifiers>
+					if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingProductionModifiers")
+					
+					#<BuildingCommerceModifiers>
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingCommerceModifiers")
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):

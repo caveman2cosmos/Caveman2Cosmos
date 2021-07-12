@@ -323,9 +323,12 @@ void CyInfoPythonInterface1()
 		.def("getYieldModifier", &CvCivicInfo::getYieldModifier, "int (int i)")
 		.def("getCommerceModifier", &CvCivicInfo::getCommerceModifier, "int (int i)")
 		.def("getSpecialistExtraCommerce", &CvCivicInfo::getSpecialistExtraCommerce, "int (int i)")
+		.def("getBuildingHappinessChanges", &CvCivicInfo::getBuildingHappinessChanges, "int (int i)")
+		.def("getBuildingHealthChanges", &CvCivicInfo::getBuildingHealthChanges, "int (int i)")
+		.def("getBuildingProductionModifier", &CvCivicInfo::getBuildingProductionModifier, "int (int i)")
+		.def("getBuildingCommerceModifier", &CvCivicInfo::getBuildingCommerceModifier, "int (int i, int j)")		
 
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
-
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
 		;
 
