@@ -137,9 +137,9 @@ class TestCode:
 			aTechGOMOrLocList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridX())
 			aTechGOMOrRowList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridY())
 		if len(aTechGOMOrLocList) > 0 and len(aTechGOMOrRowList) > 0:
-			iTechGOMOrLoc = max(aTechGOMOrLocList)
+			iTechGOMOrLoc = min(aTechGOMOrLocList)
 			for iTechLoc in xrange(len(aTechGOMOrLocList)):
-				if aTechGOMOrLocList[iTechLoc] == max(aTechGOMOrLocList):
+				if aTechGOMOrLocList[iTechLoc] == min(aTechGOMOrLocList):
 					iTechGOMOrRow = aTechGOMOrRowList[iTechLoc]
 		else:
 			iTechGOMOrLoc = 0
@@ -222,9 +222,9 @@ class TestCode:
 			aTechGOMOrLocList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridX())
 			aTechGOMOrRowList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridY())
 		if len(aTechGOMOrLocList) > 0 and len(aTechGOMOrRowList) > 0:
-			iTechGOMOrLoc = max(aTechGOMOrLocList)
+			iTechGOMOrLoc = min(aTechGOMOrLocList)
 			for iTechLoc in xrange(len(aTechGOMOrLocList)):
-				if aTechGOMOrLocList[iTechLoc] == max(aTechGOMOrLocList):
+				if aTechGOMOrLocList[iTechLoc] == min(aTechGOMOrLocList):
 					iTechGOMOrRow = aTechGOMOrRowList[iTechLoc]
 		else:
 			iTechGOMOrLoc = 0
@@ -775,19 +775,31 @@ class TestCode:
 			else:
 				iObsoleteTechLoc = 999
 
+			aBuildingReplacementUnlockList = []
+			aBuildingReplacementTypeList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
 				iReplacTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacement)[0]
+				if iReplacTechLoc > 0: #Exclude special replacements
+					aBuildingReplacementUnlockList.append(iReplacTechLoc)
+					aBuildingReplacementTypeList.append(CvBuildingReplacement.getType())
 				if CvBuildingReplacement.getObsoleteTech() != -1:
 					iObsoleteReplacementTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
 				else:
 					iObsoleteReplacementTechLoc = 999
 
-				if (iObsoleteTechLoc - iReplacTechLoc) <= 5:
-					self.log(CvBuildingInfo.getType()+" -> "+CvBuildingReplacement.getType()+": "+str(iObsoleteTechLoc)+"/"+str(iReplacTechLoc))
-
+				#Replacement should obsolete after building, that it replaces
 				if iObsoleteTechLoc > iObsoleteReplacementTechLoc:
 					self.log(CvBuildingInfo.getType()+" -> "+CvBuildingReplacement.getType()+" base/replacement obsolete location: "+str(iObsoleteTechLoc)+"/"+str(iObsoleteReplacementTechLoc))
+			
+			#Only care about earliest replacement, building shouldn't obsolete too close to its replacement
+			if len(aBuildingReplacementUnlockList) > 0 and len(aBuildingReplacementTypeList) > 0:
+				for i in xrange(len(aBuildingReplacementUnlockList)):
+					if aBuildingReplacementUnlockList[i] == min(aBuildingReplacementUnlockList):
+						sBuildingReplacement = aBuildingReplacementTypeList[i]
+						
+				if (iObsoleteTechLoc - min(aBuildingReplacementUnlockList)) <= 5:
+						self.log(CvBuildingInfo.getType()+" -> "+sBuildingReplacement+": "+str(iObsoleteTechLoc)+"/"+str(min(aBuildingReplacementUnlockList)))
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
