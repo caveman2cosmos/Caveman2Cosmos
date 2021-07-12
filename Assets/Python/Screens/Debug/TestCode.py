@@ -1154,16 +1154,22 @@ class TestCode:
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
-	#Building - Check if we don't have implicit replacements
+	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def CheckBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):		
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)	
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iBaseTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 
 			#Replacements
 			aReplacementBuildingList = []
+			aReplacementBuildingTechLocList = []
 			for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(i)
+				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
 				aReplacementBuildingList.append(iReplacementBuilding)
+				iReplacementTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
+				if iBaseTechLoc > iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
 				
 			#Replacements of replacements
 			aReplacement2BuildingList = []
@@ -1172,7 +1178,7 @@ class TestCode:
 				for j in xrange(CvBuildingReplacementInfo.getNumReplacementBuilding()):
 					iReplacement2Building = CvBuildingReplacementInfo.getReplacementBuilding(j)
 					aReplacement2BuildingList.append(iReplacement2Building)
-					
+
 			#Get building type names
 			aReplacementBuildingTypeList = []
 			for i in xrange(len(aReplacementBuildingList)):
@@ -1184,13 +1190,17 @@ class TestCode:
 			for i in xrange(len(aReplacement2BuildingTypeList)):
 				if aReplacement2BuildingTypeList[i] not in aReplacementBuildingTypeList:
 					aImplicitReplacementList.append(aReplacement2BuildingTypeList[i])
+			aImplicitReplacementUniqueList = []
+			for i in xrange(len(aImplicitReplacementList)):
+				if aImplicitReplacementList[i] not in aImplicitReplacementUniqueList:
+					aImplicitReplacementUniqueList.append(aImplicitReplacementList[i])
 			
 			#Building can't have replacements, that are implicit - that is unlisted replacements of replacements
 			if len(aReplacementBuildingList) > 0 and len(aImplicitReplacementList) > 0:
 				if CvBuildingInfo.getNumReplacedBuilding() == 0:
-					self.log("BASE: "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementList))
+					self.log("BASE: "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 				else:
-					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementList))
+					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 
 	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):

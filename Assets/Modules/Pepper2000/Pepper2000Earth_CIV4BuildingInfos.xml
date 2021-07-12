@@ -13069,6 +13069,11 @@
 		<BuildingInfo>
 			<Type>BUILDING_3DPRINTING_MILL</Type>
 			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AIRPORT</Type>
@@ -13167,6 +13172,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_BRICK_MASON</Type>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CO2_RESERVOIR</Type>
@@ -13491,6 +13499,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_OXEN_MILL</Type>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_MILL</Type>
@@ -13510,6 +13521,7 @@
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13538,10 +13550,20 @@
 		<BuildingInfo>
 			<Type>BUILDING_PARTS_MAKER</Type>
 			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARTS_PLANT</Type>
 			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEAT_GATHERER</Type>
@@ -13598,6 +13620,7 @@
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14100,6 +14123,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_GUNSMITH</Type>
 			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JET_AIRCRAFT_FACTORY</Type>
@@ -14567,6 +14593,7 @@
 			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14585,6 +14612,7 @@
 			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15346,6 +15374,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17526,6 +17555,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17533,6 +17563,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17540,6 +17571,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17565,6 +17597,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17572,6 +17605,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17579,6 +17613,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17590,6 +17625,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17597,6 +17633,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17604,6 +17641,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17611,6 +17649,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17618,6 +17657,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17632,6 +17672,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17639,6 +17680,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17646,6 +17688,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17653,6 +17696,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17660,6 +17704,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17667,6 +17712,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17688,6 +17734,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17695,6 +17742,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17702,6 +17750,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17709,6 +17758,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17730,6 +17780,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17737,6 +17788,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17758,6 +17810,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17765,6 +17818,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17772,6 +17826,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17779,6 +17834,7 @@
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17786,6 +17842,7 @@
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17807,6 +17864,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17814,6 +17872,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17821,6 +17880,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17835,6 +17895,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17849,6 +17910,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17856,6 +17918,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17863,6 +17926,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17870,6 +17934,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17884,6 +17949,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17891,6 +17957,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17898,6 +17965,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17905,6 +17973,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17916,6 +17985,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17937,6 +18007,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17958,6 +18029,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17965,6 +18037,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24975,6 +25048,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24982,6 +25056,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25419,6 +25494,9 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_TRAINER</Type>
@@ -25431,6 +25509,223 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
 			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PEST_APHIDS</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CANDLEMAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CANDLEMAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHEESE_SHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_COBBLER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CONFECTIONER_WORKSHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_COOPER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_AMBER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_CORN</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_HENNA</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_INDIGO</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_JADE</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_RICE</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GATHERER_WHEAT</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GHEE_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GRAMMATICUS</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HAT_SHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_LYE_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PAPER_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PERFUME_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PERFUME_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_QUERN</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ROASTING_HOUSE</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SAIL_WEAVER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SAUSAGE_SHOP</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SCULPTOR</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SEAMSTRESS_HUT</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SOAP_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TANNERY</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TANNIN_MAKER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WEAVER</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DONKEY_MILL</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TEXTILE_MILL</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WATERMILL</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WINDMILL</Type>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
