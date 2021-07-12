@@ -791,13 +791,13 @@ class TestCode:
 				#Replacement should obsolete after building, that it replaces
 				if iObsoleteTechLoc > iObsoleteReplacementTechLoc:
 					self.log(CvBuildingInfo.getType()+" -> "+CvBuildingReplacement.getType()+" base/replacement obsolete location: "+str(iObsoleteTechLoc)+"/"+str(iObsoleteReplacementTechLoc))
-			
+
 			#Only care about earliest replacement, building shouldn't obsolete too close to its replacement
 			if len(aBuildingReplacementUnlockList) > 0 and len(aBuildingReplacementTypeList) > 0:
 				for i in xrange(len(aBuildingReplacementUnlockList)):
 					if aBuildingReplacementUnlockList[i] == min(aBuildingReplacementUnlockList):
 						sBuildingReplacement = aBuildingReplacementTypeList[i]
-						
+
 				if (iObsoleteTechLoc - min(aBuildingReplacementUnlockList)) <= 5:
 						self.log(CvBuildingInfo.getType()+" -> "+sBuildingReplacement+": "+str(iObsoleteTechLoc)+"/"+str(min(aBuildingReplacementUnlockList)))
 
@@ -1095,21 +1095,21 @@ class TestCode:
 			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectingBuildingInfo)[0]
 			iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 			if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-				iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()			
-				
+				iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+
 			for jBuilding in xrange(GC.getNumBuildingInfos()):
 				CvAffectedBuildingInfo = GC.getBuildingInfo(jBuilding)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
 				iAffectedBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
-				
+
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					#<GlobalBuildingExtraCommerces>
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if CvAffectingBuildingInfo.getGlobalBuildingCommerceChange(jBuilding, iCommerce) != 0:
 							self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
-					
+
 					#<GlobalBuildingCostModifiers>
 					if CvAffectingBuildingInfo.getGlobalBuildingCostModifier(jBuilding) != 0:
 						self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingCostModifiers")
@@ -1120,10 +1120,13 @@ class TestCode:
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
 				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()			
+					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
+				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
-			
+
 			#<BuildingHappinessChanges>
 			for pair in CvAffectingBuildingInfo.getBuildingHappinessChanges():
 				CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
@@ -1131,9 +1134,12 @@ class TestCode:
 				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
 					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
+				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingHappinessChanges")
-			
+
 			#<BuildingProductionModifiers>
 			for pair in CvAffectingBuildingInfo.getBuildingProductionModifiers():
 				CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
@@ -1141,9 +1147,12 @@ class TestCode:
 				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
 					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
+				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingProductionModifiers")
-					
+
 			#<PrereqNotInCityBuildings>
 			for i in xrange(CvAffectingBuildingInfo.getNumPrereqNotInCityBuildings()):
 				iAffectedBuilding = CvAffectingBuildingInfo.getPrereqNotInCityBuilding(i)
@@ -1152,9 +1161,12 @@ class TestCode:
 				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
 					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
+				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - PrereqNotInCityBuildings")
-					
+
 			#<ExtendsBuilding>
 			iAffectedBuilding = CvAffectingBuildingInfo.getExtendsBuilding()
 			if iAffectedBuilding != -1:
@@ -1163,12 +1175,15 @@ class TestCode:
 				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
 				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
 					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
+				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def CheckBuildingImplicitReplacements(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):		
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iBaseTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 
@@ -1182,7 +1197,7 @@ class TestCode:
 				iReplacementTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
 				if iBaseTechLoc >= iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
 					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after or concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
-				
+
 			#Replacements of replacements
 			aReplacement2BuildingList = []
 			for i in xrange(len(aReplacementBuildingList)):
@@ -1206,7 +1221,7 @@ class TestCode:
 			for i in xrange(len(aImplicitReplacementList)):
 				if aImplicitReplacementList[i] not in aImplicitReplacementUniqueList:
 					aImplicitReplacementUniqueList.append(aImplicitReplacementList[i])
-			
+
 			#Building can't have replacements, that are implicit - that is unlisted replacements of replacements
 			if len(aReplacementBuildingList) > 0 and len(aImplicitReplacementList) > 0:
 				if CvBuildingInfo.getNumReplacedBuilding() == 0:

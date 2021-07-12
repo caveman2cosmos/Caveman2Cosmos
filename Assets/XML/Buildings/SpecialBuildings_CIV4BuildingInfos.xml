@@ -10060,7 +10060,7 @@
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>				
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
