@@ -3490,6 +3490,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 				}
 				return true;
 			}
+			/* Toffer - This is not an accurate assert, many false positives here as not all units in an area can reach all cities in the area.
 			FErrorMsg
 			(
 				CvString::format
@@ -3498,6 +3499,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 					getOwner(), getNumUnits(), headUnit->getDescription().c_str(), getX(), getY(), cityX->getName().c_str(), ePlayer, cityX->getX(), cityX->getY()
 				).c_str()
 			);
+			*/
 		}
 	}
 	return false;
