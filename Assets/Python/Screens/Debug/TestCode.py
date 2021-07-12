@@ -1075,21 +1075,33 @@ class TestCode:
 					if CvBuildingInfo.getBonusDefenseChanges(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusDefenseChanges")
 
+	class BuildingLocationData:
+
+		def __init__(self, CvBuildingInfo):
+			self.info = info = CvBuildingInfo
+			self.iUnlockTechLoc = self.checkBuildingTechRequirementLocation(info)[0]
+
+			obsoleteTech = info.getObsoleteTech()
+			if obsoleteTech != -1:
+				self.iObsoleteTechLoc = GC.getTechInfo(obsoleteTech).getGridX()			
+			else:
+				self.iObsoleteTechLoc = 999 # Never obsolete
+
 	#Check if buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
 	def checkBuildingAffectingBuildings(self):
+		lBuildingLocations = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectingBuildingInfo)[0]
-			iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-			if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-				iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()			
+			lBuildingLocations.append(BuildingLocationData(GC.getBuildingInfo(iBuilding)))
+
+		for pAffectingBuildingLocation in lBuildingLocations:
+			CvAffectingBuildingInfo = pAffectingBuildingLocation.info
+			iAffectingBuildingUnlockTechLoc = pAffectingBuildingLocation.iUnlockTechLoc
+			iAffectingBuildingObsoleteTechLoc = pAffectingBuildingLocation.iObsoleteTechLoc
 				
-			for jBuilding in xrange(GC.getNumBuildingInfos()):
-				CvAffectedBuildingInfo = GC.getBuildingInfo(jBuilding)
-				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectedBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
-					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
+			for pAffectedBuildingLocation in lBuildingLocations:
+				CvAffectedBuildingInfo = pAffectedBuildingLocation.info
+				iAffectedBuildingUnlockTechLoc = pAffectedBuildingLocation.iUnlockTechLoc
+				iAffectedBuildingObsoleteTechLoc = pAffectedBuildingLocation.iObsoleteTechLoc
 				
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					#<GlobalBuildingExtraCommerces>
