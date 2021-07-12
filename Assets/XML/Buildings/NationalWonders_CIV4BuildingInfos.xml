@@ -6214,10 +6214,6 @@
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNDERWATER_HOTEL</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLAR_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>

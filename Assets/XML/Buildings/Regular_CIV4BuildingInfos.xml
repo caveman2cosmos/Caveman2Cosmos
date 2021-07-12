@@ -6354,10 +6354,6 @@
 					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iAsset>5</iAsset>
 			<iConquestProb>75</iConquestProb>
@@ -36310,10 +36306,6 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CITY_PARK</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

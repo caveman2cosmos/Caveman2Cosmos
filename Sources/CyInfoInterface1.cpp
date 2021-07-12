@@ -473,6 +473,7 @@ void CyInfoPythonInterface1()
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 
 		.def("getGlobalBuildingCommerceChange", &CvBuildingInfo::getGlobalBuildingCommerceChange, "int (int i, int j)")
+		.def("getNumGlobalBuildingCommerceChanges", &CvBuildingInfo::getNumGlobalBuildingCommerceChanges, "int ()")
 		.def("getGlobalBuildingCostModifier", &CvBuildingInfo::getGlobalBuildingCostModifier, "int (int i)")
 		.def("getGlobalBuildingProductionModifiers", &CvBuildingInfo::cyGetGlobalBuildingProductionModifiers)
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::cyGetBuildingHappinessChanges)

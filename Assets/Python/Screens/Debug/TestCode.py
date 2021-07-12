@@ -1097,30 +1097,33 @@ class TestCode:
 			if CvAffectingBuildingInfo.getObsoleteTech() != -1:
 				iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 
-			for jBuilding in xrange(GC.getNumBuildingInfos()):
-				CvAffectedBuildingInfo = GC.getBuildingInfo(jBuilding)
-				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectedBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
-					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
-
-				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
-					#<GlobalBuildingExtraCommerces>
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvAffectingBuildingInfo.getGlobalBuildingCommerceChange(jBuilding, iCommerce) != 0:
+			#<GlobalBuildingExtraCommerces>
+			for i in xrange(CvAffectingBuildingInfo.getNumGlobalBuildingCommerceChanges()):
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					iAffectedBuilding = CvAffectingBuildingInfo.getGlobalBuildingCommerceChange(i, iCommerce)
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
+					iAffectedBuildingObsoleteTechLoc = 999 # Never obsolete
+					if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+						iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
+					if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 							self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
 
-					#<GlobalBuildingCostModifiers>
-					if CvAffectingBuildingInfo.getGlobalBuildingCostModifier(jBuilding) != 0:
+			#<GlobalBuildingCostModifiers>
+			for i in xrange(GC.getNumBuildingInfos()):
+				CvAffectedBuildingInfo = GC.getBuildingInfo(i)
+				if CvAffectingBuildingInfo.getGlobalBuildingCostModifier(i) != 0:					
+					iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
+					iAffectedBuildingObsoleteTechLoc = 999 # Never obsolete
+					if CvAffectedBuildingInfo.getObsoleteTech() != -1:
+						iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
+					if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 						self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingCostModifiers")
 
 			#<GlobalBuildingProductionModifiers>
 			for pair in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
 				CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
@@ -1131,9 +1134,6 @@ class TestCode:
 			for pair in CvAffectingBuildingInfo.getBuildingHappinessChanges():
 				CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
@@ -1144,9 +1144,6 @@ class TestCode:
 			for pair in CvAffectingBuildingInfo.getBuildingProductionModifiers():
 				CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
@@ -1158,9 +1155,6 @@ class TestCode:
 				iAffectedBuilding = CvAffectingBuildingInfo.getPrereqNotInCityBuilding(i)
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
@@ -1172,9 +1166,6 @@ class TestCode:
 			if iAffectedBuilding != -1:
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				iAffectedBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectedBuildingInfo)[0]
-				iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-				if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				iAffectedBuildingObsoleteTechLoc = 999 #Never obsolete
 				if CvAffectedBuildingInfo.getObsoleteTech() != -1:
 					iAffectedBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectedBuildingInfo.getObsoleteTech()).getGridX()
