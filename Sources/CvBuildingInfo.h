@@ -350,7 +350,7 @@ public:
 	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
 	const IDValueMap<BuildingTypes, int>& getGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier; }
 	const python::list cyGetGlobalBuildingProductionModifiers() const { return m_aGlobalBuildingProductionModifier.makeList(); }
-	
+
 	int getGlobalBuildingCostModifier(int i) const;
 	int getBonusDefenseChanges(int i) const;
 

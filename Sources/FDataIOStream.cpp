@@ -122,7 +122,7 @@ uint32_t FDataIOStream::WriteString(int count, std::wstring values[])
 	}
 	return 0;
 }
-	
+
 uint32_t FDataIOStream::ReadString(char* szName)
 {
 	char c;

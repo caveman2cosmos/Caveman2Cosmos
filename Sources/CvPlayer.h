@@ -2093,7 +2093,6 @@ public:
 	void changeNationalGreatPeopleUnitRate(const UnitTypes eIndex, const int iChange);
 
 	int getMaxTradeRoutesAdjustment() const;
-	void setMaxTradeRoutesAdjustment(int iNewValue);
 	void changeMaxTradeRoutesAdjustment(int iChange);
 
 	int getNationalHurryAngerModifier() const;

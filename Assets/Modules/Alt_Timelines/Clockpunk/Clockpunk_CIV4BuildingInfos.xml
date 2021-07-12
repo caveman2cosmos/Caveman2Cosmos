@@ -217,6 +217,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

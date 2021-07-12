@@ -42,21 +42,21 @@ public:
 	virtual uint32_t	GetEOF() const { return m_wrapped->GetEOF(); }
 	virtual uint32_t			GetSizeLeft() const { return m_wrapped->GetSizeLeft(); }
 	virtual void	CopyToMem(void* mem) { m_wrapped->CopyToMem(mem); }
-	
+
 	virtual uint32_t	WriteString(const wchar_t* szName) { return m_wrapped->WriteString(szName); }
 	virtual uint32_t	WriteString(const char* szName) { return m_wrapped->WriteString(szName); }
 	virtual uint32_t	WriteString(const std::string& szName) { return m_wrapped->WriteString(szName); }
 	virtual uint32_t	WriteString(const std::wstring& szName) { return m_wrapped->WriteString(szName); }
 	virtual uint32_t	WriteString(int count, std::string values[]) { return m_wrapped->WriteString(count,values); }
 	virtual uint32_t	WriteString(int count, std::wstring values[]) { return m_wrapped->WriteString(count,values); }
-	
+
 	virtual uint32_t	ReadString(char* szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
 	virtual uint32_t	ReadString(wchar_t* szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
 	virtual uint32_t	ReadString(std::string& szName) { return m_wrapped->ReadString(szName); m_lenRead += szName.length(); }
 	virtual uint32_t	ReadString(std::wstring& szName) { return m_wrapped->ReadString(szName); m_lenRead += 2*szName.length(); }
 	virtual uint32_t	ReadString(int count, std::string values[]) { return m_wrapped->ReadString(count,values); m_lenRead += count*values[0].length(); }
 	virtual uint32_t	ReadString(int count, std::wstring values[]) { return m_wrapped->ReadString(count,values); m_lenRead += 2*count*values[0].length(); }
-	
+
 	virtual char*		ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
 	virtual wchar_t*	ReadWideString() { wchar_t* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
 	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++;}

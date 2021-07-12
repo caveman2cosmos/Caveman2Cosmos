@@ -36,23 +36,23 @@ public:
 	virtual uint32_t	GetEOF() const = 0;
 	virtual uint32_t	GetSizeLeft() const = 0;
 	virtual void		CopyToMem(void* mem) = 0;
-	
+
 	virtual uint32_t	WriteString(const wchar_t* szName) = 0;
 	virtual uint32_t	WriteString(const char* szName) = 0;
 	virtual uint32_t	WriteString(const std::string& szName) = 0;
 	virtual uint32_t	WriteString(const std::wstring& szName) = 0;
 	virtual uint32_t	WriteString(int count, std::string values[]) = 0;
 	virtual uint32_t	WriteString(int count, std::wstring values[]) = 0;
-	
+
 	virtual uint32_t	ReadString(char* szName) = 0;
 	virtual uint32_t	ReadString(wchar_t* szName) = 0;
 	virtual uint32_t	ReadString(std::string& szName) = 0;
 	virtual uint32_t	ReadString(std::wstring& szName) = 0;
 	virtual uint32_t	ReadString(int count, std::string values[]) = 0;
 	virtual uint32_t	ReadString(int count, std::wstring values[]) = 0;
-	
-	virtual char*		ReadString() = 0;		// allocates memory 
-	virtual wchar_t*	ReadWideString() = 0;	// allocates memory 
+
+	virtual char*		ReadString() = 0;		// allocates memory
+	virtual wchar_t*	ReadWideString() = 0;	// allocates memory
 
 	virtual void		Read(char *) = 0;
 	virtual void		Read(uint8_t*) = 0;

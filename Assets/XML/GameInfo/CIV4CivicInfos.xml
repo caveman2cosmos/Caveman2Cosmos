@@ -1309,10 +1309,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VENETIAN_ARSENAL</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
 					<BuildingType>BUILDING_ARC</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
@@ -5766,10 +5762,6 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
-					<iHappinessChange>-2</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
@@ -8042,10 +8034,6 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HAGIA_SOPHIA</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
