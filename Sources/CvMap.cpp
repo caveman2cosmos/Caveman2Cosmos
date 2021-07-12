@@ -1477,7 +1477,7 @@ void CvMap::deleteViewport(int iIndex)
 
 	delete m_viewports[iIndex];
 
-	for(unsigned int iI = iIndex; iI < m_viewports.size()-1; iI++)
+	for (uint32_t iI = iIndex; iI < m_viewports.size()-1; iI++)
 	{
 		m_viewports[iI] = m_viewports[iI+1];
 	}

@@ -7,9 +7,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_BIRD_MYTH</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_BIRD_MYTH</DependencyType>
-			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OBATALA</BuildingType>

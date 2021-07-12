@@ -382,11 +382,6 @@ bool CyPlayer::canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTe
 	return m_pPlayer->canCreate((ProjectTypes)eProject, bContinue, bTestVisible);
 }
 
-bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue) const
-{
-	return m_pPlayer->canMaintain((ProcessTypes)eProcess, bContinue);
-}
-
 int CyPlayer::getUnitProductionNeeded(int /*UnitTypes*/ iIndex) const
 {
 	return m_pPlayer->getProductionNeeded((UnitTypes) iIndex);

@@ -44,10 +44,10 @@ class CvGameUtils:
 		return -1 # Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
 
 	def cannotMaintain(self, argsList):
-		CyCity, iProcess, bContinue, = argsList
+		CyCity, iProcess, = argsList
 		if not CyCity:
 			print "CyCity == None"
-			print "CyCity, iProcess, bContinue", argsList
+			print "CyCity, iProcess", argsList
 			return False
 
 		aMap = {

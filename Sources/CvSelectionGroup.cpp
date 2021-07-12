@@ -3575,7 +3575,8 @@ bool CvSelectionGroup::calculateIsStranded()
 		return false;
 	}
 
-	if (getHeadUnit()->isCargo())
+	const CvUnit* headUnit = getHeadUnit();
+	if (headUnit->isCargo())
 	{
 		return false;
 	}
@@ -3604,7 +3605,7 @@ bool CvSelectionGroup::calculateIsStranded()
 
 	if (plot()->area()->getNumCities() > 0)
 	{
-		if (getHeadUnit()->AI_getUnitAIType() == UNITAI_SPY)
+		if (headUnit->AI_getUnitAIType() == UNITAI_SPY)
 		{
 			return false;
 		}
@@ -3621,20 +3622,26 @@ bool CvSelectionGroup::calculateIsStranded()
 			return false;
 		}
 
-		//	Since we are considering a reachable enemy city as not stranded it follows
-		//	that we expect situations where we can only attack are not considered stranded,
-		//	so include the MOVE_THROUGH_ENEMY flag for consistency
-		if (isHasPathToAreaPlayerCity(getOwner(), MOVE_THROUGH_ENEMY))
+		if (headUnit->canAttack() || headUnit->isBlendIntoCity())
 		{
-			return false;
-		}
+			//	Since we are considering a reachable enemy city as not stranded it follows
+			//	that we expect situations where we can only attack are not considered stranded,
+			//	so include the MOVE_THROUGH_ENEMY flag for consistency
+			if (isHasPathToAreaPlayerCity(getOwner(), MOVE_THROUGH_ENEMY))
+			{
+				return false;
+			}
 
-		if (isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY))
+			if (isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY))
+			{
+				return false;
+			}
+		}
+		else if (isHasPathToAreaPlayerCity(getOwner(), MOVE_NO_ENEMY_TERRITORY))
 		{
 			return false;
 		}
 	}
-
 	return true;
 }
 

@@ -38,8 +38,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
 	void copyNonDefaults(CvOutcomeList* pOutcomeList);
+	void getCheckSum(uint32_t& iSum) const;
 
-	void getCheckSum(unsigned int& iSum) const;
 protected:
 	bool m_bIsReference;
 	std::vector<CvOutcome*> m_aOutcome;

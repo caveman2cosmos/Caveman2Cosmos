@@ -6797,6 +6797,7 @@
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
+			<FreePromotion>PROMOTION_WAR_CRY</FreePromotion>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -8146,10 +8147,14 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
-				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<bAutoBuild>1</bAutoBuild>
@@ -8405,7 +8410,6 @@
 			</TechTypes>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIDE_HUT</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
@@ -9291,9 +9295,13 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<bAutoBuild>1</bAutoBuild>
@@ -10047,7 +10055,12 @@
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_CAVE_DWELLING</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -11107,9 +11120,6 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
-			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
@@ -12915,6 +12925,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRISTIAN_SHRINE</Type>
@@ -13077,6 +13088,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HINDU_SHRINE</Type>
