@@ -39,6 +39,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
+		self.main.addTestCode(screen, self.CheckBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
@@ -1152,6 +1153,44 @@ class TestCode:
 					iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
 				if iAffectingBuildingObsoleteTechLoc < iAffectedBuildingUnlockTechLoc or iAffectingBuildingUnlockTechLoc > iAffectedBuildingObsoleteTechLoc:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
+
+	#Building - Check if we don't have implicit replacements
+	def CheckBuildingImplicitReplacements(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):		
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)	
+
+			#Replacements
+			aReplacementBuildingList = []
+			for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(i)
+				aReplacementBuildingList.append(iReplacementBuilding)
+				
+			#Replacements of replacements
+			aReplacement2BuildingList = []
+			for i in xrange(len(aReplacementBuildingList)):
+				CvBuildingReplacementInfo = GC.getBuildingInfo(aReplacementBuildingList[i])
+				for j in xrange(CvBuildingReplacementInfo.getNumReplacementBuilding()):
+					iReplacement2Building = CvBuildingReplacementInfo.getReplacementBuilding(j)
+					aReplacement2BuildingList.append(iReplacement2Building)
+					
+			#Get building type names
+			aReplacementBuildingTypeList = []
+			for i in xrange(len(aReplacementBuildingList)):
+				aReplacementBuildingTypeList.append(GC.getBuildingInfo(aReplacementBuildingList[i]).getType())
+			aReplacement2BuildingTypeList = []
+			for i in xrange(len(aReplacement2BuildingList)):
+				aReplacement2BuildingTypeList.append(GC.getBuildingInfo(aReplacement2BuildingList[i]).getType())
+			aImplicitReplacementList = []
+			for i in xrange(len(aReplacement2BuildingTypeList)):
+				if aReplacement2BuildingTypeList[i] not in aReplacementBuildingTypeList:
+					aImplicitReplacementList.append(aReplacement2BuildingTypeList[i])
+			
+			#Building can't have replacements, that are implicit - that is unlisted replacements of replacements
+			if len(aReplacementBuildingList) > 0 and len(aImplicitReplacementList) > 0:
+				if CvBuildingInfo.getNumReplacedBuilding() == 0:
+					self.log("BASE: "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementList))
+				else:
+					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementList))
 
 	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):
