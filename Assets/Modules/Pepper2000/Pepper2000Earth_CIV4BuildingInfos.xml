@@ -18731,8 +18731,8 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ASCENSION_GATE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>

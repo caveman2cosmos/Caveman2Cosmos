@@ -458,8 +458,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -497,8 +497,8 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_LABS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -521,8 +521,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -558,8 +558,8 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -576,8 +576,8 @@
 			<iHealth>1</iHealth>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -594,8 +594,8 @@
 			<iHealth>5</iHealth>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -1207,8 +1207,8 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -1678,8 +1678,8 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1056</iCost>
