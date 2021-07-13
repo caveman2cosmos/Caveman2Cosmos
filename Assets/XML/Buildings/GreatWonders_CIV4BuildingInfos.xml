@@ -19092,5 +19092,25 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bOrbital>1</bOrbital>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EMANCIPATION_PROCLAMATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_HELP</Help>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EMANCIPATION_PROCLAMATION</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+			<iCost>1310</iCost>
+			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
+			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

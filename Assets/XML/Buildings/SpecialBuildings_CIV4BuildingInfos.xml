@@ -13831,6 +13831,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -13861,6 +13864,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
@@ -13919,6 +13925,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
 			<Flavors>
 				<Flavor>
@@ -13943,6 +13952,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14904,6 +14916,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<FreeBuilding>BUILDING_SLAVERY</FreeBuilding>
 			<Hurrys>
 				<Hurry>
@@ -14981,6 +14996,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -15166,6 +15184,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<iHappiness>-1</iHappiness>
@@ -15184,6 +15205,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iHappiness>-3</iHappiness>
@@ -15211,6 +15235,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -15260,6 +15287,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -15309,6 +15339,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15349,6 +15382,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -15391,6 +15427,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -15425,6 +15464,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -15464,6 +15506,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -15536,6 +15581,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -15607,6 +15655,18 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -88297,6 +88297,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
