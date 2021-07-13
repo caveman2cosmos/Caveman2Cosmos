@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ECONOMY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Description>
@@ -79,6 +80,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_ECONOMY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_ECONOMY</Description>
@@ -131,6 +133,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_ECONOMY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_ECONOMY</Description>
@@ -195,6 +198,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_ECONOMY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY</Description>
@@ -251,6 +255,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
@@ -299,6 +304,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -325,6 +331,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILDING_SOLAR_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -351,6 +358,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILDING_GALACTIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -377,6 +385,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -403,6 +412,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
