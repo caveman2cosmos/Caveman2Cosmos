@@ -18741,7 +18741,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TOBACCO_PLANTATION</BuildingType>
 			</PrereqInCityBuildings>
-			<Type>BUILDING_CIGAR_ROLLER</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>

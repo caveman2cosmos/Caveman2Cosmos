@@ -12867,27 +12867,6 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLICE_CAT</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_POLICE_CAT</DependencyType>
-			</AndDependencyTypes>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FARNSWORTH_LAB</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_FARNSWORTH_LAB</DependencyType>
-			</AndDependencyTypes>
-			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RADIOPLEX</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_RADIOPLEX</DependencyType>
-			</AndDependencyTypes>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD</Type>
 			<Description>TXT_KEY_BUILDING_VIRTUAL_WORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VIRTUAL_WORLD_PEDIA</Civilopedia>
