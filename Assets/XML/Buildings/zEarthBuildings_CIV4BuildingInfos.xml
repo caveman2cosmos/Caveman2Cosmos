@@ -5913,24 +5913,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PRIME_DIRECTIVE_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-			</MapCategoryTypes>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_PESTICIDE_MANUFACTURER</Type>
 			<Description>TXT_KEY_BUILDING_PESTICIDE_MANUFACTURER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTICIDE_MANUFACTURER_PEDIA</Civilopedia>
@@ -17836,20 +17818,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>

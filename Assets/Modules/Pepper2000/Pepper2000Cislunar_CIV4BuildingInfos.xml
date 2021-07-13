@@ -1946,5 +1946,23 @@
 				<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PRIME_DIRECTIVE_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>10</iCommerce>
+			</CommerceChanges>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

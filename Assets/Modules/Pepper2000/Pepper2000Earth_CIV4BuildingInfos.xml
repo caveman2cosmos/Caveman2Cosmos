@@ -1271,5 +1271,32 @@
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
+			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
