@@ -330,7 +330,8 @@ public:
 	int* getBonusYieldModifierArray(int i) const;
 
 	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
-	int getNumGlobalBuildingCommerceChanges() const;
+	const std::vector<BuildingCommerceChange>& getGlobalBuildingCommerceChanges() const;
+	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 	//int getUnitProductionModifier(int i) const;

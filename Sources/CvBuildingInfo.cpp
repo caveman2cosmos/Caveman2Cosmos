@@ -883,20 +883,28 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 
 int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
 {
-	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
+	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
 	{
-		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
+		if (pChange.eBuilding == (BuildingTypes)iBuilding && pChange.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return it.iChange;
+			return pChange.iChange;
 		}
 	}
 
 	return 0;
 }
 
-int CvBuildingInfo::getNumGlobalBuildingCommerceChanges() const
+const std::vector<BuildingCommerceChange>& CvBuildingInfo::getGlobalBuildingCommerceChanges() const
 {
-	return m_aGlobalBuildingCommerceChanges.size();
+	return m_aGlobalBuildingCommerceChanges;
+}
+
+const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
+{
+	python::list pyList = python::list();
+	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
+		pyList.append(pChange);
+	return pyList;
 }
 
 const TCHAR* CvBuildingInfo::getButton() const
