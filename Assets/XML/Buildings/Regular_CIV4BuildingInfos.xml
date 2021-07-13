@@ -1558,6 +1558,7 @@
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOSSIL_AMBER</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<CommerceChanges>
@@ -7054,6 +7055,7 @@
 			<ObsoleteTech>TECH_IRRIGATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARLEY_FARM</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<YieldChanges>
@@ -8490,6 +8492,9 @@
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>770</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -10281,6 +10286,9 @@
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
@@ -10401,6 +10409,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>710</iCost>
 			<iHealth>-1</iHealth>
@@ -14218,6 +14229,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CANDLE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>168</iCost>
 			<YieldChanges>
@@ -14270,6 +14282,9 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -15115,6 +15130,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CARPET_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>261</iCost>
 			<iHappiness>1</iHappiness>
@@ -16896,6 +16912,7 @@
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEESE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>184</iCost>
 			<iHealth>1</iHealth>
@@ -19533,6 +19550,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHOE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<CommerceChanges>
@@ -20847,6 +20865,7 @@
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CONFECTIONS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>320</iCost>
 			<YieldChanges>
@@ -21330,6 +21349,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARREL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<CommerceChanges>
@@ -21732,6 +21752,7 @@
 			<ObsoleteTech>TECH_IRRIGATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORN_FARM</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<YieldChanges>
@@ -25467,6 +25488,7 @@
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>270</iCost>
 			<YieldChanges>
@@ -30841,6 +30863,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMU</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<iHealth>1</iHealth>
@@ -32927,6 +32950,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_PELTS</Bonus>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>40</iCost>
@@ -34408,6 +34434,7 @@
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GHEE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>153</iCost>
 			<YieldChanges>
@@ -35407,6 +35434,7 @@
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>139</iCost>
 			<CommerceChanges>
@@ -37239,6 +37267,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HAT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<CommerceChanges>
@@ -37866,6 +37895,7 @@
 			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HENNA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>35</iCost>
 			<CommerceChanges>
@@ -40037,6 +40067,9 @@
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 				<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
+			</ReplacementBuildings>
 			<iCost>2865</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -40828,6 +40861,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_FIRE_BRIGADES</ObsoleteTech>
 			<iCost>80</iCost>
 			<iHealth>1</iHealth>
@@ -40940,6 +40976,7 @@
 			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDIGO_FARM</BuildingType>
+				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>35</iCost>
 			<CommerceChanges>
@@ -42275,6 +42312,7 @@
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JADE_MINE</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<CommerceChanges>
@@ -42778,6 +42816,9 @@
 				<Bonus>BONUS_IVORY</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
@@ -46825,6 +46866,7 @@
 			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LYE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>160</iCost>
 			<iHealth>-1</iHealth>
@@ -48230,6 +48272,9 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
 			<iCost>50</iCost>
 			<CommerceChanges>
@@ -48305,6 +48350,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
+			</ReplacementBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
@@ -51237,6 +51285,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -58671,6 +58722,7 @@
 			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
+				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
 			</ReplacementBuildings>
 			<iCost>344</iCost>
 			<CommerceChanges>
@@ -59984,6 +60036,7 @@
 			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PERFUME_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>243</iCost>
 			<iHealth>1</iHealth>
@@ -60053,6 +60106,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<iCost>1540</iCost>
 			<iHealth>-1</iHealth>
@@ -63484,6 +63540,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BOOK_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>410</iCost>
 			<CommerceChanges>
@@ -64456,6 +64513,7 @@
 				<BuildingType>BUILDING_DONKEY_MILL</BuildingType>
 				<BuildingType>BUILDING_OXEN_MILL</BuildingType>
 				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<YieldChanges>
@@ -66608,6 +66666,7 @@
 			<ObsoleteTech>TECH_IRRIGATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RICE_PADDY</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<YieldChanges>
@@ -67054,6 +67113,7 @@
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COFFEE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>243</iCost>
 			<YieldChanges>
@@ -68365,6 +68425,7 @@
 			<ObsoleteTech>TECH_COAST_GUARD</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<CommerceChanges>
@@ -68946,6 +69007,7 @@
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SAUSAGE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>184</iCost>
 			<YieldChanges>
@@ -69458,6 +69520,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>160</iCost>
 			<CommerceChanges>
@@ -69804,6 +69867,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>40</iCost>
 			<iHappiness>1</iHappiness>
@@ -72514,6 +72578,7 @@
 			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>160</iCost>
 			<iHealth>1</iHealth>
@@ -73683,6 +73748,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1230</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -76088,6 +76156,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1605</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -76649,6 +76720,7 @@
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEATHER_FACTORY</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<iHealth>-1</iHealth>
@@ -76785,6 +76857,7 @@
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TANNIN_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<iHealth>-1</iHealth>
@@ -77029,6 +77102,9 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
 			<iCost>153</iCost>
 			<CommerceChanges>
@@ -78762,6 +78838,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>555</iCost>
 			<iHealth>-1</iHealth>
@@ -83837,6 +83914,7 @@
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>280</iCost>
 			<YieldChanges>
@@ -83984,6 +84062,7 @@
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CLOTH_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -84257,6 +84336,9 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iCost>344</iCost>
 			<CommerceChanges>
@@ -84369,6 +84451,7 @@
 			<ObsoleteTech>TECH_IRRIGATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WHEAT_FARM</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<YieldChanges>
@@ -84782,6 +84865,7 @@
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>320</iCost>
 			<YieldChanges>

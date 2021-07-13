@@ -7520,12 +7520,6 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MATHEMATICS_ACADEMY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MATHEMATICS_DEPARTMENT</Type>
 			<Description>TXT_KEY_BUILDING_MATHEMATICS_DEPARTMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATHEMATICS_DEPARTMENT_PEDIA</Civilopedia>
@@ -14273,24 +14267,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING1</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING2</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING3</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_BATTLEBOT_ARENA</Type>
 			<ObsoleteTech>TECH_ADVANCED_WARMACHINES</ObsoleteTech>
 			<ReplacementBuildings>
@@ -14417,24 +14393,6 @@
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ARMYSURPLUS_STORE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SPORTS_SHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SURF_SHOP</Type>
-			<ReplacementBuildings>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -23440,18 +23398,6 @@
 			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BICYCLE_SHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_BOOK_FACTORY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_ANTHILL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 			<ReplacementBuildings>
@@ -23468,58 +23414,10 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIRE_PIT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_BONFIRE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_IMU</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FURRIER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_JADE_MINE</Type>
 			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_JEWELER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MASK_CARVER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PERSONAL_ELECTRONICS_FACTORY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HYDROCARBON_REFINERY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23551,18 +23449,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TAPESTRY_MAKER_WORKSHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WHALEOIL_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FLINT_QUARRY</Type>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
@@ -23581,12 +23467,6 @@
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANDY_STORE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23919,216 +23799,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANDLEMAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CHEESE_SHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_COBBLER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CONFECTIONER_WORKSHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_COOPER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_AMBER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CORE_MINE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_BARLEY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_CORN</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_HENNA</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_INDIGO</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_JADE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CORE_MINE</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_RICE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GATHERER_WHEAT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GHEE_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_GRAMMATICUS</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HAT_SHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_LYE_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PAPER_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PERFUME_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_QUERN</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ROASTING_HOUSE</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SAIL_WEAVER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SAUSAGE_SHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SCULPTOR</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEAMSTRESS_HUT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SOAP_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TANNERY</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TANNIN_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WEAVER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DONKEY_MILL</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TEXTILE_MILL</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WATERMILL</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_WINDMILL</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CARPET_MAKER</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PRINTERS_WORKSHOP</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

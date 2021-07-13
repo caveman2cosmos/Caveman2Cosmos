@@ -11502,6 +11502,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>-5</iHealth>
 			<iHappiness>-5</iHappiness>
 			<YieldChanges>
@@ -11654,6 +11657,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -11804,6 +11810,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
 			<YieldChanges>
