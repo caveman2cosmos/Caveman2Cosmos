@@ -5542,6 +5542,7 @@
 			<Description>TXT_KEY_BUILDING_STATUE_OF_CHAMPION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_CHAMPION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<PrereqBonuses>
