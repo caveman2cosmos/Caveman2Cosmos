@@ -12307,13 +12307,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_GORILLA</SoundID>
-			<Filename>Sounds/Units/Gorilla</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_BUILD_CARNIVAL</SoundID>
 			<Filename>Sounds/Buildings/Carnival</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
