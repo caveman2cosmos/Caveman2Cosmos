@@ -1117,7 +1117,7 @@ class TestCode:
 					CvAffectedBuildingInfo = GC.getBuildingInfo(i)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
 
-      #<GlobalBuildingCostModifiers>
+			#<GlobalBuildingCostModifiers>
 			for pair in CvAffectingBuildingInfo.getGlobalBuildingCostModifiers():
 				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]:
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+GC.getBuildingInfo(pair.id).getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
