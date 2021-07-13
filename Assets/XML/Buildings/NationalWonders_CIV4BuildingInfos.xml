@@ -355,6 +355,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

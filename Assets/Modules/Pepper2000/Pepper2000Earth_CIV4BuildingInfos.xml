@@ -23368,18 +23368,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EIFFEL_TOWER</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TRANSAMERICA_PYRAMID</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_HNIC</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
@@ -23694,84 +23682,6 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BOTANICAL_GARDENS</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CHAMPAGNE_WINERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VINTAGE_RED_WINERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_VINTAGE_WHITE_WINERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIDIAS</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HARAPPAN_FAKE_GEMS</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_JADE_MASK</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MING_VASE_WORKSHOP</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RED_AND_BLACK</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_DYE_MAKER</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
@@ -23781,18 +23691,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ELEPHANT_TRAINER</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NINEVEH</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
-			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_APHIDS</Type>

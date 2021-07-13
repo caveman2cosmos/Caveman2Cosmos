@@ -5194,6 +5194,7 @@
 				<BuildingType>BUILDING_JADE_CARVER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -6020,6 +6021,7 @@
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>708</iCost>
@@ -7966,6 +7968,7 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1200</iCost>
 			<CommerceChanges>
@@ -9720,6 +9723,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
+				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5220</iCost>
 			<CommerceChanges>
@@ -11089,6 +11093,7 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
+				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -11685,6 +11690,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INSURANCE_OFFICE</BuildingType>
+				<BuildingType>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
 			<CommerceChanges>
@@ -12335,6 +12341,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -12373,6 +12380,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -12410,6 +12418,7 @@
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -14484,6 +14493,7 @@
 				<BuildingType>BUILDING_BEADMAKER</BuildingType>
 				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
@@ -14542,6 +14552,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2550</iCost>
 			<iHappiness>1</iHappiness>
@@ -14603,6 +14614,7 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1296</iCost>
 			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>

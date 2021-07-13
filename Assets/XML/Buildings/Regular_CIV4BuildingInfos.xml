@@ -27757,6 +27757,7 @@
 				<BuildingType>BUILDING_ELEPHANT_FARM</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_NATIONAL</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<CommerceChanges>
@@ -85153,6 +85154,7 @@
 			<PrereqCorporation>CORPORATION_WONKA</PrereqCorporation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CANDY_STORE</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>950</iCost>
 			<CommerceChanges>
