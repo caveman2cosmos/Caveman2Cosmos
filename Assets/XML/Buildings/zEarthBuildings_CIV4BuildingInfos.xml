@@ -6902,12 +6902,6 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iHappiness>-1</iHappiness>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
@@ -10978,7 +10972,6 @@
 				<iYield>5</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
@@ -12663,12 +12656,6 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
@@ -14976,12 +14963,6 @@
 				<iCommerce>100</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -16027,19 +16008,6 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CALLISTO_RESUPPLY_BASE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CALLISTO_RESUPPLY_BASE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -16101,13 +16069,6 @@
 				<iCommerce>12</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ENCELADUS_BASE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16198,13 +16159,6 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_IO_BASE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16231,13 +16185,6 @@
 				<iCommerce>8</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16264,13 +16211,6 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_GEOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16305,12 +16245,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16435,12 +16369,6 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_INFLATABLE_HABITAT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16466,12 +16394,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>18</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CISLUNAR_SOLAR_ARRAY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16497,13 +16419,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16531,12 +16446,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -16589,13 +16498,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
@@ -16811,12 +16713,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<iCost>8070</iCost>
-			<UnitProductionModifiers>
-				<UnitProductionModifier>
-					<UnitType>UNIT_SATELLITE</UnitType>
-					<iProductionModifier>50</iProductionModifier>
-				</UnitProductionModifier>
-			</UnitProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16886,38 +16782,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_HYDROPONICS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARS_HYDROPONICS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_VERTICAL_FARM</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_EXPANDED_HABITAT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_SOLAR_ARRAY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -17215,18 +17079,6 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_LUNAR_OUTPOST</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>20</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_GATEWAY</Type>
@@ -17312,13 +17164,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>60</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TRITON_BASE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>20</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -17344,13 +17189,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>60</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>20</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -17427,13 +17265,6 @@
 				<iYield>5</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -17971,13 +17802,6 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARS_MAGLEV</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
@@ -18454,13 +18278,6 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -18594,7 +18411,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_INTERSTELLAR_STARPORT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -18621,7 +18437,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_INTERGALACTIC_ADMINISTRATION</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -18651,12 +18466,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PLANETARY_AWARENESS</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -18793,7 +18602,7 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CISLUNAR_ECONOMY</Type>			
+			<Type>BUILDING_CISLUNAR_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Description>
@@ -19234,13 +19043,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			<iCost>11810</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARS_HITECH</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
 			</PrereqInCityBuildings>
@@ -19311,13 +19113,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			<iCost>12810</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ASTEROID_INTERIOR_CITY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_WINGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19337,13 +19132,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			<iCost>12810</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_GILLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19363,13 +19151,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
 			<iCost>13310</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19389,18 +19170,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
 			<iCost>13310</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TRITON_BASE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19420,13 +19189,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOSHIELDING</PrereqTech>
 			<iCost>13810</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19541,13 +19303,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STELLAR_COMPUTING</PrereqTech>
 			<iCost>24310</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -19570,18 +19325,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPECIES_AMALGAMATION</PrereqTech>
 			<iCost>26310</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqInCityBuildings>
@@ -19628,13 +19371,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IMMORTALITY</PrereqTech>
 			<iCost>31710</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ETERNAL_INTELLIGENCE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -19665,18 +19401,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUMINAL_BEINGS</PrereqTech>
 			<iCost>39510</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_INFORMATION_BASED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_PURE_ENERGY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19696,18 +19420,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</PrereqTech>
 			<iCost>43910</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -19742,14 +19454,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>48710</iCost>
-			<FreeBuilding>BUILDING_KOLMOGOROV_COMPRESSION</FreeBuilding>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_KOLMOGOROV_COMPRESSION</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -19772,13 +19476,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 			<iCost>52110</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -19817,18 +19514,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
 			<iCost>57510</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TRANSFINITE_SUPERCOMPUTER</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
 			<ConstructCondition>
 				<And>
 					<Has>
