@@ -681,23 +681,24 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 
-			#<PrereqAndCivics> - require all civics in list
-			aCivicTechLocList = []
+			
+			aCivicAndTechLocList = []
+			aCivicOrTechLocList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
+				#<PrereqAndCivics> - require all civics in list
 				if CvBuildingInfo.isPrereqAndCivics(iCivic):
-					iCivicTechLic = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
-					aCivicTechLocList.append(iCivicTechLic)
-			if len(aCivicTechLocList) > 0 and max(aCivicTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(aCivicTechLocList)+" "+str(iTechLoc))
-
-			#<PrereqOrCivics> - require one civics in list
-			aCivicTechLocList = []
-			for iCivic in xrange(GC.getNumCivicInfos()):
+					iCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					aCivicAndTechLocList.append(iCivicTechLoc)
+				
+				#<PrereqOrCivics> - require one civics in list
 				if CvBuildingInfo.isPrereqOrCivics(iCivic):
-					iCivicTechLic = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
-					aCivicTechLocList.append(iCivicTechLic)
-			if len(aCivicTechLocList) > 0 and min(aCivicTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(aCivicTechLocList)+" "+str(iTechLoc))
+					iCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					aCivicOrTechLocList.append(iCivicTechLoc)
+
+			if len(aCivicAndTechLocList) > 0 and max(aCivicAndTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(aCivicAndTechLocList)+" "+str(iTechLoc))
+			if len(aCivicOrTechLocList) > 0 and min(aCivicOrTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(aCivicOrTechLocList)+" "+str(iTechLoc))
 
 	#Building earliest manufacturer on resource tech reveal
 	def checkBuildingBonusManufacturerTech(self):
@@ -1036,7 +1037,7 @@ class TestCode:
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
 
-	#Bonus must be unlocked before building obsoletion so it can affect building at first place
+	#Building - bonus must be unlocked before building obsoletion so it can affect building at first place
 	def checkBuildingBonusTags(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -1089,7 +1090,7 @@ class TestCode:
 					if CvBuildingInfo.getBonusDefenseChanges(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusDefenseChanges")
 
-	#Check if buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
+	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
 	def checkBuildingAffectingBuildings(self):
 		aAffectedBuildingTechUnlockList = []
 		aAffectedBuildingTechObsoletionList = []
@@ -1155,7 +1156,7 @@ class TestCode:
 					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
-	#Check if building doesn't obsolete before civic is available
+	#Building - check if building doesn't obsolete before civic is available
 	def checkBuildingCivicInfluences(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
