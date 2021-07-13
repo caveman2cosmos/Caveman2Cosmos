@@ -10807,6 +10807,8 @@
 			</PrereqVicinityBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LADYBUGX</BuildingType>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>

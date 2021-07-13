@@ -3494,6 +3494,7 @@
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
+			<FreeBuilding>BUILDING_LAUNCH_SITE_EFFECT</FreeBuilding>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>

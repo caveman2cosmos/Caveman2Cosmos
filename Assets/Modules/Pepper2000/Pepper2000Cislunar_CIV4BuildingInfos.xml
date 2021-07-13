@@ -458,6 +458,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -468,7 +469,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_PEDIA</Civilopedia>
-			<bForceOverwrite>1</bForceOverwrite>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatType>
@@ -497,6 +497,7 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_LABS</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -511,7 +512,6 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>400</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -521,6 +521,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -555,9 +556,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -573,9 +574,9 @@
 			</CommerceChanges>
 			<iHappiness>4</iHappiness>
 			<iHealth>1</iHealth>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -591,9 +592,9 @@
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
 			<iHealth>5</iHealth>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
@@ -610,7 +611,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1207,6 +1207,7 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
@@ -1223,7 +1224,6 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
@@ -1678,6 +1678,7 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
@@ -1701,7 +1702,6 @@
 				<iCommerce>50</iCommerce>
 			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_BEAM_NETWORK</Type>
