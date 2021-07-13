@@ -22959,34 +22959,27 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+		std::map<int, std::vector<BuildingTypes> > aMap;
+
+		foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 		{
-			std::map<int, std::vector<int> > aMap;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			aMap[modifier.second].push_back(modifier.first);
+		}
+		for (std::map<int, std::vector<BuildingTypes> >::const_iterator it = aMap.begin(); it != aMap.end(); ++it)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
+
+			int iI = 0;
+			foreach_(const BuildingTypes eBuildingX, it->second)
 			{
-				if (kBuilding.getGlobalBuildingCostModifier(iI) != 0)
+				if (iI++ % 3 == 0)
 				{
-					aMap[kBuilding.getGlobalBuildingCostModifier(iI)].push_back(iI);
+					szBuffer.append(gDLL->getText("TXT_KEY_HELP_LIST"));
 				}
-			}
-			for (std::map<int, std::vector<int> >::const_iterator it = aMap.begin(); it != aMap.end(); ++it)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
+				else szBuffer.append(L", ");
 
-				int iI = 0;
-				foreach_(const int& itr, it->second)
-				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(itr);
-
-					if (iI++ % 3 == 0)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_HELP_LIST"));
-					}
-					else szBuffer.append(L", ");
-
-					szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
-					szBuffer.append(szBuilding);
-				}
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
+				szBuffer.append(szBuilding);
 			}
 		}
 

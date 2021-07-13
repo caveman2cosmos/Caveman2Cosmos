@@ -5887,48 +5887,40 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+					foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 					{
-						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+						const BuildingTypes eLoopBuilding = modifier.first;
+						if (kOwner.canConstruct(eLoopBuilding))
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building3");
-							const int iMod = kBuilding.getGlobalBuildingCostModifier(iI);
-							if (iMod != 0)
+							const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
+							int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
+
+							int iNewCost = 0;
+							// Reverse old modifier
+							if (iPlayerMod < 0)
 							{
-								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-								if (kOwner.canConstruct(eLoopBuilding))
-								{
-									const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
-									int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
-
-									int iNewCost = 0;
-									// Reverse old modifier
-									if (iPlayerMod < 0)
-									{
-										iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
-									}
-									else if (iPlayerMod > 0)
-									{
-										iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
-									}
-									iPlayerMod += iMod;
-									// Apply new modifier
-									if (iPlayerMod < 0)
-									{
-										iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
-									}
-									else if (iPlayerMod > 0)
-									{
-										iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
-									}
-
-									const int iCount = count_if(kOwner.cities(),
-										CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-									);
-
-									iValue += (iOriginalCost - iNewCost) * iCount / 10;
-								}
+								iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
 							}
+							else if (iPlayerMod > 0)
+							{
+								iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
+							}
+							iPlayerMod += modifier.second;
+							// Apply new modifier
+							if (iPlayerMod < 0)
+							{
+								iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
+							}
+							else if (iPlayerMod > 0)
+							{
+								iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
+							}
+
+							const int iCount = count_if(kOwner.cities(),
+								CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+							);
+
+							iValue += (iOriginalCost - iNewCost) * iCount / 10;
 						}
 					}
 
@@ -16011,47 +16003,39 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+				foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 				{
-					for (int iI = 0; iI < iNumBuildings; iI++)
+					const BuildingTypes eLoopBuilding = modifier.first;
+					if (kOwner.canConstruct(eLoopBuilding))
 					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building3");
-						const int iMod = kBuilding.getGlobalBuildingCostModifier(iI);
-						if (iMod != 0)
+						const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
+						int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
+
+						int iNewCost = 0;
+						// Reverse old modifier
+						if (iPlayerMod < 0)
 						{
-							const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-							if (kOwner.canConstruct(eLoopBuilding))
-							{
-								const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
-								int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
-
-								int iNewCost = 0;
-								// Reverse old modifier
-								if (iPlayerMod < 0)
-								{
-									iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
-								}
-								else if (iPlayerMod > 0)
-								{
-									iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
-								}
-								iPlayerMod += iMod;
-								// Apply new modifier
-								if (iPlayerMod < 0)
-								{
-									iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
-								}
-								else if (iPlayerMod > 0)
-								{
-									iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
-								}
-
-								const int iCount = count_if(kOwner.cities(),
-									CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-								);
-								iValue += (iOriginalCost - iNewCost) * iCount / 10;
-							}
+							iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
 						}
+						else if (iPlayerMod > 0)
+						{
+							iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
+						}
+						iPlayerMod += modifier.second;
+						// Apply new modifier
+						if (iPlayerMod < 0)
+						{
+							iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
+						}
+						else if (iPlayerMod > 0)
+						{
+							iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
+						}
+
+						const int iCount = count_if(kOwner.cities(),
+							CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+						);
+						iValue += (iOriginalCost - iNewCost) * iCount / 10;
 					}
 				}
 
