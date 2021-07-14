@@ -401,6 +401,33 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_HEAT_TOLERANCE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_HEAT_TOLERANCE</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
+			<iCost>13310</iCost>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
+			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
+			<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -431,34 +458,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HEAT_TOLERANCE</Type>
-			<bForceOverwrite>1</bForceOverwrite>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HEAT_TOLERANCE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
-			<iCost>13310</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
