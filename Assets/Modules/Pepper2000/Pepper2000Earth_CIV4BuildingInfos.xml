@@ -2038,5 +2038,30 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PRIME_DIRECTIVE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PRIME_DIRECTIVE</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
+			<iCost>23510</iCost>
+			<CommerceChanges>
+				<iCommerce>-10</iCommerce>
+			</CommerceChanges>
+			<FreeBuilding>BUILDING_PRIME_DIRECTIVE_EFFECT</FreeBuilding>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
