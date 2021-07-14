@@ -4922,36 +4922,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ONLINE_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_PRISON</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ORBITAL_PRISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_PRISON_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_NANOTUBES</Bonus>
-			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>6490</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
-			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
-			<iAIWeight>10</iAIWeight>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ORBITAL_PRISON</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>1</iExtraPlayerInstances>

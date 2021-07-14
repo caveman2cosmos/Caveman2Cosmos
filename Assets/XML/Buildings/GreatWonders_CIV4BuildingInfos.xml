@@ -688,66 +688,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ARK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASCENSION_GATE</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ASCENSION_GATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASCENSION_GATE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<Help>TXT_KEY_BUILDING_ASCENSION_GATE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ASCENSION_GATE</MovieDefineTag>
-			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
-			<bCenterInCity>1</bCenterInCity>
-			<fVisibilityPriority>10000</fVisibilityPriority>
-			<PrereqTech>TECH_ASCENSION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COMPUTERS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NANOTUBES</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
-					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>167130</iCost>
-			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
-			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
-			<VictoryThresholds>
-				<VictoryThreshold>
-					<VictoryType>VICTORY_SCIENTIFIC</VictoryType>
-					<iThreshold>1</iThreshold>
-				</VictoryThreshold>
-			</VictoryThresholds>
-			<bGoldenAge>1</bGoldenAge>
-			<iAsset>100</iAsset>
-			<iPower>100</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_AZADI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>

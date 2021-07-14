@@ -52443,40 +52443,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_NANOTUBES</Bonus>
-			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
-				<BuildingType>BUILDING_PROPAGANDA_SATELLITES</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>3245</iCost>
-			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<bOrbital>1</bOrbital>
-			<iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MICROWAVE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_MICROWAVE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROWAVE_FACTORY_PEDIA</Civilopedia>
@@ -56609,35 +56575,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_NANOBOTS</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_ORGANIC_PHOTONIC_CELLS</Bonus>
-			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>5655</iCost>
-			<CommerceChanges>
-				<iCommerce>-400</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-				<iCommerce>4</iCommerce>
-			</CommerceChanges>
-			<bOrbital>1</bOrbital>
-			<iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_NARWAL_CAMP</Type>
 			<Description>TXT_KEY_BUILDING_NARWAL_CAMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARWAL_CAMP_PEDIA</Civilopedia>
@@ -59021,125 +58958,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_DRYDOCK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_DRYDOCK</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_TITANIUM_WARES</Bonus>
-				<Bonus>BONUS_NANOTUBES</Bonus>
-			</PrereqBonuses>
-			<iCost>3245</iCost>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_EARLY_SPACESHIP</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<UnitCombatProdModifiers>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_EARLY_SPACESHIP</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_NUCLEAR_SPACESHIP</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_ANTIMATTER_SPACESHIP</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-				<UnitCombatProdModifier>
-					<UnitCombatProd>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatProd>
-					<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
-				</UnitCombatProdModifier>
-			</UnitCombatProdModifiers>
-			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<iAsset>1</iAsset>
-			<iPower>2</iPower>
-			<iConquestProb>75</iConquestProb>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_FACTORY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_FACTORY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ORBITAL_FACTORY</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>3245</iCost>
-			<YieldChanges>
-				<iYield>9</iYield>
-				<iYield>5</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<bOrbital>1</bOrbital>
-			<iAsset>6</iAsset>
-			<iPower>20</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_ORBITAL_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_HOTEL_PEDIA</Civilopedia>
@@ -59173,39 +58991,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_LABS</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_LABS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>2625</iCost>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<bOrbital>1</bOrbital>
-			<iAsset>6</iAsset>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCHID_FARM</Type>
@@ -88379,100 +88164,6 @@
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
-			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
-			</PrereqBonuses>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>2985</iCost>
-			<iHealth>5</iHealth>
-			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<bOrbital>1</bOrbital>
-			<iAsset>6</iAsset>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
-			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ARENA</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_CEMENT</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_STEEL_WARES</Bonus>
-				<Bonus>BONUS_TITANIUM_WARES</Bonus>
-				<Bonus>BONUS_NANOTUBES</Bonus>
-			</PrereqBonuses>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FURNITURE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COMPUTERS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>3245</iCost>
-			<iHealth>1</iHealth>
-			<iHappiness>10</iHappiness>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<bOrbital>1</bOrbital>
-			<iAsset>12</iAsset>
-			<iPower>5</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUMERIAN_ZIGGURAT</Type>
