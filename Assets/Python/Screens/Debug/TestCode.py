@@ -718,7 +718,7 @@ class TestCode:
 					aBonusList[iBonus] = iTechLoc
 
 			#<ExtraFreeBonuses>
-			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements
+			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements - those are subdued animal rewards most commonly
 				for iBuildingProducer in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					iBonus = CvBuildingInfo.getExtraFreeBonus(iBuildingProducer)
 					if aBonusList[iBonus] == -1:
