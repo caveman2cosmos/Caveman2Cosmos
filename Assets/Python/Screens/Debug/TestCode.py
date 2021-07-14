@@ -711,14 +711,14 @@ class TestCode:
 
 			#Singular <FreeBonus>
 			iBonus = CvBuildingInfo.getFreeBonus()
-			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1: #Natural wonder giving bonus is secondary effect - ignore natural wonders
+			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Natural wonder giving bonus is secondary effect - ignore natural wonders
 				if aBonusList[iBonus] == -1:
 					aBonusList[iBonus] = iTechLoc
 				elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
 					aBonusList[iBonus] = iTechLoc
 
 			#<ExtraFreeBonuses>
-			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1:
+			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements
 				for iBuildingProducer in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					iBonus = CvBuildingInfo.getExtraFreeBonus(iBuildingProducer)
 					if aBonusList[iBonus] == -1:

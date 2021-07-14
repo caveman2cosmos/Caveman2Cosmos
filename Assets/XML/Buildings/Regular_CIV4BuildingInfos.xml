@@ -2740,6 +2740,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ANTELOPE</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -8414,6 +8415,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BEAVER</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -8622,6 +8624,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BELUGA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<YieldChanges>
@@ -9775,6 +9778,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -10249,6 +10253,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BOAR</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -15453,6 +15458,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_CARIBOU</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -18069,6 +18075,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_CHINCHILLA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -24567,6 +24574,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -28560,6 +28568,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ELEPHANT</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -28605,6 +28614,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ELEPHANT_SEAL</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<YieldChanges>
@@ -28857,6 +28867,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -33522,6 +33533,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_FOX</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -35726,6 +35738,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -40077,6 +40090,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_HIPPO</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -44873,6 +44887,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_KANGAROO</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -49095,6 +49110,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -53979,6 +53995,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MINK</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -55232,6 +55249,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MOOSE</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -55491,6 +55509,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MOUFLON</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -56032,6 +56051,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -56602,6 +56622,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_NARWHAL</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<YieldChanges>
@@ -59379,6 +59400,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_OSTRICH</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<YieldChanges>
@@ -59417,6 +59439,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_OSTRICH</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -66558,6 +66581,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RABBIT</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -66596,6 +66620,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RACCOON</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -68403,6 +68428,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RHEA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -68441,6 +68467,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -71752,6 +71779,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_SEA_OTTER</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -71835,6 +71863,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_SEAL</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<YieldChanges>
@@ -85467,6 +85496,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_WALRUS</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<YieldChanges>
@@ -88147,6 +88177,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
