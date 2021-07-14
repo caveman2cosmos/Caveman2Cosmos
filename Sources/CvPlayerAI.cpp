@@ -883,12 +883,11 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 							iCityExp += pPlotCity->getFreeExperience();
 							iCityExp += pPlotCity->getDomainFreeExperience(pLoopUnit->getDomainType());
 							iCityExp += pPlotCity->getUnitCombatFreeExperience(pLoopUnit->getUnitCombatType());
+
 							//TB SubCombat Mod Begin
-							UnitCombatTypes eSubCombatType;
-							for (int iI = 0; iI < pLoopUnit->getUnitInfo().getNumSubCombatTypes(); iI++)
+							foreaach_(const UnitCombatTypes eSubCombat, pLoopUnit->getUnitInfo().getSubCombats())
 							{
-								eSubCombatType = ((UnitCombatTypes)pLoopUnit->getUnitInfo().getSubCombatType(iI));
-								iCityExp += pPlotCity->getUnitCombatFreeExperience(eSubCombatType);
+								iCityExp += pPlotCity->getUnitCombatFreeExperience(eSubCombat);
 							}
 							//TB SubCombat Mod End
 
@@ -10630,17 +10629,17 @@ DenialTypes CvPlayerAI::AI_religionTrade(ReligionTypes eReligion, PlayerTypes eP
 int CvPlayerAI::AI_unitImpassableCount(UnitTypes eUnit) const
 {
 	int iCount = 0;
-	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumTerrainImpassableTypes(); iI++)
+	foreach_(const TerrainTypes impassableTerrain, GC.getUnitInfo(eUnit).getImpassableTerrains())
 	{
-		const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(GC.getUnitInfo(eUnit).getTerrainImpassableType(iI));
+		const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(impassableTerrain);
 		if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iCount++;
 		}
 	}
-	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumFeatureImpassableTypes(); iI++)
+	foreach_(const FeatureTypes impassableFeature, GC.getUnitInfo(eUnit).getImpassableFeatures())
 	{
-		const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(GC.getUnitInfo(eUnit).getFeatureImpassableType(iI));
+		const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(impassableFeature);
 		if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iCount++;
