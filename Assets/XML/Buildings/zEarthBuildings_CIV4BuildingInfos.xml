@@ -2051,6 +2051,29 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_MARS_CYCLER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
+			<Description>TXT_KEY_BUILDING_MARS_CYCLER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MARS_CYCLER</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<iCost>10110</iCost>
+			<CommerceChanges>
+				<iCommerce>600</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
