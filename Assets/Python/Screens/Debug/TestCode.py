@@ -1102,7 +1102,6 @@ class TestCode:
 			else:
 				aAffectedBuildingTechObsoletionList.append(999)
 	
-		# getGlobalBuildingCommerceChange and getGlobalBuildingCostModifier needs to be rewritten within DLL, so only amount of tags in building needs to be searched for buildings, not executing checker inner loop 36 000 000 times....
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectingBuildingInfo)[0]
@@ -1119,8 +1118,9 @@ class TestCode:
 
 			#<GlobalBuildingCostModifiers>
 			for pair in CvAffectingBuildingInfo.getGlobalBuildingCostModifiers():
-				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]:
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+GC.getBuildingInfo(pair.id).getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
 
 			#<GlobalBuildingProductionModifiers>
 			for pair in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
