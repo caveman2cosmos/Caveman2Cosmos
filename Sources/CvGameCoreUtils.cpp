@@ -3593,10 +3593,12 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 
 bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pSelectionGroup, int iFlags)
 {
-	return !(iFlags & MOVE_IGNORE_DANGER) &&
-			pSelectionGroup->AI_isControlled() &&
-			!(pSelectionGroup->canFight()) &&
-			!(pSelectionGroup->alwaysInvisible());
+	return (
+		!(iFlags & MOVE_IGNORE_DANGER)
+		&& pSelectionGroup->AI_isControlled()
+		&& !pSelectionGroup->canFight()
+		&& !pSelectionGroup->alwaysInvisible()
+	);
 }
 
 //	Edge validity

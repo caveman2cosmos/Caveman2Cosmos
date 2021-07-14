@@ -11460,35 +11460,44 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 {
 	FAssertMsg(pUnit->getDomainType() == DOMAIN_SEA, "loadPirateShip expects to be passed a water unit");
 
+	const bool bSM = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
+
 	for (int iI = 0; iI < pUnit->cargoSpace(); iI++)
 	{
-		UnitTypes eBestUnit = NO_UNIT;
+		int iBestUnit = -1;
 		int iBestValue = 0;
 		for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 		{
-			if (validBarbarianShipUnit(GC.getUnitInfo((UnitTypes) iJ), (UnitTypes) iJ))
-			{
-				int iValue = (1 + getSorenRandNum(1000, "Barb Unit Selection"));
+			const CvUnitInfo& unitInfo = GC.getUnitInfo((UnitTypes) iJ);
 
-				if (GC.getUnitInfo((UnitTypes) iJ).getUnitAIType(UNITAI_ATTACK))
+			if (validBarbarianShipUnit(unitInfo, (UnitTypes) iJ) && (!bSM || pUnit->SMcargoSpaceAvailable((SpecialUnitTypes)unitInfo.getSpecialUnitType(), unitInfo.getDomainType()) > 0))
+			{
+				int iValue = 1 + getSorenRandNum(1000, "Barb Unit Selection");
+
+				if (unitInfo.getUnitAIType(UNITAI_ATTACK))
 				{
 					iValue += 250;
 				}
 
 				if (iValue > iBestValue)
 				{
-					eBestUnit = (UnitTypes) iJ;
+					iBestUnit = iJ;
 					iBestValue = iValue;
 				}
 			}
 		}
-		if (eBestUnit != NO_UNIT)
+		if (iBestUnit > -1)
 		{
-			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->getX(), pUnit->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
-			if (pPirate != NULL)
+			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit((UnitTypes)iBestUnit, pUnit->getX(), pUnit->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
+			if (pPirate != NULL
+			&& pUnit->SMcargoSpaceAvailable(pPirate->getSpecialUnitType(), pPirate->getDomainType()) >= pPirate->SMCargoVolume())
 			{
 				pPirate->setTransportUnit(pUnit);
 				pUnit->AI_setUnitAIType(UNITAI_ASSAULT_SEA);
+			}
+			else // Not enough space to load it on the ship...
+			{
+				pPirate->kill(false);
 			}
 		}
 	}

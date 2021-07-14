@@ -323,9 +323,12 @@ void CyInfoPythonInterface1()
 		.def("getYieldModifier", &CvCivicInfo::getYieldModifier, "int (int i)")
 		.def("getCommerceModifier", &CvCivicInfo::getCommerceModifier, "int (int i)")
 		.def("getSpecialistExtraCommerce", &CvCivicInfo::getSpecialistExtraCommerce, "int (int i)")
+		.def("getBuildingHappinessChanges", &CvCivicInfo::getBuildingHappinessChanges, "int (int i)")
+		.def("getBuildingHealthChanges", &CvCivicInfo::getBuildingHealthChanges, "int (int i)")
+		.def("getBuildingProductionModifier", &CvCivicInfo::getBuildingProductionModifier, "int (int i)")
+		.def("getBuildingCommerceModifier", &CvCivicInfo::getBuildingCommerceModifier, "int (int i, int j)")		
 
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
-
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
 		;
 
@@ -472,9 +475,8 @@ void CyInfoPythonInterface1()
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 
-		.def("getGlobalBuildingCommerceChange", &CvBuildingInfo::getGlobalBuildingCommerceChange, "int (int i, int j)")
-		.def("getNumGlobalBuildingCommerceChanges", &CvBuildingInfo::getNumGlobalBuildingCommerceChanges, "int ()")
-		.def("getGlobalBuildingCostModifier", &CvBuildingInfo::getGlobalBuildingCostModifier, "int (int i)")
+		.def("getGlobalBuildingCostModifiers", &CvBuildingInfo::cyGetGlobalBuildingCostModifiers)
+		.def("getGlobalBuildingCommerceChanges", &CvBuildingInfo::cyGetGlobalBuildingCommerceChanges)
 		.def("getGlobalBuildingProductionModifiers", &CvBuildingInfo::cyGetGlobalBuildingProductionModifiers)
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::cyGetBuildingHappinessChanges)
 		.def("getBuildingProductionModifiers", &CvBuildingInfo::cyGetBuildingProductionModifiers)
