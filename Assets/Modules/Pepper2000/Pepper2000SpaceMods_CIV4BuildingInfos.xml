@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
@@ -31,6 +32,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_IDENTITY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
@@ -54,6 +56,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENE_EDITING</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GENE_EDITING</Description>
@@ -76,6 +79,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_BABIES</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DESIGNER_BABIES</Description>
@@ -95,6 +99,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
@@ -115,6 +120,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOVEL_SENSES</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NOVEL_SENSES</Description>
@@ -145,6 +151,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENLIGHTENED</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ENLIGHTENED</Description>
@@ -175,6 +182,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNARIS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
@@ -212,6 +220,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
@@ -259,6 +268,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROBOTIC_BODY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ROBOTIC_BODY</Description>
@@ -288,6 +298,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
@@ -310,6 +321,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ZERO_G_ADAPTATION</Description>
@@ -336,6 +348,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WINGS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_WINGS</Description>
@@ -362,6 +375,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GILLS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GILLS</Description>
@@ -388,6 +402,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAT_TOLERANCE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
@@ -414,6 +429,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
@@ -442,9 +458,10 @@
 			<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
@@ -471,6 +488,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
@@ -505,6 +523,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOMORPHISM</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NANOMORPHISM</Description>
@@ -540,6 +559,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFORMATION_BASED</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INFORMATION_BASED</Description>
@@ -566,6 +586,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSAPIENT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TRANSAPIENT</Description>
@@ -595,6 +616,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALIEN_HYBRID</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ALIEN_HYBRID</Description>
@@ -653,6 +675,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMMORTAL</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_IMMORTAL</Description>
@@ -690,6 +713,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PURE_ENERGY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PURE_ENERGY</Description>
@@ -721,6 +745,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL</Description>
@@ -767,6 +792,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCHAILECT</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
@@ -797,6 +823,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NONSPATIAL</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NONSPATIAL</Description>
@@ -823,6 +850,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATEMPORAL</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ATEMPORAL</Description>
@@ -842,6 +870,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAPHYSICAL</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METAPHYSICAL</Description>
@@ -885,146 +914,6 @@
 			<FreeBonus>BONUS_HUMAN_MOD_METAPHYSICAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CRISPR_CAS9_BACTERIA</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRISPR_CAS9_BACTERIA</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_BACTERIUM_ENGINEERING</PrereqTech>
-			<iCost>5730</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_C4_CROPS</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_C4_CROPS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_C4_CROPS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_C4_CROPS</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_BACTERIUM_ENGINEERING</PrereqTech>
-			<iCost>5730</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FLUORESCENT_BACTERIA</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLUORESCENT_BACTERIA</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_BACTERIUM_ENGINEERING</PrereqTech>
-			<iCost>5730</iCost>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STRUCTURAL_BACTERIA</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STRUCTURAL_BACTERIA</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-			<iCost>6490</iCost>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NONPHOTOSYNTHETIC_PLANTS</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONPHOTOSYNTHETIC_PLANTS</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
-			<iCost>9310</iCost>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>15</iYield>
-			</YieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ADAPTIVE_RADIATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>4</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
-			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_LIFE</Type>

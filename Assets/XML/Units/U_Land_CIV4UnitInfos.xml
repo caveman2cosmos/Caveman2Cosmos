@@ -7907,6 +7907,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<TrainCondition>
@@ -18868,6 +18869,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
@@ -18983,6 +18985,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
@@ -19092,6 +19095,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19199,6 +19203,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19304,6 +19309,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19736,6 +19742,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iCost>1030</iCost>
@@ -19827,6 +19834,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<TechTypes>
@@ -20057,6 +20065,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
@@ -33447,6 +33456,9 @@
 			<Description>TXT_KEY_UNIT_WARLORDVS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIS</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GENERAL</UnitAIType>
@@ -34039,6 +34051,9 @@
 			<Description>TXT_KEY_UNIT_WARLORDV</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVI</UnitType>
+			</UnitUpgrades>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34066,6 +34081,541 @@
 			<iCombat>60</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIIS</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
+			<BonusType>BONUS_NANOTUBES</BonusType>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIIIS</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIIIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>4</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVI</Type>
+			<iMaxPlayerInstances>6</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVII</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
+			<BonusType>BONUS_NANOTUBES</BonusType>
+			<iCost>3000</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>90</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVII</Type>
+			<iMaxPlayerInstances>7</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIII</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
+			<iCost>5000</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>120</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIII</Type>
+			<iMaxPlayerInstances>8</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
+			<iCost>9800</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>4</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>160</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iCollateralDamage>50</iCollateralDamage>
 			<iCollateralDamageLimit>50</iCollateralDamageLimit>
@@ -37902,6 +38452,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
@@ -38005,6 +38559,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
