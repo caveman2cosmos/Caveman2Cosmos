@@ -289,7 +289,7 @@
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
