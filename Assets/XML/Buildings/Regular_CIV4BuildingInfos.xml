@@ -38313,6 +38313,17 @@
 				<BuildingType>BUILDING_ALPHAMALES</BuildingType>
 				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrCivics>
+				<PrereqCivic>
+					<CivicOption>CIVIC_STRONGMAN</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+				<PrereqCivic>
+					<CivicOption>CIVIC_CHIEFDOM</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+			</PrereqOrCivics>
+			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BROTHEL</BuildingType>
@@ -85831,11 +85842,15 @@
 			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_GREEN</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
+					<CivicOption>CIVIC_WASTE_IMPORTATION</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+				<PrereqCivic>
+					<CivicOption>CIVIC_LANDFILLS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
