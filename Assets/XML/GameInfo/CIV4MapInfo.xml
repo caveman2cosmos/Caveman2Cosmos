@@ -11,26 +11,8 @@
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
-			<!-- WB map path should look like the one below, i.e. beginning with \
-			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
-			<MapScript>Continents.py</MapScript> -->
-			<InitialWBMap/>
-			<MapScript/>
-		</MapInfo>
-		<MapInfo>
-			<!-- Subterranean map -->
-			<!-- Available in Nanotech and later -->
-			<!-- Originally it used for Subsurface Ocean terrain - Europa -->
-			<Type>MAP_SUBTERRANEAN</Type>
-			<Description>TXT_KEY_MAP_SUBTERRANEAN</Description>
-			<!-- default grid size and wrapping is the same as the original map -->
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
-			<bWrapY>0</bWrapY>
-			<!-- WB map path should look like the one below, i.e. beginning with \
-			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
-			<MapScript>Continents.py</MapScript> -->
+			<!-- WB map path should look like the one below, i.e. beginning with -->
+			<!-- <InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap> -->			
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
@@ -47,7 +29,7 @@
 			<!-- WB map path should look like the one below, i.e. beginning with \
 			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
 			<MapScript>Continents.py</MapScript> -->
-			<InitialWBMap/>
+			<InitialWBMap>PrivateMaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
