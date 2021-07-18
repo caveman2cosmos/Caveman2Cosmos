@@ -21,7 +21,6 @@ class CvHotkeyInfo;
 class CvProperties;
 class CvPropertyManipulators;
 class CvXMLLoadUtility;
-class FDataStreamBase;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -421,10 +420,8 @@ public:
 	int getNumMayDamageAttackingUnitCombatTypes() const;
 	bool isMayDamageAttackingUnitCombatType(int i) const;
 
-	int getMapType(int i) const;
-	int getNumMapTypes() const;
-	bool isMapType(int i) const;
-	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
+	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
+	const python::list cyGetMapCategories() const { return Cy::makeList(m_aeMapCategoryTypes); }
 
 	int getNumUnitCombatRepelModifiers() const;
 	int getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad = false) const;
@@ -813,7 +810,7 @@ private:
 	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
-	std::vector<int> m_aiMapTypes;
+	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_vPrereqNotInCityBuildings;
 	std::vector<BonusTypes> m_aePrereqOrBonuses;

@@ -88,10 +88,7 @@ public:
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
 	BuildTypes getImprovementBuildType(int iIndex) const;
 
-	int getMapType(int i) const;
-	int getNumMapTypes() const;
-	bool isMapType(int i) const;
-	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
+	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
 	const TCHAR* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
@@ -187,7 +184,7 @@ private:
 
 	CvImprovementBonusInfo* m_paImprovementBonus;
 
-	std::vector<int> m_aiMapTypes;
+	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiAlternativeImprovementUpgradeTypes;
 	std::vector<int> m_aiFeatureChangeTypes;
 	std::vector<BuildTypes> m_improvementBuildTypes;

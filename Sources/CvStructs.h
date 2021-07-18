@@ -305,7 +305,7 @@ struct PlaceBonusTypes
 	TechTypes ePrereqTech;
 	TerrainTypes ePrereqTerrain;
 	FeatureTypes ePrereqFeature;
-	MapTypes ePrereqMap;
+	MapCategoryTypes ePrereqMapCategory;
 	operator int() const {return (int)eBonus;}
 	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };

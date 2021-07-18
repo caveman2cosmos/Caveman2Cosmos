@@ -5991,22 +5991,9 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				continue;
 			}
-			// TB - Actually, here the unit is selected already based on the spawn info itself.
-			// Ensure that pPlot has the MapType of the unit... no need to include MapTypes on the Spawn Info file.
+			if (!pPlot->isMapCategory(unitInfo.getMapCategories()))
 			{
-				const int iCount = unitInfo.getNumMapTypes();
-				bool bFound = (iCount < 1);
-				for (int iI = 0; !bFound && iI < iCount; iI++)
-				{
-					if (pPlot->isMapType((MapTypes)unitInfo.getMapType(iI)))
-					{
-						bFound = true;
-					}
-				}
-				if (!bFound)
-				{
-					continue;
-				}
+				continue;
 			}
 
 			// Encroaching animals?
@@ -6404,7 +6391,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 #ifdef GLOBAL_WARMING
 void CvGame::doGlobalWarming()
 {
-
 	// Loop to look for environmentalism written by EmperorFool
 	bool abTreeHugger[MAX_PC_PLAYERS];
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -6502,7 +6488,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map global warming is happening on.
-			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_NOT_CITY); // GWMod removed check for water tile M.A.
 
 			if (pPlot == NULL)
@@ -6615,7 +6601,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map the nukes were used on.
-			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_LAND | RANDPLOT_NOT_CITY);
 
 			if (pPlot == NULL)
@@ -6767,7 +6753,6 @@ void CvGame::doHeadquarters()
 
 void CvGame::doDiploVote()
 {
-
 	doVoteResults();
 	doVoteSelection();
 }
@@ -6775,7 +6760,6 @@ void CvGame::doDiploVote()
 
 void CvGame::createBarbarianCities(bool bNeanderthal)
 {
-
 	if (
 		getMaxCityElimination() > 0
 	||
@@ -6882,7 +6866,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 
 	// Find plot
-	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
 	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 	int iBestValue = 0;
@@ -6892,7 +6876,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isMapType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
@@ -9969,12 +9953,12 @@ bool CvGame::foundBarbarianCity()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
-	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* plotX = GC.getMap().plotByIndex(iPlot);
-		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapType(earth))
+		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapCategoryType(earth))
 		{
 			continue;
 		}
