@@ -5991,6 +5991,8 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				continue;
 			}
+			// TB - Actually, here the unit is selected already based on the spawn info itself.
+			// Ensure that pPlot has the MapType of the unit... no need to include MapTypes on the Spawn Info file.
 			if (!isMapCategory(*pPlot, unitInfo))
 			{
 				continue;
