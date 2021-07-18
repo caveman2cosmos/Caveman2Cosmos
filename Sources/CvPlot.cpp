@@ -13420,13 +13420,6 @@ void	CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 	}
 }
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-int CvPlot::getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const
-{
-	return plotCount(PUF_isAfflicted, eAfflictionLine, -1, NULL, eOwner);
-}
-#endif
-
 void CvPlot::enableCenterUnitRecalc(bool bEnable)
 {
 	m_bInhibitCenterUnitCalculation = !bEnable;
@@ -13551,7 +13544,6 @@ void CvPlot::unitGameStateCorrections()
 bool CvPlot::isMapCategoryType(MapCategoryTypes eMapCategory) const
 {
 	const std::vector<MapCategoryTypes>& plotMapCategories = GC.getTerrainInfo(getTerrainType()).getMapCategories();
-	FAssert(!plotMapCategories.empty())
 	return plotMapCategories.empty() || algo::contains(plotMapCategories, eMapCategory);
 }
 
@@ -13597,6 +13589,12 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 	return iCount;
 }
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+int CvPlot::getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const
+{
+	return plotCount(PUF_isAfflicted, eAfflictionLine, -1, NULL, eOwner);
+}
+
 int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const
 {
 	int iCommunicability = 0;
@@ -13618,6 +13616,7 @@ int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTi
 
 	return iCommunicability;
 }
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 {
