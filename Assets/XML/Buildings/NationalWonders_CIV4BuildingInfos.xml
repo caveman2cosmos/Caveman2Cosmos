@@ -3969,7 +3969,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>1</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>

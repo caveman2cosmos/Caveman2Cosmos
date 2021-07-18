@@ -119,6 +119,7 @@ class CvPropertyInfo;
 class CvOutcomeInfo;
 class CvUnitCombatInfo;
 class CvPromotionLineInfo;
+class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
@@ -476,6 +477,9 @@ public:
 
 	int getNumPromotionLineInfos() const;
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
+
+	int getNumMapCategoryInfos() const;
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
 
 	int getNumIdeaClassInfos() const;
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
@@ -993,6 +997,7 @@ protected:
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
+	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
 	std::vector<CvInfoBase*> m_paDomainInfo;
