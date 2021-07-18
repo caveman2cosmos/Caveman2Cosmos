@@ -5748,17 +5748,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (pPlot->isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7377,7 +7367,7 @@ bool CvUnit::canUnload() const
 
 	if (isTrap())
 	{
-		TerrainTypes eTerrain = kPlot.getTerrainType();
+		const TerrainTypes eTerrain = kPlot.getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
 			if (m_pUnitInfo->isTerrainImpassableType((int)eTerrain))
@@ -7385,7 +7375,7 @@ bool CvUnit::canUnload() const
 				return false;
 			}
 		}
-		FeatureTypes eFeature = kPlot.getFeatureType();
+		const FeatureTypes eFeature = kPlot.getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
 			if (m_pUnitInfo->isFeatureImpassableType((int)eFeature))
@@ -7395,17 +7385,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (kPlot.isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7414,13 +7394,13 @@ bool CvUnit::canUnload() const
 	{
 		if (kPlot.isFriendlyCity(*this, true))
 		{
-			int iNumAirUnits = kPlot.countNumAirUnits(getTeam());
-			int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
-			CvCity* pCity = kPlot.getPlotCity();
+			const int iNumAirUnits = kPlot.countNumAirUnits(getTeam());
+			const CvCity* pCity = kPlot.getPlotCity();
 			if (NULL != pCity)
 			{
 				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
+					const int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
 					if (iNumAirUnitCargoVolume >= pCity->getSMAirUnitCapacity(getTeam()))
 					{
 						return false;
@@ -20567,7 +20547,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	//TB Debug Note: If the promotion being evaluated for is the sort you get from a leader as it attaches to the unit that then qualifies you for other
 	//promotions, and the check being called here is not for that specific purpose, then return false for that promotion.
 	if (!bForLeader && kPromotion.isLeader())
@@ -20604,40 +20585,15 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
+	if (!isMapCategory(*pPlot, kPromotion))
 	{
-		const int iCount = kPromotion.getNumMapTypes();
-		bool bFound = (iCount < 1);
-		if (pPlot != NULL)
-		{
-			for (int iI = 0; iI < iCount; iI++)
-			{
-				if (pPlot->isMapType((MapTypes)kPromotion.getMapType(iI)))
-				{
-					bFound = true;
-					break;
-				}
-			}
-			if (!bFound)
-			{
-				return false;
-			}
-		}
+		return false;
+	}
 
-		bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (m_pUnitInfo->isMapType((MapTypes)kPromotion.getMapType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
-		{
-			return false;
-		}
+	if (!isMapCategory(*m_pUnitInfo, kPromotion))
+	{
+		return false;
 	}
 
 	const PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
@@ -20660,7 +20616,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
 			if (kPromotion.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
 			{
@@ -20793,7 +20749,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		&& (
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isAffliction() ||
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isEquipment()))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -20832,7 +20788,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 			const int numPromotionInfos = GC.getNumPromotionInfos();
 			for (int iI = 0; iI < numPromotionInfos; iI++)
 			{
-				PromotionTypes ePrereq = (PromotionTypes)iI;
+				const PromotionTypes ePrereq = (PromotionTypes)iI;
 				if (isHasPromotion(ePrereq))
 				{
 					const CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
@@ -20888,7 +20844,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
 			if (kPromotion.getTechPrereq() != NO_TECH
 			&& !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))

@@ -1322,6 +1322,17 @@ CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes 
 	return *(m_paPromotionLineInfo[e]);
 }
 
+int cvInternalGlobals::getNumMapCategoryInfos() const
+{
+	return (int)m_paMapCategoryInfo.size();
+}
+
+CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
+	return *(m_paMapCategoryInfo[e]);
+}
+
 int cvInternalGlobals::getNumIdeaClassInfos() const
 {
 	return (int)m_paIdeaClassInfo.size();
@@ -2654,6 +2665,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paInvisibleInfo);
 	deleteInfoArray(m_paUnitCombatInfo);
 	deleteInfoArray(m_paPromotionLineInfo);
+	deleteInfoArray(m_paMapCategoryInfo);
 	deleteInfoArray(m_paIdeaClassInfo);
 	deleteInfoArray(m_paIdeaInfo);
 	//deleteInfoArray(m_paTraitOptionEditsInfo);
