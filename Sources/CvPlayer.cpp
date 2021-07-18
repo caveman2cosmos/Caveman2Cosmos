@@ -6247,7 +6247,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			return false;
 		}
 	}
-	if (!pPlot->isMapCategory(GC.getGoodyInfo(eGoody).getMapCategories()))
+	if (!isMapCategory(*pPlot, GC.getGoodyInfo(eGoody)))
 	{
 		return false;
 	}

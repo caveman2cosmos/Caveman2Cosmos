@@ -3185,7 +3185,7 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 		return false;
 	}
 
-	if (!plot()->isMapCategory(GC.getProjectInfo(eProject).getMapCategories()))
+	if (!isMapCategory(*plot(), GC.getProjectInfo(eProject)))
 	{
 		return false;
 	}
@@ -18051,7 +18051,7 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 	{
 		return false;
 	}
-	if (!plot()->isMapCategory(kBuilding.getMapCategories()))
+	if (!isMapCategory(*plot(), kBuilding))
 	{
 		return false;
 	}

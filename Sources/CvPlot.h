@@ -1134,7 +1134,7 @@ public:
 	void unitGameStateCorrections();
 
 	bool isMapCategoryType(MapCategoryTypes eMapCategory) const;
-	bool isMapCategory(const std::vector<MapCategoryTypes>& otherMapCategories) const;
+	const std::vector<MapCategoryTypes>& getMapCategories() const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 

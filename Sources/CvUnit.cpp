@@ -5748,7 +5748,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	if (!pPlot->isMapCategory(m_pUnitInfo->getMapCategories()))
+	if (!isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7385,7 +7385,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	if (!kPlot.isMapCategory(m_pUnitInfo->getMapCategories()))
+	if (!isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -20586,7 +20586,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!pPlot->isMapCategory(kPromotion.getMapCategories()))
+	if (!isMapCategory(*pPlot, kPromotion))
 	{
 		return false;
 	}

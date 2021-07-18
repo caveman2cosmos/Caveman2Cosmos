@@ -2397,7 +2397,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		}
 	}
 
-	if (!isMapCategory(bonus.getMapCategories()))
+	if (!isMapCategory(*this, bonus))
 	{
 		return false;
 	}
@@ -2471,7 +2471,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		return false;
 	}
 
-	if (!isMapCategory(pInfo.getMapCategories()))
+	if (!isMapCategory(*this, pInfo))
 	{
 		return false;
 	}
@@ -2822,7 +2822,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-	if (!isMapCategory(info.getMapCategories()))
+	if (!isMapCategory(*this, info))
 	{
 		return false;
 	}
@@ -2966,7 +2966,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	if (eFeature != NO_FEATURE)
 	{
-		if (getFeatureType() == eFeature || !isMapCategory(GC.getFeatureInfo(eFeature).getMapCategories()))
+		if (getFeatureType() == eFeature || !isMapCategory(*this, GC.getFeatureInfo(eFeature)))
 		{
 			return false;
 		}
@@ -12369,7 +12369,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 	}
 
-	if (!isMapCategory(kUnit.getMapCategories()))
+	if (!isMapCategory(*this, kUnit))
 	{
 		return false;
 	}
@@ -13555,25 +13555,9 @@ bool CvPlot::isMapCategoryType(MapCategoryTypes eMapCategory) const
 	return plotMapCategories.empty() || algo::contains(plotMapCategories, eMapCategory);
 }
 
-bool CvPlot::isMapCategory(const std::vector<MapCategoryTypes>& otherMapCategories) const
+const std::vector<MapCategoryTypes>& CvPlot::getMapCategories() const
 {
-	FAssert(!otherMapCategories.empty())
-	if (otherMapCategories.empty())
-	{
-		return true;
-	}
-	const std::vector<MapCategoryTypes>& plotMapCategories = GC.getTerrainInfo(getTerrainType()).getMapCategories();
-	FAssert(!plotMapCategories.empty())
-	if (plotMapCategories.empty())
-	{
-		return true;
-	}
-	foreach_(const MapCategoryTypes eMapCategory, otherMapCategories)
-	{
-		if (algo::contains(plotMapCategories, eMapCategory))
-			return true;
-	}
-	return false;
+	return GC.getTerrainInfo(getTerrainType()).getMapCategories();
 }
 
 int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const

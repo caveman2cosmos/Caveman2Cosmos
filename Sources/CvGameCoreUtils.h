@@ -396,13 +396,11 @@ template <class T1, class T2>
 bool isMapCategory(const T1& source1, const T2& source2)
 {
 	const std::vector<MapCategoryTypes>& mapCategories1 = source1.getMapCategories();
-	FAssert(!mapCategories1.empty())
 	if (mapCategories1.empty())
 	{
 		return true;
 	}
 	const std::vector<MapCategoryTypes>& mapCategories2 = source2.getMapCategories();
-	FAssert(!mapCategories2.empty())
 	if (mapCategories2.empty())
 	{
 		return true;

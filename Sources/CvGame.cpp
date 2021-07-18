@@ -5991,7 +5991,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			{
 				continue;
 			}
-			if (!pPlot->isMapCategory(unitInfo.getMapCategories()))
+			if (!isMapCategory(*pPlot, unitInfo))
 			{
 				continue;
 			}

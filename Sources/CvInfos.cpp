@@ -16064,13 +16064,20 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_bColdDamage);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int iNumElements = m_aAfflictionCommunicabilityTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].ePromotionLine);
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].iModifier);
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mods end
+}
+
+void CvTerrainInfo::validate()
+{
+	FAssert(!m_aeMapCategoryTypes.empty())
 }
 
 const TCHAR* CvTerrainInfo::getButton() const
