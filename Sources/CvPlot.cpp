@@ -13543,7 +13543,7 @@ void CvPlot::unitGameStateCorrections()
 
 bool CvPlot::isMapCategoryType(MapCategoryTypes eMapCategory) const
 {
-	const std::vector<MapCategoryTypes>& plotMapCategories = GC.getTerrainInfo(getTerrainType()).getMapCategories();
+	const std::vector<MapCategoryTypes>& plotMapCategories = getMapCategories();
 	return plotMapCategories.empty() || algo::contains(plotMapCategories, eMapCategory);
 }
 
