@@ -29,7 +29,7 @@
 			<!-- WB map path should look like the one below, i.e. beginning with \
 			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
 			<MapScript>Continents.py</MapScript> -->
-			<InitialWBMap>PrivateMaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
