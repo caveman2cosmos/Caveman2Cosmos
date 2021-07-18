@@ -10807,6 +10807,8 @@
 			</PrereqVicinityBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LADYBUGX</BuildingType>
+				<BuildingType>BUILDING_ARBORETUM</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -11502,6 +11504,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>-5</iHealth>
 			<iHappiness>-5</iHappiness>
 			<YieldChanges>
@@ -11654,6 +11659,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -11804,6 +11812,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
 			<YieldChanges>
@@ -13614,6 +13625,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
+			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
@@ -13634,6 +13646,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13709,6 +13722,7 @@
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<ObsoleteTech>TECH_LEVITATION</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -13828,6 +13842,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -13858,6 +13875,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
@@ -13916,6 +13936,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
 			<Flavors>
 				<Flavor>
@@ -13940,6 +13963,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14901,6 +14927,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<FreeBuilding>BUILDING_SLAVERY</FreeBuilding>
 			<Hurrys>
 				<Hurry>
@@ -14978,6 +15007,9 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -15163,6 +15195,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<iHappiness>-1</iHappiness>
@@ -15181,6 +15216,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iHappiness>-3</iHappiness>
@@ -15208,6 +15246,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -15257,6 +15298,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -15306,6 +15350,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15346,6 +15393,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -15388,6 +15438,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -15422,6 +15475,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -15461,6 +15517,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -15533,6 +15592,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -15604,6 +15666,187 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_BIRD_DANCE</Type>
+			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<iAsset>1</iAsset>
+			<iPower>1</iPower>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+			</PrereqOrBuildings>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FOX_DANCE</Type>
+			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<iAsset>1</iAsset>
+			<iPower>1</iPower>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+			</PrereqOrBuildings>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EFFECT_GPS</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_GPS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_GPS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_GPS</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_DIGITIZATION</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_WAR_SIMULATIONS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_LAUNCH_SITE_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_LAUNCH_SITE_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

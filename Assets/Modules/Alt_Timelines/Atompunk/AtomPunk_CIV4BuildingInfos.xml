@@ -408,6 +408,7 @@
 			</BonusYieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CANNERY</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>7</iPrereqPopulation>

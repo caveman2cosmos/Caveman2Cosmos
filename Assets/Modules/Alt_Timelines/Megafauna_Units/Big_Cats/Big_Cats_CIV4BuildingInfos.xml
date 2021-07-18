@@ -133,6 +133,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

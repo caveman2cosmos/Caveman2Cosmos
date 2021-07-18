@@ -187,6 +187,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -252,6 +253,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_RADIOS</Bonus>

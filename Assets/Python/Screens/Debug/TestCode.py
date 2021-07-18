@@ -26,6 +26,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirements, "Building requirements of buildings", "Checks if building requirements aren't unlocked after building itself")
 		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced before building itself obsoletes")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements", "Checks if various civics aren't unlocked after building")
+		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingCommerceDoubleTime, "Building commerce double time", "Checks if commerce double time exists on wonders, that have relevant flat commerce change")
 		self.main.addTestCode(screen, self.checkBuildingCommerceChangeOriginalOwners, "Building commerce owner change", "Checks if Commerce Change has relevant flat commerce changes")
@@ -49,6 +50,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.listCivics, "Civic - list civics and civic categories", "Creates list civics and civic options")
+		self.main.addTestCode(screen, self.listSpaceRequiringEarthBuildings, "Building - List Earth buildings, that require Space content", "Creates list of buildings, that have Earth mapcategory, but have building requirement, that is in space, or is spawned trough space unit/building")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
@@ -383,6 +385,28 @@ class TestCode:
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
 
+	##### OBSOLETION TECH LOCATION FINDER FUNCTIONS #####
+	
+	#Building tech obsoletion location
+	def checkBuildingTechObsoletionLocation(self, CvBuildingInfo):
+		iTechObsLoc = 999 #Never obsoletes
+		if CvBuildingInfo.getObsoleteTech() != -1:
+			iTechObsLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			
+		iTechObsRow = 99 #Never obsoletes
+		if CvBuildingInfo.getObsoleteTech() != -1:
+			iTechObsRow = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridY()
+			
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech obsoletion, then infotype X/Y grid is 999 / 99
+		#Otherwise infotype gets highest Xgrid tech obsoletion and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechObsXY = 100*iTechObsLoc + iTechObsRow
+			
+		return iTechObsLoc, iTechObsXY
+	
+	#^^^^ OBSOLETION TECH LOCATION FINDER FUNCTIONS ^^^^#
+
 	#Building tech requirement list
 	def listBuildingTechRequirements(self):
 		for i in xrange(GC.getNumBuildingInfos()):
@@ -551,9 +575,9 @@ class TestCode:
 	def checkBuildingRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 			#Myth, Story and Stories intentionally doesn't have tech requirements to prevent clogging up space
 			if CvBuildingInfo.getType().find("_MYTH") == -1 and CvBuildingInfo.getType().find("_STORY") == -1 and CvBuildingInfo.getType().find("_STORIES") == -1:
-				iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 				#<PrereqInCityBuildings> - require all buildings in list
 				aBuildingTechLocList = []
 				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
@@ -602,9 +626,7 @@ class TestCode:
 	def checkBuildingRequirementReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechObsLoc = 999
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iTechObsLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			iTechObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 			aBuildingRequirementList = []
 
 			#<PrereqInCityBuildings> - require all buildings in list
@@ -668,9 +690,7 @@ class TestCode:
 			for i in xrange(len(aBuildingRequirementReplacementUniqueList)):
 				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingRequirementReplacementUniqueList[i])
 				iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
-				iTechReplacementObsLoc = 999
-				if CvBuildingReplacementInfo.getObsoleteTech() != -1:
-					iTechReplacementObsLoc = GC.getTechInfo(CvBuildingReplacementInfo.getObsoleteTech()).getGridX()
+				iTechReplacementObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingReplacementInfo)[0]
 				#Log if requirement is replaced before building obsoletes, if replacement of requirement doesn't replace building itself, and if there isn't common replacement of building requirement and base building replacement.
 				if iTechObsLoc > iTechLoc and iTechLoc > 0 and CvBuildingInfo.getType()!= CvBuildingReplacementInfo.getType() and CvBuildingReplacementInfo.getType() not in aBuildingBaseReplacementList:
 					self.log(CvBuildingInfo.getType()+" requir. replaced by "+CvBuildingReplacementInfo.getType()+" base obsoletion: "+str(iTechObsLoc)+", requirement replacement unlock/obsoletion: "+str(iTechLoc)+"/"+str(iTechReplacementObsLoc)+", replacements involved: "+str(aBuildingReplacementList)+" Base replacements: "+str(aBuildingBaseReplacementList))
@@ -681,23 +701,75 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
 
-			#<PrereqAndCivics> - require all civics in list
-			aCivicTechLocList = []
+			
+			aCivicAndTechLocList = []
+			aCivicOrTechLocList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
+				#<PrereqAndCivics> - require all civics in list
 				if CvBuildingInfo.isPrereqAndCivics(iCivic):
-					iCivicTechLic = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
-					aCivicTechLocList.append(iCivicTechLic)
-			if len(aCivicTechLocList) > 0 and max(aCivicTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(aCivicTechLocList)+" "+str(iTechLoc))
-
-			#<PrereqOrCivics> - require one civics in list
-			aCivicTechLocList = []
-			for iCivic in xrange(GC.getNumCivicInfos()):
+					iCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					aCivicAndTechLocList.append(iCivicTechLoc)
+				
+				#<PrereqOrCivics> - require one civics in list
 				if CvBuildingInfo.isPrereqOrCivics(iCivic):
-					iCivicTechLic = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
-					aCivicTechLocList.append(iCivicTechLic)
-			if len(aCivicTechLocList) > 0 and min(aCivicTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(aCivicTechLocList)+" "+str(iTechLoc))
+					iCivicTechLoc = self.checkCivicTechRequirementLocation(GC.getCivicInfo(iCivic))[0]
+					aCivicOrTechLocList.append(iCivicTechLoc)
+
+			if len(aCivicAndTechLocList) > 0 and max(aCivicAndTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its civic AND requirements "+str(aCivicAndTechLocList)+" "+str(iTechLoc))
+			if len(aCivicOrTechLocList) > 0 and min(aCivicOrTechLocList) > iTechLoc and iTechLoc > 0:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR civic requirement "+str(aCivicOrTechLocList)+" "+str(iTechLoc))
+
+	#Building requirement civic requirements
+	def checkBuildingRequirementCivics(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			aBuildingRequirementList = []
+
+			#<PrereqInCityBuildings> - require all buildings in list
+			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
+				aBuildingRequirementList.append(iPrereqBuilding)
+
+			#<PrereqOrBuildings> - require one building in list
+			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
+				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
+				if iPrereqBuilding not in aBuildingRequirementList:
+					aBuildingRequirementList.append(iPrereqBuilding)
+
+			#<PrereqAmountBuildings> - require all buildings in empire in list
+			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
+				iPrereqBuilding = pair.id
+				if iPrereqBuilding not in aBuildingRequirementList:
+					aBuildingRequirementList.append(iPrereqBuilding)
+
+			#<ConstructCondition>
+			aBuildingGOMReqList = []
+			for i in range(2):
+				aBuildingGOMReqList.append([])
+			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
+
+			#Analyze GOM AND Building reqs
+			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
+				if iPrereqBuilding not in aBuildingRequirementList:
+					aBuildingRequirementList.append(iPrereqBuilding)
+
+			#Analyze GOM OR Building reqs
+			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
+				if iPrereqBuilding not in aBuildingRequirementList:
+					aBuildingRequirementList.append(iPrereqBuilding)
+					
+			#Find if requirement needs civics
+			for i in xrange(len(aBuildingRequirementList)):
+				CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
+				aCivicList = []
+				for iCivic in xrange(GC.getNumCivicInfos()):
+					if CvBuildingRequirementInfo.isPrereqOrCivics(iCivic) or CvBuildingRequirementInfo.isPrereqAndCivics(iCivic):		
+						aCivicList.append(GC.getCivicInfo(iCivic).getType())
+				if len(aCivicList) > 0:
+					self.log(CvBuildingInfo.getType()+" requirement "+CvBuildingRequirementInfo.getType()+" needs civics "+str(aCivicList))		
 
 	#Building earliest manufacturer on resource tech reveal
 	def checkBuildingBonusManufacturerTech(self):
@@ -709,14 +781,14 @@ class TestCode:
 
 			#Singular <FreeBonus>
 			iBonus = CvBuildingInfo.getFreeBonus()
-			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1: #Natural wonder giving bonus is secondary effect - ignore natural wonders
+			if iBonus != -1 and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Natural wonder giving bonus is secondary effect - ignore natural wonders
 				if aBonusList[iBonus] == -1:
 					aBonusList[iBonus] = iTechLoc
 				elif aBonusList[iBonus] != -1 and aBonusList[iBonus] > iTechLoc:
 					aBonusList[iBonus] = iTechLoc
 
 			#<ExtraFreeBonuses>
-			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1:
+			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements - those are subdued animal rewards most commonly
 				for iBuildingProducer in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					iBonus = CvBuildingInfo.getExtraFreeBonus(iBuildingProducer)
 					if aBonusList[iBonus] == -1:
@@ -771,36 +843,37 @@ class TestCode:
 	def checkBuildingReplacementObsoletion(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-			else:
-				iObsoleteTechLoc = 999
+			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
-			aBuildingReplacementUnlockList = []
-			aBuildingReplacementTypeList = []
+			#Gather data about building replacements
+			aReplacementTypeList = []
+			aReplacementTechUnlockList = []
+			aReplacementTechObsoleteList = []			
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-				iReplacTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacement)[0]
-				if iReplacTechLoc > 0: #Exclude special replacements
-					aBuildingReplacementUnlockList.append(iReplacTechLoc)
-					aBuildingReplacementTypeList.append(CvBuildingReplacement.getType())
-				if CvBuildingReplacement.getObsoleteTech() != -1:
-					iObsoleteReplacementTechLoc = GC.getTechInfo(CvBuildingReplacement.getObsoleteTech()).getGridX()
-				else:
-					iObsoleteReplacementTechLoc = 999
-
-				#Replacement should obsolete after building, that it replaces
-				if iObsoleteTechLoc > iObsoleteReplacementTechLoc:
-					self.log(CvBuildingInfo.getType()+" -> "+CvBuildingReplacement.getType()+" base/replacement obsolete location: "+str(iObsoleteTechLoc)+"/"+str(iObsoleteReplacementTechLoc))
-
-			#Only care about earliest replacement, building shouldn't obsolete too close to its replacement
-			if len(aBuildingReplacementUnlockList) > 0 and len(aBuildingReplacementTypeList) > 0:
-				for i in xrange(len(aBuildingReplacementUnlockList)):
-					if aBuildingReplacementUnlockList[i] == min(aBuildingReplacementUnlockList):
-						sBuildingReplacement = aBuildingReplacementTypeList[i]
-
-				if (iObsoleteTechLoc - min(aBuildingReplacementUnlockList)) <= 5:
-						self.log(CvBuildingInfo.getType()+" -> "+sBuildingReplacement+": "+str(iObsoleteTechLoc)+"/"+str(min(aBuildingReplacementUnlockList)))
+				aReplacementTypeList.append(CvBuildingReplacement.getType())
+				aReplacementTechUnlockList.append(self.checkBuildingTechRequirementLocation(CvBuildingReplacement)[0])
+				aReplacementTechObsoleteList.append(self.checkBuildingTechObsoletionLocation(CvBuildingReplacement)[0])
+				
+			#If there is any replacement
+			iMinReplacementUnlock = -1 #Earliest unlocked replacement - may be without tech requirement at first place
+			iMaxReplacementUnlock = -1	#Latest unlocked replacement - buildings list all replacements of replacements
+			iMinReplacementObsoletion = -1 #Replacement, that obsoletes earliest - may be correlated to earliest replacement, but often some replaced buildings obsolete together
+			iMaxReplacementObsoletion = -1 #Replacement, that obsoletes latest - may be not obsoleting altogether
+			if len(aReplacementTypeList) > 0:
+				for i in xrange(len(aReplacementTypeList)):
+					if aReplacementTechUnlockList[i] == min(aReplacementTechUnlockList):
+						iMinReplacementUnlock = i
+					if aReplacementTechUnlockList[i] == max(aReplacementTechUnlockList):
+						iMaxReplacementUnlock = i
+					if aReplacementTechObsoleteList[i] == min(aReplacementTechObsoleteList):
+						iMinReplacementObsoletion = i
+					if aReplacementTechObsoleteList[i] == max(aReplacementTechObsoleteList):
+						iMaxReplacementObsoletion = i
+						
+				if iObsoleteTechLoc - aReplacementTechObsoleteList[iMinReplacementObsoletion] > 0:
+					self.log(CvBuildingInfo.getType()+" -> "+aReplacementTypeList[iMinReplacementObsoletion]+" base obsoletion/replacement obsoletion "+str(iObsoleteTechLoc)+"/"+str(aReplacementTechObsoleteList[iMinReplacementObsoletion]))
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
@@ -808,9 +881,7 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 
 			BuildingObsoleteTech = CvBuildingInfo.getObsoleteTech()
-			BuildingObsoleteTechLoc = 999
-			if BuildingObsoleteTech != -1:
-				BuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			BuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
 			#<PrereqInCityBuildings> - require all buildings in list
 			aBuildingRequirementObsoleteTechLocList = []
@@ -819,9 +890,7 @@ class TestCode:
 				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuilding)
 				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
 				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				BuildingReqTechObsLoc = self.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(iPrereqBuilding))[0]
 				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
@@ -834,9 +903,7 @@ class TestCode:
 				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuilding)
 				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
 				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				BuildingReqTechObsLoc = self.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(iPrereqBuilding))[0]
 				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
@@ -849,9 +916,7 @@ class TestCode:
 				iPrereqBuilding = pair.id
 				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
 				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				BuildingReqTechObsLoc = self.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(iPrereqBuilding))[0]
 				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
@@ -870,9 +935,7 @@ class TestCode:
 				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]
 				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
 				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				BuildingReqTechObsLoc = self.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(iPrereqBuilding))[0]
 				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
 				aBuildingRequirementNameList.append(BuildingReqName)
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
@@ -885,37 +948,29 @@ class TestCode:
 				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]
 				BuildingReqTechObs = GC.getBuildingInfo(iPrereqBuilding).getObsoleteTech()
 				BuildingReqName = GC.getBuildingInfo(iPrereqBuilding).getType()
-				BuildingReqTechObsLoc = 999
-				if BuildingReqTechObs != -1:
-					BuildingReqTechObsLoc = GC.getTechInfo(BuildingReqTechObs).getGridX()
+				BuildingReqTechObsLoc = self.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(iPrereqBuilding))[0]
 				aBuildingRequirementObsoleteTechLocList.append(BuildingReqTechObsLoc)
 				aBuildingRequirementNameList.append(BuildingReqName)
-			if len(aBuildingRequirementObsoleteTechLocList) > 0 and min(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
+			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList) < BuildingObsoleteTechLoc:
 				self.log(CvBuildingInfo.getType()+" has GOM OR requirements obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
 
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iObsoleteTechLoc = 999 # Never obsolete
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
 			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
 			if iFreeBuilding != -1:
 				CvFreeBuilding = GC.getBuildingInfo(iFreeBuilding)
-				iObsoleteFreeBuildingTechLoc = 999 # Never obsolete
-				if CvFreeBuilding.getObsoleteTech() != -1:
-					iObsoleteFreeBuildingTechLoc = GC.getTechInfo(CvFreeBuilding.getObsoleteTech()).getGridX()
+				iObsoleteFreeBuildingTechLoc = self.checkBuildingTechObsoletionLocation(CvFreeBuilding)[0]
 				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc and CvFreeBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free building "+CvFreeBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeBuildingTechLoc))
 
 			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
 			if iFreeAreaBuilding != -1:
 				CvFreeAreaBuilding = GC.getBuildingInfo(iFreeAreaBuilding)
-				iObsoleteFreeAreaBuildingTechLoc = 999 # Never obsolete
-				if CvFreeAreaBuilding.getObsoleteTech() != -1:
-					iObsoleteFreeAreaBuildingTechLoc = GC.getTechInfo(CvFreeAreaBuilding.getObsoleteTech()).getGridX()
+				iObsoleteFreeAreaBuildingTechLoc = self.checkBuildingTechObsoletionLocation(CvFreeAreaBuilding)[0]
 				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc and CvFreeAreaBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeAreaBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
@@ -1036,13 +1091,11 @@ class TestCode:
 							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
 
-	#Bonus must be unlocked before building obsoletion so it can affect building at first place
+	#Building - bonus must be unlocked before building obsoletion so it can affect building at first place
 	def checkBuildingBonusTags(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iBuildingObsoleteTechLoc = 999 # Never obsolete
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iBuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			iBuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 			for iBonus in xrange(GC.getNumBonusInfos()):
 				CvBonusInfo = GC.getBonusInfo(iBonus)
 				iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
@@ -1089,84 +1142,70 @@ class TestCode:
 					if CvBuildingInfo.getBonusDefenseChanges(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusDefenseChanges")
 
-	#Check if buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
+	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
 	def checkBuildingAffectingBuildings(self):
 		aAffectedBuildingTechUnlockList = []
 		aAffectedBuildingTechObsoletionList = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			aAffectedBuildingTechUnlockList.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				aAffectedBuildingTechObsoletionList.append(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())
-			else:
-				aAffectedBuildingTechObsoletionList.append(999)
+			aAffectedBuildingTechObsoletionList.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 	
-		# getGlobalBuildingCommerceChange and getGlobalBuildingCostModifier needs to be rewritten within DLL, so only amount of tags in building needs to be searched for buildings, not executing checker inner loop 36 000 000 times....
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectingBuildingInfo)[0]
-			iAffectingBuildingObsoleteTechLoc = 999 # Never obsolete
-			if CvAffectingBuildingInfo.getObsoleteTech() != -1:
-				iAffectingBuildingObsoleteTechLoc = GC.getTechInfo(CvAffectingBuildingInfo.getObsoleteTech()).getGridX()
+			iAffectingBuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvAffectingBuildingInfo)[0]
 
-			"""
 			#<GlobalBuildingExtraCommerces>
-			for i in xrange(GC.getNumBuildingInfos()):				
-				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-					if CvAffectingBuildingInfo.getGlobalBuildingCommerceChange(i, iCommerce) != 0:	
-						CvAffectedBuildingInfo = GC.getBuildingInfo(i)
-						if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[i] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[i]:
-							self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
-			
-			#<GlobalBuildingCostModifiers>
-			for i in xrange(GC.getNumBuildingInfos()):				
-				if CvAffectingBuildingInfo.getGlobalBuildingCostModifier(i) != 0:
+			for pBuildingCommerceChange in CvAffectingBuildingInfo.getGlobalBuildingCommerceChanges():
+				i = pBuildingCommerceChange.eBuilding
+				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[i] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[i]:
 					CvAffectedBuildingInfo = GC.getBuildingInfo(i)
-					if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[i] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[i]:
-						self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingCostModifiers")
-			"""
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
+
+			#<GlobalBuildingCostModifiers>
+			for pair in CvAffectingBuildingInfo.getGlobalBuildingCostModifiers():
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
+
 			#<GlobalBuildingProductionModifiers>
 			for pair in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
-				iAffectedBuilding = pair.id
-				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
 
 			#<BuildingHappinessChanges>
 			for pair in CvAffectingBuildingInfo.getBuildingHappinessChanges():
-				iAffectedBuilding = pair.id
-				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingHappinessChanges")
 
 			#<BuildingProductionModifiers>
 			for pair in CvAffectingBuildingInfo.getBuildingProductionModifiers():
-				iAffectedBuilding = pair.id
-				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingProductionModifiers")
 
 			#<PrereqNotInCityBuildings>
 			for i in xrange(CvAffectingBuildingInfo.getNumPrereqNotInCityBuildings()):
 				iAffectedBuilding = CvAffectingBuildingInfo.getPrereqNotInCityBuilding(i)
-				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - PrereqNotInCityBuildings")
 
 			#<ExtendsBuilding>
 			iAffectedBuilding = CvAffectingBuildingInfo.getExtendsBuilding()
 			if iAffectedBuilding != -1:
-				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
-	#Check if building doesn't obsolete before civic is available
+	#Building - check if building doesn't obsolete before civic is available
 	def checkBuildingCivicInfluences(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iBuildingObsoleteTechLoc = 999 # Never obsolete
-			if CvBuildingInfo.getObsoleteTech() != -1:
-				iBuildingObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+			iBuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 			for iCivic in xrange(GC.getNumCivicInfos()):
 				CvCivicInfo = GC.getCivicInfo(iCivic)
 				iCivicTechUnlock = self.checkCivicTechRequirementLocation(CvCivicInfo)[0]
@@ -1416,20 +1455,12 @@ class TestCode:
 					if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
 							aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
-							if CvBuildingInfo.getObsoleteTech() != -1:
-								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-								aBuildingObsoletions.append(iObsoleteTechLoc)
-							else:
-								aBuildingObsoletions.append(999) #Never obsolete
+							aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 								aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
-								if CvBuildingInfo.getObsoleteTech() != -1:
-									iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-									aBuildingObsoletions.append(iObsoleteTechLoc)
-								else:
-									aBuildingObsoletions.append(999) #Never obsolete
+								aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 				# Check all bonus producers, that don't obsolete
 				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
@@ -1437,9 +1468,7 @@ class TestCode:
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
 							aBuildingReplacements = [] # List building replacements
-							iObsoleteTechLoc = 999 # Never obsolete
-							if CvBuildingInfo.getObsoleteTech() != -1:
-								iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
+							iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
 								aBuildingReplacements.append(CvBuildingReplacement.getType())
@@ -1526,3 +1555,51 @@ class TestCode:
 			else:
 				TechReq = GC.getTechInfo(TechReq).getType()
 			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
+
+	def listSpaceRequiringEarthBuildings(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			#Earthly building must have map category of Earth
+			if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):				
+				aBuildingRequirementList = []
+			
+				#<PrereqInCityBuildings> - require all buildings in list
+				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
+					iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
+					aBuildingRequirementList.append(iPrereqBuilding)
+
+				#<PrereqOrBuildings> - require one building in list
+				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
+					iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
+					if iPrereqBuilding not in aBuildingRequirementList:
+						aBuildingRequirementList.append(iPrereqBuilding)
+
+				#<PrereqAmountBuildings> - require all buildings in empire in list
+				for pair in CvBuildingInfo.getPrereqNumOfBuildings():
+					iPrereqBuilding = pair.id
+					if iPrereqBuilding not in aBuildingRequirementList:
+						aBuildingRequirementList.append(iPrereqBuilding)
+
+				#<ConstructCondition>
+				aBuildingGOMReqList = []
+				for i in range(2):
+					aBuildingGOMReqList.append([])
+				self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
+
+				#Analyze GOM AND Building reqs
+				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
+					if iPrereqBuilding not in aBuildingRequirementList:
+						aBuildingRequirementList.append(iPrereqBuilding)
+
+				#Analyze GOM OR Building reqs
+				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
+					if iPrereqBuilding not in aBuildingRequirementList:
+						aBuildingRequirementList.append(iPrereqBuilding)
+						
+				#Analyze requirements
+				for i in xrange(len(aBuildingRequirementList)):
+					CvRequiredBuildingInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
+					if not CvRequiredBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+						self.log(CvBuildingInfo.getType()+" requires off-earth building: "+CvRequiredBuildingInfo.getType())

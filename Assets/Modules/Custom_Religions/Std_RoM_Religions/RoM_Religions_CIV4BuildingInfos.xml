@@ -338,6 +338,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCULPTOR</BuildingType>
 				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>

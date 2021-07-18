@@ -459,6 +459,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -468,7 +469,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_PEDIA</Civilopedia>
-			<bForceOverwrite>1</bForceOverwrite>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatType>
@@ -498,6 +498,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_LABS</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -511,7 +512,6 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>400</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -522,6 +522,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -555,10 +556,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -573,10 +574,10 @@
 			</CommerceChanges>
 			<iHappiness>4</iHappiness>
 			<iHealth>1</iHealth>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -591,10 +592,10 @@
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
 			<iHealth>5</iHealth>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -610,7 +611,6 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -820,24 +820,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 				<iYield>10</iYield>
-			</YieldChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-			</MapCategoryTypes>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>25</iYield>
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1208,6 +1190,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -1223,7 +1206,6 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<bForceOverwrite>1</bForceOverwrite>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
@@ -1679,6 +1661,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1056</iCost>
@@ -1701,7 +1684,6 @@
 				<iCommerce>50</iCommerce>
 			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
-			<bForceOverwrite>1</bForceOverwrite>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_BEAM_NETWORK</Type>
@@ -1963,6 +1945,24 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
 			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PRIME_DIRECTIVE_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>10</iCommerce>
+			</CommerceChanges>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

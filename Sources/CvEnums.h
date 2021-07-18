@@ -704,6 +704,11 @@ enum MapTypes
 	NUM_MAPS
 };
 
+enum MapCategoryTypes
+{
+	NO_MAPCATEGORY = -1,
+};
+
 // This is our current relationship with each
 // one of our connected network peers
 enum InitStates

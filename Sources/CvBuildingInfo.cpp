@@ -243,7 +243,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pbPrereqOrImprovement(NULL)
 ,m_pbPrereqOrFeature(NULL)
 //New Integer Arrays
-,m_piGlobalBuildingCostModifier(NULL)
 ,m_piBonusDefenseChanges(NULL)
 ,m_piCommerceAttacks(NULL)
 //New Multidimensional Integer Arrays
@@ -366,7 +365,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
-	SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
 	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
@@ -432,6 +430,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aBuildingProductionModifier.removeDelayedResolution();
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
+	m_aGlobalBuildingCostModifier.removeDelayedResolution();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -883,20 +882,28 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 
 int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
 {
-	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
+	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
 	{
-		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
+		if (pChange.eBuilding == (BuildingTypes)iBuilding && pChange.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return it.iChange;
+			return pChange.iChange;
 		}
 	}
 
 	return 0;
 }
 
-int CvBuildingInfo::getNumGlobalBuildingCommerceChanges() const
+const std::vector<BuildingCommerceChange>& CvBuildingInfo::getGlobalBuildingCommerceChanges() const
 {
-	return m_aGlobalBuildingCommerceChanges.size();
+	return m_aGlobalBuildingCommerceChanges;
+}
+
+const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
+{
+	python::list pyList = python::list();
+	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
+		pyList.append(pChange);
+	return pyList;
 }
 
 const TCHAR* CvBuildingInfo::getButton() const
@@ -992,17 +999,6 @@ int CvBuildingInfo::getBonusDefenseChanges(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
-}
-
-int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
-{
-	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
-
-	if (i == NO_BUILDING)
-	{
-		return (m_piGlobalBuildingCostModifier == NULL) ? 0 : 1;
-	}
-	return m_piGlobalBuildingCostModifier ? m_piGlobalBuildingCostModifier[i] : 0;
 }
 
 int CvBuildingInfo::getCommerceAttacks(int i) const
@@ -1422,23 +1418,6 @@ bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 	return true;
 }
 
-int CvBuildingInfo::getMapType(int i) const
-{
-	return m_aiMapTypes[i];
-}
-
-int CvBuildingInfo::getNumMapTypes() const
-{
-	return m_aiMapTypes.size();
-}
-
-bool CvBuildingInfo::isMapType(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_MAPS, i)
-	return algo::contains(m_aiMapTypes, i);
-}
-
-// int vector utilizing pairing without delayed resolution
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 {
 	return m_aUnitCombatRepelModifiers.size();
@@ -1935,7 +1914,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 		}
 	}
 
-//Team Project (1)
 	if (m_ppaiLocalSpecialistYieldChange)
 	{
 		for(int i = 0; i < GC.getNumSpecialistInfos(); i++)
@@ -2005,7 +1983,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbPrereqOrFeature);
 	CheckSumC(iSum, m_aBuildingProductionModifier);
 	CheckSumC(iSum, m_aGlobalBuildingProductionModifier);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingCostModifier);
+	CheckSumC(iSum, m_aGlobalBuildingCostModifier);
 
 	CheckSumC(iSum, m_aUnitProductionModifier);
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
@@ -2138,10 +2116,9 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aEnabledCivilizationTypes[i].eCivilization);
 	}
 
-	// Vectors
 	CheckSumC(iSum, m_aiUnitCombatRetrainTypes);
 	CheckSumC(iSum, m_aiMayDamageAttackingUnitCombatTypes);
-	CheckSumC(iSum, m_aiMapTypes);
+	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSumC(iSum, m_aUnitCombatRepelModifiers);
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
@@ -3596,7 +3573,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalVector(&m_aiUnitCombatRetrainTypes, L"UnitCombatRetrainTypes");
 	pXML->SetOptionalVector(&m_aiMayDamageAttackingUnitCombatTypes, L"MayDamageAttackingUnitCombatTypes");
-	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 
 	// int vector utilizing pairing without delayed resolution
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatRepelModifiers, L"UnitCombatRepelModifiers");
@@ -3639,6 +3616,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aBuildingProductionModifier.readWithDelayedResolution(pXML, L"BuildingProductionModifiers");
 	m_aGlobalBuildingProductionModifier.readWithDelayedResolution(pXML, L"GlobalBuildingProductionModifiers");
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
+	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 
 	return true;
 }
@@ -3687,8 +3665,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
-	pXML->SetVariableListTagPair(&m_piGlobalBuildingCostModifier, L"GlobalBuildingCostModifiers",  GC.getNumBuildingInfos());
 
 	return true;
 }
@@ -4846,7 +4822,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiUnitCombatRetrainTypes, pClassInfo->m_aiUnitCombatRetrainTypes);
 
 	if (getNumMayDamageAttackingUnitCombatTypes() == 0)
@@ -4990,6 +4966,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aBuildingProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getBuildingProductionModifiers());
 	m_aGlobalBuildingProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingProductionModifiers());
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
+	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
@@ -5025,25 +5002,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 			}
 		}
-	}
-
-	if (pClassInfo->m_piGlobalBuildingCostModifier != NULL)
-	{
-		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-		{
-			if (bOver || getGlobalBuildingCostModifier(j) == iDefault && pClassInfo->getGlobalBuildingCostModifier(j) != iDefault)
-			{
-				if (m_piGlobalBuildingCostModifier == NULL)
-				{
-					CvXMLLoadUtility::InitList(&m_piGlobalBuildingCostModifier, GC.getNumBuildingInfos(), iDefault);
-				}
-				m_piGlobalBuildingCostModifier[j] = pClassInfo->getGlobalBuildingCostModifier(j);
-			}
-		}
-	}
-	else if (bOver)
-	{
-		SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 	}
 }
 

@@ -2174,7 +2174,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		iBestArea = findStartingArea();
 	}
 
-	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
@@ -2186,7 +2186,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapType(earth)
+			|| !plot->isMapCategoryType(earth)
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
@@ -6247,17 +6247,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			return false;
 		}
 	}
-	const int iCount = GC.getGoodyInfo(eGoody).getNumMapTypes();
-	bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (pPlot->isMapType((MapTypes)GC.getGoodyInfo(eGoody).getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*pPlot, GC.getGoodyInfo(eGoody)))
 	{
 		return false;
 	}
@@ -7581,7 +7571,6 @@ void CvPlayer::removeBuilding(BuildingTypes building)
 }
 
 
-// courtesy of the Gourd Bros...
 void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pArea, bool bReligiouslyDisabling)
 {
 	FAssert(iChange == 1 || iChange == -1);
@@ -7698,9 +7687,9 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 	{
-		changeBuildingCostModifier((BuildingTypes)iI, kBuilding.getGlobalBuildingCostModifier(iI) * iChange);
+		changeBuildingCostModifier(modifier.first, modifier.second * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)

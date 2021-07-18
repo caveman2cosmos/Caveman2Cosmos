@@ -475,9 +475,8 @@ void CyInfoPythonInterface1()
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 
-		.def("getGlobalBuildingCommerceChange", &CvBuildingInfo::getGlobalBuildingCommerceChange, "int (int i, int j)")
-		.def("getNumGlobalBuildingCommerceChanges", &CvBuildingInfo::getNumGlobalBuildingCommerceChanges, "int ()")
-		.def("getGlobalBuildingCostModifier", &CvBuildingInfo::getGlobalBuildingCostModifier, "int (int i)")
+		.def("getGlobalBuildingCostModifiers", &CvBuildingInfo::cyGetGlobalBuildingCostModifiers)
+		.def("getGlobalBuildingCommerceChanges", &CvBuildingInfo::cyGetGlobalBuildingCommerceChanges)
 		.def("getGlobalBuildingProductionModifiers", &CvBuildingInfo::cyGetGlobalBuildingProductionModifiers)
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::cyGetBuildingHappinessChanges)
 		.def("getBuildingProductionModifiers", &CvBuildingInfo::cyGetBuildingProductionModifiers)
@@ -512,19 +511,11 @@ void CyInfoPythonInterface1()
 		.def("getNumPrereqInCityBuildings", &CvBuildingInfo::getNumPrereqInCityBuildings, "short ()")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 
+		.def("getMapCategories", &CvBuildingInfo::cyGetMapCategories)
+
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
 
-		//Extract map category of building
-		.def("isMapType", &CvBuildingInfo::isMapType, "bool (int i)")
-
 		.def("getConstructCondition", &CvBuildingInfo::getConstructCondition, python::return_value_policy<python::reference_existing_object>())
-
-		//TB Combat Mods (Buildings) begin
-		//integers
-		//boolean vectors without delayed resolution
-		//.def("getFreePromoType", &CvBuildingInfo::getFreePromoType, "int (int i)")
-		//integer vectors with pairing method without delayed resolution
-		//TB Combat Mods (Buildings) end
 		;
 
 	python::class_<CvSpecialBuildingInfo, python::bases<CvInfoBase> >("CvSpecialBuildingInfo")

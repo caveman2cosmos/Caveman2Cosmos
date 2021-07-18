@@ -3549,12 +3549,11 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(pUnit->getUnitInfo().getHelp());
 				}
 			}
-			foreach_(const int eMap, pUnit->getUnitInfo().getMapTypes())
+			foreach_(const MapCategoryTypes eMapCategory, pUnit->getUnitInfo().getMapCategories())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+				szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 			}
-
 		}
 
 		if (bShift && (gDLL->getChtLvl() > 0))
@@ -9698,13 +9697,10 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 	pPlot->getProperties()->buildDisplayString(szString);
 
-	for (int iI = 0; iI < NUM_MAPS; iI++)
+	foreach_(const MapCategoryTypes eMapCategory, GC.getTerrainInfo(pPlot->getTerrainType()).getMapCategories())
 	{
-		if (pPlot->isMapType((MapTypes)iI))
-		{
-			szString.append(NEWLINE);
-			szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapInfo((MapTypes)iI).getTextKeyWide()));
-		}
+		szString.append(NEWLINE);
+		szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 	}
 }
 
@@ -20197,10 +20193,10 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(kUnit.getExtraHoverText());
 		}
-		foreach_(const int eMap, kUnit.getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, kUnit.getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 
@@ -22959,34 +22955,27 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+		std::map<int, std::vector<BuildingTypes> > aMap;
+
+		foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 		{
-			std::map<int, std::vector<int> > aMap;
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			aMap[modifier.second].push_back(modifier.first);
+		}
+		for (std::map<int, std::vector<BuildingTypes> >::const_iterator it = aMap.begin(); it != aMap.end(); ++it)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
+
+			int iI = 0;
+			foreach_(const BuildingTypes eBuildingX, it->second)
 			{
-				if (kBuilding.getGlobalBuildingCostModifier(iI) != 0)
+				if (iI++ % 3 == 0)
 				{
-					aMap[kBuilding.getGlobalBuildingCostModifier(iI)].push_back(iI);
+					szBuffer.append(gDLL->getText("TXT_KEY_HELP_LIST"));
 				}
-			}
-			for (std::map<int, std::vector<int> >::const_iterator it = aMap.begin(); it != aMap.end(); ++it)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
+				else szBuffer.append(L", ");
 
-				int iI = 0;
-				foreach_(const int& itr, it->second)
-				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(itr);
-
-					if (iI++ % 3 == 0)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_HELP_LIST"));
-					}
-					else szBuffer.append(L", ");
-
-					szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
-					szBuffer.append(szBuilding);
-				}
+				szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
+				szBuffer.append(szBuilding);
 			}
 		}
 
@@ -23627,10 +23616,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 	if (bCivilopediaText)
 	{
-		foreach_(const int eMap, kBuilding.getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, kBuilding.getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 }
@@ -26228,10 +26217,10 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 	}
 	if (bCivilopediaText)
 	{
-		foreach_(const int eMap, GC.getBonusInfo(eBonus).getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, GC.getBonusInfo(eBonus).getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 }
@@ -27185,11 +27174,12 @@ void CvGameTextMgr::buildWaterWorkString(CvWStringBuffer &szBuffer, TechTypes eT
 
 void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, int iImprovement, bool bList, bool bPlayerContext)
 {
+	bool bTechFound;
 	int iJ;
 
 	bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
 
-	bool bTechFound = false;
+	bTechFound = false;
 
 	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
 	{
@@ -27250,10 +27240,10 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", GC.getBuildInfo((BuildTypes) iImprovement).getTextKeyWide()));
 		}
 	}
-	foreach_(const int eMap, GC.getBuildInfo((BuildTypes) iImprovement).getMapTypes())
+	foreach_(const MapCategoryTypes eMapCategory, GC.getBuildInfo((BuildTypes)iImprovement).getMapCategories())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 	}
 }
 
@@ -31046,10 +31036,10 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 
 	if (bCivilopediaText)
 	{
-		foreach_(const int eMap, info.getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, info.getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 }
@@ -31788,12 +31778,13 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 	if (bCivilopediaText)
 	{
-		foreach_(const int eMap, GC.getFeatureInfo(eFeature).getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, GC.getFeatureInfo(eFeature).getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
+
 }
 
 
@@ -31869,10 +31860,10 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 
 	if (bCivilopediaText)
 	{
-		foreach_(const int eMap, terrain.getMapTypes())
+		foreach_(const MapCategoryTypes eMapCategory, terrain.getMapCategories())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapInfo((MapTypes)eMap).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 }
