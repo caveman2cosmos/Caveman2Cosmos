@@ -4575,8 +4575,6 @@ public:
 
 	void getCheckSum(uint32_t& iSum) const;
 
-	void validate();
-
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	//	This really belongs on CvInfoBase but you can't change the size of that

@@ -3002,8 +3002,6 @@ bool cvInternalGlobals::bugInitCalled() const
 
 void cvInternalGlobals::setIsBug()
 {
-	algo::for_each(m_paTerrainInfo, bind(CvTerrainInfo::validate, _1));
-
 	bBugInitCalled = true;
 
 	::setIsBug();

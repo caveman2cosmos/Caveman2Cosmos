@@ -16075,11 +16075,6 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 	//TB Combat Mods end
 }
 
-void CvTerrainInfo::validate()
-{
-	FAssert(!m_aeMapCategoryTypes.empty())
-}
-
 const TCHAR* CvTerrainInfo::getButton() const
 {
 /************************************************************************************************/
