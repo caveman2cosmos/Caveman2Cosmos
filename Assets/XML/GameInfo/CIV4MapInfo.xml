@@ -20,6 +20,7 @@
 		<MapInfo>
 			<!-- Subterranean map -->
 			<!-- Available in Nanotech and later -->
+			<!-- Originally it used for Subsurface Ocean terrain - Europa -->
 			<Type>MAP_SUBTERRANEAN</Type>
 			<Description>TXT_KEY_MAP_SUBTERRANEAN</Description>
 			<!-- default grid size and wrapping is the same as the original map -->

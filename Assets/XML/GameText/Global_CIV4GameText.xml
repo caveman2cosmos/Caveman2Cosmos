@@ -30274,5 +30274,73 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION</Tag>
 		<English>[ICON_BULLET]Requires Irrigation</English>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EARTH</Tag>
+		<English>Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SUBTERRANEAN</Tag>
+		<English>Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_CISLUNAR</Tag>
+		<English>Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_MOON</Tag>
+		<English>Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_MARS</Tag>
+		<English>Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_VENUS</Tag>
+		<English>Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_TITAN</Tag>
+		<English>Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_NEARBY_STARS</Tag>
+		<English>Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_ORION_ARM</Tag>
+		<English>Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_MILKY_WAY</Tag>
+		<English>Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_LOCAL_GROUP</Tag>
+		<English>Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Virgo Supercluster</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_UNIVERSE</Tag>
+		<English>Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_DISTANT_COSMOS</Tag>
+		<English>Distant Cosmos</English>
 	</TEXT>
 </Civ4GameText>
