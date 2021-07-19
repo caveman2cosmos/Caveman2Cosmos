@@ -82,43 +82,36 @@ BeginPlot
 	x=0, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=19
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=0, y=20
@@ -229,37 +222,31 @@ BeginPlot
 	x=1, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=1, y=19
@@ -375,37 +362,31 @@ BeginPlot
 	x=2, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=2, y=19
@@ -521,44 +502,37 @@ BeginPlot
 	x=3, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=16
 	StartingPlot
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=19
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=3, y=20
@@ -669,43 +643,36 @@ BeginPlot
 	x=4, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=19
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=4, y=20
@@ -816,43 +783,36 @@ BeginPlot
 	x=5, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=19
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=5, y=20
@@ -963,43 +923,36 @@ BeginPlot
 	x=6, y=13
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=14
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=15
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=16
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=17
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=18
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=19
 	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=6, y=20

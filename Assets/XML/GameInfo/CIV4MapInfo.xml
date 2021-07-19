@@ -48,11 +48,11 @@
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_MARS</Type>
 			<Description>TXT_KEY_MAP_MARS</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_03_MARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>

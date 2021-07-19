@@ -2233,13 +2233,11 @@ BeginPlot
 	x=9, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=9, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=9, y=11
@@ -2461,31 +2459,26 @@ BeginPlot
 	x=10, y=6
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=10, y=7
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=10, y=8
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=10, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=10, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=10, y=11
@@ -2709,31 +2702,26 @@ BeginPlot
 	x=11, y=6
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=11, y=7
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=11, y=8
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=11, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=11, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=11, y=11
@@ -2954,50 +2942,27 @@ BeginPlot
 	x=12, y=6
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=12, y=7
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=12, y=8
 	StartingPlot
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	BeginUnit
-		UnitType=UNIT_BAND, UnitOwner=1, (Boudica)
-		Level=1, Experience=0
-		PromotionType=PROMOTION_SENTRY
-		PromotionType=PROMOTION_GUARDIAN_TRIBAL
-		PromotionType=PROMOTION_CULTURE_EUROPEAN
-		FacingDirection=4
-		UnitAIType=UNITAI_SETTLE
-		CombatStr=225
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_NEANDERTHAL_BRUTE, UnitOwner=1, (Boudica)
-		Level=1, Experience=0
-		PromotionType=PROMOTION_STANDOUT_STATUS_HS_SM
-		FacingDirection=4
-		UnitAIType=UNITAI_EXPLORE
-		CombatStr=200
-	EndUnit
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=12, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=12, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=12, y=11
@@ -3216,37 +3181,31 @@ BeginPlot
 	x=13, y=5
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=1
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=6
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=7
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=8
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=13, y=11
@@ -3468,31 +3427,26 @@ BeginPlot
 	x=14, y=6
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=14, y=7
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=14, y=8
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=14, y=9
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=14, y=10
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
-	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=14, y=11
@@ -10661,32 +10615,27 @@ BeginPlot
 	x=43, y=42
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=43, y=43
 	BonusType=BONUS_HELIUM3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=43, y=44
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=43, y=45
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=43, y=46
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=43, y=47
@@ -10908,31 +10857,26 @@ BeginPlot
 	x=44, y=42
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=44, y=43
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=44, y=44
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=44, y=45
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=44, y=46
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=44, y=47
@@ -11153,32 +11097,27 @@ BeginPlot
 	x=45, y=42
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=45, y=43
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=45, y=44
 	StartingPlot
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=45, y=45
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=45, y=46
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=45, y=47
@@ -11402,31 +11341,26 @@ BeginPlot
 	x=46, y=42
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=46, y=43
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=46, y=44
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=46, y=45
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=46, y=46
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=46, y=47
@@ -11649,31 +11583,26 @@ BeginPlot
 	x=47, y=42
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=47, y=43
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=47, y=44
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=47, y=45
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=47, y=46
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
-	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=47, y=47
