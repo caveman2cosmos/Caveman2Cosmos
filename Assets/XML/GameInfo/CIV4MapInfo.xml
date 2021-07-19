@@ -36,11 +36,11 @@
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_MOON</Type>
 			<Description>TXT_KEY_MAP_MOON</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_02_MOON.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
