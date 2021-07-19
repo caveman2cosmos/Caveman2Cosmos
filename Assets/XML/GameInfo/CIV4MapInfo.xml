@@ -60,11 +60,11 @@
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_VENUS</Type>
 			<Description>TXT_KEY_MAP_VENUS</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_04_VENUS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
