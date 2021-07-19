@@ -1452,7 +1452,7 @@ class TestCode:
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories(): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
 							aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
 							aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
@@ -1466,7 +1466,7 @@ class TestCode:
 				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if CvBuildingInfo.isMapType(int(MapTypes.MAP_EARTH)): # Exclude space based
+						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories(): # Exclude space based
 							aBuildingReplacements = [] # List building replacements
 							iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
@@ -1560,7 +1560,7 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Earthly building must have map category of Earth
-			if CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):				
+			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():				
 				aBuildingRequirementList = []
 			
 				#<PrereqInCityBuildings> - require all buildings in list
@@ -1601,5 +1601,5 @@ class TestCode:
 				#Analyze requirements
 				for i in xrange(len(aBuildingRequirementList)):
 					CvRequiredBuildingInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
-					if not CvRequiredBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
 						self.log(CvBuildingInfo.getType()+" requires off-earth building: "+CvRequiredBuildingInfo.getType())
