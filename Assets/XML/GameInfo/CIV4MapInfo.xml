@@ -72,11 +72,11 @@
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>96</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_05_INNNER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -84,11 +84,11 @@
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_OUTER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>96</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_06_OUTER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -96,11 +96,11 @@
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_TITAN</Type>
 			<Description>TXT_KEY_MAP_TITAN</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_07_TITAN.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -108,11 +108,11 @@
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_TRANSNEPTUNIAN</Type>
 			<Description>TXT_KEY_MAP_TRANSNEPTUNIAN</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_08_KUIPER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
