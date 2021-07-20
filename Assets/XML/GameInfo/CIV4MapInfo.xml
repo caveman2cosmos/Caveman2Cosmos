@@ -120,11 +120,11 @@
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_NEARBY_STARS</Type>
 			<Description>TXT_KEY_MAP_NEARBY_STARS</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_09_NEARBY_STARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -132,11 +132,11 @@
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_ORION_ARM</Type>
 			<Description>TXT_KEY_MAP_ORION_ARM</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_10_ORION_ARM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -144,11 +144,11 @@
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_MILKY_WAY</Type>
 			<Description>TXT_KEY_MAP_MILKY_WAY</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>48</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_11_MILKY_WAY.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
