@@ -898,6 +898,22 @@
 			<ImprovementType>IMPROVEMENT_TERRAFORMED_PLANET</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_HOT_JUPITER</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MINI_NEPTUNE</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<bAltDown>0</bAltDown>
