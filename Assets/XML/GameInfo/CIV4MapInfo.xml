@@ -156,11 +156,11 @@
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_LOCAL_GROUP</Type>
 			<Description>TXT_KEY_MAP_LOCAL_GROUP</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_12_LOCAL_GROUP.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -168,12 +168,11 @@
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_VIRGO_SUPERCLUSTER</Type>
 			<Description>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Description>
-			<!-- default grid size and wrapping is the same as the original map -->
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_13_VIRGO_SUPERCLUSTER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -181,11 +180,11 @@
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_UNIVERSE</Type>
 			<Description>TXT_KEY_MAP_UNIVERSE</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_14_UNIVERSE.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
@@ -193,11 +192,11 @@
 			<!-- Colonizable in Transcendent and later -->
 			<Type>MAP_DISTANT_COSMOS</Type>
 			<Description>TXT_KEY_MAP_DISTANT_COSMOS</Description>
-			<iGridWidth>0</iGridWidth>
-			<iGridHeight>0</iGridHeight>
-			<bWrapX>0</bWrapX>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap/>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_15_DISTANT_COSMOS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
 		</MapInfo>
 	</MapInfos>
