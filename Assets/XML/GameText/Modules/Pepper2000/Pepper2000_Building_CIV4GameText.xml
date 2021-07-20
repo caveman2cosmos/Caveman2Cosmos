@@ -537,7 +537,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANDROMEDA</Tag>
-		<English>Space Reward - Voyage to Andromeda</English>
+		<English>Voyage to Andromeda</English>
 		<Russian>Путешествие к Андромеде</Russian>
 	</TEXT>
 	<TEXT>
@@ -866,7 +866,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM</Tag>
-		<English>Space Reward - Asteroid Deflection System</English>
+		<English>Asteroid Deflection System</English>
 		<Russian>Ñèñò. îòêëîí.àñòåðîèäîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -896,7 +896,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINE</Tag>
-		<English>Space Reward - Asteroid Mine</English>
+		<English>Asteroid Mine</English>
 		<Russian>Шахта (Астероиды)</Russian>
 	</TEXT>
 	<TEXT>
@@ -936,7 +936,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE</Tag>
-		<English>Space Reward - Asteroid Mine (Rare Minerals)</English>
+		<English>Asteroid Mine (Rare Minerals)</English>
 		<Russian>Àñòåðîèä. øàõòà (Ðåä. ìèíåðàëû)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1007,7 +1007,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATLAST_SPACE_TELESCOPE</Tag>
-		<English>Space Reward - ATLAST Space Telescope</English>
+		<English>ATLAST Space Telescope</English>
 		<Russian>Космический телескоп ATLAST</Russian>
 	</TEXT>
 	<TEXT>
@@ -1511,7 +1511,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRACEWELL_PROBES</Tag>
-		<English>Space Reward - Bracewell Probes</English>
+		<English>Bracewell Probes</English>
 		<Russian>Зонды Брейсвелла</Russian>
 	</TEXT>
 	<TEXT>
@@ -1735,7 +1735,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPTURED_ASTEROID</Tag>
-		<English>Space Reward - Captured Asteroid</English>
+		<English>Captured Asteroid</English>
 		<Russian>Захваченный астероид</Russian>
 	</TEXT>
 	<TEXT>
@@ -1815,7 +1815,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CASSINI_HUYGENS</Tag>
-		<English>Space Reward - Cassini-Huygens</English>
+		<English>Cassini-Huygens</English>
 		<Russian>Êàññèíè-Ãþéãåíñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2465,7 +2465,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLIMATE_SATELLITE</Tag>
-		<English>Space Reward - Climate Satellite</English>
+		<English>Climate Satellite</English>
 		<Russian>Климатический спутник</Russian>
 	</TEXT>
 	<TEXT>
@@ -3204,7 +3204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAWN</Tag>
-		<English>Space Reward - Dawn</English>
+		<English>Dawn</English>
 		<Russian>Рассвет</Russian>
 	</TEXT>
 	<TEXT>
@@ -3294,7 +3294,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY</Tag>
-		<English>Space Reward - Lunar Orbital Platform-Gateway</English>
+		<English>Lunar Orbital Platform-Gateway</English>
 		<Russian>Лунная орбит. платформа-шлюз</Russian>
 	</TEXT>
 	<TEXT>
@@ -4098,7 +4098,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_PROBE</Tag>
-		<English>Space Reward - Europa Probe</English>
+		<English>Europa Probe</English>
 		<Russian>Зонды на Европе</Russian>
 	</TEXT>
 	<TEXT>
@@ -4644,7 +4644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_CORE</Tag>
-		<English>Space Reward - Mission to the Galactic Core</English>
+		<English>Mission to the Galactic Core</English>
 		<Russian>Миссия к ядру галактики</Russian>
 	</TEXT>
 	<TEXT>
@@ -4779,7 +4779,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALILEO</Tag>
-		<English>Space Reward - Galileo</English>
+		<English>Galileo</English>
 		<Russian>Ãàëèëåî</Russian>
 	</TEXT>
 	<TEXT>
@@ -5721,7 +5721,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IKAROS</Tag>
-		<English>Space Reward - IKAROS</English>
+		<English>IKAROS</English>
 		<Russian>Èêàðîñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -6447,7 +6447,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE</Tag>
-		<English>Space Reward - Interstellar Probe</English>
+		<English>Interstellar Probe</English>
 		<Russian>Ìåæçâåçäíûé çîíä</Russian>
 	</TEXT>
 	<TEXT>
@@ -6601,7 +6601,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISS_TOURISM</Tag>
-		<English>Space Reward - Space Station Tours</English>
+		<English>Space Station Tours</English>
 		<Russian>Туры на космич. станцию</Russian>
 	</TEXT>
 	<TEXT>
@@ -6611,7 +6611,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Tag>
-		<English>Space Reward - James Webb Space Telescope</English>
+		<English>James Webb Space Telescope</English>
 		<Russian>Косм. телескоп Джеймса Уебба</Russian>
 	</TEXT>
 	<TEXT>
@@ -6691,7 +6691,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER</Tag>
-		<English>Space Reward - Kepler Space Telescope</English>
+		<English>Kepler Space Telescope</English>
 		<Russian>Космический телескоп Кеплер</Russian>
 	</TEXT>
 	<TEXT>
@@ -7330,7 +7330,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OUTPOST</Tag>
-		<English>Space Reward - Lunar Outpost</English>
+		<English>Lunar Outpost</English>
 		<French>Avant-poste lunaire</French>
 		<Italian>Avamposto lunare</Italian>
 		<Russian>Лунный аванпост</Russian>
@@ -7461,7 +7461,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_XPRIZE</Tag>
-		<English>Space Reward - Lunar XPRIZE</English>
+		<English>Lunar XPRIZE</English>
 		<Russian>Проект XPRIZE</Russian>
 	</TEXT>
 	<TEXT>
@@ -7606,7 +7606,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINER_PROGRAM</Tag>
-		<English>Space Reward - Mariner Program</English>
+		<English>Mariner Program</English>
 		<Russian>Ïðîãðàììà Ìàðèíåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -7794,7 +7794,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SCIENCE_LAB</Tag>
-		<English>Space Reward - Mars Science Laboratory</English>
+		<English>Mars Science Laboratory</English>
 		<Russian>Èññëåä. ëàáîðàòîðèÿ (Ìàðñ)</Russian>
 	</TEXT>
 	<TEXT>
@@ -8751,7 +8751,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MIR</Tag>
-		<English>Space Reward - Mir</English>
+		<English>Mir</English>
 		<Russian>Ìèð</Russian>
 	</TEXT>
 	<TEXT>
@@ -8761,7 +8761,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MISSION_MARS</Tag>
-		<English>Space Reward - Mission to Mars</English>
+		<English>Mission to Mars</English>
 		<Russian>Миссия на Марс</Russian>
 	</TEXT>
 	<TEXT>
@@ -8771,7 +8771,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MISSION_TO_CALLISTO</Tag>
-		<English>Space Reward - Mission to Callisto</English>
+		<English>Mission to Callisto</English>
 		<Russian>Ìèññèÿ Êàëëèñòî</Russian>
 	</TEXT>
 	<TEXT>
@@ -8885,7 +8885,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB</Tag>
-		<English>Space Reward - Moon Rock Lab</English>
+		<English>Moon Rock Lab</English>
 		<French>Laboratoire des roches lunaires</French>
 		<Italian>Laboratorio di rocce lunari</Italian>
 		<Russian>Лаб. селенологии</Russian>
@@ -9084,7 +9084,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Tag>
-		<English>Space Reward - Neptune Atmospheric Probe</English>
+		<English>Neptune Atmospheric Probe</English>
 		<Russian>Атмосферный зонд Нептуна</Russian>
 	</TEXT>
 	<TEXT>
@@ -9233,7 +9233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEW_HORIZONS</Tag>
-		<English>Space Reward - New Horizons</English>
+		<English>New Horizons</English>
 		<Russian>Íîâûå Ðóáåæè</Russian>
 	</TEXT>
 	<TEXT>
@@ -10247,7 +10247,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROJECT_GEMINI</Tag>
-		<English>Space Reward - Project Gemini</English>
+		<English>Project Gemini</English>
 		<Russian>Ïðîåêò Äæåìèíè</Russian>
 	</TEXT>
 	<TEXT>
@@ -10267,7 +10267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROJECT_MERCURY</Tag>
-		<English>Space Reward - Project Mercury</English>
+		<English>Project Mercury</English>
 		<Russian>Ïðîåêò Ìåðêóðèé</Russian>
 	</TEXT>
 	<TEXT>
@@ -10992,7 +10992,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEDNA_PROBE</Tag>
-		<English>Space Reward - Sedna Probe</English>
+		<English>Sedna Probe</English>
 		<Russian>Зонды на Седне</Russian>
 	</TEXT>
 	<TEXT>
@@ -11052,7 +11052,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SENTINEL</Tag>
-		<English>Space Reward - Sentinel</English>
+		<English>Sentinel</English>
 		<Russian>Ñåíòèíåëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -11252,7 +11252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKYLAB</Tag>
-		<English>Space Reward - Skylab</English>
+		<English>Skylab</English>
 		<Russian>Ñêàéëýá</Russian>
 	</TEXT>
 	<TEXT>
@@ -11507,7 +11507,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR</Tag>
-		<English>Space Reward - Solar Weather Monitor</English>
+		<English>Solar Weather Monitor</English>
 		<Russian>Ñîëíå÷íàÿ ìåòåîñòàíöèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -12727,7 +12727,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_PROBE</Tag>
-		<English>Space Reward - Titan Probe</English>
+		<English>Titan Probe</English>
 		<Russian>Çîíä íà Òèòàí</Russian>
 	</TEXT>
 	<TEXT>
@@ -13283,7 +13283,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE</Tag>
-		<English>Space Reward - Uranus Atmospheric Probe</English>
+		<English>Uranus Atmospheric Probe</English>
 		<Russian>Атмосферный зонд Урана</Russian>
 	</TEXT>
 	<TEXT>
@@ -13893,7 +13893,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOYAGER_PROGRAM</Tag>
-		<English>Space Reward - Voyager Program</English>
+		<English>Voyager Program</English>
 		<Russian>Ïðîãðàììà Âîÿäæåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -13974,7 +13974,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WMAP</Tag>
-		<English>Space Reward - Wilkinson Microwave Anisotropy Probe</English>
+		<English>Wilkinson Microwave Anisotropy Probe</English>
 		<Russian>Зонд Уилкинсона</Russian>
 	</TEXT>
 	<TEXT>
@@ -14094,7 +14094,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_YUTU</Tag>
-		<English>Space Reward - YUTU</English>
+		<English>YUTU</English>
 		<Russian>Юйту</Russian>
 	</TEXT>
 	<TEXT>

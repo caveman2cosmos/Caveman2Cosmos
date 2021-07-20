@@ -91072,7 +91072,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
-		<BuildingInfo>			
+		<BuildingInfo>
 			<Type>BUILDING_HAKA</Type>
 			<Description>TXT_KEY_BUILDING_HAKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAKA_PEDIA</Civilopedia>
