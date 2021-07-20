@@ -358,13 +358,6 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_KAMEHAMEHA</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_KAMEHAMEHA</Type>
-			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
@@ -526,13 +519,6 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_RAGNAR</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_DRUIDIC_TRADITIONS</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_RAGNAR</Type>
-			<AndDependencyTypes>
 				<DependencyType>RELIGION_ASATRU</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_ASATRU</FavoriteReligion>
@@ -575,13 +561,6 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_SALAMASINA</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_SALAMASINA</Type>
-			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			</AndDependencyTypes>
 			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
@@ -609,13 +588,6 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_SITTING_BULL</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
-			<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
-		</LeaderHeadInfo>
-		<LeaderHeadInfo>
-			<Type>LEADER_SMOKE_JAGUAR</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			</AndDependencyTypes>
