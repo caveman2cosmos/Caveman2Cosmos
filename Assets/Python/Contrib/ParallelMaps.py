@@ -16,13 +16,11 @@ class ParallelMaps:
 		if DebugUtils.bDebugMode \
 		and BugEventManager.g_eventManager.bAlt:
 			i = argsList[1] -2
-			if i in range(int(MapTypes.NUM_MAPS)) \
+			#if i in range(MapTypes.NUM_MAPS) \
+			if i in range(10) \
 			and i != GC.getGame().getCurrentMap():
 				global bIsSwitchingMap
 				bIsSwitchingMap = True
 				GC.switchMap(i)
 				bIsSwitchingMap = False
-				if i == 0:
-					CvUtil.sendImmediateMessage("Initial map")
-				else:
-					CvUtil.sendImmediateMessage("Map %d" %i)
+				CvUtil.sendImmediateMessage("Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
