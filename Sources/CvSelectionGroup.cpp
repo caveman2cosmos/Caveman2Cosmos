@@ -3491,7 +3491,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 				return true;
 			}
 			// Toffer - This assert is not super accurate, it occur when there's a discrepancy between plotSet and generatePath,
-			//	usually caused by incorrect flags used as input for this function, 
+			//	usually caused by incorrect flags used as input for this function,
 			//	it does however indicate that plotSet and generatePath disagree about plot accessability under some specific flag combinations.
 			FErrorMsg
 			(

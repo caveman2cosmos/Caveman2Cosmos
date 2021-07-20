@@ -458,7 +458,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
