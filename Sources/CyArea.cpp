@@ -3,125 +3,130 @@
 #include "CyArea.h"
 
 //
-// Python wrapper class for CvArea 
+// Python wrapper class for CvArea
 //
 
-CyArea::CyArea() : m_pArea(NULL) {}
+CyArea::CyArea() : m_pArea(NULL)
+{
+	FErrorMsg("Error");
+}
 
-CyArea::CyArea(CvArea* pArea) : m_pArea(pArea) {}
-
+CyArea::CyArea(CvArea* pArea) : m_pArea(pArea)
+{
+	FAssert(pArea != NULL);
+}
 
 int CyArea::calculateTotalBestNatureYield() const
 {
-	return m_pArea ? m_pArea->calculateTotalBestNatureYield() : -1;
+	return m_pArea->calculateTotalBestNatureYield();
 }
 
 int CyArea::countCoastalLand() const
 {
-	return m_pArea ? m_pArea->countCoastalLand() : -1;
+	return m_pArea->countCoastalLand();
 }
 
 int CyArea::countNumUniqueBonusTypes() const
 {
-	return m_pArea ? m_pArea->countNumUniqueBonusTypes() : -1;
+	return m_pArea->countNumUniqueBonusTypes();
 }
 
 int CyArea::getID() const
 {
-	return m_pArea ? m_pArea->getID() : -1;
+	return m_pArea->getID();
 }
 
 int CyArea::getNumTiles() const
 {
-	return m_pArea ? m_pArea->getNumTiles() : -1;
+	return m_pArea->getNumTiles();
 }
 
 bool CyArea::isLake() const
 {
-	return m_pArea ? m_pArea->isLake() : -1;
+	return m_pArea->isLake();
 }
 
 int CyArea::getNumRiverEdges() const
 {
-	return m_pArea ? m_pArea->getNumRiverEdges() : -1;
+	return m_pArea->getNumRiverEdges();
 }
 
 int CyArea::getNumCities() const
 {
-	return m_pArea ? m_pArea->getNumCities() : -1;
+	return m_pArea->getNumCities();
 }
 
 int CyArea::getNumUnits() const
 {
-	return m_pArea ? m_pArea->getNumUnits() : -1;
+	return m_pArea->getNumUnits();
 }
 
 int CyArea::getTotalPopulation() const
 {
-	return m_pArea ? m_pArea->getTotalPopulation() : -1;
+	return m_pArea->getTotalPopulation();
 }
 
 int CyArea::getNumStartingPlots() const
 {
-	return m_pArea ? m_pArea->getNumStartingPlots() : -1;
+	return m_pArea->getNumStartingPlots();
 }
 
 bool CyArea::isWater() const
 {
-	return m_pArea ? m_pArea->isWater() : false;
+	return m_pArea->isWater();
 }
 
-int CyArea::getUnitsPerPlayer(int /*PlayerTypes*/ eIndex) const
+int CyArea::getUnitsPerPlayer(PlayerTypes eIndex) const
 {
-	return m_pArea ? m_pArea->getUnitsPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea->getUnitsPerPlayer(eIndex);
 }
 
-int CyArea::getCitiesPerPlayer(int /*PlayerTypes*/ eIndex) const
+int CyArea::getCitiesPerPlayer(PlayerTypes eIndex) const
 {
-	return m_pArea ? m_pArea->getCitiesPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea->getCitiesPerPlayer(eIndex);
 }
 
-int CyArea::getBuildingHappiness(int /*PlayerTypes*/ eIndex) const
+int CyArea::getBuildingHappiness(PlayerTypes eIndex) const
 {
-	return m_pArea ? m_pArea->getBuildingHappiness((PlayerTypes) eIndex) : -1;
+	return m_pArea->getBuildingHappiness(eIndex);
 }
 
-int CyArea::getPower(int /*PlayerTypes*/ eIndex) const
+int CyArea::getPower(PlayerTypes eIndex) const
 {
-	return m_pArea ? m_pArea->getPower((PlayerTypes) eIndex) : -1;
+	return m_pArea->getPower(eIndex);
 }
 
-int CyArea::getBestFoundValue(int /*PlayerTypes*/ eIndex) const
+int CyArea::getBestFoundValue(PlayerTypes eIndex) const
 {
-	return m_pArea ? m_pArea->getBestFoundValue((PlayerTypes) eIndex) : -1;
+	return m_pArea->getBestFoundValue(eIndex);
 }
 
-bool CyArea::isCleanPower(int /*TeamTypes*/ eIndex) const
+bool CyArea::isCleanPower(TeamTypes eIndex) const
 {
-	return m_pArea ? m_pArea->isCleanPower((TeamTypes)eIndex) : false;
+	return m_pArea->isCleanPower(eIndex);
 }
 
-bool CyArea::isBorderObstacle(int /*TeamTypes*/ eIndex) const
+bool CyArea::isBorderObstacle(TeamTypes eIndex) const
 {
-	return m_pArea ? m_pArea->isBorderObstacle((TeamTypes)eIndex) : false;
+	return m_pArea->isBorderObstacle(eIndex);
 }
 
-int CyArea::getYieldRateModifier(int /*PlayerTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const
+int CyArea::getYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2) const
 {
-	return m_pArea ? m_pArea->getYieldRateModifier((PlayerTypes)eIndex1, (YieldTypes) eIndex2) : -1;
+	return m_pArea->getYieldRateModifier(eIndex1, eIndex2);
 }
 
-int CyArea::getNumBonuses(int /*BonusTypes*/ eBonus) const
+int CyArea::getNumBonuses(BonusTypes eBonus) const
 {
-	return m_pArea ? m_pArea->getNumBonuses((BonusTypes)eBonus) : -1;
+	return m_pArea->getNumBonuses(eBonus);
 }
 
 int CyArea::getNumTotalBonuses() const
 {
-	return m_pArea ? m_pArea->getNumTotalBonuses() : -1;
+	return m_pArea->getNumTotalBonuses();
 }
 
-void CyArea::changeCleanPowerCount(int /*TeamTypes*/ eIndex, int iChange) const
+void CyArea::changeCleanPowerCount(TeamTypes eIndex, int iChange) const
 {
-    if (m_pArea) m_pArea->changeCleanPowerCount((TeamTypes)eIndex, iChange);
-}  
+    m_pArea->changeCleanPowerCount(eIndex, iChange);
+}

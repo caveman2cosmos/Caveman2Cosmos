@@ -48,21 +48,17 @@ def _python_modules_for_python_version(version: _PythonVersion) -> Tuple[Path, .
     raise ValueError(f"Unsupported python version {version.value}")
 
 
-def _python_2_modules() -> Tuple[Path, ...]:
-    python_2_list_content = (
-        _root_path() / "Tools" / "Lint" / "python2_modules.txt"
-    ).read_text()
-    return tuple(Path(item) for item in python_2_list_content.split("\n") if item)
+def _python_2_modules():
+	files = []
+	for path in (_root_path() / "Assets" / "Python").rglob("*.py"):
+		files.append(path)
+	for path in (_root_path() / "PrivateMaps").rglob("*.py"):
+		files.append(path)
+	return files
 
 
 def _python_3_modules() -> Tuple[Path, ...]:
-    root_path = _root_path()
-
-    return tuple(
-        path
-        for path in root_path.rglob("*.py")
-        if path.relative_to(root_path) not in _python_2_modules()
-    )
+    return tuple(path for path in (Path(__file__).parents[1]).resolve().rglob("*.py"))
 
 
 def _root_path() -> Path:

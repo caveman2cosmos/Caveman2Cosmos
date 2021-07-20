@@ -34,6 +34,7 @@ public:
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
 	void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructorCall = false);
+	void SendLog(CvWString function, CvWString message);
 
 	bool AI_update();
 	bool AI_follow();
@@ -107,6 +108,10 @@ protected:
 	void AI_animalMove();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
+	bool Worker_CanDefend();
+	bool IsAbroad();
+	int GetNumberOfUnitsInGroup();
+	bool AI_upgradeWorker();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
@@ -161,7 +166,7 @@ protected:
 	void AI_SeeInvisibleMove();
 	void AI_SeeInvisibleSeaMove();
 	void AI_EscortMove();
-
+	bool AI_retreatIfCantDefend();
 	void AI_networkAutomated();
 	void AI_cityAutomated();
 
@@ -244,7 +249,9 @@ protected:
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
 	bool AI_foundReligion();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
+#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();

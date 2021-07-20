@@ -7,7 +7,7 @@
 
 //#include "CvEnums.h"
 
-class CvInitCore
+class CvInitCore : bst::noncopyable
 {
 
 public:
@@ -70,7 +70,7 @@ public:
 	const CvWString & getAdminPassword() const	{ return m_szAdminPassword; }
 	DllExport void setAdminPassword(const CvWString & szAdminPassword, bool bEncrypt = true);
 
-	DllExport CvWString getMapScriptName() const;		
+	DllExport CvWString getMapScriptName() const;
 	DllExport void setMapScriptName(const CvWString & szMapScriptName);
 	DllExport bool getWBMapScript() const;
 
@@ -260,7 +260,7 @@ public:
 
 	DllExport const CvString & getXMLCheck(PlayerTypes eID) const;
 	DllExport void setXMLCheck(PlayerTypes eID, const CvString & iXMLCheck);
-									
+
 	DllExport void resetAdvancedStartPoints();
 
 	virtual void read(FDataStreamBase* pStream);
@@ -275,10 +275,11 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	unsigned int getAssetCheckSum() const;
-	unsigned int getSavegameAssetCheckSum() const;
+	uint32_t getAssetCheckSum() const;
+	uint32_t getSavegameAssetCheckSum() const;
 	void calculateAssetCheckSum();
 	void checkVersions();
+	void endGameSetup();
 
 // BUG - EXE/DLL Paths - start
 	// EF: should these be CvWString?
@@ -416,9 +417,9 @@ protected:
 	bool m_bRecalcRequestProcessed;
 
 	// Asset checksum of the current build
-	unsigned int m_uiAssetCheckSum;
+	uint32_t m_uiAssetCheckSum;
 	// Asset checksum of the build which performed the save of the loaded game
-	unsigned int m_uiSavegameAssetCheckSum;
+	uint32_t m_uiSavegameAssetCheckSum;
 };
 
 #endif

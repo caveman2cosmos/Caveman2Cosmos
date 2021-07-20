@@ -18,10 +18,8 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("getMemoryInfo", &CyGlobalContext::getMemoryInfo, python::return_value_policy<python::reference_existing_object>(), "MemoryInfo (int id)")
 
 		.def("getPlayerOptionsInfo", &CyGlobalContext::getPlayerOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(PlayerOptionsInfoID) - PlayerOptionsInfo for PlayerOptionsInfo")
-		.def("getPlayerOptionsInfoByIndex", &CyGlobalContext::getPlayerOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(PlayerOptionsInfoID) - PlayerOptionsInfo for PlayerOptionsInfo")
 
 		.def("getGraphicOptionsInfo", &CyGlobalContext::getGraphicOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(GraphicOptionsInfoID) - GraphicOptionsInfo for GraphicOptionsInfo")
-		.def("getGraphicOptionsInfoByIndex", &CyGlobalContext::getGraphicOptionInfo, python::return_value_policy<python::reference_existing_object>(), "(GraphicOptionsInfoID) - GraphicOptionsInfo for GraphicOptionsInfo")
 
 		.def("getNumHurryInfos", &CyGlobalContext::getNumHurryInfos, "() - Total Hurry Infos")
 
@@ -33,7 +31,7 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 
 		.def("getNumCalendarInfos", &CyGlobalContext::getNumCalendarInfos, "int () - Returns NumCalendarInfos")
 		.def("getCalendarInfo", &CyGlobalContext::getCalendarInfo, python::return_value_policy<python::reference_existing_object>(), "CalendarInfo () - Returns Info object")
-		 
+
 		.def("getNumGameOptionInfos", &CyGlobalContext::getNumGameOptionInfos, "int () - Returns NumGameOptionInfos")
 		.def("getGameOptionInfo", &CyGlobalContext::getGameOptionInfo, python::return_value_policy<python::reference_existing_object>(), "GameOptionInfo () - Returns Info object")
 

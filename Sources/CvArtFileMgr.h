@@ -56,7 +56,7 @@ private: \
 
 #define ART_INFO_INIT(name) m_map##name##ArtInfos(NULL)
 
-class CvArtFileMgr
+class CvArtFileMgr : bst::noncopyable
 {
 public:
 	class ArtInfoItem
@@ -92,7 +92,7 @@ public:
 
 	// Deletes Maps, Reloads Infos from XML, Rebuilds Maps
 	DllExport void Reset();
-	
+
 	// Builds Maps
 	DllExport void buildArtFileInfoMaps();
 

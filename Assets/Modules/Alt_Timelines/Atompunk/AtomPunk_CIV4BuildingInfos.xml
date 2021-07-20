@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -11,13 +10,11 @@
 			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -36,13 +33,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
 			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -76,7 +72,7 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -89,12 +85,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUSHBUTTON_AUTOMAT</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -411,26 +406,25 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CANNERY</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_II</BuildingType>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -456,17 +450,16 @@
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEAN_NUCLEAR_REACTOR</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -499,20 +492,17 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 			</ReplacementBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -534,7 +524,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -546,17 +536,16 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</MovieDefineTag>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
@@ -600,17 +589,16 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>25</iPrereqPopulation>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HIGH_ENERGY_LAB</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -681,18 +669,17 @@
 				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMALL_REACTOR_FACTORY</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -723,7 +710,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -740,15 +727,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENTURE_INDUSTRIES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENTURE_INDUSTRIES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENTURE_INDUSTRIES</MovieDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -764,13 +750,6 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>5</iCommerce>
-						<iCommerce>5</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 					<TechCommerce>
@@ -804,19 +783,18 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ATOM</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Strategy>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>

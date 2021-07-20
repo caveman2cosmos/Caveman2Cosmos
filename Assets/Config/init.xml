@@ -19,7 +19,7 @@
 			You can safely modify this list to change the color dropdown menus
 			for color options. You can change the text displayed in the menus by
 			adding translations for your new colors to Colors_CIV4GameText.xml
-			in the XML/Text directory. 
+			in the XML/Text directory.
 		-->
 		<arg name="colors" type="tuple">
 			"COLOR_RED",
@@ -47,7 +47,7 @@
 	<init module="TradeUtil"/>
 	<init module="TraitUtil"/>
 	<gameutils module="WidgetUtil" handler="getWidgetHelp"/>
-<!--  Removed while I try and get Platy Tech Screen working
+<!-- Removed while I try and get Platy Tech Screen working
 	<event type="OnLoad" module="CvTechChooser" function="resetTechPrefs"/>
 	<event type="GameStart" module="CvTechChooser" function="resetTechPrefs"/-->
 	<!-- Mods -->
@@ -81,9 +81,6 @@
 	<load mod="Revolution"/>
 	<load mod="RevDCM"/>
 	<!--RevolutionDCM end-->
-	<!--Mad Nukes Mod-->
-	<events module="MADNukesEventManager"/>
-	<!--Mad Nukes Mod-->
 	<!-- Options Screen -->
 	<screen id="BUGFull">
 		<tab module="BugGeneralOptionsTab"/>
@@ -103,9 +100,7 @@
 		<tab module="BugSystemOptionsTab"/>
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
-	<load mod="Female Missionaries"/>
 	<load mod="CaptureSlaves"/>
-	<load mod="MasterModList"/>
 	<load mod="Partisan"/>
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>

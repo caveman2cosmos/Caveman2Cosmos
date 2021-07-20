@@ -35,28 +35,28 @@ public:
 	virtual void	Rewind() { m_wrapped->Rewind(); }
 	virtual bool	AtEnd() { return m_wrapped->AtEnd(); }
 	virtual void	FastFwd() { m_wrapped->FastFwd(); }
-	virtual unsigned int  GetPosition() const { return m_lenRead; }
-	virtual void    SetPosition(unsigned int position) { m_wrapped->SetPosition(position); }
+	virtual uint32_t  GetPosition() const { return m_lenRead; }
+	virtual void    SetPosition(uint32_t position) { m_wrapped->SetPosition(position); }
 	virtual void    Truncate() { m_wrapped->Truncate(); }
 	virtual void	Flush() { m_wrapped->Flush(); }
-	virtual unsigned int	GetEOF() const { return m_wrapped->GetEOF(); }
-	virtual unsigned int			GetSizeLeft() const { return m_wrapped->GetSizeLeft(); }
+	virtual uint32_t	GetEOF() const { return m_wrapped->GetEOF(); }
+	virtual uint32_t			GetSizeLeft() const { return m_wrapped->GetSizeLeft(); }
 	virtual void	CopyToMem(void* mem) { m_wrapped->CopyToMem(mem); }
-	
-	virtual unsigned int	WriteString(const wchar_t* szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(const char* szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(const std::string& szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(const std::wstring& szName) { return m_wrapped->WriteString(szName); }
-	virtual unsigned int	WriteString(int count, std::string values[]) { return m_wrapped->WriteString(count,values); }
-	virtual unsigned int	WriteString(int count, std::wstring values[]) { return m_wrapped->WriteString(count,values); }
-	
-	virtual unsigned int	ReadString(char* szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
-	virtual unsigned int	ReadString(wchar_t* szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
-	virtual unsigned int	ReadString(std::string& szName) { return m_wrapped->ReadString(szName); m_lenRead += szName.length(); }
-	virtual unsigned int	ReadString(std::wstring& szName) { return m_wrapped->ReadString(szName); m_lenRead += 2*szName.length(); }
-	virtual unsigned int	ReadString(int count, std::string values[]) { return m_wrapped->ReadString(count,values); m_lenRead += count*values[0].length(); }
-	virtual unsigned int	ReadString(int count, std::wstring values[]) { return m_wrapped->ReadString(count,values); m_lenRead += 2*count*values[0].length(); }
-	
+
+	virtual uint32_t	WriteString(const wchar_t* szName) { return m_wrapped->WriteString(szName); }
+	virtual uint32_t	WriteString(const char* szName) { return m_wrapped->WriteString(szName); }
+	virtual uint32_t	WriteString(const std::string& szName) { return m_wrapped->WriteString(szName); }
+	virtual uint32_t	WriteString(const std::wstring& szName) { return m_wrapped->WriteString(szName); }
+	virtual uint32_t	WriteString(int count, std::string values[]) { return m_wrapped->WriteString(count,values); }
+	virtual uint32_t	WriteString(int count, std::wstring values[]) { return m_wrapped->WriteString(count,values); }
+
+	virtual uint32_t	ReadString(char* szName){ return m_wrapped->ReadString(szName); m_lenRead += strlen(szName); }
+	virtual uint32_t	ReadString(wchar_t* szName) { return m_wrapped->ReadString(szName); m_lenRead += wcslen(szName); }
+	virtual uint32_t	ReadString(std::string& szName) { return m_wrapped->ReadString(szName); m_lenRead += szName.length(); }
+	virtual uint32_t	ReadString(std::wstring& szName) { return m_wrapped->ReadString(szName); m_lenRead += 2*szName.length(); }
+	virtual uint32_t	ReadString(int count, std::string values[]) { return m_wrapped->ReadString(count,values); m_lenRead += count*values[0].length(); }
+	virtual uint32_t	ReadString(int count, std::wstring values[]) { return m_wrapped->ReadString(count,values); m_lenRead += 2*count*values[0].length(); }
+
 	virtual char*		ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
 	virtual wchar_t*	ReadWideString() { wchar_t* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
 	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++;}
@@ -70,9 +70,9 @@ public:
 	virtual void		Read(int count, short values[]){ m_wrapped->Read(count, values); m_lenRead += count*2;}
 	virtual void		Read(int count, uint16_t values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
 	virtual void		Read(int* i){ m_wrapped->Read(i); m_lenRead += 4;}
-	virtual void		Read(unsigned int* i) { m_wrapped->Read(i); m_lenRead += 4;}
+	virtual void		Read(uint32_t* i) { m_wrapped->Read(i); m_lenRead += 4;}
 	virtual void 		Read(int count, int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
-	virtual void 		Read(int count, unsigned int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
+	virtual void 		Read(int count, uint32_t values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
 
 	virtual void		Read(long* l) { m_wrapped->Read(l); m_lenRead += 4;}
 	virtual void		Read(unsigned long* l)  { m_wrapped->Read(l); m_lenRead += 4;}
@@ -99,9 +99,9 @@ public:
 	virtual void		Write(int count, const uint16_t values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(int value) { m_wrapped->Write(value); }
-	virtual void		Write(unsigned int value) { m_wrapped->Write(value); }
+	virtual void		Write(uint32_t value) { m_wrapped->Write(value); }
 	virtual void 		Write(int count, const int values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count, const unsigned int values[])  { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const uint32_t values[])  { m_wrapped->Write(count, values); }
 
 	virtual void		Write(long value) { m_wrapped->Write(value); }
 	virtual void		Write(unsigned long  value) { m_wrapped->Write(value); }
@@ -133,7 +133,7 @@ static int usageSeq = 0;
 //		value definitions	Defines the value of an id'd element
 //	Writing the entries for the dictionary of id->elements names as we go
 //	means we only have to save a name once and thereafter can use the corresponding
-//	id, saving lots of storage.  An id definiton is signified by an entry with a 
+//	id, saving lots of storage.  An id definiton is signified by an entry with a
 //	reserved id of its own
 #define SAVE_ELEMENT_ID_DICTIONARY_ENTRY (-1)	//	Special id value for id->name mapping elements (payload is a mapping element)
 #define SAVE_ELEMENT_ID_OBJECT_DELIMITER (-2)	//	Special id for object delimiter elements
@@ -283,7 +283,7 @@ typedef struct value_entry_int
 typedef struct value_entry_unsigned_int
 {
 	int id;
-	unsigned int value;
+	uint32_t value;
 } value_entry_unsigned_int;
 
 //	Value entry for type int array
@@ -565,7 +565,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 
 	entry.escapeId = SAVE_ELEMENT_ID_CLASS_MAP;
 	entry.classType = classType;
-	
+
 	switch(classType)
 	{
 	case REMAPPED_CLASS_TYPE_BUILDINGS:
@@ -667,12 +667,12 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-	case REMAPPED_CLASS_TYPE_MAPS:
-		entry.numClasses = NUM_MAPS;
+	case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
+		entry.numClasses = GC.getNumMapCategoryInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			const CvMapInfo& info = GC.getMapInfo((MapTypes)i);
+			const CvMapCategoryInfo& info = GC.getMapCategoryInfo((MapCategoryTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1074,7 +1074,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMBATINFOS);
 	//TB Promotion Line Mod begin
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROMOTIONLINES);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPCATEGORIES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEACLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_IDEAS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_TRAITS);
@@ -1155,8 +1155,8 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 		case REMAPPED_CLASS_TYPE_PROMOTIONLINES:
 			result = GC.getNumPromotionLineInfos();
 			break;
-		case REMAPPED_CLASS_TYPE_MAPS:
-			result = NUM_MAPS;
+		case REMAPPED_CLASS_TYPE_MAPCATEGORIES:
+			result = GC.getNumMapCategoryInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_IDEACLASSES:
 			result = GC.getNumIdeaClassInfos();
@@ -1527,7 +1527,7 @@ CvTaggedSaveFormatWrapper::WriteClassEnumArray(const char* name, int& idHint, in
 
 
 //	The following methods are direct replacements for the write calls
-//	in the underlying FDataStreamBase 
+//	in the underlying FDataStreamBase
 void
 CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, char value)
 {
@@ -1801,7 +1801,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned int value)
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint32_t value)
 {
 	PROFILE_FUNC();
 
@@ -1850,7 +1850,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[])
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint32_t values[])
 {
 	PROFILE_FUNC();
 
@@ -1900,7 +1900,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, long
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned long  value) 
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned long  value)
 {
 	PROFILE_FUNC();
 
@@ -2072,7 +2072,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		m_stream->Write(count, values);
 	}
 }
-	
+
 void
 CvTaggedSaveFormatWrapper::WriteString(const char* name, int& idHint, int& idSeq, const wchar_t* szName)
 {
@@ -2638,7 +2638,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint16_t* s) 
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint16_t* s)
 {
 	PROFILE_FUNC();
 
@@ -2748,7 +2748,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int* 
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsigned int* i)
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint32_t* i)
 {
 	PROFILE_FUNC();
 
@@ -2805,7 +2805,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, unsigned int values[])
+CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint32_t values[])
 {
 	PROFILE_FUNC();
 
@@ -3513,7 +3513,7 @@ CvTaggedSaveFormatWrapper::Expect(const char* name, int& idHint, int& idSeq, Sav
 		default:
 			m_bReadNextElementHeader = true;
 
-			FAssert(m_idDictionary.size() > (unsigned int)m_iNextElementNameId);
+			FAssert(m_idDictionary.size() > (uint32_t)m_iNextElementNameId);
 
 			m_iNextElementType = m_idDictionary[m_iNextElementNameId].m_type;
 			break;
@@ -3542,7 +3542,7 @@ CvTaggedSaveFormatWrapper::Expect(const char* name, int& idHint, int& idSeq, Sav
 		{
 			//	Non matching start element for a nested object.  This implies the version we are running
 			//	now has added fields to the serialisation of the current object (prior to the
-			//	nested element).  These are skipped and it is assumed that their default initialization suffices 
+			//	nested element).  These are skipped and it is assumed that their default initialization suffices
 			//	to provide default semantics
 			return false;
 		}
@@ -3561,7 +3561,7 @@ CvTaggedSaveFormatWrapper::Expect(const char* name, int& idHint, int& idSeq, Sav
 		{
 			//	Non matching leaf element.  This implies the version we are running
 			//	now has added fields to the serialisation of the current object.  These
-			//	are skipped and it is assumed that their default initialization suffices 
+			//	are skipped and it is assumed that their default initialization suffices
 			//	to provide default semantics
 			return false;
 		}
@@ -3679,7 +3679,7 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		break;
 	case SAVE_VALUE_TYPE_UNSIGNED_INT_ARRAY:
 		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(unsigned int)*arraySize);
+		ConsumeBytes(sizeof(uint32_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_LONG:
 		ConsumeBytes(sizeof(value_entry_long)-sizeof(int));
@@ -3905,7 +3905,7 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 			memmove(ptr + 2, ptr + 3, strlen(ptr + 3) + 1);
 		}
 	}
-	
+
 	//	Strip array accessors.  Do this crudely but cheaply - we just assume the
 	//	expression is legal ([ comes before ]) and not nested (no arrays of arrays)
 	//	e.g. - we want m_thingy[iI] on save to match m_thingy[iJ] on load (don't require the same

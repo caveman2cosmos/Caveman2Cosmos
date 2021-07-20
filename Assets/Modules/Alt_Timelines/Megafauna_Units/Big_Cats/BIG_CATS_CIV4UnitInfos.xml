@@ -37,7 +37,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_TRAINEDCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRAINEDCAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
@@ -153,7 +152,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WARCAT_STRATEGY</Strategy>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -314,7 +312,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_GUARDCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUARDCAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
@@ -458,7 +455,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_POLICE_CAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POLICE_CAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
@@ -638,7 +634,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_FELINE_SUPERIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FELINE_SUPERIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>

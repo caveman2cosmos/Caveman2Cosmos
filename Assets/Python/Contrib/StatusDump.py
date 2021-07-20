@@ -3,11 +3,9 @@
 import codecs
 import os
 import os.path
-import string
 import BugCore
-import BugOptions
-import BugPath
 import BugConfigTracker
+import SystemPaths as SP
 
 BugAutolog = BugCore.game.Autolog
 
@@ -56,7 +54,7 @@ class statusdumpInstance:
 	def openSDFile(self):
 		szPath = BugAutolog.getFilePath()
 		if (not szPath or szPath == "Default"):
-			szPath = BugPath.findOrMakeDir("Autolog")
+			szPath = SP.joinModDir("Autolog")
 		if (not os.path.isdir(szPath)):
 			os.makedirs(szPath)
 		szFile = os.path.join(szPath, self.FileName)

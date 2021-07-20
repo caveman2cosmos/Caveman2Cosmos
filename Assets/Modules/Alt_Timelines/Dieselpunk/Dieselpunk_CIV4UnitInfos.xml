@@ -29,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GOLIATH_AIRSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GOLIATH_AIRSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -124,7 +123,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRACHE_HELICOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRACHE_HELICOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -236,7 +234,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAILROAD_ARTILLERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAILROAD_ARTILLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -351,7 +348,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BIG_BERTHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_BIG_BERTHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BIG_BERTHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -457,7 +453,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TZAR_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TZAR_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -567,7 +562,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DOUBLE_BIPLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOUBLE_BIPLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOUBLE_BIPLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -575,8 +569,8 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_P51_MUSTANG</UnitType>
-				<UnitType>UNIT_FIGHTER_BOMBER</UnitType>
+				<UnitType>UNIT_EARLYJET</UnitType>
+				<UnitType>UNIT_A10_BOMBER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -621,7 +615,7 @@
 			<bDCMAirBomb5>0</bDCMAirBomb5>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
- 		<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
@@ -649,7 +643,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -774,7 +767,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHROMIUM_GUNMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

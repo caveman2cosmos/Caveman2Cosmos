@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -11,7 +10,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL2</ArtDefineTag>
 			<MapCategoryTypes>
@@ -42,11 +40,6 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -118,7 +111,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -148,11 +140,6 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -182,7 +169,6 @@
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -207,11 +193,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -239,7 +220,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_WHEAT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_WHEAT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -250,7 +230,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -274,7 +254,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_BARLEY</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_BARLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BARLEY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -285,7 +264,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -309,7 +288,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_CORN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_CORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_CORN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -320,7 +298,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -344,7 +322,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_RICE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_RICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_RICE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -355,7 +332,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -379,7 +356,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_POTATO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_POTATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POTATO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -390,7 +366,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -414,7 +390,6 @@
 			<Type>BUILDING_DRUID_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_SHRINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -450,11 +425,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -467,7 +437,6 @@
 			<Type>BUILDING_DRUID_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -475,7 +444,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>68</iCost>
+			<iCost>80</iCost>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -484,11 +453,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -519,7 +483,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_WHEAT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_WHEAT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -527,7 +490,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -557,7 +520,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_BARLEY</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_BARLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BARLEY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -565,7 +527,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -595,7 +557,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_CORN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_CORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_CORN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -603,7 +564,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -633,7 +594,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_RICE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_RICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_RICE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -641,7 +601,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -671,7 +631,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_POTATO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_POTATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POTATO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -679,7 +638,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -709,7 +668,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_ALMOND</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_ALMOND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_ALMOND</ArtDefineTag>
 			<MapCategoryTypes>
@@ -720,7 +678,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -742,7 +700,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_ALMOND</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_ALMOND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_ALMOND</ArtDefineTag>
 			<MapCategoryTypes>
@@ -750,7 +707,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -778,7 +735,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_APPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_APPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_APPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -789,7 +745,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -811,7 +767,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_APPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_APPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_APPLE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -819,7 +774,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -847,7 +802,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_BANANA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_BANANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BANANA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -858,7 +812,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -880,7 +834,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_BANANA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_BANANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BANANA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -888,7 +841,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -916,7 +869,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_COCONUT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_COCONUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_COCONUT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -927,7 +879,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -949,7 +901,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_COCONUT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_COCONUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_COCONUT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -957,7 +908,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -985,7 +936,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_DATES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_DATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_DATES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -996,7 +946,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -1018,7 +968,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_DATES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_DATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_DATES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1026,7 +975,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -1054,7 +1003,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_FIG</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_FIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1065,7 +1013,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -1087,7 +1035,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_FIG</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_FIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_FIG</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1095,7 +1042,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -1123,7 +1070,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_GRAPES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_GRAPES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GRAPES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1134,7 +1080,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -1156,7 +1102,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_GRAPES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_GRAPES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GRAPES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1164,7 +1109,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -1192,7 +1137,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_GUAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_GUAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GUAVA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1203,7 +1147,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -1225,7 +1169,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_GUAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_GUAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GUAVA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1233,7 +1176,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -1261,7 +1204,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_LEMON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_LEMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_LEMON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1272,7 +1214,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -1294,7 +1236,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_LEMON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_LEMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_LEMON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1302,7 +1243,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -1330,7 +1271,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_MANGO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MANGO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MANGO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1341,7 +1281,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -1363,7 +1303,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_MANGO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MANGO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MANGO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1371,7 +1310,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -1399,7 +1338,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_MELON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MELON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MELON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1410,7 +1348,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -1432,7 +1370,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_MELON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MELON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MELON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1440,7 +1377,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -1468,7 +1405,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_MUSHROOMS</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MUSHROOMS</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1479,7 +1415,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -1501,7 +1437,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_MUSHROOMS</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MUSHROOMS</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1509,7 +1444,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -1537,7 +1472,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_OLIVES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_OLIVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_OLIVES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1548,7 +1482,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -1570,7 +1504,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_OLIVES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_OLIVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_OLIVES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1578,7 +1511,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -1606,7 +1539,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_PAPAYA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PAPAYA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1617,7 +1549,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -1639,7 +1571,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_PAPAYA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PAPAYA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1647,7 +1578,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -1675,7 +1606,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_PISTACHIO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PISTACHIO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1686,7 +1616,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -1708,7 +1638,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_PISTACHIO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PISTACHIO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1716,7 +1645,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -1744,7 +1673,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_POMEGRANATE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POMEGRANATE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1755,7 +1683,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -1777,7 +1705,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_POMEGRANATE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POMEGRANATE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1785,7 +1712,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -1813,7 +1740,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1824,7 +1750,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -1846,7 +1772,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1854,7 +1779,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -1882,7 +1807,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_PUMPKIN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PUMPKIN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1893,7 +1817,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -1915,7 +1839,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_PUMPKIN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PUMPKIN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1923,7 +1846,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -1951,7 +1874,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_SQUASH</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_SQUASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_SQUASH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1962,7 +1884,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -1984,7 +1906,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_SQUASH</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_SQUASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_SQUASH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1992,7 +1913,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -2020,7 +1941,6 @@
 			<Type>BUILDING_DRUID_MONASTERY_KAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_KAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_KAVA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2031,7 +1951,7 @@
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>25</iCost>
+			<iCost>40</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
@@ -2053,7 +1973,6 @@
 			<Type>BUILDING_DRUID_TEMPLE_KAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_KAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_KAVA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2061,7 +1980,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
-			<iCost>18</iCost>
+			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>

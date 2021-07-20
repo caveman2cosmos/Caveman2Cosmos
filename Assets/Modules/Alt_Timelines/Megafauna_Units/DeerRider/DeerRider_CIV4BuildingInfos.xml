@@ -3,19 +3,18 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <Bonus>BONUS_DEER</Bonus>
+			<Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
@@ -26,14 +25,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -55,16 +46,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_TRAINER_HERITAGE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -99,7 +87,6 @@
 			<Type>BUILDING_DEER_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
@@ -119,13 +106,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TOTEM_DEER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

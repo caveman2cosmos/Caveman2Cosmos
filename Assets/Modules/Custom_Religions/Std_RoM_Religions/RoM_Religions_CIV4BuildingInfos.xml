@@ -2,17 +2,15 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-<!-- EgyptMyth -->
+		<!-- EgyptMyth -->
 		<BuildingInfo>
 			<Type>BUILDING_PTAH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PTAH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PTAH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PTAH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PTAH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -23,7 +21,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
+			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -84,7 +82,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOTH</ArtDefineTag>
 			<MapCategoryTypes>
@@ -172,17 +169,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
-			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
-		</BuildingInfo>
-<!-- Hellenism -->
+		<!-- Hellenism -->
 		<BuildingInfo>
 			<Type>BUILDING_ERECTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERECTION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -195,7 +187,7 @@
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
 			<FreePromotion>PROMOTION_COASTAL_GUARD1</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -277,7 +269,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIDIAS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FIDIAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIDIAS</ArtDefineTag>
 			<MapCategoryTypes>
@@ -288,10 +279,10 @@
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
-			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<iCost>1104</iCost>
+			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -344,9 +335,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCULPTOR</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -370,7 +363,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NECROMANTEION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NECROMANTEION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NECROMANTEION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -382,9 +374,6 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			</TechTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
@@ -462,14 +451,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Nagualismo -->
+		<!-- Nagualismo -->
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -550,7 +538,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -627,20 +614,15 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
-			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
-		</BuildingInfo>
-<!-- Zoroasterism -->
+		<!-- Zoroasterism -->
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HAMMURABI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAMMURABI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -706,12 +688,11 @@
 		<BuildingInfo>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
- 			</AndDependencyTypes>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
+			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NIMRUD_PALACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NIMRUD_PALACE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -793,7 +774,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEHISTUN_INSCRIPTION</ArtDefineTag>
 			<MapCategoryTypes>
@@ -839,7 +819,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PIR_E_NARAKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PIR_E_NARAKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PIR_E_NARAKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIR_E_NARAKI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -889,7 +868,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SETI_PIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SETI_PIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SETI_PIR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SETI_PIR</ArtDefineTag>
 			<MapCategoryTypes>
@@ -934,7 +912,6 @@
 			<Type>BUILDING_TOWER_OF_SILENCE</Type>
 			<Description>TXT_KEY_BUILDING_TOWER_OF_SILENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOWER_OF_SILENCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOWER_OF_SILENCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOWER_OF_SILENCE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -944,6 +921,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>

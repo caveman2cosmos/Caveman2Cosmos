@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CLAY</Tag>
+		<English>%s1_civ_adjective potters are now using quality clay.</English>
+		<French>Les potiers %s1_civ_adjective utilisent de l'argile de très bonne qualité.</French>
+		<Polish>Garncarze z %s1_civ_adjective uzywaja od teraz wysokiej jakosci gline.</Polish>
+		<Russian>%s1_civ_adjective ãîí÷àðû îòíûíå èñïîëüçóþò áîëåå êà÷åñòâåííóþ ãëèíó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CLAY_1</Tag>
+		<English>This is a high quality clay. We should use it in our potter's shop.</English>
+		<French>Cet argile est de très bonne qualité. Nous l'utiliserons pour nos poteries.</French>
+		<Polish>To jest glina wysokiej jakosci. Przyda sie naszemu garncarzowi.</Polish>
+		<Russian>Ýòà ãëèíà îêàçàëàñü âûñøåé ïðîáû. Íàì ñòîèò åå ïîñòàâëÿòü â íàøè ëàâêè êåðàìè÷åñêèõ èçäåëèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CLAY_1</Tag>
+		<English>Farmers have figured out how to harvest the abundant supply of clay close to the riverbed.</English>
+		<French>Des paysans ont mis à jour une source abondante d'argile près du lit de la rivière.</French>
+		<Polish>Rolnicy odkryli jak wydobywac wysokiej jakosci gline z pobliskiego brzego rzeki.</Polish>
+		<Russian>Êðåñòüÿíå ïðèäóìàëè, êàê ñîáèðàòü áîãàòûå çàïàñû ãëèíû âáëèçè ðóñëà ðåêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_CLAY_1</Tag>
+		<English>Clay</English>
+		<French>Argile</French>
+		<Italian>Argilla</Italian>
+		<Polish>Glina</Polish>
+		<Russian>ãëèíà</Russian>
+	</TEXT>
+</Civ4GameText>

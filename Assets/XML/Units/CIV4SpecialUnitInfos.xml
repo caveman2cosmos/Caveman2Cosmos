@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Special Unit Infos -->
 <Civ4SpecialUnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpecialUnitInfos>
@@ -71,11 +70,9 @@
 			</CarrierUnitAIs>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
 			<Type>SPECIALUNIT_UNITED_NATIONS</Type>
-			<Description>TXT_KEY_SPECIALUNIT_UNITED_NATIONS</Description>
-			<bValid>1</bValid>
-			<bCityLoad>0</bCityLoad>
-			<CarrierUnitAIs/>
+			<bValid>0</bValid>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_VTOL</Type>

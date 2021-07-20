@@ -7,7 +7,7 @@
 #include "CvUnit.h"
 #include "CvViewport.h"
 
-CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext) 
+CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext)
 	: m_pMap(pMap)
 	, m_iXOffset(0)
 	, m_iYOffset(0)
@@ -209,7 +209,7 @@ void CvViewport::init(CvMapInitData* pInitData)
 void CvViewport::setupGraphical()
 {
 	m_mode = VIEWPORT_MODE_INITIALIZED;
-	
+
 	m_pMap->setupGraphical();
 }
 
@@ -270,7 +270,7 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 
 			int iAdvisorScreenLeft = ((windowInfo.rcClient.right - windowInfo.rcClient.left) - advisorWidth)/2 + windowInfo.rcClient.left;
 			int iAdvisorScreenTop = ((windowInfo.rcClient.bottom - windowInfo.rcClient.top) - 768)/2 + windowInfo.rcClient.top;
-		
+
 			iMinimapTop += iAdvisorScreenTop;
 			iMinimapBottom += iAdvisorScreenTop;
 			iMinimapLeft += iAdvisorScreenLeft;
@@ -480,7 +480,7 @@ void CvViewport::setActionState(ViewportDeferredActionState newState, bool bProc
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-	
+
 void CvViewport::erasePlots()
 {
 	m_pMap->erasePlots();
@@ -589,11 +589,6 @@ CvArea* CvViewport::findBiggestArea(bool bWater) const
 int CvViewport::getMapFractalFlags() const
 {
 	return m_pMap->getMapFractalFlags();
-}
-
-bool CvViewport::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
-{
-	return m_pMap->findWater(pPlot, iRange, bFreshWater);
 }
 
 bool CvViewport::isPlot(int iX, int iY) const
@@ -784,7 +779,7 @@ void CvViewport::write(FDataStreamBase* pStream)
 {
 	m_pMap->write(pStream);
 }
-	
+
 void CvViewport::setSpoofHiddenGraphics(ViewportGraphicalSpoofingState eValue)
 {
 	m_eSpoofHiddenGraphics = eValue;

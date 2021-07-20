@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUTCHER_ANIMAL_HELP</Tag>
+		<English>Butcher the animal.</English>
+		<French>Abattre l'animal.</French>
+		<Italian>Macella l'animale.</Italian>
+		<Polish>Zarżnij zwierzę.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ANIMAL_COMBAT</Tag>
+		<English>Animal vs animal or animal vs man in a spectacular fight.</English>
+		<French>Animal contre animal ou animal contre homme dans un combat spectaculaire.</French>
+		<Italian>Spettacolari combattimenti di animali contro animali, o animali contro uomini.</Italian>
+		<Polish>Zwierzę kontra zwierzę lub zwierzę kontra człowiek w walce na arenie!</Polish>
+		<Russian>Æèâîòíîå vrs. æèâîòíîå èëè æèâîòíîå vrs. ÷åëîâåê â çàõâàòûâàþùåé áîðüáå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ANIMAL_COMBAT_HELP</Tag>
+		<English>Provides a temporary boost to happiness.</English>
+		<French>Procure un gain temporaire de bonheur.</French>
+		<Italian>Fornisce un bonus temporaneo alla felicità.</Italian>
+		<Polish>Tymczasowo zwiększa zadowolenie miejskiej populacji.</Polish>
+		<Russian>Îáåñïå÷èâàåò ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY</Tag>
+		<English>Study the animal.</English>
+		<French>Étudier l'animal.</French>
+		<Italian>Studia l'animale.</Italian>
+		<Polish>Zbadaj zwierzę.</Polish>
+		<Russian>Îáó÷èòü æèâîòíîå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY_HELP</Tag>
+		<English>Provides a boost to science.</English>
+		<French>Procure un bonus de science.</French>
+		<Italian>Fornisce un bonus alla ricerca.</Italian>
+		<Polish>Dostarcza małą ilość nauki.</Polish>
+		<Russian>Îáåñïå÷èâàåò ïîâûøåíèå íàóêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD</Tag>
+		<English>Settle domesticated animal as resource on the map.</English>
+		<French>Installer l'animal domestique comme ressource sur la carte.</French>
+		<Polish>Osadź udomowione zwierzę na mapie jako surowiec.</Polish>
+		<Russian>Ïîñåëèòü ïðèðó÷åííîå æèâîòíîå êàê ðåñóðñ íà êàðòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD_HELP</Tag>
+		<English>The domesticated subdued animal may become a resource. With the right technology it may become a pasture as well.</English>
+		<French>L'animal dompté domestiqué peut devenir une ressource. Avec la bonne technologie, cela peut aussi devenir un pâturage.</French>
+		<Polish>Udomowione zwierzęta mogą zostać osadzone na mapie jako surowce. Z odpowiednią technologią mogą zostać w tym miejscu stworzone pastwiska.</Polish>
+		<Russian>Ïðèðó÷åííîå æèâîòíîå ìîæåò ñòàòü ðåñóðñîì. Ïðè ñîîòâåòñòâóþùåé òåõíîëîãèè òàêæå ìîæåò ñòàòü ïàñòáèùàìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECORD_TALE</Tag>
+		<English>Add the tale to your cultural heritage.</English>
+		<French>Ajouter cette histoire à votre Patrimoine culturel.</French>
+		<Italian>Aggiungi questa storia alla tua eredità culturale.</Italian>
+		<Polish>Dodaj opowieść do twojego dziedzictwa kulturowego.</Polish>
+		<Russian>Äîáàâèòü ðàññêàç ê ñâîåìó êóëüòóðíîìó íàñëåäèþ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECORD_TALE_HELP</Tag>
+		<English>Provides a small boost to culture and science.</English>
+		<French>Procure un bonus culturel et en science.</French>
+		<Italian>Fornisce un piccolo bonus alla cultura e alla ricerca.</Italian>
+		<Polish>Dostarcza małej ilości kultury i nauki.</Polish>
+		<Russian>Îáåñïå÷èâàåò ìàëåíüêîå ïîâûøåíèå êóëüòóðû è íàóêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT1</Tag>
+		<English>Cock fighting, Bear baiting, Stallion Fights. This will consume the unit providing a temporary happiness boost.</English>
+		<French>Combat de Coqs affrontements d'ours, de félins. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
+		<Italian>I combattimenti fra animali consumano l'unità selezionata, fornendo in cambio un bonus temporaneo alla felicità.</Italian>
+		<Polish>Walki kogutów, szczucie niedźdzwiedzia, walki ogierów. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
+		<Russian>Êóëèíàðíàÿ Áîðüáà, òðàâëÿ Ìåäâåäÿ, Ïîåäèíêè Æåðåáöîâ. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT2</Tag>
+		<English>Man against animals in a colosseum, blood is the point. This will consume the unit providing a temporary happiness boost.</English>
+		<French>L'homme contre les bêtes au Colisée, on réclame du sand. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
+		<Italian>Un uomo contro un animale in un'arena: ciò che la gente vuole è solo sangue. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
+		<Polish>Człowiek przeciwko bestii w koloseum. Krew się poleje. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
+		<Russian>×åëîâåê ïðîòèâ æèâîòíûõ â Êîëèçåå, êðîâü - ïóíêò. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Tag>
+		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a temporary happiness boost.</English>
+		<French>L'Homme contre l'animal dans l'arène. expérience et style sont au rendez-vous. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
+		<Italian>Un uomo contro un animale in un'arena: tutto ciò che conta sono stile e abilità. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
+		<Polish>Człowiek przeciwko zwierzętom na arenie. Styl i finezja to podstawa. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
+		<Russian>×åëîâåê ïðîòèâ æèâîòíûõ íà àðåíå, óìåíèå è ñòèëü - ïóíêò. Ýòî áóäåò ïîòðåáëÿòü åäèíèöó, îáåñïå÷èâàþùóþ ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Tag>
+		<English>The people enjoyed the games.</English>
+		<French>Le Peuple apprécie les jeux.</French>
+		<Italian>Il popolo ha apprezzato i giochi.</Italian>
+		<Polish>Ludzie pokochali walki na arenie.</Polish>
+		<Russian>Ëþäè íàñëàæäàëèñü èãðàìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Tag>
+		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a School of Scribes, Library or University.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca. Si ottengono risultati migliori in una città con Scuola di scribi, Biblioteca o università.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki. Lepsze rezultaty mogą być osiągnięte jeśli w mieście znajdują się odpowiednie budynki: Szkoła Skrybów, Biblioteka, Uniwersytet.</Polish>
+		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе со Школой писцов, Библиотекой или Университетом.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</Tag>
+		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a University.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Université).</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca. Si ottengono risultati migliori in una città con università.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki. Lepsze rezultaty mogą być osiągnięte jeśli w mieście znajduje się Uniwersytet.</Polish>
+		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Университетом.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Tag>
+		<English>The tale is now part of our cultural heritage.</English>
+		<French>Cette histoire fait partie à présent de votre Patrimoine culturel.</French>
+		<Italian>La storia è ora parte della nostra eredità culturale.</Italian>
+		<Polish>Opowieść stała się częścią Twojego dziedzictwa kulturowego.</Polish>
+		<Russian>Ðàññêàç - òåïåðü ÷àñòü íàøåãî êóëüòóðíîãî íàñëåäèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_ORAL</Tag>
+		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a Story Tellers Hut, Cave Paintings, School of Scribes, Library or University.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca. Si ottengono risultati migliori in una città con Capanna del cantastorie, Pitture rupestri, Scuola di scribi, Biblioteca o Università.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki. Lepsze rezultaty mogą być osiągnięte jeśli w mieście znajdują się odpowiednie budynki: Malunki Naskalne, Chata Opowiadacza, Szkoła Skrybów, Biblioteka, Uniwersytet.</Polish>
+		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ êóëüòóðó è íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Íàñêàëüíûå ðèñóíêè èëè Õèæèíà Ðàñêàç÷èêà Èñòîðèè).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Tag>
+		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a Library or University.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Bibliothèque ou université).</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca. Si ottengono risultati migliori in una città con Biblioteca o Università.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki. Lepsze rezultaty mogą być osiągnięte jeśli w mieście znajdują się odpowiednie budynki: Biblioteka, Uniwersytet.</Polish>
+		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Библиотекой или Университетом.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_STORY</Tag>
+		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with Cave Paintings, School of Scribes, Library or University.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Cave Paintings, School of Scribes, Library or University.</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca. Si ottengono risultati migliori in una città con Pitture rupestri, Scuola di scribi, Biblioteca o Università.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki. Lepsze rezultaty mogą być osiągnięte jeśli w mieście znajdują się odpowiednie budynki: Malunki Naskalne, Szkoła Skrybów, Biblioteka, Uniwersytet.</Polish>
+		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Пещерной живописью, Школой писцов, Библиотекой или Университетом.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_UNI</Tag>
+		<English>This will consume the unit providing a culture and science boost.</English>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science.</French>
+		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca.</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki.</Polish>
+		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY</Tag>
+		<English>This will consume the unit providing a science boost based on which building is available in the city (Butcher or Biology Lab).</English>
+		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abattoir, Laboratoire de biologie...).</French>
+		<Italian>Consumerà l'unità, fornendo un bonus alla ricerca basato sull'edificio presente in città (Macelleria o Laboratorio di biologia).</Italian>
+		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości nauki bazując na tym jakie budynki są dostępne w mieście (Rzeźnik lub Laboratorium Biologiczne).</Polish>
+		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Ìÿñíèê èëè áèîëàáîðàòîðèÿ).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY_MESSAGE</Tag>
+		<English>You have studied the animal.</English>
+		<French>Vous avez étudié l'animal.</French>
+		<Italian>Hai studiato l'animale.</Italian>
+		<Polish>Zbadałeś zwierzę.</Polish>
+		<Russian>Âû îáó÷èëè æèâîòíîå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE</Tag>
+		<English>Attempt to settle the domesticated subdued animal into a herd resource and build a pasture.</English>
+		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
+		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
+		<Russian>Ïîïûòüñÿ ïîäñåëèòü ïðèðó÷åííîå æèâîòíîå â ñòàäî ðåñóðñà è ïîñòðîèòü ïàñòáèùå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE_MESSAGE</Tag>
+		<English>Domesticated animals are now bred on this plot.</English>
+		<French>Les animaux domestiques sont maintenant élevés sur cette case.</French>
+		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
+		<Russian>Îòíûíå íà ýòîì ó÷àñòêå ðàçâîäÿò îäîìàøíåííûõ æèâîòíûõ.</Russian>
+	</TEXT>
+</Civ4GameText>

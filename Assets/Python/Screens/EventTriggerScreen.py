@@ -57,7 +57,7 @@ class EventTriggerScreen:
 
 		stTxt = szFontEdge + CyTranslator().getText("TXT_KEY_POPUP_SELECT_EVENT",())
 		screen.setLabel("Header", "", stTxt, 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 1)
-		stTxt = szFontEdge + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		stTxt = szFontEdge + CyTranslator().getText("TXT_WORD_EXIT", ())
 		screen.setText("Exit", "", stTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		LIST = []
@@ -117,10 +117,9 @@ class EventTriggerScreen:
 			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
-
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
-		ID		= inputClass.iItemID
+		#iData	= inputClass.iData
+		#ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		iData1	= inputClass.iData1
 

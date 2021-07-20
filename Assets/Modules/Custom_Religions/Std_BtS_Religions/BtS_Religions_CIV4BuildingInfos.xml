@@ -2,17 +2,15 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-<!-- Buddhist -->
+		<!-- Buddhist -->
 		<BuildingInfo>
 			<Type>BUILDING_CAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CAVES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVES</ArtDefineTag>
 			<MapCategoryTypes>
@@ -87,12 +85,11 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-       <BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_NARA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NARA</ArtDefineTag>
 			<MapCategoryTypes>
@@ -158,13 +155,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Christian -->
+		<!-- Christian -->
 		<BuildingInfo>
 			<Type>BUILDING_SAN_MARCOS_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARCOS_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -259,7 +255,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VATICAN_LIBRARY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -336,13 +331,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Confusian -->
+		<!-- Confusian -->
 		<BuildingInfo>
 			<Type>BUILDING_CONFUCIAN_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -414,14 +408,14 @@
 			</Flavors>
 			<ConstructCondition>
 				<And>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_FURNITURE</ID>
-				</Has>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_PRIME_TIMBER</ID>
-				</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FURNITURE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_PRIME_TIMBER</ID>
+					</Has>
 				</And>
 			</ConstructCondition>
 			<PropertyManipulators>
@@ -437,13 +431,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Judaism -->
+		<!-- Judaism -->
 		<BuildingInfo>
 			<Type>BUILDING_SOLOMON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLOMON</ArtDefineTag>
 			<MapCategoryTypes>
@@ -518,13 +511,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Hindu -->
+		<!-- Hindu -->
 		<BuildingInfo>
 			<Type>BUILDING_AKSHARDHAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AKSHARDHAM</ArtDefineTag>
 			<MapCategoryTypes>
@@ -604,12 +596,11 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
- 		<BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_MEENAKSHI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI</ArtDefineTag>
 			<MapCategoryTypes>
@@ -694,13 +685,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Islam -->
+		<!-- Islam -->
 		<BuildingInfo>
 			<Type>BUILDING_BLUE_MOSQUE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESTAMBUL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -776,7 +766,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DESERT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -858,7 +847,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SULTAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SULTAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -932,13 +920,12 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-<!-- Toaist -->
+		<!-- Toaist -->
 		<BuildingInfo>
 			<Type>BUILDING_QUANZHEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1011,14 +998,14 @@
 			</Flavors>
 			<ConstructCondition>
 				<And>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_FURNITURE</ID>
-				</Has>
-				<Has>
-				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_PRIME_TIMBER</ID>
-				</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FURNITURE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_PRIME_TIMBER</ID>
+					</Has>
 				</And>
 			</ConstructCondition>
 			<PropertyManipulators>
@@ -1034,7 +1021,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WUDANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WUDANG</ArtDefineTag>
 			<MapCategoryTypes>

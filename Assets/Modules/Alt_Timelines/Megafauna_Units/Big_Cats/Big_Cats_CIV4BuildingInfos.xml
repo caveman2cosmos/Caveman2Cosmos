@@ -5,23 +5,20 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_CAT_TRAINER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BIG_CAT_TRAINER</MovieDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
-            <Bonus>BONUS_CAT</Bonus>
+			<Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
@@ -71,7 +68,6 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER_EFFECT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -81,16 +77,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TOTEM_CATS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_TOTEM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -134,15 +127,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLICE_CAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_POLICE_CAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_POLICE_CAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			</TechTypes>
+			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -169,7 +160,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -2,6 +2,7 @@
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvCity.h"
 #include "CvContractBroker.h"
 #include "CvDLLEntity.h"
@@ -35,6 +36,7 @@ CvCity::CvCity()
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
+	m_aiExtraYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldPerPopRate = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiPowerYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -179,6 +181,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiSeaPlotYield);
 	SAFE_DELETE_ARRAY(m_aiRiverPlotYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldRate);
+	SAFE_DELETE_ARRAY(m_aiExtraYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldPerPopRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
@@ -186,6 +189,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiTradeYield);
 	SAFE_DELETE_ARRAY(m_aiCorporationYield);
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistYield);
+
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistCommerce);
 	SAFE_DELETE_ARRAY(m_aiCommerceRate);
 	SAFE_DELETE_ARRAY(m_abCommerceRateDirty);
@@ -293,8 +297,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY))
-	&& pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != GC.getFEATURE_FLOOD_PLAINS()
+	if (pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != GC.getFEATURE_FLOOD_PLAINS()
 	&& (GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 0 || GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 1))
 	{
 		pPlot->setFeatureType(NO_FEATURE);
@@ -321,7 +324,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	//TBFREEBUILD
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const uint16_t iFreeAreaBuildingCount = player.getFreeAreaBuildingCount((BuildingTypes)iI, pArea); 
+		const uint16_t iFreeAreaBuildingCount = player.getFreeAreaBuildingCount((BuildingTypes)iI, pArea);
 		if (iFreeAreaBuildingCount > 0)
 		{
 			changeFreeAreaBuildingCount((BuildingTypes)iI, iFreeAreaBuildingCount);
@@ -349,7 +352,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	updateFeatureHealth();
 	updateImprovementHealth();
 	updateFeatureHappiness();
-	updatePowerHealth();
 
 	player.setMaintenanceDirty(true);
 
@@ -518,8 +520,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFeatureBadHealth = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
-	m_iPowerGoodHealth = 0;
-	m_iPowerBadHealth = 0;
 	m_iBonusGoodHealth = 0;
 	m_iBonusBadHealth = 0;
 	m_iHurryAngerTimer = 0;
@@ -566,7 +566,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iNukeModifier = 0;
 	m_iFreeSpecialist = 0;
 	m_iPowerCount = 0;
-	m_iDirtyPowerCount = 0;
 	m_iDefenseDamage = 0;
 	m_iLastDefenseDamage = 0;
 	m_iOccupationTimer = 0;
@@ -578,7 +577,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iSpecialistInvestigation = 0;
 	m_icachedPropertyNeedsTurn = 0;
 	m_fPopulationgrowthratepercentageLog = 0.0;
-	m_iLostProductionBase = 0;
 	m_iImprovementGoodHealth = 0;
 	m_iImprovementBadHealth = 0;
 	m_iSpecialistGoodHealth = 0;
@@ -586,7 +584,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iSpecialistHappiness = 0;
 	m_iSpecialistUnhappiness = 0;
 	m_iCiv = NO_CIVILIZATION;
-	m_iExtraYieldTurns = 0;
 	m_eOccupationCultureLevel = NO_CULTURELEVEL;
 	m_iLineOfSight = 0;
 	m_iLandmarkAngerTimer = 0;
@@ -605,7 +602,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iNumPopulationEmployed = 0;
 	m_iHealthPercentPerPopulation = 0;
 	m_iHappinessPercentPerPopulation = 0;
-	m_iMADIncoming = 0;
 	m_iQuarantinedCount = 0;
 	m_bNeverLost = true;
 	m_bPropertyControlBuildingQueued = false;
@@ -675,6 +671,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiSeaPlotYield[iI] = 0;
 		m_aiRiverPlotYield[iI] = 0;
 		m_aiBaseYieldRate[iI] = 0;
+		m_aiExtraYield[iI] = 0;
 		m_aiBaseYieldPerPopRate[iI] = 0;
 		m_aiYieldRateModifier[iI] = 0;
 		m_aiPowerYieldRateModifier[iI] = 0;
@@ -1151,7 +1148,7 @@ bool CvCity::isRecentlyAcquired() const
 	(
 		(GC.getGame().getGameTurn() - getGameTurnAcquired())
 		<
-		12 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100
+		12 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100
 	);
 }
 
@@ -1179,23 +1176,9 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 			originalTradeNetworkConnectivity[iI] = GET_PLAYER((PlayerTypes)iI).isAlive() ? pPlot->getPlotGroup((PlayerTypes)iI) : NULL;
 		}
 	}
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			foreach_(CvUnit* unitX, GET_PLAYER((PlayerTypes)iI).units())
-			{
-				if (unitX->getUnitInfo().getUnitAIType(UNITAI_ICBM) && unitX->isMADEnabled()
-				&& at(unitX->getMADTargetPlotX(), unitX->getMADTargetPlotY())
-				&& (unitX->getX() != INVALID_PLOT_COORD || unitX->getY() != INVALID_PLOT_COORD))
-				{
-					unitX->clearMADTargetPlot();
-				}
-			}
-		}
-	}
+
 	algo::for_each(
-		plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this),
+		plots(NUM_CITY_PLOTS) | filtered(CvPlot::fn::getWorkingCityOverride() == this),
 		CvPlot::fn::setWorkingCityOverride(NULL)
 	);
 	setCultureLevel(NO_CULTURELEVEL, false);
@@ -1338,7 +1321,6 @@ void CvCity::killTestCheap()
 
 void CvCity::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvCity::doTurn()");
 
 	FAssert(m_deferringBonusProcessingCount == 0);
@@ -1387,16 +1369,6 @@ void CvCity::doTurn()
 	//Checks conditions of buildings, may disable or enable some
 	checkBuildings();
 	checkFreeBuildings();
-	//Extra Hammer from settling on Forest
-	if (getExtraYieldTurns() > 0)
-	{
-		changeExtraYieldTurns(-1);
-	}
-	//Extra Food from settling on Jungle
-	else if (getExtraYieldTurns() < 0)
-	{
-		changeExtraYieldTurns(1);
-	}
 
 	//Checks if enemy troops have found secret entrance into the city
 	doInvasion();
@@ -1451,6 +1423,7 @@ void CvCity::doTurn()
 
 	doPropertyUnitSpawn();
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mod (Buildings) begin
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
@@ -1480,6 +1453,7 @@ void CvCity::doTurn()
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
@@ -1570,14 +1544,11 @@ void CvCity::doTurn()
 	// ONEVENT - Do turn
 	CvEventReporter::getInstance().cityDoTurn(this, getOwner());
 
-	// XXX
+	/*
 #ifdef _DEBUG
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			//FAssert(getBaseYieldRate((YieldTypes)iI) >= 0);
-			//FAssert(getYieldRate((YieldTypes)iI) >= 0);
-
 			int iCount = 0;
 
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
@@ -1611,10 +1582,9 @@ void CvCity::doTurn()
 			iCount += getTradeYield((YieldTypes)iI);
 			iCount += getCorporationYield((YieldTypes)iI);
 
-			//FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
+			FAssert(iCount == getPlotYield((YieldTypes)iI) + getExtraYield((YieldTypes)iI));
 		}
 
-/*
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
@@ -1628,10 +1598,9 @@ void CvCity::doTurn()
 		{
 			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI)) : 0));
 		}
-*/
 	}
 #endif
-	// XXX
+	*/
 }
 
 void CvCity::doAutobuild()
@@ -1652,15 +1621,13 @@ void CvCity::doAutobuild()
 					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
 				}
 			}
-			else if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0
 			// Toffer - World wonder autobuilds should never be auto-removed.
-			&& kBuilding.getMaxGlobalInstances() == -1)
+			else if (kBuilding.getMaxGlobalInstances() == -1)
 			{
 				// Special rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
-				for (int iJ = 0; iJ < iNumBuildingInfos; iJ++)
+				foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
 				{
-					if (kBuilding.getPrereqNumOfBuilding((BuildingTypes)iJ) > 0
-					&& GET_PLAYER(getOwner()).getBuildingCount((BuildingTypes)iJ) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, (BuildingTypes)iJ, 0))
+					if (GET_PLAYER(getOwner()).getBuildingCount(modifier.first) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, modifier.first, 0))
 					{
 						setNumRealBuilding((BuildingTypes)iI, 0);
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
@@ -1714,15 +1681,7 @@ bool CvCity::canBeSelected() const
 
 void CvCity::updateSelectedCity(bool bTestProduction)
 {
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->updateShowCitySymbols();
-		}
-	}
+	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 
 	if (bTestProduction)
 	{
@@ -1736,15 +1695,7 @@ void CvCity::updateSelectedCity(bool bTestProduction)
 
 void CvCity::updateYield()
 {
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL)
-		{
-			pLoopPlot->updateYield();
-		}
-	}
+	algo::for_each(plots(), bind(CvPlot::updateYield, _1));
 }
 
 
@@ -2019,11 +1970,9 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+		if (pLoopPlot->getWorkingCity() == this)
 		{
 			if (eImprovement != NO_IMPROVEMENT)
 			{
@@ -2046,36 +1995,14 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 
 int CvCity::countNumWaterPlots() const
 {
-	int iCount = 0;
-
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isWater())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(plots(),
+		bind(CvPlot::getWorkingCity, _1) == this && bind(CvPlot::isWater, _1));
 }
 
 int CvCity::countNumRiverPlots() const
 {
-	int iCount = 0;
-
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
-	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isRiver())
-		{
-			++iCount;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(plots(),
+		bind(CvPlot::getWorkingCity, _1) == this && bind(CvPlot::isRiver, _1));
 }
 
 
@@ -2102,25 +2029,23 @@ int CvCity::findBaseYieldRateRank(YieldTypes eYield) const
 	if (!m_abBaseYieldRankValid[eYield])
 	{
 		//TB Traits begin
-		const int iRate = getModifiedBaseYieldRate(eYield);
+		const int iRate = getBaseYieldRate(eYield);
 		//TB Traits end
 
 		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
-			CvCity::fn::getModifiedBaseYieldRate(eYield) > iRate
-			|| (CvCity::fn::getModifiedBaseYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
+			CvCity::fn::getBaseYieldRate(eYield) > iRate
+			|| (CvCity::fn::getBaseYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
 		);
-
 		m_abBaseYieldRankValid[eYield] = true;
 		m_aiBaseYieldRank[eYield] = iRank;
 	}
-
 	return m_aiBaseYieldRank[eYield];
 }
 
 
 int CvCity::findYieldRateRank(YieldTypes eYield) const
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (!m_abYieldRankValid[eYield])
 	{
@@ -2130,11 +2055,9 @@ int CvCity::findYieldRateRank(YieldTypes eYield) const
 			CvCity::fn::getYieldRate(eYield) > iRate
 			|| (CvCity::fn::getYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
 		);
-
 		m_abYieldRankValid[eYield] = true;
 		m_aiYieldRank[eYield] = iRank;
 	}
-
 	return m_aiYieldRank[eYield];
 }
 
@@ -2149,11 +2072,9 @@ int CvCity::findCommerceRateRank(CommerceTypes eCommerce) const
 			CvCity::fn::getCommerceRateTimes100(eCommerce) > iRate
 			|| (CvCity::fn::getCommerceRateTimes100(eCommerce) == iRate && CvCity::fn::getID() < getID())
 		);
-
 		m_abCommerceRankValid[eCommerce] = true;
 		m_aiCommerceRank[eCommerce] = iRank;
 	}
-
 	return m_aiCommerceRank[eCommerce];
 }
 
@@ -2177,7 +2098,7 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 			const BuildingTypes eBuildingX = (BuildingTypes)kUnit.getPrereqAndBuilding(iI);
 			if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuildingX) && getNumActiveBuilding(eBuildingX) == 0)
 			{
-				SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eBuildingX).getSpecialBuildingType();
+				const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(eBuildingX).getSpecialBuilding();
 
 				if (eSpecialBuilding == NO_SPECIALBUILDING || !pPlayer.isSpecialBuildingNotRequired(eSpecialBuilding))
 				{
@@ -2412,24 +2333,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		return false;
 	}
-
-	if (GC.getUSE_CAN_TRAIN_CALLBACK())
-	{
-		PROFILE("canTrain.Python");
-
-		if (Cy::call<bool>(PYGameModule, "canTrain", Cy::Args()
-			<< const_cast<CvCity*>(this)
-			<< eUnit
-			<< bContinue
-			<< bTestVisible
-			<< bIgnoreCost
-			<< bIgnoreUpgrades
-			))
-		{
-			return true;
-		}
-	}
-
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (kUnit.getPrereqReligion() != NO_RELIGION && !isHasReligion((ReligionTypes)kUnit.getPrereqReligion()))
@@ -2500,16 +2403,13 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes ePreReqBonus, kUnit.getPrereqOrVicinityBonuses())
 		{
-			if (kUnit.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyVicinityBonus = true;
+			if (hasVicinityBonus(ePreReqBonus))
 			{
-				bRequiresAnyVicinityBonus = true;
-				if (hasVicinityBonus((BonusTypes)kUnit.getPrereqOrVicinityBonuses(iI)))
-				{
-					bHasAnyVicinityBonus = true;
-					break;
-				}
+				bHasAnyVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyVicinityBonus && !bHasAnyVicinityBonus)
@@ -2532,21 +2432,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		return false;
 	}
-
-	if (GC.getUSE_CANNOT_TRAIN_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotTrain", Cy::Args()
-			<< const_cast<CvCity*>(this)
-			<< eUnit
-			<< bContinue
-			<< bTestVisible
-			<< bIgnoreCost
-			<< bIgnoreUpgrades
-			))
-		{
-			return false;
-		}
-	}
 	return true;
 }
 
@@ -2559,7 +2444,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 void CvCity::populateCanTrainCache(bool bUnconditional) const
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK_EXEMPT();
 
 	if (bUnconditional || !m_canTrainCachePopulated)
 	{
@@ -2764,7 +2648,6 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 
 		if (m_bCanConstruct == NULL)
 		{
-			MEMORY_TRACK_EXEMPT()
 
 			m_bCanConstruct = new std::map<int, bool>();
 			bHaveCachedResult = false;
@@ -2795,11 +2678,9 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		{
 			bResult = canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, NULL, bAffliction, bExposed);
 			{
-				MEMORY_TRACK_EXEMPT() // Toffer - why are all these MEMORY_TRACK_EXEMPT in this function?
 
 				if (m_bCanConstruct == NULL)
 				{
-					MEMORY_TRACK_EXEMPT()
 
 					m_bCanConstruct = new std::map<int, bool>();
 				}
@@ -2815,7 +2696,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 
 bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingTypes withExtraBuilding, bool bIgnoreBuildings, TechTypes eIgnoreTechReq, int* probabilityEverConstructable, bool bAffliction, bool bExposed) const
 {
-	PROFILE_FUNC()
+	PROFILE_FUNC();
 
 	if (probabilityEverConstructable != NULL)
 	{
@@ -2846,20 +2727,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 	}
 
-	if (
-		GC.getUSE_CAN_CONSTRUCT_CALLBACK()
-	&&
-		Cy::call<bool>(
-			PYGameModule, "canConstruct", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eBuilding
-			<< bContinue
-			<< bTestVisible
-			<< bIgnoreCost
-		)
-	) return true;
-
 	//ls612: No Holy City Tag
 	if (!bExposed && kBuilding.isNoHolyCity() && isHolyCity())
 	{
@@ -2867,7 +2734,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	}
 
 	// Toffer - An extension can't exist without that which it extends.
-	if (kBuilding.getExtendsBuilding() > -1 && getNumRealBuilding((BuildingTypes)kBuilding.getExtendsBuilding()) < 1)
+	if (kBuilding.getExtendsBuilding() > NO_BUILDING && getNumRealBuilding(kBuilding.getExtendsBuilding()) < 1)
 	{
 		return false;
 	}
@@ -3026,17 +2893,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 			bool bHasBonus = false;
 			bool bRequiresBonus = false;
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(foundsCorp).getPrereqBonuses())
 			{
-				BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(foundsCorp).getPrereqBonus(i);
-				if (NO_BONUS != eBonus)
+				bRequiresBonus = true;
+				if (hasBonus(eBonus))
 				{
-					bRequiresBonus = true;
-					if (hasBonus(eBonus))
-					{
-						bHasBonus = true;
-						break;
-					}
+					bHasBonus = true;
+					break;
 				}
 			}
 
@@ -3061,11 +2924,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		if (plot()->getLatitude() > kBuilding.getMaxLatitude()
 		||  plot()->getLatitude() < kBuilding.getMinLatitude())
-		{
-			return false;
-		}
-
-		if (kBuilding.isBuildOnlyOnPeaks() && !plot()->isAsPeak())
 		{
 			return false;
 		}
@@ -3095,7 +2953,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 
-		const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqAnyoneBuilding());
+		const BuildingTypes ePrereqBuilding = kBuilding.getPrereqAnyoneBuilding();
 
 		if (ePrereqBuilding != NO_BUILDING && GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0)
 		{
@@ -3104,17 +2962,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bRequiresBonus = false;
 		bool bNeedsBonus = true;
-		for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 		{
-			if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
-			{
-				bRequiresBonus = true;
+			bRequiresBonus = true;
 
-				if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
-				{
-					bNeedsBonus = false;
-					break;
-				}
+			if (hasBonus(ePrereqBonus))
+			{
+				bNeedsBonus = false;
+				break;
 			}
 		}
 		if (bRequiresBonus && bNeedsBonus)
@@ -3230,6 +3085,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
 			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
+
 			if (getNumActiveBuilding(eReplacement) > 0
 			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
 			//	Should be an interface only thing.
@@ -3246,16 +3102,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		for (int iI = 0; iI < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iI++)
+		foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
-			if (kBuilding.getPrereqOrVicinityBonuses(iI) != NO_BONUS)
+			bRequiresAnyVicinityBonus = true;
+			if (hasVicinityBonus(ePrereqBonus))
 			{
-				bRequiresAnyVicinityBonus = true;
-				if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iI)))
-				{
-					bHasAnyVicinityBonus = true;
-					break;
-				}
+				bHasAnyVicinityBonus = true;
+				break;
 			}
 		}
 		if (bRequiresAnyVicinityBonus && !bHasAnyVicinityBonus)
@@ -3268,7 +3121,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 		bool bHasAnyRawVicinityBonus = false;
 		bool bRequiresAnyRawVicinityBonus = false;
-		foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
+		foreach_(const BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
 		{
 			bRequiresAnyRawVicinityBonus = true;
 			if (hasRawVicinityBonus(bonus))
@@ -3310,7 +3163,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				queries.push_back(query);
 			}
 
-			BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
+			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, queries);
 			if ((result == BOOLEXPR_CHANGE_REMAINS_FALSE) || (result == BOOLEXPR_CHANGE_BECOMES_FALSE))
 			{
 				return false;
@@ -3321,21 +3174,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 	}
-
-	if (
-		GC.getUSE_CANNOT_CONSTRUCT_CALLBACK()
-	&&
-		Cy::call<bool>(
-			PYGameModule, "cannotConstruct", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eBuilding
-			<< bContinue
-			<< bTestVisible
-			<< bIgnoreCost
-		)
-	) return false;
-
 	return true;
 }
 
@@ -3347,17 +3185,7 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 		return false;
 	}
 
-	int iCount = GC.getProjectInfo(eProject).getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (plot()->isMapType((MapTypes)GC.getProjectInfo(eProject).getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*plot(), GC.getProjectInfo(eProject)))
 	{
 		return false;
 	}
@@ -3366,19 +3194,16 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 }
 
 
-bool CvCity::canMaintain(ProcessTypes eProcess, bool bContinue) const
+bool CvCity::canMaintain(ProcessTypes eProcess) const
 {
-	if (!GET_PLAYER(getOwner()).canMaintain(eProcess, bContinue))
+	if (!GET_PLAYER(getOwner()).canMaintain(eProcess))
 	{
 		return false;
 	}
 
-	if (
-		GC.getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK()
-	&&
-		Cy::call<bool>(
+	if (Cy::call<bool>(
 			PYGameModule, "cannotMaintain", Cy::Args()
-			<< const_cast<CvCity*>(this) << eProcess << bContinue
+			<< const_cast<CvCity*>(this) << eProcess
 		)
 	) return false;
 
@@ -3512,7 +3337,7 @@ bool CvCity::canContinueProduction(const OrderData& order) const
 	case ORDER_CREATE:
 		return canCreate(order.getProjectType(), true);
 	case ORDER_MAINTAIN:
-		return canMaintain(order.getProcessType(), true);
+		return canMaintain(order.getProcessType());
 	case ORDER_LIST:
 		return true;
 	default:
@@ -3549,14 +3374,13 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 				iExperience += kPlayer.getUnitCombatFreeExperience(combatType);
 			}
 
-			for (int iI = 0; iI < kUnit.getNumSubCombatTypes(); iI++)
+			foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 			{
-				const UnitCombatTypes eSubCombatType = (UnitCombatTypes)kUnit.getSubCombatType(iI);
-				iExperience += getUnitCombatFreeExperience(eSubCombatType);
-				iExperience += kPlayer.getUnitCombatFreeExperience(eSubCombatType);
+				iExperience += getUnitCombatFreeExperience(eSubCombat);
+				iExperience += kPlayer.getUnitCombatFreeExperience(eSubCombat);
 			}
 
-			iExperience += getDomainFreeExperience((DomainTypes)(kUnit.getDomainType()));
+			iExperience += getDomainFreeExperience(kUnit.getDomainType());
 		}
 	}
 
@@ -3617,7 +3441,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
-		if (getNumActiveBuilding(eBuilding) > 0 && GC.getBuildingInfo(eBuilding).getNumFreePromoTypes() > 0)
+		if (getNumActiveBuilding(eBuilding) > 0 && !GC.getBuildingInfo(eBuilding).getFreePromoTypes().empty())
 		{
 			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
 		}
@@ -3974,35 +3798,17 @@ int CvCity::getProductionNeeded(const OrderData& order) const
 
 int CvCity::getProductionNeeded(UnitTypes eUnit) const
 {
-	return GET_PLAYER(getOwner()).getProductionNeeded(eUnit);
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eUnit), -getProductionModifier(eUnit)));
 }
 
 int CvCity::getProductionNeeded(BuildingTypes eBuilding) const
 {
-	int iProductionNeeded = GET_PLAYER(getOwner()).getProductionNeeded(eBuilding);
-
-	// Python cost modifier
-	if (GC.getUSE_GET_BUILDING_COST_MOD_CALLBACK())
-	{
-		long lResult = Cy::call<long>(PYGameModule, "getBuildingCostMod", Cy::Args()
-			<< getOwner()
-			<< getID()
-			<< eBuilding
-		);
-
-		if (lResult > 1)
-		{
-			iProductionNeeded *= lResult;
-			iProductionNeeded /= 100;
-		}
-	}
-
-	return iProductionNeeded;
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eBuilding), -getProductionModifier(eBuilding)));
 }
 
 int CvCity::getProductionNeeded(ProjectTypes eProject) const
 {
-	return GET_PLAYER(getOwner()).getProductionNeeded(eProject);
+	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eProject), -getProductionModifier(eProject)));
 }
 
 int CvCity::getProductionTurnsLeft() const
@@ -4097,11 +3903,10 @@ int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex) const
 	// at the first one enqueued, or it isn't enqueued at all (and therefore would
 	// be the first one were it to be)
 	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getUnitProduction(eUnit) : 0;
-	const int modifier = getProductionModifier(eUnit);
 	const ProductionCalc::flags foodProd = isFoodProduction(eUnit) ? ProductionCalc::FoodProduction : ProductionCalc::None;
-	const int perTurnProduction = getProductionPerTurn(modifier, foodProd | ProductionCalc::Yield);
+	const int perTurnProduction = getProductionPerTurn(foodProd | ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
-	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, foodProd | ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
+	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(foodProd | ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
 	return getProductionTurnsLeft(getProductionNeeded(eUnit), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
@@ -4112,10 +3917,9 @@ int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex) cons
 	// at the first one enqueued, or it isn't enqueued at all (and therefore would
 	// be the first one were it to be)
 	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getBuildingProduction(eBuilding) : 0;
-	const int modifier = getProductionModifier(eBuilding);
-	const int perTurnProduction = getProductionPerTurn(modifier, ProductionCalc::Yield);
+	const int perTurnProduction = getProductionPerTurn(ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
-	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
+	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
 	return getProductionTurnsLeft(getProductionNeeded(eBuilding), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
@@ -4127,10 +3931,9 @@ int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int orderIndex) const
 	// at the first one enqueued, or it isn't enqueued at all (and therefore would
 	// be the first one were it to be)
 	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getProjectProduction(eProject) : 0;
-	const int modifier = getProductionModifier(eProject);
-	const int perTurnProduction = getProductionPerTurn(modifier, ProductionCalc::Yield);
+	const int perTurnProduction = getProductionPerTurn(ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
-	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
+	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
 	return getProductionTurnsLeft(getProductionNeeded(eProject), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
@@ -4246,17 +4049,16 @@ int CvCity::getProductionModifier(UnitTypes eUnit) const
 	iMultiplier += GET_PLAYER(getOwner()).getUnitProductionModifier(eUnit);
 	if (!unit.isNoNonTypeProdMods())
 	{
-		iMultiplier += getDomainProductionModifier((DomainTypes)(unit.getDomainType()));
+		iMultiplier += getDomainProductionModifier(unit.getDomainType());
 		if (unit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)(unit.getUnitCombatType()));
 			iMultiplier += getUnitCombatProductionModifier((UnitCombatTypes)(unit.getUnitCombatType()));
 
-			for (int iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
+			foreach_(const UnitCombatTypes eSubCombat, unit.getSubCombatTypes())
 			{
-				UnitCombatTypes eSubCombatType = ((UnitCombatTypes)unit.getSubCombatType(iI));
-				iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier(eSubCombatType);
-				iMultiplier += getUnitCombatProductionModifier(eSubCombatType);
+				iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier(eSubCombat);
+				iMultiplier += getUnitCombatProductionModifier(eSubCombat);
 			}
 		}
 
@@ -4325,18 +4127,11 @@ int CvCity::getProductionModifier(ProjectTypes eProject) const
 			iMultiplier += GC.getProjectInfo(eProject).getBonusProductionModifier(iI);
 		}
 	}
-
 	return iMultiplier;
 }
 
 
-int CvCity::getOverflowProductionDifference() const
-{
-	return getProductionPerTurn(getProductionModifier(), ProductionCalc::Overflow);
-}
-
-
-int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = ProductionCalc::Yield) const
+int CvCity::getProductionPerTurn(ProductionCalc::flags flags = ProductionCalc::Yield) const
 {
 	if (isDisorder())
 	{
@@ -4344,9 +4139,9 @@ int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = Pro
 	}
 	const int iFoodProduction = (flags & ProductionCalc::FoodProduction) ? std::max(0, getYieldRate(YIELD_FOOD) - foodConsumption(true)) : 0;
 	const int iOverflow = (flags & ProductionCalc::Overflow) ? getOverflowProduction() + getFeatureProduction() : 0;
-	const int iYield = (flags & ProductionCalc::Yield) ? getModifiedBaseYieldRate(YIELD_PRODUCTION) : 0;
+	const int iYield = (flags & ProductionCalc::Yield) ? getBaseYieldRate(YIELD_PRODUCTION) : 0;
 
-	return iFoodProduction + (iYield + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, modifier) / 100;
+	return getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION) / 100;
 }
 
 int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const
@@ -4354,38 +4149,13 @@ int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::
 	const ProductionCalc::flags foodFlag = ((flags & ProductionCalc::FoodProduction) && isFoodProduction(orderData)) ? ProductionCalc::FoodProduction : ProductionCalc::None;
 	const ProductionCalc::flags overflowProd = (flags & ProductionCalc::Overflow) ? ProductionCalc::Overflow : ProductionCalc::None;
 
-	return range(getProductionPerTurn(getProductionModifier(orderData), foodFlag | overflowProd | ProductionCalc::Yield), 0, MAX_INT);
+	return range(getProductionPerTurn(foodFlag | overflowProd | ProductionCalc::Yield), 0, MAX_INT);
 }
 
 int CvCity::getCurrentProductionDifference(ProductionCalc::flags flags) const
 {
 	bst::optional<OrderData> order = getHeadOrder();
 	return order ? getProductionDifference(*order, flags) : 0;
-}
-
-int CvCity::getExtraProductionDifference(int iExtra) const
-{
-	return getExtraProductionDifference(iExtra, getProductionModifier());
-}
-
-int CvCity::getExtraProductionDifference(int iExtra, UnitTypes eUnit) const
-{
-	return getExtraProductionDifference(iExtra, getProductionModifier(eUnit));
-}
-
-int CvCity::getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const
-{
-	return getExtraProductionDifference(iExtra, getProductionModifier(eBuilding));
-}
-
-int CvCity::getExtraProductionDifference(int iExtra, ProjectTypes eProject) const
-{
-	return getExtraProductionDifference(iExtra, getProductionModifier(eProject));
-}
-
-int CvCity::getExtraProductionDifference(int iExtra, int iModifier) const
-{
-	return ((iExtra * getBaseYieldRateModifier(YIELD_PRODUCTION, iModifier)) / 100);
 }
 
 
@@ -4440,7 +4210,7 @@ bool CvCity::canHurry(const HurryTypes eHurry, const bool bTestVisible) const
 	return true;
 }
 
-bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const
+bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit) const
 {
 	if (!canHurryInternal(eHurry))
 	{
@@ -4452,19 +4222,19 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew)))
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(eUnit)))
 	{
 		return false;
 	}
 
-	if (maxHurryPopulation() < getHurryPopulation(eHurry, getHurryCost(true, eUnit, bIgnoreNew)))
+	if (maxHurryPopulation() < getHurryPopulation(eHurry, getHurryCost(eUnit)))
 	{
 		return false;
 	}
 	return true;
 }
 
-bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const
+bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding) const
 {
 	if (!canHurryInternal(eHurry))
 	{
@@ -4476,12 +4246,12 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool b
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eBuilding, bIgnoreNew)))
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(eBuilding)))
 	{
 		return false;
 	}
 
-	if (maxHurryPopulation() < getHurryPopulation(eHurry, getHurryCost(true, eBuilding, bIgnoreNew)))
+	if (maxHurryPopulation() < getHurryPopulation(eHurry, getHurryCost(eBuilding)))
 	{
 		return false;
 	}
@@ -4562,59 +4332,44 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		*iGold = 0;
 		return true;
 	}
-
-	int iTotal, iCurrent, iModifier, iGoldPercent;
+	int iTotal, iCurrent, iGoldPercent;
 
 	if (isProductionUnit())
 	{
-		UnitTypes eUnit = getProductionUnit();
+		const UnitTypes eUnit = getProductionUnit();
 		FAssertMsg(eUnit != NO_UNIT, "eUnit is expected to be assigned a valid unit type");
 		iTotal = getProductionNeeded(eUnit);
 		iCurrent = getUnitProduction(eUnit);
-		iModifier = getProductionModifier(eUnit);
 		iGoldPercent = GC.getMAXED_UNIT_GOLD_PERCENT();
 	}
 	else if (isProductionBuilding())
 	{
-		BuildingTypes eBuilding = getProductionBuilding();
+		const BuildingTypes eBuilding = getProductionBuilding();
 		FAssertMsg(eBuilding != NO_BUILDING, "eBuilding is expected to be assigned a valid building type");
 		iTotal = getProductionNeeded(eBuilding);
 		iCurrent = getBuildingProduction(eBuilding);
-		iModifier = getProductionModifier(eBuilding);
 		iGoldPercent = GC.getMAXED_BUILDING_GOLD_PERCENT();
 	}
 	else if (isProductionProject())
 	{
-		ProjectTypes eProject = getProductionProject();
+		const ProjectTypes eProject = getProductionProject();
 		FAssertMsg(eProject != NO_PROJECT, "eProject is expected to be assigned a valid project type");
 		iTotal = getProductionNeeded(eProject);
 		iCurrent = getProjectProduction(eProject);
-		iModifier = getProductionModifier(eProject);
 		iGoldPercent = GC.getMAXED_PROJECT_GOLD_PERCENT();
 	}
-	else
-	{
-		return false;
-	}
+	else return false;
 
-	int iHurry = hurryProduction(eHurry);
-	int iOverflow = iCurrent + iHurry - iTotal;
+	int iOverflow = iCurrent + hurryProduction(eHurry) - iTotal;
 	if (bCountThisTurn)
 	{
 		// include chops and previous overflow here
 		iOverflow += getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow);
 	}
-	int iMaxOverflow = std::max(iTotal, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-	int iLostProduction = std::max(0, iOverflow - iMaxOverflow);
-	int iBaseModifier = getBaseYieldRateModifier(YIELD_PRODUCTION);
-	int iTotalModifier = getBaseYieldRateModifier(YIELD_PRODUCTION, iModifier);
+	const int iMaxOverflow = getMaxProductionOverflow();
 
-	iOverflow = std::min(iOverflow, iMaxOverflow);
-	iLostProduction *= iBaseModifier;
-	iLostProduction /= std::max(1, iTotalModifier);
-
-	*iProduction = (iBaseModifier * iOverflow) / std::max(1, iTotalModifier);
-	*iGold = ((iLostProduction * iGoldPercent) / 100);
+	*iProduction = std::min(iOverflow, iMaxOverflow);
+	*iGold = std::max(0, iOverflow - iMaxOverflow) * iGoldPercent / 100;
 
 	return true;
 }
@@ -4625,26 +4380,16 @@ UnitTypes CvCity::getConscriptUnit() const
 {
 	UnitTypes eBestUnit = NO_UNIT;
 
-	// Allow the player to determine the conscripted unit type
-	// Toffer - ToDo: Write python UI popup selection menu.
-	int lConscriptUnit = Cy::call<int>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwner());
-	if (lConscriptUnit != -1)
+	int iBestValue = 0;
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eBestUnit = ((UnitTypes)lConscriptUnit);
-	}
-	if (eBestUnit == NO_UNIT)
-	{
-		int iBestValue = 0;
-		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		if (canTrain((UnitTypes) iI))
 		{
-			if (canTrain((UnitTypes) iI))
+			int iValue = GC.getUnitInfo((UnitTypes) iI).getConscriptionValue();
+			if (iValue > iBestValue)
 			{
-				int iValue = GC.getUnitInfo((UnitTypes) iI).getConscriptionValue();
-				if (iValue > iBestValue)
-				{
-					iBestValue = iValue;
-					eBestUnit = (UnitTypes) iI;
-				}
+				iBestValue = iValue;
+				eBestUnit = (UnitTypes) iI;
 			}
 		}
 	}
@@ -4678,12 +4423,7 @@ int CvCity::conscriptMinCityPopulation() const
 
 int CvCity::flatConscriptAngerLength() const
 {
-	int iAnger = GC.getCONSCRIPT_ANGER_DIVISOR();
-
-	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
-	iAnger /= 100;
-
-	return std::max(1, iAnger);
+	return std::max(1, GC.getCONSCRIPT_ANGER_DIVISOR() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100);
 }
 
 
@@ -4867,16 +4607,14 @@ int CvCity::getBonusHappiness(BonusTypes eBonus) const
 }
 
 
-int CvCity::getBonusPower(BonusTypes eBonus, bool bDirty) const
+int CvCity::getBonusPower(BonusTypes eBonus) const
 {
 	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 
 	int iCount = 0;
 	for (int iI = 0; iI < iNumBuildingInfos; iI++)
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI)
-		&& GC.getBuildingInfo((BuildingTypes)iI).getPowerBonus() == eBonus
-		&& GC.getBuildingInfo((BuildingTypes)iI).isDirtyPower() == bDirty)
+		if (hasFullyActiveBuilding((BuildingTypes)iI) && GC.getBuildingInfo((BuildingTypes)iI).getPowerBonus() == eBonus)
 		{
 			iCount++;
 		}
@@ -4972,8 +4710,7 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		changeBonusBadHappiness(iBadValue * iChange);
 	}
 
-	changePowerCount((getBonusPower(eBonus, true) * iChange), true);
-	changePowerCount((getBonusPower(eBonus, false) * iChange), false);
+	changePowerCount(getBonusPower(eBonus) * iChange);
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
@@ -5092,9 +4829,8 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		PROFILE("CvCity::processBuilding.part2");
 
 		const bool bChange = (iChange == 1);
-		for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
+		foreach_(const TraitTypes eTrait, kBuilding.getFreeTraitTypes())
 		{
-			const TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 			if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 			{
 				GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
@@ -5189,7 +4925,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraTradeRoutes(kBuilding.getTradeRoutes() * iChange);
 		changeTradeRouteModifier(kBuilding.getTradeRouteModifier() * iChange);
 		changeForeignTradeRouteModifier(kBuilding.getForeignTradeRouteModifier() * iChange);
-		changePowerCount((kBuilding.isPower() ? iChange : 0), kBuilding.isDirtyPower());
+		changePowerCount(kBuilding.isPower() ? iChange : 0);
 		changeGovernmentCenterCount(kBuilding.isGovernmentCenter() ? iChange : 0);
 		changeNoUnhappinessCount(kBuilding.isNoUnhappiness() ? iChange : 0);
 		changeNoUnhealthyPopulationCount(kBuilding.isNoUnhealthyPopulation() ? iChange : 0);
@@ -5210,7 +4946,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		const YieldTypes eYieldX = static_cast<YieldTypes>(iI);
 		changeSeaPlotYield(eYieldX, kBuilding.getSeaPlotYieldChange(iI) * iChange);
 		changeRiverPlotYield(eYieldX, kBuilding.getRiverPlotYieldChange(iI) * iChange);
-		changeBaseYieldRate(eYieldX,
+		changeExtraYield(eYieldX,
 			(
 				kBuilding.getYieldChange(iI)
 				+ getBuildingYieldChange(eBuilding, eYieldX)
@@ -5312,9 +5048,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeBuildingGoodHappiness(iTechBuildingHappiness * iChange);
 		}
 
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
-			changeUnitCombatExtraStrength((UnitCombatTypes)iI, kBuilding.getUnitCombatExtraStrength(iI) * iChange);
+			changeUnitCombatExtraStrength(modifier.first, modifier.second * iChange);
 		}
 
 		if (!bReligiously)
@@ -5328,24 +5064,29 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeHealthPercentPerPopulation(kBuilding.getHealthPercentPerPopulation() * iChange);
 		changeHappinessPercentPerPopulation(kBuilding.getHappinessPercentPerPopulation() * iChange);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		//TB Combat Mods (Buildings) begin
 		for (int iI = 0; iI < kBuilding.getNumAidRateChanges(); iI++)
 		{
 			PropertyTypes eProperty = kBuilding.getAidRateChange(iI).ePropertyType;
 			changeAidRate(eProperty, kBuilding.getAidRateChange(iI).iChange * iChange);
 		}
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 #ifdef STRENGTH_IN_NUMBERS
 		changeTotalFrontSupportPercentModifier(kBuilding.getFrontSupportPercentModifier() * iChange);
 		changeTotalShortRangeSupportPercentModifier(kBuilding.getShortRangeSupportPercentModifier() * iChange);
 		changeTotalMediumRangeSupportPercentModifier(kBuilding.getMediumRangeSupportPercentModifier() * iChange);
 		changeTotalLongRangeSupportPercentModifier(kBuilding.getLongRangeSupportPercentModifier() * iChange);
 		changeTotalFlankSupportPercentModifier(kBuilding.getFlankSupportPercentModifier() * iChange);
-#endif
+#endif // STRENGTH_IN_NUMBERS
 	}
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (kBuilding.getPromotionLineType() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(kBuilding.getPromotionLineType()).isAffliction())
 	{
 		changeAfflictionTypeCount(kBuilding.getPromotionLineType(), iChange);
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	for (int iI = 0; iI < kBuilding.getNumBonusAidModifiers(); iI++)
 	{
@@ -5354,6 +5095,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraBonusAidModifier(eBonus, ePropertyType, kBuilding.getBonusAidModifier(iI).iModifier);
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		PROFILE("CvCity::processBuilding.PromotionLines");
@@ -5369,6 +5111,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	//int iNum = kBuilding.getNumFreePromoTypes();
 	//for (iI=0; iI<iNum; iI++)
@@ -5443,13 +5186,16 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 	}
 
-	// TODO reform loop to iterate on the mappings
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
-		const TechTypes eTechX = static_cast<TechTypes>(iI);
-		changeTechHappiness(eTechX, kBuilding.getTechHappinessType(eTechX) * iChange);
-		changeTechHealth(eTechX, kBuilding.getTechHealthType(eTechX) * iChange);
+		changeTechHappiness(modifier.first, modifier.second * iChange);
 	}
+
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
+	{
+		changeTechHealth(modifier.first, modifier.second * iChange);
+	}
+
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const SpecialistTypes eSpecialistX = static_cast<SpecialistTypes>(iI);
@@ -5561,7 +5307,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 			if (kBuilding.getPowerBonus() == iI)
 			{
-				changePowerCount(iChange, kBuilding.isDirtyPower());
+				changePowerCount(iChange);
 			}
 
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -5594,25 +5340,17 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeDomainProductionModifier((DomainTypes)iI, kBuilding.getDomainProductionModifier(iI) * iChange);
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	foreach_(const UnitModifier2& modifier, kBuilding.getUnitProductionModifiers())
 	{
-		PROFILE("CvCity::processBuilding.UniClasses");
-		changeUnitProductionModifier(((UnitTypes)iI), kBuilding.getUnitProductionModifier(iI) * iChange);
+		changeUnitProductionModifier(modifier.first, modifier.second * iChange);
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingModifier2& modifier, kBuilding.getBuildingProductionModifiers())
 	{
-		PROFILE("CvCity::processBuilding.Buildings");
-		changeBuildingProductionModifier((BuildingTypes)iI, kBuilding.getBuildingProductionModifier(iI) * iChange);
-
-		for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
-		{
-			const int iCommerceChange = kBuilding.getGlobalBuildingCommerceChange(iI, iCommerce);
-
-			if (iCommerceChange != 0)
-			{
-				GET_PLAYER(getOwner()).changeBuildingCommerceChange((BuildingTypes)iI, (CommerceTypes)iCommerce, iCommerceChange * iChange);
-			}
-		}
+		changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
+	}
+	foreach_(const BuildingCommerceChange& kChange, kBuilding.getGlobalBuildingCommerceChanges())
+	{
+		GET_PLAYER(getOwner()).changeBuildingCommerceChange(kChange.eBuilding, kChange.eCommerce, kChange.iChange * iChange);
 	}
 /*
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
@@ -5652,7 +5390,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		// Note: this whole section was pretty well qualified to be ignored on religious disabling.
 
-		//TB DEFENSEBUG:  The following building defense line is allowing buildings that are replaced to continue to function!  
+		//TB DEFENSEBUG:  The following building defense line is allowing buildings that are replaced to continue to function!
 		//We can only assume this entire section therefore gets around replaced buildings, particularly after a recalc.
 
 		changeBuildingDefense(kBuilding.getDefenseModifier() * iChange);
@@ -5667,7 +5405,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
 		}
 
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
@@ -5725,7 +5463,7 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		changeBaseYieldRate(((YieldTypes)iI), ((GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100)) * iChange));
+		changeExtraYield((YieldTypes)iI, (GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100) * iChange);
 	}
 
 	int iCommerceChangeTotal = 0;
@@ -5782,7 +5520,6 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 			changeUnitCombatFreeExperience(GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).eUnitCombat, GC.getSpecialistInfo(eSpecialist).getUnitCombatExperienceType(iI).iModifier * iChange);
 		}
 	}
-
 }
 
 
@@ -6075,7 +5812,7 @@ int CvCity::getRevRequestPercentAnger(int iExtra) const
 	}
 
 	int iAnger = GC.getHURRY_ANGER_DIVISOR();
-	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iAnger /= 100;
 
 	iAnger = std::max(1, iAnger);
@@ -6117,7 +5854,7 @@ int CvCity::getRevSuccessHappiness() const
 
 	int iHappy = GC.getHURRY_ANGER_DIVISOR();
 
-	iHappy *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iHappy *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iHappy /= 100;
 	iHappy = std::max(1, iHappy);
 
@@ -6320,35 +6057,35 @@ int CvCity::visiblePopulation() const
 
 int CvCity::totalFreeSpecialists() const
 {
-	int iCount = 0;
-	if (getPopulation() > 0)
+	if (getPopulation() < 1)
 	{
-		iCount += getFreeSpecialist();
-		iCount += area()->getFreeSpecialist(getOwner());
-		iCount += GET_PLAYER(getOwner()).getFreeSpecialist();
+		return 0;
+	}
+	int iCount = getFreeSpecialist() + area()->getFreeSpecialist(getOwner()) + GET_PLAYER(getOwner()).getFreeSpecialist();
 
-		for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
+	{
+		const int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iI);
+		if (iNumSpecialistsPerImprovement != 0)
 		{
-			const int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iI);
-			if (iNumSpecialistsPerImprovement > 0)
-			{
-				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iI);
-			}
-		}
-		if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
-		{
-			iCount += getNumWorldWonders();
-		}
-		if (GET_PLAYER(getOwner()).hasFreeSpecialistperNationalWonder())
-		{
-			iCount += getNumNationalWonders();
-		}
-		if (GET_PLAYER(getOwner()).hasFreeSpecialistperTeamProject())
-		{
-			iCount += getNumTeamWonders();
+			iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iI);
 		}
 	}
-	return iCount;
+	if (GET_PLAYER(getOwner()).hasFreeSpecialistperWorldWonder())
+	{
+		iCount += getNumWorldWonders();
+	}
+	if (GET_PLAYER(getOwner()).hasFreeSpecialistperNationalWonder())
+	{
+		iCount += getNumNationalWonders();
+	}
+	if (GET_PLAYER(getOwner()).hasFreeSpecialistperTeamProject())
+	{
+		iCount += getNumTeamWonders();
+	}
+	// Toffer - Negative free specialist effectively reduce pop of city...
+	//	That's not an intended effect of the free specialist feature.
+	return std::max(0, iCount);
 }
 
 
@@ -6412,7 +6149,6 @@ int CvCity::goodHealth() const
 
 	iTotalHealth += std::max<int>(0, getFreshWaterGoodHealth());
 	iTotalHealth += std::max<int>(0, getFeatureGoodHealth());
-	iTotalHealth += std::max<int>(0, getPowerGoodHealth());
 	iTotalHealth += std::max<int>(0, getBonusGoodHealth());
 	iTotalHealth += std::max<int>(0, totalGoodBuildingHealth());
 	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
@@ -6437,7 +6173,6 @@ int CvCity::badHealth(bool bNoAngry, int iExtra) const
 
 	iTotalHealth -= std::max<int>(0, getEspionageHealthCounter());
 	iTotalHealth += std::min<int>(0, getFeatureBadHealth());
-	iTotalHealth += std::min<int>(0, getPowerBadHealth());
 	iTotalHealth += std::min<int>(0, getBonusBadHealth());
 	iTotalHealth += std::min<int>(0, totalBadBuildingHealth());
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
@@ -6592,10 +6327,10 @@ int CvCity::growthThreshold(const int iPopChange) const
 
 int CvCity::productionLeft() const
 {
-	return (getProductionNeeded() - getProduction());
+	return getProductionNeeded() - getProduction();
 }
 
-int CvCity::getHurryCostModifier(bool bIgnoreNew) const
+int CvCity::getHurryCostModifier() const
 {
 	bst::optional<OrderData> order = getHeadOrder();
 
@@ -6604,9 +6339,9 @@ int CvCity::getHurryCostModifier(bool bIgnoreNew) const
 		switch (order->eOrderType)
 		{
 		case ORDER_TRAIN:
-			return getHurryCostModifier(order->getUnitType(), bIgnoreNew);
+			return getHurryCostModifier(order->getUnitType());
 		case ORDER_CONSTRUCT:
-			return getHurryCostModifier(order->getBuildingType(), bIgnoreNew);
+			return getHurryCostModifier(order->getBuildingType());
 		case ORDER_CREATE:
 		case ORDER_MAINTAIN:
 		case ORDER_LIST:
@@ -6617,75 +6352,52 @@ int CvCity::getHurryCostModifier(bool bIgnoreNew) const
 			break;
 		}
 	}
-
 	return 100;
 }
 
-int CvCity::getHurryCostModifier(UnitTypes eUnit, bool bIgnoreNew) const
+int CvCity::getHurryCostModifier(UnitTypes eUnit) const
 {
-	return getHurryCostModifier(GC.getUnitInfo(eUnit).getHurryCostModifier(), getUnitProduction(eUnit), bIgnoreNew);
+	return getHurryCostModifier(GC.getUnitInfo(eUnit).getHurryCostModifier(), getProductionModifier(eUnit));
 }
 
-int CvCity::getHurryCostModifier(BuildingTypes eBuilding, bool bIgnoreNew) const
+int CvCity::getHurryCostModifier(BuildingTypes eBuilding) const
 {
-	return getHurryCostModifier(GC.getBuildingInfo(eBuilding).getHurryCostModifier(), getBuildingProduction(eBuilding), bIgnoreNew);
+	return getHurryCostModifier(GC.getBuildingInfo(eBuilding).getHurryCostModifier(), getProductionModifier(eBuilding));
 }
 
-int CvCity::getHurryCostModifier(int iBaseModifier, int iProduction, bool bIgnoreNew) const
+int CvCity::getHurryCostModifier(int iBaseModifier, int iExtraMod) const
 {
-	int iModifier = 100;
-	iModifier *= std::max(0, iBaseModifier + 100);
-	iModifier /= 100;
+	int iModifier = 100 + iBaseModifier;
 
-	if (iProduction == 0 && !bIgnoreNew)
+	if (iExtraMod != 0)
 	{
-		iModifier *= std::max(0, (GC.getNEW_HURRY_MODIFIER() + 100));
-		iModifier /= 100;
+		iModifier = getModifiedIntValue(iModifier, iExtraMod);
 	}
+	iModifier = getModifiedIntValue(iModifier, GET_PLAYER(getOwner()).getHurryModifier());
+	iModifier = getModifiedIntValue(iModifier, GET_PLAYER(getOwner()).getHurryCostModifier());
 
-	iModifier *= std::max(0, (GET_PLAYER(getOwner()).getHurryModifier() + 100));
-	iModifier /= 100;
-
-	iModifier *= std::max(0, (GET_PLAYER(getOwner()).getHurryCostModifier() + 100));
-	iModifier /= 100;
-
-	return std::max(1, iModifier);	//	Avoid potential divide by 0s
+	return std::max(1, iModifier); // Avoid potential divide by 0s
 }
 
 
-int CvCity::hurryCost(bool bExtra) const
+int CvCity::hurryCost() const
 {
-	return (getHurryCost(bExtra, productionLeft(), getHurryCostModifier(), getProductionModifier()));
+	return getHurryCost(productionLeft(), getHurryCostModifier());
 }
 
-int CvCity::getHurryCost(bool bExtra, UnitTypes eUnit, bool bIgnoreNew) const
+int CvCity::getHurryCost(UnitTypes eUnit) const
 {
-	int iProductionLeft = getProductionNeeded(eUnit) - getUnitProduction(eUnit);
-
-	return getHurryCost(bExtra, iProductionLeft, getHurryCostModifier(eUnit, bIgnoreNew), getProductionModifier(eUnit));
+	return getHurryCost(getProductionNeeded(eUnit) - getUnitProduction(eUnit), getHurryCostModifier(eUnit));
 }
 
-int CvCity::getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) const
+int CvCity::getHurryCost(BuildingTypes eBuilding) const
 {
-	int iProductionLeft = getProductionNeeded(eBuilding) - getBuildingProduction(eBuilding);
-
-	return getHurryCost(bExtra, iProductionLeft, getHurryCostModifier(eBuilding, bIgnoreNew), getProductionModifier(eBuilding));
+	return getHurryCost(getProductionNeeded(eBuilding) - getBuildingProduction(eBuilding), getHurryCostModifier(eBuilding));
 }
 
-int CvCity::getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const
+int CvCity::getHurryCost(int iProductionLeft, int iHurryModifier) const
 {
-	int iProduction = (iProductionLeft * iHurryModifier + 99) / 100; // round up
-
-	if (bExtra)
-	{
-		const int iExtraProduction = getExtraProductionDifference(iProduction, iModifier);
-		if (iExtraProduction > 0)
-		{
-			// round up
-			iProduction = (iProduction*iProduction + (iExtraProduction - 1)) / iExtraProduction;
-		}
-	}
-	return std::max(0, iProduction);
+	return std::max(0, (iProductionLeft * iHurryModifier + 99) / 100); // round up
 }
 
 int64_t CvCity::getHurryGold(const HurryTypes eHurry, int iHurryCost) const
@@ -6696,7 +6408,7 @@ int64_t CvCity::getHurryGold(const HurryTypes eHurry, int iHurryCost) const
 	}
 	if (iHurryCost < 0)
 	{
-		iHurryCost = hurryCost(false);
+		iHurryCost = hurryCost();
 	}
 	int64_t iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
 
@@ -6711,7 +6423,7 @@ int64_t CvCity::getHurryGold(const HurryTypes eHurry, int iHurryCost) const
 
 int CvCity::hurryPopulation(HurryTypes eHurry) const
 {
-	return getHurryPopulation(eHurry, hurryCost(true));
+	return getHurryPopulation(eHurry, hurryCost());
 }
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
@@ -6721,35 +6433,28 @@ int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
 	{
 		return 0;
 	}
-
-	int iPopulation = (iHurryCost - 1) / prodPerPop;
+	const int iPopulation = (iHurryCost - 1) / prodPerPop;
 
 	return std::max(1, (iPopulation + 1));
 }
 
 int CvCity::hurryProduction(HurryTypes eHurry) const
 {
-	int iProduction;
-
 	const int prodPerPop = GC.getGame().getProductionPerPopulation(eHurry);
 	if (prodPerPop > 0)
 	{
-		iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * prodPerPop)) / std::max(1, getHurryCostModifier());
+		const int iProduction = 100 * hurryPopulation(eHurry) * prodPerPop / std::max(1, getHurryCostModifier());
 		FAssert(iProduction >= productionLeft());
+		return iProduction;
 	}
-	else
-	{
-		iProduction = productionLeft();
-	}
-
-	return iProduction;
+	return productionLeft();
 }
 
 
 int CvCity::flatHurryAngerLength() const
 {
 	int iAnger = GC.getHURRY_ANGER_DIVISOR();
-	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iAnger /= 100;
 	iAnger *= std::max(0, 100 + getHurryAngerModifier());
 	iAnger /= 100;
@@ -6782,7 +6487,6 @@ int CvCity::maxHurryPopulation() const
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
 {
 	PROFILE_FUNC();
-	MEMORY_TRACK_EXEMPT();
 
 	// if the point is within one square of the city center
 	for (int iDX = -1; iDX <= 1; ++iDX)
@@ -7689,7 +7393,7 @@ const CvProperties* CvCity::getPropertiesConst() const
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
@@ -7702,7 +7406,7 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 		(iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding))
 		/
 		100
-		- 
+		-
 		iRate * iModifier / 100
 	);
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
@@ -7724,7 +7428,7 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
@@ -7770,7 +7474,7 @@ int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
@@ -7903,46 +7607,37 @@ int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
+	if (isDisorder() || isWeLoveTheKingDay())
+	{
+		return 0;
+	}
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	int iModifier = kBuilding.getMaintenanceModifier();
-	int iDirectMaintenance = 0;
-	iModifier += kBuilding.getGlobalMaintenanceModifier();
-	iModifier += kBuilding.getAreaMaintenanceModifier();
-	if (isConnectedToCapital() && !(isCapital()))
-	{
-		iModifier += kBuilding.getConnectedCityMaintenanceModifier();
-	}
-	if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-	{
-		iDirectMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
-	}
-	if ((iModifier != 0 || iDirectMaintenance > 0) && !isDisorder() && !isWeLoveTheKingDay())
-	{
-		//	Koshling - the calculation below was incorrect because calculateBaseMaintenanceTimes100() itself includes
-		//	num cities and distance maintainence effects
-		int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		int iNewBaseMaintenance = iOldBaseMaintenance + iDirectMaintenance;
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
-		//int iNumCitiesMaintenanceTimes100 = calculateNumCitiesMaintenanceTimes100();
-		//iNumCitiesMaintenanceTimes100 *= std::max(0, 100 + kBuilding.getNumCitiesMaintenanceModifier());
-		//iNumCitiesMaintenanceTimes100 /= 100;
-		//iNumCitiesMaintenanceTimes100 -= calculateNumCitiesMaintenanceTimes100();
-		//iNewMaintenance += iNumCitiesMaintenanceTimes100;
-		//iNewMaintenance += calculateDistanceMaintenanceTimes100(0, 0) - calculateDistanceMaintenanceTimes100(kBuilding.getDistanceMaintenanceModifier(), kBuilding.getCoastalDistanceMaintenanceModifier());
-/************************************************************************************************/
-/* Afforess	                  Start		 6/20/11                                                */
-/*                                                                                              */
-/*   Protect against negative maintenance                                                       */
-/************************************************************************************************/
-		//return getMaintenanceTimes100() - std::max(0, iNewMaintenance);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	}
 
-	return 0;
+	const int iModifier =
+	(
+		kBuilding.getMaintenanceModifier() +
+		kBuilding.getGlobalMaintenanceModifier() +
+		kBuilding.getAreaMaintenanceModifier() +
+		(
+			(isConnectedToCapital() && !isCapital())
+			?
+			kBuilding.getConnectedCityMaintenanceModifier() : 0
+		)
+	);
+	const int iDirectMaintenance =
+	(
+		(kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+		?
+		-kBuilding.getCommerceChange(COMMERCE_GOLD) * 100 : 0
+	);
+	if (iModifier == 0 && iDirectMaintenance == 0)
+	{
+		return 0;
+	}
+	const int iModOld = getEffectiveMaintenanceModifier();
+	const int iBaseOld = calculateBaseMaintenanceTimes100();
+
+	return getModifiedIntValue(iBaseOld, iModOld) - getModifiedIntValue(iBaseOld + iDirectMaintenance, iModOld + iModifier);
 }
 // BUG - Building Saved Maintenance - end
 
@@ -7950,79 +7645,93 @@ int CvCity::getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getDistanceMaintenanceModifier();
-
-	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay())
 	{
-		const int iOldBaseMaintenance = calculateDistanceMaintenanceTimes100();
-		const int iNewBaseMaintenance = calculateDistanceMaintenanceTimes100(iModifier);
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iFinalMod = getEffectiveMaintenanceModifier();
+
+	return (
+		getModifiedIntValue(calculateDistanceMaintenanceTimes100(), iFinalMod)
+		-
+		getModifiedIntValue(calculateDistanceMaintenanceTimes100(iMod), iFinalMod)
+	);
 }
 
 int CvCity::getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
-
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getNumCitiesMaintenanceModifier();
-
-	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay())
 	{
-		int iOldBaseMaintenance = calculateNumCitiesMaintenanceTimes100();
-		int iNewBaseMaintenance = calculateNumCitiesMaintenanceTimes100(iModifier);
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getNumCitiesMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iFinalMod = getEffectiveMaintenanceModifier();
+
+	return (
+		getModifiedIntValue(calculateNumCitiesMaintenanceTimes100(), iFinalMod)
+		-
+		getModifiedIntValue(calculateNumCitiesMaintenanceTimes100(iMod), iFinalMod)
+	);
 }
 
 int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
+	if (isDisorder() || isWeLoveTheKingDay() || !area()->isHomeArea(getOwner()))
+	{
+		return 0;
+	}
 	const int iMod = GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier();
 
-	if (iMod != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (iMod == 0)
 	{
-		const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iEffectiveMaintenanceMod = 100 + getEffectiveMaintenanceModifier();
-		return // The difference
-		(
-			(
-				std::max(0, iBaseMaintenance * iEffectiveMaintenanceMod)
-				-
-				std::max(0, iBaseMaintenance *(iEffectiveMaintenanceMod + iMod))
-			)
-			/ 100
-		);
+		return 0;
 	}
-	return 0;
+	const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+	const int iEffectiveMaintenanceMod = getEffectiveMaintenanceModifier();
+	return // The difference
+	(
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod)
+		-
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod + iMod)
+	);
 }
 
 int CvCity::getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getOtherAreaMaintenanceModifier();
-
-	if (iModifier != 0 && !area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (isDisorder() || isWeLoveTheKingDay() || area()->isHomeArea(getOwner()))
 	{
-		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		return 0;
 	}
+	const int iMod = GC.getCivicInfo(eCivic).getOtherAreaMaintenanceModifier();
 
-	return 0;
+	if (iMod == 0)
+	{
+		return 0;
+	}
+	const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+	const int iEffectiveMaintenanceMod = getEffectiveMaintenanceModifier();
+	return // The difference
+	(
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod)
+		-
+		getModifiedIntValue(iBaseMaintenance, iEffectiveMaintenanceMod + iMod)
+	);
 }
 
 int CvCity::getMaintenance() const
@@ -8031,7 +7740,6 @@ int CvCity::getMaintenance() const
 	{
 		updateMaintenance();
 	}
-
 	return m_iMaintenance / 100;
 }
 
@@ -8041,7 +7749,6 @@ int CvCity::getMaintenanceTimes100() const
 	{
 		updateMaintenance();
 	}
-
 	return m_iMaintenance;
 }
 
@@ -8069,32 +7776,23 @@ void CvCity::updateMaintenance() const
 {
 	setMaintenanceDirty(false);
 
-	int iNewMaintenance = 0;
-
-	iNewMaintenance += std::max(0, GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getInitialCityMaintenancePercent());
-
-	if (!isDisorder() && !isWeLoveTheKingDay() && (getPopulation() > 0))
+	int iNewMaintenance = GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getInitialCityMaintenancePercent();
+	if (!isDisorder() && !isWeLoveTheKingDay() && getPopulation() > 0)
 	{
-		iNewMaintenance += (calculateBaseMaintenanceTimes100() * std::max(0, (getEffectiveMaintenanceModifier() + 100))) / 100;
+		iNewMaintenance += getModifiedIntValue(calculateBaseMaintenanceTimes100(), getEffectiveMaintenanceModifier());
 	}
 
-	// Rebels pay less maintenance
-	if (GET_PLAYER(getOwner()).isRebel())
-	{
-		iNewMaintenance /= 2;
-	}
-
-	if (getMaintenanceTimes100() != iNewMaintenance)
+	if (m_iMaintenance != iNewMaintenance)
 	{
 		FASSERT_NOT_NEGATIVE(iNewMaintenance)
 
-		m_iMaintenance = std::max(0, iNewMaintenance);
+		m_iMaintenance = iNewMaintenance;
 	}
 }
 
 int CvCity::calculateDistanceMaintenance() const
 {
-	return (calculateDistanceMaintenanceTimes100() / 100);
+	return calculateDistanceMaintenanceTimes100() / 100;
 }
 
 int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int iExtraCoastalDistanceModifier) const
@@ -8118,13 +7816,18 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			iValue *= getPopulation() + 5;
 			iValue /= 10;
 
-			iValue *= std::max(0, (kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier + 100));
-			iValue /= 100;
-
 			if (isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
-				iValue *= std::max(0, (kOwner.getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier + 100));
-				iValue /= 100;
+				iValue = getModifiedIntValue(
+					iValue,
+					kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier
+					+
+					kOwner.getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier
+				);
+			}
+			else
+			{
+				iValue = getModifiedIntValue(iValue, kOwner.getDistanceMaintenanceModifier() + iExtraDistanceModifier);
 			}
 
 			// Toffer: Is this scaling rational?
@@ -8137,13 +7840,14 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			iValue *= GC.getHandicapInfo(getHandicapType()).getDistanceMaintenancePercent();
 			iValue /= 100;
 
-			iValue = std::max(0, std::min(iValue, MAX_INT));
+			iValue = std::max(0, iValue);
 
 			iDistMaint = std::min(iDistMaint, iValue);
 			bFound = true;
 		}
 	}
-	return bFound ? iDistMaint : 0;
+	// Rebels pay less maintenance
+	return bFound ? iDistMaint / (1 + kOwner.isRebel()) : 0;
 }
 
 int CvCity::calculateNumCitiesMaintenance() const
@@ -8154,7 +7858,8 @@ int CvCity::calculateNumCitiesMaintenance() const
 int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 {
 	// Toffer: Single city civs gets a free pass, and allows early second city founding without economical collapse.
-	const int iCities = GET_PLAYER(getOwner()).getNumCities() - 1;
+	const CvPlayer& owner = GET_PLAYER(getOwner());
+	const int iCities = owner.getNumCities() - 1;
 	if (iCities < 1)
 	{
 		return 0;
@@ -8189,12 +7894,16 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 		iNumCitiesMaint += iNumVassalCities * iNumCitiesPercent / (3 + iVassals);
 	}
 
-	iNumCitiesMaint *= std::max(1, GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100);
-	iNumCitiesMaint /= 100;
+	iNumCitiesMaint = getModifiedIntValue(iNumCitiesMaint, owner.getNumCitiesMaintenanceModifier() + iExtraModifier);
 
 	iNumCitiesMaint *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
 	iNumCitiesMaint /= 100;
 
+	// Rebels pay less maintenance
+	if (owner.isRebel())
+	{
+		iNumCitiesMaint /= 2;
+	}
 	// Toffer - ToDo: Max value should perhaps be a global define.
 	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
 	FASSERT_NOT_NEGATIVE(iNumCitiesMaint)
@@ -8214,8 +7923,9 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 	{
 		return 0;
 	}
+	const CvPlayer& owner = GET_PLAYER(getOwner());
+	const CvCity* pCapital = owner.getCapitalCity();
 
-	const CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 	if (pCapital && pCapital->area() == area())
 	{
 		return 0;
@@ -8223,7 +7933,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	int iNumCitiesPercent = 100;
 
-	iNumCitiesPercent *= (getPopulation() + 17);
+	iNumCitiesPercent *= 17 + getPopulation();
 	iNumCitiesPercent /= 18;
 
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getColonyMaintenancePercent();
@@ -8234,13 +7944,14 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	int iNumCities = (area()->getCitiesPerPlayer(getOwner()) - 1) * iNumCitiesPercent;
 
-	int iMaintenance = (iNumCities * iNumCities) / 100;
+	int iMaintenance = iNumCities * iNumCities / 100;
 
-	iMaintenance = std::min(iMaintenance, (GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100()) / 100);
+	iMaintenance = std::min(iMaintenance, GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100() / 100);
 
 	FASSERT_NOT_NEGATIVE(iMaintenance)
 
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return owner.isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 
@@ -8260,8 +7971,8 @@ int CvCity::calculateCorporationMaintenanceTimes100() const
 			iMaintenance += calculateCorporationMaintenanceTimes100((CorporationTypes)iCorporation);
 		}
 	}
-
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return GET_PLAYER(getOwner()).isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporation) const
@@ -8275,13 +7986,9 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 
 	// Bonus Maintenance
 	int iNumBonuses = 0;
-	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 	{
-		const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-		if (NO_BONUS != eBonus)
-		{
-			iNumBonuses += getNumBonuses(eBonus);
-		}
+		iNumBonuses += getNumBonuses(eBonus);
 	}
 	iMaintenance +=
 	(
@@ -8310,19 +8017,18 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 		iMaintenance /= 100;
 	}
 
+	const CvPlayer& owner = GET_PLAYER(getOwner());
 	// National Modifier
-	iMaintenance *= std::max(0, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + 100);
-	iMaintenance /= 100;
+	iMaintenance = getModifiedIntValue(iMaintenance, owner.getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
+	// Toffer - Huh, not sure why inflation here reduce corporation maintenance, does it make sense?
 	iMaintenance *= 100;
-	iMaintenance /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
-
-	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
-	iMaintenance /= 100;
+	iMaintenance /= 100 + owner.calculateInflationRate();
 
 	FASSERT_NOT_NEGATIVE(iMaintenance)
 
-	return iMaintenance;
+	// Rebels pay less maintenance
+	return owner.isRebel() ? iMaintenance / 2 : iMaintenance;
 }
 
 int CvCity::calculateBuildingMaintenanceTimes100() const
@@ -8339,14 +8045,25 @@ int CvCity::calculateBuildingMaintenanceTimes100() const
 				iResult -= GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD);
 			}
 		}
-		return 100 * iResult;
+		// Rebels pay less maintenance
+		return GET_PLAYER(getOwner()).isRebel() ? 50 * iResult : 100 * iResult;
 	}
 	return 0;
 }
 
 int CvCity::calculateBaseMaintenanceTimes100() const
 {
-	return (calculateBuildingMaintenanceTimes100() + calculateDistanceMaintenanceTimes100() + calculateNumCitiesMaintenanceTimes100() + calculateColonyMaintenanceTimes100() + calculateCorporationMaintenanceTimes100());
+	return (
+		calculateBuildingMaintenanceTimes100()
+		+
+		calculateDistanceMaintenanceTimes100()
+		+
+		calculateNumCitiesMaintenanceTimes100()
+		+
+		calculateColonyMaintenanceTimes100()
+		+
+		calculateCorporationMaintenanceTimes100()
+	);
 }
 
 
@@ -8360,8 +8077,7 @@ void CvCity::changeMaintenanceModifier(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iMaintenanceModifier = (m_iMaintenanceModifier + iChange);
-
+		m_iMaintenanceModifier += iChange;
 		setMaintenanceDirty(true);
 	}
 }
@@ -8562,7 +8278,7 @@ void CvCity::updateFeatureHealth()
  */
 void CvCity::calculateFeatureHealthPercent(int& iGood, int& iBad) const
 {
-	foreach_(const CvPlot* loopPlot, plots())
+	foreach_(const CvPlot* loopPlot, plots(NUM_CITY_PLOTS))
 	{
 		const FeatureTypes eFeature = loopPlot->getFeatureType();
 
@@ -8598,7 +8314,7 @@ namespace {
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	foreach_ (const CvPlot* loopPlot, plots())
+	foreach_(const CvPlot* loopPlot, plots(NUM_CITY_PLOTS))
 	{
 		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
 			continue;
@@ -8611,7 +8327,7 @@ void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* 
 
 			if (iHealth != 0)
 			{
-				if (algo::any_of(loopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
+				if (algo::any_of(loopPlot->units(), bind(isBuildingFeatureRemove, _1, eFeature)))
 				{
 					if (iHealth > 0)
 					{
@@ -8746,12 +8462,10 @@ int CvCity::getBuildingGoodHealth() const
 	return m_iBuildingGoodHealth;
 }
 
-
 int CvCity::getBuildingBadHealth() const
 {
 	return m_iBuildingBadHealth;
 }
-
 
 int CvCity::getBuildingHealth(BuildingTypes eBuilding) const
 {
@@ -8808,7 +8522,6 @@ void CvCity::changeBuildingGoodHealth(int iChange)
 	}
 }
 
-
 void CvCity::changeBuildingBadHealth(int iChange)
 {
 	if (iChange != 0)
@@ -8826,77 +8539,15 @@ void CvCity::changeBuildingBadHealth(int iChange)
 }
 
 
-int CvCity::getPowerGoodHealth() const
-{
-	return m_iPowerGoodHealth;
-}
-
-
-int CvCity::getPowerBadHealth() const
-{
-	return m_iPowerBadHealth;
-}
-
-
-void CvCity::updatePowerHealth()
-{
-	int iNewGoodHealth = 0;
-	int iNewBadHealth = 0;
-
-	if (isPower())
-	{
-		const int iPowerHealth = GC.getPOWER_HEALTH_CHANGE();
-		if (iPowerHealth > 0)
-		{
-			iNewGoodHealth += iPowerHealth;
-		}
-		else
-		{
-			iNewBadHealth += iPowerHealth;
-		}
-	}
-
-	if (isDirtyPower())
-	{
-		const int iDirtyPowerHealth = GC.getDIRTY_POWER_HEALTH_CHANGE();
-		if (iDirtyPowerHealth > 0)
-		{
-			iNewGoodHealth += iDirtyPowerHealth;
-		}
-		else
-		{
-			iNewBadHealth += iDirtyPowerHealth;
-		}
-	}
-
-	if ((getPowerGoodHealth() != iNewGoodHealth) || (getPowerBadHealth() != iNewBadHealth))
-	{
-		m_iPowerGoodHealth = iNewGoodHealth;
-		m_iPowerBadHealth = iNewBadHealth;
-		FAssert(getPowerGoodHealth() >= 0);
-		FAssert(getPowerBadHealth() <= 0);
-
-		AI_setAssignWorkDirty(true);
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-		}
-	}
-}
-
-
 int CvCity::getBonusGoodHealth() const
 {
 	return m_iBonusGoodHealth;
 }
 
-
 int CvCity::getBonusBadHealth() const
 {
 	return m_iBonusBadHealth;
 }
-
 
 void CvCity::changeBonusGoodHealth(int iChange)
 {
@@ -8911,7 +8562,6 @@ void CvCity::changeBonusGoodHealth(int iChange)
 		}
 	}
 }
-
 
 void CvCity::changeBonusBadHealth(int iChange)
 {
@@ -8967,7 +8617,7 @@ int CvCity::getBuildingBadHappiness() const
 int CvCity::getBuildingHappiness(BuildingTypes eBuilding) const
 {
 	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
-	int iHappiness = 
+	int iHappiness =
 	(
 		info.getHappiness()
 		+
@@ -9213,7 +8863,7 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 
 			if (iTempHappy != 0)
 			{
-				iHappy += iTempHappy * algo::count_if(plots(), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
+				iHappy += iTempHappy * algo::count_if(plots(NUM_CITY_PLOTS), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
 			}
 		}
 	}
@@ -9404,7 +9054,7 @@ int CvCity::getAdditionalHealthByPlayerBuildingOnlyHealthy(int iIgnoreBuildingOn
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding) const
 {
 	int iGood = 0, iBad = 0, iAngryPop = 0;
 	return getAdditionalHappinessByBuilding(eBuilding, iGood, iBad, iAngryPop);
@@ -9417,7 +9067,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding)
  * Doesn't reset iGood or iBad to zero.
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop)
+int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop) const
 {
 	PROFILE_FUNC();
 
@@ -9435,16 +9085,9 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	addGoodOrBad(getBuildingHappyChange(eBuilding), iGood, iBad);
 
 	// Other Building
-	if (kBuilding.getBuildingHappinessChanges(NO_BUILDING) != 0)
+	foreach_(const BuildingModifier2& pair, kBuilding.getBuildingHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
-			if (iBuildingHappinessChanges != 0)
-			{
-				addGoodOrBad(iBuildingHappinessChanges * (getNumActiveBuilding((BuildingTypes)iI) + (eBuilding == (BuildingTypes)iI ? 1 : 0)), iGood, iBad);
-			}
-		}
+		addGoodOrBad(pair.second * (getNumActiveBuilding(pair.first) + (eBuilding == pair.first ? 1 : 0)), iGood, iBad);
 	}
 
 	// Player Building
@@ -9532,14 +9175,11 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	int iPop = getPopulation();
 	iAngryPop += range((iUnhappy + iBad) - (iHappy + iGood), 0, iPop) - range(iUnhappy - iHappy, 0, iPop);
 
-	if (kBuilding.getTechHappinessChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHappinessChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9592,7 +9232,7 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding)
+int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding) const
 {
 	int iGood = 0, iBad = 0, iSpoiledFood = 0, iStarvation = 0;
 	return getAdditionalHealthByBuilding(eBuilding, iGood, iBad, iSpoiledFood, iStarvation);
@@ -9605,7 +9245,7 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding)
  * Doesn't reset iGood, iBad, iSpoiledFood, iStarvation to zero.
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation)
+int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation) const
 {
 	PROFILE_FUNC();
 
@@ -9655,27 +9295,6 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 		}
 	}
 
-	// Power
-	if (kBuilding.isPower() || kBuilding.isAreaCleanPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
-	{
-		// adding power
-		if (!isPower())
-		{
-			addGoodOrBad(GC.getPOWER_HEALTH_CHANGE(), iGood, iBad);
-
-			// adding dirty power
-			if (kBuilding.isDirtyPower())
-			{
-				addGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
-			}
-		}
-		// replacing dirty power with clean power
-		else if (isDirtyPower() && !kBuilding.isDirtyPower())
-		{
-			subtractGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
-		}
-	}
-
 	// No Unhealthiness from Population
 	if (kBuilding.isNoUnhealthyPopulation())
 	{
@@ -9706,14 +9325,11 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 		}
 	}
 
-	if (kBuilding.getTechHealthChanges(NO_TECH) != 0)
+	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-			{
-				addGoodOrBad(kBuilding.getTechHealthChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9863,50 +9479,45 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	int iNewFeatureGoodHappiness = 0;
 	int iNewFeatureBadHappiness = 0;
 
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 
-		if (pLoopPlot != NULL)
+		if (eFeature != NO_FEATURE)
 		{
-			FeatureTypes eFeature = pLoopPlot->getFeatureType();
-
-			if (eFeature != NO_FEATURE)
+			int iHappy = GET_PLAYER(getOwner()).getFeatureHappiness(eFeature);
+			if (iHappy > 0)
 			{
-				int iHappy = GET_PLAYER(getOwner()).getFeatureHappiness(eFeature);
-				if (iHappy > 0)
+				iNewFeatureGoodHappiness += iHappy;
+			}
+			else
+			{
+				iNewFeatureBadHappiness += iHappy;
+			}
+		}
+
+		const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+		if (NO_IMPROVEMENT != eImprovement)
+		{
+			int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
+
+			const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+			for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
+			{
+				if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
 				{
-					iNewFeatureGoodHappiness += iHappy;
-				}
-				else
-				{
-					iNewFeatureBadHappiness += iHappy;
+					iHappy += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHappinessChanges(eImprovement);
 				}
 			}
 
-			ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
-
-			if (NO_IMPROVEMENT != eImprovement)
+			if (iHappy > 0)
 			{
-				int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
-
-				CvPlayer& kPlayer = GET_PLAYER(getOwner());
-				for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-				{
-					if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
-					{
-						iHappy += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHappinessChanges(eImprovement);
-					}
-				}
-
-				if (iHappy > 0)
-				{
-					iNewFeatureGoodHappiness += iHappy;
-				}
-				else
-				{
-					iNewFeatureBadHappiness += iHappy;
-				}
+				iNewFeatureGoodHappiness += iHappy;
+			}
+			else
+			{
+				iNewFeatureBadHappiness += iHappy;
 			}
 		}
 	}
@@ -10166,7 +9777,7 @@ int CvCity::flatDefyResolutionAngerLength() const
 {
 	int iAnger = GC.getDEFY_RESOLUTION_ANGER_DIVISOR();
 
-	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iAnger /= 100;
 
 	return std::max(1, iAnger);
@@ -10371,6 +9982,11 @@ void CvCity::changeMaxFoodKeptPercent(int iChange, bool bAdd)
 	m_fMaxFoodKeptMultiplierLog += logdiff;
 }
 
+int CvCity::getMaxProductionOverflow() const
+{
+	return getYieldRate(YIELD_PRODUCTION) * 7/4; // 1.75
+}
+
 
 int CvCity::getOverflowProduction() const
 {
@@ -10385,11 +10001,9 @@ void CvCity::setOverflowProduction(int iNewValue)
 }
 
 
-void CvCity::changeOverflowProduction(int iChange, int iProductionModifier)
+void CvCity::changeOverflowProduction(int iChange)
 {
-	int iOverflow = (100 * iChange) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, iProductionModifier));
-
-	setOverflowProduction(getOverflowProduction() + iOverflow);
+	setOverflowProduction(m_iOverflowProduction + iChange);
 }
 
 
@@ -10638,7 +10252,7 @@ void CvCity::changeFreeSpecialist(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iFreeSpecialist = (m_iFreeSpecialist + iChange);
+		m_iFreeSpecialist += iChange;
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10653,49 +10267,23 @@ int CvCity::getPowerCount() const
 
 bool CvCity::isPower() const
 {
-	if (getDisabledPowerTimer() > 0) return false;
-
-	return (getPowerCount() > 0 || isAreaCleanPower());
+	return getDisabledPowerTimer() < 1 && (getPowerCount() > 0 || isAreaCleanPower());
 }
 
 
 bool CvCity::isAreaCleanPower() const
 {
-	if (area() == NULL)
-	{
-		return false;
-	}
-
-	return area()->isCleanPower(getTeam());
+	return area() != NULL && area()->isCleanPower(getTeam());
 }
 
-
-int CvCity::getDirtyPowerCount() const
-{
-	return m_iDirtyPowerCount;
-}
-
-
-bool CvCity::isDirtyPower() const
-{
-	return (isPower() && (getDirtyPowerCount() == getPowerCount()) && !isAreaCleanPower());
-}
-
-
-void CvCity::changePowerCount(int iChange, bool bDirty)
+void CvCity::changePowerCount(int iChange)
 {
 	if (iChange != 0)
 	{
 		const bool wasPower = isPower();
-		const bool wasDirtyPower = isDirtyPower();
 
 		m_iPowerCount += iChange;
 		FASSERT_NOT_NEGATIVE(getPowerCount())
-		if (bDirty)
-		{
-			m_iDirtyPowerCount += iChange;
-			FASSERT_NOT_NEGATIVE(getDirtyPowerCount())
-		}
 		// cppcheck-suppress knownConditionTrueFalse
 		if (wasPower != isPower())
 		{
@@ -10707,11 +10295,6 @@ void CvCity::changePowerCount(int iChange, bool bDirty)
 			{
 				setInfoDirty(true);
 			}
-		}
-		// cppcheck-suppress knownConditionTrueFalse
-		if (wasDirtyPower != isDirtyPower() || wasPower != isPower())
-		{
-			updatePowerHealth();
 		}
 	}
 }
@@ -10883,24 +10466,6 @@ void CvCity::setCitySizeBoost(int iBoost)
 	}
 }
 
-// M.A.D. Nukes
-int CvCity::getMADIncoming() const
-{
-	return m_iMADIncoming;
-}
-
-void CvCity::setMADIncoming(int iValue)
-{
-	m_iMADIncoming = iValue;
-}
-
-void CvCity::changeMADIncoming(int iValue)
-{
-	m_iMADIncoming += iValue;
-}
-// ! M.A.D. Nukes
-
-
 bool CvCity::isNeverLost() const
 {
 	return m_bNeverLost;
@@ -10996,7 +10561,6 @@ void CvCity::setWeLoveTheKingDay(bool bNewValue)
 
 		if (eCivic != NO_CIVIC)
 		{
-			MEMORY_TRACK_EXEMPT();
 			CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_CELEBRATE", getNameKey(), GC.getCivicInfo(eCivic).getWeLoveTheKing());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_HAPPY_PERSON")->getPath(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 		}
@@ -11028,9 +10592,10 @@ void CvCity::setCitizensAutomated(bool bNewValue)
 			}
 		}
 
-		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 		}
 	}
 }
@@ -11251,7 +10816,6 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 	if (GC.getGame().isFinalInitialized() && eNewValue > eOldValue && eNewValue > 1)
 	{
 		{
-			MEMORY_TRACK_EXEMPT();
 			AddDLLMessage(
 				getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 				gDLL->getText("TXT_KEY_MISC_BORDERS_EXPANDED", getNameKey()),
@@ -11273,7 +10837,6 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 				{
 					if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(
@@ -11288,7 +10851,6 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 					}
 					else
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(
@@ -11399,27 +10961,21 @@ void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 }
 
 
-// BUG - Building Additional Yield - start
 /*
  * Returns the total additional yield that adding one of the given buildings will provide.
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter)
+int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter) const
 {
-	const int iRate = getModifiedBaseYieldRate(eIndex);
-	const int iModifier = getBaseYieldRateModifier(eIndex);
-	int iExtra = 
-	(
-		(iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding))
-		*
-		(iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter))
-		/
-		100
-		-
-		iRate * iModifier / 100
-	);
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	const int iBase = getBaseYieldRate(eIndex);
+	const int iMod = getBaseYieldRateModifier(eIndex);
+
+	int iAddBase = getAdditionalBaseYieldByBuilding(eIndex, eBuilding);
+	int iAddExtra = getAdditionalExtraYieldByBuilding(eIndex, eBuilding);
+	int iAddBaseMod = getAdditionalBaseYieldModifierByBuilding(eIndex, eBuilding, bFilter);
 
 	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
@@ -11427,10 +10983,19 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
 
 		if (hasFullyActiveBuilding(eBuildingX))
 		{
-			iExtra -= getAdditionalYieldByBuilding(eIndex, eBuildingX);
+			iAddBase -= getAdditionalBaseYieldByBuilding(eIndex, eBuildingX);
+			iAddExtra -= getAdditionalExtraYieldByBuilding(eIndex, eBuildingX);
+			iAddBaseMod -= getAdditionalBaseYieldModifierByBuilding(eIndex, eBuildingX, bFilter);
 		}
 	}
-	return iExtra;
+	return
+	(
+		(iBase + iAddBase) * (iMod + iAddBaseMod) / 100
+		-
+		iBase * iMod / 100
+		+
+		iAddExtra
+	);
 }
 
 /*
@@ -11438,44 +11003,56 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	int iExtraRate = 0;
+	int iBaseYield = 0;
 
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	if (kBuilding.getSeaPlotYieldChange(eIndex) != 0)
+	if (building.getSeaPlotYieldChange(eIndex) != 0)
 	{
-		const int iChange = kBuilding.getSeaPlotYieldChange(eIndex);
+		const int iChange = building.getSeaPlotYieldChange(eIndex);
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
 			if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isWater())
 			{
-				iExtraRate += iChange;
+				iBaseYield += iChange;
 			}
 		}
 	}
-	if (kBuilding.getRiverPlotYieldChange(eIndex) != 0)
+	if (building.getRiverPlotYieldChange(eIndex) != 0)
 	{
-		const int iChange = kBuilding.getRiverPlotYieldChange(eIndex);
+		const int iChange = building.getRiverPlotYieldChange(eIndex);
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
 			if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isRiver())
 			{
-				iExtraRate += iChange;
+				iBaseYield += iChange;
 			}
 		}
 	}
-	iExtraRate += kBuilding.getYieldChange(eIndex);
-	iExtraRate += ((kBuilding.getYieldPerPopChange(eIndex) * getPopulation()) / 100);
-	iExtraRate += getBuildingYieldChange(eBuilding, eIndex);
+	return iBaseYield;
+}
+
+int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const
+{
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	int iExtraYield =
+	(
+		building.getYieldChange(eIndex)
+		+
+		building.getYieldPerPopChange(eIndex) * getPopulation() / 100
+		+
+		getBuildingYieldChange(eBuilding, eIndex)
+	);
 
 	// Trade
-	int iPlayerTradeYieldModifier = GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex);
-	if (iPlayerTradeYieldModifier > 0 && (kBuilding.getTradeRouteModifier() != 0 || kBuilding.getForeignTradeRouteModifier() != 0))
+	const int iPlayerTradeYieldModifier = GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex);
+	if (iPlayerTradeYieldModifier > 0 && (building.getTradeRouteModifier() != 0 || building.getForeignTradeRouteModifier() != 0))
 	{
 		int iTotalTradeYield = 0;
 		int iNewTotalTradeYield = 0;
@@ -11489,7 +11066,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 
 		for (int iI = 0; iI < getTradeRoutes(); ++iI)
 		{
-			CvCity* pCity = getTradeCity(iI);
+			const CvCity* pCity = getTradeCity(iI);
 			if (pCity)
 			{
 				int iTradeProfit = getBaseTradeProfit(pCity);
@@ -11497,86 +11074,84 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 				int iTradeYield = iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
 				iTotalTradeYield += iTradeYield;
 
-				iTradeModifier += kBuilding.getTradeRouteModifier();
+				iTradeModifier += building.getTradeRouteModifier();
 				if (pCity->getOwner() != getOwner())
 				{
-					iTradeModifier += kBuilding.getForeignTradeRouteModifier();
+					iTradeModifier += building.getForeignTradeRouteModifier();
 				}
 				int iNewTradeYield = iTradeProfit * iTradeModifier / iTradeProfitDivisor * iPlayerTradeYieldModifier / 100;
 				iNewTotalTradeYield += iNewTradeYield;
 			}
 		}
-
-		// BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		iTotalTradeYield /= 100;
 		iNewTotalTradeYield /= 100;
 #endif
-		// BUG - Fractional Trade Routes - end
-		iExtraRate += iNewTotalTradeYield - iTotalTradeYield;
+		iExtraYield += iNewTotalTradeYield - iTotalTradeYield;
 	}
 
 	// Specialists
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{
-		if (kBuilding.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
+		if (building.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
 		{
-			iExtraRate += getAdditionalBaseYieldRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
+			iExtraYield += building.getFreeSpecialistCount((SpecialistTypes)iI) * getYieldBySpecialist(eIndex, (SpecialistTypes)iI);
 		}
 	}
 
+	// Bonuses
 	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 	{
 		if (hasBonus((BonusTypes)iI))
 		{
-			iExtraRate += kBuilding.getBonusYieldChanges(iI, eIndex);
+			iExtraYield += building.getBonusYieldChanges(iI, eIndex);
 		}
-		if (kBuilding.getVicinityBonusYieldChanges(iI, eIndex) != 0 && hasVicinityBonus((BonusTypes)iI))
+		if (building.getVicinityBonusYieldChanges(iI, eIndex) != 0 && hasVicinityBonus((BonusTypes)iI))
 		{
-			iExtraRate += kBuilding.getVicinityBonusYieldChanges(iI, eIndex);
+			iExtraYield += building.getVicinityBonusYieldChanges(iI, eIndex);
 		}
 	}
+
+	// Tech
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		if (GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
 		{
-			iExtraRate += kBuilding.getTechYieldChange(iI, eIndex);
+			iExtraYield += building.getTechYieldChange(iI, eIndex);
 		}
 	}
 
-	if ((kBuilding.getGlobalTradeRoutes() + kBuilding.getCoastalTradeRoutes() + kBuilding.getTradeRoutes()) != 0)
+	int iTradeRoutes = building.getGlobalTradeRoutes() + building.getCoastalTradeRoutes() + building.getTradeRoutes();
+	if (iTradeRoutes != 0)
 	{
-		int* paiTradeYields;
-		paiTradeYields = new int[NUM_YIELD_TYPES];
-		calculateExtraTradeRouteProfit((kBuilding.getGlobalTradeRoutes() + kBuilding.getCoastalTradeRoutes() + kBuilding.getTradeRoutes()), paiTradeYields);
-		iExtraRate += paiTradeYields[eIndex];
+		int* paiTradeYields = new int[NUM_YIELD_TYPES];
+		calculateExtraTradeRouteProfit(iTradeRoutes, paiTradeYields);
+		iExtraYield += paiTradeYields[eIndex];
 		SAFE_DELETE_ARRAY(paiTradeYields);
 	}
 
-	int iFreeSpecialistYield = 0;
-	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
+	for (int iI = 1; iI < building.getFreeSpecialist() + 1; iI++)
 	{
-		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
-		//Team Project (1)
-		iFreeSpecialistYield += specialistYield(eNewSpecialist, eIndex);// old: GET_PLAYER(getOwner()).specialistYield(eNewSpecialist, eIndex);
-		//iFreeSpecialistYield += getLocalSpecialistExtraYield(eNewSpecialist, eIndex);
+		iExtraYield += specialistYield(eNewSpecialist, eIndex);
 	}
-	iExtraRate += iFreeSpecialistYield;
 
-	if (kBuilding.getNumPopulationEmployed() > 0)
+	// This could potentially affect base yield, but let's always pretend there's a specialist to remove.
+	if (building.getNumPopulationEmployed() > 0)
 	{
 		int* paiCommerce = new int[NUM_COMMERCE_TYPES];
 		int* paiYield = new int[NUM_YIELD_TYPES];
 		int iGreatPeopleRate;
 		int iHappiness;
 		int iHealthiness;
-		removeWorstCitizenActualEffects(kBuilding.getNumPopulationEmployed(), iGreatPeopleRate, iHappiness, iHealthiness, paiYield, paiCommerce);
-		iExtraRate += paiYield[eIndex];
+		removeWorstCitizenActualEffects(building.getNumPopulationEmployed(), iGreatPeopleRate, iHappiness, iHealthiness, paiYield, paiCommerce);
+		iExtraYield += paiYield[eIndex];
 		SAFE_DELETE_ARRAY(paiCommerce);
 		SAFE_DELETE_ARRAY(paiYield);
 	}
-	return iExtraRate;
+
+	return iExtraYield;
 }
 
 /*
@@ -11584,7 +11159,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter) const
+int CvCity::getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
@@ -11597,7 +11172,7 @@ int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, Building
 	{
 		iExtraModifier += kBuilding.getPowerYieldModifier(eIndex);
 	}
-	else if (kBuilding.isPower() || kBuilding.isAreaCleanPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
+	else if (kBuilding.isPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
 	{
 		for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 		{
@@ -11638,44 +11213,18 @@ int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, Building
 	}
 	return iExtraModifier;
 }
-// BUG - Building Additional Yield - end
 
 
-// BUG - Specialist Additional Yield - start
-/*
- * Returns the total additional yield that changing the number of given specialists will provide/remove.
- */
-int CvCity::getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
-{
-	//TB Traits begin
-	const int iRate = getModifiedBaseYieldRate(eIndex);
-	//TB Traits end
-	const int iModifier = getBaseYieldRateModifier(eIndex);
-	const int iExtra = ((iRate + getAdditionalBaseYieldRateBySpecialist(eIndex, eSpecialist, iChange)) * iModifier / 100) - (iRate * iModifier / 100);
-
-	return iExtra;
-}
-
-/*
- * Returns the additional yield rate that changing the number of given specialists will provide/remove.
- */
-int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
+int CvCity::getYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
-
-	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
-
-	return iChange * (kSpecialist.getYieldChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, eIndex) / 100));
+	return (
+		GC.getSpecialistInfo(eSpecialist).getYieldChange(eIndex)
+		+ GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex)
+		+ GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, eIndex) / 100
+	);
 }
-
-
-int CvCity::getBaseYieldRate(YieldTypes eIndex)	const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return m_aiBaseYieldRate[eIndex] + popYield(eIndex);
-}
-
 
 // note: player->invalidateYieldRankCache() must be called for anything that is checked here
 // so if any extra checked things are added here, the cache needs to be invalidated
@@ -11702,51 +11251,72 @@ int CvCity::getBaseYieldRateModifier(YieldTypes eIndex, int iExtra) const
 	return std::max(0, iModifier);
 }
 
-
 int CvCity::getYieldRate(YieldTypes eIndex) const
 {
 	PROFILE_FUNC();
-	return (getModifiedBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex) / 100);
+	return getExtraYield(eIndex) + getBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex) / 100;
 }
 
+int CvCity::getPlotYield(YieldTypes eIndex)	const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	return m_aiBaseYieldRate[eIndex];
+}
 
-void CvCity::setBaseYieldRate(YieldTypes eIndex, int iNewValue)
+void CvCity::changePlotYield(YieldTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 
-	if (m_aiBaseYieldRate[eIndex] != iNewValue)
+	if (iChange != 0)
 	{
-		m_aiBaseYieldRate[eIndex] = iNewValue;
+		m_aiBaseYieldRate[eIndex] += iChange;
+		onYieldChange();
+	}
+}
 
+
+int CvCity::getExtraYield(YieldTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+	return m_aiExtraYield[eIndex] + popYield(eIndex);
+}
+
+void CvCity::changeExtraYield(YieldTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
+
+	if (iChange != 0)
+	{
+		m_aiExtraYield[eIndex] += iChange;
+		onYieldChange();
+	}
+}
+
+
+void CvCity::onYieldChange()
+{
 #ifdef YIELD_VALUE_CACHING
-		ClearYieldValueCache();
+	ClearYieldValueCache();
 #endif
+	setCommerceDirty();
 
-		setCommerceDirty();
+	if (getTeam() == GC.getGame().getActiveTeam())
+	{
+		setInfoDirty(true);
 
-		if (getTeam() == GC.getGame().getActiveTeam())
+		if (isCitySelected())
 		{
-			setInfoDirty(true);
-
-			if (isCitySelected())
-			{
-				gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			}
+			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 		}
 	}
 }
 
 
-void CvCity::changeBaseYieldRate(YieldTypes eIndex, int iChange)
-{
-	setBaseYieldRate(eIndex, m_aiBaseYieldRate[eIndex] + iChange);
-}
-
 int CvCity::popYield(YieldTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
-	return (getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100);
+	return getPopulation() * m_aiBaseYieldPerPopRate[eIndex] / 100;
 }
 
 int CvCity::getBaseYieldPerPopRate(YieldTypes eIndex)	const
@@ -11762,23 +11332,7 @@ void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 	if (m_aiBaseYieldPerPopRate[eIndex] != iNewValue)
 	{
 		m_aiBaseYieldPerPopRate[eIndex] = iNewValue;
-
-#ifdef YIELD_VALUE_CACHING
-		ClearYieldValueCache();
-#endif
-
-		setCommerceDirty();
-
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-
-			if (isCitySelected())
-			{
-				gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-			}
-		}
+		onYieldChange();
 	}
 }
 
@@ -12019,14 +11573,11 @@ int CvCity::calculateTradeProfit(const CvCity* pCity) const
 
 int CvCity::calculateTradeYield(YieldTypes eIndex, int iTradeProfit) const
 {
-	if ((iTradeProfit != 0) && (GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex) > 0))
+	if (iTradeProfit != 0 && GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex) > 0)
 	{
-		return ((iTradeProfit * GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex)) / 100);
+		return iTradeProfit * GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex) / 100;
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
 
 // BUG - Trade Totals - start
@@ -12134,7 +11685,7 @@ void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
 		m_aiTradeYield[eIndex] = iNewValue;
 		FASSERT_NOT_NEGATIVE(getTradeYield(eIndex))
 
-		changeBaseYieldRate(eIndex, iNewValue - iOldValue);
+		changeExtraYield(eIndex, iNewValue - iOldValue);
 	}
 }
 
@@ -12170,14 +11721,14 @@ void CvCity::updateExtraSpecialistYield(YieldTypes eYield)
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		iNewYield += getExtraSpecialistYield(eYield, ((SpecialistTypes)iI));
+		iNewYield += getExtraSpecialistYield(eYield, (SpecialistTypes)iI);
 	}
 
 	if (iOldYield != iNewYield)
 	{
 		m_aiExtraSpecialistYield[eYield] = iNewYield;
 
-		changeBaseYieldRate(eYield, iNewYield - iOldYield);
+		changeExtraYield(eYield, iNewYield - iOldYield);
 	}
 }
 
@@ -12293,8 +11844,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate(YIELD_COMMERCE) * 100);
 
 	//STEP 2 : Commerce Changes from specialists
-	int iSpecialistCommerce = getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex);
-	iBaseCommerceRate += 100 * iSpecialistCommerce;
+	iBaseCommerceRate += 100 * (getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex));
 
 	//STEP 3 : Religion Commerce
 	iBaseCommerceRate += 100 * getReligionCommerce(eIndex);
@@ -12303,11 +11853,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	iBaseCommerceRate += 100 * getCorporationCommerce(eIndex);
 
 	//STEP 5 : Building Commerce
-	int iBuildingCommerce = getBuildingCommerce(eIndex);
-	iBuildingCommerce *= 100;
-	iBuildingCommerce += getBonusCommercePercentChanges(eIndex);
-
-	iBaseCommerceRate += iBuildingCommerce;
+	iBaseCommerceRate += 100 * getBuildingCommerce(eIndex) + getBonusCommercePercentChanges(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
@@ -12351,7 +11897,7 @@ int CvCity::getTotalCommerceRateModifier(CommerceTypes eIndex) const
 		//STEP 3 : Events
 		iTotal += GET_PLAYER(getOwner()).getCommerceRateModifierfromEvents(eIndex);
 
-		//STEP 4 : Player level 
+		//STEP 4 : Player level
 		//(Noting subtractions so it's easier to follow in comparison to the Text Manager.)
 		//Aside from those noted, Player level modifiers also include Civics, Traits, and Techs
 		//Events and buildings were isolated out so they could be expressed in the above categories
@@ -12526,7 +12072,7 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 
 				if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
 				{
-					iCommerce += 
+					iCommerce +=
 					(
 						GC.getReligionInfo((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
 						*
@@ -12570,7 +12116,7 @@ int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingT
 		int iCommerce = 0;
 		const int iNumOrbital = GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure();
 
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);	
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
 
 		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
@@ -12611,7 +12157,7 @@ int CvCity::getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingT
  * Doesn't check if the building can be constructed in this city.
  * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
-int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	return getAdditionalCommerceTimes100ByBuilding(eIndex, eBuilding) / 100;
 }
@@ -12623,7 +12169,7 @@ int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes 
  * Doesn't check if the building can be constructed in this city.
  * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
-int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	const int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
 	const int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
@@ -12672,7 +12218,7 @@ int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, Buildi
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	int iExtraRateTimes100 = 100 * getAdditionalBaseCommerceRateByBuilding(eIndex, eBuilding);
 
@@ -12689,7 +12235,7 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 }
 
 
-int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
@@ -12784,7 +12330,7 @@ int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, Buildi
  *
  * Doesn't check if the building can be constructed in this city.
  */
-int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
+int CvCity::getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
@@ -13001,7 +12547,7 @@ void CvCity::setCorporationYield(YieldTypes eIndex, int iNewValue)
 		m_aiCorporationYield[eIndex] = iNewValue;
 		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
-		changeBaseYieldRate(eIndex, (iNewValue - iOldValue));
+		changeExtraYield(eIndex, iNewValue - iOldValue);
 	}
 }
 
@@ -13021,10 +12567,9 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 
 	if (isActiveCorporation(eCorporation) && !isDisorder())
 	{
-		for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
-			const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
+			if (getNumBonuses(eBonus) > 0)
 			{
 				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
@@ -13044,10 +12589,9 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 
 	if (isActiveCorporation(eCorporation) && !isDisorder())
 	{
-		for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
-			const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
+			if (getNumBonuses(eBonus) > 0)
 			{
 				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
@@ -13094,7 +12638,7 @@ void CvCity::updateCorporationYield(YieldTypes eIndex)
 		m_aiCorporationYield[eIndex] = iNewYield;
 		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
-		changeBaseYieldRate(eIndex, (iNewYield - iOldYield));
+		changeExtraYield(eIndex, iNewYield - iOldYield);
 	}
 }
 
@@ -13148,14 +12692,10 @@ void CvCity::updateCorporationBonus()
 						{
 							bool bConsumes = false;
 
-							for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+							foreach_(const BonusTypes eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
 							{
-								int iBonusConsumed = GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonus(i);
-								if (NO_BONUS != iBonusConsumed)
-								{
-									bConsumes = true;
-									aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[iBonusConsumed];
-								}
+								bConsumes = true;
+								aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
 							}
 							if (!bConsumes && iBonusProduced != -1)
 							{
@@ -13525,15 +13065,7 @@ void CvCity::setRevealed(TeamTypes eIndex, bool bNewValue)
 
 		if (eIndex == GC.getGame().getActiveTeam())
 		{
-			for (int iI = 0; iI < getNumCityPlots(); iI++)
-			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->updateSymbols();
-				}
-			}
+			algo::for_each(plots(), bind(CvPlot::updateSymbols, _1));
 		}
 	}
 }
@@ -13642,7 +13174,6 @@ void CvCity::setName(const wchar_t* szNewValue, bool bFound)
 
 void CvCity::doFoundMessage()
 {
-	MEMORY_TRACK_EXEMPT();
 
 	CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_HAS_BEEN_FOUNDED", getNameKey());
 	AddDLLMessage(getOwner(), false, -1, szBuffer, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_MAJOR_EVENT, NULL, NO_COLOR, getX(), getY());
@@ -13846,18 +13377,11 @@ bool CvCity::isCorporationBonus(BonusTypes eBonus) const
 
 	for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 	{
-		if (GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp))
+		if (GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp)
+		&& isHasCorporation((CorporationTypes)iCorp)
+		&& algo::contains(GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses(), eBonus))
 		{
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
-			{
-				if (NO_BONUS != GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonus(i))
-				{
-					if (GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonus(i) == eBonus && isHasCorporation((CorporationTypes)iCorp))
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
 
@@ -13880,7 +13404,7 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 
 	if (GC.getCorporationInfo(eCorporation).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
+		if (GET_TEAM(getTeam()).isHasTech(GC.getCorporationInfo(eCorporation).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -13888,18 +13412,13 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 	bool bRequiresBonus = false;
 	bool bHasRequiredBonus = false;
 
-	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 	{
-		BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-
-		if (NO_BONUS != eBonus)
+		bRequiresBonus = true;
+		if (getNumBonuses(eBonus) > 0)
 		{
-			bRequiresBonus = true;
-			if (getNumBonuses(eBonus) > 0)
-			{
-				bHasRequiredBonus = true;
-				break;
-			}
+			bHasRequiredBonus = true;
+			break;
 		}
 	}
 	if (bRequiresBonus && bHasRequiredBonus)
@@ -13979,7 +13498,7 @@ bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return isHuman() && getProductionBuilding() != eIndex && getBuildingProduction(eIndex) > 0
-		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
 
 /*
@@ -13999,7 +13518,7 @@ int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
 int CvCity::getBuildingProductionDecayTurns(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
+	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
 
@@ -14071,10 +13590,10 @@ void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 
-	if (getUnitProduction(eIndex) != iNewValue)
+	if (m_paiUnitProduction[eIndex] != iNewValue)
 	{
 		m_paiUnitProduction[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getUnitProduction(eIndex))
+		FASSERT_NOT_NEGATIVE(m_paiUnitProduction[eIndex])
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -14091,7 +13610,7 @@ void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 
 void CvCity::changeUnitProduction(UnitTypes eIndex, int iChange)
 {
-	setUnitProduction(eIndex, (getUnitProduction(eIndex) + iChange));
+	setUnitProduction(eIndex, getUnitProduction(eIndex) + iChange);
 }
 
 
@@ -14124,7 +13643,7 @@ bool CvCity::isUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	return isHuman() && getProductionUnit() != eIndex && getUnitProduction(eIndex) > 0
-		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
 
 /*
@@ -14135,7 +13654,7 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	const int iProduction = getUnitProduction(eIndex);
-	return iProduction - ((iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT()) / 100);
+	return iProduction - iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT() / 100;
 }
 
 /*
@@ -14144,7 +13663,7 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
-	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
+	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
 }
 // BUG - Production Decay - end
 
@@ -14234,70 +13753,99 @@ void CvCity::changeSpecialistCount(SpecialistTypes eIndex, int iChange)
 
 void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 {
-	if (iChange != 0)
+	if (iChange == 0)
 	{
-		if (isCitizensAutomated() && getForceSpecialistCount(eIndex) + iChange < 0)
+		return;
+	}
+	if (isCitizensAutomated())
+	{
+		int iForcedSpecialists = getForceSpecialistCount(eIndex);
+		if (getForceSpecialistCount(eIndex) + iChange < 0)
 		{
+			FErrorMsg("This shouldn't happen")
 			setCitizensAutomated(false);
-		}
-
-		// cppcheck-suppress duplicateCondition
-		if (isCitizensAutomated())
-		{
-			changeForceSpecialistCount(eIndex, iChange);
-		}
-		else if (iChange > 0)
-		{
-			for (int iI = 0; iI < iChange; iI++)
-			{
-				if ((extraPopulation() > 0 || AI_removeWorstCitizen(eIndex)) && isSpecialistValid(eIndex, 1))
-				{
-					changeSpecialistCount(eIndex, 1);
-				}
-			}
 		}
 		else
 		{
-			for (int iI = 0; iI < -(iChange); iI++)
+			bool bAutomated = true;
+			if (iChange > 0)
 			{
-				if (getSpecialistCount(eIndex) > 0)
+				int iForced = 0;
+				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 				{
-					changeSpecialistCount(eIndex, -1);
+					iForced += getForceSpecialistCount((SpecialistTypes)iI);
+				}
+				if (iForced + iChange > getMaxSpecialistCount())
+				{
+					setCitizensAutomated(false);
+					bAutomated = false;
+				}
+			}
+			else
+			{
+				changeSpecialistCount(eIndex, iChange);
+			}
 
-					if (eIndex != GC.getDEFAULT_SPECIALIST() && GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST)
+			if (bAutomated)
+			{
+				setForceSpecialistCount(eIndex, getForceSpecialistCount(eIndex) + iChange);
+				AI_assignWorkingPlots();
+				return;
+			}
+		}
+	}
+
+	if (iChange > 0)
+	{
+		for (int iI = 0; iI < iChange; iI++)
+		{
+			if ((extraPopulation() > 0 || AI_removeWorstCitizen(eIndex)) && isSpecialistValid(eIndex, 1))
+			{
+				changeSpecialistCount(eIndex, 1);
+			}
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < -(iChange); iI++)
+		{
+			if (getSpecialistCount(eIndex) > 0)
+			{
+				changeSpecialistCount(eIndex, -1);
+
+				if (eIndex != GC.getDEFAULT_SPECIALIST() && GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST)
+				{
+					changeSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST(), 1);
+				}
+				else if (extraFreeSpecialists() > 0)
+				{
+					AI_addBestCitizen(false, true);
+				}
+				else
+				{
+					bool bCanWorkPlot = false;
+
+					for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 					{
-						changeSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST(), 1);
+						if (iJ != CITY_HOME_PLOT && !isWorkingPlot(iJ))
+						{
+							CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+
+							if (pLoopPlot != NULL && canWork(pLoopPlot))
+							{
+								bCanWorkPlot = true;
+								break;
+							}
+						}
 					}
-					else if (extraFreeSpecialists() > 0)
+
+					if (bCanWorkPlot)
 					{
-						AI_addBestCitizen(false, true);
+						AI_addBestCitizen(true, false);
 					}
 					else
 					{
-						bool bCanWorkPlot = false;
-
-						for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
-						{
-							if (iJ != CITY_HOME_PLOT && !isWorkingPlot(iJ))
-							{
-								CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-
-								if (pLoopPlot != NULL && canWork(pLoopPlot))
-								{
-									bCanWorkPlot = true;
-									break;
-								}
-							}
-						}
-
-						if (bCanWorkPlot)
-						{
-							AI_addBestCitizen(true, false);
-						}
-						else
-						{
-							AI_addBestCitizen(false, true);
-						}
+						AI_addBestCitizen(false, true);
 					}
 				}
 			}
@@ -14306,22 +13854,28 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 }
 
 
+int CvCity::getMaxSpecialistCount() const
+{
+	return totalFreeSpecialists() + getPopulation() - angryPopulation() - getNumPopulationEmployed();
+}
+
 int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
 	return m_paiMaxSpecialistCount[eIndex];
 }
 
-
 bool CvCity::isSpecialistValid(SpecialistTypes eIndex, int iExtra) const
 {
 	return
 	(
-		getSpecialistCount(eIndex) + iExtra <= getMaxSpecialistCount(eIndex)
-		||
-		GET_PLAYER(getOwner()).isSpecialistValid(eIndex)
-		||
-		eIndex == GC.getDEFAULT_SPECIALIST()
+		(
+			GET_PLAYER(getOwner()).isSpecialistValid(eIndex)
+			||
+			getMaxSpecialistCount(eIndex) > 0 && getSpecialistCount(eIndex) + iExtra <= getMaxSpecialistCount(eIndex)
+		)
+		&&
+		getSpecialistCount(eIndex) + iExtra <= getMaxSpecialistCount()
 	);
 }
 
@@ -14374,12 +13928,6 @@ void CvCity::setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 
 		AI_setAssignWorkDirty(true);
 	}
-}
-
-
-void CvCity::changeForceSpecialistCount(SpecialistTypes eIndex, int iChange)
-{
-	setForceSpecialistCount(eIndex, (getForceSpecialistCount(eIndex) + iChange));
 }
 
 
@@ -14591,7 +14139,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			changeBaseYieldRate(((YieldTypes)iI), iChange * pPlot->getYield((YieldTypes)iI));
+			changePlotYield((YieldTypes)iI, iChange * pPlot->getYield((YieldTypes)iI));
 		}
 	}
 
@@ -14746,7 +14294,7 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 			}
 
 			//Remove any extensions of this building
-			const int iExtensionOf = kBuilding.getExtendsBuilding();
+			const BuildingTypes iExtensionOf = kBuilding.getExtendsBuilding();
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
 				if (getNumRealBuilding((BuildingTypes)iI) > 0
@@ -14942,7 +14490,6 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 						{
 							if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
-								MEMORY_TRACK_EXEMPT();
 								AddDLLMessage(
 									(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 									gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
@@ -14952,7 +14499,6 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 							}
 							else
 							{
-								MEMORY_TRACK_EXEMPT();
 								AddDLLMessage(
 									(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 									gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN", kBuilding.getTextKeyWide()),
@@ -15327,7 +14873,6 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 						&& isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false)
 						&& (getOwner() == iI || GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex || GET_PLAYER((PlayerTypes)iI).hasHolyCity(eIndex)))
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 								gDLL->getText("TXT_KEY_MISC_RELIGION_SPREAD", GC.getReligionInfo(eIndex).getTextKeyWide(), getNameKey()),
@@ -15361,7 +14906,6 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 				&& isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false)
 				&& (getOwner() == iI || GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex || GET_PLAYER((PlayerTypes)iI).hasHolyCity(eIndex)))
 				{
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(
 						(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
 						gDLL->getText("TXT_KEY_MISC_RELIGION_DECAY", getNameKey(), GC.getReligionInfo(eIndex).getTextKeyWide()),
@@ -15550,7 +15094,6 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 					if (bNewValue)
 					{
 						{
-							MEMORY_TRACK_EXEMPT();
 							AddDLLMessage(
 								(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
@@ -15570,20 +15113,15 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 
 							CvWString szBonusList;
 							bool bFirst = true;
-							for (int iJ = 0; iJ < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++iJ)
+							foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eIndex).getPrereqBonuses())
 							{
-								int iBonus = GC.getCorporationInfo(eIndex).getPrereqBonus(iJ);
-								if (iBonus != NO_BONUS)
-								{
-									CvWString szTemp;
-									szTemp.Format(L"%s", GC.getBonusInfo((BonusTypes)iBonus).getDescription());
-									setListHelp(szBonusList, L"", szTemp, L", ", bFirst);
-									bFirst = false;
-								}
+								CvWString szTemp;
+								szTemp.Format(L"%s", GC.getBonusInfo(eBonus).getDescription());
+								setListHelp(szBonusList, L"", szTemp, L", ", bFirst);
+								bFirst = false;
 							}
 							if (!bFirst)
 							{
-								MEMORY_TRACK_EXEMPT();
 								AddDLLMessage(
 									(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
 									gDLL->getText("TXT_KEY_MISC_CORPORATION_SPREAD_BONUS", GC.getCorporationInfo(eIndex).getTextKeyWide(), szBonusString.getCString(), getNameKey(), szBonusList.GetCString()),
@@ -15595,7 +15133,6 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 					}
 					else
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_MISC_CORPORATION_DECAY", GC.getCorporationInfo(eIndex).getTextKeyWide(), getNameKey()),
@@ -15616,6 +15153,12 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 	}
 }
 
+// SAVBEBREAK - Toffer - remove
+void CvCity::resizeTradeRouteVector()
+{
+	m_paTradeCities.resize(getMaxTradeRoutes());
+}
+// ! SAVBEBREAK
 
 CvCity* CvCity::getTradeCity(int iIndex) const
 {
@@ -15804,11 +15347,11 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		{
 			const uint16_t iAIType = EXTERNAL_ORDER_IDATA(iData2);
 			const UnitAITypes AIType = (iAIType == 0xFFFF) ?
-				static_cast<UnitAITypes>(GC.getUnitInfo(unitType).getDefaultUnitAIType())
+				GC.getUnitInfo(unitType).getDefaultUnitAIType()
 				:
 				static_cast<UnitAITypes>(iAIType)
 				;
-				
+
 			contractedAIType = (iAIType == 0xFFFF)?
 				static_cast<UnitAITypes>(0xFF)
 				:
@@ -15848,7 +15391,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 			GET_PLAYER(getOwner()).changeBuildingMaking(buildingType, 1);
 
-			const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(buildingType).getSpecialBuildingType();
+			const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(buildingType).getSpecialBuilding();
 			if (eSpecialBuilding != NO_SPECIALBUILDING)
 			{
 				GET_PLAYER(getOwner()).changeBuildingGroupMaking(eSpecialBuilding, 1);
@@ -16018,27 +15561,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			{
 				logBBAI("      City %S builds unit %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription());
 			}
-
-			const int iProductionNeeded = getProductionNeeded(eTrainUnit);
-
-			// max overflow is the value of the item produced (to eliminate prebuild exploits)
-			const int iUnlimitedOverflow = getUnitProduction(eTrainUnit) - iProductionNeeded;
-			const int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
-			m_iLostProductionModified = iLostProduction;
-			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eTrainUnit)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			const int iRawOverflow = getUnitProduction(eTrainUnit) - getProductionNeeded(eTrainUnit);
+			const int iMaxOverflow = getMaxProductionOverflow();
+			const int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eTrainUnit));
+				changeOverflowProduction(iOverflow);
 			}
 			setUnitProduction(eTrainUnit, 0);
 
-			// * Limited which production modifiers affect gold from production overflow. 1/3
-			iLostProduction *= getBaseYieldRateModifier(YIELD_PRODUCTION);
-			iLostProduction /= std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eTrainUnit)));
-			int iProductionGold = ((iLostProduction * GC.getMAXED_UNIT_GOLD_PERCENT()) / 100);
-			m_iGoldFromLostProduction = iProductionGold;
+			m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
+			m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_UNIT_GOLD_PERCENT() / 100;
 
 			CvUnit* pUnit = GET_PLAYER(getOwner()).initUnit(eTrainUnit, getX(), getY(), eTrainAIUnit, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 			if (pUnit == NULL)
@@ -16182,7 +15715,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 		GET_PLAYER(getOwner()).changeBuildingMaking(eConstructBuilding, -1);
 
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eConstructBuilding).getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = GC.getBuildingInfo(eConstructBuilding).getSpecialBuilding();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			GET_PLAYER(getOwner()).changeBuildingGroupMaking(eSpecialBuilding, -1);
@@ -16205,32 +15738,24 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					getName().GetCString(),
 					GC.getBuildingInfo(eConstructBuilding).getDescription());
 			}
-
-			int iProductionNeeded = getProductionNeeded(eConstructBuilding);
-			// max overflow is the value of the item produced (to eliminate prebuild exploits)
-			int iUnlimitedOverflow = getBuildingProduction(eConstructBuilding) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
-			m_iLostProductionModified = iLostProduction;
-			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eConstructBuilding)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			const int iRawOverflow = getBuildingProduction(eConstructBuilding) - getProductionNeeded(eConstructBuilding);
+			const int iMaxOverflow = getMaxProductionOverflow();
+			const int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eConstructBuilding));
+				changeOverflowProduction(iOverflow);
 			}
 			setBuildingProduction(eConstructBuilding, 0);
 			setBuildingProductionTime(eConstructBuilding, 0);
-			// * Limited which production modifiers affect gold from production overflow. 2/3
-			iLostProduction *= getBaseYieldRateModifier(YIELD_PRODUCTION);
-			iLostProduction /= std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eConstructBuilding)));
-			const int iProductionGold = ((iLostProduction * GC.getMAXED_BUILDING_GOLD_PERCENT()) / 100);
-			m_iGoldFromLostProduction = iProductionGold;
+
+			m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
+			m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
 
 			CvEventReporter::getInstance().buildingBuilt(this, eConstructBuilding);
 		}
 		else if (!canConstruct(eConstructBuilding))
 		{
-			const BuildingTypes eBuilding = (BuildingTypes)GC.getBuildingInfo(eConstructBuilding).getProductionContinueBuilding();
+			const BuildingTypes eBuilding = GC.getBuildingInfo(eConstructBuilding).getProductionContinueBuilding();
 			if (eBuilding != NO_BUILDING && canConstruct(eBuilding, true, false, false, false))
 			{
 				if (m_iLostProduction == 0)
@@ -16240,11 +15765,9 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				}
 				if (m_iLostProduction > 0)
 				{
-					MEMORY_TRACK_EXEMPT();
 
 					setBuildingProduction(eBuilding, m_iLostProduction);
-					CvWString szMessage;
-					szMessage = gDLL->getText("TXT_KEY_MISC_PROD_CONVERTED", m_iLostProduction, GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), GC.getBuildingInfo(eBuilding).getTextKeyWide());
+					const CvWString szMessage = gDLL->getText("TXT_KEY_MISC_PROD_CONVERTED", m_iLostProduction, GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), GC.getBuildingInfo(eBuilding).getTextKeyWide());
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(YIELD_PRODUCTION).getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
 
 					m_iLostProduction = 0;
@@ -16321,26 +15844,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					GET_TEAM(getTeam()).setProjectArtType(eCreateProject, projectCount - 1, defaultArtType);
 				}
 			}
-
-			int iProductionNeeded = getProductionNeeded(eCreateProject);
-			// max overflow is the value of the item produced (to eliminate pre-build exploits)
-			int iUnlimitedOverflow = getProjectProduction(eCreateProject) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
-			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
-			m_iLostProductionModified = iLostProduction;
-			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eCreateProject)));
-			int iOverflow = std::min(iMaxOverflow, iUnlimitedOverflow);
+			const int iRawOverflow = getProjectProduction(eCreateProject) - getProductionNeeded(eCreateProject);
+			const int iMaxOverflow = getMaxProductionOverflow();
+			const int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 			if (iOverflow > 0)
 			{
-				changeOverflowProduction(iOverflow, getProductionModifier(eCreateProject));
+				changeOverflowProduction(iOverflow);
 			}
 			setProjectProduction(eCreateProject, 0);
 
-			// * Limited which production modifiers affect gold from production overflow. 3/3
-			iLostProduction *= getBaseYieldRateModifier(YIELD_PRODUCTION);
-			iLostProduction /= std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eCreateProject)));
-			const int iProductionGold = ((iLostProduction * GC.getMAXED_PROJECT_GOLD_PERCENT()) / 100);
-			m_iGoldFromLostProduction = iProductionGold;
+			m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
+			m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_PROJECT_GOLD_PERCENT() / 100;
 		}
 		break;
 
@@ -16447,7 +15961,6 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			wcscat(szBuffer, szTempBuffer);
 		}
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_MINOR_EVENT, szIcon, GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 		}
@@ -16536,10 +16049,6 @@ const std::vector< std::pair<float, float> >& CvCity::getWallOverridePoints() co
 
 void CvCity::doGrowth()
 {
-	if (GC.getUSE_CAN_DO_GROWTH_CALLBACK() && Cy::call<bool>(PYGameModule, "doGrowth", Cy::Args() << this))
-	{
-		return;
-	}
 	const int iDiff = foodDifference();
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
@@ -16575,11 +16084,6 @@ void CvCity::doGrowth()
 void CvCity::doCulture()
 {
 	PROFILE_FUNC();
-
-	if (GC.getUSE_CAN_DO_CULTURE_CALLBACK() && Cy::call<bool>(PYGameModule, "doCulture", Cy::Args() << this))
-	{
-		return;
-	}
 	changeCultureTimes100(getOwner(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
 }
 
@@ -16588,11 +16092,6 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 {
 	PROFILE_FUNC();
 
-	if (GC.getUSE_CAN_DO_PLOT_CULTURE_CALLBACK()
-	&& Cy::call<bool>(PYGameModule, "doPlotCulture", Cy::Args() << this << bUpdate << ePlayer << iCultureRate))
-	{
-		return;
-	}
 	FAssert(NO_PLAYER != ePlayer);
 
 	const int iCulture = getCultureTimes100(ePlayer);
@@ -16651,7 +16150,6 @@ bool CvCity::doCheckProduction()
 				{
 					player.changeGold(iProductionGold);
 
-					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide(), iProductionGold);
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
@@ -16668,7 +16166,7 @@ bool CvCity::doCheckProduction()
 		{
 			if (player.isProductionMaxedBuilding((BuildingTypes)iI))
 			{
-				int iProductionGold = ((getBuildingProduction((BuildingTypes)iI) * GC.getMAXED_BUILDING_GOLD_PERCENT()) / 100);
+				int iProductionGold = getBuildingProduction((BuildingTypes)iI) * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
 
 				if (GC.getBuildingInfo((BuildingTypes)iI).getProductionContinueBuilding() != NO_BUILDING)
 				{
@@ -16687,9 +16185,7 @@ bool CvCity::doCheckProduction()
 				{
 					player.changeGold(iProductionGold);
 
-					MEMORY_TRACK_EXEMPT();
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), iProductionGold);
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), iProductionGold);
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
 				}
 
@@ -16710,7 +16206,6 @@ bool CvCity::doCheckProduction()
 				{
 					player.changeGold(iProductionGold);
 
-					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), iProductionGold);
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
@@ -16752,7 +16247,7 @@ bool CvCity::doCheckProduction()
 					{
 						area()->changeNumTrainAIUnits(getOwner(), order.getUnitAIType(), -1);
 						player.AI_changeNumTrainAIUnits(order.getUnitAIType(), -1);
-						order.setUnitAIType((UnitAITypes)GC.getUnitInfo(eUpgradeUnit).getDefaultUnitAIType());
+						order.setUnitAIType(GC.getUnitInfo(eUpgradeUnit).getDefaultUnitAIType());
 						area()->changeNumTrainAIUnits(getOwner(), order.getUnitAIType(), 1);
 						player.AI_changeNumTrainAIUnits(order.getUnitAIType(), 1);
 					}
@@ -16779,11 +16274,6 @@ bool CvCity::doCheckProduction()
 
 void CvCity::doProduction(bool bAllowNoProduction)
 {
-	if (GC.getUSE_CAN_DO_PRODUCTION_CALLBACK() && Cy::call<bool>(PYGameModule, "doProduction", Cy::Args() << this))
-	{
-		return;
-	}
-
 	if (!isHuman() || isProductionAutomated())
 	{
 		//	Koshling - with the unit contracting system we only build units to contractual
@@ -16824,51 +16314,41 @@ void CvCity::doProduction(bool bAllowNoProduction)
 		setBuiltFoodProducedUnit(isFoodProduction());
 		clearLostProduction();
 
-		int iOverflowProductionModified = 0;
-		while (isProduction() && productionLeft() <= iOverflowProductionModified)
+		while (productionLeft() <= 0)
 		{
-			changeProduction(iOverflowProductionModified);
-			setOverflowProduction(0);
-
 			popOrder(0, true, true);
 
-			if (!isHuman() && !isProduction())
+			if (!isProduction())
 			{
-				AI_chooseProduction();
+				if (isHuman())
+				{
+					break;
+				}
+				else AI_chooseProduction();
+
+				FAssertMsg(isProduction(), "AI set city to pruduce nothing at all!")
 			}
 
+			/* Toffer - Don't think the wonder limit can be breached here just like that.
 			// Prevents breaching the wonder limit.
 			// Eliminates pre-build exploits for all Wonders and all Projects
 			if (isProductionWonder() || isProductionProject())
 			{
 				break;
 			}
+			*/
 
 			// Eliminate pre-build exploits for Settlers and Workers
 			if (isFoodProduction() && !isBuiltFoodProducedUnit())
 			{
 				break;
 			}
-
-			if (isProductionProcess())
-			{
-				break;
-			}
-
-			//fix production which floods from overflow capacity to next queue item if it exists
-			if (isProduction() && m_iLostProductionBase > 0)
-			{
-				changeProduction(getExtraProductionDifference(m_iLostProductionBase));
-				clearLostProduction();
-			}
-
-			iOverflowProductionModified = getOverflowProductionDifference();
+			changeProduction(getOverflowProduction());
+			setOverflowProduction(0);
 		}
 
 		if (m_iGoldFromLostProduction > 0)
 		{
-			MEMORY_TRACK_EXEMPT();
-
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_PROD_CONVERTED", getNameKey(), m_iLostProductionModified, m_iGoldFromLostProduction);
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
 
@@ -16878,7 +16358,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 	else
 	{
-		changeOverflowProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction), getProductionModifier());
+		changeOverflowProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction));
 	}
 }
 
@@ -16896,7 +16376,7 @@ void CvCity::doDecay()
 
 				if (isHuman())
 				{
-					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 					if (100 * getBuildingProductionTime(eBuilding) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
 					{
 						const int iProduction = getBuildingProduction(eBuilding);
@@ -16923,7 +16403,7 @@ void CvCity::doDecay()
 
 				if (isHuman())
 				{
-					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 					if (100 * getUnitProductionTime(eUnit) > GC.getUNIT_PRODUCTION_DECAY_TIME() * iGameSpeedPercent)
 					{
 						const int iProduction = getUnitProduction(eUnit);
@@ -16942,10 +16422,6 @@ void CvCity::doDecay()
 
 void CvCity::doReligion()
 {
-	if (GC.getUSE_CAN_DO_RELIGION_CALLBACK() && Cy::call<bool>(PYGameModule, "doReligion", Cy::Args() << this))
-	{
-		return;
-	}
 	if (getReligionCount() == 0 || GC.getGame().isModderGameOption(MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD))
 	{
 		const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
@@ -16981,7 +16457,7 @@ void CvCity::doReligion()
 											);
 											if (iSpread > 0)
 											{
-												iSpread /= 
+												iSpread /=
 												(
 													(getReligionCount() + 1)
 													*
@@ -17008,7 +16484,7 @@ void CvCity::doReligion()
 								(
 									GC.getRELIGION_SPREAD_RAND()
 									*
-									GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()
+									GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 									/
 									100
 								);
@@ -17061,7 +16537,7 @@ void CvCity::doReligion()
 						(
 							GC.getRELIGION_SPREAD_RAND()
 							*
-							GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()
+							GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 							/
 							100
 						);
@@ -17089,10 +16565,6 @@ void CvCity::doReligion()
 
 void CvCity::doGreatPeople()
 {
-	if (GC.getUSE_CAN_DO_GREATPEOPLE_CALLBACK() && Cy::call<bool>(PYGameModule, "doGreatPeople", Cy::Args() << this))
-	{
-		return;
-	}
 	if (isDisorder())
 	{
 		return;
@@ -17143,10 +16615,6 @@ void CvCity::doGreatPeople()
 
 void CvCity::doMeltdown()
 {
-	if (GC.getUSE_CAN_DO_MELTDOWN_CALLBACK() && Cy::call<bool>(PYGameModule, "doMeltdown", Cy::Args() << this))
-	{
-		return;
-	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
@@ -17159,7 +16627,6 @@ void CvCity::doMeltdown()
 
 				plot()->nukeExplosion(1);
 				{
-					MEMORY_TRACK_EXEMPT();
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_MELTDOWN_CITY", getNameKey());
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MELTDOWN", MESSAGE_TYPE_MINOR_EVENT,
 						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_UNHEALTHY_PERSON")->getPath(), GC.getCOLOR_RED(), getX(), getY(), true, true);
@@ -17174,7 +16641,6 @@ void CvCity::doMeltdown()
 
 void CvCity::read(FDataStreamBase* pStream)
 {
-	MEMORY_TRACE_FUNCTION();
 
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -17213,13 +16679,17 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHealthCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHappinessCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWaterGoodHealth);
+	// @SAVEBREAK DELETE
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iFreshWaterBadHealth, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingBadHealth);
-	WRAPPER_READ(wrapper, "CvCity", &m_iPowerGoodHealth);
-	WRAPPER_READ(wrapper, "CvCity", &m_iPowerBadHealth);
+	// @SAVEBREAK DELETE - Toffer - 11.07.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iPowerGoodHealth, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iPowerBadHealth, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCity", &m_iBonusGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBonusBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iHurryAngerTimer);
@@ -17272,7 +16742,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iNukeModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreeSpecialist);
 	WRAPPER_READ(wrapper, "CvCity", &m_iPowerCount);
-	WRAPPER_READ(wrapper, "CvCity", &m_iDirtyPowerCount);
+	// @SAVEBREAK DELETE - Toffer - 11.07.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iDirtyPowerCount, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCity", &m_iDefenseDamage);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLastDefenseDamage);
 	WRAPPER_READ(wrapper, "CvCity", &m_iOccupationTimer);
@@ -17280,10 +16752,10 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iCitySizeBoost);
 	WRAPPER_READ(wrapper, "CvCity", &m_iSpecialistFreeExperience);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageDefenseModifier);
-	// < M.A.D. Nukes Start >
-	WRAPPER_READ(wrapper, "CvCity", &m_iMADIncoming);
-	// < M.A.D. Nukes End   >
 
+	// @SAVEBREAK DELETE - Toffer - 04.07.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMADIncoming, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvCity", &m_bNeverLost);
 	WRAPPER_READ(wrapper, "CvCity", &m_bBombarded);
@@ -17392,7 +16864,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 
-	WRAPPER_READ(wrapper, "CvCity", &m_iExtraYieldTurns);
+	// @SAVEBREAK DELETE - Toffer - 25.04.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iExtraYieldTurns, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOccupationCultureLevel);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLineOfSight);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
@@ -17442,7 +16916,10 @@ void CvCity::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvCity", &m_paTradeCities[iI].iID);
 	}
 	// Discard saved trade routes above the max count we allow
-	m_paTradeCities.resize(getMaxTradeRoutes());
+	// SAVEBREAK - Toffer - This is too early in read stream, the player adjustment to max has not yet been read in from the save...
+	// Add it back at next savebreak when the m_iMaxTradeRoutesAdjustment read is moved earlier in the stream.
+	//m_paTradeCities.resize(getMaxTradeRoutes());
+	// ! SAVEBREAK
 
 	int orderQueueSize = 0;
 	WRAPPER_READ(wrapper, "CvCity", &orderQueueSize);
@@ -17459,7 +16936,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			bDeleteNode = (orderData.getUnitType() == NO_UNIT);
 			if (!bDeleteNode && orderData.getUnitAIType() == static_cast<UnitAITypes>(0xFF))
 			{
-				orderData.unit.AIType = static_cast<UnitAITypes>(GC.getUnitInfo(orderData.getUnitType()).getDefaultUnitAIType());
+				orderData.unit.AIType = GC.getUnitInfo(orderData.getUnitType()).getDefaultUnitAIType();
 			}
 			break;
 		};
@@ -17766,12 +17243,14 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiBaseYieldPerPopRate);
 	WRAPPER_READ(wrapper, "CvCity", &m_bVisibilitySetup);
 	m_bVisibilitySetup = false;
-	WRAPPER_READ(wrapper, "CvCity", &m_iLostProductionBase);
+	// @SAVEBREAK DELETE - Toffer - 17.05.2021
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iLostProductionBase, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionTypeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewExtraAfflictionOutbreakLevelChange);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionToleranceChange);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewCurrentOvercomeChange);
-	//Team Project (1)
+
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_BONUSES); ++i)
 	{
 		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, i, true);
@@ -17791,6 +17270,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iQuarantinedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
 	WRAPPER_READ(wrapper, "CvCity", &m_bPropertyControlBuildingQueued);
+
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -17836,8 +17318,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFeatureBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBuildingGoodHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBuildingBadHealth);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iPowerGoodHealth);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iPowerBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBonusGoodHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBonusBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iHurryAngerTimer);
@@ -17884,7 +17364,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iNukeModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFreeSpecialist);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iPowerCount);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iDirtyPowerCount);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iDefenseDamage);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLastDefenseDamage);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iOccupationTimer);
@@ -17892,10 +17371,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iCitySizeBoost);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iSpecialistFreeExperience);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iEspionageDefenseModifier);
-	// < M.A.D. Nukes Start >
-	WRAPPER_WRITE(wrapper, "CvCity", m_iMADIncoming);
-	// < M.A.D. Nukes End   >
-
 
 	WRAPPER_WRITE(wrapper, "CvCity", m_bNeverLost);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bBombarded);
@@ -17992,7 +17467,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraYieldTurns);
+
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOccupationCultureLevel);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLineOfSight);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLandmarkAngerTimer);
@@ -18198,7 +17673,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiBaseYieldPerPopRate);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bVisibilitySetup);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iLostProductionBase);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionTypeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewExtraAfflictionOutbreakLevelChange);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionToleranceChange);
@@ -18216,6 +17690,9 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iQuarantinedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bPropertyControlBuildingQueued);
+
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -18574,18 +18051,11 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 	{
 		return false;
 	}
-
-	const int iCount = kBuilding.getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
+	if (!isMapCategory(*plot(), kBuilding))
 	{
-		if (plot()->isMapType((MapTypes)kBuilding.getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
+		return false;
 	}
-	return bFound;
+	return true;
 }
 
 bool CvCity::isEventTriggerPossible(EventTriggerTypes eTrigger) const
@@ -18836,23 +18306,19 @@ bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTrigger
 		{
 			if (CITY_HOME_PLOT != i)
 			{
-				CvPlot* pPlot = getCityIndexPlot(i);
-				if (NULL != pPlot && pPlot->getOwner() == getOwner())
+				const CvPlot* pPlot = getCityIndexPlot(i);
+
+				if (NULL != pPlot && pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
 				{
-					if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-					{
-						++iNumImprovements;
-					}
+					++iNumImprovements;
 				}
 			}
 		}
-
 		if (iNumImprovements < kEvent.getMinPillage())
 		{
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -18933,18 +18399,17 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 					if (CITY_HOME_PLOT != iPlot)
 					{
 						CvPlot* pPlot = getCityIndexPlot(iPlot);
-						if (NULL != pPlot && pPlot->getOwner() == getOwner())
-						{
-							if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
-							{
-								MEMORY_TRACK_EXEMPT();
 
-								CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-								pPlot->setImprovementType(NO_IMPROVEMENT);
-								++iNumPillaged;
-								break;
-							}
+						if (NULL != pPlot && pPlot->getOwner() == getOwner() && pPlot->isImprovementDestructible())
+						{
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()),
+								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+							);
+							pPlot->setImprovementType(NO_IMPROVEMENT);
+							++iNumPillaged;
+							break;
 						}
 					}
 				}
@@ -18958,7 +18423,6 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 
 			if (NO_PLAYER != eOtherPlayer)
 			{
-				MEMORY_TRACK_EXEMPT();
 
 				CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_NUM_CITY_IMPROVEMENTS_DESTROYED", iNumPillaged, GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
 				AddDLLMessage(eOtherPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO);
@@ -19193,7 +18657,7 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 
 				if (hasFullyActiveBuilding(eBuilding))
 				{
-					changeBaseYieldRate(eYield, iChange - iOldChange);
+					changeExtraYield(eYield, iChange - iOldChange);
 				}
 			}
 			return;
@@ -19210,7 +18674,7 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 
 		if (hasFullyActiveBuilding(eBuilding))
 		{
-			changeBaseYieldRate(eYield, iChange);
+			changeExtraYield(eYield, iChange);
 		}
 	}
 }
@@ -19438,7 +18902,6 @@ void CvCity::liberate(bool bConquest)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman() && isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
-			MEMORY_TRACK_EXEMPT();
 			AddDLLMessage(
 				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
 				szBuffer, "AS2D_REVOLTEND", MESSAGE_TYPE_MAJOR_EVENT,
@@ -19514,11 +18977,11 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
 		if (playerX.isAlive())
 		{
-			CvCity* pCapital = playerX.getCapitalCity();
+			const CvCity* pCapital = playerX.getCapitalCity();
 			if (NULL != pCapital)
 			{
 				int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
@@ -19772,7 +19235,7 @@ void CvCity::emergencyConscript()
 	}
 	addProductionExperience(pUnit, true);
 	pUnit->setMoves(0);
-	pUnit->setDamage((100 - GC.getIDW_EMERGENCY_DRAFT_STRENGTH()) * pUnit->maxHitPoints() / 100, getOwner());
+	pUnit->setDamage((100 - GC.getIDW_EMERGENCY_DRAFT_STRENGTH()) * pUnit->getMaxHP() / 100, getOwner());
 }
 // ------ END InfluenceDrivenWar ---------------------------------
 
@@ -20076,18 +19539,13 @@ bool CvCity::isProductionWonder() const
 
 	if (headOrder && headOrder->eOrderType == ORDER_CONSTRUCT)
 	{
-		const BuildingTypes eBuilding = headOrder->getBuildingType();
-		return isWorldWonder(eBuilding) 
-			|| isTeamWonder(eBuilding) 
-			|| isNationalWonder(eBuilding);
+		return isLimitedWonder(headOrder->getBuildingType());
 	}
-
 	return false;
 }
 
 void CvCity::clearLostProduction()
 {
-	m_iLostProductionBase = 0;
 	m_iLostProductionModified = 0;
 	m_iGoldFromLostProduction = 0;
 }
@@ -20117,7 +19575,6 @@ void CvCity::changeSpecialistGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistGoodHealth += iChange;
-		FAssert(getSpecialistGoodHealth() >= 0);
 
 		AI_setAssignWorkDirty(true);
 
@@ -20133,7 +19590,6 @@ void CvCity::changeSpecialistBadHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistBadHealth += iChange;
-		FAssert(getSpecialistBadHealth() <= 0);
 
 		AI_setAssignWorkDirty(true);
 
@@ -20149,7 +19605,6 @@ void CvCity::changeSpecialistHappiness(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistHappiness += iChange;
-		FAssert(getSpecialistHappiness() >= 0);
 
 		AI_setAssignWorkDirty(true);
 
@@ -20193,11 +19648,9 @@ void CvCity::updateImprovementHealth()
 
 	int iNewGoodHealthPercent = 0;
 	int iNewBadHealthPercent = 0;
-	for (int iI = 0; iI < getNumCityPlots(); iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getOwner() != NO_PLAYER && pLoopPlot->getOwner() == getOwner())
+		if (pLoopPlot->getOwner() != NO_PLAYER && pLoopPlot->getOwner() == getOwner())
 		{
 			const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 
@@ -20295,7 +19748,7 @@ int CvCity::getLandmarkAnger() const
 		iAnger++;
 	}
 	int iDivisor = std::max(1, GC.getLANDMARK_ANGER_DIVISOR());
-	iDivisor *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
+	iDivisor *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iDivisor /= 100;
 
 	iAnger += getLandmarkAngerTimer() / std::max(1, iDivisor);
@@ -20629,7 +20082,7 @@ void CvCity::doPromotion()
 
 		if (kBuilding.isApplyFreePromotionOnMove())
 		{
-			const bool bHasFreePromofromList = kBuilding.getNumFreePromoTypes() > 0;
+			const bool bHasFreePromofromList = !kBuilding.getFreePromoTypes().empty();
 
 			const PromotionTypes ePromotion1 = (PromotionTypes)kBuilding.getFreePromotion();
 			const PromotionTypes ePromotion2 = (PromotionTypes)kBuilding.getFreePromotion_2();
@@ -20676,32 +20129,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			const bool bPeak = iI == iTerrainPeak;
 			const bool bHill = iI == iTerrainHill;
 
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			foreach_(const CvPlot* plotX, plots())
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL)
+				if (bPeak)
 				{
-					if (bPeak)
-					{
-						if (plotX->isAsPeak())
-						{
-							bValidTerrain = true;
-							break;
-						}
-					}
-					else if (bHill)
-					{
-						if (plotX->isHills())
-						{
-							bValidTerrain = true;
-							break;
-						}
-					}
-					else if (plotX->getTerrainType() == iI)
+					if (plotX->isAsPeak())
 					{
 						bValidTerrain = true;
 						break;
 					}
+				}
+				else if (bHill)
+				{
+					if (plotX->isHills())
+					{
+						bValidTerrain = true;
+						break;
+					}
+				}
+				else if (plotX->getTerrainType() == iI)
+				{
+					bValidTerrain = true;
+					break;
 				}
 			}
 		}
@@ -20713,32 +20162,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 			//Checks the city plots for a valid terrain
 			bool bHasAndTerrain = false;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			foreach_(const CvPlot* plotX, plots())
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL)
+				if (bPeak)
 				{
-					if (bPeak)
-					{
-						if (plotX->isAsPeak())
-						{
-							bHasAndTerrain = true;
-							break;
-						}
-					}
-					else if (bHill)
-					{
-						if (plotX->isHills())
-						{
-							bHasAndTerrain = true;
-							break;
-						}
-					}
-					else if (plotX->getTerrainType() == iI)
+					if (plotX->isAsPeak())
 					{
 						bHasAndTerrain = true;
 						break;
 					}
+				}
+				else if (bHill)
+				{
+					if (plotX->isHills())
+					{
+						bHasAndTerrain = true;
+						break;
+					}
+				}
+				else if (plotX->getTerrainType() == iI)
+				{
+					bHasAndTerrain = true;
+					break;
 				}
 			}
 			if (!bHasAndTerrain)
@@ -20759,14 +20204,9 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		if (kBuilding.isPrereqOrImprovement(iI))
 		{
 			bRequiresOrImprovement = true;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == iI))
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL && plotX->getImprovementType() == iI)
-				{
-					bHasValidImprovement = true;
-					break;
-				}
+				bHasValidImprovement = true;
 			}
 		}
 	}
@@ -20782,14 +20222,9 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		if (kBuilding.isPrereqOrFeature(iI))
 		{
 			bRequiresOrFeature = true;
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
 			{
-				const CvPlot* plotX = getCityIndexPlot(iJ);
-				if (plotX != NULL && plotX->getFeatureType() == iI)
-				{
-					bHasValidFeature = true;
-					break;
-				}
+				bHasValidFeature = true;
 			}
 		}
 	}
@@ -20810,14 +20245,8 @@ void CvCity::changeFreshWater(int iChange)
 
 		if (bDidHaveFreshWater != hasFreshWater())
 		{
-			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
-			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->updateIrrigated();
-				}
-			}
+			algo::for_each(plots(), bind(CvPlot::updateIrrigated, _1));
+
 			updateFreshWaterHealth();
 		}
 	}
@@ -20982,16 +20411,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORVicinityBonus = false;
 						bool bNeedsORVicinityBonus = false;
 
-						for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrVicinityBonuses())
 						{
-							if (kBuilding.getPrereqOrVicinityBonuses(iJ) != NO_BONUS)
+							bNeedsORVicinityBonus = true;
+							if (hasVicinityBonus(ePrereqBonus))
 							{
-								bNeedsORVicinityBonus = true;
-								if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iJ)))
-								{
-									bHasORVicinityBonus = true;
-									break;
-								}
+								bHasORVicinityBonus = true;
+								break;
 							}
 						}
 
@@ -21044,16 +20470,13 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						bool bHasORBonus = false;
 						bool bNeedsORBonus = false;
 
-						for (int iJ = 0; iJ < kBuilding.getNumPrereqOrBonuses(); iJ++)
+						foreach_(const BonusTypes ePrereqBonus, kBuilding.getPrereqOrBonuses())
 						{
-							if (kBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
+							bNeedsORBonus = true;
+							if (hasBonus(ePrereqBonus))
 							{
-								bNeedsORBonus = true;
-								if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iJ)))
-								{
-									bHasORBonus = true;
-									break;
-								}
+								bHasORBonus = true;
+								break;
 							}
 						}
 
@@ -21156,7 +20579,6 @@ void CvCity::checkBuildings(bool bAlertOwner)
 
 					if (bAlertOwner)
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_CITY_RESTORED_BUILDINGS", getNameKey(), kBuilding.getDescription()),
@@ -21195,7 +20617,6 @@ void CvCity::checkBuildings(bool bAlertOwner)
 						FAssert(false);
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES", kBuilding.getDescription(), getNameKey(), kBuilding.getDescription());
 					}
-					MEMORY_TRACK_EXEMPT();
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, kBuilding.getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 				}
 			}
@@ -21233,30 +20654,6 @@ int CvCity::calculateCorporationHappiness() const
 	return iHappiness;
 }
 
-int CvCity::getExtraYieldTurns() const
-{
-	return m_iExtraYieldTurns;
-}
-
-void CvCity::changeExtraYieldTurns(int iChange)
-{
-	int iOldVal = m_iExtraYieldTurns;
-	CvPlot* pPlot = GC.getMap().plot(getX(), getY());
-
-	m_iExtraYieldTurns += iChange;
-
-	if (iOldVal == -1 && iChange == 1)
-	{
-		changeBaseYieldRate(YIELD_FOOD, -1);
-		pPlot->updateSymbols();
-	}
-	else if (iOldVal == 1 && iChange == -1)
-	{
-		changeBaseYieldRate(YIELD_PRODUCTION, -1);
-		pPlot->updateSymbols();
-	}
-
-}
 
 int CvCity::getLineOfSight() const
 {
@@ -21268,22 +20665,6 @@ void CvCity::changeLineOfSight(int iChange)
 	m_iLineOfSight += iChange;
 }
 
-void CvCity::setExtraYieldTurns(int iNewVal)
-{
-	m_iExtraYieldTurns = iNewVal;
-	CvPlot* pPlot = GC.getMap().plot(getX(), getY());
-
-	if (iNewVal > 0)
-	{
-		changeBaseYieldRate(YIELD_PRODUCTION, 1);
-		pPlot->updateSymbols();
-	}
-	else if (iNewVal < 0)
-	{
-		changeBaseYieldRate(YIELD_FOOD, 1);
-		pPlot->updateSymbols();
-	}
-}
 
 BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 {
@@ -21294,8 +20675,8 @@ BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 		{
 			if (kBuild.isFeatureRemove(eFeature) &&
 				kBuild.getFeatureProduction(eFeature) != 0 &&
-				GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()) &&
-				(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
+				GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()) &&
+				(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech())))
 			{
 				return (BuildTypes)iI;
 			}
@@ -21751,7 +21132,6 @@ void CvCity::setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue)
 		{
 			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) &&*/ GET_PLAYER(getOwner()).isHuman())
 			{
-				MEMORY_TRACK_EXEMPT();
 
 				CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
@@ -21759,7 +21139,6 @@ void CvCity::setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue)
 		}
 		else if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHuman())
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
@@ -21799,7 +21178,7 @@ void CvCity::doInvasion()
 		{
 			foreach_(const CvPlot* adjacentPlot, plot()->adjacent())
 			{
-				bst::optional<CvUnit*> unit = algo::find_if(adjacentPlot->units(), bst::bind(unitCouldInvade, _1, getTeam()));
+				bst::optional<CvUnit*> unit = algo::find_if(adjacentPlot->units(), bind(unitCouldInvade, _1, getTeam()));
 				if (unit)
 				{
 					bTestInvasion = true;
@@ -21824,7 +21203,6 @@ void CvCity::doInvasion()
 				//Alert the invader
 				if (GET_PLAYER(ePlayer).isHuman())
 				{
-					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_INVASION_SUCCESSFUL", getNameKey());
 					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
@@ -21837,7 +21215,6 @@ void CvCity::doInvasion()
 		changeInvasionTimer(-1);
 		if (!isInvaded())
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_INVASION_ENDED", getNameKey());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
@@ -21926,14 +21303,13 @@ void CvCity::doAttack()
 						//	Koshling - changed city defenses to have a 1-in-4 chance of damaging each unit each turn
 						if (pLoopUnit->baseCombatStr() && GC.getGame().getSorenRandNum(4, "City adjacent damage") == 0)
 						{
-							int iDamage = pLoopUnit->currHitPoints();
+							int iDamage = pLoopUnit->getHP();
 							iDamage *= getAdjacentDamagePercent();
 							iDamage /= 100;
 
 							pLoopUnit->changeDamage(iDamage, getOwner());
 							if (!abInformPlayer[pLoopUnit->getOwner()])
 							{
-								MEMORY_TRACK_EXEMPT();
 								abInformPlayer[pLoopUnit->getOwner()] = true;
 								CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNITS_DAMAGED", getNameKey());
 								AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, pLoopUnit->getButton(), GC.getCOLOR_RED(), pLoopUnit->getX(), pLoopUnit->getY(), true, true);
@@ -21955,7 +21331,7 @@ void CvCity::doHeal()
 		UnitVector damagedUnits;
 		// Get the damaged units on our team
 		algo::push_back(
-			damagedUnits, 
+			damagedUnits,
 			plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::getDamage() > 0)
 		);
 		// Randomize them
@@ -22050,7 +21426,7 @@ void CvCity::doCorporation()
 
 			logBBAI("  City (%S) Has Rand Threshold of %d for Corporation %S", getName().GetCString(), iRandThreshold, GC.getCorporationInfo((CorporationTypes)iI).getDescription());
 			int iRand = GC.getCORPORATION_SPREAD_RAND();
-			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 			iRand /= 100;
 			iRand = GC.getGame().getSorenRandNum(iRand, "Corporation Spread");
 			if (iRand < iRandThreshold)
@@ -22064,7 +21440,6 @@ void CvCity::doCorporation()
 					{
 						setHasCorporation((CorporationTypes)iJ, false, false, false);
 
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							ePlayer, false, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(
@@ -22088,7 +21463,7 @@ void CvCity::doCorporation()
 		else if (this != GC.getGame().getHeadquarters((CorporationTypes)iI))
 		{
 			// TODO: Should HQ ever relocate?
-			const int iDiff = 
+			const int iDiff =
 			(
 				GC.getGame().getAverageCorporationInfluence(this, (CorporationTypes)iI)
 				-
@@ -22104,7 +21479,7 @@ void CvCity::doCorporation()
 				const int iRand =
 				(
 					GC.getCORPORATION_SPREAD_RAND()
-					* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()
+					* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
 					/ 100
 				);
 				if (GC.getGame().getSorenRandNum(iRand, "Corporation Decay") < iDiff)
@@ -22124,14 +21499,10 @@ int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 	int iBonusesConsumed = 0;
 	int iNumAvailBonuses = 0;
 	//Influence scales based on the number of resources a corporation consumes
-	for (int iI = 0; iI < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++iI)
+	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 	{
-		BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(iI);
-		if (eBonus != NO_BONUS)
-		{
-			iBonusesConsumed++;
-			iNumAvailBonuses += getNumBonuses(eBonus);
-		}
+		iBonusesConsumed++;
+		iNumAvailBonuses += getNumBonuses(eBonus);
 	}
 
 	if (iNumAvailBonuses > 0)
@@ -22148,15 +21519,11 @@ int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 
 	if (iBonusesConsumed > 0)
 	{
-		for (int iI = 0; iI < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++iI)
+		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
-			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(iI);
-			if (eBonus != NO_BONUS)
+			if (hasBonus(eBonus))
 			{
-				if (hasBonus(eBonus))
-				{
-					iInfluence += (GC.getCORPORATION_RESOURCE_BASE_INFLUENCE() / iBonusesConsumed);
-				}
+				iInfluence += (GC.getCORPORATION_RESOURCE_BASE_INFLUENCE() / iBonusesConsumed);
 			}
 		}
 	}
@@ -22218,13 +21585,9 @@ int CvCity::calculateCorporateTaxes() const
 			}
 
 			int iNumBonuses = 0;
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
-				const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
-				if (NO_BONUS != eBonus)
-				{
-					iNumBonuses += getNumBonuses(eBonus);
-				}
+				iNumBonuses += getNumBonuses(eBonus);
 			}
 
 			iTaxes +=
@@ -22240,9 +21603,9 @@ int CvCity::calculateCorporateTaxes() const
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-			iTaxes *= std::max(0, 100 + GET_PLAYER(getOwner()).getCorporationMaintenanceModifier());
-			iTaxes /= 100;
+			iTaxes = getModifiedIntValue(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
+			// Toffer - Huh, not sure why inflation here reduce corporation tax, does it make sense?
 			iTaxes *= 100;
 			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 
@@ -22280,7 +21643,6 @@ void CvCity::doDisabledPower()
 		changeDisabledPowerTimer(-1);
 		if (getDisabledPowerTimer() == 0)
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_POWER_RESTORED", getNameKey());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), false, false);
@@ -22297,7 +21659,7 @@ void CvCity::doWarWeariness()
 	if (getEventAnger() > 0)
 	{
 		int iTurnCheck = 10;
-		iTurnCheck *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
+		iTurnCheck *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 		iTurnCheck /= 100;
 		if (GC.getGame().getElapsedGameTurns() % iTurnCheck == 0)
 		{
@@ -22457,7 +21819,7 @@ void CvCity::changeNumPopulationEmployed(int iChange)
 	FASSERT_NOT_NEGATIVE(getNumPopulationEmployed())
 }
 
-void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces)
+void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces) const
 {
 	PROFILE_FUNC();
 
@@ -22689,8 +22051,6 @@ void CvCity::clearModifierTotals()
 	m_iHealRate = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
-	m_iPowerGoodHealth = 0;
-	m_iPowerBadHealth = 0;
 	m_iBonusGoodHealth = 0;
 	m_iBonusBadHealth = 0;
 	m_iBuildingGoodHappiness = 0;
@@ -22723,11 +22083,9 @@ void CvCity::clearModifierTotals()
 	m_iNukeModifier = 0;
 	m_iFreeSpecialist = 0;
 	m_iPowerCount = 0;
-	m_iDirtyPowerCount = 0;
 	m_iSpecialistFreeExperience = 0;
 	m_iEspionageDefenseModifier = 0;
 	m_fPopulationgrowthratepercentageLog = 0.0;
-	m_iLostProductionBase = 0;
 	m_iImprovementGoodHealth = 0;
 	m_iImprovementBadHealth = 0;
 	m_iSpecialistGoodHealth = 0;
@@ -22834,6 +22192,7 @@ void CvCity::clearModifierTotals()
 		m_aiTradeYield[iI] = 0;
 		m_aiCorporationYield[iI] = 0;
 		m_aiExtraSpecialistYield[iI] = 0;
+		m_aiExtraYield[iI] = 0;
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -22949,7 +22308,7 @@ void CvCity::recalculateModifiers()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		int	iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
+		const int iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
 
 		if (iSpecialistCount > 0)
 		{
@@ -22974,15 +22333,15 @@ void CvCity::recalculateModifiers()
 
 			// Toffer - Xml changes may have invalidated a building the city have; hence bValid.
 
-			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech((TechTypes)info.getObsoleteTech());
-			bool bValid = 
+			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech(info.getObsoleteTech());
+			bool bValid =
 			(
 				!bObsolete
 				&& // Do we have the building that this may be an extention of?
 				(
 					info.getExtendsBuilding() == -1
 					||
-					getNumRealBuilding((BuildingTypes)info.getExtendsBuilding()) > 0
+					getNumRealBuilding(info.getExtendsBuilding()) > 0
 				)
 			);
 			if (!bValid) // Forget it.
@@ -22994,10 +22353,10 @@ void CvCity::recalculateModifiers()
 
 				if (bObsolete)
 				{
-					const int iObsoletesToBuilding = info.getObsoletesToBuilding();
-					if (iObsoletesToBuilding != -1 && getNumRealBuilding((BuildingTypes)iObsoletesToBuilding) == 0)
+					const BuildingTypes iObsoletesToBuilding = info.getObsoletesToBuilding();
+					if (iObsoletesToBuilding != NO_BUILDING && getNumRealBuilding(iObsoletesToBuilding) == 0)
 					{
-						setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+						setNumRealBuilding(iObsoletesToBuilding, 1);
 					}
 				}
 			}
@@ -23072,7 +22431,6 @@ void CvCity::recalculateModifiers()
 	updateFeatureHealth();
 	updateImprovementHealth();
 	updateFeatureHappiness();
-	updatePowerHealth();
 
 	//ls612: Make Sure to keep the Air Unit capacity
 	changeAirUnitCapacity(GC.getCITY_AIR_UNIT_CAPACITY());
@@ -23233,7 +22591,6 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	}
 	else
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		int	iValue = 0;
 
@@ -23284,12 +22641,11 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 	}
 	else
 	{
-		MEMORY_TRACK_EXEMPT();
 		int	iValue = 0;
 
 		foreach_ (const CvUnit* unit, plot()->units())
 		{
-			unit->getGameObject()->foreachManipulator(bst::bind(unitSources, _1, eProperty, this, &iValue));
+			unit->getGameObject()->foreachManipulator(bind(unitSources, _1, eProperty, this, &iValue));
 		}
 
 		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
@@ -23318,7 +22674,7 @@ static bool unitHasCityOrPlotPropertySources(const CvUnit* pUnit)
 {
 	bool bHasSources;
 
-	pUnit->getGameObject()->foreachManipulator(bst::bind(unitHasSources, _1, &bHasSources));
+	pUnit->getGameObject()->foreachManipulator(bind(unitHasSources, _1, &bHasSources));
 
 	return bHasSources;
 }
@@ -23350,17 +22706,23 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	int iSum = 0;
 	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
+		if (pSource->isActive(getGameObject()))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
 	}
 	// Add sources from the player object that have an effect on cities
-	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(bst::bind(sumCitySources, _1, this, &iSum, eProperty));
+	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(bind(sumCitySources, _1, this, &iSum, eProperty));
 
 	return iSum;
 }
 
+int CvCity::getPropertyValue(PropertyTypes eProperty)
+{
+	return getProperties()->getValueByProperty(eProperty);
+}
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 //TB Combat Mods (Buildings) begin
 int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 {
@@ -23513,11 +22875,6 @@ int CvCity::getTotalTechOutbreakLevelChange(BuildingTypes eBuilding) const
 	return iTotalTechOutbreakLevelChange;
 }
 
-int CvCity::getPropertyValue(PropertyTypes eProperty)
-{
-	return getProperties()->getValueByProperty(eProperty);
-}
-
 int CvCity::getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const
 {
 	int iTotal = 0;
@@ -23605,7 +22962,7 @@ int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = ::plotCity(getX(), getY(), iI);
+		const CvPlot* pLoopPlot = ::plotCity(getX(), getY(), iI);
 		if (isWorkingPlot(iI))
 		{
 			iWorkedTileCommunicability += pLoopPlot->getCommunicability(eAfflictionLine, true, false, false);
@@ -23617,7 +22974,7 @@ int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
-		BonusTypes eBonus = (BonusTypes)iI;
+		const BonusTypes eBonus = (BonusTypes)iI;
 		iAccessVolumeBonusCommunicability += (getNumBonuses(eBonus) * GC.getBonusInfo(eBonus).getAfflictionCommunicabilityType(eAfflictionLine, false, false, true).iModifier);
 	}
 
@@ -23628,24 +22985,21 @@ int CvCity::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 {
 	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
 	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	BuildingTypes eBuilding;
-	CvWString szBuffer;
 	int iLowestLinePriority = MAX_INT;
 
-
-	if (GC.getPromotionLineInfo(eAfflictionLine).getObsoleteTech() != NO_TECH)
+	if (kAffliction.getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionLineInfo(eAfflictionLine).getObsoleteTech())))
+		if (GET_TEAM(getTeam()).isHasTech(kAffliction.getObsoleteTech()))
 		{
 			return;
 		}
 	}
 
-	if (GC.getPromotionLineInfo(eAfflictionLine).getPrereqTech() != NO_TECH)
+	if (kAffliction.getPrereqTech() != NO_TECH)
 	{
-		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionLineInfo(eAfflictionLine).getPrereqTech())))
+		if (!GET_TEAM(getTeam()).isHasTech(kAffliction.getPrereqTech()))
 		{
 			return;
 		}
@@ -23677,11 +23031,11 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 
 	if (iLowestLinePriority <= 1)
 	{
-		//we do not have an outbreak at all and must check to see if we're exposed.  
+		//we do not have an outbreak at all and must check to see if we're exposed.
 		//If not exposed, we check canconstruct with a fair amount of prerequisite details.  The base likelihood is used for the check.
 		//Otherwise, many canconstruct factors won't matter.  And the degree to which we are exposed will make a difference in the likelihood.
 		bDoCheck = canConstruct(eBuilding, false, false, true/*bIgnoreCost - must be true for affliction checks*/, false, false, NO_TECH, 0, true, bExposed);
-		//<-Add bools for bAffliction and bExposed - bAffliction would be true and bExposed would be bExposed			
+		//<-Add bools for bAffliction and bExposed - bAffliction would be true and bExposed would be bExposed
 	}
 	else
 	{
@@ -23710,9 +23064,7 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 
 	if (iOutbreakRollResult < iChancetoOutbreak)
 	{
-		MEMORY_TRACK_EXEMPT();
-
-		szBuffer = gDLL->getText("TXT_KEY_MISC_OUTBREAK", getNameKey(), GC.getBuildingInfo(eBuilding).getDescription());
+		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OUTBREAK", getNameKey(), kBuilding.getDescription());
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 		setNumRealBuilding(eBuilding, 1);
 	}
@@ -23723,7 +23075,6 @@ void CvCity::doOutbreakCheck(PromotionLineTypes eAfflictionLine)
 void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 {
 	const PropertyTypes ePropertyType = GC.getPromotionLineInfo(eAfflictionLine).getPropertyType();
-	const CvPropertyInfo& kInfo = GC.getPropertyInfo(ePropertyType);
 	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	int iHighestLinePriority = 0;
 	BuildingTypes eBuilding;
@@ -23755,7 +23106,6 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 
 	if (iOvercomeRollResult < iChancetoOvercome)
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_CITY", getNameKey(), GC.getBuildingInfo(eBuilding).getDescription());
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
@@ -23797,7 +23147,6 @@ void CvCity::doOvercomeCheck(PromotionLineTypes eAfflictionLine)
 	//						iOvercomeRollResult = GC.getGame().getSorenRandNum(100, "Overcome");
 	//						if (iOvercomeRollResult < iChancetoOvercome)
 	//						{
-	//							MEMORY_TRACK_EXEMPT();
 
 	//							szBuffer = DLL_SERIALIZE(gDLL->getText("TXT_KEY_MISC_OVERCOME_CITY", getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription()));
 	//							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
@@ -23828,6 +23177,7 @@ void CvCity::setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes 
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAffliction)
 	m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] = iValue;
 }
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 int CvCity::getUnitCombatProductionModifier(UnitCombatTypes eIndex) const
 {
@@ -24013,15 +23363,15 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 
 void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit) const
 {
-	for (int promoTypeIdx = 0; promoTypeIdx < building.getNumFreePromoTypes(); ++promoTypeIdx)
+	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
 	{
-		const FreePromoTypes& freePromoType = building.getFreePromoType(promoTypeIdx);
 		if (freePromoType.ePromotion != NO_PROMOTION &&
 			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
 				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
-				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
+				//freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
+				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
 			}
@@ -24064,12 +23414,10 @@ bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 	return true;
 }
 
-//TB Combat Mods (Buildings) end
-//TB Traits begin
-int CvCity::getModifiedBaseYieldRate(YieldTypes eIndex) const
+
+int CvCity::getBaseYieldRate(YieldTypes eIndex) const
 {
-	int iModifiedYield = getBaseYieldRate(eIndex);
-	iModifiedYield += GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
+	int iModifiedYield = getPlotYield(eIndex) + GET_PLAYER(getOwner()).getFreeCityYield(eIndex);
 
 	if (GET_PLAYER(getOwner()).isGoldenAge() && GET_PLAYER(getOwner()).getGoldenAgeYield(eIndex) > 0)
 	{
@@ -24077,17 +23425,18 @@ int CvCity::getModifiedBaseYieldRate(YieldTypes eIndex) const
 	}
 	return iModifiedYield;
 }
-//TB Traits end
-//TB Building Tags
-//Team Project (3)
+
+
 int CvCity::getExtraLocalCaptureProbabilityModifier() const
 {
 	return m_iExtraLocalCaptureProbabilityModifier;
 }
+
 void CvCity::setExtraLocalCaptureProbabilityModifier(int iValue)
 {
 	m_iExtraLocalCaptureProbabilityModifier = iValue;
 }
+
 void CvCity::changeExtraLocalCaptureProbabilityModifier(int iChange)
 {
 	m_iExtraLocalCaptureProbabilityModifier += iChange;
@@ -24324,28 +23673,22 @@ void CvCity::updateExtraTechSpecialistHappiness()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
+		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
 		iBaseSpecialistCount += specialistCount(eSpecialist);
-		int iSpecificSpecialistCount = specialistCount(eSpecialist);
+		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
 		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
-			TechTypes eTech = ((TechTypes)iJ);
+			const TechTypes eTech = ((TechTypes)iJ);
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHappinessTypes(eTech, eSpecialist);
-				for (int iK = 0; iK < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iK++)
-				{
-					if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iK).eTech == eTech)
-					{
-						iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iK).iModifier;
-					}
-				}
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
 			}
 		}
 	}
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHappiness(eTech);
@@ -24483,29 +23826,22 @@ void CvCity::updateExtraTechSpecialistHealth()
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
-		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
+		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
 		iBaseSpecialistCount += specialistCount(eSpecialist);
-		int iSpecificSpecialistCount = specialistCount(eSpecialist);
+		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
 		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
-			TechTypes eTech = ((TechTypes)iJ);
+			const TechTypes eTech = ((TechTypes)iJ);
 			if (GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHealthTypes(eTech, eSpecialist);
-				for (int iK = 0; iK < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iK++)
-				{
-					TechTypes kTech = GC.getSpecialistInfo(eSpecialist).getTechHealthType(iK).eTech;
-					if (kTech == eTech)
-					{
-						iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealthType(iK).iModifier;
-					}
-				}
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
 			}
 		}
 	}
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
 			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHealth(eTech);
@@ -24594,9 +23930,7 @@ void CvCity::changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldT
 	{
 		m_ppaaiLocalSpecialistExtraYield[eSpecialist][eYield] += iChange;
 	}
-
 	updateExtraSpecialistYield();
-
 	AI_setAssignWorkDirty(true);
 }
 
@@ -24627,10 +23961,7 @@ int CvCity::specialistCount(SpecialistTypes eSpecialist) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 
-	int iTotal = getSpecialistCount(eSpecialist);
-	iTotal += getFreeSpecialistCount(eSpecialist);
-
-	return iTotal;
+	return getSpecialistCount(eSpecialist) + getFreeSpecialistCount(eSpecialist);
 }
 
 int CvCity::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
@@ -24638,10 +23969,7 @@ int CvCity::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) cons
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
 
-	int iTotal = GET_PLAYER(getOwner()).specialistYield(eSpecialist, eYield);
-	iTotal += getLocalSpecialistExtraYield(eSpecialist, eYield);
-
-	return iTotal;
+	return GET_PLAYER(getOwner()).specialistYield(eSpecialist, eYield) + getLocalSpecialistExtraYield(eSpecialist, eYield);
 }
 
 int CvCity::specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const
@@ -24972,7 +24300,6 @@ void CvCity::doPropertyUnitSpawn()
 						{
 							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 							{
-								MEMORY_TRACK_EXEMPT();
 
 								const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
 								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
@@ -24980,7 +24307,6 @@ void CvCity::doPropertyUnitSpawn()
 						}
 						else if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 						{
-							MEMORY_TRACK_EXEMPT();
 
 							const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
 							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);

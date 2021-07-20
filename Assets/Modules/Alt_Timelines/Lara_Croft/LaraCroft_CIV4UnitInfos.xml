@@ -36,7 +36,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LARA_CROFT</Description>
 			<Civilopedia>TXT_KEY_UNIT_LARA_CROFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LARA_CROFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bRivalTerritory>1</bRivalTerritory>

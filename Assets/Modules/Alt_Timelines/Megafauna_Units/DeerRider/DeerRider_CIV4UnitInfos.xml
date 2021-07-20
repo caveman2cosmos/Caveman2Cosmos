@@ -38,7 +38,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DEERRIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DEERRIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DEERRIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -172,7 +171,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DEER_ARCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DEER_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DEER_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -308,7 +306,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DEER_LIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_DEER_LIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DEER_LIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

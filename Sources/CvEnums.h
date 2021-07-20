@@ -243,7 +243,7 @@ enum InterfaceModeTypes
 	INTERFACEMODE_RANGE_ATTACK,
 	INTERFACEMODE_AIRSTRIKE,
 	INTERFACEMODE_REBASE,
-	INTERFACEMODE_PYTHON_PICK_PLOT,
+	INTERFACEMODE_DOTMAP,
 	INTERFACEMODE_SAVE_PLOT_NIFS,
 
 	INTERFACEMODE_AIRBOMB1,
@@ -254,15 +254,9 @@ enum InterfaceModeTypes
 	INTERFACEMODE_BOMBARD,
 	INTERFACEMODE_FENGAGE,
 
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	INTERFACEMODE_GO_TO_SENTRY,
 #endif
-// BUG - Sentry Actions - end
-	// < M.A.D. Nukes Start >
-	INTERFACEMODE_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
-
 	INTERFACEMODE_SHADOW_UNIT,
 
 	NUM_INTERFACEMODE_TYPES
@@ -708,6 +702,11 @@ enum MapTypes
 	MAP_HYPERSPACE,
 
 	NUM_MAPS
+};
+
+enum MapCategoryTypes
+{
+	NO_MAPCATEGORY = -1,
 };
 
 // This is our current relationship with each
@@ -1698,9 +1697,7 @@ enum MissionTypes
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
-	// < M.A.D. Nukes Start >
-	MISSION_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
+
 	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,
@@ -1870,12 +1867,10 @@ enum ControlTypes
 	CONTROL_PING,
 	CONTROL_SIGN,
 	CONTROL_GRID,
-	CONTROL_BARE_MAP,
 	CONTROL_YIELDS,
 	CONTROL_RESOURCE_ALL,
 	CONTROL_UNIT_ICONS,
 	CONTROL_GLOBELAYER,
-	CONTROL_SCORES,
 	CONTROL_LOAD_GAME,
 	CONTROL_OPTIONS_SCREEN,
 	CONTROL_RETIRE,
@@ -3122,7 +3117,6 @@ enum GlobeLayerTypes
 	GLOBE_LAYER_RESOURCE,
 	GLOBE_LAYER_RELIGION,
 	GLOBE_LAYER_CULTURE,
-	GLOBE_LAYER_DEBUG,
 
 	NUM_GLOBE_LAYER_TYPES
 };
@@ -3174,35 +3168,15 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-enum RankingTypes
-{
-	RANKING_POWER,
-	RANKING_POPULATION,
-	RANKING_LAND,
-	RANKING_CULTURE,
-	RANKING_ESPIONAGE,
-	RANKING_WONDERS,
-	RANKING_TECH,
-	NUM_RANKINGS
-};
-
 enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3287,9 +3261,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes

@@ -5,17 +5,12 @@
 			<Type>BONUS_HIT_ANIMATED_MOVIE</Type>
 			<Description>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIT_MOVIES</ArtDefineTag>
 			<TechReveal>TECH_ANIMATION</TechReveal>
 			<TechCityTrade>TECH_ANIMATION</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

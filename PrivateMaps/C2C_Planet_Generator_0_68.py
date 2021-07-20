@@ -107,10 +107,8 @@ v. 0.41
 """
 
 from CvPythonExtensions import *
-import CvUtil
 from CvUtil import *
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import *
 import math
 import sys
 import gc
@@ -118,7 +116,7 @@ try:
 	import cPickle as pickle
 except:
 	import pickle
-	
+
 
 VERSION = "0_68"
 
@@ -3738,7 +3736,7 @@ def civFilePath():
 		return folder
 	except:
 		return ""
-			
+
 #----------------------------------------------
 """Other functions"""
 #----------------------------------------------

@@ -6,12 +6,10 @@
 ## Copyright (c) 2008 The BUG Mod.
 
 from CvPythonExtensions import *
-import CvUtil
 
-# BUG - Options - end
+# BUG Options
 import BugCore
 TechWindowOpt = BugCore.game.TechWindow
-# BUG - Options - end
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
@@ -243,21 +241,14 @@ class CvTechSplashScreen:
 			       self.X_ALLOWS_PANELSIR+self.iMarginSpace, self.Y_ALLOWS_PANELSIR - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for j in range(GC.getNumTechInfos()):
-			for k in range(GC.getDefineINT("NUM_OR_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqOrTechs(k)
-				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqAndTechs(k)
-				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
+			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
+				if iPrereq == self.iTech:
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
+				if iPrereq == self.iTech:
+					screen.attachImageButton(panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
 #---Eingef�gt ENDE ------------------------------------------------
-		# Allows
-		# szAllowsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_ALLOWS", ()) + ":" + u"</font>"
-		# szAllowsTitleWidget = "AllowsTitle"
-		# screen.setText(szAllowsTitleWidget, "", szAllowsTitleDesc, 1<<0,
-		# 	       self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Units Enabled
 		szUnitsTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":" + u"</font>"

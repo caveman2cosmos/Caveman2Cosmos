@@ -113,8 +113,8 @@ def onCityAcquired(argsList):
 ### set Partisan Units ###
 ##########################
 
-						ft_forest = GC.getInfoTypeForString('FEATURE_FOREST')
-						ft_jungle = GC.getInfoTypeForString( 'FEATURE_JUNGLE' )
+						ft_forest = GC.getFEATURE_FOREST()
+						ft_jungle = GC.getFEATURE_JUNGLE()
 						it_fort = GC.getInfoTypeForString("IMPROVEMENT_FORT")
 						# Check all city radius plots
 						iX = CyCity.getX()
@@ -309,12 +309,10 @@ def onCityAcquired(argsList):
 
 								# Find all EnemyUnits near the partisan
 								lEnemyUnits = []
-								for iiXLoop in range(iiX - 1, iiX + 2, 1):
-									for iiYLoop in range(iiY - 1, iiY + 2, 1):
-										CyPlotX = CyMap().plot(iiXLoop, iiYLoop)
-										if CyPlotX.isVisibleEnemyUnit(iOwnerOld):
-											for i in range(CyPlotX.getNumUnits()):
-												lEnemyUnits.append(CyPlotX.getUnit(i))
+								for CyPlotX in CyCity.plot().rect(1, 1):
+									if CyPlotX.isVisibleEnemyUnit(iOwnerOld):
+										for CyUnitX in CyPlotX.units():
+											lEnemyUnits.append(CyUnitX)
 
 								if lEnemyUnits:
 
@@ -333,7 +331,7 @@ def onCityAcquired(argsList):
 										iRand = GAME.getSorenRandNum(16, "rand damage") + 15
 
 										# Check to not kill the unit
-										iMaxDamage = ppUnit.currHitPoints() - 1
+										iMaxDamage = ppUnit.getHP() - 1
 										if iMaxDamage:
 											if iRand > iMaxDamage:
 												iRand = iMaxDamage

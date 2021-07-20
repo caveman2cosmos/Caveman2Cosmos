@@ -52,7 +52,6 @@
 			<iNoTechTradeModifier>150</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>10</iStartingLocPercent>
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
@@ -219,7 +218,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -228,7 +227,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -312,7 +311,6 @@
 			<iNoTechTradeModifier>100</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>20</iStartingLocPercent>
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
@@ -513,7 +511,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -522,7 +520,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -599,7 +597,6 @@
 			<iNoTechTradeModifier>50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>30</iStartingLocPercent>
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
@@ -801,7 +798,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -873,7 +870,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>40</iStartingLocPercent>
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
@@ -1107,7 +1103,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -1176,7 +1172,6 @@
 			<iNoTechTradeModifier>-10</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
@@ -1488,7 +1483,6 @@
 			<iNoTechTradeModifier>-20</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>60</iStartingLocPercent>
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
@@ -1810,7 +1804,6 @@
 			<iNoTechTradeModifier>-30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>70</iStartingLocPercent>
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
@@ -2164,7 +2157,6 @@
 			<iNoTechTradeModifier>-40</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>80</iStartingLocPercent>
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
@@ -2509,7 +2501,6 @@
 			<iNoTechTradeModifier>-50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>90</iStartingLocPercent>
 			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
@@ -2880,7 +2871,6 @@
 			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>100</iStartingLocPercent>
 			<iAnimalAttackProb>90</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>

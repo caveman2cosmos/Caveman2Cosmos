@@ -7,10 +7,7 @@
 
 from CvPythonExtensions import *
 import BugUtil
-import CvUtil
-import ScreenInput
 from CvScreenEnums import *
-import CvReplayScreen
 import CvScreensInterface
 import re
 
@@ -100,7 +97,7 @@ class CvHallOfFameScreen:
 			self.iMultiplayerFilter = 0
 		self.iSortBy = SORT_BY_NORMALIZED_SCORE
 
-		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
+		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_WORD_EXIT", ()).upper() + u"</font>"
 
 		self.hallOfFame = CyHallOfFameInfo()
 		self.hallOfFame.loadReplays()
@@ -186,22 +183,8 @@ class CvHallOfFameScreen:
 		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
 
-		# Climate dropdown initialization
-		#screen.addDropDownBoxGFC(self.CLIMATE_DROPDOWN_ID, xDropDown, yDropDown, self.DROPDOWN_WIDTH, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		#screen.addPullDownString(self.CLIMATE_DROPDOWN_ID, localText.getText("TXT_KEY_ALL_CLIMATES", ()), -1, -1, True)
-		#for i in range(gc.getNumClimateInfos()):
-		#	screen.addPullDownString(self.CLIMATE_DROPDOWN_ID, gc.getClimateInfo(i).getDescription(), i, i, False)
-		#iNumDropDowns += 1
-
 		#yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		#xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
-
-		# Sea Level dropdown initialization
-		#screen.addDropDownBoxGFC(self.SEALEVEL_DROPDOWN_ID, xDropDown, yDropDown, self.DROPDOWN_WIDTH, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		#screen.addPullDownString(self.SEALEVEL_DROPDOWN_ID, localText.getText("TXT_KEY_ALL_SEA_LEVELS", ()), -1, -1, True)
-		#for i in range(gc.getNumSeaLevelInfos()):
-		#	screen.addPullDownString(self.SEALEVEL_DROPDOWN_ID, gc.getSeaLevelInfo(i).getDescription(), i, i, False)
-		#iNumDropDowns += 1
 
 		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X

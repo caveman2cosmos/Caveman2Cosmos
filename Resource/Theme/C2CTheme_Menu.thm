@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Menu.thm
 Content		:	Civ4 - GMenu and GMenuBar control theme
@@ -10,7 +10,7 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 **********************************************************************/
 
 
-// *** Main Menu control namespace 
+// *** Main Menu control namespace
 
 with GFC_Control_Menu
 {
@@ -90,25 +90,25 @@ with GFC_Control_Menu
 			.Inner_InactiveSelect				=	GFC_Control_Color_Inner_InactiveSelect;
 			.Inner_Disable						=	GFC_Control_Color_Inner_Disable;
 			.Inner_DisableSelect				=	GFC_Control_Color_Inner_DisableSelect;
-													
+
 			.Text_Default						=	GFC_Control_Color_Text_Default;  //GFC_Control_Color_Text_Default;
 			.Text_Select						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 			.Text_InactiveSelect				=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 			.Text_Disable						=	GFC_Control_Color_Text_Disable;
 			.Text_DisableSelect					=	GFC_Control_Color_Text_Disable;
-													
+
 			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;		//GFC_Control_Color_TextShadow_Default;
 			.TextShadow_Select					=	GFC_Control_Color_TextShadow_Default;
 			.TextShadow_InactiveSelect			=	GFC_Control_Color_TextShadow_Default;
 			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
 			.TextShadow_DisableSelect			=	GFC_Control_Color_TextShadow_Disable;
-													
+
 			.Image_Default						=	GFC_Control_Color_Image_Default;
 			.Image_Select						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 			.Image_InactiveSelect				=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 			.Image_Disable						=	GFC_Control_Color_Image_Disable;
 			.Image_DisableSelect				=	GFC_Control_Color_Image_DisableSelect;
-														
+
 			// Toggle item colors (check & radio items)
 			.ToggleImage_Default				=	GFC_Control_Color_Text_Default;
 			.ToggleImage_Select					=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
@@ -254,7 +254,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
 				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
 				DestCombine		=	GColorCombine(BlendSource,Disable);
 				FactorCombine	= 	GColorCombine(Modulate,Modulate);
-				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 				Image			=	GBitmap("../../../../Resource/Civ4/menu_bg_TB.tga", HVGrid, 1, 1, 0, 0);
 				Margin			=	GRectMargin(2,2,2,2);
 				Indent			=	GRectMargin(1,4,1,4);
@@ -266,7 +266,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
 				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
 				DestCombine		=	GColorCombine(BlendSource,Disable);
 				FactorCombine	= 	GColorCombine(Modulate,Modulate);
-				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
 				Image			=	GBitmap("../../../../Resource/Civ4/menu_bg_LR.tga", HVGrid, 1, 1, 0, 0);
 				Margin			=	GRectMargin(5,30,5,30);
 				Indent			=	GRectMargin(1,6,1,6);
@@ -286,9 +286,9 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
 				Image			= 	GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 1);
 				Margin			= 	GRectMargin(6,6,6,6);
 			}
-			layer					
-			{					
-				LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+			layer
+			{
+				LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 															GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 				Image			= 	GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 2);
 				Margin			= 	GRectMargin(6,6,6,6);
@@ -301,7 +301,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
 		.Full_Inactive				=	.Full_Default;
 		.Full_InactiveDisable		=	.Full_Disable;
 		.Full_Winoff				=	.Full_Default;
-		.Full_WinoffDisable			=	.Full_Disable;	
+		.Full_WinoffDisable			=	.Full_Disable;
 	}
 	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_DefaultBorder_Style;
 	map GFC_Control								=	GFC_Control_DefaultBorder_Style;
@@ -311,7 +311,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
 style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 {
 	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
-	
+
 	GFC_Control_Table_Flag_NoInnerBorder		=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
 	GFC_Control_Table_Flag_NoInnerFill			=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERFILL);
 
@@ -327,7 +327,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 	{
 		.StyleId_Table		=	GPropertyId(SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style);
 		.StyleId_Border		=	GPropertyId(SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style);
-	
+
 		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_Inner
 		{
 			.Default
@@ -335,7 +335,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 				layer
 				{
 					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG; 
+					CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
 				}
 				layer
 				{
@@ -361,23 +361,23 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 				{
 					DestCombine 	=	GColorCombine(BlendSource,Disable);
 					Center			=	GBitmap("../../../../Resource/Civ4/menu_arrow.tga", Vertical, 3, 0);
-				}				
-			}					
-			.Select					
-			{					
-				layer				
-				{				
+				}
+			}
+			.Select
+			{
+				layer
+				{
 					DestCombine 	=	GColorCombine(BlendSource,Disable);
 					FactorCombine	= 	GColorCombine(Modulate,Modulate);
 					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
 					Center			=	GBitmap("../../../../Resource/Civ4/menu_arrow.tga", Vertical, 3, 1);
-				}				
-			}					
+				}
+			}
 			.Submenuselect			=	.Select;
-			.Disable				
-			{					
-				layer				
-				{				
+			.Disable
+			{
+				layer
+				{
 					DestCombine 	=	GColorCombine(BlendSource,Disable);
 					FactorCombine	= 	GColorCombine(Modulate,Modulate);
 					FactorColor		= 	GFC_Control_Color_Text_Disable;
@@ -386,16 +386,16 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 			}
 			.DisableSelect			=	.Disable;
 		}
-		
-		
+
+
 		// Item skins
-		
+
 		// String item backgrounds
 		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_TextItem
 		{
 			.Default
 			{
-				layer 
+				layer
 				{
 					LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_NOTVISIBLE);
 				}
@@ -409,7 +409,7 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 					FactorColor						= SF_CtrlTheme_Civ4_Control_Color_Select;
 					Image							= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
 					Margin							= GRectMargin(48,0,48,0);
-				}	
+				}
 			}
 			.Submenuselect			=	.Select;
 			.Disable				=	.Default;
@@ -422,12 +422,12 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 					FactorColor						= SF_CtrlTheme_Civ4_Control_Color_DisableSelect;
 					Image							= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
 					Margin							= GRectMargin(48,0,48,0);
-				}	
+				}
 			}
 		}
-		
+
 		// Separator items
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_SeparatorItem
 		{
 			.Default
@@ -439,12 +439,12 @@ style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
 					Image			= GBitmap("../../../../Resource/Civ4/separator_h.tga", HVGrid, 1, 1, 0, 0);
 					Margin			= GRectMargin(48,0,48,0);
 				}
-			}		
+			}
 			.Disable				= .Default;
 		}
-		
-		
-		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_DefaultMenu_Style;		
+
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_DefaultMenu_Style;
 		map GFC_CtrlTheme_Bitmap_Control_Menu		=	GFC_Control_DefaultMenu_Style;
 		map GFC_Control								=	GFC_Control_DefaultMenu_Style;
 	}
@@ -640,7 +640,7 @@ with GFC_Control_MenuBar
 style SF_CtrlTheme_Civ4_Control_MenuBar_Standard_Table_Style
 {
 	GFC_Control_Flag_Transparent			=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
-	
+
 	GFC_Control_Table_Flag_NoInnerBorder	=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
 	GFC_Control_Table_Flag_NoInnerFill		=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERFILL);
 
@@ -664,7 +664,7 @@ style SF_CtrlTheme_Civ4_Control_MenuBar_Standard_Table_Style
 		{
 			.Default
 			{
-				layer 
+				layer
 				{
 					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_NOTVISIBLE);
 				}

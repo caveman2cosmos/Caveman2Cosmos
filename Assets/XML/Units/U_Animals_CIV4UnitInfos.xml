@@ -34,7 +34,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -149,7 +148,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_AFRICANGREY</Description>
 			<Civilopedia>TXT_KEY_UNIT_AFRICANGREY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -168,6 +166,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -289,7 +289,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_AFRICAN_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_AFRICAN_PENGUIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -393,7 +392,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_ANIMAL_JAGUAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -538,7 +536,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_ANTEATER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANTEATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -687,7 +684,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ARCTICFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARCTICFOX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -824,7 +820,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_ARMADILLO</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARMADILLO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -974,7 +969,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ASIANBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASIANBEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1108,7 +1102,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BABIRUSA</Description>
 			<Civilopedia>TXT_KEY_UNIT_BABIRUSA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1281,7 +1274,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BADGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BADGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1371,7 +1363,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_BALLPYTHON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLPYTHON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1505,7 +1496,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BARBARYAPE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARBARYAPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1612,7 +1602,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_BARNOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARNOWL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1708,7 +1697,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_BARREDOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARREDOWL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1838,7 +1826,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_BROWN_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1993,7 +1980,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BEAVER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2136,7 +2122,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BELUGA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2269,7 +2254,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BENGALTIGER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2416,7 +2400,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BISON</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2538,7 +2521,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BLACKBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2669,7 +2651,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BOAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2827,7 +2808,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BONGO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2969,7 +2949,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BOOBY</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOOBY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3096,7 +3075,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3233,7 +3211,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3389,7 +3366,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAMEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3522,7 +3498,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAPUCHIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPUCHIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3638,7 +3613,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAPYBARA</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPYBARA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3791,7 +3765,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CARIBOU</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3915,7 +3888,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CASSOWARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4044,7 +4016,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAVE_BEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4156,7 +4127,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4301,7 +4271,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CHEETAH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4444,7 +4413,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CHIMPANZEE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHIMPANZEE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4562,7 +4530,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_COBRA</Description>
 			<Civilopedia>TXT_KEY_UNIT_COBRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4694,7 +4661,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_COD</Description>
 			<Civilopedia>TXT_KEY_UNIT_COD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4827,7 +4793,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_COW</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4952,7 +4917,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CRAB</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4977,6 +4941,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -5080,7 +5046,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_CROW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5182,7 +5147,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CUSCUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_CUSCUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5289,7 +5253,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DARTFROG</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARTFROG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5404,7 +5367,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_DESERT_TORTOISE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5528,7 +5490,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DHOLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DHOLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5663,7 +5624,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DINGO</Description>
 			<Civilopedia>TXT_KEY_UNIT_DINGO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5788,7 +5748,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DIREWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIREWOLF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5931,7 +5890,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DOLPHIN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6039,7 +5997,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DONKEY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6160,7 +6117,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DUCK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6286,7 +6242,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_DUGONG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6303,12 +6258,12 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
@@ -6392,7 +6347,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_EAGLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6507,7 +6461,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EAGLE_BALD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EAGLE_BALD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6641,7 +6594,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ELEPHANT_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6776,7 +6728,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ELEPHANT_ASIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6902,7 +6853,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_EMU</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7022,7 +6972,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_EWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_EWOLF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7152,7 +7101,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_FENNECFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_FENNECFOX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7277,7 +7225,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_FLAMINGO</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLAMINGO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7402,7 +7349,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GALAPAGOS_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_PENGUIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7501,7 +7447,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_GALAPAGOS_TORTOISE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_TORTOISE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7591,7 +7536,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_GATOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7720,7 +7664,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_GATOR_ASIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7855,7 +7798,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GAZELLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GAZELLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7974,7 +7916,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GELADA</Description>
 			<Civilopedia>TXT_KEY_UNIT_GELADA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8097,7 +8038,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GEMSBOK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8207,7 +8147,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GERENUK</Description>
 			<Civilopedia>TXT_KEY_UNIT_GERENUK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8328,7 +8267,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GHARIAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8451,7 +8389,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_GIANT_SQUID</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIANT_SQUID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8466,6 +8403,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_SIZE_SMALL</UnitCombatTargetType>
@@ -8573,7 +8511,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIRAFFE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8687,7 +8624,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GLYPTO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8804,7 +8740,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GORILLA</Description>
 			<Civilopedia>TXT_KEY_UNIT_GORILLA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8926,7 +8861,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GREATWHITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GREATWHITE_SHARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9026,7 +8960,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_GRIZZLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIZZLY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9129,7 +9062,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GROUNDSLOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_GROUNDSLOTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9260,7 +9192,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GUANACO</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUANACO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9397,7 +9328,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GULL</Description>
 			<Civilopedia>TXT_KEY_UNIT_GULL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9487,7 +9417,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_HAAST_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAAST_EAGLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9597,7 +9526,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_HAMMERHEAD</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAMMERHEAD_SHARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9716,7 +9644,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_HARPYEAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HARPYEAGLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9844,7 +9771,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_HAWK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9979,7 +9905,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HIPPO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10107,7 +10032,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PYGMYHIPPO</Description>
 			<Civilopedia>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10219,7 +10143,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HORNEDOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORNEDOWL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10375,8 +10298,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HORSE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_HORSE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10501,7 +10423,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HUMPBACK_WHALE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUMPBACK_WHALE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10618,7 +10539,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HYENA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10732,7 +10652,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_IBEX</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10834,7 +10753,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IGUANA</Description>
 			<Civilopedia>TXT_KEY_UNIT_IGUANA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10946,7 +10864,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_IMPALA</Description>
 			<Civilopedia>TXT_KEY_UNIT_IMPALA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11057,7 +10974,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_KANGAROO_GREY</Description>
 			<Civilopedia>TXT_KEY_UNIT_KANGAROO_GREY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11180,7 +11096,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_KANGAROO_RED</Description>
 			<Civilopedia>TXT_KEY_UNIT_KANGAROO_RED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11281,7 +11196,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_KOALA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOALA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11399,7 +11313,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_KOMODO_DRAGON</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOMODO_DRAGON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11545,7 +11458,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_KOOKABURRA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOOKABURRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11678,7 +11590,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_LEMUR</Description>
 			<Civilopedia>TXT_KEY_UNIT_LEMUR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11793,7 +11704,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_LION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11914,7 +11824,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_LIZARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIZARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12003,7 +11912,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_LOCUST</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOCUST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOCUST_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12028,6 +11936,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12075,7 +11985,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_LOCUST_HUGE_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOCUST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOCUST_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12100,6 +12009,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12147,7 +12058,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_LOCUST_LARGE_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOCUST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOCUST_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12172,6 +12082,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12219,7 +12131,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_LOCUST_SMALL_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOCUST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOCUST_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12244,6 +12155,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -12301,7 +12214,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_LOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12412,7 +12324,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_LYNX</Description>
 			<Civilopedia>TXT_KEY_UNIT_LYNX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12533,7 +12444,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MACAW</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACAW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12667,7 +12577,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MACKEREL</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACKEREL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12773,7 +12682,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12866,7 +12774,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MANEDWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANEDWOLF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13004,7 +12911,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MANDRILL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13122,7 +13028,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_RAY_MANTA</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_MANTA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13228,7 +13133,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MARLIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARLIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13347,7 +13251,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MINKIE_WHALE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MINKIE_WHALE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13362,6 +13265,7 @@
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<bRenderBelowWater>1</bRenderBelowWater>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
@@ -13456,7 +13360,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MOA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13569,7 +13472,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MONITOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_NILE_MONITOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13689,7 +13591,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MOOSE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13803,7 +13704,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MOUFLON</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOUFLON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13924,7 +13824,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_MUSKOX</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14043,7 +13942,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_NARWHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_NARWHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14156,7 +14054,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_NILECROC</Description>
 			<Civilopedia>TXT_KEY_UNIT_NILECROC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14293,7 +14190,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_NUMBAT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14390,7 +14286,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_OKAPI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14485,7 +14380,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_OPOSSUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_OPOSSUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14575,7 +14469,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_ORANGUTAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14691,7 +14584,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ORCA</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORCA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14805,7 +14697,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_OSTRICH</Description>
 			<Civilopedia>TXT_KEY_UNIT_OSTRICH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14918,7 +14809,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_OXPECKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_OXPECKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15020,7 +14910,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_PANDA_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANDA_BEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15130,7 +15019,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_PANTHER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15222,7 +15110,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_PARROT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PARROT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15241,6 +15128,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -15324,7 +15213,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_PEACOCK</Description>
 			<Civilopedia>TXT_KEY_UNIT_PEACOCK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15343,6 +15231,8 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -15478,7 +15368,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_EMPEROR_PENGUIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15588,7 +15477,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PHEASANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PHEASANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15705,7 +15593,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PIGEON</Description>
 			<Civilopedia>TXT_KEY_UNIT_PIGEON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15819,7 +15706,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PIG_NEW</Description>
 			<Civilopedia>TXT_KEY_UNIT_PIG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15929,7 +15815,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_PLATYPUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLATYPUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16043,7 +15928,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_POLARBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_POLAR_BEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16206,7 +16090,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_POSSUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_POSSUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16313,7 +16196,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PROCOPTODON</Description>
 			<Civilopedia>TXT_KEY_UNIT_PROCOPTODON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16435,7 +16317,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_PUFFADDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PUFFADDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16557,7 +16438,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_QUOLL</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUOLL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16661,7 +16541,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RACCOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_RACCOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16763,7 +16642,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RATEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_RATEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16890,7 +16768,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RAVEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAVEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16983,7 +16860,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_RAY_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17098,7 +16974,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RAZORBILL</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAZORBILL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17215,7 +17090,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_REDFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDFOX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17330,7 +17204,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_REDPANDA</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDPANDA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17454,7 +17327,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RHEA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17568,7 +17440,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ELASMOTHERIUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELASMOTHERIUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17674,7 +17545,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_BLACK_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACK_RHINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17783,7 +17653,6 @@
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INDIAN_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_INDIAN_RHINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17887,7 +17756,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_JAVA_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_JAVA_RHINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17998,7 +17866,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WHITE_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHITE_RHINO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18108,7 +17975,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RIVER_CROC_LARGE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROCODILE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18262,7 +18128,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_RIVER_CROC_SMALL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROCODILE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18430,7 +18295,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ROCKHOPPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ROCKHOPPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18545,7 +18409,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SABRETOOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18665,7 +18528,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SAIGA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAIGA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18773,7 +18635,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SALTWATER_CROC_LARGE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SALTWATER_CROC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18888,7 +18749,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SALTWATER_CROC_SMALL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SALTWATER_CROC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18988,7 +18848,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SEAEAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19132,7 +18991,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19260,7 +19118,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19392,7 +19249,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SEAOTTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAOTTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19508,7 +19364,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SEATURTLE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19618,7 +19473,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SECRETARYBIRD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SECRETARYBIRD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19752,7 +19606,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_REEF_SHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_REEF_SHARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19874,7 +19727,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SIBERIANTIGER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19998,7 +19850,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_SKUNK</Description>
 			<Civilopedia>TXT_KEY_UNIT_SKUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20094,7 +19945,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SLOTHBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOTHBEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20195,7 +20045,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SNOWLEOPARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SNOWLEOPARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20365,7 +20214,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SPECTACLEDBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPECTACLEDBEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20506,7 +20354,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_STAG_DEER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20608,7 +20455,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUNBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUNBEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20724,7 +20570,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20840,7 +20685,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_BRAZILIAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20955,7 +20799,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MALAYAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21071,7 +20914,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_MOUNTAIN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<UnitAIs>
@@ -21183,7 +21025,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_JUNGLE_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21281,7 +21122,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_DESERT_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21393,7 +21233,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TASMANIANDEVIL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TASMANIANDEVIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21535,7 +21374,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TERN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21648,7 +21486,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_THYLACINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_THYLACINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21774,7 +21611,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TOUCAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOUCAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21871,7 +21707,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_TREESLOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TREESLOTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21991,7 +21826,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TUNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22103,7 +21937,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_TURKEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURKEY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22209,7 +22042,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_VIPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIPER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22312,7 +22144,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_VIPER_CHAIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIPER_CHAIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22439,7 +22270,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_VULTURE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22556,7 +22386,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WALLABY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLABY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22710,7 +22539,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_WALLAROO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLAROO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22832,7 +22660,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WALRUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALRUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -22957,7 +22784,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WARTHOG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23075,7 +22901,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_WHALESHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHALESHARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23201,7 +23026,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WILDEBEEST</Description>
 			<Civilopedia>TXT_KEY_UNIT_WILDEBEEST_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23317,7 +23141,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_WOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOLF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23417,7 +23240,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_WOLVERINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOLVERINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23552,7 +23374,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_WOMBAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOMBAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23669,7 +23490,6 @@
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23723,7 +23543,12 @@
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
 					<UnitType>UNIT_SUBDUED_ZEBRA</UnitType>
-					<bUnitToCity><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SEDENTARY_LIFESTYLE</ID></Has></bUnitToCity>
+					<bUnitToCity>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</bUnitToCity>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>

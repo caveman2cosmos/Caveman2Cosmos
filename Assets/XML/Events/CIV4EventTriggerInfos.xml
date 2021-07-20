@@ -10263,35 +10263,35 @@
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
 			<EventArt>Art/Event_Images/musicofgods.dds</EventArt>
-	</EventTriggerInfo>
-	<EventTriggerInfo>
-		<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
-		<TriggerTexts>
-			<TriggerText>
-				<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
-			</TriggerText>
-		</TriggerTexts>
-		<iPercentGamesActive>100</iPercentGamesActive>
-		<iWeight>20</iWeight>
-		<iMaxOurLandmass>-1</iMaxOurLandmass>
-		<iNumPlotsRequired>1</iNumPlotsRequired>
-		<TerrainsRequired>
-			<TerrainType>TERRAIN_ROCKY</TerrainType>
-			<TerrainType>TERRAIN_BADLAND</TerrainType>
-			<TerrainType>TERRAIN_JAGGED</TerrainType>
-		</TerrainsRequired>
-		<BonusesRequired>
-			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<BonusType>BONUS_SULPHUR</BonusType>
-		</BonusesRequired>
-		<Events>
-			<Event>EVENT_VOLCANO_ERUPTION_1</Event>
-		</Events>
-		<bRecurring>1</bRecurring>
-		<PythonCanDo>canDoNewVolcano</PythonCanDo>
-		<PythonCallback>doVolcanoNewEruption</PythonCallback>
-	</EventTriggerInfo>
-	<EventTriggerInfo>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>20</iWeight>
+			<iMaxOurLandmass>-1</iMaxOurLandmass>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<TerrainsRequired>
+				<TerrainType>TERRAIN_ROCKY</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
+			</TerrainsRequired>
+			<BonusesRequired>
+				<BonusType>BONUS_OBSIDIAN</BonusType>
+				<BonusType>BONUS_SULPHUR</BonusType>
+			</BonusesRequired>
+			<Events>
+				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+			</Events>
+			<bRecurring>1</bRecurring>
+			<PythonCanDo>canDoNewVolcano</PythonCanDo>
+			<PythonCallback>doVolcanoNewEruption</PythonCallback>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
 			<TriggerTexts>
 				<TriggerText>

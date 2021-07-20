@@ -3,6 +3,9 @@
 	<UnitCombatInfos>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SUBDUED</Type>
+			<Description>TXT_KEY_UNITCOMBAT_SUBDUED</Description>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_RECORD_TALE</MissionType>
@@ -83,7 +86,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>6</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -194,7 +197,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>10</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -245,6 +248,38 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_URSINE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_URSINE</Description>
+			<iPursuitChange>10</iPursuitChange>
+			<FeatureAttacks>
+				<FeatureAttack>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iFeatureAttack>10</iFeatureAttack>
+				</FeatureAttack>
+			</FeatureAttacks>
+			<FeatureDefenses>
+				<FeatureDefense>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iFeatureDefense>20</iFeatureDefense>
+				</FeatureDefense>
+			</FeatureDefenses>
+			<InvisibleFeatureChanges>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+			</InvisibleFeatureChanges>
+			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_COMBAT</MissionType>
@@ -323,6 +358,8 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
+			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RHINO</Description>
+			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_COMBAT</MissionType>
@@ -393,7 +430,7 @@
 			<Type>UNITCOMBAT_WHALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WHALE</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/whales.dds</Button>
-<!--
+			<!--
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_STUDY</MissionType>

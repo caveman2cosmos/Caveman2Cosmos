@@ -6,7 +6,7 @@
 //  FILE:    CvInfosWater.h
 //
 //  AUTHOR:	tomw
-//					
+//
 //
 //  PURPOSE: All Civ4 info classes and the base class for them
 //
@@ -25,7 +25,7 @@ class CvXMLLoadUtility;
 //
 //  class : CvWaterPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvWaterPlaneInfo : public CvInfoBase
@@ -70,7 +70,7 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvTerrainPlaneInfo : public CvInfoBase
@@ -118,7 +118,7 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvCameraOverlayInfo : public CvInfoBase

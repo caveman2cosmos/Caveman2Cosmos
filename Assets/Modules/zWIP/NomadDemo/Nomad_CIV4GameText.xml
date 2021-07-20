@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../XML/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_AWLS</Tag>
+		<English>Awls</English>
+		<French>Alènes</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_AXES</Tag>
+		<English>Hand held axe heads</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_BURINS</Tag>
+		<English>Burins</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_CLUBS</Tag>
+		<English>Clubs</English>
+		<French>Gourdins</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_CLUBS_WITH_STONE</Tag>
+		<English>Clubs with stone chips</English>
+		<French>Gourdins à piques</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_DILLY_BAG</Tag>
+		<English>Dilly Bag</English>
+		<French>Cabat</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_FIRE_STICK</Tag>
+		<English>Fire Stick</English>
+		<French>Pieu brûlé</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SCRAPER</Tag>
+		<English>Scraper</English>
+		<French>Grattoir</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SPEAR_HARDENED_WOOD</Tag>
+		<English>Hardened Pointy Sticks</English>
+		<French>Pieu affuté</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SPEAR_OBSIDIAN</Tag>
+		<English>Spear (obsidian tip)</English>
+		<French>Lance (pointe en obsidienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SPEAR_STONE</Tag>
+		<English>Spear (stone tip)</English>
+		<French>Lance (pointe en pierre)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SPEAR_WOOD</Tag>
+		<English>Pointy Sticks</English>
+		<French>Pieu</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_STONE_MACE</Tag>
+		<English>Stone Mace</English>
+		<French>Masse de pierre</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_NOMAD</Tag>
+		<English>Nomads</English>
+		<French>Nomades</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NOMAD_CAMP</Tag>
+		<English>Nomad Camp</English>
+		<French>Camp de Nomades</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NOMAD_CAMP_PEDIA</Tag>
+		<English>Nomad Camp is not yet available for use.</English>
+	</TEXT>
+</Civ4GameText>

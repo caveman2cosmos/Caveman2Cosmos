@@ -7,6 +7,8 @@
 			<iHillsChange>-1</iHillsChange>
 			<iPeakChange>-2</iPeakChange>
 			<iMinCity>3</iMinCity>
+			<iCityChange>-1</iCityChange>
+			<iPopulationChangeDivisor>5</iPopulationChangeDivisor>
 			<iAIWeightPercent>100</iAIWeightPercent>
 			<ColorType>COLOR_YIELD_FOOD</ColorType>
 			<SymbolPaths>
@@ -22,7 +24,9 @@
 			<Description>TXT_KEY_YIELD_PRODUCTION</Description>
 			<iHillsChange>1</iHillsChange>
 			<iPeakChange>3</iPeakChange>
-			<iMinCity>2</iMinCity>
+			<iMinCity>1</iMinCity>
+			<iCityChange>1</iCityChange>
+			<iPopulationChangeDivisor>2</iPopulationChangeDivisor>
 			<iGoldenAgeYield>1</iGoldenAgeYield>
 			<iGoldenAgeYieldThreshold>1</iGoldenAgeYieldThreshold>
 			<iAIWeightPercent>110</iAIWeightPercent>
@@ -38,7 +42,11 @@
 		<YieldInfo>
 			<Type>YIELD_COMMERCE</Type>
 			<Description>TXT_KEY_YIELD_COMMERCE</Description>
+			<iPeakChange>-1</iPeakChange>
+			<iRiverChange>1</iRiverChange>
 			<iMinCity>1</iMinCity>
+			<iCityChange>1</iCityChange>
+			<iPopulationChangeDivisor>4</iPopulationChangeDivisor>
 			<iTradeModifier>100</iTradeModifier>
 			<iGoldenAgeYield>1</iGoldenAgeYield>
 			<iGoldenAgeYieldThreshold>1</iGoldenAgeYieldThreshold>

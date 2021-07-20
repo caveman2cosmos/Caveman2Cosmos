@@ -3,7 +3,6 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- ReModified by StrategyOnly -->
-<!-- -->
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
@@ -11,16 +10,14 @@
 			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEAMPUNK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<FreeBonus>BONUS_STEAMPUNK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -37,13 +34,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUNICIP_COMP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MUNICIP_COMP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTING_ENGINE</ArtDefineTag>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -69,18 +65,17 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TR_WORKSHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TR_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TR_WORKSHOP</ArtDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -118,23 +113,22 @@
 			</SpecialistCounts>
 			<iAsset>5</iAsset>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PANOPTICON_PRISON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PANOPTICON_PRISON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PANOPTICON_PRISON</ArtDefineTag>
 			<ObsoleteTech>TECH_CRYONICS</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -164,23 +158,22 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-			    <iAmountPerTurn>-30</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</ArtDefineTag>
 			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -238,31 +231,28 @@
 				</Property>
 			</Properties>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COAL_DYNAMO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COAL_DYNAMO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COAL_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -293,26 +283,23 @@
 				</Property>
 			</Properties>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-			    <iAmountPerTurn>30</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>30</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOOD_DYNAMO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WOOD_DYNAMO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -343,26 +330,23 @@
 				</Property>
 			</Properties>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-			    <iAmountPerTurn>15</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>15</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEAT_DYNAMO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PEAT_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PEAT_DYNAMO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -393,24 +377,23 @@
 				</Property>
 			</Properties>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-			    <iAmountPerTurn>25</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>25</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
-			<iPrereqPopulation>6</iPrereqPopulation>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEMO_ACADEMY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -457,7 +440,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>

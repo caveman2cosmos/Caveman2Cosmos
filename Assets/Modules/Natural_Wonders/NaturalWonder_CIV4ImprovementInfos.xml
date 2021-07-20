@@ -4,6 +4,9 @@
 		<!-- Beacon -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_BEACON_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
@@ -26,6 +29,9 @@
 		<!-- Lighthouse -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>

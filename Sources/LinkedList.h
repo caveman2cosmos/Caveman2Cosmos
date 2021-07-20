@@ -160,8 +160,7 @@ inline void CLinkList<tVARTYPE>::insertAtBeginning(const tVARTYPE& val)
 //inserts at the tail of the list
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
-{	
-	MEMORY_TRACK_EXEMPT();
+{
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
@@ -187,7 +186,6 @@ inline void CLinkList<tVARTYPE>::insertAtEnd(const tVARTYPE& val)
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
@@ -212,7 +210,6 @@ inline void CLinkList<tVARTYPE>::insertBefore(const tVARTYPE& val, CLLNode<tVART
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::insertAfter(const tVARTYPE& val, CLLNode<tVARTYPE>* pThisNode)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	FAssert(m_pHead == NULL || m_iLength > 0);
 
@@ -457,7 +454,7 @@ inline void CLinkList< T >::ReadNonWrapperSubset( FDataStreamBase* pStream)
 	{
 		insertAtEnd(val);
 	}
-	
+
 	CLLNode< T >* pNode = nodeNum(index);
 	for ( int i = index; i < index + iNum; i++ )
 	{
@@ -469,7 +466,7 @@ template < class T >
 inline void CLinkList< T >::WriteNonWrapperSubset( FDataStreamBase* pStream, int index, int iNum ) const
 {
 	int iLength = getLength();
-	
+
 	// If iNum is too large, limit it to the length of the list
 	if (iLength < index + iNum)
 	{
