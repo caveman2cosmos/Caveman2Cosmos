@@ -1827,6 +1827,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BRACEWELL_PROBES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
+			<iCost>34707</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
