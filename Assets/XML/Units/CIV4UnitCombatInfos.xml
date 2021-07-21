@@ -9156,5 +9156,23 @@
 			<CultureType>BONUS_ZIMBABWEAN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_ANDEANISM</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Description>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_andeanism.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_ASATRU</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Description>
+			<ReligionType>RELIGION_ASATRU</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_asatru.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_BAHAI</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Description>
+			<ReligionType>RELIGION_BAHAI</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_bahai.dds</Button>
+		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>
