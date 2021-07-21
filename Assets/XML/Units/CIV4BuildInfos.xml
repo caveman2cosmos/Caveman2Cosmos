@@ -10743,6 +10743,38 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
+		<!-- Lighthouse (Great Barrier Reef) -->
+		<BuildInfo>
+			<Type>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
+			<Help/>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<iTime>200</iTime>
+			<iCost>40</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
 		<!-- Beacon (Coral) -->
 		<BuildInfo>
 			<Type>BUILD_BEACON_CORAL</Type>
@@ -10783,6 +10815,31 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
+		<!-- Beacon (Great Barrier Reef) -->
+		<BuildInfo>
+			<Type>BUILD_BEACON_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Description>
+			<Help/>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>20</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
