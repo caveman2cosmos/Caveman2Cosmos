@@ -46204,6 +46204,22 @@
 					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<iCost>15</iCost>
 			<iHealth>-1</iHealth>
@@ -52015,6 +52031,14 @@
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -75914,6 +75938,18 @@
 					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<iCost>1845</iCost>
 			<iHealth>2</iHealth>
@@ -75948,6 +75984,18 @@
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -85300,6 +85348,22 @@
 				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

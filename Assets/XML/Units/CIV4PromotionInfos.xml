@@ -23700,6 +23700,18 @@
 					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
+				<FeatureDoubleMove>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<bFeatureDoubleMove>1</bFeatureDoubleMove>
+				</FeatureDoubleMove>
+				<FeatureDoubleMove>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<bFeatureDoubleMove>1</bFeatureDoubleMove>
+				</FeatureDoubleMove>
+				<FeatureDoubleMove>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
+					<bFeatureDoubleMove>1</bFeatureDoubleMove>
+				</FeatureDoubleMove>
 			</FeatureDoubleMoves>
 			<Button>,Art/Interface/Buttons/Promotions/ShallowDraft.dds</Button>
 		</PromotionInfo>

@@ -45432,8 +45432,10 @@
 				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
 				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>

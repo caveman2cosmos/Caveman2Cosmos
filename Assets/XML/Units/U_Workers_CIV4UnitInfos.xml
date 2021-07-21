@@ -1982,6 +1982,7 @@
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
 				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iCost>48</iCost>
@@ -2085,10 +2086,12 @@
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
 				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 			</Builds>
@@ -2222,6 +2225,7 @@
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<BuildType>BUILD_BEACON_CORAL</BuildType>
 				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
@@ -2230,6 +2234,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
@@ -2367,6 +2372,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -2467,6 +2473,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
 				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->

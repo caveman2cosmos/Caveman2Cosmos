@@ -3574,6 +3574,22 @@
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
