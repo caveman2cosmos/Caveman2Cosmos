@@ -3539,7 +3539,7 @@
 		<!-- BEGIN: POSITIVE_TRAIT -->
 		<TraitInfo>
 			<Type>TRAIT_PHILOSOPHICAL1</Type>
-			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL</Description>
+			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
@@ -3619,7 +3619,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_AGGRESSIVE1</Type>
-			<Description>TXT_KEY_TRAIT_AGGRESSIVE</Description>
+			<Description>TXT_KEY_TRAIT_AGGRESSIVE1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_AGGRESSIVE_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggressive.dds</Button>
@@ -3779,7 +3779,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL1</Type>
-			<Description>TXT_KEY_TRAIT_SPIRITUAL</Description>
+			<Description>TXT_KEY_TRAIT_SPIRITUAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SPIRITUAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSpiritual.dds</Button>
@@ -4001,7 +4001,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ORGANIZED1</Type>
-			<Description>TXT_KEY_TRAIT_ORGANIZED</Description>
+			<Description>TXT_KEY_TRAIT_ORGANIZED1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ORGANIZED_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitOrganized.dds</Button>
@@ -4111,7 +4111,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_INDUSTRIOUS1</Type>
-			<Description>TXT_KEY_TRAIT_INDUSTRIOUS</Description>
+			<Description>TXT_KEY_TRAIT_INDUSTRIOUS1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_INDUSTRIOUS_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIndustrious.dds</Button>
@@ -4315,7 +4315,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_CREATIVE1</Type>
-			<Description>TXT_KEY_TRAIT_CREATIVE</Description>
+			<Description>TXT_KEY_TRAIT_CREATIVE1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CREATIVE_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_CREATIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCreative.dds</Button>
@@ -4526,7 +4526,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_FINANCIAL1</Type>
-			<Description>TXT_KEY_TRAIT_FINANCIAL</Description>
+			<Description>TXT_KEY_TRAIT_FINANCIAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FINANCIAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFinancial.dds</Button>
@@ -4615,7 +4615,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_EXPANSIVE1</Type>
-			<Description>TXT_KEY_TRAIT_EXPANSIVE</Description>
+			<Description>TXT_KEY_TRAIT_EXPANSIVE1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXPANSIVE_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExpansive.dds</Button>
@@ -4737,7 +4737,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_CHARISMATIC1</Type>
-			<Description>TXT_KEY_TRAIT_CHARISMATIC</Description>
+			<Description>TXT_KEY_TRAIT_CHARISMATIC1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CHARISMATIC_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCharismatic.dds</Button>
@@ -4828,7 +4828,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_PROTECTIVE1</Type>
-			<Description>TXT_KEY_TRAIT_PROTECTIVE</Description>
+			<Description>TXT_KEY_TRAIT_PROTECTIVE1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROTECTIVE_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProtective.dds</Button>
@@ -4984,7 +4984,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_IMPERIALIST1</Type>
-			<Description>TXT_KEY_TRAIT_IMPERIALIST</Description>
+			<Description>TXT_KEY_TRAIT_IMPERIALIST1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IMPERIALIST_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitImperialist.dds</Button>
@@ -5046,7 +5046,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_SEAFARING1</Type>
-			<Description>TXT_KEY_TRAIT_SEAFARING</Description>
+			<Description>TXT_KEY_TRAIT_SEAFARING1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SEAFARING_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_SEAFARING_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitSeafaring.dds</Button>
@@ -5222,7 +5222,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_NOMAD1</Type>
-			<Description>TXT_KEY_TRAIT_NOMAD</Description>
+			<Description>TXT_KEY_TRAIT_NOMAD1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_NOMAD_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_NOMAD_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitNomadic.dds</Button>
@@ -5435,7 +5435,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_AGRICULTURAL1</Type>
-			<Description>TXT_KEY_TRAIT_AGRICULTURAL</Description>
+			<Description>TXT_KEY_TRAIT_AGRICULTURAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAggricultural.dds</Button>
@@ -5580,7 +5580,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_DECEIVER1</Type>
-			<Description>TXT_KEY_TRAIT_DECEIVER</Description>
+			<Description>TXT_KEY_TRAIT_DECEIVER1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_DECEIVER_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_DECEIVER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitDeceptive.dds</Button>
@@ -5710,7 +5710,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_SCIENTIFIC1</Type>
-			<Description>TXT_KEY_TRAIT_SCIENTIFIC</Description>
+			<Description>TXT_KEY_TRAIT_SCIENTIFIC1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitScientific.dds</Button>
@@ -5803,7 +5803,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_HUMANITARIAN1</Type>
-			<Description>TXT_KEY_TRAIT_HUMANITARIAN</Description>
+			<Description>TXT_KEY_TRAIT_HUMANITARIAN1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHumanitarian.dds</Button>
@@ -5928,7 +5928,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_PROGRESSIST1</Type>
-			<Description>TXT_KEY_TRAIT_PROGRESSIST</Description>
+			<Description>TXT_KEY_TRAIT_PROGRESSIST1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PROGRESSIST_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitProgressist.dds</Button>
@@ -6067,7 +6067,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_POLITICIAN1</Type>
-			<Description>TXT_KEY_TRAIT_POLITICIAN</Description>
+			<Description>TXT_KEY_TRAIT_POLITICIAN1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POLITICIAN_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
@@ -6161,7 +6161,7 @@
 		<!-- Note: Flavors are given to aid in the selection of the negative trait for REMOVAL so values are inverse-->
 		<TraitInfo>
 			<Type>TRAIT_ANTI_CLERICAL1</Type>
-			<Description>TXT_KEY_TRAIT_ANTI_CLERICAL</Description>
+			<Description>TXT_KEY_TRAIT_ANTI_CLERICAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANTI_CLERICAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitAnti-Clerical.dds</Button>
@@ -6324,7 +6324,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_CRUEL1</Type>
-			<Description>TXT_KEY_TRAIT_CRUEL</Description>
+			<Description>TXT_KEY_TRAIT_CRUEL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CRUEL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_CRUEL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitCruel.dds</Button>
@@ -6385,7 +6385,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_IDEALISTIC1</Type>
-			<Description>TXT_KEY_TRAIT_IDEALISTIC</Description>
+			<Description>TXT_KEY_TRAIT_IDEALISTIC1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_IDEALISTIC_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIdealistic.dds</Button>
@@ -6418,7 +6418,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_MEGALOMANIAC1</Type>
-			<Description>TXT_KEY_TRAIT_MEGALOMANIAC</Description>
+			<Description>TXT_KEY_TRAIT_MEGALOMANIAC1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_MEGALOMANIAC_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitMegalomaniac.dds</Button>
@@ -6468,7 +6468,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_BARBARIC1</Type>
-			<Description>TXT_KEY_TRAIT_BARBARIC</Description>
+			<Description>TXT_KEY_TRAIT_BARBARIC1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIC_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_BARBARIC_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitBarbaric.dds</Button>
@@ -6545,7 +6545,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ISOLATIONIST1</Type>
-			<Description>TXT_KEY_TRAIT_ISOLATIONIST</Description>
+			<Description>TXT_KEY_TRAIT_ISOLATIONIST1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitIsolationist.dds</Button>
@@ -6599,7 +6599,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_FANATICAL1</Type>
-			<Description>TXT_KEY_TRAIT_FANATICAL</Description>
+			<Description>TXT_KEY_TRAIT_FANATICAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FANATICAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_FANATICAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitFanatical.dds</Button>
@@ -6657,7 +6657,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_POPULIST1</Type>
-			<Description>TXT_KEY_TRAIT_POPULIST</Description>
+			<Description>TXT_KEY_TRAIT_POPULIST1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_POPULIST_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_POPULIST_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitPopulist.dds</Button>
@@ -6705,7 +6705,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_EXCESSIVE1</Type>
-			<Description>TXT_KEY_TRAIT_EXCESSIVE</Description>
+			<Description>TXT_KEY_TRAIT_EXCESSIVE1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_EXCESSIVE_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitExcessive.dds</Button>
@@ -6774,7 +6774,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_FOREIGN1</Type>
-			<Description>TXT_KEY_TRAIT_FOREIGN</Description>
+			<Description>TXT_KEY_TRAIT_FOREIGN1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FOREIGN_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_FOREIGN_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitForeign.dds</Button>
@@ -6850,7 +6850,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_TEMPERAMENTAL1</Type>
-			<Description>TXT_KEY_TRAIT_TEMPERAMENTAL</Description>
+			<Description>TXT_KEY_TRAIT_TEMPERAMENTAL1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_TEMPERAMENTAL_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitTemperamental.dds</Button>
@@ -6889,7 +6889,7 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_REVOLUTIONARY1</Type>
-			<Description>TXT_KEY_TRAIT_REVOLUTIONARY</Description>
+			<Description>TXT_KEY_TRAIT_REVOLUTIONARY1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_REVOLUTIONARY_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
@@ -6961,7 +6961,7 @@
 		<!-- BEGIN: SPECIAL_TRAIT (MINOR AND BARBARIAN) -->
 		<TraitInfo>
 			<Type>TRAIT_HUNTER_GATHERER1</Type>
-			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER</Description>
+			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER1</Description>
 			<ShortDescription>TXT_KEY_TRAIT_HUNTER_GATHERER_SHORT</ShortDescription>
 			<Civilopedia>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
