@@ -278,22 +278,5 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EJE_SONG</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

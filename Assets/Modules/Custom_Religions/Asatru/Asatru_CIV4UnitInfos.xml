@@ -148,17 +148,5 @@
 				</FreePromotion>
 			</FreePromotions>
 		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_PROPHET</Type>
-			<Buildings>
-				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
-			</Buildings>
-			<ReligionSpreads>
-				<ReligionSpread>
-					<ReligionType>RELIGION_ASATRU</ReligionType>
-					<iReligionSpread>100</iReligionSpread>
-				</ReligionSpread>
-			</ReligionSpreads>
-		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

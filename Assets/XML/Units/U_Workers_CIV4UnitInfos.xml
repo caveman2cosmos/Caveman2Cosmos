@@ -181,6 +181,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
 			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -307,6 +308,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -467,6 +469,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -639,6 +642,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -812,6 +816,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -974,6 +979,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -1146,6 +1152,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -1298,6 +1305,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
@@ -1545,6 +1553,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>

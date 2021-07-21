@@ -43,32 +43,5 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HORSE_TRAINER</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TENGRII_HORSE_BREEDER</BuildingType>
-			</PrereqOrBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HORSE_MYTH</Type>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EJE_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

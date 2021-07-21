@@ -34883,6 +34883,78 @@
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ASATRU</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_BAHAI</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_JAINISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MORMON</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHINTO</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SIKHISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_TENGRIISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_VOODOO</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_YORUBA</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
 			</ReligionSpreads>
 			<GreatPeoples>
 				<GreatPeople>
@@ -34902,6 +34974,24 @@
 				<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+				<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+				<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+				<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_KARMA</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_RESURRECTION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>

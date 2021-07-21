@@ -281,14 +281,5 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VOODOO_CATHEDRAL</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

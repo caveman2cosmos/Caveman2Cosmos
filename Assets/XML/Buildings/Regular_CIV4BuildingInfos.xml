@@ -40748,6 +40748,7 @@
 				<BuildingType>BUILDING_HORSE_FARM</BuildingType>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
 				<BuildingType>BUILDING_HORSE_NATIONAL</BuildingType>
+				<BuildingType>BUILDING_TENGRII_HORSE_BREEDER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<CommerceChanges>
@@ -41810,6 +41811,12 @@
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PHONOGRAPHS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_THEREMIN</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -49023,6 +49030,12 @@
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_PHONOGRAPHS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_THEREMIN</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -88178,6 +88191,7 @@
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_GYM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>216</iCost>

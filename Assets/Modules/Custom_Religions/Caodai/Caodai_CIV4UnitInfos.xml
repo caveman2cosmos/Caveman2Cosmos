@@ -49,17 +49,5 @@
 			</UnitMeshGroups>
 			<Button>,Art/Interface/Buttons/Units/Missionary_Taoist.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,3</Button>
 		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_PROPHET</Type>
-			<Buildings>
-				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
-			</Buildings>
-			<ReligionSpreads>
-				<ReligionSpread>
-					<ReligionType>RELIGION_CAO_DAI</ReligionType>
-					<iReligionSpread>100</iReligionSpread>
-				</ReligionSpread>
-			</ReligionSpreads>
-		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

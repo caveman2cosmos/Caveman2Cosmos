@@ -384,6 +384,7 @@
 				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_SHINTO_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_KARMA</FreeBuilding>
 			<iAsset>10</iAsset>
@@ -406,6 +407,8 @@
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_REINCARNATION</FreeBuilding>
 			<iAsset>10</iAsset>
@@ -432,6 +435,8 @@
 				<BuildingType>BUILDING_JEWISH_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_RESURRECTION</FreeBuilding>
 			<iAsset>10</iAsset>

@@ -54,17 +54,5 @@
 			</UnitMeshGroups>
 			<Button>Art/sikh_miss.dds</Button>
 		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_PROPHET</Type>
-			<Buildings>
-				<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
-			</Buildings>
-			<ReligionSpreads>
-				<ReligionSpread>
-					<ReligionType>RELIGION_SIKHISM</ReligionType>
-					<iReligionSpread>100</iReligionSpread>
-				</ReligionSpread>
-			</ReligionSpreads>
-		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

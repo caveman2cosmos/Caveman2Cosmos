@@ -219,14 +219,5 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SIKH_CATHEDRAL</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

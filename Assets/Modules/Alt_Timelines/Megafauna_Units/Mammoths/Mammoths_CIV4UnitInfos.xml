@@ -791,6 +791,7 @@
 				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
 				<BuildType>BUILD_HAMLET</BuildType>
@@ -884,12 +885,6 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKMAMMOTH</UnitType>
 			</UnitUpgrades>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WORKMAMMOTH</Type>
-			<Builds>
-				<BuildType>BUILD_MACHU_PICCHU</BuildType>
-			</Builds>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

@@ -56,17 +56,5 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_PROPHET</Type>
-			<Buildings>
-				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
-			</Buildings>
-			<ReligionSpreads>
-				<ReligionSpread>
-					<ReligionType>RELIGION_MORMON</ReligionType>
-					<iReligionSpread>100</iReligionSpread>
-				</ReligionSpread>
-			</ReligionSpreads>
-		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>
