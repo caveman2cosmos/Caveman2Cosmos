@@ -45,10 +45,6 @@
 					<Directory>zWIP</Directory>
 					<bLoad>0</bLoad>
 				</Module>
-				<Module> <!-- Maybe this folder should contain ALL overrides? -->
-					<Directory>zInterdependencies</Directory>
-					<bLoad>1</bLoad>
-				</Module>
 			</Modules>
 		</ConfigurationInfo>
 	</ConfigurationInfos>
