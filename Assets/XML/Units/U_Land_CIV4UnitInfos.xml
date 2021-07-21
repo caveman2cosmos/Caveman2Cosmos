@@ -46470,7 +46470,7 @@
 					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</UnitInfo>	
+		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HELLSMOUTH_DOG</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
