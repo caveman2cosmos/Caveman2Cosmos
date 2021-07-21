@@ -46854,5 +46854,1910 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/terrainfeatures/coral.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ANDEAN_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>3.5</fScale>
+			<fInterfaceScale>3.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Andean_Cathedral/gaurishrine.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/TemploMayor.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ANDEAN_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>3.3</fScale>
+			<fInterfaceScale>3.3</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Andean_Monastery/gauribazaar.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/Fortification.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ANDEAN_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>3.7</fScale>
+			<fInterfaceScale>3.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Andean_Shrine/gauricentervillage.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/EpicWorks.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ANDEAN_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.4</fScale>
+			<fInterfaceScale>2.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Andean_Temple/Gauritemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/04.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MACHU_PICCHU</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.81</fScale>
+			<fInterfaceScale>0.80</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Machu/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/machu_picchu.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DORADO</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.50</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<!--NIF>Art/Structures/Buildings/Dorado/Wudang.nif</NIF-->
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Andean/el_dorado.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASATRU_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/AsenCathedral_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASATRU_MONASTERY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/AsenMonastery_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASATRU_SHRINE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/AsenShrine_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASATRU_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/AsenTemple_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FREYA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/freya_sanctuary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HEIMDALL</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/heimdall_sanctuary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LOKI</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/loki_sanctuary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_THOR</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/thor_sanctuary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_THOR_ALTAR</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/Thor_Altar.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BAHAI_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bahai_Cathedral/zorocathedral.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/Bahai_Cathedral.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BAHAI_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>.75</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bahai_Monastery/zoro_kloster.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/Bahai_monastery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BAHAI_SHRINE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bahai_Shrine/BabShrine.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/bahai_shrine_of_bab.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BAHAI_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Bahai_Temple/FTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/bahai_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LOTUS_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/LotusTemple/lotus6.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Bahai/lotustemple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CANAANISM_TEMPLE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.10</fScale>
+			<fInterfaceScale>.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/canaanite_shrine/shrine_ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/Temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CANAANISM_MONASTERY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1</fScale>
+			<fInterfaceScale>.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/canaanite_temple/temple_an.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/Monastery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CANAANISM_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.25</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/canaanite_Cathedral/Temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/cathedral.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CANAANISM_SHRINE</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.1</fScale>
+			<fInterfaceScale>0.3</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/canaanite_Shrine/shrine_nanna.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/Shrine.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAODAI_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>.90</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Cathedrals/taoist_cathedral.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/religions/Caodai/Cathedral_CaoDai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAODAI_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>.85</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Monastery/taoist/taoist_monastery.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/religions/Caodai/Monastery_CaoDai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAODAI_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shrine/taoist_shrine.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/religions/Caodai/Shrine_CaoDai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAODAI_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Temple/taoist/taoist_temple.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/religions/Caodai/Temple_CaoDai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidTemple_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_WHEAT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_wheat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_BARLEY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_barley.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_CORN</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_corn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_RICE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_rice.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_POTATO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_potato.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidCathedral_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_CATHEDRAL2</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidCathedral_Button2.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidMonastery_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_RICE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_rice.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_BARLEY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_barley.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_WHEAT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_wheat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_CORN</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_corn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_POTATO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_potato.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_SHRINE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidShrine_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_ALMOND</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_almond.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_ALMOND</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_almond.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_APPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_apple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_APPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_apple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_BANANA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_banana.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_BANANA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_banana.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_COCONUT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_coconut.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_COCONUT</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_coconut.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_DATES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_date.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_DATES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_date.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_FIG</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_fig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_fig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_GRAPES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_grape.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_GRAPES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_grape.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_GUAVA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_guava.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_GUAVA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_guava.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_MANGO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_mango.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_LEMON</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_lemon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_LEMON</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_lemon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_MANGO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_mango.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_MELON</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_melon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_MELON</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_melon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_MUSHROOMS</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_mushroom.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_MUSHROOMS</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_mushroom.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_OLIVES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_olive.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_OLIVES</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_olive.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_PAPAYA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_papaya.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_PAPAYA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_papaya.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_PISTACHIO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_pistachio.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_PISTACHIO</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_pistachio.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_POMEGRANATE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_pomegranate.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_POMEGRANATE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_pomegranate.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_prickly_pear.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_prickly_pear.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_PUMPKIN</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_pumpkin.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_PUMPKIN</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_pumpkin.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_SQUASH</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_Squash.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_SQUASH</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_Squash.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_KAVA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_fig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_KAVA</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_fig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JAIN_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>.90</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Cathedrals/hindu_cathedral.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Jainism/Cathedral_Jain.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JAIN_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>.85</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Monastery/Hindu/Hindu_monastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Jainism/Monastery_Jain.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JAIN_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Temple/hindu/hindu_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Jainism/Temple_Jain.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JAINISM_SHRINE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.25</fScale>
+			<fInterfaceScale>0.25</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Statue_jain/statue.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Jainism/button_shrine_jain.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_An.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_An.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BABEL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>3.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tower_of_Babel/babel09.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Tower_of_Babel.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ENKI</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Water.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_Enki.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ENLIL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Enlil.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_Enlil.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_INANNA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ianna.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_Inanna.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KI</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_Ki.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KI_WHEAT</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/temple_of_ki_wheat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KI_RICE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/temple_of_ki_rice.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KI_POTATO</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/temple_of_ki_potato.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KI_CORN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/GodsofOld/Temples/Temple_Ki.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/temple_of_ki_corn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MORMON_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mormon/mormon_cathedral.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MORMON_MONASTERY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mormon/LDS_missionary_training.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MORMON_SHRINE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mormon/mormon_shrine.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MORMON_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.00</fScale>
+			<fInterfaceScale>0.00</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mormon/mormon_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NAITERUKOB</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Naiterukob.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAI</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Ngai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAINANYOKE</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Nanyoke.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAINAROK</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Narok.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAINAROK_COW</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Narok_Cow.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAINAROK_SHEEP</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Narok_Sheep.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NGAINAROK_PIG</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Narok_Pig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLDOINYO</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ngai/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Oldoinyo.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RODNOVERY_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>.90</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/rodnovery_cathedral/celtic_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/rodnovery_cathedral.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RODNOVERY_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>.85</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>art/structures/buildings/monument/pacific_monument/svarog_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/rodnovery_monastery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RODNOVERY_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/rodnovery_temple/slavic_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/rodnovery_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RODNOVERY_SHRINE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.25</fScale>
+			<fInterfaceScale>0.25</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/rodnovery_shrine/nordic_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/rodnovery_shrine.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCIENTOLOGY_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.50</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scientology/scotlandyard.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Scientology/scientology_cathedral.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCIENTOLOGY_MONASTERY</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.7</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scientology/martian nest.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Scientology/Scientology_Monastery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCIENTOLOGY_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.9</fScale>
+			<fInterfaceScale>0.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scientology/scotlandyard.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Scientology/scientology_sede.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCIENTOLOGY_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scientology/scotlandyard.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Scientology/Scientology_Temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanTemple_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_BISON</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_bison.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_COW</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_cow.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_DEER</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_deer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_PIG</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_pig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_SHEEP</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_sheep.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_RABBIT</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_rabbit.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_SEA_LIONS</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_seal.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_WALRUS</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_walrus.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanCathedral.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanCathedral_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_CATHEDRAL2</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/Wildwood.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanCathedral2_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanMonastery_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_BISON</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_bison.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_COW</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_cow.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_DEER</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_deer.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_PIG</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_pig.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_SHEEP</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_sheep.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_RABBIT</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_rabbit.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_SEA_LIONS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_seal.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_MONASTERY_WALRUS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/invocation_hut_walrus.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMAN_SHRINE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shaman/ShamanShrine2.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanShrine_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHINTO_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.44</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shinto/ShintoTemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shinto/ShintoTemple_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHINTO_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>3.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shinto/ShintoMonastery.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shinto/ShintoMonastery_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHINTO_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.7</fScale>
+			<fInterfaceScale>0.54</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shinto/ShintoCathedral.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shinto/ShintoCathedral_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHINTO_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.3</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shinto/ShintoNaiku.nif</NIF>
+			<KFM />
+			<Button>Art/Structures/Buildings/Shinto/ShintoNaiku_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MATSUMOTO_CASTLE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.75</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/MatsumotoCastle/asiapalace.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shinto/matsumoto_castle.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.40</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Itsukushima_Shrine/torii.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Shinto/itsukushima_shrine.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SIKH_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>.90</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Cathedrals/hindu_cathedral.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Sikh/Cathedral_Sikh.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SIKH_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Shrine/hindu_shrine.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Sikh/Shrine_Sikh.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SIKH_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Temple/hindu/hindu_temple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Sikh/Temple_Sikh.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAVES</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.9</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Buddhism/caves08.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Buddhist/bezeklik_caves.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NARA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Buddhism/buddha.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Buddhist/naras_giant_buddha.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MARCOS_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_COAST</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Christianity/sanmarco.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Christian/saint_marks_basillica.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VATICAN_LIBRARY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Christianity/DP.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/christian/holy_see_library.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CONFUCIO</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.50</fScale>
+			<fInterfaceScale>0.65</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Confucian/IC_Palace_Early.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Confucian/confucian_school.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SOLOMON</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.8</fScale>
+			<fInterfaceScale>1.10</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Judaism/Solomon.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Judaism/solomons_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AKSHARDHAM</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.3</fScale>
+			<fInterfaceScale>0.40</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Hindu/second.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Hindu/akshardham.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MEENAKSHI</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>0.40</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Hindu/menak_two.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Hindu/meenakshi_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ESTAMBUL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.63</fScale>
+			<fInterfaceScale>0.85</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Islam/mideast_latetemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Islam/blue_mosque.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DESERT</Type>
+			<LSystem>LSYSTEM_3x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Islam/med_african_palace.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Islam/great_mosque_of_desert.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SULTAN</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.65</fScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Islam/muscat02.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Islam/sultan_qaboos_grand_mosque.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_QUANZHEN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.80</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Taoism/Quanzhen.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Taoist/quanzhen_school.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_WUDANG</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.4</fScale>
+			<fInterfaceScale>1.20</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Taoism/Wudang.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/Taoist/wudang_mountain.dds</Button>
+		</BuildingArtInfo>
+		<!-- EgyptMyth -->
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PTAH</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.30</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EgyptMyth/Ptah.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_ptah.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TOTH</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.30</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EgyptMyth/Ptah.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_toth.dds</Button>
+		</BuildingArtInfo>
+		<!-- Hellenic -->
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ERECTION</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.8</fScale>
+			<fInterfaceScale>2.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Parthenon/Parthenon.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/hellenism/erechtheum.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FIDIAS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.11</fScale>
+			<fInterfaceScale>0.50</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Hellenism/statue.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/hellenism/phidias_statue_workshop.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NECROMANTEION</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.8</fScale>
+			<fInterfaceScale>1.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Hellenism/Necromanteion.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/hellenism/necromanteion.dds</Button>
+		</BuildingArtInfo>
+		<!-- Nagualismo -->
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.40</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Nagualismo/toltec.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/Religions/Nagualism/pyramid_of_the_moon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.40</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Nagualismo/sacrificial_pyramid.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/Religions/Nagualism/pyramid_of_the_sun.dds</Button>
+		</BuildingArtInfo>
+		<!-- Zoroasterism -->
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HAMMURABI</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.61</fScale>
+			<fInterfaceScale>0.80</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Zoroasterism/CodeofHammurabi.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/hammurabi_stele_of_laws.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NIMRUD_PALACE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>0.80</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Zoroasterism/IC_Palace_med.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/nimrud_palace.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BEHISTUN_INSCRIPTION</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/Religions/Zoroastrian/behistun_inscription.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PIR_E_NARAKI</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/Religions/Zoroastrian/pir_e_naraki.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SETI_PIR</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/Religions/Zoroastrian/seti_pir.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TOWER_OF_SILENCE</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/Religions/Zoroastrian/Tower_of_Silence.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_EJE_SONG</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_Song/an_orc.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/eje_song.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KING_GESAR_SONG</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_Song/an_orc.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/King_Gesar_Song.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TENGRI_SONG</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_Song/an_orc.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/Tengri_Song.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHAMANS_YURTA</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_Yurta/an_orc.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/tengritemplenew.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TENGRI_SHRINE</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>3</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_Khan/Caves.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/KhanTengriButton.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TENGRII_HORSE_BREEDER</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tengri_HorseBreeder/Stable.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/buildings/religions/Tengri/tengrihorsebreeder.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HELLSMOUTH</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>66.32</fScale>
+			<fInterfaceScale>0.67</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Voodoo/Volcan/volcanotemple.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/voodoo/hellsmouth_sanctuary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VOODOO_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.2</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Voodoo/VoodooMarket.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/voodoo/VoodooMarket_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VOODOO_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.9</fScale>
+			<fInterfaceScale>0.45</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Voodoo/VoodooPython.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/voodoo/VoodooPython_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VOODOO_SHRINE</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.63</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Voodoo/VoodooPyramid.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/voodoo/VoodooPyramid_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VOODOO_TEMPLE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.50</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Voodoo/VoodooHut.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/buildings/religions/voodoo/VoodooHut_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OBATALA</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Obatala.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OGGUN</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Oggun.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLODUMARE</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Olodumare.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLOFIN</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Olofin.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLOKUN</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Olokun.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OSHOSI</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.0</fScale>
+			<fInterfaceScale>0.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba/hilmon.NIF</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/religions/Yoruba/Oshosi.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
