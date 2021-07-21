@@ -215,13 +215,4 @@
 		<English>Discovery - Victoria Falls (First)</English>
 		<Russian>Îòêðûòèå (Âèêòîðèÿ)</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI</Tag>
-		<English>Autobuild - Animated Movie Featuring National Wonder</English>
-		<Russian>Экранизация фильма о Нац. Чуде</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
 </Civ4GameText>

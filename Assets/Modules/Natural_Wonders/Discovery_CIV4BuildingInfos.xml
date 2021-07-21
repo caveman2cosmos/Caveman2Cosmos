@@ -779,32 +779,5 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MOVIE_AUYANTEPUI</Type>
-			<Description>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMATION_STUDIO</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ANIMATION_STUDIO</MovieDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ANIMATION</PrereqTech>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_NATURAL_WONDER_AUYANTEPUI</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_HIT_ANIMATED_MOVIE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAsset>18</iAsset>
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
