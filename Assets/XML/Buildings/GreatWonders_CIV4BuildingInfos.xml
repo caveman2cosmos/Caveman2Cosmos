@@ -10396,9 +10396,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ISHTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ISHTAR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
-			</AndDependencyTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
@@ -18250,9 +18247,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SHAOLIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_TAOISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_BUILDING_SHAOLIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAOLIN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>

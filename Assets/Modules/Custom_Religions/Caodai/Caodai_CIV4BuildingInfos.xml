@@ -7,9 +7,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CAODAI_CATHEDRAL</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAO_DAI</DependencyType>
-			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_PEDIA</Civilopedia>
@@ -71,9 +68,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAODAI_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAO_DAI</DependencyType>
-			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_MONASTERY_PEDIA</Civilopedia>
@@ -113,9 +107,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAODAI_SHRINE</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAO_DAI</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -155,9 +146,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAODAI_TEMPLE</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAO_DAI</DependencyType>
-			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_TEMPLE_PEDIA</Civilopedia>

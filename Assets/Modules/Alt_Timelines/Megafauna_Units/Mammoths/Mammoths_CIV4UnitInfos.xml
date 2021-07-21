@@ -887,9 +887,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORKMAMMOTH</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEANISM</DependencyType>
-			</AndDependencyTypes>
 			<Builds>
 				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>

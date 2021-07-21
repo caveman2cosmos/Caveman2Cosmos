@@ -3,9 +3,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CROCODILE_MYTH</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_KEMETISM</DependencyType>
-			</AndDependencyTypes>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>

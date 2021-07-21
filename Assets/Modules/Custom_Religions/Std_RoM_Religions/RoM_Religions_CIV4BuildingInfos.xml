@@ -617,9 +617,6 @@
 		<!-- Zoroasterism -->
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
-			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
@@ -687,9 +684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
-			</AndDependencyTypes>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>

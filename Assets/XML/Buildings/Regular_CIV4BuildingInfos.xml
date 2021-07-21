@@ -35196,9 +35196,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_TENGRIISM</DependencyType>
-			</AndDependencyTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<Bonus>BONUS_HORSE</Bonus>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
@@ -82289,9 +82286,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -88286,9 +88280,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
-			</AndDependencyTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
