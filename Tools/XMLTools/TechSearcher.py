@@ -9,8 +9,8 @@ class TechNode:
 	def find(self,text):
 		return self.ET.find('t:' + text,self.ns)
 	def loadPreq(self) -> None:
-		ands = []
-		ors = []
+		ands = [0]
+		ors = [0]
 		self.fullPreq = []
 		self.partialPreq = []
 		ands = self.find('AndPreReqs')
