@@ -9,8 +9,10 @@ class TechNode:
   def find(self,text):
     return self.ET.find('t:' + text,self.ns)
   def loadPreq(self) -> None:
+	ands = []
+	ors = []
     self.fullPreq = []
-    self.partialPreq = []
+    self.partialPreq = []	
     ands = self.find('AndPreReqs')
     if ands is not None:
       self.fullPreq = [preq.text for preq in ands]
@@ -21,9 +23,9 @@ class TechNode:
       else:
         self.partialPreq = [preq.text for preq in ors]
 
-  def __init__(self, node) -> None:
+  def __init__(self, node = "") -> None:
     self.ET = node
-    self.ns = {'t': re.search('\{(.*)\}\s*TechInfo',node.tag).group(1)}
+    self.ns = {'t': re.search(r'\{(.*)\}\s*TechInfo',node.tag).group(1)}
     self.name = self.find('Type').text
     self.fullPreqOf = []
     self.partialPreqOf = []
@@ -88,7 +90,7 @@ def toposort(tList, tDict) -> list:
     def getCompareValue(self) -> tuple:
       return (self.linksLeft(),self.node.find('iCost'),self.node.find('iGridX'),self.node.find('iGridY'))
     def __cmp__(self,other):
-      return cmp(self.getCompareValue(),other.getCompareValue())
+      return self.cmp(self.getCompareValue(),other.getCompareValue())
   nodeDict = {node.name : TopoNode(node) for node in tList}
   results = []
   targets = filter(lambda n: n.linksLeft() == 0, nodeDict.values())
@@ -140,7 +142,7 @@ class TechTree:
     return deps[-1]
   def dependance(self, firstName, secondName) -> int:
     if self.orderDifference(firstName, secondName) < 0:
-      return self.strictDependance(secondName,firstName)
+      return self.strictDependance(sName,fName)
     return self.strictDependance(firstName,secondName)
   def listRedudantDependanciesOf(self, baseTech) -> map:
     fulls = sorted(lookup(self.orderDict)(baseTech.fullPreq))
