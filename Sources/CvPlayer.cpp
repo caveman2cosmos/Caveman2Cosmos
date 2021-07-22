@@ -2193,7 +2193,6 @@ CvPlot* CvPlayer::findStartingPlot(const CvMap& map, bool bRandomize)
 			CvPlot* plot = map.plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapType(earth)
 #ifndef PARALLEL_MAPS
 			|| !plot->isMapCategoryType(earth)
 #endif
