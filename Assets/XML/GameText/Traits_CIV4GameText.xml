@@ -30,6 +30,10 @@
 		<Russian>Ìèëèòàðèñò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
+		<English>Aggressive 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
 		<English>This is a warmonger's trait. You get a free promotion for most of your units (the best units in the game, really--melee and gunpowder) and cheap barracks and drydocks to provide additional promotions. If you don't go to war when you're Aggressive, you're wasting the trait.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Bronze Working[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_IRON_WORKING]Iron Working[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CIVIL_SERVICE]Civil Service[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MACHINERY]Machinery[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUNPOWDER]Gunpowder[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CHEMISTRY]Chemistry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RIFLING]Rifling[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_STEEL]Steel[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Heroic Epic[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]West Point[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_RED_CROSS]Red Cross[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]The Pentagon[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STATUE_OF_ZEUS]Statue of Zeus[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Barracks[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Drydock[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Stable[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Vassalage[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Theocracy[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]How to use this trait? War. Duh. Am I not making myself clear, here? Put together a horde and go kill somebody already.[NEWLINE]You'll want your forces to mostly be composed of units that benefit from the trait: Melee units (Warriors, Axemen, Swordsmen, Spearmen, Macemen, Pikemen), Gunpowder units (Musketmen, Riflemen, Grenadiers, Infantry, SAM Infantry, Marines, Mechanized Infantry) and their UU variants.[NEWLINE]Drydocks make Steel a priority technology; likewise with technologies that enable one of the aforementioned units. Note that some of the Aggressive leaders have a UU that benefit from the trait (Montezuma, Alexander, Tokugawa, Ragnar, Shaka) and some do not (Genghis, Kublai, Stalin). The latter do benefit from the cheap barracks, however. Also, remember that you'll need more units than just melee and gunpowder--siege weapons and mounted may not receive Aggressive's free Combat I, but they're still essential.[NEWLINE]The Statue of Zeus world wonder is very good to have--mainly so that someone you're attacking doesn't have it. War weariness is bad enough as it is; having it doubled will definitely put a crimp in your world domination plans.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Aggressive in and of itself has no economic advantages and may, in fact, over-encourage you to accrue too many economic liabilities. Every unit has a maintenance cost, remember, and that cost goes up when the unit leaves home turf. In addition, every conquered city has maintenance costs. Over-conquering, especially early in the game, can be just as bad as over-expanding.[NEWLINE]On the plus side, since Aggressive should mean you have better units, hopefully you'll need fewer of them.</English>
 		<German>Dies ist eine Eigenschaft für Kriegstreiber. Viele der eigenen Einheiten (tatsächlich die besten Einheiten des Spiels: Nahkampf und Schießpulver) erhalten eine Extra-Beförderung und verbilligte Kasernen und Trockendocks sorgen für zusätzliche Beförderungen. Falls diese Eigenschaft nicht zum Führen von Kriegen verwendet wird, ist sie eigentlich komplett verschwendet.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Bronzeverarbeitung[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_IRON_WORKING]Eisenverarbeitung[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CIVIL_SERVICE]Öffentliche Verwaltung[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MACHINERY]Maschinen[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUNPOWDER]Schießpulver[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CHEMISTRY]Chemie[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RIFLING]Drall[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_STEEL]Stahl[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Fließband[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Heldenepos[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]West Point[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_RED_CROSS]Rotes Kreuz[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]Pentagon[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STATUE_OF_ZEUS]Zeus-Statue[\LINK][PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Kaserne[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Trockendock[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Stallungen[\LINK][PARAGRAPH:1][H1]Nützliche Gesellschaftsformen[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Vasallentum[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Theokratie[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Wie diese Eigenschaft eingesetzt werden soll? Im Krieg, natürlich. Immer noch nicht deutlich genug? Eine Horde Einheiten dazu benutzen, um andere Einheiten auszulöschen.[NEWLINE]Die eigenen Streitkräfte sollten am besten aus Einheiten zusammengesetzt sein, die von der Eigenschaft profitieren: Nahkampfeinheiten (Krieger, Axtkämpfer, Schwertkämpfer, Speerkämpfer, Streitkolbenträger, Pikeniere), Schießpulvereinheiten (Musketiere, Schützen, Grenadiere, Infanterie, SAM Infanterie, Marines, Mechanisierte Infanterie) und die Spezialeinheiten, die sie jeweils ersetzen.[NEWLINE]Die Technologie Stahl sollte vordringlich erforscht werden, um Trockendocks errichten zu können; ebenso verhält es sich mit Technologien, die Voraussetzung für die oben genannten Einheiten sind. Es sollte beachtet werden, dass einige der "aggressiven" Oberhäupter über eine Spezialeinheit verfügen, die von der Eigenschaft profitiert (Montezuma, Alexander, Tokugawa, Ragnar, Shaka), während bei anderen dies nicht der Fall ist (Dschingis Khan, Kublai Khan, Stalin). Trotzdem können die letztgenannten natürlich Nutzen aus den verbilligten Kasernen ziehen. Außerdem sollte nicht vergessen werden, dass für einen Krieg mehr als nur Nahkampf- und Schießpulvereinheiten benötigt werden - Belagerungswaffen und Berittene Einheiten erhalten vielleicht nicht die Extra-Beförderung "Kampf I", sind aber trotzdem unverzichtbar.[NEWLINE]Das Weltwunder "Zeus-Statue" ist eine schöne Ergänzung für die eigene Zivilisation - hauptsächlich deswegen, damit niemand anderes es errichten kann. Kriegsunzufriedenheit ist schon schlimm genug; wenn sie sich aber verdoppelt, hat das desaströse Auswirkungen auf die eigenen Welteroberungspläne.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]Die Eigenschaft "Aggressiv" selbst bietet keine wirtschaftlichen Vorteile und könnte den Anreiz zu einem enormen Anwachsen der Kosten liefern. Schließlich verursacht jede Einheit laufende Kosten und diese Kosten erhöhen sich, wenn die Einheit das eigene Hoheitsgebiet verlässt. Zusätzlich verursacht auch jede eroberte Stadt laufende Kosten. Übertriebene Eroberungen, speziell in der Frühphase einer Partie, können ebenso tödlich sein, wie übertriebene Expansion.[NEWLINE]Andererseits: Da "Aggressiv" meist auch bessere Einheiten bedeuten sollte, werden hoffentlich auch weniger von ihnen benötigt.</German>
@@ -49,6 +53,10 @@
 		</Spanish>
 		<Polish>Rolniczy</Polish>
 		<Russian>Çåìëåäåëåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
+		<English>Agricultural 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
@@ -246,6 +254,10 @@
 		<Russian>Áåçáîæíèê</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
+		<English>Anti Clerical 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
 		<English>This leader finds strong opposition from clergy of his country, due to his actions against the church, heretical ideas or something similar. As clergy doesn't want to voice its support for the ruler great people take a -15% hit. Monasteries all have a negative happiness bonus. Holy Cities in heathen lands cause extra negative revolution implications as do rival religions in your cities. - TR Team.</English>
 		<Italian>Questo leader trova una forte opposizione da parte del clero del suo stato, a causa delle sue azioni contro la chiesa, di idee eretiche o cose del genere. Dato che il clero non supporta il leader, i grandi personaggi nascono con una frequenza minore del 15%. Tutti i monasteri hanno delle penalità alla felicità. Le città sante nei territori degli infedeli aumentano i sentimenti rivoluzionari, allo stesso modo in cui le religioni rivali influenzano le tue città.</Italian>
@@ -377,6 +389,10 @@
 		</Spanish>
 		<Polish>Barbarzyński</Polish>
 		<Russian>Ãðóáûé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
+		<English>Barbaric 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
@@ -549,6 +565,10 @@
 		<Russian>Ìåöåíàò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
+		<English>Creative 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
 		<English>Creative is powerful early in the game, allowing you to quickly expand your borders and thereby claim territory and resources. The Warlords 2.08 patch added cheap Libraries, one of the best buildings in the game, making this trait even better.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Writing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DRAMA]Drama[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CONSTRUCTION]Construction[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]n/a[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Library[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THEATRE]Theatre[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSEUM]Colosseum[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]The big benefit Creative provides is allowing you more freedom in your city placement and in your early city builds. You don't have to worry about placing a city so a crucial resource is in its first ring of workable tiles so you can access it right away; it will be workable within a few short turns of founding the city. You can also skip monuments, Stonehenge, and spreading a religion (well, you can be a little more relaxed about the latter, at least).[PARAGRAPH:1]In addition, Creative may allow you to win some early game tug-o-war battles with a nearby civ over a key resource tile. By the same token, if the map lends itself to it, you can use the trait to seal off territory at a choke point. Creative is also something of a defensive trait, a cousin to Protective. By expanding your borders earlier and infusing the tiles with your culture, you have more territory that the enemy has to trudge through to attack you. It's also harder for another civilization to take tiles from you by city placement or by conquering cities. Creative also raises the cultural defense of a city faster, making it tougher to conquer.[PARAGRAPH:1]Writing enables the trait's cheap libraries, so it's obviously an even more important tech than before. The cheap theatres and coliseums may or may not be useful, depending on your strategy and circumstances in the game. You may want to warmonger in the mid or late game to get your most out of these buildings, using them to decrease war weariness.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Creative is a trait that is extremely useful in the early game and gets weaker as the game goes on. The +2[ICON_CULTURE] becomes less and less of a factor as the game progresses and more methods of producing culture accrue in each city. Also, the cheap buildings are available early and are all relatively cheap to begin with, so their faster production times will be less noticeable later in the game. By the middle of most games, the Creative trait is mostly a non-factor.</English>
 		<German>Die Eigenschaft "Kreativ" ist vor allem in der frühen Phase einer Partie sehr nützlich, da sie die schnelle Erweiterung der eigenen Grenzen und damit die Inbesitznahme von neuen Gebieten und Ressourcen erlaubt. Der Patch 2.08 für das erste Addon "Warlords" fügte der Eigenschaft verbilligte Bibliotheken hinzu, die zu den besten Gebäuden des Spiels zählen, wodurch die Eigenschaft noch weiter aufgewertet wurde.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Schrift[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DRAMA]Drama[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CONSTRUCTION]Bauwesen[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET]keine[PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Bibliothek[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THEATRE]Theater[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSEUM]Kolosseum[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Der große Vorteil der Eigenschaft "Kreativ" besteht darin, dass mehr Freiheiten bei der Gründung einer Stadt und deren ersten Bauprojekten bestehen. Bei der Gründung einer Stadt muss nicht unbedingt darauf geachtet werden, dass sich eine wichtige Ressource im ersten Stadtfeldring befindet, damit sie sofort zugänglich ist; schon wenige Runden nach Gründung der Stadt steht sie zur Verfügung. Außerdem können Monumente, Stonehenge und die Verbreitung einer Religion außer Acht gelassen werden (nun, die letztere Aufgabe kann zumindest etwas entspannter angegangen werden).[PARAGRAPH:1]Zusätzlich kann die Eigenschaft "Kreativ" dabei helfen, schon früh in einer Partie das Tauziehen mit anderen Zivilisationen um Schlüsselgeländefelder, die mit wichtigen Ressourcen versehen sind, zu gewinnen. Ebenso kann die Eigenschaft, falls die Karte es erlaubt, dazu verwendet werden, um das Gebiet um einen Engpass abzuriegeln. "Kreativ" ist eher eine defensive Eigenschaft, nah verwandt mit der Eigenschaft "Schützend". Durch die frühe Erweiterung der eigenen Grenzen und die Belegung der Geländefelder mit der eigenen Kultur muss sich ein Gegner durch ein großes Gebiet quälen, bevor er angreifen kann. Außerdem wird es für andere Zivilisationen schwieriger, Geländefelder durch die Gründung von Städten oder deren Eroberung für sich zu gewinnen. Durch die Eigenschaft "Kreativ" erhöht sich der kulturelle Widerstand einer Stadt schneller, wodurch sie schwerer zu erobern ist.[PARAGRAPH:1]Die Technologie "Schrift" schaltet die verbilligten Bibliotheken frei, so dass diese Technologie offensichtlich sogar noch wichtiger ist als zuvor. Die verbilligten Theater und Kolosseen können, abhängig von der eigenen Strategie und den Umständen der Partie, hilfreich sein oder auch nicht. Im mittleren bis späten Spielverlauf sollte ein Krieg geführt werden, um den größten Nutzen aus diesen Gebäuden ziehen zu können, indem sie zur Verringerung der Kriegsunzufriedenheit eingesetzt werden.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]"Kreativ" ist eine Eigenschaft, die in der frühen Phase einer Partie sehr nützlich ist und während des weiteren Spielverlaufs seinen Nutzen verliert. Die zusätzlichen +2[ICON_CULTURE] werden immer weniger entscheidend während die Partie fortschreitet und sich in jeder Stadt mehr Möglichkeiten zur Generierung von Kulturpunkten ergeben. Außerdem sind die verbilligten Gebäude schon früh in einer Partie verfügbar und daher gleich zu Anfang relativ günstig, so dass deren schnellere Produktionszeiten später in der Partie weniger von Vorteil sind. In der Mitte der meisten Partien spielt die Eigenschaft "Kreativ" fast keine Rolle mehr.</German>
@@ -579,6 +599,10 @@
 		</Spanish>
 		<Polish>Okrutny</Polish>
 		<Russian>Æåñòîêèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
+		<English>Cruel 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -625,6 +649,10 @@
 		</Spanish>
 		<Polish>Kłamca</Polish>
 		<Russian>Èíòðèãàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
+		<English>Deceiver 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
@@ -710,6 +738,10 @@
 		<Russian>Íåóìåðåííûé</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
+		<English>Excessive 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
 		<English>The opulent court of this ruler is a real strain on the state budget. - TR Team.</English>
 		<Russian>Пышный двор этого правителя ложится тяжелым бременем на государственный бюджет.</Russian>
@@ -767,6 +799,10 @@
 		<Russian>Ýêñïàíñèîíèñò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
+		<English>Expansive 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
 		<English>Expansive doesn't look that great at first glance. In fact, it first appears to belong in the category of "weak" traits, like Protective. After all, health is not a big problem; it's happiness that cramps your growth early in the game. And once you get used to those sickly green tendrils floating around your city, you realize that its effects aren't usually that bad. Health problems just slow growth a little.[PARAGRAPH:1]But hang on. Granaries--cheap for Expansive leaders--are one of the most useful buildings in the game. With grains, they provide additional health. But more importantly, they allow you to leverage slavery by growing your sacrificed population back faster.[PARAGRAPH:1]And with the Warlords 2.08 patch, Expansive got a needed boost thanks to slightly cheaper workers. You can always use more workers, especially early in the game.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Pottery[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_COMPASS]Compass[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Bronze Working[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Mathematics[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HANGING_GARDEN]The Hanging Gardens[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NOTRE_DAME]Notre Dame[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GRANARY]Granary[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HARBOR]Harbor[\LINK][PARAGRAPH:1]Bee-line to Pottery. Build (or whip) your cheap granaries. Thanks to the granary, the population will grow back faster, allowing you to whip them again.[PARAGRAPH:1]Obviously, build more Workers since they're cheaper for you, and put them to work. Get your tiles improved and your resources connected faster. Just remember that the +25% for Worker builds is accelerated by hammers, not by food, so you'll need to improve some tiles with good production and work them while the Worker is being built to take advantage of this. Since harbours are cheap, try to claim several coastal cities so you can leverage the advantages of that cheap building.[PARAGRAPH:1]Also look for opportunities to leverage that +2 health. Early on, you can place a city smack-dab in the jungle, for example, or surrounded by flood plains. In addition, you can construct health reducing buildings like forges and factories with less concern for their impact on health. You can chop more forests because you don't need their health benefits (hence the attractiveness of the Bronze Working and Mathematics techs). Just keep in mind that the trait does not make your cities invincible, and you will have to concern yourself with their health--just later rather than sooner.[PARAGRAPH:1]The Hanging Gardens is an attractive wonder for Expansive. It might not seem so at first--I already have a health boost, why do I need more? Because you're pursuing a strategy that pushes the envelope of your cities' health, that's why. I'm fond of wonders and buildings that further enhance a trait's benefits (which is why I like to try to build the Parthenon when I'm playing as a Philosophical leader, for example). The Hanging Gardens also provides more citizens to whip away. And hey--GPP towards a Great Engineer! You gotta like that.[PARAGRAPH:1]Notre Dame can also be handy. If you're whipping 'til your hands bleed, the big cathedral's happy boost may be very welcome indeed.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Like many other traits such as Creative, the effects of Expansive diminish as the game goes on. Other means of increasing health appear, the cheap buildings are early ones, and by the end of the game, once your railroad network is complete, your plentiful, cheap workers start to become idle. You may also switch away from the Slavery civic, losing one of the principal benefits of the cheap granaries.[PARAGRAPH:1]And as with most other traits, Expansive does not provide any direct economic benefits.</English>
 		<German>Die Eigenschaft "Expansiv" sieht auf den ersten Blick nicht besonders interessant aus. Tatsächlich scheint sie, in die Kategorie der "schwachen" Eigenschaften zu gehören, wie beispielsweise "Schützend". Immerhin ist Gesundheit kein großes Problem, schließlich ist es die Zufriedenheit, die früh in einer Partie das eigene Wachstum hemmt. Und sobald diese kränklichen grünen Ranken, die um die eigenen Städte schweben, zur Normalität geworden sind, wird klar, dass ihre Auswirkungen in der Regel nicht so schlimm sind. Probleme mit der Gesundheit einer Stadt verlangsamen das Wachstum nur ein wenig.[PARAGRAPH:1]Aber abwarten. Kornspeicher, die für Oberhäupter mit der Eigenschaft "Expansiv" relativ günstig sind, sind eines der nützlichsten Gebäude im Spiel. Falls eine Getreide-Ressource verfügbar ist, erzeugen sie zusätzliche Gesundheit. Aber, was noch wichtiger ist, sie ermöglichen den wirksamen Einsatz der Gesellschaftsform "Sklaverei", da geopferte Bürger schneller "nachwachsen".[PARAGRAPH:1]Und mit dem Patch 2.08 für das erste Addon "Warlords" erhielt die Eigenschaft "Expansiv" eine dringend nötige Verstärkung durch leicht verbilligte Bautrupps. Es ist immer besser, mehr Bautrupps einsetzen zu können, besonders in der frühen Phase einer Partie.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Keramik[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_COMPASS]Kompass[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Bronzeverarbeitung[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Mathematik[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HANGING_GARDEN]Hängende Gärten[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NOTRE_DAME]Notre-Dame[\LINK][PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GRANARY]Kornspeicher[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HARBOR]Hafen[\LINK][PARAGRAPH:1][H1]Nützliche Gesellschaftsformen[\H1][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Das erste Forschungziel sollte "Keramik" sein. Außerdem sollten die verbilligten Kornspeicher errichtet werden (oder deren Produktion durch Zwangsarbeit beschleunigt werden). Die Produktion sollte immer durch Zwangsarbeit beschleunigt werden und zwar, wenn möglich, während der gesamten Partie. Dank dem Kornspeicher, wird die Bevölkerung schneller nachwachsen, wodurch der erneute Einsatz der Zwangsarbeit ermöglicht wird.[PARAGRAPH:1]Offensichtlich sollten auch mehr Bautrupps aufgestellt und eingesetzt werden, da sie ebenfalls verbilligt verfügbar sind. Eigene Geländefelder sollten so schnell wie möglich mit Modernisierungen ausgestattet und Ressourcen erschlossen werden. Dabei sollte nicht vergessen werden, dass die 25% höhere Produktionsgeschwindigkeit für Bautrupps von der Produktionsleistung abhängt und nicht von der Nahrungsproduktion, so dass einige Geländefelder mit produktionsfördernden Modernisierungen ausgestattet und diese auch während der Produktion eines Bautrupps bearbeitet werden sollten. Da Häfen ebenfalls verbilligt sind, sollte versucht werden, einige Küstenstädte zu erlangen, so dass der Vorteil dieses Gebäudes auch genutzt werden kann.[PARAGRAPH:1]Außerdem sollte nach Möglichkeiten Ausschau gehalten werden, um die zusätzlichen +2 Gesundheit wirksam einsetzen zu können. Beispielsweise kann schon früh eine Stadt mitten im Dschungel oder im Schwemmland platziert werden. Zusätzlich können gesundheitsvermindernde Gebäude wie Schmieden und Fabriken errichtet werden, ohne deren Einfluss auf die Gesundheit einer Stadt berücksichtigen zu müssen. Es können auch mehr Wälder abgeholzt werden, da deren Gesundheitsboni nicht benötigt (deswegen sind die Technologien "Bronzeverarbeitung" und "Mathematik" so interessant). Allerdings macht die Eigenschaft "Expansiv" die eigenen Städte nicht unbesiegbar, die Beschäftigung mit der Gesundheit der eigenen Städte wird nur weiter nach hinten verschoben als sonst üblich.[PARAGRAPH:1]Die "Hängende Gärten" sind ein interessantes Weltwunder für diese Eigenschaft. Auf den ersten Blick erscheint dies nicht so: Ein Gesundheitsbonus ist schon vorhanden. Warum sollte ein zusätzlicher benötigt werden? Weil mit dieser Eigenschaft eine Strategie verfolgt wird, die die Gesundheit der eigenen Städte bis zum Äußersten treibt, deshalb. Es sollten bevorzugt Wunder und Gebäude errichtet werden, die die Vorteile einer Eigenschaft noch weiter erhöhen (deshalb kann beispielsweise bei einem Oberhaupt mit der Eigenschaft "Philosophisch" versucht werden, das "Parthenon" zu errichten). Die "Hängende Gärten" erhöhen außerdem die Bevölkerungszahl, die wiederum für Zwangsarbeit eingesetzt werden können. Und gewähren noch Große Persönlichkeit-Punkte für einen Großen Ingenieur! Das ist großartig.[PARAGRAPH:1]Das Weltwunder "Notre-Dame" kann ebenfalls nützlich sein. Bei wiederholtem Einsatz der Zwangsarbeit, kann der Zufriedenheitsbonus dieser großen Kathedrale tatsächlich sehr angenehm sein.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]Wie bei vielen andere Eigenschaften, beispielsweise "Kreativ", lassen die Vorteile der Eigenschaft "Expansiv" im Verlauf einer Partie nach. Andere Methoden, um die Gesundheit zu erhöhen, werden verfügbar, die verbilligten Gebäude sind nur in der frühen Phase einer Partie von Vorteil und sobald das eigene Schienennetz gegen Ende einer Partie vollendet ist, werden die Massen von billigen Bautrupps nutzlos. Außerdem könnte der Wunsch aufkommen, von der "Sklaverei" zu einer anderen Gesellschaftsform zu wechseln, wodurch einer der Hauptvorteile der verbilligten Kornspeicher verloren ginge.[PARAGRAPH:1]Und wie viele andere Eigenschaften gewährt "Expansiv" keine direkten wirtschaftlichen Vorteile.</German>
@@ -815,6 +851,10 @@
 		</Spanish>
 		<Polish>Fanatyczny</Polish>
 		<Russian>Ôàíàòèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
+		<English>Fanatical 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
@@ -869,6 +909,10 @@
 		<Russian>Ôèíàíñèñò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
+		<English>Financial 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
 		<English>This is quite probably the strongest of the traits, at least at levels below Emperor, so much so that many players consider Financial to be a "crutch" and avoid leaders with this trait because they feel it offers an unfair advantage. The game developers apparently agreed, hence in one of the early patches they removed the double production speed of banks to lessen its power. Even so, Financial remains a truly awesome trait.[PARAGRAPH:1]At first, it seems so subtle: +1[ICON_COMMERCE] on some tiles? So what?[PARAGRAPH:1]The answer, of course, is this: It's the economy, stupid. Say what you want about military, research, religion, and other game elements; ultimately, your civilization requires a robust economy in order to support everything else you do. Military units incur maintenance costs, more so if they're outside of your territory. Cities likewise have maintenance costs, hampering your rate of expansion and requiring you to ensure each city can somehow pay for itself. And to keep up in technology you have to be able to set aside funds to support research. The Financial trait makes all of these tasks a little easier--if handled well, a lot easier.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Pottery[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CURRENCY]Currency[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUILDS]Guilds[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BANKING]Banking[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_LIBERALISM]Liberalism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PRINTING_PRESS]Printing Press[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DEMOCRACY]Democracy[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CORPORATION]Corporation[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSUS]The Colossus[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WALL_STREET]Wall Street[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MARKET]Market[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GROCER]Grocer[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BANK]Bank[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Library[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]University[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_OBSERVATORY]Observatory[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LABORATORY]Laboratory[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]The main way to leverage the financial trait is very straightforward: cottage spam. Yes, the tried-and-true Cottage Economy, or CE. Have your [LINK=UNIT_WORKER]Workers[\LINK] lay down as many [LINK=IMPROVEMENT_COTTAGE]cottages[\LINK] as your population can work while still working other worthwhile tiles as well. I'm especially fond of placing cottages on riverside grassland tiles, as the Financial benefit kicks in as soon as the cottage is built, and the 2 food feeds the citizen working the tile (floodplains, with 3 food, are even better for cottages, supporting city growth along with the economy). Just remember you may have to irrigate some of those tiles instead, by placing farms on them, in order to feed and grow your population and/or to chain irrigate another tile. Make sure you have citizens working the cottages steadily, however, as it's the only way to make them grow and increase their revenue.[PARAGRAPH:1]In addition, be on the lookout for resources that provide additional commerce. Gems, gold, and silver are obvious targets, but spices, silk, and wine are good as well; all will earn you the +1[ICON_COMMERCE] benefit in addition to the additional commerce of the resource. You want to claim these resources, ensure they're in a city's fat cross, and are improved and then worked by a citizen. Most of the commerce-rich resources also increase happiness, which means you can grow your other cities larger and, in turn, work more cottages and other commerce-rich tiles.[PARAGRAPH:1]Since you'll have all that extra commerce rolling in, prioritize buildings that do something with it, and the technologies that enable them. Libraries, monasteries, universities, observatories, and laboratories all multiply the amount of research you convert from commerce via the science slider, while markets, grocers, and banks multiply whatever gold is left over. In addition, Printing Press will increase the yield from your cottage investment, as will the Free Speech civic. Emancipation will make any immature cottages grow faster.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]First off, Financial provides no direct benefit to a tile that isn't providing at least 2 commerce. This can make you reluctant to work tiles without the benefit, even though you will need to. This means a production city, which mostly works hammer-rich rather than commerce-rich tiles, gains no direct benefit from the trait. You will, however, need at least one production city, preferably more, so don't overlook them in favour of commerce cities. The same goes for tile improvements. Yes, you can place a cottage on a grassland hill. But should you? A mine would provide much-needed hammers, something commerce cities often chronically lack.[PARAGRAPH:1]The biggest problem with Financial, however, is the vulnerability of your economy, especially as time goes on. It takes a lot of turns to make a cottage grow into a town, but that investment can be quickly undone by a couple of pillaging enemy units. And the not-inconsiderable amount of gold to be gained from pillaging cottages is very tempting to the AI. You will need to garrison your best, oldest commerce cities with anti-pillaging units if you go to war. Also try to have your best commerce cities inland at the heart of your empire, rather than on the more vulnerable borders or coastline.</English>
 		<Russian>Ýòî ÿâëÿåòñÿ âåñüìà âåðîÿòíî ñàìîé ñèëüíîé îñîáåííîñòüþ, êàê ìèíèìóì íà óðîâíÿõ äî Èìïåðàòîðà, òàê ÷òî ìíîãèå èãðîêè ðàññìàòðèâàþò Ôèíàíñèñòà êàê "êîñòûëü" è èçáåãàþò ëèäåðîâ ñ ýòîé ÷åðòîé ïîòîìó ÷òî îíè ÷óâñòâóþò, ÷òî ýòî ïðåäëàãàåò íåñïðàâåäëèâîå ïðåèìóùåñòâî. Ðàçðàáîò÷èêè èãðû ïî-âèäèìîìó ñîãëàñèëèñü ñ ýòèì, ñëåäîâàòåëüíî â îäíîì èç ðàííèõ ïàò÷åé îíè óäàëèëè äâîéíóþ ñêîðîñòü ïðîèçâîäñòâà áàíêîâ ÷òîáû óìåíüøèòü åãî ìîùü. Äàæå â ýòîì ñëó÷àå, Ôèíàíñîâûé îñòàåòñÿ äåéñòâèòåëüíî óæàñíûé îñîáåííîñòüþ.[PARAGRAPH:1]Ñíà÷àëà, ýòî êàæåòñÿ åäâà ðàçëè÷èìûì: +1[ICON_COMMERCE] íà íåêîòîðûõ êëåòêàõ? Íó è ÷òî?[PARAGRAPH:1]Îòâåò, êîíå÷íî, ýòîò: ýòî - ýêîíîìèêà, ãëóïåö. Ñêàæèòå, ÷òî âû õîòèòå î âîåííûõ, èññëåäîâàíèÿõ, ðåëèãèè, è äðóãèõ ýëåìåíòàõ èãðû; â êîíå÷íîì ñ÷åòå, âàøà öèâèëèçàöèÿ òðåáóåò çäðàâîé ýêîíîìèêè ÷òîáû ïîääåðæèâàòü âñå îñòàëüíîå, ÷òî âû äåëàåòå. Âîåííûå þíèòû òðåáóþò äåíåæíîãî ñîäåðæàíèÿ, áîëüøå òîãî, åñëè îíè âíå âàøåé òåððèòîðèè. Ãîðîäà àíàëîãè÷íî èìåþò çàòðàòû îáñëóæèâàíèÿ, çàäåðæèâàÿ âàøó ñêîðîñòü ðàñøèðåíèÿ è òðåáóÿ îò âàñ ãàðàíòèé ÷òî êàæäûé ãîðîä ìîæåò òàê èëè èíà÷å çàïëàòèòü çà ñåáÿ. È âû äîëæíû ïîääåðæèâàòü íà âûñîêîì óðîâíå òåõíîëîãèè è áûòü â ñîñòîÿíèè îòêëàäûâàòü êàïèòàëû, ÷òîáû ïîääåðæàòü èññëåäîâàíèÿ. Ôèíàíñîâàÿ ÷åðòà äåëàåò âñå ýòè çàäà÷è íåìíîãî ëåã÷å--åñëè îáðàáîòàíî õîðîøî, íàìíîãî ëåã÷å.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Ãëèíÿíàÿ ïîñóäà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CURRENCY]Äåíüãè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUILDS]Ãèëüäèè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BANKING]Áàíêîâñêîå äåëî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_LIBERALISM]Ëèáåðàëèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PRINTING_PRESS]Ïå÷àòíûé ñòàíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DEMOCRACY]Äåìîêðàòèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CORPORATION]Êîðïîðàöèè[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSUS]Êîëîññ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WALL_STREET]Óîëë Ñòðèò[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MARKET]Ðûíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GROCER]Òîðãîâûå ðÿäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BANK]Áàíê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]Óíèâåðñèòåò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_OBSERVATORY]Îáñåðâàòîðèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LABORATORY]Ëàáîðàòîðèÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ãëàâíûé ñïîñîá óñèëèòü ôèíàíñîâóþ ÷åðòó ÿâëÿåòñÿ î÷åíü ïðÿìûì: äîìîâîé çàâàë. Äà, ïðîâåðåííàÿ Cottage Economy - äîìîâàÿ ýêîíîìèêà, èëè CE. Èìåéòå âàøèõ [LINK=UNIT_WORKER]ðàáî÷èõ[\LINK] çàëîæèòå òàê ìíîãî [LINK=IMPROVEMENT_COTTAGE]äîìîâ[\LINK] ñêîëüêî âàøå íàñåëåíèå ìîæåò îáðàáîòàòü è åùå îáðàáàòûâàÿ äðóãèå ðÿäîìñòîÿùèå êëåòêè òàêæå. ß îñîáåííî ëþáëþ ïîìåùàòü äîìà íà ïðèáðåæíûõ êëåòêàõ ëóãîâ, ïîñêîëüêó Ôèíàíñîâàÿ âûãîäà óìèðàåò, êàê òîëüêî äîì ïîñòðîåí, è 2 ïèùè êîðìèò ãðàæäàíèíà, îáðàáîòûâàþùåãî êëåòêó (ïîéìû, ñ 3 ïèùè, åùå ëó÷øå äëÿ äîìîâ, ïîääåðæèâàÿ ãîðîäñêîé ðîñò íàðÿäó ñ ýêîíîìèêîé). Òîëüêî ïîìíèòå, ÷òî âàì, âåðîÿòíî, ïðèäåòñÿ îðîñèòü íåêîòîðûå èç ýòèõ êëåòîê âìåñòî ýòîãî, ðàçìåñòèâ ôåðìû íà íèõ, ÷òîáû êîðìèòü è âûðàñòèòü âàøå íàñåëåíèå è/èëè ñâÿçàòü èððèãàöèåé äðóãóþ êëåòêó. Óäîñòîâåðüòåñü, ÷òî âû èìååòå ãðàæäàí, îáðàáîòûâàþùèõ äîìà óñòîé÷èâî, îäíàêî, ïîñêîëüêó ýòî - åäèíñòâåííûé ñïîñîá çàñòàâèòü èõ âûðàñòèòü è óâåëè÷èâàòü èõ äîõîä.[PARAGRAPH:1]Êðîìå òîãî, áóäüòå â ïîèñêàõ ðåñóðñîâ, êîòîðûå îáåñïå÷èâàþò äîïîëíèòåëüíóþ òîðãîâëþ. Äðàãîöåííûå êàìíè, çîëîòî, è ñåðåáðî ÿâëÿþòñÿ î÷åâèäíûìè öåëÿìè, íî ñïåöèè, øåëê, è âèíî õîðîøè òàêæå; âñå îíè çàðàáîòàþò äëÿ âàñ âûãîäó +1[ICON_COMMERCE] â äîïîëíåíèå ê äîïîëíèòåëüíîé òîðãîâëå ðåñóðñà. Âàì íåîáõîäèìî ïðåòåíäîâàòü íà ýòè ðåñóðñû, ãàðàíòèðóéòå, ÷òî îíè íàõîäÿòñÿ â êðóãå ãîðîäà, è óëó÷øåíû è çàòåì îáðàáîòûâàþòñÿ ãðàæäàíèíîì. Áîëüøèíñòâî áîãàòûõ òîðãîâëåé ðåñóðñîâ òàêæå óâåëè÷èâàåò ñ÷àñòüå, ÷òî îçíà÷àåò, ÷òî âû ìîæåòå âûðàñòèòü âàøè äðóãèå áîëüøèå ãîðîäà è, çà õîä îáðàáîòàòü áîëüøå äîìîâ è äðóãèå áîãàòûå òîðãîâëåé êëåòêè.[PARAGRAPH:1]Òàê âû áóäåòå èìåòü âñå ÷òî ïðèíîñèò äîïîëíèòåëüíàÿ òîðãîâëÿ, óäåëèòå ïåðâîñòåïåííîå âíèìàíèå çäàíèÿì, êîòîðûå äåëàþò ÷òî-òî ñ ýòèì, è òåõíîëîãèÿì êîòîðûå âêëþ÷àþò èõ. Áèáëèîòåêè, ìîíàñòûðè, óíèâåðñèòåòû, îáñåðâàòîðèè è ëàáîðàòîðèè âñå óìíîæàþò êîëè÷åñòâî èññëåäîâàíèé, êîòîðîå âû ïðåîáðàçîâûâàåòå èç òîðãîâëè ÷åðåç ñëàéäåð íàóêè, â òî âðåìÿ êàê ðûíêè, òîðãîâûå ðÿäû è áàíêè óìíîæàþò ëþáîå îñòàâøååñÿ çîëîòî. Â äîáàâëåíèå, Ïå÷àòíûé ïðåññ óâåëè÷èò äîõîä ñ âàøèõ èíâåñòèöèé â äîìà, òàêæå êàê ïàðàäèãìà Ñâîáîäà ñëîâà. Ýìàíñèïàöèÿ çàñòàâèò ëþáûå äîìà âûðàñòàòü áûñòðåå.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ñíà÷àëà, Ôèíàíñîâûé íå îáåñïå÷èâàåò íèêàêîé ïðÿìîé âûãîäû ê êëåòêå, êîòîðàÿ íå îáåñïå÷èâàåò êàê ìèíèìóì 2 òîðãîâëè. Ýòî ìîæåò çàñòàâèòü âàñ îòêàçàòüñÿ ðàáîòàòü ñ êëåòêàìè áåç âûãîäû, äàæå ïðè òîì, ÷òî âû áóäåòå íóæäàòüñÿ â íèõ. Ýòî îçíà÷àåò ÷òî ïðîèçâîäñòâî ãîðîäà, êîòîðûé ãëàâíûì îáðàçîì îáðàáàòûâàåò áîãàòûå ìîëîòêàìè à íå áîãàòûå òîðãîâëåé êëåòêè, íå ïðèîáðåòàÿ íåïîñðåäñòâåííîãî âûèãðûøà èç îñîáåííîñòåé. Âû áóäåòå, îäíàêî, íóæäàòüñÿ ïî êðàéíåé ìåðå â îäíîì ïðîèçâîäÿùåì ãîðîäå, ïðåäïî÷òèòåëüíî áîëüøå, òàê ÷òî íå ïðîïóñêàéòå èõ â ïîëüçó ãîðîäîâ òîðãîâëè. Òî æå ñàìîå ïîäõîäèò äëÿ óñîâåðøåíñòâîâàíèé êëåòêè. Äà, âû ìîæåòå ïîìåñòèòü äîì íà õîëì ïîëÿ. Íî íóæíî ýòî âàì? Ðóäíèê îáåñïå÷èë áû âåñüìà íåîáõîäèìûå ìîëîòêè, ÷åãî êîììåð÷åñêèì ãîðîäàì ÷àñòî õðîíè÷åñêè íåõâàòàåò.[PARAGRAPH:1]Ñàìàÿ áîëüøàÿ ïðîáëåìà ñ Ôèíàíñîâûì, îäíàêî, ÿâëÿåòñÿ óÿçâèìîñòü âàøåé ýêîíîìèêè, îñîáåííî ñ òå÷åíèåì âðåìåíè. Òðåáóåòñÿ ìíîãî õîäîâ çàñòàâèòü äîì ïðåâðàòèòüñÿ â ãîðîä, íî ýòè èíâåñòèöèè ìîãóò áûòü áûñòðî óíè÷òîæåíû íåñêîëüêèìè ãðàáÿùèìè âðàæåñêèìè þíèòàìè. È çíà÷èòåëüíîå êîëè÷åñòâî çîëîòà êîòîðîå ìîæåò áûòü ïîëó÷åíî îò îãðàáëåííûõ äîìîâ î÷åíü ñîáëàçíÿåò ÈÈ. Âû áóäåòå íóæäàòüñÿ ñòàâèòü â ãàðíèçîí âàøèõ ëó÷øèõ, ñòàðåéøèõ êîììåð÷åñêèõ ãîðîäîâ àíòèãðàáÿùèõ þíèòîâ, åñëè âû èäåòå âîåâàòü. Òàêæå ïðîáóéòå èìåòü âàøè ëó÷øèå ãîðîäà òîðãîâëè âíóòðè îñíîâû âàøåé èìïåðèè, à íå íà áîëåå óÿçâèìûõ ãðàíèöàõ èëè áåðåãîâîé ëèíèè.</Russian>
@@ -906,6 +950,10 @@
 		</Spanish>
 		<Polish>Cudoziemski</Polish>
 		<Russian>Êñåíîôèë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
+		<English>Foreign 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1031,6 +1079,10 @@
 		<Russian>Ãóìàíèñò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
+		<English>Humanitarian 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -1066,6 +1118,10 @@
 		</Spanish>
 		<Polish>Łowco-Zbieracz</Polish>
 		<Russian>Ñîáèðàòåëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
+		<English>Hunter-Gatherer 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1123,6 +1179,10 @@
 		</Spanish>
 		<Polish>Perfekcjonista</Polish>
 		<Russian>Èäåàëèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
+		<English>Idealistic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1184,6 +1244,10 @@
 		<Russian>Òðóäîëþáèâûé</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
+		<English>Industrious 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
 		<English>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Masonry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metal Casting[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]Er... pretty much all of them. Well, maybe except for Chichen Itza.[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Forge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]State Property[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Caste System[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Environmentalism[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</English>
 		<Russian>Åñëè Ïîëêîâîäåö ýòî îñîáåííîñòü ìèëèòàðèñòà, Õîçÿéñòâåííèê ýòî îñîáåííîñòü ñòðîèòåëÿ. ×óäåñà áîëåå äåøåâû, óâåëè÷èâàÿ èõ "ÿñíóþ" ïðèòÿãàòåëüíîñòü è äàåò âàì îïîðó â ñîðåâíîâàíèÿõ ïî èõ ñòðîèòåëüñòâó. Êðîìå òîãî, êóçíèöà, çäàíèå, êîòîðîå óñêîðÿåò ñòðîèòåëüñòâî äðóãèõ çäàíèé, íó, â îáùåì, áûñòðåå ñòðîèòü.[PARAGRAPH:1]×òî êàñàåòñÿ ïàêåòà ðàñøèðåíèÿ Beyond the Sword, ýòà ñåé÷àñ ñàìûé èñêëþ÷èòåëüíûé êëóá Civilization IV, õîòÿ íå î÷åíü. Âñå äðóãèå ÷åðòû èìåþò 9 èëè 10 ëèäåðîâ êòî îáëàäàåò èìè, â òî âðåìÿ êàê Õîçÿéñòâåííèê ðàçäåëåí òîëüêî 8 ëèäåðàìè. È íåò, îí îäíàêî íå êîìáèíàöèÿ ÷åðò Õîçÿéñòâåííèêà/Ôèëîñîôà; ýòî î÷åâèäíî ðàñöåíåíî ïðîåêòèðîâùèêàìè èãðû êàê ïîäàâëåíèå.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Êàìåííàÿ êëàäêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Ìîíîòåèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Êîíâåéåð[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET]Ñêîðåå . . . â çíà÷èòåëüíîé ñòåïåíè âñå îíè. Õîðîøî, âîçìîæíî çà èñêëþ÷åíèåì ×è÷åí-Èöû.[PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Êóçíèöà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Ôàáðèêà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Ãîñóäàðñòâåííàÿ ñîáñòâåííîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Êàñòîâàÿ ñèñòåìà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Îõðàíà îêðóæ. ñðåäû[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ñòðîèòü ÷óäåñà, êîíå÷íî. Ñòðîéòå èõ è óñèëüòå èõ è íå ïóñòèòå èõ â íåðÿøëèâûå ìàëåíüêèå ðóêè ÈÈ. Òàêæå èùèòå è ïðåòåíäóéòå íà ÷óäåñîóñêîðÿþùèå ðåñóðñû òèïà ìåäè, æåëåçà, ìðàìîðà, è êàìíÿ. Ïîìíèòå ÷òî óñêîðåííîå ïðîèçâîäñòâî ÷óäåñ âëèÿåò íà íàöèîíàëüíûå ÷óäåñà òàêæå.[PARAGRAPH:1]Òàêæå, óäåëèòå ïðèîðèòåò òåõíîëîãèè Ëèòüÿ â ïîðÿäêå äîñòóïà ê âàøåìó äåøåâîìó ñòðîåíèþ. Òàêòèêà ñ áîëüøèì êîëè÷åñòâîì ñîâìåñòíûõ äåéñòâèé ñ Èíäóñòðèàëüíûìè ëèäåðàìè ýòî ïîñòðîèòü Îðàêóëà (÷óäî, ïîýòîìó äåøåâî) è âûáðàòü Ëèòüå êàê âàøó ñâîáîäíóþ òåõíîëîãèþ. Çàòåì íà÷èíàéòå ñòðîèòü êóçíèöû. Ïîìíèòå ÷òî êóçíèöà, òàêæå òðåáóåòñÿ äëÿ äîïîëíèòåëüíûõ ÷óäåñ êàê Ìåòàëëóðãè÷åñêèé çàâîä, Êîëîññ, Ýéôåëåâà áàøíÿ, è Ñòàòóÿ ñâîáîäû. Òàê êàê Ëèòüå âêëþ÷àåò èõ, Êîëîññ îáû÷íî ñòðîèòñÿ ñðàçó ïîñëå òîãî êàê â åãî áóäóùåì ãîðîäå êóçíèöà çàêàí÷èâàåòñÿ.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Êîãäà âû èãðàåòå êàê ëèäåð Õîçÿéñòâåííèê, ñèðåíî-ïîäîáíîå î÷àðîâàíèå áûòü "ñòðîèòåëüíîãîëèêîì" åùå óâåëè÷èâàåòñÿ. Äàæå ïðè òîì, ÷òî ÷óäåñà áîëåå äåøåâû, îíè âñå åùå íå äåøåâàÿ ãðÿçü. Îíè òðåáóþò çíà÷èòåëüíûõ èíâåñòèöèé ìîëîòêîâ, êîòîðûå ìîãëè áû áûòü ïîìåùåíû â ëó÷øèå öåëè. Êàê âñåãäà, óäîñòîâåðüòåñü ÷òî ÷óäåñà, êîòîðûå âû õîòèòå ñòðîèòü, âïèñûâàþòñÿ â âàøó ñòðàòåãèþ è îáñòîÿòåëüñòâà èãðû.</Russian>
@@ -1213,6 +1277,10 @@
 		</Spanish>
 		<Polish>Izolacjonista</Polish>
 		<Russian>Èçîëÿöèîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
+		<English>Isolationist 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
@@ -1298,6 +1366,10 @@
 		</Spanish>
 		<Polish>Megaloman</Polish>
 		<Russian>Ìåãàëîìàíüÿê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
+		<English>Megalomaniac 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1392,6 +1464,10 @@
 		</Spanish>
 		<Polish>Koczownik</Polish>
 		<Russian>Êî÷åâíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
+		<English>Nomad 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
@@ -1491,6 +1567,10 @@
 		<Russian>Îðãàíèçàòîð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
+		<English>Organized 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
 		<English>Although Organized has a direct economic benefit--reducing the overhead of civics--it isn't nearly as big a boost in that regard as Financial. Nevertheless, saved GPT is saved GPT and is nothing to sneeze at.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Code of Laws[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Sailing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIGHTHOUSE]The Great Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PALACE]The Forbidden Palace[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Cristo Redentor[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Courthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Bureaucracy[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]State Property[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Similar to Spiritual, technologies that enable civics--especially higher cost civics--are priorities. Unlike Spiritual, however, switching civics is not something to do constantly (unless you're Asoka, who has the best of both worlds in this regard). Also remember to choose a civic because you'll benefit from it, not just because it's available or because Organized will make it cheaper.[PARAGRAPH:1]The big benefits from Organized, however, are the cheap buildings--three of the best in the game. To leverage the lighthouses, try to build several coastal cities. Cheap courthouses make new cities cheaper, so you can employ this into a REX strategy or into warmongering or both.[PARAGRAPH:1]In fact, I tend to consider Organized to be a warmonger's trait (especially for Hammurabi, Julius Caesar, and Napoleon, whose companion traits are also warmonger-friendly). This is because my first build in a conquered city is a courthouse to reduce its maintenance cost, and Organized makes those courthouses cheaper to build--or whip.[PARAGRAPH:1]Finally, factories are one of the best late-game buildings, and the 2.08 patch has made them cheap for Organized.[PARAGRAPH:1]Technology priorities are obviously Sailing, Code of Laws, and Assembly Line for the cheap buildings. Other tech targets are those that enable some of the more useful but expensive civics, especially Civil Service for the powerful Bureaucracy civic. Its high upkeep cost will be cut in half for an Organized leader, increasing its utility. The same goes for Organized Religion (enabled by Monotheism) and Police State (enabled by Fascism).[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Like many traits, as the game progresses, Organized gets weaker. Your economy grows and high-upkeep civics gradually become more affordable. As a result, the addition of a late cheap building (factories) in the 2.08 patch was a welcome late-game boost to Organized. Nevertheless, the best period for Organized is definitely the mid-game when you're probably running Bureaucracy and Organized Religion and are still building your economy.</English>
 		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание Парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» чертам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих черт). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать черту Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие черты также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие черты, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
@@ -1516,6 +1596,10 @@
 		</Spanish>
 		<Polish>Filozoficzny:Filozoficzna:Filozoficzny:Filozoficzna</Polish>
 		<Russian>Ôèëîñîô</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
+		<English>Philosophical 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -1547,6 +1631,10 @@
 		</Spanish>
 		<Polish>Polityk</Polish>
 		<Russian>Ïîëèòèêàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
+		<English>Politician 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -1604,6 +1692,10 @@
 		</Spanish>
 		<Polish>Populista</Polish>
 		<Russian>Ïîïóëèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
+		<English>Populist 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -1696,6 +1788,10 @@
 		<Russian>Ïðîãðåññèâíûé</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
+		<English>Progressist 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
 		<English>Progressivism is a political attitude favoring or advocating changes or reform. Progressivism is often viewed in opposition to conservative or reactionary ideologies. The Progressive Movement began in cities with settlement workers and reformers who were interested in helping those facing harsh conditions at home and at work. The reformers spoke out about the need for laws regulating tenement housing and child labor. They also called for better working conditions for women.</English>
 		<Italian>Il progressivismo è un atteggiamento politico che favorisce o richiede cambiamenti e riforme. Il progressivismo è spesso in contrapposizione con le ideologie conservative o reazionarie. Il movimento progressista iniziò nelle città con insediamenti di lavoratori e di riformatori che erano interessati nell'aiutare coloro che affrontavano condizioni difficili a casa e al lavoro. I riformatori parlavano del bisogno di leggi che regolavano le abitazioni e il lavoro minorile; chiedevano anche condizioni di lavoro migliori per le donne.</Italian>
@@ -1759,6 +1855,10 @@
 		<Russian>Ðåâîëþöèîíåð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
+		<English>Revolutionary 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
 		<English>This leader came to power through a coup or revolution. This society he leads is therefore in its very nature revolutionary. This affects the nation in a number of ways ; having a natural tolerance to anarchy ; a tendency towards civil disobedience ; a natural affinity to espionage and the covert. Finally, the talents of the individuals here are often latent leading to increased great generals inside his/her borders, free instigator promotion on spies. These attributes come somewhat at a price though. Cities take a hit in there economy and negative revolution implications, are symptomatic of being "Revolutionary".</English>
 		<Russian>Этот лидер пришел к власти в результате переворота или революции. Таким образом, общество, которым он руководит, революционно по самой своей природе. Это влияет по-разному на всю державу; естественная терпимость к анархии; склонность к гражданскому неповиновению; естественная близость к шпионажу и тайне. Наконец, таланты людей здесь часто скрыты, что приводит к увеличению числа великих генералов внутри его/ее границ, бесплатных квалификаций подстрекателей на шпионов. Однако эти атрибуты имеют свою цену. Города страдают от экономической разрухи и негативных последствий революции, что является симптомом «революционности».</Russian>
@@ -1804,6 +1904,10 @@
 		<Russian>Ó÷åíûé</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
+		<English>Scientific 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -1829,6 +1933,10 @@
 		</Spanish>
 		<Polish>Żeglarski</Polish>
 		<Russian>Ìîðåïëàâàòåëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
+		<English>Seafaring 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
@@ -1865,6 +1973,10 @@
 		</Spanish>
 		<Polish>Uduchowiony:Uduchowiona:Uduchowiony:Uduchowiona'</Polish>
 		<Russian>Ìèñòèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
+		<English>Spiritual 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -1938,6 +2050,10 @@
 		</Spanish>
 		<Polish>Wybuchowy</Polish>
 		<Russian>Òåìïåðàìåíòíûé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
+		<English>Temperamental 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
@@ -2082,6 +2198,10 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
+		<English>Charismatic 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
 		<English>Imperialistic</English>
 		<French>Impérialiste</French>
@@ -2092,6 +2212,10 @@
 		</German>
 		<Italian>Imperialista</Italian>
 		<Spanish>Imperialista</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
+		<English>Imperialistic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
@@ -2116,6 +2240,10 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
+		<English>Protective 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</Tag>

@@ -3758,16 +3758,6 @@
 		<Russian>Õèìüÿðèòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE</Tag>
-		<English>Hit Animated Movie</English>
-		<Italian>Film di animazione di successo</Italian>
-		<Russian>Àíèìå-õèò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
 		<English>Hit Movies</English>
 		<French>Film réussi</French>

@@ -300,27 +300,5 @@
 				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_AMERICAN_MALL</Type>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
-					<BonusType>BONUS_THEREMIN</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HYPERMARKET</Type>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
-					<BonusType>BONUS_THEREMIN</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

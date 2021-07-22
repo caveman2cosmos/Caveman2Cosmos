@@ -960,7 +960,7 @@ class Pedia:
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 
-		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+		if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
 			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):

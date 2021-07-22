@@ -1006,5 +1006,14 @@
 			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,2,2</Button>
 			<FontButtonIndex>90</FontButtonIndex>
 		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MACHU_PICCHU_PLANS</Type>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>

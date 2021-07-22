@@ -1652,6 +1652,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6629,6 +6639,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6652,17 +6663,6 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6674,6 +6674,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6709,6 +6710,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6724,17 +6726,6 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -11990,6 +11981,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24064,6 +24061,40 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NAITERUKOB</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAI</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAINANYOKE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAINAROK</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29786,6 +29817,32 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NAITERUKOB</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAI</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAINANYOKE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NGAINAROK</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BULL_MYTH_EFFECT</Type>
@@ -29888,6 +29945,24 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_MYTH_EFFECT</Type>
@@ -29962,6 +30037,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_MYTH_EFFECT</Type>
@@ -30076,6 +30161,24 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EJE_SONG</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -30319,6 +30422,24 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Type>
@@ -31577,6 +31698,28 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OBATALA</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OGGUN</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOKUN</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OSHOSI</BuildingType>
+					<iProductionModifier>5</iProductionModifier>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>

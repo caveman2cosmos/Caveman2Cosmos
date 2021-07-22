@@ -1188,9 +1188,6 @@
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
@@ -1207,9 +1204,6 @@
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_I</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
@@ -1227,9 +1221,6 @@
 		</OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_II</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_DRUID_MONASTERY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Description>
 			<Message>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_MESSAGE</Message>
 			<PrereqTech>NONE</PrereqTech>
