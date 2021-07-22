@@ -3352,5 +3352,24 @@
 			</NotOnDomainTypes>
 			<bBuildUp>1</bBuildUp>
 		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_BUSHIDO</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_BUSHIDO</Description>
+			<Button>Art/Interface/Buttons/Promotions/Bushido1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_WIND_HORSE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_WIND_HORSE</Description>
+			<Button>Art/Interface/Buttons/Promotions/Windhorse1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
 	</PromotionLineInfos>
 </Civ4PromotionLineInfos>

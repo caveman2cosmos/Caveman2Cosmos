@@ -4,21 +4,12 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_BARD</Type>
-			<AndDependencyTypes>
-				<DependencyType>UNIT_BARD</DependencyType>
-				<DependencyType>BUILDING_CROW_STORY</DependencyType>
-			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ENTERTAINER</Type>
-			<AndDependencyTypes>
-				<DependencyType>UNIT_ENTERTAINER</DependencyType>
-				<DependencyType>BUILDING_CROW_STORY</DependencyType>
-				<DependencyType>BUILDING_CROW_STORIES</DependencyType>
-			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
 				<BuildingType>BUILDING_CROW_STORIES</BuildingType>
@@ -26,11 +17,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CELEBRITY</Type>
-			<AndDependencyTypes>
-				<DependencyType>UNIT_CELEBRITY</DependencyType>
-				<DependencyType>BUILDING_CROW_STORY</DependencyType>
-				<DependencyType>BUILDING_CROW_STORIES</DependencyType>
-			</AndDependencyTypes>
 			<Buildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
 				<BuildingType>BUILDING_CROW_STORIES</BuildingType>
