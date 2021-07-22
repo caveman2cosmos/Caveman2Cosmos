@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import re
 import heapq
+from pathlib import Path
 
 defaultData = ['CIV4TechInfos.xml']
 
@@ -30,11 +31,13 @@ class TechNode:
     self.loadPreq()
 
 
+def _getModDir() -> Path:
+    return (Path(__file__).parents[2]).resolve()
 
 def loadData(files, prefix = '') -> list:
   trees = []
   for f in files:
-    trees.append(ET.parse(f))
+    trees.append(ET.parse(_getModDir() / "Assets" / "XML" / "Technologies" / f))
   return trees
 
 def generateTechList(trees) -> list:
