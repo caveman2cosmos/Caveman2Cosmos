@@ -30,8 +30,8 @@
 		<Russian>Ìèëèòàðèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_AGGRESSIVE1</Tag>
-		<English>Aggressive I</English>
+		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
+		<English>Aggressive 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
@@ -55,8 +55,8 @@
 		<Russian>Çåìëåäåëåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_AGRICULTURAL1</Tag>
-		<English>Agricultural I</English>
+		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
+		<English>Agricultural 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
@@ -254,8 +254,8 @@
 		<Russian>Áåçáîæíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL1</Tag>
-		<English>Anti Clerical I</English>
+		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
+		<English>Anti Clerical 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
@@ -391,8 +391,8 @@
 		<Russian>Ãðóáûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BARBARIC1</Tag>
-		<English>Barbaric I</English>
+		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
+		<English>Barbaric 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
@@ -565,8 +565,8 @@
 		<Russian>Ìåöåíàò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CREATIVE1</Tag>
-		<English>Creative I</English>
+		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
+		<English>Creative 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -601,8 +601,8 @@
 		<Russian>Æåñòîêèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CRUEL1</Tag>
-		<English>Cruel I</English>
+		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
+		<English>Cruel 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -651,8 +651,8 @@
 		<Russian>Èíòðèãàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_DECEIVER1</Tag>
-		<English>Deceiver I</English>
+		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
+		<English>Deceiver 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
@@ -738,8 +738,8 @@
 		<Russian>Íåóìåðåííûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_EXCESSIVE1</Tag>
-		<English>Excessive I</English>
+		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
+		<English>Excessive 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
@@ -799,8 +799,8 @@
 		<Russian>Ýêñïàíñèîíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_EXPANSIVE1</Tag>
-		<English>Expansive I</English>
+		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
+		<English>Expansive 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -853,8 +853,8 @@
 		<Russian>Ôàíàòèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FANATICAL1</Tag>
-		<English>Fanatical I</English>
+		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
+		<English>Fanatical 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
@@ -909,8 +909,8 @@
 		<Russian>Ôèíàíñèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FINANCIAL1</Tag>
-		<English>Financial I</English>
+		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
+		<English>Financial 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -952,8 +952,8 @@
 		<Russian>Êñåíîôèë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FOREIGN1</Tag>
-		<English>Foreign I</English>
+		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
+		<English>Foreign 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1079,8 +1079,8 @@
 		<Russian>Ãóìàíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_HUMANITARIAN1</Tag>
-		<English>Humanitarian I</English>
+		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
+		<English>Humanitarian 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
@@ -1120,8 +1120,8 @@
 		<Russian>Ñîáèðàòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER1</Tag>
-		<English>Hunter-Gatherer I</English>
+		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
+		<English>Hunter-Gatherer 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1181,8 +1181,8 @@
 		<Russian>Èäåàëèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_IDEALISTIC1</Tag>
-		<English>Idealistic I</English>
+		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
+		<English>Idealistic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1244,8 +1244,8 @@
 		<Russian>Òðóäîëþáèâûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS1</Tag>
-		<English>Industrious I</English>
+		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
+		<English>Industrious 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1279,8 +1279,8 @@
 		<Russian>Èçîëÿöèîíèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ISOLATIONIST1</Tag>
-		<English>Isolationist I</English>
+		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
+		<English>Isolationist 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
@@ -1368,8 +1368,8 @@
 		<Russian>Ìåãàëîìàíüÿê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC1</Tag>
-		<English>Megalomaniac I</English>
+		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
+		<English>Megalomaniac 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1466,8 +1466,8 @@
 		<Russian>Êî÷åâíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_NOMAD1</Tag>
-		<English>Nomad I</English>
+		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
+		<English>Nomad 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
@@ -1567,8 +1567,8 @@
 		<Russian>Îðãàíèçàòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ORGANIZED1</Tag>
-		<English>Organized I</English>
+		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
+		<English>Organized 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
@@ -1598,8 +1598,8 @@
 		<Russian>Ôèëîñîô</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL1</Tag>
-		<English>Philosophical I</English>
+		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
+		<English>Philosophical 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -1633,8 +1633,8 @@
 		<Russian>Ïîëèòèêàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_POLITICIAN1</Tag>
-		<English>Politician I</English>
+		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
+		<English>Politician 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -1694,8 +1694,8 @@
 		<Russian>Ïîïóëèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_POPULIST1</Tag>
-		<English>Populist I</English>
+		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
+		<English>Populist 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -1788,8 +1788,8 @@
 		<Russian>Ïðîãðåññèâíûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PROGRESSIST1</Tag>
-		<English>Progressist I</English>
+		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
+		<English>Progressist 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
@@ -1855,8 +1855,8 @@
 		<Russian>Ðåâîëþöèîíåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY1</Tag>
-		<English>Revolutionary I</English>
+		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
+		<English>Revolutionary 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -1904,8 +1904,8 @@
 		<Russian>Ó÷åíûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SCIENTIFIC1</Tag>
-		<English>Scientific I</English>
+		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
+		<English>Scientific 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
@@ -1935,8 +1935,8 @@
 		<Russian>Ìîðåïëàâàòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SEAFARING1</Tag>
-		<English>Seafaring I</English>
+		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
+		<English>Seafaring 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
@@ -1975,8 +1975,8 @@
 		<Russian>Ìèñòèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SPIRITUAL1</Tag>
-		<English>Spiritual I</English>
+		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
+		<English>Spiritual 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2052,8 +2052,8 @@
 		<Russian>Òåìïåðàìåíòíûé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL1</Tag>
-		<English>Temperamental I</English>
+		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
+		<English>Temperamental 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
@@ -2198,8 +2198,8 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CHARISMATIC1</Tag>
-		<English>Charismatic I</English>
+		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
+		<English>Charismatic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
@@ -2214,8 +2214,8 @@
 		<Spanish>Imperialista</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_IMPERIALIST1</Tag>
-		<English>Imperialistic I</English>
+		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
+		<English>Imperialistic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
@@ -2242,8 +2242,8 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PROTECTIVE1</Tag>
-		<English>Protective I</English>
+		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
+		<English>Protective 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</Tag>
