@@ -2149,6 +2149,31 @@
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>4</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -4208,16 +4233,6 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
-				<!--BuildingExtraCommerce>
-					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce-->
-				<!--BuildingExtraCommerce>
-					<Building>BUILDING_JAIN_CATHEDRAL</Building>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce-->
 				<BuildingExtraCommerce>
 					<Building>BUILDING_MORMON_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
@@ -4240,6 +4255,36 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_JAIN_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

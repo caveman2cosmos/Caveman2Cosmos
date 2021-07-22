@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL</Tag>
-		<English>Aerial</English>
+		<English>Aerial CT</English>
 		<French>Aérien</French>
 		<Russian>Àâèàòîð</Russian>
 	</TEXT>
@@ -295,7 +295,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF</Tag>
-		<English>Aloof</English>
+		<English>Aloof CT</English>
 		<French>Distant</French>
 		<Russian>Áåçðàçëè÷íûé</Russian>
 	</TEXT>
@@ -427,7 +427,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT</Tag>
-		<English>Bigot</English>
+		<English>Bigot CT</English>
 		<French>Bigot</French>
 		<Russian>Ðåòðîãðàä</Russian>
 	</TEXT>
@@ -558,7 +558,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS</Tag>
-		<English>Careless</English>
+		<English>Careless CT</English>
 		<French>Négligent</French>
 		<Russian>Áåñïå÷íûé</Russian>
 	</TEXT>
@@ -680,7 +680,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED</Tag>
-		<English>Civilized</English>
+		<English>Civilized CT</English>
 		<French>Civilisé</French>
 		<Russian>Öèâèëèçîâàííûé</Russian>
 	</TEXT>
@@ -818,7 +818,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
-		<English>Aggressive</English>
+		<English>Aggressive CT</English>
 		<French>Agressif:Agressive:Agressifs:Agressives</French>
 		<German>Aggressiv</German>
 		<Russian>Àãðåññèâíûé</Russian>
@@ -1057,7 +1057,7 @@ Nachteile:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
-		<English>Agricultural</English>
+		<English>Agricultural CT</English>
 		<French>Agricole</French>
 		<Russian>Çåìëåäåëåö</Russian>
 	</TEXT>
@@ -1277,7 +1277,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL</Tag>
-		<English>Anti-Clerical</English>
+		<English>Anti-Clerical CT</English>
 		<French>Anti-Clérical</French>
 		<Russian>Àíòèêëåðèêàë</Russian>
 	</TEXT>
@@ -1426,7 +1426,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC</Tag>
-		<English>Barbaric</English>
+		<English>Barbaric CT</English>
 		<French>Barbare</French>
 		<Russian>Âàðâàð</Russian>
 	</TEXT>
@@ -1563,7 +1563,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC</Tag>
-		<English>Charismatic</English>
+		<English>Charismatic CT</English>
 		<French>Charismatique</French>
 		<Russian>Âäîõíîâèòåëü</Russian>
 	</TEXT>
@@ -1681,7 +1681,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE</Tag>
-		<English>Creative</English>
+		<English>Creative CT</English>
 		<French>Créatif:Créative:Créatifs:Créatives</French>
 		<Russian>Òâîðåö</Russian>
 	</TEXT>
@@ -1845,7 +1845,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL</Tag>
-		<English>Cruel</English>
+		<English>Cruel CT</English>
 		<French>Cruel</French>
 		<Russian>Æåñòîêèé</Russian>
 	</TEXT>
@@ -1988,7 +1988,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER</Tag>
-		<English>Deceiver</English>
+		<English>Deceiver CT</English>
 		<French>Sournois</French>
 		<Russian>Ëèöåäåé</Russian>
 	</TEXT>
@@ -2132,7 +2132,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE</Tag>
-		<English>Excessive</English>
+		<English>Excessive CT</English>
 		<French>Excessif</French>
 		<Russian>Òðàíæèðà</Russian>
 	</TEXT>
@@ -2360,7 +2360,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE</Tag>
-		<English>Expansive</English>
+		<English>Expansive CT</English>
 		<French>Accessible:Accessible:Accessibles:Accessibles</French>
 		<Russian>Ýêñïàíñèîíèñò</Russian>
 	</TEXT>
@@ -2490,7 +2490,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL</Tag>
-		<English>Financial</English>
+		<English>Financial CT</English>
 		<French>Financier:Financière:Financiers:Financières</French>
 		<Russian>Ôèíàíñèñò</Russian>
 	</TEXT>
@@ -2649,7 +2649,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN</Tag>
-		<English>Foreigner</English>
+		<English>Foreigner CT</English>
 		<French>Étranger</French>
 		<Russian>Êîñìîïîëèò</Russian>
 	</TEXT>
@@ -2774,7 +2774,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN</Tag>
-		<English>Humanitarian</English>
+		<English>Humanitarian CT</English>
 		<French>Humanitaire</French>
 		<Russian>Ãóìàíèñò</Russian>
 	</TEXT>
@@ -2917,7 +2917,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER</Tag>
-		<English>Hunter-Gatherer</English>
+		<English>Hunter-Gatherer CT</English>
 		<French>Chasseur-Cueilleur</French>
 		<Russian>Îõîòíèê-ñîáèðàòåëü</Russian>
 	</TEXT>
@@ -3037,7 +3037,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC</Tag>
-		<English>Idealistic</English>
+		<English>Idealistic CT</English>
 		<French>Idéaliste</French>
 		<Russian>Èäåàëèñò</Russian>
 	</TEXT>
@@ -3159,7 +3159,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST</Tag>
-		<English>Imperialist</English>
+		<English>Imperialist CT</English>
 		<French>Impérialiste</French>
 		<Russian>Èìïåðèàëèñò</Russian>
 	</TEXT>
@@ -3300,7 +3300,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS</Tag>
-		<English>Industrious</English>
+		<English>Industrious CT</English>
 		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses</French>
 		<Russian>Òðóäîãîëèê</Russian>
 	</TEXT>
@@ -3423,7 +3423,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE</Tag>
-		<English>Innovative</English>
+		<English>Innovative CT</English>
 		<French>Innovant</French>
 		<Russian>Íîâàòîð</Russian>
 	</TEXT>
@@ -3552,7 +3552,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST</Tag>
-		<English>Isolationist</English>
+		<English>Isolationist CT</English>
 		<French>Isolationiste</French>
 		<Russian>Èçîëÿöèîíèñò</Russian>
 	</TEXT>
@@ -3693,7 +3693,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC</Tag>
-		<English>Megalomaniac</English>
+		<English>Megalomaniac CT</English>
 		<French>Mégalomaniaque</French>
 		<Russian>×åñòîëþáåö</Russian>
 	</TEXT>
@@ -3822,7 +3822,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC</Tag>
-		<English>Nomadic</English>
+		<English>Nomadic CT</English>
 		<French>Nomade</French>
 		<Russian>Êî÷åâíèê</Russian>
 	</TEXT>
@@ -3970,7 +3970,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED</Tag>
-		<English>Organized</English>
+		<English>Organized CT</English>
 		<French>Organisé:Organisée:Organisés:Organisées</French>
 		<Russian>Îðãàíèçàòîð</Russian>
 	</TEXT>
@@ -4100,7 +4100,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL</Tag>
-		<English>Philosophical</English>
+		<English>Philosophical CT</English>
 		<French>Philosophe:Philosophe:Philosophes:Philosophes</French>
 		<Russian>Ôèëîñîô</Russian>
 	</TEXT>
@@ -4233,7 +4233,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN</Tag>
-		<English>Politician</English>
+		<English>Politician CT</English>
 		<French>Politicien</French>
 		<Russian>Ïîëèòèê</Russian>
 	</TEXT>
@@ -4361,7 +4361,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST</Tag>
-		<English>Populist</English>
+		<English>Populist CT</English>
 		<French>Populiste</French>
 		<Russian>Ïîïóëèñò</Russian>
 	</TEXT>
@@ -4494,7 +4494,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE</Tag>
-		<English>Protective</English>
+		<English>Protective CT</English>
 		<French>Protecteur</French>
 		<Russian>Ïîêðîâèòåëü</Russian>
 	</TEXT>
@@ -4636,7 +4636,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY</Tag>
-		<English>Revolutionary</English>
+		<English>Revolutionary CT</English>
 		<French>Révolutionaire</French>
 		<Russian>Ðåâîëþöèîíåð</Russian>
 	</TEXT>
@@ -4777,7 +4777,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC</Tag>
-		<English>Scientific</English>
+		<English>Scientific CT</English>
 		<French>Scientifique</French>
 		<Russian>Ó÷åíûé</Russian>
 	</TEXT>
@@ -5043,7 +5043,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING</Tag>
-		<English>Seafaring</English>
+		<English>Seafaring CT</English>
 		<French>Marin</French>
 		<Russian>Ìîðåõîä</Russian>
 	</TEXT>
@@ -5193,7 +5193,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL</Tag>
-		<English>Spiritual</English>
+		<English>Spiritual CT</English>
 		<French>Spirituel:Spirituelle:Spirituels:Spirituelles</French>
 		<Russian>Êëåðèêàë</Russian>
 	</TEXT>
@@ -5333,7 +5333,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL</Tag>
-		<English>Temperamental</English>
+		<English>Temperamental CT</English>
 		<French>Tempéré</French>
 		<Russian>Âñïûëü÷èâûé</Russian>
 	</TEXT>
@@ -5452,7 +5452,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS</Tag>
-		<English>Covetous</English>
+		<English>Covetous CT</English>
 		<French>Cupide</French>
 		<Russian>Êîðûñòíûé</Russian>
 	</TEXT>
@@ -5585,7 +5585,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY</Tag>
-		<English>Cowardly</English>
+		<English>Cowardly CT</English>
 		<French>Couard</French>
 		<German>Feige</German>
 		<Russian>Òðóñëèâûé</Russian>
@@ -5804,7 +5804,7 @@ Vorteile:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED</Tag>
-		<English>Crooked</English>
+		<English>Crooked CT</English>
 		<French>Cagneux</French>
 		<Russian>Öèíèê</Russian>
 	</TEXT>
@@ -6100,7 +6100,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE</Tag>
-		<English>Defensive</English>
+		<English>Defensive CT</English>
 		<French>Défensif</French>
 		<German>Defensiv</German>
 		<Russian>Çàùèòíèê</Russian>
@@ -6415,7 +6415,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC</Tag>
-		<English>Dynamic</English>
+		<English>Dynamic CT</English>
 		<French>Dynamique</French>
 		<Russian>Äèíàìè÷íûé</Russian>
 	</TEXT>
@@ -6649,7 +6649,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT</Tag>
-		<English>Efficient</English>
+		<English>Efficient CT</English>
 		<French>Efficient</French>
 		<Russian>Ðà÷èòåëüíûé</Russian>
 	</TEXT>
@@ -6851,7 +6851,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY</Tag>
-		<English>Gloomy</English>
+		<English>Gloomy CT</English>
 		<French>Morne</French>
 		<Russian>Óãðþìûé</Russian>
 	</TEXT>
@@ -7077,7 +7077,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS</Tag>
-		<English>Glorious</English>
+		<English>Glorious CT</English>
 		<French>Glorieux</French>
 		<Russian>Ñëàâíûé</Russian>
 	</TEXT>
@@ -7293,7 +7293,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS</Tag>
-		<English>Gluttonous</English>
+		<English>Gluttonous CT</English>
 		<French>Glouton</French>
 		<Russian>×ðåâîóãîäíèê</Russian>
 	</TEXT>
@@ -7521,7 +7521,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY</Tag>
-		<English>Greedy</English>
+		<English>Greedy CT</English>
 		<French>Avide</French>
 		<Russian>Ñêðÿãà</Russian>
 	</TEXT>
@@ -7793,7 +7793,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM</Tag>
-		<English>Grim</English>
+		<English>Grim CT</English>
 		<French>Sinistre</French>
 		<Russian>Ãðîçíûé</Russian>
 	</TEXT>
@@ -8045,7 +8045,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST</Tag>
-		<English>Honest</English>
+		<English>Honest CT</English>
 		<French>Honnête</French>
 		<Russian>×åñòíûé</Russian>
 	</TEXT>
@@ -8237,7 +8237,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE</Tag>
-		<English>Humble</English>
+		<English>Humble CT</English>
 		<French>Humble</French>
 		<Russian>Ñêðîìíûé</Russian>
 	</TEXT>
@@ -8457,7 +8457,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE</Tag>
-		<English>Impulsive</English>
+		<English>Impulsive CT</English>
 		<French>Impulsif</French>
 		<Russian>Èìïóëüñèâíûé</Russian>
 	</TEXT>
@@ -8683,7 +8683,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL</Tag>
-		<English>Lawful</English>
+		<English>Lawful CT</English>
 		<French>Légitime</French>
 		<Russian>Çàêîíîäàòåëü</Russian>
 	</TEXT>
@@ -8965,7 +8965,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY</Tag>
-		<English>Lazy</English>
+		<English>Lazy CT</English>
 		<French>Paresseux</French>
 		<Russian>Ïðàçäíûé</Russian>
 	</TEXT>
@@ -9173,7 +9173,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR</Tag>
-		<English>Liar</English>
+		<English>Liar CT</English>
 		<French>Menteur</French>
 		<Russian>Ëæåö</Russian>
 	</TEXT>
@@ -9365,7 +9365,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL</Tag>
-		<English>Medical</English>
+		<English>Medical CT</English>
 		<French>Médical</French>
 		<Russian>Ìåäèê</Russian>
 	</TEXT>
@@ -9601,7 +9601,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK</Tag>
-		<English>Meek</English>
+		<English>Meek CT</English>
 		<French>Docile</French>
 		<Russian>Ìÿãêîñåðäå÷íûé</Russian>
 	</TEXT>
@@ -9845,7 +9845,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST</Tag>
-		<English>Minimalist</English>
+		<English>Minimalist CT</English>
 		<French>Minimaliste</French>
 		<Russian>Ìèíèìàëèñò</Russian>
 	</TEXT>
@@ -10075,7 +10075,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE</Tag>
-		<English>Naive</English>
+		<English>Naive CT</English>
 		<French>Naïf</French>
 		<Russian>Íàèâíûé</Russian>
 	</TEXT>
@@ -10319,7 +10319,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST</Tag>
-		<English>Naturalist</English>
+		<English>Naturalist CT</English>
 		<French>Naturaliste</French>
 		<Russian>Íàòóðàëèñò</Russian>
 	</TEXT>
@@ -10555,7 +10555,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT</Tag>
-		<English>Negligent</English>
+		<English>Negligent CT</English>
 		<French>Négligent</French>
 		<Russian>Íåáðåæíûé</Russian>
 	</TEXT>
@@ -10781,7 +10781,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR</Tag>
-		<English>Negotiator</English>
+		<English>Negotiator CT</English>
 		<French>Négociateur</French>
 		<Russian>Íåãîöèàíò</Russian>
 	</TEXT>
@@ -11025,7 +11025,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST</Tag>
-		<English>Pacifist</English>
+		<English>Pacifist CT</English>
 		<French>Pacifiste</French>
 		<German>Pazifist</German>
 		<Russian>Ïàöèôèñò</Russian>
@@ -11273,7 +11273,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS</Tag>
-		<English>Pious</English>
+		<English>Pious CT</English>
 		<French>Pieux</French>
 		<Russian>Íàáîæíûé</Russian>
 	</TEXT>
@@ -11539,7 +11539,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC</Tag>
-		<English>Pragmatic</English>
+		<English>Pragmatic CT</English>
 		<French>Pragmatique</French>
 		<Russian>Ïðàãìàòèê</Russian>
 	</TEXT>
@@ -11743,7 +11743,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT</Tag>
-		<English>Preeminent</English>
+		<English>Preeminent CT</English>
 		<French>Prééminent</French>
 		<Russian>Ïðåâîñõîäíûé</Russian>
 	</TEXT>
@@ -11969,7 +11969,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE</Tag>
-		<English>Progressive</English>
+		<English>Progressive CT</English>
 		<French>Progressiste</French>
 		<Russian>Ïîçèòèâèñò</Russian>
 	</TEXT>
@@ -12167,7 +12167,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC</Tag>
-		<English>Prolific</English>
+		<English>Prolific CT</English>
 		<French>Prolifique</French>
 		<Russian>Ùåäðûé</Russian>
 	</TEXT>
@@ -12355,7 +12355,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB</Tag>
-		<English>Slob</English>
+		<English>Slob CT</English>
 		<French>Plouc</French>
 		<Russian>Çàãðÿçíèòåëü</Russian>
 	</TEXT>
@@ -12571,7 +12571,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST</Tag>
-		<English>Strategist</English>
+		<English>Strategist CT</English>
 		<French>Stratège</French>
 		<Russian>Ñòðàòåã</Russian>
 	</TEXT>
@@ -12797,7 +12797,7 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN</Tag>
-		<English>Stubborn</English>
+		<English>Stubborn CT</English>
 		<French>Têtu</French>
 		<Russian>Óïðÿìûé</Russian>
 	</TEXT>
@@ -13023,7 +13023,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID</Tag>
-		<English>Timid</English>
+		<English>Timid CT</English>
 		<French>Timide</French>
 		<German>Schüchtern</German>
 		<Russian>Ðîáêèé</Russian>
@@ -13353,7 +13353,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL</Tag>
-		<English>Traditional</English>
+		<English>Traditional CT</English>
 		<French>Traditionnel</French>
 		<Russian>Ðåàêöèîíåð</Russian>
 	</TEXT>
@@ -13589,7 +13589,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED</Tag>
-		<English>Unrefined</English>
+		<English>Unrefined CT</English>
 		<French>Non raffiné</French>
 		<Russian>Íåîòåñàííûé</Russian>
 	</TEXT>
@@ -13883,7 +13883,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY</Tag>
-		<English>Unsanitary</English>
+		<English>Unsanitary CT</English>
 		<French>Malsain</French>
 		<Russian>Íåðÿõà</Russian>
 	</TEXT>
@@ -14026,7 +14026,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER</Tag>
-		<English>Usurper</English>
+		<English>Usurper CT</English>
 		<French>Usurpateur</French>
 		<Russian>Óçóðïàòîð</Russian>
 	</TEXT>
@@ -14151,7 +14151,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER</Tag>
-		<English>Warmonger</English>
+		<English>Warmonger CT</English>
 		<French>Seigneur de Guerre</French>
 		<German>Kriegstreiber</German>
 		<Russian>Ïîäñòðåêàòåëü</Russian>
@@ -14419,7 +14419,7 @@ Nachteile:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS</Tag>
-		<English>Zealous</English>
+		<English>Zealous CT</English>
 		<French>Zélé</French>
 		<Russian>Ôàíàòèê</Russian>
 	</TEXT>

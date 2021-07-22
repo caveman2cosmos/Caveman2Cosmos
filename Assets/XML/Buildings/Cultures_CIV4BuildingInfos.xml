@@ -4665,6 +4665,10 @@
 					<BuildingType>BUILDING_KERALA</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LOTUS_TEMPLE</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>

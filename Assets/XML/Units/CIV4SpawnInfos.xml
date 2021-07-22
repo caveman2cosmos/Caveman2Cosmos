@@ -4380,6 +4380,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+				<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
