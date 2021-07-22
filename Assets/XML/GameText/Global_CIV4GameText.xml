@@ -30280,10 +30280,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Earth</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAP_SUBTERRANEAN</Tag>
-		<English>Underground</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAP_CISLUNAR</Tag>
 		<English>Cislunar Space</English>
 	</TEXT>
