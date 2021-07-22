@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import re
 import heapq
 
-defaultData = ['CIV4TechInfos.xml']
+defaultData = ['Caveman2Cosmos_GIT\Assets\XML\Technologies\CIV4TechInfos.xml']
 
 class TechNode:
 
