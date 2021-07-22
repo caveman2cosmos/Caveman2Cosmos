@@ -2854,7 +2854,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
-	CyGlobalContext::getInstance().getCyMap() = GC.getMap();
+	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
 	GC.getMap().afterSwitch();
 }
 
