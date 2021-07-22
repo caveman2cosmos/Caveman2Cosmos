@@ -8,6 +8,594 @@
 		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала внутри культурных границ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_AIR_UNIT_CAPACITY</Tag>
+		<English>[ICON_BULLET]%D1_Amount Air Unit Capacity in all cities.</English>
+		<French>[ICON_BULLET]%D1_Amount de capacité d'accueil d'unité aériennes dans toutes les Villes.</French>
+		<Italian>[ICON_BULLET]%D1_Amount alla capacità aerea in tutte le città.</Italian>
+		<Polish>[ICON_BULLET]%D1_Amount Ilości możliwych stacjonujących Jednostek Powietrznych we wszystkich miastach.</Polish>
+		<Russian>[ICON_BULLET]%D1_Amount воздушных отрядов во всех городах.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE</Tag>
+		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
+		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
+		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
+		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
+		<Polish>[ICON_BULLET]%D1_Num Kary do Dyplomacji (zamienne na bonus do Przywódców z tą samą cechą)</Polish>
+		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с той же чертой)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_POSITIVE</Tag>
+		<English>[ICON_BULLET]%D1_Num Diplomacy Bonus with other Leaders</English>
+		<French>[ICON_BULLET]%D1_Num Bonus Diplomatique envers les autres Leaders</French>
+		<German>[ICON_BULLET]%D1_Num Diplomatiebonus</German>
+		<Italian>[ICON_BULLET]%D1_Num nei rapporti diplomatici con gli altri leader</Italian>
+		<Polish>[ICON_BULLET]%D1_Num Bonusu do Dyplomacji z innymi Przywódcami</Polish>
+		<Russian>[ICON_BULLET]%D1_Num к бонусу дипломатии во время переговоров с другими лидерами</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_BOMBARD_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
+		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di danni dal bombardamento in tutte le tue città</Italian>
+		<Polish>[ICON_BULLET]%D1_Mod%% Obrażeń do Obrony przed Bombardowaniem we wszystkich Miastach</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% ущерба защитным сооружениям и отрядам от обстрела и дальнего боя во всех городах</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
+		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
+		<English>Resources</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
+		<English>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp de[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Geländeart[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp per[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]%D1_Change de %F2_HappOrUnhapp por[SPACE]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp z[SPACE]</Polish>
+		<Russian>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp от[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CAPITAL_XP_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
+		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
+		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
+		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Stolicy</Polish>
+		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в столице или резиденции правителя</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_CULTURE</Tag>
+		<English>[ICON_BULLET]New cities begin with %D1 culture</English>
+		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 culture</French>
+		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 cultura</Italian>
+		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: %D1 kultury</Polish>
+		<Russian>[ICON_BULLET]Новые города начинают с %D1 культуры.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_POPULATION</Tag>
+		<English>[ICON_BULLET]New cities begin with %D1 population.</English>
+		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 population.</French>
+		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 popolazione.</Italian>
+		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: %D1 populacji.</Polish>
+		<Russian>[ICON_BULLET]Новые города начинают с %D1 населения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CITY_START_STATE_RELIGION</Tag>
+		<English>[ICON_BULLET]New cities begin with the State Religion.</English>
+		<French>[ICON_BULLET]Les nouvelles Villes commencent avec la religion d'Etat.</French>
+		<Italian>[ICON_BULLET]Le nuove città cominciano con la religione di stato.</Italian>
+		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: Religią Państwową.</Polish>
+		<Russian>[ICON_BULLET]В новых городах уже есть государственная религия.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
+		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
+		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
+		<Italian>[ICON_BULLET]%D1%% XP richiesti per la promozione</Italian>
+		<Spanish>[ICON_BULLET]%D1%% PX necesarios para ascender unidades.</Spanish>
+		<Polish>[ICON_BULLET]%D1%% Potrzebnego Doświadczenia dla Promocji Jednostki</Polish>
+		<Russian>[ICON_BULLET]%D1%% опыта для Квалификации отряда</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CIVIC_UPKEEP_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Civic Upkeep</English>
+		<French>[ICON_BULLET]%D1%% d'entretien doctrinal</French>
+		<German>[ICON_BULLET]%D1%% Unterhalt für Gesellschaftsform</German>
+		<Italian>[ICON_BULLET]%D1%% costo di mantenimento della civiltà</Italian>
+		<Spanish>[ICON_BULLET]%D1%% al mantenimiento de principios</Spanish>
+		<Polish>[ICON_BULLET]%D1%% do Utrzymania Doktryny</Polish>
+		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
+		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections</English>
+		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
+		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
+		<Polish>[ICON_BULLET]Tylko Cywilizacja może otrzymać tą cechę - Niedostępne dla Przywódców</Polish>
+		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
+		<English>[ICON_BULLET]%D1%F2_commerce/City</English>
+		<French>[ICON_BULLET]%D1%F2_commerce/ville</French>
+		<German>[ICON_BULLET]%D1%F2_commerce/Stadt</German>
+		<Italian>[ICON_BULLET]%D1%F2_commerce/Città</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2_commerce/ciudad</Spanish>
+		<Polish>[ICON_BULLET]%D1%F2_commerce/Miasto</Polish>
+		<Russian>[ICON_BULLET]%D1%F2_commerce/город</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_COMMERCE_MODIFIERS</Tag>
+		<English>[ICON_BULLET]%D1%% %F2_commerce</English>
+		<French>[ICON_BULLET]%D1%% au %F2_commerce</French>
+		<Spanish>[ICON_BULLET]%D1%% [NUM2:al:a la:a los:a las] %F2_commerce</Spanish>
+		<Russian>[ICON_BULLET]%D1%% %F2_commerce</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_DISABLED_OFF</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców w grze z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам при игре в режиме с «Развивающимися лидерами».[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców bez gry z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_DISALLOWED</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
+		<English>[NEWLINE][ICON_BULLET]Double Production Speed of[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Double la vitesse de production de:[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]Doppelte Produktionsgeschwindigkeit für:[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Raddoppia la velocità di produzione di[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Dobla la velocidad de producción de[SPACE]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]Podwójna szybkość Produkcji:[SPACE]</Polish>
+		<Russian>[NEWLINE][ICON_BULLET]Двойная скорость производства[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_DRAFT_ON_CAPTURE</Tag>
+		<English>[ICON_BULLET]Automatically Drafts new units in newly conquered cities.</English>
+		<French>[ICON_BULLET]Enrôle automatiquement des unités dans les Villes nouvellement conquises.</French>
+		<Italian>[ICON_BULLET]Recluta automaticamente nuove unità nelle città appena conquistate.</Italian>
+		<Polish>[ICON_BULLET]Automatycznie Powołuje nowe jednostki w nowo podbitych miastach.</Polish>
+		<Russian>[ICON_BULLET]Автоматически призывает новые отряды во вновь завоеванных городах.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_EXTRA_GOODY</Tag>
+		<English>[ICON_BULLET]Gains a second result from Goody Huts and Islands.</English>
+		<French>[ICON_BULLET]Reçoit un second cadeau des Huttes et Iles.</French>
+		<Italian>[ICON_BULLET]Ottieni un secondo bonus da villaggi tribali e isole sconosciute.</Italian>
+		<Polish>[ICON_BULLET]Otrzymujesz drugą nagrodę z Chatek i Nieznanych Wysp.</Polish>
+		<Russian>[ICON_BULLET]Удвоенная награда от туземных деревень и островов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_EXTRA_YIELD_THRESHOLDS</Tag>
+		<English>[ICON_BULLET]+1%F1_yield on Plots with %d2%F3_yield</English>
+		<French>[ICON_BULLET]+1%F1_yield sur les cases avec: %d2%F3_yield</French>
+		<German>[ICON_BULLET]+1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
+		<Italian>[ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+		<Spanish>[ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+		<Polish>[ICON_BULLET]+1%F1_yield na polach z: %d2%F3_yield</Polish>
+		<Russian>[ICON_BULLET]+1%F1_yield на участках с %d2%F3_yield</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
+		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
+		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
+		<Italian>[ICON_BULLET]%D1_Amount al raggio d'azione per le unità aeree.</Italian>
+		<Polish>[ICON_BULLET]%D1_Amount Zasięgu Operacyjnego dla jednostek Powietrznych.</Polish>
+		<Russian>[ICON_BULLET]%D1_Amount дальности полета авиационных отрядов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FREE_PROMOTION_UNITCOMBAT</Tag>
+		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
+		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
+		<German>[ICON_BULLET]freie Beförderung [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für[SPACE]</German>
+		<Russian>[ICON_BULLET]Бесплатные Квалификации [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] для[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_NW</Tag>
+		<English>[ICON_BULLET]Gets a Free Specialist for each National Wonder where built.</English>
+		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
+		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
+		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Cud Narodowy który wybudujesz.</Polish>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
+		<English>[ICON_BULLET]Gets a Free Specialist for each Team Project where built.</English>
+		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Projet d'Equipe construit.</French>
+		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Progetto di squadra nella città in cui è costruito.</Italian>
+		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Projekt który wybudujesz.</Polish>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждый завершенный командный проект.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_WW</Tag>
+		<English>[ICON_BULLET]Gets a Free Specialist for each World Wonder where built.</English>
+		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
+		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Grande Meraviglia nella città in cui è costruito.</Italian>
+		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Wielki Cud który wybudujesz.</Polish>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
+		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
+		<German>[ICON_BULLET]freie militärische Einheiten pro 100 Bürger: %D1</German>
+		<Russian>[ICON_BULLET]Бесплатных отрядов на каждые 100 жителей: %D1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>
+		<English>[ICON_BULLET]Starts a Golden Age when a %s1_GP is born in an owned city.</English>
+		<French>[ICON_BULLET]Démarre l'Age d'Or lorsqu'un %s1_GP est né dans la ville.</French>
+		<Italian>[ICON_BULLET]Comincia un'età dell'oro quando un %s1_GP nasce in una tua città.</Italian>
+		<Polish>[ICON_BULLET]Rozpoczyna Złotą Erę gdy: %s1_GP narodzi się w mieście.</Polish>
+		<Russian>[ICON_BULLET]Начинается Золотой век, когда %s1_GP рождается в городе игрока.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_GENERAL_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Great Military People Emergence</English>
+		<French>[ICON_BULLET]%D1%% Emergen de Général illustre</French>
+		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren</German>
+		<Italian>[ICON_BULLET]%D1%% ritmo di nascita dei Grandi Generali</Italian>
+		<Polish>[ICON_BULLET]%D1%% do Wielkiego Generała</Polish>
+		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_GREAT_PEOPLE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] Birth Rate</English>
+		<French>[ICON_BULLET]Taux de natalité [ICON_GREATPEOPLE] %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Geburtenrate [ICON_GREATPEOPLE]</German>
+		<Italian>[ICON_BULLET]%D1%% ritmo di nascita [ICON_GREATPEOPLE]</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
+		<Polish>[ICON_BULLET]Częstotliwość Narodzin: [ICON_GREATPEOPLE] %D1%%</Polish>
+		<Russian>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] ур. рождаемости</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
+		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
+		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священных городах негос. религий</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
+		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
+		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
+		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Świętym Mieście Twojej Religi Narodowej</Polish>
+		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священном городе вашей госуд. религии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_LESS_YIELD_THRESHOLDS</Tag>
+		<English>[ICON_BULLET]-1%F1_yield on Plots with %d2%F3_yield</English>
+		<French>[ICON_BULLET]-1%F1_yield sur les cases avec: %d2%F3_yield</French>
+		<German>[ICON_BULLET]-1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
+		<Italian>[ICON_BULLET]-1%F1_yield su caselle con %d2%F3_yield</Italian>
+		<Spanish>[ICON_BULLET]-1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+		<Polish>[ICON_BULLET]-1%F1_yield na polach z: %d2%F3_yield</Polish>
+		<Russian>[ICON_BULLET]-1%F1_yield на участках с %d2%F3_yield</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_MAX_ANARCHY</Tag>
+		<English>[ICON_BULLET]Max %d1 [NUM1:Turn:Turns] of Anarchy</English>
+		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie maximum</French>
+		<German>[ICON_BULLET]Max. %d1 [NUM1:Runde:Runden] Unruhen</German>
+		<Italian>[ICON_BULLET]%d1 [NUM1:turno massimo:turni massimi] di Anarchia</Italian>
+		<Spanish>[ICON_BULLET]Máx. %d1 [NUM1:turno:turnos] de anarquía</Spanish>
+		<Polish>[ICON_BULLET]Maksymalna ilość tur Anarchii: %d1</Polish>
+		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change to Maximum possible Trade Routes ([ICON_TRADE]) per City</English>
+		<French>[ICON_BULLET]%D1_Change de nombre maximum de routes commerciales ([ICON_TRADE]) par ville</French>
+		<Italian>[ICON_BULLET]%D1_Change al numero massimo di rotte commerciali ([ICON_TRADE]) per città</Italian>
+		<Polish>[ICON_BULLET]%D1_Change do maksymalnej ilości Szlaków Handlowych ([ICON_TRADE]) na Miasto</Polish>
+		<Russian>[ICON_BULLET]%D1_Change максимально возможных торговых путей ([ICON_TRADE]) на город</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_MIN_ANARCHY</Tag>
+		<English>[ICON_BULLET]Min %d1 [NUM1:Turn:Turns] of Anarchy</English>
+		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie minimum</French>
+		<German>[ICON_BULLET]Min. %d1 [NUM1:Runde:Runden] Unruhen</German>
+		<Italian>[ICON_BULLET]%d1 [NUM1:turno minimo:turni minimi] di anarchia</Italian>
+		<Polish>[ICON_BULLET]Minimalna ilość tur Anarchii: %d1</Polish>
+		<Russian>[ICON_BULLET]Мин. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
+		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
+		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità che trasportano missili.</Italian>
+		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewożących rakiety.</Polish>
+		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех ракетоносцев.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_MISSILE_RANGE</Tag>
+		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
+		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
+		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% National Wonder Production</English>
+		<French>[ICON_BULLET]Construction de merveilles nationales %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Produktion Nationaler Wunder</German>
+		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie Nazionali</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas nacionales</Spanish>
+		<Polish>[ICON_BULLET]%D1%% do Budowy Narodowych Cudów</Polish>
+		<Russian>[ICON_BULLET]%D1%% производства Национальных чудес</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NAVAL_CARGO_SPACE</Tag>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
+		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
+		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
+		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla wszystkich jednostek transportujących - morskich.</Polish>
+		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех транспортных судов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NEGATIVE</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This is a Negative Trait[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]C'est un Trait Négatif[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo è un tratto negativo[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]To jest Negatywna Cecha[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это негативная черта[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
+		<English>[ICON_BULLET]Non State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
+		<French>
+			<Text>[ICON_BULLET]Le [ICON_RELIGION] (non officielle) produit encore [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>[ICON_BULLET]Nicht-staatliche [ICON_RELIGION] produziert immer noch [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
+			<Gender>Male:Neuter</Gender>
+			<Plural>0:0</Plural>
+		</German>
+		<Italian>[ICON_BULLET]La [ICON_RELIGION] non di Stato produrrà [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Italian>
+		<Spanish>[ICON_BULLET]Las [ICON_RELIGION] no oficiales producirán [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Spanish>
+		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Nie narodowe [ICON_RELIGION] Nadal produkuje [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Polish>
+		<Russian>[ICON_BULLET]Негосударственная религия [ICON_RELIGION] по-прежнему производит базовые очки [ICON_CULTURE], [ICON_GOLD] и [ICON_RESEARCH].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
+		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
+		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
+		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Nie-Państwowej przez Misjonarzy.</Polish>
+		<Russian>[ICON_BULLET]%D1%% шанс распространить негосударственную религию вашими миссионерами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NOT_ON_GAME_OPTION</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]désactivé lorsque l'option %s2_Option est active[COLOR_REVERT]</French>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Inattivo se l'opzione %s2_Option è attivata[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dezaktywuje się gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Отключается, когда используется опция %s2_Option[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NO_ANARCHY</Tag>
+		<English>[ICON_BULLET]No Anarchy</English>
+		<French>[ICON_BULLET]Pas d'anarchie</French>
+		<German>[ICON_BULLET]Keine Unruhen</German>
+		<Italian>[ICON_BULLET]Nessuna Anarchia</Italian>
+		<Spanish>[ICON_BULLET]Sin anarquía</Spanish>
+		<Polish>[ICON_BULLET]Brak Anarchii</Polish>
+		<Russian>[ICON_BULLET]Нет Анархии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_NO_UPKEEP</Tag>
+		<English>[ICON_BULLET]No Upkeep Costs for %s1 Civics</English>
+		<French>[ICON_BULLET]Aucun coût d'entretien pour: %s1</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für %s1</German>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento per %s1</Italian>
+		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por %s1</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów Utrzymania dla: %s1</Polish>
+		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%s1 íå òðåáóåò çàòðàò íà ñîäåðæàíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_ON_GAME_OPTION</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Attivo solo se l'opzione %s1_Option è attivata[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aktywna tylko gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Активно только когда используется опция %s1_Option[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_AND_ENTRY</Tag>
+		<English>[COLOR_WARNING_TEXT] and %s1_trait[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT] et %s1_trait[COLOR_REVERT]</French>
+		<Italian>[COLOR_WARNING_TEXT] e %s1_trait[COLOR_REVERT]</Italian>
+		<Polish>[COLOR_WARNING_TEXT] i %s1_trait[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT] и %s1_trait[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_BEGIN</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]You currently require %s1_trait[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Il vous faut le trait %s1_trait[COLOR_REVERT]</French>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede %s1_trait[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga %s1_trait[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Вам в настоящее время требуется %s1_trait[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_PREREQ_OR_ENTRY</Tag>
+		<English>[COLOR_WARNING_TEXT] (%s1_Trait may substitute for %s2_Trait)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT] (%s1_Trait peut remplacer %s2_Trait)[COLOR_REVERT]</French>
+		<Italian>[COLOR_WARNING_TEXT] (%s1_Trait può sostituire %s2_Trait)[COLOR_REVERT]</Italian>
+		<Polish>[COLOR_WARNING_TEXT] (%s1_Trait może być substytutem dla %s2_Trait)[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT] (%s1_Trait может заменить %s2_Trait)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER</Tag>
+		<English>[NEWLINE][ICON_BULLET]%D1%% Production of[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Production %D1%% plus rapide de:[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]%D1%% schnellere Produktion für:[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Produzione più veloce del %D1%% per[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Acelera un %D1%% la producción de[SPACE]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]%D1%% Szybszej Produkcji:[SPACE]</Polish>
+		<Russian>[NEWLINE][ICON_BULLET]%D1%% к производству[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_STATE_REL_SPREAD_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% chance to Spread State Religion with your Missionaries.</English>
+		<French>[ICON_BULLET]%D1%% de chances de propager la religion d'État avec vos missionnaires.</French>
+		<Italian>[ICON_BULLET]%D1%% di diffondere la religione di stato con i tuoi missionari.</Italian>
+		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Państwowej przez Misjonarzy.</Polish>
+		<Russian>[ICON_BULLET]%D1%% шанс на успешное распространение государственной религии вашими миссионерами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TEAM_WONDER_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Team Project Production</English>
+		<French>[ICON_BULLET]Construction de merveilles d'équipe %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Teamwunderproduktion</German>
+		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie di Squadra</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas de equipo</Spanish>
+		<Polish>[ICON_BULLET]%D1%% do Budowy Projektów</Polish>
+		<Russian>[ICON_BULLET]%D1%% к скорости для Командных проектов</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TECH_PREREQ</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires knowledge of %s1_TechName[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert la connaissance de %s1_TechName[COLOR_REVERT]</French>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede la conoscenza della tecnologia %s1_TechName[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga znajomości: %s1_TechName[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требуется знание %s1_TechName[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
+		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_END</Tag>
+		<English>Technologies</English>
+		<Russian>Технологии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST</Tag>
+		<English>[ICON_BULLET]Research %D1_Change%% as fast as normal when researching [LINK=%s2_Tech]%s3_Tech[\LINK]</English>
+		<French>[ICON_BULLET]Recherche %D1_Change%% plus vite que la normale lors de la recherche de [LINK=%s2_Tech]%s3_Tech[\LINK]</French>
+		<Russian>[ICON_BULLET]Исследование [LINK=%s2_Tech]%s3_Tech[\LINK] на %D1_Change%% быстрее обычного</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS</Tag>
+		<English>[ICON_BULLET]%D1%% %F2_yield from [ICON_TRADE]</English>
+		<French>[ICON_BULLET]%D1%% %F2_yield avec: [ICON_TRADE]</French>
+		<German>[ICON_BULLET]%D1%% %F2_yield durch [ICON_TRADE]</German>
+		<Italian>[ICON_BULLET]%D1%% %F2_yield da [ICON_TRADE]</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2_yield por [ICON_TRADE]</Spanish>
+		<Polish>[ICON_BULLET]%D1%% %F2_yield z: [ICON_TRADE]</Polish>
+		<Russian>[ICON_BULLET]%D1%% %F2_yield от [ICON_TRADE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag>
+		<English>Unit Types</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_FIRST</Tag>
+		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
+		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</German>
+		<Russian>[ICON_BULLET]%D1 опыта всем недавно обученным [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_END</Tag>
+		<English>Unit Types</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_FIRST</Tag>
+		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
+		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% Wonder Production</English>
+		<French>[ICON_BULLET]Construction de merveilles %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Wunderproduktion</German>
+		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas</Spanish>
+		<Polish>[ICON_BULLET]%D1%% do Produkcji Cudów</Polish>
+		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
+		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
+		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più lentamente</Italian>
+		<Polish>[ICON_BULLET]Robotnicy budują ulepszenia z prędkością: %D1_Modifier%%</Polish>
+		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
+		<English>[ICON_BULLET]Workers build improvements %D1_Modifier%% faster</English>
+		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
+		<Polish>[ICON_BULLET]Robotnicy budują ulepszenia szybciej o: %D1_Modifier%%</Polish>
+		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%% World Wonder Production</English>
+		<French>[ICON_BULLET]Construction de merveilles mondiales %D1%%</French>
+		<German>[ICON_BULLET]%D1%% Weltwunderproduktion</German>
+		<Italian>[ICON_BULLET]%D1%% produzione di Grandi Meraviglie</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
+		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cudów</Polish>
+		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
+		<English>[ICON_BULLET]%D1%F2_yeild/City</English>
+		<French>[ICON_BULLET]%D1%F2_yeild/ville</French>
+		<German>[ICON_BULLET]%D1%F2_yeild/Stadt</German>
+		<Italian>[ICON_BULLET]%D1%F2_yeild/Città</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2_yeild/ciudad</Spanish>
+		<Polish>[ICON_BULLET]%D1%F2_yeild/Miasto</Polish>
+		<Russian>[ICON_BULLET]%D1%F2_yeild/город</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE</Tag>
 		<English>Aggressive</English>
 		<French>
@@ -41,6 +629,14 @@
 		<Russian>Ýòî ñâîéñòâà ìèëèòàðèñòà. Âû ïîëó÷àåòå ñâîáîäíîå óëó÷øåíèå äëÿ áîëüøèíñòâà âàøèõ þíèòîâ (ëó÷øèå þíèòû â èãðå, â äåéñòâèòåëüíîñòè--ðóêîïàøíèê è îãíåñòðåë) è äåøåâûå áàðàêè è ñóõèå äîêè, ÷òîáû îáåñïå÷èòü äîïîëíèòåëüíûå óëó÷øåíèÿ. Åñëè âû íå âîþåòå êîãäà âû àãðåññèâíûé, âû âïóñòóþ òðàòèòå ñâîéñòâî.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Áðîíçîâîå ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_IRON_WORKING]Îáðàáîòêà æåëåçà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CIVIL_SERVICE]Ãðàæäàíñêàÿ ñëóæáà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MACHINERY]Ñëîæíûå ìåõàíèçìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUNPOWDER]Ïîðîõ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CHEMISTRY]Õèìèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RIFLING]Íàðåçíûå ñòâîëû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_STEEL]Ñòàëü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Êîíâåéåð[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Ãåðîè÷åñêèé ýïîñ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]Âåñò-Ïîéíò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_RED_CROSS]Êðàñíûé Êðåñò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]Ïåíòàãîí[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STATUE_OF_ZEUS]Ñòàòóÿ Çåâñà[\LINK][PARAGRAPH:1][H1]Ëó÷øèå ñòðîåíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Êàçàðìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Ñóõîé äîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Êîíþøíÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëüíàÿ çàâèñèìîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Òåîêðàòèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_NATIONALIST]Íàöèîíàëèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Ãîñóäàðñòâåííàÿ ñîáñòâåííîñòü[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Êàê èñïîëüçîâàòü ýòè ñâîéñòâà? Âîéíà. Áîé. Íåóæåëè íå ÿñíî? Ñîåäèíèòåñü â îðäó è ïîéäèòå óáèâàòü êîãî - íèáóäü óæå.[NEWLINE]Âû çàõîòèòå ÷òîáû âàøè ñèëû ãëàâíûì îáðàçîì áûëè ñîñòàâëåíû èç þíèòîâ, êîòîðûå èçâëåêàþò âûãîäó èç îñîáåííîñòåé: Ðóêîïàøíûå þíèòû (Âîèí, Ñåêèðîíîñåö, Ìå÷íèê, Êîïüåíîñåö, Áóëàâîíîñåö, Ïèêåìåí), Îãíåñòðåëüíûå þíèòû (Ìóøêåòåð, Ñòðåëîê, Ãðåíàäåð, Ïåõîòà, Ñîëäàò ñ ÏÇÐÊ, Ìîðïåõ, ÁÌÏ) è èõ UU âàðèàíòû.[NEWLINE]Ñóõèå äîêè äåëàþò Ñòàëü ïðèîðèòåòíîé òåõíîëîãèåé; àíàëîãè÷íî ñ òåõíîëîãèÿìè, êîòîðûå ïîçâîëÿþò îäèí èç âûøåóïîìÿíóòûõ þíèòîâ. Îòìåòèì ÷òî íåêîòîðûå àãðåññèâíûå ëèäåðû èìåþò UU âûãîäû îò îñîáåííîñòåé (Ìîíòåñóìà, Àëåêñàíäð, Òîêóãàâà, Ðàãíàð, Øàêà) è íåêîòîðûå íåò (×èíãèç, Êóáëàé, Ñòàëèí). Ïîñëåäíèå äåéñòâèòåëüíî èçâëåêàþò âûãîäó èç äåøåâûõ áàðàêîâ, îäíàêî. Òàêæå, ïîìíèòå ÷òî âû áóäåòå íóæäàòüñÿ â áîëüøåì êîëè÷åñòâå þíèòîâ ÷åì ðóêîïàøíûå è îãíåñòðåëüíûå --îñàäíîå îðóæèå è êîííîå ìîãóò è íå ïîëó÷àòü ñâîáîäíûé àãðåññèâíûé Áîé I, íî îíè âñå åùå ñóùåñòâåííû.[NEWLINE]Ìèðîâîå ÷óäî Ñòàòóþ Çåâñà î÷åíü õîðîøî èìåòü--ãëàâíûì îáðàçîì òàê, ÷òîáû êòî - òî, íà êîòîðîãî Âû íàïàäàåòå, íå èìåë ýòîãî. Âîåííàÿ óñòàëîñòü äîñòàòî÷íî ïëîõà, òàê ñêàçàòü; èìåòü ýòî âäâîéíå îïðåäåëåííî ïîìåñòèò ïîìåõó íà âàøè ïëàíû ìèðîâîãî ãîñïîäñòâà.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Àãðåññèâíûé ñàì íå èìååò íèêàêèõ ýêîíîìè÷åñêèõ ïðåèìóùåñòâ, è ìîæåò, ôàêòè÷åñêè, ÷åðåñ÷óð ïîîùðèòü âàñ íàêîïèòü ñëèøêîì ìíîãî ýêîíîìè÷åñêèõ äîëãîâ. Ïîìíèòå ÷òî êàæäûé þíèò èìååò ñòîèìîñòü ïîääåðæàíèÿ, è ýòà ñòîèìîñòü ïîâûøàåòñÿ, êîãäà þíèò îñòàâëÿåò äîìàøíèé î÷àã. Â äîáàâëåíèå, êàæäûé çàõâà÷åííûé ãîðîä èìååò ñòîèìîñòü ïîääåðæàíèÿ. Ïåðåçàõâàò, îñîáåííî â íà÷àëå èãðû, ìîæåò áûòü òàêæå ïëîõ êàê ïåðåýêñïàíñèÿ.[NEWLINE]Ñ ïîëîæèòåëüíîé ñòîðîíû, òàê êàê àãðåññèâíûé äîëæåí îçíà÷àòü ÷òî âû èìååòå ëó÷øèå þíèòû, íàäååìñÿ âû áóäåòå íóæäàòüñÿ ìåíüøå â íèõ.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_SHORT</Tag>
+		<English>Agg</English>
+		<French>Agr</French>
+		<German>Agg</German>
+		<Italian>Agg</Italian>
+		<Spanish>Agr</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
 		<French>Agricole</French>
@@ -68,14 +664,6 @@
 		<French>Agr.</French>
 		<Polish>Rol.</Polish>
 		<Russian>Çåìë.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_AIR_UNIT_CAPACITY</Tag>
-		<English>[ICON_BULLET]%D1_Amount Air Unit Capacity in all cities.</English>
-		<French>[ICON_BULLET]%D1_Amount de capacité d'accueil d'unité aériennes dans toutes les Villes.</French>
-		<Italian>[ICON_BULLET]%D1_Amount alla capacità aerea in tutte le città.</Italian>
-		<Polish>[ICON_BULLET]%D1_Amount Ilości możliwych stacjonujących Jednostek Powietrznych we wszystkich miastach.</Polish>
-		<Russian>[ICON_BULLET]%D1_Amount воздушных отрядов во всех городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
@@ -290,22 +878,100 @@
 		<Russian>Áåçá.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE</Tag>
-		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
-		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
-		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
-		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
-		<Polish>[ICON_BULLET]%D1_Num Kary do Dyplomacji (zamienne na bonus do Przywódców z tą samą cechą)</Polish>
-		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с той же чертой)</Russian>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
+		<English>Astrological Influence of Aquarius</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_POSITIVE</Tag>
-		<English>[ICON_BULLET]%D1_Num Diplomacy Bonus with other Leaders</English>
-		<French>[ICON_BULLET]%D1_Num Bonus Diplomatique envers les autres Leaders</French>
-		<German>[ICON_BULLET]%D1_Num Diplomatiebonus</German>
-		<Italian>[ICON_BULLET]%D1_Num nei rapporti diplomatici con gli altri leader</Italian>
-		<Polish>[ICON_BULLET]%D1_Num Bonusu do Dyplomacji z innymi Przywódcami</Polish>
-		<Russian>[ICON_BULLET]%D1_Num к бонусу дипломатии во время переговоров с другими лидерами</Russian>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
+		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
+		<English>Astrological Influence of Aries</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Tag>
+		<English>Astrological Influence of Aries trait is only available with the Astrological Influence of Aries Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Tag>
+		<English>Astrological Influence of Cancer</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Tag>
+		<English>Astrological Influence of Cancer trait is only available with the Astrological Influence of Cancer Group Wonder. All Heal People units receive the Influence of the Moon promotion, giving bonus to numbers heal and Disease Control during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Tag>
+		<English>Astrological Influence of Capricorn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
+		<English>Astrological Influence of Capricorn trait is only available with the Astrological Influence of Capricorn Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Tag>
+		<English>Astrological Influence of Gemini</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Tag>
+		<English>Astrological Influence of Gemini trait is only available with the Astrological Influence of Gemini Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Tag>
+		<English>Astrological Influence of Leo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Tag>
+		<English>Astrological Influence of Leo trait is only available with the Astrological Influence of Leo Group Wonder. All Melee units receive the Influence of the Sun promotion, giving bonus to Strength and Experience during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Tag>
+		<English>Astrological Influence of Libra</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Tag>
+		<English>Astrological Influence of Libra trait is only available with the Astrological Influence of Libra Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Tag>
+		<English>Astrological Influence of Pisces</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Tag>
+		<English>Astrological Influence of Pisces trait is only available with the Astrological Influence of Pisces Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Tag>
+		<English>Astrological Influence of Sagittarius</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Tag>
+		<English>Astrological Influence of Sagittarius trait is only available with the Astrological Influence of Sagittarius Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Tag>
+		<English>Astrological Influence of Scorpio</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Tag>
+		<English>Astrological Influence of Scorpio trait is only available with the Astrological Influence of Scorpio Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Tag>
+		<English>Astrological Influence of Taurus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Tag>
+		<English>Astrological Influence of Taurus trait is only available with the Astrological Influence of Taurus Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Tag>
+		<English>Astrological Influence of Virgo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Tag>
+		<English>Astrological Influence of Virgo trait is only available with the Astrological Influence of Virgo Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN</Tag>
@@ -426,121 +1092,38 @@
 		<Russian>Ãðóá.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BOMBARD_DEFENSE_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
-		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
-		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di danni dal bombardamento in tutte le tue città</Italian>
-		<Polish>[ICON_BULLET]%D1_Mod%% Obrażeń do Obrony przed Bombardowaniem we wszystkich Miastach</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% ущерба защитным сооружениям и отрядам от обстрела и дальнего боя во всех городах</Russian>
+		<Tag>TXT_KEY_TRAIT_CHARISMATIC</Tag>
+		<English>Charismatic</English>
+		<French>
+			<Text>Charismatique</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Charismatisch:charismatisches</Text>
+			<Gender>Male:Neuter</Gender>
+			<Plural>0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Carismatico:Carismatica</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Carismático:Carismática</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
-		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
-		<English>Resources</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
-		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
-		<English>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp from[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp de[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch Geländeart[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp per[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]%D1_Change de %F2_HappOrUnhapp por[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp z[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]%D1_Change%F2_HappOrUnhapp от[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CAPITAL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
-		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
-		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
-		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Stolicy</Polish>
-		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в столице или резиденции правителя</Russian>
+		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
+		<English>Charismatic 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
 		<English>Charismatic was introduced with the Warlords expansion pack (along with Imperialistic and Protective) and is definitely the best of the three new traits. It is clearly a warmonger's trait, mainly because of the reduced XP requirement for each promotion. By warring early, you can amass a force of highly-promoted veteran units which you can keep upgrading as the game progresses.[PARAGRAPH:1]The extra happiness from the trait and two buildings also helps with warmongering, since it reduces war weariness. It should also help you financially; whether you run a CE or SE or a hybrid, more population because of an elevated happiness cap always means a stronger economy.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MYSTICISM]Mysticism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_AGRICULTURE]Agriculture[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ANIMAL_HUSBANDRY]Animal Husbandry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RADIO]Radio[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASS_MEDIA]Mass Media[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STONEHENGE]Stonehenge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Heroic Epic[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]West Point[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_EIFFEL_TOWER]The Eiffel Tower[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]The Pentagon[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MONUMENT]Monument[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Barracks[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Stable[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Drydock[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BROADCAST_TOWER]Broadcast Tower[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Vassalage[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Theocracy[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]When you're Charismatic, go to war early to collect those promotions and build your army of veterans. Playing with barbs, even raging barbs, turned on allows you to amass more promotions faster, so you will likely have a powerful army by the time you've dealt with the barbarians and are ready to turn on your neighbours.[PARAGRAPH:1]Also be sure to take advantage of the elevated happiness cap. Prioritize growth in the early game: ensure each city has good food resources, bee-line to Pottery so you can build Granaries, and build Workers so you can ensure all your extra citizens have improved tiles to work. Chop Workers and Settlers as much as possible to hurry their builds and get your cities back to growing their populations.[PARAGRAPH:1]Mysticism and Mass Media are obvious tech targets in order to enable the happiness-increasing buildings (which are, unfortunately, not made cheaper by the trait; Charismatic is one of the few traits without a cheap building). Alternatively, you may bee-line to Radio and build the Eiffel Tower, which gives you a free broadcast tower in every one of your cities.[PARAGRAPH:1]Stonehenge is also an attractive wonder, since it gives you a free monument in each city. However, remember that those monuments magically disappear once you discover Calendar (Astronomy in BtS). Broadcast Towers and the Eiffel Tower, in contrast, never become obsolete. Also, any monument you build directly stays put to produce culture, and the culture doubles after 1000 years.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]As mentioned above, while Charismatic enhances the effects of two buildings, it has no cheap building, a limitation it shares only with the Financial and Imperialistic traits.[PARAGRAPH:1]Balancing early growth with the need to have a large number of Workers to ensure those extra citizens have improved tiles to work can be tricky. In addition to ensuring each city has at least one food resource, also try to ensure it has forests for chop-rushing Workers.</English>
 		<German>Die Eigenschaft "Charismatisch" wurde mit dem ersten Addon "Warlords" ins Spiel eingeführt (zusammen mit "Imperialistisch" und "Schützend") und ist sicherlich die nützlichste der drei neuen Eigenschaften. Sie ist eindeutig für Kriegstreiber gedacht, hauptsächlich wegen der gesenkten Erfahrungspunkte-Anforderungen für Beförderungen. Indem schon früh Kriege geführt werden, können sehr viele erfahrene, mit Massen von Beförderungen versehene Einheiten angesammelt werden, die im weiteren Spielverlauf noch weiter befördert werden können.[PARAGRAPH:1]Auch die zusätzliche Zufriedenheit dieser Eigenschaft und der zwei Gebäude unterstützt das Führen von Kriegen, da sie die Kriegsunzufriedenheit senkt. Außerdem unterstützt sie auch die eigene Wirtschaft; sei es nun eine Hüttenwirtschaft (CE), eine Spezialistenwirtschaft (SE) oder eine Mischung, eine höhere Bevölkerung auf Grund einer erhöhten Zufriedenheitsobergrenze bedeutet immer auch eine stärkere Wirtschaft.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MYSTICISM]Mystik[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_AGRICULTURE]Landwirtschaft[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ANIMAL_HUSBANDRY]Tierzucht[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RADIO]Funkwesen[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASS_MEDIA]Massenmedien[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STONEHENGE]Stonehenge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Heldenepos[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]West Point[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_EIFFEL_TOWER]Eiffelturm[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]Pentagon[\LINK][PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MONUMENT]Monument[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Kaserne[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Stallungen[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Trockendock[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BROADCAST_TOWER]Funkturm[\LINK][PARAGRAPH:1][H1]Nützliche Gesellschaftsformen[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Vasallentum[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Theokratie[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Mit einem Oberhaupt mit der Eigenschaft "Charismatisch" sollten früh Kriege geführt werden, um Beförderungen zu erlangen und eine Armee erfahrener Einheiten aufstellen zu können. Falls die Option "Barbaren", oder sogar "Rasende Barbaren", aktiviert wurde, können mehr Beförderungen noch schneller angesammelt werden, so dass sehr wahrscheinlich nach der Ausrottung der Barbaren eine schlagkräftige Armee zur Verfügung steht, die dann bereit ist, sich den Nachbarzivilisationen zuzuwenden.[PARAGRAPH:1]Außerdem sollte von der erhöhten Zufriedenheitsobergrenze Gebrauch gemacht werden. Der Schwerpunkt sollte bereits früh in der Partie auf Wachstum gelegt werden: es sollte sichergestellt werden, dass jede Stadt über gute Nahrungsressourcen verfügt, die Forschung sollte geradewegs auf "Keramik" ausgerichtet werden, damit "Kornspeicher" errichtet werden können, und Bautrupps sollten aufgestellt werden, damit diese für die Modernisierung der Stadtgeländefelder sorgen können, die dann von den zusätzlichen Bürgern bearbeitet werden können. Bautrupps und Siedler sollten wenn möglich durch das Abholzen von Wäldern beschleunigt werden, damit die Städte schneller wachsen können.[PARAGRAPH:1]"Mystik" und "Massenmedien" stellen offensichtliche Forschungsziele dar, um die Gebäude verfügbar zu machen, die zur Erhöhung der Zufriedenheit beitragen (die durch die Eigenschaft leider nicht verbilligt werden; "Charismatisch" ist eine der wenigen Eigenschaften ohne verbilligtes Gebäude). Wahlweise kann auch das "Funkwesen" erforscht werden und der "Eiffelturm" errichtet werden, der einen kostenlosen "Funkturm" in jeder eigenen Stadt gewährt.[PARAGRAPH:1]"Stonehenge" ist ebenfalls ein attraktives Wunder, da es ein kostenloses "Monument" in jeder Stadt gewährt. Jedoch sollte nicht vergessen werden, dass diese Monumente magischerweise verschwinden, wenn "Kalender" erfoscht wurde ("Astronomie" in BtS). Im Gegensatz dazu veralten Funktürme und der Eiffelturm niemals. Außerdem verbleibt jedes selbst errichtete Monument in einer Stadt und generiert Kulturpunkte, die sich nach 1000 Jahren sogar verdoppeln.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]Wie oben erwähnt, erhöht die Eigenschaft "Charismatisch" zwar den Effekt zweier Gebäude, verfügt aber selbst über kein verbilligtes Gebäude, was eine Beschränkung ist, die sie nur mit den Eigenschaften "Finanzorientiert" und "Imperialistisch" teilt.[PARAGRAPH:1]Es kann etwas schwierig sein, das frühe Wachstum mit der Notwendigkeit zu vereinen, viele Bautrupps aufstellen zu müssen, die sicherstellen, dass die zusätzlichen Bürger modernisierte Geländefelder bearbeiten können. Zusätzlich muss jede Stadt mit mindestens einer Nahrungsressource versorgt sein und sollte außerdem in der Nähe von Wäldern gelegen sein, damit die Aufstellung von Bautrupps beschleunigt werden kann.</German>
 		<Russian>Õàðèçìàòè÷åñêèé áûë ââåäåí ñ ïàêåòîì ðàñøèðåíèÿ Warlords (âìåñòå ñ Èìïåðèàëèñòîì è Çàùèòíèêîì) è ýòî íåñîìíåííî ëó÷øàÿ òðîéêà íîâûõ îñîáåííîñòåé. Ýòî ÿñíàÿ îñîáåííîñòü ìèëèòàðèñòà, ãëàâíûì îáðàçîì èç-çà ñîêðàùåíèÿ òðåáîâàíèé XP äëÿ êàæäîãî óëó÷øåíèÿ. Âðàæäóÿ ðàíî, âû ìîæåòå íàêîïèòü ìîùü ñèëüíîóëó÷øåííûõ âåòåðàíñêèõ þíèòîâ êîòîðûõ âû ìîæåòå ïðîäîëæàòü ìîäåðíèçèðîâàòü â ïðîöåññå èãðû.[PARAGRAPH:1]Äîïîëíèòåëüíîå ñ÷àñòüå îò îñîáåííîñòåé è äâà ñòðîåíèÿ òàêæå ïîìîãóò ñ ìèëèòàðèñòîì, òàê êàê ýòî óìåíüøàåò âîåííóþ óñòàëîñòü. Ýòî òàêæå äîëæíî ïîìî÷ü âàì ìàòåðèàëüíî; êîãäà âû çàïóñòèòå CE èëè SE èëè èõ ãèáðèä, áîëüøå íàñåëåíèÿ èç-çà ïîäíÿòîé âåðõóøêè ñ÷àñòüÿ âñåãäà ïîäðàçóìåâàåò áîëåå ñèëüíóþ ýêîíîìèêó.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MYSTICISM]Ìèñòèöèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_AGRICULTURE]Çåìëåäåëèå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ANIMAL_HUSBANDRY]Æèâîòíîâîäñòâî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_RADIO]Ðàäèî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASS_MEDIA]ÑÌÈ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STONEHENGE]Ñòîóíõåäæ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HEROIC_EPIC]Ãåðîè÷åñêèé ýïîñ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WEST_POINT]Âåñò-Ïîéíò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_EIFFEL_TOWER]Ýéôåëåâà áàøíÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PENTAGON]Ïåíòàãîí[\LINK][PARAGRAPH:1][H1]Ëó÷øèå ñòðîåíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MONUMENT]Ïàìÿòíèê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Êàçàðìû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STABLE]Êîíþøíÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_DRYDOCK]Ñóõîé äîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BROADCAST_TOWER]Òåëåáàøíÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëüíàÿ çàâèñèìîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Òåîêðàòèÿ[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Êîãäà âû õîðèçìàòè÷åñêèé, ðàíî îòïðàâëÿéòåñü íà âîéíó, ÷òîáû ñîáðàòü óëó÷øåíèÿ è ïîñòðîèòü âàøó àðìèþ âåòåðàíîâ. Èãðà ñ âàðâàðàìè, äàæå ÿðîñòíûìè âàðâàðàìè åñëè âêëþ÷åíà, ïîçâîëÿåò âàì áûñòðåå íàêàïëèâàòü áîëüøå óëó÷øåíèé, òàêèì îáðàçîì âû âåðîÿòíî áóäåòå èìåòü ìîùíóþ àðìèþ ê òîìó âðåìåíè, êîãäà âû ñòîëêíåòåñü ñ âàðâàðàìè è áóäåòå ãîòîâû óäèâèòü âàøèõ ñîñåäåé.[PARAGRAPH:1]Òàêæå óáåäèòåñü, ÷òî èñïîëüçîâàëè â ñâîèõ èíòåðåñàõ ïîäíÿòóþ âåðõóøêó ñ÷àñòüÿ. Óäåëèòå ïåðâîñòåïåííîå âíèìàíèå ðîñòó â ðàííåé èãðå: ãàðàíòèðóéòå, ÷òî êàæäûé ãîðîä èìååò õîðîøèå ðåñóðñû ïèùè, ïðÿìî ê ãëèíÿíîé ïîñóäå, òàê ÷òîáû âû ìîãëè ïîñòðîèòü àìáàð, è ïîñòðîéòå ðàáî÷èõ òàê ÷òî âû ìîæåòå îáåñïå÷èâàòü âñåõ âàøèõ äîïîëíèòåëüíûõ ãðàæäàí ðàáîòîé èìåÿ óëó÷øåííûå êëåòêè. Äåëàéòå ðàáî÷èõ è ïîñåëåíöåâ â ìàêñèìàëüíî âîçìîæíîé ñòåïåíè óñêîðÿÿ èõ ñòðîèòåëüñòâî è âîçâðàùàéòå âàøè ãîðîäà ê ðîñòó èõ íàñåëåíèÿ.[PARAGRAPH:1]Ìèñòèöèçì è ÑÌÈ ÿâëÿþòñÿ î÷åâèäíûìè òåõíè÷åñêèìè öåëÿìè, ÷òîáû ïîçâîëèòü óëó÷øàþùèå ñ÷àñòüå ñòðîåíèÿ (êîòîðûå, ê ñîæàëåíèþ, äåëàþòñÿ íå äåøåâî èç-çà îñîáåííîñòåé; Õàðèçìàòè÷åñêèé - îäíà èç íåìíîãèõ îñîáåííîñòåé áåç äåøåâîãî çäàíèÿ). Àëüòåðíàòèâíî, âû ìîæåòå äâèãàòüñÿ ïðÿìî ê Ðàäèî è ïîñòîèòü Ýéôåëåâó áàøíþ, êîòîðàÿ äàñò âàì ñâîáîäíóþ òåëåâûøêó â êàæäîì èç âàøèõ ãîðîäîâ.[PARAGRAPH:1]Ñòîóíõåäæ òàêæå ïðèâëåêàòåëüíîå ÷óäî, òàê êàê äàåò âàì ñâîáîäíûé ïàìÿòíèê â êàæäîì ãîðîäå. Îäíàêî, ïîìíèòå, ÷òî òå ïàìÿòíèêè âîëøåáíî èñ÷åçàþò, êàê òîëüêî âû îáíàðóæèâàåòå Êàëåíäàðü (Àñòðîíîìèþ â BtS). Òåëåáàøíè è Ýéôåëåâà áàøíÿ, íàïðîòèâ, íèêîãäà íå óñòàðåâàåò. Òàêæå, ëþáîé ïàìÿòíèê êîòîðûé âû ñòðîèòå íåïîñðåäñòâåííî îñòàåòñÿ ïðîèçâîäèòü êóëüòóðó, è êóëüòóðà óäâàèâàåòñÿ ïîñëå 1000 ãîäîâ.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Êàê óïîìèíàëîñü âûøå, â òî âðåìÿ êàê Õàðèçìàòèê óâåëè÷èâàåò ýôôåêòû äâóõ çäàíèé, ó íåãî íåò äåøåâûõ çäàíèé, îãðàíè÷åíèå ýòî ðàçäåëÿåò òîëüêî ñ îñîáåííîñòÿìè Ôèíàíñèñòà è Èìïåðèàëèñòà.[PARAGRAPH:1]Áàëàíñèðîâàíèå ðàííåãî ðîñòà ñ ïîòðåáíîñòüþ èìåòü áîëüøîå êîëè÷åñòâî ðàáî÷èõ ãàðàíòèðóÿ òåì äîïîëíèòåëüíûì ãðàæäàíàì èìåòü óëó÷øåííûå êëåòêè äëÿ ðàáîòû ìîæåò áûòü òðóäíûì. Â äîïîëíåíèå ê îáåñïå÷åíèþ êàæäîãî ãîðîäà ïî êðàéíåé ìåðå îäíèì ðåñóðñîì ïèùè, òàêæå ïðîáóéòå ãàðàíòèðîâàòü, ÷òî åñòü ëåñà äëÿ îæèâëåííî-ðóáÿùèõ ðàáî÷èõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CITY_START_CULTURE</Tag>
-		<English>[ICON_BULLET]New cities begin with %D1 culture</English>
-		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 culture</French>
-		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 cultura</Italian>
-		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: %D1 kultury</Polish>
-		<Russian>[ICON_BULLET]Новые города начинают с %D1 культуры.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CITY_START_POPULATION</Tag>
-		<English>[ICON_BULLET]New cities begin with %D1 population.</English>
-		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 population.</French>
-		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 popolazione.</Italian>
-		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: %D1 populacji.</Polish>
-		<Russian>[ICON_BULLET]Новые города начинают с %D1 населения.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CITY_START_STATE_RELIGION</Tag>
-		<English>[ICON_BULLET]New cities begin with the State Religion.</English>
-		<French>[ICON_BULLET]Les nouvelles Villes commencent avec la religion d'Etat.</French>
-		<Italian>[ICON_BULLET]Le nuove città cominciano con la religione di stato.</Italian>
-		<Polish>[ICON_BULLET]Nowe miasta rozpoczynają z: Religią Państwową.</Polish>
-		<Russian>[ICON_BULLET]В новых городах уже есть государственная религия.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
-		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
-		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
-		<Italian>[ICON_BULLET]%D1%% XP richiesti per la promozione</Italian>
-		<Spanish>[ICON_BULLET]%D1%% PX necesarios para ascender unidades.</Spanish>
-		<Polish>[ICON_BULLET]%D1%% Potrzebnego Doświadczenia dla Promocji Jednostki</Polish>
-		<Russian>[ICON_BULLET]%D1%% опыта для Квалификации отряда</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CIVIC_UPKEEP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Civic Upkeep</English>
-		<French>[ICON_BULLET]%D1%% d'entretien doctrinal</French>
-		<German>[ICON_BULLET]%D1%% Unterhalt für Gesellschaftsform</German>
-		<Italian>[ICON_BULLET]%D1%% costo di mantenimento della civiltà</Italian>
-		<Spanish>[ICON_BULLET]%D1%% al mantenimiento de principios</Spanish>
-		<Polish>[ICON_BULLET]%D1%% do Utrzymania Doktryny</Polish>
-		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
-		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections</English>
-		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
-		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
-		<Polish>[ICON_BULLET]Tylko Cywilizacja może otrzymać tą cechę - Niedostępne dla Przywódców</Polish>
-		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
-		<English>[ICON_BULLET]%D1%F2_commerce/City</English>
-		<French>[ICON_BULLET]%D1%F2_commerce/ville</French>
-		<German>[ICON_BULLET]%D1%F2_commerce/Stadt</German>
-		<Italian>[ICON_BULLET]%D1%F2_commerce/Città</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2_commerce/ciudad</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2_commerce/Miasto</Polish>
-		<Russian>[ICON_BULLET]%D1%F2_commerce/город</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_COMMERCE_MODIFIERS</Tag>
-		<English>[ICON_BULLET]%D1%% %F2_commerce</English>
-		<French>[ICON_BULLET]%D1%% au %F2_commerce</French>
-		<Spanish>[ICON_BULLET]%D1%% [NUM2:al:a la:a los:a las] %F2_commerce</Spanish>
-		<Russian>[ICON_BULLET]%D1%% %F2_commerce</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE</Tag>
@@ -573,6 +1156,14 @@
 		<English>Creative is powerful early in the game, allowing you to quickly expand your borders and thereby claim territory and resources. The Warlords 2.08 patch added cheap Libraries, one of the best buildings in the game, making this trait even better.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Writing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DRAMA]Drama[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CONSTRUCTION]Construction[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]n/a[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Library[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THEATRE]Theatre[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSEUM]Colosseum[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]The big benefit Creative provides is allowing you more freedom in your city placement and in your early city builds. You don't have to worry about placing a city so a crucial resource is in its first ring of workable tiles so you can access it right away; it will be workable within a few short turns of founding the city. You can also skip monuments, Stonehenge, and spreading a religion (well, you can be a little more relaxed about the latter, at least).[PARAGRAPH:1]In addition, Creative may allow you to win some early game tug-o-war battles with a nearby civ over a key resource tile. By the same token, if the map lends itself to it, you can use the trait to seal off territory at a choke point. Creative is also something of a defensive trait, a cousin to Protective. By expanding your borders earlier and infusing the tiles with your culture, you have more territory that the enemy has to trudge through to attack you. It's also harder for another civilization to take tiles from you by city placement or by conquering cities. Creative also raises the cultural defense of a city faster, making it tougher to conquer.[PARAGRAPH:1]Writing enables the trait's cheap libraries, so it's obviously an even more important tech than before. The cheap theatres and coliseums may or may not be useful, depending on your strategy and circumstances in the game. You may want to warmonger in the mid or late game to get your most out of these buildings, using them to decrease war weariness.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Creative is a trait that is extremely useful in the early game and gets weaker as the game goes on. The +2[ICON_CULTURE] becomes less and less of a factor as the game progresses and more methods of producing culture accrue in each city. Also, the cheap buildings are available early and are all relatively cheap to begin with, so their faster production times will be less noticeable later in the game. By the middle of most games, the Creative trait is mostly a non-factor.</English>
 		<German>Die Eigenschaft "Kreativ" ist vor allem in der frühen Phase einer Partie sehr nützlich, da sie die schnelle Erweiterung der eigenen Grenzen und damit die Inbesitznahme von neuen Gebieten und Ressourcen erlaubt. Der Patch 2.08 für das erste Addon "Warlords" fügte der Eigenschaft verbilligte Bibliotheken hinzu, die zu den besten Gebäuden des Spiels zählen, wodurch die Eigenschaft noch weiter aufgewertet wurde.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Schrift[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DRAMA]Drama[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CONSTRUCTION]Bauwesen[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET]keine[PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Bibliothek[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THEATRE]Theater[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSEUM]Kolosseum[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Der große Vorteil der Eigenschaft "Kreativ" besteht darin, dass mehr Freiheiten bei der Gründung einer Stadt und deren ersten Bauprojekten bestehen. Bei der Gründung einer Stadt muss nicht unbedingt darauf geachtet werden, dass sich eine wichtige Ressource im ersten Stadtfeldring befindet, damit sie sofort zugänglich ist; schon wenige Runden nach Gründung der Stadt steht sie zur Verfügung. Außerdem können Monumente, Stonehenge und die Verbreitung einer Religion außer Acht gelassen werden (nun, die letztere Aufgabe kann zumindest etwas entspannter angegangen werden).[PARAGRAPH:1]Zusätzlich kann die Eigenschaft "Kreativ" dabei helfen, schon früh in einer Partie das Tauziehen mit anderen Zivilisationen um Schlüsselgeländefelder, die mit wichtigen Ressourcen versehen sind, zu gewinnen. Ebenso kann die Eigenschaft, falls die Karte es erlaubt, dazu verwendet werden, um das Gebiet um einen Engpass abzuriegeln. "Kreativ" ist eher eine defensive Eigenschaft, nah verwandt mit der Eigenschaft "Schützend". Durch die frühe Erweiterung der eigenen Grenzen und die Belegung der Geländefelder mit der eigenen Kultur muss sich ein Gegner durch ein großes Gebiet quälen, bevor er angreifen kann. Außerdem wird es für andere Zivilisationen schwieriger, Geländefelder durch die Gründung von Städten oder deren Eroberung für sich zu gewinnen. Durch die Eigenschaft "Kreativ" erhöht sich der kulturelle Widerstand einer Stadt schneller, wodurch sie schwerer zu erobern ist.[PARAGRAPH:1]Die Technologie "Schrift" schaltet die verbilligten Bibliotheken frei, so dass diese Technologie offensichtlich sogar noch wichtiger ist als zuvor. Die verbilligten Theater und Kolosseen können, abhängig von der eigenen Strategie und den Umständen der Partie, hilfreich sein oder auch nicht. Im mittleren bis späten Spielverlauf sollte ein Krieg geführt werden, um den größten Nutzen aus diesen Gebäuden ziehen zu können, indem sie zur Verringerung der Kriegsunzufriedenheit eingesetzt werden.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]"Kreativ" ist eine Eigenschaft, die in der frühen Phase einer Partie sehr nützlich ist und während des weiteren Spielverlaufs seinen Nutzen verliert. Die zusätzlichen +2[ICON_CULTURE] werden immer weniger entscheidend während die Partie fortschreitet und sich in jeder Stadt mehr Möglichkeiten zur Generierung von Kulturpunkten ergeben. Außerdem sind die verbilligten Gebäude schon früh in einer Partie verfügbar und daher gleich zu Anfang relativ günstig, so dass deren schnellere Produktionszeiten später in der Partie weniger von Vorteil sind. In der Mitte der meisten Partien spielt die Eigenschaft "Kreativ" fast keine Rolle mehr.</German>
 		<Russian>Ìåöåíàò ìîùíûé â íà÷àëå èãðû, ïîçâîëÿÿ âàì áûñòðî ðàñøèðÿòü âàøè ãðàíèöû è òàêèì îáðàçîì çàíèìàòü òåððèòîðèè è ðåñóðñû. Ïàò÷ 2.08 Warlords äîáàâèë äåøåâûå áèáëèîòåêè, îäíî èç ëó÷øèõ çäàíèé â èãðå, äåëàÿ ýòî ñâîéñòâî åùå ëó÷øå.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Ïèñüìåííîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DRAMA]Ìþçèêë[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CONSTRUCTION]Ñòðîèòåëüñòâî[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET]íåò[PARAGRAPH:1][H1]Ëó÷øèå ñòðîåíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THEATRE]Òåàòð[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSEUM]Àðåíà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Áîëüøàÿ âûãîäà Ìåöåíàòà ïðåäîñòàâëåíèå ðàçðåøåíèÿ âàì áîëüøåé ñâîáîäû â ðàçìåùåíèè âàøåãî ãîðîäà è ñòðîåíèé â âàøåì ðàííåì ãîðîäå. Âû íå äîëæíû âîëíîâàòüñÿ î ðàçìåùåíèè ãîðîäà òàê êàê êðèòè÷åñêèå ðåñóðñû â åãî ïåðâîì êîëüöå ðàáî÷èõ êëåòîê òàê ÷òî âû ìîæåòå ïîëó÷èòü äîñòóï ê ýòîìó ñðàçó æå; ýòî áóäåò îñóùåñòâèìî â ïðåäåëàõ íåñêîëüêèõ êîðîòêèõ õîäîâ ïîñëå îñíîâàíèÿ ãîðîäà. Âû ìîæåòå òàêæå ïðîïóñòèòü ïàìÿòíèêè, Ñòîóíõåíäæ, è ðàñïðîñòðàíåíèå ðåëèãèè (õîðîøî, âû ìîæåòå áûòü íåìíîãî áîëåå óâåðåííûìè ïîçæå, ïî êðàéíåé ìåðå).[PARAGRAPH:1]Â äîïîëíåíèå, Ìåöåíàò ìîæåòå ïîçâîëèòü âàì âûèãðàòü íåêîòîðóþ ðàííþþ èãðó ñðàæåíèé áûñòðîé âîéíû ñ áëèæàøèìè öèâèëèçàöèÿìè ïî êëþ÷åâîé êëåòêå ðåñóðñà. Ê òîìó æå, åñëè êàðòà ïîäòâåðæäàåò ýòî, âû ìîæåòå èñïîëüçîâàòü îñîáåííîñòü, ÷òîáû îêðóæèòü òåððèòîðèþ â ÷åêïîéíòå. Ìåöåíàòñòâî ÿâëÿåòñÿ òàêæå íåìíîãî çàùèòíîé ÷åðòîé, êóçåí Çàùèòíèêà. Ðàñøèðÿÿ âàøè ãðàíèöû ðàíåå è âëèâàÿ â êëåòêè ñâîþ êóëüòóðó, âû èìååòå áîëüøå òåððèòîðèè ÷òîáû âðàã äîëæåí áûë òàùèòüñÿ ÷åðåç íåå ÷òîáû íàïàñòü íà âàñ. Òàêæå áîëåå òðóäíî äëÿ äðóãîé öèâèëèçàöèè çàáðàòü êëåòêè îò âàñ ðàçìåùåíèåì ãîðîäîâ èëè çàõâàòîì ãîðîäîâ. Ìåöåíàò òàêæå ïîäíèìàåò êóëüòóðíóþ çàùèòó ãîðîäà áûñòðåå, äåëàÿ åãî áîëåå ñòîéêèì ê çàâîåâàíèþ.[PARAGRAPH:1]Ïèñüìåííîñòü âêëþ÷àåò îñîáåííîñòè äåøåâûõ áèáëèîòåê, òàêèì îáðàçîì ýòî î÷åâèäíî åùå áîëåå âàæíàÿ òåõíîëîãèÿ ÷åì ïðåæäå. Äåøåâûå òåàòðû è àðåíû ìîãóò èëè íå ìîãóò áûòü ïîëåçíûìè, â çàâèñèìîñòè îò âàøåé ñòðàòåãèè è îáñòîÿòåëüñòâ â èãðå. Âû ìîæåòå õîòåòü áûòü ìèëèòàðèñòîì â ñåðåäèíå èëè êîíöå èãðû ÷òîáû ïîëó÷èòü áîëüøå âñåãî èç ýòèõ çäàíèé, èñïîëüçóÿ èõ ÷òîáû óìåíüøèòü âîåííóþ óñòàëîñòü.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ìåöåíàò ýòî îñîáåííîñòü êîòîðàÿ ÷ðåçâû÷àéíî ïîëåçíà â íà÷àëå èãðû è ñòàíîâèòñÿ áîëåå ñëàáûì, êîãäà èãðà ïðîäîëæàåòñÿ. +2[ICON_CULTURE] ñòàíîâèòñÿ âñå ìåíüøèì è ìåíüøèì ôàêòîðîì ïðè ïðîäâèæåíèè èãðû è áîëüøå ìåòîäîâ ñîçäàíèÿ êóëüòóðû âîçíèêàåò â êàæäîì ãîðîäå. Òàêæå, äåøåâûå ñòðîåíèÿ äîñòóïíû ðàíåå è âñå îòíîñèòåëüíî äåøåâû äëÿ íà÷àëà, òàêèì îáðàçîì èõ áîëåå áûñòðûå âðåìåíà ïðîèçâîäñòâà áóäóò ìåíåå ïðèìå÷àòåëüíûìè ïîçæå â èãðå. Â ñåðåäèíå áîëüøèíñòâà èãð, îñîáåííîñòü Ìåöåíàò ïî áîëüøåé ÷àñòè íå ôàêòîð.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CREATIVE_SHORT</Tag>
+		<English>Cre</English>
+		<French>Cré</French>
+		<German>Kre</German>
+		<Italian>Cre</Italian>
+		<Spanish>Cre</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL</Tag>
@@ -667,49 +1258,6 @@
 		<Spanish>Tra</Spanish>
 		<Polish>Kła</Polish>
 		<Russian>Èíòð.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DISABLED_OFF</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców w grze z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам при игре в режиме с «Развивающимися лидерами».[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców bez gry z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DISALLOWED</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
-		<English>[NEWLINE][ICON_BULLET]Double Production Speed of[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Double la vitesse de production de:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Doppelte Produktionsgeschwindigkeit für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Raddoppia la velocità di produzione di[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Dobla la velocidad de producción de[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Podwójna szybkość Produkcji:[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Двойная скорость производства[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_DRAFT_ON_CAPTURE</Tag>
-		<English>[ICON_BULLET]Automatically Drafts new units in newly conquered cities.</English>
-		<French>[ICON_BULLET]Enrôle automatiquement des unités dans les Villes nouvellement conquises.</French>
-		<Italian>[ICON_BULLET]Recluta automaticamente nuove unità nelle città appena conquistate.</Italian>
-		<Polish>[ICON_BULLET]Automatycznie Powołuje nowe jednostki w nowo podbitych miastach.</Polish>
-		<Russian>[ICON_BULLET]Автоматически призывает новые отряды во вновь завоеванных городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE</Tag>
@@ -809,22 +1357,12 @@
 		<Russian>Ýêñïàíñèîíèñò íå âûãëÿäèò âåëèêèì ñ ïåðâîãî âçãëÿäà. Ôàêòè÷åñêè, îí ñíà÷àëà êàæåòñÿ ïðèíàäëåæèò ê êàòåãîðèè "ñëàáûõ" ÷åðò, ïîäîáíî Çàùèòíèêó. Â êîíöå êîíöîâ, çäîðîâüå íå áîëüøàÿ ïðîáëåìà; ïðîáëåìà ñ÷àñòüå, êîòîðîå îãðàíè÷èâàåò âàø ðîñò â íà÷àëå èãðû. È êàê òîëüêî âû ïðèâûêíåòå ê áîëåçíåííûì çåëåíûì çàâèòêàì, ïëàâàþùèì âîêðóã âàøåãî ãîðîäà, âû ïîíèìàåòå, ÷òî åãî ýôôåêòû îáû÷íî íå òàê ïëîõè. Ïðîáëåìû çäîðîâüÿ òîëüêî íåìíîãî çàìåäëÿþò ðîñò.[PARAGRAPH:1]Íî äåðæèòåñü. Àìáàðû--äåøåâûå äëÿ Ýêñïàíñèâíûõ ëèäåðîâ--ÿâëÿþòñÿ îäíèì èç ñàìûõ ïîëåçíûõ çäàíèé â èãðå. Ñ çåðíîì îíè îáåñïå÷èâàþò äîïîëíèòåëüíîå çäîðîâüå. Íî ÷òî åùå áîëåå âàæíî îíè ïîçâîëÿþò âàì óñèëèâàòü ðàáñòâî áûñòðåå çàíîâî âûðàùèâàÿ âàøå ïîæåðòâîâàííîå íàñåëåíèå.[PARAGRAPH:1]È ñ ïàò÷à 2.08 Warlords, Ýêñïàíñèâíûé ïîëó÷èë íåîáõîäèìîå ïîâûøåíèå áëàãîäàðÿ íåìíîãî áîëåå äåøåâûì ðàáî÷èì. Âû ìîæåòå âñåãäà èñïîëüçîâàòü áîëüøå ðàáî÷èõ, îñîáåííî â íà÷àëå èãðû.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Ãëèíÿíàÿ ïîñóäà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_COMPASS]Êîìïàñ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Áðîíçîâîå ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Ìàòåìàòèêà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HANGING_GARDEN]Âèñÿ÷èå ñàäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NOTRE_DAME]Íîòð-Äàì[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GRANARY]Àìáàð[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_HARBOR]Ãàâàíü[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ïðÿìî ê ãëèíÿíîé ïîñóäå. Ñòðîéòå (èëè ïîäñòåãíèòå) âàøè äåøåâûå àìáàðû. Ïîäñòåãíèòå íåêîòîðûõ è ïðîäîëæàéòå ïîäñòåãèâàòü.[PARAGRAPH:1]Ñïåöèàëüíî èçó÷èòå êàê ëó÷øå âñåãî óñèëèòü ãðàæäàíñêîå ðàáñòâî ÷òîáû ìàêñèìèçèðîâàòü âûõîä ìîëîòêîâ çà ïðåäåëû ïðèíóæäåíèÿ, äåëàÿ îáà è ñòðîåíèå êîòîðîå âû ïðèíóæäàåòå è ñëåäóþùåå ñòðîåíèå äåøåâûì. Áëàãîäàðÿ àìáàðó, íàñåëåíèå âûðàñòåò ñíîâà áûñòðåå, ïîçâîëÿÿ âàì ïðèíóäèòü èõ ñíîâà.[PARAGRAPH:1]Î÷åâèäíî, ñòðîéòå áîëüøå Ðàáî÷èõ, òàê êàê îíè áîëåå äåøåâû äëÿ âàñ, è ïîìåùàéòå èõ íà ðàáîòó. Óëó÷øèòå âàøè êëåòêè è ñîåäèíÿéòå âàùè ðåñóðñû áûñòðåå. Òîëüêî ïîìíèòå ÷òî +25% äëÿ ñòðîèòåëüñòâà ðàáî÷èõ óñêîðÿåòñÿ ìîëîòêàìè, à íå ïèùåé, òàêèì îáðàçîì âû äîëæíû áóäåòå óëó÷øèòü íåêîòîðûå êëåòêè ñ õîðîøèì ïðîèçâîäñòâîì è ðàáîòàòü ñ íèìè ïîêà ðàáî÷èé ñòðîèòñÿ ÷òîáû ïîëó÷èòü ïðåèìóùåñòâî îò ýòîãî. Òàê êàê ãàâàíè äåøåâû, ïðîáóéòå ïðåòåíäîâàòü íà íåñêîëüêî ïðèáðåæíûõ ãîðîäîâ òàêèì îáðàçîì âû ìîæåòå óñèëèòü ïðåèìóùåñòâà ýòîãî äåøåâîãî çäàíèÿ.[PARAGRAPH:1]Òàêæå èùèòå âîçìîæíîñòü èñïîëüçîâàòü ÷òî çäîðîâüå +2. Âíà÷àëå, âû ìîæåòå ïîìåñòèòü, ãîðîä ïðÿìèêîì â äæóíãëè, íàïðèìåð, èëè îêðóæåííûé ïîéìàìè. Êðîìå òîãî, âû ìîæåòå ñòðîèòü óõóäøàþùèå çäîðîâüå çäàíèÿ ïîäîáíûå êóçíèöå è ôàáðèêå ñ ìåíüøèì áåñïîêîéñòâîì î èõ âîçäåéñòâèè íà çäîðîâüå. Âû ìîæåòå âûðóáèòü áîëüøå ëåñîâ, ïîòîìó ÷òî âû íå íóæäàåòåñü â èõ âûãîäàõ çäîðîâüÿ (ñëåäîâàòåëüíî ïðèâëåêàòåëüíû òåõíîëîãèè Áðîíçîâîãî ëèòüÿ è Ìàòåìàòèêè). Òîëüêî èìåéòå â âèäó, ÷òî ÷åðòà íå äåëàåò âàøè ãîðîäà íåóêðîòèìûìè, è âû áóäåòå èìåòü ñâîå áåñïîêîéñòâî ñ èõ çäîðîâüåì--òîëüêî ãîðàçäî ïîçæå ÷åì ðàíî.[PARAGRAPH:1]Âèñÿ÷èå ñàäû ÿâëÿþòñÿ ïðèâëåêàòåëüíûì ÷óäîì äëÿ Ýêñïàíñèâíîãî. Ýòî ìîæåò íå ïîêàçàòüñÿ òàê ñíà÷àëà--ÿ óæå èìåþ ïîâûøåíèå çäîðîâüÿ, ÷òî ìíå áîëüøå íàäî? Ïîñêîëüêó âû ïðåñëåäóåòå ñòðàòåãèþ êîòîðàÿ âûäâèãàåò îáîëî÷êó çäîðîâüÿ âàøèõ ãîðîäîâ, èìåííî ïîýòîìó. ß ëþáëþ ÷óäåñà è çäàíèÿ, êîòîðûå äàëåå óâåëè÷èâàþò âûãîäû îñîáåííîñòåé (âîò ïî÷åìó ÿ ëþáëþ ïðîáîâàòü ñòðîèòü Ïàðôåíîí êîãäà ÿ èãðàþ êàê ôèëîñîôñêèé ëèäåð, äëÿ ïðèìåðà). Âèñÿ÷èå ñàäû òàêæå îáåñïå÷èâàþò áîëüøåå êîëè÷åñòâî ãðàæäàí äëÿ ïðèíóæäåíèÿ. È ýé--GPP âïåðåä ê âåëèêîìó èíæåíåðó! Âû äîëæíû ëþáèòü ýòî.[PARAGRAPH:1]Íîòð-Äàì òàêæå ìîæåò áûòü óäîáíûì. Åñëè âû ïðèíóæäàåòå òî âàøè ðóêè êðîâîòî÷àò,ïîâûøåíèå ñ÷àñòüÿ îò áîëüøîãî ñîáîðà ìîæåò áûòü äåéñòâèòåëüíî î÷åíü äîëãîæäàííûì.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ïîäîáíî ìíîãèì äðóãèì îñîáåííîñòÿì òàêèì êàê Ìåöåíàò, ýôôåêòû Ýêñïàíñèîíèñòà óìåíüøàþòñÿ, ïðè ïðîäîëæåíèè èãðû. Ïîÿâëÿþòñÿ äðóãèå ñðåäñòâà óâåëè÷åíèÿ çäîðîâüÿ, äåøåâûå çäàíèÿ - ðàííèå, è ê êîíöó èãðû, êàê òîëüêî âàøà ñåòü æåëåçíîé äîðîãè âûïîëíåíà, âàøå ïðîñòîðíîå, äåøåâûå ðàáî÷èå íà÷èíàþò ñòàíîâèòüñÿ ïðàçäíûìè. Âû ìîæåòå òàêæå ïåðåêëþ÷èòü îò ïàðàäèãìû Ðàáñòâà, òåðÿÿ îäíî èç îñíîâíûõ âûãîä äåøåâûõ àìáàðîâ.[PARAGRAPH:1]È êàê ñ áîëüøèíñòâîì äðóãèõ ÷åðò, Ýêñïàíñèâíûé íå îáåñïå÷èâàåò íèêàêîãî ïðÿìîãî ýêîíîìè÷åñêîãî ýôôåêòà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_EXTRA_GOODY</Tag>
-		<English>[ICON_BULLET]Gains a second result from Goody Huts and Islands.</English>
-		<French>[ICON_BULLET]Reçoit un second cadeau des Huttes et Iles.</French>
-		<Italian>[ICON_BULLET]Ottieni un secondo bonus da villaggi tribali e isole sconosciute.</Italian>
-		<Polish>[ICON_BULLET]Otrzymujesz drugą nagrodę z Chatek i Nieznanych Wysp.</Polish>
-		<Russian>[ICON_BULLET]Удвоенная награда от туземных деревень и островов.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_EXTRA_YIELD_THRESHOLDS</Tag>
-		<English>[ICON_BULLET]+1%F1_yield on Plots with %d2%F3_yield</English>
-		<French>[ICON_BULLET]+1%F1_yield sur les cases avec: %d2%F3_yield</French>
-		<German>[ICON_BULLET]+1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
-		<Italian>[ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
-		<Spanish>[ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
-		<Polish>[ICON_BULLET]+1%F1_yield na polach z: %d2%F3_yield</Polish>
-		<Russian>[ICON_BULLET]+1%F1_yield на участках с %d2%F3_yield</Russian>
+		<Tag>TXT_KEY_TRAIT_EXPANSIVE_SHORT</Tag>
+		<English>Exp</English>
+		<French>Acc</French>
+		<German>Exp</German>
+		<Italian>Esp</Italian>
+		<Spanish>Com</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL</Tag>
@@ -918,12 +1456,12 @@
 		<Russian>Ýòî ÿâëÿåòñÿ âåñüìà âåðîÿòíî ñàìîé ñèëüíîé îñîáåííîñòüþ, êàê ìèíèìóì íà óðîâíÿõ äî Èìïåðàòîðà, òàê ÷òî ìíîãèå èãðîêè ðàññìàòðèâàþò Ôèíàíñèñòà êàê "êîñòûëü" è èçáåãàþò ëèäåðîâ ñ ýòîé ÷åðòîé ïîòîìó ÷òî îíè ÷óâñòâóþò, ÷òî ýòî ïðåäëàãàåò íåñïðàâåäëèâîå ïðåèìóùåñòâî. Ðàçðàáîò÷èêè èãðû ïî-âèäèìîìó ñîãëàñèëèñü ñ ýòèì, ñëåäîâàòåëüíî â îäíîì èç ðàííèõ ïàò÷åé îíè óäàëèëè äâîéíóþ ñêîðîñòü ïðîèçâîäñòâà áàíêîâ ÷òîáû óìåíüøèòü åãî ìîùü. Äàæå â ýòîì ñëó÷àå, Ôèíàíñîâûé îñòàåòñÿ äåéñòâèòåëüíî óæàñíûé îñîáåííîñòüþ.[PARAGRAPH:1]Ñíà÷àëà, ýòî êàæåòñÿ åäâà ðàçëè÷èìûì: +1[ICON_COMMERCE] íà íåêîòîðûõ êëåòêàõ? Íó è ÷òî?[PARAGRAPH:1]Îòâåò, êîíå÷íî, ýòîò: ýòî - ýêîíîìèêà, ãëóïåö. Ñêàæèòå, ÷òî âû õîòèòå î âîåííûõ, èññëåäîâàíèÿõ, ðåëèãèè, è äðóãèõ ýëåìåíòàõ èãðû; â êîíå÷íîì ñ÷åòå, âàøà öèâèëèçàöèÿ òðåáóåò çäðàâîé ýêîíîìèêè ÷òîáû ïîääåðæèâàòü âñå îñòàëüíîå, ÷òî âû äåëàåòå. Âîåííûå þíèòû òðåáóþò äåíåæíîãî ñîäåðæàíèÿ, áîëüøå òîãî, åñëè îíè âíå âàøåé òåððèòîðèè. Ãîðîäà àíàëîãè÷íî èìåþò çàòðàòû îáñëóæèâàíèÿ, çàäåðæèâàÿ âàøó ñêîðîñòü ðàñøèðåíèÿ è òðåáóÿ îò âàñ ãàðàíòèé ÷òî êàæäûé ãîðîä ìîæåò òàê èëè èíà÷å çàïëàòèòü çà ñåáÿ. È âû äîëæíû ïîääåðæèâàòü íà âûñîêîì óðîâíå òåõíîëîãèè è áûòü â ñîñòîÿíèè îòêëàäûâàòü êàïèòàëû, ÷òîáû ïîääåðæàòü èññëåäîâàíèÿ. Ôèíàíñîâàÿ ÷åðòà äåëàåò âñå ýòè çàäà÷è íåìíîãî ëåã÷å--åñëè îáðàáîòàíî õîðîøî, íàìíîãî ëåã÷å.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POTTERY]Ãëèíÿíàÿ ïîñóäà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CURRENCY]Äåíüãè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_GUILDS]Ãèëüäèè[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BANKING]Áàíêîâñêîå äåëî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_LIBERALISM]Ëèáåðàëèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PRINTING_PRESS]Ïå÷àòíûé ñòàíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_DEMOCRACY]Äåìîêðàòèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CORPORATION]Êîðïîðàöèè[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COLOSSUS]Êîëîññ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_WALL_STREET]Óîëë Ñòðèò[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MARKET]Ðûíîê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GROCER]Òîðãîâûå ðÿäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BANK]Áàíê[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]Óíèâåðñèòåò[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_OBSERVATORY]Îáñåðâàòîðèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LABORATORY]Ëàáîðàòîðèÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ãëàâíûé ñïîñîá óñèëèòü ôèíàíñîâóþ ÷åðòó ÿâëÿåòñÿ î÷åíü ïðÿìûì: äîìîâîé çàâàë. Äà, ïðîâåðåííàÿ Cottage Economy - äîìîâàÿ ýêîíîìèêà, èëè CE. Èìåéòå âàøèõ [LINK=UNIT_WORKER]ðàáî÷èõ[\LINK] çàëîæèòå òàê ìíîãî [LINK=IMPROVEMENT_COTTAGE]äîìîâ[\LINK] ñêîëüêî âàøå íàñåëåíèå ìîæåò îáðàáîòàòü è åùå îáðàáàòûâàÿ äðóãèå ðÿäîìñòîÿùèå êëåòêè òàêæå. ß îñîáåííî ëþáëþ ïîìåùàòü äîìà íà ïðèáðåæíûõ êëåòêàõ ëóãîâ, ïîñêîëüêó Ôèíàíñîâàÿ âûãîäà óìèðàåò, êàê òîëüêî äîì ïîñòðîåí, è 2 ïèùè êîðìèò ãðàæäàíèíà, îáðàáîòûâàþùåãî êëåòêó (ïîéìû, ñ 3 ïèùè, åùå ëó÷øå äëÿ äîìîâ, ïîääåðæèâàÿ ãîðîäñêîé ðîñò íàðÿäó ñ ýêîíîìèêîé). Òîëüêî ïîìíèòå, ÷òî âàì, âåðîÿòíî, ïðèäåòñÿ îðîñèòü íåêîòîðûå èç ýòèõ êëåòîê âìåñòî ýòîãî, ðàçìåñòèâ ôåðìû íà íèõ, ÷òîáû êîðìèòü è âûðàñòèòü âàøå íàñåëåíèå è/èëè ñâÿçàòü èððèãàöèåé äðóãóþ êëåòêó. Óäîñòîâåðüòåñü, ÷òî âû èìååòå ãðàæäàí, îáðàáîòûâàþùèõ äîìà óñòîé÷èâî, îäíàêî, ïîñêîëüêó ýòî - åäèíñòâåííûé ñïîñîá çàñòàâèòü èõ âûðàñòèòü è óâåëè÷èâàòü èõ äîõîä.[PARAGRAPH:1]Êðîìå òîãî, áóäüòå â ïîèñêàõ ðåñóðñîâ, êîòîðûå îáåñïå÷èâàþò äîïîëíèòåëüíóþ òîðãîâëþ. Äðàãîöåííûå êàìíè, çîëîòî, è ñåðåáðî ÿâëÿþòñÿ î÷åâèäíûìè öåëÿìè, íî ñïåöèè, øåëê, è âèíî õîðîøè òàêæå; âñå îíè çàðàáîòàþò äëÿ âàñ âûãîäó +1[ICON_COMMERCE] â äîïîëíåíèå ê äîïîëíèòåëüíîé òîðãîâëå ðåñóðñà. Âàì íåîáõîäèìî ïðåòåíäîâàòü íà ýòè ðåñóðñû, ãàðàíòèðóéòå, ÷òî îíè íàõîäÿòñÿ â êðóãå ãîðîäà, è óëó÷øåíû è çàòåì îáðàáîòûâàþòñÿ ãðàæäàíèíîì. Áîëüøèíñòâî áîãàòûõ òîðãîâëåé ðåñóðñîâ òàêæå óâåëè÷èâàåò ñ÷àñòüå, ÷òî îçíà÷àåò, ÷òî âû ìîæåòå âûðàñòèòü âàøè äðóãèå áîëüøèå ãîðîäà è, çà õîä îáðàáîòàòü áîëüøå äîìîâ è äðóãèå áîãàòûå òîðãîâëåé êëåòêè.[PARAGRAPH:1]Òàê âû áóäåòå èìåòü âñå ÷òî ïðèíîñèò äîïîëíèòåëüíàÿ òîðãîâëÿ, óäåëèòå ïåðâîñòåïåííîå âíèìàíèå çäàíèÿì, êîòîðûå äåëàþò ÷òî-òî ñ ýòèì, è òåõíîëîãèÿì êîòîðûå âêëþ÷àþò èõ. Áèáëèîòåêè, ìîíàñòûðè, óíèâåðñèòåòû, îáñåðâàòîðèè è ëàáîðàòîðèè âñå óìíîæàþò êîëè÷åñòâî èññëåäîâàíèé, êîòîðîå âû ïðåîáðàçîâûâàåòå èç òîðãîâëè ÷åðåç ñëàéäåð íàóêè, â òî âðåìÿ êàê ðûíêè, òîðãîâûå ðÿäû è áàíêè óìíîæàþò ëþáîå îñòàâøååñÿ çîëîòî. Â äîáàâëåíèå, Ïå÷àòíûé ïðåññ óâåëè÷èò äîõîä ñ âàøèõ èíâåñòèöèé â äîìà, òàêæå êàê ïàðàäèãìà Ñâîáîäà ñëîâà. Ýìàíñèïàöèÿ çàñòàâèò ëþáûå äîìà âûðàñòàòü áûñòðåå.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ñíà÷àëà, Ôèíàíñîâûé íå îáåñïå÷èâàåò íèêàêîé ïðÿìîé âûãîäû ê êëåòêå, êîòîðàÿ íå îáåñïå÷èâàåò êàê ìèíèìóì 2 òîðãîâëè. Ýòî ìîæåò çàñòàâèòü âàñ îòêàçàòüñÿ ðàáîòàòü ñ êëåòêàìè áåç âûãîäû, äàæå ïðè òîì, ÷òî âû áóäåòå íóæäàòüñÿ â íèõ. Ýòî îçíà÷àåò ÷òî ïðîèçâîäñòâî ãîðîäà, êîòîðûé ãëàâíûì îáðàçîì îáðàáàòûâàåò áîãàòûå ìîëîòêàìè à íå áîãàòûå òîðãîâëåé êëåòêè, íå ïðèîáðåòàÿ íåïîñðåäñòâåííîãî âûèãðûøà èç îñîáåííîñòåé. Âû áóäåòå, îäíàêî, íóæäàòüñÿ ïî êðàéíåé ìåðå â îäíîì ïðîèçâîäÿùåì ãîðîäå, ïðåäïî÷òèòåëüíî áîëüøå, òàê ÷òî íå ïðîïóñêàéòå èõ â ïîëüçó ãîðîäîâ òîðãîâëè. Òî æå ñàìîå ïîäõîäèò äëÿ óñîâåðøåíñòâîâàíèé êëåòêè. Äà, âû ìîæåòå ïîìåñòèòü äîì íà õîëì ïîëÿ. Íî íóæíî ýòî âàì? Ðóäíèê îáåñïå÷èë áû âåñüìà íåîáõîäèìûå ìîëîòêè, ÷åãî êîììåð÷åñêèì ãîðîäàì ÷àñòî õðîíè÷åñêè íåõâàòàåò.[PARAGRAPH:1]Ñàìàÿ áîëüøàÿ ïðîáëåìà ñ Ôèíàíñîâûì, îäíàêî, ÿâëÿåòñÿ óÿçâèìîñòü âàøåé ýêîíîìèêè, îñîáåííî ñ òå÷åíèåì âðåìåíè. Òðåáóåòñÿ ìíîãî õîäîâ çàñòàâèòü äîì ïðåâðàòèòüñÿ â ãîðîä, íî ýòè èíâåñòèöèè ìîãóò áûòü áûñòðî óíè÷òîæåíû íåñêîëüêèìè ãðàáÿùèìè âðàæåñêèìè þíèòàìè. È çíà÷èòåëüíîå êîëè÷åñòâî çîëîòà êîòîðîå ìîæåò áûòü ïîëó÷åíî îò îãðàáëåííûõ äîìîâ î÷åíü ñîáëàçíÿåò ÈÈ. Âû áóäåòå íóæäàòüñÿ ñòàâèòü â ãàðíèçîí âàøèõ ëó÷øèõ, ñòàðåéøèõ êîììåð÷åñêèõ ãîðîäîâ àíòèãðàáÿùèõ þíèòîâ, åñëè âû èäåòå âîåâàòü. Òàêæå ïðîáóéòå èìåòü âàøè ëó÷øèå ãîðîäà òîðãîâëè âíóòðè îñíîâû âàøåé èìïåðèè, à íå íà áîëåå óÿçâèìûõ ãðàíèöàõ èëè áåðåãîâîé ëèíèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
-		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
-		<Italian>[ICON_BULLET]%D1_Amount al raggio d'azione per le unità aeree.</Italian>
-		<Polish>[ICON_BULLET]%D1_Amount Zasięgu Operacyjnego dla jednostek Powietrznych.</Polish>
-		<Russian>[ICON_BULLET]%D1_Amount дальности полета авиационных отрядов.</Russian>
+		<Tag>TXT_KEY_TRAIT_FINANCIAL_SHORT</Tag>
+		<English>Fin</English>
+		<French>Fin</French>
+		<German>Fin</German>
+		<Italian>Eco</Italian>
+		<Spanish>Fin</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -985,84 +1523,6 @@
 		</Spanish>
 		<Polish>Cdz</Polish>
 		<Russian>Êñåí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FREE_PROMOTION_UNITCOMBAT</Tag>
-		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
-		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
-		<German>[ICON_BULLET]freie Beförderung [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für[SPACE]</German>
-		<Russian>[ICON_BULLET]Бесплатные Квалификации [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] для[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_NW</Tag>
-		<English>[ICON_BULLET]Gets a Free Specialist for each National Wonder where built.</English>
-		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
-		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Cud Narodowy który wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
-		<English>[ICON_BULLET]Gets a Free Specialist for each Team Project where built.</English>
-		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Projet d'Equipe construit.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Progetto di squadra nella città in cui è costruito.</Italian>
-		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Projekt który wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждый завершенный командный проект.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_WW</Tag>
-		<English>[ICON_BULLET]Gets a Free Specialist for each World Wonder where built.</English>
-		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Grande Meraviglia nella città in cui è costruito.</Italian>
-		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Wielki Cud który wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
-		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
-		<German>[ICON_BULLET]freie militärische Einheiten pro 100 Bürger: %D1</German>
-		<Russian>[ICON_BULLET]Бесплатных отрядов на каждые 100 жителей: %D1</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE</Tag>
-		<English>[ICON_BULLET]Starts a Golden Age when a %s1_GP is born in an owned city.</English>
-		<French>[ICON_BULLET]Démarre l'Age d'Or lorsqu'un %s1_GP est né dans la ville.</French>
-		<Italian>[ICON_BULLET]Comincia un'età dell'oro quando un %s1_GP nasce in una tua città.</Italian>
-		<Polish>[ICON_BULLET]Rozpoczyna Złotą Erę gdy: %s1_GP narodzi się w mieście.</Polish>
-		<Russian>[ICON_BULLET]Начинается Золотой век, когда %s1_GP рождается в городе игрока.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_GREAT_GENERAL_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Great Military People Emergence</English>
-		<French>[ICON_BULLET]%D1%% Emergen de Général illustre</French>
-		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren</German>
-		<Italian>[ICON_BULLET]%D1%% ritmo di nascita dei Grandi Generali</Italian>
-		<Polish>[ICON_BULLET]%D1%% do Wielkiego Generała</Polish>
-		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_GREAT_PEOPLE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] Birth Rate</English>
-		<French>[ICON_BULLET]Taux de natalité [ICON_GREATPEOPLE] %D1%%</French>
-		<German>[ICON_BULLET]%D1%% Geburtenrate [ICON_GREATPEOPLE]</German>
-		<Italian>[ICON_BULLET]%D1%% ritmo di nascita [ICON_GREATPEOPLE]</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
-		<Polish>[ICON_BULLET]Częstotliwość Narodzin: [ICON_GREATPEOPLE] %D1%%</Polish>
-		<Russian>[ICON_BULLET]%D1%% [ICON_GREATPEOPLE] ур. рождаемости</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
-		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
-		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священных городах негос. религий</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
-		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
-		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
-		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Świętym Mieście Twojej Religi Narodowej</Polish>
-		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священном городе вашей госуд. религии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -1217,6 +1677,22 @@
 		<Russian>Èä.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
+		<English>Imperialistic</English>
+		<French>Impérialiste</French>
+		<German>
+			<Text>Imperialistisch:imperialistisches</Text>
+			<Gender>Male:Neuter</Gender>
+			<Plural>0:0</Plural>
+		</German>
+		<Italian>Imperialista</Italian>
+		<Spanish>Imperialista</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
+		<English>Imperialistic 0</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
 		<English>After several off-line games as Julius Caesar, my opinion of this trait has improved. I originally included it in the "Weak" category, but now feel it belongs in "Medium"--if it's used properly.[PARAGRAPH:1]Imperialistic supports aggressive expansion in two ways. First of all, Settlers are cheaper to build, allowing you to perform a faster land-grab early in the game. Second, to take advantage of the increased Great General emergence, you're encouraged to expand through aggression.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Bronze Working[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Masonry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Mathematics[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Code of Laws[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_FASCISM]Fascism[\LINK][PARAGRAPH:1][ICON_BULLET]All military technologies[PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_WALL]The Great Wall[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MT_RUSHMORE]Mount Rushmore[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Barracks[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Vassalage[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Theocracy[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Obviously, pursue a REX (Rapid EXpansion) strategy in the early game, and follow this up with an aggressive, warmonger's expansion policy once your core cities are established. This especially suits Catherine the Great of Russia, since her Creative trait has definite synergy with an early game land-grabbing strategy.[PARAGRAPH:1]Keep in mind that the increased Settler production comes from hammers, not food. This means you'll want to focus as much on mines as farms and pastures when improving tiles in the early game. Chopping and whipping contribute hammers, so those get multiplied by the trait as well--hence the attraction of Bronze Working and Mathematics.[PARAGRAPH:1]You can enhance the increased GG emergence further by building the Great Wall. In addition to keeping barbs away, that wonder also provides +100% Great General emergence from battles that take place within your cultural borders, resulting in a +200% GG boost with the trait when defending within your own territory. Masonry, therefore, and a source of stone are likely to be priorities when playing as a leader with this trait.[PARAGRAPH:1]The chief way to take advantage of the Imperialistic trait once the original period of REX is over is simple: war. War early and war often. It's the only way to generate Great Generals (and remember that battling barbs earns you XPs, but not points towards a Great General.) Great Generals are actually one of the most useful Great People in the game, even if they lack some of the uses of other GPs (such as lightbulbing technologies or starting a Golden Age). You can attach them to units to uber-promote them, put them in cities to provide additional XPs or boost unit production with a military academy. Just remember to prioritize Code of Laws and courthouses to keep your ever-expanding empire economically viable.[PARAGRAPH:1]Many players favour combining the first Great General with a unit and giving it the Medic I, II, and III promotions. This medic unit will heal your stacks faster, allowing them to return to the fray much sooner. You can also use a GG to give a unit the Leadership promotion, which creates synergy with the Imperialistic trait because the promotion results in double XPs for that unit from every battle it survives, and those double XPs are doubled again in their count towards your next Great General. You can also combine the GG with a Caravel to give it Flanking I, Navigation I, and Navigation II in order to practically guarantee winning the circumnavigation bonus.[PARAGRAPH:1]Since you're going after several Great Generals (and likely basing much of your strategy on their benefits), you'll want to snag the free one that you get from researching Fascism first. With all the warmongering you'll be doing, you're going to want to build Mount Rushmore and run Police State to alleviate some of the War Weariness anyway.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Well, for starters, there's no cheap building and no economic advantage. It seems logical that Imperialistic should have cheap courthouses, but Organized has those, and shifting them away would seriously weaken that trait. Perhaps jails would have been a good cheap building for Imperialistic. If Civ IV had useful forts, faster build times of those would have been logical for this trait as well.[PARAGRAPH:1]Instead of a cheap building, however, there's a cheap unit. But Imperialistic's boost to Settler builds comes from hammers, not food. This means you need to work at cross-purposes in the early game, building mines to ensure your Settler builds take advantage of the trait. If food also boosted the Setter's build time, this would be a much stronger trait.[PARAGRAPH:1]The biggest weakness of the trait, however, is that it locks you into a specific strategy. You don't have to play as a warmonger with the Aggressive trait; you could leverage it to build a strong army and military infrastructure (the cheap barracks and drydocks count towards your power rating, after all) so you're left alone to build. With Imperialistic, however, you have to warmonger. There's no other way to earn those Great Generals except by fighting other civs. Don't play with this trait unless you're in the mood to knock heads, or you're wasting it.</English>
 		<Russian>Ïîñëå íåñêîëüêèõ îôô-ëàéíîâûõ èãð çà Þëèÿ Öåçàðÿ, ìîå îòíîøåíèå ê åãî îñîáåííîñòÿì óëó÷øèëîñü. ß èñõîäíî âêëþ÷èë åãî â êàòåãîðèþ "ñëàáûõ", íî ñåé÷àñ ïîëàãàþ, ÷òî îí îòíîñèòüñÿ ê "ñðåäíèì"--åñëè îí èñïîëüçóåòñÿ ïðàâèëüíî.[PARAGRAPH:1]Èìïåðèàëèñò ïîääåðæèâàåò àãðåññèâíîå ðàñøèðåíèå äâóìÿ ñïîñîáàìè. Ïðåæäå âñåãî, ïîñåëåíöû äåøåâû äëÿ ñòðîèòåëüñòâà, ïîçâîëÿÿ âàì âûïîëíèòü áîëåå áûñòðûé çàõâàò çåìëè â íà÷àëå èãðû. Âòîðîå, èñïîëüçóéòå ïðåèìóùåñòâî óâåëè÷åííîãî âîçíèêíîâåíèÿ âåëèêîãî ãåíåðàëà, âû ïîîùðÿåòåñü ðàñøèðÿòüñÿ ÷åðåç àãðåññèþ.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BRONZE_WORKING]Áðîíçîâîå ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Êàìåííàÿ êëàäêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MATHEMATICS]Ìàòåìàòèêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Ñâîä çàêîíîâ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_FASCISM]Ôàøèçì[\LINK][PARAGRAPH:1][ICON_BULLET]Âñå âîåííûå òåõíîëîãèè[PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_WALL]Âåëèêàÿ ñòåíà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_MT_RUSHMORE]Ãîðà Ðàøìîð[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_BARRACKS]Êàçàðìû[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_VASSALAGE]Âàññàëüíàÿ çàâèñèìîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_THEOCRACY]Òåîêðàòèÿ[\LINK]PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Î÷åâèäíî, ñëåäóéòå ñòðàòåãèè REX (Rapid EXpansion - Áûñòðîå ÐÀñøèðåíèå) â íà÷àëå èãðû, è ñëåäóéòå çà ýòèì ñ àãðåññèâíîé, ìèëèòàðèñòêîé ïîëèòèêîé ðàñøèðåíèÿ êàê òîëüêî âàøè îñíîâíûå ãîðîäà îñíîâàíû. Ýòî îñîáåííî óäîâëåòâîðÿåò Åêàòåðèíå Âåëèêîé èç Ðîññèè, òàê êàê åå îñîáåííîñòè Ìåöåíàòà èìåþò îïðåäåëåííóþ ñîâìåñòèìîñòü ñ ðàííåé ñòðàòåãèåé çàõâàòà çåìëè â èãðå.[PARAGRAPH:1]Èìåéòå â âèäó, ÷òî óâåëè÷åíèå ïðîèçâîäñòâà Ïîñåëåíöà ïðîèñõîäèò îò ìîëîòêîâ, íå îò ïèùè. Ýòî îçíà÷àåò, ÷òî âû áóäåòå äîëæíû ñîñðåäîòî÷èòüñÿ òàêæå íà øàõòàõ êàê è íà ôåðìàõ è ïàñòáèùàõ, êîãäà óëó÷øàåòå êëåòêè â ðàííåé èãðå. Âûðóáêà è ïðèíóæäåíèå ñïîñîáñòâóþò ìîëîòêàì, òàêèì îáðàçîì îíè óìíîæàþòñÿ ýòîé ÷åðòîé òàêæå--ñëåäîâàòåëüíî ïðèâëåêàòåëüíû Áðîíçîâîå ëèòüå è Ìàòåìàòèêà.[PARAGRAPH:1]Âû ìîæåòå ðàñøèðèòü óâåëè÷åííûé âûõîä GG êðîìå òîãî ïîñòðîèâ Âåëèêóþ ñòåíó. Â äîïîëíåíèå ê óäåðæàíèþ âàðâàðîâ ïîäàëüøå, ýòî ÷óäî òàêæå îáåñïå÷èâàåò +100% âûõîä Âåëèêîãî ãåíåðàëà îò ñðàæåíèé, êîòîðûå èìåþò ìåñòî â ïðåäåëàõ âàøèõ êóëüòóðíûõ ãðàíèö, ïðèâîäÿ ê ïîâûøåíèþ +200% GG îñîáåííî êîãäà çàùèùàåòåñü â ïðåäåëàõ âàøåé ñîáñòâåííîé òåððèòîðèè. Êàìåííàÿ êëàäêà, ñëåäîâàòåëüíî, è èñòî÷íèê êàìíÿ âåðîÿòíî, áóäóò ïðèîðèòåòíû, êîãäà èãðàåòå çà ëèäåðà ñ ýòîé îñîáåííîñòüþ.[PARAGRAPH:1]Ãëàâíûé ñïîñîá èñïîëüçîâàòü â ñâîèõ èíòåðåñàõ Èìïåðèàëèñòè÷åñêóþ ÷åðòó â ïåðâîíà÷àëüíûé ïåðèîä REX çàêàí÷èâàåòñÿ ïðîñòî: âîéíà. Âîéíà ðàíî è âîéíà ÷àñòî. Ýòî - åäèíñòâåííûé ñïîñîá ïðîèçâåñòè Âåëèêèõ ãåíåðàëîâ (è ïîìíèòå, ÷òî áîðüáà ïðîòèâ âàðâàðîâ çàðàáàòûâàåò âàì XP, íî íå î÷êè ê Âåëèêîìó ãåíåðàëó.) Âåëèêèé ãåíåðàë ÿâëÿåòñÿ ôàêòè÷åñêè îäíèì èç ñàìûõ ïîëåçíûõ çíàìåíèòîñòåé â èãðå, äàæå åñëè ó íèõ íåäîñòàòêè â èñïîëüçîâàíèè ïî ñðàâíåíèþ ñ äðóãèìè GP (òàêèå êàê óñêîðåíèå èññëåäîâàíèé èëè íà÷àëî Çîëîòîãî âåêà). Âû ìîæåòå ïðèëîæèòü èõ ê þíèòàì, ÷òîáû ñóïåð-ïðîäâèíóòü èõ, ïîìåñòèòü èõ â ãîðîäà, ÷òîáû îáåñïå÷èòü äîïîëíèòåëüíûé XP èëè ïîâûñèòü ïðîèçâîäñòâî þíèòîâ ñ âîåííîé àêàäåìèåé. Òîëüêî íå çàáóäüòå ïðèîðèòåòíîñòü Ñâîäà çàêîíîâ è çäàíèÿ ñóäà, ÷òîáû äåðæàòü âàøó ÷åðåñ÷óð-ðàñøèðÿþùóþñÿ èìïåðèþ ýêîíîìè÷åñêè æèçíåñïîñîáíî.[PARAGRAPH:1]Ìíîãèå èãðîêè îäîáðÿþò îáúåäèíåíèå ïåðâîãî Âåëèêîãî ãåíåðàëà ñ þíèòîì è ïåðåäà÷ó åìó óëó÷øåíèé Ìåäèêà I, II, è III. Ýòîò þíèò ìåäèê èçëå÷èò âàøè ãðóïïû áûñòðåå, ïîçâîëÿÿ èì âîçâðàùàòüñÿ ê äðàêå íàìíîãî ñêîðåå. Âû ìîæåòå òàêæå èñïîëüçîâàòü GG ÷òîáû äàòü þíèòó óëó÷øåíèå Ëèäåðñòâî, êîòîðîå ñîçäàåò ñèíòåç ñ Èìïåðèàëèñòè÷åñêîé ÷åðòîé ïîòîìó ÷òî óëó÷øåíèå ïðèâîäèò ê óäâîåíèþ XP äëÿ òàêîãî þíèòà èç êàæäîé áèòâû ãäå îí âûæèâåò, è ýòî óäâîåíèå XP óäâàèâàåòñÿ ñíîâà â ïîäñ÷åòå ê âàøåìó ñëåäóþùåìó Âåëèêîìó ãåíåðàëó. Âû ìîæåòå òàêæå êîìáèíèðîâàòü GG ñ êàðàâåëëîé ÷òîáû äàòü åé Ôëàíãîâûé îãîíü I, Íàâèãàöèþ I, è Íàâèãàöèþ II ÷òîáû ôàêòè÷åñêè ãàðàíòèðîâàòü çàâîåâàíèå ïðåìèè êðóãîñâåòíîãî ïëàâàíèÿ.[PARAGRAPH:1]Òàê êàê âû èäåòå ïîñëå íåñêîëüêèõ Âåëèêèõ ãåíåðàëîâ (è âåðîÿòíî áàçèðóÿ áîëüøóþ ÷àñòü âàøåé ñòðàòåãèè íà èõ âûãîäàõ), âû áóäåòå õîòåòü çàñòîïîðèòü ñâîáîäó òåì ÷òî âû ïîëó÷èòå îò èññëåäîâàíèÿ Ôàøèçìà âíà÷àëå. Ñî âñåì ìèëèòàðèçìîì ñäåëàííûì âàìè, âû çàõîòèòå ïîñòðîèòü Ãîðó Ðàøìîð è ïåðåéòè ê Ïîëèöåñêîìó ãîñóäàðñòâó ÷òîáû òàê èëè èíà÷å îáëåã÷èòü ÷àñòü âîåííîé óñòàëîñòè.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Õîðîøî, äëÿ íà÷àëà, íåò íèêàêîãî äåøåâîãî çäàíèÿ è íèêàêîãî ýêîíîìè÷åñêîãî ïðåèìóùåñòâà. Êàæåòñÿ ëîãè÷íûì, ÷òî Èìïåðèàëèñòè÷åñêèé äîëæåí èìåòü äåøåâûå çäàíèÿ ñóäà, íî îðãàíèçàòîðû ñäåëàëè òàê, è óäàëåíèå èõ ñåðüåçíî îñëàáèëà ýòó ÷åðòó. Âîçìîæíî òþðüìû áûëè áû õîðîøèì äåøåâûì çäàíèåì äëÿ Èìïåðèàëèñòà. Åñëè Civ IV èìååò ïîëåçíûå ôîðòû, áûñòðàÿ ïîñòðîéêà èõ áûëî áû ëîãè÷íûì äëÿ ýòîé ÷åðòû òàêæå.[PARAGRAPH:1]Âìåñòî äåøåâîãî çäàíèÿ, îäíàêî, åñòü äåøåâûé þíèò. Íî âûèãðûø Èìïåðèàëèñòà â ïîñòðîéêå ïîñåëåíöà ïðèáûâàåò îò ìîëîòêîâ, à íå îò ïèùè. Ýòî îçíà÷àåò, ÷òî âû äîëæíû ðàáîòàòü íàä ïðîòèâîïîëîæíûìè íàìåðåíèÿìè â ðàííåé èãðå, ñòðîèòü ðóäíèêè ÷òîáû ãàðàíòèðîâàòü ÷òî ïîñòðîåíèå Ïîñåëåíöåâ èìååò ïðåèìóùåñòâî îò îñîáåííîñòåé. Åñëè ïèùà òàêæå óñêîðÿåò âðåìÿ ñòðîèòåëüñòâà Ïîñåëåíöà, ýòî áûëî áû íàìíîãî ñèëüíîé ÷åðòîé.[PARAGRAPH:1]Ñàìàÿ áîëüøàÿ ñëàáîñòü ÷åðòû, îäíàêî, ýòî òî ÷òî îíà çàïèðàåò âàñ â ñïåöèôè÷åñêóþ ñòðàòåãèþ. Âû íå äîëæíû èãðàòü êàê ìèëèòàðèñò ñ îñîáåííîñòÿìè Ïîëêîâîäöà; âû ìîãëè óñèëèòü ýòî, ÷òîáû ïîñòðîèòü ñèëüíóþ àðìèþ è âîåííóþ èíôðàñòðóêòóðó (äåøåâûå áàðàêè è ñóõèå äîêè ðàññ÷èòûâàþò âàøó îöåíêó ìîùè, â êîíöå êîíöîâ) òàêèì îáðàçîì âû îñòàâëåíû â ïîêîå, ÷òîáû ñòðîèòü. Ñ Èìïåðèàëèñòè÷åñêèì, îäíàêî, âû ïîëó÷àåòå ìèëèòàðèñòà. Íåò íèêàêîãî äðóãîãî ñïîñîáà çàðàáîòàòü Âåëèêèõ ãåíåðàëîâ êðîìå êàê áîðÿñü ñ äðóãèìè öèâèëèçàöèÿìè. Íå èãðàéòå ñ ýòîé ÷åðòîé, åñëè âû íå íàõîäèòåñü â íàñòðîåíèè ïîðàçèòü ãîëîâó, èëè âû ïîòåðÿåòå åå.</Russian>
@@ -1251,6 +1727,14 @@
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
 		<English>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Masonry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metal Casting[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]Er... pretty much all of them. Well, maybe except for Chichen Itza.[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Forge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]State Property[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Caste System[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Environmentalism[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</English>
 		<Russian>Åñëè Ïîëêîâîäåö ýòî îñîáåííîñòü ìèëèòàðèñòà, Õîçÿéñòâåííèê ýòî îñîáåííîñòü ñòðîèòåëÿ. ×óäåñà áîëåå äåøåâû, óâåëè÷èâàÿ èõ "ÿñíóþ" ïðèòÿãàòåëüíîñòü è äàåò âàì îïîðó â ñîðåâíîâàíèÿõ ïî èõ ñòðîèòåëüñòâó. Êðîìå òîãî, êóçíèöà, çäàíèå, êîòîðîå óñêîðÿåò ñòðîèòåëüñòâî äðóãèõ çäàíèé, íó, â îáùåì, áûñòðåå ñòðîèòü.[PARAGRAPH:1]×òî êàñàåòñÿ ïàêåòà ðàñøèðåíèÿ Beyond the Sword, ýòà ñåé÷àñ ñàìûé èñêëþ÷èòåëüíûé êëóá Civilization IV, õîòÿ íå î÷åíü. Âñå äðóãèå ÷åðòû èìåþò 9 èëè 10 ëèäåðîâ êòî îáëàäàåò èìè, â òî âðåìÿ êàê Õîçÿéñòâåííèê ðàçäåëåí òîëüêî 8 ëèäåðàìè. È íåò, îí îäíàêî íå êîìáèíàöèÿ ÷åðò Õîçÿéñòâåííèêà/Ôèëîñîôà; ýòî î÷åâèäíî ðàñöåíåíî ïðîåêòèðîâùèêàìè èãðû êàê ïîäàâëåíèå.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Êàìåííàÿ êëàäêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Ìîíîòåèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Ëèòüå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Êîíâåéåð[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET]Ñêîðåå . . . â çíà÷èòåëüíîé ñòåïåíè âñå îíè. Õîðîøî, âîçìîæíî çà èñêëþ÷åíèåì ×è÷åí-Èöû.[PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Êóçíèöà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Ôàáðèêà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Ãîñóäàðñòâåííàÿ ñîáñòâåííîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Êàñòîâàÿ ñèñòåìà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Îõðàíà îêðóæ. ñðåäû[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Ñòðîèòü ÷óäåñà, êîíå÷íî. Ñòðîéòå èõ è óñèëüòå èõ è íå ïóñòèòå èõ â íåðÿøëèâûå ìàëåíüêèå ðóêè ÈÈ. Òàêæå èùèòå è ïðåòåíäóéòå íà ÷óäåñîóñêîðÿþùèå ðåñóðñû òèïà ìåäè, æåëåçà, ìðàìîðà, è êàìíÿ. Ïîìíèòå ÷òî óñêîðåííîå ïðîèçâîäñòâî ÷óäåñ âëèÿåò íà íàöèîíàëüíûå ÷óäåñà òàêæå.[PARAGRAPH:1]Òàêæå, óäåëèòå ïðèîðèòåò òåõíîëîãèè Ëèòüÿ â ïîðÿäêå äîñòóïà ê âàøåìó äåøåâîìó ñòðîåíèþ. Òàêòèêà ñ áîëüøèì êîëè÷åñòâîì ñîâìåñòíûõ äåéñòâèé ñ Èíäóñòðèàëüíûìè ëèäåðàìè ýòî ïîñòðîèòü Îðàêóëà (÷óäî, ïîýòîìó äåøåâî) è âûáðàòü Ëèòüå êàê âàøó ñâîáîäíóþ òåõíîëîãèþ. Çàòåì íà÷èíàéòå ñòðîèòü êóçíèöû. Ïîìíèòå ÷òî êóçíèöà, òàêæå òðåáóåòñÿ äëÿ äîïîëíèòåëüíûõ ÷óäåñ êàê Ìåòàëëóðãè÷åñêèé çàâîä, Êîëîññ, Ýéôåëåâà áàøíÿ, è Ñòàòóÿ ñâîáîäû. Òàê êàê Ëèòüå âêëþ÷àåò èõ, Êîëîññ îáû÷íî ñòðîèòñÿ ñðàçó ïîñëå òîãî êàê â åãî áóäóùåì ãîðîäå êóçíèöà çàêàí÷èâàåòñÿ.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Êîãäà âû èãðàåòå êàê ëèäåð Õîçÿéñòâåííèê, ñèðåíî-ïîäîáíîå î÷àðîâàíèå áûòü "ñòðîèòåëüíîãîëèêîì" åùå óâåëè÷èâàåòñÿ. Äàæå ïðè òîì, ÷òî ÷óäåñà áîëåå äåøåâû, îíè âñå åùå íå äåøåâàÿ ãðÿçü. Îíè òðåáóþò çíà÷èòåëüíûõ èíâåñòèöèé ìîëîòêîâ, êîòîðûå ìîãëè áû áûòü ïîìåùåíû â ëó÷øèå öåëè. Êàê âñåãäà, óäîñòîâåðüòåñü ÷òî ÷óäåñà, êîòîðûå âû õîòèòå ñòðîèòü, âïèñûâàþòñÿ â âàøó ñòðàòåãèþ è îáñòîÿòåëüñòâà èãðû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_SHORT</Tag>
+		<English>Ind</English>
+		<French>Tra</French>
+		<German>Ind</German>
+		<Italian>Ind</Italian>
+		<Spanish>Dil</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST</Tag>
@@ -1314,34 +1798,6 @@
 		<Russian>Èçîë.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_LESS_YIELD_THRESHOLDS</Tag>
-		<English>[ICON_BULLET]-1%F1_yield on Plots with %d2%F3_yield</English>
-		<French>[ICON_BULLET]-1%F1_yield sur les cases avec: %d2%F3_yield</French>
-		<German>[ICON_BULLET]-1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
-		<Italian>[ICON_BULLET]-1%F1_yield su caselle con %d2%F3_yield</Italian>
-		<Spanish>[ICON_BULLET]-1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
-		<Polish>[ICON_BULLET]-1%F1_yield na polach z: %d2%F3_yield</Polish>
-		<Russian>[ICON_BULLET]-1%F1_yield на участках с %d2%F3_yield</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MAX_ANARCHY</Tag>
-		<English>[ICON_BULLET]Max %d1 [NUM1:Turn:Turns] of Anarchy</English>
-		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie maximum</French>
-		<German>[ICON_BULLET]Max. %d1 [NUM1:Runde:Runden] Unruhen</German>
-		<Italian>[ICON_BULLET]%d1 [NUM1:turno massimo:turni massimi] di Anarchia</Italian>
-		<Spanish>[ICON_BULLET]Máx. %d1 [NUM1:turno:turnos] de anarquía</Spanish>
-		<Polish>[ICON_BULLET]Maksymalna ilość tur Anarchii: %d1</Polish>
-		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
-		<English>[ICON_BULLET]%D1_Change to Maximum possible Trade Routes ([ICON_TRADE]) per City</English>
-		<French>[ICON_BULLET]%D1_Change de nombre maximum de routes commerciales ([ICON_TRADE]) par ville</French>
-		<Italian>[ICON_BULLET]%D1_Change al numero massimo di rotte commerciali ([ICON_TRADE]) per città</Italian>
-		<Polish>[ICON_BULLET]%D1_Change do maksymalnej ilości Szlaków Handlowych ([ICON_TRADE]) na Miasto</Polish>
-		<Russian>[ICON_BULLET]%D1_Change максимально возможных торговых путей ([ICON_TRADE]) на город</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC</Tag>
 		<English>Megalomaniac</English>
 		<French>
@@ -1402,56 +1858,6 @@
 		<Russian>Ìåã.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MIN_ANARCHY</Tag>
-		<English>[ICON_BULLET]Min %d1 [NUM1:Turn:Turns] of Anarchy</English>
-		<French>[ICON_BULLET]%d1 [NUM1:tour:tours] d'anarchie minimum</French>
-		<German>[ICON_BULLET]Min. %d1 [NUM1:Runde:Runden] Unruhen</German>
-		<Italian>[ICON_BULLET]%d1 [NUM1:turno minimo:turni minimi] di anarchia</Italian>
-		<Polish>[ICON_BULLET]Minimalna ilość tur Anarchii: %d1</Polish>
-		<Russian>[ICON_BULLET]Мин. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
-		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
-		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità che trasportano missili.</Italian>
-		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewożących rakiety.</Polish>
-		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех ракетоносцев.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_MISSILE_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
-		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
-		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% National Wonder Production</English>
-		<French>[ICON_BULLET]Construction de merveilles nationales %D1%%</French>
-		<German>[ICON_BULLET]%D1%% Produktion Nationaler Wunder</German>
-		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie Nazionali</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas nacionales</Spanish>
-		<Polish>[ICON_BULLET]%D1%% do Budowy Narodowych Cudów</Polish>
-		<Russian>[ICON_BULLET]%D1%% производства Национальных чудес</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NAVAL_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
-		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
-		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
-		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla wszystkich jednostek transportujących - morskich.</Polish>
-		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех транспортных судов.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NEGATIVE</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This is a Negative Trait[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]C'est un Trait Négatif[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo è un tratto negativo[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]To jest Negatywna Cecha[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это негативная черта[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD</Tag>
 		<English>Nomad</English>
 		<French>Nomade</French>
@@ -1480,69 +1886,6 @@
 		<Spanish>Nóm</Spanish>
 		<Polish>Kcz</Polish>
 		<Russian>Êî÷.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
-		<English>[ICON_BULLET]Non State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
-		<French>
-			<Text>[ICON_BULLET]Le [ICON_RELIGION] (non officielle) produit encore [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>[ICON_BULLET]Nicht-staatliche [ICON_RELIGION] produziert immer noch [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
-			<Gender>Male:Neuter</Gender>
-			<Plural>0:0</Plural>
-		</German>
-		<Italian>[ICON_BULLET]La [ICON_RELIGION] non di Stato produrrà [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Italian>
-		<Spanish>[ICON_BULLET]Las [ICON_RELIGION] no oficiales producirán [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Spanish>
-		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Nie narodowe [ICON_RELIGION] Nadal produkuje [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Polish>
-		<Russian>[ICON_BULLET]Негосударственная религия [ICON_RELIGION] по-прежнему производит базовые очки [ICON_CULTURE], [ICON_GOLD] и [ICON_RESEARCH].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
-		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
-		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
-		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Nie-Państwowej przez Misjonarzy.</Polish>
-		<Russian>[ICON_BULLET]%D1%% шанс распространить негосударственную религию вашими миссионерами.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NOT_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]désactivé lorsque l'option %s2_Option est active[COLOR_REVERT]</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Inattivo se l'opzione %s2_Option è attivata[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dezaktywuje się gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Отключается, когда используется опция %s2_Option[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NO_ANARCHY</Tag>
-		<English>[ICON_BULLET]No Anarchy</English>
-		<French>[ICON_BULLET]Pas d'anarchie</French>
-		<German>[ICON_BULLET]Keine Unruhen</German>
-		<Italian>[ICON_BULLET]Nessuna Anarchia</Italian>
-		<Spanish>[ICON_BULLET]Sin anarquía</Spanish>
-		<Polish>[ICON_BULLET]Brak Anarchii</Polish>
-		<Russian>[ICON_BULLET]Нет Анархии</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_NO_UPKEEP</Tag>
-		<English>[ICON_BULLET]No Upkeep Costs for %s1 Civics</English>
-		<French>[ICON_BULLET]Aucun coût d'entretien pour: %s1</French>
-		<German>[ICON_BULLET]keine laufenden Kosten für %s1</German>
-		<Italian>[ICON_BULLET]Nessun costo di mantenimento per %s1</Italian>
-		<Spanish>[ICON_BULLET]Sin costes de mantenimiento por %s1</Spanish>
-		<Polish>[ICON_BULLET]Brak kosztów Utrzymania dla: %s1</Polish>
-		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%s1 íå òðåáóåò çàòðàò íà ñîäåðæàíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Attivo solo se l'opzione %s1_Option è attivata[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aktywna tylko gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Активно только когда используется опция %s1_Option[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED</Tag>
@@ -1576,6 +1919,14 @@
 		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание Парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» чертам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих черт). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать черту Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие черты также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие черты, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ORGANIZED_SHORT</Tag>
+		<English>Org</English>
+		<French>Org</French>
+		<German>Org</German>
+		<Italian>Org</Italian>
+		<Spanish>Org</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL</Tag>
 		<English>Philosophical</English>
 		<French>
@@ -1605,6 +1956,14 @@
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
 		<English>Just as the Financial trait lends itself to the Commerce Economy, the Philosophical trait lends itself to the Specialist Economy (SE). The SE, of course, has many adherents, and the debate over which economy is best rages on.[PARAGRAPH:1]Suffice it to say that the SE is strongest in the hands of a Philosophical leader, since running all those specialists will result in many more Great People. You don't have to run a SE with a Philosophical leader, just as you can run a CE without the Financial trait, but the SE and the Philosophical trait are both at their strongest when combined.[PARAGRAPH:1]Great People have many uses, of course. In the Specialist Economy, they are principally used for "lightbulbing", that is, using the Great Person to discover a technology, usually research-free. You can then trade this "free technology" for techs you need from other civilizations. This allows you to run the research slider at 0% for most of the game while you rely on a combination of scientists and tech trades to keep up in research. (My version of the SE in a nutshell.)[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Writing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POLYTHEISM]Polytheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Code of Laws[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PHILOSOPHY]Philosophy[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_EDUCATION]Education[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BIOLOGY]Biology[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PYRAMID]The Pyramids[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PARTHENON]The Parthenon[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIBRARY]The Great Library[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STATUE_OF_LIBERTY]The Statue of Liberty[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NATIONAL_PARK]National Park[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Library[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]University[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Caste System[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_MERCANTILISM]Mercantilism[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]I won't go into the details on how to run a SE, because that's beyond the scope of this article. Let's just say my recommendation with the Philosophical trait is to run a SE or at least a "hybrid economy" where some cities focus on food and specialists and others focus on cottages and commerce. (A hybrid economy is especially suitable for Elizabeth of England, who has the Financial trait that, as mentioned above, requires a certain amount of cottage spam to take full advantage of it.)[PARAGRAPH:1]Within the SE community, opinions differ as to the importance of building the Pyramids. The appeal of the Pyramids to a SE is to run the Representation civic extremely early in the game. This civic raises the happiness cap of your five largest cities on a standard-sized map (which are probably your only cities early on). This allows you to grow those cities even larger so you can work more farms and run more specialists. In addition, every specialist contributes an additional three research points under Representation beyond whatever research points they normally contribute--even those that normally don't contribute any research, such as engineers, priests, merchants, and ordinary citizen specialists. The science contribution of artists and spies goes up from 1 to 4 under representation, while the contribution of scientists doubles from 3 to 6. Obviously the Pyramids and early Representation hyper-charge the SE, but many maintain the SE can get along without either the wonder or the civic.[PARAGRAPH:1]The Parthenon can also be a useful wonder to a Philosophical leader. You're already relying on Great People for technologies, so why not build a wonder that increases the number of GP you'll get?[PARAGRAPH:1]Writing will be an early priority technology so you can build libraries and run your first scientists. Wonders can be very useful since they all contribute GP points; go after the wonders that contribute GPP towards the types of Great People you most want and need. Since Great Scientists are usually the most useful GPs, that makes the Great Library a very attractive wonder for leaders with the Philosophical trait. Mercantilism contributes a free specialist for each city, as does the Statue of Liberty (and without the "no foreign trade routes" price of Mercantilism). The Caste System civic is a huge boon to the SE and the Philosophical trait, allowing you to run as many merchants, scientists, and/or artists as a city can support. Therefore Code of Laws is a priority technology. Education enables the Philosophical trait's cheap building, the University, so that's a priority as well. Philosophy makes the Pacifism civic available, which provides a further +100% boost to GP production in cities that have your state religion. Biology will allow you to grow larger cities and support more specialists, so prioritize that tech later in the game.[PARAGRAPH:1]The National Park national wonder benefits the SE as it allows 1 free specialist for every forest preserve. It means, though, that you have to be careful to preserve some forests or even jungles in the fat cross of the city where you build it.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Running a specialist economy requires a great deal more micro-management than running the more-straightforward cottage economy. The game will take longer to play and you'll need to manage everything much more closely. That style of play doesn't suit everyone.[PARAGRAPH:1]The benefits of the Philosophical trait and of the SE begin to peter out in the late game. Great People get more expensive to produce and appear less frequently, while technologies become too expensive for your specialists and fewer Great People to research efficiently. You had better be in a position to win by this point or you may quickly find yourself falling behind. Either that, or you will need to transition to a cottage economy; a switch to the Emancipation civic will be essential to pulling this off.[PARAGRAPH:1]Unlike the Financial trait, the Philosophical trait does not provide any direct economic benefits. You'll need to look for other ways to keep your economy afloat.</English>
 		<Russian>Òàê æå êàê îñîáåííîñòü Ôèíàíñèñòà îòäàåò ñåáå òîðãîâóþ ýêîíîìèêó, îñîáåííîñòü Ôèëîñîôà îòäàåò ñåáå ýêîíîìèêó ñïåöèàëèñòà Specialist Economy (SE). SE, êîíå÷íî, èìååò ìíîãî ñòîðîííèêîâ, è äåáàòû, ïî ýòîé ýêîíîìèêå ÿâëÿþòñÿ íàèáîëüøèì ïîìåøàòåëüñòâîì.[PARAGRAPH:1]Óäîâëåòâîðèì ýòî, ñêàçàâ ÷òî SE íàèáîëåå ñèëüíà â ðóêàõ ëèäåðà Ôèëîñîôà, ïîñëå çàïóñêà âñå ýòè ñïåöèàëèñòû äàäóò â ðåçóëüòàòå çíà÷èòåëüíî áîëüøå çíàìåíèòîñòåé. Âû íå äîëæíû óïðàâëÿòü SE ñ ëèäåðîì Ôèëîñîôîì, òàê êàê âû óïðàâëÿåòå CE áåç îñîáåííîñòåé Ôèíàíñèñòà, íî SE è ÷åðòà Ôèëîñîôà îáà óñèëèâàþòñÿ êîãäà êîìáèíèðóþòñÿ.[PARAGRAPH:1]Çíàìåíèòîñòè ìîæíî èñïîëüçîâàòü ïî ðàçíîìó, êîíå÷íî. Â Specialist Economy, îíè ïðèíöèïèàëüíî èñïîëüçóþòñÿ äëÿ "èññëåäîâàíèé", òî åñòü, èñïîëüçîâàíèå çíàìåíèòîñòåé äëÿ îòêðûòèÿ òåõíîëîãèè, îáû÷íî áåç èññëåäîâàíèÿ. Âû ìîæåòå çàòåì òîðãîâàòü ýòîé "ñâîáîäíîé òåõíîëîãèåé" äëÿ òåõíîëîãèé íóæíûõ âàì îò äðóãèõ öèâèëèçàöèé. Ýòî ïîçâîëÿåò âàì óñòàíîâèòü ñëàéäåð èññëåäîâàíèé íà 0% íà áîëüøóþ ÷àñòü èãðû â òî âðåìÿ êàê âû ïîëàãàåòåñü íà êîìáèíàöèþ ó÷åíûõ è òîðãîâëè òåõíîëîãèÿìè ïîääåðæèâàÿ âûñîêèé óðîâåíü èññëåäîâàíèé. (Ìîÿ âåðñèÿ SE â îðåõîâîé ñêîðëóïå.)[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_WRITING]Ïèñüìåííîñòü[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_POLYTHEISM]Ïîëèòåèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Ñâîä çàêîíîâ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PHILOSOPHY]Ôèëîñîôèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_EDUCATION]Îáðàçîâàíèå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_BIOLOGY]Áèîëîãèÿ[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PYRAMID]Ïèðàìèäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_PARTHENON]Ïàðôåíîí[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_LIBRARY]Âåëèêàÿ áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_STATUE_OF_LIBERTY]Ñòàòóÿ ñâîáîäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_NATIONAL_PARK]Íàöèîíàëüíûé ïàðê[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIBRARY]Áèáëèîòåêà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_UNIVERSITY]Óíèâåðñèòåò[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_PACIFISM]Ïàöèôèçì[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Êàñòîâàÿ ñèñòåìà[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_MERCANTILISM]Ìåðêàíòèëèçì[\LINK][PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]ß íå õî÷ó âõîäèòü â äåòàëè êàê çàïóñòèòü SE, ïîòîìó ÷òî ýòî - âíå âîçìîæíîñòåé ýòîé ñòàòüè. Äàâàéòå òîëüêî ñêàæó ìîþ ðåêîìåíäàöèþ äëÿ Ôèëîñîôñêîé ÷åðòû ýòî íà÷àòü SE èëè êàê ìèíèìóì "ãèáðèäíóþ ýêîíîìèêó" ãäå íåêîòîðûå ãîðîäà ñîñðåäîòà÷èâàþòñÿ íà ïèùå è ñïåöèàëèñòàõ è äðóãèå ñîñðåäîòà÷èâàþòñÿ íà äîìàõ è òîðãîâëå. (Ãèáðèäíàÿ ýêîíîìèêà ÿâëÿåòñÿ îñîáåííî ïîäõîäÿùåé äëÿ Åëèçàáåòû àíãëèéñêîé, êîòîðàÿ èìååò Ôèíàíñîâóþ ÷åðòó ýòî, êàê óïîìèíàëîñü âûøå, òðåáóåò, ÷òîáû îïðåäåëåííîå êîëè÷åñòâî óâëå÷åíèÿ äîìàìè âçÿëî ïîëíîå ïðåèìóùåñòâî ýòîãî.)[PARAGRAPH:1]Âíóòðè îáùåñòâà SE, îòëè÷àþòñÿ ìíåíèÿ îòíîñèòåëüíî âàæíîñòè ïîñòðîåíèÿ Ïèðàìèä. Ïðèâëåêàòåëüíîñòü Ïèðàìèä äëÿ SE ýòî çàïóñòèòü ïàðàäèãìó Ïðåäñòàâèòåëüñêîãî ïðàâëåíèÿ ÷ðåçâû÷àéíî ðàíî â èãðå. Ýòà ïàðàäèãìà ïîäíèìàåò âåðõ ñ÷àñòüÿ âàøèõ ïÿòè íàèáîëüøèõ ãîðîäîâ íà êàðòå ñòàíäàðòíîãî ðàçìåðà (êîòîðûå ÿâëÿþòñÿ âåðîÿòíî âàøèìè åäèíñòâåííûìè ãîðîäàìè âíà÷àëå). Ýòî ïîçâîëÿåò âàì óâåëè÷èòü ýòè ãîðîäà äàæå áîëüøå òàê êàê âû ìîæåò ðàáîòàòü ñ áîëüøèì êîëè÷åñòâîì ôåðì è ñäåëàòü áîëüøå ñïåöèàëèñòîâ. Êðîìå òîãî, êàæäûé ñïåöèàëèñò âíîñèò äîïîëíèòåëüíûå òðè ïóíêòà èññëåäîâàíèÿ ïðè Ïðåäñòàâèòåëüñêîì ïðàâëåíèè êðîìå ïóíêòîâ èññëåäîâàíèÿ, êîòîðûå îíè îáû÷íî âíîñÿò--äàæå òå, ÷òî îáû÷íî íå âíîñèò íèêàêîãî èññëåäîâàíèÿ, òàêèõ êàê èíæåíåðîâ, ñâÿùåííèêîâ, òîðãîâöåâ, è îáû÷íûõ ãðàæäàíñêèõ ñïåöèàëèñòîâ. Âêëàä â íàóêó õóäîæíèêîâ è øïèîíîâ ïîâûøàåòñÿ îò 1 äî 4 ïðè Ïðåäñòàâèòåëüñêîì ïðàâëåíèè, â òî âðåìÿ êàê âêëàä ó÷åíûõ óäâàèâàåòñÿ îò 3 äî 6. Î÷åâèäíî Ïèðàìèäû è ðàííåå Ïðåäñòàâèòåëüñêîå ïðàâëåíèå ãèïåð-çàðÿæàþò SE, íî ìíîãèå ïîääåðæèâàþò ÷òî SE ìîæåò îáîéòèñü èëè áåç ÷óäåñ èëè áåç ïàðàäèãì.[PARAGRAPH:1]Ïàðôåíîí òàêæå ìîæåò áûòü ïîëåçíûì ÷óäîì Ôèëîñîôñêîìó ëèäåðó. Âû óæå ïîëàãàåòåñü íà çíàìåíèòîñòåé äëÿ òåõíîëîãèé, èòàê, ïî÷åìó áû íå ñòðîèòü ÷óäî, êîòîðîå óâåëè÷èâàåò ÷èñëî GP, êîòîðûé âû ïîëó÷èòå?[PARAGRAPH:1]Ïèñüìî áóäåò ðàííåé ïðèîðèòåòíîé òåõíîëîãèåé, òàê êàê âû ìîæåòå ñòðîèòü áèáëèîòåêè è çàïóñòèòü âàøèõ ïåðâûõ ó÷åíûõ. ×óäåñà ìîãóò áûòü î÷åíü ïîëåçíûìè, òàê êàê îíè âñå âíîñÿò ïóíêòû GP; çàïóñòèòå ïîçæå ÷óäåñà ÷òî âíîñÿò GPP ê ïðåäñòîÿùèì òèïàì çíàìåíèòîñòåé êîòîðûõ âû áîëüøå âñåãî õîòèòå è íóæäàåòåñü. Òàê êàê Âåëèêèå ó÷åíûå ÿâëÿþòñÿ îáû÷íî ñàìûìè ïîëåçíûìè GP, ýòî äåëàåò Âåëèêóþ áèáëèîòåêó î÷åíü ïðèâëåêàòåëüíûì ÷óäîì äëÿ ëèäåðîâ ñ Ôèëîñîôñêîé ÷åðòîé. Ìåðêàíòèëèçì âíîñèò ñâîáîäíîãî ñïåöèàëèñòà äëÿ êàæäîãî ãîðîäà, êàê äåëàåò Ñòàòóÿ ñâîáîäû (è áåç "íåò èíîñòðàííûõ òîðãîâûõ ïóòåé" ñòîèìîñòè Ìåðêàíòèëèçìà). Ïàðàäèãìà Êàñòîâàÿ ñèñòåìà ÿâëÿåòñÿ îãðîìíûì áëàãîì äëÿ SE è Ôèëîñîôà â îñîáåííîñòè, ðàçðåøàÿ âàì óïðàâëÿòü ñòîëüêèìè òîðãîâöàìè, ó÷åíûìè, è/èëè õóäîæíèêàìè, ñêîëüêî ãîðîä ìîæåò ïîääåðæàòü. Ñëåäîâàòåëüíî Ñâîä çàêîíîâ ïðèîðèòåòíàÿ òåõíîëîãèÿ. Îáðàçîâàíèå ïîçâîëÿåò äåøåâîå çäàíèå Ôèëîñîôñêîé ÷åðòû, Óíèâåðñèòåò, òàêèì îáðàçîì ýòî - ïðèîðèòåò òàêæå. Ôèëîñîôèÿ äåëàåò ïàðàäèãìó Ïàöèôèçì äîñòóïíîé, êîòîðàÿ îáåñïå÷èâàåò äàëüíåéøåå ïîâûøåíèå íà +100 % ïðîèçâîäñòâà GP â ãîðîäàõ êîòîðûå èìåþò âàøó ãîñóäàðñòâåííóþ ðåëèãèþ. Áèîëîãèÿ ïîçâîëèò âàì âûðàùèâàòü áîëüøèå ãîðîäà è ïîääåðæèâàòü áîëüøå ñïåöèàëèñòîâ, ïîýòîìó ïðèîðèòåçèðóéòå ýòó òåõíîëîãèþ ïîçäíåå â èãðå.[PARAGRAPH:1]Íàöèîíàëüíîå ÷óäî Íàöèîíàëüíûé Ïàðê ïðåèìóùåñòâî SE òàê êàê îí ïîçâîëÿåò 1 ñâîáîäíîãî ñïåöèàëèñòà äëÿ êàæäîãî ëåñíîãî çàïîâåäíèêà. Ýòî îçíà÷àåò, òåì íå ìåíåå, ÷òî âû äîëæíû äåëàòü âñå âîçìîæíîå ÷òîáû ñîõðàíèòü íåìíîãî ëåñîâ èëè äàæå äæóíãëåé â îêðóæåíèè ãîðîäà, ãäå âû ñòðîèòå ýòî.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Óïðàâëåíèå ýêîíîìèêîé ñïåöèàëèñòîâ òðåáóåò ãîðàçäî áîëüøå ìèêðîóïðàâëåíèÿ ÷åì óïðàâëåíèå áîëåå-ïðîñòîé äîìîâîé ýêîíîìèêîé. Èãðà ïðîäëèòñÿ äîëüøå è âû áóäåòå äîëæíû óïðàâëÿòü âñåì íàìíîãî áîëåå áëèçêî. Ýòîò ñòèëü èãðû íå ïîäõîäèò êàæäîìó.[PARAGRAPH:1]Âûãîäû Ôèëîñîôñêîé ÷åðòû è SE íà÷íóò ïðåêðàùàòüñÿ â êîíöå èãðå. Çíàìåíèòîñòè ñòàíîâÿòñÿ áîëåå äîðîãèìè â ïðîèçâîäñòâå è ïîÿâëÿþòñÿ ìåíåå ÷àñòî, â òî âðåìÿ êàê òåõíîëîãèè ñòàíîâÿòñÿ ñëèøêîì äîðîãèìè äëÿ âàøèõ ñïåöèàëèñòîâ è ìåíüøèõ çíàìåíèòîñòåé ÷òîáû ýôôåêòèâíî èññëåäîâàòüñÿ. Âû äîëæíû èìåòü âîçìîæíîñòü ïîáåäû â ýòîé òî÷êå èëè âû ìîæåòå áûñòðî îòñòàòü. Èëè ýòî, èëè âû áóäåòå íóæäàòüñÿ ê ïåðåõîäó ê äîìîâîé ýêîíîìèêå; ïåðåêëþ÷åíèå ê ïàðàäèãìå Ýìàíñèïàöèè áóäåò ñóùåñòâåííî ê îñóùåñòâëåíèþ ýòîãî.[PARAGRAPH:1]Â îòëè÷èå îò Ôèíàíñîâîé ÷åðòû, Ôèëîñîôñêàÿ ÷åðòà íå îáåñïå÷èâàåò íèêàêîãî ïðÿìîãî ýêîíîìè÷åñêîãî ýôôåêòà. Âû äîëæíû áóäåòå èñêàòü äðóãèå ñïîñîáû óäåðæàòü âàøó ýêîíîìèêó íà ïëàâó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</Tag>
+		<English>Phi</English>
+		<French>Phi</French>
+		<German>Phi</German>
+		<Italian>FIL</Italian>
+		<Spanish>Fil</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN</Tag>
@@ -1728,40 +2087,6 @@
 		<Russian>Ïîï.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_PREREQ_AND_ENTRY</Tag>
-		<English>[COLOR_WARNING_TEXT] and %s1_trait[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT] et %s1_trait[COLOR_REVERT]</French>
-		<Italian>[COLOR_WARNING_TEXT] e %s1_trait[COLOR_REVERT]</Italian>
-		<Polish>[COLOR_WARNING_TEXT] i %s1_trait[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT] и %s1_trait[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_PREREQ_BEGIN</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]You currently require %s1_trait[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Il vous faut le trait %s1_trait[COLOR_REVERT]</French>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede %s1_trait[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga %s1_trait[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Вам в настоящее время требуется %s1_trait[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_PREREQ_OR_ENTRY</Tag>
-		<English>[COLOR_WARNING_TEXT] (%s1_Trait may substitute for %s2_Trait)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT] (%s1_Trait peut remplacer %s2_Trait)[COLOR_REVERT]</French>
-		<Italian>[COLOR_WARNING_TEXT] (%s1_Trait può sostituire %s2_Trait)[COLOR_REVERT]</Italian>
-		<Polish>[COLOR_WARNING_TEXT] (%s1_Trait może być substytutem dla %s2_Trait)[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT] (%s1_Trait может заменить %s2_Trait)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_PRODUCTION_MODIFIER</Tag>
-		<English>[NEWLINE][ICON_BULLET]%D1%% Production of[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Production %D1%% plus rapide de:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]%D1%% schnellere Produktion für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Produzione più veloce del %D1%% per[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelera un %D1%% la producción de[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]%D1%% Szybszej Produkcji:[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]%D1%% к производству[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST</Tag>
 		<English>Progressist</English>
 		<French>
@@ -1822,6 +2147,34 @@
 		</Spanish>
 		<Polish>Pro</Polish>
 		<Russian>Ïðîã.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
+		<English>Protective</English>
+		<French>
+			<Text>Protecteur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Schützend:schützendes</Text>
+			<Gender>Male:Neuter</Gender>
+			<Plural>0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Protettivo:Protettiva</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Protector:Protectora</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
+		<English>Protective 0</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -1984,46 +2337,12 @@
 		<Russian>Êàê ó Ôèíàíñèñòà, ó Ìèñòèêà íàèáîëüøàÿ ñèëà ïðèõîäèò îò åãå ïîëîæèòåëüíîãî âîçäåéñòâèÿ íà âàøó ýêîíîìèêó. Àíàðõèÿ îçíà÷àåò ýòî äëÿ îäíîãî õîäà èëè áîëüøå, âàøè ãîðîäà íè÷åãî íå âûðàùèâàþò èëè ñòðîÿò, âàøà êóëüòóðà íå óâåëè÷èâàåòñÿ, GPP íå íàêàïëèâàþòñÿ, äîìà íå ðàñòóò, è òàê äàëåå. Ìèñòèê îçíà÷àåò, ÷òî âû èçáåãàåòå ýòèõ ïåðèîäîâ ýêîíîìè÷åñêîãî çàñòîÿ; ýòî äîëæíî ïðèâåñòè ê òîìó, ÷òî âû áóäåòå â ñîñòîÿíèè èññëåäîâàòü ïî êðàéíåé ìåðå îäíó èëè äâå äîïîëíèòåëüíûõ òåõíîëîãèè, ïîñòðîèòü íåñêîëüêî áîëüøå þíèòîâ è çäàíèé, ïðîèçâåñòè áîëüøå çíàìåíèòîñòåé, è òàê äàëåå, ïî ñðàâíåíèþ ñ íå-Ìèñòè÷åñêîé öèâèëèçàöèåé.[PARAGRAPH:1]Â îòëè÷èå îò íåñêîëüêèõ äðóãèõ îñîáåííîñòåé, ýôôåêòû Ìèñòèêà íå óìåíüøàþòñÿ ïîçäíåå â èãðå. Íàïðîòèâ, ïîñêîëüêó áîëüøå ïàðàäèãì è ðåëèãèé ñòàíîâÿòñÿ äîñòóïíûìè, âû ìîæåòå õîòåòü è äîëæíû èçìåíÿòü ïàðàäèãìû ÷àùå, è Ìèñòèê ïîçâîëÿåò âàì äåëàòü ýòî.[PARAGRAPH:1]Îäíàêî, ýòà ÷åðòà ñïîëçàåò, ïî ìîåìó ìíåíèþ, îò òîãî, ÷òîáû áûòü îäíîé èç ñàìûõ ñèëüíûõ ê òîìó, ÷òîáû áûòü ÷åðòîé ñðåäíåé ñèëû. Ýòî â îñíîâíîì èç-çà ïàêåòà ðàñøèðåíèé Beyond the Sword. Îòêðîâåííî, ìíîãèå îñïàðèâàþò ìîå âêëþ÷åíèå ýòîãî â "Ñèëüíóþ" êàòåãîðèþ äëÿ íà÷àëà. Íî Beyond the Sword óìåíüøèë åãî ñèëó ñäåëàâ åãî ýôôåêòû ëåãêèìè äëÿ ïîëó÷åíèÿ. Âû òåïåðü äîëæíû èñïîëüçîâàòü òîëüêî îäíó çíàìåíèòîñòü, à íå äâå, ÷òîáû âûçûâàòü âàø ïåðâûé Çîëîòîé âåê; è âû ìîæåòå òåïåðü èçìåíèòü ïàðàäèãìû, áåç àíàðõèè â òå÷åíèå Çîëîòîãî âåêà. Ýòî òîëüêî îäíî èç ìíîãèõ ãäå Çîëîòîé âåê áûë óëó÷øåí è ñäåëàí áîëåå ïðèâëåêàòåëüíûì â Beyond the Sword.[PARAGRAPH:1]Êðîìå òîãî, â ñëåäóþùåé èãðå, êîãäà âû èìååòå äîñòóï êî âñåì ïàðàäèãìàì è Ìèñòèê îáû÷íî ñàìûé ñèëüíûé, âû ìîæåòå òåïåðü äîñòèãíóòü òåõ æå ñàìûõ ýôôåêòîâ, ñòðîÿ íîâîå ÷óäî Ñòàòóÿ ñïàñèòåëÿ, êîòîðûé íå òîëüêî äàåò âàì âîçìîæíîñòè Ìèñòèêà èçìåíåíèÿ ïàðàäèãì áåç àíàðõèè; âû ìîæåòå òàêæå èçìåíÿòü ïàðàäèãìû, íå îæèäàÿ ñìåíû õîäà, óæå íå ãîâîðÿ î îáû÷íûõ ïÿòè! (Çàìåòêà: â ïàò÷å BtS 3.13, ýòî áûëî çàìåíåíî íà 1 õîä îæèäàíèÿ ìåæäó èçìåíåíèÿìè ïàðàäèãì.)[PARAGRAPH:1]Ïîýòîì Ìèñòèê, ïî ìîåìó ìíåíèþ, óïàë îò ñèëüíîãî äî ñðåäíåãî íå èç-çà ñîáñòâåííîé îøèáêè, íî ÷åðåç áîëåå ëåãêèé äîñòóï ê åãî âûãîäàì íå-Ìèñòè÷åñêèì ëèäåðàì.[PARAGRAPH:1][H1]Ïåðâîî÷åðåäíûå òåõíîëîãèè[\H1][PARAGRAPH:1][ICON_BULLET]Òå, êîòîðûå âêëþ÷àþò ïàðàäèãìû (íàïðèìåð. [LINK=TECH_CODE_OF_LAWS]Ñâîä çàêîíîâ[\LINK])[PARAGRAPH:1][ICON_BULLET]Òå, êîòîðûå îòêðûâàþò ðåëèãèè (íàïðèìåð. [LINK=TECH_MEDITATION]Ìåäèòàöèÿ[\LINK])[PARAGRAPH:1][ICON_BULLET][LINK=TECH_DIVINE_RIGHT]Áîæåñòâåííîå ïðàâî[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_PAPER]Áóìàãà[\LINK][PARAGRAPH:1][H1]Ïîëåçíûå ÷óäåñà[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_GREAT_PYRAMID]Ïèðàìèäû[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SANKORE]Óíèâåðñèòåò Ñàíêîðå[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SPIRAL_MINARET]Ìèíàðåò Àëü-Ìàëüâèÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_APOSTOLIC_PALACE]Àïîñòîëüñêèé äâîðåö[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SHWEDAGON_PAYA]Øâåäàãîí-Ïàÿ[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_SISTINE_CHAPEL]Ñèêñòèíñêàÿ êàïåëëà[\LINK][PARAGRAPH:1][H1]Ëó÷øèå çäàíèÿ[\H1][PARAGRAPH:1][ICON_BULLET]Õðàìû[PARAGRAPH:1][ICON_BULLET]Ìîíàñòûðè[PARAGRAPH:1][H1]Ïîëåçíûå ïàðàäèãìû[\H1][PARAGRAPH:1][ICON_BULLET]Ïî÷òè âñå îíè--åñëè ýòî ïðåäëàãàåò ñòîÿùóþ âûãîäó è ñîîòâåòñòâóåò âàøåé ñòðàòåãèè, ïåðåõîäèòå íà íåå.[PARAGRAPH:1][H1]Êàê èõ èñïîëüçîâàòü[\H1][PARAGRAPH:1]Íåò àíàðõèè íå îçíà÷àåò, ÷òî âû ìîæåòå ïðèíÿòü ïàðàäèãìó ïðÿìî òîò÷àñ, êàê òîëüêî ýòî äîñòóïíî, è ïîëó÷èòü åå ïðåèìóùåñòâà íåìåäëåííî, âìåñòî òîãî, ÷òîáû æäàòü, ÷òîáû èçìåíèòü íåñêîëüêî ïàðàäèãì ñðàçó êàê áëàãîðàçóìíûé íå-Ìèñòèê ëèäåð ñäåëàë áû. Òàê æå, åñëè ïàðàäèãìà ïðèíåñëà áû ïîëüçó âàì, íå êîëåáèòåñü ñäåëàòü ýòî. Åäèíñòâåííîå îãðàíè÷åíèå, êîòîðîå âû èìååòå, æäàòü ïÿòü õîäîâ, ïîêà âû íå ñìîæåòå èçìåíèòü ïàðàäèãìû ñíîâà.[PARAGRAPH:1]Åñòü òàêæå äèïëîìàòè÷åñêèå âûãîäû. Âû ìîæåòå ëåãêî ìåíÿòü ðåëèãèþ èëè èçìåíèòü íà áëàãîïðèÿòñòâóåìóþ ïàðàäèãìó èùà ðàñïîëîæåíèÿ äðóãîé öèâèëèçàöèè. Êàê òîëüêî âû ïîëó÷àåòå òî, â ÷åì âû íóæäàåòåñü îò íèõ--ñêàæåì, òîðãîâëÿ òåõíîëîãèåé--âû ìîæåòå ñìåíèòü ðåëèãèþ èëè ïàðàäèãìó íàçàä òàê æå ëåãêî. Îäíàêî, äåéñòâèòåëüíî èìåéòå â âèäó ÷òî äèïëîìàòè÷åñêèå ïðåìèè äëÿ ðàçäåëåííûõ ðåëèãèé èëè ëþáèìûõ ïàðàäèãì ìîæåò çàíÿòü íåñêîëüêî õîäîâ ÷òîáû íàêîïèòüñÿ äî ñóùåñòâåííîãî óðîâíÿ.[PARAGRAPH:1]Ïèðàìèäû ïðèâëåêàòåëüíîå ÷óäî äëÿ Ìèñòè÷åñêîãî ëèäåðà, òàê êàê îíè ðàíî âêëþ÷àþò âñå ïðàâèòåëüñòâåííûå ïàðàäèãìû, ðàçðåøàÿ âàì óñèëèâàòü îñîáåííîñòü â íà÷àëå èãðû. Î÷åâèäíî, ëþáàÿ òåõíîëîãèÿ, êîòîðàÿ ïîçâîëÿåò ïàðàäèãìó, öåííà è äîëæíà áûòü ïðèîðèòèçèðîâàíà--åñëè ïàðàäèãìà ÿâëÿåòñÿ ñòîÿùåé. Â Beyond the Sword, Øâåäàãîí-Ïàÿ òàêæå ïðèâëåêàòåëüíà, òàê êàê ýòî ðåëèãèîçíûé ýêâèâàëåíò Ïèðàìèä, âêëþ÷àþùèé âñå ðåëèãèîçíûå ïàðàäèãìû.[PARAGRAPH:1]Õðàìû ñêðîìíûå çäàíèÿ, ñîçäàþùèå +1 êóëüòóðû è äåðæàùèå îäíîãî ñ÷àñòëèâîãî ãðàæäàíèíà. Îäíàêî, äåøåâûå õðàìû Ìèñòèêà ìîãóò äåéñòâèòåëüíî çàñèÿòü åñëè âû ïîñòðîèòå Ìèíàðåò Àëü-Ìàëüâèÿ (âêëþ÷àåìûé Áîæåñòâåííûì Ïðàâîì), Óíèâåðñèòåò Ñàíêîðå (Áóìàãà), è Àïîñòîëüñêèé äâîðåö (Òåîëîãèÿ). Ýòè ÷óäåñà çàñòàâëÿþò õðàìû âàøåé ãîñóäàðñòâåííîé ðåëèãèè ïðîèçâåñòè +1 çîëîòî, +2 èññëåäîâàíèÿ, è +2 ìîëîòêà, ñîîòâåòñòâåííî. (Ïîæàëóéñòà îòìåòüòå ÷òî, åñëè âû íå ïîñòðîèòå AP, âû ìîæåòå âñå æå ïîëó÷àòü åãî +2 ïîâûøåíèÿ ìîëîòêà äëÿ âñåõ ðåëèãèîçíûõ çäàíèé ïðèíèìàÿ ðåëèãèþ AP êàê âàøó ãîñóäàðñòâåííóþ ðåëèãèþ.) Òîëüêî çíàéòå ÷òî ñòðîèòåëüñòâî îäíîãî èëè íåñêîëüêèõ ýòèõ ÷óäåñ äåëàåò ïàðàäèãìó Ñâîáîäû ñîâåñòè íåïðèâëåêàòåëüíîé, è ïîíèæàåò ïðèîðèòåò Êîìïüþòåðîâ è ÑÌÈ, ïðè êîòîðûõ óñòàðåâàþò ÷óäåñà.[PARAGRAPH:1][H1]Ïëîõàÿ ñòîðîíà[\H1][PARAGRAPH:1]Ìèñòèê ÿâëÿåòñÿ èíâåðñèåé ÷åðòû ïîäîáíîé Ìåöåíàòó: îíà î÷åíü ñëàáà â íà÷àëå èãðû, êîãäà åñòü íåìíîãî äîñòóïíûõ ïàðàäèãì. Åãî âûãîäû ïðèáûâàþò ïîçæå, ïîñêîëüêó áîëüøå ïàðàäèãì ïðèáûâàåò äëÿ ïîäêëþ÷åíèÿ. Ðåàëüíî, áîëüøèíñòâî âàøèõ èçìåíåíèé ïàðàäèãì ïðîèçîéäåò â ñåðåäèíå èãðû, õîòÿ î÷åâèäíî ýòî ìîæåò èçìåíèòüñÿ, íî â áîëüøèíñòâå èãð ÿ áåðó ìåíüøå ïðåèìóùåñòâ îñîáåííîñòè Ìèñòèêà â ïîçäíåé èãðå.[PARAGRAPH:1]Êðîìå òîãî, â òî âðåìÿ êàê Ìèñòèê ìîæåò ïîçâîëèòü âàì "ñîõðàíèòü äåíüãè", â îòëè÷èè îò Ôèíàíñèñòà, ýòà ÷åðòà íåïîñðåäñòâåííî èõ íå ïðîèçâîäèò. Âû äîëæíû áóäåòå èìåòü íîðìàëüíóþ ýêîíîìèêó, êàê îáû÷íî.[PARAGRAPH:1]Âû ìîæåòå ñîáëàçíèòüñÿ, êîãäà èãðàåòå êàê ëèäåð Ìèñòèê, ïåðåêëþ÷àòü ê ëþáîé ïàðàäèãìå, êàê òîëüêî ýòî äîñòóïíî. Ïîìíèòå, ÷òî íåêîòîðûå ïàðàäèãìû èìåþò âûñîêèå çàòðàòû îáñëóæèâàíèÿ ïî ñðàâíåíèþ ñ äðóãèìè; óáåäèòåñü ÷òî ïàðàäèãìà ïîëåçíà â íåêîòîðîì îòíîøåíèè ïåðåä èçìåíåíèåì. Òàêæå ïîìíèòå, ÷òî òîëüêî ïîòîìó, ÷òî ïàðàäèãìà ñäåëàëàñü äîñòóïíûé, ýòî íå îçíà÷àåò, ÷òî ýòî îáÿçàòåëüíî îïòèìàëüíî äëÿ âàñ â ýòîé òî÷êå â èãðå. Ðàññìîòðèòå âàø âûáîð òùàòåëüíî è óäîñòîâåðüòåñü, ÷òî âàøè ïàðàäèãìû âïèñûâàþòñÿ â âàøó ïîëíóþ ñòðàòåãèþ è îáñòîÿòåëüñòâà â ïðåäåëàõ èãðû.[PARAGRAPH:1]×òîáû ïîëó÷àòü âûãîäû äåøåâûõ õðàìîâ, âû íóæäàåòåñü â ãîñóäàðñòâåííîé ðåëèãèè. Âû áóäåòå ïîýòîìó íóæäàòüñÿ â îòêðûòèè ðåëèãèè èëè ðàñïðîñòðàíåíèè åå ê âàì. Êðîìå òîãî, âû, âîçìîæíî, íóæäàåòåñü èëè õîòèòå ïðèíÿòü ãîñóäàðñòâåííóþ ðåëèãèþ î÷åíü ðàíî, è ýòî ìîæåò èìåòü äèïëîìàòè÷åñêèå ïîñëåäñòâèÿ äëÿ âàñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_STATE_REL_SPREAD_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% chance to Spread State Religion with your Missionaries.</English>
-		<French>[ICON_BULLET]%D1%% de chances de propager la religion d'État avec vos missionnaires.</French>
-		<Italian>[ICON_BULLET]%D1%% di diffondere la religione di stato con i tuoi missionari.</Italian>
-		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Państwowej przez Misjonarzy.</Polish>
-		<Russian>[ICON_BULLET]%D1%% шанс на успешное распространение государственной религии вашими миссионерами.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TEAM_WONDER_PRODUCTION_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Team Project Production</English>
-		<French>[ICON_BULLET]Construction de merveilles d'équipe %D1%%</French>
-		<German>[ICON_BULLET]%D1%% Teamwunderproduktion</German>
-		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie di Squadra</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas de equipo</Spanish>
-		<Polish>[ICON_BULLET]%D1%% do Budowy Projektów</Polish>
-		<Russian>[ICON_BULLET]%D1%% к скорости для Командных проектов</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_PREREQ</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires knowledge of %s1_TechName[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert la connaissance de %s1_TechName[COLOR_REVERT]</French>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede la conoscenza della tecnologia %s1_TechName[COLOR_REVERT]</Italian>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga znajomości: %s1_TechName[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требуется знание %s1_TechName[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
-		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_END</Tag>
-		<English>Technologies</English>
-		<Russian>Технологии</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST</Tag>
-		<English>[ICON_BULLET]Research %D1_Change%% as fast as normal when researching [LINK=%s2_Tech]%s3_Tech[\LINK]</English>
-		<French>[ICON_BULLET]Recherche %D1_Change%% plus vite que la normale lors de la recherche de [LINK=%s2_Tech]%s3_Tech[\LINK]</French>
-		<Russian>[ICON_BULLET]Исследование [LINK=%s2_Tech]%s3_Tech[\LINK] на %D1_Change%% быстрее обычного</Russian>
+		<Tag>TXT_KEY_TRAIT_SPIRITUAL_SHORT</Tag>
+		<English>Spi</English>
+		<French>Spi</French>
+		<German>Spi</German>
+		<Italian>Spi</Italian>
+		<Spanish>Esp</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL</Tag>
@@ -2085,324 +2404,5 @@
 		</Spanish>
 		<Polish>Wyb</Polish>
 		<Russian>Òåìï.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS</Tag>
-		<English>[ICON_BULLET]%D1%% %F2_yield from [ICON_TRADE]</English>
-		<French>[ICON_BULLET]%D1%% %F2_yield avec: [ICON_TRADE]</French>
-		<German>[ICON_BULLET]%D1%% %F2_yield durch [ICON_TRADE]</German>
-		<Italian>[ICON_BULLET]%D1%% %F2_yield da [ICON_TRADE]</Italian>
-		<Spanish>[ICON_BULLET]%D1%% %F2_yield por [ICON_TRADE]</Spanish>
-		<Polish>[ICON_BULLET]%D1%% %F2_yield z: [ICON_TRADE]</Polish>
-		<Russian>[ICON_BULLET]%D1%% %F2_yield от [ICON_TRADE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
-		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag>
-		<English>Unit Types</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_FIRST</Tag>
-		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
-		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
-		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</German>
-		<Russian>[ICON_BULLET]%D1 опыта всем недавно обученным [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
-		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_END</Tag>
-		<English>Unit Types</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_FIRST</Tag>
-		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
-		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
-		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Wonder Production</English>
-		<French>[ICON_BULLET]Construction de merveilles %D1%%</French>
-		<German>[ICON_BULLET]%D1%% Wunderproduktion</German>
-		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas</Spanish>
-		<Polish>[ICON_BULLET]%D1%% do Produkcji Cudów</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
-		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
-		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più lentamente</Italian>
-		<Polish>[ICON_BULLET]Robotnicy budują ulepszenia z prędkością: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements %D1_Modifier%% faster</English>
-		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
-		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
-		<Polish>[ICON_BULLET]Robotnicy budują ulepszenia szybciej o: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% World Wonder Production</English>
-		<French>[ICON_BULLET]Construction de merveilles mondiales %D1%%</French>
-		<German>[ICON_BULLET]%D1%% Weltwunderproduktion</German>
-		<Italian>[ICON_BULLET]%D1%% produzione di Grandi Meraviglie</Italian>
-		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
-		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cudów</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
-		<English>[ICON_BULLET]%D1%F2_yeild/City</English>
-		<French>[ICON_BULLET]%D1%F2_yeild/ville</French>
-		<German>[ICON_BULLET]%D1%F2_yeild/Stadt</German>
-		<Italian>[ICON_BULLET]%D1%F2_yeild/Città</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2_yeild/ciudad</Spanish>
-		<Polish>[ICON_BULLET]%D1%F2_yeild/Miasto</Polish>
-		<Russian>[ICON_BULLET]%D1%F2_yeild/город</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CHARISMATIC</Tag>
-		<English>Charismatic</English>
-		<French>
-			<Text>Charismatique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Charismatisch:charismatisches</Text>
-			<Gender>Male:Neuter</Gender>
-			<Plural>0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Carismatico:Carismatica</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Carismático:Carismática</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
-		<English>Charismatic 0</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
-		<English>Imperialistic</English>
-		<French>Impérialiste</French>
-		<German>
-			<Text>Imperialistisch:imperialistisches</Text>
-			<Gender>Male:Neuter</Gender>
-			<Plural>0:0</Plural>
-		</German>
-		<Italian>Imperialista</Italian>
-		<Spanish>Imperialista</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
-		<English>Imperialistic 0</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
-		<English>Protective</English>
-		<French>
-			<Text>Protecteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Schützend:schützendes</Text>
-			<Gender>Male:Neuter</Gender>
-			<Plural>0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Protettivo:Protettiva</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Protector:Protectora</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
-		<English>Protective 0</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</Tag>
-		<English>Phi</English>
-		<French>Phi</French>
-		<German>Phi</German>
-		<Italian>FIL</Italian>
-		<Spanish>Fil</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_SHORT</Tag>
-		<English>Agg</English>
-		<French>Agr</French>
-		<German>Agg</German>
-		<Italian>Agg</Italian>
-		<Spanish>Agr</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_SPIRITUAL_SHORT</Tag>
-		<English>Spi</English>
-		<French>Spi</French>
-		<German>Spi</German>
-		<Italian>Spi</Italian>
-		<Spanish>Esp</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_EXPANSIVE_SHORT</Tag>
-		<English>Exp</English>
-		<French>Acc</French>
-		<German>Exp</German>
-		<Italian>Esp</Italian>
-		<Spanish>Com</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_SHORT</Tag>
-		<English>Ind</English>
-		<French>Tra</French>
-		<German>Ind</German>
-		<Italian>Ind</Italian>
-		<Spanish>Dil</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_CREATIVE_SHORT</Tag>
-		<English>Cre</English>
-		<French>Cré</French>
-		<German>Kre</German>
-		<Italian>Cre</Italian>
-		<Spanish>Cre</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_FINANCIAL_SHORT</Tag>
-		<English>Fin</English>
-		<French>Fin</French>
-		<German>Fin</German>
-		<Italian>Eco</Italian>
-		<Spanish>Fin</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ORGANIZED_SHORT</Tag>
-		<English>Org</English>
-		<French>Org</French>
-		<German>Org</German>
-		<Italian>Org</Italian>
-		<Spanish>Org</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
-		<English>Astrological Influence of Aquarius</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
-		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Tag>
-		<English>Astrological Influence of Pisces</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Tag>
-		<English>Astrological Influence of Pisces trait is only available with the Astrological Influence of Pisces Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
-		<English>Astrological Influence of Aries</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Tag>
-		<English>Astrological Influence of Aries trait is only available with the Astrological Influence of Aries Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Tag>
-		<English>Astrological Influence of Taurus</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Tag>
-		<English>Astrological Influence of Taurus trait is only available with the Astrological Influence of Taurus Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Tag>
-		<English>Astrological Influence of Gemini</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Tag>
-		<English>Astrological Influence of Gemini trait is only available with the Astrological Influence of Gemini Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Tag>
-		<English>Astrological Influence of Cancer</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Tag>
-		<English>Astrological Influence of Cancer trait is only available with the Astrological Influence of Cancer Group Wonder. All Heal People units receive the Influence of the Moon promotion, giving bonus to numbers heal and Disease Control during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Tag>
-		<English>Astrological Influence of Leo</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Tag>
-		<English>Astrological Influence of Leo trait is only available with the Astrological Influence of Leo Group Wonder. All Melee units receive the Influence of the Sun promotion, giving bonus to Strength and Experience during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Tag>
-		<English>Astrological Influence of Virgo</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Tag>
-		<English>Astrological Influence of Virgo trait is only available with the Astrological Influence of Virgo Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Tag>
-		<English>Astrological Influence of Libra</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Tag>
-		<English>Astrological Influence of Libra trait is only available with the Astrological Influence of Libra Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Tag>
-		<English>Astrological Influence of Scorpio</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Tag>
-		<English>Astrological Influence of Scorpio trait is only available with the Astrological Influence of Scorpio Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Tag>
-		<English>Astrological Influence of Sagittarius</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Tag>
-		<English>Astrological Influence of Sagittarius trait is only available with the Astrological Influence of Sagittarius Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Tag>
-		<English>Astrological Influence of Capricorn</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
-		<English>Astrological Influence of Capricorn trait is only available with the Astrological Influence of Capricorn Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
 	</TEXT>
 </Civ4GameText>

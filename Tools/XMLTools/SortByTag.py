@@ -1,9 +1,11 @@
 import argparse
 import glob
 import re
-from lxml import etree
+from lxml import etree 
+# You might need to install lxml manually, for example trough Python 3 installed by Git tools - Tools\python\tools\Scripts has pip exe, that you need to run trough command console
 
 def sortkey(child, nsmap):
+	# 'Tag' will sort GameText files, 'Type' will sort Infos files after some tweaks maybe
     tag = child.find('Tag',nsmap)
     if(tag is not None):
         return tag.text
@@ -26,7 +28,7 @@ def sort_xmls(files_to_sort):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Sort xml text file by Tag.')
+    parser = argparse.ArgumentParser(description='Sort xml text file by Tag or Type.')
     parser.add_argument('glob_patterns', metavar='glob', type=str,
                         nargs='+', help='globs describing what files to process (e.g. "*_CIV4GameText.xml")')
     args = parser.parse_args()
