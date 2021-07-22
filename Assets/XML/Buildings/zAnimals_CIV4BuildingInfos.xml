@@ -6639,6 +6639,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6662,17 +6663,6 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6684,6 +6674,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6719,6 +6710,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -6734,17 +6726,6 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
