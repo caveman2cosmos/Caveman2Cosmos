@@ -51,51 +51,6 @@
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
-			<Type>UNIT_ARTSTYLE_AMERICAN_CONFEDERACY</Type>
-			<StyleUnits>
-				<StyleUnit>
-					<UnitType>UNIT_ZEBRA_ARCHER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZEBRA_ARCHER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZEBRA_ARCHER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZEBRA_ARCHER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_ZEBRA_CAVALRY</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZEBRA_CAVALRY_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZEBRA_CAVALRY_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZEBRA_CAVALRY_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_ZEBRA_CHARIOT</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZEBRA_CHARIOT_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZEBRA_CHARIOT_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZEBRA_CHARIOT_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_ZEBRA_CUIRASSIER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZEBRA_CUIRASSIER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZEBRA_CUIRASSIER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZEBRA_CUIRASSIER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_ZEBRA_KNIGHT</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZEBRA_KNIGHT_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZEBRA_KNIGHT_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZEBRA_KNIGHT_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-			</StyleUnits>
-		</UnitArtStyleTypeInfo>
-		<UnitArtStyleTypeInfo>
 			<Type>UNIT_ARTSTYLE_ASIAN</Type>
 			<StyleUnits>
 				<StyleUnit>

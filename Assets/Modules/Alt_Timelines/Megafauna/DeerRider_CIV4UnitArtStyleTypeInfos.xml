@@ -90,27 +90,6 @@
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
-			<Type>UNIT_ARTSTYLE_AMERICAN_CONFEDERACY</Type>
-			<StyleUnits>
-				<StyleUnit>
-					<UnitType>UNIT_DEER_ARCHER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_DEER_ARCHER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_DEER_ARCHER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_DEER_ARCHER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_DEERRIDER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_DEERRIDER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_DEERRIDER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_DEERRIDER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-			</StyleUnits>
-		</UnitArtStyleTypeInfo>
-		<UnitArtStyleTypeInfo>
 			<Type>UNIT_ARTSTYLE_ASIAN</Type>
 			<StyleUnits>
 				<StyleUnit>

@@ -177,27 +177,6 @@
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
-			<Type>UNIT_ARTSTYLE_AMERICAN_CONFEDERACY</Type>
-			<StyleUnits>
-				<StyleUnit>
-					<UnitType>UNIT_BOMBARD_MAMMOTH</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_EUROPEAN_SEIGE_MAMMOTH</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_EUROPEAN_SEIGE_MAMMOTH</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_EUROPEAN_SEIGE_MAMMOTH</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
-					<UnitType>UNIT_WAR_MAMMOTH</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_WAR_MAMMOTH_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_WAR_MAMMOTH_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_WAR_MAMMOTH_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-			</StyleUnits>
-		</UnitArtStyleTypeInfo>
-		<UnitArtStyleTypeInfo>
 			<Type>UNIT_ARTSTYLE_ASIAN</Type>
 			<StyleUnits>
 				<StyleUnit>
