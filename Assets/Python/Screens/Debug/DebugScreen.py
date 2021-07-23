@@ -181,7 +181,7 @@ class DebugScreen:
 				screen.show("DS_Tab" + str(self.iTab))
 				screen.hide("DS_Tab" + str(ID))
 				screen.show("DS_Col_Tab" + str(ID))
-				self.deleteAllWidgets()
+				self.deleteAllWidgets(screen, aName)
 				self.initTab(screen, ID)
 
 			elif self.iTab == 0:
