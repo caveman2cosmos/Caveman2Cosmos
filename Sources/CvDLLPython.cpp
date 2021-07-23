@@ -54,9 +54,6 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<CorporationTypes>();
 	registerAllowPyIntAsType<GameOptionTypes>();
 	registerAllowPyIntAsType<PlayerTypes>();
-	registerAllowPyIntAsType<VictoryTypes>();
-	registerAllowPyIntAsType<VoteTypes>();
-	registerAllowPyIntAsType<VoteSourceTypes>();
 	registerAllowPyIntAsType<ReligionTypes>();
 	registerAllowPyIntAsType<ImprovementTypes>();
 	registerAllowPyIntAsType<CivilizationTypes>();
@@ -73,7 +70,6 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<CultureLevelTypes>();
 	registerAllowPyIntAsType<ReplayMessageTypes>();
 	registerAllowPyIntAsType<ModderGameOptionTypes>();
-	registerAllowPyIntAsType<UnitTypes>();
 	registerAllowPyIntAsType<YieldTypes>();
 	registerAllowPyIntAsType<CultureLevelTypes>();
 	registerAllowPyIntAsType<CommerceTypes>();
@@ -87,6 +83,11 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<DomainTypes>();
 	registerAllowPyIntAsType<PropertyTypes>();
 	registerAllowPyIntAsType<ProcessTypes>();
+	registerAllowPyIntAsType<UnitCombatTypes>();
+	registerAllowPyIntAsType<UnitTypes>();
+	registerAllowPyIntAsType<VictoryTypes>();
+	registerAllowPyIntAsType<VoteTypes>();
+	registerAllowPyIntAsType<VoteSourceTypes>();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();

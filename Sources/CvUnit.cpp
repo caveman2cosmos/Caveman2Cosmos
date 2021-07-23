@@ -7359,7 +7359,7 @@ bool CvUnit::canUnload() const
 			return false;
 		}
 		const FeatureTypes eFeature = kPlot.getFeatureType();
-		if (eFeature != NO_FEATURE && m_pUnitInfo->isFeatureImpassableType((int)eFeature))
+		if (eFeature != NO_FEATURE && m_pUnitInfo->isFeatureImpassableType(eFeature))
 		{
 			return false;
 		}
@@ -15338,12 +15338,12 @@ bool CvUnit::hasCombatType(UnitCombatTypes eCombatType) const
 		return true;
 	}
 	// AIAndy: This could be removed if the unit type sub combat types get added to the extra sub combat type counts
-	return algo::contains(m_pUnitInfo->getSubCombats(), eCombatType);;
+	return algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
 }
 
 bool CvUnit::hasSubCombatType(UnitCombatTypes eCombatType) const
 {
-	bool bSubCombat = algo::contains(m_pUnitInfo->getSubCombats(), eCombatType);
+	bool bSubCombat = algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);
 
 	if ((bSubCombat || hasExtraSubCombatType(eCombatType)) && m_pUnitInfo->getUnitCombatType() != eCombatType && !hasRemovesUnitCombatType(eCombatType))
 	{
@@ -16658,6 +16658,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	if (pNewPlot != NULL)
 	{
+		setHasAnyInvisibility();
+
 		if ((pOldPlot != NULL && pOldPlot->isInViewport()) != pNewPlot->isInViewport())
 		{
 			reloadEntity();
@@ -16694,8 +16696,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	{
 		gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity());
 	}
-	//TBSET
-	setHasAnyInvisibility();
 
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
@@ -29904,7 +29904,7 @@ void CvUnit::setCommander(bool bNewVal)
 
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 
-		foreaach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombats())
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
 			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
 			{
@@ -35872,7 +35872,7 @@ void CvUnit::doSetUnitCombats()
 	{
 		setHasUnitCombat(getUnitCombatType(), true);
 
-		foreaach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombats())
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
 			setHasUnitCombat(eSubCombat, true);
 			bUpdated = true;

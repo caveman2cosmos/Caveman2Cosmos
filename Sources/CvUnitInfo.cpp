@@ -245,7 +245,7 @@ m_iShortRangeSupportPercent(0),
 m_iMediumRangeSupportPercent(0),
 m_iLongRangeSupportPercent(0),
 m_iFlankSupportPercent(0),
-#endif
+#endif // STRENGTH_IN_NUMBERS
 m_iDodgeModifier(0),
 m_iPrecisionModifier(0),
 m_iPowerShots(0),
@@ -1887,7 +1887,7 @@ CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(int i) const		{ret
 //Functions
 void CvUnitInfo::setReligionSubCombat()
 {
-	foreaach_(const UnitCombatTypes eSubCombat, getSubCombats())
+	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
 	{
 		if (GC.getUnitCombatInfo(eSubCombat).getReligion() != NO_RELIGION)
 		{
@@ -1896,7 +1896,7 @@ void CvUnitInfo::setReligionSubCombat()
 	}
 	if (getReligionType() != NO_RELIGION)
 	{
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getReligionType())
 			{
@@ -1907,7 +1907,7 @@ void CvUnitInfo::setReligionSubCombat()
 	}
 	if (getStateReligion() != NO_RELIGION)
 	{
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getStateReligion())
 			{
@@ -1918,7 +1918,7 @@ void CvUnitInfo::setReligionSubCombat()
 	}
 	if (getPrereqReligion() != NO_RELIGION)
 	{
-		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getPrereqReligion())
 			{
@@ -1930,7 +1930,7 @@ void CvUnitInfo::setReligionSubCombat()
 }
 void CvUnitInfo::setCultureSubCombat()
 {
-	foreaach_(const UnitCombatTypes eSubCombat, getSubCombats())
+	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
 	{
 		if (GC.getUnitCombatInfo(eSubCombat).getCulture() != NO_BONUS)
 		{
@@ -1976,7 +1976,7 @@ void CvUnitInfo::setEraSubCombat()
 	{
 		return;
 	}
-	foreaach_(const UnitCombatTypes eSubCombat, getSubCombats())
+	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
 	{
 		if (GC.getUnitCombatInfo(eSubCombat).getEra() != NO_ERA)
 		{
@@ -2619,10 +2619,10 @@ int CvUnitInfo::getNumSubCombatTypes() const
 	return (int)m_aiSubCombatTypes.size();
 }
 
-bool CvUnitInfo::isSubCombatType(int i) const
+bool CvUnitInfo::isSubCombatType(UnitCombatTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiSubCombatTypes, (UnitCombatTypes)i);
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), e);
+	return algo::contains(m_aiSubCombatTypes, e);
 }
 
 const std::vector<UnitCombatTypes>& CvUnitInfo::getSubCombatTypes() const
@@ -2675,7 +2675,7 @@ void CvUnitInfo::setHealAsTypes()
 	m_aiHealAsTypes.clear();
 	for ( int i = 0; i < GC.getNumUnitCombatInfos(); i++)
 	{
-		if ((getUnitCombatType() == i || isSubCombatType(i)) && GC.getUnitCombatInfo((UnitCombatTypes)i).isHealsAs())
+		if ((getUnitCombatType() == i || isSubCombatType((UnitCombatTypes)i)) && GC.getUnitCombatInfo((UnitCombatTypes)i).isHealsAs())
 		{
 			m_aiHealAsTypes.push_back((UnitCombatTypes)i);
 		}
@@ -3984,7 +3984,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiCureAfflictionTypes);
 	CheckSumC(iSum, m_aiHealAsTypes);
 	CheckSumC(iSum, m_vTerrainImpassableTypes);
-	CheckSumC(iSum, m_aiFeatureImpassableTypes);
+	CheckSumC(iSum, m_vFeatureImpassableTypes);
 	CheckSumC(iSum, m_aiMapTypes);
 	CheckSumC(iSum, m_aiTrapSetWithPromotionTypes);
 	CheckSumC(iSum, m_aiTrapImmunityUnitCombatTypes);
@@ -4654,7 +4654,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aiSubCombatTypes, L"SubCombatTypes");
 	pXML->SetOptionalVector(&m_aiCureAfflictionTypes, L"CureAfflictionTypes");
 	pXML->SetOptionalVector(&m_vTerrainImpassableTypes, L"TerrainImpassableTypes");
-	pXML->SetOptionalVector(&m_aiFeatureImpassableTypes, L"FeatureImpassableTypes");
+	pXML->SetOptionalVector(&m_vFeatureImpassableTypes, L"FeatureImpassableTypes");
 	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
 	pXML->SetOptionalVector(&m_aiTrapSetWithPromotionTypes, L"TrapSetWithPromotionTypes");
 	pXML->SetOptionalVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
@@ -5642,7 +5642,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiSubCombatTypes, pClassInfo->m_aiSubCombatTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCureAfflictionTypes, pClassInfo->m_aiCureAfflictionTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vTerrainImpassableTypes, pClassInfo->m_vTerrainImpassableTypes);
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureImpassableTypes, pClassInfo->m_aiFeatureImpassableTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vFeatureImpassableTypes, pClassInfo->m_vFeatureImpassableTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapSetWithPromotionTypes, pClassInfo->m_aiTrapSetWithPromotionTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapImmunityUnitCombatTypes, pClassInfo->m_aiTrapImmunityUnitCombatTypes);
@@ -6085,7 +6085,7 @@ bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 
 		m_abHasCombatType[getUnitCombatType()] = true;
 
-		foreaach_(const UnitCombatTypes eSubCombat, getSubCombats())
+		foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
 		{
 			m_abHasCombatType[eSubCombat] = true;
 		}
@@ -6100,7 +6100,7 @@ void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
 
 	UnitCombatTypes eUnitCombat;
 
-	foreach_(const UnitCombatTypes eSubCombat, getSubCombats())
+	for (int iI = 0; iI < getNumSubCombatTypes(); iI++)
 	{
 		if (iI > -1)
 		{
@@ -6399,7 +6399,7 @@ void CvUnitInfo::setCanAnimalIgnores()
 	{
 		iCount += GC.getUnitCombatInfo(eUnitCombat).getAnimalIgnoresBordersChange();
 	}
-	foreach_(const UnitCombatTypes eSubCombat, getSubCombats())
+	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
 	{
 		iCount += GC.getUnitCombatInfo(eSubCombat).getAnimalIgnoresBordersChange();
 	}
