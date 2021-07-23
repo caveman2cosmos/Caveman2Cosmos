@@ -8,7 +8,7 @@ if not exist "%PYTHON%" (
     echo Python install not found, installing now...
     call Tools\Setup\InstallPython3.bat!
 )
-%PYTHON% Tools\XMLTools\SortByTag.py %*
+%PYTHON% Tools\XMLTools\TechSearcher.py %*
 
 POPD
 
