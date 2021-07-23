@@ -5,7 +5,7 @@ from lxml import etree
 # You might need to install lxml manually, for example trough Python 3 installed by Git tools - Tools\python\tools\Scripts has pip exe, that you need to run trough command console
 
 def sortkey(child, nsmap):
-	# 'Tag' will sort GameText files, 'Type' will sort Infos files after some tweaks maybe
+	# 'Tag' will sort GameText files, 'Type' will sort Infos files after some tweaks, or temporarily comment out outermost tags in infotypes
 	tag = child.find('Tag',nsmap)
 	if(tag is not None):
 		return tag.text
