@@ -3,7 +3,7 @@ import re
 import heapq
 from pathlib import Path
 
-defaultData = ['Caveman2Cosmos_GIT\Assets\XML\Technologies\CIV4TechInfos.xml']
+defaultData = ['CIV4TechInfos.xml']
 
 class TechNode:
 
