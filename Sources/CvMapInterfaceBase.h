@@ -46,7 +46,7 @@ public:
 	CvMapInterfaceBase();
 	virtual ~CvMapInterfaceBase();
 
-	CvMapExternal* getProxy() const;
+	CvMapExternal& getProxy() const;
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const = 0;
 
