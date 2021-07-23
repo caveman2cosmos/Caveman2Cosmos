@@ -10,8 +10,6 @@ class TechNode:
 	def find(self,text):
 		return self.ET.find('t:' + text,self.ns)
 	def loadPreq(self) -> None:
-		ands = [0]
-		ors = [0]
 		self.fullPreq = []
 		self.partialPreq = []
 		ands = self.find('AndPreReqs')
@@ -93,7 +91,7 @@ def toposort(tList, tDict) -> list:
 		def getCompareValue(self) -> tuple:
 			return (self.linksLeft(),self.node.find('iCost'),self.node.find('iGridX'),self.node.find('iGridY'))
 		def __cmp__(self,other):
-			return self.cmp(self.getCompareValue(),other.getCompareValue())
+			return cmp(self.getCompareValue(),other.getCompareValue())
 	nodeDict = {node.name : TopoNode(node) for node in tList}
 	results = []
 	targets = filter(lambda n: n.linksLeft() == 0, nodeDict.values())
