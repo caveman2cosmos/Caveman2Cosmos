@@ -1,7 +1,7 @@
 import argparse
 import glob
 import re
-from lxml import etree 
+from lxml import etree
 # You might need to install lxml manually, for example trough Python 3 installed by Git tools - Tools\python\tools\Scripts has pip exe, that you need to run trough command console
 
 def sortkey(child, nsmap):
