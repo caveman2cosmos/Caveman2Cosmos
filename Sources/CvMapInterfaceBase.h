@@ -33,7 +33,7 @@ struct CvMapInitData
 	bool m_bWrapY;
 
 	CvMapInitData(int iGridW=0, int iGridH=0, int iTopLatitude=90, int iBottomLatitude=-90, bool bWrapX=false, bool bWrapY=false) :
-		m_iGridH(iGridH),m_iGridW(iGridW),m_iTopLatitude(iTopLatitude),m_iBottomLatitude(iBottomLatitude),m_bWrapY(bWrapY),m_bWrapX(bWrapX)
+		m_iGridH(iGridH), m_iGridW(iGridW), m_iTopLatitude(iTopLatitude), m_iBottomLatitude(iBottomLatitude), m_bWrapY(bWrapY), m_bWrapX(bWrapX)
 	{ }
 };
 
@@ -46,7 +46,7 @@ public:
 	CvMapInterfaceBase();
 	virtual ~CvMapInterfaceBase();
 
-	CvMapExternal* getProxy();
+	CvMapExternal* getProxy() const;
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const = 0;
 

@@ -25,18 +25,13 @@
 #include "CvViewport.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-#include <direct.h>			// for getcwd()
-#include <stdlib.h>			// for MAX_PATH
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+#include <direct.h> // for getcwd()
+#include <stdlib.h> // for MAX_PATH
 
-// Public Functions...
+bool CvMap::m_bSwitchInProgress = false;
 
-CvMap::CvMap(MapTypes eType) /* Parallel Maps */
+
+CvMap::CvMap(MapTypes eType)
 	: m_iGridWidth(0)
 	, m_iGridHeight(0)
 	, m_iLandPlots(0)
@@ -1182,8 +1177,8 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	OutputDebugString("Reading Map: Start");
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	OutputDebugString("Reading Map: Start\n");
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -1208,7 +1203,6 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapX);
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapY);
 
-	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated");
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
@@ -1229,7 +1223,7 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	OutputDebugString("Reading Map: End");
+	OutputDebugString("Reading Map: End\n");
 }
 
 // save object to a stream
@@ -1237,26 +1231,25 @@ void CvMap::read(FDataStreamBase* pStream)
 //
 void CvMap::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridWidth);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridHeight);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iLandPlots);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iOwnedPlots);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iTopLatitude);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iBottomLatitude);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iNextRiverID);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iGridWidth);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iGridHeight);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iLandPlots);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iOwnedPlots);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iTopLatitude);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iBottomLatitude);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iNextRiverID);
 
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_bWrapX);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_bWrapY);
+	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapX);
+	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapY);
 
-	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated");
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1273,12 +1266,15 @@ void CvMap::beforeSwitch()
 {
 	PROFILE_FUNC();
 
+	m_bSwitchInProgress = true;
+
 #ifdef THE_GREAT_WALL
 	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 	{
 		GC.getGame().processGreatWall(false);
 	}
-#endif
+#endif // THE_GREAT_WALL
+
 	gDLL->getEngineIFace()->setResourceLayer(false);
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
@@ -1331,7 +1327,7 @@ void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (m_pMapPlots == NULL)		// if it hasn't been initialized yet...
+	if (m_pMapPlots == NULL)
 	{
 		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
 		{
@@ -1395,11 +1391,7 @@ void CvMap::afterSwitch()
 		}
 	}
 
-	{
-		PROFILE("CvMap::afterSwitch.RebuildAll");
-
-		gDLL->getEngineIFace()->RebuildAllPlots();
-	}
+	gDLL->getEngineIFace()->RebuildAllPlots();
 
 	for (i = 0; i < MAX_PLAYERS; i++)
 	{
@@ -1436,9 +1428,12 @@ void CvMap::afterSwitch()
 	{
 		GC.getGame().processGreatWall(true);
 	}
-#endif
+#endif // THE_GREAT_WALL
+
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+
+	m_bSwitchInProgress = false;
 }
 
 int	CvMap::getNumViewports() const

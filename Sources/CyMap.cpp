@@ -81,7 +81,7 @@ bool CyMap::isInViewport(int iX, int iY)
 
 bool CyMap::isMidSwitch() const
 {
-	return GC.getCurrentViewport()->isMidSwitch();
+	return CvMap::isMidSwitch();
 }
 
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
