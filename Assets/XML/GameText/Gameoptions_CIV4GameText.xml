@@ -90,6 +90,18 @@
 		<Russian>Ïîçâîëÿåò èñïîëüçîâàòü áîëåå ïåðåäîâûå èçìåíåíèÿ ÿäåðíîãî îðóæèÿ äëÿ âàøåãî àðñåíàëà.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
+		<English>Advanced Routes</English>
+		<Italian>Percorsi avanzati</Italian>
+		<Russian>Улучшенные маршруты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
+		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
+		<Italian>Richiede più tecnologia rispetto alle tecnologie minime per i percorsi normali per poter costruire su terreni più difficili. Progettato per dare una sensazione più realistica ai terreni più difficili durante il gioco.</Italian>
+		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START</Tag>
 		<English>Advanced Start</English>
 		<French>Démarrage avancé</French>
@@ -1630,17 +1642,5 @@ Only affects SmartMap if terrain options is:
 		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recommended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC. Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels. L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 		<Russian>Зона контроля (ЗК) мешает вражеским отрядам ходить по фортам с гарнизоном или городам со рвами. Данный эффект действует в радиусе одной клетки. Отряд, оказавшийся внутри вражеской ЗК, не может перейти на другую клетку в пределах ЗК, но должен выйти из ЗК, прежде чем сможет достичь других участков ЗК. Не рекомендуется на данный момент, так как есть известная ошибка, которую он создает для путей, и некоторые игроки могут скверно застраивать текущие форты. Автор этого варианта также считает, что данный сабмод оставляет мало места для честного боя во многих случаях, когда вы предпочитаете принимать удар на угрожаемом участке и хотели бы в конечном итоге создать полосу ЗК, генерирующую вместо этого дармовую дальнюю атаку против агрессора, вместо того, чтобы удерживать его от движения вообще (так как в любом случае это концепция, лежащая в основе эффекта).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
-		<English>Advanced Routes</English>
-		<Italian>Percorsi avanzati</Italian>
-		<Russian>Улучшенные маршруты</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
-		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
-		<Italian>Richiede più tecnologia rispetto alle tecnologie minime per i percorsi normali per poter costruire su terreni più difficili. Progettato per dare una sensazione più realistica ai terreni più difficili durante il gioco.</Italian>
-		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 </Civ4GameText>
