@@ -5811,7 +5811,7 @@ def canTriggerUnlimitedPower1(argsList):
 
 def TriggerUnlimitedPower1(argsList):
 	data = argsList[1]
-	GC.getPlayer(data.ePlayer).getCity(data.iCityId).changePowerCount(1, False)
+	GC.getPlayer(data.ePlayer).getCity(data.iCityId).changePowerCount(1)
 
 def getHelpUnlimitedPower1(argsList):
 	data = argsList[1]

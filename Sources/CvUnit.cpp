@@ -5748,17 +5748,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (pPlot->isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7377,7 +7367,7 @@ bool CvUnit::canUnload() const
 
 	if (isTrap())
 	{
-		TerrainTypes eTerrain = kPlot.getTerrainType();
+		const TerrainTypes eTerrain = kPlot.getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
 			if (m_pUnitInfo->isTerrainImpassableType((int)eTerrain))
@@ -7385,7 +7375,7 @@ bool CvUnit::canUnload() const
 				return false;
 			}
 		}
-		FeatureTypes eFeature = kPlot.getFeatureType();
+		const FeatureTypes eFeature = kPlot.getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
 			if (m_pUnitInfo->isFeatureImpassableType((int)eFeature))
@@ -7395,17 +7385,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (kPlot.isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7414,13 +7394,13 @@ bool CvUnit::canUnload() const
 	{
 		if (kPlot.isFriendlyCity(*this, true))
 		{
-			int iNumAirUnits = kPlot.countNumAirUnits(getTeam());
-			int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
-			CvCity* pCity = kPlot.getPlotCity();
+			const int iNumAirUnits = kPlot.countNumAirUnits(getTeam());
+			const CvCity* pCity = kPlot.getPlotCity();
 			if (NULL != pCity)
 			{
 				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
+					const int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
 					if (iNumAirUnitCargoVolume >= pCity->getSMAirUnitCapacity(getTeam()))
 					{
 						return false;
@@ -10216,7 +10196,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 		if (!GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
 		{
-			const TechTypes ePreqTech = (TechTypes)GC.getReligionInfo(eReligion).getTechPrereq();
+			const TechTypes ePreqTech = GC.getReligionInfo(eReligion).getTechPrereq();
 
 			if (!GC.getGame().isTechDiscovered(ePreqTech)
 			|| !GET_TEAM(getTeam()).isHasTech(ePreqTech)
@@ -12629,7 +12609,7 @@ namespace CvUnitInternal
 		foreach_(const BuildTypes eBuild, aBuilds)
 		{
 			const CvBuildInfo& info = GC.getBuildInfo(eBuild);
-			if (info.getRoute() > NO_ROUTE && team.isHasTech((TechTypes)info.getTechPrereq()))
+			if (info.getRoute() > NO_ROUTE && team.isHasTech(info.getTechPrereq()))
 			{
 				const TechTypes obsoleteTech = info.getObsoleteTech();
 				if (obsoleteTech == NO_TECH || !team.isHasTech(obsoleteTech))
@@ -20275,26 +20255,13 @@ void CvUnit::changeFeatureDoubleMoveCount(FeatureTypes eIndex, int iChange)
 	}
 }
 
-//Team Project (4)
-	//WorkRateMod
-//ls612: Terrain Work Modifiers
 int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	return info == NULL ? 0 : info->m_iExtraTerrainWorkPercent + info->m_iTerrainWorkPercent;
-}
-
-//ls612: Terrain Work Modifiers
-int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
-
-	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
-
-	return info == NULL ? 0 : info->m_iTerrainWorkPercent;
+	return info == NULL ? 0 : info->m_iExtraTerrainWorkPercent;
 }
 
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
@@ -20318,16 +20285,7 @@ int CvUnit::getExtraFeatureWorkPercent(FeatureTypes eIndex) const
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	return info == NULL ? 0 : info->m_iExtraFeatureWorkPercent + info->m_iFeatureWorkPercent;
-}
-
-int CvUnit::getFeatureWorkPercent(FeatureTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
-
-	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
-
-	return info == NULL ? 0 : info->m_iFeatureWorkPercent;
+	return info == NULL ? 0 : info->m_iExtraFeatureWorkPercent;
 }
 
 void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
@@ -20348,23 +20306,13 @@ void CvUnit::changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange)
 int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
-	return
-	(
-		m_pUnitInfo->getTerrainWorkRateModifierType(eIndex)
-		+ getExtraTerrainWorkPercent(eIndex)
-		+ getTerrainWorkPercent(eIndex)
-	);
+	return m_pUnitInfo->getTerrainWorkRateModifierType(eIndex) + getExtraTerrainWorkPercent(eIndex);
 }
 
 int CvUnit::featureWorkPercent(FeatureTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
-	return
-	(
-		m_pUnitInfo->getFeatureWorkRateModifierType(eIndex)
-		+ getExtraFeatureWorkPercent(eIndex)
-		+ getFeatureWorkPercent(eIndex)
-	);
+	return m_pUnitInfo->getFeatureWorkRateModifierType(eIndex) + getExtraFeatureWorkPercent(eIndex);
 }
 
 int CvUnit::buildWorkPercent(BuildTypes eIndex) const
@@ -20599,7 +20547,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	//TB Debug Note: If the promotion being evaluated for is the sort you get from a leader as it attaches to the unit that then qualifies you for other
 	//promotions, and the check being called here is not for that specific purpose, then return false for that promotion.
 	if (!bForLeader && kPromotion.isLeader())
@@ -20636,40 +20585,15 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
+	if (!isMapCategory(*pPlot, kPromotion))
 	{
-		const int iCount = kPromotion.getNumMapTypes();
-		bool bFound = (iCount < 1);
-		if (pPlot != NULL)
-		{
-			for (int iI = 0; iI < iCount; iI++)
-			{
-				if (pPlot->isMapType((MapTypes)kPromotion.getMapType(iI)))
-				{
-					bFound = true;
-					break;
-				}
-			}
-			if (!bFound)
-			{
-				return false;
-			}
-		}
+		return false;
+	}
 
-		bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (m_pUnitInfo->isMapType((MapTypes)kPromotion.getMapType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
-		{
-			return false;
-		}
+	if (!isMapCategory(*m_pUnitInfo, kPromotion))
+	{
+		return false;
 	}
 
 	const PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
@@ -20692,14 +20616,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
-			if (kPromotion.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kPromotion.getTechPrereq()))
+			if (kPromotion.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
 			{
 				return false;
 			}
 			if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
-			&& !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
+			&& !GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
 			{
 				return false;
 			}
@@ -20825,7 +20749,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		&& (
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isAffliction() ||
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isEquipment()))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -20864,7 +20788,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 			const int numPromotionInfos = GC.getNumPromotionInfos();
 			for (int iI = 0; iI < numPromotionInfos; iI++)
 			{
-				PromotionTypes ePrereq = (PromotionTypes)iI;
+				const PromotionTypes ePrereq = (PromotionTypes)iI;
 				if (isHasPromotion(ePrereq))
 				{
 					const CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
@@ -20920,18 +20844,18 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
 			if (kPromotion.getTechPrereq() != NO_TECH
-			&& !GET_TEAM(getTeam()).isHasTech((TechTypes)kPromotion.getTechPrereq()))
+			&& !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
 			{
 				return false;
 			}
 			if (ePromotionLine != NO_PROMOTIONLINE
 			&&
-				GC.getPromotionLineInfo((PromotionLineTypes)ePromotionLine).getPrereqTech() != NO_TECH
+				GC.getPromotionLineInfo(ePromotionLine).getPrereqTech() != NO_TECH
 			&&
-				!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getPromotionLineInfo((PromotionLineTypes)ePromotionLine).getPrereqTech()))
+				!GET_TEAM(getTeam()).isHasTech(GC.getPromotionLineInfo(ePromotionLine).getPrereqTech()))
 			{
 				return false;
 			}
@@ -22606,7 +22530,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTerrainDefensePercent(((TerrainTypes)iI), (kPromotion.getTerrainDefensePercent(iI) * iChange));
 
 		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkPercent(iI) * iChange));
-		changeExtraTerrainWorkPercent(((TerrainTypes)iI), (kPromotion.getTerrainWorkRateModifierChangeType(iI) * iChange));
 
 		changeTerrainDoubleMoveCount(((TerrainTypes)iI), ((kPromotion.getTerrainDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnTerrainType(((TerrainTypes)iI), (kPromotion.getWithdrawOnTerrainTypeChange(iI) * iChange));
@@ -22618,7 +22541,6 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraFeatureDefensePercent(((FeatureTypes)iI), (kPromotion.getFeatureDefensePercent(iI) * iChange));
 
 		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkPercent(iI) * iChange));
-		changeExtraFeatureWorkPercent(((FeatureTypes)iI), (kPromotion.getFeatureWorkRateModifierChangeType(iI) * iChange));
 
 		changeFeatureDoubleMoveCount(((FeatureTypes)iI), ((kPromotion.getFeatureDoubleMove(iI)) ? iChange : 0));
 		changeExtraWithdrawOnFeatureType(((FeatureTypes)iI), (kPromotion.getWithdrawOnFeatureTypeChange(iI) * iChange));
@@ -23314,7 +23236,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainWorkPercent, "terrainWorkPercent");
+				// SAVEBREAK - Toffer - Remove
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainWorkPercent, SAVE_VALUE_TYPE_INT);
+				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 			}
@@ -23336,7 +23260,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureWorkPercent, "featureWorkPercent");
+				// SAVEBREAK - Toffer - Remove
+				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureWorkPercent, SAVE_VALUE_TYPE_INT);
+				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 			}
@@ -24835,7 +24761,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainDefensePercent, "extraDefensePercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iTerrainWorkPercent, "terrainWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 		}
@@ -24849,7 +24774,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureAttackPercent, "extraAttackPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureDefensePercent, "extraDefensePercent");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iFeatureWorkPercent, "featureWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 		}
@@ -33223,7 +33147,6 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 			GET_PLAYER(getOwner()).changePlayerWideAfflictionCount(eAfflictionLine, 1);
 		}
 
-
 		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_SUFFERED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
 		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 		const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
@@ -33274,7 +33197,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
@@ -33283,7 +33205,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
@@ -33306,7 +33227,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
@@ -33320,7 +33240,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
@@ -33343,7 +33262,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
@@ -33352,7 +33270,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
@@ -33423,7 +33340,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					if (bMessageOnFalse)
 					{
-
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 					}
@@ -33432,7 +33348,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					if (bMessageOnFalse)
 					{
-
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
@@ -33511,7 +33426,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						{
 							if (bMessageOnFalse)
 							{
-
 								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 							}
@@ -33520,7 +33434,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						{
 							if (bMessageOnFalse)
 							{
-
 								const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 							}
@@ -33559,7 +33472,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33568,7 +33480,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33578,14 +33489,13 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 	if (GC.getPromotionInfo(ePromotion).getObsoleteTech() != NO_TECH)
 	{// TB Debug: was
-		//if ((GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(ePromotion).getTechPrereq()))))
+		//if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getTechPrereq()))
 		if (GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(ePromotion).getObsoleteTech()))
 		{
 			if (bPromo && !bIsFreePromotion)
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33594,7 +33504,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33610,7 +33519,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 			}
@@ -33619,7 +33527,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		{
 			if (bMessageOnFalse)
 			{
-
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 			}
@@ -33689,7 +33596,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33698,7 +33604,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33717,7 +33622,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					if (bMessageOnFalse)
 					{
-
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 					}
@@ -33726,7 +33630,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				{
 					if (bMessageOnFalse)
 					{
-
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 					}
@@ -33747,7 +33650,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33756,7 +33658,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33815,7 +33716,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33824,7 +33724,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33853,7 +33752,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33862,7 +33760,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33914,7 +33811,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33923,7 +33819,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -33953,7 +33848,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY());
 				}
@@ -33962,7 +33856,6 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (bMessageOnFalse)
 				{
-
 					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
 					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
 				}
@@ -34274,7 +34167,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	if (GC.getPromotionInfo(eEquipment).getTechPrereq() != NO_TECH)
 	{
-		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getPromotionInfo(eEquipment).getTechPrereq())))
+		if (!GET_TEAM(getTeam()).isHasTech(GC.getPromotionInfo(eEquipment).getTechPrereq()))
 		{
 			return false;
 		}

@@ -119,6 +119,7 @@ class CvPropertyInfo;
 class CvOutcomeInfo;
 class CvUnitCombatInfo;
 class CvPromotionLineInfo;
+class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
@@ -477,6 +478,9 @@ public:
 	int getNumPromotionLineInfos() const;
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 
+	int getNumMapCategoryInfos() const;
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
+
 	int getNumIdeaClassInfos() const;
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
@@ -535,6 +539,7 @@ public:
 
 	int getNumBuildInfos() const;
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
+	const std::vector<CvBuildInfo*>& getBuildInfos() const { return m_paBuildInfo; }
 
 	int getNumHandicapInfos() const;
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
@@ -583,6 +588,7 @@ public:
 
 	int getNumReligionInfos() const;
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
+	const std::vector<CvReligionInfo*>& getReligionInfos() const { return m_paReligionInfo; }
 
 	int getNumCorporationInfos() const;
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
@@ -991,6 +997,7 @@ protected:
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
+	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
 	std::vector<CvInfoBase*> m_paDomainInfo;

@@ -88,10 +88,7 @@ public:
 	const std::vector<BuildTypes>& getBuildTypes() const { return m_improvementBuildTypes; };
 	BuildTypes getImprovementBuildType(int iIndex) const;
 
-	int getMapType(int i) const;
-	int getNumMapTypes() const;
-	bool isMapType(int i) const;
-	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
+	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
 	const TCHAR* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
@@ -99,7 +96,7 @@ public:
 	int getHealthPercent() const;
 	bool isPeakMakesValid() const;
 	int getImprovementBonusDepletionRand(int i) const;
-	int getPrereqTech() const;
+	TechTypes getPrereqTech() const	{ return m_iPrereqTech; }
 	//int getTraitYieldChanges(int i, int j) const;
 	//int* getTraitYieldChangesArray(int i) const;
 
@@ -150,7 +147,6 @@ private:
 
 	int m_iHealthPercent;
 	int m_iDepletionRand;
-	int m_iPrereqTech;
 	int m_iAdvancedStartCost;
 	int m_iTilesPerGoody;
 	int m_iGoodyUniqueRange;
@@ -170,6 +166,7 @@ private:
 	BonusTypes m_iBonusChange;
 	ImprovementTypes m_iImprovementPillage;
 	ImprovementTypes m_iImprovementUpgrade;
+	TechTypes m_iPrereqTech;
 
 	CvString m_szArtDefineTag;
 
@@ -187,7 +184,7 @@ private:
 
 	CvImprovementBonusInfo* m_paImprovementBonus;
 
-	std::vector<int> m_aiMapTypes;
+	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiAlternativeImprovementUpgradeTypes;
 	std::vector<int> m_aiFeatureChangeTypes;
 	std::vector<BuildTypes> m_improvementBuildTypes;

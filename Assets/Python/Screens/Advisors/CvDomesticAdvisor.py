@@ -937,7 +937,7 @@ class CvDomesticAdvisor:
 					elif iEffect > 1 or iEffect < 0:
 						szEffects += "%d%s " % (iEffect, self.commerceIcons[eCommerce])
 
-		iEffect = city.getBonusPower(arg, False) + city.getBonusPower(arg, True)
+		iEffect = city.getBonusPower(arg)
 		if iEffect == 1:
 			szEffects += "%s " %(unichr(8872))
 		elif iEffect > 1:

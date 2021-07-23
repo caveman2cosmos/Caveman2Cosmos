@@ -1189,24 +1189,6 @@
 		<Russian>Øèðîêèé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_HOVER</Tag>
-		<English>Select which turn number 200 000 BC should be.</English>
-		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
-		<German>Bestimmt die Runde, der das Jahr 200 000 n.Chr. entsprechen soll</German>
-		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
-		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
-		<Russian>Âûáåðèòå êîãäà õîä íîìåð 200 000BC äîëæåí áûòü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_TEXT</Tag>
-		<English>200 000 BC is Turn</English>
-		<French>200 000 av. J.C. est le Tour</French>
-		<German>200000 n.Chr. ist Runde</German>
-		<Italian>200 000 a.C. è il turno</Italian>
-		<Spanish>200 000 a.C. es el turno</Spanish>
-		<Russian>200 000BC ýòî õîä</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_HOVER</Tag>
 		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
 		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
@@ -1918,6 +1900,24 @@
 		<Italian>Avvio automatico</Italian>
 		<Spanish>Inicio automático</Spanish>
 		<Russian>Íà÷àòü àâòîìàòè÷åñêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_HOVER</Tag>
+		<English>Select which turn number 200 000 BC should be.</English>
+		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
+		<German>Bestimmt die Runde, der das Jahr 200 000 n.Chr. entsprechen soll</German>
+		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
+		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
+		<Russian>Âûáåðèòå êîãäà õîä íîìåð 200 000BC äîëæåí áûòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_TEXT</Tag>
+		<English>200 000 BC is Turn</English>
+		<French>200 000 av. J.C. est le Tour</French>
+		<German>200000 n.Chr. ist Runde</German>
+		<Italian>200 000 a.C. è il turno</Italian>
+		<Spanish>200 000 a.C. es el turno</Spanish>
+		<Russian>200 000BC ýòî õîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AIRUNITCANDEFEND_HOVER</Tag>

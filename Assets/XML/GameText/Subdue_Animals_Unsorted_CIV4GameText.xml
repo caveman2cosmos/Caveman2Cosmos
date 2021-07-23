@@ -1,6 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Amphibians</English>
+		<French>Effet (Mythe des Amphibiens)</French>
+		<Polish>Efekt Mitu - Płazy</Polish>
+		<Russian>Ïåñíÿ îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Tag>
+		<English>Stories (B) - Amphibians</English>
+		<French>Histoires des Amphibiens</French>
+		<Polish>Historie - Płazy</Polish>
+		<Russian>Ñêàçû îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Amphibians</English>
+		<French>Effet (Histoires des Amphibiens)</French>
+		<Polish>Efekt Historii - Płazy</Polish>
+		<Russian>Ïðåäàíèÿ îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Tag>
+		<English>Story (B) - Amphibians</English>
+		<French>Histoire des Amphibiens</French>
+		<Polish>Opowieść - Płazy</Polish>
+		<Russian>Ñêàçêà îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
+		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
+		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTEATER_MYTH</Tag>
 		<English>Myth - Anteater</English>
 		<French>Mythe du Fourmilier</French>
@@ -211,6 +244,53 @@
 		<Russian>Ñêàçêà î áåíãàë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
+		<English>Unit Reward - Dance (Bird)</English>
+		<French>Danse des Oiseaux</French>
+		<Russian>Òàíåö ïòèöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
+		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_MYTH</Tag>
+		<English>Myth (B) - Birds</English>
+		<French>Mythe des Oiseaux</French>
+		<Polish>Mit - Ptaki</Polish>
+		<Russian>Ìèô î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Birds</English>
+		<French>Effet (Mythe des Oiseaux)</French>
+		<Polish>Efekt Mitu - Ptaki</Polish>
+		<Russian>Ïåñíÿ î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORIES</Tag>
+		<English>Stories (B) - Birds</English>
+		<French>Histoires des Oiseaux</French>
+		<Polish>Historie - Ptaki</Polish>
+		<Russian>Ñêàçû î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Birds</English>
+		<French>Effet (Histoires des Oiseaux)</French>
+		<Polish>Efekt Historii - Ptaki</Polish>
+		<Russian>Ïðåäàíèÿ î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
+		<English>Story (B) - Birds</English>
+		<French>Histoire des Oiseaux</French>
+		<Polish>Opowieść - Ptaki</Polish>
+		<Russian>Ñêàçêà î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_MYTH</Tag>
 		<English>Myth - Bison</English>
 		<French>Mythe du Bison</French>
@@ -334,6 +414,41 @@
 		<Russian>Ñêàçêà î áóéâîëå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_MYTH</Tag>
+		<English>Myth (B) - Bug</English>
+		<French>Mythe des insectes</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Bug</English>
+		<French>Effet (Mythe des insectes)</French>
+		<Polish>Efekt Mitu - Ptaki morskie</Polish>
+		<Russian>Ïåñíÿ î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORIES</Tag>
+		<English>Stories (B) - Bug</English>
+		<French>Histoires des insectes</French>
+		<Polish>Historie - Ptaki morskie</Polish>
+		<Russian>Ñêàçû î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Bug</English>
+		<French>Effet (Histoires des insectes)</French>
+		<Polish>Efekt Historii - Ptaki morskie</Polish>
+		<Russian>Ïðåäàíèÿ î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORY</Tag>
+		<English>Story (B) - Bug</English>
+		<French>Histoire des insectes</French>
+		<Polish>Opowieść - Ptaki morskie</Polish>
+		<Russian>Ñêàçêà î æóêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COBRA_MYTH</Tag>
 		<English>Myth - Cobra</English>
 		<French>Mythe du Cobra</French>
@@ -392,6 +507,148 @@
 		<English>Story - Crow</English>
 		<French>Histoire du Corbeau</French>
 		<Russian>Ñêàçêà î âîðîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
+		<English>Donkey Breeder</English>
+		<French>Éleveur d'ânes</French>
+		<Russian>Îñëèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_MYTH</Tag>
+		<English>Myth - Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<Russian>Ìèô îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Donkey</English>
+		<French>Effet (Mythe de l'Ane)</French>
+		<Russian>Ïåñíÿ îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_STORIES</Tag>
+		<English>Stories - Donkey</English>
+		<French>Histoires des Anes</French>
+		<Russian>Ñêàçû îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Donkey</English>
+		<French>Effet (Histoires des Anes)</French>
+		<Russian>Ïðåäàíèÿ îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_STORY</Tag>
+		<English>Story - Donkey</English>
+		<French>Histoire de l'Ane</French>
+		<Russian>Ñêàçêà îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
+		<English>Flocks of Duck</English>
+		<Russian>Ñòàÿ óòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_EFFECT</Tag>
+		<English>Effect - Flocks of Duck</English>
+		<Russian>Ýôôåêò - Ñòàÿ óòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Duck.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_MYTH</Tag>
+		<English>Myth (B) - Tales of Fish</English>
+		<French>
+			<Text>Mythe des Bancs de Poissons</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito - Storie di pesce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Tales of Fish</English>
+		<French>Effet (Mythe des Poissons)</French>
+		<Polish>Efekt Mitu - Ryby</Polish>
+		<Russian>Ïåñíÿ î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORIES</Tag>
+		<English>Stories (B) - Fish</English>
+		<French>Histoires des Poissons</French>
+		<Polish>Historie - Ryby</Polish>
+		<Russian>Ñêàçû î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Fish</English>
+		<French>Effet (Histoires des Poissons)</French>
+		<Polish>Efekt Historii - Ryby</Polish>
+		<Russian>Ïðåäàíèÿ î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
+		<English>Story (B) - Fish</English>
+		<French>Histoire des Poissons</French>
+		<Polish>Opowieść - Ryby</Polish>
+		<Russian>Ñêàçêà î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Tag>
+		<English>Myth (B) - Flightless Birds</English>
+		<French>Mythe des Oiseaux marcheurs</French>
+		<Polish>Mit - Ptaki-Nieloty</Polish>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Flightless Birds</English>
+		<French>Effet (Mythe des Oiseaux marcheurs)</French>
+		<Polish>Efekt Mitu - Ptaki-Nieloty</Polish>
+		<Russian>Ïåñíÿ î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Tag>
+		<English>Stories (B) - Flightless Birds</English>
+		<French>Histoires des Oiseaux marcheurs</French>
+		<Polish>Historie - Ptaki-Nieloty</Polish>
+		<Russian>Ñêàçû î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Flightless Birds</English>
+		<French>Effet (Histoires des Oiseaux marcheurs)</French>
+		<Polish>Efekt Historii - Ptaki-Nieloty</Polish>
+		<Russian>Ïðåäàíèÿ î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Tag>
+		<English>Story (B) - Flightless Birds</English>
+		<French>Histoire des Oiseaux marcheurs</French>
+		<Polish>Opowieść - Ptaki-Nieloty</Polish>
+		<Russian>Ñêàçêà î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<English>Unit Reward - Dance (Fox)</English>
+		<French>Danse du Renard</French>
+		<Russian>Òàíåö ëèñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH</Tag>
@@ -602,6 +859,65 @@
 		<English>Story - Gull</English>
 		<French>Histoire du Goéland</French>
 		<Russian>Ñêàçêà î ÷àéêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
+		<English>Dance - Haka</English>
+		<French>Danse - Haka</French>
+		<Russian>Òàíåö Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
+		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
+		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
+		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
+		<English>Horse Breeder</English>
+		<French>Éleveur de chevaux</French>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_MYTH</Tag>
+		<English>Myth - Horse</English>
+		<French>
+			<Text>Mythe du Cheval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del cavallo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Horse</English>
+		<French>Effet (Mythe du Cheval)</French>
+		<Russian>Ïåñíÿ î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_STORIES</Tag>
+		<English>Stories - Horse</English>
+		<French>Histoires des Chevaux</French>
+		<Russian>Ñêàçû î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Horse</English>
+		<French>Effet (Histoires des Chevaux)</French>
+		<Russian>Ïðåäàíèÿ î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_STORY</Tag>
+		<English>Story - Horse</English>
+		<French>Histoire du Cheval</French>
+		<Polish>Opowieść o Koniu</Polish>
+		<Russian>Ñêàçêà î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
@@ -910,6 +1226,18 @@
 		<Russian>Ïðåäàíèÿ î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Tag>
+		<English>Myth (B) - Fish</English>
+		<French>Mythe des Poissons (local)</French>
+		<Polish>Mit - Ryby (regionalne)</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Fish</English>
+		<Russian>Ïåñíÿ î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH</Tag>
 		<English>Myth - Mandrill</English>
 		<French>Mythe du Mandrill</French>
@@ -938,6 +1266,31 @@
 		<English>Story - Mandrill</English>
 		<French>Histoire du Mandrill</French>
 		<Russian>Ñêàçêà î ìàíäðèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Tag>
+		<English>Myth - New World Monkeys</English>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH_EFFECT</Tag>
+		<English>Myth Effect - New World Monkeys</English>
+		<Russian>Ïåñíÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES</Tag>
+		<English>Stories - New World Monkeys</English>
+		<Russian>Ñêàçû îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Tag>
+		<English>Stories Effect - New World Monkeys</English>
+		<Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORY</Tag>
+		<English>Story - New World Monkeys</English>
+		<Russian>Ñêàçêà îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_MYTH</Tag>
@@ -1000,6 +1353,31 @@
 		<Russian>Ñêàçêà îá îêàïè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Tag>
+		<English>Myth - Old World Monkeys</English>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Old World Monkeys</English>
+		<Russian>Ïåñíÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES</Tag>
+		<English>Stories - Old World Monkeys</English>
+		<Russian>Ñêàçû îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Old World Monkeys</English>
+		<Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORY</Tag>
+		<English>Story - Old World Monkeys</English>
+		<Russian>Ñêàçêà îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Tag>
 		<English>Myth - Orangutan</English>
 		<French>Mythe de l'Orang-outan</French>
@@ -1028,6 +1406,41 @@
 		<English>Story - Orangutan</English>
 		<French>Histoire de l'Orang-outan</French>
 		<Russian>Ñêàçêà îá îðàíãóòàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_MYTH</Tag>
+		<English>Myth (B) - Owls</English>
+		<French>Mythe des Chouettes</French>
+		<Polish>Myth - Sowy</Polish>
+		<Russian>Ìèô î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Owls</English>
+		<French>Effet (Mythe des Chouettes)</French>
+		<Polish>Efekt Mitu - Sowy</Polish>
+		<Russian>Ïåñíÿ î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORIES</Tag>
+		<English>Stories (B) - Owls</English>
+		<French>Histoires des Chouettes</French>
+		<Polish>Historie - Sowy</Polish>
+		<Russian>Ñêàçû î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Owls</English>
+		<French>Effet (Histoires des Chouettes)</French>
+		<Polish>Efekt Historii - Sowy</Polish>
+		<Russian>Ïðåäàíèÿ î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORY</Tag>
+		<English>Story (B) - Owls</English>
+		<French>Histoire des Chouettes</French>
+		<Polish>Opowieść - Sowy</Polish>
+		<Russian>Ñêàçêà î ñîâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
@@ -1060,6 +1473,21 @@
 		<Russian>Ñêàçêà î âîëîêëþå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<English>Flocks of Peacock</English>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_EFFECT</Tag>
+		<English>Effect - Flocks of Peacock</English>
+		<Russian>Ýôôåêò - Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Peacocks.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
 		<English>Myth - Peacock</English>
 		<French>Mythe du Paon</French>
@@ -1088,6 +1516,36 @@
 		<English>Story - Peacock</English>
 		<French>Histoire du Paon</French>
 		<Russian>Ñêàçêà î ïàâëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_MYTH</Tag>
+		<English>Myth (B) - Penguin</English>
+		<French>Mythe du Pingouin</French>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Penguin</English>
+		<French>Effet (Mythe du Pingouin)</French>
+		<Russian>Ïåñíÿ î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORIES</Tag>
+		<English>Stories (B) - Penguin</English>
+		<French>Histoires des Pingouins</French>
+		<Russian>Ñêàçû î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Penguin</English>
+		<French>Effet (Histoires des Pingouins)</French>
+		<Russian>Ïðåäàíèÿ î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORY</Tag>
+		<English>Story (B) - Penguin</English>
+		<French>Histoire du Pingouin</French>
+		<Russian>Ñêàçêà î ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
@@ -1186,6 +1644,41 @@
 		<Russian>Ñêàçêà î ñóì÷.êóíèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_MYTH</Tag>
+		<English>Myth (B) - Raptors</English>
+		<French>Mythe des Rapaces</French>
+		<Polish>Mit - Ptaki drapieżne</Polish>
+		<Russian>Ìèô î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Raptors</English>
+		<French>Effet (Mythe des Rapaces)</French>
+		<Polish>Efekt Mitu - Ptaki drapieżne</Polish>
+		<Russian>Ïåñíÿ î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORIES</Tag>
+		<English>Stories (B) - Raptors</English>
+		<French>Histoires des Rapaces</French>
+		<Polish>Historie - Ptaki drapieżne</Polish>
+		<Russian>Ñêàçû î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Raptors</English>
+		<French>Effet (Histoires des Rapaces)</French>
+		<Polish>Efekt Historii - Ptaki drapieżne</Polish>
+		<Russian>Ïðåäàíèÿ î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORY</Tag>
+		<English>Story (B) - Raptors</English>
+		<French>Histoire des Rapaces</French>
+		<Polish>Opowieść - Ptaki drapieżne</Polish>
+		<Russian>Ñêàçêà î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_MYTH</Tag>
 		<English>Myth - Ratel</English>
 		<French>Mythe du Ratel</French>
@@ -1216,6 +1709,104 @@
 		<Russian>Ñêàçêà î ìåäîåäå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Reptile</English>
+		<French>Effet (Mythe des Reptiles)</French>
+		<Polish>Efekt Mitu - Gady</Polish>
+		<Russian>Ïåñíÿ î ðåïòèëèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORIES</Tag>
+		<English>Stories (B) - Reptile</English>
+		<French>Histoires des Reptiles</French>
+		<Polish>Historie - Gady</Polish>
+		<Russian>Ñêàçû î ðåïòèëèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Reptile</English>
+		<French>Effet (Histoires des Reptiles)</French>
+		<Polish>Efekt Historii - Gady</Polish>
+		<Russian>Ïðåäàíèÿ î ðåïòèëèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
+		<English>Story (B) - Reptile</English>
+		<French>Histoire des Reptiles</French>
+		<Polish>Opowieść - Gady</Polish>
+		<Russian>Ñêàçêà î ðåïòèëèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_MYTH</Tag>
+		<English>Myth (B) - Rodent</English>
+		<French>Mythe des Rongeurs</French>
+		<Polish>Mit - Gryzonie</Polish>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Rodent</English>
+		<French>Effet (Mythe des Rongeurs)</French>
+		<Polish>Efekt Mitu - Gryzonie</Polish>
+		<Russian>Ïåñíÿ î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORIES</Tag>
+		<English>Stories (B) - Rodent</English>
+		<French>Histoires des Rongeurs</French>
+		<Polish>Historie - Gryzonie</Polish>
+		<Russian>Ñêàçû î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Rodent</English>
+		<French>Effet (Histoires des Rongeurs)</French>
+		<Polish>Efekt Historii - Gryzonie</Polish>
+		<Russian>Ïðåäàíèÿ î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
+		<English>Story (B) - Rodent</English>
+		<French>Histoire des Rongeurs</French>
+		<Polish>Opowieść - Gryzonie</Polish>
+		<Russian>Ñêàçêà î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Tag>
+		<English>Myth (B) - Sea Birds</English>
+		<French>Mythe des Oiseaux marins</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Sea Birds</English>
+		<French>Effet (Mythe des Oiseaux marins)</French>
+		<Polish>Efekt Mitu - Ptaki morskie</Polish>
+		<Russian>Ïåñíÿ î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Tag>
+		<English>Stories (B) - Sea Birds</English>
+		<French>Histoires des Oiseaux marins</French>
+		<Polish>Stories - Ptaki morskie</Polish>
+		<Russian>Ñêàçû î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Sea Birds</English>
+		<French>Effet (Histoires des Oiseaux marins)</French>
+		<Polish>Efekt Historii - Ptaki morskie</Polish>
+		<Russian>Ïðåäàíèÿ î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORY</Tag>
+		<English>Story (B) - Sea Birds</English>
+		<French>Histoire des Oiseaux marins</French>
+		<Polish>Opowieść - Ptaki morskie</Polish>
+		<Russian>Ñêàçêà î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKES_MYTH</Tag>
 		<English>Myth - Snakes</English>
 		<French>Mythe des Serpents</French>
@@ -1244,6 +1835,26 @@
 		<English>Story - Snakes</English>
 		<French>Histoire des Serpents</French>
 		<Russian>Ñêàçêà î çìåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Spotted Cat</English>
+		<Russian>Ïåñíÿ î ëåîïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
+		<English>Flocks of Turkey</English>
+		<Russian>Ñòàÿ èíäååê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Tag>
+		<English>Effect - Flocks of Turkey</English>
+		<Russian>Ýôôåêò - Ñòàÿ èíäååê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Turkey.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIPER_MYTH</Tag>
@@ -1371,8 +1982,92 @@
 		<Russian>Ñêàçêà î ãíó</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_MYTH</Tag>
+		<English>Myth (B) - Wolf</English>
+		<French>
+			<Text>Mythe des Loups</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del lupo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Wilk</Polish>
+		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Wolf</English>
+		<French>Effet (Mythe des Loups)</French>
+		<Polish>Efekt Mitu - Wilk</Polish>
+		<Russian>Ïåñíÿ î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORIES</Tag>
+		<English>Stories (B) - Wolf</English>
+		<French>Histoires des Loups</French>
+		<Polish>Historie - Wilk</Polish>
+		<Russian>Ñêàçû î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Tag>
+		<English>Stories Effect - Wolf</English>
+		<French>Effet (Histoires des Loups)</French>
+		<Polish>Efekt Historii - Wilk</Polish>
+		<Russian>Ïðåäàíèÿ î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORY</Tag>
+		<English>Story (B) - Wolf</English>
+		<French>Histoire du Loup</French>
+		<Polish>Opowieść - Wilk</Polish>
+		<Russian>Ñêàçêà î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
+		<English>Shock and Awe - Cacophony</English>
+		<French>Choc et stupeur - Cacophonie</French>
+		<Russian>Øîê è òðåïåò - êàêîôîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
+		<English>Shock and Awe - Haka</English>
+		<French>Choc et stupeur - Haka</French>
+		<Russian>Øîê è òðåïåò - Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
+		<English>Shock and Awe - War Cry</English>
+		<French>Choc et stupeur - Cri de guerre</French>
+		<Russian>Øîê è òðåïåò - Áîåâîé êëè÷</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA_PEDIA</Tag>
 		<English>Naja is a genus of venomous elapid snakes known as cobras. Several other genera include species commonly called cobras (for example the rinkhals, or ring-necked spitting cobra), but of all the snakes known by that name, members of the genus Naja are the most widespread and the most widely recognized as cobras. Various species occur in regions throughout Africa, Southwest Asia, South Asia and Southeast Asia.[PARAGRAPH:2]Until recently the genus Naja had 20 to 22 species, but it has undergone several taxonomic revisions in recent years, so sources vary greatly. There is however wide support for a 2009 revision that synonymised the genera Boulengerina and Paranaja with Naja. According to that revision the genus Naja now includes 28 species.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DONKEY</Tag>
+		<English>Donkey</English>
+		<French>
+			<Text>Onagre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Onagro</Italian>
+		<Spanish>
+			<Text>Onagro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Dziki Osioł</Polish>
+		<Russian>Îñåë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HORSE_PEDIA</Tag>
+		<English>[COLOR_UNIT_TEXT] Horses [COLOR_REVERT] belong to the order of odd ungulates. They have existed for about 56 million years. The genus includes wild horses (from which the house forms arose), donkeys, and some species of zebra. Today they live in Africa and Asia. [NEWLINE] Their habitat is open landscapes, which are usually grassy, ​​but can also be desert-like. With their robust physique and long limbs, they are perfectly adapted to these regions. The head of the animals is comparatively large and elongated in the facial area, with eyes lying on the side and large, flexible ears. In most species, the fur is short and forms longer hairs on the neck, forelock and tail. The color varies depending on the species and is noticeably striped in zebras. The limbs end in wide hooves, with the animals only walking on the last toe (pointed walkers). The natural gaits step, trot and gallop are differentiated according to speed and sequence of movements. Horses are particularly active at twilight and nocturnal in the tropics, and more during the day in temperate zones. They spend most of their active time eating. Their food is mainly grass, less often leaves and twigs. On average, they only need 2.5 hours of sleep, mostly dozing with their eyes open, which is a typical feature of escape animals. Horses are social animals that live together in groups that either consist of mares and young animals or form a larger "harem" that also includes one or more stallions. Communication is varied and takes place via visual, tactile and olfactory signals. Mares usually give birth to a single young animal, which is relatively heavy in relation to the mother and also precocious. It can follow the mother just a few hours after the birth. In the wild, horses can live to be 21 to 40 years old. Large predators, including hyenas, wolves and big cats, count as natural enemies. When threatened, horses flee, are cornered, kicked or bite. [NEWLINE] Horses have long been of great importance to humans. In the Paleolithic they were a source of raw materials and food. In the Upper Paleolithic, numerous depictions were made in cave paintings, e.g. in the Lascaux cave. The domestication of the first donkeys probably began around 3000 BC. in Egypt. Since then, horses have become an integral part of human cultural history. As pack animals, draft animals or riding animals, house donkeys and domestic horses achieved worldwide distribution. The first modern horses came to America in 1492 with Christopher Columbus. With the motorization of agriculture and increasing automobile traffic, the importance of livestock decreased in the western industrialized countries and is largely limited to riding as a hobby or sport. In addition, mare's and donkey's milk and horse meat are used as food. The skin can be made into leather and plays a role in the manufacture of shoes. Horsehair is used, among other things, to cover string bows and is also used in upholstery.</English>
+		<German>[COLOR_UNIT_TEXT]Pferde[COLOR_REVERT] gehören zur Ordnung der Unpaarhufer. Sie existieren schon seit etwa 56 Millionen Jahren. Die Gattung umfasst wildlebende Pferde (aus denen die Hausformen entstanden sind), Esel und einige Zebraarten. Sie leben heute in Afrika und Asien.[NEWLINE]Ihr Lebensraum sind offene Landschaften, die in der Regel grasbewachsen sind, aber auch wüstenartig sein können. Mit ihrem robusten Körperbau und den langen Gliedmaßen sind sie perfekt an diese Regionen angepasst. Der Kopf der Tiere ist vergleichsweise groß und im Gesichtsbereich langgezogen, mit seitlich liegenden Augen und großen, beweglichen Ohren. Bei den meisten Arten ist das Fell kurz und bildet an Nacken, Schopf und Schwanz längere Haare. Die Farbe variiert je nach Art und ist bei Zebras auffällig gestreift. Die Gliedmaßen enden in breiten Hufen, wobei die Tiere nur auf dem letzten Zehenglied laufen (Spitzengänger). Nach Geschwindigkeit und Bewegungsabfolge werden dabei die natürlichen Gangarten Schritt, Trab und Galopp unterschieden. Pferde sind besonders in den Tropen dämmerungs- und nachtaktiv, in gemäßigten Zonen eher tagsüber. Die meiste aktive Zeit verbringen sie mit Fressen. Ihre Nahrung bilden hauptsächlich Gräser, seltener Blätter und Zweige. Durchschnittlich brauchen sie nur 2,5 Stunden Schlaf, wobei sie meist nur mit offenen Augen dösen, was ein typisches Merkmal für Fluchttiere ist. Pferde sind soziale Tiere, die in Gruppen zusammenleben, welche entweder aus Stuten und Jungtieren bestehen oder einen größeren "Harem" bilden, der auch ein oder mehrere Hengste mit einschließt. Die Kommunikation ist vielseitig und erfolgt über visuelle, taktile und olfaktorische Signale. Stuten gebären in der Regel ein einzelnes Jungtier, das im Verhältnis zur Mutter relativ schwer und auch frühreif ist. Bereits wenige Stunden nach der Geburt kann es der Mutter folgen. In freier Wildbahn können Pferde 21 bis 40 Jahre alt werden. Als natürliche Feinde zählen große Raubtiere, u.a. Hyänen, Wölfe und Großkatzen. Bei Bedrohung ergreifen Pferde die Flucht, werden sie in die Enge getrieben, treten oder beißen sie auch.[NEWLINE]Pferde haben schon lange eine große Bedeutung für den Menschen. In der Altsteinzeit waren sie eine Rohstoff- und Nahrungsquelle. Im Jungpaläolithikum entstanden zahlreiche Darstellung in der Höhlenmalerei, z.B. in der Höhle von Lascaux. Die Domestizierung der ersten Esel begann vermutlich ca. 3000 v.Chr. in Ägypten. Seither sind Pferde aus der menschlichen Kulturgeschichte nicht mehr wegzudenken. Als Last-, Zug- oder Reittiere erlangten Hausesel und Hauspferd eine weltweite Verbreitung. Die ersten modernen Pferde kamen 1492 mit Christoph Kolumbus nach Amerika. Mit der Motorisierung der Landwirtschaft und dem zunehmenden Automobilverkehr nahm die Bedeutung als Nutztier in den westlichen Industrieländern ab und beschränkt sich weitgehend auf Reiten als Hobby oder Sport. Des Weiteren werden Stuten- und Eselsmilch sowie Pferdefleich als Nahrungsmittel verwendet. Die Haut kann zu Leder verarbeitet werden und spielt bei der Schuhherstellung eine Rolle. Rosshaar dient u.a. zur Bespannung von Streichbögen und findet auch in der Polsterei Verwendung.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IGUANA_PEDIA</Tag>
@@ -1396,6 +2091,22 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cobra, Myths of Earth and Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe et Histoires des Cobras[NEWLINE][ICON_BULLET]Mythe de la Terre et des serpents[NEWLINE][ICON_BULLET]Cage et enclos pour Reptiles[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
+		<English>Subdued Donkey</English>
+		<French>Ane (App.)</French>
+		<Russian>Îñåë (ðó÷í.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Donkey and Equine, Horse Herd, Carnival, Exotic Herbivore Cage and Enclosure. May place resource on map</English>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Donkey and Equine[NEWLINE][ICON_BULLET]Horse Herd and Carnival[NEWLINE][ICON_BULLET]Exoctic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]May place resource on map</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_HORSE_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Horse and Equine, Horse Herd, Carnival, Exotic Herbivore Cage and Enclosure. May place resource on map</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire [COLOR_REVERT] Mythe et Histoires des Chevaux et équidés[NEWLINE][ICON_BULLET]Troupeau de chevaux et Carnaval[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores[NEWLINE][ICON_BULLET]Peut ajouter la ressource sur la carte</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
@@ -1463,6 +2174,39 @@
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
+		<English>Amphibian Colony</English>
+		<French>Colonie d'Amphibiens</French>
+		<Polish>Kolonia Płazów</Polish>
+		<Russian>Êîëîíèÿ àìôèáèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Tag>
+		<English>[ICON_BULLET]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
+		<Polish>Użyj [COLOR_HIGHLIGHT_TEXT]Kolonii Płazów[COLOR_REVERT] by rozprzestrzenić [COLOR_HIGHLIGHT_TEXT]Stawyz z płazami[COLOR_REVERT] do innych miast.</Polish>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Используйте [COLOR_HIGHLIGHT_TEXT]Колонию амфибий[COLOR_REVERT] для размещения [COLOR_HIGHLIGHT_TEXT]Затонов амфибий[COLOR_REVERT] в других городах.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
+		<English>Breeding Pair - Donkey</English>
+		<French>Couple reproducteur - Ânes</French>
+		<Russian>Çàâîä÷èê îñëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
+		<English>Breeding Pair - Horse</English>
+		<French>Couple reproducteur - Chevaux</French>
+		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD</Tag>
 		<English>Tamed Lizard</English>
 		<French>Lézard géant(dompté)</French>
@@ -1488,5 +2232,11 @@
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Tag>
 		<English>Tamed Snake</English>
 		<French>Serpent (dompté)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Tag>
+		<English>Breeding Pair - Wolf</English>
+		<French>Couple reproducteur - Loup</French>
+		<Russian>Çàâîä÷èê âîëêîâ</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -17,6 +17,7 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
 #include <time.h>
@@ -1320,6 +1321,17 @@ CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes 
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), e)
 	return *(m_paPromotionLineInfo[e]);
+}
+
+int cvInternalGlobals::getNumMapCategoryInfos() const
+{
+	return (int)m_paMapCategoryInfo.size();
+}
+
+CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
+	return *(m_paMapCategoryInfo[e]);
 }
 
 int cvInternalGlobals::getNumIdeaClassInfos() const
@@ -2654,6 +2666,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paInvisibleInfo);
 	deleteInfoArray(m_paUnitCombatInfo);
 	deleteInfoArray(m_paPromotionLineInfo);
+	deleteInfoArray(m_paMapCategoryInfo);
 	deleteInfoArray(m_paIdeaClassInfo);
 	deleteInfoArray(m_paIdeaInfo);
 	//deleteInfoArray(m_paTraitOptionEditsInfo);
@@ -2841,6 +2854,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
+	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
 	GC.getMap().afterSwitch();
 }
 

@@ -242,10 +242,8 @@ void CvCityAI::AI_doTurn()
 		{
 			setForceSpecialistCount(((SpecialistTypes)iI), 0);
 		}
-
 		AI_stealPlots();
 	}
-
 	AI_updateBestBuild();
 	AI_updateWorkersNeededHere();
 
@@ -253,21 +251,18 @@ void CvCityAI::AI_doTurn()
 
 	if (isHuman())
 	{
+		/* Toffer - Disabled governors ability to rush.
 		if (isProductionAutomated())
 		{
 			AI_doHurry();
 		}
+		*/
 		return;
 	}
-
 	AI_doPanic();
-
 	AI_doDraft();
-
 	AI_doHurry();
-
 	AI_doEmphasize();
-
 	AI_doContractFloatingDefenders();
 }
 
@@ -358,25 +353,6 @@ void CvCityAI::AI_assignWorkingPlots()
 		return;
 	}
 
-	//	Koshling - I can't see the point in scrapping the current worker setup
-	//	each time (it's very costly in performance terms), and the eventual
-	//	AI_juggleCitizens() in what follows will adjust the allocation if priorities
-	//	have changed.  Hence changing it to only stop working plots that are
-	//	now invalid as worked plots
-	//	Empirically it does make a small difference to the eventual assignments
-	//	but it seems to be a neither-here-nor-there difference between two approximations
-	//	to optimality - better to choose the low-overhead one!
-#ifdef OLD_BTS_EVALUATION
-	// remove all assigned plots if we automated
-	if (!isHuman() || isCitizensAutomated())
-	{
-		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-		{
-			setWorkingPlot(iI, false);
-		}
-	}
-#endif
-
 	//update the special yield multiplier to be current
 	AI_updateSpecialYieldMultiplier();
 
@@ -391,21 +367,12 @@ void CvCityAI::AI_assignWorkingPlots()
 		// remove any plots we can no longer work for any reason
 		verifyWorkingPlots();
 
-		// if forcing specialists, try to make all future specialists of the same type
-		bool bIsSpecialistForced = false;
-		int iTotalForcedSpecialists = 0;
-
 		// make sure at least the forced amount of specialists are assigned
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			const int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
-			if (iForcedSpecialistCount > 0)
-			{
-				bIsSpecialistForced = true;
-				iTotalForcedSpecialists += iForcedSpecialistCount;
-			}
 
-			if (!isHuman() || isCitizensAutomated() || (getSpecialistCount((SpecialistTypes)iI) < iForcedSpecialistCount))
+			if (!isHuman() || isCitizensAutomated() || getSpecialistCount((SpecialistTypes)iI) < iForcedSpecialistCount)
 			{
 				setSpecialistCount(((SpecialistTypes)iI), iForcedSpecialistCount);
 			}
@@ -416,9 +383,10 @@ void CvCityAI::AI_assignWorkingPlots()
 		{
 			if (!isSpecialistValid((SpecialistTypes)iI))
 			{
-				if (getSpecialistCount((SpecialistTypes)iI) > getMaxSpecialistCount((SpecialistTypes)iI))
+				const int iMaxSpecialist = getMaxSpecialistCount((SpecialistTypes)iI);
+				if (iMaxSpecialist > 0 && getSpecialistCount((SpecialistTypes)iI) > iMaxSpecialist)
 				{
-					setSpecialistCount(((SpecialistTypes)iI), getMaxSpecialistCount((SpecialistTypes)iI));
+					setSpecialistCount(((SpecialistTypes)iI), iMaxSpecialist);
 				}
 			}
 		}
@@ -443,63 +411,24 @@ void CvCityAI::AI_assignWorkingPlots()
 		// extraSpecialists() is less than extraPopulation()
 		FASSERT_NOT_NEGATIVE(extraSpecialists())
 
-			// do we have population unassigned
-			while (extraPopulation() > 0)
-			{
-				// (AI_addBestCitizen now handles forced specialist logic)
-				if (!AI_addBestCitizen(/*bWorkers*/ true, /*bSpecialists*/ true))
-				{
-					break;
-				}
-			}
-
-		// if forcing specialists, assign any other specialists that we must place based on forced specialists
-		int iInitialExtraSpecialists = extraSpecialists();
-		int iExtraSpecialists = iInitialExtraSpecialists;
-		if (bIsSpecialistForced && iExtraSpecialists > 0)
+		// do we have population unassigned
+		while (extraPopulation() > 0)
 		{
-			FAssertMsg(iTotalForcedSpecialists > 0, "zero or negative total forced specialists");
-			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+			// (AI_addBestCitizen now handles forced specialist logic)
+			if (!AI_addBestCitizen(/*bWorkers*/ true, /*bSpecialists*/ true))
 			{
-				if (isSpecialistValid((SpecialistTypes)iI, 1))
-				{
-					int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
-					if (iForcedSpecialistCount > 0)
-					{
-						int iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
-						int iMaxSpecialistCount = getMaxSpecialistCount((SpecialistTypes)iI);
-
-						int iSpecialistsToAdd = ((iInitialExtraSpecialists * iForcedSpecialistCount) + (iTotalForcedSpecialists / 2)) / iTotalForcedSpecialists;
-						if (iExtraSpecialists < iSpecialistsToAdd)
-						{
-							iSpecialistsToAdd = iExtraSpecialists;
-						}
-
-						iSpecialistCount += iSpecialistsToAdd;
-						iExtraSpecialists -= iSpecialistsToAdd;
-
-						// if we cannot fit that many, then add as many as we can
-						if (iSpecialistCount > iMaxSpecialistCount && !GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI))
-						{
-							iExtraSpecialists += iSpecialistCount - iMaxSpecialistCount;
-							iSpecialistCount = iMaxSpecialistCount;
-						}
-
-						setSpecialistCount((SpecialistTypes)iI, iSpecialistCount);
-					}
-				}
+				break;
 			}
 		}
-		FASSERT_NOT_NEGATIVE(iExtraSpecialists)
 
-			// if we still have population to assign, assign specialists
-			while (extraSpecialists() > 0)
+		// if we still have population to assign, assign specialists
+		while (extraSpecialists() > 0)
+		{
+			if (!AI_addBestCitizen(/*bWorkers*/ false, /*bSpecialists*/ true))
 			{
-				if (!AI_addBestCitizen(/*bWorkers*/ false, /*bSpecialists*/ true))
-				{
-					break;
-				}
+				break;
 			}
+		}
 
 		// if automated, look for better choices than the current ones
 		if (!isHuman() || isCitizensAutomated())
@@ -513,7 +442,7 @@ void CvCityAI::AI_assignWorkingPlots()
 
 	AI_setAssignWorkDirty(false);
 
-	if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+	if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
 	{
 		gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 	}
@@ -4696,8 +4625,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
 
-	//bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower());
-
 	//Don't consider a building if it causes the city to immediately start shrinking from unhealthiness
 	//For that purpose ignore bad health and unhappiness from Espionage.
 	int iBuildingActualHappiness = getAdditionalHappinessByBuilding(eBuilding);
@@ -5608,25 +5535,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					iValue -= kBuilding.getRiverDefensePenalty() / 4;
 
-					if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
-					{
-						foreach_(const CvCity * pLoopCity, kOwner.cities())
-						{
-							if (pLoopCity->area() == area())
-							{
-								if (pLoopCity->isDirtyPower())
-								{
-									//Fuyu: less value for cities that don't already have power
-									iValue += 8;
-								}
-								else if (!pLoopCity->isPower())
-								{
-									iValue += 12;
-								}
-							}
-						}
-					}
-
 					if (kBuilding.getDomesticGreatGeneralRateModifier() != 0)
 					{
 						iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
@@ -5979,48 +5887,40 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+					foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 					{
-						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+						const BuildingTypes eLoopBuilding = modifier.first;
+						if (kOwner.canConstruct(eLoopBuilding))
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building3");
-							const int iMod = kBuilding.getGlobalBuildingCostModifier(iI);
-							if (iMod != 0)
+							const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
+							int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
+
+							int iNewCost = 0;
+							// Reverse old modifier
+							if (iPlayerMod < 0)
 							{
-								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-								if (kOwner.canConstruct(eLoopBuilding))
-								{
-									const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
-									int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
-
-									int iNewCost = 0;
-									// Reverse old modifier
-									if (iPlayerMod < 0)
-									{
-										iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
-									}
-									else if (iPlayerMod > 0)
-									{
-										iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
-									}
-									iPlayerMod += iMod;
-									// Apply new modifier
-									if (iPlayerMod < 0)
-									{
-										iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
-									}
-									else if (iPlayerMod > 0)
-									{
-										iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
-									}
-
-									const int iCount = count_if(kOwner.cities(),
-										CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-									);
-
-									iValue += (iOriginalCost - iNewCost) * iCount / 10;
-								}
+								iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
 							}
+							else if (iPlayerMod > 0)
+							{
+								iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
+							}
+							iPlayerMod += modifier.second;
+							// Apply new modifier
+							if (iPlayerMod < 0)
+							{
+								iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
+							}
+							else if (iPlayerMod > 0)
+							{
+								iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
+							}
+
+							const int iCount = count_if(kOwner.cities(),
+								CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+							);
+
+							iValue += (iOriginalCost - iNewCost) * iCount / 10;
 						}
 					}
 
@@ -6479,7 +6379,7 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 		iValue += kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots() * 4;
 	}
 
-	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus()) || kBuilding.isAreaCleanPower()))
+	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
 	{
 		iValue += iBaseRate * getPowerYieldRateModifier(eYield) / 20;
 	}
@@ -7424,14 +7324,14 @@ bool CvCityAI::AI_isAnyCommerceOrYieldEmphasis() const
 bool CvCityAI::AI_isEmphasize(EmphasizeTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumEmphasizeInfos(), eIndex)
-		FAssertMsg(m_pbEmphasize != NULL, "m_pbEmphasize is not expected to be equal with NULL");
+	FAssertMsg(m_pbEmphasize != NULL, "m_pbEmphasize is not expected to be equal with NULL");
 	return m_pbEmphasize[eIndex];
 }
 
 bool CvCityAI::AI_isEmphasizeSpecialist(SpecialistTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eIndex)
-		FAssertMsg(m_pbEmphasizeSpecialist != NULL, "m_pbEmphasize is not expected to be equal with NULL");
+	FAssertMsg(m_pbEmphasizeSpecialist != NULL, "m_pbEmphasize is not expected to be equal with NULL")
 	return m_pbEmphasizeSpecialist[eIndex];
 }
 
@@ -7515,6 +7415,7 @@ void CvCityAI::AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue)
 			if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
 			{
 				gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+				gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 			}
 		}
 }
@@ -9066,7 +8967,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 {
 	PROFILE_FUNC();
 
-	FAssert(!isHuman() || isProductionAutomated());
+	FAssert(!isHuman() /*|| isProductionAutomated()*/); // Toffer - Disabled governors ability to rush.
 
 	if (isNPC() || getProduction() == 0 && !bForce)
 	{
@@ -9130,11 +9031,13 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 			if (eProductionBuilding != NO_BUILDING)
 			{
+				/* Toffer - Disabled governors ability to rush.
 				// City governor hard limitation.
 				if (player.isHuman() && player.getHurriedCount() > 32)
 				{
 					continue;
 				}
+				*/
 				// If it doesn't reduce time to completion, it isn't worth the inflation.
 				// (ToDo) Inflation may in the future be based on gold amount spent
 				// rather than e.g. hurry count, making this check obsolete.
@@ -9352,7 +9255,8 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 			if (getProductionTurnsLeft() > iMinTurns)
 			{
-				bool bWait = isHuman() || 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
+				// Toffer - Disabled governors ability to rush. 'isHuman() not needed here for now'
+				bool bWait = /*isHuman() ||*/ 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
 
 				if (!bWait && iHurryAngerLength > 0)
 				{
@@ -9955,54 +9859,15 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 
 	int iBestSpecialistValue = 0;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
-	SpecialistTypes eBestForcedSpecialist = NO_SPECIALIST;
 
 	if (bSpecialists)
 	{
 		// count the total forced specialists
-		int iTotalForcedSpecialists = 0;
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
-			int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
-			if (iForcedSpecialistCount > 0)
+			if (getForceSpecialistCount((SpecialistTypes)iI) > 0)
 			{
 				bIsSpecialistForced = true;
-				iTotalForcedSpecialists += iForcedSpecialistCount;
-			}
-		}
-
-		// if forcing any specialists, find the best one that we can still assign
-		if (bIsSpecialistForced)
-		{
-			int iBestForcedValue = MIN_INT;
-
-			int iTotalSpecialists = 1 + getSpecialistPopulation();
-			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-			{
-				if (isSpecialistValid((SpecialistTypes)iI, 1))
-				{
-					int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
-					if (iForcedSpecialistCount > 0)
-					{
-						int iSpecialistCount = getSpecialistCount((SpecialistTypes)iI);
-
-						// the value is based on how close we are to our goal ratio forced/total
-						int iForcedValue = ((iForcedSpecialistCount * 128) / iTotalForcedSpecialists) - ((iSpecialistCount * 128) / iTotalSpecialists);
-						if (iForcedValue >= iBestForcedValue)
-						{
-							int iSpecialistValue = AI_specialistValue((SpecialistTypes)iI, bAvoidGrowth, false);
-
-							// if forced value larger, or if equal, does this specialist have a higher value
-							if (iForcedValue > iBestForcedValue || iSpecialistValue > iBestSpecialistValue)
-							{
-								iBestForcedValue = iForcedValue;
-								iBestSpecialistValue = iSpecialistValue;
-								eBestForcedSpecialist = ((SpecialistTypes)iI);
-								eBestSpecialist = eBestForcedSpecialist;
-							}
-						}
-					}
-				}
 			}
 		}
 
@@ -10054,15 +9919,11 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 		}
 	}
 
-	// if we found a plot to work
-	if (iBestPlot != -1)
+	// if we found a plot to work and it's better than the best specialist.
+	if (iBestPlot != -1 && iBestPlotValue > iBestSpecialistValue)
 	{
-		// if the best plot value is better than the best specialist, or if we forcing and we could not assign a forced specialst
-		if (iBestPlotValue > iBestSpecialistValue || (bIsSpecialistForced && eBestForcedSpecialist == NO_SPECIALIST))
-		{
-			// do not work the specialist
-			eBestSpecialist = NO_SPECIALIST;
-		}
+		// do not work the specialist
+		eBestSpecialist = NO_SPECIALIST;
 	}
 
 	if (eBestSpecialist != NO_SPECIALIST)
@@ -10076,7 +9937,7 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 		}
 		return true;
 	}
-	else if (iBestPlot != -1)
+	if (iBestPlot != -1)
 	{
 		setWorkingPlot(iBestPlot, true);
 		if (piBestPlot != NULL)
@@ -10088,7 +9949,6 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 		}
 		return true;
 	}
-
 	return false;
 }
 
@@ -14432,7 +14292,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		return true;
 	}
-	if (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower())
+	if (kBuilding.isPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))))
 	{
 		return true;
 	}
@@ -15812,24 +15672,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 				iValue -= kBuilding.getRiverDefensePenalty() / 4;
 
-				if (kBuilding.isAreaCleanPower() && !bCleanPower)
-				{
-					foreach_(const CvCity * pLoopCity, kOwner.cities())
-					{
-						if (pLoopCity->area() == pArea)
-						{
-							if (pLoopCity->isDirtyPower())
-							{
-								iValue += 8;
-							}
-							else if (!pLoopCity->isPower())
-							{
-								iValue += 12;
-							}
-						}
-					}
-				}
-
 				if (kBuilding.getDomesticGreatGeneralRateModifier() != 0)
 				{
 					iValue += (kBuilding.getDomesticGreatGeneralRateModifier() / 10);
@@ -16161,47 +16003,39 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					}
 				}
 
-				if (kBuilding.getGlobalBuildingCostModifier(NO_BUILDING) != 0)
+				foreach_(const BuildingModifier2& modifier, kBuilding.getGlobalBuildingCostModifiers())
 				{
-					for (int iI = 0; iI < iNumBuildings; iI++)
+					const BuildingTypes eLoopBuilding = modifier.first;
+					if (kOwner.canConstruct(eLoopBuilding))
 					{
-						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building3");
-						const int iMod = kBuilding.getGlobalBuildingCostModifier(iI);
-						if (iMod != 0)
+						const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
+						int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
+
+						int iNewCost = 0;
+						// Reverse old modifier
+						if (iPlayerMod < 0)
 						{
-							const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-							if (kOwner.canConstruct(eLoopBuilding))
-							{
-								const int iOriginalCost = kOwner.getProductionNeeded(eLoopBuilding);
-								int iPlayerMod = kOwner.getBuildingCostModifier(eLoopBuilding);
-
-								int iNewCost = 0;
-								// Reverse old modifier
-								if (iPlayerMod < 0)
-								{
-									iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
-								}
-								else if (iPlayerMod > 0)
-								{
-									iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
-								}
-								iPlayerMod += iMod;
-								// Apply new modifier
-								if (iPlayerMod < 0)
-								{
-									iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
-								}
-								else if (iPlayerMod > 0)
-								{
-									iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
-								}
-
-								const int iCount = count_if(kOwner.cities(),
-									CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-								);
-								iValue += (iOriginalCost - iNewCost) * iCount / 10;
-							}
+							iNewCost = iOriginalCost * (-1 * iPlayerMod + 100) / 100;
 						}
+						else if (iPlayerMod > 0)
+						{
+							iNewCost = iOriginalCost * 100 / (100 + iPlayerMod);
+						}
+						iPlayerMod += modifier.second;
+						// Apply new modifier
+						if (iPlayerMod < 0)
+						{
+							iNewCost = iOriginalCost * 100 / (-1 * iPlayerMod + 100);
+						}
+						else if (iPlayerMod > 0)
+						{
+							iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
+						}
+
+						const int iCount = count_if(kOwner.cities(),
+							CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
+						);
+						iValue += (iOriginalCost - iNewCost) * iCount / 10;
 					}
 				}
 

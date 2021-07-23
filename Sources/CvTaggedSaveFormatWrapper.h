@@ -57,7 +57,7 @@ typedef enum
 	REMAPPED_CLASS_TYPE_TRAITS,
 	//REMAPPED_CLASS_TYPE_TRAITOPTIONEDITS,
 	REMAPPED_CLASS_TYPE_INVISIBLES,
-	REMAPPED_CLASS_TYPE_MAPS,
+	REMAPPED_CLASS_TYPE_MAPCATEGORIES,
 	REMAPPED_CLASS_TYPE_IDEACLASSES,
 	REMAPPED_CLASS_TYPE_IDEAS,
 	//TB Promotion Line Mod end
@@ -176,9 +176,9 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned int value) ;
+	void		Write(const char* name, int& idHint, int& idSeq, uint32_t value) ;
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[]) ;
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint32_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, long value);
 	void		Write(const char* name, int& idHint, int& idSeq, unsigned long  value) ;
@@ -233,9 +233,9 @@ public:
 	void		Read(const char* name, int& idHint, int& idSeq, int count, short values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int* i);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned int* i);
+	void		Read(const char* name, int& idHint, int& idSeq, uint32_t* i);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned int values[]);
+	void 		Read(const char* name, int& idHint, int& idSeq, int count, uint32_t values[]);
 
 	void		Read(const char* name, int& idHint, int& idSeq, long* l);
 	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l) ;

@@ -2,8 +2,10 @@
 <Civ4MapInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MapInfos>
 		<MapInfo>
-			<Type>MAPCATEGORY_EARTH</Type>
-			<Description>TXT_KEY_MAPCATEGORY_EARTH</Description>
+			<!-- Earth map -->
+			<!-- Available at game start -->
+			<Type>MAP_EARTH</Type>
+			<Description>TXT_KEY_MAP_EARTH</Description>
 			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
@@ -16,162 +18,259 @@
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_SUBTERRANEAN</Type>
-			<Description>TXT_KEY_MAPCATEGORY_SUBTERRANEAN</Description>
+			<!-- Subterranean map -->
+			<!-- Available in Nanotech and later -->
+			<!-- Originally it used for Subsurface Ocean terrain - Europa -->
+			<Type>MAP_SUBTERRANEAN</Type>
+			<Description>TXT_KEY_MAP_SUBTERRANEAN</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_AQUATIC</Type>
-			<Description>TXT_KEY_MAPCATEGORY_AQUATIC</Description>
+			<!-- Cislunar map -->
+			<!-- Available in Nanotech and later -->
+			<Type>MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_MAP_CISLUNAR</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_CISLUNAR</Type>
-			<Description>TXT_KEY_MAPCATEGORY_CISLUNAR</Description>
+			<!-- Map of the Moon -->
+			<!-- Available in Nanotech and later -->
+			<Type>MAP_MOON</Type>
+			<Description>TXT_KEY_MAP_MOON</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_LUNAR</Type>
-			<Description>TXT_KEY_MAPCATEGORY_LUNAR</Description>
+			<!-- Map of the Mars -->
+			<!-- Available in Nanotech and later -->
+			<Type>MAP_MARS</Type>
+			<Description>TXT_KEY_MAP_MARS</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_SOLAR_SYSTEM</Type>
-			<Description>TXT_KEY_MAPCATEGORY_SOLAR_SYSTEM</Description>
+			<!-- Map of the Venus -->
+			<!-- Available in Nanotech and later -->
+			<Type>MAP_VENUS</Type>
+			<Description>TXT_KEY_MAP_VENUS</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_MARTIAN</Type>
-			<Description>TXT_KEY_MAPCATEGORY_MARTIAN</Description>
+			<!-- Map of Inner Solar System -->
+			<!-- Available in Transhuman and later -->
+			<Type>MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_VENUSIAN</Type>
-			<Description>TXT_KEY_MAPCATEGORY_VENUSIAN</Description>
+			<!-- Map of Outer Solar System -->
+			<!-- Available in Transhuman and later -->
+			<Type>MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_JOVIAN</Type>
-			<Description>TXT_KEY_MAPCATEGORY_JOVIAN</Description>
+			<!-- Map of Saturn moon, Titan -->
+			<!-- Available in Transhuman and later -->
+			<Type>MAP_TITAN</Type>
+			<Description>TXT_KEY_MAP_TITAN</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_TITANIC</Type>
-			<Description>TXT_KEY_MAPCATEGORY_TITANIC</Description>
+			<!-- Map of Kuiper Belt -->
+			<!-- Available in Transhuman and later -->
+			<Type>MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_MAP_TRANSNEPTUNIAN</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_INTERSTELLAR</Type>
-			<Description>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Description>
+			<!-- Map of Nearby Stars -->
+			<!-- Available in Galactic and later -->
+			<Type>MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_MAP_NEARBY_STARS</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_PLASMA</Type>
-			<Description>TXT_KEY_MAPCATEGORY_PLASMA</Description>
+			<!-- Map of Orion Arm -->
+			<!-- Available in Galactic and later -->
+			<Type>MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_MAP_ORION_ARM</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_GALACTIC</Type>
-			<Description>TXT_KEY_MAPCATEGORY_GALACTIC</Description>
+			<!-- Map of Milky Way -->
+			<!-- Available in Galactic and later -->
+			<Type>MAP_MILKY_WAY</Type>
+			<Description>TXT_KEY_MAP_MILKY_WAY</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_MILKY_WAY</Type>
-			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
+			<!-- Map of Local Group -->
+			<!-- Available in Cosmic and later -->
+			<Type>MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_MAP_LOCAL_GROUP</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_UNIVERSAL</Type>
-			<Description>TXT_KEY_MAPCATEGORY_UNIVERSAL</Description>
+			<!-- Map of Virgo Supercluster -->
+			<!-- Available in Cosmic and later -->
+			<Type>MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_DISTANT</Type>
-			<Description>TXT_KEY_MAPCATEGORY_DISTANT</Description>
+			<!-- Map of Universe -->
+			<!-- Available in Cosmic and later -->
+			<Type>MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_MAP_UNIVERSE</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAPCATEGORY_HYPERSPACE</Type>
-			<Description>TXT_KEY_MAPCATEGORY_HYPERSPACE</Description>
+			<!-- Map of Distant Cosmos -->
+			<!-- Available in Transcendent and later -->
+			<Type>MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_MAP_DISTANT_COSMOS</Description>
+			<!-- default grid size and wrapping is the same as the original map -->
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \
+			<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
 		</MapInfo>

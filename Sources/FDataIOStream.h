@@ -12,30 +12,30 @@ public:
 	void OpenWrite(CvString szFile);
 	void Close();
 	bool IsOpen();
-	virtual void	Rewind();
-	virtual bool	AtEnd();
-	virtual void	FastFwd();
-	virtual unsigned int  GetPosition() const;
-	virtual void    SetPosition(unsigned int position);
-	virtual void    Truncate();
-	virtual void	Flush();
-	virtual unsigned int	GetEOF() const;
-	virtual unsigned int			GetSizeLeft() const;
-	virtual void	CopyToMem(void* mem);
+	virtual void		Rewind();
+	virtual bool		AtEnd();
+	virtual void		FastFwd();
+	virtual uint32_t	GetPosition() const;
+	virtual void		SetPosition(uint32_t position);
+	virtual void		Truncate();
+	virtual void		Flush();
+	virtual uint32_t	GetEOF() const;
+	virtual uint32_t	GetSizeLeft() const;
+	virtual void		CopyToMem(void* mem);
 
-	virtual unsigned int	WriteString(const wchar_t* szName);
-	virtual unsigned int	WriteString(const char* szName);
-	virtual unsigned int	WriteString(const std::string& szName);
-	virtual unsigned int	WriteString(const std::wstring& szName);
-	virtual unsigned int	WriteString(int count, std::string values[]);
-	virtual unsigned int	WriteString(int count, std::wstring values[]);
+	virtual uint32_t	WriteString(const wchar_t* szName);
+	virtual uint32_t	WriteString(const char* szName);
+	virtual uint32_t	WriteString(const std::string& szName);
+	virtual uint32_t	WriteString(const std::wstring& szName);
+	virtual uint32_t	WriteString(int count, std::string values[]);
+	virtual uint32_t	WriteString(int count, std::wstring values[]);
 
-	virtual unsigned int	ReadString(char* szName);
-	virtual unsigned int	ReadString(wchar_t* szName);
-	virtual unsigned int	ReadString(std::string& szName);
-	virtual unsigned int	ReadString(std::wstring& szName);
-	virtual unsigned int	ReadString(int count, std::string values[]);
-	virtual unsigned int	ReadString(int count, std::wstring values[]);
+	virtual uint32_t	ReadString(char* szName);
+	virtual uint32_t	ReadString(wchar_t* szName);
+	virtual uint32_t	ReadString(std::string& szName);
+	virtual uint32_t	ReadString(std::wstring& szName);
+	virtual uint32_t	ReadString(int count, std::string values[]);
+	virtual uint32_t	ReadString(int count, std::wstring values[]);
 
 	virtual char*		ReadString();		// allocates memory
 	virtual wchar_t*	ReadWideString();	// allocates memory
@@ -51,9 +51,9 @@ public:
 	virtual void		Read(int count, short values[]);
 	virtual void		Read(int count, uint16_t values[]);
 	virtual void		Read(int* i);
-	virtual void		Read(unsigned int* i);
+	virtual void		Read(uint32_t* i);
 	virtual void 		Read(int count, int values[]);
-	virtual void 		Read(int count, unsigned int values[]);
+	virtual void 		Read(int count, uint32_t values[]);
 
 	virtual void		Read(long* l);
 	virtual void		Read(unsigned long* l);
@@ -83,9 +83,9 @@ public:
 	virtual void		Write(int count, const uint16_t values[]);
 
 	virtual void		Write(int value);
-	virtual void		Write(unsigned int value);
+	virtual void		Write(uint32_t value);
 	virtual void 		Write(int count, const int values[]);
-	virtual void		Write(int count, const unsigned int values[]);
+	virtual void		Write(int count, const uint32_t values[]);
 
 	virtual void		Write(long value);
 	virtual void		Write(unsigned long  value);

@@ -397,22 +397,6 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 		return m_paImprovementBonus[i].m_iDiscoverRand;
 }
 
-int CvImprovementInfo::getMapType(int i) const
-{
-	return m_aiMapTypes[i];
-}
-
-int CvImprovementInfo::getNumMapTypes() const
-{
-	return m_aiMapTypes.size();
-}
-
-bool CvImprovementInfo::isMapType(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_MAPS, i)
-		return algo::contains(m_aiMapTypes, i);
-}
-
 const TCHAR* CvImprovementInfo::getButton() const
 {
 	/************************************************************************************************/
@@ -463,11 +447,6 @@ int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
 		return m_paImprovementBonus[i].m_iDepletionRand;
-}
-
-int CvImprovementInfo::getPrereqTech() const
-{
-	return m_iPrereqTech;
 }
 
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
@@ -613,7 +592,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGoody);
 	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
-	CheckSumC(iSum, m_aiMapTypes);
+	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
@@ -766,7 +745,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbTerrainMakesValid, L"TerrainMakesValids", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeatureMakesValid, L"FeatureMakesValids", GC.getNumFeatureInfos());
 
-	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 	if (pXML->TryMoveToXmlFirstChild(L"BonusTypeStructs"))
 	{
 		// call the function that sets the bonus booleans
@@ -877,8 +856,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPeakMakesValid, L"bPeakMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_iDepletionRand, L"iDepletionRand");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-	m_iPrereqTech = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalTypeEnum(m_iPrereqTech, L"PrereqTech");
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	//FAssertMsg((GC.getNumTraitInfos() > 0) && (NUM_YIELD_TYPES > 0),"either the number of trait infos is zero or less or the number of yield types is zero or less");
@@ -1165,5 +1143,5 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	GC.copyNonDefaultDelayedResolution((int*)&m_iBonusChange, (int*)&pClassInfo->m_iBonusChange);
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 }

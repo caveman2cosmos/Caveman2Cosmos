@@ -15,6 +15,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
 		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::return_by_value>(), "OrderData* (int iIndex)")  // only use local
 
+		.def("AI_isEmphasizeSpecialist", &CyCity::AI_isEmphasizeSpecialist, "bool (int /*SpecialistTypes*/ eIndex)")
 		.def("AI_isEmphasize", &CyCity::AI_isEmphasize, "bool (int iEmphasizeType)")
 		.def("AI_countBestBuilds", &CyCity::AI_countBestBuilds, "int (CyArea* pArea)")
 		.def("AI_cityValue", &CyCity::AI_cityValue, "int ()")
@@ -189,7 +190,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setWeLoveTheKingDay", &CyCity::setWeLoveTheKingDay, "void (bool bWeLoveTheKingDay)")
 		.def("calculateCorporateTaxes", &CyCity::calculateCorporateTaxes, "int ()")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
-		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange, bool bDirty)")
+		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange)")
 
 		.def("changeEventAnger", &CyCity::changeEventAnger, "void (int iChange)")
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")

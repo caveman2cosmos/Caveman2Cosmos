@@ -392,6 +392,28 @@ void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szSt
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
 
+template <class T1, class T2>
+bool isMapCategory(const T1& source1, const T2& source2)
+{
+	const std::vector<MapCategoryTypes>& mapCategories1 = source1.getMapCategories();
+	if (mapCategories1.empty())
+	{
+		return true;
+	}
+	const std::vector<MapCategoryTypes>& mapCategories2 = source2.getMapCategories();
+	if (mapCategories2.empty())
+	{
+		return true;
+	}
+	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
+	{
+		if (algo::contains(mapCategories2, eMapCategory))
+			return true;
+	}
+	return false;
+}
+
+
 //	Koshling - better checksum algorithm that can be used when reasonably high quality
 //	hashes are needed
 class CvChecksum {
