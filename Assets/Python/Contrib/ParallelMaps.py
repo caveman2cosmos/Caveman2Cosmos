@@ -1,4 +1,4 @@
-from CvPythonExtensions import CyGlobalContext, MapTypes
+from CvPythonExtensions import CyGlobalContext #, MapTypes
 import BugEventManager
 import CvUtil
 import DebugUtils
