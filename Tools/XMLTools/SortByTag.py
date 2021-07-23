@@ -17,7 +17,7 @@ def namespace(element):
 
 def sort_xmls(files_to_sort):
 	for filename in files_to_sort:
-		print('Sorting %s' % filename)		
+		print('Sorting %s' % filename)
 		root = etree.parse(filename).getroot()
 		nsmap = {'': namespace(root)}
 		try:
