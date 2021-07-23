@@ -1,15 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEANISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
@@ -44,9 +37,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASATRU_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ASATRU</DependencyType>
-			</AndDependencyTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -76,9 +66,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAHAI_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_BAHAI</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
@@ -102,9 +89,29 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUDDHIST_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_BUDDHIST</DependencyType>
-			</AndDependencyTypes>
+			<TechCommerceModifiers>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_BIOLOGY</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-3</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+			</TechCommerceModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CANAANISM_MONASTERY</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -128,9 +135,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRISTIAN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -154,9 +158,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONFUCIAN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -180,9 +181,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_KEMETISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -206,9 +204,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HELLENIC_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_HELLENISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -232,9 +227,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HINDU_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_HINDUISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -258,9 +250,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ISLAMIC_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ISLAM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -284,9 +273,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAIN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_JAINISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -310,9 +296,29 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JEWISH_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_JUDAISM</DependencyType>
-			</AndDependencyTypes>
+			<TechCommerceModifiers>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_BIOLOGY</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-3</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+			</TechCommerceModifiers>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -336,9 +342,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORMON_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MORMON</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
@@ -361,36 +364,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
-			</AndDependencyTypes>
-			<TechCommerceModifiers>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-			</TechCommerceModifiers>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SCIENTOLOGY_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
@@ -414,9 +388,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHINTO_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHINTO</DependencyType>
-			</AndDependencyTypes>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -445,9 +416,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_TAOISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -471,35 +439,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZOROASTRIAN_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ZOROASTRIANISM</DependencyType>
-			</AndDependencyTypes>
-			<TechCommerceModifiers>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_BIOLOGY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-			</TechCommerceModifiers>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CANAANISM_MONASTERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANISM</DependencyType>
-			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

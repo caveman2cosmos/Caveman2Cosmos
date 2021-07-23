@@ -36,16 +36,16 @@
 		<Russian>, %d1 дальности</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
-		<English>[ICON_BULLET]Military Branch</English>
-		<German>[ICON_BULLET]militärischer Zweig</German>
-		<Russian>[ICON_BULLET]Комбатанты</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Civilian Branch</English>
 		<German>[ICON_BULLET]ziviler Zweig</German>
 		<Russian>[ICON_BULLET]Гражданские</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
+		<English>[ICON_BULLET]Military Branch</English>
+		<German>[ICON_BULLET]militärischer Zweig</German>
+		<Russian>[ICON_BULLET]Комбатанты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>

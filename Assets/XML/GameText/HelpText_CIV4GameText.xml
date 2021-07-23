@@ -44,6 +44,12 @@
 		<Russian>[SPACE](%s1 [ICON_GOLD])</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
+		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
+		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
+		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
 		<English>[ICON_BULLET]%d1%% civilian unit upkeep cost</English>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für zivile Einheiten</German>
@@ -54,11 +60,5 @@
 		<English>[ICON_BULLET]%d1%% military unit upkeep cost</English>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
 		<Russian>[ICON_BULLET]%d1%% стоимость военного отряда</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
-		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
-		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
-		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
 	</TEXT>
 </Civ4GameText>

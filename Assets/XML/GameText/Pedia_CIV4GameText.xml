@@ -132,10 +132,6 @@
 		<Russian>Предания</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
-		<English>Space</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALS</Tag>
 		<English>Animals</English>
 		<French>Animaux</French>
@@ -178,10 +174,6 @@
 		<English>Technocultural Bonuses</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
-		<English>Unique Bonuses</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
 	</TEXT>
@@ -193,6 +185,10 @@
 		<Spanish>Recursos del mapa</Spanish>
 		<Polish>Bonusy Mapy</Polish>
 		<Russian>Ðåñóðñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
+		<English>Unique Bonuses</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING</Tag>
@@ -485,10 +481,6 @@
 		<Russian>Прочие юниты</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
-		<English>Spreading Units</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS</Tag>
 		<English>National Wonders</English>
 		<French>Merveilles Nationales</French>
@@ -608,6 +600,10 @@
 		<Russian>Óïðàâëåíèå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
+		<English>Space</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
@@ -649,6 +645,10 @@
 		<French>Unités Spéciales</French>
 		<German>Spezialeinheiten</German>
 		<Russian>Особые юниты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
+		<English>Spreading Units</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -885,11 +885,6 @@
 		<Russian>Íå èçìåíÿòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
-		<English>Non-Combat</English>
-		<Russian>Небоевой</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
@@ -1064,5 +1059,10 @@
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>
 		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
+		<English>Non-Combat</English>
+		<Russian>Небоевой</Russian>
 	</TEXT>
 </Civ4GameText>

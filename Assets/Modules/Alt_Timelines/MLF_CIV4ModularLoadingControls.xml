@@ -15,10 +15,9 @@
 					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
-					<Directory>Megafauna_Units</Directory>
+					<Directory>Megafauna</Directory>
 					<bLoad>1</bLoad>
 					<!--> Modular? Yes v38 Initial Test Only<-->
-					<!--> NOTE: This contains sub modules turn all off here or selected ones using the folders MLF file <-->
 				</Module>
 				<Module>
 					<Directory>Clockpunk</Directory>

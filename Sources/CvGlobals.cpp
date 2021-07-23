@@ -17,6 +17,7 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
 #include <time.h>
@@ -2853,6 +2854,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
+	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
 	GC.getMap().afterSwitch();
 }
 
