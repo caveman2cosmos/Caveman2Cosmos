@@ -376,10 +376,8 @@ void CvMap::updateIncomingUnits()
 	{
 		if ((*itr).second-- <= 0)
 		{
-			if (m_pMapPlots == NULL)
-			{
-				GC.switchMap(getType());
-			}
+			GC.switchMap(m_eType);
+
 			CvUnit& offMapUnit = (*itr).first;
 			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
 			CvPlot* startingPlot = owner.findStartingPlot();
@@ -405,9 +403,14 @@ void CvMap::doTurn()
 
 	updateIncomingUnits();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	if (m_pMapPlots != NULL)
 	{
-		plotByIndex(iI)->doTurn();
+		GC.switchMap(m_eType);
+
+		for (int iI = 0; iI < numPlots(); iI++)
+		{
+			plotByIndex(iI)->doTurn();
+		}
 	}
 }
 
