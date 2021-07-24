@@ -52,9 +52,6 @@ public:
 	virtual void setupGraphical() = 0;
 	virtual void reset(CvMapInitData* pInitData) = 0;
 
-	//virtual void beforeSwitch() = 0;
-	//virtual void afterSwitch() = 0;
-
 	virtual void erasePlots() = 0;
 
 	virtual void updateFlagSymbols() = 0;
