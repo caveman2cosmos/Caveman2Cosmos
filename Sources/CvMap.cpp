@@ -370,10 +370,40 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
+void CvMap::updateIncomingUnits()
+{
+	for (std::vector<IncomingUnit>::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
+	{
+		if ((*itr).second-- <= 0)
+		{
+			if (m_pMapPlots == NULL)
+			{
+				GC.switchMap(getType());
+			}
+			CvUnit& offMapUnit = (*itr).first;
+			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
+			CvPlot* startingPlot = owner.findStartingPlot();
+			//CvUnit& onMapUnit = owner.addUnit(offMapUnit);
+			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+			if (onMapUnit == NULL)
+			{
+				FErrorMsg("CvPlayer::initUnit returned NULL");
+				continue;
+			}
+			
+			//onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
+			//onMapUnit.reloadEntity(true);
+			m_IncomingUnits.erase(itr);
+		}
+	}
+}
+
+
 void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
+
+	updateIncomingUnits();
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1491,6 +1521,11 @@ CvViewport* CvMap::getCurrentViewport() const
 MapTypes CvMap::getType() const
 {
 	return m_eType;
+}
+
+void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
+{
+	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
 
 const char* CvMap::getMapScript() const

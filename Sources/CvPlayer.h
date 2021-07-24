@@ -1089,7 +1089,9 @@ public:
 	DllExport int getNumUnits() const;
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
+	CvUnit& addUnitCopy(CvUnit& unit);
 	void deleteUnit(int iID);
+	void deleteUnit(int iID, MapTypes eMap);
 
 	// selection groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);
