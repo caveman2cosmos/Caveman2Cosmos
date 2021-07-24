@@ -7,7 +7,7 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import RevInstances
-import ParallelMaps
+#import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()

@@ -86,8 +86,6 @@ public:
 	virtual void beforeSwitch();
 	virtual void afterSwitch();
 
-	bool isMidSwitch() const;
-
 	void getMapOffset(int& iX, int& iY) const;
 	void setMapOffset(int iX, int iY);
 	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
@@ -438,7 +436,6 @@ private:
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
 	int								m_countdown;
-	bool							m_bSwitchInProgress;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

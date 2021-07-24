@@ -28,15 +28,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Tag>
-		<English>Subdued animals</English>
-		<French>Animaux apprivoisés</French>
-		<German>Gefangene Tiere</German>
-		<Italian>Animali addomesticati</Italian>
-		<Polish>Poskromione zwierzęta</Polish>
-		<Russian>Ïðèðó÷åííûå æèâîòíûå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_PEDIA</Tag>
 		<English>Only domesticated buffalos can build the Herd - Buffalo; provides a resource of buffalos.</English>
 		<Italian>Solo i bufali addomesticati possono costruire il Branco - Bufali; fornisce una risorsa di bufali.</Italian>
@@ -287,17 +278,24 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Tag>
+		<English>Myths, Legends and Stories</English>
+		<French>Mythes, Légendes et Histoires</French>
+		<Polish>Mity, Legendy i Historie</Polish>
+		<Russian>Ìèôû, ëåãåíäû è ïðåäàíèÿ</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
 		<English>Myth buildings represent oral traditions and have the main aim of simulating the neolithic burst in "scientific" discovery by providing science. Some also provide a small boost to the production of other buildings, e.g. Crocodile Myth reduces the cost of building the Temple of Set. For the most part Myths are [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]pseudo-national wonders[/LINK] which means that they can only be built in one city but have effects in all your cities. The myth effects building is free and is used to provide access to the Story buildings.[PARAGRAPH:2]Story and Stories buildings represent the written tradition they don't provide science but do provide Education. You can only build a Story if you have the Writing and the Myth. Stories require Literature and the Story building but effectively provide the Story building effects in all your cities, including new ones.[PARAGRAPH:2]There are Myths about individual animals (e.g. Moon Bear), animal groups (e.g. Bears), natural elements (Earth, Sky, Sea, etc.), landscapes (a C2C extension to Platyping's Natural Wonders component) and mythical beasts.</English>
 		<French>Les bâtiments mythiques représentent les traditions orales et ont pour objectif principal de simuler l'éclatement néolithique de la découverte "scientifique" en fournissant la science. Certains fournissent également un petit coup de pouce à la production d'autres bâtiments, par exemple Mythe Crocodile réduit le coût de construction du Temple de Set. Pour la plupart, les mythes sont [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]Pseudo-merveilles nationales[/ LINK], ce qui signifie qu'ils ne peuvent être construits que dans une seule ville mais ont des effets dans toutes vos villes. Le bâtiment des effets mythiques est gratuit et est utilisé pour donner accès aux bâtiments de l'histoire.[PARAGRAPH:2]Les bâtiments de l'histoire et des histoires représentent la tradition écrite qu'ils ne fournissent pas la science mais fournissent l'éducation. Vous ne pouvez construire une histoire que si vous avez l'écriture et le mythe. Les histoires nécessitent de la littérature et la construction de l'histoire mais fournissent efficacement les effets de construction de l'histoire dans toutes vos villes, y compris les nouvelles.[PARAGRAPH:2]Il y a des mythes sur les animaux individuels, par exemple Moon Bear; Mythes sur les groupes d'animaux, par exemple les ours; Mythes élémentaires (Terre, ciel, mer, etc.), Mythes du paysage (une extension C2C du composant Merveilles naturelles de Platyping) et Bêtes mythiques.</French>
 		<Russian>Ìèôîëîãè÷åñêèå ïîñòðîéêè ïðåäñòàâëÿþò óñòíûå òðàäèöèè è èìåþò ãëàâíóþ öåëü ñèìóëèðîâàòü òåõíîëîãè÷åñêèé ïðîðûâ â íåîëèòå, ïðåäîñòàâëÿÿ âñåâîçìîæíûå òåõíîëîãèè. Íåêîòîðûå èç íèõ òàêæå îáåñïå÷èâàþò íåáîëüøîå óñêîðåíèå ïðîèçâîäñòâà äðóãèõ çäàíèé, íàïðèìåð, «Ìèô î êðîêîäèëå» ñíèæàåò ñòîèìîñòü ñòðîèòåëüñòâà Õðàìà Ñåòà. Ïî áîëüøåé ÷àñòè ìèôû - ýòî [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]Íàöèîíàëüíûå êâàçè÷óäåñà[\LINK], îçíà÷àþùåå, ÷òî îíè ìîãóò áûòü ïîñòðîåíû ëèøü â îäíîì ãîðîäå, íî ïðåäîñòàâëÿþò ýôôåêòû âî âñå âàøè ãîðîäà. Çäàíèå ñ ìèôè÷åñêèìè ýôôåêòàìè áåñïëàòíîå è èñïîëüçóåòñÿ äëÿ îáåñïå÷åíèÿ äîñòóïà ê ðàçëè÷íûì ñêàçàì è ïðåäàíèÿì.[PARAGRAPH:2]Çäàíèÿ ñêàçîâ è ñêàçîê ïðåäñòàâëÿþò ñîáîé ïèñüìåííóþ òðàäèöèþ, êîòîðàÿ íå ïðåäîñòàâëÿåò ïðÿìûõ áîíóñîâ ê èññëåäîâàíèÿì, çàòî îíè ïîâûøàþò óðîâåíü ãðàìîòíîñòè âàøåãî íàñåëåíèÿ. Âû ìîæåòå çàïèñàòü ñêàç èëè ðàññêàç, êàê òîëüêî ó âàñ ïîÿâëÿåòñÿ Ïèñüìåííîñòü è ñîîòâåòñòâóþùèé ìèô. Ñêàçû òðåáóþò òåõíîëîãèè Ëèòåðàòóðû è Óñòíîé òðàäèöèè, ïðåäîñòàâëÿÿ ýôôåêòû îò ñêàçîâ âî âñåõ âàøèõ ãîðîäàõ, âêëþ÷àÿ íîâûå.[PARAGRAPH:2]Ñóùåñòâóþò òàêæå ìèôû îá îòäåëüíûõ æèâîòíûõ, íàïðèìåð, î Ëóííîì Ìåäâåäå; ìèôû î ãðóïïàõ æèâîòíûõ, íàïðèìåð, ìåäâåäè; ìèôû î ïåðâîçäàííûõ ñòèõèÿõ ïðèðîäû (Çåìëÿ, Íåáî, Ìîðå è ò. ä.), ìèôû î ëàíäøàôòàõ (ðàñøèðåíèå C2C äëÿ êîìïîíåíòà ×óäåñà ïðèðîäû îò Platyping) è î ìèôè÷åñêèõ ñîçäàíèÿõ - äðàêîíàõ, åäèíîðîãàõ, ðóñàëêàõ, ôåíèêñàõ, ëåâèàôàíàõ è ò.ï.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Tag>
-		<English>Myths, Legends and Stories</English>
-		<French>Mythes, Légendes et Histoires</French>
-		<Polish>Mity, Legendy i Historie</Polish>
-		<Russian>Ìèôû, ëåãåíäû è ïðåäàíèÿ</Russian>
+		<Tag>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS</Tag>
+		<English>Pseudo National Wonders</English>
+		<French>Pseudo-Merveilles Nationales</French>
+		<Polish>Pseudo Cud Narodowy</Polish>
+		<Russian>Íàöèîíàëüíûå êâàçè÷óäåñà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_PEDIA</Tag>
@@ -306,11 +304,13 @@
 		<Russian>Ïñåâäî-Íàöèîíàëüíûå ×óäåñà äåéñòâóþò êàê Íàöèîíàëüíûå ×óäåñà â òîì ñìûñëå, ÷òî âû ìîæåòå ïîñòðîèòü òîëüêî îäíî èç íèõ íà âñþ ñòðàíó, íî îíè íå ó÷èòûâàþòñÿ îáùèì ñ÷åò÷èêîì Íàöèîíàëüíûõ ×óäåñ, ïîñòðîåííûõ â ãîðîäå.[PARAGRAPH:2]Ýòî ðàáîòàåò, êîãäà óñëîâíîå çäàíèå (À) äàåò äðóãóþ áåñïëàòíóþ ïîñòðîéêó (Á) âî âñå ãîðîäà, íî òðåáóåòñÿ, ÷òîáû ïîñòðîéêà Á íàõîäèëàñü çà ïðåäåëàìè ãîðîäà, ÷òîáû çäàíèå A áûëî äîñòóïíî äëÿ ñòðîèòåëüñòâà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS</Tag>
-		<English>Pseudo National Wonders</English>
-		<French>Pseudo-Merveilles Nationales</French>
-		<Polish>Pseudo Cud Narodowy</Polish>
-		<Russian>Íàöèîíàëüíûå êâàçè÷óäåñà</Russian>
+		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Tag>
+		<English>Subdued animals</English>
+		<French>Animaux apprivoisés</French>
+		<German>Gefangene Tiere</German>
+		<Italian>Animali addomesticati</Italian>
+		<Polish>Poskromione zwierzęta</Polish>
+		<Russian>Ïðèðó÷åííûå æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Tag>

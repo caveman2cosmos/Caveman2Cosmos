@@ -242,6 +242,8 @@ public:
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
 
+	static bool	isMidSwitch() { return m_bSwitchInProgress; }
+
 protected:
 
 	int m_iGridWidth;
@@ -270,6 +272,8 @@ protected:
 
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
+
+	static bool m_bSwitchInProgress;
 
 	CvPlot* m_pMapPlots;
 

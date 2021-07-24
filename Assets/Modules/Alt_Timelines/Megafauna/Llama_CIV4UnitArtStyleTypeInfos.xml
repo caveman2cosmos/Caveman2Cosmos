@@ -82,19 +82,6 @@
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
-			<Type>UNIT_ARTSTYLE_AMERICAN_CONFEDERACY</Type>
-			<StyleUnits>
-				<StyleUnit>
-					<UnitType>UNIT_LLAMA_RIDER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_LLAMA_RIDER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_LLAMA_RIDER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_LLAMA_RIDER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-			</StyleUnits>
-		</UnitArtStyleTypeInfo>
-		<UnitArtStyleTypeInfo>
 			<Type>UNIT_ARTSTYLE_CELTIC</Type>
 			<StyleUnits>
 				<StyleUnit>
