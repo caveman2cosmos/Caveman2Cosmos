@@ -31,6 +31,7 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);

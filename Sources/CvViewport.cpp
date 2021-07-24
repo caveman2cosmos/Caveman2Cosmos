@@ -21,7 +21,6 @@ CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext)
 	, m_bAddSelectedCity(false)
 	, m_state(VIEWPORT_ACTION_STATE_NONE)
 	, m_countdown(0)
-	, m_bSwitchInProgress(false)
 	, m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE)
 	, m_spoofTransitionStartTickCount(-1)
 {
@@ -230,7 +229,6 @@ MapTypes CvViewport::getType() const
 
 void CvViewport::beforeSwitch()
 {
-	m_bSwitchInProgress = true;
 	m_pMap->beforeSwitch();
 }
 
@@ -239,12 +237,6 @@ void CvViewport::afterSwitch()
 	setSpoofHiddenGraphics(VIEWPORT_SPOOF_ALL_UNREVEALED);
 
 	m_pMap->afterSwitch();
-	m_bSwitchInProgress = false;
-}
-
-bool	CvViewport::isMidSwitch() const
-{
-	return m_bSwitchInProgress;
 }
 
 void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
