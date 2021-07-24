@@ -1241,69 +1241,66 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			return CURRENT_MAP != MAP_EARTH
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_SUBTERRANEAN:
-			return CURRENT_MAP != MAP_SUBTERRANEAN
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
-		case MISSION_GO_TO_MAP_AQUATIC:
-			return CURRENT_MAP != MAP_AQUATIC
-				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
-
 		case MISSION_GO_TO_MAP_CISLUNAR:
 			return CURRENT_MAP != MAP_CISLUNAR
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_LUNAR:
-			return CURRENT_MAP != MAP_LUNAR
+		case MISSION_GO_TO_MAP_MOON:
+			return CURRENT_MAP != MAP_MOON
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-			return CURRENT_MAP != MAP_SOLAR_SYSTEM
+		case MISSION_GO_TO_MAP_MARS:
+			return CURRENT_MAP != MAP_MARS
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_MARTIAN:
-			return CURRENT_MAP != MAP_MARTIAN
+		case MISSION_GO_TO_MAP_VENUS:
+			return CURRENT_MAP != MAP_VENUS
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_VENUSIAN:
-			return CURRENT_MAP != MAP_VENUSIAN
+		case MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM:
+			return CURRENT_MAP != MAP_INNER_SOLAR_SYSTEM
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_JOVIAN:
-			return CURRENT_MAP != MAP_JOVIAN
+		case MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM:
+			return CURRENT_MAP != MAP_OUTER_SOLAR_SYSTEM
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_TITANIC:
-			return CURRENT_MAP != MAP_TITANIC
+		case MISSION_GO_TO_MAP_TITAN:
+			return CURRENT_MAP != MAP_TITAN
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_INTERSTELLAR:
-			return CURRENT_MAP != MAP_INTERSTELLAR
+		case MISSION_GO_TO_MAP_TRANSNEPTUNIAN:
+			return CURRENT_MAP != MAP_TRANSNEPTUNIAN
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_PLASMA:
-			return CURRENT_MAP != MAP_PLASMA
+		case MISSION_GO_TO_MAP_NEARBY_STARS:
+			return CURRENT_MAP != MAP_NEARBY_STARS
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_GALACTIC:
-			return CURRENT_MAP != MAP_GALACTIC
+		case MISSION_GO_TO_MAP_ORION_ARM:
+			return CURRENT_MAP != MAP_ORION_ARM
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
 		case MISSION_GO_TO_MAP_MILKY_WAY:
 			return CURRENT_MAP != MAP_MILKY_WAY
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_UNIVERSAL:
-			return CURRENT_MAP != MAP_UNIVERSAL
+		case MISSION_GO_TO_MAP_LOCAL_GROUP:
+			return CURRENT_MAP != MAP_LOCAL_GROUP
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_DISTANT:
-			return CURRENT_MAP != MAP_DISTANT
+		case MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER:
+			return CURRENT_MAP != MAP_VIRGO_SUPERCLUSTER
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
 
-		case MISSION_GO_TO_MAP_HYPERSPACE:
-			return CURRENT_MAP != MAP_HYPERSPACE
+		case MISSION_GO_TO_MAP_UNIVERSE:
+			return CURRENT_MAP != MAP_UNIVERSE
 				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
+
+		case MISSION_GO_TO_MAP_DISTANT_COSMOS:
+			return CURRENT_MAP != MAP_DISTANT_COSMOS
+				&& pLoopUnit->canGoToMap(GC.getMissionInfo((MissionTypes)iMission));
+
 #endif
 		default:
 			// AIAndy: Assumed to be an outcome mission
@@ -2060,101 +2057,96 @@ bool CvSelectionGroup::startMission()
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_SUBTERRANEAN:
-						pLoopUnit->goToMap(MAP_SUBTERRANEAN);
-						bAction = true;
-						bDelete = true;
-						break;
-
-					case MISSION_GO_TO_MAP_AQUATIC:
-						pLoopUnit->goToMap(MAP_AQUATIC);
-						bAction = true;
-						bDelete = true;
-						break;
-
 					case MISSION_GO_TO_MAP_CISLUNAR:
 						pLoopUnit->goToMap(MAP_CISLUNAR);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_LUNAR:
-						pLoopUnit->goToMap(MAP_LUNAR);
+					case MISSION_GO_TO_MAP_MOON:
+						pLoopUnit->goToMap(MAP_MOON);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-						pLoopUnit->goToMap(MAP_SOLAR_SYSTEM);
+					case MISSION_GO_TO_MAP_MARS:
+						pLoopUnit->goToMap(MAP_MARS);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_MARTIAN:
-						pLoopUnit->goToMap(MAP_MARTIAN);
+					case MISSION_GO_TO_MAP_VENUS:
+						pLoopUnit->goToMap(MAP_VENUS);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_VENUSIAN:
-						pLoopUnit->goToMap(MAP_VENUSIAN);
+					case MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM:
+						pLoopUnit->goToMap(MAP_INNER_SOLAR_SYSTEM);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_JOVIAN:
-						pLoopUnit->goToMap(MAP_JOVIAN);
+					case MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM:
+						pLoopUnit->goToMap(MAP_OUTER_SOLAR_SYSTEM);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_TITANIC:
-						pLoopUnit->goToMap(MAP_TITANIC);
+					case MISSION_GO_TO_MAP_TITAN:
+						pLoopUnit->goToMap(MAP_TITAN);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_INTERSTELLAR:
-						pLoopUnit->goToMap(MAP_INTERSTELLAR);
+					case MISSION_GO_TO_MAP_TRANSNEPTUNIAN:
+						pLoopUnit->goToMap(MAP_TRANSNEPTUNIAN);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_PLASMA:
-						pLoopUnit->goToMap(MAP_PLASMA);
+					case MISSION_GO_TO_MAP_NEARBY_STARS:
+						pLoopUnit->goToMap(MAP_NEARBY_STARS);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_GALACTIC:
-						pLoopUnit->goToMap(MAP_GALACTIC);
+					case MISSION_GO_TO_MAP_ORION_ARM:
+						pLoopUnit->goToMap(MAP_ORION_ARM);
 						bAction = true;
 						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_MILKY_WAY:
-						pLoopUnit->goToMap(MAP_MILKY_WAY);
+						pLoopUnit->goToMap(MAP_MAP_MILKY_WAY);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_UNIVERSAL:
-						pLoopUnit->goToMap(MAP_UNIVERSAL);
+					case MISSION_GO_TO_MAP_LOCAL_GROUP:
+						pLoopUnit->goToMap(MAP_LOCAL_GROUP);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_DISTANT:
-						pLoopUnit->goToMap(MAP_DISTANT);
+					case MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER:
+						pLoopUnit->goToMap(MAP_VIRGO_SUPERCLUSTER);
 						bAction = true;
 						bDelete = true;
 						break;
 
-					case MISSION_GO_TO_MAP_HYPERSPACE:
-						pLoopUnit->goToMap(MAP_HYPERSPACE);
+					case MISSION_GO_TO_MAP_UNIVERSE:
+						pLoopUnit->goToMap(MAP_UNIVERSE);
 						bAction = true;
 						bDelete = true;
 						break;
+
+					case MISSION_GO_TO_MAP_DISTANT_COSMOS:
+						pLoopUnit->goToMap(MAP_DISTANT_COSMOS);
+						bAction = true;
+						bDelete = true;
+						break;
+
 #endif
 					default:
 						// AIAndy: Assumed to be an outcome mission
@@ -2680,22 +2672,21 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_ASSASSINATE:
 #ifdef PARALLEL_MAPS
 			case MISSION_GO_TO_MAP_EARTH:
-			case MISSION_GO_TO_MAP_SUBTERRANEAN:
-			case MISSION_GO_TO_MAP_AQUATIC:
 			case MISSION_GO_TO_MAP_CISLUNAR:
-			case MISSION_GO_TO_MAP_LUNAR:
-			case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
-			case MISSION_GO_TO_MAP_MARTIAN:
-			case MISSION_GO_TO_MAP_VENUSIAN:
-			case MISSION_GO_TO_MAP_JOVIAN:
-			case MISSION_GO_TO_MAP_TITANIC:
-			case MISSION_GO_TO_MAP_INTERSTELLAR:
-			case MISSION_GO_TO_MAP_PLASMA:
-			case MISSION_GO_TO_MAP_GALACTIC:
+			case MISSION_GO_TO_MAP_MOON:
+			case MISSION_GO_TO_MAP_MARS:
+			case MISSION_GO_TO_MAP_VENUS:
+			case MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM:
+			case MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM:
+			case MISSION_GO_TO_MAP_TITAN:
+			case MISSION_GO_TO_MAP_TRANSNEPTUNIAN:
+			case MISSION_GO_TO_MAP_NEARBY_STARS:
+			case MISSION_GO_TO_MAP_ORION_ARM:
 			case MISSION_GO_TO_MAP_MILKY_WAY:
-			case MISSION_GO_TO_MAP_UNIVERSAL:
-			case MISSION_GO_TO_MAP_DISTANT:
-			case MISSION_GO_TO_MAP_HYPERSPACE:
+			case MISSION_GO_TO_MAP_LOCAL_GROUP:
+			case MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER:
+			case MISSION_GO_TO_MAP_UNIVERSE:
+			case MISSION_GO_TO_MAP_DISTANT_COSMOS:
 #endif
 				bDone = true;
 				break;

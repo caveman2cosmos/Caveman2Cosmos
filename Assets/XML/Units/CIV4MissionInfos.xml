@@ -1792,22 +1792,6 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_SUBTERRANEAN</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRANEAN</Description>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>NONE</EntityEventType>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_AQUATIC</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_AQUATIC</Description>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>NONE</EntityEventType>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_CISLUNAR</Type>
 			<Description>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Description>
 			<Waypoint>NONE</Waypoint>
@@ -1816,72 +1800,72 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_LUNAR</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_LUNAR</Description>
+			<Type>MISSION_GO_TO_MAP_MOON</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_MOON</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_SOLAR_SYSTEM</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_SOLAR_SYSTEM</Description>
+			<Type>MISSION_GO_TO_MAP_MARS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_MARS</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_MARTIAN</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_MARTIAN</Description>
+			<Type>MISSION_GO_TO_MAP_VENUS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_VENUSIAN</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_VENUSIAN</Description>
+			<Type>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_JOVIAN</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_JOVIAN</Description>
+			<Type>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_TITANIC</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_TITANIC</Description>
+			<Type>MISSION_GO_TO_MAP_TITAN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_INTERSTELLAR</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_INTERSTELLAR</Description>
+			<Type>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_PLASMA</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_PLASMA</Description>
+			<Type>MISSION_GO_TO_MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_GALACTIC</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_GALACTIC</Description>
+			<Type>MISSION_GO_TO_MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
@@ -1896,24 +1880,32 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_UNIVERSAL</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSAL</Description>
+			<Type>MISSION_GO_TO_MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_DISTANT</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_DISTANT</Description>
+			<Type>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_HYPERSPACE</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_HYPERSPACE</Description>
+			<Type>MISSION_GO_TO_MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Description>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>

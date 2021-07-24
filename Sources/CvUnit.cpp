@@ -5926,7 +5926,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 #ifdef PARALLEL_MAPS
 #if 0
 	case INCOMPLETE:
-		
+
 #endif
 #endif
 	default:
