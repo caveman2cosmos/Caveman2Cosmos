@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_WORLD_TECH_PEDIA</Tag>
-		<English>A World Tech is a technology that can be researched by a limited number of nations in the game. Once that number have researched the tech no others can. Original code by Platyping.[PARAGRAPH:2]In Caveman2Cosmos the Religion techs are World Techs that only one nation can research. This is because those techs are both dead end and one shot techs and this was the only way to ensure the AI nations did not waste research on those already discovered.</English>
-		<French>Une Tech Mondiale limitée est une technologie qui peut être recherchée par un nombre limité de nations dans le jeu. Une fois que ce nombre aura fait des recherches sur la technologie, aucun autre ne le pourra. Code original de Platyping.[PARAGRAPH:2]Dans Caveman2Cosmos, les techniciens de la religion sont des techniciens du monde qu'une seule nation peut rechercher. C'est parce que ces technologies sont à la fois des technologies sans issue et à un coup et que c'était la seule façon de s'assurer que les nations de l'IA ne gaspillent pas la recherche sur celles déjà découvertes.</French>
-		<Russian>Óíèêàëüíàÿ òåõíîëîãèÿ - ýòî çíàíèå, êîòîðîå ìîæåò áûòü ïîëó÷åíî îãðàíè÷åííûì ÷èñëîì öèâèëèçàöèé â èãðå. Êàê òîëüêî îäíà èç èõ ÷èñëà èññëåäóåò òåõíîëîãèþ, äðóãèì îíà áóäåò óæå íå äîñòóïíà. Îðèãèíàëüíûé êîä îò Platyping. [PARAGRAPH:2] Â ìîå Caveman2Cosmos ïðèìåðîì òàêèõ íàóê ÿâëÿþòñÿ ðåëèãèîçíûå òåõíîëîãèè, êîòîðûå ìîæåò èññëåäîâàòü òîëüêî îäíà öèâèëèçàöèÿ. Äàííûå òåõíîëîãèè ÿâëÿþòñÿ òóïèêîâûìè è îäíîðàçîâûìè, è ýòî áûë åäèíñòâåííûé ñïîñîá ãàðàíòèðîâàòü, ÷òî ñòðàíû ÈÈ íå ïîòðàòÿò âïóñòóþ î÷êè èññëåäîâàíèÿ íà çàâåäîìî áåñïîëåçíûå öåëè.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_TECH</Tag>
 		<English>World Tech</English>
 		<French>Tech Mondiale limitée</French>
 		<Russian>Óíèêàëüíûå òåõíîëîãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONCEPT_WORLD_TECH_PEDIA</Tag>
+		<English>A World Tech is a technology that can be researched by a limited number of nations in the game. Once that number have researched the tech no others can. Original code by Platyping.[PARAGRAPH:2]In Caveman2Cosmos the Religion techs are World Techs that only one nation can research. This is because those techs are both dead end and one shot techs and this was the only way to ensure the AI nations did not waste research on those already discovered.</English>
+		<French>Une Tech Mondiale limitée est une technologie qui peut être recherchée par un nombre limité de nations dans le jeu. Une fois que ce nombre aura fait des recherches sur la technologie, aucun autre ne le pourra. Code original de Platyping.[PARAGRAPH:2]Dans Caveman2Cosmos, les techniciens de la religion sont des techniciens du monde qu'une seule nation peut rechercher. C'est parce que ces technologies sont à la fois des technologies sans issue et à un coup et que c'était la seule façon de s'assurer que les nations de l'IA ne gaspillent pas la recherche sur celles déjà découvertes.</French>
+		<Russian>Óíèêàëüíàÿ òåõíîëîãèÿ - ýòî çíàíèå, êîòîðîå ìîæåò áûòü ïîëó÷åíî îãðàíè÷åííûì ÷èñëîì öèâèëèçàöèé â èãðå. Êàê òîëüêî îäíà èç èõ ÷èñëà èññëåäóåò òåõíîëîãèþ, äðóãèì îíà áóäåò óæå íå äîñòóïíà. Îðèãèíàëüíûé êîä îò Platyping. [PARAGRAPH:2] Â ìîå Caveman2Cosmos ïðèìåðîì òàêèõ íàóê ÿâëÿþòñÿ ðåëèãèîçíûå òåõíîëîãèè, êîòîðûå ìîæåò èññëåäîâàòü òîëüêî îäíà öèâèëèçàöèÿ. Äàííûå òåõíîëîãèè ÿâëÿþòñÿ òóïèêîâûìè è îäíîðàçîâûìè, è ýòî áûë åäèíñòâåííûé ñïîñîá ãàðàíòèðîâàòü, ÷òî ñòðàíû ÈÈ íå ïîòðàòÿò âïóñòóþ î÷êè èññëåäîâàíèÿ íà çàâåäîìî áåñïîëåçíûå öåëè.</Russian>
 	</TEXT>
 </Civ4GameText>
