@@ -10,6 +10,7 @@
 //-----------------------------------------------------------------------------
 //	Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //-----------------------------------------------------------------------------
+//
 
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
@@ -36,6 +37,7 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 	}
 	return iCoord;
 }
+
 
 //
 // CvMap
@@ -68,14 +70,14 @@ public:
 	void updateIncomingUnits();
 	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
 
-	bool plotsInitialized() const;
-
 	//	Viewports are owned by their underlying maps
 	const std::vector<CvViewport*> getViewports() const;
 	int addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext);	//	Returns new viewport index
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
+
+	bool plotsInitialized() const;
 
 	const char* getMapScript() const;
 
