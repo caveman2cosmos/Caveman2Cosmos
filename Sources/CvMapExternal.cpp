@@ -7,6 +7,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMapExternal.h"
 #include "CvPlot.h"
@@ -28,28 +29,19 @@ CvMapExternal::~CvMapExternal()
 {
 }
 
-// FUNCTION: init()
-// Initializes the map.
-// Parameters:
-//	pInitInfo					- Optional init structure (used for WB load)
-// Returns:
-//	nothing.
+
 void CvMapExternal::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
 	m_proxiedMap->init(pInitInfo);
 }
 
-// FUNCTION: reset()
-// Initializes data members that are serialized.
+
 void CvMapExternal::reset(CvMapInitData* pInitInfo)
 {
 	m_proxiedMap->reset(pInitInfo);
 }
 
 
-//////////////////////////////////////
-// graphical only setup
-//////////////////////////////////////
 void CvMapExternal::setupGraphical()
 {
 	m_proxiedMap->setupGraphical();
@@ -90,6 +82,7 @@ void CvMapExternal::updateCenterUnit()
 {
 	m_proxiedMap->updateCenterUnit();
 }
+
 
 CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
 {
@@ -153,7 +146,7 @@ bool CvMapExternal::isWrap()
 
 WorldSizeTypes CvMapExternal::getWorldSize()
 {
-	return m_proxiedMap->getWorldSize();
+	return GC.getInitCore().getWorldSize();
 }
 
 

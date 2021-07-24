@@ -3023,9 +3023,9 @@ void cvInternalGlobals::setIsBug()
 		// This happens after the maps load on first load, so resize existing viewports
 		foreach_(const CvMap* map, m_maps)
 		{
-			for (int iJ = 0; iJ < map->getNumViewports(); iJ++)
+			foreach_(CvViewport* viewport, map->getViewports())
 			{
-				map->getViewport(iJ)->resizeForMap();
+				viewport->resizeForMap();
 			}
 		}
 	}
