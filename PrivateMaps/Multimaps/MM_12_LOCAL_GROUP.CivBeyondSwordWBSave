@@ -6,8 +6,8 @@ EndMeta
 BeginMap
 	grid width=48
 	grid height=32
-	top latitude=90
-	bottom latitude=-90
+	top latitude=0
+	bottom latitude=0
 	wrap X=1
 	wrap Y=0
 	world size=WORLDSIZE_DUEL
