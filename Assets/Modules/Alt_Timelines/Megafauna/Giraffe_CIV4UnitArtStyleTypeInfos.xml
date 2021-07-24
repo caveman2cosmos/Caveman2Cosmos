@@ -58,19 +58,6 @@
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
-			<Type>UNIT_ARTSTYLE_AMERICAN_CONFEDERACY</Type>
-			<StyleUnits>
-				<StyleUnit>
-					<UnitType>UNIT_GIRAFFE_ARCHER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_GIRAFFE_ARCHER_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_GIRAFFE_ARCHER_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_GIRAFFE_ARCHER_EUROPEAN</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-			</StyleUnits>
-		</UnitArtStyleTypeInfo>
-		<UnitArtStyleTypeInfo>
 			<Type>UNIT_ARTSTYLE_AUSTRALIA</Type>
 			<StyleUnits>
 				<StyleUnit>

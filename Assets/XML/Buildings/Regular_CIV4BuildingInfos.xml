@@ -88580,7 +88580,6 @@
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<CommerceModifiers>
@@ -88661,7 +88660,6 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iHealth>1</iHealth>
-			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<CommerceChanges>
@@ -88713,7 +88711,6 @@
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
-			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<CommerceChanges>
