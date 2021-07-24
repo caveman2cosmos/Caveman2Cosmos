@@ -14,6 +14,6 @@ class ParallelMaps:
 		if DebugUtils.bDebugMode and BugEventManager.g_eventManager.bAlt:
 			i = argsList[1] -2
 			#if i > -1 and i < MapTypes.NUM_MAPS:
-			if i > -1 and i < 10:
+			if i > -1 and i < 10 and i != GC.getGame().getCurrentMap():
 				GC.switchMap(i)
 				CvUtil.sendImmediateMessage("Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
