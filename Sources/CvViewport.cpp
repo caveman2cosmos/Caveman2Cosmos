@@ -1,9 +1,7 @@
 #include "CvGameCoreDLL.h"
-#include "CvArea.h"
 #include "CvCity.h"
 #include "CvPlot.h"
 #include "CvPython.h"
-#include "CvSelectionGroup.h"
 #include "CvUnit.h"
 #include "CvViewport.h"
 
@@ -47,7 +45,7 @@ void CvViewport::getMapOffset(int& iX, int& iY) const
 	iY = m_iYOffset;
 }
 
-void	CvViewport::setOffsetToShow(int iX, int iY)	//	Make this the centre or near as appropiate
+void CvViewport::setOffsetToShow(int iX, int iY)	//	Make this the centre or near as appropiate
 {
 	int iNewX = iX - m_iXSize/2;
 	int iNewY = iY - m_iYSize/2;
@@ -65,7 +63,7 @@ void	CvViewport::setOffsetToShow(int iX, int iY)	//	Make this the centre or near
 	setMapOffset(iNewX, iNewY);
 }
 
-void	CvViewport::resizeForMap()
+void CvViewport::resizeForMap()
 {
 	if (m_pMap->getGridWidth() > 0 && !GC.bugInitCalled())
 	{
@@ -88,7 +86,7 @@ void	CvViewport::resizeForMap()
 	}
 }
 
-void	CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
+void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plot(iX, iY);
 	if ( pSelectionUnit != NULL && !pSelectionUnit->isDead() && !pSelectionUnit->isDelayedDeath() )
@@ -113,9 +111,9 @@ void	CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, boo
 	}
 }
 
-void	CvViewport::centerOnSelection()
+void CvViewport::centerOnSelection()
 {
-	CvUnit* pUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ( pUnit != NULL )
 	{
@@ -123,7 +121,7 @@ void	CvViewport::centerOnSelection()
 	}
 }
 
-void	CvViewport::panLeft()
+void CvViewport::panLeft()
 {
 	int iNewCenterX = m_iXOffset - m_iXSize/2;
 
@@ -142,7 +140,7 @@ void	CvViewport::panLeft()
 	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
 }
 
-void	CvViewport::panRight()
+void CvViewport::panRight()
 {
 	int iNewCenterX = m_iXOffset + (3*m_iXSize)/2;
 
@@ -161,7 +159,7 @@ void	CvViewport::panRight()
 	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
 }
 
-void	CvViewport::panDown()
+void CvViewport::panDown()
 {
 	int iNewCenterY = m_iYOffset - m_iYSize/2;
 
@@ -180,7 +178,7 @@ void	CvViewport::panDown()
 	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true, true);
 }
 
-void	CvViewport::panUp()
+void CvViewport::panUp()
 {
 	int iNewCenterY = m_iYOffset + (3*m_iYSize)/2;
 
@@ -217,14 +215,6 @@ void CvViewport::reset(CvMapInitData* pInitData)
 	OutputDebugString("Reseting Viewport: Start/n");
 	m_pMap->reset(pInitData);
 	OutputDebugString("Reseting Viewport: End/n");
-}
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-MapTypes CvViewport::getType() const
-{
-	return m_pMap->getType();
 }
 
 void CvViewport::beforeSwitch()
@@ -469,28 +459,9 @@ void CvViewport::setActionState(ViewportDeferredActionState newState, bool bProc
 	}
 }
 
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 void CvViewport::erasePlots()
 {
 	m_pMap->erasePlots();
-}
-
-void CvViewport::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
-{
-	m_pMap->setRevealedPlots(eTeam, bNewValue, bTerrainOnly);
-}
-
-void CvViewport::setAllPlotTypes(PlotTypes ePlotType)
-{
-	m_pMap->setAllPlotTypes(ePlotType);
-}
-
-void CvViewport::doTurn()
-{
-	m_pMap->doTurn();
 }
 
 void CvViewport::updateFlagSymbols()
@@ -503,19 +474,9 @@ void CvViewport::updateFog()
 	m_pMap->updateFog();
 }
 
-void CvViewport::updateVisibility()
-{
-	m_pMap->updateVisibility();
-}
-
 void CvViewport::updateSymbolVisibility()
 {
 	m_pMap->updateSymbolVisibility();
-}
-
-void CvViewport::updateSymbols()
-{
-	m_pMap->updateSymbols();
 }
 
 void CvViewport::updateMinimapColor()
@@ -523,64 +484,14 @@ void CvViewport::updateMinimapColor()
 	m_pMap->updateMinimapColor();
 }
 
-void CvViewport::updateSight(bool bIncrement, bool bUpdatePlotGroups)
-{
-	m_pMap->updateSight(bIncrement, bUpdatePlotGroups);
-}
-
-void CvViewport::updateIrrigated()
-{
-	m_pMap->updateIrrigated();
-}
-
 void CvViewport::updateCenterUnit()
 {
 	m_pMap->updateCenterUnit();
 }
 
-void CvViewport::updateWorkingCity()
-{
-	m_pMap->updateWorkingCity();
-}
-
-void CvViewport::updateMinOriginalStartDist(const CvArea* pArea)
-{
-	m_pMap->updateMinOriginalStartDist(pArea);
-}
-
-void CvViewport::updateYield()
-{
-	m_pMap->updateYield();
-}
-
-void CvViewport::verifyUnitValidPlot()
-{
-	m_pMap->verifyUnitValidPlot();
-}
-
-CvPlot* CvViewport::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)
-{
-	return m_pMap->syncRandPlot(iFlags, iArea, iMinUnitDistance, iTimeout);
-}
-
 CvCity* CvViewport::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, const CvCity* pSkipCity) const
 {
 	return m_pMap->findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
-}
-
-CvSelectionGroup* CvViewport::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers) const
-{
-	return m_pMap->findSelectionGroup(iX, iY, eOwner, bReadyToSelect, bWorkers);
-}
-
-CvArea* CvViewport::findBiggestArea(bool bWater) const
-{
-	return m_pMap->findBiggestArea(bWater);
-}
-
-int CvViewport::getMapFractalFlags() const
-{
-	return m_pMap->getMapFractalFlags();
 }
 
 bool CvViewport::isPlot(int iX, int iY) const
@@ -597,7 +508,7 @@ int CvViewport::plotNum(int iX, int iY) const
 {
 	return iY*m_iXSize + iX;
 }
-
+/*
 int CvViewport::plotX(int iIndex) const
 {
 	return iIndex % m_iXSize;
@@ -607,16 +518,15 @@ int CvViewport::plotY(int iIndex) const
 {
 	return iIndex/m_iXSize;
 }
+*/
 
 int CvViewport::pointXToPlotX(float fX) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
 
-	float fNormalizedX = fX + (fWidth/2.0f);
-	int iResult = fNormalizedX >= 0 ? (int)((fNormalizedX / fWidth) * getGridWidth()) : INVALID_PLOT_COORD;
-
-	return iResult;
+	const float fNormalizedX = fX + (fWidth/2.0f);
+	return fNormalizedX >= 0 ? (int)((fNormalizedX / fWidth) * getGridWidth()) : INVALID_PLOT_COORD;
 }
 
 float CvViewport::plotXToPointX(int iX) const
@@ -631,10 +541,8 @@ int CvViewport::pointYToPlotY(float fY) const
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
 
-	float fNormalizedY = fY + (fHeight/2.0f);
-	int iResult = fNormalizedY >= 0 ? (int)((fNormalizedY / fHeight) * getGridHeight()) : INVALID_PLOT_COORD;
-
-	return iResult;
+	const float fNormalizedY = fY + (fHeight/2.0f);
+	return fNormalizedY >= 0 ? (int)((fNormalizedY / fHeight) * getGridHeight()) : INVALID_PLOT_COORD;
 }
 
 float CvViewport::plotYToPointY(int iY) const
@@ -643,7 +551,7 @@ float CvViewport::plotYToPointY(int iY) const
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
 	return ((iY * fHeight) / ((float)getGridHeight())) - (fHeight / 2.0f) + (GC.getPLOT_SIZE() / 2.0f);
 }
-
+/*
 float CvViewport::getWidthCoords() const
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridWidth()));
@@ -653,17 +561,7 @@ float CvViewport::getHeightCoords() const
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridHeight()));
 }
-
-int CvViewport::maxPlotDistance() const
-{
-	return m_pMap->maxPlotDistance();
-}
-
-int CvViewport::maxStepDistance() const
-{
-	return m_pMap->maxStepDistance();
-}
-
+*/
 int CvViewport::getGridWidth() const
 {
 	return m_iXSize;
@@ -672,26 +570,6 @@ int CvViewport::getGridWidth() const
 int CvViewport::getGridHeight() const
 {
 	return m_iYSize;
-}
-
-int CvViewport::getLandPlots() const
-{
-	return m_pMap->getLandPlots();
-}
-
-int CvViewport::getOwnedPlots() const
-{
-	return m_pMap->getOwnedPlots();
-}
-
-int CvViewport::getTopLatitude() const
-{
-	return m_pMap->getTopLatitude();
-}
-
-int CvViewport::getBottomLatitude() const
-{
-	return m_pMap->getBottomLatitude();
 }
 
 bool CvViewport::isWrapX() const
@@ -711,31 +589,6 @@ bool CvViewport::isWrap() const
 	return isWrapX() || isWrapY();
 }
 
-WorldSizeTypes CvViewport::getWorldSize() const
-{
-	return m_pMap->getWorldSize();
-}
-
-ClimateTypes CvViewport::getClimate() const
-{
-	return m_pMap->getClimate();
-}
-
-SeaLevelTypes CvViewport::getSeaLevel() const
-{
-	return m_pMap->getSeaLevel();
-}
-
-int CvViewport::getNumCustomMapOptions() const
-{
-	return m_pMap->getNumCustomMapOptions();
-}
-
-CustomMapOptionTypes CvViewport::getCustomMapOption(int iOption) const
-{
-	return m_pMap->getCustomMapOption(iOption);
-}
-
 CvPlot* CvViewport::plotByIndex(int iIndex) const
 {
 	return plot(iIndex % m_iXSize, iIndex/m_iXSize);
@@ -749,27 +602,6 @@ CvPlot* CvViewport::plot(int iX, int iY) const
 CvPlot* CvViewport::pointToPlot(float fX, float fY) const
 {
 	return plot(pointXToPlotX(fX), pointYToPlotY(fY));
-}
-
-int CvViewport::getNumAreas() const
-{
-	return m_pMap->getNumAreas();
-}
-
-int CvViewport::getNumLandAreas() const
-{
-	return m_pMap->getNumLandAreas();
-}
-
-// Serialization:
-void CvViewport::read(FDataStreamBase* pStream)
-{
-	m_pMap->read(pStream);
-}
-
-void CvViewport::write(FDataStreamBase* pStream)
-{
-	m_pMap->write(pStream);
 }
 
 void CvViewport::setSpoofHiddenGraphics(ViewportGraphicalSpoofingState eValue)
