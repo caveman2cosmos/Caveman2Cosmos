@@ -2118,7 +2118,7 @@ bool CvSelectionGroup::startMission()
 						break;
 
 					case MISSION_GO_TO_MAP_MILKY_WAY:
-						pLoopUnit->goToMap(MAP_MAP_MILKY_WAY);
+						pLoopUnit->goToMap(MAP_MILKY_WAY);
 						bAction = true;
 						bDelete = true;
 						break;
