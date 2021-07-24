@@ -74,8 +74,7 @@ public:
 	bool plotsInitialized() const;
 
 	//	Viewports are owned by their underlying maps
-	int	getNumViewports() const;
-	CvViewport* getViewport(int iIndex) const;
+	const std::vector<CvViewport*> getViewports() const;
 	int addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext);	//	Returns new viewport index
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);

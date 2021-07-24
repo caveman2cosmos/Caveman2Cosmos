@@ -318,6 +318,8 @@ class MapConstants:
 		elif selectionID == 2:
 			wrapString = "Flat"
 			self.bWrapX = False
+		else:
+			wrapString = "None - we are just switching maps"
 
 		# New World Rules
 		selectionID = MAP.getCustomMapOption(4)

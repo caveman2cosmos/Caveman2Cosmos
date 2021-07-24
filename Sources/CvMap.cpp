@@ -14,6 +14,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMapGenerator.h"
 #include "CvPlayerAI.h"
@@ -1485,16 +1486,9 @@ void CvMap::afterSwitch()
 	m_bSwitchInProgress = false;
 }
 
-int	CvMap::getNumViewports() const
+const std::vector<CvViewport*> CvMap::getViewports() const
 {
-	return m_viewports.size();
-}
-
-CvViewport* CvMap::getViewport(int iIndex) const
-{
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
-
-	return m_viewports[iIndex];
+	return m_viewports;
 }
 
 int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Returns new viewport index
@@ -1512,7 +1506,7 @@ int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Re
 
 void CvMap::deleteViewport(int iIndex)
 {
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
 
 	if (m_iCurrentViewportIndex == iIndex)
 	{
@@ -1531,7 +1525,7 @@ void CvMap::deleteViewport(int iIndex)
 
 void CvMap::setCurrentViewport(int iIndex)
 {
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
 
 	m_iCurrentViewportIndex = iIndex;
 }
