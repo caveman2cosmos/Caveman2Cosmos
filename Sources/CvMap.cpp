@@ -381,17 +381,14 @@ void CvMap::updateIncomingUnits()
 			CvUnit& offMapUnit = (*itr).first;
 			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
 			CvPlot* startingPlot = owner.findStartingPlot();
-			//CvUnit& onMapUnit = owner.addUnit(offMapUnit);
 			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 			if (onMapUnit == NULL)
 			{
 				FErrorMsg("CvPlayer::initUnit returned NULL");
 				continue;
 			}
-			
-			//onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
-			//onMapUnit.reloadEntity(true);
 			m_IncomingUnits.erase(itr);
+			// TODO - make onMapUnit a copy of offMapUnit without changing onMapUnit x/y
 		}
 	}
 }
