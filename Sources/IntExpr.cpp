@@ -758,12 +758,12 @@ void IntExprAdapt::getCheckSum(uint32_t& iSum) const
 
 int IntExprPython::evaluate(const CvGameObject* pObject) const
 {
-	return Cy::call<int>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << const_cast<CvGameObject*>(pObject));
+	return Cy::call<int>("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << const_cast<CvGameObject*>(pObject));
 }
 
 void IntExprPython::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	CvWString szResult = Cy::call<CvWString>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << false);
+	CvWString szResult = Cy::call<CvWString>("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << false);
 	szBuffer.append(szResult);
 }
 
