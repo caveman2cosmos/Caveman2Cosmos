@@ -24,22 +24,10 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
-				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
-					<PassableTech>TECH_PLANETARY_COLONIZATION</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
@@ -128,6 +116,55 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<!-- This unit prepares ground for colonization of Moon, hence why it is using one with early tech requirement -->
+							<OutcomeType>OUTCOME_GO_TO_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<!-- Lunar Rover-->
@@ -202,52 +239,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<Actions>
 				<Action>
-					<MissionType>MISSION_EXPLORE_MOON</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_EXPLORE_MOON</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>ExploreMoon</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									return plot.getTerrainType() not in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									map = CyMap()
-									destX = -1
-									destY = -1
-									numValid = 0
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									for x in range(map.getGridWidth()):
-										for y in range(map.getGridHeight()):
-											if map.plot(x,y).getTerrainType() in valid_terrains:
-												numValid += 1
-												if max(random.random(), 1./numValid) == 1./numValid:
-													destX = x
-													destY = y
-									if destX != -1:
-										gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNAR_ROVER'),destX,destY,UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Launch to the Moon"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_EXPLORE_MOON_SURFACE</MissionType>
 					<iCost>
 						<Adapt>
@@ -277,6 +268,22 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -471,6 +478,22 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -491,14 +514,9 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
-			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
 			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Help>
@@ -571,6 +589,38 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -591,7 +641,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -599,10 +648,10 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
+			<!-- Sun exists in Inner Solar System and Titan exists in Outer Solar System -->
+			<!-- Titan can be settled on Outer Solar System, Earth/Moon, Mars and Venus in Inner Solar System shouldn't be settleable -->
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SUN</TerrainType>
-				<TerrainType>TERRAIN_TITAN</TerrainType>
-				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<TerrainPassableTechs>
 				<TerrainPassableTech>
@@ -678,6 +727,15 @@
 								from CvPythonExtensions import CyGlobalContext
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
+									GAME = gc.getGame()									
+									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
+										return False
+									if GAME.getCurrentMap() == MapTypes.MAP_INNER_SOLAR_SYSTEM:
+										invalid_mapcategory_strings = ['EARTH','LUNAR','MARTIAN','VENUSIAN']
+										invalid_mapcategories = [gc.getInfoTypeForString('MAPCATEGORY_'+t) for t in invalid_mapcategory_strings]
+										for eMapCategory in invalid_mapcategories:
+											if eMapCategory not in plot.getTerrainType().getMapCategories():
+												return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
 									return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
@@ -687,6 +745,102 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>

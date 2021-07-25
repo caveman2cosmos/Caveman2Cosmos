@@ -4560,6 +4560,7 @@ public:
 	int get3DAudioScriptFootstepIndex(int i) const;
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
+	const python::list cyGetMapCategories() const { return Cy::makeList(m_aeMapCategoryTypes); }
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumAfflictionCommunicabilityTypes() const;
