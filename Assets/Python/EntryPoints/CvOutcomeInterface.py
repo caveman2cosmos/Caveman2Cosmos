@@ -1,4 +1,9 @@
 from CvPythonExtensions import *
+import CvUtil
+
+GC = CyGlobalContext()
+GAME = GC.getGame()
+TRNSLTR = CyTranslator()
 
 
 ################ CAPTIVES AND SLAVERY ###################
@@ -713,6 +718,149 @@ def doBuildSheepBonusAndPasture(argsList):
 
 	pPlot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PASTURE"))
 	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_SHEEP"))
+
+def canBuildCamelBonus(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_DUNES"), GC.getTERRAIN_DESERT(), GC.getInfoTypeForString("TERRAIN_SCRUB")): return 0
+	return 1
+
+def doBuildCamelBonus(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(-1)
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_CAMEL"))
+
+def canBuildCamelBonusAndPasture(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_DUNES"), GC.getTERRAIN_DESERT(), GC.getInfoTypeForString("TERRAIN_SCRUB")): return 0
+	return 1
+
+def doBuildCamelBonusAndPasture(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PASTURE"))
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_CAMEL"))
+
+def canBuildLlamaBonus(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getTerrainType() not in (
+		GC.getInfoTypeForString("TERRAIN_BARREN"),	GC.getTERRAIN_DESERT(),	GC.getInfoTypeForString("TERRAIN_SCRUB"),
+		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_BADLAND")
+		): return 0
+	return 1
+
+def doBuildLlamaBonus(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(-1)
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_LLAMA"))
+
+def canBuildLlamaBonusAndPasture(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getTerrainType() not in (
+		GC.getInfoTypeForString("TERRAIN_BARREN"),	GC.getTERRAIN_DESERT(),	GC.getInfoTypeForString("TERRAIN_SCRUB"),
+		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_BADLAND")
+		): return 0
+	return 1
+
+def doBuildLlamaBonusAndPasture(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PASTURE"))
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_LLAMA"))
+
+def canBuildPigBonus(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getFeatureType() not in (
+		GC.getFEATURE_FOREST(), GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"),
+		GC.getFEATURE_JUNGLE(), GC.getFEATURE_FLOOD_PLAINS()
+		): return f
+	if pPlot.getTerrainType() not in (
+		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
+		GC.getInfoTypeForString("TERRAIN_LUSH"), GC.getInfoTypeForString("TERRAIN_MUDDY"), GC.getInfoTypeForString("TERRAIN_MARSH")
+		): return 0
+	return 1
+
+def doBuildPigBonus(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(-1)
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_PIG"))
+
+def canBuildPigBonusAndPasture(argsList):
+	pGoToPlot = CyInterface().getGotoPlot()
+	if pGoToPlot.getX() > -1:
+		pPlot = pGoToPlot
+	elif argsList[0]:
+		pPlot = argsList[0]
+	else: return 0
+	# Check if plot has a city or any map bonus.
+	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
+	# Check if Feature or Terrain makes invalid.
+	if pPlot.getFeatureType() in (GC.getInfoTypeForString("FEATURE_MANGROVE"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")): return 0
+	if pPlot.getTerrainType() not in (
+		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
+		GC.getInfoTypeForString("TERRAIN_LUSH"), GC.getInfoTypeForString("TERRAIN_MUDDY"), GC.getInfoTypeForString("TERRAIN_MARSH")
+		): return 0
+	return 1
+
+def doBuildPigBonusAndPasture(argsList):
+	pPlot = argsList[0].plot()
+
+	if not pPlot: return
+
+	pPlot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PASTURE"))
+	pPlot.setBonusType(GC.getInfoTypeForString("BONUS_PIG"))
 
 
 ################ MULTIMAPS ###################
