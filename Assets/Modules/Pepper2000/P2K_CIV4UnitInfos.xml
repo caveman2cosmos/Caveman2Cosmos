@@ -727,16 +727,17 @@
 								from CvPythonExtensions import CyGlobalContext
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									GAME = gc.getGame()									
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									if GAME.getCurrentMap() == MapTypes.MAP_INNER_SOLAR_SYSTEM:
+									if gc.getGame().getCurrentMap() == MapTypes.MAP_INNER_SOLAR_SYSTEM:
 										invalid_mapcategory_strings = ['EARTH','LUNAR','MARTIAN','VENUSIAN']
 										invalid_mapcategories = [gc.getInfoTypeForString('MAPCATEGORY_'+t) for t in invalid_mapcategory_strings]
 										for eMapCategory in invalid_mapcategories:
-											if eMapCategory not in plot.getTerrainType().getMapCategories():
-												return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
-									return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
+											if eMapCategory in gc.getTerrainInfo(plot.getTerrainType()).getMapCategories():
+												return False
+										return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
+									else:
+										return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
 									gc.getPlayer(unit.getOwner()).found(plot.getX(),plot.getY())
