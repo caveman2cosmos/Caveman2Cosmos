@@ -9633,10 +9633,10 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_COLONIZE_MAP_MILKY_WAY</MissionType>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
-							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Greater>
