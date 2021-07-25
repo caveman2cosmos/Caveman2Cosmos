@@ -1177,4 +1177,68 @@
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
 		<English>Travel to Distant Cosmos</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
+		<English>Transfer unit to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Transfer unit to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
+		<English>Transfer unit to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
+		<English>Transfer unit to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
+		<English>Transfer unit to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
+		<English>Transfer unit to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Transfer unit to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Transfer unit to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Transfer unit to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Transfer unit to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Transfer unit to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Transfer unit to Virgo Superscluster</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Transfer unit to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Transfer unit to Distant Cosmos</English>
+	</TEXT>
 </Civ4GameText>
