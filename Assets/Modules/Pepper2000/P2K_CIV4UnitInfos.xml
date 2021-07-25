@@ -6799,6 +6799,7 @@
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
+			<!-- Cislunar Space and Orbit are in same space zone -->
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
@@ -6886,6 +6887,22 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -7133,6 +7150,22 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -7167,8 +7200,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7176,15 +7207,6 @@
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-					<PassableTech>TECH_MAGNETIC_SAILS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -7750,6 +7772,102 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
@@ -7798,12 +7916,6 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
-				<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -7951,6 +8063,38 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -8113,6 +8257,54 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
@@ -8240,6 +8432,102 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
@@ -8331,6 +8619,22 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -8461,6 +8765,22 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>				
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
@@ -8795,6 +9115,22 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -8829,7 +9165,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -8883,6 +9218,120 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Captured Comet -->
 		<UnitInfo>
@@ -8904,7 +9353,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -8958,6 +9406,120 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Interstellar Workcraft -->
 		<UnitInfo>
@@ -8979,25 +9541,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-					<PassableTech>TECH_ADVANCED_SEEDSHIPS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Civilopedia>
@@ -9050,6 +9593,56 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Reward units for planetary exploration -->
 		<UnitInfo>
@@ -9754,12 +10347,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -9833,14 +10420,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -9914,14 +10494,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -11447,13 +12020,6 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -11509,6 +12075,56 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_BULLDOZER</Type>
