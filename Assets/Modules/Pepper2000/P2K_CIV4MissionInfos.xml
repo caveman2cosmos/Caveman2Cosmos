@@ -34,20 +34,6 @@
 			<Button>Art/interface/buttons/units/satellite.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_EXPLORE_MOON</Type>
-			<Description>TXT_KEY_MISSION_EXPLORE_MOON</Description>
-			<Help>TXT_KEY_MISSION_EXPLORE_MOON_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/interface/buttons/units/lunarrover.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_EXPLORE_SS1</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_SS1</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_SS1_HELP</Help>

@@ -8184,10 +8184,10 @@ def goToTitan(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_TITAN)
 	
-def canGoToKuiperBelt(argsList):
+def canGoToTransneptunianSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_TRANSNEPTUNIAN
 
-def goToKuiperBelt(argsList):
+def goToTransneptunianSpace(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_TRANSNEPTUNIAN)
 	
