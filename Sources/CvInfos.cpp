@@ -17998,6 +17998,8 @@ bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szInitialWBMap, L"InitialWBMap");
 	pXML->GetOptionalChildXmlValByName(m_szMapScript, L"MapScript");
 
+	m_aMapInteractions.readWithDelayedResolution(pXML, L"MapInteraction");
+
 	return true;
 }
 

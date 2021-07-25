@@ -5041,6 +5041,9 @@ public:
 	const CvString getInitialWBMap() const	{ return m_szInitialWBMap; }
 	const CvString getMapScript() const		{ return m_szMapScript; }
 
+	int getDistance(MapTypes eMap) const							{ return m_aMapInteractions.getValue(eMap); }
+	const IDValueMap<MapTypes, int, -1>& getMapDistances() const	{ return m_aMapInteractions; }
+
 	bool read(CvXMLLoadUtility* pXML);
 
 private:
@@ -5052,6 +5055,8 @@ private:
 
 	CvString m_szInitialWBMap;
 	CvString m_szMapScript;
+
+	IDValueMap<MapTypes, int, -1> m_aMapInteractions;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

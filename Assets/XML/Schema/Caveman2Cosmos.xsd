@@ -591,36 +591,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="NewConceptInfo" type="c2cConceptInfo"/>
-  <xs:element name="Civ4DCMConceptInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="DCMConceptInfos"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DCMConceptInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="DCMConceptInfo" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DCMConceptInfo" type="c2cConceptInfo"/>
-  <xs:element name="Civ4ANDConceptInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="ANDConceptInfos"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ANDConceptInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="ANDConceptInfo" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ANDConceptInfo" type="c2cConceptInfo"/>
   <xs:element name="Civ4InvisibleInfos">
     <xs:complexType>
       <xs:sequence>
