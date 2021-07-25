@@ -392,7 +392,7 @@ int IntExprAttribute::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAttribute::getCheckSum(unsigned int &iSum) const
+void IntExprAttribute::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eAttribute);
 }
