@@ -268,6 +268,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Lunar Rover is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
 					<ActionOutcomes>
@@ -2006,6 +2007,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Earth has no tech requirement -->
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
@@ -3541,7 +3543,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- This unit is meant to place some stuff before full fledged colonization -->
+				<!-- This unit is meant to capture asteroids for colonization preparation -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
 					<ActionOutcomes>
@@ -6512,6 +6514,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Actions>
+				<!-- Earth has no tech requirement -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
 					<ActionOutcomes>
@@ -6885,6 +6888,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Satellite is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
 					<ActionOutcomes>
@@ -7146,6 +7150,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Space Shuttle is explorer and can place space station on Orbit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
 					<ActionOutcomes>
@@ -7769,6 +7774,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Planetary Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
 					<ActionOutcomes>
@@ -8064,6 +8070,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Interstellar Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
 					<ActionOutcomes>
@@ -8256,6 +8263,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Bracewell Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
 					<ActionOutcomes>
@@ -8432,6 +8440,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Von Neumann Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
 					<ActionOutcomes>
@@ -8623,6 +8632,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Quantum Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
 					<ActionOutcomes>
@@ -8767,6 +8777,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Interdimensional Probe is an explorer type unit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
 					<ActionOutcomes>
@@ -9118,6 +9129,7 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Heavy Rocket is explorer and can place space station on Orbit -->
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
 					<ActionOutcomes>
@@ -9222,6 +9234,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Captured Asteroid is Mission Reward, that can place Asteroid for colonization preparation -->
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
@@ -9411,6 +9424,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Captured Comet is Mission Reward, that can place Asteroid for colonization preparation -->
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
@@ -12114,6 +12128,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Galactic Core is a Mission Reward -->
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
