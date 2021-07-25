@@ -642,15 +642,12 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
 			<!-- Sun exists in Inner Solar System and Titan exists in Outer Solar System -->
-			<!-- Titan can be settled on Outer Solar System, Earth/Moon, Mars and Venus in Inner Solar System shouldn't be settleable -->
+			<!-- Titan can be settled on Outer Solar System -->
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SUN</TerrainType>
 				<TerrainType>TERRAIN_TITAN</TerrainType>
@@ -718,7 +715,6 @@
 					</iCost>
 					<ActionOutcomes>
 						<Outcome>
-							<!-- Whats wrong with gc.getGame().getCurrentMap() == MapTypes.MAP_INNER_SOLAR_SYSTEM that causes game to spam python error? -->
 							<OutcomeType>OUTCOME_UPGRADE_TO_PLANET_SETTLER</OutcomeType>
 							<iChance>100</iChance>
 							<PythonName>BuildCitySolarSystem</PythonName>
@@ -726,17 +722,7 @@
 								from CvPythonExtensions import CyGlobalContext
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
-										return False
-									if gc.getGame().getCurrentMap() == MapTypes.MAP_INNER_SOLAR_SYSTEM:
-										invalid_mapcategory_strings = ['EARTH','LUNAR','MARTIAN','VENUSIAN']
-										invalid_mapcategories = [gc.getInfoTypeForString('MAPCATEGORY_'+t) for t in invalid_mapcategory_strings]
-										for eMapCategory in invalid_mapcategories:
-											if eMapCategory in gc.getTerrainInfo(plot.getTerrainType()).getMapCategories():
-												return False
-										return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
-									else:
-										return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
+									return gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY())
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
 									gc.getPlayer(unit.getOwner()).found(plot.getX(),plot.getY())
@@ -745,38 +731,6 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
-							<iChance>100</iChance>
-							<PlotCondition>
-								<Greater>
-									<Python>canGoToMars</Python>
-									<Constant>0</Constant>
-								</Greater>
-							</PlotCondition>
-							<PythonCallback>goToMars</PythonCallback>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
-							<iChance>100</iChance>
-							<PlotCondition>
-								<Greater>
-									<Python>canGoToVenus</Python>
-									<Constant>0</Constant>
-								</Greater>
-							</PlotCondition>
-							<PythonCallback>goToVenus</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
