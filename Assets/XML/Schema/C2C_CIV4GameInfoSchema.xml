@@ -170,6 +170,9 @@
 		<element type="Map"/>
 		<element type="iDistance"/>
 	</ElementType>
+	<ElementType name="MapInteractions" content="eltOnly">
+		<element type="MapInteraction" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="MapInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="Description"/>
@@ -180,7 +183,7 @@
 		<element type="bWrapY"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
-		<element type="MapInteraction" minOccurs="0" />
+		<element type="MapInteractions" minOccurs="0" />
 	</ElementType>
 	<ElementType name="MapInfos" content="eltOnly">
 		<element type="MapInfo" minOccurs="0"/>

@@ -18,6 +18,20 @@
 			<!-- <MapScript>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\Test.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
+			<MapInteractions>
+				<MapInteraction>
+					<Map>MAP_CISLUNAR</Map>
+					<iDistance>1</iDistance>
+				</MapInteraction>
+				<MapInteraction>
+					<Map>MAP_MOON</Map>
+					<iDistance>1</iDistance>
+				</MapInteraction>
+				<MapInteraction>
+					<Map>MAP_MARS</Map>
+					<iDistance>1</iDistance>
+				</MapInteraction>
+			</MapInteractions>
 		</MapInfo>
 		<MapInfo>
 			<!-- Cislunar map -->
