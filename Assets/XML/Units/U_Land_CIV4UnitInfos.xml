@@ -94,11 +94,11 @@
 							<iChance>100</iChance>
 							<PlotCondition>
 								<Greater>
-									<Python>canGoToCislunar</Python>
+									<Python>canGoToCislunarSpace</Python>
 									<Constant>0</Constant>
 								</Greater>
 							</PlotCondition>
-							<PythonCallback>goToCislunar</PythonCallback>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>

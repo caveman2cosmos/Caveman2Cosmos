@@ -8134,9 +8134,9 @@ def goToEarth(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_EARTH)
 
-def canGoToCislunar(argsList):
+def canGoToCislunarSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
 
-def goToCislunar(argsList):
+def goToCislunarSpace(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_CISLUNAR)
