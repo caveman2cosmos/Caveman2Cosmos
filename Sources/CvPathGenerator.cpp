@@ -1835,7 +1835,6 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 {
 	PROFILE_FUNC();
 
-	bool bResult;
 	CvUnit*	pTempUnit = GET_PLAYER(ePlayer).getTempUnit(eUnit, pFrom->getX(), pFrom->getY());
 
 	pTempUnit->finishMoves();
@@ -1847,7 +1846,7 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 	//	FUTURE - might want to move the no-land-units-across-water flags up to the callers once they
 	//	become aware of it.  For now it's here to prevent paths Python generates to build roads etc
 	//	crossing water
-	bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
+	const bool bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
 
 	GET_PLAYER(ePlayer).releaseTempUnit();
 

@@ -11,10 +11,11 @@ class ParallelMaps:
 		pEventManager.addEventHandler("kbdEvent", self.filterInput)
 
 	def filterInput(self, argsList):
-		if DebugUtils.bDebugMode and BugEventManager.g_eventManager.bAlt:
+		if BugEventManager.g_eventManager.bAlt:
 			i = argsList[1] -2
 			#if i > -1 and i < MapTypes.NUM_MAPS:
-			if i > -1 and i < 10 and i != GC.getGame().getCurrentMap():
+			if i > -1 and i < 10 and i != GC.getGame().getCurrentMap() \
+			and (DebugUtils.bDebugMode or GC.getMapByIndex(i).plotsInitialized()):
 				if not GC.getMapByIndex(i).plotsInitialized():
 					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
 				else:
