@@ -289,7 +289,7 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 //
 void cvInternalGlobals::init()
 {
-	OutputDebugString("Initializing Internal Globals: Start");
+	OutputDebugString("Initializing Internal Globals: Start\n");
 
 #ifdef MINIDUMP
 	/* Enable our custom exception that will write the minidump for us. */
@@ -441,7 +441,7 @@ void cvInternalGlobals::init()
 	m_bSignsCleared = false;
 	m_bResourceLayerOn = false;
 
-	OutputDebugString("Initializing Internal Globals: End");
+	OutputDebugString("Initializing Internal Globals: End\n");
 }
 
 //
@@ -2849,13 +2849,15 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {
-	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
-	FAssert(eMap != CURRENT_MAP);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 
-	GC.getMap().beforeSwitch();
-	GC.getGame().setCurrentMap(eMap);
-	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
-	GC.getMap().afterSwitch();
+	if (eMap != CURRENT_MAP)
+	{
+		getMap().beforeSwitch();
+		getGame().setCurrentMap(eMap);
+		*CyGlobalContext::getInstance().getCyMap() = getMap();
+		getMap().afterSwitch();
+	}
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
@@ -2886,11 +2888,11 @@ int	cvInternalGlobals::getViewportCenteringBorder() const
 
 CvMapExternal& cvInternalGlobals::getMapExternal() const
 {
-	CvViewport* currentViewport = getCurrentViewport();
+	const CvViewport* currentViewport = getCurrentViewport();
 
 	FAssert(currentViewport != NULL);
 
-	return *currentViewport->getProxy();
+	return currentViewport->getProxy();
 }
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
@@ -3023,9 +3025,9 @@ void cvInternalGlobals::setIsBug()
 		// This happens after the maps load on first load, so resize existing viewports
 		foreach_(const CvMap* map, m_maps)
 		{
-			for (int iJ = 0; iJ < map->getNumViewports(); iJ++)
+			foreach_(CvViewport* viewport, map->getViewports())
 			{
-				map->getViewport(iJ)->resizeForMap();
+				viewport->resizeForMap();
 			}
 		}
 	}

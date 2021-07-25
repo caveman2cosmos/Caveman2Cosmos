@@ -19,6 +19,7 @@ class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
+class CvUnitAI;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -46,7 +47,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -66,17 +67,19 @@ public:
 	void beforeSwitch();
 	void afterSwitch();
 
+	void updateIncomingUnits();
+	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
+
 	//	Viewports are owned by their underlying maps
-	int	getNumViewports() const;
-	CvViewport* getViewport(int iIndex) const;
+	const std::vector<CvViewport*> getViewports() const;
 	int addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext);	//	Returns new viewport index
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
 
-	const char* getMapScript() const;
-
 	bool plotsInitialized() const;
+
+	const char* getMapScript() const;
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
@@ -237,6 +240,8 @@ public:
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
 
+	static bool	isMidSwitch() { return m_bSwitchInProgress; }
+
 protected:
 
 	int m_iGridWidth;
@@ -266,9 +271,14 @@ protected:
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
 
+	static bool m_bSwitchInProgress;
+
 	CvPlot* m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
+
+	typedef std::pair<CvUnitAI, int> IncomingUnit;
+	std::vector<IncomingUnit> m_IncomingUnits;
 
 	void calculateAreas();
 };

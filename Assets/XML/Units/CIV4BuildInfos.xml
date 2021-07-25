@@ -10652,7 +10652,7 @@
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
-			<PrereqTech>TECH_RUDDER</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>0</bKill>
@@ -10677,7 +10677,7 @@
 			<Type>BUILD_HARVEST_KELP_KILL</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ObsoleteTech>TECH_RUDDER</ObsoleteTech>
+			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
 			<iTime>250</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
