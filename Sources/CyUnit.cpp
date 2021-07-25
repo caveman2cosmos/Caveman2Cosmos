@@ -722,3 +722,8 @@ void CyUnit::doHNCapture()
 {
 	m_pUnit->doHNCapture();
 }
+
+void CyUnit::goToMap(MapTypes eMap)
+{
+	m_pUnit->goToMap(eMap);
+}

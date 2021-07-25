@@ -8126,3 +8126,17 @@ def applyCivilWar(argsList):
 def canDoBestHunters1(argsList):
 	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
 	return False
+
+def canGoToEarth(argsList):
+	return GAME.getCurrentMap() != MapTypes.MAP_EARTH
+
+def goToEarth(argsList):
+	pUnit = argsList[0]
+	pUnit.goToMap(MapTypes.MAP_EARTH)
+
+def canGoToCislunar(argsList):
+	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
+
+def goToCislunar(argsList):
+	pUnit = argsList[0]
+	pUnit.goToMap(MapTypes.MAP_CISLUNAR)

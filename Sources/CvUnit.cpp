@@ -41238,7 +41238,7 @@ ReligionTypes CvUnit::getReligion() const
 void CvUnit::goToMap(MapTypes eMap)
 {
 	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
-	kill(false, NO_PLAYER);
+	kill(true, NO_PLAYER);
 }
 
 bool CvUnit::isWorker() const

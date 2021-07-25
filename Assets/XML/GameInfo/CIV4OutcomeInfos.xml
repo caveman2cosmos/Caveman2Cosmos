@@ -1299,5 +1299,25 @@
 				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_EARTH</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
 	</OutcomeInfos>
 </Civ4OutcomeInfos>

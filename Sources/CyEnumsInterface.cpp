@@ -2418,8 +2418,6 @@ void CyEnumsPythonInterface()
 
 	python::enum_<MapTypes>("MapTypes")
 		.value("MAP_EARTH", MAP_EARTH)
-/*
-		.value("NO_MAP", NO_MAP)
 		.value("MAP_CISLUNAR", MAP_CISLUNAR)
 		.value("MAP_MOON", MAP_MOON)
 		.value("MAP_MARS", MAP_MARS)
@@ -2435,7 +2433,7 @@ void CyEnumsPythonInterface()
 		.value("MAP_VIRGO_SUPERCLUSTER", MAP_VIRGO_SUPERCLUSTER)
 		.value("MAP_UNIVERSE", MAP_UNIVERSE)
 		.value("MAP_DISTANT_COSMOS", MAP_DISTANT_COSMOS)
-*/
+
 		.value("NUM_MAPS", NUM_MAPS)
 	;
 }
