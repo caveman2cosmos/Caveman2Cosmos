@@ -1386,6 +1386,18 @@
 		<Russian>Èññëåäîâàíèå Ìåðêóðèÿ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON</Tag>
+		<English>Explore Moon</English>
+		<French>Explorer la Lune</French>
+		<Russian>Èññëåä. Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_HELP</Tag>
+		<English>Launch rover to the Moon</English>
+		<French>Lancer un rover sur la Lune</French>
+		<Russian>Çàïóñê ëóíîõîäà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Tag>
 		<English>Explore Moon Surface</English>
 		<French>Explorer la surface de la Lune</French>
@@ -1828,6 +1840,18 @@
 		<English>Mission Successful!</English>
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON</Tag>
+		<English>Explore Moon</English>
+		<French>Explorer la Lune</French>
+		<Russian>Èññëåä. Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_MESSAGE</Tag>
+		<English>Rover launched!</English>
+		<French>Rover lancé !</French>
+		<Russian>Ëóíîõîä ïîåõàë!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE</Tag>
