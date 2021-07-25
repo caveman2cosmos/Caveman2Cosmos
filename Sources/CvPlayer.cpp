@@ -2186,7 +2186,9 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapCategoryType(earth)
+#ifdef SUPPORT_SINGLE_MAP_SPACE_MAPS
+			|| (CURRENT_MAP == MAP_EARTH && !plot->isMapCategoryType(earth))
+#endif // SUPPORT_SINGLE_MAP_SPACE_MAPS
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;

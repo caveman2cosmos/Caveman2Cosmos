@@ -5769,7 +5769,10 @@ void CvGame::doTurn()
 
 	reverse_foreach_(CvMap* map, GC.getMaps())
 	{
-		map->doTurn();
+		if (map->plotsInitialized())
+		{
+			map->doTurn();
+		}
 	}
 
 	createBarbarianCities(false);
@@ -5898,6 +5901,14 @@ void CvGame::doTurn()
 
 	gDLL->getEngineIFace()->SetDirty(GlobePartialTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->DoTurn();
+
+	foreach_(CvMap* map, GC.getMaps())
+	{
+		if (!map->plotsInitialized())
+		{
+			map->updateIncomingUnits();
+		}
+	}
 
 	PROFILE_END();
 

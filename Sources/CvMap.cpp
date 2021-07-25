@@ -372,23 +372,24 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 void CvMap::updateIncomingUnits()
 {
-	for (std::vector<IncomingUnit>::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
+	foreach_(IncomingUnit& travelingUnit, m_IncomingUnits)
 	{
-		if ((*itr).second-- <= 0)
+		if (travelingUnit.second-- <= 0)
 		{
-			GC.switchMap(m_eType);
-
-			CvUnit& offMapUnit = (*itr).first;
-			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
-			CvPlot* startingPlot = owner.findStartingPlot();
-			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			if (onMapUnit == NULL)
+			if (!plotsInitialized())
 			{
-				FErrorMsg("CvPlayer::initUnit returned NULL");
-				continue;
+				GC.switchMap(m_eType);
 			}
-			m_IncomingUnits.erase(itr);
-			// TODO - make onMapUnit a copy of offMapUnit without changing onMapUnit x/y
+			const CvUnit& kUnit = travelingUnit.first;
+			CvPlayer& owner = GET_PLAYER(kUnit.getOwner());
+			//const CvPlot* plot = owner.findStartingPlot();
+			CvUnit* newUnit = owner.initUnit(kUnit.getUnitType(), /*plot ? plot->getX() :*/ 0, /*plot ? plot->getY() :*/ 0, kUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
+			if (newUnit != NULL)
+			{
+				//newUnit = kUnit; // TODO: make newUnit a copy of kUnit without changing x/y of newUnit
+				m_IncomingUnits.erase(&travelingUnit);
+				updateVisibility();
+			}
 		}
 	}
 }
@@ -398,16 +399,13 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
+	GC.switchMap(m_eType);
+
 	updateIncomingUnits();
 
-	if (m_pMapPlots != NULL)
+	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		GC.switchMap(m_eType);
-
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			plotByIndex(iI)->doTurn();
-		}
+		plotByIndex(iI)->doTurn();
 	}
 }
 
