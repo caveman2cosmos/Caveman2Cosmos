@@ -81,7 +81,7 @@ bool CyMap::isInViewport(int iX, int iY)
 
 bool CyMap::isMidSwitch() const
 {
-	return CvMap::isMidSwitch();
+	return CvMap::m_bSwitchInProgress;
 }
 
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)

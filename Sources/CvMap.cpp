@@ -122,13 +122,12 @@ void CvMap::uninit()
 
 	m_areas.uninit();
 
-	for(int iI = 0; iI < (int)m_viewports.size(); iI++)
+	foreach_(const CvViewport* viewport, m_viewports)
 	{
-		delete m_viewports[iI];
+		delete viewport;
 	}
 
 	m_viewports.clear();
-	m_iCurrentViewportIndex = -1;
 }
 
 // FUNCTION: reset()
@@ -262,7 +261,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 
 	//	Create a viewport of the requisite external size without initial positioning (this can be repositioned
 	//	at any time before it is graphically initialised, of after with a map switch)
-	setCurrentViewport(addViewport(-1, -1, false));
+	addViewport(-1, -1);
 
 	if ( !GC.viewportsEnabled() )
 	{
@@ -1469,19 +1468,18 @@ const std::vector<CvViewport*> CvMap::getViewports() const
 	return m_viewports;
 }
 
-int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Returns new viewport index
+void CvMap::addViewport(int iXOffset, int iYOffset)
 {
-	CvViewport*	viewport = new CvViewport(this, bIsFullMapContext);
+	CvViewport*	viewport = new CvViewport(this);
 
-	if ( iXOffset >= 0 && iYOffset >= 0 )
+	if (iXOffset >= 0 && iYOffset >= 0)
 	{
 		viewport->setMapOffset(iXOffset, iYOffset);
 	}
 	m_viewports.push_back(viewport);
-
-	return (int)m_viewports.size()-1;
 }
 
+/*
 void CvMap::deleteViewport(int iIndex)
 {
 	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
@@ -1500,19 +1498,12 @@ void CvMap::deleteViewport(int iIndex)
 
 	m_viewports.pop_back();
 }
-
-void CvMap::setCurrentViewport(int iIndex)
-{
-	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
-
-	m_iCurrentViewportIndex = iIndex;
-}
+*/
 
 CvViewport* CvMap::getCurrentViewport() const
 {
-	FAssert( m_iCurrentViewportIndex == -1 || m_iCurrentViewportIndex < (int)m_viewports.size() );
-
-	return (m_iCurrentViewportIndex == -1 ? NULL : m_viewports[m_iCurrentViewportIndex]);
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), m_iCurrentViewportIndex)
+	return m_viewports[m_iCurrentViewportIndex];
 }
 
 MapTypes CvMap::getType() const
