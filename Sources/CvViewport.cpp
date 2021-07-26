@@ -5,7 +5,7 @@
 #include "CvUnit.h"
 #include "CvViewport.h"
 
-CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext)
+CvViewport::CvViewport(CvMap* pMap)
 	: m_pMap(pMap)
 	, m_iXOffset(0)
 	, m_iYOffset(0)
@@ -24,7 +24,7 @@ CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext)
 {
 	resizeForMap();
 
-	m_mode = (bIsFullMapContext ? VIEWPORT_MODE_FULL_MAP : VIEWPORT_MODE_UNINITIALIZED);
+	m_mode = VIEWPORT_MODE_UNINITIALIZED;
 }
 
 CvViewport::~CvViewport()
@@ -71,18 +71,31 @@ void CvViewport::resizeForMap()
 		Cy::call(PYCivModule, "forceBUGModuleInit", Cy::Args() << "BUG Main Interface");
 	}
 
-	m_iXSize = GC.viewportsEnabled() ? GC.getViewportSizeX() : m_pMap->getGridWidth();
-	m_iYSize = GC.viewportsEnabled() ? GC.getViewportSizeY() : m_pMap->getGridHeight();
+	if (GC.getENABLE_VIEWPORTS())
+	{
+		m_iXSize = GC.getVIEWPORT_SIZE_X();
+		m_iYSize = GC.getVIEWPORT_SIZE_Y();
+/*
+		if (m_iXSize > m_pMap->getGridWidth())
+		{
+			m_iXSize = m_pMap->getGridWidth();
+		}
 
-	//	For now we don't allow maps smaller than the viewport size
-	if ( m_iXSize > m_pMap->getGridWidth() )
+		if (m_iYSize > m_pMap->getGridHeight())
+		{
+			m_iYSize = m_pMap->getGridHeight();
+		}
+*/
+	}
+	else if (m_pMap->getType() == MAP_EARTH)
 	{
 		m_iXSize = m_pMap->getGridWidth();
-	}
-
-	if ( m_iYSize > m_pMap->getGridHeight() )
-	{
 		m_iYSize = m_pMap->getGridHeight();
+	}
+	else
+	{
+		m_iXSize = GC.getMapByIndex(MAP_EARTH).getGridWidth();
+		m_iYSize = GC.getMapByIndex(MAP_EARTH).getGridHeight();
 	}
 }
 
@@ -97,7 +110,7 @@ void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, boo
 	m_bDisplayCityScreen = bDisplayCityScreen;
 	m_bSelectCity = bSelectCity;
 	m_bAddSelectedCity = bAddSelectedCity;
-	if ( m_transformType != VIEWPORT_TRANSFORM_TYPE_WINDOW || !isInViewport(iX, iY, GC.getViewportSelectionBorder()) || bForceCenter)
+	if ( m_transformType != VIEWPORT_TRANSFORM_TYPE_WINDOW || !isInViewport(iX, iY, GC.getVIEWPORT_FOCUS_BORDER()) || bForceCenter)
 	{
 		gDLL->getInterfaceIFace()->clearSelectionList();
 		gDLL->getInterfaceIFace()->clearSelectedCities();

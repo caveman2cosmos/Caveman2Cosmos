@@ -17,7 +17,6 @@ class CvUnit;
 
 enum ViewportMode
 {
-	VIEWPORT_MODE_FULL_MAP,
 	VIEWPORT_MODE_UNINITIALIZED,
 	VIEWPORT_MODE_INITIALIZED
 };
@@ -69,7 +68,7 @@ enum ViewportGraphicalSpoofingState
 class CvViewport : public CvMapInterfaceBase
 {
 public:
-	CvViewport(CvMap* map, bool bIsFullMapContext);
+	CvViewport(CvMap* map);
 	virtual ~CvViewport();
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const { return m_pMap; }
