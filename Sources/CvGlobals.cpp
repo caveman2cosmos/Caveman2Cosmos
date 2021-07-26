@@ -134,22 +134,8 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
-	, m_bViewportsEnabled(false)
-	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
-	, m_paHints()
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	// MLF loading
-	, m_paModLoadControlVector(NULL)
-	, m_paModLoadControls(NULL)
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 END                                                  */
-	/************************************************************************************************/
 	, m_bXMLLogging(true)
 
 	// BBAI Options
@@ -176,8 +162,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumArtStyleTypes(0)
 	, m_iNumCitySizeTypes(0)
 	, m_iNumFootstepAudioTypes(0)
-	, m_iViewportSizeX(0)
-	, m_iViewportSizeY(0)
 	, m_bSignsCleared(false)
 
 #define ADD_TO_CONSTRUCTOR(dataType, VAR) \
@@ -599,12 +583,12 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 bool cvInternalGlobals::viewportsEnabled() const
 {
-	return m_bViewportsEnabled;
+	return m_ENABLE_VIEWPORTS;
 }
 
 bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 {
-	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
+	return m_ENABLE_VIEWPORTS || getDefineBOOL("DYNAMIC_GREAT_WALL");
 }
 
 int cvInternalGlobals::getNumMapInfos() const
@@ -2410,11 +2394,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 
-	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
-	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
-	m_iViewportSizeX = GC.getDefineINT("VIEWPORT_SIZE_X");
-	m_iViewportSizeY = GC.getDefineINT("VIEWPORT_SIZE_Y");
-
 	m_szAlternateProfilSampleName = getDefineSTRING("PROFILER_ALTERNATE_SAMPLE_SET_SOURCE");
 	if (m_szAlternateProfilSampleName == NULL)
 	{
@@ -2865,21 +2844,6 @@ CvViewport* cvInternalGlobals::getCurrentViewport() const
 	return m_maps[CURRENT_MAP]->getCurrentViewport();
 }
 
-int	cvInternalGlobals::getViewportSizeX() const
-{
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
-}
-
-int	cvInternalGlobals::getViewportSizeY() const
-{
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridHeight();
-}
-
-int	cvInternalGlobals::getViewportSelectionBorder() const
-{
-	return m_iViewportFocusBorder;
-}
-
 int	cvInternalGlobals::getViewportCenteringBorder() const
 {
 	return m_iViewportCenterOnSelectionCenterBorder;
@@ -3013,7 +2977,7 @@ void cvInternalGlobals::setIsBug()
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))
 	{
-		m_bViewportsEnabled = true;
+		m_ENABLE_VIEWPORTS = true;
 
 		// Push them back inot the globals so that a reload of the globals cache preserves these values
 		setDefineINT("ENABLE_VIEWPORTS", 1, false);
