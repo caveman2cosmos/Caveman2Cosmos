@@ -307,7 +307,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 {
-	OutputDebugString("Setting Post Global Defines: Start");
+	OutputDebugString("Setting Post Global Defines: Start\n");
 
 	const char* szVal=NULL;		// holds the string value from the define queue
 	int idx;
@@ -520,7 +520,7 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 	sprintf( szMessage, "Size of Global Defines is not greater than 0. \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 	gDLL->MessageBox(szMessage, "XML Load Error");
 
-	OutputDebugString("Setting Post Global Defines: End");
+	OutputDebugString("Setting Post Global Defines: End\n");
 
 	return false;
 }
@@ -802,14 +802,14 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 		return false;
 	}
 
-	GC.m_paConceptInfo.load(this, "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo", false);
-	GC.m_paNewConceptInfo.load(this, "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo", false);
-	GC.m_paCityTabInfo.load(this, "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo", false);
-	GC.m_paCalendarInfo.load(this, "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo", false);
-	GC.m_paSeasonInfo.load(this, "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo", false);
-	GC.m_paMonthInfo.load(this, "CIV4MonthInfos", "BasicInfos", L"/Civ4MonthInfos/MonthInfos/MonthInfo", false);
-	GC.m_paDenialInfo.load(this, "CIV4DenialInfos", "BasicInfos", L"/Civ4DenialInfos/DenialInfos/DenialInfo", false);
-	GC.m_paDomainInfo.load(this, "CIV4DomainInfos", "BasicInfos", L"/Civ4DomainInfos/DomainInfos/DomainInfo", false);
+	GC.m_paConceptInfo.load(this, "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo");
+	GC.m_paNewConceptInfo.load(this, "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo");
+	GC.m_paCityTabInfo.load(this, "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo");
+	GC.m_paCalendarInfo.load(this, "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo");
+	GC.m_paSeasonInfo.load(this, "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo");
+	GC.m_paMonthInfo.load(this, "CIV4MonthInfos", "BasicInfos", L"/Civ4MonthInfos/MonthInfos/MonthInfo");
+	GC.m_paDenialInfo.load(this, "CIV4DenialInfos", "BasicInfos", L"/Civ4DenialInfos/DenialInfos/DenialInfo");
+	GC.m_paDomainInfo.load(this, "CIV4DomainInfos", "BasicInfos", L"/Civ4DomainInfos/DomainInfos/DomainInfo");
 	//	Koshling - replaced XML-based registration of UNITAI types with internal registration.  Since they are a DLL-defined enum
 	//	anyway this allows new UNITAIs to be defined freely without ordering issues (in the XML or DLL), which in turn makes it
 	//	easier to merge mods with different UNITAI changes.  The XML is retained purely for documentary purposes
@@ -823,8 +823,8 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 	GC.registerPropertySources();
 	GC.registerPropertyInteractions();
 	GC.registerPropertyPropagators();
-	GC.m_paAttitudeInfos.load(this, "CIV4AttitudeInfos", "BasicInfos", L"/Civ4AttitudeInfos/AttitudeInfos/AttitudeInfo", false);
-	GC.m_paMemoryInfos.load(this, "CIV4MemoryInfos", "BasicInfos", L"/Civ4MemoryInfos/MemoryInfos/MemoryInfo", false);
+	GC.m_paAttitudeInfos.load(this, "CIV4AttitudeInfos", "BasicInfos", L"/Civ4AttitudeInfos/AttitudeInfos/AttitudeInfo");
+	GC.m_paMemoryInfos.load(this, "CIV4MemoryInfos", "BasicInfos", L"/Civ4MemoryInfos/MemoryInfos/MemoryInfo");
 
 	DestroyFXml();
 
@@ -855,38 +855,38 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	OutputDebugString("Begin load global infos\n");
-	GC.m_paInvisibleInfo.load(this, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo", false);
-	GC.m_paMapInfo.load(this, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", false);
-	GC.m_paGameSpeedInfo.load(this, "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false);
-	GC.m_paGameOptionInfos.load(this, "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
+	GC.m_paInvisibleInfo.load(this, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo");
+	GC.m_paMapInfo.load(this, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo");
+	GC.m_paGameSpeedInfo.load(this, "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo");
+	GC.m_paGameOptionInfos.load(this, "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo");
 	GC.m_paColorInfo.load(this, "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal");
-	GC.m_paTurnTimerInfo.load(this, "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
-	GC.m_paWorldInfo.load(this, "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false);
-	GC.m_paClimateInfo.load(this, "CIV4ClimateInfo", "GameInfo", L"/Civ4ClimateInfo/ClimateInfos/ClimateInfo", false);
-	GC.m_paSeaLevelInfo.load(this, "CIV4SeaLevelInfo", "GameInfo", L"/Civ4SeaLevelInfo/SeaLevelInfos/SeaLevelInfo", false);
-	GC.m_paAdvisorInfo.load(this, "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo", false);
-	GC.m_paIdeaClassInfo.load(this, "CIV4IdeaClassInfos", "GameInfo", L"/Civ4IdeaClassInfos/IdeaClassInfos/IdeaClassInfo", false);
-	GC.m_paIdeaInfo.load(this, "CIV4IdeaInfos", "GameInfo", L"/Civ4IdeaInfos/IdeaInfos/IdeaInfo", false);
-	GC.m_paTerrainInfo.load(this, "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false);
-	GC.m_paYieldInfo.load(this, "CIV4YieldInfos", "Terrain", L"/Civ4YieldInfos/YieldInfos/YieldInfo", false);
-	GC.m_paCommerceInfo.load(this, "CIV4CommerceInfo", "GameInfo", L"/Civ4CommerceInfo/CommerceInfos/CommerceInfo", false);
-	GC.m_aEraInfo.load(this, "CIV4EraInfos", "GameInfo", L"/Civ4EraInfos/EraInfos/EraInfo", false);
-	GC.m_paAnimationCategoryInfo.load(this, "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory", false);
-	GC.m_paAnimationPathInfo.load(this, "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath", false);
-	GC.m_paCursorInfo.load(this, "CIV4CursorInfo", "GameInfo", L"/Civ4CursorInfo/CursorInfos/CursorInfo", false);
-	GC.m_paCivicOptionInfo.load(this, "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
-	GC.m_paUpkeepInfo.load(this, "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo", false);
-	GC.m_paCultureLevelInfo.load(this, "CIV4CultureLevelInfo", "GameInfo", L"/Civ4CultureLevelInfo/CultureLevelInfos/CultureLevelInfo", false);
-	GC.m_paBonusClassInfo.load(this, "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo", false);
-	GC.m_paVictoryInfo.load(this, "CIV4VictoryInfo", "GameInfo", L"/Civ4VictoryInfo/VictoryInfos/VictoryInfo", false);
-	GC.m_paEffectInfo.load(this, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
-	GC.m_paEntityEventInfo.load(this, "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
-	GC.m_paPropertyInfo.load(this, "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
-	GC.m_paSpecialistInfo.load(this, "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false);
-	GC.m_paVoteSourceInfo.load(this, "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
-	GC.m_paTechInfo.load(this, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", false);
-	GC.m_paFeatureInfo.load(this, "CIV4FeatureInfos", "Terrain", L"/Civ4FeatureInfos/FeatureInfos/FeatureInfo", false);
-	GC.m_paReligionInfo.load(this, "CIV4ReligionInfo", "GameInfo", L"/Civ4ReligionInfo/ReligionInfos/ReligionInfo", false);
+	GC.m_paTurnTimerInfo.load(this, "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo");
+	GC.m_paWorldInfo.load(this, "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo");
+	GC.m_paClimateInfo.load(this, "CIV4ClimateInfo", "GameInfo", L"/Civ4ClimateInfo/ClimateInfos/ClimateInfo");
+	GC.m_paSeaLevelInfo.load(this, "CIV4SeaLevelInfo", "GameInfo", L"/Civ4SeaLevelInfo/SeaLevelInfos/SeaLevelInfo");
+	GC.m_paAdvisorInfo.load(this, "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo");
+	GC.m_paIdeaClassInfo.load(this, "CIV4IdeaClassInfos", "GameInfo", L"/Civ4IdeaClassInfos/IdeaClassInfos/IdeaClassInfo");
+	GC.m_paIdeaInfo.load(this, "CIV4IdeaInfos", "GameInfo", L"/Civ4IdeaInfos/IdeaInfos/IdeaInfo");
+	GC.m_paTerrainInfo.load(this, "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo");
+	GC.m_paYieldInfo.load(this, "CIV4YieldInfos", "Terrain", L"/Civ4YieldInfos/YieldInfos/YieldInfo");
+	GC.m_paCommerceInfo.load(this, "CIV4CommerceInfo", "GameInfo", L"/Civ4CommerceInfo/CommerceInfos/CommerceInfo");
+	GC.m_aEraInfo.load(this, "CIV4EraInfos", "GameInfo", L"/Civ4EraInfos/EraInfos/EraInfo");
+	GC.m_paAnimationCategoryInfo.load(this, "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory");
+	GC.m_paAnimationPathInfo.load(this, "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath");
+	GC.m_paCursorInfo.load(this, "CIV4CursorInfo", "GameInfo", L"/Civ4CursorInfo/CursorInfos/CursorInfo");
+	GC.m_paCivicOptionInfo.load(this, "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo");
+	GC.m_paUpkeepInfo.load(this, "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo");
+	GC.m_paCultureLevelInfo.load(this, "CIV4CultureLevelInfo", "GameInfo", L"/Civ4CultureLevelInfo/CultureLevelInfos/CultureLevelInfo");
+	GC.m_paBonusClassInfo.load(this, "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo");
+	GC.m_paVictoryInfo.load(this, "CIV4VictoryInfo", "GameInfo", L"/Civ4VictoryInfo/VictoryInfos/VictoryInfo");
+	GC.m_paEffectInfo.load(this, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo");
+	GC.m_paEntityEventInfo.load(this, "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo");
+	GC.m_paPropertyInfo.load(this, "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo");
+	GC.m_paSpecialistInfo.load(this, "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo");
+	GC.m_paVoteSourceInfo.load(this, "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo");
+	GC.m_paTechInfo.load(this, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo");
+	GC.m_paFeatureInfo.load(this, "CIV4FeatureInfos", "Terrain", L"/Civ4FeatureInfos/FeatureInfos/FeatureInfo");
+	GC.m_paReligionInfo.load(this, "CIV4ReligionInfo", "GameInfo", L"/Civ4ReligionInfo/ReligionInfos/ReligionInfo");
 	// TGA indexation - important must do before anything else
 	std::sort(GC.m_paReligionInfo.begin(), GC.m_paReligionInfo.end(), cmpReligionTGA);
 	for (int i = 0; i < (int)GC.m_paReligionInfo.size(); i++)
@@ -894,18 +894,18 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(GC.m_paReligionInfo[i]->getType(), i);
 	}
 
-	GC.m_paBonusInfo.load(this, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false);
-	GC.m_paSpecialUnitInfo.load(this, "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
+	GC.m_paBonusInfo.load(this, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo");
+	GC.m_paSpecialUnitInfo.load(this, "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo");
 	shouldHaveType = true;
-	GC.m_paRouteInfo.load(this, "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false);
+	GC.m_paRouteInfo.load(this, "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo");
 	shouldHaveType = false;
 	GC.m_paImprovementInfo.load(this, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true);
-	GC.m_paUnitCombatInfo.load(this, "CIV4UnitCombatInfos", "Units", L"/Civ4UnitCombatInfos/UnitCombatInfos/UnitCombatInfo", false);
-	GC.m_paPromotionLineInfo.load(this, "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
+	GC.m_paUnitCombatInfo.load(this, "CIV4UnitCombatInfos", "Units", L"/Civ4UnitCombatInfos/UnitCombatInfos/UnitCombatInfo");
+	GC.m_paPromotionLineInfo.load(this, "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo");
 	//TB Promotion Line Mod begin
 	GC.m_paPromotionInfo.load(this, "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true);
-	GC.m_paHurryInfo.load(this, "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
-	GC.m_paCorporationInfo.load(this, "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false);
+	GC.m_paHurryInfo.load(this, "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo");
+	GC.m_paCorporationInfo.load(this, "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo");
 	// TGA indexation - important must do before anything else
 	std::sort(GC.m_paCorporationInfo.begin(), GC.m_paCorporationInfo.end(), cmpCorporationTGA);
 	for (int i = 0; i < (int)GC.m_paCorporationInfo.size(); i++)
@@ -913,19 +913,19 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(GC.m_paCorporationInfo[i]->getType(), i);
 	}
 
-	GC.m_paSpecialBuildingInfo.load(this, "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false);
+	GC.m_paSpecialBuildingInfo.load(this, "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo");
 	GC.m_paBuildingInfo.load(this, "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true);
-	GC.m_paCivicInfo.load(this, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false);
-	GC.m_paPlayerColorInfo.load(this, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
-	GC.m_paBuildInfo.load(this, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false);
+	GC.m_paCivicInfo.load(this, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo");
+	GC.m_paPlayerColorInfo.load(this, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo");
+	GC.m_paBuildInfo.load(this, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo");
 	GC.m_paOutcomeInfo.load(this, "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
 
 	//	AlbertS2: Register mission types
 	GC.registerMissions();
-	GC.m_paMissionInfo.load(this, "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
+	GC.m_paMissionInfo.load(this, "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo");
 	GC.m_paUnitInfo.load(this, "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", true);
 	GC.m_paTraitInfo.load(this, "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true);
-	GC.m_paLeaderHeadInfo.load(this, "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false);
+	GC.m_paLeaderHeadInfo.load(this, "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo");
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
 /*                                                                                              */
@@ -942,10 +942,10 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
 
-	GC.m_paUnitArtStyleTypeInfo.load(this, "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
+	GC.m_paUnitArtStyleTypeInfo.load(this, "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo");
 	GC.m_paCivilizationInfo.load(this, "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true);
 
-	GC.m_paProjectInfo.load(this, "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false);
+	GC.m_paProjectInfo.load(this, "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo");
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
@@ -962,23 +962,23 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	GC.m_paHints.load(this, "CIV4Hints", "GameInfo", L"/Civ4Hints/HintInfos/HintInfo", false);
-	GC.m_paMainMenus.load(this, "CIV4MainMenus", "Art", L"/Civ4MainMenus/MainMenus/MainMenu", false);
-	GC.m_paSlideShowInfo.load(this, "CIV4SlideShowInfos", "Interface", L"/Civ4SlideShowInfos/SlideShowInfos/SlideShowInfo", false);
-	GC.m_paSlideShowRandomInfo.load(this, "CIV4SlideShowRandomInfos", "Interface", L"/Civ4SlideShowRandomInfos/SlideShowRandomInfos/SlideShowRandomInfo", false);
-	GC.m_paWorldPickerInfo.load(this, "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo", false);
-	GC.m_paSpaceShipInfo.load(this, "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo", false);
+	GC.m_paHints.load(this, "CIV4Hints", "GameInfo", L"/Civ4Hints/HintInfos/HintInfo");
+	GC.m_paMainMenus.load(this, "CIV4MainMenus", "Art", L"/Civ4MainMenus/MainMenus/MainMenu");
+	GC.m_paSlideShowInfo.load(this, "CIV4SlideShowInfos", "Interface", L"/Civ4SlideShowInfos/SlideShowInfos/SlideShowInfo");
+	GC.m_paSlideShowRandomInfo.load(this, "CIV4SlideShowRandomInfos", "Interface", L"/Civ4SlideShowRandomInfos/SlideShowRandomInfos/SlideShowRandomInfo");
+	GC.m_paWorldPickerInfo.load(this, "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo");
+	GC.m_paSpaceShipInfo.load(this, "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo");
 
 	shouldHaveType = true;
-	GC.m_paGoodyInfo.load(this, "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
-	GC.m_paHandicapInfo.load(this, "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false);
+	GC.m_paGoodyInfo.load(this, "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo");
+	GC.m_paHandicapInfo.load(this, "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo");
 	shouldHaveType = false;
 
-	GC.m_paMPOptionInfos.load(this, "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
-	GC.m_paForceControlInfos.load(this, "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);
+	GC.m_paMPOptionInfos.load(this, "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo");
+	GC.m_paForceControlInfos.load(this, "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo");
 
-	GC.m_paEventInfo.load(this, "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo", false);
-	GC.m_paEventTriggerInfo.load(this, "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo", false);
+	GC.m_paEventInfo.load(this, "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo");
+	GC.m_paEventTriggerInfo.load(this, "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo");
 	OutputDebugString("Base load complete\n");
 
 	// AIAndy: Resolve delayed resolutions of type strings
@@ -1080,66 +1080,66 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	//throne room disabled
 	UpdateProgressCB("Global Throne Room");
 
-	GC.m_paThroneRoomCamera.load(this, "CIV4ThroneRoomCameraInfos", "Interface", L"/Civ4ThroneRoomCameraInfos/ThroneRoomCameraInfos/ThroneRoomCamera", false);
-	GC.m_paThroneRoomInfo.load(this, "CIV4ThroneRoomInfos", "Interface", L"/Civ4ThroneRoomInfos/ThroneRoomInfos/ThroneRoomInfo", false);
-	GC.m_paThroneRoomStyleInfo.load(this, "CIV4ThroneRoomStyleInfos", "Interface", L"/Civ4ThroneRoomStyleInfos/ThroneRoomStyleInfos/ThroneRoomStyleInfo", false);
+	GC.m_paThroneRoomCamera.load(this, "CIV4ThroneRoomCameraInfos", "Interface", L"/Civ4ThroneRoomCameraInfos/ThroneRoomCameraInfos/ThroneRoomCamera");
+	GC.m_paThroneRoomInfo.load(this, "CIV4ThroneRoomInfos", "Interface", L"/Civ4ThroneRoomInfos/ThroneRoomInfos/ThroneRoomInfo");
+	GC.m_paThroneRoomStyleInfo.load(this, "CIV4ThroneRoomStyleInfos", "Interface", L"/Civ4ThroneRoomStyleInfos/ThroneRoomStyleInfos/ThroneRoomStyleInfo");
 
 	UpdateProgressCB("Global Events");
 	UpdateProgressCB("Global Routes");
 
-	GC.m_paRouteModelInfo.load(this, "CIV4RouteModelInfos", "Art", L"/Civ4RouteModelInfos/RouteModelInfos/RouteModelInfo", false);
+	GC.m_paRouteModelInfo.load(this, "CIV4RouteModelInfos", "Art", L"/Civ4RouteModelInfos/RouteModelInfos/RouteModelInfo");
 
 	UpdateProgressCB("Global Rivers");
 
-	GC.m_paRiverModelInfo.load(this, "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
+	GC.m_paRiverModelInfo.load(this, "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo");
 
 	UpdateProgressCB("Global Other");
 
-	GC.m_paWaterPlaneInfo.load(this, "CIV4WaterPlaneInfos", "Misc", L"/Civ4WaterPlaneInfos/WaterPlaneInfos/WaterPlaneInfo", false);
-	GC.m_paTerrainPlaneInfo.load(this, "CIV4TerrainPlaneInfos", "Misc", L"/Civ4TerrainPlaneInfos/TerrainPlaneInfos/TerrainPlaneInfo", false);
-	GC.m_paCameraOverlayInfo.load(this, "CIV4CameraOverlayInfos", "Misc", L"/Civ4CameraOverlayInfos/CameraOverlayInfos/CameraOverlayInfo", false);
+	GC.m_paWaterPlaneInfo.load(this, "CIV4WaterPlaneInfos", "Misc", L"/Civ4WaterPlaneInfos/WaterPlaneInfos/WaterPlaneInfo");
+	GC.m_paTerrainPlaneInfo.load(this, "CIV4TerrainPlaneInfos", "Misc", L"/Civ4TerrainPlaneInfos/TerrainPlaneInfos/TerrainPlaneInfo");
+	GC.m_paCameraOverlayInfo.load(this, "CIV4CameraOverlayInfos", "Misc", L"/Civ4CameraOverlayInfos/CameraOverlayInfos/CameraOverlayInfo");
 
 
 	UpdateProgressCB("Global Process");
 
-	GC.m_paProcessInfo.load(this, "CIV4ProcessInfo", "GameInfo", L"/Civ4ProcessInfo/ProcessInfos/ProcessInfo", false);
+	GC.m_paProcessInfo.load(this, "CIV4ProcessInfo", "GameInfo", L"/Civ4ProcessInfo/ProcessInfos/ProcessInfo");
 
 	UpdateProgressCB("Global Emphasize");
 
-	GC.m_paEmphasizeInfo.load(this, "CIV4EmphasizeInfo", "GameInfo", L"/Civ4EmphasizeInfo/EmphasizeInfos/EmphasizeInfo", false);
+	GC.m_paEmphasizeInfo.load(this, "CIV4EmphasizeInfo", "GameInfo", L"/Civ4EmphasizeInfo/EmphasizeInfos/EmphasizeInfo");
 
 	UpdateProgressCB("Global Other");
 
-	GC.m_paControlInfo.load(this, "CIV4ControlInfos", "Units", L"/Civ4ControlInfos/ControlInfos/ControlInfo", false);
-	GC.m_paCommandInfo.load(this, "CIV4CommandInfos", "Units", L"/Civ4CommandInfos/CommandInfos/CommandInfo", false);
-	GC.m_paAutomateInfo.load(this, "CIV4AutomateInfos", "Units", L"/Civ4AutomateInfos/AutomateInfos/AutomateInfo", false);
+	GC.m_paControlInfo.load(this, "CIV4ControlInfos", "Units", L"/Civ4ControlInfos/ControlInfos/ControlInfo");
+	GC.m_paCommandInfo.load(this, "CIV4CommandInfos", "Units", L"/Civ4CommandInfos/CommandInfos/CommandInfo");
+	GC.m_paAutomateInfo.load(this, "CIV4AutomateInfos", "Units", L"/Civ4AutomateInfos/AutomateInfos/AutomateInfo");
 
 	UpdateProgressCB("Global Vote");
 
-	GC.m_paVoteInfo.load(this, "CIV4VoteInfo", "GameInfo", L"/Civ4VoteInfo/VoteInfos/VoteInfo", false);
+	GC.m_paVoteInfo.load(this, "CIV4VoteInfo", "GameInfo", L"/Civ4VoteInfo/VoteInfos/VoteInfo");
 
 	UpdateProgressCB("Global Interface");
 
-	LoadGlobalClassInfo(GC.m_paInterfaceModeInfo, "CIV4InterfaceModeInfos", "Interface", L"/Civ4InterfaceModeInfos/InterfaceModeInfos/InterfaceModeInfo", false);
+	LoadGlobalClassInfo(GC.m_paInterfaceModeInfo, "CIV4InterfaceModeInfos", "Interface", L"/Civ4InterfaceModeInfos/InterfaceModeInfos/InterfaceModeInfo");
 
 	SetGlobalActionInfo();
 
 	// Load the formation info
-	GC.m_paUnitFormationInfo.load(this, "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation", false);
+	GC.m_paUnitFormationInfo.load(this, "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation");
 
 	// Load the attachable infos
-	GC.m_paAttachableInfo.load(this, "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo", false);
+	GC.m_paAttachableInfo.load(this, "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo");
 
 	// Specail Case Diplomacy Info due to double vectored nature and appending of Responses
 	LoadDiplomacyInfo(GC.m_paDiplomacyInfo, "CIV4DiplomacyInfos", "GameInfo", L"/Civ4DiplomacyInfos/DiplomacyInfos/DiplomacyInfo", true);
 
-	GC.m_paQuestInfo.load(this, "CIV4QuestInfos", "Misc", L"/Civ4QuestInfos/QuestInfo", false);
-	GC.m_paTutorialInfo.load(this, "CIV4TutorialInfos", "Misc", L"/Civ4TutorialInfos/TutorialInfo", false);
+	GC.m_paQuestInfo.load(this, "CIV4QuestInfos", "Misc", L"/Civ4QuestInfos/QuestInfo");
+	GC.m_paTutorialInfo.load(this, "CIV4TutorialInfos", "Misc", L"/Civ4TutorialInfos/TutorialInfo");
 
-	GC.m_paEspionageMissionInfo.load(this, "CIV4EspionageMissionInfo", "GameInfo", L"/Civ4EspionageMissionInfo/EspionageMissionInfos/EspionageMissionInfo", false);
+	GC.m_paEspionageMissionInfo.load(this, "CIV4EspionageMissionInfo", "GameInfo", L"/Civ4EspionageMissionInfo/EspionageMissionInfos/EspionageMissionInfo");
 	
 	// TB: Moved to enable PlayerTypes to load with Spawn Infos.  Spawn infos aren't called by any other class anyhow.
-	GC.m_paSpawnInfo.load(this, "CIV4SpawnInfos", "Units", L"/Civ4SpawnInfos/SpawnInfos/SpawnInfo", false);
+	GC.m_paSpawnInfo.load(this, "CIV4SpawnInfos", "Units", L"/Civ4SpawnInfos/SpawnInfos/SpawnInfo");
 	DestroyFXml();
 
 	GC.getInitCore().calculateAssetCheckSum();
