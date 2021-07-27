@@ -1204,7 +1204,6 @@ int cvInternalGlobals::getNumMapCategoryInfos() const
 
 CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
 	return *(m_paMapCategoryInfo[e]);
 }
 

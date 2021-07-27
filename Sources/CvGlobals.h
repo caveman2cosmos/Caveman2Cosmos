@@ -1,7 +1,6 @@
 #pragma once
 
-// cvGlobals.h
-//ReplacementStep: search down here for 'CvInfoReplacements'
+// CvGlobals.h
 
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
@@ -541,7 +540,7 @@ public:
 
 	int getNumBuildInfos() const;
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
-	const std::vector<CvBuildInfo*>& getBuildInfos() const { return m_paBuildInfo; }
+	const CvInfoArray<CvBuildInfo>& getBuildInfos() const { return m_paBuildInfo; }
 
 	int getNumHandicapInfos() const;
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
@@ -590,7 +589,7 @@ public:
 
 	int getNumReligionInfos() const;
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
-	const std::vector<CvReligionInfo*>& getReligionInfos() const { return m_paReligionInfo; }
+	const CvInfoArray<CvReligionInfo>& getReligionInfos() const { return m_paReligionInfo; }
 
 	int getNumCorporationInfos() const;
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
@@ -1006,7 +1005,7 @@ protected:
 	CvInfoArray<CvCivicOptionInfo> m_paCivicOptionInfo;
 	CvInfoArray<CvCivicInfo> m_paCivicInfo;
 	std::vector<CvDiplomacyInfo*> m_paDiplomacyInfo;
-	CvInfoArray<CvEraInfo> m_aEraInfo;	// [NUM_ERA_TYPES];
+	CvInfoArray<CvEraInfo> m_aEraInfo;
 	CvInfoArray<CvHurryInfo> m_paHurryInfo;
 	CvInfoArray<CvVictoryInfo> m_paVictoryInfo;
 	CvInfoArray<CvRouteModelInfo> m_paRouteModelInfo;
@@ -1027,7 +1026,7 @@ protected:
 	CvInfoArray<CvPropertyInfo> m_paPropertyInfo;
 	CvInfoArray<CvOutcomeInfo> m_paOutcomeInfo;
 	CvInfoArray<CvMapInfo> m_paMapInfo;
-	CvInfoArray<CvMapInfo> m_paMapCategoryInfo;
+	CvInfoArray<CvMapCategoryInfo> m_paMapCategoryInfo;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

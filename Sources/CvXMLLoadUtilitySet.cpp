@@ -817,7 +817,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 {
 	OutputDebugString("Loading PreMenu Infos: Start\n");
 
-	//ReplacementStep: search down here for 'InfoReplacements()'
 	if (!CreateFXml())
 	{
 		return false;
@@ -825,7 +824,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	OutputDebugString("Begin load global infos\n");
 	GC.m_paInvisibleInfo.load(this, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo");
-	GC.m_paMapCategoryInfo.load(this, "CIV4MapCategoryInfo", "Terrain", L"/Civ4MapCategoryInfos/MapCategoryInfos/MapCategoryInfo");
+	GC.m_paMapCategoryInfo.load(this, "CIV4MapCategoryInfos", "Terrain", L"/Civ4MapCategoryInfos/MapCategoryInfos/MapCategoryInfo");
 	GC.m_paMapInfo.load(this, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo");
 	GC.m_paGameSpeedInfo.load(this, "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo");
 	GC.m_paGameOptionInfos.load(this, "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo");
