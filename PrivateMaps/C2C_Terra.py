@@ -28,8 +28,8 @@ TERRA NOTES
 Terra turns out to be our largest size map. This is the only map script
 in the original release of Civ4 where the grids are this large!
 
-This script is also the one that got me started in to map scripting. I had 
-this idea early in the development cycle and just kept pestering until Soren 
+This script is also the one that got me started in to map scripting. I had
+this idea early in the development cycle and just kept pestering until Soren
 turned me loose on it, finally. Once I got going, I just kept on going!
 
 - Bob Thomas   September 20, 2005
@@ -117,7 +117,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(1) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def getGridSize(argsList):

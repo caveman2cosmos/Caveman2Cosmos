@@ -25,7 +25,7 @@ def isAdvancedMap():
 
 def getNumCustomMapOptions():
 	return 3
-	
+
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
 	option_names = {
@@ -35,7 +35,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -44,7 +44,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:	5
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -244,7 +244,7 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			else:
 				westShift = 0
 				eastShift = int(0.5 * self.iW)
-		
+
 		iWestX = westShift
 		iEastX = self.iW - eastShift
 		iWidth = iEastX - iWestX
@@ -412,7 +412,7 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			# (This will choose one side or the other for this region then fit it properly in its space).
 			westShift = int(0.66 * self.iW)
 			eastShift = 0
-			
+
 			iWestX = westShift
 			iEastX = self.iW - eastShift
 			iWidth = iEastX - iWestX

@@ -4,7 +4,7 @@
 const CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {
 	foreach_(const CvBonusInfo* info, GC.getBonusInfos())
-		if (info->getType() == szType) 
+		if (info->getType() == szType)
 			return info;
 	return NULL;
 }

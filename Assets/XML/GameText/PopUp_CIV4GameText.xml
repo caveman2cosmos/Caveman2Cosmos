@@ -87,20 +87,20 @@
 		<Russian>Эту территорию заняли [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT]. Нарушение границ приведет к войне. Продолжить?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER</Tag>
-		<English>A new mysticism</English>
-		<French>Un nouveau mystique</French>
-		<German>Ein neuer Kult</German>
-		<Italian>Un nuovo culto</Italian>
-		<Russian>Новый культ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION</Tag>
 		<English>A wandering man has arrived in your capital, and he's talking about a religion, founded in the recent years in a far away land. The new religion is called %s1, and the wise man is so amazed by this religion, that he has decided to found a new school in your city to teach it to your citizens.</English>
 		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
 		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
 		<Italian>Un uomo errante è arrivato nella tua capitale e sta parlando di una nuova religione, fondata di recente in una terra lontana. La nuova religione si chiama %s1 e l'uomo ne è così ammirato, che ha deciso di fondare una scuola nella tua città per diffonderla tra i tuoi cittadini.</Italian>
 		<Russian>В вашу столицу прибыл странник, который поведал нам о религии, основанной в последние годы в далекой стране. Новая религия называется %s1, и мудрец был ей так впечатлен, что решил основать новую миссию в вашем городе, чтобы проповедовать там новое учение нашему народу.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER</Tag>
+		<English>A new mysticism</English>
+		<French>Un nouveau mystique</French>
+		<German>Ein neuer Kult</German>
+		<Italian>Un nuovo culto</Italian>
+		<Russian>Новый культ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_GOTO_CITY</Tag>

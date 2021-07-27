@@ -999,6 +999,150 @@
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>10</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -1306,10 +1450,6 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_PENTAGON</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VENETIAN_ARSENAL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -3324,6 +3464,12 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<Flavors/>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NOMAD_SKYSCRAPER</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
@@ -3426,6 +3572,24 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AI_INVESTMENT</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AI_SURVEILLANCE</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
@@ -5766,10 +5930,6 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
-					<iHappinessChange>-2</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
@@ -7042,7 +7202,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_SHAMANHUT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
@@ -7614,6 +7779,150 @@
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>10</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 			<SpecialistCommercePercentChanges>
 				<SpecialistCommercePercentChange>
@@ -8037,10 +8346,6 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HAGIA_SOPHIA</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -8824,7 +9129,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>-2</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
@@ -9037,7 +9342,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
@@ -9068,7 +9372,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>2</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>20</iWorkerSpeedModifier>
@@ -9235,7 +9539,6 @@
 			<iNationalCaptureResistanceModifier>10</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>10</iRealCorporationMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -10796,7 +11099,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-50</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -10876,7 +11179,6 @@
 			<BuildingProductionModifiers/>
 			<iHurryCostModifier>10</iHurryCostModifier>
 			<iHurryInflationModifier>5</iHurryInflationModifier>
-			<iRealCorporationMaintenanceModifier>-50</iRealCorporationMaintenanceModifier>
 			<SpecialistCommercePercentChanges>
 				<SpecialistCommercePercentChange>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -10941,7 +11243,7 @@
 			<iNumCitiesMaintenanceModifier>7</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-50</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11028,7 +11330,6 @@
 			<iInflation>20</iInflation>
 			<iHurryCostModifier>-50</iHurryCostModifier>
 			<iHurryInflationModifier>20</iHurryInflationModifier>
-			<iRealCorporationMaintenanceModifier>-50</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11174,7 +11475,7 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>6</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-33</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-75</iCorporationMaintenanceModifier>
 			<iExtraHealth>-1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11264,7 +11565,6 @@
 			<Flavors/>
 			<iInflation>15</iInflation>
 			<bNoLandmarkAnger>0</bNoLandmarkAnger>
-			<iRealCorporationMaintenanceModifier>-75</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11285,7 +11585,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>7</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-75</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11411,7 +11711,6 @@
 			<iInflation>-10</iInflation>
 			<iHurryCostModifier>-33</iHurryCostModifier>
 			<iSharedCivicTradeRouteModifier>0</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-75</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11432,7 +11731,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11563,7 +11862,6 @@
 			<Flavors/>
 			<iInflation>-10</iInflation>
 			<iSharedCivicTradeRouteModifier>5</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11751,7 +12049,6 @@
 			<Flavors/>
 			<iInflation>5</iInflation>
 			<iLandmarkHappiness>1</iLandmarkHappiness>
-			<iRealCorporationMaintenanceModifier>15</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -11772,7 +12069,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -11856,7 +12153,6 @@
 			<Flavors/>
 			<iHurryCostModifier>33</iHurryCostModifier>
 			<iSharedCivicTradeRouteModifier>0</iSharedCivicTradeRouteModifier>
-			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12375,6 +12671,78 @@
 					<BuildingType>BUILDING_SHAOLIN</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_NGAI</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_AN</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_JAIN_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -12591,7 +12959,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-45</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -12740,7 +13108,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-45</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -12761,7 +13128,7 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>4</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>25</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -12882,7 +13249,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-55</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -12903,7 +13269,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-45</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -13004,7 +13370,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-45</iRealCorporationMaintenanceModifier>
 			<!-- Wrong Civic for these Modifiers
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -13056,7 +13421,7 @@
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>30</iCorporationMaintenanceModifier>
 			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -13185,7 +13550,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-125</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -13935,7 +14299,7 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-55</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -14026,7 +14390,6 @@
 				</Flavor>
 			</Flavors>
 			<iInflation>0</iInflation>
-			<iRealCorporationMaintenanceModifier>-55</iRealCorporationMaintenanceModifier>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -15502,7 +15865,6 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>0</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
@@ -16080,7 +16442,6 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
 			<Flavors/>
-			<iRealCorporationMaintenanceModifier>-85</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
@@ -16734,6 +17095,46 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -17601,7 +18002,16 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<CivicAttitudeChanges/>
 			<Flavors/>
-			<BuildingProductionModifiers/>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ENCYCLOPEDIA_GALACTICA</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<!-- Starter Civic -->
 		<CivicInfo>
@@ -20654,6 +21064,16 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<iProductionModifier>40</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+					<iProductionModifier>40</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>

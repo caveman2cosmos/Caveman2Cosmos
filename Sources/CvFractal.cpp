@@ -48,7 +48,7 @@ void CvFractal::fracInit(int iNewXs, int iNewYs, int iGrain, CvRandom& random, i
 	fracInitInternal(iNewXs, iNewYs, iGrain, random, NULL, -1, iFlags, pRifts, iFracXExp, iFracYExp);
 }
 
-// pbyHints should be a 1d array of bytes representing a 2d array 
+// pbyHints should be a 1d array of bytes representing a 2d array
 //	with width = 2^(iFracXExp - minExp + iGrain) + (GC.getMap().isWrapX() ? 0 : 1)
 //	and height = 2^(iFracYExp - minExp + iGrain) + (GC.getMap().isWrapY() ? 0 : 1)
 // where minExp = std::min(iFracXExp, iFracYExp)
@@ -187,7 +187,7 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 			for (iY = 0; iY < (m_iFracY >> iPass) + ((m_iFlags & FRAC_WRAP_Y) ? 0 : 1); iY++)
 			{
 				if ((iPass == iSmooth))// If this is the first, pass, set the initial random spots
-				{  
+				{
 					if (pbyHints == NULL)
 					{
 						m_aaiFrac[iX << iPass][iY << iPass] = random.get(256, "Fractal Gen");

@@ -19,7 +19,7 @@ balancer = BonusBalancer()
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_CONTINENTS_DESCR"
 
-def isAdvancedMap(): 
+def isAdvancedMap():
 	return 0
 
 def getNumCustomMapOptions():

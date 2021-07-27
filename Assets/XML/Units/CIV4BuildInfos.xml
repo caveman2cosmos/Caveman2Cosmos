@@ -2505,7 +2505,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Early Mountain Mine -> Mountain Mine -->
 		<BuildInfo>
@@ -2522,7 +2521,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Core Mine | End -->
 		<BuildInfo>
@@ -3019,7 +3017,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Shaft Mine -> Modern Mine Era -->
 		<BuildInfo>
@@ -3030,7 +3027,6 @@
 			<iTime>800</iTime>
 			<iCost>30</iCost>
 			<bKill>0</bKill>
-			<bHideObsoleteExempt>1</bHideObsoleteExempt>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<FeatureStructs>
@@ -3053,7 +3049,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Mine -> Shaft Mine Era -->
 		<BuildInfo>
@@ -3085,7 +3080,6 @@
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
-			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Quarry -> Core Mine Era -->
 		<BuildInfo>
@@ -3386,7 +3380,7 @@
 		<BuildInfo>
 			<Type>BUILD_SUBURBS</Type>
 			<Description>TXT_KEY_BUILD_SUBURBS</Description>
-			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
@@ -3647,7 +3641,7 @@
 		<BuildInfo>
 			<Type>BUILD_TOWN</Type>
 			<Description>TXT_KEY_BUILD_TOWN</Description>
-			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>200</iCost>
@@ -3909,7 +3903,7 @@
 		<BuildInfo>
 			<Type>BUILD_VILLAGE</Type>
 			<Description>TXT_KEY_BUILD_VILLAGE</Description>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
 			<iCost>100</iCost>
@@ -4164,7 +4158,7 @@
 		<BuildInfo>
 			<Type>BUILD_HAMLET</Type>
 			<Description>TXT_KEY_BUILD_HAMLET</Description>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>50</iCost>
@@ -4238,7 +4232,7 @@
 		<BuildInfo>
 			<Type>BUILD_COTTAGE</Type>
 			<Description>TXT_KEY_BUILD_COTTAGE</Description>
-			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
 			<iCost>25</iCost>
@@ -5754,6 +5748,28 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/moaiimprovement.dds</Button>
+		</BuildInfo>
+		<!-- Machu Picchu | Independent -->
+		<BuildInfo>
+			<Type>BUILD_MACHU_PICCHU</Type>
+			<Description>TXT_KEY_BUILD_MACHU_PICCHU</Description>
+			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
+			<iTime>400</iTime>
+			<iCost>0</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_MACHU_PICCHU</ImprovementType>
+			<RouteType>NONE</RouteType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<PrereqBonusTypes>
+				<PrereqBonusType>BONUS_MACHU_PICCHU_PLANS</PrereqBonusType>
+			</PrereqBonusTypes>
+			<FeatureStructs/>
+			<HotKey/>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Improvements/Machu.dds</Button>
 		</BuildInfo>
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp (No Kill) | End - Information Lifestyle -->
@@ -10749,6 +10765,38 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
+		<!-- Lighthouse (Great Barrier Reef) -->
+		<BuildInfo>
+			<Type>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
+			<Help/>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<iTime>200</iTime>
+			<iCost>40</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
 		<!-- Beacon (Coral) -->
 		<BuildInfo>
 			<Type>BUILD_BEACON_CORAL</Type>
@@ -10789,6 +10837,31 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
+		<!-- Beacon (Great Barrier Reef) -->
+		<BuildInfo>
+			<Type>BUILD_BEACON_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Description>
+			<Help/>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>20</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>

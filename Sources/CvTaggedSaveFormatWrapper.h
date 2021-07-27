@@ -57,7 +57,7 @@ typedef enum
 	REMAPPED_CLASS_TYPE_TRAITS,
 	//REMAPPED_CLASS_TYPE_TRAITOPTIONEDITS,
 	REMAPPED_CLASS_TYPE_INVISIBLES,
-	REMAPPED_CLASS_TYPE_MAPS,
+	REMAPPED_CLASS_TYPE_MAPCATEGORIES,
 	REMAPPED_CLASS_TYPE_IDEACLASSES,
 	REMAPPED_CLASS_TYPE_IDEAS,
 	//TB Promotion Line Mod end
@@ -161,7 +161,7 @@ public:
 	void		WriteClassArrayOfClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, const int values[]);
 
 	//	The following methods are direct replacements for the write calls
-	//	in the underlying FDataStreamBase 
+	//	in the underlying FDataStreamBase
 	void		Write(const char* name, int& idHint, int& idSeq, char value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint8_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const char values[]);
@@ -176,9 +176,9 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned int value) ;
+	void		Write(const char* name, int& idHint, int& idSeq, uint32_t value) ;
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned int values[]) ;
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint32_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, long value);
 	void		Write(const char* name, int& idHint, int& idSeq, unsigned long  value) ;
@@ -190,14 +190,14 @@ public:
 
 	void		Write(const char* name, int& idHint, int& idSeq, double value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const double values[]);
-	
+
 	void		WriteString(const char* name, int& idHint, int& idSeq, const wchar_t* szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, const char* szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, const std::string& szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, const std::wstring& szName);
 	void		WriteString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);
 	void		WriteString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[]);
-	
+
 	void		ReadStartObject(const char* name, int& idHint, int& idSeq);
 	void		ReadEndObject();
 
@@ -214,14 +214,14 @@ public:
 	void		ReadClassArrayOfClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, int values[]);
 
 	//	The following methods are direct replacements for the read calls
-	//	in the underlying FDataStreamBase 
+	//	in the underlying FDataStreamBase
 	void		ReadString(const char* name, int& idHint, int& idSeq, char **szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, std::string& szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, std::wstring& szName);
 	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);
 	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[]);
-	
+
 	void		Read(const char* name, int& idHint, int& idSeq, char *);
 	void		Read(const char* name, int& idHint, int& idSeq, uint8_t *);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, char values[]);
@@ -233,9 +233,9 @@ public:
 	void		Read(const char* name, int& idHint, int& idSeq, int count, short values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[]);
 	void		Read(const char* name, int& idHint, int& idSeq, int* i);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned int* i);
+	void		Read(const char* name, int& idHint, int& idSeq, uint32_t* i);
 	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned int values[]);
+	void 		Read(const char* name, int& idHint, int& idSeq, int count, uint32_t values[]);
 
 	void		Read(const char* name, int& idHint, int& idSeq, long* l);
 	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l) ;

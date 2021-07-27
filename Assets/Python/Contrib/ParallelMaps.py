@@ -1,27 +1,22 @@
-from CvPythonExtensions import CyGlobalContext, MapTypes
+from CvPythonExtensions import CyGlobalContext #, MapTypes
 import BugEventManager
 import CvUtil
+import DebugUtils
 
 GC = CyGlobalContext()
-bIsSwitchingMap = False
-
 
 class ParallelMaps:
 
 	def __init__(self, pEventManager):
-		if GC.getDefineINT("ENABLE_MULTI_MAPS"):
-			pEventManager.addEventHandler("kbdEvent", self.filterInput)
+		pEventManager.addEventHandler("kbdEvent", self.filterInput)
 
 	def filterInput(self, argsList):
-		i = argsList[1] -2
-		if BugEventManager.g_eventManager.bAlt \
-		and i < MapTypes.NUM_MAPS \
-		and i != GC.getGame().getCurrentMap():
-			global bIsSwitchingMap
-			bIsSwitchingMap = True
-			GC.switchMap(i)
-			bIsSwitchingMap = False
-			if i == 0:
-				CvUtil.sendImmediateMessage("Initial map")
-			else:
-				CvUtil.sendImmediateMessage("Map %d" %i)
+		if DebugUtils.bDebugMode and BugEventManager.g_eventManager.bAlt:
+			i = argsList[1] -2
+			#if i > -1 and i < MapTypes.NUM_MAPS:
+			if i > -1 and i < 10 and i != GC.getGame().getCurrentMap():
+				if not GC.getMapByIndex(i).plotsInitialized():
+					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
+				else:
+					CvUtil.sendImmediateMessage("Map %d: %s" %(i, GC.getMapInfo(i).getDescription())) 
+				GC.switchMap(i)

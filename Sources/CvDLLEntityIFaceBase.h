@@ -3,7 +3,7 @@
 #ifndef CvDLLEntityIFaceBase_h
 #define CvDLLEntityIFaceBase_h
 
-#pragma warning(disable:4100) 
+#pragma warning(disable:4100)
 
 //
 // abstract class containing entity-related functions that the DLL needs

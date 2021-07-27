@@ -77,7 +77,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 
 	//if (strcmp(szTag, "Not") == 0)
 	//wchar_t szLog[1000];
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Not' is %i", pXML->GetXmlTagName(), 
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Not' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"Not") );
 	//OutputDebugStringW(szLog);
 
@@ -100,10 +100,10 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 	}
 
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'And' is %i", pXML->GetXmlTagName(), 
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'And' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"And") );
 	//OutputDebugStringW(szLog);
-	
+
 	//if (strcmp(szTag, "And") == 0)
 	if (equal(pXML->GetXmlTagName(), L"And"))
 	{
@@ -132,7 +132,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				const BoolExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
 				{
@@ -172,7 +172,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				const BoolExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
 				{
@@ -199,7 +199,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				const BoolExpr* pExpr = read(pXML);
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -227,7 +227,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				// read the first node
 				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
 				const BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -255,7 +255,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				// read the first node
 				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
 				const BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -283,7 +283,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				// read the first node
 				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
 				const BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -312,7 +312,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				const BoolExpr* pIfExpr = read(pXML);
 				const BoolExpr* pThenExpr = NULL;
 				const BoolExpr* pElseExpr = NULL;
-				
+
 				// read the then node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -340,7 +340,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		pXML->GetOptionalChildXmlValByName(&iData, L"iDistance", -1);
 		pXML->GetChildXmlValByName(szTextVal, L"GameObjectType");
 		const GameObjectTypes eType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
-		
+
 		// Find the expression and read it
 		if (pXML->TryMoveToXmlFirstChild())
 		{
@@ -351,8 +351,8 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				//{
 				//if (GETXML->GetLastLocatedNodeTagName(pXML->GetXML(), szInnerTag))
 				//{
-				if ( !(equal(pXML->GetXmlTagName(), L"RelationType")   || 
-					   equal(pXML->GetXmlTagName(), L"iDistance")      || 
+				if ( !(equal(pXML->GetXmlTagName(), L"RelationType")   ||
+					   equal(pXML->GetXmlTagName(), L"iDistance")      ||
 					   equal(pXML->GetXmlTagName(), L"GameObjectType")   ) )
 				{
 					pExpr = BoolExpr::read(pXML);
@@ -373,8 +373,8 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 	}
 
-	
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Has' is %i", pXML->GetXmlTagName(), 
+
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Has' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"Has") );
 	//OutputDebugStringW(szLog);
 
@@ -988,7 +988,7 @@ BoolExprIntegrateOr::~BoolExprIntegrateOr()
 bool BoolExprIntegrateOr::evaluate(const CvGameObject* pObject) const
 {
 	bool bAcc = false;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
 	return bAcc;
 }
 
@@ -1021,7 +1021,7 @@ void evalExprChangeIntegrateOr(const CvGameObject* pObject, const BoolExpr* pExp
 BoolExprChange BoolExprIntegrateOr::evaluateChange(const CvGameObject* pObject, const std::vector<GOMOverride>& overrides) const
 {
 	BoolExprChange bAcc = BOOLEXPR_CHANGE_REMAINS_FALSE;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, overrides));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, overrides));
 	return bAcc;
 }
 

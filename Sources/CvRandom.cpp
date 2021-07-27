@@ -10,13 +10,13 @@
 #define RANDOM_SHIFT  (16)
 
 CvRandom::CvRandom()
-{ 
+{
 	reset();
 }
 
 
 CvRandom::~CvRandom()
-{ 
+{
 	uninit();
 }
 

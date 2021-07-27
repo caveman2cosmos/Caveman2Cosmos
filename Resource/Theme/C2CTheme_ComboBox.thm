@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	: Civ4Theme_ComboBox.thm
 Content		: Civ4 - GComboBox control theme
@@ -149,7 +149,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_UpButton_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 			}
 			layer {
 				DestCombine		= GColorCombine(BlendSource,Disable);
@@ -219,7 +219,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_DownButton_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 			}
 			layer {
 				DestCombine		= GColorCombine(BlendSource,Disable);
@@ -289,7 +289,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_LeftButton_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 			}
 			layer {
 				DestCombine		= GColorCombine(BlendSource,Disable);
@@ -359,7 +359,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_RightButton_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 			}
 			layer {
 				DestCombine		= GColorCombine(BlendSource,Disable);
@@ -431,7 +431,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_VGrip_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 				Indent		= GRectMargin(5,0,5,0);
 			}
 			layer {
@@ -479,7 +479,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_HGrip_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 				Indent		= GRectMargin(0,5,0,5);
 			}
 			layer {
@@ -519,7 +519,7 @@ skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Default
 	layer
 	{
 		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 	}
 	layer {
 		DestCombine		= GColorCombine(BlendSource,Disable);
@@ -543,7 +543,7 @@ skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Press
 	layer
 	{
 		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 	}
 	layer {
 		DestCombine		= GColorCombine(BlendSource,Disable);
@@ -567,7 +567,7 @@ skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Default
 	layer
 	{
 		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 	}
 	layer {
 		DestCombine		= GColorCombine(BlendSource,Disable);
@@ -591,7 +591,7 @@ skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Press
 	layer
 	{
 		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 	}
 	layer {
 		DestCombine		= GColorCombine(BlendSource,Disable);
@@ -718,7 +718,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTableBorder_Style
 			}
 			layer
 			{
-				LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+				LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST,
 													 GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
 				Image			= GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 2);
 				Margin			= GRectMargin(6,6,6,6);
@@ -765,7 +765,7 @@ style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTable_Style
 			layer
 			{
 				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
 			}
 			layer
 			{
@@ -1187,7 +1187,7 @@ with GFC_Control_ComboBox
 	GFC_Control_EditComboBox_Style
 	{
 		.Flag_Popup_VStyle = GFlags(GComboBoxCtrl, GFC_CF_COMBOBOX_POPUP_DOWN);
-		
+
 		with .StyleId
 		{
 			.OuterBorder	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Edit_Border_Style);

@@ -21,7 +21,7 @@ def isAdvancedMap():
 
 def getNumCustomMapOptions():
 	return 3
-	
+
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
 	option_names = {
@@ -31,7 +31,7 @@ def getCustomMapOptionName(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(option_names[iOption], ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	[iOption] = argsList
 	option_values = {
@@ -40,7 +40,7 @@ def getNumCustomMapOptionValues(argsList):
 		2:	2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -60,7 +60,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -241,4 +241,3 @@ def addFeatures():
 
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	

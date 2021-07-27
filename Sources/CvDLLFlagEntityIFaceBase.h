@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-	
+
 #pragma once
 #ifndef CvDLLFlagEntityIFaceBase_H
 #define CvDLLFlagEntityIFaceBase_H

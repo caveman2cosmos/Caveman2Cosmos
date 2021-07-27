@@ -1,23 +1,6 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_PLANT</Type>
-			<iNukeExplosionRand>10</iNukeExplosionRand>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
-			<iNukeExplosionRand>5</iNukeExplosionRand>
-		</BuildingInfo>
-		<!-- Pepper -->
-		<BuildingInfo>
-			<Type>BUILDING_GENERATION_IV_REACTOR</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_GENERATION_IV_REACTOR</DependencyType>
-			</AndDependencyTypes>
-			<iNukeExplosionRand>1</iNukeExplosionRand>
-		</BuildingInfo>
-		<!-- Atompunk -->
 		<BuildingInfo>
 			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
 			<AndDependencyTypes>
@@ -26,11 +9,26 @@
 			<iNukeExplosionRand>3</iNukeExplosionRand>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
+			<iNukeExplosionRand>5</iNukeExplosionRand>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GENERATION_IV_REACTOR</Type>
+			<AndDependencyTypes>
+				<DependencyType>BUILDING_GENERATION_IV_REACTOR</DependencyType>
+			</AndDependencyTypes>
+			<iNukeExplosionRand>1</iNukeExplosionRand>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_HI_TECH_NUCLEAR_REACTOR</DependencyType>
 			</AndDependencyTypes>
 			<iNukeExplosionRand>2</iNukeExplosionRand>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NUCLEAR_PLANT</Type>
+			<iNukeExplosionRand>10</iNukeExplosionRand>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

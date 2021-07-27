@@ -12,7 +12,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {
 	OutputDebugString("Python Extension Module - CyPlayerPythonInterface1\n");
 
-	// set the docstring of the current module scope 
+	// set the docstring of the current module scope
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
 		.def("getAdvancedStartPoints", &CyPlayer::getAdvancedStartPoints, "int ()")
@@ -105,12 +105,10 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
 		.def("isMinorCiv", &CyPlayer::isMinorCiv, "bool ()")
+
 		.def("isAlive", &CyPlayer::isAlive, "bool ()")
 		.def("isEverAlive", &CyPlayer::isEverAlive, "bool ()")
 		.def("isFoundedFirstCity", &CyPlayer::isFoundedFirstCity, "bool ()")
-
-		.def("isMADNukesEnabled", &CyPlayer::isMADNukesEnabled, "bool ()")
-
 		.def("isStrike", &CyPlayer::isStrike, "bool ()")
 
 		.def("getID", &CyPlayer::getID, "int ()")
@@ -175,7 +173,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("isResearchingTech", &CyPlayer::isResearchingTech, "bool (int /*TechTypes*/ iIndex)")
 		.def("getCivics", &CyPlayer::getCivics, "int /*CivicTypes*/ (int /*CivicOptionTypes*/ iIndex)")
 		.def("getSingleCivicUpkeep", &CyPlayer::getSingleCivicUpkeep, "int (int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy)")
-		.def("getCivicUpkeep", &CyPlayer::getCivicUpkeep, "int (int* /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy)")
+		.def("getCivicUpkeep", &CyPlayer::getCivicUpkeep, "int (bool bIgnoreAnarchy)")
 		.def("setCivics", &CyPlayer::setCivics, "void (int iCivicOptionType, int iCivicType) - Used to forcibly set civics with no anarchy")
 
 		.def("getCombatExperience", &CyPlayer::getCombatExperience, "int () - Combat experience used to produce Warlords")

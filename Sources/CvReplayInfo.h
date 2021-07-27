@@ -94,7 +94,7 @@ protected:
 	bool m_bMultiplayer;
 
 	typedef std::vector<const CvReplayMessage*> ReplayMessageList;
-	ReplayMessageList m_listReplayMessages; 
+	ReplayMessageList m_listReplayMessages;
 
 	int m_iInitialTurn;
 	int m_iFinalTurn;

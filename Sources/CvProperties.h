@@ -41,7 +41,7 @@ class CvProperties
 {
 public:
 	CvProperties();
-	
+
 	explicit CvProperties(CvGame* pGame);
 	explicit CvProperties(CvTeam* pTeam);
 	explicit CvProperties(CvPlayer* pPlayer);
@@ -66,7 +66,7 @@ public:
 	void changeValueByProperty(PropertyTypes eProp, int iChange);
 	void changeChangeByProperty(PropertyTypes eProp, int iChange);
 	void propagateChange(PropertyTypes eProp, int iChange);
-	
+
 	void addProperties(const CvProperties* pProp);
 	void subtractProperties(const CvProperties* pProp);
 
@@ -93,7 +93,7 @@ public:
 
 	// For Python
 	std::wstring getPropertyDisplay(int index) const;
-	
+
 	void read(FDataStreamBase* pStream);
 	void readWrapper(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -102,16 +102,6 @@ public:
 	void copyNonDefaults(const CvProperties* pProp);
 
 	void getCheckSum(uint32_t& iSum) const;
-
-private:
-	friend void CyPropertiesPythonInterface();
-
-	// Python variants with non-strict enum typing (don't use these in C++ code)
-	int _getProperty(int index) const { return static_cast<int>(getProperty(index)); }
-	int _getValueByProperty(int eProp) const { return getValueByProperty(static_cast<PropertyTypes>(eProp)); }
-	int _getChangeByProperty(int eProp) const { return getChangeByProperty(static_cast<PropertyTypes>(eProp)); }
-	void _setValueByProperty(int eProp, int iVal) { setValueByProperty(static_cast<PropertyTypes>(eProp), iVal); }
-	void _changeValueByProperty(int eProp, int iChange) { changeValueByProperty(static_cast<PropertyTypes>(eProp), iChange); }
 
 private:
 	struct PropertyValue
@@ -137,7 +127,7 @@ private:
 
 	PropertyValueVector m_aiProperty;
 	PropertyValueVector m_aiPropertyChange;
-	
+
 	// Pointer to the object to which the properties belong
 	CvGameObject* m_pGameObject;
 };

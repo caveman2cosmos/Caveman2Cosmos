@@ -6,7 +6,7 @@
 ## [o] = Partially implemented in the Civ4lerts mod
 ## [x] = Already implemented in CivIV
 ## [?] = Not sure if this applies in CivIV
-## 
+##
 ## Golden Age turns left
 ## At Year 1000 B.C. (QSC Save Submission)
 ## Within 10 tiles of domination limit
@@ -40,7 +40,7 @@
 ## City is working unimproved tiles
 ## Disconnected resources in our territory
 ## City is about to produce a great person
-## 
+##
 ## Other:
 ## City is under cultural pressure
 
@@ -103,7 +103,7 @@ def addMessage(iPlayer, szTxt, icon=None, iX=-1, iY=-1, bOffArrow=False, bOnArro
 	"Displays an on-screen message."
 	"""
 	Make these alerts optionally show a delayable popup with various options.
-	a) show: 
+	a) show:
 
 	Happy: Zoom to City, Turn OFF avoid growth, Whip (maybe?), Ignore
 	Unhappy:  Zoom to City, Turn on Avoid Growth, Suggest cheapest military unit (with right civic), Open Resources screen in FA, Ignore. (for future = suggest building)
@@ -121,7 +121,7 @@ def addMessage(iPlayer, szTxt, icon=None, iX=-1, iY=-1, bOffArrow=False, bOnArro
 ## Base Alert Class
 class AbstractStatefulAlert:
 	"""
-	Provides a base class and several convenience functions for 
+	Provides a base class and several convenience functions for
 	implementing an alert that retains state between turns.
 	"""
 	def __init__(self, eventManager):
@@ -153,7 +153,7 @@ def getCityId(city):
 
 class AbstractCityAlertManager(AbstractStatefulAlert):
 	"""
-	Triggered when cities are acquired or lost, this event manager passes 
+	Triggered when cities are acquired or lost, this event manager passes
 	each off to a set of alert checkers.
 
 	All of the alerts are reset when the game is loaded or started.
@@ -621,7 +621,7 @@ class CanHurryPopulation(AbstractCanHurry):
 	"""
 	Displays an alert when a city can hurry using population.
 	"""
-	def __init__(self, eventManager): 
+	def __init__(self, eventManager):
 		AbstractCanHurry.__init__(self, eventManager)
 
 	def init(self):
@@ -648,7 +648,7 @@ class CanHurryGold(AbstractCanHurry):
 	"""
 	Displays an alert when a city can hurry using gold.
 	"""
-	def __init__(self, eventManager): 
+	def __init__(self, eventManager):
 		AbstractCanHurry.__init__(self, eventManager)
 
 	def init(self):
@@ -894,7 +894,7 @@ class WorstEnemy(AbstractStatefulAlert):
 						if eOldEnemy == iActiveTeam:
 							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_NO_WORST_ENEMY", GC.getTeam(eTeam).getName())
 						else:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_NO_WORST_ENEMY", 
+							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_NO_WORST_ENEMY",
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
 					elif eOldEnemy == -1:
 						message = None # handled below
@@ -904,13 +904,13 @@ class WorstEnemy(AbstractStatefulAlert):
 							delayedMessages[eNewEnemy] += u", " + GC.getTeam(eTeam).getName()
 					else:
 						if eOldEnemy == iActiveTeam:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_FROM_YOU", 
+							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_FROM_YOU",
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName()))
 						elif eNewEnemy == iActiveTeam:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_TO_YOU", 
+							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_TO_YOU",
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
 						else:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY", 
+							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY",
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName(), GC.getTeam(eOldEnemy).getName()))
 					if message:
 						addMessage(eActivePlayer, message)

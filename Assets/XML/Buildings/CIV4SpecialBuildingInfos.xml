@@ -76,6 +76,20 @@
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_STORY</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_STORY</Description>
+			<TechPrereq>TECH_WRITING</TechPrereq>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Buildings/story_dartfrog.dds</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_STORIES</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_STORIES</Description>
+			<TechPrereq>TECH_LITERATURE</TechPrereq>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Buildings/stories_dartfrog.dds</Button>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_CORPORATION_HQ</Description>
 			<TechPrereq>TECH_CORPORATION</TechPrereq>

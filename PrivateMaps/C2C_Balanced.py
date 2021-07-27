@@ -21,8 +21,8 @@ def getDescription():
 def isAdvancedMap():
 	"This map should show up in simple mode"
 	return 0
-# Rise of Mankind 2.5	
-	
+# Rise of Mankind 2.5
+
 def getNumCustomMapOptions():
 	return 1
 
@@ -32,10 +32,10 @@ def getNumHiddenCustomMapOptions():
 def getCustomMapOptionName(argsList):
 	translated_text = unicode(CyTranslator().getText("TXT_KEY_MAP_WORLD_WRAP", ()))
 	return translated_text
-	
+
 def getNumCustomMapOptionValues(argsList):
 	return 3
-	
+
 def getCustomMapOptionDescAt(argsList):
 	iSelection = argsList[1]
 	selection_names = ["TXT_KEY_MAP_WRAP_FLAT",
@@ -43,7 +43,7 @@ def getCustomMapOptionDescAt(argsList):
 					   "TXT_KEY_MAP_WRAP_TOROID"]
 	translated_text = unicode(CyTranslator().getText(selection_names[iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	return 1
 
@@ -53,7 +53,7 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 2)
@@ -76,7 +76,7 @@ def generatePlotTypes():
 	if not cont:
 		print "Couldn't create continent! Reverting to C implementation."
 		CyPythonMgr().allowDefaultImpl()
-	else:		
+	else:
 		for x in range(hinted_world.w):
 			for y in (0, hinted_world.h - 1):
 				hinted_world.setValue(x,y, 1) # force ocean at poles
@@ -99,14 +99,14 @@ def generateTerrainTypes():
 	return terrainTypes
 
 # subclass FeatureGenerator to eliminate arctic, equatorial latitudes
-	
+
 class BFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
 		lat = CvMapGeneratorUtil.FeatureGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
 		lat = 0.05 + 0.75*lat				# range [0.05, 0.75]
 		return lat
-	
+
 def addFeatures():
 	NiTextOut("Adding Features (Python Balanced) ...")
 	featuregen = BFeatureGenerator()
@@ -116,13 +116,12 @@ def addFeatures():
 def normalizeAddExtras():
 	balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
-	
+
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	
+
 	if (not balancer.isSkipBonus(iBonusType)):
-		CyPythonMgr().allowDefaultImpl() 
-		
+		CyPythonMgr().allowDefaultImpl()
+
 def afterGeneration():
 	CvMapGeneratorUtil.placeC2CBonuses()
-	
