@@ -19,7 +19,6 @@ class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
-class CvUnitAI;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -47,7 +46,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(MapTypes eMap);
+	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -77,9 +76,9 @@ public:
 	CvViewport* getCurrentViewport() const;
 	const std::vector<CvViewport*> getViewports() const;
 
-	bool plotsInitialized() const;
-
 	const char* getMapScript() const;
+
+	bool plotsInitialized() const;
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);

@@ -369,44 +369,14 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-void CvMap::updateIncomingUnits()
-{
-	for (std::vector<IncomingUnit>::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
-	{
-		if ((*itr).second-- <= 0)
-		{
-			GC.switchMap(m_eType);
-
-			CvUnit& offMapUnit = (*itr).first;
-			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
-			CvPlot* startingPlot = owner.findStartingPlot();
-			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			if (onMapUnit == NULL)
-			{
-				FErrorMsg("CvPlayer::initUnit returned NULL");
-				continue;
-			}
-			m_IncomingUnits.erase(itr);
-			// TODO - make onMapUnit a copy of offMapUnit without changing onMapUnit x/y
-		}
-	}
-}
-
-
+// XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
-	updateIncomingUnits();
-
-	if (m_pMapPlots != NULL)
+	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		GC.switchMap(m_eType);
-
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			plotByIndex(iI)->doTurn();
-		}
+		plotByIndex(iI)->doTurn();
 	}
 }
 
@@ -1512,11 +1482,6 @@ CvViewport* CvMap::getCurrentViewport() const
 MapTypes CvMap::getType() const
 {
 	return m_eType;
-}
-
-void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
-{
-	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
 
 const char* CvMap::getMapScript() const
