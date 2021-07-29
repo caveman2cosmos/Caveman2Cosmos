@@ -66,9 +66,6 @@ public:
 	void beforeSwitch();
 	void afterSwitch();
 
-	void updateIncomingUnits();
-	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
-
 private:
 	void addViewport(int iXOffset, int iYOffset);
 public:
@@ -268,9 +265,6 @@ private:
 	FFreeListTrashArray<CvArea> m_areas;
 
 	std::vector<CvViewport*> m_viewports;
-
-	typedef std::pair<CvUnitAI, int> IncomingUnit;
-	std::vector<IncomingUnit> m_IncomingUnits;
 };
 
 #endif
