@@ -77,7 +77,7 @@ CvPlot::CvPlot()
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
 	m_aiPlotGroup = NULL;
-	m_aiVisibilityCount = NULL;
+	m_aiVisibilityCount = new short[MAX_TEAMS];
 	m_aiLastSeenTurn = NULL;
 	m_aiDangerCount = NULL;
 	m_aiStolenVisibilityCount = NULL;
@@ -8799,7 +8799,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
-	return m_aiVisibilityCount ? m_aiVisibilityCount[eTeam] : 0;
+	return m_aiVisibilityCount[eTeam];
 }
 
 int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer) const
@@ -8860,9 +8860,24 @@ void CvPlot::clearVisibilityCounts()
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-	SAFE_DELETE_ARRAY(m_aiStolenVisibilityCount);
-	SAFE_DELETE_ARRAY2(m_apaiInvisibleVisibilityCount, MAX_TEAMS);
-	//SAFE_DELETE_ARRAY2(m_apaiCachedHighestTeamInvisibilityIntensity, MAX_TEAMS);
+	SAFE_DELETE(m_aiStolenVisibilityCount);
+	if (NULL != m_apaiInvisibleVisibilityCount)
+	{
+		for (int iI = 0; iI < MAX_TEAMS; ++iI)
+		{
+			SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount);
+	}
+
+	//if (NULL != m_apaiCachedHighestTeamInvisibilityIntensity)
+	//{
+	//	for (int iI = 0; iI < MAX_TEAMS; ++iI)
+	//	{
+	//		SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
+	//	}
+	//	SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity);
+	//}
 	m_resultHashMap->clear();
 	g_bestDefenderCache->clear();
 	m_aPlotTeamVisibilityIntensity.clear();
@@ -9882,13 +9897,9 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 		return;
 	}
 
-	FeatureTypes eFeature = getFeatureType();
+	const FeatureTypes eFeature = getFeatureType();
 
-	{
-		//CMemoryTrace __memoryTrace("RebuildTileArt");
-
-		gDLL->getEngineIFace()->RebuildTileArt(getViewportX(),getViewportY());
-	}
+	gDLL->getEngineIFace()->RebuildTileArt(getViewportX(),getViewportY());
 
 	if ( eFeature == NO_FEATURE ||
 		 GC.getFeatureInfo(eFeature).getArtInfo()->isRiverArt() ||

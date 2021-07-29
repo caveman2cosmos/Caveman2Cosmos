@@ -180,9 +180,6 @@ public:
 	const bst::array<CvMap*, NUM_MAPS>& getMaps() const { return m_maps; }
 
 	CvViewport* getCurrentViewport() const;
-	int	getViewportSizeX() const;
-	int	getViewportSizeY() const;
-	int getViewportSelectionBorder() const;
 	int getViewportCenteringBorder() const;
 	CvMapExternal& getMapExternal() const;
 
@@ -1112,14 +1109,10 @@ protected:
 
 	float m_fPLOT_SIZE;
 
-	bool m_bViewportsEnabled;
-	int	m_iViewportFocusBorder;
-	int m_iViewportSizeX;
-	int m_iViewportSizeY;
 	int m_iViewportCenterOnSelectionCenterBorder;
 
 	const char* m_szAlternateProfilSampleName;
-	FProfiler* m_Profiler;		// profiler
+	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
 
 public:
