@@ -15522,17 +15522,8 @@ CvUnit* CvPlayer::addUnit()
 	return m_units[CURRENT_MAP]->add();
 }
 
-CvUnit& CvPlayer::addUnitCopy(CvUnit& unit)
-{
-	return *addUnit() = unit;
-}
 
 void CvPlayer::deleteUnit(int iID)
-{
-	deleteUnit(iID, CURRENT_MAP);
-}
-
-void CvPlayer::deleteUnit(int iID, MapTypes eMap)
 {
 	if (getUnit(iID)->isCommander())
 	{
@@ -15553,7 +15544,7 @@ void CvPlayer::deleteUnit(int iID, MapTypes eMap)
 			}
 		}
 	}
-	m_units[eMap]->removeAt(iID);
+	m_units[CURRENT_MAP]->removeAt(iID);
 }
 
 CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
