@@ -8,26 +8,23 @@ GC = CyGlobalContext()
 class ParallelMaps:
 
 	def __init__(self, pEventManager):
-		pEventManager.addEventHandler("kbdEvent", self.filterInput)
+		pEventManager.addEventHandler("kbdEvent", self.handleInput)
 
-	def filterInput(self, argsList):
+	def handleInput(self, argsList):
+
+		def _tryMapSwitch(eMap):
+			if eMap > -1 and eMap < MapTypes.NUM_MAPS and eMap != GC.getGame().getCurrentMap() \
+			and (GC.isDebugBuild() or DebugUtils.bDebugMode or GC.getMapByIndex(eMap).plotsInitialized()):
+				if not GC.getMapByIndex(eMap).plotsInitialized():
+					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()))
+				else:
+					CvUtil.sendImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()))
+				GC.switchMap(eMap)
+
+		eKey = argsList[1]
+
 		if BugEventManager.g_eventManager.bAlt:
-			i = argsList[1] -2
-			#if i > -1 and i < MapTypes.NUM_MAPS:
-			if i > -1 and i < 10 and i != GC.getGame().getCurrentMap() \
-			and (DebugUtils.bDebugMode or GC.getMapByIndex(i).plotsInitialized()):
-				if not GC.getMapByIndex(i).plotsInitialized():
-					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
-				else:
-					CvUtil.sendImmediateMessage("Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
-				GC.switchMap(i)
+			_tryMapSwitch(eKey -2) # enum of key -2 gives the correct value for the number keys (0-9). I know enums should not be used this way.
 
-		if BugEventManager.g_eventManager.bCtrl:
-			i = argsList[1] +7 #Maps 10 - 16 (ctrl+1 -> ctrl+6)
-			if i > -1 and i < MapTypes.NUM_MAPS and i != GC.getGame().getCurrentMap() \
-			and (DebugUtils.bDebugMode or GC.getMapByIndex(i).plotsInitialized()):
-				if not GC.getMapByIndex(i).plotsInitialized():
-					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
-				else:
-					CvUtil.sendImmediateMessage("Map %d: %s" %(i, GC.getMapInfo(i).getDescription()))
-				GC.switchMap(i)
+		elif BugEventManager.g_eventManager.bCtrl:
+			_tryMapSwitch(eKey +7) # Maps 10 - 16 (ctrl+1 -> ctrl+6)
