@@ -71,32 +71,8 @@ void CvViewport::resizeForMap()
 		Cy::call(PYCivModule, "forceBUGModuleInit", Cy::Args() << "BUG Main Interface");
 	}
 
-	if (GC.getENABLE_VIEWPORTS())
-	{
-		m_iXSize = GC.getVIEWPORT_SIZE_X();
-		m_iYSize = GC.getVIEWPORT_SIZE_Y();
-/*
-		if (m_iXSize > m_pMap->getGridWidth())
-		{
-			m_iXSize = m_pMap->getGridWidth();
-		}
-
-		if (m_iYSize > m_pMap->getGridHeight())
-		{
-			m_iYSize = m_pMap->getGridHeight();
-		}
-*/
-	}
-	else if (m_pMap->getType() == MAP_EARTH)
-	{
-		m_iXSize = m_pMap->getGridWidth();
-		m_iYSize = m_pMap->getGridHeight();
-	}
-	else
-	{
-		m_iXSize = GC.getMapByIndex(MAP_EARTH).getGridWidth();
-		m_iYSize = GC.getMapByIndex(MAP_EARTH).getGridHeight();
-	}
+	m_iXSize = GC.viewportsEnabled() ? std::min(GC.getVIEWPORT_SIZE_X(), m_pMap->getGridWidth()) : m_pMap->getGridWidth();
+	m_iYSize = GC.viewportsEnabled() ? std::min(GC.getVIEWPORT_SIZE_Y(), m_pMap->getGridHeight()) : m_pMap->getGridHeight();
 }
 
 void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
