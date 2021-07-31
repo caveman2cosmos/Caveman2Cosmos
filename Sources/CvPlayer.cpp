@@ -10722,17 +10722,10 @@ int CvPlayer::getOverflowResearch() const
 	return m_iOverflowResearch;
 }
 
-
-void CvPlayer::setOverflowResearch(int iNewValue)
-{
-	m_iOverflowResearch = iNewValue;
-	FASSERT_NOT_NEGATIVE(getOverflowResearch())
-}
-
-
 void CvPlayer::changeOverflowResearch(int iChange)
 {
-	setOverflowResearch(getOverflowResearch() + iChange);
+	m_iOverflowResearch += iChange;
+	FASSERT_NOT_NEGATIVE(m_iOverflowResearch)
 }
 
 
@@ -15976,8 +15969,10 @@ void CvPlayer::doResearch()
 	}
 	else
 	{
-		const int iOverflow = getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100;
-		setOverflowResearch(0);
+		int iOverflow = getOverflowResearch();
+		changeOverflowResearch(-iOverflow);
+		iOverflow *= calculateResearchModifier(eCurrentTech);
+		iOverflow /= 100;
 		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, (calculateResearchRate(eCurrentTech) + iOverflow), getID());
 	}
 
