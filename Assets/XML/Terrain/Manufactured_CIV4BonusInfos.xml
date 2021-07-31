@@ -2314,12 +2314,10 @@
 			<Type>BONUS_SMART_MEDICINE</Type>
 			<Description>TXT_KEY_BONUS_SMART_MEDICINE</Description>
 			<Civilopedia>TXT_KEY_BONUS_SMART_MEDICINE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SMART_MEDICINE</ArtDefineTag>
 			<TechReveal>TECH_SMART_DRUGS</TechReveal>
 			<TechCityTrade>TECH_SMART_DRUGS</TechCityTrade>
-			<iAITradeModifier>10</iAITradeModifier>
-			<iAIObjective>10</iAIObjective>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>

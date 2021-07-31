@@ -6389,7 +6389,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
-			<iNumFreeBonuses>-1</iNumFreeBonuses>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

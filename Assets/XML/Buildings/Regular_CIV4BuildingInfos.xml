@@ -1074,9 +1074,10 @@
 				<iYield>0</iYield>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -3414,6 +3415,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBonuses>
@@ -18255,6 +18260,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_APICULTURE</PrereqTech>
+			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_SUGAR</Bonus>
 				<Bonus>BONUS_HONEY</Bonus>
@@ -20581,8 +20587,11 @@
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
-				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1605</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -30640,9 +30649,12 @@
 			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_HYDRAULIC_FACTORY</BuildingType>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HYDRAULIC_FACTORY</BuildingType>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3385</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -30877,12 +30889,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1410</iCost>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
@@ -31195,9 +31211,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MODERN_CARTOGRAPHER</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2105</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -31870,9 +31889,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
 				<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1410</iCost>
 			<iInvestigation>50</iInvestigation>
 			<CommerceChanges>
@@ -37920,8 +37942,11 @@
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
-				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2105</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -39678,8 +39703,11 @@
 			<Bonus>BONUS_LARD</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1410</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -44795,6 +44823,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
@@ -44838,6 +44867,9 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -45459,9 +45491,12 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -45499,8 +45534,11 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAUTY_SALON</BuildingType>
-				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2985</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -46010,9 +46048,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2305</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -52189,9 +52228,10 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
@@ -52418,6 +52458,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POWERED_EXOSKELETON</PrereqTech>
+			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
@@ -52428,6 +52469,9 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MECHATRONICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>2745</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -63821,10 +63865,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SMART_MEDICINE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_STIM_PACKS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -66862,8 +66902,11 @@
 			<Bonus>BONUS_SERVICE_BOTS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CONTROL_CENTER</BuildingType>
-				<BuildingType>BUILDING_HYDRAULIC_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HYDRAULIC_FACTORY</BuildingType>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3245</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -68696,12 +68739,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1410</iCost>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -70500,8 +70547,11 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
-				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3805</iCost>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -70581,10 +70631,13 @@
 				<Bonus>BONUS_BIOPOLYMERS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NANOFACTORY</BuildingType>
 				<BuildingType>BUILDING_BIOMORPHICS_LAB</BuildingType>
 				<BuildingType>BUILDING_INTUITIVE_ALGORITHMS</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_NANOFACTORY</BuildingType>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3805</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -70657,12 +70710,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOELECTRONICS</PrereqTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_NANOGENERATORS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NANITE_LAB</BuildingType>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>3805</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -70819,9 +70876,10 @@
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NANOFACTORY</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3975</iCost>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -71019,10 +71077,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_ZEPTOTECHNOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1925</iCost>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -84071,9 +84133,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
 				<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MOLECULAR_BIOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1410</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -97833,9 +97898,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2305</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -111178,13 +111244,22 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
-			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CONCRETE_MASON</BuildingType>
 				<BuildingType>BUILDING_CEMENT_MILL</BuildingType>
 			</PrereqOrBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_GATHERER_LAVA_ROCK</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_ADVANCED_EARTHWORKS</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WATER_PARK</Type>
