@@ -8793,7 +8793,7 @@
 							<PythonCallback>goToDistantCosmos</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action>				
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
