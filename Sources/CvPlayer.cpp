@@ -15976,12 +15976,9 @@ void CvPlayer::doResearch()
 	}
 	else
 	{
+		const int iOverflow = getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100;
 		setOverflowResearch(0);
-		GET_TEAM(getTeam()).changeResearchProgress
-		(
-			eCurrentTech,
-			calculateResearchRate(eCurrentTech) + getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100, getID()
-		);
+		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, (calculateResearchRate(eCurrentTech) + iOverflow), getID());
 	}
 
 	if (bForceResearchChoice)
