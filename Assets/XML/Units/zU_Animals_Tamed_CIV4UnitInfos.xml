@@ -1041,8 +1041,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>				
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_ASIANBEAR_MYTH</BuildingType>
@@ -1269,8 +1268,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>				
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_MYTH</BuildingType>
@@ -1344,8 +1342,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>				
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_GRIZZLY_MYTH</BuildingType>
 				<BuildingType>BUILDING_GRIZZLY_STORY</BuildingType>
@@ -1493,7 +1490,6 @@
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_POLAR_BEAR_MYTH</BuildingType>
@@ -1639,8 +1635,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>				
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
 				<BuildingType>BUILDING_SLOTH_BEAR_MYTH</BuildingType>
