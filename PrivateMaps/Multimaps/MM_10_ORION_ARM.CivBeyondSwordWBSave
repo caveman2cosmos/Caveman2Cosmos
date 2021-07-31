@@ -140,32 +140,27 @@ BeginPlot
 	x=0, y=24
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=0, y=25
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=0, y=26
 	StartingPlot
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=0, y=27
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=0, y=28
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=0, y=29
@@ -309,31 +304,26 @@ BeginPlot
 	x=1, y=24
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=1, y=25
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=1, y=26
 	TerrainType=TERRAIN_STAR_CLUSTER
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=1, y=27
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=1, y=28
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=1, y=29
@@ -476,31 +466,26 @@ BeginPlot
 	x=2, y=24
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=2, y=25
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=2, y=26
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=2, y=27
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=2, y=28
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=2, y=29
@@ -4111,31 +4096,26 @@ BeginPlot
 	x=25, y=5
 	TerrainType=TERRAIN_NEUTRON_STAR
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=25, y=6
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=25, y=7
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=25, y=8
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=25, y=9
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=25, y=10
@@ -4279,31 +4259,26 @@ BeginPlot
 	x=26, y=5
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=26, y=6
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=26, y=7
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=26, y=8
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=26, y=9
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=26, y=10
@@ -4446,32 +4421,27 @@ BeginPlot
 	x=27, y=5
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=27, y=6
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=27, y=7
 	StartingPlot
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=27, y=8
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=27, y=9
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=27, y=10
@@ -4615,31 +4585,26 @@ BeginPlot
 	x=28, y=5
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=28, y=6
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=28, y=7
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=28, y=8
 	TerrainType=TERRAIN_STAR_CLUSTER
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=28, y=9
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=28, y=10
@@ -4780,31 +4745,26 @@ BeginPlot
 	x=29, y=5
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=29, y=6
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=29, y=7
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=29, y=8
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=29, y=9
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=29, y=10
@@ -7642,32 +7602,27 @@ BeginPlot
 	BonusType=BONUS_XENOFAUNA
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=46, y=25
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=46, y=26
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=46, y=27
 	BonusType=BONUS_XENOFAUNA
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=46, y=28
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=46, y=29
@@ -7809,32 +7764,27 @@ BeginPlot
 	x=47, y=24
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=47, y=25
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=47, y=26
 	BonusType=BONUS_XENOFLORA
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=47, y=27
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=47, y=28
 	TerrainType=TERRAIN_ORION_ARM
 	PlotType=2
-
 EndPlot
 BeginPlot
 	x=47, y=29
