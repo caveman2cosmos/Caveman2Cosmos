@@ -2714,7 +2714,7 @@ class CvEventManager:
 						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_KENTUCKY_DERBY",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
 				elif KEY == "GREAT_ZIMBABWE":
-					if not CyCity.isFoodProduction():
+					if CyCity.isFoodProduction():
 						CyCity.changeFood(CyCity.getYieldRate(0) - CyCity.foodConsumption(False, 0))
 						if CyCity.getFood() >= CyCity.growthThreshold():
 							CyCity.changePopulation(1)
