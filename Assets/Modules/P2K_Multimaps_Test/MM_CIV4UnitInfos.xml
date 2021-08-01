@@ -932,20 +932,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP2_HELP</Help>
@@ -1014,6 +1000,22 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -1134,6 +1136,22 @@
 								def getAIValue(unit, plot):
 									return 1
 							</Python>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -1780,6 +1798,22 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -1866,6 +1900,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -2116,6 +2166,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -3979,20 +4045,6 @@
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -4184,6 +4236,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -5086,6 +5154,22 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -5316,6 +5400,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -5600,6 +5700,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -5905,6 +6021,22 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -6065,6 +6197,22 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -6207,6 +6355,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -6508,6 +6672,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -8101,6 +8281,22 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -8258,6 +8454,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -9349,20 +9561,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Civilopedia>
@@ -9429,6 +9627,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -11929,6 +12143,22 @@
 								</Greater>
 							</PlotCondition>
 							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>

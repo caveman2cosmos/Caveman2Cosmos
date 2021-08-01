@@ -128,6 +128,18 @@
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
+			<!-- Map of Orion Arm -->
+			<!-- Colonizable in Galactic and later -->
+			<Type>MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_MAP_ORION_ARM</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_10_ORION_ARM.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
 			<!-- Map of Milky Way -->
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_MILKY_WAY</Type>

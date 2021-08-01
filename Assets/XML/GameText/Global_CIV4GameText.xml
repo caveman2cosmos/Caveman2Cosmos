@@ -15248,6 +15248,10 @@
 		<English>Nearby Stars</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MAP_ORION_ARM</Tag>
+		<English>Orion Arm</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Tag>
 		<English>Outer Solar System</English>
 	</TEXT>
