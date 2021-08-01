@@ -5647,7 +5647,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>

@@ -4814,7 +4814,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
 		{
-			int iOverflow = (100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
+			int iOverflow = 100 * (getResearchProgress(eIndex) - getResearchCost(eIndex)) / GET_PLAYER(ePlayer).calculateResearchModifier(eIndex);
 
 			// Multiple Research
 			setHasTech(eIndex, true, ePlayer, true, true);
@@ -4827,9 +4827,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 void CvTeam::changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer)
 {
-	int iNewResearch = std::max(0, getResearchProgress(eIndex) + iChange);
-
-	setResearchProgress(eIndex, iNewResearch, ePlayer);
+	setResearchProgress(eIndex, std::max(0, getResearchProgress(eIndex) + iChange), ePlayer);
 }
 
 int CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)

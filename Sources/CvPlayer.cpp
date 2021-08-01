@@ -8286,12 +8286,11 @@ int64_t CvPlayer::calculateBaseNetGold() const
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 {
-	int iModifier = 100;
-
 	if (NO_TECH == eTech)
 	{
-		return iModifier;
+		return 100;
 	}
+	int iModifier = 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
@@ -8322,11 +8321,11 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 
 						knownExp += 0.5;
 
-						if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
+						if (GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()))
 						{
 							knownExp += 1.5;
 						}
-						else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
+						else if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 						{
 							knownExp += 0.5;
 						}
@@ -8397,7 +8396,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
-	return std::max(1,iModifier);
+	return std::max(1, iModifier);
 }
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
@@ -8610,7 +8609,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 		&& (iI == getID() || GET_PLAYER((PlayerTypes)iI).getCurrentResearch() == eTech))
 		{
 			iResearchRate += GET_PLAYER((PlayerTypes)iI).calculateResearchRate(eTech);
-			iOverflow += (GET_PLAYER((PlayerTypes)iI).getOverflowResearch() * calculateResearchModifier(eTech)) / 100;
+			iOverflow += GET_PLAYER((PlayerTypes)iI).getOverflowResearch() * calculateResearchModifier(eTech) / 100;
 		}
 	}
 
@@ -10722,17 +10721,10 @@ int CvPlayer::getOverflowResearch() const
 	return m_iOverflowResearch;
 }
 
-
-void CvPlayer::setOverflowResearch(int iNewValue)
-{
-	m_iOverflowResearch = iNewValue;
-	FASSERT_NOT_NEGATIVE(getOverflowResearch())
-}
-
-
 void CvPlayer::changeOverflowResearch(int iChange)
 {
-	setOverflowResearch(getOverflowResearch() + iChange);
+	m_iOverflowResearch += iChange;
+	FASSERT_NOT_NEGATIVE(m_iOverflowResearch)
 }
 
 
@@ -15972,13 +15964,13 @@ void CvPlayer::doResearch()
 	const TechTypes eCurrentTech = getCurrentResearch();
 	if (eCurrentTech == NO_TECH)
 	{
-		changeOverflowResearch(100 * calculateResearchRate() / std::max(1, calculateResearchModifier(eCurrentTech)));
+		changeOverflowResearch(100 * calculateResearchRate() / calculateResearchModifier(eCurrentTech));
 	}
 	else
 	{
-		const int iOverflow = getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100;
-		setOverflowResearch(0);
-		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, (calculateResearchRate(eCurrentTech) + iOverflow), getID());
+		const int iOverflow = getOverflowResearch();
+		changeOverflowResearch(-iOverflow);
+		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + iOverflow * calculateResearchModifier(eCurrentTech) / 100, getID());
 	}
 
 	if (bForceResearchChoice)
@@ -27350,40 +27342,38 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 
 	FAssertMsg(eCurrentTech < GC.getNumTechInfos(), "eCurrentTech is expected to be within maximum bounds (invalid Index)");
 
-	if ( eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech) )
+	if (eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech))
 	{
-		if ( !isHuman() )
+		if (!isHuman())
 		{
 			AI_chooseResearch();
 			eCurrentTech = getCurrentResearch();
 		}
-		else
+		else // This shouldn't really happen but it's  safety precaution
 		{
-			//	This shouldn't really happen but it's  safety precaution
 			clearResearchQueue();
 		}
 	}
 
-	while (eCurrentTech != NO_TECH && ((100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech))) / std::max(1, calculateResearchModifier(eCurrentTech)) <= iOverflow))
+	while (eCurrentTech != NO_TECH
+	&& 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech) <= iOverflow)
 	{
 		//The Future Tech can cause strange infinite loops
-		if (GC.getTechInfo(eCurrentTech).isRepeat())
-			break;
+		if (GC.getTechInfo(eCurrentTech).isRepeat()) break;
 
-		iOverflow -= (100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech))) / std::max(1, calculateResearchModifier(eCurrentTech));
+		iOverflow -= 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech);
 		GET_TEAM(getTeam()).setHasTech(eCurrentTech, true, getID(), true, true);
+
 		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
 		{
 			GET_TEAM(getTeam()).setNoTradeTech(eCurrentTech, true);
 		}
-		if ( !isHuman() )
+		if (!isHuman())
 		{
 			AI_chooseResearch();
 		}
-
 		eCurrentTech = getCurrentResearch();
 	}
-
 	return std::max(0, iOverflow);
 }
 

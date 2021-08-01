@@ -50,7 +50,6 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.listCivics, "Civic - list civics and civic categories", "Creates list civics and civic options")
-		self.main.addTestCode(screen, self.listSpaceRequiringEarthBuildings, "Building - List Earth buildings, that require Space content", "Creates list of buildings, that have Earth mapcategory, but have building requirement, that is in space, or is spawned trough space unit/building")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
@@ -1452,7 +1451,7 @@ class TestCode:
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories(): # Exclude space based
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
 							aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
 							aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
@@ -1463,10 +1462,10 @@ class TestCode:
 								aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 				# Check all bonus producers, that don't obsolete
-				if len(aNumBonusManufacturers) > 0 and min(aBuildingObsoletions) == 999:
+				if len(aNumBonusManufacturers) > 1 and min(aBuildingObsoletions) == 999:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories(): # Exclude space based
+						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): # Exclude space based
 							aBuildingReplacements = [] # List building replacements
 							iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
@@ -1555,51 +1554,3 @@ class TestCode:
 			else:
 				TechReq = GC.getTechInfo(TechReq).getType()
 			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
-
-	def listSpaceRequiringEarthBuildings(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			#Earthly building must have map category of Earth
-			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
-				aBuildingRequirementList = []
-
-				#<PrereqInCityBuildings> - require all buildings in list
-				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
-					iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-					aBuildingRequirementList.append(iPrereqBuilding)
-
-				#<PrereqOrBuildings> - require one building in list
-				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
-					iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
-					if iPrereqBuilding not in aBuildingRequirementList:
-						aBuildingRequirementList.append(iPrereqBuilding)
-
-				#<PrereqAmountBuildings> - require all buildings in empire in list
-				for pair in CvBuildingInfo.getPrereqNumOfBuildings():
-					iPrereqBuilding = pair.id
-					if iPrereqBuilding not in aBuildingRequirementList:
-						aBuildingRequirementList.append(iPrereqBuilding)
-
-				#<ConstructCondition>
-				aBuildingGOMReqList = []
-				for i in range(2):
-					aBuildingGOMReqList.append([])
-				self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
-
-				#Analyze GOM AND Building reqs
-				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
-					if iPrereqBuilding not in aBuildingRequirementList:
-						aBuildingRequirementList.append(iPrereqBuilding)
-
-				#Analyze GOM OR Building reqs
-				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
-					if iPrereqBuilding not in aBuildingRequirementList:
-						aBuildingRequirementList.append(iPrereqBuilding)
-
-				#Analyze requirements
-				for i in xrange(len(aBuildingRequirementList)):
-					CvRequiredBuildingInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
-					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
-						self.log(CvBuildingInfo.getType()+" requires off-earth building: "+CvRequiredBuildingInfo.getType())
