@@ -151,21 +151,12 @@ public:
 	void uninit();
 	void reset(int iX = 0, int iY = 0, bool bConstructorCall=false);
 	void setupGraphical();
+	void destroyGraphics();
 	void updateGraphicEra();
 
 	void erase();
 
 	void recalculateBaseYield();
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	void destroyGraphics();
-	bool isNull() const;
-	void setNull(bool bNull);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	DllExport float getPointX() const;
 	DllExport float getPointY() const;
@@ -940,13 +931,6 @@ public:
 	void write(FDataStreamBase* pStream);
 
 protected:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	bool m_bNull;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 	short m_iX;
 	short m_iY;
 	int m_iArea;

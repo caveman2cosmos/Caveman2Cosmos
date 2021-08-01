@@ -56,14 +56,13 @@ public:
 	void setupGraphical();
 	void reset(CvMapInitData* pInitData);
 
+private:
 	void uninit();
-protected:
-
 	void setup();
 
-public:
 	MapTypes getType() const;
 
+public:
 	void beforeSwitch();
 	void afterSwitch();
 
@@ -77,6 +76,7 @@ public:
 	CvViewport* getCurrentViewport() const;
 	const std::vector<CvViewport*> getViewports() const;
 
+	bool generatePlots();
 	bool plotsInitialized() const;
 
 	const char* getMapScript() const;
@@ -258,8 +258,6 @@ private:
 
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
-
-	static bool m_bSwitchInProgress;
 
 	int* m_paiNumBonus;
 	int* m_paiNumBonusOnLand;

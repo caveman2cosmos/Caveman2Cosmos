@@ -23,6 +23,7 @@ public:
 	explicit CyGame(CvGameAI& pGame);		// Call from C++;
 
 	MapTypes getCurrentMap() const;
+	void setCurrentMap(MapTypes eMap);
 
 	bool isMultiplayer() const;
 

@@ -20,9 +20,15 @@ CyGame::CyGame(CvGame& pGame) : m_pGame(pGame) {}
 
 CyGame::CyGame(CvGameAI& pGame) : m_pGame(pGame) {}
 
+
 MapTypes CyGame::getCurrentMap() const
 {
 	return m_pGame.getCurrentMap();
+}
+
+void CyGame::setCurrentMap(MapTypes eMap)
+{
+	m_pGame.setCurrentMap(eMap);
 }
 
 bool CyGame::isMultiplayer() const

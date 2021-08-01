@@ -26,16 +26,16 @@ public:
 	static CyGlobalContext& getInstance();		// singleton accessor
 
 	bool isDebugBuild() const;
+
 	CyGame* getCyGame() const;
 	CyMap* getCyMap() const;
-
-	void switchMap(int iMap);
-	CyMap* getMapByIndex(int iIndex);
-
-	CyPlayer* getCyPlayer(int idx) const;
+	CyMap* getMapByIndex(MapTypes eMap) const;
+	CyPlayer* getCyPlayer(PlayerTypes ePlayer) const;
 	CyPlayer* getCyActivePlayer() const;
 	CvRandom& getCyASyncRand() const;
-	CyTeam* getCyTeam(int i) const;
+	CyTeam* getCyTeam(TeamTypes eTeam) const;
+
+	void switchMap(MapTypes eMap);
 
 	int getInfoTypeForString(const char* szInfoType) const;
 	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;

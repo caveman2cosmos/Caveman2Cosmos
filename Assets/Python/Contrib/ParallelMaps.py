@@ -1,9 +1,9 @@
-from CvPythonExtensions import CyGlobalContext, MapTypes
+from CvPythonExtensions import CyGlobalContext, CyInterface, MapTypes
 import BugEventManager
-import CvUtil
 import DebugUtils
 
 GC = CyGlobalContext()
+
 
 class ParallelMaps:
 
@@ -16,9 +16,9 @@ class ParallelMaps:
 			if eMap > -1 and eMap < MapTypes.NUM_MAPS and eMap != GC.getGame().getCurrentMap() \
 			and (GC.isDebugBuild() or DebugUtils.bDebugMode or GC.getMapByIndex(eMap).plotsInitialized()):
 				if not GC.getMapByIndex(eMap).plotsInitialized():
-					CvUtil.sendImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()))
+					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				else:
-					CvUtil.sendImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()))
+					CyInterface().addImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				GC.switchMap(eMap)
 				return 1
 

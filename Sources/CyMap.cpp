@@ -14,18 +14,12 @@
 #include "CyMap.h"
 #include "CyPlot.h"
 
-CyMap::CyMap() : m_pMap(NULL)
+CyMap::CyMap() : m_pMap(&GC.getMap())
 {
-	m_pMap = &GC.getMap();
 }
 
 CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
 {
-}
-
-int CyMap::getType()
-{
-	return m_pMap ? m_pMap->getType() : NO_MAP;
 }
 
 CyMap& CyMap::operator=(CvMap& kMap)
@@ -34,9 +28,39 @@ CyMap& CyMap::operator=(CvMap& kMap)
 	return *this;
 }
 
+void CyMap::wrapCurrentMap()
+{
+	m_pMap = &GC.getMap();
+}
+
+void CyMap::beforeSwitch()
+{
+	m_pMap->getCurrentViewport()->beforeSwitch();
+}
+
+void CyMap::afterSwitch()
+{
+	m_pMap->getCurrentViewport()->afterSwitch();
+}
+
+bool CyMap::isMidSwitch() const
+{
+	return GC.getCurrentViewport()->isMidSwitch();
+}
+
 bool CyMap::plotsInitialized() const
 {
 	return m_pMap->plotsInitialized();
+}
+
+bool CyMap::generatePlots()
+{
+	return m_pMap->generatePlots();
+}
+
+void CyMap::erasePlots()
+{
+	m_pMap->erasePlots();
 }
 
 bool CyMap::viewportsEnabled()
@@ -79,11 +103,6 @@ bool CyMap::isInViewport(int iX, int iY)
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
 }
 
-bool CyMap::isMidSwitch() const
-{
-	return CvMap::m_bSwitchInProgress;
-}
-
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
 {
 	GC.getCurrentViewport()->closeAdvisor(advisorWidth, iMinimapLeft, iMinimapRight, iMinimapTop, iMinimapBottom);
@@ -92,12 +111,6 @@ void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, 
 void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
-}
-
-void CyMap::erasePlots()
-{
-	if (m_pMap)
-		m_pMap->erasePlots();
 }
 
 void CyMap::setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly)
@@ -425,14 +438,4 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 	for (int i = 0; i < index; i++)
 		++it;
 	return new CyPlot(it.plot());
-}
-
-
-// Super Forts *canal* *choke*
-void CyMap::calculateCanalAndChokePoints()
-{
-	if (m_pMap)
-	{
-		m_pMap->calculateCanalAndChokePoints();
-	}
 }

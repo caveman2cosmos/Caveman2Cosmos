@@ -214,13 +214,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	m_bNull = false;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 	m_iX = iX;
 	m_iY = iY;
 	m_iArea = FFreeList::INVALID_INDEX;
@@ -951,6 +944,8 @@ void CvPlot::updateFog()
 	}
 	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
 
+	DEBUG_LOG("ParallelMaps.log", "CvPlot::updateFog() - x: %d, y: %d, FOW index: %d", getX(), getY(), getFOWIndex()); // Matt: Temporary - delete later.
+
 	if (!isRevealed(GC.getGame().getActiveTeam(), false))
 	{
 		gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
@@ -959,7 +954,7 @@ void CvPlot::updateFog()
 	{
 		gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
 	}
-	else if (GC.getDefineINT("CITY_SCREEN_FOG_ENABLED") && gDLL->getInterfaceIFace()->isCityScreenUp() && (gDLL->getInterfaceIFace()->getHeadSelectedCity() != getWorkingCity()))
+	else if (GC.getCITY_SCREEN_FOG_ENABLED() && gDLL->getInterfaceIFace()->isCityScreenUp() && gDLL->getInterfaceIFace()->getHeadSelectedCity() != getWorkingCity())
 	{
 		gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
 	}
@@ -9334,15 +9329,6 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	if (isNull() && !isRevealed(eTeam, false))
-		return;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-
 	if (isRevealed(eTeam, false) != bNewValue)
 	{
 		if (NULL == m_abRevealed)
@@ -13326,53 +13312,16 @@ void	CvPlot::NextCachePathEpoch()
 	m_iGlobalCachePathEpoch++;
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 
 void CvPlot::destroyGraphics()
 {
-	//gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
-	//if(m_pPlotBuilder)
-	//{
-	//	gDLL->getPlotBuilderIFace()->destroy(m_pPlotBuilder);
-	//	m_pPlotBuilder = NULL;
-	//}
-	//gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
-	//gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
-	//gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
-	//gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbolOffset);
-	//m_pCenterUnit = NULL;
-	//m_pFeatureSymbol = NULL;
-	//m_pRouteSymbol = NULL;
-	//m_pRiverSymbol = NULL;
-	//m_pFlagSymbol = NULL;
-	//m_pFlagSymbolOffset = NULL;
-
 	hideGraphics(ECvPlotGraphics::ALL);
 
 	m_bPlotLayoutDirty = false;
 	m_bLayoutStateWorked = false;
 	m_bFlagDirty = false;
-
-	// deleteAllSymbols();
-
-	// m_visibleGraphics = ECvPlotGraphics::NONE;
 }
 
-bool CvPlot::isNull() const
-{
-	return m_bNull;
-}
-
-void CvPlot::setNull(bool bNull)
-{
-	m_bNull = bNull;
-}
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 bool CvPlot::bDeferPlotGroupRecalculation = false;
 

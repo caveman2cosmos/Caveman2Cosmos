@@ -19,6 +19,7 @@ CvViewport::CvViewport(CvMap* pMap)
 	, m_bAddSelectedCity(false)
 	, m_state(VIEWPORT_ACTION_STATE_NONE)
 	, m_countdown(0)
+	, m_bSwitchInProgress(false)
 	, m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE)
 	, m_spoofTransitionStartTickCount(-1)
 {
@@ -68,7 +69,7 @@ void CvViewport::resizeForMap()
 	if (m_pMap->getGridWidth() > 0 && !GC.bugInitCalled())
 	{
 		//	Force-load the main interface BUG module so we can get at the viewport BUG settings
-		Cy::call(PYCivModule, "forceBUGModuleInit", Cy::Args() << "BUG Main Interface");
+		Cy::call("CvAppInterface", "initBUG");
 	}
 
 	m_iXSize = GC.viewportsEnabled() ? std::min(GC.getVIEWPORT_SIZE_X(), m_pMap->getGridWidth()) : m_pMap->getGridWidth();
@@ -208,6 +209,15 @@ void CvViewport::reset(CvMapInitData* pInitData)
 
 void CvViewport::beforeSwitch()
 {
+	m_bSwitchInProgress = true;
+
+#ifdef THE_GREAT_WALL
+	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
+	{
+		GC.getGame().processGreatWall(false);
+	}
+#endif // THE_GREAT_WALL
+
 	m_pMap->beforeSwitch();
 }
 
@@ -216,6 +226,15 @@ void CvViewport::afterSwitch()
 	setSpoofHiddenGraphics(VIEWPORT_SPOOF_ALL_UNREVEALED);
 
 	m_pMap->afterSwitch();
+
+#ifdef THE_GREAT_WALL
+	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
+	{
+		GC.getGame().processGreatWall(true);
+	}
+#endif // THE_GREAT_WALL
+
+	m_bSwitchInProgress = false;
 }
 
 void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
@@ -320,7 +339,7 @@ void CvViewport::processActionState()
 		m_inhibitSelection = true;
 
 		afterSwitch();
-		gDLL->getPythonIFace()->callFunction(PYScreensModule, "showMilitaryAdvisor");
+		Cy::call("CvScreensInterface", "showMilitaryAdvisor");
 
 		setActionState(VIEWPORT_ACTION_STATE_MILITARY_ADVISOR_LAUNCHED);
 		break;
