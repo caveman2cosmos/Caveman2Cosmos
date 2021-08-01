@@ -2418,6 +2418,7 @@ void CyEnumsPythonInterface()
 
 	python::enum_<MapTypes>("MapTypes")
 		.value("MAP_EARTH", MAP_EARTH)
+		.value("MAP_SUBTERRAIN", MAP_SUBTERRAIN)
 		.value("MAP_CISLUNAR", MAP_CISLUNAR)
 		.value("MAP_MOON", MAP_MOON)
 		.value("MAP_MARS", MAP_MARS)

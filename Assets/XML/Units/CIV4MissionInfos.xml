@@ -1792,6 +1792,14 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Description>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_CISLUNAR</Type>
 			<Description>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Description>
 			<Waypoint>NONE</Waypoint>

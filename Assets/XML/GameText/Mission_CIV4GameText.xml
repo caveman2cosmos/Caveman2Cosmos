@@ -1118,6 +1118,10 @@
 		<English>Travel to Earth</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Travel to Earth Underground</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
 		<English>Travel to Cislunar Space</English>
 	</TEXT>
@@ -1180,6 +1184,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
 		<English>Transfer unit to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Transfer unit to Earth Underground</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>

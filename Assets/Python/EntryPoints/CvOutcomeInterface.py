@@ -871,6 +871,13 @@ def canGoToEarth(argsList):
 def goToEarth(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_EARTH)
+	
+def canGoToSubterrain(argsList):
+	return GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
+
+def goToSubterrain(argsList):
+	pUnit = argsList[0]
+	pUnit.goToMap(MapTypes.MAP_SUBTERRAIN)
 
 def canGoToCislunarSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR

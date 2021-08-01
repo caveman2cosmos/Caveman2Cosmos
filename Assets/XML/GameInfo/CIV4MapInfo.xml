@@ -20,6 +20,18 @@
 			<MapScript/>
 		</MapInfo>
 		<MapInfo>
+			<!-- Subterrain map -->
+			<!-- This is underground part of starting map -->
+			<Type>MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_MAP_SUBTERRAIN</Description>
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap/>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
 			<!-- Cislunar map -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_CISLUNAR</Type>

@@ -1309,6 +1309,16 @@
 			<bFriendlyTerritory>1</bFriendlyTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_GO_TO_MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Description>
+			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>1</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
+			<bCity>0</bCity>
+		</OutcomeInfo>
 		<!-- Early tech requirements for explorer/scout types -->
 		<OutcomeInfo>
 			<Type>OUTCOME_GO_TO_MAP_CISLUNAR</Type>
