@@ -1864,14 +1864,6 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_GO_TO_MAP_ORION_ARM</Type>
-			<Description>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Description>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>NONE</EntityEventType>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_MILKY_WAY</Type>
 			<Description>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Description>
 			<Waypoint>NONE</Waypoint>

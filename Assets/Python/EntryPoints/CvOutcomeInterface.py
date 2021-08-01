@@ -935,13 +935,6 @@ def goToNearbyStars(argsList):
 	pUnit = argsList[0]
 	pUnit.goToMap(MapTypes.MAP_NEARBY_STARS)
 
-def canGoToOrionArm(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_ORION_ARM
-
-def goToOrionArm(argsList):
-	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_ORION_ARM)
-
 def canGoToMilkyWay(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MILKY_WAY
 

@@ -1401,16 +1401,6 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_GO_TO_MAP_ORION_ARM</Type>
-			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Description>
-			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Message>
-			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bFriendlyTerritory>1</bFriendlyTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_GO_TO_MAP_MILKY_WAY</Type>
 			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Description>
 			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Message>
@@ -1552,20 +1542,10 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_COLONIZE_MAP_ORION_ARM</Type>
-			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Description>
-			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Message>
-			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bFriendlyTerritory>1</bFriendlyTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_COLONIZE_MAP_MILKY_WAY</Type>
 			<Description>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Description>
 			<Message>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Message>
-			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bFriendlyTerritory>1</bFriendlyTerritory>

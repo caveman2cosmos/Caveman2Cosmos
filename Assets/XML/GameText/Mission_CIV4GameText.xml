@@ -1154,10 +1154,6 @@
 		<English>Travel to Nearby Stars</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
-		<English>Travel to Orion Arm</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
 		<English>Travel to Milky Way</English>
 	</TEXT>
@@ -1216,10 +1212,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
 		<English>Transfer unit to Nearby Stars</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Tag>
-		<English>Transfer unit to Orion Arm</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
