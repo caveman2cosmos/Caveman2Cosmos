@@ -6196,10 +6196,11 @@ int CvCity::healthRate(bool bNoAngry, int iExtra) const
 }
 
 
+// Toffer - Gradual food consumption change
+//	Food consumption should gradually increment, or decrement, during the growth process so that
+// 	a pop growth, or decline, doesn't entail an abrumpt jump in food consumption from one turn to the other.
 int CvCity::getPopulationPlusProgress100(const int iExtra) const
 {
-	// Toffer - Food consumption should gradually increment during the growth process
-	// so that the pop growth doesn't entail a huge food consumption change in one turn
 	if (iExtra == 0)
 	{
 		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
@@ -6209,17 +6210,21 @@ int CvCity::getPopulationPlusProgress100(const int iExtra) const
 
 int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
 {
-	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
-		+ getPopulationPlusProgress100(iExtra)
-		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT()
-		/ 100;
+	// Treat pop 1.00 or less as zero in this regard.
+	const int iPop100 = getPopulationPlusProgress100(iExtra) - 100;
+	if (iPop100 <= 0)
+	{
+		return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION();
+	}
+	// The above is only strictly needed in case iPop100 becomes a negative value due to negative iExtra value input.
+	//	Negative iExtra value is currently never passed to this function, so it's a future proof thing.
+	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION() + (iPop100 - 100) * GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT() / 100;
 }
 
 int CvCity::getFoodConsumedByPopulation(const int iExtra) const
 {
 	return getPopulationPlusProgress100(iExtra) * getFoodConsumedPerPopulation100() / 10000;
 }
-
 
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
@@ -6228,6 +6233,8 @@ int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bI
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
 }
+// ! Toffer - Gradual food consumption change
+
 
 // Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
 float CvCity::foodWastage(int surplass) const
