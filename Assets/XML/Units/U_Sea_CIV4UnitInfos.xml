@@ -8795,8 +8795,11 @@
 			</UnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>

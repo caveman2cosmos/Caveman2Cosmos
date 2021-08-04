@@ -1122,9 +1122,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
 			</UnitUpgrades>
@@ -1207,9 +1208,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
@@ -1291,9 +1293,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI</UnitType>
@@ -1377,9 +1380,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -1467,9 +1471,10 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -2678,8 +2683,12 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BARRACKS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_BARRACKS</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -2801,8 +2810,11 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GARRISON</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>

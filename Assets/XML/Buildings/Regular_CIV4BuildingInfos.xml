@@ -80299,7 +80299,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
-			<ObsoleteTech>TECH_PERSONALIZED_HEALTH</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_DRUGS</Bonus>
