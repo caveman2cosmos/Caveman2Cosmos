@@ -19,29 +19,25 @@ class TestCode:
 		# Toffer - Add new test code button to the debug screen like this and define the function below.
 		#	This is all that is needed for the button to become functional, one line.
 		#self.main.addTestCode(screen, functionName, "Button Text", "tooltip")
-		self.main.addTestCode(screen, self.listBuildingTechRequirements, "Building tech requirement list", "Creates list of buildings with Main, TechTypes, SpecialBuilding and Religious tech requirements")
-		self.main.addTestCode(screen, self.listUnitTechRequirements, "Unit tech requirement list", "Creates list of units with Main and TechTypes tech requirements")
-		self.main.addTestCode(screen, self.listTechRequirements, "Tech requirement list", "Creates list of techs with its tech requirements")
-		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingRequirements, "Building requirements of buildings", "Checks if building requirements aren't unlocked after building itself")
 		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced before building itself obsoletes")
-		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements", "Checks if various civics aren't unlocked after building")
-		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
+		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself")
+		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
+		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
+		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
+		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
+		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
+		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements", "Checks if various civics aren't unlocked after building")
+		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingCommerceDoubleTime, "Building commerce double time", "Checks if commerce double time exists on wonders, that have relevant flat commerce change")
 		self.main.addTestCode(screen, self.checkBuildingCommerceChangeOriginalOwners, "Building commerce owner change", "Checks if Commerce Change has relevant flat commerce changes")
 		self.main.addTestCode(screen, self.checkBuildingHurryModifier, "Building hurry modifiers", "Checks if hurry modifiers exist on unbuildable buildings")
-		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
-		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
-		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself")
 		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
-		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
-		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
 		self.main.addTestCode(screen, self.checkBuildingCivicInfluences, "Building - check civic tags", "Check if building is available when civic is active")
-		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
@@ -50,7 +46,11 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
+		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.listCivics, "Civic - list civics and civic categories", "Creates list civics and civic options")
+		self.main.addTestCode(screen, self.listBuildingTechRequirements, "Building tech requirement list", "Creates list of buildings with Main, TechTypes, SpecialBuilding and Religious tech requirements")
+		self.main.addTestCode(screen, self.listUnitTechRequirements, "Unit tech requirement list", "Creates list of units with Main and TechTypes tech requirements")
+		self.main.addTestCode(screen, self.listTechRequirements, "Tech requirement list", "Creates list of techs with its tech requirements")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
@@ -406,103 +406,6 @@ class TestCode:
 		return iTechObsLoc, iTechObsXY
 
 	#^^^^ OBSOLETION TECH LOCATION FINDER FUNCTIONS ^^^^#
-
-	#Building tech requirement list
-	def listBuildingTechRequirements(self):
-		for i in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(i)
-			aTechList = []
-			#Main tech requirement
-			TechMainReq = CvBuildingInfo.getPrereqAndTech()
-			if TechMainReq != -1:
-				TechMain = GC.getTechInfo(TechMainReq).getType()
-				aTechList.append(TechMain)
-
-			#Tech Type requirement
-			for techType in CvBuildingInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(techType).getType())
-
-			#Tech requirement as defined in special building infos (core tech)
-			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
-			if iSpecialBuilding != -1:
-				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
-				if TechSpecialReq != -1:
-					TechSpecial = GC.getTechInfo(TechSpecialReq).getType()
-					aTechList.append(TechSpecial)
-
-			#Tech requirement derived from location of religion in tech tree
-			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
-			iRelPrereq2 = CvBuildingInfo.getReligionType()
-			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
-			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
-				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
-				if iReligionBuilding != -1:
-					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
-					if TechReligionReq != -1:
-						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
-						aTechList.append(TechReligionLoc)
-
-			#Tech requirement as defined by <ConstructCondition>
-			aTechGOMReqList = []
-			for j in range(2):
-				aTechGOMReqList.append([])
-			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvBuildingInfo.getType()+" requires: "+str(aTechList))
-
-	#Unit tech requirement list
-	def listUnitTechRequirements(self):
-		for iUnit in xrange(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-			aTechList = []
-			#Main tech
-			TechMainReq = CvUnitInfo.getPrereqAndTech()
-			if TechMainReq != -1:
-				TechMain = GC.getTechInfo(TechMainReq).getType()
-				aTechList.append(TechMain)
-
-			#Tech Type requirement
-			for iTechType in CvUnitInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			#Tech requirement as defined by <TrainCondition>
-			aTechGOMReqList = []
-			for i in range(2):
-				aTechGOMReqList.append([])
-			self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvUnitInfo.getType()+" requires: "+str(aTechList))
-
-	#Tech requirement list
-	def listTechRequirements(self):
-		for iTech in xrange(GC.getNumTechInfos()):
-			CvTechInfo = GC.getTechInfo(iTech)
-			aTechList = []
-			#AND techs
-			for iTechType in CvTechInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
-				aTechList.append("one of: ")
-			if len(CvTechInfo.getPrereqAndTechs()) > 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
-				aTechList.append(" and one of: ")
-
-			#OR techs
-			for iTechType in CvTechInfo.getPrereqOrTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvTechInfo.getType()+" requires: "+str(aTechList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
@@ -1452,7 +1355,6 @@ class TestCode:
 			if len(aBuildingTypeList) > 0:
 				self.log(CvUnitInfo.getType()+" requires "+str(aBuildingTypeList))
 
-
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1627,3 +1529,100 @@ class TestCode:
 			else:
 				TechReq = GC.getTechInfo(TechReq).getType()
 			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
+
+	#Building tech requirement list
+	def listBuildingTechRequirements(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			aTechList = []
+			#Main tech requirement
+			TechMainReq = CvBuildingInfo.getPrereqAndTech()
+			if TechMainReq != -1:
+				TechMain = GC.getTechInfo(TechMainReq).getType()
+				aTechList.append(TechMain)
+
+			#Tech Type requirement
+			for techType in CvBuildingInfo.getPrereqAndTechs():
+				aTechList.append(GC.getTechInfo(techType).getType())
+
+			#Tech requirement as defined in special building infos (core tech)
+			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+			if iSpecialBuilding != -1:
+				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
+				if TechSpecialReq != -1:
+					TechSpecial = GC.getTechInfo(TechSpecialReq).getType()
+					aTechList.append(TechSpecial)
+
+			#Tech requirement derived from location of religion in tech tree
+			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
+			iRelPrereq2 = CvBuildingInfo.getReligionType()
+			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
+			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
+				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
+				if iReligionBuilding != -1:
+					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
+					if TechReligionReq != -1:
+						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
+						aTechList.append(TechReligionLoc)
+
+			#Tech requirement as defined by <ConstructCondition>
+			aTechGOMReqList = []
+			for j in range(2):
+				aTechGOMReqList.append([])
+			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
+			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
+			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
+
+			if len(aTechList) > 0:
+				self.log(CvBuildingInfo.getType()+" requires: "+str(aTechList))
+
+	#Unit tech requirement list
+	def listUnitTechRequirements(self):
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			aTechList = []
+			#Main tech
+			TechMainReq = CvUnitInfo.getPrereqAndTech()
+			if TechMainReq != -1:
+				TechMain = GC.getTechInfo(TechMainReq).getType()
+				aTechList.append(TechMain)
+
+			#Tech Type requirement
+			for iTechType in CvUnitInfo.getPrereqAndTechs():
+				aTechList.append(GC.getTechInfo(iTechType).getType())
+
+			#Tech requirement as defined by <TrainCondition>
+			aTechGOMReqList = []
+			for i in range(2):
+				aTechGOMReqList.append([])
+			self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
+			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
+				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
+			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
+
+			if len(aTechList) > 0:
+				self.log(CvUnitInfo.getType()+" requires: "+str(aTechList))
+
+	#Tech requirement list
+	def listTechRequirements(self):
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+			aTechList = []
+			#AND techs
+			for iTechType in CvTechInfo.getPrereqAndTechs():
+				aTechList.append(GC.getTechInfo(iTechType).getType())
+
+			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
+				aTechList.append("one of: ")
+			if len(CvTechInfo.getPrereqAndTechs()) > 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
+				aTechList.append(" and one of: ")
+
+			#OR techs
+			for iTechType in CvTechInfo.getPrereqOrTechs():
+				aTechList.append(GC.getTechInfo(iTechType).getType())
+
+			if len(aTechList) > 0:
+				self.log(CvTechInfo.getType()+" requires: "+str(aTechList))
