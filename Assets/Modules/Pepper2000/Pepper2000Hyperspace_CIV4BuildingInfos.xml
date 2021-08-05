@@ -1237,6 +1237,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SIMULATED_CIVILIZATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_GOVERNANCE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EXPERIMENTAL_COSMOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>1945</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1354,6 +1357,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TESSERACT_HOMES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TESSERACT_CONSTRUCTION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
+			</TechTypes>
 			<iCost>1713</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

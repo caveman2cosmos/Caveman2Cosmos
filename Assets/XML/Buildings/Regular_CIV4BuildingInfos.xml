@@ -8629,6 +8629,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_BIOMECHANICAL_HARVESTING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<ConstructCondition>
@@ -12288,6 +12291,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BIOMETRIC_WARFARE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			</TechTypes>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>-8</iCommerce>
@@ -23709,6 +23715,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SYNERGETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_WEIGHTLESS_FLIGHT</PrereqTech>
+			</TechTypes>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -29785,6 +29794,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -49757,6 +49769,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -51213,6 +51226,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ALTERNATE_HISTORY_EXPLORATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TIMELINE_RECTIFICATION</PrereqTech>
+			</TechTypes>
 			<iCost>26955</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -61782,6 +61798,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOPERATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
 			</PrereqInCityBuildings>
@@ -70702,6 +70721,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
@@ -74462,6 +74484,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_NANOELECTRONICS</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_SHOCKWAVE_ENGINES</Bonus>
@@ -75598,6 +75623,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFINING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
@@ -75913,6 +75941,7 @@
 			<PrereqTech>TECH_COOPERATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -76599,6 +76628,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
 			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
@@ -80400,6 +80432,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_BINARY_SEMIOTICS</PrereqTech>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -101974,6 +102007,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
+			</TechTypes>
 			<iCost>19755</iCost>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -102680,6 +102716,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TRADE</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOL</Bonus>
@@ -107666,6 +107705,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
+			</TechTypes>
 			<iCost>2005</iCost>
 			<ObsoleteTech>TECH_OPTRONICS</ObsoleteTech>
 			<bWater>1</bWater>

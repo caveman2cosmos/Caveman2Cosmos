@@ -5,6 +5,8 @@
 #	This so that python novices can utilize this file as a training/testing ground with minimal intimidation.
 from CvPythonExtensions import *
 GC = CyGlobalContext()
+aTechID = []
+aTechDesc = []
 
 class TestCode:
 
@@ -47,20 +49,24 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
-		self.main.addTestCode(screen, self.listCivics, "Civic - list civics and civic categories", "Creates list civics and civic options")
-		self.main.addTestCode(screen, self.listBuildingTechRequirements, "Building tech requirement list", "Creates list of buildings with Main, TechTypes, SpecialBuilding and Religious tech requirements")
-		self.main.addTestCode(screen, self.listUnitTechRequirements, "Unit tech requirement list", "Creates list of units with Main and TechTypes tech requirements")
-		self.main.addTestCode(screen, self.listTechRequirements, "Tech requirement list", "Creates list of techs with its tech requirements")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
 	#Building tech location
-	def checkBuildingTechRequirementLocation(self, CvBuildingInfo):
+	def checkBuildingTechRequirements(self, CvBuildingInfo):
+		#All required techs
+		aTechList = []
+		aTechGridXList = []
+		aTechXY = []
+
 		#Main tech requirement
 		iTechMainReq = CvBuildingInfo.getPrereqAndTech()
 		if iTechMainReq != -1:
 			iTechMainLoc = GC.getTechInfo(iTechMainReq).getGridX()
 			iTechMainRow = GC.getTechInfo(iTechMainReq).getGridY()
+			aTechList.append(GC.getTechInfo(iTechMainReq).getType())
+			aTechGridXList.append(iTechMainLoc)
+			aTechXY.append(100*iTechMainLoc+iTechMainRow)
 		else:
 			iTechMainLoc = 0
 			iTechMainRow = 0
@@ -71,6 +77,9 @@ class TestCode:
 		for iTechType in CvBuildingInfo.getPrereqAndTechs():
 			aTechTypeLocList.append(GC.getTechInfo(iTechType).getGridX())
 			aTechTypeRowList.append(GC.getTechInfo(iTechType).getGridY())
+			aTechList.append(GC.getTechInfo(iTechType).getType())
+			aTechGridXList.append(GC.getTechInfo(iTechType).getGridX())
+			aTechXY.append(100*GC.getTechInfo(iTechType).getGridX()+GC.getTechInfo(iTechType).getGridY())
 		if len(aTechTypeLocList) > 0 and len(aTechTypeRowList) > 0:
 			iTechTypeLoc = max(aTechTypeLocList)
 			for iTechLoc in xrange(len(aTechTypeLocList)):
@@ -87,6 +96,9 @@ class TestCode:
 			if iTechSpecialReq != -1:
 				iTechSpecialLoc = GC.getTechInfo(iTechSpecialReq).getGridX()
 				iTechSpecialRow = GC.getTechInfo(iTechSpecialReq).getGridY()
+				aTechList.append(GC.getTechInfo(iTechSpecialReq).getType())
+				aTechGridXList.append(iTechSpecialLoc)
+				aTechXY.append(100*iTechSpecialLoc+iTechSpecialRow)
 			elif iTechSpecialReq == -1:
 				iTechSpecialLoc = 0
 				iTechSpecialRow = 0
@@ -105,6 +117,9 @@ class TestCode:
 				if iTechReligionReq != -1:
 					iTechReligionLoc = GC.getTechInfo(iTechReligionReq).getGridX()
 					iTechReligionRow = GC.getTechInfo(iTechReligionReq).getGridY()
+					aTechList.append(GC.getTechInfo(iTechReligionReq).getType())
+					aTechGridXList.append(iTechReligionLoc)
+					aTechXY.append(100*iTechReligionLoc+iTechReligionRow)
 			elif iReligionBuilding == -1:
 				iTechReligionLoc = 0
 				iTechReligionRow = 0
@@ -122,6 +137,9 @@ class TestCode:
 				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_STORIES_REQUIRE"):
 				iTechAnimalLoc = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridX()
 				iTechAnimalRow = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridY()
+				aTechList.append(GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getType())
+				aTechGridXList.append(iTechAnimalLoc)
+				aTechXY.append(100*iTechAnimalLoc+iTechAnimalRow)
 
 		#Tech GOM requirements
 		aTechGOMReqList = []
@@ -129,6 +147,7 @@ class TestCode:
 		aTechGOMAndRowList = []
 		aTechGOMOrLocList = []
 		aTechGOMOrRowList = []
+		aTechGOMOrTypeList = []
 		for i in range(2):
 			aTechGOMReqList.append([])
 		self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
@@ -137,6 +156,9 @@ class TestCode:
 		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
 			aTechGOMAndLocList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getGridX())
 			aTechGOMAndRowList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getGridY())
+			aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
+			aTechGridXList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getGridX())
+			aTechXY.append(100*GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getGridX()+GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getGridY())
 		if len(aTechGOMAndLocList) > 0 and len(aTechGOMAndRowList) > 0:
 			iTechGOMAndLoc = max(aTechGOMAndLocList)
 			for iTechLoc in xrange(len(aTechGOMAndLocList)):
@@ -150,16 +172,21 @@ class TestCode:
 		for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
 			aTechGOMOrLocList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridX())
 			aTechGOMOrRowList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getGridY())
+			aTechGOMOrTypeList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
 		if len(aTechGOMOrLocList) > 0 and len(aTechGOMOrRowList) > 0:
 			iTechGOMOrLoc = min(aTechGOMOrLocList)
+			aTechGridXList.append(iTechGOMOrLoc)
 			for iTechLoc in xrange(len(aTechGOMOrLocList)):
 				if aTechGOMOrLocList[iTechLoc] == min(aTechGOMOrLocList):
 					iTechGOMOrRow = aTechGOMOrRowList[iTechLoc]
+					sTechGOMOrType = aTechGOMOrTypeList[iTechLoc]
+					aTechList.append(sTechGOMOrType)
+					aTechXY.append(100*iTechGOMOrLoc+iTechGOMOrRow)
 		else:
 			iTechGOMOrLoc = 0
 			iTechGOMOrRow = 0
 
-		#Pick most advanced tech
+		#Pick most advanced column
 		iTechLoc = max(iTechMainLoc, iTechTypeLoc, iTechSpecialLoc, iTechReligionLoc, iTechAnimalLoc, iTechGOMAndLoc, iTechGOMOrLoc)
 		if iTechLoc == iTechMainLoc:
 			iTechRow = iTechMainRow
@@ -176,13 +203,22 @@ class TestCode:
 		elif iTechLoc == iTechGOMOrLoc:
 			iTechRow = iTechGOMOrRow
 
-		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#Pick all techs in most advanced column
+		aMostAdvancedColumnRequirementsNames = []
+		for i in xrange(len(aTechGridXList)):
+			if aTechGridXList[i] == max(aTechGridXList):
+				aMostAdvancedColumnRequirementsNames.append(aTechList[i])
+
+		#aMostAdvancedColumnRequirementsXY is a Tech location ID array - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
 		#If infotype doesn't have tech requirement, then both infotype X/Y grid is 0
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
-		iTechXY = 100*iTechLoc + iTechRow
+		aMostAdvancedColumnRequirementsXY = []
+		for i in xrange(len(aTechGridXList)):
+			if aTechGridXList[i] == max(aTechGridXList):
+				aMostAdvancedColumnRequirementsXY.append(aTechXY[i])
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, aMostAdvancedColumnRequirementsXY, aMostAdvancedColumnRequirementsNames
 
 	#Unit tech location
 	def checkUnitTechRequirementLocation(self, CvUnitInfo):
@@ -262,8 +298,9 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechXY = 100*iTechLoc + iTechRow
+		sTechDesc = self.getTechName(iTechXY)
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, iTechXY, sTechDesc
 
 	#Promotion tech location
 	def checkPromotionTechRequirementLocation(self, CvPromotionInfo):
@@ -281,8 +318,9 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechXY = 100*iTechLoc + iTechRow
+		sTechDesc = self.getTechName(iTechXY)
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, iTechXY, sTechDesc
 
 	#Bonus tech locations
 	def checkBonusTechRequirementLocation(self, CvBonusInfo):
@@ -312,8 +350,10 @@ class TestCode:
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechRevealXY = 100*iTechRevealLoc + iTechRevealRow
 		iTechEnableXY = 100*iTechEnableLoc + iTechEnableRow
+		sTechDescReveal = self.getTechName(iTechRevealXY)
+		sTechDescEnable = self.getTechName(iTechEnableXY)
 
-		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow, iTechRevealXY, iTechEnableXY
+		return iTechRevealLoc, iTechRevealRow, iTechEnableLoc, iTechEnableRow, iTechRevealXY, iTechEnableXY, sTechDescReveal, sTechDescEnable
 
 	#Improvement tech location
 	def checkImprovementTechRequirementLocation(self, CvImprovementInfo):
@@ -331,8 +371,9 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechXY = 100*iTechLoc + iTechRow
+		sTechDesc = self.getTechName(iTechXY)
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, iTechXY, sTechDesc
 
 	#Civic tech location
 	def checkCivicTechRequirementLocation(self, CvCivicInfo):
@@ -350,8 +391,9 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechXY = 100*iTechLoc + iTechRow
+		sTechDesc = self.getTechName(iTechXY)
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, iTechXY, sTechDesc
 
 	#Build tech location
 	def checkBuildTechRequirementLocation(self, CvBuildInfo):
@@ -369,8 +411,25 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech requirement and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechXY = 100*iTechLoc + iTechRow
+		sTechDesc = self.getTechName(iTechXY)
 
-		return iTechLoc, iTechRow, iTechXY
+		return iTechLoc, iTechRow, iTechXY, sTechDesc
+
+	#Tech name - obtained from tech ID
+	def getTechName(self, iTechXY):
+		global aTechID, aTechDesc
+		#This loop runs once, as cache is created
+		if len(aTechID) != GC.getNumTechInfos() or len(aTechDesc) != GC.getNumTechInfos():
+			for iTech in xrange(GC.getNumTechInfos()):
+				CvTechInfo = GC.getTechInfo(iTech)
+				aTechID.append(100*CvTechInfo.getGridX() + CvTechInfo.getGridY())
+				aTechDesc.append(CvTechInfo.getType())
+				#Position of tech corresponds tech name
+
+		if iTechXY != 0 and iTechXY != 99999: #If we have tech requirement or tech obsoletion
+			return aTechDesc[aTechID.index(iTechXY)]
+		else:
+			return ""
 
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
 
@@ -415,8 +474,9 @@ class TestCode:
 		#Otherwise infotype gets highest Xgrid tech obsoletion and related Ygrid position
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		iTechObsXY = 100*iTechObsLoc + iTechObsRow
+		sTechDesc = self.getTechName(iTechObsXY)
 
-		return iTechObsLoc, iTechObsXY
+		return iTechObsLoc, iTechObsXY, sTechDesc
 
 	#^^^^ OBSOLETION TECH LOCATION FINDER FUNCTIONS ^^^^#
 
@@ -424,35 +484,78 @@ class TestCode:
 	def checkBuildingRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
-			iTechID = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[2]
+			iBaseTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			aBaseTechIDList = self.checkBuildingTechRequirements(CvBuildingInfo)[2]
+			aBaseTechList = self.checkBuildingTechRequirements(CvBuildingInfo)[3]
+
 			#<PrereqInCityBuildings> - require all buildings in list
-			aBuildingTechLocList = []
-			aBuildingTechIDList = []
+			aRequirementTechLocList = []
+			aReqColumnTechIDList = []
+			aReqColumnTechList = []
 			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
-				aBuildingTechIDList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[2])
-			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-			if 0: #len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) == iTechLoc and max(aBuildingTechIDList) != iTechID:
-				self.log(CvBuildingInfo.getType()+" AND requirement unlocked by different tech in column "+str(aBuildingTechIDList)+" "+str(iTechID))
+				aRequirementTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[0])
+				aRequirementTechIDList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[2]
+				aRequirementTechList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[3]
+
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechIDList.append(aRequirementTechIDList[i])
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechList.append(aRequirementTechList[i])
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
+				for i in xrange(len(aReqColumnTechIDList)):
+					if aReqColumnTechIDList[i] not in aBaseTechIDList:
+						self.log(CvBuildingInfo.getType()+" AND requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
 			#<PrereqOrBuildings> - require one building in list
-			aBuildingTechLocList = []
+			aRequirementTechLocList = []
+			aReqColumnTechIDList = []
+			aReqColumnTechList = []
 			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
 				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
-			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+				aRequirementTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[0])
+				aRequirementTechIDList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[2]
+				aRequirementTechList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[3]
+
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechIDList.append(aRequirementTechIDList[i])
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechList.append(aRequirementTechList[i])
+			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) == iBaseTechLoc:
+				for i in xrange(len(aReqColumnTechIDList)):
+					if aReqColumnTechIDList[i] not in aBaseTechIDList:
+						self.log(CvBuildingInfo.getType()+" Earliest OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
 			#<PrereqAmountBuildings> - require all buildings in empire in list
-			aBuildingTechLocList = []
+			aRequirementTechLocList = []
+			aReqColumnTechIDList = []
+			aReqColumnTechList = []
 			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
 				iPrereqBuilding = pair.id
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(iPrereqBuilding))[0])
-			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its Empire AND requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+				aRequirementTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[0])
+				aRequirementTechIDList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[2]
+				aRequirementTechList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[3]
+
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechIDList.append(aRequirementTechIDList[i])
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechList.append(aRequirementTechList[i])
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its empire AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
+				for i in xrange(len(aReqColumnTechIDList)):
+					if aReqColumnTechIDList[i] not in aBaseTechIDList:
+						self.log(CvBuildingInfo.getType()+" Empire AND requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
 			#<ConstructCondition>
 			aBuildingGOMReqList = []
@@ -461,18 +564,50 @@ class TestCode:
 			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
 
 			#Analyze GOM AND Building reqs
-			aBuildingTechLocList = []
+			aRequirementTechLocList = []
+			aReqColumnTechIDList = []
+			aReqColumnTechList = []
 			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]))[0])
-			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - GOM AND building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
+				aRequirementTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[0])
+				aRequirementTechIDList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[2]
+				aRequirementTechList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[3]
+
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechIDList.append(aRequirementTechIDList[i])
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechList.append(aRequirementTechList[i])
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
+				for i in xrange(len(aReqColumnTechIDList)):
+					if aReqColumnTechIDList[i] not in aBaseTechIDList:
+						self.log(CvBuildingInfo.getType()+" GOM AND requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
 			#Analyze GOM OR Building reqs
-			aBuildingTechLocList = []
+			aRequirementTechLocList = []
+			aReqColumnTechIDList = []
+			aReqColumnTechList = []
 			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]))[0])
-			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc:
-				self.log(CvBuildingInfo.getType()+" - GOM OR building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
+				aRequirementTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[0])
+				aRequirementTechIDList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[2]
+				aRequirementTechList = self.checkBuildingTechRequirements(GC.getBuildingInfo(iPrereqBuilding))[3]
+
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechIDList.append(aRequirementTechIDList[i])
+				for i in xrange(len(aRequirementTechList)):
+					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
+						aReqColumnTechList.append(aRequirementTechList[i])
+			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc:
+				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) == iBaseTechLoc:
+				for i in xrange(len(aReqColumnTechIDList)):
+					if aReqColumnTechIDList[i] not in aBaseTechIDList:
+						self.log(CvBuildingInfo.getType()+" GOM OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
 	#Building replacements of requirements
 	def checkBuildingRequirementReplacements(self):
@@ -541,7 +676,7 @@ class TestCode:
 			#Check if tech unlock of replacement is earlier than building obsoletion. Replacements listed aren't part of building requirements
 			for i in xrange(len(aBuildingRequirementReplacementUniqueList)):
 				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingRequirementReplacementUniqueList[i])
-				iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
+				iTechLoc = self.checkBuildingTechRequirements(CvBuildingReplacementInfo)[0]
 				iTechReplacementObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingReplacementInfo)[0]
 				#Log if requirement is replaced before building obsoletes, if replacement of requirement doesn't replace building itself, and if there isn't common replacement of building requirement and base building replacement.
 				if iTechObsLoc > iTechLoc and iTechLoc > 0 and CvBuildingInfo.getType()!= CvBuildingReplacementInfo.getType() and CvBuildingReplacementInfo.getType() not in aBuildingBaseReplacementList:
@@ -630,7 +765,7 @@ class TestCode:
 	def checkBuildingUnlockObsoletion(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
 				if iObsoleteTechLoc - iTechLoc <= 5:
@@ -640,7 +775,7 @@ class TestCode:
 	def checkBuildingReplacementObsoletion(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
 			#Gather data about building replacements
@@ -650,7 +785,7 @@ class TestCode:
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
 				aReplacementTypeList.append(CvBuildingReplacement.getType())
-				aReplacementTechUnlockList.append(self.checkBuildingTechRequirementLocation(CvBuildingReplacement)[0])
+				aReplacementTechUnlockList.append(self.checkBuildingTechRequirements(CvBuildingReplacement)[0])
 				aReplacementTechObsoleteList.append(self.checkBuildingTechObsoletionLocation(CvBuildingReplacement)[0])
 
 			#If there is any replacement
@@ -676,7 +811,7 @@ class TestCode:
 	def checkBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iBaseTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iBaseTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 			#Replacements
 			aReplacementBuildingList = []
@@ -685,7 +820,7 @@ class TestCode:
 				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(i)
 				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
 				aReplacementBuildingList.append(iReplacementBuilding)
-				iReplacementTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingReplacementInfo)[0]
+				iReplacementTechLoc = self.checkBuildingTechRequirements(CvBuildingReplacementInfo)[0]
 				if iBaseTechLoc >= iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
 					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after or concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
 
@@ -724,7 +859,7 @@ class TestCode:
 	def checkBuildingBonusRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			#<Bonus>BONUS_X
 			iBonus = CvBuildingInfo.getPrereqAndBonus()
 			if iBonus != -1:
@@ -793,7 +928,7 @@ class TestCode:
 		aBonusList = [-1]*GC.getNumBonusInfos()
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 			#Singular <FreeBonus>
 			iBonus = CvBuildingInfo.getFreeBonus()
@@ -873,7 +1008,7 @@ class TestCode:
 	def checkBuildingCivicRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 
 			aCivicAndTechLocList = []
@@ -960,7 +1095,7 @@ class TestCode:
 	def checkBuildingTechMods(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0]
+			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
 			for pair in CvBuildingInfo.getTechHappinessChanges():
 				iTech = pair.id
@@ -1092,12 +1227,12 @@ class TestCode:
 		aAffectedBuildingTechObsoletionList = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			aAffectedBuildingTechUnlockList.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
+			aAffectedBuildingTechUnlockList.append(self.checkBuildingTechRequirements(CvBuildingInfo)[0])
 			aAffectedBuildingTechObsoletionList.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirementLocation(CvAffectingBuildingInfo)[0]
+			iAffectingBuildingUnlockTechLoc = self.checkBuildingTechRequirements(CvAffectingBuildingInfo)[0]
 			iAffectingBuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvAffectingBuildingInfo)[0]
 
 			#<GlobalBuildingExtraCommerces>
@@ -1246,14 +1381,14 @@ class TestCode:
 			#<PrereqAndBuildings> - require all buildings in list
 			aBuildingTechLocList = []
 			for iBuilding in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(CvUnitInfo.getPrereqAndBuilding(iBuilding)))[0])
+				aBuildingTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(CvUnitInfo.getPrereqAndBuilding(iBuilding)))[0])
 			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" is unlocked before its AND building requirements "+str(aBuildingTechLocList)+" "+str(iTechLoc))
 
 			#<PrereqOrBuildings> - require one building in list
 			aBuildingTechLocList = []
 			for iBuilding in xrange(CvUnitInfo.getPrereqOrBuildingsNum()):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(CvUnitInfo.getPrereqOrBuilding(iBuilding)))[0])
+				aBuildingTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(CvUnitInfo.getPrereqOrBuilding(iBuilding)))[0])
 			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" is unlocked before its earliest OR building requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
 
@@ -1266,14 +1401,14 @@ class TestCode:
 			#Analyze GOM AND Building reqs
 			aBuildingTechLocList = []
 			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
+				aBuildingTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
 			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" - GOM AND building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
 
 			#Analyze GOM OR Building reqs
 			aBuildingTechLocList = []
 			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aBuildingTechLocList.append(self.checkBuildingTechRequirementLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
+				aBuildingTechLocList.append(self.checkBuildingTechRequirements(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
 			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" - GOM OR building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
 
@@ -1421,12 +1556,12 @@ class TestCode:
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): # Exclude space based
 						if CvBuildingInfo.getFreeBonus() == iBonus:
-							aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
+							aNumBonusManufacturers.append(self.checkBuildingTechRequirements(CvBuildingInfo)[0])
 							aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-								aNumBonusManufacturers.append(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])
+								aNumBonusManufacturers.append(self.checkBuildingTechRequirements(CvBuildingInfo)[0])
 								aBuildingObsoletions.append(self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
 				# Check all bonus producers, that don't obsolete
@@ -1441,11 +1576,11 @@ class TestCode:
 								aBuildingReplacements.append(CvBuildingReplacement.getType())
 
 							if CvBuildingInfo.getFreeBonus() == iBonus:
-								self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+								self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-									self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirementLocation(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+									self.log(CvBonusInfo.getType()+" "+str(self.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
 	#Improvement - yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):
@@ -1532,113 +1667,3 @@ class TestCode:
 					self.log(CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef())
 				else:
 					self.log(CvProjectInfo.getType()+" is missing a wonder movie!")
-
-	#Civic - list civics and civic categories
-	def listCivics(self):
-		for iCivic in xrange(GC.getNumCivicInfos()):
-			CvCivicInfo = GC.getCivicInfo(iCivic)
-			TechReq = CvCivicInfo.getTechPrereq()
-			iTechLoc = self.checkCivicTechRequirementLocation(CvCivicInfo)[0]
-
-			if TechReq == -1:
-				TechReq = "None"
-			else:
-				TechReq = GC.getTechInfo(TechReq).getType()
-			self.log(GC.getCivicOptionInfo(CvCivicInfo.getCivicOptionType()).getType()+" "+CvCivicInfo.getType()+" "+TechReq+" "+str(iTechLoc))
-
-	#Building tech requirement list
-	def listBuildingTechRequirements(self):
-		for i in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(i)
-			aTechList = []
-			#Main tech requirement
-			TechMainReq = CvBuildingInfo.getPrereqAndTech()
-			if TechMainReq != -1:
-				TechMain = GC.getTechInfo(TechMainReq).getType()
-				aTechList.append(TechMain)
-
-			#Tech Type requirement
-			for techType in CvBuildingInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(techType).getType())
-
-			#Tech requirement as defined in special building infos (core tech)
-			iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
-			if iSpecialBuilding != -1:
-				TechSpecialReq = GC.getSpecialBuildingInfo(iSpecialBuilding).getTechPrereq()
-				if TechSpecialReq != -1:
-					TechSpecial = GC.getTechInfo(TechSpecialReq).getType()
-					aTechList.append(TechSpecial)
-
-			#Tech requirement derived from location of religion in tech tree
-			iRelPrereq1 = CvBuildingInfo.getPrereqReligion()
-			iRelPrereq2 = CvBuildingInfo.getReligionType()
-			iRelPrereq3 = CvBuildingInfo.getPrereqStateReligion()
-			if iRelPrereq1 != -1 or iRelPrereq2 != -1 or iRelPrereq3 != -1:
-				iReligionBuilding = max(iRelPrereq1, iRelPrereq2, iRelPrereq3)
-				if iReligionBuilding != -1:
-					TechReligionReq = GC.getReligionInfo(iReligionBuilding).getTechPrereq()
-					if TechReligionReq != -1:
-						TechReligionLoc = GC.getTechInfo(TechReligionReq).getType()
-						aTechList.append(TechReligionLoc)
-
-			#Tech requirement as defined by <ConstructCondition>
-			aTechGOMReqList = []
-			for j in range(2):
-				aTechGOMReqList.append([])
-			self.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvBuildingInfo.getType()+" requires: "+str(aTechList))
-
-	#Unit tech requirement list
-	def listUnitTechRequirements(self):
-		for iUnit in xrange(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-			aTechList = []
-			#Main tech
-			TechMainReq = CvUnitInfo.getPrereqAndTech()
-			if TechMainReq != -1:
-				TechMain = GC.getTechInfo(TechMainReq).getType()
-				aTechList.append(TechMain)
-
-			#Tech Type requirement
-			for iTechType in CvUnitInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			#Tech requirement as defined by <TrainCondition>
-			aTechGOMReqList = []
-			for i in range(2):
-				aTechGOMReqList.append([])
-			self.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aTechGOMReqList)
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_AND][iTech]).getType())
-			for iTech in xrange(len(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				aTechList.append(GC.getTechInfo(aTechGOMReqList[BoolExprTypes.BOOLEXPR_OR][iTech]).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvUnitInfo.getType()+" requires: "+str(aTechList))
-
-	#Tech requirement list
-	def listTechRequirements(self):
-		for iTech in xrange(GC.getNumTechInfos()):
-			CvTechInfo = GC.getTechInfo(iTech)
-			aTechList = []
-			#AND techs
-			for iTechType in CvTechInfo.getPrereqAndTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			if len(CvTechInfo.getPrereqAndTechs()) == 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
-				aTechList.append("one of: ")
-			if len(CvTechInfo.getPrereqAndTechs()) > 0 and len(CvTechInfo.getPrereqOrTechs()) > 1:
-				aTechList.append(" and one of: ")
-
-			#OR techs
-			for iTechType in CvTechInfo.getPrereqOrTechs():
-				aTechList.append(GC.getTechInfo(iTechType).getType())
-
-			if len(aTechList) > 0:
-				self.log(CvTechInfo.getType()+" requires: "+str(aTechList))

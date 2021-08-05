@@ -1488,6 +1488,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_SEA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
+			</TechTypes>
 			<iCost>2982</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

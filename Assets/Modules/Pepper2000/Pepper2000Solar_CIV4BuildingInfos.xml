@@ -482,6 +482,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_NOBLE_GAS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2514,6 +2517,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MERCURY_SUNSHADE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
+			</TechTypes>
 			<iCost>9454</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4713,6 +4719,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VERTICAL_REEF</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

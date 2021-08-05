@@ -1144,6 +1144,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			</TechTypes>
 			<iCost>11810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -1306,6 +1309,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SUPERCRITICAL_CO2_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ADAPTIVE_RADIATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iCost>7608</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

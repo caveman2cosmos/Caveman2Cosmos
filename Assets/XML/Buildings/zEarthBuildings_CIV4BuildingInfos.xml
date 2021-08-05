@@ -2263,6 +2263,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			</TechTypes>
 			<iCost>11810</iCost>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>

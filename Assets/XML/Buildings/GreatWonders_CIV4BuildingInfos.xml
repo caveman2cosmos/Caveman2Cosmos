@@ -7840,6 +7840,9 @@
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
+			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
@@ -10591,6 +10594,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HIMEJI_CASTLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -15824,6 +15830,7 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
+				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>

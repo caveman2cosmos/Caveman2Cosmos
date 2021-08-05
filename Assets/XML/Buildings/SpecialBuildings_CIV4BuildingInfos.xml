@@ -10455,6 +10455,9 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10492,6 +10495,9 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10534,6 +10540,9 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
