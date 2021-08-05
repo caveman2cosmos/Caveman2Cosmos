@@ -5193,18 +5193,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>3285</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>6</iBaseUpkeep>
@@ -8041,18 +8033,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>2308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>4</iBaseUpkeep>

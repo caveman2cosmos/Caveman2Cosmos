@@ -838,6 +838,9 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -851,10 +854,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_IRON_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -1913,18 +1912,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>630</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>27</iCombat>
@@ -2225,18 +2216,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SULPHUR</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_SULPHUR</BonusType>
+			</PrereqBonuses>
 			<iCost>475</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>21</iCombat>

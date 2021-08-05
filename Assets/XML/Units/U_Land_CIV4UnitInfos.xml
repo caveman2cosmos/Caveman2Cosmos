@@ -8299,48 +8299,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
-			<!--
-				BonusType>BONUS_ALCOHOL</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_TAR</BonusType>
 				<BonusType>BONUS_OLIVE_OIL</BonusType>
 				<BonusType>BONUS_FISH_OIL</BonusType>
 				<BonusType>BONUS_GHEE_OIL</BonusType>
 				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
-				</PrereqBonuses
-			-->
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_KEROSENE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALCOHOL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_TAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OLIVE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FISH_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GHEE_OIL</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -8911,18 +8878,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>920</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9029,18 +8988,10 @@
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1140</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9145,18 +9096,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1400</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -10727,18 +10670,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>975</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -10833,18 +10768,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1500</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -11058,18 +10985,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1230</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -11140,18 +11059,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1475</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -14257,6 +14168,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
@@ -14264,14 +14176,6 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SIEGE_WORKSHOP</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -14395,6 +14299,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -14406,10 +14311,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_SULPHUR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -26715,14 +26616,7 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SHERIFF</UnitType>
 			</UnitUpgrades>
@@ -26858,18 +26752,10 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_RIOTPOLICE</UnitType>
 			</UnitUpgrades>
@@ -27013,18 +26899,10 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_APC</UnitType>
 			</UnitUpgrades>
@@ -27154,6 +27032,10 @@
 				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27176,16 +27058,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_STATION</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_PRECINCT</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<UnitUpgrades>
@@ -27624,6 +27496,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FORENSICS</PrereqTech>
+			<PrereqBonuses>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
+				<BonusType>BONUS_BIOFUEL</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -27654,16 +27530,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_RADIOS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_PETROLEUM_PRODUCTS</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_BIOFUEL</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -29074,14 +28940,7 @@
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_LABOR_UNIONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -29290,18 +29149,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<ForceObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -29515,18 +29366,10 @@
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_STREET_GANG</UnitType>
 			</UnitUpgrades>
@@ -30553,22 +30396,16 @@
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
 			<BonusType>BONUS_CELLPHONES</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PERSONAL_ELECTRONICS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -31103,18 +30940,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -31476,17 +31305,12 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTLAW</UnitType>
 			</UnitUpgrades>
@@ -31688,18 +31512,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SALOON</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MOBSTER_CAR</UnitType>
 			</UnitUpgrades>
@@ -32425,14 +32241,7 @@
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SNIPER</UnitType>
 			</UnitUpgrades>
@@ -32597,18 +32406,10 @@
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
@@ -32749,18 +32550,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
 			</PrereqAndBuildings>
@@ -32976,18 +32769,10 @@
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 			</UnitUpgrades>
@@ -33162,18 +32947,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIVOUAC_GROUNDS</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 				<UnitType>UNIT_SPECIAL_INFANTRY</UnitType>
@@ -38591,16 +38368,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<iCost>330</iCost>
@@ -38791,16 +38561,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqBonuses>
@@ -39819,7 +39582,8 @@
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_PARTS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -39835,16 +39599,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_COMPUTERS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_PARTS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1180</iCost>
@@ -39926,7 +39684,8 @@
 			<PrereqTech>TECH_MICROPROCESSOR</PrereqTech>
 			<BonusType>BONUS_PERSONAL_ELECTRONICS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_FIREARMS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -39934,16 +39693,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_MICROCHIPS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1540</iCost>
@@ -41898,6 +41651,8 @@
 			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_REJUVENATION_TANK</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_STATION</BuildingType>
 			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
@@ -41932,14 +41687,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HYPOSPRAYS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_REJUVENATION_TANK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SKYROAD_STATION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -42681,10 +42428,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_FIREARMS</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>380</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42827,10 +42576,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>525</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42969,10 +42720,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>900</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

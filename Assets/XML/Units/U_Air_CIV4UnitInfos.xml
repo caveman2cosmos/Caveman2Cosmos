@@ -969,14 +969,9 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AIRCRAFT</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_AIRCRAFT</BonusType>
+			</PrereqBonuses>
 			<iCost>1353</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
