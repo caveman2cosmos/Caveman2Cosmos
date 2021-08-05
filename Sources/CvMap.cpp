@@ -374,9 +374,9 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
-	GC.switchMap(m_eType);
+	//GC.switchMap(m_eType);
 
-	updateIncomingUnits();
+	//updateIncomingUnits();
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1453,11 +1453,6 @@ CvViewport* CvMap::getCurrentViewport() const
 MapTypes CvMap::getType() const
 {
 	return m_eType;
-}
-
-void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
-{
-	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
 
 const char* CvMap::getMapScript() const

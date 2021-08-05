@@ -5765,13 +5765,15 @@ void CvGame::doTurn()
 		}
 	}
 
-	reverse_foreach_(CvMap* map, GC.getMaps())
-	{
-		if (map->plotsInitialized())
-		{
-			map->doTurn();
-		}
-	}
+	//reverse_foreach_(CvMap* map, GC.getMaps())
+	//{
+	//	if (map->plotsInitialized())
+	//	{
+	//		map->doTurn();
+	//	}
+	//}
+
+	GC.getMap().doTurn();
 
 	createBarbarianCities(false);
 	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
