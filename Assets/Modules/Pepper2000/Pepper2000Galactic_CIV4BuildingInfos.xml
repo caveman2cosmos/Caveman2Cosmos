@@ -6290,18 +6290,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_CORE_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARP_DRIVES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AB_MATTER</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_WARP_DRIVES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_AB_MATTER</Bonus>
+			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GAS_GIANT</Type>

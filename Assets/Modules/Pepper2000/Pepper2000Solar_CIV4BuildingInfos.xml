@@ -2372,18 +2372,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NANOMORPHIC_HABITATS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ADVANCED_REPLICATORS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NANOMORPHIC_HABITATS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_ADVANCED_REPLICATORS</Bonus>
+			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_ANTIMATTER</Type>

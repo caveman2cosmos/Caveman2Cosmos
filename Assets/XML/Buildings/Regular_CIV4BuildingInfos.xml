@@ -4966,26 +4966,12 @@
 			</ReplacementBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GOLD_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SILVER_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_PLATINUM_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COPPER_WARES</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GOLD_WARES</Bonus>
+				<Bonus>BONUS_SILVER_WARES</Bonus>
+				<Bonus>BONUS_PLATINUM_WARES</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
@@ -8211,18 +8197,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AUGMENTED_EQUIPMENT_CENTER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_INGOTS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CEMENT</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_STEEL_INGOTS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_CEMENT</Bonus>
+			</PrereqBonuses>
 			<iPrereqPopulation>8</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11885,46 +11863,17 @@
 				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
 			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAINS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUGAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_VEGETABLES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FRUIT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEMP</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRASS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_REEDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STRAW</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALGAE</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GRAINS</Bonus>
+				<Bonus>BONUS_SUGAR</Bonus>
+				<Bonus>BONUS_VEGETABLES</Bonus>
+				<Bonus>BONUS_FRUIT</Bonus>
+				<Bonus>BONUS_HEMP</Bonus>
+				<Bonus>BONUS_GRASS</Bonus>
+				<Bonus>BONUS_REEDS</Bonus>
+				<Bonus>BONUS_STRAW</Bonus>
+				<Bonus>BONUS_ALGAE</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -19027,14 +18976,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAPHENE</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_GRAPHENE</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -31008,18 +30950,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SYNTHETIC_DIAMOND</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_SYNTHETIC_DIAMOND</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -99452,18 +99386,10 @@
 			<PrereqTech>TECH_CLONING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ENZYMES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COMPUTERS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_ENZYMES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_COMPUTERS</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FORENSICS_LAB</BuildingType>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
@@ -104390,14 +104316,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_PLASTIC</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_PLASTIC</Bonus>
 			<FreeBonus>BONUS_CARPETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -107644,46 +107563,17 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAINS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUGAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_VEGETABLES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FRUIT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEMP</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRASS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_REEDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STRAW</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALGAE</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GRAINS</Bonus>
+				<Bonus>BONUS_SUGAR</Bonus>
+				<Bonus>BONUS_VEGETABLES</Bonus>
+				<Bonus>BONUS_FRUIT</Bonus>
+				<Bonus>BONUS_HEMP</Bonus>
+				<Bonus>BONUS_GRASS</Bonus>
+				<Bonus>BONUS_REEDS</Bonus>
+				<Bonus>BONUS_STRAW</Bonus>
+				<Bonus>BONUS_ALGAE</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>

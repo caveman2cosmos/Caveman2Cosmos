@@ -191,14 +191,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_PARTS</Bonus>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CEMENT</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_CEMENT</Bonus>
+			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>70</iConquestProb>
@@ -482,14 +477,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_PARTS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_PARTS</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_ANDROIDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1500</iCost>

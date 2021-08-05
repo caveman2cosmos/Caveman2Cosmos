@@ -250,18 +250,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_ROBOTIC_BODY</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_ENLIGHTENED</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -401,18 +393,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UTOPIA_DESTINY</PrereqTech>
 			<iCost>10510</iCost>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_DESIGNER_BABIES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -630,18 +614,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_TRANSAPIENT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_TRANSAPIENT</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -1040,18 +1016,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SYNTHETIC_SYNESTHESIA</PrereqTech>
 			<iCost>10110</iCost>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NEUROIMPLANTS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_NEUROIMPLANTS</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>

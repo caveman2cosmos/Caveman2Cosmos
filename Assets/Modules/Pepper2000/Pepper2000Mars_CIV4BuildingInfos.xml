@@ -29,14 +29,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_CROPS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_CROPS</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -75,18 +68,10 @@
 				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CARBON_DIOXIDE_ICE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_MANUFACTURED_GOODS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_CARBON_DIOXIDE_ICE</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_MARTIAN_ALGAE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -124,18 +109,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_ELECTRONICS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_ALGAE</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_ELECTRONICS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_MARTIAN_ALGAE</Bonus>
+			</PrereqBonuses>
 			<bPrereqPower>1</bPrereqPower>
 			<PropertyManipulators>
 				<PropertySource>
@@ -419,14 +396,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_FRUIT</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_FRUIT</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -456,14 +426,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NOVUS_CHEMICALS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -928,14 +891,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NOVUS_CHEMICALS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CLAYTRONIC_CITY</Type>
@@ -1667,14 +1623,7 @@
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIAMOND_NANOTHREADS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_DIAMOND_NANOTHREADS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYSCRAPER</Type>
