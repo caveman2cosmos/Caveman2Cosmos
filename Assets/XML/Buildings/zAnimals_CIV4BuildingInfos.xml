@@ -21734,6 +21734,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</FreeBuilding>
@@ -21773,7 +21774,7 @@
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqOrBuildings>			
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -22318,6 +22319,7 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -22533,6 +22535,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
