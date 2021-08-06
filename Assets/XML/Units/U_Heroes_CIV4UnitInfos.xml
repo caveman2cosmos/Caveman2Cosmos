@@ -2094,9 +2094,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_GERMAN</BonusType>
 			<iCost>3800</iCost>
@@ -3578,9 +3578,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_JAPANESE</BonusType>
 			<iCost>3800</iCost>
@@ -23666,9 +23666,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_MALAYSIAN</BonusType>
 			<iCost>3800</iCost>
@@ -32192,9 +32192,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SUNDANESE</BonusType>
 			<iCost>3800</iCost>
@@ -32321,9 +32321,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SURINAMESE</BonusType>
 			<iCost>3800</iCost>
@@ -34268,9 +34268,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TIWI</BonusType>
 			<iCost>3800</iCost>
@@ -34828,9 +34828,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TONGAN</BonusType>
 			<iCost>3800</iCost>

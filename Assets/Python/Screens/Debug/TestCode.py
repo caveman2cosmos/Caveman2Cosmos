@@ -49,6 +49,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
+		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
@@ -505,7 +506,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechList.append(aRequirementTechList[i])
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+				self.log(CvBuildingInfo.getType()+" is unlocked before its AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
@@ -528,7 +529,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechList.append(aRequirementTechList[i])
 			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
@@ -551,7 +552,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechList.append(aRequirementTechList[i])
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its empire AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+				self.log(CvBuildingInfo.getType()+" is unlocked before its empire AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
@@ -580,7 +581,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechList.append(aRequirementTechList[i])
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) > iBaseTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM AND building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(max(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and max(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
@@ -603,7 +604,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechList.append(aRequirementTechList[i])
 			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc:
-				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList))+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc)
+				self.log(CvBuildingInfo.getType()+" is unlocked before its GOM OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
@@ -1667,3 +1668,51 @@ class TestCode:
 					self.log(CvProjectInfo.getType()+" has movie art define tag: "+CvProjectInfo.getMovieArtDef())
 				else:
 					self.log(CvProjectInfo.getType()+" is missing a wonder movie!")
+
+	#Building and unit - check if main tech requirement is more advanced or equal to tech types, main tech requirement determinates where to put icon in tech tree
+	def checkTechTypes(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			aTechList = []
+			aTechXY = []
+
+			#Main tech requirement
+			iTechMainReq = CvBuildingInfo.getPrereqAndTech()
+			if iTechMainReq != -1:
+				iTechMainLoc = GC.getTechInfo(iTechMainReq).getGridX()
+				iTechMainRow = GC.getTechInfo(iTechMainReq).getGridY()
+				aTechList.append(GC.getTechInfo(iTechMainReq).getType())
+				aTechXY.append(100*iTechMainLoc+iTechMainRow)
+
+			#Tech Type requirement
+			aTechTypeLocList = []
+			aTechTypeRowList = []
+			for iTechType in CvBuildingInfo.getPrereqAndTechs():
+				aTechList.append(GC.getTechInfo(iTechType).getType())
+				aTechXY.append(100*GC.getTechInfo(iTechType).getGridX()+GC.getTechInfo(iTechType).getGridY())
+
+			if len(aTechXY) > 1 and 100*iTechMainLoc+iTechMainRow != max(aTechXY):
+				self.log(CvBuildingInfo.getType()+" Main tech isn't most advanced, switch it to "+str(aTechList[aTechXY.index(max(aTechXY))]))
+
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			aTechList = []
+			aTechXY = []
+
+			#Main tech requirement
+			iTechMainReq = CvUnitInfo.getPrereqAndTech()
+			if iTechMainReq != -1:
+				iTechMainLoc = GC.getTechInfo(iTechMainReq).getGridX()
+				iTechMainRow = GC.getTechInfo(iTechMainReq).getGridY()
+				aTechList.append(GC.getTechInfo(iTechMainReq).getType())
+				aTechXY.append(100*iTechMainLoc+iTechMainRow)
+
+			#Tech Type requirement
+			aTechTypeLocList = []
+			aTechTypeRowList = []
+			for iTechType in CvUnitInfo.getPrereqAndTechs():
+				aTechList.append(GC.getTechInfo(iTechType).getType())
+				aTechXY.append(100*GC.getTechInfo(iTechType).getGridX()+GC.getTechInfo(iTechType).getGridY())
+
+			if len(aTechXY) > 1 and 100*iTechMainLoc+iTechMainRow != max(aTechXY):
+				self.log(CvUnitInfo.getType()+" Main tech isn't most advanced, switch it to "+str(aTechList[aTechXY.index(max(aTechXY))]))

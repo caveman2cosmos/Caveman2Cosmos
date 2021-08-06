@@ -4431,9 +4431,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NAVIGATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>

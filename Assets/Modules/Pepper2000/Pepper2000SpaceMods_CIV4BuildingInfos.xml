@@ -1308,9 +1308,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUPERCRITICAL_CO2_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ADAPTIVE_RADIATION</PrereqTech>
+			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_ADAPTIVE_RADIATION</PrereqTech>
 			</TechTypes>
 			<iCost>7608</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

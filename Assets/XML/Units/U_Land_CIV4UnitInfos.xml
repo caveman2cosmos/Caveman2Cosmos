@@ -8874,9 +8874,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
+			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_FIREARMS</BonusType>
 			<PrereqBonuses>
@@ -15602,9 +15602,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_COMPOSITES</PrereqTech>
+			<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
@@ -19452,9 +19452,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -19558,9 +19558,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -34266,9 +34266,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -34719,9 +34719,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MILITARY_SCIENCE</ForceObsoleteTech>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -41641,9 +41641,9 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<PrereqTech>TECH_SKYROADS</PrereqTech>
+			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SKYROADS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>

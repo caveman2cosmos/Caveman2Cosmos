@@ -315,10 +315,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_ELECTROMAGNETIC_FIELD_SHIELDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
-				<PrereqTech>TECH_ELECTROMAGNETIC_FIELD_SHIELDING</PrereqTech>
+				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -738,9 +738,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ALGAE_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
+				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
 				<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 			</TechTypes>
 			<iCost>1577</iCost>
@@ -1706,9 +1706,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SPACEPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+				<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			</TechTypes>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

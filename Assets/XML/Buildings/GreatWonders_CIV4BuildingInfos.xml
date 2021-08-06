@@ -4109,9 +4109,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_CHEOMSEONGDAE</ConstructSound>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqTech>TECH_STARGAZING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MASONRY</PrereqTech>
+				<PrereqTech>TECH_STARGAZING</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -9955,9 +9955,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HANGING_GARDEN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HANGING_GARDENS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GARDENING</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
+				<PrereqTech>TECH_GARDENING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
@@ -12276,9 +12276,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KRAK_DES_CHEVS</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
-			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_STONE</Bonus>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>

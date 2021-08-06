@@ -8628,9 +8628,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
+			<PrereqTech>TECH_BIOMECHANICAL_HARVESTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BIOMECHANICAL_HARVESTING</PrereqTech>
+				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -8991,9 +8991,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -29793,9 +29793,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+			<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+				<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -39360,9 +39360,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
+			<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
+				<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -40749,9 +40749,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_FIRE_MYTH_EFFECT</FreeBuilding>
@@ -70720,9 +70720,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
+			<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
+				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -76627,9 +76627,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
-			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
+				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -78916,9 +78916,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+			<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
@@ -82350,9 +82350,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_TELEPHONE</PrereqTech>
+				<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -97041,9 +97041,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+				<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
@@ -100003,9 +100003,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_STONE_MYTH_EFFECT</FreeBuilding>
@@ -107704,9 +107704,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
+				<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
 			</TechTypes>
 			<iCost>2005</iCost>
 			<ObsoleteTech>TECH_OPTRONICS</ObsoleteTech>

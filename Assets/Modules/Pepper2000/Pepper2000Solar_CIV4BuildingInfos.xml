@@ -4718,9 +4718,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VERTICAL_REEF</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
+				<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
 			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

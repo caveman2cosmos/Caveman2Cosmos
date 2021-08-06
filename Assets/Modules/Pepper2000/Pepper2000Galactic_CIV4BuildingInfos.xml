@@ -1882,9 +1882,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNER_CASTE_MISSION_CONTROL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
+			<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			</TechTypes>
 			<iCost>1757</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2523,9 +2523,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
+				<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			</TechTypes>
 			<iCost>29200</iCost>
 			<MapCategoryTypes>
@@ -5256,9 +5256,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRECIOUS_METAL_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -6120,10 +6120,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STAR_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
-				<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -6149,9 +6149,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STELLAR_FUSION_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

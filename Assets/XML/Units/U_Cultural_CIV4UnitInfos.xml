@@ -20335,9 +20335,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
+			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_KONJAN</BonusType>
 			<PrereqBonuses>
@@ -27514,9 +27514,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
+			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_PALESTINIAN</BonusType>
 			<PrereqBonuses>
@@ -29451,9 +29451,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_QING</BonusType>
 			<TrainCondition>
