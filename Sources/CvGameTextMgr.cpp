@@ -33304,12 +33304,19 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	// Specialists
 	{
 		int iSpecialistYield = 0;
+		int iFreeSpecialistYield = 0;
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
-			const int iCount = city.getSpecialistCount((SpecialistTypes)iI);
+			const SpecialistTypes eType = static_cast<SpecialistTypes>(iI);
+			int iCount = city.getSpecialistCount(eType);
 			if (iCount > 0)
 			{
-				iSpecialistYield += iCount * city.specialistYield((SpecialistTypes)iI, eYieldType);
+				iSpecialistYield += iCount * city.specialistYield(eType, eYieldType);
+			}
+			iCount = city.getFreeSpecialistCount(eType);
+			if (iCount > 0)
+			{
+				iFreeSpecialistYield += iCount * city.specialistYield(eType, eYieldType);
 			}
 		}
 		if (iSpecialistYield != 0)
@@ -33317,6 +33324,12 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistYield, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
 			iYield -= iSpecialistYield;
+		}
+		if (iFreeSpecialistYield != 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iFreeSpecialistYield, info.getChar(), L"TXT_KEY_WB_FREE_SPECIALISTS"));
+			iYield -= iFreeSpecialistYield;
 		}
 	}
 	// Trade

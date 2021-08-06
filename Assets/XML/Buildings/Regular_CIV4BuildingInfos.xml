@@ -4966,26 +4966,12 @@
 			</ReplacementBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GOLD_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SILVER_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_PLATINUM_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COPPER_WARES</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GOLD_WARES</Bonus>
+				<Bonus>BONUS_SILVER_WARES</Bonus>
+				<Bonus>BONUS_PLATINUM_WARES</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
@@ -8211,18 +8197,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AUGMENTED_EQUIPMENT_CENTER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_INGOTS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CEMENT</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_STEEL_INGOTS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_CEMENT</Bonus>
+			</PrereqBonuses>
 			<iPrereqPopulation>8</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8650,7 +8628,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
+			<PrereqTech>TECH_BIOMECHANICAL_HARVESTING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<ConstructCondition>
@@ -9010,9 +8991,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -11885,46 +11866,17 @@
 				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
 			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAINS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUGAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_VEGETABLES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FRUIT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEMP</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRASS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_REEDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STRAW</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALGAE</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GRAINS</Bonus>
+				<Bonus>BONUS_SUGAR</Bonus>
+				<Bonus>BONUS_VEGETABLES</Bonus>
+				<Bonus>BONUS_FRUIT</Bonus>
+				<Bonus>BONUS_HEMP</Bonus>
+				<Bonus>BONUS_GRASS</Bonus>
+				<Bonus>BONUS_REEDS</Bonus>
+				<Bonus>BONUS_STRAW</Bonus>
+				<Bonus>BONUS_ALGAE</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -12339,6 +12291,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BIOMETRIC_WARFARE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			</TechTypes>
 			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>-8</iCommerce>
@@ -19027,14 +18982,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAPHENE</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_GRAPHENE</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -23767,6 +23715,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SYNERGETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_WEIGHTLESS_FLIGHT</PrereqTech>
+			</TechTypes>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -29842,7 +29793,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+			<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_DIRECTED_PANSPERMIA</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -31008,18 +30962,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SYNTHETIC_DIAMOND</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_SYNTHETIC_DIAMOND</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -39414,9 +39360,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
+			<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
+				<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -40803,9 +40749,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_FIRE_MYTH_EFFECT</FreeBuilding>
@@ -49823,6 +49769,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
@@ -51279,6 +51226,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ALTERNATE_HISTORY_EXPLORATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TIMELINE_RECTIFICATION</PrereqTech>
+			</TechTypes>
 			<iCost>26955</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -61848,6 +61798,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOPERATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
 			</PrereqInCityBuildings>
@@ -70767,7 +70720,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
+			<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
@@ -74528,6 +74484,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_NANOELECTRONICS</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_SHOCKWAVE_ENGINES</Bonus>
@@ -75664,6 +75623,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFINING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ULTRAFUEL_REFINERY</BuildingType>
@@ -75979,6 +75941,7 @@
 			<PrereqTech>TECH_COOPERATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -76664,7 +76627,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
-			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
@@ -78950,9 +78916,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+			<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
@@ -80299,7 +80265,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
-			<ObsoleteTech>TECH_PERSONALIZED_HEALTH</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_DRUGS</Bonus>
@@ -80467,6 +80432,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_BINARY_SEMIOTICS</PrereqTech>
 			<iCost>5455</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -82384,9 +82350,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_TELEPHONE</PrereqTech>
+				<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -97075,9 +97041,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+				<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
@@ -99453,18 +99419,10 @@
 			<PrereqTech>TECH_CLONING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ENZYMES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COMPUTERS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_ENZYMES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_COMPUTERS</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FORENSICS_LAB</BuildingType>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
@@ -100045,9 +100003,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_STONE_MYTH_EFFECT</FreeBuilding>
@@ -102049,6 +102007,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
+			</TechTypes>
 			<iCost>19755</iCost>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -102755,6 +102716,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TRADE</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOL</Bonus>
@@ -104391,14 +104355,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_PLASTIC</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_PLASTIC</Bonus>
 			<FreeBonus>BONUS_CARPETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -107645,46 +107602,17 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<bPrereqPower>1</bPrereqPower>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAINS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUGAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_VEGETABLES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FRUIT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HEMP</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRASS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_REEDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STRAW</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALGAE</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_GRAINS</Bonus>
+				<Bonus>BONUS_SUGAR</Bonus>
+				<Bonus>BONUS_VEGETABLES</Bonus>
+				<Bonus>BONUS_FRUIT</Bonus>
+				<Bonus>BONUS_HEMP</Bonus>
+				<Bonus>BONUS_GRASS</Bonus>
+				<Bonus>BONUS_REEDS</Bonus>
+				<Bonus>BONUS_STRAW</Bonus>
+				<Bonus>BONUS_ALGAE</Bonus>
+			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -107776,7 +107704,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
+			</TechTypes>
 			<iCost>2005</iCost>
 			<ObsoleteTech>TECH_OPTRONICS</ObsoleteTech>
 			<bWater>1</bWater>

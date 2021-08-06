@@ -24933,8 +24933,12 @@ int CvPlayer::getNewCityProductionValue() const
 
 int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
-	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD");
 
+	if (iPopulation > 1)
+	{
+		iThreshold += (iPopulation - 1) * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	}
 	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iThreshold /= 100;
 

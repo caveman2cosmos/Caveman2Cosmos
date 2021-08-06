@@ -709,8 +709,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_COW_FARM</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_COW</BonusType>
 			<iCost>140</iCost>
@@ -914,8 +917,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_PIG_FARM</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PIG_FARM</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_PIG</BonusType>
 			<iCost>140</iCost>

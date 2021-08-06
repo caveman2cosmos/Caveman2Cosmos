@@ -1898,9 +1898,10 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_JUMPLANE</BuildType>
 			</Builds>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 			<iCost>3500</iCost>
 			<iBaseUpkeep>7</iBaseUpkeep>
