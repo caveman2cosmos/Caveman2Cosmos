@@ -269,7 +269,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNICATION_NETWORKS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

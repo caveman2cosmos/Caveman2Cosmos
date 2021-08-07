@@ -53,7 +53,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -156,7 +156,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

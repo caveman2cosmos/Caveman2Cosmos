@@ -604,7 +604,6 @@ public:
 	void changeMaxConscript(int iChange);
 
 	int getOverflowResearch() const;
-	void setOverflowResearch(int iNewValue);
 	void changeOverflowResearch(int iChange);
 
 	int getNoUnhealthyPopulationCount() const;

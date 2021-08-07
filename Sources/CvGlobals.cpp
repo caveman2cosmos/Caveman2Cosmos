@@ -273,7 +273,7 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 //
 void cvInternalGlobals::init()
 {
-	OutputDebugString("Initializing Internal Globals: Start");
+	OutputDebugString("Initializing Internal Globals: Start\n");
 
 #ifdef MINIDUMP
 	/* Enable our custom exception that will write the minidump for us. */
@@ -425,7 +425,7 @@ void cvInternalGlobals::init()
 	m_bSignsCleared = false;
 	m_bResourceLayerOn = false;
 
-	OutputDebugString("Initializing Internal Globals: End");
+	OutputDebugString("Initializing Internal Globals: End\n");
 }
 
 //
@@ -2824,12 +2824,14 @@ void cvInternalGlobals::cacheInfoTypes()
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
-	FAssert(eMap != CURRENT_MAP);
 
-	GC.getMap().beforeSwitch();
-	GC.getGame().setCurrentMap(eMap);
-	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
-	GC.getMap().afterSwitch();
+	if (eMap != CURRENT_MAP)
+	{
+		getMap().beforeSwitch();
+		getGame().setCurrentMap(eMap);
+		*CyGlobalContext::getInstance().getCyMap() = getMap();
+		getMap().afterSwitch();
+	}
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const

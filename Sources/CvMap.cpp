@@ -118,13 +118,19 @@ void CvMap::uninit()
 
 	SAFE_DELETE_ARRAY(m_pMapPlots);
 
+	m_areas.uninit
+
 	foreach_(const CvViewport* viewport, m_viewports)
 	{
 		delete viewport;
 	}
 	m_viewports.clear();
+
+	foreach_(const TravelingUnit* unit, m_IncomingUnits)
+	{
+		delete unit;
+	}
 	m_IncomingUnits.clear();
-	m_areas.uninit();
 }
 
 // FUNCTION: reset()
@@ -346,24 +352,31 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
+void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
+{
+	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
+	unit.kill(true, NO_PLAYER);
+}
+
 void CvMap::updateIncomingUnits()
 {
-	foreach_(IncomingUnit& travelingUnit, m_IncomingUnits)
+	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
 	{
-		if (travelingUnit.second-- <= 0)
+		if (travelingUnit->numTurnsUntilArrival-- <= 0)
 		{
-			if (!plotsInitialized())
+			//if (!plotsInitialized())
 			{
 				GC.switchMap(m_eType);
 			}
-			const CvUnit& kUnit = travelingUnit.first;
-			CvPlayer& owner = GET_PLAYER(kUnit.getOwner());
+			const CvUnitAI& unit = travelingUnit->unit;
+			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(kUnit.getUnitType(), plot->getX(), plot->getY(), kUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
-				//newUnit = kUnit; // TODO: make newUnit a copy of kUnit without changing x/y of newUnit
+				static_cast<CvUnitAI&>(*newUnit) = unit;
 				m_IncomingUnits.erase(&travelingUnit);
+				delete travelingUnit;
 			}
 		}
 	}

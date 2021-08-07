@@ -870,116 +870,116 @@ def canGoToEarth(argsList):
 
 def goToEarth(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_EARTH)
+	GC.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(pUnit)
 	
 def canGoToSubterrain(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
 
 def goToSubterrain(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_SUBTERRAIN)
+	GC.getMapByIndex(MapTypes.MAP_SUBTERRAIN).moveUnitToMap(pUnit)
 
 def canGoToCislunarSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
 
 def goToCislunarSpace(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_CISLUNAR)
+	GC.getMapByIndex(MapTypes.MAP_CISLUNAR).moveUnitToMap(pUnit)
 
 def canGoToMoon(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MOON
 
 def goToMoon(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_MOON)
+	GC.getMapByIndex(MapTypes.MAP_MOON).moveUnitToMap(pUnit)
 
 def canGoToMars(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MARS
 
 def goToMars(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_MARS)
+	GC.getMapByIndex(MapTypes.MAP_MARS).moveUnitToMap(pUnit)
 
 def canGoToVenus(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_VENUS
 
 def goToVenus(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_VENUS)
+	GC.getMapByIndex(MapTypes.MAP_VENUS).moveUnitToMap(pUnit)
 
 def canGoToInnerSolarSystem(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_INNER_SOLAR_SYSTEM
 
 def goToInnerSolarSystem(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_INNER_SOLAR_SYSTEM)
+	GC.getMapByIndex(MapTypes.MAP_INNER_SOLAR_SYSTEM).moveUnitToMap(pUnit)
 
 def canGoToOuterSolarSystem(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_OUTER_SOLAR_SYSTEM
 
 def goToOuterSolarSystem(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_OUTER_SOLAR_SYSTEM)
+	GC.getMapByIndex(MapTypes.MAP_OUTER_SOLAR_SYSTEM).moveUnitToMap(pUnit)
 
 def canGoToTitan(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_TITAN
 
 def goToTitan(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_TITAN)
+	GC.getMapByIndex(MapTypes.MAP_TITAN).moveUnitToMap(pUnit)
 
 def canGoToTransneptunianSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_TRANSNEPTUNIAN
 
 def goToTransneptunianSpace(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_TRANSNEPTUNIAN)
+	GC.getMapByIndex(MapTypes.MAP_TRANSNEPTUNIAN).moveUnitToMap(pUnit)
 
 def canGoToNearbyStars(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_NEARBY_STARS
 
 def goToNearbyStars(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_NEARBY_STARS)
+	GC.getMapByIndex(MapTypes.MAP_NEARBY_STARS).moveUnitToMap(pUnit)
 
 def canGoToOrionArm(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_ORION_ARM
 
 def goToOrionArm(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_ORION_ARM)
+	GC.getMapByIndex(MapTypes.MAP_ORION_ARM).moveUnitToMap(pUnit)
 
 def canGoToMilkyWay(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MILKY_WAY
 
 def goToMilkyWay(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_MILKY_WAY)
+	GC.getMapByIndex(MapTypes.MAP_MILKY_WAY).moveUnitToMap(pUnit)
 
 def canGoToLocalGroup(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_LOCAL_GROUP
 
 def goToLocalGroup(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_LOCAL_GROUP)
+	GC.getMapByIndex(MapTypes.MAP_LOCAL_GROUP).moveUnitToMap(pUnit)
 
 def canGoToVirgoSupercluster(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_VIRGO_SUPERCLUSTER
 
 def goToVirgoSupercluster(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_VIRGO_SUPERCLUSTER)
+	GC.getMapByIndex(MapTypes.MAP_VIRGO_SUPERCLUSTER).moveUnitToMap(pUnit)
 
 def canGoToUniverse(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_UNIVERSE
 
 def goToUniverse(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_UNIVERSE)
+	GC.getMapByIndex(MapTypes.MAP_UNIVERSE).moveUnitToMap(pUnit)
 
 def canGoToDistantCosmos(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_DISTANT_COSMOS
 
 def goToDistantCosmos(argsList):
 	pUnit = argsList[0]
-	pUnit.goToMap(MapTypes.MAP_DISTANT_COSMOS)
+	GC.getMapByIndex(MapTypes.MAP_DISTANT_COSMOS).moveUnitToMap(pUnit)

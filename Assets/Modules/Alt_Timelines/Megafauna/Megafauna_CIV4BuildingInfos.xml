@@ -13,7 +13,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -139,7 +139,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -184,7 +184,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
@@ -314,7 +314,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
@@ -364,7 +364,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -384,7 +384,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_BEAR_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
@@ -528,6 +528,9 @@
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -598,7 +601,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -630,6 +633,8 @@
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_DEER_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -643,7 +648,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -660,7 +665,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -701,7 +706,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GIRAFFE_TRAINER</MovieDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -730,6 +735,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -739,7 +746,7 @@
 			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -760,7 +767,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -890,6 +897,8 @@
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1092,6 +1101,8 @@
 				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1218,6 +1229,8 @@
 				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

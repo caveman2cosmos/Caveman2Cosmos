@@ -36,6 +36,10 @@
 			</MapCategoryTypes>
 			<iCost>237240</iCost>
 			<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
+				<PrereqTech>TECH_SIMULATION_AWARENESS</PrereqTech>
+			</TechTypes>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<bCenterInCity>1</bCenterInCity>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
@@ -234,6 +238,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOSPHERE_2</Type>
@@ -866,6 +873,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
