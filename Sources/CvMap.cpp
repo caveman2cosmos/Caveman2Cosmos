@@ -126,8 +126,13 @@ void CvMap::uninit()
 	{
 		delete viewport;
 	}
-
 	m_viewports.clear();
+
+	foreach_(const TravelingUnit* unit, m_IncomingUnits)
+	{
+		delete unit;
+	}
+	m_IncomingUnits.clear();
 }
 
 // FUNCTION: reset()
@@ -372,7 +377,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
 	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
-	unit.kill(false, NO_PLAYER);
+	unit.kill(true, NO_PLAYER);
 }
 
 void CvMap::updateIncomingUnits()
