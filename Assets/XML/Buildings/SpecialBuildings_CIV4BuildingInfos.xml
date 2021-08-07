@@ -5963,7 +5963,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-7</iHealth>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
@@ -6020,7 +6020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
 			<YieldModifiers>

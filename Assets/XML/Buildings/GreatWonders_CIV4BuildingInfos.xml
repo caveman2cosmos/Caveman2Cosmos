@@ -10642,7 +10642,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>1800</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15701,7 +15701,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17060,7 +17060,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PHYSICS</ObsoleteTech>
+			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<iCost>1296</iCost>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>

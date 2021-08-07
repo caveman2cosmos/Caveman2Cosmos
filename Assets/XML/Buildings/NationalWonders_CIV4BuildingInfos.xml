@@ -665,7 +665,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
+			<ObsoleteTech>TECH_WOODWORKING</ObsoleteTech>
 			<iCost>40</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
