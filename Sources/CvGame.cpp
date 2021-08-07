@@ -5908,7 +5908,6 @@ void CvGame::doTurn()
 
 void CvGame::doDeals()
 {
-
 	verifyDeals();
 
 	int iLoop;

@@ -41108,12 +41108,6 @@ ReligionTypes CvUnit::getReligion() const
 	return m_eReligionType;
 }
 
-void CvUnit::goToMap(MapTypes eMap)
-{
-	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
-	kill(true, NO_PLAYER);
-}
-
 bool CvUnit::isWorker() const
 {
 	return m_worker != NULL;

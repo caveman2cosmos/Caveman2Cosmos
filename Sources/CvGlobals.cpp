@@ -2367,7 +2367,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start/n");
+	OutputDebugString("Caching Globals: Start\n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2395,7 +2395,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End/n");
+	OutputDebugString("Caching Globals: End\n");
 }
 
 
