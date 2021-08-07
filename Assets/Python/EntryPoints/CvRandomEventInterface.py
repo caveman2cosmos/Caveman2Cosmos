@@ -6434,7 +6434,7 @@ def doVolcanoPlot(pPlot):
       # move them to safety
       iX = pPlot.getX()
       iY = pPlot.getY()
-      for i in xrange(8): 
+      for i in xrange(8):
         sPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
         if not sPlot.isNone():
           if pPlotUnit.canMoveInto(sPlot, False, False, True):
