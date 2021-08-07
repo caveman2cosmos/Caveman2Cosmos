@@ -436,3 +436,8 @@ void CyMap::calculateCanalAndChokePoints()
 		m_pMap->calculateCanalAndChokePoints();
 	}
 }
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
+}

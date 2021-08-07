@@ -126,8 +126,13 @@ void CvMap::uninit()
 	{
 		delete viewport;
 	}
-
 	m_viewports.clear();
+
+	foreach_(const TravelingUnit* unit, m_IncomingUnits)
+	{
+		delete unit;
+	}
+	m_IncomingUnits.clear();
 }
 
 // FUNCTION: reset()
@@ -369,7 +374,37 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
+void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
+{
+	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
+	unit.kill(true, NO_PLAYER);
+}
+
+void CvMap::updateIncomingUnits()
+{
+	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
+	{
+		if (travelingUnit->numTurnsUntilArrival-- <= 0)
+		{
+			//if (!plotsInitialized())
+			{
+				GC.switchMap(m_eType);
+			}
+			const CvUnitAI& unit = travelingUnit->unit;
+			CvPlayer& owner = GET_PLAYER(unit.getOwner());
+			const CvPlot* plot = owner.findStartingPlot();
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
+			if (newUnit != NULL)
+			{
+				static_cast<CvUnitAI&>(*newUnit) = unit;
+				m_IncomingUnits.erase(&travelingUnit);
+				delete travelingUnit;
+			}
+		}
+	}
+}
+
+
 void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");

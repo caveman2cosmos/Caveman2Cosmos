@@ -451,6 +451,8 @@ public:
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
 
+	CvUnit& operator=(const CvUnit& other);
+
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
 	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
