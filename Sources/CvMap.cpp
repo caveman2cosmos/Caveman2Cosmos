@@ -371,7 +371,6 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
-	FAssertMsg(m_eType != CURRENT_MAP, "Unit is already on this map");
 	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
 	unit.kill(false, NO_PLAYER);
 }
@@ -386,13 +385,13 @@ void CvMap::updateIncomingUnits()
 			{
 				GC.switchMap(m_eType);
 			}
-			const CvUnit& unit = travelingUnit->unit;
+			const CvUnitAI& unit = travelingUnit->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
-				//newUnit = unit; // TODO: make newUnit a copy of unit without changing x/y of newUnit
+				static_cast<CvUnitAI&>(*newUnit) = unit;
 				m_IncomingUnits.erase(&travelingUnit);
 				delete travelingUnit;
 			}
