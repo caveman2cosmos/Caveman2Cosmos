@@ -369,29 +369,32 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
+void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
-	m_IncomingUnits.push_back(IncomingUnit(unit, numTravelTurns));
+	FAssertMsg(m_eType != CURRENT_MAP, "Unit is already on this map");
+	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
+	unit.kill(false, NO_PLAYER);
 }
 
 void CvMap::updateIncomingUnits()
 {
-	foreach_(IncomingUnit& travelingUnit, m_IncomingUnits)
+	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
 	{
-		if (travelingUnit.numTurnsUntilArrival-- <= 0)
+		if (travelingUnit->numTurnsUntilArrival-- <= 0)
 		{
 			//if (!plotsInitialized())
 			{
 				GC.switchMap(m_eType);
 			}
-			const CvUnit& kUnit = travelingUnit.unit;
-			CvPlayer& owner = GET_PLAYER(kUnit.getOwner());
+			const CvUnit& unit = travelingUnit->unit;
+			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(kUnit.getUnitType(), plot->getX(), plot->getY(), kUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
 			if (newUnit != NULL)
 			{
-				//newUnit = kUnit; // TODO: make newUnit a copy of kUnit without changing x/y of newUnit
+				//newUnit = unit; // TODO: make newUnit a copy of unit without changing x/y of newUnit
 				m_IncomingUnits.erase(&travelingUnit);
+				delete travelingUnit;
 			}
 		}
 	}

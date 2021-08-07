@@ -45,18 +45,6 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 //
 class CvMap : public CvMapInterfaceBase
 {
-	struct IncomingUnit
-	{
-		IncomingUnit(const CvUnitAI& travelingUnit, int numTravelTurns)
-			: turnsUntilArrival(numTravelTurns)
-		{
-			unit = travelingUnit;
-		}
-
-		CvUnitAI unit;
-		int turnsUntilArrival;
-	};
-
 	friend class CyMap;
 
 public:
@@ -80,7 +68,7 @@ public:
 	void afterSwitch();
 
 	void updateIncomingUnits();
-	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
+	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
 
 private:
 	void addViewport(int iXOffset, int iYOffset);
@@ -282,8 +270,19 @@ private:
 
 	std::vector<CvViewport*> m_viewports;
 
-	//typedef std::pair<CvUnitAI, int> IncomingUnit;
-	std::vector<IncomingUnit> m_IncomingUnits;
+	struct TravelingUnit
+	{
+		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+			: numTurnsUntilArrival(numTravelTurns)
+		{
+			unit = static_cast<const CvUnitAI&>(travelingUnit);
+		}
+
+		CvUnitAI unit;
+		int numTurnsUntilArrival;
+	};
+
+	std::vector<TravelingUnit*> m_IncomingUnits;
 };
 
 #endif

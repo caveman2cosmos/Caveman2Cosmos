@@ -446,7 +446,6 @@ class CvUnit : public CvDLLEntity
 {
 public:
 	CvUnit(bool bIsDummy = false);
-	CvUnit(const CvUnit& other);
 	virtual ~CvUnit();
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
@@ -600,6 +599,7 @@ public:
 	void scrap();
 
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
+
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
 	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
@@ -609,8 +609,6 @@ public:
 	int getHurryFood(const CvPlot* pPlot) const;
 	bool canHurryFood(const CvPlot* pPlot) const;
 	bool hurryFood();
-
-	void goToMap(MapTypes eMap);
 
 	bool canPerformInquisition(const CvPlot* pPlot) const;
 	bool performInquisition();

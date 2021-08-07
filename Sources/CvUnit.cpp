@@ -205,117 +205,6 @@ m_Properties(this)
 }
 
 
-CvUnit::CvUnit(const CvUnit& other)
-	: m_GameObject(this)
-	, m_Properties(this)
-{
-	m_aiExtraDomainModifier = new int[NUM_DOMAIN_TYPES];
-	m_aiExtraVisibilityIntensity = new int[GC.getNumInvisibleInfos()];
-	m_aiExtraInvisibilityIntensity = new int[GC.getNumInvisibleInfos()];
-	m_aiExtraVisibilityIntensityRange = new int[GC.getNumInvisibleInfos()];
-	m_aiExtraVisibilityIntensitySameTile = new int[GC.getNumInvisibleInfos()];
-	m_aiNegatesInvisibleCount = new int[GC.getNumInvisibleInfos()];
-	m_aExtraInvisibleTerrains.clear();
-	m_aExtraInvisibleFeatures.clear();
-	m_aExtraInvisibleImprovements.clear();
-	m_aExtraVisibleTerrains.clear();
-	m_aExtraVisibleFeatures.clear();
-	m_aExtraVisibleImprovements.clear();
-	m_aExtraVisibleTerrainRanges.clear();
-	m_aExtraVisibleFeatureRanges.clear();
-	m_aExtraVisibleImprovementRanges.clear();
-
-	m_iMaxMoveCacheTurn = -1;
-
-	if (g_dummyUnit == NULL)
-	{
-		g_dummyUnit = new CvUnitAI(true);
-
-		if (GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
-		{
-			g_bUseDummyEntities = true;
-		}
-	}
-
-	if (!g_bUseDummyEntities)
-	{
-		CvDLLEntity::createUnitEntity(this); // create and attach entity to unit
-	}
-	else if (g_dummyEntity == NULL)
-	{
-		CvDLLEntity::createUnitEntity(this); // create and attach entity to unit
-
-		g_dummyEntity = getEntity();
-	}
-	else
-	{
-		setEntity(g_dummyEntity);
-		g_dummyUsage++;
-	}
-
-	bGraphicsSetup = false;
-
-	reset(0, NO_UNIT, NO_PLAYER, true);
-
-	*this = other;
-
-	if (!m_staticsInitialized)
-	{
-		//	Allocate static buffers to be used during read and write
-		g_paiTempPromotionFreeCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictOnAttackCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempCureAfflictionCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempCureAfflictionTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionLineCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionTurnCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictionTurnTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictionHitCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempAfflictionTolerance = new int[GC.getNumPromotionInfos()];
-		g_paiTempTrapImmunityUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempTargetUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapDisableUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapAvoidanceUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapTriggerUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempAfflictionTypeTolerance = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempFortitudeModifierTypeAmount = new int[GC.getNumPromotionInfos()];
-		g_paiTempFortitudeModifierAmount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempTrapSetWithPromotionCount = new int[GC.getNumPromotionInfos()];
-		g_paiTempPromotionFromTraitCount = new int [GC.getNumPromotionInfos()];
-		g_paiTempAfflictOnAttackTypeProbability = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeImmediateCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeMeleeCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeDistanceCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
-		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
-		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
-		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
-		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempSubCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraKnockbackVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPunctureVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraArmorVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraDodgeVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraPrecisionVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraCriticalVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraRoundStunVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeAdjacentVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealAsDamage = new int[GC.getNumUnitCombatInfos()];
-
-		m_staticsInitialized = true;
-	}
-}
-
-
 CvUnit::~CvUnit()
 {
 	if (!isUsingDummyEntities())
@@ -1372,23 +1261,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
 	m_Properties = other.m_Properties;
-/*
-	m_iBirthmark = other.m_iBirthmark;
-	m_eUnitAIType = other.m_eUnitAIType;
-	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
-	//int m_contractsLastEstablishedTurn;
-	//ContractualState m_contractualState;
-	m_iGarrisonCity = other.m_iGarrisonCity;
-	m_iAffirmedGarrisonCity = other.m_iAffirmedGarrisonCity;
-	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
-	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
-	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
-	m_bHasAttacked = other.m_bHasAttacked;
-	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
-	m_iGenericValue = other.m_iGenericValue;
-	m_eGenericValueFlagsCached = other.m_eGenericValueFlagsCached;
-	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
-*/
+
 	return *this;
 }
 
@@ -41233,12 +41106,6 @@ void CvUnit::defineReligion()
 ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
-}
-
-void CvUnit::goToMap(MapTypes eMap)
-{
-	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
-	kill(false, NO_PLAYER);
 }
 
 bool CvUnit::isWorker() const
