@@ -369,7 +369,35 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
+void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
+{
+	m_IncomingUnits.push_back(IncomingUnit(unit, numTravelTurns));
+}
+
+void CvMap::updateIncomingUnits()
+{
+	foreach_(IncomingUnit& travelingUnit, m_IncomingUnits)
+	{
+		if (travelingUnit.numTurnsUntilArrival-- <= 0)
+		{
+			//if (!plotsInitialized())
+			{
+				GC.switchMap(m_eType);
+			}
+			const CvUnit& kUnit = travelingUnit.unit;
+			CvPlayer& owner = GET_PLAYER(kUnit.getOwner());
+			const CvPlot* plot = owner.findStartingPlot();
+			CvUnit* newUnit = owner.initUnit(kUnit.getUnitType(), plot->getX(), plot->getY(), kUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, ""));
+			if (newUnit != NULL)
+			{
+				//newUnit = kUnit; // TODO: make newUnit a copy of kUnit without changing x/y of newUnit
+				m_IncomingUnits.erase(&travelingUnit);
+			}
+		}
+	}
+}
+
+
 void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");

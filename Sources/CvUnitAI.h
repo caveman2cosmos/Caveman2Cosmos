@@ -26,7 +26,10 @@ class CvUnitAI : public CvUnit
 {
 public:
 	CvUnitAI(bool bIsDummy = false);
+	CvUnitAI(const CvUnitAI& other);
 	virtual ~CvUnitAI();
+
+	CvUnitAI& operator=(const CvUnitAI& other);
 
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
