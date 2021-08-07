@@ -187,7 +187,7 @@ class WorldBuilder:
 		self.m_iCurrentX = self.m_pCurrentPlot.getX()
 		self.m_iCurrentY = self.m_pCurrentPlot.getY()
 
-		sText = "<font=3b>%s, X: %d, Y: %d" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
+		sText = "<font=3b>%s, %s, X: %d, Y: %d" %(GC.getMapInfo(GAME.getCurrentMap()).getDescription(), CyTranslator().getText("TXT_KEY_WB_LATITUDE", (self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
 		screen.setLabel("WBCoords", "Background", sText, 1<<2, self.xRes/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		if self.iPlayerAddMode in self.RevealMode:

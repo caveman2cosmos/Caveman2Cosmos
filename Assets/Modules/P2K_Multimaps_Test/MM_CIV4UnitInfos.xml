@@ -3,6 +3,7 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_CONSTRUCTION_SHIP</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -19,22 +20,10 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
-				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
-					<PassableTech>TECH_PLANETARY_COLONIZATION</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
@@ -123,11 +112,61 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<!-- This unit prepares ground for colonization of Moon, hence why it is using one with early tech requirement -->
+							<OutcomeType>OUTCOME_GO_TO_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<!-- Lunar Rover-->
 		<UnitInfo>
 			<Type>UNIT_LUNAR_ROVER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -197,54 +236,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<Actions>
 				<Action>
-					<!-- Delete this action after finishing multimaps if we doesn't want single map space scenario support -->
-					<!-- It teleports unit to Lunar surface -->
-					<MissionType>MISSION_EXPLORE_MOON</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_EXPLORE_MOON</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>ExploreMoon</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									return plot.getTerrainType() not in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									map = CyMap()
-									destX = -1
-									destY = -1
-									numValid = 0
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									for x in range(map.getGridWidth()):
-										for y in range(map.getGridHeight()):
-											if map.plot(x,y).getTerrainType() in valid_terrains:
-												numValid += 1
-												if max(random.random(), 1./numValid) == 1./numValid:
-													destX = x
-													destY = y
-									if destX != -1:
-										gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNAR_ROVER'),destX,destY,UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Launch to the Moon"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_EXPLORE_MOON_SURFACE</MissionType>
 					<iCost>
 						<Adapt>
@@ -277,11 +268,29 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Lunar Rover is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<!-- New settler units-->
 		<UnitInfo>
 			<Type>UNIT_CISLUNARSETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -374,6 +383,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNARSETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -468,10 +478,27 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_PLANETARYSETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -488,14 +515,9 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
-			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
 			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Help>
@@ -568,10 +590,43 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ONEILLSETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -588,27 +643,20 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
+			<!-- Sun exists in Inner Solar System and Titan exists in Outer Solar System -->
+			<!-- Titan can be settled on Outer Solar System -->
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SUN</TerrainType>
 				<TerrainType>TERRAIN_TITAN</TerrainType>
-				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<TerrainPassableTechs>
 				<TerrainPassableTech>
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-					<PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -625,10 +673,18 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
-				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
-			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_CISLUNAR_SPACEPORT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_DEEP_SPACE_DOCKING_BAY</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -679,10 +735,75 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORLDSHIP</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -698,7 +819,6 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -774,10 +894,27 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORLDSHIP2</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -795,20 +932,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP2_HELP</Help>
@@ -866,7 +989,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['ORION_ARM','NEUTRON_STAR','NEBULA','STAR_CLUSTER','MILKY_WAY','GALACTIC_CORE']
+									valid_terrain_strings = ['ORION_ARM','STAR_CLUSTER','MILKY_WAY','GALACTIC_CORE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -880,10 +1003,43 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORLDSHIP3</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -903,25 +1059,6 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-				<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-				<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP3</Description>
 			<Help>TXT_KEY_UNIT_WORLDSHIP3_HELP</Help>
@@ -936,10 +1073,18 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_WORMHOLE_TRADE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -980,7 +1125,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['MILKY_WAY','NEUTRON_STAR','NEBULA','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE']
+									valid_terrain_strings = ['MILKY_WAY','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -994,10 +1139,91 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORLDSHIP4</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -1031,10 +1257,18 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
-			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HORIZON_PORT</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1089,10 +1323,75 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HYPERSHIP</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -1127,11 +1426,22 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
-				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
-			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TEMPORAL_RIFT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INTERGALACTIC_HYPERPORT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HYPERSPACE_EXPORTER</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1152,15 +1462,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -1196,10 +1497,75 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ATTACKSHIP</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_NUCLEAR_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1252,9 +1618,60 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_INVADER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_EARLY_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1310,6 +1727,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INT_INVADER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ANTIMATTER_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1362,9 +1780,60 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INT_BATTLECRUISER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ANTIMATTER_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1417,9 +1886,60 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HYPER_BATTLECRUISER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_WORMHOLE_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1487,9 +2007,269 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Earth has no tech requirement -->
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1572,6 +2352,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEEPSPACE_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1660,6 +2441,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WORLDSHIP_DEFENDER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1748,6 +2530,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1835,6 +2618,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MARTIAN_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1922,6 +2706,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -2009,6 +2794,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_PLANETARY_INFANTRY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -2090,9 +2876,60 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HYPERSPACE_DEFENDER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -2178,6 +3015,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MARTIAN_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_MARTIAN_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2246,6 +3084,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_VENUS_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2307,6 +3146,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CISLUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2366,6 +3206,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SOLAR_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SOLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2426,9 +3267,92 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MARSSETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -2483,6 +3407,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_SETTLER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -2539,6 +3464,7 @@
 		<!-- Solar Sail Workcraft -->
 		<UnitInfo>
 			<Type>UNIT_SOLARSAIL_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_SOLARSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -2557,9 +3483,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
@@ -2620,6 +3543,55 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- This unit is meant to capture asteroids for colonization preparation -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
@@ -2649,6 +3621,7 @@
 		<!-- Magsail Workcraft -->
 		<UnitInfo>
 			<Type>UNIT_MAGSAIL_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_MAGSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2666,9 +3639,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
@@ -2742,6 +3712,86 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+					<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
@@ -2773,6 +3823,7 @@
 		<!-- Nanoworker -->
 		<UnitInfo>
 			<Type>UNIT_NANOWORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_NANOWORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2789,10 +3840,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
@@ -2865,6 +3912,86 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
@@ -2895,6 +4022,7 @@
 		<!-- Cosmic Worker -->
 		<UnitInfo>
 			<Type>UNIT_COSMIC_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_COSMIC_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -2911,15 +4039,11 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -2980,50 +4104,22 @@
 				<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
 				<BuildType>BUILD_PLACE_GALAXY</BuildType>
 			</Builds>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-				<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-				<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-				<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-				<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-					<PassableTech>TECH_SPACE_CREASING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
-			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INTERSTELLAR_STARPORT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INTERGALACTIC_STARPORT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HORIZON_PORT</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_PHASING</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3046,10 +4142,205 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Chronoform Ship -->
 		<UnitInfo>
 			<Type>UNIT_CHRONOFORM_SHIP</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CHRONOFORM_SHIP</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3098,30 +4389,6 @@
 				<BuildType>BUILD_SPIRITUAL_REALM</BuildType>
 				<BuildType>BUILD_HYPERSPACE_BUNKER</BuildType>
 			</Builds>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-				<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-				<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-				<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CHRONOTON</BuildingType>
 			</PrereqAndBuildings>
@@ -3147,10 +4414,77 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Space Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_SPACE_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SPACE_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3208,10 +4542,29 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Cybernetic Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_CYBERNETIC_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CYBERNETIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3273,10 +4626,125 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Transhuman Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_TRANSHUMAN_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_TRANSHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3340,10 +4808,141 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Posthuman Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_POSTHUMAN_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_POSTHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3409,10 +5008,189 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Cosmic Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_COSMIC_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_COSMIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3480,10 +5258,237 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Shapeshifting Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_SHAPESHIFTING_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SHAPESHIFTING_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3511,6 +5516,8 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -3551,10 +5558,253 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Hyperintelligent Work Crew -->
 		<UnitInfo>
 			<Type>UNIT_HYPERINTELLIGENT_WORK_CREW</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_HYPERINTELLIGENT_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3625,10 +5875,253 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Bacteria Swarm -->
 		<UnitInfo>
 			<Type>UNIT_BACTERIA_SWARM</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_BACTERIA_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3647,30 +6140,6 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-				<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-				<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-					<PassableTech>TECH_SPACE_CREASING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -3710,10 +6179,109 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Life Swarm -->
 		<UnitInfo>
 			<Type>UNIT_LIFE_SWARM</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_LIFE_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3734,35 +6302,6 @@
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-				<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-				<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-				<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
-					<PassableTech>TECH_SPACE_CREASING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
-					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -3802,10 +6341,125 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Energy Entity -->
 		<UnitInfo>
 			<Type>UNIT_ENERGY_ENTITY</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_ENERGY_ENTITY</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -3859,10 +6513,270 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<!-- Earth has no tech requirement -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MOON</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMoon</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMoon</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Satellite -->
 		<UnitInfo>
 			<Type>UNIT_SATELLITE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_SATELLITE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3883,6 +6797,7 @@
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
+			<!-- Cislunar Space and Orbit are in same space zone -->
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
@@ -3973,6 +6888,23 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Satellite is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
@@ -4001,6 +6933,7 @@
 		<!-- Space Shuttle -->
 		<UnitInfo>
 			<Type>UNIT_SPACE_SHUTTLE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Capture>UNIT_SPACE_SHUTTLE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4217,6 +7150,23 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Space Shuttle is explorer and can place space station on Orbit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -4234,6 +7184,7 @@
 		<!-- Planetary Probe -->
 		<UnitInfo>
 			<Type>UNIT_PLANET_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_PLANET_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4251,8 +7202,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -4260,15 +7209,6 @@
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-					<PassableTech>TECH_MAGNETIC_SAILS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -4834,6 +7774,103 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Planetary Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TITAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TITAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTitan</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTitan</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
@@ -4862,6 +7899,7 @@
 		<!-- Interstellar Probe -->
 		<UnitInfo>
 			<Type>UNIT_INTERSTELLAR_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_INTERSTELLAR_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4882,12 +7920,6 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_STAR_CLUSTER</TerrainType>
-				<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -5038,6 +8070,39 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Interstellar Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
@@ -5066,6 +8131,7 @@
 		<!-- Bracewell Probe -->
 		<UnitInfo>
 			<Type>UNIT_BRACEWELL_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_BRACEWELL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -5197,6 +8263,55 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Bracewell Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
@@ -5225,6 +8340,7 @@
 		<!-- Von Neumann Probe -->
 		<UnitInfo>
 			<Type>UNIT_VON_NEUMANN_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_VON_NEUMANN_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -5324,6 +8440,103 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Von Neumann Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_LOCAL_GROUP</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToLocalGroup</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToLocalGroup</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVirgoSupercluster</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVirgoSupercluster</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_UNIVERSE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_UNIVERSE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToUniverse</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToUniverse</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
@@ -5352,6 +8565,7 @@
 		<!-- Quantum Probe -->
 		<UnitInfo>
 			<Type>UNIT_QUANTUM_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_QUANTUM_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -5418,6 +8632,23 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Quantum Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
@@ -5446,6 +8677,7 @@
 		<!-- Interdimensional Probe -->
 		<UnitInfo>
 			<Type>UNIT_INTERDIMENSIONAL_PROBE</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_INTERDIMENSIONAL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -5545,6 +8777,23 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Interdimensional Probe is an explorer type unit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_DISTANT_COSMOS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_DISTANT_COSMOS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToDistantCosmos</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToDistantCosmos</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
@@ -5573,6 +8822,7 @@
 		<!-- Heavy Rocket -->
 		<UnitInfo>
 			<Type>UNIT_HEAVY_ROCKET</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_HEAVY_ROCKET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -5598,7 +8848,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
+			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5879,6 +9129,23 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<!-- Heavy Rocket is explorer and can place space station on Orbit -->
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -5896,6 +9163,7 @@
 		<!-- Captured Asteroid -->
 		<UnitInfo>
 			<Type>UNIT_CAPTURED_ASTEROID</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTURED_ASTEROID</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5913,7 +9181,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -5967,10 +9234,126 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Captured Asteroid is Mission Reward, that can place Asteroid for colonization preparation -->
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Captured Comet -->
 		<UnitInfo>
 			<Type>UNIT_CAPTURED_COMET</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CAPTURED_COMET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5988,7 +9371,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -6042,10 +9424,126 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Captured Comet is Mission Reward, that can place Asteroid for colonization preparation -->
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_EARTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_EARTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToEarth</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToEarth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_CISLUNAR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToCislunarSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToCislunarSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_VENUS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_VENUS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToVenus</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToVenus</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToInnerSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToInnerSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOuterSolarSystem</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOuterSolarSystem</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToTransneptunianSpace</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToTransneptunianSpace</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Interstellar Workcraft -->
 		<UnitInfo>
 			<Type>UNIT_INTERSTELLAR_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_INTERSTELLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6063,25 +9561,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-				<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_ORION_ARM</TerrainType>
-					<PassableTech>TECH_ADVANCED_SEEDSHIPS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
-					<PassableTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Civilopedia>
@@ -6134,10 +9613,61 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_COLONIZE_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!-- Reward units for planetary exploration -->
 		<UnitInfo>
 			<Type>UNIT_LOE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_LOE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6215,6 +9745,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS1_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SS1_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6289,6 +9820,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS2_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SS2_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6365,6 +9897,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS3_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SS3_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6443,6 +9976,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_CISLUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6521,6 +10055,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_LUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6598,6 +10133,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INNER_SOLAR_SYSTEM_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_INNER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6677,6 +10213,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6751,6 +10288,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRANSNEPTUNIAN_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_TRANSNEPTUNIAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6822,6 +10360,7 @@
 		<!-- Interstellar Reward -->
 		<UnitInfo>
 			<Type>UNIT_INTERSTELLAR_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_INTERSTELLAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6838,12 +10377,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -6902,6 +10435,7 @@
 		<!-- Galactic Reward -->
 		<UnitInfo>
 			<Type>UNIT_GALACTIC_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_GALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6917,14 +10451,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -6983,6 +10510,7 @@
 		<!-- Intergalactic Reward -->
 		<UnitInfo>
 			<Type>UNIT_INTERGALACTIC_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_INTERGALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6998,14 +10526,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -7064,6 +10585,7 @@
 		<!-- Mercury Reward -->
 		<UnitInfo>
 			<Type>UNIT_MERCURY_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_MERCURY_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7137,6 +10659,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_VENUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7210,6 +10733,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MARS_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_MARS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7284,6 +10808,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ASTEROID_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_ASTEROID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7357,6 +10882,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_JUPITER_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_JUPITER_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7430,6 +10956,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EUROPA_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_EUROPA_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7504,6 +11031,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SATURN_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SATURN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7577,6 +11105,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TITAN_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_TITAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7650,6 +11179,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_URANUS_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_URANUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7724,6 +11254,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEPTUNE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_NEPTUNE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7798,6 +11329,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_KBO_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_KBO_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7873,6 +11405,7 @@
 		<!-- Sednoid Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_SEDNOID_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SEDNOID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -7948,6 +11481,7 @@
 		<!-- Exoplanet Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_EXOPLANET_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_EXOPLANET_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8019,6 +11553,7 @@
 		<!-- Oort Cloud Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_OORT_CLOUD_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_OORT_CLOUD_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8090,6 +11625,7 @@
 		<!-- Distant Cosmos Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_DISTANT_COSMOS_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_DISTANT_COSMOS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8161,6 +11697,7 @@
 		<!-- Hyperspace Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_HYPERSPACE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_HYPERSPACE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8232,6 +11769,7 @@
 		<!-- Multiverse Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_MULTIVERSE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_MULTIVERSE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8303,6 +11841,7 @@
 		<!-- Ancient Civilization Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_ANCIENT_CIVILIZATION_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_ANCIENT_CIVILIZATION_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8374,6 +11913,7 @@
 		<!-- Solar System Life Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8445,6 +11985,7 @@
 		<!-- Interstellar Life Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_INTERSTELLAR_LIFE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_INTERSTELLAR_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8516,6 +12057,7 @@
 		<!-- Galactic Core Mission Reward-->
 		<UnitInfo>
 			<Type>UNIT_GALACTIC_CORE_REWARD</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_GALACTIC_CORE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8531,13 +12073,6 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -8593,9 +12128,61 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<!-- Galactic Core is a Mission Reward -->
+			<Actions>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_NEARBY_STARS</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToNearbyStars</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToNearbyStars</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_ORION_ARM</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_ORION_ARM</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToOrionArm</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToOrionArm</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_GO_TO_MAP_MILKY_WAY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_GO_TO_MAP_MILKY_WAY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Greater>
+									<Python>canGoToMilkyWay</Python>
+									<Constant>0</Constant>
+								</Greater>
+							</PlotCondition>
+							<PythonCallback>goToMilkyWay</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_BULLDOZER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_LUNAR_BULLDOZER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -8663,6 +12250,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_WORKER</Type>
+			<bForceOverwrite>1</bForceOverwrite>
 			<Capture>UNIT_LUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
