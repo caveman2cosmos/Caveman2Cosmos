@@ -257,7 +257,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_BIOLOGICAL_CORE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
+			</TechTypes>
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1038,6 +1041,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
+			</TechTypes>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

@@ -482,6 +482,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_NOBLE_GAS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2372,18 +2375,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NANOMORPHIC_HABITATS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ADVANCED_REPLICATORS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NANOMORPHIC_HABITATS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_ADVANCED_REPLICATORS</Bonus>
+			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_ANTIMATTER</Type>
@@ -2522,6 +2517,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MERCURY_SUNSHADE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
+			</TechTypes>
 			<iCost>9454</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4720,7 +4718,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VERTICAL_REEF</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

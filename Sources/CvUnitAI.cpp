@@ -87,6 +87,28 @@ CvUnitAI::~CvUnitAI()
 }
 
 
+CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
+{
+	m_iBirthmark = other.m_iBirthmark;
+	m_eUnitAIType = other.m_eUnitAIType;
+	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
+	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
+	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
+	m_contractualState = other.m_contractualState;
+	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
+	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
+	m_bHasAttacked = other.m_bHasAttacked;
+	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
+	m_iGarrisonCity = other.m_iGarrisonCity;
+	m_iGenericValue = other.m_iGenericValue;
+	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
+
+	//static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other)
+
+	return *this;
+}
+
+
 void CvUnitAI::AI_init(UnitAITypes eUnitAI, int iBirthmark)
 {
 	AI_reset(eUnitAI);

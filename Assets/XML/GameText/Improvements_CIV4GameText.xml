@@ -1901,7 +1901,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Tag>
 		<English>Scavenging Camp</English>
 		<French>Camp de Récupérateurs</French>
-		<German>Lager der Aasverwerter</German>
+		<German>
+			<Text>Fleischsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Campo degli spazzini</Italian>
 		<Spanish>
 			<Text>Campamento de recolección</Text>
@@ -1914,7 +1918,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Tag>
 		<English>A Scavenging Camp provides extra food. If built on an animal resource (for example [COLOR_HIGHLIGHT_TEXT]cow[COLOR_REVERT]) it also provides the resource.</English>
-		<German>Ein Aasverwerterlager liefert zusätzliche [ICON_FOOD]. Wenn es auf einer Tierressource (z.B. einer [COLOR_HIGHLIGHT_TEXT]Kuh[COLOR_REVERT]) angelegt wird, stellt es auch diese zur Verfügung. Das Lager kann sich nach der Erforschung der [COLOR_TECH_TEXT]Megafaunadomestizierung[COLOR_REVERT] zu einer Nomadenherde weiterentwickeln, wenn es bearbeitet wird.</German>
+		<German>Bevor entsprechende Waffen und Jagdtechniken entwickelt wurden, waren die Menschen gezwungen, sich die tierischen Bestandteile ihrer Nahrung wie Fleisch und Knochenmark zusammenzusuchen. [COLOR_BUILDING_TEXT]Fleischsammler[COLOR_REVERT] gingen auf die Suche nach kleinen Tieren wie Ameisen und Würmern. Wenn sich die Möglichkeit bot, wurden aber auch verwertbare Stücke von toten Tieren eingesammelt. Hierbei musste behutsam vorgegangen werden, denn zu Beginn des Fäulnisprozesses ist das Fleisch für Menschen zwar noch essbar, bereits stärker verwestes Fleisch wird jedoch ungenießbar und führt zu Krankheit oder gar dem Tod. Dies liegt an den enthaltenen Bakterien und den von ihnen produzierten Abbauprodukten wie z.B. Botulinumtoxin, die für den Menschen stark toxisch sind.</German>
 		<Italian>Un campo dei recuperatori fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
 		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
 		<Polish>Padlina - określenie zwierzęcych zwłok. Określenia tego nie używa się w stosunku do zwłok ludzkich. Padlina jest podstawowym pokarmem wielu drapieżników i zwierząt wszystkożernych, takich jak diabły tasmańskie, hieny, kondory i sępy. Padlina to także siedlisko występowania bezkręgowców zaliczanych do nekrofauny. Niektóre rośliny potrafią wytwarzać zapach rozkładającej się padliny, by zwabić zapylające je owady, takie jak muchy.</Polish>

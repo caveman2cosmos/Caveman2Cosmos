@@ -439,3 +439,8 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 		++it;
 	return new CyPlot(it.plot());
 }
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
+}

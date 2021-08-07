@@ -103,5 +103,7 @@ void CyMapPythonInterface()
 		.def("generatePathForHypotheticalUnit", &CyMap::generatePathForHypotheticalUnit, "bool (CyPlot*, CyPlot*, int, int, int, int)")
 		.def("getLastPathStepNum", &CyMap::getLastPathStepNum, "int ()")
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
+
+		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 	;
 }

@@ -557,16 +557,7 @@ bool CvCityAI::AI_avoidGrowth()
 bool CvCityAI::AI_ignoreGrowth()
 {
 	PROFILE_FUNC();
-
-	if (!AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople())
-	{
-		if (!AI_foodAvailable((isHuman()) ? 0 : 1))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return !AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople() && !AI_foodAvailable(!isHuman());
 }
 
 
