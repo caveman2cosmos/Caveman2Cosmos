@@ -68,7 +68,7 @@ void CvViewport::resizeForMap()
 	if (m_pMap->getGridWidth() > 0 && !GC.bugInitCalled())
 	{
 		//	Force-load the main interface BUG module so we can get at the viewport BUG settings
-		Cy::call(PYCivModule, "forceBUGModuleInit", Cy::Args() << "BUG Main Interface");
+		Cy::call("CvAppInterface", "initBUG");
 	}
 
 	if (GC.getENABLE_VIEWPORTS())
