@@ -12,7 +12,6 @@
 # DONT ADD ANY MORE IMPORTS HERE - Moose
 from CvPythonExtensions import *
 
-#Afforess
 def AddSign(argsList):
 	import EventSigns
 	EventSigns.addSign(argsList[0], argsList[1], argsList[2])
@@ -21,10 +20,8 @@ def RemoveSign(argsList):
 	import EventSigns
 	CyEngine().removeSign(argsList[0], argsList[1])
 	EventSigns.gSavedSigns.removeSign(argsList[0], argsList[1])
-#Afforess End
 
-# Should be changed to initBUG() with no arguments needed.
-def forceBUGModuleInit(argsList):
+def initBUG():
 	import BugInit
 	BugInit.init()
 

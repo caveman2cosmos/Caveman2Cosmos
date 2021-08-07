@@ -23,6 +23,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
+		<!-- Delete OUTCOME_EXPLORE_MOON after finishing multimaps if we doesn't want single map space scenario support -->
 		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_MOON</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_MOON</Description>
