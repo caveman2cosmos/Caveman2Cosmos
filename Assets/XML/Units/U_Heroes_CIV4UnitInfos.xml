@@ -2219,7 +2219,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
-			<BonusType>BONUS_RUSSIAN</BonusType>
+			<BonusType>BONUS_SOVIET</BonusType>
 			<iCost>4000</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
