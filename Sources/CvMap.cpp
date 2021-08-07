@@ -14,6 +14,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMapGenerator.h"
 #include "CvPlayerAI.h"
@@ -25,18 +26,13 @@
 #include "CvViewport.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-#include <direct.h>			// for getcwd()
-#include <stdlib.h>			// for MAX_PATH
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+#include <direct.h> // for getcwd()
+#include <stdlib.h> // for MAX_PATH
 
-// Public Functions...
+bool CvMap::m_bSwitchInProgress = false;
 
-CvMap::CvMap(MapTypes eType) /* Parallel Maps */
+
+CvMap::CvMap(MapTypes eType)
 	: m_iGridWidth(0)
 	, m_iGridHeight(0)
 	, m_iLandPlots(0)
@@ -78,9 +74,9 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
 	OutputDebugString("Initializing Map: Start\n");
 	PROFILE("CvMap::init");
-	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6", 
-		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(), 
-		GC.getClimateInfo(GC.getInitCore().getClimate()).getDescription(), 
+	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6",
+		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(),
+		GC.getClimateInfo(GC.getInitCore().getClimate()).getDescription(),
 		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
 		GC.getInitCore().getNumCustomMapOptions()).c_str() );
 
@@ -126,13 +122,12 @@ void CvMap::uninit()
 
 	m_areas.uninit();
 
-	for(int iI = 0; iI < (int)m_viewports.size(); iI++)
+	foreach_(const CvViewport* viewport, m_viewports)
 	{
-		delete m_viewports[iI];
+		delete viewport;
 	}
 
 	m_viewports.clear();
-	m_iCurrentViewportIndex = -1;
 }
 
 // FUNCTION: reset()
@@ -189,7 +184,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	}
 	else
 	{
-		// Check map script for latitude override (map script beats ini file)	
+		// Check map script for latitude override (map script beats ini file)
 		long resultTop = 0, resultBottom = 0;
 		if(Cy::call_override(getMapScript(), "getTopLatitude", resultTop)
 			&& Cy::call_override(getMapScript(), "getBottomLatitude", resultBottom))
@@ -266,7 +261,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 
 	//	Create a viewport of the requisite external size without initial positioning (this can be repositioned
 	//	at any time before it is graphically initialised, of after with a map switch)
-	setCurrentViewport(addViewport(-1, -1, false));
+	addViewport(-1, -1);
 
 	if ( !GC.viewportsEnabled() )
 	{
@@ -368,7 +363,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 	//mark minimap as dirty
 	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-	
+
 	//float endTime = (float) timeGetTime();
 	//OutputDebugString(CvString::format("[Jason] setAllPlotTypes: %f\n", endTime - startTime).c_str());
 }
@@ -442,7 +437,7 @@ void CvMap::updateSymbols()
 	PROFILE_FUNC();
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
-	
+
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateSymbols();
@@ -599,18 +594,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 
 	while (iCount < iTimeout)
 	{
-/*************************************************************************************************/
-/**	Xienwolf Tweak							12/13/08											**/
-/**																								**/
-/**					Reduction in massive Random Spam in Logger files by using Map				**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-		pTestPlot = plotSorenINLINE(GC.getGame().getSorenRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getSorenRandNum(getGridHeight(), "Rand Plot Height"));
-/**								----  End Original Code  ----									**/
 		CvPlot* pTestPlot = plotSorenINLINE(GC.getGame().getMapRandNum(getGridWidth(), "Rand Plot Width"), GC.getGame().getMapRandNum(getGridHeight(), "Rand Plot Height"));
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
 
 		FAssertMsg(pTestPlot != NULL, "TestPlot is not assigned a valid value");
 
@@ -619,7 +603,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 			bool bValid = true;
 
 			if (iMinUnitDistance != -1
-			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(CvPlot::isUnit, _1)))
+			&& algo::any_of(pTestPlot->rect(iMinUnitDistance, iMinUnitDistance), bind(&CvPlot::isUnit, _1)))
 			{
 				bValid = false;
 			}
@@ -883,13 +867,13 @@ float CvMap::plotYToPointY(int iY) const
 }
 
 
-float CvMap::getWidthCoords() const																	
+float CvMap::getWidthCoords() const
 {
 	return (GC.getPLOT_SIZE() * (float)getGridWidth());
 }
 
 
-float CvMap::getHeightCoords() const																	
+float CvMap::getHeightCoords() const
 {
 	return (GC.getPLOT_SIZE() * (float)getGridHeight());
 }
@@ -1193,8 +1177,8 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	OutputDebugString("Reading Map: Start");
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	OutputDebugString("Reading Map: Start\n");
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -1219,7 +1203,6 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapX);
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapY);
 
-	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated");
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
@@ -1240,7 +1223,7 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	OutputDebugString("Reading Map: End");
+	OutputDebugString("Reading Map: End\n");
 }
 
 // save object to a stream
@@ -1248,26 +1231,25 @@ void CvMap::read(FDataStreamBase* pStream)
 //
 void CvMap::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridWidth);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridHeight);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iLandPlots);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iOwnedPlots);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iTopLatitude);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iBottomLatitude);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_iNextRiverID);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iGridWidth);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iGridHeight);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iLandPlots);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iOwnedPlots);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iTopLatitude);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iBottomLatitude);
+	WRAPPER_WRITE(wrapper, "CvMap", m_iNextRiverID);
 
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_bWrapX);
-	WRAPPER_WRITE(wrapper, "CvMap" ,m_bWrapY);
+	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapX);
+	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapY);
 
-	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated");
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1284,12 +1266,15 @@ void CvMap::beforeSwitch()
 {
 	PROFILE_FUNC();
 
+	m_bSwitchInProgress = true;
+
 #ifdef THE_GREAT_WALL
 	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 	{
 		GC.getGame().processGreatWall(false);
 	}
-#endif
+#endif // THE_GREAT_WALL
+
 	gDLL->getEngineIFace()->setResourceLayer(false);
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
@@ -1329,7 +1314,7 @@ void CvMap::beforeSwitch()
 			}
 		}
 	}
-	
+
 	GC.clearSigns();
 
 	for (i = 0; i < numPlots(); i++)
@@ -1342,7 +1327,7 @@ void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (m_pMapPlots == NULL)		// if it hasn't been initialized yet...
+	if (m_pMapPlots == NULL)
 	{
 		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
 		{
@@ -1368,7 +1353,7 @@ void CvMap::afterSwitch()
 			kGenerator.addGameElements();
 		}
 	}
-	
+
 	gDLL->getInterfaceIFace()->clearSelectionList();
 	gDLL->getInterfaceIFace()->makeSelectionListDirty();
 
@@ -1379,7 +1364,7 @@ void CvMap::afterSwitch()
 	gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
-	
+
 	int iWidth = GC.getMapInfo(getType()).getGridWidth();
 	if (iWidth == 0)
 	{
@@ -1405,12 +1390,8 @@ void CvMap::afterSwitch()
 			plotByIndex(i)->setFlagDirty(true);
 		}
 	}
-	
-	{
-		PROFILE("CvMap::afterSwitch.RebuildAll");
 
-		gDLL->getEngineIFace()->RebuildAllPlots();
-	}
+	gDLL->getEngineIFace()->RebuildAllPlots();
 
 	for (i = 0; i < MAX_PLAYERS; i++)
 	{
@@ -1421,7 +1402,7 @@ void CvMap::afterSwitch()
 				//gDLL->getEntityIFace()->createCityEntity(pLoopCity);
 				pLoopCity->setupGraphical();
 			}
-			
+
 			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
 				if ( !pLoopUnit->isUsingDummyEntities() )
@@ -1447,39 +1428,34 @@ void CvMap::afterSwitch()
 	{
 		GC.getGame().processGreatWall(true);
 	}
-#endif
+#endif // THE_GREAT_WALL
+
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+
+	m_bSwitchInProgress = false;
 }
 
-int	CvMap::getNumViewports() const
+const std::vector<CvViewport*> CvMap::getViewports() const
 {
-	return m_viewports.size();
+	return m_viewports;
 }
 
-CvViewport* CvMap::getViewport(int iIndex) const
+void CvMap::addViewport(int iXOffset, int iYOffset)
 {
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
+	CvViewport*	viewport = new CvViewport(this);
 
-	return m_viewports[iIndex];
-}
-
-int CvMap::addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext)	//	Returns new viewport index
-{
-	CvViewport*	viewport = new CvViewport(this, bIsFullMapContext);
-
-	if ( iXOffset >= 0 && iYOffset >= 0 )
+	if (iXOffset >= 0 && iYOffset >= 0)
 	{
 		viewport->setMapOffset(iXOffset, iYOffset);
 	}
 	m_viewports.push_back(viewport);
-
-	return (int)m_viewports.size()-1;
 }
 
+/*
 void CvMap::deleteViewport(int iIndex)
 {
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), iIndex)
 
 	if (m_iCurrentViewportIndex == iIndex)
 	{
@@ -1488,28 +1464,21 @@ void CvMap::deleteViewport(int iIndex)
 
 	delete m_viewports[iIndex];
 
-	for(unsigned int iI = iIndex; iI < m_viewports.size()-1; iI++)
+	for (uint32_t iI = iIndex; iI < m_viewports.size()-1; iI++)
 	{
 		m_viewports[iI] = m_viewports[iI+1];
 	}
 
 	m_viewports.pop_back();
 }
-
-void CvMap::setCurrentViewport(int iIndex)
-{
-	FASSERT_BOUNDS(0, getNumViewports(), iIndex)
-
-	m_iCurrentViewportIndex = iIndex;
-}
+*/
 
 CvViewport* CvMap::getCurrentViewport() const
 {
-	FAssert( m_iCurrentViewportIndex == -1 || m_iCurrentViewportIndex < (int)m_viewports.size() );
-
-	return (m_iCurrentViewportIndex == -1 ? NULL : m_viewports[m_iCurrentViewportIndex]);
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), m_iCurrentViewportIndex)
+	return m_viewports[m_iCurrentViewportIndex];
 }
-	
+
 MapTypes CvMap::getType() const
 {
 	return m_eType;
@@ -1728,7 +1697,7 @@ void CvMap::toggleUnitsDisplay()
 	CvWString szBuffer = "Unit entities destroyed";
 	if (m_bUnitsDisplayed)
 		szBuffer = "Unit entities created";
-			
+
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 }

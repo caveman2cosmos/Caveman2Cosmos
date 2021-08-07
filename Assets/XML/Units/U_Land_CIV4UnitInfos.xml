@@ -1830,7 +1830,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>125</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1896,7 +1896,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>440</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1968,7 +1968,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>760</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1000</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>500</iEspionagePoints>
 			<iAsset>1</iAsset>
@@ -2054,7 +2054,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>4320</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>1500</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
 			<iAsset>1</iAsset>
@@ -2155,7 +2155,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>3800</iCost>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>10000</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>20</iDropRange>
 			<iEspionagePoints>500</iEspionagePoints>
@@ -3963,6 +3963,1125 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_ANDEAN_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_ANDEAN_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_ANDEAN_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ANDEAN_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_DRUID_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_DRUID_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_DRUID_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_DRUID_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_DRUID_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_TENGRI_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_TENGRI_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_TENGRI_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_TENGRI_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_TENGRIISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_TENGRI_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_VOODOO_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_VOODOO_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_VOODOO_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_VOODOO_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_VOODOO</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VOODOO_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_YORUBA_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_YORUBA_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_YORUBA_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_YORUBA</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_YORUBA_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_NGAI_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_NGAI_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NGAI_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_NGAI_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NGAI_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_RODNOVERY_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_RODNOVERY_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_RODNOVERY_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_RODNOVERA_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_RODNOVERY_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_SCIENTOLOGY_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_SCIENTOLOGY_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SCIENTOLOGY_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_SHAMAN_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SHAMAN_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_SHAMAN_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SHAMAN_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_SHINTO_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_SHINTO_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SHINTO_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_SHINTO_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHINTO</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SHINTO_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_SIKH_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_SIKH_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SIKH_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_SIKH_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SIKHISM</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SIKHISM_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<Button>Art/sikh_miss.dds</Button>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_JAINISM_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_JAINISM_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_JAINISM_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_JAINISM_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_JAINISM</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_JAINISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_JAIN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_JAINISM_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_MESO_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_MESO_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_MESO_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_MESO_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MESO_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_MORMON_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_MORMON_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_MORMON_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_MORMON_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MORMON</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iBaseHurry>20</iBaseHurry>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MORMON_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_ASATRU_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_ASATRU_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_ASATRU_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ASATRU</ReligionType>
+					<iReligionSpread>80</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ASATRU_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_BAHAI_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_BAHAI_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_BAHAI_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_TECH_BAHAI_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_BAHAI</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_BAHAI_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_CANAANITE_MISSIONARY</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_CANAANITE_MISSIONARY</Capture>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CANAANITE_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_UNIT_CANAANITE_MISSIONARY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iCost>110</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_CANAANITE_MISSIONARY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_CAODAI_MISSIONARY</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Combat>UNITCOMBAT_MISSIONARY</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CAODAI_MISSIONARY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_RELIGION</Advisor>
+			<ReligionSpreads>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
+					<iReligionSpread>40</iReligionSpread>
+				</ReligionSpread>
+			</ReligionSpreads>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>110</iCost>
+			<iMoves>2</iMoves>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MISSIONARY_CAODAI</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<Button>,Art/Interface/Buttons/Units/Missionary_Taoist.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,3</Button>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_RA_FIST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<Combat>UNITCOMBAT_MELEE</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SHIELD_TOWER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_RA_FIST</Description>
+			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bRivalTerritory>1</bRivalTerritory>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ESCORT</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			<BonusType>BONUS_IRON_WARES</BonusType>
+			<iCost>330</iCost>
+			<iAdvancedStartCost>200</iAdvancedStartCost>
+			<iMoves>2</iMoves>
+			<iCombat>13</iCombat>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCityAttack>30</iCityAttack>
+			<iAsset>3</iAsset>
+			<iPower>6</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>3</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>5</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_RA_FIST</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_WARMTH1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MARCH</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BLITZ</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_COMBAT1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_RA_KNIGHT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<Combat>UNITCOMBAT_MOUNTED</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SHIELD_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_RIDING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOUNT_HORSE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_RA_KNIGHT</Description>
+			<Civilopedia>TXT_KEY_UNIT_RA_FIST_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitUpgrades>
+				<UnitType>UNIT_CUIRASSIER</UnitType>
+			</UnitUpgrades>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<UnitType>UNIT_CATAPULT</UnitType>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+				<FlankingStrike>
+					<UnitType>UNIT_TREBUCHET</UnitType>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			<BonusType>BONUS_HORSE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+			</PrereqBonuses>
+			<iCost>370</iCost>
+			<iMoves>2</iMoves>
+			<iCombat>17</iCombat>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCollateralDamageLimit>100</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iAsset>5</iAsset>
+			<iPower>11</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_RA_KNIGHT</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_WARMTH1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MARCH</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BLITZ</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_COMBAT1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INQUISITOR</Type>
@@ -7180,48 +8299,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
-			<!--
-				BonusType>BONUS_ALCOHOL</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_TAR</BonusType>
 				<BonusType>BONUS_OLIVE_OIL</BonusType>
 				<BonusType>BONUS_FISH_OIL</BonusType>
 				<BonusType>BONUS_GHEE_OIL</BonusType>
 				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
-				</PrereqBonuses
-			-->
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_KEROSENE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALCOHOL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_TAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OLIVE_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FISH_OIL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GHEE_OIL</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7788,22 +8874,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
+			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			</TechTypes>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>920</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -7907,20 +8985,13 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1140</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -8025,18 +9096,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1400</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9607,18 +10670,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>975</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9713,18 +10768,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1500</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9938,18 +10985,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1230</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -10020,18 +11059,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<iCost>1475</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -13137,6 +14168,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
@@ -13144,14 +14176,6 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SIEGE_WORKSHOP</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -13275,6 +14299,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -13286,10 +14311,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_SULPHUR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14581,9 +15602,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_COMPOSITES</PrereqTech>
+			<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
@@ -16396,9 +17417,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<iCost>82</iCost>
@@ -18430,9 +19452,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -18536,9 +19558,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -18868,6 +19890,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
@@ -18983,6 +20006,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
@@ -19092,6 +20116,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19199,6 +20224,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19304,6 +20330,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -19736,6 +20763,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iCost>1030</iCost>
@@ -19827,6 +20855,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<TechTypes>
@@ -20057,6 +21086,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
@@ -23807,9 +24837,10 @@
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRAINED_DOG</UnitType>
@@ -24861,6 +25892,13 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
@@ -24986,6 +26024,12 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TOWN_WATCHMEN</UnitType>
@@ -25132,6 +26176,11 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_PATROLS</UnitType>
@@ -25268,6 +26317,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARD</UnitType>
@@ -25413,6 +26466,9 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CITY_GUARD</UnitType>
@@ -25557,15 +26613,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SHERIFF</UnitType>
 			</UnitUpgrades>
@@ -25699,19 +26750,12 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_RIOTPOLICE</UnitType>
 			</UnitUpgrades>
@@ -25851,21 +26895,14 @@
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_FORENSICS</ObsoleteTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_APC</UnitType>
 			</UnitUpgrades>
@@ -25995,6 +27032,10 @@
 				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -26017,16 +27058,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_STATION</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_POLICE_PRECINCT</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<UnitUpgrades>
@@ -26169,9 +27200,10 @@
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqOrBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -26464,6 +27496,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FORENSICS</PrereqTech>
+			<PrereqBonuses>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
+				<BonusType>BONUS_BIOFUEL</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -26494,16 +27530,6 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_RADIOS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_PETROLEUM_PRODUCTS</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_BIOFUEL</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -27524,18 +28550,14 @@
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BANDITS_HIDEOUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LOCKSMITH</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
+				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
 			</UnitUpgrades>
@@ -27706,18 +28728,14 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BANDITS_HIDEOUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LOCKSMITH</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
+				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SCOUNDREL</UnitType>
 				<UnitType>UNIT_PARTISAN</UnitType>
@@ -27922,14 +28940,7 @@
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_LABOR_UNIONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -28138,18 +29149,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<ForceObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -28363,18 +29366,10 @@
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_STREET_GANG</UnitType>
 			</UnitUpgrades>
@@ -29224,9 +30219,10 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -29400,22 +30396,16 @@
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
 			<BonusType>BONUS_CELLPHONES</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_PERSONAL_ELECTRONICS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-					</Or>
 				</And>
 			</TrainCondition>
 			<PrereqAndBuildings>
@@ -29950,18 +30940,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -30323,17 +31305,12 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTLAW</UnitType>
 			</UnitUpgrades>
@@ -30535,18 +31512,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SALOON</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MOBSTER_CAR</UnitType>
 			</UnitUpgrades>
@@ -31269,15 +32238,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SNIPER</UnitType>
 			</UnitUpgrades>
@@ -31440,19 +32404,12 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
+				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
@@ -31593,18 +32550,10 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
 			</PrereqAndBuildings>
@@ -31820,18 +32769,10 @@
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 			</UnitUpgrades>
@@ -32006,18 +32947,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIVOUAC_GROUNDS</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<BonusType>BONUS_FIREARMS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+			</PrereqBonuses>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
 				<UnitType>UNIT_SPECIAL_INFANTRY</UnitType>
@@ -33333,9 +34266,9 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -33447,6 +34380,9 @@
 			<Description>TXT_KEY_UNIT_WARLORDVS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIS</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GENERAL</UnitAIType>
@@ -33783,9 +34719,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MILITARY_SCIENCE</ForceObsoleteTech>
-			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -34039,6 +34975,9 @@
 			<Description>TXT_KEY_UNIT_WARLORDV</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVI</UnitType>
+			</UnitUpgrades>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -34066,6 +35005,541 @@
 			<iCombat>60</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIIS</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
+			<BonusType>BONUS_NANOTUBES</BonusType>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIIIS</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIIIS</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
+			<Combat>UNITCOMBAT_CAPTAIN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<GreatPeoples>
+				<GreatPeople>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
+					<bGreatPeople>1</bGreatPeople>
+				</GreatPeople>
+			</GreatPeoples>
+			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
+			<iCost>-1</iCost>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>4</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
+					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
+			<iLeaderExperience>25</iLeaderExperience>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVI</Type>
+			<iMaxPlayerInstances>6</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVII</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
+			<BonusType>BONUS_NANOTUBES</BonusType>
+			<iCost>3000</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>90</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVII</Type>
+			<iMaxPlayerInstances>7</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARLORDVIII</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
+			<iCost>5000</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>3</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>120</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iWithdrawalProb>25</iWithdrawalProb>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCityAttack>25</iCityAttack>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<iBombardRate>20</iBombardRate>
+			<iAsset>15</iAsset>
+			<iPower>60</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>4</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>0</iMeleeWaveSize>
+				<iRangedWaveSize>5</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>0</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_LEADER</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_WARLORDVIII</Type>
+			<iMaxPlayerInstances>8</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
+			<Combat>UNITCOMBAT_GUN</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bHiddenNationality>1</bHiddenNationality>
+			<bAlwaysHostile>1</bAlwaysHostile>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_GENERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
+			<iCost>9800</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iBaseUpkeep>16</iBaseUpkeep>
+			<iMoves>4</iMoves>
+			<iNukeRange>-1</iNukeRange>
+			<iCombat>160</iCombat>
+			<iCombatLimit>100</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iCollateralDamage>50</iCollateralDamage>
 			<iCollateralDamageLimit>50</iCollateralDamageLimit>
@@ -34333,6 +35807,78 @@
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_ASATRU</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_BAHAI</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_JAINISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_MORMON</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SHINTO</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_SIKHISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_TENGRIISM</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_VOODOO</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
+				<ReligionSpread>
+					<ReligionType>RELIGION_YORUBA</ReligionType>
+					<iReligionSpread>100</iReligionSpread>
+				</ReligionSpread>
 			</ReligionSpreads>
 			<GreatPeoples>
 				<GreatPeople>
@@ -34352,6 +35898,24 @@
 				<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+				<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+				<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+				<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_KARMA</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_RESURRECTION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>
@@ -36257,7 +37821,6 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SPY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -36301,7 +37864,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>100</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
 			<iAsset>1</iAsset>
@@ -36523,9 +38086,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_CARRIAGE</BuildingType>
+				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<BonusType>BONUS_WOOD</BonusType>
 			<PrereqBonuses>
@@ -36618,9 +38184,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
@@ -36801,16 +38368,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<iCost>330</iCost>
@@ -37001,16 +38561,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
 			</PrereqAndBuildings>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORSE_TRAINER</ID>
-					</Has>
-				</And>
-			</TrainCondition>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqBonuses>
@@ -37112,9 +38665,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PARTS_MAKER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_PARTS_PLANT</BuildingType>
+				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -37205,9 +38765,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -37297,9 +38858,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -37394,9 +38956,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -37500,9 +39063,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -37603,9 +39167,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
@@ -37709,9 +39274,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
@@ -37801,9 +39367,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<BonusType>BONUS_COMPUTERS</BonusType>
 			<PrereqBonuses>
@@ -37903,6 +39470,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
@@ -38006,11 +39577,13 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_PARTS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -38026,16 +39599,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_COMPUTERS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_PARTS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1180</iCost>
@@ -38110,13 +39677,15 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROPROCESSOR</PrereqTech>
 			<BonusType>BONUS_PERSONAL_ELECTRONICS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_FIREARMS</BonusType>
+				<BonusType>BONUS_DISKETTES</BonusType>
+				<BonusType>BONUS_FLASH_MEMORY_DEVICES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -38124,16 +39693,10 @@
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_MICROCHIPS</ID>
 					</Has>
-					<Or>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DISKETTES</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_FLASH_MEMORY_DEVICES</ID>
-						</Has>
-					</Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
 				</And>
 			</TrainCondition>
 			<iCost>1540</iCost>
@@ -38839,9 +40402,12 @@
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
@@ -38946,9 +40512,12 @@
 				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_SOAP</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
 			</UnitUpgrades>
@@ -39049,9 +40618,10 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SCROLLS</BonusType>
 			</PrereqBonuses>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_PHARMACY</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
 			</UnitUpgrades>
@@ -39152,6 +40722,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SURGEON</UnitType>
@@ -39250,9 +40821,10 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
 			</UnitUpgrades>
@@ -40069,9 +41641,9 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<PrereqTech>TECH_SKYROADS</PrereqTech>
+			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SKYROADS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
@@ -40079,6 +41651,8 @@
 			</PrereqBonuses>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
+				<BuildingType>BUILDING_REJUVENATION_TANK</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_STATION</BuildingType>
 			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
@@ -40113,14 +41687,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HYPOSPRAYS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_REJUVENATION_TANK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SKYROAD_STATION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -40862,10 +42428,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_FIREARMS</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_FIREARMS</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>380</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -41008,10 +42576,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>525</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -41150,10 +42720,12 @@
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<Has>
-					<GOMType>GOM_BONUS</GOMType>
-					<ID>BONUS_AMMUNITION</ID>
-				</Has>
+				<And>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_AMMUNITION</ID>
+					</Has>
+				</And>
 			</TrainCondition>
 			<iCost>900</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -42471,9 +44043,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -43373,7 +44946,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iBaseHurry>25</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -44027,7 +45599,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<bWorkerTrade>1</bWorkerTrade>
 			<iBaseHurry>100</iBaseHurry>
 			<iHurryMultiplier>5</iHurryMultiplier>
@@ -44216,7 +45787,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<UnitMeshGroups>
 				<iGroupSize>4</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -44284,7 +45854,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>90</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -44711,6 +46280,225 @@
 					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_HELLSMOUTH_DOG</Type>
+			<Combat>UNITCOMBAT_ANIMAL</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
+			<Description>TXT_KEY_UNIT_HELLSMOUTH_DOG</Description>
+			<Civilopedia>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_COLLATERAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_HUNTER_ESCORT</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_SEE_INVISIBLE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<BonusType>BONUS_DOG</BonusType>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
+			<ReligionType>RELIGION_VOODOO</ReligionType>
+			<StateReligion>RELIGION_VOODOO</StateReligion>
+			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
+			<UnitUpgrades>
+				<UnitType>UNIT_POLICE_DOG</UnitType>
+			</UnitUpgrades>
+			<VisibilityIntensityTypes>
+				<VisibilityIntensityType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityType>
+			</VisibilityIntensityTypes>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+			<iXPValueAttack>8</iXPValueAttack>
+			<iXPValueDefense>4</iXPValueDefense>
+			<iCost>310</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
+			<iMoves>2</iMoves>
+			<iCombat>15</iCombat>
+			<iAnimalCombat>25</iAnimalCombat>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>25</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
+			<iStealthCombatModifier>30</iStealthCombatModifier>
+			<iCombatModifierPerSizeLess>15</iCombatModifierPerSizeLess>
+			<iUnnerve>20</iUnnerve>
+			<iEnclose>10</iEnclose>
+			<iLunge>20</iLunge>
+			<iDynamicDefense>10</iDynamicDefense>
+			<iCaptureProbabilityModifier>-15</iCaptureProbabilityModifier>
+			<iPursuit>60</iPursuit>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BERZERKER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<iAsset>7</iAsset>
+			<iPower>15</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_HELLSMOUTH_DOG</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Type>UNIT_LOKI</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<Combat>UNITCOMBAT_MELEE</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ARMOR_HEAVY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_LOKI</Description>
+			<Civilopedia>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<UnitUpgrades>
+				<UnitType>UNIT_MUSKETMAN</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<ReligionType>RELIGION_ASATRU</ReligionType>
+			<StateReligion>RELIGION_ASATRU</StateReligion>
+			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LOKI_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<PrereqBonuses>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+			</PrereqBonuses>
+			<iCost>300</iCost>
+			<iMoves>1</iMoves>
+			<iCombat>12</iCombat>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCityAttack>20</iCityAttack>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iUnitCombatMod>60</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<iConscription>3</iConscription>
+			<iAsset>3</iAsset>
+			<iPower>7</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LOKI</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BERZERKER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BERZERKER2</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

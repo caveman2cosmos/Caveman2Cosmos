@@ -17,9 +17,10 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include "CvImprovementInfo.h"
-#include <time.h> 
+#include <time.h>
 #include <sstream>
 
 static char gVersionString[1024] = { 0 };
@@ -81,7 +82,7 @@ ProxyTracker::~ProxyTracker()
 //
 // CONSTRUCTOR
 //
-cvInternalGlobals::cvInternalGlobals() 
+cvInternalGlobals::cvInternalGlobals()
 	: m_paszAnimationOperatorTypes(NULL)
 	, m_paszFunctionTypes(NULL)
 	, m_paszFlavorTypes(NULL)
@@ -133,22 +134,8 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
-	, m_bViewportsEnabled(false)
-	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
-	, m_paHints()
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	// MLF loading
-	, m_paModLoadControlVector(NULL)
-	, m_paModLoadControls(NULL)
-	/************************************************************************************************/
-	/* MODULAR_LOADING_CONTROL                 END                                                  */
-	/************************************************************************************************/
 	, m_bXMLLogging(true)
 
 	// BBAI Options
@@ -175,8 +162,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumArtStyleTypes(0)
 	, m_iNumCitySizeTypes(0)
 	, m_iNumFootstepAudioTypes(0)
-	, m_iViewportSizeX(0)
-	, m_iViewportSizeY(0)
 	, m_bSignsCleared(false)
 
 #define ADD_TO_CONSTRUCTOR(dataType, VAR) \
@@ -242,7 +227,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 							  FILE_ATTRIBUTE_NORMAL,
 							  NULL);
 
-	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) 
+	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE))
 	{
 		return;
 	}
@@ -416,7 +401,7 @@ void cvInternalGlobals::init()
 	gDLL->initGlobals();	// some globals need to be allocated outside the dll
 
 	m_game = new CvGameAI;
-	
+
 	for (int i = 0; i < NUM_MAPS; i++)
 	{
 		m_maps[i] = new CvMap((MapTypes)i);
@@ -462,7 +447,7 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
 
 	SAFE_DELETE(m_game);
-	
+
 	foreach_(const CvMap* map, m_maps)
 	{
 		SAFE_DELETE(map);
@@ -598,12 +583,12 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 /*********************************/
 bool cvInternalGlobals::viewportsEnabled() const
 {
-	return m_bViewportsEnabled;
+	return m_ENABLE_VIEWPORTS;
 }
 
 bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 {
-	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
+	return m_ENABLE_VIEWPORTS || getDefineBOOL("DYNAMIC_GREAT_WALL");
 }
 
 int cvInternalGlobals::getNumMapInfos() const
@@ -769,17 +754,17 @@ void cvInternalGlobals::updateReplacements()
 	m_CorporationInfoReplacements.updateReplacements(m_paCorporationInfo);
 
 	m_RouteInfoReplacements.updateReplacements(m_paRouteInfo);
-	
+
 	m_ProjectInfoReplacements.updateReplacements(m_paProjectInfo);
 
 	m_BuildInfoReplacements.updateReplacements(m_paBuildInfo);
-	
+
 	m_SpawnInfoReplacements.updateReplacements(m_paSpawnInfo);
 	m_GameSpeedInfoReplacements.updateReplacements(m_paGameSpeedInfo);
 	m_EraInfoReplacements.updateReplacements(m_aEraInfo);
-	
+
 	m_SpecialBuildingInfoReplacements.updateReplacements(m_paSpecialBuildingInfo);
-	
+
 	m_HandicapInfoReplacements.updateReplacements(m_paHandicapInfo);
 //ReplacementStep: search down here for 'CvInfoReplacements'
 }
@@ -1322,6 +1307,17 @@ CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes 
 	return *(m_paPromotionLineInfo[e]);
 }
 
+int cvInternalGlobals::getNumMapCategoryInfos() const
+{
+	return (int)m_paMapCategoryInfo.size();
+}
+
+CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
+	return *(m_paMapCategoryInfo[e]);
+}
+
 int cvInternalGlobals::getNumIdeaClassInfos() const
 {
 	return (int)m_paIdeaClassInfo.size();
@@ -1669,7 +1665,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_SHADOW);
 	REGISTER_MISSION(MISSION_WAIT_FOR_TECH);
 	REGISTER_MISSION(MISSION_GOTO);
-	REGISTER_MISSION(MISSION_PRETARGET_NUKE);
 	REGISTER_MISSION(MISSION_BUTCHER);
 	REGISTER_MISSION(MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE);
 	REGISTER_MISSION(MISSION_DIPLOMAT_PRAISE_IND_PEOPLE);
@@ -2120,28 +2115,6 @@ CvVictoryInfo& cvInternalGlobals::getVictoryInfo(VictoryTypes eVictoryNum) const
 	return *(m_paVictoryInfo[eVictoryNum]);
 }
 
-int cvInternalGlobals::getNumQuestInfos() const
-{
-	return (int)m_paQuestInfo.size();
-}
-
-CvQuestInfo& cvInternalGlobals::getQuestInfo(int iIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumQuestInfos(), iIndex)
-	return *(m_paQuestInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumTutorialInfos() const
-{
-	return (int)m_paTutorialInfo.size();
-}
-
-CvTutorialInfo& cvInternalGlobals::getTutorialInfo(int iIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTutorialInfos(), iIndex)
-	return *(m_paTutorialInfo[iIndex]);
-}
-
 int cvInternalGlobals::getNumEventTriggerInfos() const
 {
 	return (int)m_paEventTriggerInfo.size();
@@ -2421,11 +2394,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 
-	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
-	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
-	m_iViewportSizeX = GC.getDefineINT("VIEWPORT_SIZE_X");
-	m_iViewportSizeY = GC.getDefineINT("VIEWPORT_SIZE_Y");
-
 	m_szAlternateProfilSampleName = getDefineSTRING("PROFILER_ALTERNATE_SAMPLE_SET_SOURCE");
 	if (m_szAlternateProfilSampleName == NULL)
 	{
@@ -2677,6 +2645,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paInvisibleInfo);
 	deleteInfoArray(m_paUnitCombatInfo);
 	deleteInfoArray(m_paPromotionLineInfo);
+	deleteInfoArray(m_paMapCategoryInfo);
 	deleteInfoArray(m_paIdeaClassInfo);
 	deleteInfoArray(m_paIdeaInfo);
 	//deleteInfoArray(m_paTraitOptionEditsInfo);
@@ -2712,8 +2681,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
-	deleteInfoArray(m_paQuestInfo);
-	deleteInfoArray(m_paTutorialInfo);
 
 	deleteInfoArray(m_paEventInfo);
 	deleteInfoArray(m_paEventTriggerInfo);
@@ -2860,33 +2827,19 @@ void cvInternalGlobals::cacheInfoTypes()
 /*********************************/
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
-{	
+{
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
+	*CyGlobalContext::getInstance().getCyMap() = GC.getMap();
 	GC.getMap().afterSwitch();
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
 	return m_maps[CURRENT_MAP]->getCurrentViewport();
-}
-
-int	cvInternalGlobals::getViewportSizeX() const
-{
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
-}
-
-int	cvInternalGlobals::getViewportSizeY() const
-{
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridHeight();
-}
-
-int	cvInternalGlobals::getViewportSelectionBorder() const
-{
-	return m_iViewportFocusBorder;
 }
 
 int	cvInternalGlobals::getViewportCenteringBorder() const
@@ -2897,11 +2850,11 @@ int	cvInternalGlobals::getViewportCenteringBorder() const
 
 CvMapExternal& cvInternalGlobals::getMapExternal() const
 {
-	CvViewport* currentViewport = getCurrentViewport();
+	const CvViewport* currentViewport = getCurrentViewport();
 
 	FAssert(currentViewport != NULL);
 
-	return *currentViewport->getProxy();
+	return currentViewport->getProxy();
 }
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
@@ -2961,7 +2914,7 @@ void cvInternalGlobals::copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTy
 		}
 	}
 }
-	
+
 void cvInternalGlobals::resolveDelayedResolution()
 {
 	for (DelayedResolutionMap::iterator it = m_delayedResolutionMap.begin(); it != m_delayedResolutionMap.end(); ++it)
@@ -2973,7 +2926,7 @@ void cvInternalGlobals::resolveDelayedResolution()
 }
 
 int cvInternalGlobals::getNumMissionInfos() const
-{ 
+{
 	return (int) m_paMissionInfo.size();
 }
 
@@ -3022,7 +2975,7 @@ void cvInternalGlobals::setIsBug()
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))
 	{
-		m_bViewportsEnabled = true;
+		m_ENABLE_VIEWPORTS = true;
 
 		// Push them back inot the globals so that a reload of the globals cache preserves these values
 		setDefineINT("ENABLE_VIEWPORTS", 1, false);
@@ -3034,9 +2987,9 @@ void cvInternalGlobals::setIsBug()
 		// This happens after the maps load on first load, so resize existing viewports
 		foreach_(const CvMap* map, m_maps)
 		{
-			for (int iJ = 0; iJ < map->getNumViewports(); iJ++)
+			foreach_(CvViewport* viewport, map->getViewports())
 			{
-				map->getViewport(iJ)->resizeForMap();
+				viewport->resizeForMap();
 			}
 		}
 	}

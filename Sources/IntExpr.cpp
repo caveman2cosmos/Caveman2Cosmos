@@ -392,7 +392,7 @@ int IntExprAttribute::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAttribute::getCheckSum(unsigned int &iSum) const
+void IntExprAttribute::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eAttribute);
 }
@@ -591,7 +591,7 @@ IntExprIntegrateOp::~IntExprIntegrateOp()
 int IntExprIntegrateOp::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(getOp(), _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(getOp(), _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
@@ -648,7 +648,7 @@ int IntExprIntegrateAvg::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
 	int iCount = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
 	return iCount ? iAcc/iCount : 0;
 }
 
@@ -674,7 +674,7 @@ IntExprIntegrateCount::~IntExprIntegrateCount()
 int IntExprIntegrateCount::evaluate(const CvGameObject* pObject) const
 {
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
@@ -758,12 +758,12 @@ void IntExprAdapt::getCheckSum(uint32_t& iSum) const
 
 int IntExprPython::evaluate(const CvGameObject* pObject) const
 {
-	return Cy::call<int>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << const_cast<CvGameObject*>(pObject));
+	return Cy::call<int>("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << const_cast<CvGameObject*>(pObject));
 }
 
 void IntExprPython::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	CvWString szResult = Cy::call<CvWString>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << false);
+	CvWString szResult = Cy::call<CvWString>("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << false);
 	szBuffer.append(szResult);
 }
 

@@ -17,12 +17,12 @@ class IntExpr;
 enum BoolExprTypes
 {
 	NO_BOOLEXPR = -1,
+	BOOLEXPR_AND = 0,
+	BOOLEXPR_OR = 1,
 	BOOLEXPR_CONSTANT,
 	BOOLEXPR_HAS,
 	BOOLEXPR_IS,
 	BOOLEXPR_NOT,
-	BOOLEXPR_AND,
-	BOOLEXPR_OR,
 	BOOLEXPR_BEQUAL,
 	BOOLEXPR_IF,
 	BOOLEXPR_INTEGRATE_OR,
@@ -41,6 +41,7 @@ struct GOMOverride
 
 enum BoolExprChange
 {
+	NO_BOOLEXPR_CHANGE = -1,
 	BOOLEXPR_CHANGE_REMAINS_TRUE,
 	BOOLEXPR_CHANGE_REMAINS_FALSE,
 	BOOLEXPR_CHANGE_BECOMES_TRUE,
@@ -57,13 +58,14 @@ class BoolExpr
 {
 public:
 	virtual ~BoolExpr();
-	virtual bool evaluate(const CvGameObject* pObject) const = 0;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, const std::vector<GOMOverride>& overrides) const = 0;
-	virtual bool getInvolvesGOM(const std::vector<GOMQuery>& queries) const = 0;
+	virtual bool evaluate(const CvGameObject*) const { return false; }
+	virtual BoolExprChange evaluateChange(const CvGameObject*, const std::vector<GOMOverride>&) const { return NO_BOOLEXPR_CHANGE; }
+	virtual bool getInvolvesGOM(const std::vector<GOMQuery>&) const { return false; }
 	static const BoolExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(uint32_t& iSum) const = 0;
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
-	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
+	virtual void getCheckSum(uint32_t&) const { }
+	virtual void buildDisplayString(CvWStringBuffer&) const { }
+	virtual int getBindingStrength() const { return 0; } // How strong the operator binds in language so brackets can be placed appropriately
+	virtual BoolExprTypes getType() const { return NO_BOOLEXPR; }
 };
 
 class BoolExprConstant : public BoolExpr
@@ -93,6 +95,10 @@ public:
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
+
+	virtual BoolExprTypes getType() const	{ return BOOLEXPR_HAS; }
+	GOMTypes getGOMType() const				{ return m_eGOM; }
+	int getID() const						{ return m_iID; }
 protected:
 	GOMTypes m_eGOM;
 	int m_iID;
@@ -138,6 +144,10 @@ public:
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
+
+	virtual BoolExprTypes getType() const	{ return BOOLEXPR_AND; }
+	const BoolExpr* getFirstExpr() const	{ return m_pExpr1; }
+	const BoolExpr* getSecondExpr() const	{ return m_pExpr2; }
 protected:
 	const BoolExpr* m_pExpr1;
 	const BoolExpr* m_pExpr2;
@@ -154,6 +164,10 @@ public:
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
+
+	virtual BoolExprTypes getType() const	{ return BOOLEXPR_OR; }
+	const BoolExpr* getFirstExpr() const	{ return m_pExpr1; }
+	const BoolExpr* getSecondExpr() const	{ return m_pExpr2; }
 protected:
 	const BoolExpr* m_pExpr1;
 	const BoolExpr* m_pExpr2;

@@ -50,7 +50,6 @@ class CvEventManager:
 			'ModNetMessage'				: self.onModNetMessage,
 			'Init'						: self.onInit,
 #			'UnInit'					: self.onUnInit,
-#			'Update'					: self.onUpdate,
 #			'OnSave'					: self.onSaveGame,
 #			'OnPreSave'					: self.onPreSave,
 			'OnLoad'					: self.onLoadGame,
@@ -89,7 +88,6 @@ class CvEventManager:
 #			'cityHurry'					: self.onCityHurry,
 #			'selectionGroupPushMission'	: self.onSelectionGroupPushMission,
 #			'unitMove'					: self.onUnitMove,
-#			'unitSetXY'					: self.onUnitSetXY,
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
@@ -407,6 +405,7 @@ class CvEventManager:
 				# key down event for the 'D' in 'ctrl+shift+alt+D' seems to be consumed by the exe in some cases
 				if key == 16: # D
 					DebugUtils.toggleDebugMode()
+					CvScreensInterface.mainInterface.pythonDebugToggle(DebugUtils.bDebugMode)
 					return 1
 
 		elif eventType == 6: # Key down
@@ -572,8 +571,8 @@ class CvEventManager:
 					CyTeam.setIsMinorCiv(True, False)
 
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		self.iTrainPrcntGS = CvGameSpeedInfo.getTrainPercent()
-		self.iVictoryDelayPrcntGS = CvGameSpeedInfo.getVictoryDelayPercent()
+		self.iTrainPrcntGS = CvGameSpeedInfo.getHammerCostPercent()
+		self.iGameSpeedPercent = CvGameSpeedInfo.getSpeedPercent()
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
@@ -748,7 +747,7 @@ class CvEventManager:
 					CyPlayer.changeGold(CyPlayer.getGold()//200)
 
 				elif KEY == "CYRUS_CYLINDER":
-					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
+					if not iGameTurn % (4*self.iGameSpeedPercent/100 + 1):
 						iTeam = CyPlayer.getTeam()
 						iDiv = iGameTurn * 2
 						for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -771,8 +770,8 @@ class CvEventManager:
 		# Aging Animals
 		if not CyPlayer.isNPC() or CyPlayer.isHominid():
 			return
-		bMinor = not iGameTurn % (16 * self.iVictoryDelayPrcntGS / 100 + 1)
-		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
+		bMinor = not iGameTurn % (16 * self.iGameSpeedPercent / 100 + 1)
+		bMajor = not iGameTurn % (128 * self.iGameSpeedPercent / 100)
 
 		if bMinor or bMajor:
 			for CyUnit in CyPlayer.units():
@@ -1491,11 +1490,10 @@ class CvEventManager:
 						break
 		# NANITE DEFUSER - destroyes all nukes from all players
 		elif iBuilding == mapBuildingType["NANITE_DEFUSER"]:
-
 			for iPlayerX in xrange(self.MAX_PLAYERS):
 				for CyUnit in GC.getPlayer(iPlayerX).units():
-					if CyUnit.isNone() or CyUnit.isDead():
-						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead()), ("CyUnit.isNone()", CyUnit.isNone())
+					if CyUnit.isDead():
+						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead())
 					elif CyUnit.nukeRange() > -1:
 						CyUnit.kill(0, -1)
 				# Global message
@@ -2012,12 +2010,6 @@ class CvEventManager:
 	'''
 
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_SET_XY_CALLBACK = False)
-	def onUnitSetXY(self, argsList):
-		pPlot, pUnit = argsList
-	'''
-
-
 	def onUnitCreated(self, argsList): # Enabled in PythonCallbackDefines.xml (USE_ON_UNIT_CREATED_CALLBACK = True)
 		CyUnit, = argsList
 
@@ -2052,11 +2044,11 @@ class CvEventManager:
 		if DebugUtils.bDebugMode:
 			print "%s Built %s in %s" %(GC.getPlayer(CyCity.getOwner()).getCivilizationDescription(0), CyUnit.getName(), CyCity.getName())
 		CvAdvisorUtils.unitBuiltFeats(CyCity, CyUnit)
-		CyPlayer = GC.getPlayer(CyUnit.getOwner())
+		iPlayer = CyUnit.getOwner()
+		CyPlayer = GC.getPlayer(iPlayer)
 		iUnit = CyUnit.getUnitType()
 		'''
 		## Hero Movie (Not implemented yet)
-		iPlayer = CyUnit.getOwner()
 		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and isWorldUnit(iUnit):
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -2077,11 +2069,11 @@ class CvEventManager:
 
 		# Immigration Mod
 		if iUnit == self.UNIT_IMMIGRANT:
-			CyCity.setPopulation(CyCity.getPopulation() - 2)
-			import Immigration
-			CyCityX = Immigration.getLeastPopulatedCity(CyPlayer)
-			if CyCityX:
-				Immigration.doImmigrantPlacementAI(CyUnit, CyCityX)
+			iNewPop = CyCity.getPopulation() - 2
+			if iNewPop > -1:
+				if iNewPop == 0:
+					iNewPop = 1
+				CyCity.setPopulation(iNewPop)
 
 
 	def onUnitKilled(self, argsList):
@@ -2122,7 +2114,7 @@ class CvEventManager:
 			CyUnit.setLeaderUnitType(-1)
 
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_LOST_CALLBACK = False)
+	'''
 	def onUnitLost(self, argsList):
 		CyUnit, = argsList
 	'''
@@ -2178,9 +2170,8 @@ class CvEventManager:
 			CyUnitOld, CyUnitNew, iPrice = argsList
 			print "%s Upgraded %s to %s" %(GC.getPlayer(CyUnitOld.getOwner()).getCivilizationDescription(0), CyUnitOld.getName(), CyUnitNew.getName())
 
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_SELECTED_CALLBACK = False)
+	''' Might be useful
 	def onUnitSelected(self, argsList):
-		print ("onUnitSelected", argsList)
 		CyUnit = argsList[0]
 	'''
 
@@ -2266,7 +2257,7 @@ class CvEventManager:
 				# Message
 				if iPlayer == GAME.getActivePlayer():
 					CvUtil.sendMessage(
-						TRNSLTR.getText("TXT_KEY_BARBCIV_DISCOVER_WRITING", ()), iPlayer, 16, 
+						TRNSLTR.getText("TXT_KEY_BARBCIV_DISCOVER_WRITING", ()), iPlayer, 16,
 						eColor = GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"),
 						eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, bForce = False
 					)
@@ -2723,14 +2714,14 @@ class CvEventManager:
 						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_KENTUCKY_DERBY",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
 				elif KEY == "GREAT_ZIMBABWE":
-					if not CyCity.isFoodProduction():
+					if CyCity.isFoodProduction():
 						CyCity.changeFood(CyCity.getYieldRate(0) - CyCity.foodConsumption(False, 0))
 						if CyCity.getFood() >= CyCity.growthThreshold():
 							CyCity.changePopulation(1)
 							CyCity.setFood(CyCity.getFoodKept())
 
 				elif KEY == "BIODOME":
-					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iVictoryDelayPrcntGS/100 + 1):
+					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iGameSpeedPercent/100 + 1):
 						continue
 					CyPlayer = GC.getPlayer(iPlayer)
 					iX = CyCity.getX()
@@ -2795,13 +2786,6 @@ class CvEventManager:
 			OOSLogger.writeLog()
 			self.bNetworkMP = False
 
-
-	''' Disabled in PythonCallbackDefines.xml (USE_ON_UPDATE_CALLBACK = False)
-	def onUpdate(self, argsList):
-		print ("onUpdate", argsList)
-		'Called every frame'
-		fDeltaTime = argsList[0]
-	'''
 
 #################### TRIGGERED EVENTS ##################
 

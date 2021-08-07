@@ -24,7 +24,7 @@
 //	{
 //		...
 //		std::ostringstream msg
-//			<< pLoopPlot->isHasValidBonus() << "\n" 
+//			<< pLoopPlot->isHasValidBonus() << "\n"
 //			<< pLoopPlot->isConnectedTo(this);
 //
 //		if (SCvDebug::checkMode(NoVicinityBonusDebug)

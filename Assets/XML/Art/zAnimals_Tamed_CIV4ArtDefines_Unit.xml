@@ -605,8 +605,6 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_UN_ELEPHANT</SelectionSound>
-			<ActionSound>AS3D_UN_ELEPHANT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_HIPPO</Type>

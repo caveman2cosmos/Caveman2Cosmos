@@ -104,13 +104,11 @@ class CvEmphasizeInfo;
 class CvUpkeepInfo;
 class CvCultureLevelInfo;
 class CvVictoryInfo;
-class CvQuestInfo;
 class CvGameOptionInfo;
 class CvMPOptionInfo;
 class CvForceControlInfo;
 class CvPlayerOptionInfo;
 class CvGraphicOptionInfo;
-class CvTutorialInfo;
 class CvEventTriggerInfo;
 class CvEventInfo;
 class CvEspionageMissionInfo;
@@ -121,6 +119,7 @@ class CvPropertyInfo;
 class CvOutcomeInfo;
 class CvUnitCombatInfo;
 class CvPromotionLineInfo;
+class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
@@ -181,9 +180,6 @@ public:
 	const bst::array<CvMap*, NUM_MAPS>& getMaps() const { return m_maps; }
 
 	CvViewport* getCurrentViewport() const;
-	int	getViewportSizeX() const;
-	int	getViewportSizeY() const;
-	int getViewportSelectionBorder() const;
 	int getViewportCenteringBorder() const;
 	CvMapExternal& getMapExternal() const;
 
@@ -479,6 +475,9 @@ public:
 	int getNumPromotionLineInfos() const;
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 
+	int getNumMapCategoryInfos() const;
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
+
 	int getNumIdeaClassInfos() const;
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
@@ -537,6 +536,7 @@ public:
 
 	int getNumBuildInfos() const;
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
+	const std::vector<CvBuildInfo*>& getBuildInfos() const { return m_paBuildInfo; }
 
 	int getNumHandicapInfos() const;
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
@@ -585,6 +585,7 @@ public:
 
 	int getNumReligionInfos() const;
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
+	const std::vector<CvReligionInfo*>& getReligionInfos() const { return m_paReligionInfo; }
 
 	int getNumCorporationInfos() const;
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
@@ -618,12 +619,6 @@ public:
 
 	int getNumVictoryInfos() const;
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
-
-	int getNumQuestInfos() const;
-	CvQuestInfo& getQuestInfo(int iIndex) const;
-
-	int getNumTutorialInfos() const;
-	CvTutorialInfo& getTutorialInfo(int i) const;
 
 	int getNumEventTriggerInfos() const;
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
@@ -999,6 +994,7 @@ protected:
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
+	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
 	std::vector<CvInfoBase*> m_paDomainInfo;
@@ -1049,8 +1045,6 @@ protected:
 	std::vector<CvUnitFormationInfo*> m_paUnitFormationInfo;
 	std::vector<CvEffectInfo*> m_paEffectInfo;
 	std::vector<CvAttachableInfo*> m_paAttachableInfo;
-	std::vector<CvQuestInfo*> m_paQuestInfo;
-	std::vector<CvTutorialInfo*> m_paTutorialInfo;
 	std::vector<CvEventTriggerInfo*> m_paEventTriggerInfo;
 	CvInfoReplacements<CvEventTriggerInfo> m_EventTriggerInfoReplacements;
 	std::vector<CvEventInfo*> m_paEventInfo;
@@ -1115,14 +1109,10 @@ protected:
 
 	float m_fPLOT_SIZE;
 
-	bool m_bViewportsEnabled;
-	int	m_iViewportFocusBorder;
-	int m_iViewportSizeX;
-	int m_iViewportSizeY;
 	int m_iViewportCenterOnSelectionCenterBorder;
 
 	const char* m_szAlternateProfilSampleName;
-	FProfiler* m_Profiler;		// profiler
+	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
 
 public:
@@ -1987,7 +1977,12 @@ public:
 	DllExport int getUSE_FINISH_TEXT_CALLBACK()
 	{
 		PROXY_TRACK("getUSE_FINISH_TEXT_CALLBACK");
-		return gGlobals->getUSE_FINISH_TEXT_CALLBACK();
+		// Toffer - Change this to true to make exe call String finishText([String,]) within CvTranslator.py.
+		//	text handled by the exe will be sent as input to the python function line by line
+		//	and the string it gets in return will replace whatever it sent in.
+		//	Not sure we can actually use this for anythin, I think it's mostly a weird way to alter exe tooltip text.
+		//	Maybe there's some text hardcoded in the exe we can change through this, though I doubt that.
+		return false;
 	}
 	DllExport int getMAX_CIV_PLAYERS()
 	{

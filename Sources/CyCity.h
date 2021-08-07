@@ -3,11 +3,6 @@
 #ifndef CyCity_h__
 #define CyCity_h__
 
-#ifndef __INTELLISENSE__
-#include <boost/python/tuple.hpp>
-namespace python = boost::python;
-#endif
-
 //
 // Python wrapper class for CvCity
 //
@@ -53,17 +48,17 @@ public:
 	int countNumImprovedPlots() const;
 	int countNumWaterPlots() const;
 
-	int findBaseYieldRateRank(int /*YieldTypes*/ eYield) const;
-	int findYieldRateRank(int /*YieldTypes*/ eYield) const;
-	int findCommerceRateRank(int /*CommerceTypes*/ eCommerce) const;
+	int findBaseYieldRateRank(YieldTypes eYield) const;
+	int findYieldRateRank(YieldTypes eYield) const;
+	int findCommerceRateRank(CommerceTypes eCommerce) const;
 
 	int getMaxNumWorldWonders() const;
 	int getMaxNumNationalWonders() const;
 
-	bool canTrain(int iUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const;
-	bool canConstruct(int iBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
-	bool canCreate(int iProject, bool bContinue, bool bTestVisible) const;
-	bool canMaintain(int iProcess, bool bContinue) const;
+	bool canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const;
+	bool canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
+	bool canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 	int getFoodTurnsLeft() const;
 	bool isProduction() const;
 	bool isProductionUnit() const;
@@ -71,13 +66,13 @@ public:
 	bool isProductionProject() const;
 	bool isProductionProcess() const;
 
-	int getProductionExperience(int /*UnitTypes*/ eUnit) const;
+	int getProductionExperience(UnitTypes eUnit) const;
 	void addProductionExperience(const CyUnit& kUnit, bool bConscript);
 
-	int /*UnitTypes*/ getProductionUnit() const;
-	int /*BuildingTypes*/ getProductionBuilding() const;
-	int /*ProjectTypes*/ getProductionProject() const;
-	int /*ProcessTypes*/ getProductionProcess() const;
+	UnitTypes getProductionUnit() const;
+	BuildingTypes getProductionBuilding() const;
+	ProjectTypes getProductionProject() const;
+	ProcessTypes getProductionProcess() const;
 	std::wstring getProductionName() const;
 	std::wstring getProductionNameKey() const;
 	int getGeneralProductionTurnsLeft() const;
@@ -101,7 +96,7 @@ public:
 	bool canConscript() const;
 	int getBonusHealth(int /*BonusTypes*/ iBonus) const;
 	int getBonusHappiness(int /*BonusTypes*/ iBonus) const;
-	int getBonusPower(int /*BonusTypes*/ eBonus, bool bDirty) const;
+	int getBonusPower(int /*BonusTypes*/ eBonus) const;
 	int getBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int /*BonusTypes*/ eBonus) const;
 	int /* HandicapTypes */ getHandicapType() const;
 	int /* CivilizationTypes */ getCivilizationType() const;
@@ -241,8 +236,6 @@ public:
 	int getAirModifier() const;
 	int getNukeModifier() const;
 	bool isPower() const;
-	bool isAreaCleanPower() const;
-	bool isDirtyPower() const;
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
 	int getNaturalDefense() const;
@@ -255,8 +248,6 @@ public:
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
 	void setNeverLost(int iNewValue);
-
-	int getMADIncoming() const;
 
 	bool isBombarded() const;
 	void setBombarded(int iNewValue);
@@ -321,7 +312,7 @@ public:
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bWeLoveTheKingDay);
 	int calculateCorporateTaxes() const;
-	void changePowerCount(int iChange, bool bDirty);
+	void changePowerCount(int iChange);
 
 	void changeEventAnger(int iChange);
 
@@ -426,6 +417,7 @@ public:
 
 	int getLiberationPlayer(bool bConquest) const;
 
+	bool AI_isEmphasizeSpecialist(int /*SpecialistTypes*/ iIndex) const;
 	bool AI_isEmphasize(int iEmphasizeType) const;
 	int AI_countBestBuilds(const CyArea& kArea) const;
 	int AI_cityValue() const;

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Mission Infos -->
+<Civ4MissionInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
+	<!--Changes must be reflected in CvEnums.h-->
+	<MissionInfos>
+		<MissionInfo>
+			<Type>MISSION_NOMAD_DEFENDER</Type>
+			<Description>TXT_KEY_MISSION_NOMAD_DEFENDER</Description>
+			<Help>TXT_KEY_MISSION_NOMAD_DEFENDER_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>0</bSound>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/Units/sparth/stone_thrower.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_NOMAD_RESEARCH</Type>
+			<Description>TXT_KEY_MISSION_NOMAD_RESEARCH</Description>
+			<Help>TXT_KEY_MISSION_NOMAD_RESEARCH_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>0</bSound>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/Missions/RecordOral.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_NOMAD_RECON</Type>
+			<Description>TXT_KEY_MISSION_NOMAD_RECON</Description>
+			<Help>TXT_KEY_MISSION_NOMAD_RECON_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>0</bSound>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/Units/sparth/Wanderer.dds</Button>
+		</MissionInfo>
+	</MissionInfos>
+</Civ4MissionInfos>

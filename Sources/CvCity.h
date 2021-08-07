@@ -204,8 +204,8 @@ public:
 	struct city_plot_iterator_base :
 		public bst::iterator_facade<city_plot_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
-		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit city_plot_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
+		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0), m_numPlots(0) {}
+		explicit city_plot_iterator_base(int centerX, int centerY, int numPlots, int idx) : m_centerX(centerX), m_centerY(centerY), m_numPlots(numPlots), m_curr(nullptr), m_idx(idx)
 		{
 			increment();
 		}
@@ -215,7 +215,7 @@ public:
 		void increment()
 		{
 			m_curr = nullptr;
-			while (m_curr == nullptr && m_idx < NUM_CITY_PLOTS)
+			while (m_curr == nullptr && m_idx < m_numPlots/*NUM_CITY_PLOTS*/)
 			{
 				m_curr = plotCity(m_centerX, m_centerY, m_idx);
 				++m_idx;
@@ -231,18 +231,20 @@ public:
 
 		Value_* dereference() const { return m_curr; }
 
-		int m_centerX;
-		int m_centerY;
+		const int m_centerX;
+		const int m_centerY;
+		const int m_numPlots;
 		Value_* m_curr;
 		int m_idx;
 	};
 	typedef city_plot_iterator_base<CvPlot> city_plot_iterator;
 
-	city_plot_iterator beginPlots() const { return city_plot_iterator(getX(), getY()); }
+	city_plot_iterator beginPlots(int numPlots, bool skipCityHomePlot) const { return city_plot_iterator(getX(), getY(), numPlots, skipCityHomePlot); }
 	city_plot_iterator endPlots() const { return city_plot_iterator(); }
 
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
-	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
+ 	city_plot_range plots(int numPlots, bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(numPlots, skipCityHomePlot), endPlots()); }
+	city_plot_range plots(bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(getNumCityPlots(), skipCityHomePlot), endPlots()); }
 
 	int getCityPlotIndex(const CvPlot* pPlot) const;
 	// Prefer to use plots() range instead of this for loops, searching etc.
@@ -284,7 +286,7 @@ public:
 	void NoteBuildingNoLongerConstructable(BuildingTypes eBuilding) const;
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
-	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 
 	int getFoodTurnsLeft() const;
 	bool isProduction() const;
@@ -365,7 +367,7 @@ public:
 
 	int getBonusHealth(BonusTypes eBonus) const;
 	int getBonusHappiness(BonusTypes eBonus) const;
-	int getBonusPower(BonusTypes eBonus, bool bDirty) const;
+	int getBonusPower(BonusTypes eBonus) const;
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
@@ -717,10 +719,6 @@ public:
 	void changeBuildingGoodHealth(int iChange);
 	void changeBuildingBadHealth(int iChange);
 
-	int getPowerGoodHealth() const;
-	int getPowerBadHealth() const;
-	void updatePowerHealth();
-
 	int getBonusGoodHealth() const;
 	int getBonusBadHealth() const;
 	void changeBonusGoodHealth(int iChange);
@@ -878,9 +876,7 @@ public:
 	int getPowerCount() const;
 	bool isPower() const;
 	bool isAreaCleanPower() const;
-	int getDirtyPowerCount() const;
-	bool isDirtyPower() const;
-	void changePowerCount(int iChange, bool bDirty);
+	void changePowerCount(int iChange);
 
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
@@ -905,10 +901,6 @@ public:
 
 	int getCitySizeBoost() const;
 	void setCitySizeBoost(int iBoost);
-
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
 
 	bool isNeverLost() const;
 	void setNeverLost(bool bNewValue);
@@ -1176,6 +1168,7 @@ public:
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
 	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);
 
+	int getMaxSpecialistCount() const;
 	int getMaxSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;
 	void changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange);
@@ -1183,7 +1176,6 @@ public:
 	int getForceSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistForced() const;
 	void setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue);
-	void changeForceSpecialistCount(SpecialistTypes eIndex, int iChange);
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
@@ -1249,6 +1241,7 @@ public:
 	int getTradeRoutes() const;
 	void clearTradeRoutes();
 	void updateTradeRoutes();
+	void resizeTradeRouteVector();
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
@@ -1707,8 +1700,6 @@ protected:
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
-	int m_iPowerGoodHealth;
-	int m_iPowerBadHealth;
 	int m_iBonusGoodHealth;
 	int m_iBonusBadHealth;
 	int m_iHurryAngerTimer;
@@ -1820,7 +1811,6 @@ protected:
 	int m_iNukeModifier;
 	int m_iFreeSpecialist;
 	int m_iPowerCount;
-	int m_iDirtyPowerCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;
@@ -1832,9 +1822,7 @@ protected:
 	int m_iSpecialistInvestigation;
 	// Mutable as its used in caching
 	mutable int m_icachedPropertyNeedsTurn;
-	// < M.A.D. Nukes Start >
-	int m_iMADIncoming;
-	// < M.A.D. Nukes Start >
+
 	int m_iQuarantinedCount;
 
 	bool m_bNeverLost;
@@ -2218,7 +2206,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);

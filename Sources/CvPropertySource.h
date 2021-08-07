@@ -66,7 +66,7 @@ public:
 	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	
+
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 

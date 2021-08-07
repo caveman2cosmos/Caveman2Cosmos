@@ -3,8 +3,8 @@
 #include "CyDeal.h"
 
 //
-// Python wrapper class for CvGame 
-// 
+// Python wrapper class for CvGame
+//
 
 CyDeal::CyDeal(CvDeal* pDeal) : m_pDeal(pDeal) {}
 
@@ -94,7 +94,7 @@ bool CyDeal::isCancelable(int /*PlayerTypes*/ eByPlayer, bool bIgnoreWaitingPeri
 
 		return m_pDeal->isCancelable((PlayerTypes)eByPlayer, NULL);
 	}
-	
+
 	return false;
 }
 

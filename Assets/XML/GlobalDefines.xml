@@ -378,11 +378,11 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_CITY_GROWTH_THRESHOLD</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>124</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_GROWTH_MULTIPLIER</DefineName>
-		<iDefineIntVal>24</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FOOD_CONSUMPTION_PER_POPULATION</DefineName>
@@ -407,14 +407,6 @@
 	<Define>
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DIRTY_POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS</DefineName>
@@ -522,7 +514,7 @@
 	</Define>
 	<Define>
 		<DefineName>GREAT_GENERALS_THRESHOLD</DefineName>
-		<iDefineIntVal>30</iDefineIntVal>
+		<iDefineIntVal>11</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_SPY_SABOTAGE_COST</DefineName>
@@ -766,10 +758,6 @@
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_BONUS_WEIGHT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>GLOBAL_WARMING_POWER_WEIGHT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1729,15 +1717,11 @@
 	</Define>
 	<Define>
 		<DefineName>TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
-		<iDefineIntVal>-70</iDefineIntVal>
+		<iDefineIntVal>-200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CIVIC_ANARCHY_QTY_DISCOUNT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>

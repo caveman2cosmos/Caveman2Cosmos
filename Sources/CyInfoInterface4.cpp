@@ -8,28 +8,6 @@
 void CyInfoPythonInterface4()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface4\n");
-	
-	python::class_<CvQuestInfo, python::bases<CvInfoBase> >("CvQuestInfo")
-		.def("getQuestMessages", &CvQuestInfo::getQuestMessages, "int ()")
-		.def("getNumQuestLinks", &CvQuestInfo::getNumQuestLinks, "int ()")
-
-		.def("getQuestObjective", &CvQuestInfo::getQuestObjective, "string ()")
-		.def("getQuestBodyText", &CvQuestInfo::getQuestBodyText, "string ()")
-		.def("getNumQuestMessages", &CvQuestInfo::getNumQuestMessages, "string ()")
-		.def("getQuestSounds", &CvQuestInfo::getQuestSounds, "string ()")
-
-
-		;
-
-	python::class_<CvTutorialMessage>("CvTutorialMessage")
-		.def("getText", &CvTutorialMessage::getText, "string ()")
-		.def("getSound", &CvTutorialMessage::getSound, "string ()")
-
-		;
-
-	python::class_<CvTutorialInfo, python::bases<CvInfoBase> >("CvTutorialInfo")
-
-		;
 
 	python::class_<CvAutomateInfo, python::bases<CvInfoBase> >("CvAutomateInfo")
 		;

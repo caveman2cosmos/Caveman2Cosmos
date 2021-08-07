@@ -2600,37 +2600,36 @@
 			<Path>Art/Effects/FlameThrower/firespray_sfx.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
-		<!-- temporary new missionary effects -->
 		<EffectInfo>
 			<Type>EFFECT_MISSIONARY_ACTIVE_RA</Type>
-			<Description>Activation effect for Kemetism missionary</Description>
-			<fScale>1.2</fScale>
+			<Description>Activation effect for Pesedjet missionary</Description>
+			<fScale>1.3</fScale>
 			<fUpdateRate>1.0</fUpdateRate>
-			<Path>Art/Effects/unit_missionary_activation/fx_missionary_activate_hinduism.nif</Path>
+			<Path>Art/Effects/fx_missionary_activate_ra.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_MISSIONARY_ACTIVE_OLYMP</Type>
-			<Description>Activation effect for Hellenic missionary</Description>
-			<fScale>1.5</fScale>
+			<Description>Activation effect for Olympic missionary</Description>
+			<fScale>1.3</fScale>
 			<fUpdateRate>1.0</fUpdateRate>
-			<Path>Art/Effects/unit_missionary_activation/fx_missionary_activate_christianity.nif</Path>
+			<Path>Art/Effects/fx_missionary_activate_olymp.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_MISSIONARY_ACTIVE_TOLTEC</Type>
-			<Description>Activation effect for Naghual missionary</Description>
-			<fScale>1.2</fScale>
+			<Description>Activation effect for Toltec missionary</Description>
+			<fScale>1.3</fScale>
 			<fUpdateRate>1.0</fUpdateRate>
-			<Path>Art/Effects/unit_missionary_activation/fx_missionary_activate_hinduism.nif</Path>
+			<Path>Effects/fx_missionary_activate_toltec.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 		<EffectInfo>
 			<Type>EFFECT_MISSIONARY_ACTIVE_ZORO</Type>
-			<Description>Activation effect for Zoroastrian missionary</Description>
-			<fScale>1.2</fScale>
+			<Description>Activation effect for Zoro missionary</Description>
+			<fScale>1.3</fScale>
 			<fUpdateRate>1.0</fUpdateRate>
-			<Path>Art/Effects/unit_missionary_activation/fx_missionary_activate_confuscian.nif</Path>
+			<Path>Effects/fx_missionary_activate_zoro.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 		<EffectInfo>
@@ -2749,6 +2748,118 @@
 			<fScale>7.8</fScale>
 			<fUpdateRate>1.0</fUpdateRate>
 			<Path>Art/Effects/improvement_campfire/fx_fire_campfire.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_ANDEAN</Type>
+			<Description>Activation effect for Andean missionary</Description>
+			<fScale>1.2</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_andean.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_YORUBA</Type>
+			<Description>Activation effect for Yoruba missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_Yoruba.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_ASEN</Type>
+			<Description>Activation effect for Asen missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_asen.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_BAAL</Type>
+			<Description>Activation effect for canaanite missionary</Description>
+			<fScale>1.2</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_baal.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_DRUID</Type>
+			<Description>Activation effect for Masonic missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_druid.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_BAHAI</Type>
+			<Description>Activation effect for Bahai missionary</Description>
+			<fScale>1.2</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_bahai.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_SCIENTOLOGY</Type>
+			<Description>Activation effect for Mesopotamian missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_Scientology.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_MORMON</Type>
+			<Description>Activation effect for Normon missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_mormon.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_MESOPOTAMIAN</Type>
+			<Description>Activation effect for Mesopotamian missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_mesopotamian.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_SIKH</Type>
+			<Description>Activation effect for Sikh missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_sikh.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_TENGRI</Type>
+			<Description>Activation effect for Tengri missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_tengri.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_SHINTO</Type>
+			<Description>Activation effect for Shintoistic missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_shinto.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_SHAMAN</Type>
+			<Description>Activation effect for Shamanistic missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_shaman.nif</Path>
+			<bIsProjectile>0</bIsProjectile>
+		</EffectInfo>
+		<EffectInfo>
+			<Type>EFFECT_MISSIONARY_ACTIVE_VOODOO</Type>
+			<Description>Activation effect for Voodoo missionary</Description>
+			<fScale>1.3</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Effects/fx_missionary_activate_voodoo.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 	</EffectInfos>

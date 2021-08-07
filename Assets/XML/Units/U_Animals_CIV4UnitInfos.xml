@@ -10298,7 +10298,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HORSE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_HORSE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

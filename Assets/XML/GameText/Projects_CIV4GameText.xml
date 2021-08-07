@@ -1,6 +1,121 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_DISTANCE_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione derivanti dalla distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå çà ðàññòîÿíèÿ äî äâîðöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_ENABLES_NUKES</Tag>
+		<English>Enables Nuclear Weapons for the Player that builds this</English>
+		<French>Permet au joueur l'ayant construit d'obtenir des armes Nucléaires</French>
+		<Italian>Attiva le bombe atomiche per il giocatore che completa questo progetto</Italian>
+		<Polish>Pozwala budować Broń Nuklearną graczowi który to wybudował.</Polish>
+		<Russian>[ICON_BULLET]Îòêðûâàåò âîçìîæíîñòü ïðèìåíåíèÿ ÿäåðíîãî îðóæèÿ (äëÿ âñåõ èãðîêîâ)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_GLOBAL_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
+		<French>[ICON_BULLET]%D1_MOD%% de coût d'entretien dans toutes les Villes</French>
+		<Italian>[ICON_BULLET]%D1_MOD%% costi di manutenzione in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]%D1_MOD%% çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_HAPPINESS</Tag>
+		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HAPPY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Joueur</French>
+		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HAPPY]</German>
+		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_HAPPY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_HAPPY] en todas las ciudades del jugador</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_HAPPY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_HEALTH</Tag>
+		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HEALTHY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Joueur</French>
+		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HEALTHY]</German>
+		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_HEALTHY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_HEALTHY] en todas las ciudades del jugador</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_HEALTHY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_NUM_CITIES_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione dal numero di città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_UNHAPPINESS</Tag>
+		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Joueur</French>
+		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHAPPY]</German>
+		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_UNHAPPY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] en todas las ciudades del jugador</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_UNHAPPY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_UNHEALTH</Tag>
+		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHEALTHY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Joueur</French>
+		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHEALTHY]</German>
+		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_UNHEALTHY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_UNHEALTHY] en todas las ciudades del jugador</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_UNHEALTHY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_HAPPINESS</Tag>
+		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HAPPY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Monde</French>
+		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HAPPY]</German>
+		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_HAPPY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_HAPPY] en todas las ciudades del mundo</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_HAPPY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_HEALTH</Tag>
+		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HEALTHY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Monde</French>
+		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HEALTHY]</German>
+		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_HEALTHY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_HEALTHY] en todas las ciudades del mundo</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_HEALTHY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHAPPINESS</Tag>
+		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Monde</French>
+		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHAPPY]</German>
+		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_UNHAPPY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] en todas las ciudades del mundo</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_UNHAPPY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHEALTH</Tag>
+		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHEALTHY]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Monde</French>
+		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHEALTHY]</German>
+		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_UNHEALTHY]</Italian>
+		<Spanish>[ICON_BULLET]+%d1[ICON_UNHEALTHY] en todas las ciudades del mundo</Spanish>
+		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_UNHEALTHY]</Polish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_APOLLO_PROGRAM</Tag>
 		<English>Apollo Program</English>
 		<French>
@@ -36,15 +151,6 @@
 		<Russian>Программа «Аполлон» была амбициозным проектом по отправке человека на Луну. Программа была задумана в конце 1950-х годов официальными лицами Соединенных Штатов, которые были потрясены лидерством Советского Союза в космической гонке. В 1961 году президент Джон Ф. Кеннеди заявил перед объединенным заседанием Конгресса: «Я считаю, что эта страна должна взять на себя обязательство достичь цели до конца этого десятилетия - высадить человека на Луну и благополучно вернуть его на Землю.[PARAGRAPH:1]Есть некоторые предположения о том, действительно ли сам президент Кеннеди верил в проект; некоторые говорят, что у него были серьезные вопросы о стоимости и научной осуществимости, и что его предложение было главным образом уловкой по связям с общественностью, чтобы поднять настроение Америки перед лицом предполагаемой советской космической угрозы. Но проект воспламенил воображение Америки, и работа пошла быстро.[PARAGRAPH:1]Руководителям программы «Аполлон» пришлось преодолеть невероятное количество сложных научных и инженерных проблем, чтобы добиться успеха. Путешествие включало множество отдельных этапов: восхождение с Земли, путешествие с Земли на Луну, спуск на Луну и возвращение на лунную орбиту, за которым следовало путешествие обратно на Землю, а затем спуск на поверхность Земли. Для этого требовалось транспортное средство с множеством различных возможностей, которое оставалось достаточно легким, чтобы его можно было вывести на орбиту с помощью имеющихся в то время ракет. (Проблема была сродни попытке создать комбинированную подводную лодку, вездеход и самолет, который мог бы буксировать Фольксваген «Жук».)[PARAGRAPH:1]Успех программы «Аполлон» и высадка человека на Луну в 1969 году является невероятным свидетельством изобретательности, мужества и настойчивости земной науки и инженеров, проявленных преданными мужчинами и женщинами.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_DISTANCE_MAINT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
-		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione derivanti dalla distanza dal palazzo</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå çà ðàññòîÿíèÿ äî äâîðöà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EDEN</Tag>
 		<English>Eden Project</English>
 		<French>Projet Eden</French>
@@ -67,14 +173,6 @@
 		<Spanish>[ICON_BULLET]Mejora todo el terreno dentro de tus fronteras culturales al siguiente nivel de productividad[NEWLINE][NEWLINE]Technically, the Eden Project is the world's largest greenhouse located near the town of St Austell in England. The complex comprises a number of domes that house plant species from around the world, with each emulating a natural biome. The domes are made out of hundreds of hexagons plus a few pentagons that interconnect the whole construction together; each of these is a transparent cushion made of tough plastic. The first dome emulates a tropical environment, the second a warm temperate, Mediterranean environment.[NEWLINE][NEWLINE]In Civ, the idea is taken a step further as a global attempt to improve the planet. As such, completing the project will improve the terrain in all city controlled areas of your empire. El terreno se mejorará en el siguiente orden:[NEWLINE][NEWLINE]Salar - Dunas - Desierto - Llanura - Pradera - Bosque[NEWLINE][NEWLINE]Hielo - Permagel - Tundra - Pradera[NEWLINE][NEWLINE]Océano - Costa</Spanish>
 		<Polish>[ICON_BULLET]Ulepsza cały teren w granicach kulturowych o jeden poziom[NEWLINE][NEWLINE][NEWLINE]Projekt Eden jest to ogród botaniczny w Wielkiej Brytanii, w hrabstwie Kornwalia, położony 3 km od St Austell – największego miasta hrabstwa, stworzony w wyeksploatowanym wyrobisku kaolinu. Zgromadzono tu 18 tysięcy gatunków roślin z kilku stref klimatycznych świata. Obiekt odwiedza corocznie 1,2 mln osó[NEWLINE][NEWLINE]W Civ, pomysł jest krokiem dalej jako globalna próba, by ulepszyć planetę. Kiedy ukończysz projekt cały teren w granicach kulturowych ulepszy się o jeden poziom. Ulepszenie terenu przebiega tak:[NEWLINE][NEWLINE]Pustynia - Równina - Łąka[NEWLINE][NEWLINE]Lód - Tundra - Łąka[NEWLINE][NEWLINE]Ocean - Wybrzeże</Polish>
 		<Russian>[ICON_BULLET]Óëó÷øàåò âñå òåððèòîðèè âíóòðè êóëüòóðíûõ ãðàíèö[NEWLINE][NEWLINE][NEWLINE][TAB]Технически проект «Эдем» - это самая большая в мире теплица, расположенная недалеко от города Сент-Остелл в Англии. Комплекс состоит из нескольких куполов, в которых обитают растения со всего мира, каждый из которых имитирует естественный биом. Купола состоят из сотен шестиугольников и нескольких пятиугольников, которые соединяют вместе все сооружение; каждая из них представляет собой прозрачную подушку из прочного пластика. Первый купол имитирует тропическую среду, второй - средиземноморскую среду с умеренно теплым климатом.[NEWLINE][NEWLINE][TAB]В Civ4 C2C идея развивается дальше и представляет собой глобальную попытку улучшить планету. Таким образом, завершение проекта улучшит на один уровень ландшафт в пределах культурных границ вашей державы. Улучшения ландшафта происходят по следующей схеме:[NEWLINE][NEWLINE]Ïóñòûíè - Ïîëÿ - Ðàâíèíû - Ëåñà[NEWLINE][NEWLINE]Ñíåãà - Òóíäðû - Ïîëÿ[NEWLINE][NEWLINE]Îêåàí - Ïîáåðåæüå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_ENABLES_NUKES</Tag>
-		<English>Enables Nuclear Weapons for the Player that builds this</English>
-		<French>Permet au joueur l'ayant construit d'obtenir des armes Nucléaires</French>
-		<Italian>Attiva le bombe atomiche per il giocatore che completa questo progetto</Italian>
-		<Polish>Pozwala budować Broń Nuklearną graczowi który to wybudował.</Polish>
-		<Russian>[ICON_BULLET]Îòêðûâàåò âîçìîæíîñòü ïðèìåíåíèÿ ÿäåðíîãî îðóæèÿ (äëÿ âñåõ èãðîêîâ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE</Tag>
@@ -119,35 +217,6 @@
 		<English>Dolly (July 5, 1996 - February 14, 2003), was a female domestic sheep remarkable in being the first mammal to be cloned from an adult somatic cell, using the process of nuclear transfer. She was cloned by Ian Wilmut, Keith Campbell and colleagues at the Roslin Institute in Edinburgh, Scotland. She was born on July 5, 1996 and she lived until the age of six, and was dubbed "the world's most famous sheep" by Scientific American.[PARAGRAPH:2]Dolly was the first clone produced from a cell taken from an adult mammal (the first animal cloned was an Asian carp in China in 1963 by Tong Dizhou). The production of Dolly showed that genes in the nucleus of such a mature differentiated somatic cell are still capable of reverting back to an undifferentiated totipotent state, creating a cell that can then go on to develop into any part of an animal. However, this reprogramming process is not perfect and embryos produced by nuclear transfer often show abnormal development.[PARAGRAPH:2]As a consequence of these difficulties in development, cloning mammals by nuclear transfer is still highly inefficient, with Dolly the only lamb that survived to adulthood from 277 attempts. However, her birth is still recognised as one of the major stepping stones in the development of modern biology. Wilmut, who led the team that created Dolly, announced in 2007 that the nuclear transfer technique may never be sufficiently efficient for use in humans.</English>
 		<Polish>Klonowanie – w potocznym rozumieniu proces tworzenia idealnej kopii z oryginału. W biologii mianem klonu określa się organizmy mające identyczny lub prawie identyczny materiał genetyczny. Klonami są więc organizmy powstałe w procesie rozmnażania wegetatywnego, takie jak kolonie bakterii, jednokomórkowców, odrośla i rozmnóżki roślin etc. Termin klonowanie jest używany w kilku znaczeniach: Klonowanie to proces tworzenia organizmów mających taką samą informację genetyczną jak dawca. Szczególnym przypadkiem jest twinning, czyli powstawanie lub otrzymywanie bliźniąt monozygotycznych, gdzie nie można wyróżnić dawcy. Klonowanie organizmów oznacza procedurę otrzymywania organizmów o takiej samej informacji genetycznej, z reguły poprzez procedurę transferu jądra z komórki somatycznej do komórki jajowej pozbawionej uprzednio jądra. W przypadku klonowania roślin stosuje się procedurę odróżnicowania komórek dawcy do komórek merystematycznych. Klonowanie genów - w genetyce i biologii molekularnej proces wyosobniania genu. Polega na łączeniu fragmentów materiału genetycznego z wektorem molekularnym i ich namnażaniu w innym organizmie. Otrzymuje się w ten sposób wiele kopii tego samego genu. Termin klonowanie genów odnosi się też do identyfikacji genów poprzez wykorzystanie procedury klonowania genów. Jeśli pojedynczy fragment genomu jest przenoszony z jednego wektora do drugiego, taki proces określa się mianem subklonowania. Opanowano obecnie metody klonowania wielu gatunków roślin i zwierząt. W przypadku zwierząt zazwyczaj stosuje się technikę polegającą na przeniesieniu jądra komórki somatycznej pobranej z klonowanego osobnika, do komórki jajowej pozbawionej jądra. Proces ten tworzy funkcjonalną zygotę. Zygota ta może, jeśli się jej na to pozwoli, rozwinąć w żywego osobnika. Dawca komórki jajowej z reguły pochodzi z tego samego gatunku. Transfer jądra do komórki jajowej innego gatunku rzadko jest skuteczny. Klony otrzymane w procesie transferu jądrowego nie są w 100% genetycznie identyczne z dawcami. W trakcie tego procesu wymienia się bowiem tylko materiał genetyczny zawarty w jądrze komórkowym pozostawiając DNA mitochondrialny biorcy. Mitochondrialne DNA ma jednak minimalny wkład w dziedziczenie cech genetycznych.</Polish>
 		<Russian>Долли (5 июля 1996 г. - 14 февраля 2003 г.) была домашней овцой женского пола, ставшая первым млекопитающим, клонированным из взрослой соматической клетки с использованием процесса переноса ядра. Ее клонировали Ян Уилмут, Кейт Кэмпбелл и его коллеги из Института Рослина в Эдинбурге, Шотландия. Она родилась 5 июля 1996 года и дожила до шести лет, и журнал «Scientific American» назвал ее «самой известной овцой в мире».[PARAGRAPH:2]Долли была первым клоном, полученным из клетки взрослого млекопитающего (первым клонированным животным был азиатский карп в Китае в 1963 году Тонг Дичжоу). Производство Долли показало, что гены в ядре такой зрелой дифференцированной соматической клетки все еще способны возвращаться к недифференцированному тотипотентному состоянию, создавая клетку, которая затем может развиваться в любую часть животного. Однако этот процесс перепрограммирования несовершенен, и эмбрионы, полученные путем переноса ядра, часто демонстрируют аномальное развитие.[PARAGRAPH:2]Вследствие этих трудностей в развитии клонирование млекопитающих с помощью переноса ядра по-прежнему крайне неэффективно, и Долли - единственный ягненок, который дожил до взрослого возраста после 277 попыток. Тем не менее, ее рождение по-прежнему считается одним из важнейших этапов развития современной биологии. Уилмут, возглавлявший команду, создавшую Долли, объявил в 2007 году, что метод переноса ядер может никогда не оказаться достаточно эффективным для использования на людях.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_GLOBAL_MAINT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
-		<French>[ICON_BULLET]%D1_MOD%% de coût d'entretien dans toutes les Villes</French>
-		<Italian>[ICON_BULLET]%D1_MOD%% costi di manutenzione in tutte le città</Italian>
-		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]%D1_MOD%% çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_HAPPINESS</Tag>
-		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HAPPY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Joueur</French>
-		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HAPPY]</German>
-		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_HAPPY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_HAPPY] en todas las ciudades del jugador</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_HAPPY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_HEALTH</Tag>
-		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_HEALTHY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Joueur</French>
-		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_HEALTHY]</German>
-		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_HEALTHY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_HEALTHY] en todas las ciudades del jugador</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_HEALTHY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HUBBLE</Tag>
@@ -292,15 +361,6 @@
 		</Spanish>
 		<Polish>Działko Anty-Rakietowe</Polish>
 		<Russian>Ðåëüñîòðîííàÿ ÏÐÎ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_NUM_CITIES_MAINT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
-		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione dal numero di città</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_SDI</Tag>
@@ -538,6 +598,14 @@
 		<Russian>ÊÊ - Êðèîìîäóëü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROJECT_SS_STASIS_CHAMBER_PEDIA</Tag>
+		<English>With a journey predicted to take decades, if not centuries, one of the most important considerations of the engineers was the aging of the crew. Recent advances in cryogenics and chemical therapy have enabled scientists to chemically slow the metabolic process to a virtual standstill, which enables the scientists to then deep freeze the body without harm. Sensors regulate the zero-oxygen environment to ensure that the colonists will be kept as safe as possible, and a special warming system utilizing broad spectrum electromagnetic radiation is used to quickly and safely restore warmth to the body.[PARAGRAPH:1]The radiation also has the effect of breaking down the chemical agents that slow the colonists' metabolism, making them able to be thawed out in a matter of seconds and fully aware in a little over a minute. This is essential to the survival of the craft in a situation in which the computer is unable to determine a course of action and a pilot or navigator must be roused to assess the danger, or in a situation in which a technician must be roused to effect repairs.[PARAGRAPH:1]This system has been used very effectively in tests on pigs and monkeys, and it has been shown that such animals in deep cryogenic sleep have been able to be roused after three years with absolutely no visible side effects. A couple of military volunteers have also been frozen to test the system, but only for a matter of weeks. Although scientists have not yet tested the effects of long-term freezing on human beings, they are completely confident that there will not be any problems with the Stasis Chamber on the Space Ship.[PARAGRAPH:1]Completely confident.</English>
+		<French>Le voyage devant durer des décennies, voire des siècles, l'une des considérations les plus importantes des ingénieurs tenait au vieillissement de l'équipage. Les récentes avancées réalisées dans le domaine de la cryogénie et des thérapies chimiques ont permis aux ingénieurs de ralentir chimiquement le processus métabolique et même d'aboutir pratiquement à un arrêt virtuel, ce qui permet ensuite aux ingénieurs de congeler les corps sans les endommager. Des détecteurs assurent un environnement sans oxygène afin de garantir le fait que les colons puissent rester en bon état le plus longtemps possible. Un système spécial de réchauffement utilisant un large spectre de radiation électromagnétique pourra être utilisé pour réchauffer les corps rapidement et en toute sécurité. [PARAGRAPH:1]La radiation a aussi pour effet de décomposer les agents chimiques qui ralentissent le métabolisme des colons, leur permettant d'être décongelés en une fraction de seconde et de reprendre parfaitement connaissance en un peu plus d'une minute. Cet aspect est essentiel à la survie de l'équipage dans le cas où l'ordinateur est incapable de déterminer ce qui se passe et qu'un pilote ou navigateur doit être réveillé pour apprécier un danger, ou dans la situation où un technicien doit être réveillé pour effectuer des réparations. [PARAGRAPH:1]Ce système a été testé avec succès sur des cochons et des singes, ces expériences ayant montré que ces animaux en profond sommeil cryogénique pouvaient se réveiller trois ans plus tard, ne subissant aucun effet secondaire visible. Un couple de volontaires militaires a également été congelé pour tester le système, mais seulement pendant quelques semaines. Si les scientifiques n'ont pas encore testé les effets à long terme de la congélation sur des êtres humains, ils sont absolument certains qu'il n'y aura aucun problème avec le module de stase du vaisseau spatial.</French>
+		<German>Angesichts einer Reise, die voraussichtlich Jahrzehnte, wenn nicht gar Jahrhunderte dauern sollte, war eines der größten Probleme der Ingenieure der Alterungsprozess der Besatzung. Neue Erkenntnisse auf dem Gebiet der Tieftemperaturtechnik und innovative chemische Therapien ermöglichten es den Wissenschaftlern, den Stoffwechsel praktisch zum Erliegen zu bringen, wodurch ein menschlicher Körper gefahrlos tiefgefroren werden kann. Die sauerstofflose Umgebungsatmosphäre in den Stasekammern wird mit Hilfe empfindlicher Sensoren reguliert, die größtmögliche Sicherheit für die "eingefrorenen" Kolonisten gewährleisten. Zur schnellen und sicheren Wiederherstellung der normalen Körpertemperatur dient ein spezielles Auftausystem, bei dem ein Breitbandspektrum elektromagnetischer Strahlung zum Einsatz kommt. [PARAGRAPH:1]Die Strahlung bewirkt, dass die chemischen Wirkstoffe, die den Stoffwechsel der Kolonisten verlangsamen, aufgespaltet werden. Dank dieses Verfahrens können die Menschen innerhalb von Sekunden aufgetaut werden und sind nach einem Zeitraum von etwas über einer Minute wieder vollkommen wohlauf. Dieser Aspekt der Stasetechnologie ist besonders wichtig für das Überleben des Raumfahrzeugs, z.B. wenn eine Situation eintritt, in der der Computer das geeignete Vorgehen nicht eigenständig einschätzen kann, so dass ein Pilot oder Navigator geweckt werden muss, um sich der Sache anzunehmen. Auch kann es im Laufe der Reise notwendig werden, einen Techniker zu wecken, um Reparaturen durchzuführen. [PARAGRAPH:1]Das Stasesystem wurde sehr erfolgreich an Schweinen und Affen getestet: Es hat sich gezeigt, dass die Tiere nach drei Jahren im Tiefkühlschlaf ohne sichtbare Nebeneffekte wieder geweckt werden konnten. Außerdem wurden auch einige freiwillige Militärbedienstete eingefroren, allerdings nur für ein paar Wochen. Obwohl man die Auswirkungen der Langzeitgefrierung auf den Menschen bisher noch nicht restlos erforschen konnte, sind die verantwortlichen Wissenschaftler absolut zuversichtlich, dass es keinerlei Probleme mit den Stasekammern auf dem Raumschiff geben wird [PARAGRAPH:1]- gar keine.</German>
+		<Italian>In un viaggio che, secondo le previsioni, dovrebbe durare decenni, se non secoli, una delle considerazioni più importanti degli ingegneri è stata l'invecchiamento dell'equipaggio. Le recenti scoperte nella criogenia e nella chemioterapia hanno consentito agli scienziati di rallentare chimicamente il processo metabolico, fino ad arrestarlo, cosa che consente di congelare il corpo senza danneggiarlo. I sensori regolano l'ambiente senza ossigeno, per assicurare che i coloni siano mantenuti al sicuro il più possibile, mentre un sistema speciale di riscaldamento che si avvale di radiazioni elettromagnetiche ad ampio spettro è usato per ripristinare velocemente e senza pericolo il calore del corpo.[PARAGRAPH:1]La radiazione ha anche l'effetto di eliminare gli agenti chimici che rallentano il metabolismo dei coloni, rendendo possibile un loro riscaldamento nel giro di qualche secondo e un loro completo risveglio in poco più di un minuto. Si tratta di un processo fondamentale per la sopravvivenza dell'equipaggio, in una situazione in cui il computer non è in grado di determinare una serie di azioni e si rende necessario un pilota o un navigatore per valutare il pericolo, oppure in una situazione in cui serve un tecnico per effettuare delle riparazioni.[PARAGRAPH:1]Questo sistema è stato usato in modo molto efficace nei test sui maiali e sulle scimmie e ha dimostrato che questi animali, avvolti in un profondo sonno criogenico, sono stati scongelati dopo tre anni senza nessun effetto collaterale visibile. Anche un paio di volontari militari sono stati congelati per provare il sistema, ma solo per qualche settimana. Malgrado gli scienziati non abbiano ancora verificato gli effetti del congelamento a lungo termine sugli esseri umani, sono assolutamente fiduciosi sul fatto che non sorgeranno problemi con la camera di stasi sull'astronave.[PARAGRAPH:1]Assolutamente fiduciosi.</Italian>
+		<Spanish>Con un viaje con una duración prevista de décadas, si no siglos, una de las consideraciones más importantes de los diseñadores fue el envejecimiento de la tripulación. Ciertos avances recientes en los campos de la criogenia y la terapia química permitieron ralentizar químicamente el proceso metabólico hasta casi detenerlo, lo que posibilitó que los científicos pudieran ultracongelar los cuerpos sin dañarlos. Hay sensores que se encargan de regular el ambiente al vacío para garantizar que los colonos estén tan seguros como sea posible, y un sistema de calefacción que utiliza radiación electromagnética de amplio espectro para devolver el calor al cuerpo de manera rápida y segura.[PARAGRAPH:1]La radiación también se encarga de descomponer los agentes químicos que ralentizan el metabolismo de los colonos, permitiendo que sean descongelados en cuestión de segundos y estén plenamente conscientes en menos de un minuto. Esto es esencial para la supervivencia de la nave en una situación en la que el ordenador no pueda determinar las acciones a emprender y haya que despertar al piloto o navegante para evaluar el peligro, o a un ingeniero para llevar a cabo las reparaciones.[PARAGRAPH:1]Este sistema ha sido probado con gran efectividad en cerdos y monos, y se ha demostrado que esos animales pueden salir de un profundo sueño criogénico sin ningún efecto secundario constatable. También se ha congelado a un par de voluntarios del ejército para probar el sistema, pero solo durante unas semanas. Aunque los científicos todavía no han puesto a prueba los efectos de la congelación a largo plazo, están completamente seguros de que no puede haber ningún problema con la cámara criogénica de la nave.[PARAGRAPH:1]Completamente seguros.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_SS_THRUSTERS</Tag>
 		<English>SS Thrusters</English>
 		<French>
@@ -606,73 +674,5 @@
 		<Italian>Internet è un sistema di reti che collega computer, telefonia e satelliti. Questi computer parlano lo stesso linguaggio per comunicare, consentendo una rapida diffusione delle informazioni. Chiunque in possesso di un computer e un modem (o un altro sistema di connessione), può utilizzare Internet per ricercare informazioni, pubblicare notizie e opinioni o più semplicemente giocare con altre persone in una sorta di realtà virtuale. Negli ultimi anni, la diffusione di Internet ha cambiato drasticamente il modo nel quale cercare e diffondere informazioni: il potenziale della rete è inimmaginabile.[PARAGRAPH:1]Internet è stata concepita nei primi anni '60, in un periodo in cui una discussione del genere era puramente teorica, poiché i computer non sapevano ancora comunicare tra loro; inoltre era il culmine della Guerra Fredda e nessuno si prodigò in necessaria cooperazione internazionale. Ma l'idea aveva molti sostenitori, specialmente nelle università e nei laboratori di ricerca disseminati negli Stati Uniti; nel 1969, quattro computer dislocati in altrettante zone della nazione entrarono in comunicazione tra loro mediante la rete ARPA-Net.[PARAGRAPH:1]Verso la metà degli anni '80, il cuore della rete pulsava, i protocolli di comunicazione vennero determinati: era nato il World Wide Web. Nel 1990 venne scritto il primo linguaggio per Internet (http) e pubblicato il primo browser.[PARAGRAPH:1]Internet rappresenta uno dei pochi grandi progetti realizzati principalmente da individui piuttosto che da corporazioni o associazioni religiose e governative. Alcune parti della rete vennero create e fondate dal Dipartimento della Difesa degli Stati Uniti d'America, ma il resto arrivò organicamente, pezzo per pezzo, grazie al lavoro di professori, scienziati e ingegneri che pensarono che la "società dell'informazione" fosse un obiettivo per cui valesse la pena lavorare, anche senza fini personali.</Italian>
 		<Spanish>Internet es una red de ordenadores unidos por cable, telefonía y satélite, que comparten un mismo lenguaje, lo que permite una rápida transferencia de información. Cualquiera que tenga un ordenador y un módem (u otro medio de conexión) puede utilizar Internet para recabar información, enviar noticias y opiniones o buscar gente de mentalidad afín en galerías de realidad virtual. En sus pocos años de existencia, Internet ha cambiado drásticamente las técnicas de recopilación de información, y el potencial de la red no se conoce todavía.[PARAGRAPH:1]Internet se concibió por primera vez en la década de los 60. Por aquel entonces el debate era puramente teórico, puesto que los ordenadores, las conexiones y el lenguaje común no existían. Si tenemos en cuenta que era el momento álgido de la Guerra Fría, tampoco existía el necesario clima de cooperación internacional. Pero la idea tenía muchos partidarios, especialmente en las universidades y laboratorios de EE. UU., y en 1969, cuatro ordenadores situados en puntos diferentes del país pudieron comunicarse por medio de ARPA-Net.[PARAGRAPH:1]Hacia mediados de 1980, el núcleo de la red estaba en funcionamiento, se habían establecido los protocolos de comunicación e Internet iniciaba su andadura. A principios de los 90, se creó el primer lenguaje de Internet (http) y se publicó el primer navegador. Había nacido la World Wide Web.[PARAGRAPH:1]Hoy en día, Internet es uno de los escasos ejemplos existentes de un proyecto importante construido en gran medida por individuos y no por organizaciones como grandes empresas, religiones o gobiernos. Es cierto que diversas partes de la red fueron creadas y financiadas por el Departamento de Defensa de EE. UU., pero en su conjunto nació de forma orgánica, construida pieza a pieza por profesores, científicos e ingenieros, no tanto por razones de interés personal como por amor a la idea de una "sociedad de la información".</Spanish>
 		<Russian>Интернет - это компьютерная сеть, соединенная проводом, телефонией и спутниковой связью. Эти компьютеры используют один и тот же язык, что позволяет быстро передавать информацию. Любой, у кого есть компьютер и модем (или другое подключение), может использовать Интернет для сбора информации, передачи новостей и мнений или для стрельбы по другим единомышленникам в галереях виртуальной реальности. За несколько лет своего существования Интернет кардинально изменил способ сбора и передачи информации, и невозможно предугадать весь потенциал сети.[PARAGRAPH:1]Интернет зародился в начале 1960-х годов. В то время дискуссия была чисто теоретической, поскольку компьютеров, соединений и общего языка еще не существовало. Учитывая, что это был разгар «холодной войны», не было и необходимого международного сотрудничества. Но у этой идеи было много сторонников, особенно в университетах и ??исследовательских лабораториях США, и к 1969 году четыре компьютера, расположенные по всей стране, поддерживали связь друг с другом через ARPA-Net.[PARAGRAPH:1]К середине 1980-х ядро сети было готово, протоколы связи были определены, и Интернет заработал. К началу 1990-х был написан первый язык Интернета (http) и опубликован первый браузер. Так родилась всемирная паутина.[PARAGRAPH:1]Интернет сегодня является одним из немногих великих проектов, созданных в основном отдельными людьми, а не организацией, такой как корпорация, религия или правительство. Различные части сети действительно были созданы и профинансированы Министерством обороны США, но большая часть из них объединилась органически, построена по частям профессорами, учеными и инженерами, возможно, не столько для личной выгоды, сколько потому, что они считали "информационное общество" - это идея, к которой стоит стремиться.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHAPPY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Joueur</French>
-		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHAPPY]</German>
-		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_UNHAPPY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] en todas las ciudades del jugador</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_UNHAPPY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_UNHEALTH</Tag>
-		<English>[ICON_BULLET]All of the player's cities receive +%d1 [ICON_UNHEALTHY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Joueur</French>
-		<German>[ICON_BULLET]Alle Städte des Spielers erhalten +%d1 [ICON_UNHEALTHY]</German>
-		<Italian>[ICON_BULLET]Tutte le città del giocatore ricevono +%d1 [ICON_UNHEALTHY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_UNHEALTHY] en todas las ciudades del jugador</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta gracza otrzymują +%d1 [ICON_UNHEALTHY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà èãðîêà ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_WORLD_HAPPINESS</Tag>
-		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HAPPY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_HAPPY] dans toutes les Villes du Monde</French>
-		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HAPPY]</German>
-		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_HAPPY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_HAPPY] en todas las ciudades del mundo</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_HAPPY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_WORLD_HEALTH</Tag>
-		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_HEALTHY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_HEALTHY] dans toutes les Villes du Monde</French>
-		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_HEALTHY]</German>
-		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_HEALTHY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_HEALTHY] en todas las ciudades del mundo</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_HEALTHY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHAPPY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_UNHAPPY] dans toutes les Villes du Monde</French>
-		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHAPPY]</German>
-		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_UNHAPPY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_UNHAPPY] en todas las ciudades del mundo</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_UNHAPPY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECTHELP_WORLD_UNHEALTH</Tag>
-		<English>[ICON_BULLET]All cities in the world receive +%d1 [ICON_UNHEALTHY]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_UNHEALTHY] dans toutes les Villes du Monde</French>
-		<German>[ICON_BULLET]Alle Städte der Welt erhalten +%d1 [ICON_UNHEALTHY]</German>
-		<Italian>[ICON_BULLET]Tutte le città nel mondo ricevono +%d1 [ICON_UNHEALTHY]</Italian>
-		<Spanish>[ICON_BULLET]+%d1[ICON_UNHEALTHY] en todas las ciudades del mundo</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie miasta na planecie otrzymują +%d1 [ICON_UNHEALTHY]</Polish>
-		<Russian>[ICON_BULLET]Âñå ãîðîäà â ìèðå ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECT_SS_STASIS_CHAMBER_PEDIA</Tag>
-		<English>With a journey predicted to take decades, if not centuries, one of the most important considerations of the engineers was the aging of the crew. Recent advances in cryogenics and chemical therapy have enabled scientists to chemically slow the metabolic process to a virtual standstill, which enables the scientists to then deep freeze the body without harm. Sensors regulate the zero-oxygen environment to ensure that the colonists will be kept as safe as possible, and a special warming system utilizing broad spectrum electromagnetic radiation is used to quickly and safely restore warmth to the body.[PARAGRAPH:1]The radiation also has the effect of breaking down the chemical agents that slow the colonists' metabolism, making them able to be thawed out in a matter of seconds and fully aware in a little over a minute. This is essential to the survival of the craft in a situation in which the computer is unable to determine a course of action and a pilot or navigator must be roused to assess the danger, or in a situation in which a technician must be roused to effect repairs.[PARAGRAPH:1]This system has been used very effectively in tests on pigs and monkeys, and it has been shown that such animals in deep cryogenic sleep have been able to be roused after three years with absolutely no visible side effects. A couple of military volunteers have also been frozen to test the system, but only for a matter of weeks. Although scientists have not yet tested the effects of long-term freezing on human beings, they are completely confident that there will not be any problems with the Stasis Chamber on the Space Ship.[PARAGRAPH:1]Completely confident.</English>
-		<French>Le voyage devant durer des décennies, voire des siècles, l'une des considérations les plus importantes des ingénieurs tenait au vieillissement de l'équipage. Les récentes avancées réalisées dans le domaine de la cryogénie et des thérapies chimiques ont permis aux ingénieurs de ralentir chimiquement le processus métabolique et même d'aboutir pratiquement à un arrêt virtuel, ce qui permet ensuite aux ingénieurs de congeler les corps sans les endommager. Des détecteurs assurent un environnement sans oxygène afin de garantir le fait que les colons puissent rester en bon état le plus longtemps possible. Un système spécial de réchauffement utilisant un large spectre de radiation électromagnétique pourra être utilisé pour réchauffer les corps rapidement et en toute sécurité. [PARAGRAPH:1]La radiation a aussi pour effet de décomposer les agents chimiques qui ralentissent le métabolisme des colons, leur permettant d'être décongelés en une fraction de seconde et de reprendre parfaitement connaissance en un peu plus d'une minute. Cet aspect est essentiel à la survie de l'équipage dans le cas où l'ordinateur est incapable de déterminer ce qui se passe et qu'un pilote ou navigateur doit être réveillé pour apprécier un danger, ou dans la situation où un technicien doit être réveillé pour effectuer des réparations. [PARAGRAPH:1]Ce système a été testé avec succès sur des cochons et des singes, ces expériences ayant montré que ces animaux en profond sommeil cryogénique pouvaient se réveiller trois ans plus tard, ne subissant aucun effet secondaire visible. Un couple de volontaires militaires a également été congelé pour tester le système, mais seulement pendant quelques semaines. Si les scientifiques n'ont pas encore testé les effets à long terme de la congélation sur des êtres humains, ils sont absolument certains qu'il n'y aura aucun problème avec le module de stase du vaisseau spatial.</French>
-		<German>Angesichts einer Reise, die voraussichtlich Jahrzehnte, wenn nicht gar Jahrhunderte dauern sollte, war eines der größten Probleme der Ingenieure der Alterungsprozess der Besatzung. Neue Erkenntnisse auf dem Gebiet der Tieftemperaturtechnik und innovative chemische Therapien ermöglichten es den Wissenschaftlern, den Stoffwechsel praktisch zum Erliegen zu bringen, wodurch ein menschlicher Körper gefahrlos tiefgefroren werden kann. Die sauerstofflose Umgebungsatmosphäre in den Stasekammern wird mit Hilfe empfindlicher Sensoren reguliert, die größtmögliche Sicherheit für die "eingefrorenen" Kolonisten gewährleisten. Zur schnellen und sicheren Wiederherstellung der normalen Körpertemperatur dient ein spezielles Auftausystem, bei dem ein Breitbandspektrum elektromagnetischer Strahlung zum Einsatz kommt. [PARAGRAPH:1]Die Strahlung bewirkt, dass die chemischen Wirkstoffe, die den Stoffwechsel der Kolonisten verlangsamen, aufgespaltet werden. Dank dieses Verfahrens können die Menschen innerhalb von Sekunden aufgetaut werden und sind nach einem Zeitraum von etwas über einer Minute wieder vollkommen wohlauf. Dieser Aspekt der Stasetechnologie ist besonders wichtig für das Überleben des Raumfahrzeugs, z.B. wenn eine Situation eintritt, in der der Computer das geeignete Vorgehen nicht eigenständig einschätzen kann, so dass ein Pilot oder Navigator geweckt werden muss, um sich der Sache anzunehmen. Auch kann es im Laufe der Reise notwendig werden, einen Techniker zu wecken, um Reparaturen durchzuführen. [PARAGRAPH:1]Das Stasesystem wurde sehr erfolgreich an Schweinen und Affen getestet: Es hat sich gezeigt, dass die Tiere nach drei Jahren im Tiefkühlschlaf ohne sichtbare Nebeneffekte wieder geweckt werden konnten. Außerdem wurden auch einige freiwillige Militärbedienstete eingefroren, allerdings nur für ein paar Wochen. Obwohl man die Auswirkungen der Langzeitgefrierung auf den Menschen bisher noch nicht restlos erforschen konnte, sind die verantwortlichen Wissenschaftler absolut zuversichtlich, dass es keinerlei Probleme mit den Stasekammern auf dem Raumschiff geben wird [PARAGRAPH:1]- gar keine.</German>
-		<Italian>In un viaggio che, secondo le previsioni, dovrebbe durare decenni, se non secoli, una delle considerazioni più importanti degli ingegneri è stata l'invecchiamento dell'equipaggio. Le recenti scoperte nella criogenia e nella chemioterapia hanno consentito agli scienziati di rallentare chimicamente il processo metabolico, fino ad arrestarlo, cosa che consente di congelare il corpo senza danneggiarlo. I sensori regolano l'ambiente senza ossigeno, per assicurare che i coloni siano mantenuti al sicuro il più possibile, mentre un sistema speciale di riscaldamento che si avvale di radiazioni elettromagnetiche ad ampio spettro è usato per ripristinare velocemente e senza pericolo il calore del corpo.[PARAGRAPH:1]La radiazione ha anche l'effetto di eliminare gli agenti chimici che rallentano il metabolismo dei coloni, rendendo possibile un loro riscaldamento nel giro di qualche secondo e un loro completo risveglio in poco più di un minuto. Si tratta di un processo fondamentale per la sopravvivenza dell'equipaggio, in una situazione in cui il computer non è in grado di determinare una serie di azioni e si rende necessario un pilota o un navigatore per valutare il pericolo, oppure in una situazione in cui serve un tecnico per effettuare delle riparazioni.[PARAGRAPH:1]Questo sistema è stato usato in modo molto efficace nei test sui maiali e sulle scimmie e ha dimostrato che questi animali, avvolti in un profondo sonno criogenico, sono stati scongelati dopo tre anni senza nessun effetto collaterale visibile. Anche un paio di volontari militari sono stati congelati per provare il sistema, ma solo per qualche settimana. Malgrado gli scienziati non abbiano ancora verificato gli effetti del congelamento a lungo termine sugli esseri umani, sono assolutamente fiduciosi sul fatto che non sorgeranno problemi con la camera di stasi sull'astronave.[PARAGRAPH:1]Assolutamente fiduciosi.</Italian>
-		<Spanish>Con un viaje con una duración prevista de décadas, si no siglos, una de las consideraciones más importantes de los diseñadores fue el envejecimiento de la tripulación. Ciertos avances recientes en los campos de la criogenia y la terapia química permitieron ralentizar químicamente el proceso metabólico hasta casi detenerlo, lo que posibilitó que los científicos pudieran ultracongelar los cuerpos sin dañarlos. Hay sensores que se encargan de regular el ambiente al vacío para garantizar que los colonos estén tan seguros como sea posible, y un sistema de calefacción que utiliza radiación electromagnética de amplio espectro para devolver el calor al cuerpo de manera rápida y segura.[PARAGRAPH:1]La radiación también se encarga de descomponer los agentes químicos que ralentizan el metabolismo de los colonos, permitiendo que sean descongelados en cuestión de segundos y estén plenamente conscientes en menos de un minuto. Esto es esencial para la supervivencia de la nave en una situación en la que el ordenador no pueda determinar las acciones a emprender y haya que despertar al piloto o navegante para evaluar el peligro, o a un ingeniero para llevar a cabo las reparaciones.[PARAGRAPH:1]Este sistema ha sido probado con gran efectividad en cerdos y monos, y se ha demostrado que esos animales pueden salir de un profundo sueño criogénico sin ningún efecto secundario constatable. También se ha congelado a un par de voluntarios del ejército para probar el sistema, pero solo durante unas semanas. Aunque los científicos todavía no han puesto a prueba los efectos de la congelación a largo plazo, están completamente seguros de que no puede haber ningún problema con la cámara criogénica de la nave.[PARAGRAPH:1]Completamente seguros.</Spanish>
 	</TEXT>
 </Civ4GameText>

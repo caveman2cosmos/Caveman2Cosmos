@@ -10,7 +10,7 @@
 class CyCity;
 class CvArea;
 
-class CyArea 
+class CyArea
 {
 public:
 	CyArea();
@@ -33,21 +33,21 @@ public:
 	int getNumStartingPlots() const;
 	bool isWater() const;
 
-	int getUnitsPerPlayer(int /*PlayerTypes*/ eIndex) const;
-	int getCitiesPerPlayer(int /*PlayerTypes*/ eIndex) const;
-	int getBuildingHappiness(int /*PlayerTypes*/ eIndex) const;
-	int getPower(int /*PlayerTypes*/ eIndex) const;
-	int getBestFoundValue(int /*PlayerTypes*/ eIndex) const;
+	int getUnitsPerPlayer(PlayerTypes eIndex) const;
+	int getCitiesPerPlayer(PlayerTypes eIndex) const;
+	int getBuildingHappiness(PlayerTypes eIndex) const;
+	int getPower(PlayerTypes eIndex) const;
+	int getBestFoundValue(PlayerTypes eIndex) const;
 
-	bool isCleanPower(int /*TeamTypes*/ eIndex) const;
-	bool isBorderObstacle(int /*TeamTypes*/ eIndex) const;
+	bool isCleanPower(TeamTypes eIndex) const;
+	bool isBorderObstacle(TeamTypes eIndex) const;
 
-	int getYieldRateModifier(int /*PlayerTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const;
+	int getYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2) const;
 
-	int getNumBonuses(int /*BonusTypes*/ eBonus) const;
+	int getNumBonuses(BonusTypes eBonus) const;
 	int getNumTotalBonuses() const;
 
-	void changeCleanPowerCount(int /*TeamTypes*/ eIndex, int iChange) const;
+	void changeCleanPowerCount(TeamTypes eIndex, int iChange) const;
 
 protected:
 	CvArea* m_pArea;

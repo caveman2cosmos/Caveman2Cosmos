@@ -72,7 +72,7 @@ private:
 	bool launchNameListPopup(CvPopup* pPopup, CvPopupInfo &info);
 	// ls612: Added City Go-To popup.
 	bool launchGoToCityPopup(CvPopup* pPopup, CvPopupInfo &info);
-	
+
 /************************************************************************************************/
 /* Afforess	                  Start		 09/19/10                                               */
 /*                                                                                              */

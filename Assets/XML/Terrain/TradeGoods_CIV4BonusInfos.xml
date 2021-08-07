@@ -5,7 +5,7 @@
 			<Type>BONUS_CARVED_EMU_EGGS</Type>
 			<Description>TXT_KEY_BONUS_CARVED_EMU_EGGS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARVED_EMU_EGGS</ArtDefineTag>
 			<TechReveal>TECH_PICTOGRAPHS</TechReveal>
 			<TechCityTrade>TECH_PICTOGRAPHS</TechCityTrade>
@@ -16,7 +16,7 @@
 			<Type>BONUS_CRYSTAL_GLASSWARE</Type>
 			<Description>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CRYSTAL_GLASSWARE</ArtDefineTag>
 			<TechReveal>TECH_LEAD_GLASS</TechReveal>
 			<TechCityTrade>TECH_LEAD_GLASS</TechCityTrade>
@@ -27,7 +27,7 @@
 			<Type>BONUS_FAKE_GEMS</Type>
 			<Description>TXT_KEY_BONUS_FAKE_GEMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_FAKE_GEMS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FAKE_GEMS</ArtDefineTag>
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
@@ -38,7 +38,7 @@
 			<Type>BONUS_FINE_STONEWARE</Type>
 			<Description>TXT_KEY_BONUS_FINE_STONEWARE</Description>
 			<Civilopedia>TXT_KEY_BONUS_FINE_STONEWARE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FINE_STONEWARE</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
@@ -49,7 +49,7 @@
 			<Type>BONUS_HAWAIIAN_SURFBOARDS</Type>
 			<Description>TXT_KEY_BONUS_HAWAIIAN_SURFBOARDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HAWAIIAN_SURFBOARDS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HAWAIIAN_SURFBOARDS</ArtDefineTag>
 			<TechReveal>TECH_MARTIAL_ARTS</TechReveal>
 			<TechCityTrade>TECH_MARTIAL_ARTS</TechCityTrade>
@@ -60,7 +60,7 @@
 			<Type>BONUS_HIT_MOVIES</Type>
 			<Description>TXT_KEY_BONUS_HIT_MOVIES</Description>
 			<Civilopedia>TXT_KEY_BONUS_HIT_MOVIES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIT_MOVIES</ArtDefineTag>
 			<TechReveal>TECH_MOTION_PICTURES</TechReveal>
 			<TechCityTrade>TECH_MOTION_PICTURES</TechCityTrade>
@@ -71,7 +71,7 @@
 			<Type>BONUS_HIT_MUSICALS</Type>
 			<Description>TXT_KEY_BONUS_HIT_MUSICALS</Description>
 			<Civilopedia>TXT_KEY_BONUS_HIT_MUSICALS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIT_MUSICALS</ArtDefineTag>
 			<TechReveal>TECH_INCANDESCENT_LIGHTING</TechReveal>
 			<TechCityTrade>TECH_INCANDESCENT_LIGHTING</TechCityTrade>
@@ -82,7 +82,7 @@
 			<Type>BONUS_HIT_SINGLES</Type>
 			<Description>TXT_KEY_BONUS_HIT_SINGLES</Description>
 			<Civilopedia>TXT_KEY_BONUS_HIT_SINGLES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIT_SINGLES</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
@@ -93,7 +93,7 @@
 			<Type>BONUS_JADE_DEATH_MASKS</Type>
 			<Description>TXT_KEY_BONUS_JADE_DEATH_MASKS</Description>
 			<Civilopedia>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JADE_DEATH_MASKS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
@@ -104,7 +104,7 @@
 			<Type>BONUS_LIANGZHU_JADES</Type>
 			<Description>TXT_KEY_BONUS_LIANGZHU_JADES</Description>
 			<Civilopedia>TXT_KEY_BONUS_LIANGZHU_JADES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LIANGZHU_JADES</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
@@ -115,7 +115,7 @@
 			<Type>BONUS_MING_VASE</Type>
 			<Description>TXT_KEY_BONUS_MING_VASE</Description>
 			<Civilopedia>TXT_KEY_BONUS_MING_VASE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MING_VASE</ArtDefineTag>
 			<TechReveal>TECH_FREE_ARTISTRY</TechReveal>
 			<TechCityTrade>TECH_FREE_ARTISTRY</TechCityTrade>
@@ -126,7 +126,7 @@
 			<Type>BONUS_OLMEC_JADE_FIGURINES</Type>
 			<Description>TXT_KEY_BONUS_OLMEC_JADE_FIGURINES</Description>
 			<Civilopedia>TXT_KEY_BONUS_OLMEC_JADE_FIGURINES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OLMEC_JADE_FIGURINES</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
@@ -159,7 +159,7 @@
 			<Type>BONUS_RED_AND_BLACK_CERAMICS</Type>
 			<Description>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS</Description>
 			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK_CERAMICS</ArtDefineTag>
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
@@ -170,7 +170,7 @@
 			<Type>BONUS_SHANG_JADE_RITUAL_ITEMS</Type>
 			<Description>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHANG_JADE_RITUAL_ITEMS</ArtDefineTag>
 			<TechReveal>TECH_SACRIFICE_CULT</TechReveal>
 			<TechCityTrade>TECH_SACRIFICE_CULT</TechCityTrade>
@@ -181,7 +181,7 @@
 			<Type>BONUS_TERRA_SIGILLATA</Type>
 			<Description>TXT_KEY_BONUS_TERRA_SIGILLATA</Description>
 			<Civilopedia>TXT_KEY_BONUS_TERRA_SIGILLATA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TERRA_SIGILLATA</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
@@ -192,7 +192,7 @@
 			<Type>BONUS_WINE_CHAMPAGNE</Type>
 			<Description>TXT_KEY_BONUS_WINE_CHAMPAGNE</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WINE_CHAMPAGNE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
@@ -203,7 +203,7 @@
 			<Type>BONUS_WINE_VINTAGE_RED</Type>
 			<Description>TXT_KEY_BONUS_WINE_VINTAGE_RED</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_RED</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
@@ -215,7 +215,7 @@
 			<Type>BONUS_WINE_VINTAGE_WHITE</Type>
 			<Description>TXT_KEY_BONUS_WINE_VINTAGE_WHITE</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_WHITE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>

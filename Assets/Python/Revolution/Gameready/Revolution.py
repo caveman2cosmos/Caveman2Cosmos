@@ -2048,7 +2048,7 @@ class Revolution:
 			if (pCity.getRevolutionCounter() == 0
 			and revIdx > cityThreshold * self.revReadyDividend / self.revReadyDivisor
 			and prevRevIdx > cityThreshold * self.revReadyDividend / self.revReadyDivisor
-			): 
+			):
 				revReadyCities.append(pCity) # City meets revolution ready criteria
 
 			RevData.updateCityVal(pCity, 'PrevRevIndex', revIdx)
@@ -3010,7 +3010,7 @@ class Revolution:
 							relCities = []
 							for city in revCities:
 								if city.isHasReligion(stateRel):
-									if self.LOG_DEBUG: 
+									if self.LOG_DEBUG:
 										print "[REV] %s has state religion" % city.getName()
 									relCities.append(city)
 

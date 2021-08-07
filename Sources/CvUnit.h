@@ -304,17 +304,14 @@ public:
 class TerrainKeyedInfo
 {
 public:
-	TerrainKeyedInfo() :	m_iTerrainProtected(0),
-							m_iTerrainDoubleMoveCount(0),
-							m_iExtraTerrainAttackPercent(0),
-							m_iExtraTerrainDefensePercent(0),
-							m_iTerrainWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraTerrainWorkPercent(0),
-							m_iExtraWithdrawOnTerrainType(0)
-	{
-	}
+	TerrainKeyedInfo() :
+		m_iTerrainProtected(0),
+		m_iTerrainDoubleMoveCount(0),
+		m_iExtraTerrainAttackPercent(0),
+		m_iExtraTerrainDefensePercent(0),
+		m_iExtraTerrainWorkPercent(0),
+		m_iExtraWithdrawOnTerrainType(0)
+	{ }
 
 	bool Empty() const
 	{
@@ -322,7 +319,6 @@ public:
 			m_iTerrainDoubleMoveCount == 0 &&
 			m_iExtraTerrainAttackPercent == 0 &&
 			m_iExtraTerrainDefensePercent == 0 &&
-			m_iTerrainWorkPercent == 0 &&
 			m_iExtraTerrainWorkPercent == 0 &&
 			m_iExtraWithdrawOnTerrainType == 0);
 	}
@@ -331,10 +327,6 @@ public:
 	int	m_iTerrainDoubleMoveCount;
 	int	m_iExtraTerrainAttackPercent;
 	int	m_iExtraTerrainDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iTerrainWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraTerrainWorkPercent;
 	int m_iExtraWithdrawOnTerrainType;
 };
@@ -342,23 +334,19 @@ public:
 class FeatureKeyedInfo
 {
 public:
-	FeatureKeyedInfo() :	m_iFeatureDoubleMoveCount(0),
-							m_iExtraFeatureAttackPercent(0),
-							m_iExtraFeatureDefensePercent(0),
-							m_iFeatureWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraFeatureWorkPercent(0),
-							m_iExtraWithdrawOnFeatureType(0)
-	{
-	}
+	FeatureKeyedInfo() :
+		m_iFeatureDoubleMoveCount(0),
+		m_iExtraFeatureAttackPercent(0),
+		m_iExtraFeatureDefensePercent(0),
+		m_iExtraFeatureWorkPercent(0),
+		m_iExtraWithdrawOnFeatureType(0)
+	{ }
 
 	bool Empty() const
 	{
 		return (m_iFeatureDoubleMoveCount == 0 &&
 			m_iExtraFeatureAttackPercent == 0 &&
 			m_iExtraFeatureDefensePercent == 0 &&
-			m_iFeatureWorkPercent == 0 &&
 			m_iExtraFeatureWorkPercent == 0 &&
 			m_iExtraWithdrawOnFeatureType == 0);
 	}
@@ -366,10 +354,6 @@ public:
 	int	m_iFeatureDoubleMoveCount;
 	int	m_iExtraFeatureAttackPercent;
 	int	m_iExtraFeatureDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iFeatureWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraFeatureWorkPercent;
 	int m_iExtraWithdrawOnFeatureType;
 };
@@ -544,18 +528,6 @@ protected:
 		m_worker;
 
 public:
-	bool isMADEnabled() const;
-	void setMADEnabled(bool bValue);
-	CvPlot* getMADTargetPlot() const;
-	int getMADTargetPlotX() const;
-	int getMADTargetPlotY() const;
-	void setMADTargetPlot(const CvPlot* pPlot);
-	bool setMADTargetPlot(int iX, int iY);
-	bool clearMADTargetPlot();
-	PlayerTypes getMADTargetPlotOwner() const;
-	void setMADTargetPlotOwner(PlayerTypes pPlayer);
-	void doMADNukes(bool bForceRetarget);
-
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
 	void changeIdentity(UnitTypes eUnit);
@@ -750,7 +722,7 @@ public:
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
 	bool canNuke(const CvPlot* pPlot) const;
-	bool canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar = true) const;
+	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
 	bool canRecon(const CvPlot* pPlot) const;
@@ -1518,10 +1490,6 @@ public:
 	int getExtraCombatPercent() const;
 	void changeExtraCombatPercent(int iChange);
 
-	//ls612: Work Rate Modifiers
-	int getExtraWorkPercent() const;
-	void changeExtraWorkPercent(int iChange);
-
 	int getExtraCityAttackPercent() const;
 	void changeExtraCityAttackPercent(int iChange);
 
@@ -1534,9 +1502,11 @@ public:
 	int getExtraHillsDefensePercent() const;
 	void changeExtraHillsDefensePercent(int iChange);
 
-	//WorkRateMod
+	// WorkRateMod
+	int getWorkModifier() const;
 	int hillsWorkModifier() const;
 	int peaksWorkModifier() const;
+	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
 
 	int getCollateralDamageProtection() const;
 	void changeCollateralDamageProtection(int iChange);
@@ -1636,19 +1606,10 @@ public:
 	int getExtraFeatureDefensePercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange);
 
-	//ls612: Terrain Work Modifiers
-//Team Project (4)
-//WorkRateMod
-	int getTerrainWorkPercent(TerrainTypes eIndex) const;
-	//void changeTerrainWorkPercent (TerrainTypes eIndex, int iChange);
-	int getFeatureWorkPercent(FeatureTypes eIndex) const;
-	//void changeFeatureWorkPercent(FeatureTypes eIndex, int iChange);
 	int getExtraTerrainWorkPercent(TerrainTypes eIndex) const;
 	void changeExtraTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getExtraFeatureWorkPercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange);
-	int getExtraBuildWorkPercent(BuildTypes eIndex) const;
-	void changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange);
 	int terrainWorkPercent(TerrainTypes eIndex) const;
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
@@ -1797,15 +1758,9 @@ public:
 	bool isWorker() const;
 
 protected:
-	bool m_bMADEnabled;
-	int m_iMADTargetPlotX;
-	int m_iMADTargetPlotY;
-	PlayerTypes m_pMADTargetPlotOwner;
-
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	int m_iHealUnitCombatCount;
-	std::vector<BuildTypes> m_aeExtraBuildTypes;
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
@@ -2053,8 +2008,6 @@ protected:
 	int m_iUpkeepMultiplierSM;
 	int m_iUpkeep100;
 
-	int m_iExtraPowerValue;
-	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
 	int m_iSMPowerValue;
 	int m_iSMHPValue;
@@ -2082,8 +2035,6 @@ protected:
 	int m_iSameTileHeal;
 	int m_iAdjacentTileHeal;
 	int m_iExtraCombatPercent;
-	//ls612: Work Rate Modifiers
-	int m_iExtraWorkPercent;
 	int m_iExtraCityAttackPercent;
 	int m_iExtraCityDefensePercent;
 	int m_iExtraHillsAttackPercent;
@@ -2140,8 +2091,6 @@ protected:
 	int* m_aiExtraVisibilityIntensityRange;
 	int* m_aiNegatesInvisibleCount;
 	int* m_aiExtraVisibilityIntensitySameTile;
-
-	std::map<short, short> m_extraBuildWorkPercent;
 
 	CvWString m_szName;
 	CvString m_szScriptData;
@@ -2688,18 +2637,10 @@ public:
 	int getSMHPValue() const;
 	void setSMHPValue();
 
-	int getExtraPowerValue() const;
-	void changeExtraPowerValue(int iChange);
 	int getPowerValueTotal() const;
-	int getSMPowerValueTotalBase() const;
-	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 
-	int getExtraAssetValue() const;
-	void changeExtraAssetValue(int iChange);
 	int assetValueTotal() const;
-	int assetValueTotalPreCheck() const;
-	int getSMAssetValue() const;
 	void setSMAssetValue(bool bForLoad = false);
 
 	int getCargoVolumeModifier() const;
@@ -2834,9 +2775,6 @@ public:
 	void processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 
 	bool hasBuild(BuildTypes eBuild) const;
-	//bool isExtraBuild(BuildTypes eBuild) const;
-	//BuildTypes getExtraBuildType(int i) const;
-	//int getNumExtraBuildTypes() const;
 	void changeExtraBuildType(bool bChange, BuildTypes eBuild);
 
 	bool isExcile() const;
@@ -3198,7 +3136,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);

@@ -101,17 +101,17 @@ void CvSelectionGroupAI::AI_separate()
 
 void CvSelectionGroupAI::AI_separateNonAI(UnitAITypes eUnitAI)
 {
-	separateIf(this, bst::bind(matchNonAI, _1, eUnitAI));
+	separateIf(this, bind(matchNonAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateAI(UnitAITypes eUnitAI)
 {
-	separateIf(this, bst::bind(matchAI, _1, eUnitAI));
+	separateIf(this, bind(matchAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateImpassable()
 {
-	separateIf(this, bst::bind(matchImpassable, _1, bst::ref(GET_PLAYER(getOwner()))));
+	separateIf(this, bind(matchImpassable, _1, bst::ref(GET_PLAYER(getOwner()))));
 }
 
 void CvSelectionGroupAI::AI_separateEmptyTransports()
@@ -350,7 +350,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		{
 			return 100;
 		}
-		
+
 		//	Initialize predicted health for all units involved
 		int iStartAttackerMaxStrength = 0;
 		int iNumDefenders = 0;
@@ -407,7 +407,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 					OutputDebugString(buffer);
 #endif
 					pLoopUnit->AI_setPredictedHitPoints(pLoopUnit->getHP());
-					
+
 					//This is a routine to ensure that the attackers are not all invisible to this unit.  If they are, the unit won't have the opportunity to attack back afterwards and could sway the perception of needed strength to overcome a counterattack.
 					if (plot()->getNumVisibleEnemyUnits(pLoopUnit) > 0)
 					{
@@ -668,25 +668,25 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-						const int iOdds = pBestDefender? 
+						const int iOdds = pBestDefender?
 							pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
 							:
 							pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
 
 						int iValue = iOdds;
 						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
-	
+
 						if (pLoopUnit->collateralDamage() > 0)
 						{
 							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
-	
+
 							if (iPossibleTargets > 0)
 							{
 								iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
 								iValue /= 100;
 							}
 						}
-	
+
 						// if non-human, prefer the last unit that has the best value (so as to avoid splitting the group)
 						if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
 						{
@@ -709,7 +709,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		//	had previously, but should not change the unit choice
 		iBestOdds = pBestUnit->AI_attackOdds(pPlot, bPotentialEnemy, ppDefender);
 	}
-	
+
 	iUnitOdds = iBestOdds;
 	return pBestUnit;
 }
@@ -778,7 +778,7 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 		eOwner = getHeadOwner();
 	}
 	FAssert(eOwner != NO_PLAYER);
-	
+
 /* original bts code
 	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, getOwner(), eDomainType, true, !bPotentialEnemy, bPotentialEnemy);
 */
@@ -837,19 +837,19 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			strSum += (uint64_t)unit->currCombatStr(NULL,NULL);
 			// K-Mod estimate the attack power of collateral units
 			if (!bFastMode && unit->collateralDamage() > 0 && pAttackedPlot != plot())
-			{ 
-				const int iPossibleTargets = std::min(iNumPotentialDefenders, unit->collateralDamageMaxUnits()); 
+			{
+				const int iPossibleTargets = std::min(iNumPotentialDefenders, unit->collateralDamageMaxUnits());
 
-				if (iPossibleTargets > 0) 
-				{ 
-					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
+				if (iPossibleTargets > 0)
+				{
+					// collateral damage is not trivial to calculate. This estimate is pretty rough.
 					strSum += (uint64_t)unit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit->collateralDamage() * iPossibleTargets / 100;
-				} 
-			} 
+				}
+			}
 
 			if (strSum >= MAX_INT)
 				break;
-			// K-Mod end 
+			// K-Mod end
 		}
 	}
 	return static_cast<int>(std::min<uint64_t>(MAX_INT, strSum));
@@ -932,7 +932,7 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 			return true;
 		}
 		break;
-		
+
 	case UNITAI_PARADROP:
 	case UNITAI_RESERVE:
 	case UNITAI_COUNTER:
@@ -1092,7 +1092,7 @@ bool CvSelectionGroupAI::AI_isFull() const
 	// do two passes, the first pass, we ignore units with speical cargo
 	int iSpecialCargoCount = 0;
 	int iCargoCount = 0;
-		
+
 	// first pass, count but ignore special cargo units
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -1113,7 +1113,7 @@ bool CvSelectionGroupAI::AI_isFull() const
 			}
 		}
 	}
-	
+
 	// if every unit in the group has special cargo, then check those, otherwise, consider ourselves full
 	if (iSpecialCargoCount >= iCargoCount)
 	{
@@ -1130,7 +1130,7 @@ bool CvSelectionGroupAI::AI_isFull() const
 }
 
 int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
-{	
+{
 	int iResult = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -1155,7 +1155,7 @@ bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCi
 }
 
 CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(const CvCity* pTargetCity)
-{	
+{
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
 
@@ -1169,17 +1169,17 @@ CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(const CvCity* pTarge
 			pBestUnit = pLoopUnit;
 		}
 	}
-	
+
 	if (NULL != pBestUnit && getNumUnits() > 1)
 	{
 		pBestUnit->joinGroup(NULL);
 	}
-	
+
 	return pBestUnit;
 }
 
 CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool allowAllDefenders, bool bConsiderPropertyValues) const
-{	
+{
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
 
@@ -1202,7 +1202,7 @@ CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool 
 
 				iValue /= 100;
 			}
-			
+
 			if (plot()->isCity(true, getTeam()))
 			{
 				if ( bConsiderPropertyValues )
@@ -1217,9 +1217,9 @@ CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool 
 
 			iValue *= 100;
 			iValue /= std::max(1,100 + pLoopUnit->cityAttackModifier());
-			
+
 			iValue /= 2 + pLoopUnit->getLevel();
-			
+
 			if (iValue > iBestUnitValue || (pBestUnit == NULL && allowAllDefenders))
 			{
 				iBestUnitValue = iValue;
@@ -1239,7 +1239,7 @@ CvUnit* CvSelectionGroupAI::AI_ejectBestDefender(const CvPlot* pDefendPlot, bool
 	{
 		pBestUnit->joinGroup(NULL);
 	}
-	
+
 	return pBestUnit;
 }
 
