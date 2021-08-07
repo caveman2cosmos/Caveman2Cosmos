@@ -138,7 +138,6 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
-#define SUPPORT_SINGLE_MAP_SPACE_MAPS
 #define OUTBREAKS_AND_AFFLICTIONS
 // #define BATTLEWORN
 // #define STRENGTH_IN_NUMBERS

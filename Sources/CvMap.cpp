@@ -29,6 +29,8 @@
 #include <direct.h> // for getcwd()
 #include <stdlib.h> // for MAX_PATH
 
+bool CvMap::m_bSwitchInProgress = false;
+
 
 CvMap::CvMap(MapTypes eType)
 	: m_iGridWidth(0)
@@ -226,6 +228,26 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		}
 	}
 
+/*********************************/
+/***** Parallel Maps - Begin *****/
+/*********************************/
+	if (m_eType > MAP_EARTH && GC.getNumMapInfos() > 0)
+	{
+		if (GC.getMapInfo(getType()).getGridWidth() > 0 && GC.getMapInfo(getType()).getGridHeight() > 0)
+		{
+			m_iGridWidth = GC.getMapInfo(getType()).getGridWidth();
+			m_iGridHeight = GC.getMapInfo(getType()).getGridHeight();
+		}
+		if (GC.getMapInfo(getType()).getWrapX() > 0 && GC.getMapInfo(getType()).getWrapY() > 0)
+		{
+			m_bWrapX = GC.getMapInfo(getType()).getWrapX();
+			m_bWrapY = GC.getMapInfo(getType()).getWrapY();
+		}
+	}
+/*******************************/
+/***** Parallel Maps - End *****/
+/*******************************/
+
 	if (GC.getNumBonusInfos())
 	{
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvMap::reset");
@@ -386,10 +408,6 @@ void CvMap::updateIncomingUnits()
 void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
-
-	//GC.switchMap(m_eType);
-
-	//updateIncomingUnits();
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
@@ -1279,44 +1297,62 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-
 void CvMap::beforeSwitch()
 {
+	PROFILE_FUNC();
+
+	m_bSwitchInProgress = true;
+
+#ifdef THE_GREAT_WALL
+	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
+	{
+		GC.getGame().processGreatWall(false);
+	}
+#endif // THE_GREAT_WALL
+
+	gDLL->getEngineIFace()->setResourceLayer(false);
+
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
-			| filtered(!bind(&CvUnit::isUsingDummyEntities, _1)))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
-				//if (gDLL->getEntityIFace()->IsSelected(pLoopUnit->getEntity()))
-				//{
-				//	gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true, true);
-				//}
-				//if (GC.IsGraphicsInitialized())
-				//{
-					gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
-					pLoopUnit->removeEntity();
-				//}
-				pLoopUnit->destroyEntity();
+				if ( !pLoopUnit->isUsingDummyEntities() )
+				{
+					if (gDLL->getEntityIFace()->IsSelected(pLoopUnit->getEntity()))
+					{
+						gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true, true);
+					}
+					if (GC.IsGraphicsInitialized())
+					{
+						gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
+						pLoopUnit->removeEntity();
+					}
+					pLoopUnit->destroyEntity();
+				}
 			}
 
-			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities()
-			| filtered(bind(&CvCity::getEntity, _1) != nullptr))
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
 			{
-				pLoopCity->removeEntity();
-				pLoopCity->destroyEntity();
+				if ( pLoopCity->getEntity() != NULL )
+				{
+					FAssert(pLoopCity->isInViewport());
+
+					if (pLoopCity->isCitySelected())
+					{
+						gDLL->getInterfaceIFace()->clearSelectedCities();
+					}
+					pLoopCity->removeEntity();
+					pLoopCity->destroyEntity();
+				}
 			}
 		}
 	}
 
-	gDLL->getInterfaceIFace()->clearSelectedCities();
-	gDLL->getInterfaceIFace()->clearSelectionList();
-	gDLL->getEngineIFace()->setResourceLayer(false);
-
 	GC.clearSigns();
 
-	for (int i = 0; i < numPlots(); i++)
+	for (i = 0; i < numPlots(); i++)
 	{
 		plotByIndex(i)->destroyGraphics();
 	}
@@ -1324,39 +1360,75 @@ void CvMap::beforeSwitch()
 
 void CvMap::afterSwitch()
 {
-	if (!plotsInitialized())
+	PROFILE_FUNC();
+
+	if (m_pMapPlots == NULL)
 	{
-		generatePlots();
+		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
+		{
+			CyArgsList argsList;
+			long lResult;
+
+			char mapPath[1024];
+			getcwd(mapPath, 1024);
+			strcat(mapPath, GC.getMapInfo(getType()).getInitialWBMap().GetCString());
+
+			argsList.add(mapPath);
+			gDLL->getPythonIFace()->callFunction(PYWorldBuilderModule, "readAndApplyDesc", argsList.makeFunctionArgs(), &lResult);
+			if (lResult < 0) // failed
+			{
+				AddDLLMessage((PlayerTypes)0, true, GC.getEVENT_MESSAGE_TIME(), L"Worldbuilder map failed to load");
+			}
+		}
+		else
+		{
+			init();
+			CvMapGenerator& kGenerator = CvMapGenerator::GetInstance();
+			kGenerator.generateRandomMap();
+			kGenerator.addGameElements();
+		}
 	}
 
+	gDLL->getInterfaceIFace()->clearSelectionList();
+	gDLL->getInterfaceIFace()->makeSelectionListDirty();
+
+	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
+	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
+	gDLL->getEngineIFace()->SetDirty(CultureBorders_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
-	gDLL->getInterfaceIFace()->setDirty(BlockadedPlots_DIRTY_BIT, true); // Matt: Maybe need this.
-	gDLL->getInterfaceIFace()->setDirty(Fog_DIRTY_BIT, true); // Matt: Maybe need this.
-	gDLL->getInterfaceIFace()->makeSelectionListDirty();
-	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
-	gDLL->getEngineIFace()->SetDirty(CultureBorders_DIRTY_BIT, true);
-	gDLL->getEngineIFace()->MarkBridgesDirty();
-	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
+
+	int iWidth = GC.getMapInfo(getType()).getGridWidth();
+	if (iWidth == 0)
+	{
+		iWidth = MAX_INT;
+	}
+
+	int iHeight = GC.getMapInfo(getType()).getGridHeight();
+	if (iHeight == 0)
+	{
+		iHeight = MAX_INT;
+	}
 
 	for (int i = 0; i < numPlots(); i++)
 	{
-		plotByIndex(i)->setLayoutDirty(true);
-		plotByIndex(i)->setFlagDirty(true);
+		//	Koshlimg - this is no longer necesary (or correct) with viewports enabled
+		if (!GC.viewportsEnabled() && (plotByIndex(i)->getX() > iWidth || plotByIndex(i)->getY() > iHeight))
+		{
+			plotByIndex(i)->setNull(true);
+		}
+		else
+		{
+			plotByIndex(i)->setLayoutDirty(true);
+			plotByIndex(i)->setFlagDirty(true);
+		}
 	}
 
-	//gDLL->getEngineIFace()->RebuildAllPlots();
-	for (int i = 0; i < numPlots(); i++)
-	{
-		const CvPlot& plot = m_pMapPlots[i];
-		DEBUG_LOG("ParallelMaps.log", "RebuildPlot %d, x: %d, y: %d", i, plot.getX(), plot.getY()); // Matt: Temporary - delete later.
-		gDLL->getEngineIFace()->RebuildPlot(plot.getX(), plot.getY(), true, true);
-	}
+	gDLL->getEngineIFace()->RebuildAllPlots();
 
-	for (int i = 0; i < MAX_PLAYERS; i++)
+	for (i = 0; i < MAX_PLAYERS; i++)
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
@@ -1366,58 +1438,37 @@ void CvMap::afterSwitch()
 				pLoopCity->setupGraphical();
 			}
 
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
-			| filtered(!bind(CvUnit::isUsingDummyEntities, _1)))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
-				gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
-				pLoopUnit->setupGraphical();
+				if ( !pLoopUnit->isUsingDummyEntities() )
+				{
+					gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
+					pLoopUnit->setupGraphical();
+				}
 			}
 		}
 	}
 
 	setupGraphical();
-	DEBUG_LOG("ParallelMaps.log", "Graphical setup complete"); // Matt: Temporary - delete later.
-	//updateVisibility(); // Matt: Maybe need this.
 	updateFog();
-	//gDLL->getEngineIFace()->setFogOfWarFromStack();
 	updateSymbols();
 	updateFlagSymbols();
 	updateMinimapColor();
 
+	// Reprocess landmarks and signs
 	GC.reprocessSigns();
+
+#ifdef THE_GREAT_WALL
+	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
+	{
+		GC.getGame().processGreatWall(true);
+	}
+#endif // THE_GREAT_WALL
 
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-#ifdef DEBUG_
-	//gDLL->getEngineIFace()->PushFogOfWar(FOGOFWARMODE_OFF); // Matt: Temporary - delete later.
-#endif
-}
 
-bool CvMap::generatePlots()
-{
-	if (!GC.getMapInfo(getType()).getInitialWBMap().empty())
-	{
-		char mapPath[1024];
-		getcwd(mapPath, 1024);
-		strcat(mapPath, static_cast<const char*>(GC.getMapInfo(getType()).getInitialWBMap()));
-
-		bool bSuccess;
-		Cy::call("CvWBInterface", "readAndApplyDesc", Cy::Args() << mapPath, &bSuccess);
-		return bSuccess;
-	}
-	else
-	{
-		init();
-		CvMapGenerator& kGenerator = CvMapGenerator::GetInstance();
-		kGenerator.generateRandomMap();
-		kGenerator.addGameElements();
-		return true;
-	}
-}
-
-bool CvMap::plotsInitialized() const
-{
-	return m_pMapPlots != NULL;
+	m_bSwitchInProgress = false;
 }
 
 const std::vector<CvViewport*> CvMap::getViewports() const
@@ -1479,6 +1530,11 @@ const char* CvMap::getMapScript() const
 	return gDLL->getPythonIFace()->getMapScriptModule();
 }
 
+bool CvMap::plotsInitialized() const
+{
+	return m_pMapPlots != NULL;
+}
+
 //
 // used for loading WB maps
 //
@@ -1514,8 +1570,9 @@ void CvMap::calculateAreas()
 		if (pLoopPlot->getArea() == FFreeList::INVALID_INDEX)
 		{
 			CvArea* pArea = addArea();
+			pArea->init(pArea->getID(), pLoopPlot->isWater());
+
 			const int iArea = pArea->getID();
-			pArea->init(iArea, pLoopPlot->isWater());
 
 			pLoopPlot->setArea(iArea);
 

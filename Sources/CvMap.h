@@ -57,13 +57,13 @@ public:
 	void setupGraphical();
 	void reset(CvMapInitData* pInitData);
 
-private:
+protected:
 	void uninit();
 	void setup();
 
+public:
 	MapTypes getType() const;
 
-public:
 	void beforeSwitch();
 	void afterSwitch();
 
@@ -79,7 +79,6 @@ public:
 
 	const char* getMapScript() const;
 
-	bool generatePlots();
 	bool plotsInitialized() const;
 
 	void erasePlots();
@@ -259,6 +258,8 @@ private:
 
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
+
+	static bool m_bSwitchInProgress;
 
 	int* m_paiNumBonus;
 	int* m_paiNumBonusOnLand;

@@ -196,8 +196,6 @@ public:
 	int controlPoints() const;
 	float getRealExperience() const;
 
-	void goToMap(MapTypes eMap);
-
 protected:
 	CvUnit* m_pUnit;
 };

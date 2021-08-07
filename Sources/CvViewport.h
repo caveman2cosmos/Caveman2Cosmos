@@ -77,11 +77,6 @@ public:
 	virtual void setupGraphical();
 	virtual void reset(CvMapInitData* pInitData);
 
-	void beforeSwitch();
-	void afterSwitch();
-
-	bool isMidSwitch() const { return m_bSwitchInProgress; }
-
 	void getMapOffset(int& iX, int& iY) const;
 	void setMapOffset(int iX, int iY);
 	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
@@ -350,7 +345,7 @@ public:
 	inline ViewportTransformType getTransformType() const
 	{
 		return m_transformType;
-	}
+	};
 
 	//	Close an advisor screen which was using a full-map minimap
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
@@ -359,8 +354,8 @@ public:
 	//	Transition to a new action state
 	void setActionState(ViewportDeferredActionState newState, bool bProcessImmediately = false);
 
-	//	During some state transitions we need to inhibit calls to update the selection cycle.
-	//	This retrieves the inhibition status.
+	//	During some state transitions we need to inhibit calls to update the selection cycle.  This
+	//	retrieves the inhibition status
 	inline bool isSelectionInhibitted() const
 	{
 		return m_inhibitSelection;
@@ -374,6 +369,9 @@ public:
 
 
 private:
+	void beforeSwitch();
+	void afterSwitch();
+
 	CvMap*	m_pMap;
 	int		m_iXOffset;
 	int		m_iYOffset;
@@ -384,13 +382,12 @@ private:
 	ViewportTransformType			m_transformType;
 	ViewportDeferredActionState		m_state;
 	IDInfo							m_preservedHeadSelectedUnitId;
-	CvPlot*							m_pLookatPlot;
+	CvPlot* m_pLookatPlot;
 	bool							m_inhibitSelection;
 	bool							m_bDisplayCityScreen;
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
 	int								m_countdown;
-	bool							m_bSwitchInProgress;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

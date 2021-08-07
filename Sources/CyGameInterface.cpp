@@ -15,10 +15,10 @@ void CyGamePythonInterface()
 	OutputDebugString("Python Extension Module - CyGamePythonInterface\n");
 
 	python::class_<CyGame>("CyGame")
-		.def("getCurrentMap", &CyGame::getCurrentMap)
-		.def("setCurrentMap", &CyGame::setCurrentMap)
 
-		.def("isMultiplayer", &CyGame::isMultiplayer)
+		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
+
+		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
 
 		.def("updateScore", &CyGame::updateScore, "void (bool bForce)")
 		.def("cycleCities", &CyGame::cycleCities, "void (bool bForward, bool bAdd)")

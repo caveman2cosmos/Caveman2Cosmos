@@ -17,19 +17,12 @@ class CyMap
 public:
 	CyMap();
 	explicit CyMap(CvMap* pMap); // Call from C++
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 
-	CyMap& operator=(CvMap& kMap);
-
-	void wrapCurrentMap();
-
-	void beforeSwitch();
-	void afterSwitch();
-
-	bool isMidSwitch() const;
+	int getType();
+	CyMap& operator = (CvMap& kMap);
 
 	bool plotsInitialized() const;
-	bool generatePlots();
-	void erasePlots();
 
 	bool viewportsEnabled();
 	int	getViewportWidth();
@@ -39,12 +32,14 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
 
 	void verifyUnitValidPlot();
 
+	void erasePlots();
 	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
 	void resetRevealedPlots(int /*TeamTypes*/ eTeam);
 	void setAllPlotTypes(int /*PlotTypes*/ ePlotType);
@@ -87,7 +82,7 @@ public:
 	CyPlot* plotByIndex(int iIndex);
 	CyPlot* sPlotByIndex(int iIndex);
 	CyPlot* plot(int iX, int iY);
-	CyPlot* sPlot(int iX, int iY);
+	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
 
 	int getNumAreas();
@@ -110,6 +105,9 @@ public:
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
 	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
+
+	// Super Forts *canal* *choke*
+	void calculateCanalAndChokePoints();
 
 protected:
 	CvMap* m_pMap;
