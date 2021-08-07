@@ -607,6 +607,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_IMU</BuildingType>
@@ -5962,7 +5963,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-7</iHealth>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
@@ -6019,7 +6020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
 			<YieldModifiers>
@@ -8928,6 +8929,7 @@
 				<BuildingType>BUILDING_IMU</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FOLK_DANCE</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -10454,7 +10456,10 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10491,7 +10496,10 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10533,7 +10541,10 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -12253,6 +12264,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<CommerceChanges>
@@ -12582,6 +12594,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<CommerceChanges>
@@ -14257,6 +14270,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WEATHER_FORECASTING</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -17346,6 +17360,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<CommerceChanges>

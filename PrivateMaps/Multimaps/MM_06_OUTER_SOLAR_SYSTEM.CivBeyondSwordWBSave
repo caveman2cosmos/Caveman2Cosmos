@@ -1445,31 +1445,26 @@ BeginPlot
 	x=2, y=91
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=2, y=92
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=2, y=93
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=2, y=94
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=2, y=95
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=3, y=0
@@ -1935,31 +1930,26 @@ BeginPlot
 	x=3, y=91
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=3, y=92
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=3, y=93
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=3, y=94
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=3, y=95
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=4, y=0
@@ -2422,32 +2412,27 @@ BeginPlot
 	x=4, y=91
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=4, y=92
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=4, y=93
 	StartingPlot
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=4, y=94
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=4, y=95
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=5, y=0
@@ -2911,31 +2896,26 @@ BeginPlot
 	x=5, y=91
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=5, y=92
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=5, y=93
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=5, y=94
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=5, y=95
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=6, y=0
@@ -3397,31 +3377,26 @@ BeginPlot
 	x=6, y=91
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=6, y=92
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=6, y=93
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=6, y=94
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=6, y=95
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=7, y=0
@@ -7303,31 +7278,26 @@ BeginPlot
 	x=15, y=2
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=15, y=3
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=15, y=4
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=15, y=5
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=15, y=6
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=15, y=7
@@ -7796,31 +7766,26 @@ BeginPlot
 	x=16, y=2
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=16, y=3
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=16, y=4
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=16, y=5
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=16, y=6
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=16, y=7
@@ -8285,7 +8250,6 @@ BeginPlot
 	FeatureType=FEATURE_ASTEROIDS, FeatureVariety=0
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=17, y=3
@@ -8293,7 +8257,6 @@ BeginPlot
 	FeatureType=FEATURE_ASTEROIDS, FeatureVariety=0
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=17, y=4
@@ -8301,19 +8264,16 @@ BeginPlot
 	FeatureType=FEATURE_ASTEROIDS, FeatureVariety=0
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=17, y=5
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=17, y=6
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=17, y=7
@@ -8771,39 +8731,33 @@ BeginPlot
 	x=18, y=1
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=2
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=3
 	FeatureType=FEATURE_ASTEROIDS, FeatureVariety=0
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=4
 	FeatureType=FEATURE_ASTEROIDS, FeatureVariety=0
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=5
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=6
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=18, y=7
@@ -9263,37 +9217,31 @@ BeginPlot
 	x=19, y=1
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=2
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=3
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=4
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=5
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=6
 	TerrainType=TERRAIN_OUTER_SOLAR_SYSTEM
 	PlotType=2
-	
 EndPlot
 BeginPlot
 	x=19, y=7

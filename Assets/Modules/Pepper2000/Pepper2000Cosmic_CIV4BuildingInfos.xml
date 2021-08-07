@@ -32,6 +32,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_CIVILIZATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1179,6 +1182,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUIDED_PLANETARY_EVOLUTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
+			</TechTypes>
 			<iCost>2634</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1460,6 +1466,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_CULTURE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1483,6 +1492,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_DYSON_SPHERES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>3075</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1569,6 +1581,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_GOVERNMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
+			</TechTypes>
 			<iCost>2853</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1836,6 +1851,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_TERRAFORMING_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
+			</TechTypes>
 			<iCost>2634</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

@@ -628,18 +628,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CISLUNAR_SPACEPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DEEP_SPACE_DOCKING_BAY</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -947,18 +939,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_WORMHOLE_TRADE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1050,18 +1034,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORIZON_PORT</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1154,22 +1130,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_TEMPORAL_RIFT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_HYPERPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HYPERSPACE_EXPORTER</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3057,22 +3022,11 @@
 					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERSTELLAR_STARPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_STARPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORIZON_PORT</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PHASING</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -5647,7 +5601,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
