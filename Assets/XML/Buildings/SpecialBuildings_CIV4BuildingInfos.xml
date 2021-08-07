@@ -607,6 +607,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_IMU</BuildingType>
@@ -8928,6 +8929,7 @@
 				<BuildingType>BUILDING_IMU</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
+				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FOLK_DANCE</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -12262,6 +12264,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<CommerceChanges>
@@ -12591,6 +12594,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<CommerceChanges>
@@ -14266,6 +14270,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WEATHER_FORECASTING</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -17355,6 +17360,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<CommerceChanges>

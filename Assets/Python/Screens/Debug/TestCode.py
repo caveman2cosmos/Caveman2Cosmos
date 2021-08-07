@@ -22,7 +22,7 @@ class TestCode:
 		#	This is all that is needed for the button to become functional, one line.
 		#self.main.addTestCode(screen, functionName, "Button Text", "tooltip")
 		self.main.addTestCode(screen, self.checkBuildingRequirements, "Building requirements of buildings", "Checks if building requirements aren't unlocked after building itself")
-		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced before building itself obsoletes")
+		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced")
 		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself")
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
@@ -614,25 +614,29 @@ class TestCode:
 	def checkBuildingRequirementReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+			iFreeBuildingInfo = CvBuildingInfo.getFreeBuilding()
 			aBuildingRequirementList = []
+			aBuildingRequirementNamesList = []
 
 			#<PrereqInCityBuildings> - require all buildings in list
 			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 				iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
 				aBuildingRequirementList.append(iPrereqBuilding)
+				aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
 
 			#<PrereqOrBuildings> - require one building in list
 			for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
 				iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
 				if iPrereqBuilding not in aBuildingRequirementList:
 					aBuildingRequirementList.append(iPrereqBuilding)
+					aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
 
 			#<PrereqAmountBuildings> - require all buildings in empire in list
 			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
 				iPrereqBuilding = pair.id
 				if iPrereqBuilding not in aBuildingRequirementList:
 					aBuildingRequirementList.append(iPrereqBuilding)
+					aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
 
 			#<ConstructCondition>
 			aBuildingGOMReqList = []
@@ -645,28 +649,31 @@ class TestCode:
 				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
 				if iPrereqBuilding not in aBuildingRequirementList:
 					aBuildingRequirementList.append(iPrereqBuilding)
+					aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
 
 			#Analyze GOM OR Building reqs
 			for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
 				iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
 				if iPrereqBuilding not in aBuildingRequirementList:
 					aBuildingRequirementList.append(iPrereqBuilding)
+					aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
 
 			#Generate list of buildings, that replace requirements
 			aBuildingRequirementReplacementList = []
-			aBuildingReplacementList = []
 			for i in xrange(len(aBuildingRequirementList)):
 				CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
 				for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
 					iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
-					aBuildingRequirementReplacementList.append(iReplacementBuilding)
-					aBuildingReplacementList.append(CvBuildingRequirementInfo.getType()+" -> "+GC.getBuildingInfo(iReplacementBuilding).getType())
+					if iReplacementBuilding not in aBuildingRequirementReplacementList:
+						aBuildingRequirementReplacementList.append(iReplacementBuilding)
 
 			#Remove buildings from requirement replacement list, if they already exist in requirement list
 			aBuildingRequirementReplacementUniqueList = []
+			aBuildingRequirementReplacementUniqueNameList = []
 			for i in xrange(len(aBuildingRequirementReplacementList)):
 				if aBuildingRequirementReplacementList[i] not in aBuildingRequirementList:
 					aBuildingRequirementReplacementUniqueList.append(aBuildingRequirementReplacementList[i])
+					aBuildingRequirementReplacementUniqueNameList.append(GC.getBuildingInfo(aBuildingRequirementReplacementList[i]).getType())
 
 			#Get replacements of base building
 			aBuildingBaseReplacementList = []
@@ -674,14 +681,13 @@ class TestCode:
 				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(iBuildingReplacement)
 				aBuildingBaseReplacementList.append(GC.getBuildingInfo(iReplacementBuilding).getType())
 
-			#Check if tech unlock of replacement is earlier than building obsoletion. Replacements listed aren't part of building requirements
-			for i in xrange(len(aBuildingRequirementReplacementUniqueList)):
-				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingRequirementReplacementUniqueList[i])
-				iTechLoc = self.checkBuildingTechRequirements(CvBuildingReplacementInfo)[0]
-				iTechReplacementObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingReplacementInfo)[0]
-				#Log if requirement is replaced before building obsoletes, if replacement of requirement doesn't replace building itself, and if there isn't common replacement of building requirement and base building replacement.
-				if iTechObsLoc > iTechLoc and iTechLoc > 0 and CvBuildingInfo.getType()!= CvBuildingReplacementInfo.getType() and CvBuildingReplacementInfo.getType() not in aBuildingBaseReplacementList:
-					self.log(CvBuildingInfo.getType()+" requir. replaced by "+CvBuildingReplacementInfo.getType()+" base obsoletion: "+str(iTechObsLoc)+", requirement replacement unlock/obsoletion: "+str(iTechLoc)+"/"+str(iTechReplacementObsLoc)+", replacements involved: "+str(aBuildingReplacementList)+" Base replacements: "+str(aBuildingBaseReplacementList))
+			#If we have unlisted replacements
+			#They don't have to be listed if:
+			#Requirement replaces base building
+			#Requirement and base building is replaced
+			#Free building from base building is replacement of requirement
+			if len(aBuildingRequirementReplacementUniqueList) > 0 and iBuilding not in aBuildingRequirementReplacementUniqueList and not aBuildingRequirementReplacementUniqueList <= aBuildingBaseReplacementList and iFreeBuildingInfo not in aBuildingRequirementReplacementUniqueList:
+				self.log(CvBuildingInfo.getType()+" requirements "+str(aBuildingRequirementNamesList)+" have unlisted replacements "+str(aBuildingRequirementReplacementUniqueNameList))
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):

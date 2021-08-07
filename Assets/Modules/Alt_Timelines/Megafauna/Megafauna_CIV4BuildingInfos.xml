@@ -528,6 +528,9 @@
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
+				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -630,6 +633,8 @@
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_DEER_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -730,6 +735,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -890,6 +897,8 @@
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1092,6 +1101,8 @@
 				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1218,6 +1229,8 @@
 				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

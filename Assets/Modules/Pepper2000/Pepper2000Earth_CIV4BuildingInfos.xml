@@ -238,6 +238,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOSPHERE_2</Type>
@@ -870,6 +873,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
