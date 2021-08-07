@@ -4517,7 +4517,7 @@ bool CvGame::isFinalInitialized() const
 
 void CvGame::setFinalInitialized(bool bNewValue)
 {
-	OutputDebugString("Setting FinalInitialized: Start\n");
+	OutputDebugString("Setting FinalInitialized: Start");
 	PROFILE_FUNC();
 
 	if (m_bFinalInitialized != bNewValue)
@@ -4539,7 +4539,7 @@ void CvGame::setFinalInitialized(bool bNewValue)
 			}
 		}
 	}
-	OutputDebugString("Setting FinalInitialized: End\n");
+	OutputDebugString("Setting FinalInitialized: End");
 }
 
 
@@ -4671,10 +4671,12 @@ void CvGame::updateUnitEnemyGlow()
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units()
-		| filtered(!bind(CvUnit::isUsingDummyEntities, _1)))
+		foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 		{
-			gDLL->getEntityIFace()->updateEnemyGlow(pLoopUnit->getUnitEntity());
+ 			if (!pLoopUnit->isUsingDummyEntities())
+			{
+				gDLL->getEntityIFace()->updateEnemyGlow(pLoopUnit->getUnitEntity());
+			}
 		}
 	}
 }
@@ -5765,14 +5767,6 @@ void CvGame::doTurn()
 		}
 	}
 
-	//reverse_foreach_(CvMap* map, GC.getMaps())
-	//{
-	//	if (map->plotsInitialized())
-	//	{
-	//		map->doTurn();
-	//	}
-	//}
-
 	GC.getMap().doTurn();
 
 	createBarbarianCities(false);
@@ -5901,14 +5895,6 @@ void CvGame::doTurn()
 
 	gDLL->getEngineIFace()->SetDirty(GlobePartialTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->DoTurn();
-
-	foreach_(CvMap* map, GC.getMaps())
-	{
-		if (!map->plotsInitialized())
-		{
-			map->updateIncomingUnits();
-		}
-	}
 
 	PROFILE_END();
 

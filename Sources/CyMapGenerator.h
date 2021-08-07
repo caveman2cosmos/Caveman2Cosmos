@@ -22,6 +22,7 @@ class CyMapGenerator
 public:
 	CyMapGenerator();
 	explicit CyMapGenerator(CvMapGenerator* pMapGenerator);		// Call from C++
+	bool isNone() const { return m_pMapGenerator == NULL; }
 
 	void doRiver(CyPlot* pStartPlot, CardinalDirectionTypes eCardinalDirection);
 	void addFeatures();

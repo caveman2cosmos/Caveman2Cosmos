@@ -14561,7 +14561,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 	*/
 
 #ifdef THE_GREAT_WALL
-	if (!bForce && !GC.getENABLE_VIEWPORTS() && !GC.getDefineBOOL("DYNAMIC_GREAT_WALL"))
+	if (!bForce && !GC.getReprocessGreatWallDynamically())
 	{
 		return true;
 	}

@@ -13,15 +13,8 @@ void CyMapPythonInterface()
 	OutputDebugString("Python Extension Module - CyMapPythonInterface\n");
 
 	python::class_<CyMap>("CyMap")
-		.def("wrapCurrentMap", &CyMap::wrapCurrentMap)
+		.def("getType", &CyMap::getType, "int ()")
 
-		.def("beforeSwitch", &CyMap::beforeSwitch)
-		.def("afterSwitch", &CyMap::afterSwitch)
-
-		.def("isMidSwitch", &CyMap::isMidSwitch)
-
-		.def("generatePlots", &CyMap::generatePlots)
-		.def("erasePlots", &CyMap::erasePlots)
 		.def("plotsInitialized", &CyMap::plotsInitialized)
 
 		.def("viewportsEnabled", &CyMap::viewportsEnabled, "bool ()")
@@ -32,10 +25,12 @@ void CyMapPythonInterface()
 		.def("getViewportXFromMapX", &CyMap::getViewportXFromMapX, "int (int iX)")
 		.def("getViewportYFromMapY", &CyMap::getViewportYFromMapY, "int (int iY)")
 		.def("isInViewport", &CyMap::isInViewport, "bool (int iX, int iY)")
+		.def("isMidSwitch", &CyMap::isMidSwitch)
 
 		.def("closeAdvisor", &CyMap::closeAdvisor, "void (int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)")
 		.def("bringIntoView", &CyMap::bringIntoView, "void (int iX, int iY, bool bDisplayCityScreen)")
 
+		.def("erasePlots", &CyMap::erasePlots, "() - erases the plots")
 		.def("setRevealedPlots", &CyMap::setRevealedPlots, "void (int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly) - reveals the plots to eTeam")
 		.def("resetRevealedPlots", &CyMap::resetRevealedPlots, "void (int /*TeamTypes*/ eTeam) - removes reveal status on all plots to eteam but then resets reveal for that plot if is currently visible")
 		.def("setAllPlotTypes", &CyMap::setAllPlotTypes, "void (int /*PlotTypes*/ ePlotType) - sets all plots to ePlotType")
@@ -103,6 +98,9 @@ void CyMapPythonInterface()
 		.def("generatePathForHypotheticalUnit", &CyMap::generatePathForHypotheticalUnit, "bool (CyPlot*, CyPlot*, int, int, int, int)")
 		.def("getLastPathStepNum", &CyMap::getLastPathStepNum, "int ()")
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
+
+		// Super Forts *canal* *choke*
+		.def("calculateCanalAndChokePoints", &CyMap::calculateCanalAndChokePoints, "void ()")
 
 		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 	;

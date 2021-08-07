@@ -586,6 +586,11 @@ bool cvInternalGlobals::viewportsEnabled() const
 	return m_ENABLE_VIEWPORTS;
 }
 
+bool cvInternalGlobals::getReprocessGreatWallDynamically() const
+{
+	return m_ENABLE_VIEWPORTS || getDefineBOOL("DYNAMIC_GREAT_WALL");
+}
+
 int cvInternalGlobals::getNumMapInfos() const
 {
 	return m_paMapInfo.size();

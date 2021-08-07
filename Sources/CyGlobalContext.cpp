@@ -54,14 +54,19 @@ CyMap* CyGlobalContext::getCyMap() const
 	return &cyMap;
 }
 
-CyMap* CyGlobalContext::getMapByIndex(MapTypes eMap) const
+void CyGlobalContext::switchMap(int iMap)
+{
+	GC.switchMap((MapTypes)iMap);
+}
+
+CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 {
 	static CyMap cyMap;
-	cyMap = GC.getMapByIndex(eMap);
+	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
 }
 
-CyPlayer* CyGlobalContext::getCyPlayer(PlayerTypes ePlayer) const
+CyPlayer* CyGlobalContext::getCyPlayer(int idx) const
 {
 	static CyPlayer cyPlayers[MAX_PLAYERS];
 	static bool bInit = false;
@@ -73,9 +78,9 @@ CyPlayer* CyGlobalContext::getCyPlayer(PlayerTypes ePlayer) const
 		bInit = true;
 	}
 
-	if (ePlayer >= 0 && ePlayer < MAX_PLAYERS)
+	if (idx >= 0 && idx < MAX_PLAYERS)
 	{
-		return &cyPlayers[ePlayer];
+		return &cyPlayers[idx];
 	}
 
 	FErrorMsg("Player index requested isn't valid");
@@ -85,7 +90,8 @@ CyPlayer* CyGlobalContext::getCyPlayer(PlayerTypes ePlayer) const
 
 CyPlayer* CyGlobalContext::getCyActivePlayer() const
 {
-	return getCyPlayer(GC.getGame().getActivePlayer());
+	const PlayerTypes pt = GC.getGame().getActivePlayer();
+	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
 }
 
 
@@ -94,26 +100,22 @@ CvRandom& CyGlobalContext::getCyASyncRand() const
 	return GC.getASyncRand();
 }
 
-CyTeam* CyGlobalContext::getCyTeam(TeamTypes eTeam) const
+CyTeam* CyGlobalContext::getCyTeam(int i) const
 {
 	static CyTeam cyTeams[MAX_TEAMS];
-	static bool bInit = false;
+	static bool bInit=false;
 
 	if (!bInit)
 	{
-		for (int i = 0; i < MAX_TEAMS; i++)
+		int j;
+		for(j=0;j<MAX_TEAMS;j++)
 		{
-			cyTeams[i] = CyTeam(&GET_TEAM((TeamTypes)i));
+			cyTeams[j]=CyTeam(&GET_TEAM((TeamTypes)j));
 		}
 		bInit = true;
 	}
 
-	return eTeam < MAX_TEAMS ? &cyTeams[eTeam] : NULL;
-}
-
-void CyGlobalContext::switchMap(MapTypes eMap)
-{
-	GC.switchMap(eMap);
+	return i<MAX_TEAMS ? &cyTeams[i] : NULL;
 }
 
 int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
