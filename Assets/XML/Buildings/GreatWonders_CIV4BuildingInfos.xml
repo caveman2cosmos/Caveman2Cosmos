@@ -566,7 +566,7 @@
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
+			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ALHAMBRA_2</ObsoletesToBuilding>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3450,7 +3450,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<iCost>224</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -10951,7 +10951,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_WISDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_WISDOM</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
+			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
@@ -13453,7 +13453,7 @@
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
+			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
 			<iCost>2640</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14090,7 +14090,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_MINING</ObsoleteTech>
 			<iCost>248</iCost>
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -14624,7 +14624,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -17836,7 +17836,7 @@
 			<PrereqTech>TECH_ANIMISM</PrereqTech>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>

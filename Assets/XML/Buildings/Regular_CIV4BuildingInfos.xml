@@ -3338,7 +3338,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
-			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_ANDROIDS</Bonus>
@@ -16474,7 +16474,7 @@
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_BOARD_GAMES</ObsoleteTech>
 			<iCost>74</iCost>
 			<YieldChanges>
 				<iYield>5</iYield>
@@ -30376,7 +30376,7 @@
 				<BuildingType>BUILDING_ELECTRIC_CHAIR</BuildingType>
 				<BuildingType>BUILDING_LETHAL_INJECTION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
+			<ObsoleteTech>TECH_ENLIGHTENMENT</ObsoleteTech>
 			<iCost>332</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -45179,7 +45179,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<ObsoleteTech>TECH_WOODWORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_EARTH_OVEN</ObsoleteTech>
 			<iCost>15</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -68268,7 +68268,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -81298,7 +81298,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
+			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
 			<iCost>440</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
