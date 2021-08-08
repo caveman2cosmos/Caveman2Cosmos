@@ -59,7 +59,6 @@ public:
 
 protected:
 	void uninit();
-	void setup();
 
 public:
 	MapTypes getType() const;
@@ -222,7 +221,6 @@ public:
 	void recalculateAreas();
 	void resetPathDistance();
 
-	// Super Forts *canal* *choke*
 	int calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, const CvPlot* pInvalidPlot = NULL) const;
 	void calculateCanalAndChokePoints();
 

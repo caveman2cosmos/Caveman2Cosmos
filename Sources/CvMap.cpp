@@ -64,6 +64,30 @@ CvMap::~CvMap()
 	uninit();
 }
 
+
+namespace CvMapInternal
+{
+	void initFAStar(const CvMap& map, FAStar* ptr, FAPointFunc DestValidFn, FAHeuristic HeuristicFn, FAStarFunc CostFn, FAStarFunc ValidFn, FAStarFunc NotifyChildFn, FAStarFunc NotifyListFn)
+	{
+		if (ptr == NULL)
+			ptr = gDLL->getFAStarIFace()->create();
+
+		gDLL->getFAStarIFace()->Initialize(ptr, map.getGridWidth(), map.getGridHeight(), map.isWrapX(), map.isWrapY(), DestValidFn, HeuristicFn, CostFn, ValidFn, NotifyChildFn, NotifyListFn, NULL);
+	}
+
+	void setup(const CvMap& map)
+	{
+		initFAStar(map, &GC.getPathFinder(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL);
+		initFAStar(map, &GC.getInterfacePathFinder(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL);
+		initFAStar(map, &GC.getStepFinder(), stepDestValid, stepHeuristic, stepCost, stepValid, stepAdd, NULL);
+		initFAStar(map, &GC.getRouteFinder(), NULL, NULL, NULL, routeValid, NULL, NULL);
+		initFAStar(map, &GC.getBorderFinder(), NULL, NULL, NULL, borderValid, NULL, NULL);
+		initFAStar(map, &GC.getAreaFinder(), NULL, NULL, NULL, areaValid, NULL, joinArea);
+		initFAStar(map, &GC.getPlotGroupFinder(), NULL, NULL, NULL, plotGroupValid, NULL, countPlotGroup);
+	}
+}
+
+
 // FUNCTION: init()
 // Initializes the map.
 // Parameters:
@@ -92,11 +116,10 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 
 	//--------------------------------
 	// Init non-saved data
-	setup();
+	CvMapInternal::setup(*this);
 
 	//--------------------------------
 	// Init other game data
-	gDLL->logMemState("CvMap before init plots");
 	m_pMapPlots = new CvPlot[numPlots()];
 	for (int iX = 0; iX < getGridWidth(); iX++)
 	{
@@ -107,7 +130,6 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 		}
 	}
 	calculateAreas();
-	gDLL->logMemState("CvMap after init plots");
 
 	OutputDebugString("Initializing Map: End\n");
 }
@@ -274,23 +296,6 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		getCurrentViewport()->setMapOffset(0, 0);
 	}
 }
-
-
-// FUNCTION: setup()
-// Initializes all data that is not serialized but needs to be initialized after loading.
-void CvMap::setup()
-{
-	PROFILE("CvMap::setup");
-
-	gDLL->getFAStarIFace()->Initialize(&GC.getPathFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getInterfacePathFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getStepFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), stepDestValid, stepHeuristic, stepCost, stepValid, stepAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getRouteFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, routeValid, NULL, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getBorderFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, borderValid, NULL, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getAreaFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, areaValid, NULL, joinArea, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getPlotGroupFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, plotGroupValid, NULL, countPlotGroup, NULL);
-}
-
 
 //////////////////////////////////////
 // graphical only setup
@@ -1254,7 +1259,7 @@ void CvMap::read(FDataStreamBase* pStream)
 	// call the read of the free list CvArea class allocations
 	ReadStreamableFFreeListTrashArray(m_areas, pStream);
 
-	setup();
+	CvMapInternal::setup(*this);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -1352,7 +1357,7 @@ void CvMap::beforeSwitch()
 
 	GC.clearSigns();
 
-	for (i = 0; i < numPlots(); i++)
+	for (int i = 0; i < numPlots(); i++)
 	{
 		plotByIndex(i)->destroyGraphics();
 	}
@@ -1428,7 +1433,7 @@ void CvMap::afterSwitch()
 
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
-	for (i = 0; i < MAX_PLAYERS; i++)
+	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
@@ -1523,9 +1528,9 @@ const char* CvMap::getMapScript() const
 {
 	if (m_eType > MAP_EARTH)
 	{
-		const CvString& module = GC.getMapInfo(m_eType).getMapScript();
-		if (module.GetLength() > 0)
-			return module.c_str();
+		const CvString& path = GC.getMapInfo(m_eType).getMapScript();
+		if (!path.empty())
+			return static_cast<const char*>(path);
 	}
 	return gDLL->getPythonIFace()->getMapScriptModule();
 }
@@ -1570,9 +1575,8 @@ void CvMap::calculateAreas()
 		if (pLoopPlot->getArea() == FFreeList::INVALID_INDEX)
 		{
 			CvArea* pArea = addArea();
-			pArea->init(pArea->getID(), pLoopPlot->isWater());
-
 			const int iArea = pArea->getID();
+			pArea->init(iArea, pLoopPlot->isWater());
 
 			pLoopPlot->setArea(iArea);
 

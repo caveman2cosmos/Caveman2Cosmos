@@ -71,31 +71,18 @@ void CvViewport::resizeForMap()
 		Cy::call("CvAppInterface", "initBUG");
 	}
 
-	if (GC.getENABLE_VIEWPORTS())
-	{
-		m_iXSize = GC.getVIEWPORT_SIZE_X();
-		m_iYSize = GC.getVIEWPORT_SIZE_Y();
-/*
-		if (m_iXSize > m_pMap->getGridWidth())
-		{
-			m_iXSize = m_pMap->getGridWidth();
-		}
+	m_iXSize = GC.getENABLE_VIEWPORTS() ? GC.getVIEWPORT_SIZE_X() : m_pMap->getGridWidth();
+	m_iYSize = GC.getENABLE_VIEWPORTS() ? GC.getVIEWPORT_SIZE_Y() : m_pMap->getGridHeight();
 
-		if (m_iYSize > m_pMap->getGridHeight())
-		{
-			m_iYSize = m_pMap->getGridHeight();
-		}
-*/
-	}
-	else if (m_pMap->getType() == MAP_EARTH)
+	//	For now we don't allow maps smaller than the viewport size
+	if (m_iXSize > m_pMap->getGridWidth())
 	{
 		m_iXSize = m_pMap->getGridWidth();
-		m_iYSize = m_pMap->getGridHeight();
 	}
-	else
+
+	if (m_iYSize > m_pMap->getGridHeight())
 	{
-		m_iXSize = GC.getMapByIndex(MAP_EARTH).getGridWidth();
-		m_iYSize = GC.getMapByIndex(MAP_EARTH).getGridHeight();
+		m_iYSize = m_pMap->getGridHeight();
 	}
 }
 

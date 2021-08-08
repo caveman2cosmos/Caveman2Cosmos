@@ -661,7 +661,7 @@ public:
 	void updateIrrigated();
 
 	bool isPotentialCityWork() const;
-	bool isPotentialCityWorkForArea(CvArea* pArea) const;
+	bool isPotentialCityWorkForArea(const CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
