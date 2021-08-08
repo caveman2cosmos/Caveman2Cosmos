@@ -155,7 +155,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	}
 	catch (const xercesc::XMLException & toCatch)
 	{
-		OutputDebugString("XMLPlatformUtils::Initialize Faild");
+		OutputDebugString("XMLPlatformUtils::Initialize Faild\n");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		logging::logMsg("xml.log", message);
 		gDLL->MessageBox(message, "Error");
