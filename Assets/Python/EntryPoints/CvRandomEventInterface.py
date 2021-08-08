@@ -2109,22 +2109,23 @@ def applyClassicLiteratureDone3(argsList):
 ######## MASTER BLACKSMITH ###########
 
 def canTriggerMasterBlacksmith(argsList):
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(argsList[0].ePlayer).isHuman():
-		return False
-	return True
-
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) or not GC.getPlayer(argsList[0].ePlayer).isHuman()
 
 def getHelpMasterBlacksmith1(argsList):
-	iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	return TRNSLTR.getText("TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1", (iRequired, GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()))
-
+	return (
+		TRNSLTR.getText(
+			"TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1",
+			(
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(),
+				GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()
+			)
+		)
+	)
 
 def expireMasterBlacksmith1(argsList):
 	iPlayer = argsList[1].ePlayer
 	CyCity = GC.getPlayer(iPlayer).getCity(argsList[1].iCityId)
-	if not CyCity or CyCity.getOwner() != iPlayer:
-		return True
-	return False
+	return not CyCity or CyCity.getOwner() != iPlayer
 
 
 def canTriggerMasterBlacksmithDone(argsList):
