@@ -27,6 +27,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
+		self.main.addTestCode(screen, self.checkBuildingReplacingProductivity, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
@@ -786,13 +787,13 @@ class TestCode:
 
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners, replacements also shouldn't obsolete at earlier point compared to base
 	def checkBuildingReplacementObsoletion(self):
+		aSpecialReplacementsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2])
 			iTechObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-			iTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[1]
-			aSpecialReplacementsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+			iTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[1]			
 
 			#All replacements of base
 			aBuildingReplacementList = []
@@ -915,6 +916,43 @@ class TestCode:
 					self.log("BASE: "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 				else:
 					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
+
+	#Building - check if replacing building has better yields, commerces, and other stats
+	def checkBuildingReplacingProductivity(self):
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			#Tech location would be good way to sort replacements, as later ones tend to replace more
+			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2]) 
+
+			#Ignore Stories Effect, Pollution, and Bans			
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1 and CvBuildingInfo.getNumReplacedBuilding() != 0:
+				#Get list of replaced buildings
+				aReplacedBuildings = []
+				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+					aReplacedBuildings.append(CvBuildingInfo.getReplacedBuilding(i))
+
+				#<YieldChanges> - base
+				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
+				
+				#Analyze replacements by tag
+				for i in xrange(len(aReplacedBuildings)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aReplacedBuildings[i])					
+					#<YieldChanges>
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
+						
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					aFinalYieldChangesList[iYield] += aBaseYieldChangesList[iYield]
+					aFinalYieldChangesList[iYield] += aYieldChangesList[iYield]
+						
+				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList))
+					
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
@@ -1070,7 +1108,6 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
-
 
 			aCivicAndTechLocList = []
 			aCivicOrTechLocList = []
