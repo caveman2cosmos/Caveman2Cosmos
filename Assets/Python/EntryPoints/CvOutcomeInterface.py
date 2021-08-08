@@ -871,7 +871,7 @@ def canGoToEarth(argsList):
 def goToEarth(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(pUnit)
-	
+
 def canGoToSubterrain(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
 

@@ -25,7 +25,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced")
 		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself. For beeliners: If there is requirement obsoletion within 10 columns, then building shall obsolete on same tech as its requirement")
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
-		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
+		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
@@ -614,7 +614,7 @@ class TestCode:
 	def checkBuildingRequirementReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iFreeBuildingInfo = CvBuildingInfo.getFreeBuilding()
+			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
 			aBuildingRequirementList = []
 			aBuildingRequirementNamesList = []
 
@@ -686,7 +686,7 @@ class TestCode:
 			#Requirement replaces base building
 			#Requirement and base building is replaced
 			#Free building from base building is replacement of requirement
-			if len(aBuildingRequirementReplacementUniqueList) > 0 and iBuilding not in aBuildingRequirementReplacementUniqueList and not aBuildingRequirementReplacementUniqueList <= aBuildingBaseReplacementList and iFreeBuildingInfo not in aBuildingRequirementReplacementUniqueList:
+			if len(aBuildingRequirementReplacementUniqueList) > 0 and iBuilding not in aBuildingRequirementReplacementUniqueList and aBuildingRequirementReplacementUniqueList > aBuildingBaseReplacementList and iFreeBuilding not in aBuildingRequirementReplacementUniqueList:
 				self.log(CvBuildingInfo.getType()+" requirements "+str(aBuildingRequirementNamesList)+" have unlisted replacements "+str(aBuildingRequirementReplacementUniqueNameList))
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
@@ -786,37 +786,44 @@ class TestCode:
 	def checkBuildingReplacementObsoletion(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
-			iObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+			iTechObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+			iTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[1]
 
-			#Gather data about building replacements
-			aReplacementTypeList = []
-			aReplacementTechUnlockList = []
-			aReplacementTechObsoleteList = []
+			#All replacements of base
+			aBuildingReplacementList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-				CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-				aReplacementTypeList.append(CvBuildingReplacement.getType())
-				aReplacementTechUnlockList.append(self.checkBuildingTechRequirements(CvBuildingReplacement)[0])
-				aReplacementTechObsoleteList.append(self.checkBuildingTechObsoletionLocation(CvBuildingReplacement)[0])
+				iBuildingReplacement = CvBuildingInfo.getReplacementBuilding(iReplacement)
+				aBuildingReplacementList.append(iBuildingReplacement)
 
-			#If there is any replacement
-			iMinReplacementUnlock = -1 #Earliest unlocked replacement - may be without tech requirement at first place
-			iMaxReplacementUnlock = -1	#Latest unlocked replacement - buildings list all replacements of replacements
-			iMinReplacementObsoletion = -1 #Replacement, that obsoletes earliest - may be correlated to earliest replacement, but often some replaced buildings obsolete together
-			iMaxReplacementObsoletion = -1 #Replacement, that obsoletes latest - may be not obsoleting altogether
-			if len(aReplacementTypeList) > 0:
-				for i in xrange(len(aReplacementTypeList)):
-					if aReplacementTechUnlockList[i] == min(aReplacementTechUnlockList):
-						iMinReplacementUnlock = i
-					if aReplacementTechUnlockList[i] == max(aReplacementTechUnlockList):
-						iMaxReplacementUnlock = i
-					if aReplacementTechObsoleteList[i] == min(aReplacementTechObsoleteList):
-						iMinReplacementObsoletion = i
-					if aReplacementTechObsoleteList[i] == max(aReplacementTechObsoleteList):
-						iMaxReplacementObsoletion = i
+			#All replacements of replacements
+			aBuildingReplacement2List = []
+			for i in xrange(len(aBuildingReplacementList)):
+				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
+				for iReplacement2 in xrange(CvBuildingReplacementInfo.getNumReplacementBuilding()):
+					iBuildingReplacement2 = CvBuildingReplacementInfo.getReplacementBuilding(iReplacement2)
+					if iBuildingReplacement2 not in aBuildingReplacement2List:
+						aBuildingReplacement2List.append(iBuildingReplacement2)
 
-				if iObsoleteTechLoc - aReplacementTechObsoleteList[iMinReplacementObsoletion] > 0:
-					self.log(CvBuildingInfo.getType()+" -> "+aReplacementTypeList[iMinReplacementObsoletion]+" base obsoletion/replacement obsoletion "+str(iObsoleteTechLoc)+"/"+str(aReplacementTechObsoleteList[iMinReplacementObsoletion]))
+			#Get replacements, that don't appear as replacements of replacements
+			aImmediateReplacementList = []
+			for i in xrange(len(aBuildingReplacementList)):
+				if aBuildingReplacementList[i] not in aBuildingReplacement2List:
+					CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
+					aImmediateReplacementList.append(aBuildingReplacementList[i])
+
+			#There may be several immediate replacements
+			if len(aImmediateReplacementList) > 0:
+				for i in xrange(len(aImmediateReplacementList)):
+					CvBuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacementList[i])
+					iImmediateReplacementTechLoc = self.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[0]
+					iImmediateReplacementTechLocID = self.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2]
+					#Building obsoletes before its replacement
+					if iTechObsLoc < iImmediateReplacementTechLoc:
+						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
+
+					#Building obsoletes soon after replacement
+					if iTechObsLoc - iImmediateReplacementTechLoc <= 10:
+						self.log(CvBuildingInfo.getType()+" obsoletes soon after "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):

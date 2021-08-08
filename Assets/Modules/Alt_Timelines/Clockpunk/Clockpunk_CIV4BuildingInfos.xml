@@ -53,7 +53,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
+			<ObsoleteTech>TECH_MICROPROCESSOR</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -107,7 +107,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
+			<ObsoleteTech>TECH_MICROPROCESSOR</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
