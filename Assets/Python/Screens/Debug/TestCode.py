@@ -32,9 +32,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements", "Checks if various civics aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
-		self.main.addTestCode(screen, self.checkBuildingCommerceDoubleTime, "Building commerce double time", "Checks if commerce double time exists on wonders, that have relevant flat commerce change")
-		self.main.addTestCode(screen, self.checkBuildingCommerceChangeOriginalOwners, "Building commerce owner change", "Checks if Commerce Change has relevant flat commerce changes")
-		self.main.addTestCode(screen, self.checkBuildingHurryModifier, "Building hurry modifiers", "Checks if hurry modifiers exist on unbuildable buildings")
+		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, or if hurry modifiers exist on unbuildable buildings")
 		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion - those bonus tags affect buildings in various ways")
@@ -218,7 +216,7 @@ class TestCode:
 		for i in xrange(len(aTechGridXList)):
 			if aTechGridXList[i] == max(aTechGridXList):
 				aMostAdvancedColumnRequirementsXY.append(aTechXY[i])
-				
+
 		if len(aMostAdvancedColumnRequirementsXY) == 0:
 			aMostAdvancedColumnRequirementsXY.append(0)
 
@@ -1107,10 +1105,11 @@ class TestCode:
 			if iRelPrereq3 != -1 and iRelPrereq1 != -1 and iRelPrereq3 != iRelPrereq1:
 				self.log(CvBuildingInfo.getType()+" mismatch between getPrereqStateReligion and getPrereqReligion: "+GC.getReligionType(iRelPrereq3).getType()+" "+GC.getReligionType(iRelPrereq1).getType())
 
-	#Building commerce double time - wonders only, and ensure flat change exists
-	def checkBuildingCommerceDoubleTime(self):
+	#Building - variety of tags
+	def checkBuildingTags(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			#Building commerce double time - wonders only, and ensure flat change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or  CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" Non-wonder has commerce change double time")
@@ -1119,18 +1118,12 @@ class TestCode:
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has commerce change double time but no relevant flat commerce change")
 
-	#Building owner change - ensure flat commerce change exists
-	def checkBuildingCommerceChangeOriginalOwners(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			#Building owner change - ensure flat commerce change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change")
 
-	#Building hurry modifiers works only on buildable buildings
-	def checkBuildingHurryModifier(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			#Building hurry modifiers works only on buildable buildings
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				self.log(CvBuildingInfo.getType()+" can't be hurried at first place")
 
