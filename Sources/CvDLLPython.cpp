@@ -83,6 +83,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<BonusTypes>();
 	registerAllowPyIntAsType<HurryTypes>();
 	registerAllowPyIntAsType<MapTypes>();
+	registerAllowPyIntAsType<MapCategoryTypes>();
 	registerAllowPyIntAsType<UnitAITypes>();
 	registerAllowPyIntAsType<DomainTypes>();
 	registerAllowPyIntAsType<PropertyTypes>();
