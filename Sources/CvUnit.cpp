@@ -1738,7 +1738,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
 		AI_killed(); // Update AI counts for this unit
 		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
+		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
 		joinGroup(NULL, false, false);
 
