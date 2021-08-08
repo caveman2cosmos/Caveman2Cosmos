@@ -400,13 +400,6 @@ void cvInternalGlobals::init()
 
 	gDLL->initGlobals();	// some globals need to be allocated outside the dll
 
-	m_game = new CvGameAI;
-
-	for (int i = 0; i < NUM_MAPS; i++)
-	{
-		m_maps[i] = new CvMap((MapTypes)i);
-	}
-
 	for (int i = 1; i < NUM_MAPS; i++)
 	{
 		m_pathFinders[i]			= gDLL->getFAStarIFace()->create();
@@ -416,6 +409,13 @@ void cvInternalGlobals::init()
 		m_borderFinders[i]			= gDLL->getFAStarIFace()->create();
 		m_areaFinders[i]			= gDLL->getFAStarIFace()->create();
 		m_plotGroupFinders[i]		= gDLL->getFAStarIFace()->create();
+	}
+
+	m_game = new CvGameAI;
+
+	for (int i = 0; i < NUM_MAPS; i++)
+	{
+		m_maps[i] = new CvMap((MapTypes)i);
 	}
 
 	CvPlayerAI::initStatics();
