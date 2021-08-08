@@ -211,6 +211,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iHealth>-3</iHealth>
 			<YieldChanges>

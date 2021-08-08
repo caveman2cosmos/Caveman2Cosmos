@@ -165,6 +165,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_BURROW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BURROW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
@@ -660,6 +661,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
@@ -1448,6 +1450,7 @@
 			<Description>TXT_KEY_BUILDING_CLIFF_DWELLING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLIFF_DWELLING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -9683,6 +9686,7 @@
 			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_GRASS</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9819,6 +9823,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_HIDE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -9906,6 +9911,7 @@
 			<Description>TXT_KEY_BUILDING_HOGAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOGAN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -10016,6 +10022,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDHW_PEDIA</Civilopedia>
 			<bFreshWater>1</bFreshWater>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -10053,6 +10060,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
@@ -10085,6 +10093,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -10119,6 +10128,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10158,6 +10168,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -10205,6 +10216,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -10241,6 +10253,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqBonuses>
@@ -10279,6 +10292,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDLW_PEDIA</Civilopedia>
 			<bFreshWater>1</bFreshWater>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -10309,6 +10323,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -10342,6 +10357,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10380,6 +10396,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -10422,6 +10439,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -10460,6 +10478,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10500,6 +10519,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10545,6 +10565,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10581,6 +10602,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -10616,6 +10638,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -10649,6 +10672,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDMW_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -10682,6 +10706,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10717,6 +10742,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10758,6 +10784,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10793,6 +10820,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10830,6 +10858,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10874,6 +10903,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10910,6 +10940,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -10945,6 +10976,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -10979,6 +11011,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -11011,6 +11044,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11047,6 +11081,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11083,6 +11118,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11118,6 +11154,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11155,6 +11192,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11197,6 +11235,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11847,6 +11886,7 @@
 			<Description>TXT_KEY_BUILDING_LEANTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEANTO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
@@ -11871,6 +11911,7 @@
 			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
@@ -12355,6 +12396,7 @@
 			<Description>TXT_KEY_BUILDING_MUD_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MUD_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_CLAY</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -14223,6 +14265,7 @@
 			<Description>TXT_KEY_BUILDING_PUEBLO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUEBLO_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -15888,6 +15931,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -15923,6 +15967,7 @@
 			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
@@ -16060,6 +16105,7 @@
 			<Description>TXT_KEY_BUILDING_TIPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HIDE</Bonus>
@@ -16598,7 +16644,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16629,7 +16675,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
 			<UnitCombatFreeExperiences>
@@ -16778,6 +16824,7 @@
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -16839,6 +16886,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -17393,6 +17441,7 @@
 			<Description>TXT_KEY_BUILDING_WOOD_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_HUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BARK_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_BARK</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -17671,6 +17720,7 @@
 			<Description>TXT_KEY_BUILDING_YURT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YURT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>

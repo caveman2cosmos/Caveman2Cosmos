@@ -525,6 +525,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MICROWAVE_WEAPONRY</PrereqTech>
+			<ObsoleteTech>TECH_WEAPONIZED_GRAVITY_FIELDS</ObsoleteTech>
 			<iCost>2405</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -4579,7 +4580,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ANTI_GRAVITY_FIELD_GENERATOR_FACTORY</BuildingType>
@@ -5027,6 +5028,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
+			<ObsoleteTech>TECH_ADVANCED_SHIELDING</ObsoleteTech>
 			<Bonus>BONUS_AMMUNITION</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
@@ -5986,7 +5988,7 @@
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
@@ -6030,6 +6032,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
@@ -6161,7 +6164,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_REALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_TEAM_SPORTS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
@@ -6658,7 +6661,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RAILGUN</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_ROCKETRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
 				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
@@ -7886,6 +7889,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
+			<ObsoleteTech>TECH_MATERIALIZATION</ObsoleteTech>
 			<iCost>14655</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -8637,6 +8641,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_LEVITATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<ConstructCondition>
@@ -8725,6 +8730,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_INTERNAL_SHOCKWAVE_ENGINE</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
@@ -9416,7 +9422,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
@@ -9723,7 +9729,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STONE_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_BRICK_BRIDGE</BuildingType>
@@ -10136,6 +10142,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GARRISON</BuildingType>
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
@@ -10434,7 +10441,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
@@ -10540,7 +10547,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
@@ -10786,6 +10793,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -10889,7 +10897,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
@@ -10975,7 +10983,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
@@ -13570,7 +13578,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
 				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
@@ -13791,7 +13799,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_AMMUNITION</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ELECTRIC_ARC_WEAPONRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
 				<BuildingType>BUILDING_BIO_TRAPS</BuildingType>
@@ -15874,7 +15882,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
@@ -15963,7 +15971,7 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
@@ -15992,7 +16000,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
@@ -16050,6 +16058,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RADIO</PrereqTech>
+			<ObsoleteTech>TECH_TERRA_COMPUTER</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
@@ -16206,7 +16215,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
-			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
@@ -16734,7 +16743,7 @@
 				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAVEYARD</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
@@ -17150,7 +17159,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
@@ -17456,6 +17465,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_3D_MODELLING</PrereqTech>
+			<ObsoleteTech>TECH_AUTOMATED_URBANIZATION</ObsoleteTech>
 			<iCost>1605</iCost>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -18511,7 +18521,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SULPHUR</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>410</iCost>
 			<iHealth>-1</iHealth>
 			<UnitProductionModifiers>
@@ -18572,7 +18582,7 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>410</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -19893,7 +19903,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
@@ -20213,7 +20223,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
@@ -20649,7 +20659,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TRUSS_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
@@ -23083,6 +23093,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
@@ -25670,7 +25681,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_CEMENT_MILL</BuildingType>
@@ -28096,6 +28107,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRAMA</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<ReplacementBuildings>
@@ -28435,7 +28447,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CANAL_SYSTEMS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
@@ -28578,6 +28590,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -29079,7 +29092,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
+			<ObsoleteTech>TECH_JURISPRUDENCE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GALLOWS</BuildingType>
 				<BuildingType>BUILDING_GUILLOTINE</BuildingType>
@@ -32004,6 +32017,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLAGUE_MEDICINE</PrereqTech>
+			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -35312,7 +35326,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
@@ -36059,7 +36073,7 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
-			<ObsoleteTech>TECH_ADVANCED_SHIELDING</ObsoleteTech>
+			<ObsoleteTech>TECH_SHIELDING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
 				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
@@ -38202,6 +38216,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_GRAVITRONICS</ObsoleteTech>
 			<iCost>2305</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -40278,7 +40293,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
-			<ObsoleteTech>TECH_TEAM_SPORTS</ObsoleteTech>
+			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARENA</BuildingType>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
@@ -40580,7 +40595,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARBWIRE_FENCE</BuildingType>
 				<BuildingType>BUILDING_ELECTRIC_FENCE</BuildingType>
@@ -40875,7 +40890,7 @@
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_FIRE_BRIGADES</ObsoleteTech>
+			<ObsoleteTech>TECH_METAL_CASTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMU</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
@@ -41454,7 +41469,7 @@
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
 			</ReplacementBuildings>
@@ -42331,7 +42346,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
@@ -43145,7 +43160,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FORTIFIED_OUTPOST</BuildingType>
 				<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
@@ -43499,7 +43514,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_FURNITURE_FACTORY</BuildingType>
@@ -44101,7 +44116,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_NANOTECH_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PUBLIC_RESTROOMS</BuildingType>
 				<BuildingType>BUILDING_SANITATION_CHAMBER</BuildingType>
@@ -46426,7 +46441,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
@@ -48323,6 +48338,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -48494,7 +48510,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
@@ -48617,7 +48633,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
+			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
@@ -48679,7 +48695,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
 				<BuildingType>BUILDING_BOMBARD_TOWER</BuildingType>
@@ -49075,7 +49091,7 @@
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WIND_PUMP</BuildingType>
 				<BuildingType>BUILDING_STATION_PUMP</BuildingType>
@@ -49112,7 +49128,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<PrereqBonuses>
@@ -49474,7 +49490,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_ELIXIRS_AND_TONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DOCTOR</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
@@ -58528,7 +58544,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_LACQUERWARE_WORKSHOP</BuildingType>
@@ -58589,7 +58605,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_LACQUERWARE_FACTORY</BuildingType>
@@ -58767,7 +58783,7 @@
 				<Bonus>BONUS_AMMUNITION</Bonus>
 				<Bonus>BONUS_SULPHUR</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_BIOLOGICAL_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BOOBY_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ROBOTIC_TRAPS</BuildingType>
@@ -58839,7 +58855,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
@@ -60633,7 +60649,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
+			<ObsoleteTech>TECH_BIOMETRIC_WARFARE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
@@ -60717,7 +60733,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MEGALITH_CONSTRUCTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BAMBOO_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_STONE_BRIDGE</BuildingType>
@@ -62606,6 +62622,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -68048,6 +68065,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
+			<ObsoleteTech>TECH_ELECTRIC_ARC_WEAPONRY</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
@@ -68735,6 +68753,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
+			<ObsoleteTech>TECH_STABLE_TIME_LOOPS</ObsoleteTech>
 			<iCost>2625</iCost>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -68778,6 +68797,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOLECULAR_ASSEMBLY</PrereqTech>
+			<ObsoleteTech>TECH_MACROSCOPIC_SUPERPOSITION</ObsoleteTech>
 			<iCost>10155</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -70973,7 +70993,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
-			<ObsoleteTech>TECH_MATERIALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_GRAVITRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -74762,6 +74782,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
+			<ObsoleteTech>TECH_SUPERCONDUCTORS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_URANIUM</Bonus>
 			<PrereqBonuses>
@@ -75682,7 +75703,7 @@
 				<Bonus>BONUS_KEROSENE</Bonus>
 				<Bonus>BONUS_GHEE_OIL</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_INCANDESCENT_LIGHTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAS_LAMPS</BuildingType>
 				<BuildingType>BUILDING_STREET_LIGHTS</BuildingType>
@@ -78118,7 +78139,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EARTHWALL</BuildingType>
 				<BuildingType>BUILDING_WALLS</BuildingType>
@@ -78887,7 +78908,7 @@
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
+			<ObsoleteTech>TECH_3D_PRINTING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -78955,7 +78976,7 @@
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MOLECULAR_ASSEMBLY</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOROBOTICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -79085,7 +79106,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
+			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_PASTA_FACTORY</BuildingType>
@@ -79175,7 +79196,7 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
@@ -82717,7 +82738,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<!--<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>-->
+			<ObsoleteTech>TECH_BINARY_LEGISLATION</ObsoleteTech>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -83077,7 +83098,7 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
@@ -83121,7 +83142,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bWater>1</bWater>
 			<PrereqBonuses>
@@ -83475,7 +83496,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -83559,7 +83580,7 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
@@ -84546,6 +84567,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -84744,7 +84766,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TORTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_EXECUTIONS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CROSSES</BuildingType>
 				<BuildingType>BUILDING_GALLOWS</BuildingType>
@@ -85343,7 +85365,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_CONSUMERISM</ObsoleteTech>
+			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WATERMILL</BuildingType>
 				<BuildingType>BUILDING_WINDMILL</BuildingType>
@@ -85783,6 +85805,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAILGUN</PrereqTech>
+			<ObsoleteTech>TECH_WEAPONIZED_ANTIMATTER</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<ReplacementBuildings>
@@ -87374,7 +87397,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
-			<ObsoleteTech>TECH_MATERIALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_GRAVITRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -88180,7 +88203,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_COAST_GUARD</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
 				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
@@ -88343,7 +88366,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
@@ -88632,7 +88655,7 @@
 			<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<ObsoleteTech>TECH_NANOMORPHICS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOELECTRONICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMP_TRAPS</BuildingType>
 				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
@@ -89125,7 +89148,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LOG_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_BAMBOO_BRIDGE</BuildingType>
@@ -89235,7 +89258,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_ROPE_FACTORY</BuildingType>
@@ -91708,7 +91731,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
@@ -92210,7 +92233,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
+			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
@@ -95554,7 +95577,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
@@ -95717,6 +95740,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUEL_CELLS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROMAGNETIC_VOLTAGE</ObsoleteTech>
 			<iCost>1845</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -96880,7 +96904,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ENCRYPTED_FIREWALL</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_BINARY_SEMIOTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_EXOCORTEX_NETWORKS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
 				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
@@ -98751,7 +98775,7 @@
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -100151,7 +100175,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BRICK_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
@@ -103434,6 +103458,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
+			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
@@ -104350,7 +104375,7 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_TERRACOTTA_FACTORY</BuildingType>
@@ -106114,6 +106139,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNITY</PrereqTech>
+			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -106168,7 +106194,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -106268,7 +106294,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TOY_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
@@ -106357,7 +106383,7 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_TOY_FACTORY</BuildingType>
@@ -106540,7 +106566,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<ObsoleteTech>TECH_INVENTION</ObsoleteTech>
+			<ObsoleteTech>TECH_PAVED_ROADS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
@@ -107218,7 +107244,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
@@ -107252,7 +107278,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
@@ -108746,6 +108772,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+			<ObsoleteTech>TECH_FRICTIONLESS_FLIGHT</ObsoleteTech>
 			<iCost>1925</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -109364,7 +109391,7 @@
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
 				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
@@ -109633,6 +109660,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -112289,6 +112317,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
+			<ObsoleteTech>TECH_PLASTIC_ELECTRONICS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
@@ -112739,6 +112768,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_ADVANCED_SHIELDING</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<ReplacementBuildings>
@@ -112784,6 +112814,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_FRICTIONLESS_FLIGHT</ObsoleteTech>
 			<iCost>3975</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>

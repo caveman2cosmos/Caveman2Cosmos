@@ -812,19 +812,52 @@ class TestCode:
 					CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
 					aImmediateReplacementList.append(aBuildingReplacementList[i])
 
-			#There may be several immediate replacements
-			if len(aImmediateReplacementList) > 0:
+			#There may be several immediate replacements, this checks replacements, that don't have replacements
+			if len(aImmediateReplacementList) > 0 and len(aBuildingReplacement2List) == 0:
 				for i in xrange(len(aImmediateReplacementList)):
 					CvBuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacementList[i])
 					iImmediateReplacementTechLoc = self.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[0]
-					iImmediateReplacementTechLocID = self.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2]
-					#Building obsoletes before its replacement
-					if iTechObsLoc < iImmediateReplacementTechLoc:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
-
-					#Building obsoletes soon after replacement
+					#Building obsoletes before or soon after replacement
 					if iTechObsLoc - iImmediateReplacementTechLoc <= 10:
-						self.log(CvBuildingInfo.getType()+" obsoletes soon after "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
+						self.log(CvBuildingInfo.getType()+" obsoletes before or soon after "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
+
+			#Get replacements of replacements
+			for i in xrange(len(aImmediateReplacementList)):
+				Cv2BuildingInfo = GC.getBuildingInfo(aImmediateReplacementList[i])
+				iReplacementTechLoc = self.checkBuildingTechRequirements(Cv2BuildingInfo)[0]
+
+				#All replacements of replacements
+				a2BuildingReplacementList = []
+				for iReplacement in xrange(Cv2BuildingInfo.getNumReplacementBuilding()):
+					iBuildingReplacement = Cv2BuildingInfo.getReplacementBuilding(iReplacement)
+					a2BuildingReplacementList.append(iBuildingReplacement)
+
+				#All third level replacements
+				a2BuildingReplacement2List = []
+				for i in xrange(len(a2BuildingReplacementList)):
+					Cv2BuildingReplacementInfo = GC.getBuildingInfo(a2BuildingReplacementList[i])
+					for iReplacement2 in xrange(Cv2BuildingReplacementInfo.getNumReplacementBuilding()):
+						iBuildingReplacement2 = Cv2BuildingReplacementInfo.getReplacementBuilding(iReplacement2)
+						if iBuildingReplacement2 not in a2BuildingReplacement2List:
+							a2BuildingReplacement2List.append(iBuildingReplacement2)
+
+				#Get replacements, that don't appear as third level replacements
+				aImmediateReplacement2List = []
+				for i in xrange(len(a2BuildingReplacementList)):
+					if a2BuildingReplacementList[i] not in a2BuildingReplacement2List:
+						Cv2BuildingReplacementInfo = GC.getBuildingInfo(a2BuildingReplacementList[i])
+						aImmediateReplacement2List.append(a2BuildingReplacementList[i])
+
+				if len(aImmediateReplacement2List) > 0:
+					for i in xrange(len(aImmediateReplacement2List)):
+						Cv2BuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacement2List[i])
+						iReplacement2TechLoc = self.checkBuildingTechRequirements(Cv2BuildingImmediateReplacementInfo)[0]
+						if iTechObsLoc > iReplacement2TechLoc:
+							if iTechObsLoc - iReplacementTechLoc <= 10:
+								self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base obsoletion/Second lvl replacement unlock - consider picking more advanced tech "+str(iTechObsLoc)+"/"+str(iReplacement2TechLoc))
+							else:
+								self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base obsoletion/Second lvl replacement unlock "+str(iTechObsLoc)+"/"+str(iReplacement2TechLoc))
+
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
