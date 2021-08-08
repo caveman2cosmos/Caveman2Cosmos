@@ -586,11 +586,6 @@ bool cvInternalGlobals::viewportsEnabled() const
 	return m_ENABLE_VIEWPORTS;
 }
 
-bool cvInternalGlobals::getReprocessGreatWallDynamically() const
-{
-	return m_ENABLE_VIEWPORTS || getDefineBOOL("DYNAMIC_GREAT_WALL");
-}
-
 int cvInternalGlobals::getNumMapInfos() const
 {
 	return m_paMapInfo.size();
@@ -2372,7 +2367,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start/n");
+	OutputDebugString("Caching Globals: Start\n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2400,7 +2395,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End/n");
+	OutputDebugString("Caching Globals: End\n");
 }
 
 

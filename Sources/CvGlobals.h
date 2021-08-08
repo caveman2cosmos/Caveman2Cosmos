@@ -185,7 +185,6 @@ public:
 
 	bool bugInitCalled() const;
 	bool viewportsEnabled() const;
-	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
 

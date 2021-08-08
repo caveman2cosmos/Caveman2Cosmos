@@ -686,7 +686,7 @@ class TestCode:
 			#Requirement replaces base building
 			#Requirement and base building is replaced
 			#Free building from base building is replacement of requirement
-			if len(aBuildingRequirementReplacementUniqueList) > 0 and iBuilding not in aBuildingRequirementReplacementUniqueList and not aBuildingRequirementReplacementUniqueList <= aBuildingBaseReplacementList and iFreeBuildingInfo not in aBuildingRequirementReplacementUniqueList:
+			if len(aBuildingRequirementReplacementUniqueList) > 0 and iBuilding not in aBuildingRequirementReplacementUniqueList and aBuildingRequirementReplacementUniqueList > aBuildingBaseReplacementList and iFreeBuildingInfo not in aBuildingRequirementReplacementUniqueList:
 				self.log(CvBuildingInfo.getType()+" requirements "+str(aBuildingRequirementNamesList)+" have unlisted replacements "+str(aBuildingRequirementReplacementUniqueNameList))
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
