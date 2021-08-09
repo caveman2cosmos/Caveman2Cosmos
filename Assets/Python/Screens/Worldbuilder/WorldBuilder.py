@@ -16,7 +16,6 @@ import WBProjectScreen
 import WBPlayerUnits
 import WBInfoScreen
 import WBTradeScreen
-import Popup
 
 GC = CyGlobalContext()
 MAP = GC.getMap()
@@ -250,6 +249,7 @@ class WorldBuilder:
 			CyEngine().removeLandmark(self.m_pCurrentPlot)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				CyEngine().removeSign(self.m_pCurrentPlot, iPlayerX)
+
 		elif self.iPlayerAddMode == "AddLandMark":
 			iIndex = -1
 			for i in xrange(CyEngine().getNumSigns()):
@@ -262,12 +262,14 @@ class WorldBuilder:
 			sText = ""
 			if iIndex > -1:
 				sText = CyEngine().getSignByIndex(iIndex).getCaption()
-			popup = Popup.PyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARK_START", ()))
+			popup = CyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARK_START", ()), 1<<2)
 			popup.setUserData((self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), self.iCurrentPlayer, iIndex))
-			popup.createEditBox(sText)
-			popup.launch()
+			popup.createEditBox(sText, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
 		elif self.iSelection == -1: return
+
 		elif self.iPlayerAddMode == "Ownership":
 			self.m_pCurrentPlot.setOwner(self.iCurrentPlayer)
 	## Python Effects ##
