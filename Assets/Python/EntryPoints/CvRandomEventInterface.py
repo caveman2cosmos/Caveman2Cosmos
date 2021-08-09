@@ -2126,7 +2126,8 @@ def canApplyMasterBlacksmithDone1(argsList):
 	#eEvent = argsList[0]
 	data = argsList[1]
 
-	city = GC.getPlayer(data.ePlayer).getCity(data.iCityId)
+	player = GC.getPlayer(data.ePlayer)
+	city = player.getCity(data.iCityId)
 	if not city: return False
 
 	iX = city.getX()
