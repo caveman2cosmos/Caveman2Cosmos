@@ -7227,7 +7227,7 @@ void CvCityAI::AI_updateRouteToCity() const
 		allAreaCitiesConnected->clear();
 	}
 
-	CvCity* pBestCity = NULL;
+	const CvCity* pBestCity = NULL;
 	stdext::hash_map<int, bool>::const_iterator itr;
 	if ((itr = allAreaCitiesConnected->find(area()->getID())) == allAreaCitiesConnected->end() ||
 		!(itr->second))
@@ -7235,7 +7235,6 @@ void CvCityAI::AI_updateRouteToCity() const
 		gDLL->getFAStarIFace()->ForceReset(&GC.getRouteFinder());
 
 		int iBestValue = MAX_INT;
-		pBestCity = NULL;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
