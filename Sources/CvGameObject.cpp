@@ -726,54 +726,6 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
-	//CvString szBuffer;
-	//TB Combat Mods (disease special manifestation and removal system)
-	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
-
-	//if (eProperty != eDiseaseType)
-	//{
-	//
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (!GC.getPropertyInfo(eProperty).isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
-#endif
-	{
-		//TB Combat Mods end
-		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
-		{
-			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
-			{
-				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
-				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
-				if (!bInRange)
-				{
-					if (bHasBuilding)
-					{//TBWORKINGHERE
-						//szBuffer.format("Removing Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
-					}
-				}
-				else if (m_pCity->canConstruct(kBuilding.eBuilding, false, false, true, true))
-				{
-					if (!bHasBuilding)
-					{
-						//szBuffer.format("Adding Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 1);
-					}
-				}
-				else
-				{
-					if (bHasBuilding)
-					{
-						//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
-					}
-				}
-			}
-		}
-	}
 }
 
 void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)

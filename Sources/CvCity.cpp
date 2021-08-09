@@ -1605,19 +1605,13 @@ void CvCity::doTurn()
 
 void CvCity::doAutobuild()
 {
-	// Toffer - Property buildings should be checked more often than just upon property value changes.
-	//	Property buildings may have requirements that change more often than the property value itself.
+	// Toffer - Property buildings should be checked each turn.
+	if (!GET_PLAYER(getOwner()).isNPC())
 	{
-		CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
-
-		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
-		{
-			pObject->eventPropertyChanged(static_cast<PropertyTypes>(iI), getProperties()->getValueByProperty(static_cast<PropertyTypes>(iI)));
-		}
-
+		checkPropertyBuildings();
 	}
 	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-	//	Auto-build any auto-build buildings we can
+	// Auto-build any auto-build buildings we can
 	for (int iI = 0; iI < iNumBuildingInfos; iI++)
 	{
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
@@ -1644,6 +1638,57 @@ void CvCity::doAutobuild()
 						const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
 						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
 						break;
+					}
+				}
+			}
+		}
+	}
+}
+
+void CvCity::checkPropertyBuildings()
+{
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	const bool bOaA = GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS);
+#endif
+
+	for (int iI = GC.getNumPropertyInfos() - 1; iI > -1; iI--)
+	{
+		const PropertyTypes eProperty = static_cast<PropertyTypes>(iI);
+		const int iValue = getProperties()->getValueByProperty(eProperty);
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+		if (!bOaA || !GC.getPropertyInfo(eProperty).isOAType())
+#endif
+		{
+			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
+			{
+				const bool bHasBuilding = getNumActiveBuilding(kBuilding.eBuilding) > 0;
+				const bool bInRange = (iValue >= kBuilding.iMinValue) && (iValue <= kBuilding.iMaxValue);
+				if (!bInRange)
+				{
+					if (bHasBuilding)
+					{//TBWORKINGHERE
+						//szBuffer.format("Removing Building, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
+						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+						setNumRealBuilding(kBuilding.eBuilding, 0);
+					}
+				}
+				else if (canConstruct(kBuilding.eBuilding, false, false, true, true))
+				{
+					if (!bHasBuilding)
+					{
+						//szBuffer.format("Adding Building, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
+						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+						setNumRealBuilding(kBuilding.eBuilding, 1);
+					}
+				}
+				else
+				{
+					if (bHasBuilding)
+					{
+						//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
+						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+						setNumRealBuilding(kBuilding.eBuilding, 0);
 					}
 				}
 			}
