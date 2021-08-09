@@ -404,9 +404,7 @@ CvGameObjectPlayer* CvGameObjectUnit::getOwner() const
 
 CvGameObjectPlayer* CvGameObjectPlot::getOwner() const
 {
-	if (m_pPlot->getOwner() != NO_PLAYER)
-		return GET_PLAYER(m_pPlot->getOwner()).getGameObject();
-	return NULL;
+	return m_pPlot->getOwner() != NO_PLAYER ? GET_PLAYER(m_pPlot->getOwner()).getGameObject() : NULL;
 }
 
 CvGameObjectTeam* CvGameObjectGame::getTeam() const
@@ -436,9 +434,7 @@ CvGameObjectTeam* CvGameObjectUnit::getTeam() const
 
 CvGameObjectTeam* CvGameObjectPlot::getTeam() const
 {
-	if (m_pPlot->getTeam() != NO_TEAM)
-		return GET_TEAM(m_pPlot->getTeam()).getGameObject();
-	return NULL;
+	return m_pPlot->getTeam() != NO_TEAM ? GET_TEAM(m_pPlot->getTeam()).getGameObject() : NULL;
 }
 
 CvGameObjectPlot* CvGameObjectGame::getPlot() const
@@ -514,10 +510,7 @@ void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRela
 	{
 		foreachRelated(eType, eRelation, bind(callFuncIf, _1, pExpr, func), iData);
 	}
-	else
-	{
-		foreachRelated(eType, eRelation, func, iData);
-	}
+	else foreachRelated(eType, eRelation, func, iData);
 }
 
 //helper function to add game object to vector
@@ -557,10 +550,7 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(const
 	{
 		func(this);
 	}
-	else
-	{
-		foreach(eType, func);
-	}
+	else foreach(eType, func);
 }
 
 void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
@@ -601,24 +591,18 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 			}
 		}
 	}
-	else
-	{
-		CvGameObject::foreachRelated(eType, eRelation, func, iData);
-	}
+	else CvGameObject::foreachRelated(eType, eRelation, func, iData);
 }
 
 void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, int iData) const
 {
-	if (eRelation == RELATION_WORKING)
-	{
-		if (eType == GAMEOBJECT_CITY)
-		{
-			func(m_pPlot->getWorkingCity()->getGameObject());
-		}
-	}
-	else
+	if (eRelation != RELATION_WORKING)
 	{
 		CvGameObject::foreachRelated(eType, eRelation, func, iData);
+	}
+	else if (eType == GAMEOBJECT_CITY)
+	{
+		func(m_pPlot->getWorkingCity()->getGameObject());
 	}
 }
 
@@ -769,25 +753,22 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
 					}
 				}
+				else if (m_pCity->canConstruct(kBuilding.eBuilding, false, false, true, true))
+				{
+					if (!bHasBuilding)
+					{
+						//szBuffer.format("Adding Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
+						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 1);
+					}
+				}
 				else
 				{
-					if (m_pCity->canConstruct(kBuilding.eBuilding, false, false, true, true))
+					if (bHasBuilding)
 					{
-						if (!bHasBuilding)
-						{
-							//szBuffer.format("Adding Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-							//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-							m_pCity->setNumRealBuilding(kBuilding.eBuilding, 1);
-						}
-					}
-					else
-					{
-						if (bHasBuilding)
-						{
-							//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-							//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-							m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
-						}
+						//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
+						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
 					}
 				}
 			}
