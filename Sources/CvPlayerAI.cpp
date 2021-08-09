@@ -24993,7 +24993,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 
 	while (iPlotsImproved < iTargetPopulation)
 	{
-		CvPlot* pBestPlot;
+		const CvPlot* pBestPlot;
 		ImprovementTypes eBestImprovement = NO_IMPROVEMENT;
 		int iBestValue = 0;
 
@@ -25008,7 +25008,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 					const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
+						const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 						if (pLoopPlot != NULL && pLoopPlot->getImprovementType() != eImprovement)
 						{
 							eBestImprovement = eImprovement;
@@ -25060,11 +25060,10 @@ bool CvPlayerAI::AI_advancedStartDoRoute(const CvPlot* pFromPlot, const CvPlot* 
 	FAssert(pFromPlot != NULL);
 	FAssert(pToPlot != NULL);
 
-	FAStarNode* pNode;
 	gDLL->getFAStarIFace()->ForceReset(&GC.getStepFinder());
 	if (gDLL->getFAStarIFace()->GeneratePath(&GC.getStepFinder(), pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY(), false, -1, true))
 	{
-		pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+		FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
 		if (pNode != NULL)
 		{
 			if (pNode->m_iData1 > (1 + stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY())))

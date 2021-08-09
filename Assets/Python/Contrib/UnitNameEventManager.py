@@ -74,7 +74,6 @@ import BugCore
 import Roman
 import RandomNameUtils
 import random
-import Popup as PyPopup
 import BugData
 
 
@@ -117,29 +116,19 @@ class UnitNameEventManager:
 		#~ self.Prompt = "Enter a rename convention"
 
 	def __eventUnitRenameBegin(self, argsList):
-		header = localText.getText("TXT_KEY_UNITHELP_NAME_EM_HEADER_1",())
-		prompt = self.Prompt   #"Enter a rename convention"
-		#ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
-		cancel = BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL")
-		popup = PyPopup.PyPopup(RENAME_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
-		popup.setHeaderString(header)
-		popup.setBodyString(prompt)
+		popup = CyPopup(RENAME_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF, True)
+
+		popup.setHeaderString(localText.getText("TXT_KEY_UNITHELP_NAME_EM_HEADER_1",()), 1<<2)
+		popup.setBodyString(self.Prompt, 1<<0)
+
 		popup.createPythonEditBox(self.UnitNameConv, "Enter the unit name convention that you want to test.", 0)
-#		popup.createPythonCheckBoxes(1, 0)
-#		popup.setPythonCheckBoxText(0, "Check to increment counters", "Note: if checked, units named in-game commence from counter used in testing.", 0)
+
 		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_DONT_INCREMENT_COUNTER",()))
 		popup.addButton(localText.getText("TXT_KEY_UNITHELP_NAME_EM_INCREMENT_COUNTER",()))
-		#~ popup.addButton("Ok, don't increment counter")
-		#~ popup.addButton("Ok, increment counter")
-		popup.addButton(cancel)
+		popup.addButton(BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL"))
+
 		popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
-#				popup.createPythonCheckBoxes(3, 0)
-#				for i in range(3):
-#					strCheckboxText = "Checkbox " + str(i)
-#					strCheckBoxHelp = "Checkbox Help Text " + str(i)
-#					# set checkbox text of button i, group 0 to strCheckboxText
-#					popup.setPythonCheckBoxText(i, strCheckboxText, strCheckBoxHelp, 0)
 
 	def __eventUnitRenameApply(self, playerID, userData, popupReturn):
 		self.testUnitNameConv(popupReturn)

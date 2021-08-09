@@ -14,11 +14,13 @@
 
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
+#include "CvUnitAI.h"
 
 class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
+//class CvUnitAI;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -46,7 +48,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -55,9 +57,8 @@ public:
 	void setupGraphical();
 	void reset(CvMapInitData* pInitData);
 
-	void uninit();
 protected:
-
+	void uninit();
 	void setup();
 
 public:
@@ -65,6 +66,9 @@ public:
 
 	void beforeSwitch();
 	void afterSwitch();
+
+	void updateIncomingUnits();
+	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
 
 private:
 	void addViewport(int iXOffset, int iYOffset);
@@ -265,6 +269,20 @@ private:
 	FFreeListTrashArray<CvArea> m_areas;
 
 	std::vector<CvViewport*> m_viewports;
+
+	struct TravelingUnit
+	{
+		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+			: numTurnsUntilArrival(numTravelTurns)
+		{
+			unit = static_cast<const CvUnitAI&>(travelingUnit);
+		}
+
+		CvUnitAI unit;
+		int numTurnsUntilArrival;
+	};
+
+	std::vector<TravelingUnit*> m_IncomingUnits;
 };
 
 #endif

@@ -17,6 +17,10 @@
 					<Directory>Pepper2000</Directory>
 					<bLoad>1</bLoad>
 				</Module>
+				<Module> <!-- Pepper Space Program - units converted to support MultiMaps -->
+					<Directory>P2K_Multimaps_Test</Directory>
+					<bLoad>0</bLoad>
+				</Module>
 				<Module> <!-- Complex Traits -->
 					<Directory>Thunderbrd</Directory>
 					<bLoad>1</bLoad>

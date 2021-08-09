@@ -1431,7 +1431,8 @@ int CyPlayer::getNumCities() const
 
 CyCity* CyPlayer::getCity(int iID) const
 {
-	return new CyCity(m_pPlayer->getCity(iID));
+	CvCity* city = m_pPlayer->getCity(iID);
+	return city ? new CyCity(city) : NULL;
 }
 
 python::list CyPlayer::units() const
