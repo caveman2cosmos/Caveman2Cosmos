@@ -79,7 +79,7 @@ class DynamicCivNames:
 		#eventType, key, mx, my, px, py = argsList
 		eventType = argsList[0]; key = argsList[1]
 
-		if eventType == RevDefs.EventKeyDown:
+		if eventType == 6:
 			theKey = int(key)
 
 			# For debug or trial only
