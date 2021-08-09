@@ -724,10 +724,6 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 }
 
-void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
-{
-}
-
 void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	PROFILE_FUNC();
