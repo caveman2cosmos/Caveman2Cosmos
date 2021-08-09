@@ -1304,7 +1304,7 @@ void CvMap::beforeSwitch()
 	m_bSwitchInProgress = true;
 
 #ifdef THE_GREAT_WALL
-	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
+	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
 	{
 		GC.getGame().processGreatWall(false);
 	}
@@ -1316,43 +1316,29 @@ void CvMap::beforeSwitch()
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
+			| filtered(!bind(&CvUnit::isUsingDummyEntities, _1)))
 			{
-				if ( !pLoopUnit->isUsingDummyEntities() )
-				{
-					if (gDLL->getEntityIFace()->IsSelected(pLoopUnit->getEntity()))
-					{
-						gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true, true);
-					}
-					if (GC.IsGraphicsInitialized())
-					{
-						gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
-						pLoopUnit->removeEntity();
-					}
-					pLoopUnit->destroyEntity();
-				}
+				gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
+
+				pLoopUnit->removeEntity();
+				pLoopUnit->destroyEntity();
 			}
-
-			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities()
+			| filtered(bind(&CvCity::getEntity, _1) != nullptr))
 			{
-				if ( pLoopCity->getEntity() != NULL )
-				{
-					FAssert(pLoopCity->isInViewport());
-
-					if (pLoopCity->isCitySelected())
-					{
-						gDLL->getInterfaceIFace()->clearSelectedCities();
-					}
-					pLoopCity->removeEntity();
-					pLoopCity->destroyEntity();
-				}
+				pLoopCity->removeEntity();
+				pLoopCity->destroyEntity();
 			}
 		}
 	}
 
+	gDLL->getInterfaceIFace()->clearSelectionList();
+	gDLL->getInterfaceIFace()->clearSelectedCities();
+
 	GC.clearSigns();
 
-	for (i = 0; i < numPlots(); i++)
+	for (int i = 0; i < numPlots(); i++)
 	{
 		plotByIndex(i)->destroyGraphics();
 	}
@@ -1362,23 +1348,14 @@ void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (m_pMapPlots == NULL)
+	if (!plotsInitialized())
 	{
-		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
+		if (!GC.getMapInfo(getType()).getInitialWBMap().empty())
 		{
-			CyArgsList argsList;
-			long lResult;
-
 			char mapPath[1024];
 			getcwd(mapPath, 1024);
-			strcat(mapPath, GC.getMapInfo(getType()).getInitialWBMap().GetCString());
-
-			argsList.add(mapPath);
-			gDLL->getPythonIFace()->callFunction(PYWorldBuilderModule, "readAndApplyDesc", argsList.makeFunctionArgs(), &lResult);
-			if (lResult < 0) // failed
-			{
-				AddDLLMessage((PlayerTypes)0, true, GC.getEVENT_MESSAGE_TIME(), L"Worldbuilder map failed to load");
-			}
+			strcat(mapPath, static_cast<const char*>(GC.getMapInfo(getType()).getInitialWBMap()));
+			Cy::call("CvWBInterface", "readAndApplyDesc", Cy::Args() << mapPath);
 		}
 		else
 		{
@@ -1389,16 +1366,18 @@ void CvMap::afterSwitch()
 		}
 	}
 
-	gDLL->getInterfaceIFace()->clearSelectionList();
-	gDLL->getInterfaceIFace()->makeSelectionListDirty();
-
+	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
+	gDLL->getEngineIFace()->MarkBridgesDirty(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->SetDirty(CultureBorders_DIRTY_BIT, true);
+	gDLL->getInterfaceIFace()->makeSelectionListDirty();
 	gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
+	gDLL->getInterfaceIFace()->setDirty(BlockadedPlots_DIRTY_BIT, true); // Matt: Maybe need this.
+	gDLL->getInterfaceIFace()->setDirty(Fog_DIRTY_BIT, true); // Matt: Maybe need this.
 
 	int iWidth = GC.getMapInfo(getType()).getGridWidth();
 	if (iWidth == 0)
@@ -1428,7 +1407,7 @@ void CvMap::afterSwitch()
 
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
-	for (i = 0; i < MAX_PLAYERS; i++)
+	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
@@ -1437,14 +1416,11 @@ void CvMap::afterSwitch()
 				//gDLL->getEntityIFace()->createCityEntity(pLoopCity);
 				pLoopCity->setupGraphical();
 			}
-
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
+			| filtered(!bind(CvUnit::isUsingDummyEntities, _1)))
 			{
-				if ( !pLoopUnit->isUsingDummyEntities() )
-				{
-					gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
-					pLoopUnit->setupGraphical();
-				}
+				gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
+				pLoopUnit->setupGraphical();
 			}
 		}
 	}
@@ -1455,11 +1431,10 @@ void CvMap::afterSwitch()
 	updateFlagSymbols();
 	updateMinimapColor();
 
-	// Reprocess landmarks and signs
 	GC.reprocessSigns();
 
 #ifdef THE_GREAT_WALL
-	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
+	if (GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW)
 	{
 		GC.getGame().processGreatWall(true);
 	}
