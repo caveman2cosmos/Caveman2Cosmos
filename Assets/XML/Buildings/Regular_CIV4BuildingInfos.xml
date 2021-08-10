@@ -10752,6 +10752,8 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BATTLEFIELD_SPORTS</PrereqTech>
 			<iCost>4485</iCost>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -43514,6 +43516,8 @@
 			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
 			<iCost>740</iCost>
 			<iConquestProb>70</iConquestProb>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>

@@ -951,7 +951,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS =====#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -959,6 +959,8 @@ class TestCode:
 				iBaseForeignTradeRouteModifier = CvBuildingInfo.getForeignTradeRouteModifier()
 				iBaseHappiness = CvBuildingInfo.getHappiness()
 				iBaseHealth = CvBuildingInfo.getHealth()
+				iBaseGreatPeopleRateChange = CvBuildingInfo.getGreatPeopleRateChange()
+				iBaseGreatPeopleRateModifier = CvBuildingInfo.getGreatPeopleRateModifier()
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -968,9 +970,11 @@ class TestCode:
 				iForeignTradeRouteModifier = 0
 				iHappiness = 0
 				iHealth = 0
+				iGreatPeopleRateChange = 0
+				iGreatPeopleRateModifier = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
@@ -978,8 +982,12 @@ class TestCode:
 					iForeignTradeRouteModifier += CvReplacedBuildingInfo.getForeignTradeRouteModifier()
 					iHappiness += CvReplacedBuildingInfo.getHappiness()
 					iHealth += CvReplacedBuildingInfo.getHealth()
+					iGreatPeopleRateChange += CvReplacedBuildingInfo.getGreatPeopleRateChange()
+					if CvBuildingInfo.getGreatPeopleUnitType() != -1 and CvReplacedBuildingInfo.getGreatPeopleUnitType() != -1 and CvBuildingInfo.getGreatPeopleUnitType() != CvReplacedBuildingInfo.getGreatPeopleUnitType():
+						self.log("WARNING: "+CvBuildingInfo.getType()+", "+CvReplacedBuildingInfo.getType()+" have different GPs, remove GPUnitType from both buildings, or unify entire replacement tree")
+					iGreatPeopleRateModifier += CvReplacedBuildingInfo.getGreatPeopleRateModifier()
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
@@ -987,6 +995,8 @@ class TestCode:
 				iFinalForeignTradeRouteModifier = iBaseForeignTradeRouteModifier + iForeignTradeRouteModifier
 				iFinalHappiness = iBaseHappiness + iHappiness
 				iFinalHealth = iBaseHealth + iHealth
+				iFinalGreatPeopleRateChange = iBaseGreatPeopleRateChange + iGreatPeopleRateChange
+				iFinalGreatPeopleRateModifier = iBaseGreatPeopleRateModifier + iGreatPeopleRateModifier
 
 				#Building shouldn't be worse than replaced one!
 				if iBaseTradeRoutes < iTradeRoutes:
@@ -1003,6 +1013,10 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Happiness "+str(iFinalHappiness)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseHealth < iHealth:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Health "+str(iFinalHealth)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGreatPeopleRateChange < iGreatPeopleRateChange:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have GP Rate Change "+str(iFinalGreatPeopleRateChange)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGreatPeopleRateModifier < iGreatPeopleRateModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have GP Rate Modifier "+str(iFinalGreatPeopleRateModifier)+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS =====#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
