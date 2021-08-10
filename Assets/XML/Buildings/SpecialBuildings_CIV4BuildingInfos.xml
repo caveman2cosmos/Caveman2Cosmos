@@ -6524,6 +6524,10 @@
 				<iYield>2</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>5</iYield>
+			</YieldModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>

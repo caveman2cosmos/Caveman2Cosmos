@@ -950,34 +950,42 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				#<YieldChanges>, <YieldPerPopChange> - base
+				#<YieldChanges>, <YieldPerPopChanges>, <YieldModifiers> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
-				aBaseYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aBaseYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aBaseYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
-					aBaseYieldPerPopChangeList[iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
+					aBaseYieldPerPopChangesList[iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
+					aBaseYieldModifiersList[iYield] += CvBuildingInfo.getYieldModifier(iYield)
 
 				#Analyze replacements by tag
 				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
-				aYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>, <YieldPerPopChange>
+					#<YieldChanges>, <YieldPerPopChanges>, <YieldModifiers>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
-						aYieldPerPopChangeList[iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
+						aYieldPerPopChangesList[iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
+						aYieldModifiersList[iYield] += CvReplacedBuildingInfo.getYieldModifier(iYield)
 
-				#Keep already existing <YieldChanges>, <YieldPerPopChange> in base
+				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <YieldModifiers> in base
 				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
-				aFinalYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aFinalYieldChangesList[iYield] = aBaseYieldChangesList[iYield] + aYieldChangesList[iYield]
-					aFinalYieldPerPopChangeList[iYield] = aBaseYieldPerPopChangeList[iYield] + aYieldPerPopChangeList[iYield]
+					aFinalYieldPerPopChangesList[iYield] = aBaseYieldPerPopChangesList[iYield] + aYieldPerPopChangesList[iYield]
+					aFinalYieldModifiersList[iYield] = aBaseYieldModifiersList[iYield] + aYieldModifiersList[iYield]
 
 				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseYieldPerPopChangeList[0] < aYieldPerPopChangeList[0] or aBaseYieldPerPopChangeList[1] < aYieldPerPopChangeList[1] or aBaseYieldPerPopChangeList[2] < aYieldPerPopChangeList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangeList)+" replaced: "+str(aImmediateReplacedNameList))
+				if aBaseYieldPerPopChangesList[0] < aYieldPerPopChangesList[0] or aBaseYieldPerPopChangesList[1] < aYieldPerPopChangesList[1] or aBaseYieldPerPopChangesList[2] < aYieldPerPopChangesList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+				if aBaseYieldModifiersList[0] < aYieldModifiersList[0] or aBaseYieldModifiersList[1] < aYieldModifiersList[1] or aBaseYieldModifiersList[2] < aYieldModifiersList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Modifiers "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 
 
 	#Building bonus requirements

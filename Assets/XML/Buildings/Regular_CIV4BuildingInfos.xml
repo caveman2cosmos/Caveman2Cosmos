@@ -62457,6 +62457,10 @@
 			</PrereqInCityBuildings>
 			<iCost>1180</iCost>
 			<iHealth>-2</iHealth>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>15</iYield>
+			</YieldModifiers>
 			<PowerYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>40</iYield>
