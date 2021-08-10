@@ -950,27 +950,34 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				#<YieldChanges> - base
+				#<YieldChanges>, <YieldPerPopChange> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
-				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
-				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aBaseYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
+					aBaseYieldPerPopChangeList[iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
 
 				#Analyze replacements by tag
+				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>
+					#<YieldChanges>, <YieldPerPopChange>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
+						aYieldPerPopChangeList[iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
 
-				#Keep already existing <YieldChanges> in base
+				#Keep already existing <YieldChanges>, <YieldPerPopChange> in base
+				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalYieldPerPopChangeList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-					aFinalYieldChangesList[iYield] += aBaseYieldChangesList[iYield]
-					aFinalYieldChangesList[iYield] += aYieldChangesList[iYield]
+					aFinalYieldChangesList[iYield] = aBaseYieldChangesList[iYield] + aYieldChangesList[iYield]
+					aFinalYieldPerPopChangeList[iYield] = aBaseYieldPerPopChangeList[iYield] + aYieldPerPopChangeList[iYield]
 
 				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+				if aBaseYieldPerPopChangeList[0] < aYieldPerPopChangeList[0] or aBaseYieldPerPopChangeList[1] < aYieldPerPopChangeList[1] or aBaseYieldPerPopChangeList[2] < aYieldPerPopChangeList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangeList)+" replaced: "+str(aImmediateReplacedNameList))
 
 
 	#Building bonus requirements
