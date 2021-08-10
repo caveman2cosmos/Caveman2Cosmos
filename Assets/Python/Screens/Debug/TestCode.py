@@ -950,40 +950,46 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers> - base
+				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aBaseRiverPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
 					aBaseYieldPerPopChangesList[iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
 					aBaseSeaPlotYieldChangesList[iYield] += CvBuildingInfo.getSeaPlotYieldChange(iYield)
+					aBaseRiverPlotYieldChangesList[iYield] += CvBuildingInfo.getRiverPlotYieldChange(iYield)
 					aBaseYieldModifiersList[iYield] += CvBuildingInfo.getYieldModifier(iYield)
 
 				#Analyze replacements by tag
 				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aRiverPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers>
+					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
 						aYieldPerPopChangesList[iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
 						aSeaPlotYieldChangesList[iYield] += CvReplacedBuildingInfo.getSeaPlotYieldChange(iYield)
+						aRiverPlotYieldChangesList[iYield] += CvReplacedBuildingInfo.getRiverPlotYieldChange(iYield)
 						aYieldModifiersList[iYield] += CvReplacedBuildingInfo.getYieldModifier(iYield)
 
-				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers> in base
+				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers> in base
 				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aFinalYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aFinalSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalRiverPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aFinalYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aFinalYieldChangesList[iYield] = aBaseYieldChangesList[iYield] + aYieldChangesList[iYield]
 					aFinalYieldPerPopChangesList[iYield] = aBaseYieldPerPopChangesList[iYield] + aYieldPerPopChangesList[iYield]
 					aFinalSeaPlotYieldChangesList[iYield] = aBaseSeaPlotYieldChangesList[iYield] + aSeaPlotYieldChangesList[iYield]
+					aFinalRiverPlotYieldChangesList[iYield] = aBaseRiverPlotYieldChangesList[iYield] + aRiverPlotYieldChangesList[iYield]
 					aFinalYieldModifiersList[iYield] = aBaseYieldModifiersList[iYield] + aYieldModifiersList[iYield]
 
 				#Building shouldn't be worse than replaced one!
@@ -993,6 +999,8 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangesList)+" replaced: "+str(aImmediateReplacedNameList))
 				if aBaseSeaPlotYieldChangesList[0] < aSeaPlotYieldChangesList[0] or aBaseSeaPlotYieldChangesList[1] < aSeaPlotYieldChangesList[1] or aBaseSeaPlotYieldChangesList[2] < aSeaPlotYieldChangesList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Sea plot Yield Changes "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+				if aBaseRiverPlotYieldChangesList[0] < aRiverPlotYieldChangesList[0] or aBaseRiverPlotYieldChangesList[1] < aRiverPlotYieldChangesList[1] or aBaseRiverPlotYieldChangesList[2] < aRiverPlotYieldChangesList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C River plot Yield Changes "+str(aFinalRiverPlotYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
 				if aBaseYieldModifiersList[0] < aYieldModifiersList[0] or aBaseYieldModifiersList[1] < aYieldModifiersList[1] or aBaseYieldModifiersList[2] < aYieldModifiersList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Modifiers "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 				
