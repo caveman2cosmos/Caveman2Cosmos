@@ -778,6 +778,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
+			<iHealth>-1</iHealth>
 			<iTradeRoutes>2</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>

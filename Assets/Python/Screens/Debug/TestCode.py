@@ -951,12 +951,14 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS =====#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
 				iBaseTradeRouteModifier = CvBuildingInfo.getTradeRouteModifier()
 				iBaseForeignTradeRouteModifier = CvBuildingInfo.getForeignTradeRouteModifier()
+				iBaseHappiness = CvBuildingInfo.getHappiness()
+				iBaseHealth = CvBuildingInfo.getHealth()
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -964,33 +966,43 @@ class TestCode:
 				iGlobalTradeRoutes = 0
 				iTradeRouteModifier = 0
 				iForeignTradeRouteModifier = 0
+				iHappiness = 0
+				iHealth = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
 					iTradeRouteModifier += CvReplacedBuildingInfo.getTradeRouteModifier()
 					iForeignTradeRouteModifier += CvReplacedBuildingInfo.getForeignTradeRouteModifier()
+					iHappiness += CvReplacedBuildingInfo.getHappiness()
+					iHealth += CvReplacedBuildingInfo.getHealth()
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
 				iFinalTradeRouteModifier = iBaseTradeRouteModifier + iTradeRouteModifier
 				iFinalForeignTradeRouteModifier = iBaseForeignTradeRouteModifier + iForeignTradeRouteModifier
+				iFinalHappiness = iBaseHappiness + iHappiness
+				iFinalHealth = iBaseHealth + iHealth
 
 				#Building shouldn't be worse than replaced one!
 				if iBaseTradeRoutes < iTradeRoutes:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Trade Routes "+str(iFinalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Trade Routes "+str(iFinalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseCoastalTradeRoutes < iCoastalTradeRoutes:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Coastal Trade Routes "+str(iFinalCoastalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Coastal Trade Routes "+str(iFinalCoastalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseGlobalTradeRoutes < iGlobalTradeRoutes:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Global Trade Routes "+str(iFinalGlobalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Trade Routes "+str(iFinalGlobalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseTradeRouteModifier < iTradeRouteModifier:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Trade Route Modifier "+str(iFinalTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Trade Route Modifier "+str(iFinalTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseForeignTradeRouteModifier < iForeignTradeRouteModifier:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Foreign Trade Route Modifier "+str(iFinalForeignTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Foreign Trade Route Modifier "+str(iFinalForeignTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHappiness < iHappiness:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Happiness "+str(iFinalHappiness)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHealth < iHealth:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Health "+str(iFinalHealth)+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS =====#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base

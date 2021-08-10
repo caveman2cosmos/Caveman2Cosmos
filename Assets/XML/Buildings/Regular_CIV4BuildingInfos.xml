@@ -208,6 +208,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
 			<iDefense>10</iDefense>
 			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
 			<iTradeRoutes>-1</iTradeRoutes>
@@ -436,7 +437,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-5</iHappiness>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAVITY_CROWD_CONTROL</BuildingType>
 			</ReplacementBuildings>
@@ -532,7 +533,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-5</iHappiness>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ACOUSTIC_CROWD_CONTROL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_CROWD_CONTROL</BuildingType>
@@ -929,7 +930,7 @@
 				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>6405</iCost>
-			<iHappiness>-5</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -1420,6 +1421,8 @@
 				<iCommerce>15</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
+			<iHappiness>14</iHappiness>
+			<iHealth>1</iHealth>
 			<FreeBonus>BONUS_BUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1845,6 +1848,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
+			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 				<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
@@ -2641,6 +2645,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
+			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_TIRES</BonusType>
@@ -5614,6 +5619,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
+			<iHealth>1</iHealth>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
@@ -5890,6 +5896,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>535</iCost>
 			<iHealth>1</iHealth>
+			<iHappiness>14</iHappiness>
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
@@ -6092,7 +6099,7 @@
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>5905</iCost>
-			<iHappiness>-4</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -10296,6 +10303,7 @@
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -10468,6 +10476,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
@@ -10573,6 +10582,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
@@ -10924,6 +10934,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BEADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -11009,6 +11020,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BEADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -12613,8 +12625,8 @@
 				<BuildingType>BUILDING_NANO_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1180</iCost>
-			<iHealth>-3</iHealth>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -13831,7 +13843,8 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -14339,6 +14352,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<FreePromotion>PROMOTION_CACOPHONY</FreePromotion>
@@ -14664,6 +14678,7 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -14856,6 +14871,7 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -16090,6 +16106,7 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -18265,6 +18282,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_CANDLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
@@ -19324,6 +19342,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>710</iCost>
+			<iHappiness>1</iHappiness>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -19376,6 +19395,7 @@
 				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>261</iCost>
+			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -19448,6 +19468,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
@@ -20342,7 +20363,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1180</iCost>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -20992,7 +21013,8 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<iCost>153</iCost>
-			<iHealth>-1</iHealth>
+			<iHealth>3</iHealth>
+			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>1</iYield>
@@ -21222,7 +21244,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>184</iCost>
-			<iHealth>1</iHealth>
+			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -21253,6 +21275,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iHealth>-2</iHealth>
+			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
@@ -21374,6 +21397,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
+			<iHappiness>3</iHappiness>
 			<FreeBonus>BONUS_PLASTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -23304,8 +23328,8 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
-			<iHealth>3</iHealth>
-			<iHappiness>1</iHappiness>
+			<iHealth>7</iHealth>
+			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -24271,6 +24295,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_SHOES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -24742,7 +24767,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8405</iCost>
-			<iHealth>-4</iHealth>
+			<iHealth>17</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>150</iYield>
@@ -25005,7 +25030,7 @@
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<iCost>1230</iCost>
-			<iHealth>-3</iHealth>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -25065,6 +25090,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iHealth>-1</iHealth>
+			<iHappiness>-1</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -25600,6 +25626,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iHealth>-1</iHealth>
+			<iHappiness>2</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -25807,6 +25834,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_CEMENT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>70</iConquestProb>
@@ -25843,6 +25871,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_MARZIPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -28288,7 +28317,7 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldModifiers>
-			<iHealth>-1</iHealth>
+			<iHealth>-3</iHealth>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 			</ReplacementBuildings>
@@ -35364,6 +35393,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_DYE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -35466,6 +35496,7 @@
 			<iMinDefense>10</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
 			<Flavors>
@@ -36195,7 +36226,7 @@
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1080</iCost>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -37174,6 +37205,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<iDefense>40</iDefense>
 			<iEspionageDefense>4</iEspionageDefense>
 			<iLocalRepel>55</iLocalRepel>
@@ -39091,6 +39124,7 @@
 				<iYield>50</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<iHappiness>7</iHappiness>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>6</iAsset>
 			<Flavors>
@@ -39134,6 +39168,7 @@
 				<iYield>50</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
+			<iHealth>1</iHealth>
 			<FreeBonus>BONUS_NUTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -39185,6 +39220,8 @@
 			<YieldChanges>
 				<iYield>75</iYield>
 			</YieldChanges>
+			<iHappiness>1</iHappiness>
+			<iHealth>13</iHealth>
 			<FreeBonus>BONUS_FRUIT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -40426,6 +40463,7 @@
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -40733,6 +40771,7 @@
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iHappiness>-1</iHappiness>
 			<iDefense>20</iDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>10</iAdjacentDamagePercent>
@@ -42084,6 +42123,7 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<iHappiness>6</iHappiness>
 			<FreeBonus>BONUS_DRIED_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -43499,6 +43539,8 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
+			<iHealth>5</iHealth>
+			<iHappiness>5</iHappiness>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -43650,6 +43692,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_FURNITURE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -43907,6 +43950,7 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
+			<iHappiness>-1</iHappiness>
 			<iAsset>2</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -44544,6 +44588,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -44949,6 +44994,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -46359,6 +46405,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_GHEE_OIL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -46662,7 +46709,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>710</iCost>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -47809,7 +47856,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<iHappiness>-4</iHappiness>
+			<iHappiness>-5</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 			</PrereqInCityBuildings>
@@ -47944,6 +47991,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<iDefense>60</iDefense>
 			<iEspionageDefense>40</iEspionageDefense>
 			<iLocalRepel>60</iLocalRepel>
@@ -48053,7 +48102,8 @@
 			<FreeBonus>BONUS_FLOWERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>740</iCost>
-			<iHealth>1</iHealth>
+			<iHappiness>16</iHappiness>
+			<iHealth>4</iHealth>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -49295,6 +49345,8 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
+			<iHappiness>-1</iHappiness>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iAsset>4</iAsset>
@@ -49537,6 +49589,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_HATS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -51132,6 +51185,7 @@
 			</PropertyManipulators>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -53399,8 +53453,8 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<iHappiness>5</iHappiness>
 			<iHealth>5</iHealth>
+			<iHappiness>11</iHappiness>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -54904,7 +54958,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<YieldChanges>
 				<iCommerce>0</iCommerce>
@@ -58686,6 +58740,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_LACQUERWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -58746,6 +58801,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_LACQUERWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -58931,7 +58987,8 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -59222,7 +59279,6 @@
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>8755</iCost>
-			<iHealth>-5</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>200</iYield>
@@ -59232,6 +59288,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>60</iCommerce>
 			</CommerceChanges>
+			<iHealth>17</iHealth>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</UnitCombatType>
@@ -59608,7 +59665,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>710</iCost>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -61404,7 +61461,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>710</iCost>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -61985,7 +62042,7 @@
 			</PrereqInCityBuildings>
 			<iCost>1230</iCost>
 			<iHealth>1</iHealth>
-			<iHappiness>8</iHappiness>
+			<iHappiness>17</iHappiness>
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -62441,6 +62498,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<iHappiness>1</iHappiness>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -63701,6 +63759,7 @@
 			</ReplacementBuildings>
 			<iCost>270</iCost>
 			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -64487,7 +64546,7 @@
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
 			<Bonus>BONUS_MEGASTRONG_ALLOYS</Bonus>
 			<iCost>12155</iCost>
-			<iHappiness>-5</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -66035,7 +66094,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>2505</iCost>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -68129,7 +68188,7 @@
 			</ReplacementBuildings>
 			<iCost>455</iCost>
 			<iHealth>1</iHealth>
-			<iHappiness>4</iHappiness>
+			<iHappiness>9</iHappiness>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -69349,6 +69408,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -70250,7 +70310,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>830</iCost>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -70420,6 +70480,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>1</iHappiness>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
@@ -71405,6 +71466,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<iDefense>50</iDefense>
 			<iEspionageDefense>6</iEspionageDefense>
 			<iLocalRepel>60</iLocalRepel>
@@ -74967,6 +75030,7 @@
 			<CommerceChanges>
 				<iCommerce>-40</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
 			<iNumPopulationEmployed>1</iNumPopulationEmployed>
@@ -78298,7 +78362,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
-			<iHappiness>1</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -78607,6 +78671,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_PAPER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -79267,6 +79332,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_PASTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusYieldChanges>
@@ -79901,6 +79967,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_PERCUSSION_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
@@ -80037,7 +80104,7 @@
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>243</iCost>
-			<iHealth>1</iHealth>
+			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -81634,6 +81701,7 @@
 			</ReplacementBuildings>
 			<iCost>40</iCost>
 			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -83258,6 +83326,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -83320,6 +83389,7 @@
 				</And>
 			</NewCityFree>
 			<iHealth>-1</iHealth>
+			<iHappiness>-1</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -83655,6 +83725,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_POTTERY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -83738,6 +83809,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_POTTERY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -84182,6 +84254,7 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_BOOKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusHappinessChanges>
@@ -84885,7 +84958,8 @@
 				<BuildingType>BUILDING_SANITATION_CHAMBER</BuildingType>
 			</ReplacementBuildings>
 			<iCost>740</iCost>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_SOAP</BonusType>
@@ -87929,7 +88003,8 @@
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3525</iCost>
-			<iHappiness>2</iHappiness>
+			<iHappiness>5</iHappiness>
+			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -88613,6 +88688,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_ROASTED_COFFEE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -88815,7 +88891,8 @@
 				<BuildingType>BUILDING_GRAV_TRAPS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1685</iCost>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -89424,6 +89501,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_ROPE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -90084,6 +90162,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_SAILS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -90548,6 +90627,8 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -90770,6 +90851,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_SAUSAGE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusHealthChanges>
@@ -91633,6 +91715,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
@@ -91892,6 +91975,7 @@
 			</ReplacementBuildings>
 			<iCost>40</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -95426,6 +95510,7 @@
 			</CommerceChanges>
 			<iTradeRoutes>4</iTradeRoutes>
 			<iTradeRouteModifier>100</iTradeRouteModifier>
+			<iHealth>1</iHealth>
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -96903,7 +96988,7 @@
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>160</iCost>
-			<iHealth>1</iHealth>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -98472,6 +98557,7 @@
 			</ReplacementBuildings>
 			<iCost>62</iCost>
 			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -100756,6 +100842,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
@@ -101776,7 +101863,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>4145</iCost>
-			<iHappiness>-4</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -102098,6 +102185,8 @@
 				<iYield>90</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
+			<iHealth>2</iHealth>
+			<iHappiness>2</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -102790,7 +102879,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>710</iCost>
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -104121,6 +104210,7 @@
 			</CommerceChanges>
 			<iTradeRoutes>5</iTradeRoutes>
 			<iTradeRouteModifier>200</iTradeRouteModifier>
+			<iHealth>1</iHealth>
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -104711,6 +104801,7 @@
 				<iYield>1</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
+			<iHappiness>2</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
@@ -106455,6 +106546,7 @@
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -106543,6 +106635,7 @@
 			</ReplacementBuildings>
 			<iCost>332</iCost>
 			<iHappiness>1</iHappiness>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -107056,6 +107149,7 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -110813,6 +110907,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHappiness>-1</iHappiness>
 			<iDefense>60</iDefense>
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -110968,6 +111063,7 @@
 			</TechYieldChanges>
 			<iFoodKept>9</iFoodKept>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iHealth>1</iHealth>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<PropertyManipulators>
@@ -112035,6 +112131,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_CLOTH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -112411,6 +112508,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_CHARIOT</UnitType>
@@ -112935,7 +113033,7 @@
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
 			<iCost>3975</iCost>
-			<iHappiness>-3</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -113185,6 +113283,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iHealth>-1</iHealth>
 			<FreeBonus>BONUS_WOODWIND_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>

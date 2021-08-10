@@ -35,6 +35,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -155,7 +156,7 @@
 					<iHeal>15</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<iHealth>-5</iHealth>
+			<iHealth>-1</iHealth>
 			<iTradeRoutes>3</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
