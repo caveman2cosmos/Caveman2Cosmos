@@ -6519,6 +6519,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
+			<YieldChanges>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>
@@ -11097,6 +11102,10 @@
 			</ReplacementBuildings>
 			<iHappiness>-4</iHappiness>
 			<iHealth>-4</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>6</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>-4</iCommerce>
 			</CommerceChanges>

@@ -323,7 +323,7 @@ class UnitReName(object):
 
 		zsCntCode = self.getCountCode(conv, searchStr)
 
-		if zsCntCode: 
+		if zsCntCode:
 			return conv.replace(zsCntCode, self.FormatNumber(self.getNumberFormat(conv, searchStr), iCnt))
 		return conv
 

@@ -793,7 +793,7 @@ class TestCode:
 			iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2])
 			iTechObsLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-			iTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[1]			
+			iTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[1]
 
 			#All replacements of base
 			aBuildingReplacementList = []
@@ -923,14 +923,32 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Tech location would be good way to sort replacements, as later ones tend to replace more
-			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2]) 
+			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2])
 
-			#Ignore Stories Effect, Pollution, and Bans			
+			#Ignore Stories Effect, Pollution, and Bans
 			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1 and CvBuildingInfo.getNumReplacedBuilding() != 0:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
 					aReplacedBuildings.append(CvBuildingInfo.getReplacedBuilding(i))
+
+				#All replaced buildings of replaced ones
+				aBuildingReplaced2List = []
+				for i in xrange(len(aReplacedBuildings)):
+					CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+					for iReplaced2 in xrange(CvBuildingReplacedInfo.getNumReplacedBuilding()):
+						iBuildingReplacd2 = CvBuildingReplacedInfo.getReplacedBuilding(iReplaced2)
+						if iBuildingReplacd2 not in aBuildingReplaced2List:
+							aBuildingReplaced2List.append(iBuildingReplacd2)
+
+				#Get replacements, that don't appear as replaced of replaced.
+				aImmediateReplacedList = []
+				aImmediateReplacedNameList = []
+				for i in xrange(len(aReplacedBuildings)):
+					if aReplacedBuildings[i] not in aBuildingReplaced2List:
+						CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+						aImmediateReplacedList.append(aReplacedBuildings[i])
+						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#<YieldChanges> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
@@ -938,21 +956,22 @@ class TestCode:
 				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
-				
+
 				#Analyze replacements by tag
-				for i in xrange(len(aReplacedBuildings)):
-					CvReplacedBuildingInfo = GC.getBuildingInfo(aReplacedBuildings[i])					
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<YieldChanges>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
-						
+
+				#Keep already existing <YieldChanges> in base
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aFinalYieldChangesList[iYield] += aBaseYieldChangesList[iYield]
 					aFinalYieldChangesList[iYield] += aYieldChangesList[iYield]
-						
+
 				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList))
-					
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):

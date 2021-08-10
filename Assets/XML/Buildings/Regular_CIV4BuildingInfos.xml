@@ -701,7 +701,7 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>15</iYield>
+				<iYield>40</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -1409,8 +1409,8 @@
 			<PrereqTech>TECH_ENVIRONMENTAL_ECONOMICS</PrereqTech>
 			<iCost>4315</iCost>
 			<YieldChanges>
-				<iYield>10</iYield>
-				<iYield>15</iYield>
+				<iYield>50</iYield>
+				<iYield>65</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>15</iCommerce>
@@ -3353,6 +3353,9 @@
 			</ReplacementBuildings>
 			<iCost>4655</iCost>
 			<iHappiness>2</iHappiness>
+			<YieldChanges>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5548,7 +5551,7 @@
 			<bWater>1</bWater>
 			<iCost>1845</iCost>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>30</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5883,6 +5886,9 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>535</iCost>
 			<iHealth>1</iHealth>
+			<YieldChanges>
+				<iYield>20</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -14507,6 +14513,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14549,6 +14558,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14599,6 +14611,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14638,6 +14653,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14677,6 +14695,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14731,6 +14752,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14779,6 +14803,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14818,6 +14845,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14857,6 +14887,10 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>2</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14905,6 +14939,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14946,6 +14983,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14985,6 +15025,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15027,6 +15070,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15069,6 +15115,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15108,6 +15157,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15147,6 +15199,10 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15196,6 +15252,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15235,6 +15294,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15274,6 +15336,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15331,6 +15396,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15381,6 +15449,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15429,6 +15500,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15474,6 +15548,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15516,6 +15593,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15558,6 +15638,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15600,6 +15683,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15646,6 +15732,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15689,6 +15778,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15729,6 +15821,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15777,6 +15872,9 @@
 			</PrereqInCityBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16229,6 +16327,9 @@
 			</ReplacementBuildings>
 			<iCost>216</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20882,7 +20983,7 @@
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
-				<iYield>0</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_CHARCOAL</FreeBonus>
@@ -38973,7 +39074,8 @@
 			</ExtraFreeBonuses>
 			<iCost>3975</iCost>
 			<YieldChanges>
-				<iYield>10</iYield>
+				<iYield>50</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>6</iAsset>
@@ -39012,7 +39114,8 @@
 			</PrereqInCityBuildings>
 			<iCost>3975</iCost>
 			<YieldChanges>
-				<iYield>10</iYield>
+				<iYield>50</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_NUTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -39063,7 +39166,7 @@
 			</PrereqInCityBuildings>
 			<iCost>3975</iCost>
 			<YieldChanges>
-				<iYield>10</iYield>
+				<iYield>75</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_FRUIT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -39677,6 +39780,10 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
@@ -41950,7 +42057,8 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>100</iYield>
+				<iYield>175</iYield>
+				<iYield>10</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
@@ -45700,6 +45808,9 @@
 			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
+			<YieldChanges>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -65989,6 +66100,9 @@
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>740</iCost>
+			<YieldChanges>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>-8</iCommerce>
 				<iCommerce>4</iCommerce>
@@ -80821,7 +80935,7 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>35</iYield>
+				<iYield>175</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
@@ -101942,8 +102056,8 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>20</iYield>
-				<iYield>10</iYield>
+				<iYield>90</iYield>
+				<iYield>25</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
@@ -104555,7 +104669,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
