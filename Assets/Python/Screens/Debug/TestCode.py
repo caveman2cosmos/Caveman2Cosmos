@@ -1308,11 +1308,11 @@ class TestCode:
 			#Hurry modifiers works only on buildable buildings
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				self.log(CvBuildingInfo.getType()+" can't be hurried at first place")
-				
+
 			#GreatPeopleRateChange must be present, if GreatPeopleUnitType is present
 			if CvBuildingInfo.getGreatPeopleUnitType() != -1 and CvBuildingInfo.getGreatPeopleRateChange() == 0:
 				self.log(CvBuildingInfo.getType()+" has zero rate change of "+GC.getUnitInfo(CvBuildingInfo.getGreatPeopleUnitType()).getType())
-				
+
 			#FreeBonus must be present if iNumFreeBonuses is present and viceversa.
 			if CvBuildingInfo.getFreeBonus() != -1 and CvBuildingInfo.getNumFreeBonuses() == 0:
 				self.log(CvBuildingInfo.getType()+" has free bonus tag, but actually doesn't give bonus")

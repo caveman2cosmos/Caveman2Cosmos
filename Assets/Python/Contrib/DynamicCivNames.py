@@ -9,7 +9,6 @@
 from CvPythonExtensions import *
 import CvUtil
 # --------- Revolution mod -------------
-import RevDefs
 import SdToolKit as SDTK
 import RevUtils
 import LeaderCivNames
