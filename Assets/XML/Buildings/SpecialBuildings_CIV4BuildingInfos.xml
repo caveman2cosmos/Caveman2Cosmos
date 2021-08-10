@@ -14601,6 +14601,7 @@
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SCIENTOLOGY</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
@@ -14858,6 +14859,7 @@
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHINTO</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>

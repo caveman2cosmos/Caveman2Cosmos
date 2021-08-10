@@ -33,7 +33,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements", "Checks if various civics aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
-		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, or if hurry modifiers exist on unbuildable buildings")
+		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion - those bonus tags affect buildings in various ways")
@@ -1277,7 +1277,7 @@ class TestCode:
 	def checkBuildingTags(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			#Building commerce double time - wonders only, and ensure flat change exists
+			#Commerce double time - wonders only, and ensure flat change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or  CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" Non-wonder has commerce change double time")
@@ -1286,14 +1286,29 @@ class TestCode:
 				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has commerce change double time but no relevant flat commerce change")
 
-			#Building owner change - ensure flat commerce change exists
+			#Owner change - ensure flat commerce change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				if CvBuildingInfo.isCommerceChangeOriginalOwner(iCommerce) and CvBuildingInfo.getCommerceChange(iCommerce) == 0:
 					self.log(CvBuildingInfo.getType()+" has CommerceChangeOriginalOwners but no flat commerce change")
 
-			#Building hurry modifiers works only on buildable buildings
+			#Hurry modifiers works only on buildable buildings
 			if CvBuildingInfo.getProductionCost() == -1 and (CvBuildingInfo.getHurryCostModifier() != 0 or CvBuildingInfo.getHurryAngerModifier() != 0):
 				self.log(CvBuildingInfo.getType()+" can't be hurried at first place")
+				
+			#GreatPeopleRateChange must be present, if GreatPeopleUnitType is present
+			if CvBuildingInfo.getGreatPeopleUnitType() != -1 and CvBuildingInfo.getGreatPeopleRateChange() == 0:
+				self.log(CvBuildingInfo.getType()+" has zero rate change of "+GC.getUnitInfo(CvBuildingInfo.getGreatPeopleUnitType()).getType())
+				
+			#FreeBonus must be present if iNumFreeBonuses is present and viceversa.
+			if CvBuildingInfo.getFreeBonus() != -1 and CvBuildingInfo.getNumFreeBonuses() == 0:
+				self.log(CvBuildingInfo.getType()+" has free bonus tag, but actually doesn't give bonus")
+			if CvBuildingInfo.getFreeBonus() == -1 and CvBuildingInfo.getNumFreeBonuses() != 0:
+				self.log(CvBuildingInfo.getType()+" has unspecified free bonus type")
+			for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+				if CvBuildingInfo.getExtraFreeBonus(i) != -1 and CvBuildingInfo.getExtraFreeBonusNum(i) == 0:
+					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")
+				if CvBuildingInfo.getExtraFreeBonus(i) == -1 and CvBuildingInfo.getExtraFreeBonusNum(i) != 0:
+					self.log(CvBuildingInfo.getType()+" has unspecified extra free bonus type")
 
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):

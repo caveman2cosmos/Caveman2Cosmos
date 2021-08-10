@@ -27768,6 +27768,7 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -75330,6 +75331,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -75805,6 +75807,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -76190,6 +76193,7 @@
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -76235,6 +76239,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -77439,6 +77444,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>
