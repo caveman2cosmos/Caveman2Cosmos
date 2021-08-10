@@ -7904,6 +7904,10 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldModifiers>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>25</iYield>
+			</PowerYieldModifiers>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
@@ -39113,6 +39117,9 @@
 				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3975</iCost>
+			<PowerYieldModifiers>
+				<iYield>10</iYield>
+			</PowerYieldModifiers>
 			<YieldChanges>
 				<iYield>50</iYield>
 				<iYield>2</iYield>
@@ -63167,6 +63174,10 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>25</iYield>
+			</PowerYieldModifiers>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ENTROPY_REVERSAL</PrereqTech>
@@ -68924,6 +68935,10 @@
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldModifiers>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>25</iYield>
+			</PowerYieldModifiers>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
@@ -85159,6 +85174,10 @@
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 			</YieldModifiers>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>25</iYield>
+			</PowerYieldModifiers>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
@@ -107955,6 +107974,10 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldModifiers>
+			<PowerYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</PowerYieldModifiers>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
