@@ -950,42 +950,52 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				#<YieldChanges>, <YieldPerPopChanges>, <YieldModifiers> - base
+				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aBaseSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aBaseYieldChangesList[iYield] += CvBuildingInfo.getYieldChange(iYield)
 					aBaseYieldPerPopChangesList[iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
+					aBaseSeaPlotYieldChangesList[iYield] += CvBuildingInfo.getSeaPlotYieldChange(iYield)
 					aBaseYieldModifiersList[iYield] += CvBuildingInfo.getYieldModifier(iYield)
 
 				#Analyze replacements by tag
 				aYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>, <YieldPerPopChanges>, <YieldModifiers>
+					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
 						aYieldPerPopChangesList[iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
+						aSeaPlotYieldChangesList[iYield] += CvReplacedBuildingInfo.getSeaPlotYieldChange(iYield)
 						aYieldModifiersList[iYield] += CvReplacedBuildingInfo.getYieldModifier(iYield)
 
-				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <YieldModifiers> in base
+				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <YieldModifiers> in base
 				aFinalYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aFinalYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
+				aFinalSeaPlotYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aFinalYieldModifiersList = [0]*YieldTypes.NUM_YIELD_TYPES
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aFinalYieldChangesList[iYield] = aBaseYieldChangesList[iYield] + aYieldChangesList[iYield]
 					aFinalYieldPerPopChangesList[iYield] = aBaseYieldPerPopChangesList[iYield] + aYieldPerPopChangesList[iYield]
+					aFinalSeaPlotYieldChangesList[iYield] = aBaseSeaPlotYieldChangesList[iYield] + aSeaPlotYieldChangesList[iYield]
 					aFinalYieldModifiersList[iYield] = aBaseYieldModifiersList[iYield] + aYieldModifiersList[iYield]
 
+				#Building shouldn't be worse than replaced one!
 				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
 				if aBaseYieldPerPopChangesList[0] < aYieldPerPopChangesList[0] or aBaseYieldPerPopChangesList[1] < aYieldPerPopChangesList[1] or aBaseYieldPerPopChangesList[2] < aYieldPerPopChangesList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+				if aBaseSeaPlotYieldChangesList[0] < aSeaPlotYieldChangesList[0] or aBaseSeaPlotYieldChangesList[1] < aSeaPlotYieldChangesList[1] or aBaseSeaPlotYieldChangesList[2] < aSeaPlotYieldChangesList[2]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Sea plot Yield Changes "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 				if aBaseYieldModifiersList[0] < aYieldModifiersList[0] or aBaseYieldModifiersList[1] < aYieldModifiersList[1] or aBaseYieldModifiersList[2] < aYieldModifiersList[2]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Modifiers "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+				
 
 
 	#Building bonus requirements
