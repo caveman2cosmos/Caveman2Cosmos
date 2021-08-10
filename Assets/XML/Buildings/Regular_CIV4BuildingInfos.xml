@@ -210,6 +210,8 @@
 			</CommerceChanges>
 			<iDefense>10</iDefense>
 			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iPower>1</iPower>
 			<Flavors>
 				<Flavor>
@@ -931,6 +933,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iDefense>200</iDefense>
 			<iBombardDefense>30</iBombardDefense>
 			<iEspionageDefense>60</iEspionageDefense>
@@ -6092,6 +6096,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iDefense>180</iDefense>
 			<iBombardDefense>15</iBombardDefense>
 			<iEspionageDefense>50</iEspionageDefense>
@@ -10289,6 +10295,7 @@
 			<iNoEntryDefenseLevel>20</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -25604,6 +25611,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<iTradeRoutes>2</iTradeRoutes>
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -35456,6 +35464,8 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>80</iNoEntryDefenseLevel>
 			<iMinDefense>10</iMinDefense>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
 			<Flavors>
@@ -40721,6 +40731,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iDefense>20</iDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>10</iAdjacentDamagePercent>
@@ -51118,6 +51130,8 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -78292,6 +78306,8 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>100</iNoEntryDefenseLevel>
 			<iMinDefense>5</iMinDefense>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iPower>3</iPower>
 			<Flavors>
 				<Flavor>
@@ -110809,6 +110825,8 @@
 					<iAmountPerTurn>-4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -112921,6 +112939,8 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iTradeRoutes>-1</iTradeRoutes>
+			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
 			<iDefense>160</iDefense>
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>

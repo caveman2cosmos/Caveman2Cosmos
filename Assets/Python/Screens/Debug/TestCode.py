@@ -950,6 +950,49 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
+				#===== 0D ENTRIES - INTEGERS =====#
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>
+				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
+				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
+				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
+				iBaseTradeRouteModifier = CvBuildingInfo.getTradeRouteModifier()
+				iBaseForeignTradeRouteModifier = CvBuildingInfo.getForeignTradeRouteModifier()
+
+				#Analyze replacements by tag
+				iTradeRoutes = 0
+				iCoastalTradeRoutes = 0
+				iGlobalTradeRoutes = 0
+				iTradeRouteModifier = 0
+				iForeignTradeRouteModifier = 0
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>
+					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
+					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
+					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
+					iTradeRouteModifier += CvReplacedBuildingInfo.getTradeRouteModifier()
+					iForeignTradeRouteModifier += CvReplacedBuildingInfo.getForeignTradeRouteModifier()
+
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier> in base
+				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
+				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
+				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
+				iFinalTradeRouteModifier = iBaseTradeRouteModifier + iTradeRouteModifier
+				iFinalForeignTradeRouteModifier = iBaseForeignTradeRouteModifier + iForeignTradeRouteModifier
+
+				#Building shouldn't be worse than replaced one!
+				if iBaseTradeRoutes < iTradeRoutes:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Trade Routes "+str(iFinalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseCoastalTradeRoutes < iCoastalTradeRoutes:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Coastal Trade Routes "+str(iFinalCoastalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGlobalTradeRoutes < iGlobalTradeRoutes:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Global Trade Routes "+str(iFinalGlobalTradeRoutes)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseTradeRouteModifier < iTradeRouteModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Trade Route Modifier "+str(iFinalTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseForeignTradeRouteModifier < iForeignTradeRouteModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" Foreign Trade Route Modifier "+str(iFinalForeignTradeRouteModifier)+" replaced: "+str(aImmediateReplacedNameList))
+
+				#===== 1D ENTRIES - ARRAYS =====#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
