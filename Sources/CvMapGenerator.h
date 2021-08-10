@@ -47,15 +47,13 @@ public:
 
 	void afterGeneration();
 
-	void setPlotTypes(const int* paiPlotTypes);
+	void setPlotTypes(const std::vector<int>& plotTypes);
 
-protected:
-
+private:
 	// Utility functions for roughenHeights()
 	int getRiverValueAtPlot(CvPlot* pPlot);
 	int calculateNumBonusesToAdd(BonusTypes eBonusType);
 
-private:
 	static CvMapGenerator* m_pInst;
 
 	void setBonusClusterValues(const CvBonusInfo& bonus, const int iWorldSize, int& iGroupRange, int& iGroupRand, int& iMaxCluster);
