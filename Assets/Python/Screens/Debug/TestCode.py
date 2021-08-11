@@ -1256,6 +1256,40 @@ class TestCode:
 					if aBaseBonusHealthChanges[iBonus] < aBonusHealthChanges[iBonus]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus health Changes "+str(aFinalBonusHealthChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=================================================================================================
+				#<TechHappinessChanges>, <TechHealthChanges> - base
+				aBaseTechHappinessChanges = [0]*GC.getNumTechInfos()
+				aBaseTechHealthChanges = [0]*GC.getNumTechInfos()
+				for pair in CvBuildingInfo.getTechHappinessChanges():
+					aBaseTechHappinessChanges[pair.id] += pair.value
+				for pair in CvBuildingInfo.getTechHealthChanges():
+					aBaseTechHealthChanges[pair.id] += pair.value
+
+				#Analyze replacements by tag
+				aTechHappinessChanges = [0]*GC.getNumTechInfos()
+				aTechHealthChanges = [0]*GC.getNumTechInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<TechHappinessChanges>, <TechHealthChanges>
+					for pair in CvReplacedBuildingInfo.getTechHappinessChanges():
+						aTechHappinessChanges[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getTechHealthChanges():
+						aTechHealthChanges[pair.id] += pair.value
+
+				#Keep already existing <TechHappinessChanges>, <TechHealthChanges> in base
+				aFinalTechHappinessChanges = [0]*GC.getNumTechInfos()
+				aFinalTechHealthChanges = [0]*GC.getNumTechInfos()
+				for iTech in xrange(GC.getNumTechInfos()):
+					aFinalTechHappinessChanges[iTech] = aBaseTechHappinessChanges[iTech] + aTechHappinessChanges[iTech]
+					aFinalTechHealthChanges[iTech] = aBaseTechHealthChanges[iTech] + aTechHealthChanges[iTech]
+
+				#Building shouldn't be worse than replaced one!
+				for iTech in xrange(GC.getNumTechInfos()):
+					if aBaseTechHappinessChanges[iTech] < aTechHappinessChanges[iTech]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech happiness Changes "+str(aFinalTechHappinessChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseTechHealthChanges[iTech] < aTechHealthChanges[iTech]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aFinalTechHealthChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+
 				#===== 2D ENTRIES - Yield/Commerce <-> Specialist/Bonus/Tech coupling =====#
 
 
@@ -1625,7 +1659,6 @@ class TestCode:
 					#<BonusProductionModifiers>
 					if CvBuildingInfo.getBonusProductionModifier(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusProductionModifiers")
-
 
 	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
 	def checkBuildingAffectingBuildings(self):

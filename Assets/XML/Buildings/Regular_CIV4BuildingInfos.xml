@@ -1458,6 +1458,12 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>2</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
@@ -2840,6 +2846,12 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -3412,6 +3424,12 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5651,6 +5669,12 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_LEISURE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iHealth>1</iHealth>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
@@ -5937,6 +5961,12 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>55</iCommerce>
 			</CommerceChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>2</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>6</iAsset>
 			<iPower>3</iPower>
 			<Flavors>
@@ -6448,6 +6478,12 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_SANITATION</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
 			<iAsset>3</iAsset>
@@ -7861,6 +7897,18 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
+					<iHealth>2</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_TOURISM</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16440,6 +16488,12 @@
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>4</iAsset>
 			<Flavors>
@@ -21446,6 +21500,12 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
+					<iHealth>2</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -46102,6 +46162,12 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -53650,6 +53716,12 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iHealth>5</iHealth>
 			<iHappiness>11</iHappiness>
 			<SpecialistCounts>
@@ -58581,6 +58653,12 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_LEISURE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -69177,6 +69255,12 @@
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqOrBuildings>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_LEISURE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<iCost>475</iCost>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -102597,6 +102681,12 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_MEDICINE</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -103929,6 +104019,12 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
+					<iHappiness>-1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<FreePromotion>PROMOTION_TATTOO</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<iHurryCostModifier>100</iHurryCostModifier>
