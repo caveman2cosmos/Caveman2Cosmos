@@ -1224,6 +1224,38 @@ class TestCode:
 					if aBaseImprovementFreeSpecialists[iImprovement] < aImprovementFreeSpecialists[iImprovement]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aFinalImprovementFreeSpecialists[iImprovement])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=================================================================================================
+				#<BonusHappinessChanges>, <BonusHealthChanges> - base
+				aBaseBonusHappinessChanges = [0]*GC.getNumBonusInfos()
+				aBaseBonusHealthChanges = [0]*GC.getNumBonusInfos()
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					aBaseBonusHappinessChanges[iBonus] += CvBuildingInfo.getBonusHappinessChanges(iBonus)
+					aBaseBonusHealthChanges[iBonus] += CvBuildingInfo.getBonusHealthChanges(iBonus)
+
+				#Analyze replacements by tag
+				aBonusHappinessChanges = [0]*GC.getNumBonusInfos()
+				aBonusHealthChanges = [0]*GC.getNumBonusInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<BonusHappinessChanges>, <BonusHealthChanges>
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						aBonusHappinessChanges[iBonus] += CvReplacedBuildingInfo.getBonusHappinessChanges(iBonus)
+						aBonusHealthChanges[iBonus] += CvReplacedBuildingInfo.getBonusHealthChanges(iBonus)
+
+				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges> in base
+				aFinalBonusHappinessChanges = [0]*GC.getNumBonusInfos()
+				aFinalBonusHealthChanges = [0]*GC.getNumBonusInfos()
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					aFinalBonusHappinessChanges[iBonus] = aBaseBonusHappinessChanges[iBonus] + aBonusHappinessChanges[iBonus]
+					aFinalBonusHealthChanges[iBonus] = aBaseBonusHealthChanges[iBonus] + aBonusHealthChanges[iBonus]
+
+				#Building shouldn't be worse than replaced one!
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					if aBaseBonusHappinessChanges[iBonus] < aBonusHappinessChanges[iBonus]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus happiness Changes "+str(aFinalBonusHappinessChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseBonusHealthChanges[iBonus] < aBonusHealthChanges[iBonus]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus health Changes "+str(aFinalBonusHealthChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+
 				#===== 2D ENTRIES - Yield/Commerce <-> Specialist/Bonus/Tech coupling =====#
 
 
@@ -1594,13 +1626,6 @@ class TestCode:
 					if CvBuildingInfo.getBonusProductionModifier(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusProductionModifiers")
 
-					#<BonusAidModifiers>
-					#if CvBuildingInfo.getBonusAidModifiers(iBonus) != 0:
-					#	self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusAidModifiers")
-
-					#<BonusDefenseChanges>
-					if CvBuildingInfo.getBonusDefenseChanges(iBonus) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusDefenseChanges")
 
 	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
 	def checkBuildingAffectingBuildings(self):
