@@ -1464,6 +1464,15 @@
 					<iHealth>2</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
+			<VicinityBonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
@@ -12732,6 +12741,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iDefense>30</iDefense>
 			<iEspionageDefense>3</iEspionageDefense>
 			<iLocalRepel>50</iLocalRepel>
@@ -13950,6 +13973,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iDefense>25</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
 			<iLocalRepel>40</iLocalRepel>
@@ -21141,6 +21178,14 @@
 				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -21500,6 +21545,22 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_LITHIUM</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>4</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_METALLIC_HYDROGEN</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
@@ -37398,6 +37459,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<iDefense>40</iDefense>
@@ -39380,6 +39455,87 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_APPLE</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CORN</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_COW</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CRAB</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_DYE</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_FISH</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_LEMONS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_OLIVES</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SHEEP</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SHRIMP</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WHALE</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>6</iAsset>
 			<Flavors>
@@ -42414,6 +42570,70 @@
 					<iHealthChange>3</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BARLEY</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CHOCOLATE</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_HONEY</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WHEAT</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
+			<VicinityBonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_BARLEY</BonusType>
+					<YieldChanges>
+						<iYield>10</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CORN</BonusType>
+					<YieldChanges>
+						<iYield>10</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_RICE</BonusType>
+					<YieldChanges>
+						<iYield>10</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WHEAT</BonusType>
+					<YieldChanges>
+						<iYield>10</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -48243,6 +48463,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<iDefense>60</iDefense>
@@ -59262,6 +59496,20 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -64472,6 +64720,26 @@
 				<iCommerce>55</iCommerce>
 			</CommerceChanges>
 			<iHealth>3</iHealth>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_GRASS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_REEDS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_STRAW</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -71817,6 +72085,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>4</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>4</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<iDefense>50</iDefense>
@@ -86889,6 +87171,16 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_CAT</BonusType>
+					<YieldModifiers>
+						<iYield>1</iYield>
+						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iConquestProb>70</iConquestProb>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -89276,6 +89568,20 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>2</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<iDefense>30</iDefense>
 			<iEspionageDefense>3</iEspionageDefense>
 			<iLocalRepel>50</iLocalRepel>
@@ -92656,6 +92962,15 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_CARBON_FIBER</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -102681,6 +102996,78 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_COW</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_POULTRY</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SHEEP</BonusType>
+					<YieldChanges>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_FISH</BonusType>
+					<YieldModifiers>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_GRAINS</BonusType>
+					<YieldModifiers>
+						<iYield>9</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_GRASS</BonusType>
+					<YieldModifiers>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SALT</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_STRAW</BonusType>
+					<YieldModifiers>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_WAX</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_MEDICINE</PrereqTech>

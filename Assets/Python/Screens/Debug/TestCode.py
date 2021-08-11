@@ -1290,8 +1290,49 @@ class TestCode:
 					if aBaseTechHealthChanges[iTech] < aTechHealthChanges[iTech]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aFinalTechHealthChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
 
-				#===== 2D ENTRIES - Yield/Commerce <-> Specialist/Bonus/Tech coupling =====#
+				#===== 2D ENTRIES - coupling between two infotypes, like yield changing in presence of bonus =====#
+				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers> - base
+				aBaseBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBaseVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBaseBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aBaseBonusYieldChanges[iBonus][iYield] += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+						aBaseVicinityBonusYieldChanges[iBonus][iYield] += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+						aBaseBonusYieldModifiers[iBonus][iYield] += CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
 
+				#Analyze replacements by tag
+				aBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBonusVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aBonusYieldChanges[iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+							aBonusVicinityBonusYieldChanges[iBonus][iYield] += CvReplacedBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+							aBonusYieldModifiers[iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+
+				#Keep already existing <BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers> in base
+				aFinalBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aFinalBonusVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aFinalBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aFinalBonusYieldChanges[iBonus][iYield] = aBaseBonusYieldChanges[iBonus][iYield] + aBonusYieldChanges[iBonus][iYield]
+						aFinalBonusVicinityBonusYieldChanges[iBonus][iYield] = aBaseVicinityBonusYieldChanges[iBonus][iYield] + aBonusVicinityBonusYieldChanges[iBonus][iYield]
+						aFinalBonusYieldModifiers[iBonus][iYield] = aBaseBonusYieldModifiers[iBonus][iYield] + aBonusYieldModifiers[iBonus][iYield]
+
+				#Building shouldn't be worse than replaced one!
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aBaseBonusYieldChanges[iBonus][iYield] < aBonusYieldChanges[iBonus][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Yield Changes "+str(aFinalBonusYieldChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseVicinityBonusYieldChanges[iBonus][iYield] < aBonusVicinityBonusYieldChanges[iBonus][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus vicinity Yield Changes "+str(aFinalBonusVicinityBonusYieldChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseBonusYieldModifiers[iBonus][iYield] < aBonusYieldModifiers[iBonus][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Yield Modifiers "+str(aFinalBonusYieldModifiers[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
@@ -1560,7 +1601,6 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
 				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
 					self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
-
 
 			#Check if Yield Changes techs don't appear before building can be unlocked or after is obsoleted
 			if CvBuildingInfo.isAnyTechYieldChanges():
