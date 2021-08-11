@@ -803,12 +803,14 @@ class TestCode:
 
 			#All replacements of replacements
 			aBuildingReplacement2List = []
+			aBuildingReplacement2NameList = []
 			for i in xrange(len(aBuildingReplacementList)):
 				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
 				for iReplacement2 in xrange(CvBuildingReplacementInfo.getNumReplacementBuilding()):
 					iBuildingReplacement2 = CvBuildingReplacementInfo.getReplacementBuilding(iReplacement2)
 					if iBuildingReplacement2 not in aBuildingReplacement2List:
 						aBuildingReplacement2List.append(iBuildingReplacement2)
+						aBuildingReplacement2NameList.append(GC.getBuildingInfo(iBuildingReplacement2).getType())
 
 			#Get replacements, that don't appear as replacements of replacements
 			aImmediateReplacementList = []
@@ -825,12 +827,15 @@ class TestCode:
 					iImmediateReplacementTechLocID = max(self.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2])
 					iImmediateReplacementTechObs = self.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[0]
 					iImmediateReplacementTechObsID = self.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[1]
-					if iTechObsLoc < iImmediateReplacementTechLoc and aImmediateReplacementList[i] not in aSpecialReplacementsList:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
-					if (iTechObsLoc > iImmediateReplacementTechObs or (iTechObsLoc == iImmediateReplacementTechObs and iTechObsID != iImmediateReplacementTechObsID)) and aImmediateReplacementList[i] not in aSpecialReplacementsList and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-						self.log(CvBuildingInfo.getType()+" obsoletes after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
-					if (iTechLoc > iImmediateReplacementTechLoc or (iTechLoc == iImmediateReplacementTechLoc and iTechID != iImmediateReplacementTechLocID)) and aImmediateReplacementList[i] not in aSpecialReplacementsList and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-						self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement unlocks "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
+					if aImmediateReplacementList[i] not in aSpecialReplacementsList and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+						if iTechObsLoc < iImmediateReplacementTechLoc:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
+						if (iTechObsLoc > iImmediateReplacementTechObs or (iTechObsLoc == iImmediateReplacementTechObs and iTechObsID != iImmediateReplacementTechObsID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							self.log(CvBuildingInfo.getType()+" obsoletes after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
+						if (iTechLoc > iImmediateReplacementTechLoc or (iTechLoc == iImmediateReplacementTechLoc and iTechID != iImmediateReplacementTechLocID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement unlocks "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
+						if iImmediateReplacementTechObs == 999 and len(aBuildingReplacement2List) > 0 and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							self.log(CvBuildingInfo.getType()+" replacement doesn't obsolete, but replacements of replacement exist "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs)+" replacements of replacement "+str(aBuildingReplacement2NameList))
 
 			#Get replacements of replacements
 			for i in xrange(len(aImmediateReplacementList)):
@@ -864,10 +869,8 @@ class TestCode:
 						Cv2BuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacement2List[i])
 						iReplacement2TechLoc = self.checkBuildingTechRequirements(Cv2BuildingImmediateReplacementInfo)[0]
 						if iTechObsLoc > iReplacement2TechLoc and aImmediateReplacement2List[i] not in aSpecialReplacementsList:
-							if iTechObsLoc - iReplacementTechLoc <= 10:
+							if iTechObsLoc - iReplacementTechLoc <= 10 and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
 								self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base obsoletion/Second lvl replacement unlock - consider picking more advanced tech "+str(iTechObsLoc)+"/"+str(iReplacement2TechLoc))
-							else:
-								self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base obsoletion/Second lvl replacement unlock "+str(iTechObsLoc)+"/"+str(iReplacement2TechLoc))
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
@@ -951,7 +954,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS =====#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -1098,23 +1101,46 @@ class TestCode:
 					aFinalGlobalYieldModifiersList[iYield] = aBaseGlobalYieldModifiersList[iYield] + aGlobalYieldModifiersList[iYield]
 
 				#Building shouldn't be worse than replaced one!
-				if aBaseYieldChangesList[0] < aYieldChangesList[0] or aBaseYieldChangesList[1] < aYieldChangesList[1] or aBaseYieldChangesList[2] < aYieldChangesList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseYieldPerPopChangesList[0] < aYieldPerPopChangesList[0] or aBaseYieldPerPopChangesList[1] < aYieldPerPopChangesList[1] or aBaseYieldPerPopChangesList[2] < aYieldPerPopChangesList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangesList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseSeaPlotYieldChangesList[0] < aSeaPlotYieldChangesList[0] or aBaseSeaPlotYieldChangesList[1] < aSeaPlotYieldChangesList[1] or aBaseSeaPlotYieldChangesList[2] < aSeaPlotYieldChangesList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Sea plot Yield Changes "+str(aFinalSeaPlotYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseRiverPlotYieldChangesList[0] < aRiverPlotYieldChangesList[0] or aBaseRiverPlotYieldChangesList[1] < aRiverPlotYieldChangesList[1] or aBaseRiverPlotYieldChangesList[2] < aRiverPlotYieldChangesList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C River plot Yield Changes "+str(aFinalRiverPlotYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseYieldModifiersList[0] < aYieldModifiersList[0] or aBaseYieldModifiersList[1] < aYieldModifiersList[1] or aBaseYieldModifiersList[2] < aYieldModifiersList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Modifiers "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBasePowerYieldModifiersList[0] < aPowerYieldModifiersList[0] or aBasePowerYieldModifiersList[1] < aPowerYieldModifiersList[1] or aBasePowerYieldModifiersList[2] < aPowerYieldModifiersList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Power Modifiers "+str(aFinalPowerYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseAreaYieldModifiersList[0] < aAreaYieldModifiersList[0] or aBaseAreaYieldModifiersList[1] < aAreaYieldModifiersList[1] or aBaseAreaYieldModifiersList[2] < aAreaYieldModifiersList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Area Modifiers "+str(aFinalAreaYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
-				if aBaseGlobalYieldModifiersList[0] < aGlobalYieldModifiersList[0] or aBaseGlobalYieldModifiersList[1] < aGlobalYieldModifiersList[1] or aBaseGlobalYieldModifiersList[2] < aGlobalYieldModifiersList[2]:
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global Modifiers "+str(aFinalGlobalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+					if aBaseYieldChangesList[iYield] < aYieldChangesList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Changes "+str(aFinalYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseYieldPerPopChangesList[iYield] < aYieldPerPopChangesList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Per pop Changes "+str(aFinalYieldPerPopChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseSeaPlotYieldChangesList[iYield] < aSeaPlotYieldChangesList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Sea plot Yield Changes "+str(aFinalSeaPlotYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseRiverPlotYieldChangesList[iYield] < aRiverPlotYieldChangesList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C River plot Yield Changes "+str(aFinalRiverPlotYieldChangesList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseYieldModifiersList[iYield] < aYieldModifiersList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Modifiers "+str(aFinalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBasePowerYieldModifiersList[iYield] < aPowerYieldModifiersList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Power Modifiers "+str(aFinalPowerYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseAreaYieldModifiersList[iYield] < aAreaYieldModifiersList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Area Modifiers "+str(aFinalAreaYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseGlobalYieldModifiersList[iYield] < aGlobalYieldModifiersList[iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global Modifiers "+str(aFinalGlobalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 
+				#<CommerceChanges> - base
+				aBaseCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					aBaseCommerceChanges[iCommerce] += CvBuildingInfo.getCommerceChange(iCommerce)
+
+				#Analyze replacements by tag
+				aCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<CommerceChanges>
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aCommerceChanges[iCommerce] += CvReplacedBuildingInfo.getCommerceChange(iCommerce)
+
+				#Keep already existing  in base
+				aFinalCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					aFinalCommerceChanges[iCommerce] = aBaseCommerceChanges[iCommerce] + aCommerceChanges[iCommerce]
+
+				#Building shouldn't be worse than replaced one!
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					if 0:# aBaseCommerceChanges[iCommerce] < aCommerceChanges[iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Changes "+str(aFinalCommerceChanges)+" replaced: "+str(aImmediateReplacedNameList))
 
 
 	#Building bonus requirements

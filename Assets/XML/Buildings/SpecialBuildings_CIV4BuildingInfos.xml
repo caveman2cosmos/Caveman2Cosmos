@@ -165,7 +165,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_BURROW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BURROW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
@@ -16843,7 +16843,7 @@
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -16905,7 +16905,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
