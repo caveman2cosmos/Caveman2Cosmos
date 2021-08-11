@@ -953,7 +953,7 @@ class TestCode:
 						aImmediateReplacedList.append(aReplacedBuildings[i])
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
-				#===== 0D ENTRIES - INTEGERS =====#
+				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
 				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
@@ -1039,7 +1039,7 @@ class TestCode:
 				if iBaseGlobalFreeSpecialist < iGlobalFreeSpecialist:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global free Specialist "+str(iFinalGlobalFreeSpecialist)+" replaced: "+str(aImmediateReplacedNameList))
 
-				#===== 1D ENTRIES - ARRAYS =====#
+				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
 				aBaseYieldChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseYieldPerPopChangesList = [0]*YieldTypes.NUM_YIELD_TYPES
@@ -1119,6 +1119,7 @@ class TestCode:
 					if aBaseGlobalYieldModifiersList[iYield] < aGlobalYieldModifiersList[iYield]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global Modifiers "+str(aFinalGlobalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=================================================================================================
 				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers> - base
 				aBaseCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
 				aBaseCommercePerPopChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
@@ -1165,6 +1166,65 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Modifiers "+str(aFinalCommerceModifiers)+" replaced: "+str(aImmediateReplacedNameList))
 					if aBaseGlobalCommerceModifiers[iCommerce] < aGlobalCommerceModifiers[iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Global Modifiers "+str(aFinalGlobalCommerceModifiers)+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<SpecialistCounts>, <FreeSpecialistCounts> - base
+				aBaseSpecialistCounts = [0]*GC.getNumSpecialistInfos()
+				aBaseFreeSpecialistCounts = [0]*GC.getNumSpecialistInfos()
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					aBaseSpecialistCounts[iSpecialist] += CvBuildingInfo.getSpecialistCount(iSpecialist)
+					aBaseFreeSpecialistCounts[iSpecialist] += CvBuildingInfo.getFreeSpecialistCount(iSpecialist)
+
+				#Analyze replacements by tag
+				aSpecialistCounts = [0]*GC.getNumSpecialistInfos()
+				aFreeSpecialistCount = [0]*GC.getNumSpecialistInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<SpecialistCounts>, <FreeSpecialistCounts>
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						aSpecialistCounts[iSpecialist] += CvReplacedBuildingInfo.getSpecialistCount(iSpecialist)
+						aFreeSpecialistCount[iSpecialist] += CvReplacedBuildingInfo.getFreeSpecialistCount(iSpecialist)
+
+				#Keep already existing <SpecialistCounts>, <FreeSpecialistCounts> in base
+				aFinalSpecialistCounts = [0]*GC.getNumSpecialistInfos()
+				aFinalFreeSpecialistCount = [0]*GC.getNumSpecialistInfos()
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					aFinalSpecialistCounts[iSpecialist] = aBaseSpecialistCounts[iSpecialist] + aSpecialistCounts[iSpecialist]
+					aFinalFreeSpecialistCount[iSpecialist] = aBaseFreeSpecialistCounts[iSpecialist] + aFreeSpecialistCount[iSpecialist]
+
+				#Building shouldn't be worse than replaced one!
+				#Emancipation Proclamation removes worldview buildings, python is needed for it to actually erase all slave specialists
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					if aBaseSpecialistCounts[iSpecialist] < aSpecialistCounts[iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialists Count "+str(aFinalSpecialistCounts[iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseFreeSpecialistCounts[iSpecialist] < aFreeSpecialistCount[iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Free specialists Count "+str(aFinalFreeSpecialistCount[iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<ImprovementFreeSpecialists> - base
+				aBaseImprovementFreeSpecialists = [0]*GC.getNumImprovementInfos()
+				for iImprovement in xrange(GC.getNumImprovementInfos()):
+					aBaseImprovementFreeSpecialists[iImprovement] += CvBuildingInfo.getImprovementFreeSpecialist(iImprovement)
+
+				#Analyze replacements by tag
+				aImprovementFreeSpecialists = [0]*GC.getNumImprovementInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<ImprovementFreeSpecialists>
+					for iImprovement in xrange(GC.getNumImprovementInfos()):
+						aImprovementFreeSpecialists[iImprovement] += CvReplacedBuildingInfo.getImprovementFreeSpecialist(iImprovement)
+
+				#Keep already existing <ImprovementFreeSpecialists> in base
+				aFinalImprovementFreeSpecialists = [0]*GC.getNumImprovementInfos()
+				for iImprovement in xrange(GC.getNumImprovementInfos()):
+					aFinalImprovementFreeSpecialists[iImprovement] = aBaseImprovementFreeSpecialists[iImprovement] + aImprovementFreeSpecialists[iImprovement]
+
+				#Building shouldn't be worse than replaced one!
+				for iImprovement in xrange(GC.getNumImprovementInfos()):
+					if aBaseImprovementFreeSpecialists[iImprovement] < aImprovementFreeSpecialists[iImprovement]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aFinalImprovementFreeSpecialists[iImprovement])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#===== 2D ENTRIES - Yield/Commerce <-> Specialist/Bonus/Tech coupling =====#
 
 
 	#Building bonus requirements
