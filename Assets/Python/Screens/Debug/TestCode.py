@@ -1119,28 +1119,52 @@ class TestCode:
 					if aBaseGlobalYieldModifiersList[iYield] < aGlobalYieldModifiersList[iYield]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global Modifiers "+str(aFinalGlobalYieldModifiersList)+" replaced: "+str(aImmediateReplacedNameList))
 
-				#<CommerceChanges> - base
+				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers> - base
 				aBaseCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aBaseCommercePerPopChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aBaseCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aBaseGlobalCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					aBaseCommerceChanges[iCommerce] += CvBuildingInfo.getCommerceChange(iCommerce)
+					aBaseCommercePerPopChanges[iCommerce] += CvBuildingInfo.getCommercePerPopChange(iCommerce)
+					aBaseCommerceModifiers[iCommerce] += CvBuildingInfo.getCommerceModifier(iCommerce)
+					aBaseGlobalCommerceModifiers[iCommerce] += CvBuildingInfo.getGlobalCommerceModifier(iCommerce)
 
 				#Analyze replacements by tag
 				aCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aCommercePerPopChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aGlobalCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<CommerceChanges>
+					#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						aCommerceChanges[iCommerce] += CvReplacedBuildingInfo.getCommerceChange(iCommerce)
+						aCommercePerPopChanges[iCommerce] += CvReplacedBuildingInfo.getCommercePerPopChange(iCommerce)
+						aCommerceModifiers[iCommerce] += CvReplacedBuildingInfo.getCommerceModifier(iCommerce)
+						aGlobalCommerceModifiers[iCommerce] += CvReplacedBuildingInfo.getGlobalCommerceModifier(iCommerce)
 
-				#Keep already existing  in base
+				#Keep already existing <CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers> in base
 				aFinalCommerceChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aFinalCommercePerPopChanges = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aFinalCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
+				aFinalGlobalCommerceModifiers = [0]*CommerceTypes.NUM_COMMERCE_TYPES
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					aFinalCommerceChanges[iCommerce] = aBaseCommerceChanges[iCommerce] + aCommerceChanges[iCommerce]
+					aFinalCommercePerPopChanges[iCommerce] = aBaseCommercePerPopChanges[iCommerce] + aCommercePerPopChanges[iCommerce]
+					aFinalCommerceModifiers[iCommerce] = aBaseCommerceModifiers[iCommerce] + aCommerceModifiers[iCommerce]
+					aFinalGlobalCommerceModifiers[iCommerce] = aBaseGlobalCommerceModifiers[iCommerce] + aGlobalCommerceModifiers[iCommerce]
 
 				#Building shouldn't be worse than replaced one!
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					if aBaseCommerceChanges[iCommerce] < aCommerceChanges[iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Changes "+str(aFinalCommerceChanges)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseCommercePerPopChanges[iCommerce] < aCommercePerPopChanges[iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Per pop Changes "+str(aFinalCommercePerPopChanges)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseCommerceModifiers[iCommerce] < aCommerceModifiers[iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Modifiers "+str(aFinalCommerceModifiers)+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseGlobalCommerceModifiers[iCommerce] < aGlobalCommerceModifiers[iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Global Modifiers "+str(aFinalGlobalCommerceModifiers)+" replaced: "+str(aImmediateReplacedNameList))
 
 
 	#Building bonus requirements
