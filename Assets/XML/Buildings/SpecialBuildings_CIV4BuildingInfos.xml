@@ -6528,6 +6528,11 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
 			<iHealth>1</iHealth>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11110,7 +11115,9 @@
 				<iYield>6</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>

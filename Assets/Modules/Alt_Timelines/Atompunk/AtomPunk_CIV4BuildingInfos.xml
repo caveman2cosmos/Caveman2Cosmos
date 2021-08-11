@@ -58,7 +58,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -196,7 +196,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>

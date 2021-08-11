@@ -1139,7 +1139,7 @@ class TestCode:
 
 				#Building shouldn't be worse than replaced one!
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-					if 0:# aBaseCommerceChanges[iCommerce] < aCommerceChanges[iCommerce]:
+					if aBaseCommerceChanges[iCommerce] < aCommerceChanges[iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Changes "+str(aFinalCommerceChanges)+" replaced: "+str(aImmediateReplacedNameList))
 
 

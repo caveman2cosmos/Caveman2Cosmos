@@ -212,7 +212,7 @@
 			<iDefense>10</iDefense>
 			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>1</iPower>
 			<Flavors>
 				<Flavor>
@@ -701,7 +701,7 @@
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<iCost>1410</iCost>
 			<CommerceChanges>
-				<iCommerce>20</iCommerce>
+				<iCommerce>45</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -797,9 +797,6 @@
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<iCost>3975</iCost>
 			<bWater>1</bWater>
-			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
-			</CommerceChanges>
 			<SeaPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -936,7 +933,7 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iDefense>200</iDefense>
 			<iBombardDefense>30</iBombardDefense>
 			<iEspionageDefense>60</iEspionageDefense>
@@ -1419,8 +1416,9 @@
 				<iYield>65</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>15</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>75</iCommerce>
+				<iCommerce>25</iCommerce>
+				<iCommerce>55</iCommerce>
 			</CommerceChanges>
 			<iHappiness>14</iHappiness>
 			<iHealth>1</iHealth>
@@ -1844,10 +1842,10 @@
 			<PrereqTech>TECH_UTOPIA_DESTINY</PrereqTech>
 			<iCost>5255</iCost>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
@@ -2129,7 +2127,7 @@
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
@@ -2643,9 +2641,9 @@
 			</ReplacementBuildings>
 			<iCost>1030</iCost>
 			<CommerceChanges>
-				<iCommerce>4</iCommerce>
+				<iCommerce>9</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
@@ -5171,7 +5169,7 @@
 			<iCost>243</iCost>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -5565,7 +5563,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -5903,8 +5901,9 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>50</iCommerce>
+				<iCommerce>20</iCommerce>
+				<iCommerce>55</iCommerce>
 			</CommerceChanges>
 			<iAsset>6</iAsset>
 			<iPower>3</iPower>
@@ -6106,7 +6105,7 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iDefense>180</iDefense>
 			<iBombardDefense>15</iBombardDefense>
 			<iEspionageDefense>50</iEspionageDefense>
@@ -6407,7 +6406,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusYieldChanges>
 				<BonusYieldChange>
@@ -10033,7 +10032,7 @@
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<iMinDefense>5</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>3</iPower>
 			<Flavors>
 				<Flavor>
@@ -10298,6 +10297,8 @@
 			<iCost>535</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iDefense>100</iDefense>
 			<iBombardDefense>40</iBombardDefense>
@@ -10306,7 +10307,7 @@
 			<iNoEntryDefenseLevel>20</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -10676,9 +10677,6 @@
 			</BonusProductionModifiers>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>4</iAsset>
@@ -12349,10 +12347,10 @@
 			</TechTypes>
 			<iCost>3245</iCost>
 			<CommerceChanges>
-				<iCommerce>-8</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>8</iCommerce>
+				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -13916,7 +13914,9 @@
 			<iCost>710</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_BOOKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -16027,7 +16027,7 @@
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-3</iDefense>
 			<iRiverDefensePenalty>15</iRiverDefensePenalty>
@@ -20053,7 +20053,7 @@
 			</ReplacementBuildings>
 			<iCost>252</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>24</iRiverDefensePenalty>
@@ -20372,6 +20372,8 @@
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iDefense>120</iDefense>
 			<iBombardDefense>40</iBombardDefense>
@@ -20380,7 +20382,7 @@
 			<iNoEntryDefenseLevel>14</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -20808,7 +20810,7 @@
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
-				<iCommerce>-6</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>27</iRiverDefensePenalty>
@@ -21025,6 +21027,11 @@
 				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
 			<FreeBonus>BONUS_CHARCOAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
@@ -21274,7 +21281,9 @@
 			<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
 			<iCost>3805</iCost>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>50</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -21535,8 +21544,8 @@
 			</PrereqInCityBuildings>
 			<iCost>495</iCost>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>7</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -23173,7 +23182,7 @@
 			</PrereqInCityBuildings>
 			<iCost>870</iCost>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -23339,7 +23348,7 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>7</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -23641,9 +23650,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
 			<iCost>4655</iCost>
-			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
-			</CommerceChanges>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24114,7 +24120,7 @@
 				<iYield>6</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
@@ -24216,7 +24222,7 @@
 			<iCost>1030</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -24699,7 +24705,7 @@
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
 			<iCost>6155</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -24779,9 +24785,9 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>40</iCommerce>
+				<iCommerce>65</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>50</iCommerce>
+				<iCommerce>105</iCommerce>
 			</CommerceChanges>
 			<iLineOfSight>1</iLineOfSight>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -25634,6 +25640,10 @@
 			</BonusProductionModifiers>
 			<iHealth>-1</iHealth>
 			<iHappiness>2</iHappiness>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -28610,7 +28620,7 @@
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-4</iDefense>
 			<iRiverDefensePenalty>18</iRiverDefensePenalty>
@@ -30387,6 +30397,8 @@
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
@@ -30422,9 +30434,6 @@
 			</PrereqInCityBuildings>
 			<iCost>3805</iCost>
 			<iHealth>1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-80</iCommerce>
-			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<iConquestProb>100</iConquestProb>
@@ -32182,7 +32191,7 @@
 			</ReplacementBuildings>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -35332,7 +35341,9 @@
 			<iCost>710</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_DYE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -35504,7 +35515,7 @@
 			<iNoEntryDefenseLevel>80</iNoEntryDefenseLevel>
 			<iMinDefense>10</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
@@ -36197,7 +36208,7 @@
 			<iCost>800</iCost>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -36246,7 +36257,7 @@
 			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
 			<iMinDefense>5</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>4</iPower>
 			<Flavors>
 				<Flavor>
@@ -36355,8 +36366,8 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iCost>2405</iCost>
 			<CommerceChanges>
-				<iCommerce>50</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>140</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -36628,10 +36639,10 @@
 			</PrereqOrBuildings>
 			<iCost>1845</iCost>
 			<CommerceChanges>
-				<iCommerce>-6</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>6</iCommerce>
+				<iCommerce>11</iCommerce>
 			</CommerceChanges>
 			<iDefense>5</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -36765,7 +36776,7 @@
 			</ConstructCondition>
 			<iCost>870</iCost>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -39134,6 +39145,9 @@
 				<iYield>50</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>75</iCommerce>
+			</CommerceChanges>
 			<iHappiness>7</iHappiness>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>6</iAsset>
@@ -39178,6 +39192,9 @@
 				<iYield>50</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>25</iCommerce>
+			</CommerceChanges>
 			<iHealth>1</iHealth>
 			<FreeBonus>BONUS_NUTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -39230,6 +39247,9 @@
 			<YieldChanges>
 				<iYield>75</iYield>
 			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>55</iCommerce>
+			</CommerceChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>13</iHealth>
 			<FreeBonus>BONUS_FRUIT</FreeBonus>
@@ -39842,7 +39862,7 @@
 			<iHealth>-1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -40780,7 +40800,7 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iHappiness>-1</iHappiness>
 			<iDefense>20</iDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -40837,7 +40857,7 @@
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-12</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iPower>2</iPower>
@@ -41181,7 +41201,7 @@
 			<iHealth>2</iHealth>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-24</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>14</iAsset>
 			<iPower>4</iPower>
@@ -42122,7 +42142,7 @@
 			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			<iCost>3525</iCost>
 			<CommerceChanges>
-				<iCommerce>50</iCommerce>
+				<iCommerce>125</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>175</iYield>
@@ -43535,9 +43555,9 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>16</iCommerce>
 			</CommerceChanges>
 			<BonusYieldChanges>
 				<BonusYieldChange>
@@ -44528,7 +44548,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>4</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -45669,7 +45689,7 @@
 			<ObsoleteTech>TECH_GRAVITY_CONTROL</ObsoleteTech>
 			<iCost>2505</iCost>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -47871,7 +47891,7 @@
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<iCost>11355</iCost>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -48128,7 +48148,7 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>22</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<BonusCommerceModifiers>
@@ -48719,7 +48739,7 @@
 			</ReplacementBuildings>
 			<iCost>368</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -48841,7 +48861,7 @@
 			</ReplacementBuildings>
 			<iCost>455</iCost>
 			<CommerceChanges>
-				<iCommerce>-6</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
@@ -49073,7 +49093,7 @@
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
@@ -50814,7 +50834,7 @@
 				<iYield>6</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -51106,7 +51126,7 @@
 			</PrereqInCityBuildings>
 			<iCost>870</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -51205,7 +51225,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iHappiness>-1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>5</iPower>
@@ -53122,9 +53142,9 @@
 			</PrereqInCityBuildings>
 			<iCost>3665</iCost>
 			<CommerceChanges>
-				<iCommerce>40</iCommerce>
+				<iCommerce>85</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
+				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -58562,7 +58582,7 @@
 			</ReplacementBuildings>
 			<iCost>320</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -59072,7 +59092,7 @@
 			</ReplacementBuildings>
 			<iCost>740</iCost>
 			<CommerceChanges>
-				<iCommerce>-9</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>36</iRiverDefensePenalty>
@@ -59105,7 +59125,7 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>830</iCost>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>42</iRiverDefensePenalty>
@@ -59306,9 +59326,9 @@
 				<iYield>200</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>50</iCommerce>
+				<iCommerce>120</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>60</iCommerce>
+				<iCommerce>170</iCommerce>
 			</CommerceChanges>
 			<iHealth>17</iHealth>
 			<HealUnitCombatTypes>
@@ -59879,7 +59899,7 @@
 			<iCost>1280</iCost>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
@@ -62069,9 +62089,9 @@
 			<iHealth>1</iHealth>
 			<iHappiness>17</iHappiness>
 			<CommerceChanges>
-				<iCommerce>8</iCommerce>
+				<iCommerce>17</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>8</iCommerce>
+				<iCommerce>17</iCommerce>
 			</CommerceChanges>
 			<iAsset>5</iAsset>
 			<iPower>4</iPower>
@@ -62402,13 +62422,17 @@
 			<iCost>2405</iCost>
 			<CommerceChanges>
 				<iCommerce>120</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>50</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>65</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>30</iYield>
+			</YieldModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 			</PrereqInCityBuildings>
@@ -63739,7 +63763,7 @@
 			<iCost>1605</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -64063,7 +64087,7 @@
 			<iCost>1280</iCost>
 			<iHealth>5</iHealth>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -64177,7 +64201,7 @@
 			<PrereqTech>TECH_MOLECULAR_SCANNING</PrereqTech>
 			<iCost>7205</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>55</iCommerce>
 			</CommerceChanges>
 			<iHealth>3</iHealth>
 			<PrereqInCityBuildings>
@@ -64239,7 +64263,7 @@
 			<iCost>2205</iCost>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<TechHealthChanges>
 				<TechHealthChange>
@@ -64575,6 +64599,8 @@
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iDefense>180</iDefense>
 			<iBombardDefense>70</iBombardDefense>
@@ -64583,7 +64609,7 @@
 			<iNoEntryDefenseLevel>2</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -66123,6 +66149,8 @@
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iDefense>140</iDefense>
 			<iBombardDefense>50</iBombardDefense>
@@ -66131,7 +66159,7 @@
 			<iNoEntryDefenseLevel>12</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -66218,8 +66246,9 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-8</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -68216,9 +68245,9 @@
 			<iHealth>1</iHealth>
 			<iHappiness>9</iHappiness>
 			<CommerceChanges>
-				<iCommerce>4</iCommerce>
+				<iCommerce>9</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>9</iCommerce>
 			</CommerceChanges>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -70502,7 +70531,7 @@
 			</PrereqOrBuildings>
 			<iCost>280</iCost>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -75054,7 +75083,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-40</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iHealth>-1</iHealth>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
@@ -77139,7 +77168,7 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>4</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -78090,9 +78119,6 @@
 			</PrereqInCityBuildings>
 			<iCost>6905</iCost>
 			<iHealth>1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-80</iCommerce>
-			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<iConquestProb>100</iConquestProb>
@@ -78402,7 +78428,7 @@
 			<iNoEntryDefenseLevel>100</iNoEntryDefenseLevel>
 			<iMinDefense>5</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>3</iPower>
 			<Flavors>
 				<Flavor>
@@ -80705,7 +80731,7 @@
 			<iCost>440</iCost>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -81064,7 +81090,8 @@
 			<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
 			<iCost>12155</iCost>
 			<CommerceChanges>
-				<iCommerce>60</iCommerce>
+				<iCommerce>125</iCommerce>
+				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -82893,7 +82920,7 @@
 			</PrereqInCityBuildings>
 			<iCost>2985</iCost>
 			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -82948,10 +82975,10 @@
 			</ConstructCondition>
 			<iCost>1845</iCost>
 			<CommerceChanges>
-				<iCommerce>-12</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>7</iCommerce>
+				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -83006,10 +83033,10 @@
 			</ConstructCondition>
 			<iCost>800</iCost>
 			<CommerceChanges>
-				<iCommerce>-12</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>7</iCommerce>
+				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -83297,7 +83324,9 @@
 			<iCost>710</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
-				<iCommerce>8</iCommerce>
+				<iCommerce>12</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -85032,7 +85061,7 @@
 			<iHealth>-1</iHealth>
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -87873,7 +87902,7 @@
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -91097,7 +91126,7 @@
 			</ReplacementBuildings>
 			<iCost>870</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -92516,7 +92545,7 @@
 			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -93940,10 +93969,10 @@
 			</ReplacementBuildings>
 			<iCost>630</iCost>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -95859,7 +95888,7 @@
 			</ReplacementBuildings>
 			<iCost>740</iCost>
 			<CommerceChanges>
-				<iCommerce>-8</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>33</iRiverDefensePenalty>
@@ -95894,7 +95923,7 @@
 			</ReplacementBuildings>
 			<iCost>830</iCost>
 			<CommerceChanges>
-				<iCommerce>-9</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>39</iRiverDefensePenalty>
@@ -99618,7 +99647,7 @@
 			<iCost>655</iCost>
 			<iHealth>3</iHealth>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -100465,7 +100494,7 @@
 			</ReplacementBuildings>
 			<iCost>104</iCost>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-3</iDefense>
 			<iRiverDefensePenalty>12</iRiverDefensePenalty>
@@ -100831,7 +100860,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>4</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -101908,6 +101937,8 @@
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iDefense>160</iDefense>
 			<iBombardDefense>60</iBombardDefense>
@@ -101916,7 +101947,7 @@
 			<iNoEntryDefenseLevel>8</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -102038,7 +102069,7 @@
 			<iCost>535</iCost>
 			<iHealth>3</iHealth>
 			<CommerceChanges>
-				<iCommerce>-12</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -102221,7 +102252,8 @@
 			<PrereqTech>TECH_REPLACEMENT_ORGANS</PrereqTech>
 			<iCost>2865</iCost>
 			<CommerceChanges>
-				<iCommerce>15</iCommerce>
+				<iCommerce>85</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
@@ -104836,9 +104868,9 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iCost>2405</iCost>
 			<CommerceChanges>
-				<iCommerce>20</iCommerce>
+				<iCommerce>50</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -106383,7 +106415,7 @@
 			</ReplacementBuildings>
 			<iCost>168</iCost>
 			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -106492,7 +106524,7 @@
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
@@ -106868,6 +106900,9 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>5</iTradeRouteModifier>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -107544,7 +107579,7 @@
 			</ReplacementBuildings>
 			<iCost>630</iCost>
 			<CommerceChanges>
-				<iCommerce>-7</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>30</iRiverDefensePenalty>
@@ -108122,7 +108157,7 @@
 			<iCost>3525</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
-				<iCommerce>12</iCommerce>
+				<iCommerce>35</iCommerce>
 			</CommerceChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -109699,7 +109734,7 @@
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDefense>-5</iDefense>
 			<iRiverDefensePenalty>21</iRiverDefensePenalty>
@@ -110286,14 +110321,14 @@
 			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
 			<iCost>3525</iCost>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
-				<iCommerce>40</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>75</iCommerce>
+				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>8</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER_EDUCATION</BuildingType>
@@ -110966,7 +111001,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -112922,7 +112957,7 @@
 			<iCost>555</iCost>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -113083,7 +113118,7 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
-			<iForeignTradeRouteModifier>-25</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iDefense>160</iDefense>
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
