@@ -1354,6 +1354,62 @@ class TestCode:
 						if aBaseBonusCommerceModifiers[iBonus][iCommerce] < aBonusCommerceModifiers[iBonus][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce Modifiers "+str(aFinalBonusCommerceModifiers[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#======================================================================================================================================
+				#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers> - base
+				aBaseTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aBaseTechYieldChanges[iTech][iYield] += CvBuildingInfo.getTechYieldChange(iTech, iYield)
+						aBaseTechYieldModifiers[iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aBaseTechCommerceChanges[iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+						aBaseTechCommerceModifiers[iTech][iCommerce] += CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+
+				#Analyze replacements by tag
+				aTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aTechYieldChanges[iTech][iYield] += CvReplacedBuildingInfo.getTechYieldChange(iTech, iYield)
+							aTechYieldModifiers[iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aTechCommerceChanges[iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+							aTechCommerceModifiers[iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+
+				#Keep already existing <TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers> in base
+				aFinalTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aFinalTechYieldChanges[iTech][iYield] = aBaseTechYieldChanges[iTech][iYield] + aTechYieldChanges[iTech][iYield]
+						aFinalTechYieldModifiers[iTech][iYield] = aBaseTechYieldModifiers[iTech][iYield] + aTechYieldModifiers[iTech][iYield]
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aFinalTechCommerceChanges[iTech][iCommerce] = aBaseTechCommerceChanges[iTech][iCommerce] + aTechCommerceChanges[iTech][iCommerce]
+						aFinalTechCommerceModifiers[iTech][iCommerce] = aBaseTechCommerceModifiers[iTech][iCommerce] + aTechCommerceModifiers[iTech][iCommerce]
+
+				#Building shouldn't be worse than replaced one!
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aBaseTechYieldChanges[iTech][iYield] < aTechYieldChanges[iTech][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Changes "+str(aFinalTechYieldChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseTechYieldModifiers[iTech][iYield] < aTechYieldModifiers[iTech][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Modifiers "+str(aFinalTechYieldModifiers[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aBaseTechCommerceChanges[iTech][iCommerce] < aTechCommerceChanges[iTech][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Changes "+str(aFinalTechCommerceChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseTechCommerceModifiers[iTech][iCommerce] < aTechCommerceModifiers[iTech][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Modifiers "+str(aFinalTechCommerceModifiers[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
