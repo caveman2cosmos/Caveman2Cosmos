@@ -184,7 +184,6 @@ m_piCommerceHappiness(NULL),
 m_piReligionChange(NULL),
 m_piSpecialistCount(NULL),
 m_piFreeSpecialistCount(NULL),
-m_piBonusHealthChanges(NULL),
 m_piBonusHappinessChanges(NULL),
 m_piBonusProductionModifier(NULL),
 m_piUnitCombatFreeExperience(NULL),
@@ -343,7 +342,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piReligionChange);
 	SAFE_DELETE_ARRAY(m_piSpecialistCount);
 	SAFE_DELETE_ARRAY(m_piFreeSpecialistCount);
-	SAFE_DELETE_ARRAY(m_piBonusHealthChanges);
 	SAFE_DELETE_ARRAY(m_piBonusHappinessChanges);
 	SAFE_DELETE_ARRAY(m_piBonusProductionModifier);
 	SAFE_DELETE_ARRAY(m_piUnitCombatFreeExperience);
@@ -678,9 +676,9 @@ int CvBuildingInfo::getBonusHealthChanges(int i) const
 
 	if (i == NO_BONUS)
 	{
-		return m_piBonusHealthChanges ? 1 : 0;
+		return !m_piBonusHealthChanges.empty() ? 1 : 0;
 	}
-	return m_piBonusHealthChanges ? m_piBonusHealthChanges[i] : 0;
+	return m_piBonusHealthChanges.getValue((BonusTypes)i);
 }
 
 int CvBuildingInfo::getBonusHappinessChanges(int i) const
@@ -1885,7 +1883,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionChange);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piSpecialistCount);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piFreeSpecialistCount);
-	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusHealthChanges);
+	CheckSumC(iSum, m_piBonusHealthChanges);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusHappinessChanges);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatFreeExperience);
@@ -2595,7 +2593,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
-	pXML->SetVariableListTagPair(&m_piBonusHealthChanges, L"BonusHealthChanges", GC.getNumBonusInfos());
+	m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
 	pXML->SetVariableListTagPair(&m_piBonusHappinessChanges, L"BonusHappinessChanges", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, L"BonusProductionModifiers", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatFreeExperience, L"UnitCombatFreeExperiences", GC.getNumUnitCombatInfos());
@@ -4099,16 +4097,10 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getConstructSound() == cDefault) m_szConstructSound = pClassInfo->getConstructSound();
 
+	m_piBonusHealthChanges.copyNonDefaults(pClassInfo->m_piBonusHealthChanges);
+
 	for ( int j = 0; j < GC.getNumBonusInfos(); j++)
 	{
-		if ( getBonusHealthChanges(j) == iDefault && pClassInfo->getBonusHealthChanges(j) != iDefault)
-		{
-			if ( NULL == m_piBonusHealthChanges )
-			{
-				CvXMLLoadUtility::InitList(&m_piBonusHealthChanges,GC.getNumBonusInfos(),iDefault);
-			}
-			m_piBonusHealthChanges[j] = pClassInfo->getBonusHealthChanges(j);
-		}
 		if ( getBonusHappinessChanges(j) == iDefault && pClassInfo->getBonusHappinessChanges(j) != iDefault)
 		{
 			if ( NULL == m_piBonusHappinessChanges )

@@ -283,7 +283,10 @@ public:
 	int getReligionChange(int i) const;
 	int getSpecialistCount(int i) const;
 	int getFreeSpecialistCount(int i) const;
+
 	int getBonusHealthChanges(int i) const;
+	const python::list cyGetBonusHealth() const { return m_piBonusHealthChanges.makeList(); }
+
 	int getBonusHappinessChanges(int i) const;
 	int getBonusProductionModifier(int i) const;
 	int getUnitCombatFreeExperience(int i) const;
@@ -778,7 +781,6 @@ private:
 	int* m_piReligionChange;
 	int* m_piSpecialistCount;
 	int* m_piFreeSpecialistCount;
-	int* m_piBonusHealthChanges;
 	int* m_piBonusHappinessChanges;
 	int* m_piBonusProductionModifier;
 	int* m_piUnitCombatFreeExperience;
@@ -832,6 +834,7 @@ private:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<BonusTypes, int> m_piBonusHealthChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
