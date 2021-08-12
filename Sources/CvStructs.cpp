@@ -14,6 +14,8 @@
 #include "CvCityAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 
 plotInfo::plotInfo() :
 	index(0),
@@ -37,6 +39,21 @@ std::string plotInfo::ToJSON()
 
 	const std::string output = oss.str();
 	return output;
+}
+
+XYCoords::XYCoords(int x, int y)
+	: iX(x)
+	, iY(y)
+{}
+
+XYCoords::XYCoords(const CvPlot& plot)
+	: iX(plot.getX())
+	, iY(plot.getY())
+{}
+
+CvPlot* XYCoords::plot() const
+{
+	return GC.getMap().plotSorenINLINE(iX, iY);
 }
 
 int EventTriggeredData::getID() const
