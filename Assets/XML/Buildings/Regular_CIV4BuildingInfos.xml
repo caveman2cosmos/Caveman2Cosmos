@@ -6500,6 +6500,14 @@
 					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iAsset>4</iAsset>
 			<iPower>5</iPower>
@@ -23864,6 +23872,10 @@
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iAsset>4</iAsset>
 			<iPower>5</iPower>
@@ -25448,6 +25460,10 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -41348,6 +41364,18 @@
 					<BuildingType>BUILDING_ARENA</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iAsset>5</iAsset>
 			<iPower>6</iPower>
@@ -49858,6 +49886,10 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE_GARDEN</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CITY_PARK</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -65326,6 +65358,10 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -87403,6 +87439,30 @@
 					<BuildingType>BUILDING_WALLS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BARRICADES</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<Flavors>
 				<Flavor>
@@ -106159,6 +106219,18 @@
 					<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Properties>
@@ -108977,6 +109049,10 @@
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -109168,6 +109244,14 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -112706,6 +112790,18 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOWN_HALL</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

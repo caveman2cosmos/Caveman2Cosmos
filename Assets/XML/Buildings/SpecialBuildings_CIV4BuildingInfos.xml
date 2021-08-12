@@ -17611,6 +17611,18 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
+					<BuildingType>BUILDING_STEAM_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MODERN_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WATERMILL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
@@ -17636,6 +17648,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -10875,6 +10875,10 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
@@ -21785,6 +21789,10 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+					<iHappinessChange>3</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
