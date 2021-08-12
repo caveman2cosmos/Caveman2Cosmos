@@ -11103,7 +11103,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HUMPHREY_METRODOME</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
@@ -15571,7 +15571,7 @@
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
 				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<iCost>708</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>

@@ -81,6 +81,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
 			<bNeverCapture>1</bNeverCapture>
