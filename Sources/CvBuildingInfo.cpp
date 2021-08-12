@@ -2592,7 +2592,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
 	m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
-	m_piBonusHealthChanges.read(pXML, L"BonusHappinessChanges");
+	m_piBonusHappinessChanges.read(pXML, L"BonusHappinessChanges");
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, L"BonusProductionModifiers", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatFreeExperience, L"UnitCombatFreeExperiences", GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_piDomainFreeExperience, L"DomainFreeExperiences", NUM_DOMAIN_TYPES);
