@@ -1610,9 +1610,8 @@ void CvCity::doAutobuild()
 	{
 		checkPropertyBuildings();
 	}
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	// Auto-build any auto-build buildings we can
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 		if (kBuilding.isAutoBuild())
@@ -1662,34 +1661,18 @@ void CvCity::checkPropertyBuildings()
 		{
 			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
 			{
-				const bool bHasBuilding = getNumActiveBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iValue >= kBuilding.iMinValue) && (iValue <= kBuilding.iMaxValue);
-				if (!bInRange)
+
+				if (getNumActiveBuilding(kBuilding.eBuilding) > 0)
 				{
-					if (bHasBuilding)
-					{//TBWORKINGHERE
-						//szBuffer.format("Removing Building, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
+					if (!bInRange || !canConstruct(kBuilding.eBuilding, false, false, true, true))
+					{
 						setNumRealBuilding(kBuilding.eBuilding, 0);
 					}
 				}
-				else if (canConstruct(kBuilding.eBuilding, false, false, true, true))
+				else if (bInRange && canConstruct(kBuilding.eBuilding, false, false, true, true))
 				{
-					if (!bHasBuilding)
-					{
-						//szBuffer.format("Adding Building, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						setNumRealBuilding(kBuilding.eBuilding, 1);
-					}
-				}
-				else
-				{
-					if (bHasBuilding)
-					{
-						//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iValue %i.", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						setNumRealBuilding(kBuilding.eBuilding, 0);
-					}
+					setNumRealBuilding(kBuilding.eBuilding, 1);
 				}
 			}
 		}

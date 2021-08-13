@@ -233,7 +233,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 
 	def onKbdEvent(self, argsList):
 		eventType,key,mx,my,px,py = argsList
-		if ( eventType == self.eventMgr.EventKeyDown ):
+		if eventType == 6:
 			theKey=int(key)
 			'Check if ALT + E was hit == echoes to text log and in-game log'
 			if (theKey == int(InputTypes.KB_E)

@@ -71,6 +71,7 @@
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>

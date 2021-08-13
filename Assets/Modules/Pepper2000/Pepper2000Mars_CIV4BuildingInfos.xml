@@ -320,6 +320,7 @@
 				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ASTROECOLOGY</ObsoleteTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
