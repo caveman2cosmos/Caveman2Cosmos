@@ -1799,7 +1799,7 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Commerce double time - wonders only, and ensure flat change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or  CvBuildingInfo.getHolyCity() != -1):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" Non-wonder has commerce change double time")
 
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1829,6 +1829,12 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")
 				if CvBuildingInfo.getExtraFreeBonus(i) == -1 and CvBuildingInfo.getExtraFreeBonusNum(i) != 0:
 					self.log(CvBuildingInfo.getType()+" has unspecified extra free bonus type")
+
+			#GlobalBuildingExtraCommerces is meant to be placed on wonders
+			for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+				CvTargetBuilding = GC.getBuildingInfo(pBuildingCommerceChange.eBuilding)
+				if not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces should be swapped with "+CvTargetBuilding.getType())
 
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):
