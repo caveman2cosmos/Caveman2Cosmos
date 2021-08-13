@@ -1327,6 +1327,60 @@ class TestCode:
 					if aBaseTechHealthChanges[iTech] < aTechHealthChanges[iTech]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aFinalTechHealthChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=============================================================================================================================
+				#<GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers> - base
+				aBaseGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aBaseGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aBaseBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aBaseBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
+					aBaseGlobalBuildingCostModifiers[pair.id] += pair.value
+				for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
+					aBaseGlobalBuildingProductionModifiers[pair.id] += pair.value
+				for pair in CvBuildingInfo.getBuildingHappinessChanges():
+					aBaseBuildingHappinessChanges[pair.id] += pair.value
+				for pair in CvBuildingInfo.getBuildingProductionModifiers():
+					aBaseBuildingProductionModifiers[pair.id] += pair.value
+
+				#Analyze replacements by tag
+				aGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers>
+					for pair in CvReplacedBuildingInfo.getGlobalBuildingCostModifiers():
+						aGlobalBuildingCostModifiers[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getGlobalBuildingProductionModifiers():
+						aGlobalBuildingProductionModifiers[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getBuildingHappinessChanges():
+						aBuildingHappinessChanges[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getBuildingProductionModifiers():
+						aBuildingProductionModifiers[pair.id] += pair.value
+
+				#Keep already existing <GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers> in base
+				aFinalGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aFinalGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aFinalBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aFinalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for iAffectedBuildings in xrange(GC.getNumBuildingInfos()):
+					aFinalGlobalBuildingCostModifiers[iAffectedBuildings] = aBaseGlobalBuildingCostModifiers[iAffectedBuildings] + aGlobalBuildingCostModifiers[iAffectedBuildings]
+					aFinalGlobalBuildingProductionModifiers[iAffectedBuildings] = aBaseGlobalBuildingProductionModifiers[iAffectedBuildings] + aGlobalBuildingProductionModifiers[iAffectedBuildings]
+					aFinalBuildingHappinessChanges[iAffectedBuildings] = aBaseBuildingHappinessChanges[iAffectedBuildings] + aBuildingHappinessChanges[iAffectedBuildings]
+					aFinalBuildingProductionModifiers[iAffectedBuildings] = aBaseBuildingProductionModifiers[iAffectedBuildings] + aBuildingProductionModifiers[iAffectedBuildings]
+
+				#Building shouldn't be worse than replaced one!
+				for iAffectedBuildings in xrange(GC.getNumBuildingInfos()):
+					if aBaseGlobalBuildingCostModifiers[iAffectedBuildings] < aGlobalBuildingCostModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Global Building cost Modifiers "+str(aFinalGlobalBuildingCostModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseGlobalBuildingProductionModifiers[iAffectedBuildings] < aGlobalBuildingProductionModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Global Building production Modifiers "+str(aFinalGlobalBuildingProductionModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseBuildingHappinessChanges[iAffectedBuildings] < aBuildingHappinessChanges[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building Happiness Changes "+str(aFinalBuildingHappinessChanges[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseBuildingProductionModifiers[iAffectedBuildings] < aBuildingProductionModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building production Modifiers "+str(aFinalBuildingProductionModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+
 				#===== 2D ENTRIES - coupling between two infotypes, like yield changing in presence of bonus =====#
 				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> - base
 				aBaseBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
@@ -1459,6 +1513,36 @@ class TestCode:
 						if aBaseTechSpecialistChanges[iTech][iSpecialist] < aTechSpecialistChanges[iTech][iSpecialist]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType()+" replaced: "+str(aFinalTechSpecialistChanges))
 
+				#==============================================================================================================
+				#<GlobalBuildingExtraCommerces> - base
+				aBaseGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+					iAffectedBuilding = pBuildingCommerceChange.eBuilding
+					iCommerce = pBuildingCommerceChange.eCommerce
+					aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] += pBuildingCommerceChange.value
+
+				#Analyze replacements by tag
+				aGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<GlobalBuildingExtraCommerces>
+					for pBuildingCommerceChange in CvReplacedBuildingInfo.getGlobalBuildingCommerceChanges():
+						iAffectedBuilding = pBuildingCommerceChange.eBuilding
+						iCommerce = pBuildingCommerceChange.eCommerce
+						aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] += pBuildingCommerceChange.value
+
+				#Keep already existing <GlobalBuildingExtraCommerces> in base
+				aFinalGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aFinalGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] = aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] + aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce]
+
+				#Building shouldn't be worse than replaced one!
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] < aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuilding).getType()+" Global Building extra Commerces "+str(aFinalGlobalBuildingExtraCommerces[iAffectedBuilding])+" replaced: "+str(aImmediateReplacedNameList))
+
 	#Building - check if building replacements are present in tags affecting buildings
 	def checkBuildingReplacingAvailability(self):
 		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
@@ -1470,86 +1554,86 @@ class TestCode:
 			for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
 				iAffectedBuilding = pBuildingCommerceChange.eBuilding
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacedBuildingsList = []
+				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
-						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-							aReplacedBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
 				for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
 					iAffectedBuilding = pBuildingCommerceChange.eBuilding
-					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacedBuildingsList:
-						aReplacedBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacedBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 			#<GlobalBuildingCostModifiers>
 			for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
 				iAffectedBuilding = pair.id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacedBuildingsList = []
+				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
-						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-							aReplacedBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
 				for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
 					iAffectedBuilding = pair.id
-					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacedBuildingsList:
-						aReplacedBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacedBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" GlobalBuildingCostModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingCostModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 			#<GlobalBuildingProductionModifiers>
 			for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
 				iAffectedBuilding = pair.id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacedBuildingsList = []
+				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
-						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-							aReplacedBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
 				for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
 					iAffectedBuilding = pair.id
-					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacedBuildingsList:
-						aReplacedBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacedBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" GlobalBuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 			#<BuildingHappinessChanges>
 			for pair in CvBuildingInfo.getBuildingHappinessChanges():
 				iAffectedBuilding = pair.id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacedBuildingsList = []
+				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
-						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-							aReplacedBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
 				for pair in CvBuildingInfo.getBuildingHappinessChanges():
 					iAffectedBuilding = pair.id
-					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacedBuildingsList:
-						aReplacedBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacedBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" BuildingHappinessChanges "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" BuildingHappinessChanges "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 			#<BuildingProductionModifiers>
 			for pair in CvBuildingInfo.getBuildingProductionModifiers():
 				iAffectedBuilding = pair.id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacedBuildingsList = []
+				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
-						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-							aReplacedBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
 				#If affected building replacement is listed, then remove it from buildings to be added
 				for pair in CvBuildingInfo.getBuildingProductionModifiers():
 					iAffectedBuilding = pair.id
-					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacedBuildingsList:
-						aReplacedBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacedBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 		#Civics referencing buildings
 		if 0:# There is currently no way to filter out already existing buildings
@@ -1560,50 +1644,50 @@ class TestCode:
 				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
 					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					if CvCivicInfo.getBuildingHappinessChanges(iAffectedBuilding) != 0:
-						aReplacedBuildingsList = []
+						aReplacementBuildingsList = []
 						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-									aReplacedBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacedBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHappinessChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingHappinessChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 				#<BuildingHealthChanges>
 				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
 					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					if CvCivicInfo.getBuildingHealthChanges(iAffectedBuilding) != 0:
-						aReplacedBuildingsList = []
+						aReplacementBuildingsList = []
 						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-									aReplacedBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacedBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHealthChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingHealthChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 				#<BuildingProductionModifiers>
 				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
 					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					if CvCivicInfo.getBuildingProductionModifier(iAffectedBuilding) != 0:
-						aReplacedBuildingsList = []
+						aReplacementBuildingsList = []
 						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-									aReplacedBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacedBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingProductionModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingProductionModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 				#<BuildingCommerceModifiers>
 				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
 					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if CvCivicInfo.getBuildingCommerceModifier(iAffectedBuilding, iCommerce) != 0:
-							aReplacedBuildingsList = []
+							aReplacementBuildingsList = []
 							if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 								for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-									if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get replaced buildings
-										aReplacedBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-							if len(aReplacedBuildingsList) > 0:
-								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacedBuildingsList))
+									if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+										aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+							if len(aReplacementBuildingsList) > 0:
+								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
