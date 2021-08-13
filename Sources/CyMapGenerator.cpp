@@ -19,9 +19,9 @@ CyMapGenerator::CyMapGenerator() : m_pMapGenerator(NULL)
 	m_pMapGenerator = &CvMapGenerator::GetInstance();
 }
 
-CyMapGenerator::CyMapGenerator(CvMapGenerator* pMapGenerator) : m_pMapGenerator(pMapGenerator)
-{
-}
+//CyMapGenerator::CyMapGenerator(CvMapGenerator* pMapGenerator) : m_pMapGenerator(pMapGenerator)
+//{
+//}
 
 void CyMapGenerator::doRiver(CyPlot* pStartPlot, CardinalDirectionTypes eCardinalDirection)
 {
@@ -48,10 +48,9 @@ void CyMapGenerator::generateTerrain()
 	m_pMapGenerator->generateTerrain();
 }
 
-void CyMapGenerator::setPlotTypes(python::list& listPlotTypes)
+void CyMapGenerator::setPlotTypes(const python::list& lPlotTypes)
 {
-	int* paiPlotTypes = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(listPlotTypes.ptr() /*src*/, &paiPlotTypes /*dst*/);
-	m_pMapGenerator->setPlotTypes(paiPlotTypes);
-	delete [] paiPlotTypes;
+	std::vector<int> v;
+	python::container_utils::extend_container(v, lPlotTypes);
+	m_pMapGenerator->setPlotTypes(v);
 }
