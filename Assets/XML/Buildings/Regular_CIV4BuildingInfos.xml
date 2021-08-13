@@ -966,7 +966,7 @@
 			<iBombardDefense>30</iBombardDefense>
 			<iEspionageDefense>60</iEspionageDefense>
 			<iNoEntryDefenseLevel>4</iNoEntryDefenseLevel>
-			<iMinDefense>1</iMinDefense>
+			<iMinDefense>5</iMinDefense>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
 			<iAirModifier>-50</iAirModifier>
 			<iNukeModifier>-50</iNukeModifier>
@@ -1947,6 +1947,12 @@
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 				<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 			</PrereqInCityBuildings>
+			<DomainFreeExperiences>
+				<DomainFreeExperience>
+					<DomainType>DOMAIN_SEA</DomainType>
+					<iExperience>5</iExperience>
+				</DomainFreeExperience>
+			</DomainFreeExperiences>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6402,7 +6408,7 @@
 			<iBombardDefense>15</iBombardDefense>
 			<iEspionageDefense>50</iEspionageDefense>
 			<iNoEntryDefenseLevel>6</iNoEntryDefenseLevel>
-			<iMinDefense>1</iMinDefense>
+			<iMinDefense>5</iMinDefense>
 			<iAdjacentDamagePercent>35</iAdjacentDamagePercent>
 			<iAirModifier>-25</iAirModifier>
 			<iNukeModifier>-25</iNukeModifier>
@@ -8145,6 +8151,16 @@
 					<iHappiness>1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8839,6 +8855,14 @@
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
 			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iExperience>3</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 					<iExperience>6</iExperience>
@@ -10376,7 +10400,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>18</iNoEntryDefenseLevel>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
-			<iMinDefense>1</iMinDefense>
+			<iMinDefense>5</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>3</iPower>
@@ -11129,6 +11153,10 @@
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
 					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<PrereqInCityBuildings>
@@ -36877,7 +36905,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>16</iNoEntryDefenseLevel>
 			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
-			<iMinDefense>1</iMinDefense>
+			<iMinDefense>5</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>4</iPower>
@@ -42069,7 +42097,15 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iExperience>3</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
@@ -45527,6 +45563,18 @@
 			</NewCityFree>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>3</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
@@ -45540,7 +45588,7 @@
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<iExperience>2</iExperience>
+					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -63538,6 +63586,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>17</iCommerce>
 			</CommerceChanges>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>5</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iAsset>5</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -68678,6 +68732,18 @@
 			<iCost>1130</iCost>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>3</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
@@ -68695,7 +68761,7 @@
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<iExperience>2</iExperience>
+					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
@@ -70089,6 +70155,12 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>5</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iCost>455</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>9</iHappiness>
@@ -79109,6 +79181,18 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
 			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iExperience>3</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iExperience>4</iExperience>
+				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ROCKET_LAUNCHER</UnitCombatType>
 					<iExperience>6</iExperience>
@@ -97046,10 +97130,14 @@
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iExperience>2</iExperience>
+					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
@@ -100927,6 +101015,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -115988,7 +116082,7 @@
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>10</iNoEntryDefenseLevel>
-			<iMinDefense>1</iMinDefense>
+			<iMinDefense>5</iMinDefense>
 			<iAdjacentDamagePercent>30</iAdjacentDamagePercent>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>

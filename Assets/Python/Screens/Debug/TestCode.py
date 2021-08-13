@@ -955,7 +955,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty> - base
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -984,6 +984,8 @@ class TestCode:
 				iBaseMinDefense = CvBuildingInfo.getMinDefense()
 				iBaseNoEntryDefenseLevel = CvBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
 				iBaseRiverDefensePenalty = CvBuildingInfo.getRiverDefensePenalty()
+				iBaseExperience = CvBuildingInfo.getFreeExperience()
+				iBaseGlobalExperience = CvBuildingInfo.getGlobalFreeExperience()
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -1014,9 +1016,11 @@ class TestCode:
 				iMinDefense = 0
 				iNoEntryDefenseLevel = 0  #iNoEntryDefenseLevel - lower value is better
 				iRiverDefensePenalty = 0
+				iExperience = 0
+				iGlobalExperience = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
@@ -1047,8 +1051,10 @@ class TestCode:
 					iMinDefense = CvReplacedBuildingInfo.getMinDefense()
 					iNoEntryDefenseLevel = CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
 					iRiverDefensePenalty = CvReplacedBuildingInfo.getRiverDefensePenalty()
+					iExperience = CvReplacedBuildingInfo.getFreeExperience()
+					iGlobalExperience = CvReplacedBuildingInfo.getGlobalFreeExperience()
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
@@ -1077,6 +1083,8 @@ class TestCode:
 				iFinalMinDefense = iBaseMinDefense + iMinDefense
 				iFinalNoEntryDefenseLevel = iBaseNoEntryDefenseLevel + iNoEntryDefenseLevel  #iNoEntryDefenseLevel - lower value is better
 				iFinalRiverDefensePenalty = iBaseRiverDefensePenalty + iRiverDefensePenalty
+				iFinalExperience = iBaseExperience + iExperience
+				iFinalGlobalExperience = iBaseGlobalExperience + iGlobalExperience
 
 				#Building shouldn't be worse than replaced one!
 				if iBaseTradeRoutes < iTradeRoutes:
@@ -1135,6 +1143,10 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have No Entry Defense Level "+str(iFinalNoEntryDefenseLevel)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseRiverDefensePenalty < iRiverDefensePenalty:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have River Defense Penalty "+str(iFinalRiverDefensePenalty)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseExperience < iExperience:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Free Experience "+str(iFinalExperience)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGlobalExperience < iGlobalExperience:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Free global Experience Penalty "+str(iFinalGlobalExperience)+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
@@ -1440,6 +1452,54 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building Happiness Changes "+str(aFinalBuildingHappinessChanges[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
 					if aBaseBuildingProductionModifiers[iAffectedBuildings] < aBuildingProductionModifiers[iAffectedBuildings]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building production Modifiers "+str(aFinalBuildingProductionModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<DomainFreeExperiences> - base
+				aBaseDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					aBaseDomainFreeExperiences[iDomain] += CvBuildingInfo.getDomainFreeExperience(iDomain)
+
+				#Analyze replacements by tag
+				aDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<DomainFreeExperiences>
+					for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+						aDomainFreeExperiences[iDomain] += CvReplacedBuildingInfo.getDomainFreeExperience(iDomain)
+
+				#Keep already existing <DomainFreeExperiences> in base
+				aFinalDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					aFinalDomainFreeExperiences[iDomain] = aBaseDomainFreeExperiences[iDomain] + aDomainFreeExperiences[iDomain]
+
+				#Building shouldn't be worse than replaced one!
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					if aBaseDomainFreeExperiences[iDomain] < aDomainFreeExperiences[iDomain]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getDomainInfo(iDomain).getType()+" Domain Free Experience "+str(aFinalDomainFreeExperiences[iDomain])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<UnitCombatFreeExperiences> - base
+				aBaseUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					aBaseUnitCombatFreeExperiences[iUnitCombat] += CvBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+
+				#Analyze replacements by tag
+				aUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<UnitCombatFreeExperiences>
+					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+						aUnitCombatFreeExperiences[iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+
+				#Keep already existing <UnitCombatFreeExperiences> in base
+				aFinalUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					aFinalUnitCombatFreeExperiences[iUnitCombat] = aBaseUnitCombatFreeExperiences[iUnitCombat] + aUnitCombatFreeExperiences[iUnitCombat]
+
+				#Building shouldn't be worse than replaced one!
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					if aBaseUnitCombatFreeExperiences[iUnitCombat] < aUnitCombatFreeExperiences[iUnitCombat]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat free Experience "+str(aFinalUnitCombatFreeExperiences[iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 2D ENTRIES - coupling between two infotypes, like yield changing in presence of bonus =====#
 				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> - base
