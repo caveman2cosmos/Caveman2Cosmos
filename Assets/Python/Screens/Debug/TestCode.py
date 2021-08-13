@@ -955,7 +955,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> - base
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -968,6 +968,12 @@ class TestCode:
 				iBaseFreeSpecialist = CvBuildingInfo.getFreeSpecialist()
 				iBaseAreaFreeSpecialist = CvBuildingInfo.getAreaFreeSpecialist()
 				iBaseGlobalFreeSpecialist = CvBuildingInfo.getGlobalFreeSpecialist()
+				iBaseMaintenanceModifier = CvBuildingInfo.getMaintenanceModifier() #iMaintenanceModifier - lower value is better
+				iBaseHappinessPercentPerPopulation = CvBuildingInfo.getHappinessPercentPerPopulation()
+				iBaseHealthPercentPerPopulation = CvBuildingInfo.getHealthPercentPerPopulation()
+				iBaseWarWearinessModifier = CvBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
+				iBaseGlobalWarWearinessModifier = CvBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
+				iBaseEnemyWarWearinessModifier = CvBuildingInfo.getEnemyWarWearinessModifier()
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -982,9 +988,15 @@ class TestCode:
 				iFreeSpecialist = 0
 				iAreaFreeSpecialist = 0
 				iGlobalFreeSpecialist = 0
+				iMaintenanceModifier = 0 #iMaintenanceModifier - lower value is better
+				iHappinessPercentPerPopulation = 0
+				iHealthPercentPerPopulation = 0
+				iWarWearinessModifier = 0 #iWarWearinessModifier - lower value is better
+				iGlobalWarWearinessModifier = 0 #iGlobalWarWearinessModifier - lower value is better
+				iEnemyWarWearinessModifier = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
@@ -999,8 +1011,14 @@ class TestCode:
 					iFreeSpecialist += CvReplacedBuildingInfo.getFreeSpecialist()
 					iAreaFreeSpecialist += CvReplacedBuildingInfo.getAreaFreeSpecialist()
 					iGlobalFreeSpecialist += CvReplacedBuildingInfo.getGlobalFreeSpecialist()
+					iMaintenanceModifier += CvReplacedBuildingInfo.getMaintenanceModifier() #iMaintenanceModifier - lower value is better
+					iHappinessPercentPerPopulation += CvReplacedBuildingInfo.getHappinessPercentPerPopulation()
+					iHealthPercentPerPopulation += CvReplacedBuildingInfo.getHealthPercentPerPopulation()
+					iWarWearinessModifier += CvReplacedBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
+					iGlobalWarWearinessModifier += CvReplacedBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
+					iEnemyWarWearinessModifier += CvReplacedBuildingInfo.getEnemyWarWearinessModifier()
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
@@ -1013,6 +1031,12 @@ class TestCode:
 				iFinalFreeSpecialist = iBaseFreeSpecialist + iFreeSpecialist
 				iFinalAreaFreeSpecialist = iBaseAreaFreeSpecialist + iAreaFreeSpecialist
 				iFinalGlobalFreeSpecialist = iBaseGlobalFreeSpecialist + iGlobalFreeSpecialist
+				iFinalMaintenanceModifier = iBaseMaintenanceModifier + iMaintenanceModifier #iMaintenanceModifier - lower value is better
+				iFinalHappinessPercentPerPopulation = iBaseHappinessPercentPerPopulation + iHappinessPercentPerPopulation
+				iFinalHealthPercentPerPopulation = iBaseHealthPercentPerPopulation + iHealthPercentPerPopulation
+				iFinalWarWearinessModifier = iBaseWarWearinessModifier + iWarWearinessModifier #iWarWearinessModifier - lower value is better
+				iFinalGlobalWarWearinessModifier = iBaseGlobalWarWearinessModifier + iGlobalWarWearinessModifier #iGlobalWarWearinessModifier - lower value is better
+				iFinalEnemyWarWearinessModifier = iBaseEnemyWarWearinessModifier + iEnemyWarWearinessModifier
 
 				#Building shouldn't be worse than replaced one!
 				if iBaseTradeRoutes < iTradeRoutes:
@@ -1039,6 +1063,18 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Area free Specialist "+str(iFinalAreaFreeSpecialist)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseGlobalFreeSpecialist < iGlobalFreeSpecialist:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global free Specialist "+str(iFinalGlobalFreeSpecialist)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseMaintenanceModifier > iMaintenanceModifier: #iMaintenanceModifier - lower value is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Maintaince Modifier "+str(iFinalMaintenanceModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHappinessPercentPerPopulation < iHappinessPercentPerPopulation:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Happiness per Pop "+str(iFinalHappinessPercentPerPopulation)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHealthPercentPerPopulation < iHealthPercentPerPopulation:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Health per Pop "+str(iFinalHealthPercentPerPopulation)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseWarWearinessModifier > iWarWearinessModifier: #iWarWearinessModifier - lower value is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have War Weariness "+str(iFinalWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGlobalWarWearinessModifier > iGlobalWarWearinessModifier: #iGlobalWarWearinessModifier - lower value is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global War Weariness "+str(iFinalGlobalWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseEnemyWarWearinessModifier < iEnemyWarWearinessModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Enemy War Weariness "+str(iFinalEnemyWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base

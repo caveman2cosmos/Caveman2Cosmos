@@ -1882,7 +1882,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iHappiness>1</iHappiness>
-			<iMaintenanceModifier>-5</iMaintenanceModifier>
+			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1941,6 +1941,7 @@
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<iHealth>1</iHealth>
+			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 				<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
@@ -23866,7 +23867,7 @@
 			</CommerceChanges>
 			<iFreeSpecialist>3</iFreeSpecialist>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iMaintenanceModifier>20</iMaintenanceModifier>
+			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
@@ -30556,6 +30557,7 @@
 				<iYield>40</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
+			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 			</PrereqInCityBuildings>
@@ -68251,7 +68253,7 @@
 			</CommerceChanges>
 			<iFreeSpecialist>4</iFreeSpecialist>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iMaintenanceModifier>40</iMaintenanceModifier>
+			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
 			<iAsset>4</iAsset>
 			<iPower>5</iPower>
@@ -85247,6 +85249,7 @@
 			<iInvestigation>50</iInvestigation>
 			<iEspionageDefense>6</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iPower>2</iPower>
 			<PropertyManipulators>
@@ -85329,6 +85332,7 @@
 			<iInvestigation>35</iInvestigation>
 			<iEspionageDefense>5</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -96471,6 +96475,7 @@
 			<iInvestigation>25</iInvestigation>
 			<iEspionageDefense>3</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -106899,7 +106904,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<iTradeRoutes>2</iTradeRoutes>
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
@@ -109256,7 +109261,7 @@
 			</CommerceChanges>
 			<iFreeSpecialist>2</iFreeSpecialist>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
