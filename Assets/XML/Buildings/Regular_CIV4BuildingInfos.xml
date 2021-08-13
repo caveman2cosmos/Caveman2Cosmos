@@ -966,6 +966,7 @@
 			<iBombardDefense>30</iBombardDefense>
 			<iEspionageDefense>60</iEspionageDefense>
 			<iNoEntryDefenseLevel>4</iNoEntryDefenseLevel>
+			<iMinDefense>1</iMinDefense>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
 			<iAirModifier>-50</iAirModifier>
 			<iNukeModifier>-50</iNukeModifier>
@@ -6401,6 +6402,7 @@
 			<iBombardDefense>15</iBombardDefense>
 			<iEspionageDefense>50</iEspionageDefense>
 			<iNoEntryDefenseLevel>6</iNoEntryDefenseLevel>
+			<iMinDefense>1</iMinDefense>
 			<iAdjacentDamagePercent>35</iAdjacentDamagePercent>
 			<iAirModifier>-25</iAirModifier>
 			<iNukeModifier>-25</iNukeModifier>
@@ -10117,7 +10119,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-2</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>9</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>6</iTradeRouteModifier>
@@ -10374,7 +10376,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>18</iNoEntryDefenseLevel>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
-			<iMinDefense>5</iMinDefense>
+			<iMinDefense>1</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>3</iPower>
@@ -16424,7 +16426,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-3</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>15</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>10</iTradeRouteModifier>
@@ -20476,7 +20478,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>24</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>16</iTradeRouteModifier>
@@ -21261,7 +21263,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>27</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>18</iTradeRouteModifier>
@@ -29211,7 +29213,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-4</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>18</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>12</iTradeRouteModifier>
@@ -36875,7 +36877,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>16</iNoEntryDefenseLevel>
 			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
-			<iMinDefense>5</iMinDefense>
+			<iMinDefense>1</iMinDefense>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
 			<iPower>4</iPower>
@@ -49902,7 +49904,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iInvestigation>25</iInvestigation>
-			<iDefense>15</iDefense>
+			<iDefense>20</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
 			<iPower>2</iPower>
 			<Flavors>
@@ -50025,7 +50027,7 @@
 			</SpecialistCounts>
 			<iInvestigation>30</iInvestigation>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
-			<iDefense>5</iDefense>
+			<iDefense>20</iDefense>
 			<iEspionageDefense>4</iEspionageDefense>
 			<iPower>2</iPower>
 			<Flavors>
@@ -60526,7 +60528,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>36</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>24</iTradeRouteModifier>
@@ -60559,7 +60561,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>42</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>26</iTradeRouteModifier>
@@ -62429,7 +62431,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-2</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>6</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>4</iTradeRouteModifier>
@@ -85245,7 +85247,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iInvestigation>50</iInvestigation>
-			<iEspionageDefense>6</iEspionageDefense>
+			<iDefense>20</iDefense>
+			<iEspionageDefense>9</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
@@ -85328,7 +85331,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iInvestigation>35</iInvestigation>
-			<iEspionageDefense>5</iEspionageDefense>
+			<iDefense>20</iDefense>
+			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
@@ -96457,7 +96461,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iInvestigation>25</iInvestigation>
-			<iEspionageDefense>3</iEspionageDefense>
+			<iDefense>20</iDefense>
+			<iEspionageDefense>7</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
@@ -98361,7 +98366,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>33</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>22</iTradeRouteModifier>
@@ -98396,7 +98401,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>39</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>24</iTradeRouteModifier>
@@ -103013,7 +103018,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-3</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>12</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>8</iTradeRouteModifier>
@@ -110404,7 +110409,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>30</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>20</iTradeRouteModifier>
@@ -112570,7 +112575,7 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iDefense>-5</iDefense>
+			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>21</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>14</iTradeRouteModifier>
@@ -115983,6 +115988,7 @@
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>10</iNoEntryDefenseLevel>
+			<iMinDefense>1</iMinDefense>
 			<iAdjacentDamagePercent>30</iAdjacentDamagePercent>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
