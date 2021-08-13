@@ -37,10 +37,10 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>30</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>30</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
-			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
+			<iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>25</iNumCitiesMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
+			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
@@ -79,10 +79,10 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers>
-				<iCommerce>-4</iCommerce>
 				<iCommerce>-3</iCommerce>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>-3</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -2256,16 +2256,16 @@
 			<Upkeep>NONE</Upkeep>
 			<iDistanceMaintenanceModifier>3</iDistanceMaintenanceModifier>
 			<CapitalCommerceModifiers>
-				<iCommerce>-3</iCommerce>
-				<iCommerce>-3</iCommerce>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<!-- Revolution Mod Start -->
 			<iRevIdxNational>1</iRevIdxNational>
 			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
-			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
+			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<Button>art/Interface/buttons/civics/sparth/rule_obedience.dds</Button>
 			<Flavors>
 				<Flavor>
@@ -4066,15 +4066,15 @@
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-4</iCommerce>
+				<iCommerce>-3</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-4</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>-3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -5331,9 +5331,14 @@
 				<iYield>0</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5434,12 +5439,12 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>5</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>1</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iExtraHealth>-2</iExtraHealth>
+			<iExtraHealth>-1</iExtraHealth>
 			<iFreeExperience>1</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -5476,10 +5481,10 @@
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>-3</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
@@ -5515,7 +5520,7 @@
 			<bCanDoElection>0</bCanDoElection>
 			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
-			<iNationalCaptureResistanceModifier>-30</iNationalCaptureResistanceModifier>
+			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -5536,15 +5541,15 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_THIEF</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ROGUE</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_AMBUSHER</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ASSASSIN</UnitType>
