@@ -288,8 +288,8 @@ void CyInfoPythonInterface3()
 
 
 		// Arrays
-		.def("getYieldChange", &CvEmphasizeInfo::getYieldChange, "int (int i)", python::no_init)
-		.def("getCommerceChange", &CvEmphasizeInfo::getCommerceChange, "int (int i)", python::no_init)
+		.def("getYieldChange", &CvEmphasizeInfo::getYieldChange, "int (int i)")
+		.def("getCommerceChange", &CvEmphasizeInfo::getCommerceChange, "int (int i)")
 	;
 
 
