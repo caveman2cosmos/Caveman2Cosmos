@@ -9,7 +9,7 @@ void CyPropertiesPythonInterface()
 {
 	OutputDebugString("Python Extension Module - CyPropertiesPythonInterface\n");
 
-	python::class_<CvProperties>("CvProperties")
+	python::class_<CvProperties>("CvProperties", python::no_init)
 
 		.def("getProperty", &CvProperties::getProperty, "int (int)")
 		.def("getValue", &CvProperties::getValue, "int (int)")

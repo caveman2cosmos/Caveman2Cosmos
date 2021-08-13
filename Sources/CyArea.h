@@ -13,7 +13,6 @@ class CvArea;
 class CyArea
 {
 public:
-	CyArea();
 	explicit CyArea(CvArea* pArea);					// Call from C++
 
 	CvArea* getArea() { return m_pArea; }	// Call from C++
