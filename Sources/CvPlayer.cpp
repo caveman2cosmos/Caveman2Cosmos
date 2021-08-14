@@ -12665,21 +12665,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 
 		if (isEndTurn())
 		{
-			CvPathGenerator::EnableMaxPerformance(true);
-/************************************************************************************************/
-/* Afforess					  Start		 09/16/10											   */
-/*																							  */
-/* Advanced Automations																		 */
-/************************************************************************************************/
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
 				group->AI_update();
 			}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-			CvPathGenerator::EnableMaxPerformance(false);
 			setAutoMoves(true);
 		}
 	}
