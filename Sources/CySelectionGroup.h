@@ -15,7 +15,6 @@ class CyUnit;
 class CySelectionGroup
 {
 public:
-	CySelectionGroup();
 	explicit CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
 
 	//CvSelectionGroup* getSelectionGroup() const { return m_pSelectionGroup; }	// Call from C++

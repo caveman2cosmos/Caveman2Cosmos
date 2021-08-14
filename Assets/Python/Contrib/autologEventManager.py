@@ -7,7 +7,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import Popup as PyPopup
 import autolog
 import time
 import BugCore
@@ -88,15 +87,15 @@ class autologEventManager:
 		eventManager.Events.update(moreEvents)
 
 	def __OPEN_LOG_EVENT_IDBegin(self, argsList):
-		popup = PyPopup.PyPopup(OPEN_LOG_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
+		popup = CyPopup(OPEN_LOG_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF, True)
 
-		if (AutologOpt.isUseDefaultFileName()):
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_QUESTION"))
-			popup.setBodyString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_ANSWERS"))
+		if AutologOpt.isUseDefaultFileName():
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_QUESTION"), 1<<2)
+			popup.setBodyString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_ANSWERS"), 1<<0)
 		else:
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_ENTER_LOG_NAME"))
-			popup.createEditBox(AutologOpt.getFileName())
-			popup.setEditBoxMaxCharCount( 30 )
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_ENTER_LOG_NAME"), 1<<2)
+			popup.createEditBox(AutologOpt.getFileName(), 0)
+			popup.setEditBoxMaxCharCount(30, 32, 0)
 
 		popup.addButton(BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK"))
 		popup.addButton(BugUtil.getPlainText("TXT_KEY_SCREEN_CANCEL"))
@@ -113,9 +112,9 @@ class autologEventManager:
 
 	def __CUSTOM_ENTRY_EVENT_IDBegin(self, argsList):
 		if isLoggingOn():
-			popup = PyPopup.PyPopup(CUSTOM_ENTRY_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_CUSTOM_ENTRY"))
-			popup.createEditBox("")
+			popup = CyPopup(CUSTOM_ENTRY_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF, True)
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_CUSTOM_ENTRY"), 1<<2)
+			popup.createEditBox("", 0)
 			popup.addButton(BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK"))
 			popup.addButton(BugUtil.getPlainText("TXT_KEY_SCREEN_CANCEL"))
 			popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
@@ -234,7 +233,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 
 	def onKbdEvent(self, argsList):
 		eventType,key,mx,my,px,py = argsList
-		if ( eventType == self.eventMgr.EventKeyDown ):
+		if eventType == 6:
 			theKey=int(key)
 			'Check if ALT + E was hit == echoes to text log and in-game log'
 			if (theKey == int(InputTypes.KB_E)

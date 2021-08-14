@@ -6141,7 +6141,7 @@ void CvPlot::updatePotentialCityWork()
 }
 
 
-bool CvPlot::isPotentialCityWorkForArea(CvArea* pArea) const
+bool CvPlot::isPotentialCityWorkForArea(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 	const bool bWaterValid = GC.getWATER_POTENTIAL_CITY_WORK_FOR_AREA() > 0;

@@ -177,8 +177,6 @@ public:
 
 	virtual void foreachManipulator(ManipCallbackFn func) const;
 
-	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
-
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID) const;

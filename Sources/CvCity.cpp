@@ -1605,9 +1605,13 @@ void CvCity::doTurn()
 
 void CvCity::doAutobuild()
 {
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-	//	Auto-build any auto-build buildings we can
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	// Toffer - Property buildings should be checked each turn.
+	if (!GET_PLAYER(getOwner()).isNPC())
+	{
+		checkPropertyBuildings();
+	}
+	// Auto-build any auto-build buildings we can
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 		if (kBuilding.isAutoBuild())
@@ -1634,6 +1638,41 @@ void CvCity::doAutobuild()
 						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
 						break;
 					}
+				}
+			}
+		}
+	}
+}
+
+void CvCity::checkPropertyBuildings()
+{
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	const bool bOaA = GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS);
+#endif
+
+	for (int iI = GC.getNumPropertyInfos() - 1; iI > -1; iI--)
+	{
+		const PropertyTypes eProperty = static_cast<PropertyTypes>(iI);
+		const int iValue = getProperties()->getValueByProperty(eProperty);
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+		if (!bOaA || !GC.getPropertyInfo(eProperty).isOAType())
+#endif
+		{
+			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
+			{
+				const bool bInRange = (iValue >= kBuilding.iMinValue) && (iValue <= kBuilding.iMaxValue);
+
+				if (getNumActiveBuilding(kBuilding.eBuilding) > 0)
+				{
+					if (!bInRange || !canConstruct(kBuilding.eBuilding, false, false, true, true))
+					{
+						setNumRealBuilding(kBuilding.eBuilding, 0);
+					}
+				}
+				else if (bInRange && canConstruct(kBuilding.eBuilding, false, false, true, true))
+				{
+					setNumRealBuilding(kBuilding.eBuilding, 1);
 				}
 			}
 		}
@@ -6196,10 +6235,11 @@ int CvCity::healthRate(bool bNoAngry, int iExtra) const
 }
 
 
+// Toffer - Gradual food consumption change
+//	Food consumption should gradually increment, or decrement, during the growth process so that
+// 	a pop growth, or decline, doesn't entail an abrumpt jump in food consumption from one turn to the other.
 int CvCity::getPopulationPlusProgress100(const int iExtra) const
 {
-	// Toffer - Food consumption should gradually increment during the growth process
-	// so that the pop growth doesn't entail a huge food consumption change in one turn
 	if (iExtra == 0)
 	{
 		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
@@ -6209,17 +6249,21 @@ int CvCity::getPopulationPlusProgress100(const int iExtra) const
 
 int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
 {
-	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION()
-		+ getPopulationPlusProgress100(iExtra)
-		* GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT()
-		/ 100;
+	// Treat pop 1.00 or less as zero in this regard.
+	const int iPop100 = getPopulationPlusProgress100(iExtra) - 100;
+	if (iPop100 <= 0)
+	{
+		return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION();
+	}
+	// The above is only strictly needed in case iPop100 becomes a negative value due to negative iExtra value input.
+	//	Negative iExtra value is currently never passed to this function, so it's a future proof thing.
+	return 100 * GC.getFOOD_CONSUMPTION_PER_POPULATION() + (iPop100 - 100) * GC.getFOOD_CONSUMPTION_PER_POPULATION_PERCENT() / 100;
 }
 
 int CvCity::getFoodConsumedByPopulation(const int iExtra) const
 {
 	return getPopulationPlusProgress100(iExtra) * getFoodConsumedPerPopulation100() / 10000;
 }
-
 
 int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bIncludeWastage) const
 {
@@ -6228,6 +6272,8 @@ int CvCity::foodConsumption(const bool bNoAngry, const int iExtra, const bool bI
 		- healthRate(bNoAngry, iExtra)
 		+ (bIncludeWastage ? (int)foodWastage() : 0);
 }
+// ! Toffer - Gradual food consumption change
+
 
 // Included by Thunderbrd 6/8/2019, code contributed by Sorcdk
 float CvCity::foodWastage(int surplass) const
@@ -14554,7 +14600,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 	*/
 
 #ifdef THE_GREAT_WALL
-	if (!bForce && !GC.getReprocessGreatWallDynamically())
+	if (!bForce && !GC.getENABLE_VIEWPORTS() && !GC.getDefineBOOL("DYNAMIC_GREAT_WALL"))
 	{
 		return true;
 	}
@@ -22589,31 +22635,26 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	{
 		return itr->second;
 	}
-	else
+	int	iValue = 0;
+
+	for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
 	{
-
-		int	iValue = 0;
-
-		for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
+		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			if (hasFullyActiveBuilding((BuildingTypes)iI))
+			foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
 			{
-				foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
+				//	For now we're only interested in constant sources
+				//	TODO - expand this as buildings add other types
+				if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 				{
-					//	For now we're only interested in constant sources
-					//	TODO - expand this as buildings add other types
-					if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
-					{
-						iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-					}
+					iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 				}
 			}
 		}
-
-		m_buildingSourcedPropertyCache[(int)eProperty] = iValue;
-
-		return iValue;
 	}
+	m_buildingSourcedPropertyCache[(int)eProperty] = iValue;
+
+	return iValue;
 }
 
 void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
@@ -22639,19 +22680,15 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 	{
 		return itr->second;
 	}
-	else
+	int	iValue = 0;
+
+	foreach_ (const CvUnit* unit, plot()->units())
 	{
-		int	iValue = 0;
-
-		foreach_ (const CvUnit* unit, plot()->units())
-		{
-			unit->getGameObject()->foreachManipulator(bind(unitSources, _1, eProperty, this, &iValue));
-		}
-
-		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
-
-		return iValue;
+		unit->getGameObject()->foreachManipulator(bind(unitSources, _1, eProperty, this, &iValue));
 	}
+	m_unitSourcedPropertyCache[(int)eProperty] = iValue;
+
+	return iValue;
 }
 
 void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)

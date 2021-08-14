@@ -15224,6 +15224,10 @@
 		<English>Earth</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MAP_SUBTERRAIN</Tag>
+		<English>Underground</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Inner Solar System</English>
 	</TEXT>
@@ -30956,7 +30960,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TIME_AD_SAVE</Tag>
 		<English>AD-%s1_Date</English>
 		<French>%s1_Date ap. J.C</French>
-		<German>n. Chr.-%s1_Date</German>
+		<German>n.Chr.-%s1_Date</German>
 		<Italian>d.C. - %s1_Date</Italian>
 		<Spanish>%s1_Date d. C.</Spanish>
 	</TEXT>
@@ -30974,7 +30978,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TIME_BC_SAVE</Tag>
 		<English>BC-%s1_Date</English>
 		<French>%s1_Date av. J-C.</French>
-		<German>v. Chr.-%s1_Date</German>
+		<German>v.Chr.-%s1_Date</German>
 		<Italian>a. C. - %s1_Date</Italian>
 		<Spanish>%s1_Date a. C.</Spanish>
 	</TEXT>

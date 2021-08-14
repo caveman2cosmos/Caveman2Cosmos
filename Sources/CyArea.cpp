@@ -6,11 +6,6 @@
 // Python wrapper class for CvArea
 //
 
-CyArea::CyArea() : m_pArea(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyArea::CyArea(CvArea* pArea) : m_pArea(pArea)
 {
 	FAssert(pArea != NULL);

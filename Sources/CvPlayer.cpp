@@ -12665,21 +12665,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 
 		if (isEndTurn())
 		{
-			CvPathGenerator::EnableMaxPerformance(true);
-/************************************************************************************************/
-/* Afforess					  Start		 09/16/10											   */
-/*																							  */
-/* Advanced Automations																		 */
-/************************************************************************************************/
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
 				group->AI_update();
 			}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-			CvPathGenerator::EnableMaxPerformance(false);
 			setAutoMoves(true);
 		}
 	}
@@ -24933,8 +24923,12 @@ int CvPlayer::getNewCityProductionValue() const
 
 int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
-	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD");
 
+	if (iPopulation > 1)
+	{
+		iThreshold += (iPopulation - 1) * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	}
 	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iThreshold /= 100;
 

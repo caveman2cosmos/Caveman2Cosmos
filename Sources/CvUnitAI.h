@@ -28,6 +28,8 @@ public:
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
 
+	CvUnitAI& operator=(const CvUnitAI& other);
+
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
 	void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructorCall = false);

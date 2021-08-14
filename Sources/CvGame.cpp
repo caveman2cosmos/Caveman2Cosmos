@@ -4517,7 +4517,7 @@ bool CvGame::isFinalInitialized() const
 
 void CvGame::setFinalInitialized(bool bNewValue)
 {
-	OutputDebugString("Setting FinalInitialized: Start");
+	OutputDebugString("Setting FinalInitialized: Start\n");
 	PROFILE_FUNC();
 
 	if (m_bFinalInitialized != bNewValue)
@@ -4539,7 +4539,7 @@ void CvGame::setFinalInitialized(bool bNewValue)
 			}
 		}
 	}
-	OutputDebugString("Setting FinalInitialized: End");
+	OutputDebugString("Setting FinalInitialized: End\n");
 }
 
 
@@ -4671,12 +4671,10 @@ void CvGame::updateUnitEnemyGlow()
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
+		foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units()
+		| filtered(!bind(CvUnit::isUsingDummyEntities, _1)))
 		{
- 			if (!pLoopUnit->isUsingDummyEntities())
-			{
-				gDLL->getEntityIFace()->updateEnemyGlow(pLoopUnit->getUnitEntity());
-			}
+			gDLL->getEntityIFace()->updateEnemyGlow(pLoopUnit->getUnitEntity());
 		}
 	}
 }
@@ -5910,7 +5908,6 @@ void CvGame::doTurn()
 
 void CvGame::doDeals()
 {
-
 	verifyDeals();
 
 	int iLoop;
@@ -7201,12 +7198,8 @@ void CvGame::updateMoves()
 			{
 				PROFILE("CvGame::updateMoves.AI");
 
-				CvPathGenerator::EnableMaxPerformance(true);
-
 				// Always try to do automations first for the AI
 				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-				CvPathGenerator::EnableMaxPerformance(false);
 
 				if (!player.isAutoMoves())
 				{
