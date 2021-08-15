@@ -27,7 +27,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
-		self.main.addTestCode(screen, self.checkBuildingReplacingProductivity, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
+		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics or traits")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
@@ -922,7 +922,7 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 
 	#Building - check if replacing building has better yields, commerces, and other stats
-	def checkBuildingReplacingProductivity(self):
+	def checkBuildingReplacingQuality(self):
 		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -1041,18 +1041,18 @@ class TestCode:
 					iWarWearinessModifier += CvReplacedBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
 					iGlobalWarWearinessModifier += CvReplacedBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
 					iEnemyWarWearinessModifier += CvReplacedBuildingInfo.getEnemyWarWearinessModifier()
-					iAllCityDefense = CvReplacedBuildingInfo.getAllCityDefenseModifier()
-					iBombardDefense = CvReplacedBuildingInfo.getBombardDefenseModifier()
-					iBuildingDefenseRecoverySpeedModifier = CvReplacedBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
-					iCityDefenseRecoverySpeedModifier = CvReplacedBuildingInfo.getCityDefenseRecoverySpeedModifier()
-					iDefense = CvReplacedBuildingInfo.getDefenseModifier()
-					iEspionageDefense = CvReplacedBuildingInfo.getEspionageDefenseModifier()
-					iLocalDynamicDefense = CvReplacedBuildingInfo.getLocalDynamicDefense()
-					iMinDefense = CvReplacedBuildingInfo.getMinDefense()
-					iNoEntryDefenseLevel = CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
-					iRiverDefensePenalty = CvReplacedBuildingInfo.getRiverDefensePenalty()
-					iExperience = CvReplacedBuildingInfo.getFreeExperience()
-					iGlobalExperience = CvReplacedBuildingInfo.getGlobalFreeExperience()
+					iAllCityDefense += CvReplacedBuildingInfo.getAllCityDefenseModifier()
+					iBombardDefense += CvReplacedBuildingInfo.getBombardDefenseModifier()
+					iBuildingDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
+					iCityDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getCityDefenseRecoverySpeedModifier()
+					iDefense += CvReplacedBuildingInfo.getDefenseModifier()
+					iEspionageDefense += CvReplacedBuildingInfo.getEspionageDefenseModifier()
+					iLocalDynamicDefense += CvReplacedBuildingInfo.getLocalDynamicDefense()
+					iMinDefense += CvReplacedBuildingInfo.getMinDefense()
+					iNoEntryDefenseLevel += CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
+					iRiverDefensePenalty += CvReplacedBuildingInfo.getRiverDefensePenalty()
+					iExperience += CvReplacedBuildingInfo.getFreeExperience()
+					iGlobalExperience += CvReplacedBuildingInfo.getGlobalFreeExperience()
 
 				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes

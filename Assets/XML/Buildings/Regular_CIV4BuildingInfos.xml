@@ -962,8 +962,8 @@
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
-			<iDefense>200</iDefense>
-			<iBombardDefense>30</iBombardDefense>
+			<iDefense>400</iDefense>
+			<iBombardDefense>50</iBombardDefense>
 			<iEspionageDefense>60</iEspionageDefense>
 			<iNoEntryDefenseLevel>4</iNoEntryDefenseLevel>
 			<iMinDefense>5</iMinDefense>
@@ -6375,8 +6375,8 @@
 			</CommerceChanges>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
-			<iDefense>180</iDefense>
-			<iBombardDefense>15</iBombardDefense>
+			<iDefense>380</iDefense>
+			<iBombardDefense>40</iBombardDefense>
 			<iEspionageDefense>50</iEspionageDefense>
 			<iNoEntryDefenseLevel>6</iNoEntryDefenseLevel>
 			<iMinDefense>5</iMinDefense>
@@ -73608,8 +73608,8 @@
 			</BonusYieldModifiers>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
-			<iDefense>50</iDefense>
-			<iEspionageDefense>6</iEspionageDefense>
+			<iDefense>130</iDefense>
+			<iEspionageDefense>15</iEspionageDefense>
 			<iLocalRepel>60</iLocalRepel>
 			<iDamageAttackerChance>50</iDamageAttackerChance>
 			<iDamageToAttacker>50</iDamageToAttacker>
