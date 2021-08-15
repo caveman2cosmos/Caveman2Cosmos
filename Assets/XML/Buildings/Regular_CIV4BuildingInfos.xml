@@ -3266,17 +3266,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Andean Cathedral -->
 			<Type>BUILDING_ANDEAN_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_CATHEDRAL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3290,7 +3287,6 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<!-- Construction cost -->
 			<iCost>280</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -3302,7 +3298,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -3310,13 +3305,11 @@
 				<iCommerce>15</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
-			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -3330,14 +3323,12 @@
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
-			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Special properties -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3346,7 +3337,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3356,17 +3346,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Andean Monastery -->
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_MONASTERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_MONASTERY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3376,29 +3363,24 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
-			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
-			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<!-- Special properties -->
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3407,7 +3389,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3417,38 +3398,31 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Andean Temple -->
 			<Type>BUILDING_ANDEAN_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_TEMPLE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
-			<!-- Construction cost -->
 			<iCost>160</iCost>
-			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
-			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
@@ -3456,14 +3430,12 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
-			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Special properties -->
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3472,7 +3444,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19079,14 +19050,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<!-- Properties diffusion
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>-->
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19771,8 +19734,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldModifiers>
-			<!-- Misc. Effects
-			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>-->
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -33884,7 +33846,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>80</iCost>
@@ -33937,7 +33898,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -33969,7 +33929,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34001,7 +33960,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34033,7 +33991,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34067,7 +34024,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34099,7 +34055,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34133,7 +34088,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34165,7 +34119,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34197,7 +34150,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34229,7 +34181,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34261,7 +34212,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34293,7 +34243,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34325,7 +34274,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34357,7 +34305,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34389,7 +34336,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34421,7 +34367,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34453,7 +34398,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34485,7 +34429,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34517,7 +34460,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34549,7 +34491,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34583,7 +34524,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34615,7 +34555,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34647,7 +34586,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34681,7 +34619,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34713,7 +34650,6 @@
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -34791,7 +34727,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -34826,7 +34761,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -34861,7 +34795,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -34896,7 +34829,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -34933,7 +34865,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -34968,7 +34899,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35005,7 +34935,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35040,7 +34969,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35075,7 +35003,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35110,7 +35037,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35145,7 +35071,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35180,7 +35105,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35215,7 +35139,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35250,7 +35173,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35285,7 +35207,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35320,7 +35241,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35355,7 +35275,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35390,7 +35309,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35425,7 +35343,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35460,7 +35377,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35497,7 +35413,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35532,7 +35447,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35567,7 +35481,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35604,7 +35517,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -35639,7 +35551,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
@@ -38981,7 +38892,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<!-- Note: This building will eventually spawn barb Exiles that cannot enter your territory-->
 			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -43359,14 +43269,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<!-- Properties diffusion
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>-->
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORENSICS_LAB</Type>
@@ -50441,25 +50343,19 @@
 			<Description>TXT_KEY_BUILDING_HAKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAKA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HAKA</ArtDefineTag>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
-			<!-- Construction cost -->
 			<iCost>30</iCost>
-			<!-- Main effects -->
 			<FreePromotion>PROMOTION_HAKA</FreePromotion>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<PrereqInCityBuildings>
@@ -95563,7 +95459,6 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>80</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -95621,7 +95516,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95661,7 +95555,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95701,7 +95594,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95741,7 +95633,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95781,7 +95672,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95821,7 +95711,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95861,7 +95750,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95901,7 +95789,6 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>40</iCost>
 			<iAsset>3</iAsset>
@@ -95983,7 +95870,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96020,7 +95906,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96057,7 +95942,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96094,7 +95978,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96131,7 +96014,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96168,7 +96050,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96205,7 +96086,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -96242,7 +96122,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>40</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -104795,13 +104674,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- Properties diffusion
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>2</iPropertyValue>
-				</Property>
-			</Properties> -->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -114488,14 +114360,6 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- Properties diffusion
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators> -->
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -114801,7 +114665,6 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<!--bProvidesFreshWater>1</bProvidesFreshWater-->
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<Properties>
@@ -115730,8 +115593,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<!-- Obsolescence
-			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech> -->
 			<iCost>20</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iHealth>1</iHealth>

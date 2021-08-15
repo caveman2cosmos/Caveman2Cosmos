@@ -16275,7 +16275,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -16286,7 +16285,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -23004,7 +23003,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -23015,7 +23013,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -23107,7 +23105,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -23118,7 +23115,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
