@@ -152,7 +152,7 @@ public:
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion) const;
 	int countHolyCities() const;
 
-	int getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics) const;
+	int getCivicAnarchyLength(const python::list& /*CivicTypes*/ lNewCivics) const;
 	int getReligionAnarchyLength() const;
 
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation) const;
@@ -429,7 +429,7 @@ public:
 
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
 
-	void doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce);
+	void doRevolution(const python::list& /*CivicTypes*/ lNewCivics, bool bForce);
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);

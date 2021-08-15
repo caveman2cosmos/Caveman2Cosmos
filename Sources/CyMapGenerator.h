@@ -21,7 +21,7 @@ class CyMapGenerator
 {
 public:
 	CyMapGenerator();
-	explicit CyMapGenerator(CvMapGenerator* pMapGenerator);		// Call from C++
+	//explicit CyMapGenerator(CvMapGenerator* pMapGenerator);		// Call from C++
 
 	void doRiver(CyPlot* pStartPlot, CardinalDirectionTypes eCardinalDirection);
 	void addFeatures();
@@ -30,7 +30,7 @@ public:
 	void generatePlotTypes();
 	void generateTerrain();
 
-	void setPlotTypes(python::list& listPlotTypes);
+	void setPlotTypes(const python::list& lPlotTypes);
 
 protected:
 	CvMapGenerator* m_pMapGenerator;

@@ -320,6 +320,7 @@
 				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ASTROECOLOGY</ObsoleteTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1390,6 +1391,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

@@ -616,7 +616,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<iMaintenanceModifier>50</iMaintenanceModifier>
+			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -681,6 +681,18 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMU</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_BONFIRE</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -852,6 +864,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2357,6 +2374,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKER</ArtDefineTag>
@@ -2373,15 +2395,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FORGE</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2410,6 +2427,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FOUNDRY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2460,6 +2482,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2562,6 +2589,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -2610,6 +2642,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2667,6 +2704,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2822,6 +2864,16 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -2864,6 +2916,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_JEWELER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2918,6 +2975,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -2960,6 +3022,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_AGROFOREST</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3014,6 +3081,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -3065,6 +3137,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -3108,6 +3185,16 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3272,6 +3359,11 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7432,6 +7524,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_RIVER_RAFTING_DOCK</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

@@ -1605,9 +1605,13 @@ void CvCity::doTurn()
 
 void CvCity::doAutobuild()
 {
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-	//	Auto-build any auto-build buildings we can
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	// Toffer - Property buildings should be checked each turn.
+	if (!GET_PLAYER(getOwner()).isNPC())
+	{
+		checkPropertyBuildings();
+	}
+	// Auto-build any auto-build buildings we can
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 		if (kBuilding.isAutoBuild())
@@ -1634,6 +1638,41 @@ void CvCity::doAutobuild()
 						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED());
 						break;
 					}
+				}
+			}
+		}
+	}
+}
+
+void CvCity::checkPropertyBuildings()
+{
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	const bool bOaA = GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS);
+#endif
+
+	for (int iI = GC.getNumPropertyInfos() - 1; iI > -1; iI--)
+	{
+		const PropertyTypes eProperty = static_cast<PropertyTypes>(iI);
+		const int iValue = getProperties()->getValueByProperty(eProperty);
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+		if (!bOaA || !GC.getPropertyInfo(eProperty).isOAType())
+#endif
+		{
+			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
+			{
+				const bool bInRange = (iValue >= kBuilding.iMinValue) && (iValue <= kBuilding.iMaxValue);
+
+				if (getNumActiveBuilding(kBuilding.eBuilding) > 0)
+				{
+					if (!bInRange || !canConstruct(kBuilding.eBuilding, false, false, true, true))
+					{
+						setNumRealBuilding(kBuilding.eBuilding, 0);
+					}
+				}
+				else if (bInRange && canConstruct(kBuilding.eBuilding, false, false, true, true))
+				{
+					setNumRealBuilding(kBuilding.eBuilding, 1);
 				}
 			}
 		}
@@ -22596,31 +22635,26 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	{
 		return itr->second;
 	}
-	else
+	int	iValue = 0;
+
+	for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
 	{
-
-		int	iValue = 0;
-
-		for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
+		if (hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			if (hasFullyActiveBuilding((BuildingTypes)iI))
+			foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
 			{
-				foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
+				//	For now we're only interested in constant sources
+				//	TODO - expand this as buildings add other types
+				if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 				{
-					//	For now we're only interested in constant sources
-					//	TODO - expand this as buildings add other types
-					if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
-					{
-						iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-					}
+					iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 				}
 			}
 		}
-
-		m_buildingSourcedPropertyCache[(int)eProperty] = iValue;
-
-		return iValue;
 	}
+	m_buildingSourcedPropertyCache[(int)eProperty] = iValue;
+
+	return iValue;
 }
 
 void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
@@ -22646,19 +22680,15 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 	{
 		return itr->second;
 	}
-	else
+	int	iValue = 0;
+
+	foreach_ (const CvUnit* unit, plot()->units())
 	{
-		int	iValue = 0;
-
-		foreach_ (const CvUnit* unit, plot()->units())
-		{
-			unit->getGameObject()->foreachManipulator(bind(unitSources, _1, eProperty, this, &iValue));
-		}
-
-		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
-
-		return iValue;
+		unit->getGameObject()->foreachManipulator(bind(unitSources, _1, eProperty, this, &iValue));
 	}
+	m_unitSourcedPropertyCache[(int)eProperty] = iValue;
+
+	return iValue;
 }
 
 void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)

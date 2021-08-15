@@ -10,7 +10,6 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreensInterface
-import Popup as PyPopup
 import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
@@ -40,7 +39,7 @@ class CvEventManager:
 		# EventRButtonDown = 3
 		# EventBack = 4
 		# EventForward = 5
-		self.EventKeyDown = 6
+		# EventKeyDown = 6
 		# EventKeyUp = 7
 
 		## EVENT MAP
@@ -2384,9 +2383,9 @@ class CvEventManager:
 					capital.setHasReligion(iReligion, True, True, True)
 					if CyPlayerX.isHuman():
 						strReligionName = GC.getReligionInfo(iReligion).getText()
-						popup = PyPopup.PyPopup(-1)
-						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
-						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION", (strReligionName, strReligionName)))
+						popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+						popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()), 1<<2)
+						popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION", (strReligionName, strReligionName)), 1<<0)
 						popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
@@ -2836,14 +2835,14 @@ class CvEventManager:
 				screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
 				screen.setText("CityName", "", CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + newName, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 
-	def __eventEditUnitNameBegin(self, argsList):
-		pUnit = argsList
-		popup = PyPopup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
+
+	def __eventEditUnitNameBegin(self, pUnit):
+		popup = CyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL, True)
 		popup.setUserData((pUnit.getOwner(), pUnit.getID()))
-		popup.setBodyString(TRNSLTR.getText("TXT_KEY_RENAME_UNIT", ()))
-		popup.createEditBox(pUnit.getNameNoDesc())
+		popup.setBodyString(TRNSLTR.getText("TXT_KEY_RENAME_UNIT", ()), 1<<0)
+		popup.createEditBox(pUnit.getNameNoDesc(), 0)
 		popup.setEditBoxMaxCharCount(24, 0, 0)
-		popup.launch()
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	def __eventEditUnitNameApply(self, iPlayer, userData, popupReturn):
 		unit = GC.getPlayer(userData[0]).getUnit(userData[1])

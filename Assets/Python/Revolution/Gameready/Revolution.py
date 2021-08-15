@@ -6,7 +6,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import Popup as PyPopup
 import math
 # --------- Revolution mod -------------
 import RevDefs
@@ -299,78 +298,76 @@ class Revolution:
 			caesiumpasy = yRes/10
 			width = int(max([350, 2.5*caesiumpasx]))
 			height = int(max([450, 3.5*caesiumpasy]))
-			popup = PyPopup.PyPopup(RevDefs.revWatchPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
+			popup = CyPopup(RevDefs.revWatchPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
 			if self.centerPopups:
 				popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 			else:
 				popup.setPosition(xRes - width - 35, 120)
 			popup.setSize(width, height)
-			popup.setHeaderString(localText.getText("TXT_KEY_REV_WATCH_TITLE", ()))
-			popup.setBodyString(danger + warning + safe)
+			popup.setHeaderString(localText.getText("TXT_KEY_REV_WATCH_TITLE", ()), 1<<2)
+			popup.setBodyString(danger + warning + safe, 1<<0)
 			popup.addSeparator()
 			popup.addButton(localText.getText("TXT_KEY_REV_WATCH_DETAIL", ()))
 			popup.addButton(localText.getText("TXT_KEY_REV_WATCH_BRIBE", ()))
 			popup.addButton('OK')
-			popup.launch(bCreateOkButton = False)
+			popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 			# End additions by Caesium et al
 
-	def revWatchHandler( self, iPlayerID, netUserData, popupReturn ) :
-			if( self.iNationalismTech == None ) :
-				self.loadInfo()
+	def revWatchHandler(self, iPlayerID, netUserData, popupReturn):
+		if self.iNationalismTech == None:
+			self.loadInfo()
 
-			civString = self.updateCivStability( GAME.getGameTurn(), iPlayerID, bIsRevWatch = True )
-			cityString = self.updateLocalRevIndices( GAME.getGameTurn(), iPlayerID, bIsRevWatch = True )
+		civString = self.updateCivStability( GAME.getGameTurn(), iPlayerID, bIsRevWatch = True )
+		cityString = self.updateLocalRevIndices( GAME.getGameTurn(), iPlayerID, bIsRevWatch = True )
 
-			if (self.isLocalHumanPlayer(iPlayerID)):
-				if( popupReturn.getButtonClicked() == 0 ):
-					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Showing detailed rev watch for player %d"%(iPlayerID))
-					# Additions by Caesium et al
-					caesiumtR = CyUserProfile().getResolutionString(CyUserProfile().getResolution())
-					caesiumtextResolution = caesiumtR.split('x')
-					caesiumpasx = int(caesiumtextResolution[0])/10
-					caesiumpasy = int(caesiumtextResolution[1])/10
-					popup = PyPopup.PyPopup()
-					width = int(max([350,3*caesiumpasx]))
-					height = int(max([450,3.5*caesiumpasy]))
-					if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
-					else : popup.setPosition(int(caesiumtextResolution[0]) - width - 35,120)
-					popup.setSize( width, height )
-					popup.setHeaderString(GC.getPlayer(iPlayerID).getCivilizationDescription(0))
-					# popup.createTable(2,1,1)
-					# popup.addTableCellText(1,1,civString,1)
-					# popup.addTableCellText(2,1,cityString,1)
-					# popup.completeTableAndAttach(1)
-					popup.setBodyString( civString + '\n\n' + cityString )
-					popup.launch()
-					# End additions by Caesium et al
-				elif( popupReturn.getButtonClicked() == 1 ):
-					self.showPickCityPopup( iPlayerID )
+		if self.isLocalHumanPlayer(iPlayerID):
+			if popupReturn.getButtonClicked() == 0:
+				if self.LOG_DEBUG: CvUtil.pyPrint("  Revolt - Showing detailed rev watch for player %d"%(iPlayerID))
+				# Additions by Caesium et al
+				caesiumtR = CyUserProfile().getResolutionString(CyUserProfile().getResolution())
+				caesiumtextResolution = caesiumtR.split('x')
+				caesiumpasx = int(caesiumtextResolution[0])/10
+				caesiumpasy = int(caesiumtextResolution[1])/10
+				popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+				width = int(max([350,3*caesiumpasx]))
+				height = int(max([450,3.5*caesiumpasy]))
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				else:
+					popup.setPosition(int(caesiumtextResolution[0]) - width - 35,120)
+				popup.setSize(width, height)
+				popup.setHeaderString(GC.getPlayer(iPlayerID).getCivilizationDescription(0), 1<<2)
+				popup.setBodyString(civString + '\n\n' + cityString, 1<<0)
+				popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+				# End additions by Caesium et al
+			elif popupReturn.getButtonClicked() == 1:
+				self.showPickCityPopup(iPlayerID)
 
 	def showPickCityPopup(self, iPlayer):
 		if self.isLocalHumanPlayer(iPlayer):
 			lCity = []
 			for city in GC.getPlayer(iPlayer).cities():
 				lCity.append((pCity.getRevolutionIndex(), pCity.getName(), pCity.getID()))
+
+			if not lCity:
+				popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+				popup.setBodyString(localText.getText("TXT_KEY_REV_WATCH_NO_CITIES", ()), 1<<0)
+				popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+				return
+
 			lCity.sort()
 			lCity.reverse()
 
-			popup = PyPopup.PyPopup( RevDefs.pickCityPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-
-			if not lCity:
-				popup = PyPopup.PyPopup()
-				popup.setBodyString(localText.getText("TXT_KEY_REV_WATCH_NO_CITIES", ()))
-				popup.launch()
-
-			popup.setBodyString(localText.getText("TXT_KEY_REV_BRIBE_CITY_WHICH",()))
+			popup = CyPopup(RevDefs.pickCityPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+			popup.setBodyString(localText.getText("TXT_KEY_REV_BRIBE_CITY_WHICH",()), 1<<0)
 			popup.addSeparator()
 
 			popup.createPythonPullDown('Cities', 1)
-
 			for cityData in lCity:
 				popup.addPullDownString(cityData[1], cityData[2], 1)
 
 			popup.addButton(localText.getText("TXT_KEY_REV_NONE",()))
-			popup.launch()
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 			print 'Launch city picker popup'
 
 
@@ -388,43 +385,26 @@ class Revolution:
 				self.showBribeCityPopup(pCity)
 
 
-	def showBribeCityPopup( self, pCity ) :
-		popup = PyPopup.PyPopup(RevDefs.bribeCityPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
+	def showBribeCityPopup(self, pCity):
+		popup = CyPopup(RevDefs.bribeCityPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
 
-		iRevIdx = pCity.getRevolutionIndex()
-		localRevIdx = pCity.getLocalRevIndex()
-
-		popupData = dict()
-
-		popupData['City'] = pCity.getID()
-		popupData['Buttons'] = []
+		popupData = {'City' : pCity.getID(), 'Buttons' : []}
 
 		bCanBribe, reason = RevUtils.isCanBribeCity(pCity)
 
 		if not bCanBribe:
 			if reason == 'Violent':
 				# Can't be bought
-				bodStr = localText.getText("TXT_KEY_REV_BRIBE_CITY_VIOLENT",())%(pCity.getName())
-				popup.setBodyString(bodStr)
-				popupData['Buttons'] = [['None',-1]]
-				popup.setUserData((popupData,))
-				popup.launch()
-				return
+				popup.setBodyString(localText.getText("TXT_KEY_REV_BRIBE_CITY_VIOLENT",()) % pCity.getName(), 1<<0)
+			elif reason == 'No Need':
+				popup.setBodyString(localText.getText("TXT_KEY_REV_BRIBE_CITY_NO_NEED",()) % pCity.getName(), 1<<0)
+			else:
+				popup.setBodyString('Error! unknown reason for inability to bribe #s: %s' % (pCity.getName(), reason), 1<<0)
+				print '[ERROR] unknown reason for inability to bribe %s: %s' % (pCity.getName(), reason)
 
-			if reason == 'No Need':
-				bodStr = localText.getText("TXT_KEY_REV_BRIBE_CITY_NO_NEED",())%(pCity.getName())
-				popup.setBodyString(bodStr)
-				popupData['Buttons'] = [['None',-1]]
-				popup.setUserData((popupData,))
-				popup.launch()
-				return
-
-			print 'Error! unknown reason for inability to bribe: %s'%(reason)
-			bodStr = localText.getText("TXT_KEY_REV_BRIBE_CITY_NO_NEED",())%(pCity.getName())
-			popup.setBodyString(bodStr)
 			popupData['Buttons'] = [['None',-1]]
 			popup.setUserData((popupData,))
-			popup.launch()
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 			return
 
 		CyPlayer = GC.getPlayer(pCity.getOwner())
@@ -437,40 +417,38 @@ class Revolution:
 			bodStr = localText.getText("TXT_KEY_REV_BRIBE_CITY_POOR",())
 			if( not lastBribeTurn == None and GAME.getGameTurn() - lastBribeTurn < 20 ) :
 				bodStr += '  ' + localText.getText("TXT_KEY_REV_BRIBE_CITY_RECENT",())%(GAME.getGameTurn() - lastBribeTurn) + '  '
-			popup.setBodyString(bodStr)
+			popup.setBodyString(bodStr, 1<<0)
 			popupData['Buttons'] = [['None',-1]]
 			popup.setUserData((popupData,))
-			popup.launch()
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 			return
-		else:
-			buttonList.append( [localText.getText("TXT_KEY_REV_NONE",()), -1] )
-			bodStr = ''
-			if( not lastBribeTurn == None and GAME.getGameTurn() - lastBribeTurn < 20 ) :
-				bodStr += localText.getText("TXT_KEY_REV_BRIBE_CITY_RECENT",())%(GAME.getGameTurn() - lastBribeTurn) + '  '
 
-			bodStr += localText.getText("TXT_KEY_REV_BRIBE_CITY_OPTIONS",())
-			bodStr += '\n\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_SMALL",())%(iSmall)
-			buttonList.append( ['Small', iSmall] )
+		buttonList.append( [localText.getText("TXT_KEY_REV_NONE",()), -1] )
+		bodStr = ''
+		if not lastBribeTurn == None and GAME.getGameTurn() - lastBribeTurn < 20:
+			bodStr += localText.getText("TXT_KEY_REV_BRIBE_CITY_RECENT",())%(GAME.getGameTurn() - lastBribeTurn) + '  '
 
-			if iGold > iMed:
-				bodStr += '\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_MED",())%(iMed)
-				buttonList.append( ['Med', iMed] )
-				#popup.addButton( localText.getText("TXT_KEY_REV_BRIBE_CITY_BUTTON",())%(iMed) )
-				if iGold > iLarge:
-					bodStr += '\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_LARGE",())%(iLarge)
-					buttonList.append( ['Large', iLarge] )
-					#popup.addButton( localText.getText("TXT_KEY_REV_BRIBE_CITY_BUTTON",())%(iLarge) )
+		bodStr += localText.getText("TXT_KEY_REV_BRIBE_CITY_OPTIONS",())
+		bodStr += '\n\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_SMALL",())%(iSmall)
+		buttonList.append( ['Small', iSmall] )
 
-			popup.setBodyString( bodStr )
+		if iGold > iMed:
+			bodStr += '\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_MED",())%(iMed)
+			buttonList.append( ['Med', iMed] )
+			if iGold > iLarge:
+				bodStr += '\n' + localText.getText("TXT_KEY_REV_BRIBE_CITY_LARGE",())%(iLarge)
+				buttonList.append( ['Large', iLarge] )
 
-			popup.addButton( localText.getText("TXT_KEY_REV_BRIBE_CITY_NO_BRIBE",()) )
-			for [label,cost] in buttonList :
-				if( cost > 0 ) :
-					popup.addButton( localText.getText("TXT_KEY_REV_BRIBE_CITY_BUTTON",())%(cost) )
-			popupData['Buttons'] = buttonList
-			popup.setUserData( (popupData,) )
+		popup.setBodyString(bodStr, 1<<0)
 
-			popup.launch(bCreateOkButton = False)
+		popup.addButton(localText.getText("TXT_KEY_REV_BRIBE_CITY_NO_BRIBE",()))
+		for [label, cost] in buttonList:
+			if cost > 0:
+				popup.addButton( localText.getText("TXT_KEY_REV_BRIBE_CITY_BUTTON",())%(cost) )
+		popupData['Buttons'] = buttonList
+		popup.setUserData((popupData,))
+		popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
+
 
 	def bribeCityHandler( self, iPlayerID, netUserData, popupReturn ) :
 		print 'bribing city ...'
@@ -2146,45 +2124,46 @@ class Revolution:
 					instigator = pCity
 					break
 
-		if( not instigator == None ) :
+		if not instigator == None:
 			self.pickRevolutionStyle( pPlayer, instigator, revReadyCities )
 
-		elif( len(warnCities) > 0 ) :
-			for pCity in warnCities :
+		elif warnCities:
+			for pCity in warnCities:
 				RevData.updateCityVal( pCity, 'WarningCounter', self.warnTurns )
 
-			if( self.isLocalHumanPlayer(pPlayer.getID())  ) :
-				pTeam = GC.getTeam( pPlayer.getTeam() )
+			if self.isLocalHumanPlayer(pPlayer.getID()):
+				pTeam = GC.getTeam(pPlayer.getTeam())
 				# Additions by Caesium et al
 				caesiumtR = CyUserProfile().getResolutionString(CyUserProfile().getResolution())
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup(bDynamic=False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx,3*caesiumpasy)
 				# End additions by Caesium et al
-				popup.setHeaderString( localText.getText("TXT_KEY_REV_WARN_TITLE",()) )
-				bodStr = localText.getText("TXT_KEY_REV_WARN_NEWS",()) + ' '
-				bodStr += getCityTextList(warnCities) + ' '
-				bodStr += ' ' + localText.getText("TXT_KEY_REV_WARN_CONTEMPLATING",())
-				cityStrings = self.updateLocalRevIndices( GAME.getGameTurn(), pPlayer.getID(), subCityList = warnCities, bIsRevWatch = True )
-				bodStr += cityStrings
-				bodStr += '\n\n' + localText.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
-				civString = self.updateCivStability( GAME.getGameTurn(), pPlayer.getID(), bIsRevWatch = True )
-				bodStr += civString
-				if( pTeam.getAtWarCount(True) > 0 ) :
-					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_WARN_WARS",())
-				else :
-					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_WARN_GLORY",())
-					if( pPlayer.getCitiesLost() > 0 ) :
-						bodStr += "  " + localText.getText("TXT_KEY_REV_WARN_LOST",())
-					bodStr += '  ' + localText.getText("TXT_KEY_REV_WARN_TEMPORARY",())
-				popup.setBodyString( bodStr )
+				popup.setHeaderString( localText.getText("TXT_KEY_REV_WARN_TITLE",()), 1<<2)
+				bodStr = (
+					localText.getText("TXT_KEY_REV_WARN_NEWS",())
+					+ ' ' + getCityTextList(warnCities)
+					+ ' ' + localText.getText("TXT_KEY_REV_WARN_CONTEMPLATING",())
+					+ self.updateLocalRevIndices(GAME.getGameTurn(), pPlayer.getID(), subCityList = warnCities, bIsRevWatch = True)
+					+ '\n\n' + localText.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
+					+ self.updateCivStability(GAME.getGameTurn(), pPlayer.getID(), bIsRevWatch = True) + '\n\n'
+				)
+				if pTeam.getAtWarCount(True) > 0:
+					bodStr += localText.getText("TXT_KEY_REV_WARN_WARS",())
+				else:
+					bodStr += localText.getText("TXT_KEY_REV_WARN_GLORY",()) + '  '
+					if pPlayer.getCitiesLost() > 0:
+						bodStr += localText.getText("TXT_KEY_REV_WARN_LOST",())
+					bodStr += localText.getText("TXT_KEY_REV_WARN_TEMPORARY",())
+				popup.setBodyString(bodStr, 1<<0)
 
 				# Center camera on city
 				CyCamera().JustLookAt( warnCities[0].plot().getPoint() )
 
-				popup.launch()
+				popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
 	def incrementRevIdxHistory(self, iGameTurn, iPlayer):
@@ -4083,35 +4062,36 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup( RevDefs.revolutionPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(RevDefs.revolutionPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				if( bPeaceful ) :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()) )
-				else :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()) )
-				if( iOdds >= 70 ) :
+				if bPeaceful:
+					popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()), 1<<2)
+				else: popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()), 1<<2)
+
+				if iOdds >= 70:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_ACCEPT",())
-				elif( iOdds <= 30 ) :
+				elif iOdds <= 30:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_REJECT",())
-				else :
+				else:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_NEUTRAL",())
-				popup.setBodyString( bodStr )
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
+				popup.setBodyString(bodStr, 1<<0)
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()))
 				buttons = ('accept',)
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_REJECT",()))
 				buttons += ('reject',)
 				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost))
 					buttons += ('buyoff',)
-				if not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs:
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()) )
+				if not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and pRevPlayer.getNumCities() == 0 and self.offerDefectToRevs:
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()))
 					buttons += ('defect',)
 
 				popup.setUserData( (buttons, pPlayer.getID(), iRevoltIdx) )
 				# Center camera on city
 				CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			elif (not pPlayer.isHuman()) :
 				# Make AI decision
@@ -4190,35 +4170,36 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup( RevDefs.revolutionPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(RevDefs.revolutionPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				if( bPeaceful ) :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()) )
-				else :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()) )
-				if( iOdds >= 70 ) :
+				if bPeaceful:
+					popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()), 1<<2)
+				else: popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()), 1<<2)
+
+				if iOdds >= 70:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_ACCEPT",())
-				elif( iOdds <= 30 ) :
+				elif iOdds <= 30:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_REJECT",())
-				else :
+				else:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_NEUTRAL",())
-				popup.setBodyString( bodStr )
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
+				popup.setBodyString(bodStr, 1<<0)
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
 				buttons = ('accept',)
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
 				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
 					buttons += ('buyoff',)
 				if( not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs ) :
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()) )
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()) )
 					buttons += ('defect',)
 
 				popup.setUserData( (buttons, pPlayer.getID(), iRevoltIdx) )
 				# Center camera on city
 				CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			elif (not pPlayer.isHuman()) :
 				# Make AI decision
@@ -4340,43 +4321,46 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup( RevDefs.revolutionPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(RevDefs.revolutionPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				if( bPeaceful ) :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()) )
-				else :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()) )
-				if( iOdds >= 70 ) :
+				if bPeaceful:
+					popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()), 1<<2)
+				else: popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()), 1<<2)
+
+				if iOdds >= 70:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_ACCEPT",())
-				elif( iOdds <= 30 ) :
+				elif iOdds <= 30:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_REJECT",())
-				else :
+				else:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_NEUTRAL",())
-				if( bIsElection ) :
+
+				if bIsElection:
 					bodStr += "  " + localText.getText("TXT_KEY_REV_ADVISOR_APPROVAL",()) + " %d."%(iHappiness)
-					if( iHappiness < 40 ) :
+					if iHappiness < 40:
 						bodStr += "  " + localText.getText("TXT_KEY_REV_ADVISOR_ELEC_LOSE",())
-				popup.setBodyString( bodStr )
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
+
+				popup.setBodyString(bodStr, 1<<0)
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()))
 				buttons = ('accept',)
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_REJECT",()))
 				buttons += ('reject',)
 				if iBuyOffCost > 0 and iBuyOffCost <= pPlayer.getGold():
-					if( bIsElection ) :
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUY_ELECTION",()) + ' %d'%(iBuyOffCost) )
+					if bIsElection:
+						popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_BUY_ELECTION",()) + ' %d'%(iBuyOffCost))
 						buttons += ('buyelection',)
-					else :
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost) )
+					else:
+						popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_BUYOFF",()) + ' %d'%(iBuyOffCost))
 						buttons += ('buyoff',)
 				if( not bPeaceful and not 'iJoinPlayer' in revData.dict.keys() and not bIsBarbRev and (pRevPlayer.getNumCities() == 0) and self.offerDefectToRevs ) :
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()) )
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_DEFECT",()))
 					buttons += ('defect',)
 
 				popup.setUserData( (buttons, pPlayer.getID(), iRevoltIdx) )
 				# Center camera on city
 				CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			elif (not pPlayer.isHuman()) :
 				# Make AI decision
@@ -4439,30 +4423,31 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup( RevDefs.revolutionPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(RevDefs.revolutionPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				if( bPeaceful ) :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()) )
-				else :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()) )
-				if( iOdds >= 70 ) :
+				if bPeaceful:
+					popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()), 1<<2)
+				else: popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()), 1<<2)
+
+				if iOdds >= 70:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_ACCEPT",())
-				elif( iOdds <= 30 ) :
+				elif iOdds <= 30:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_REJECT",())
-				else :
+				else:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_NEUTRAL",())
 
-				popup.setBodyString( bodStr )
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
+				popup.setBodyString(bodStr, 1<<0)
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
 				buttons = ('accept',)
-				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
+				popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
 
 				popup.setUserData( (buttons, pPlayer.getID(), iRevoltIdx) )
 				# Center camera on city
 				CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			elif (not pPlayer.isHuman()) :
 				# Make AI decision
@@ -4623,33 +4608,33 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup( RevDefs.revolutionPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
-				if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+				popup = CyPopup(RevDefs.revolutionPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
+				if self.centerPopups:
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				if( bPeaceful ) :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()) )
-				else :
-					popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()) )
-				if( iOdds >= 70 ) :
+				if bPeaceful:
+					popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_PEACEFUL",()), 1<<2)
+				else: popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_VIOLENT",()), 1<<2)
+
+				if iOdds >= 70:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_ACCEPT",())
-				elif( iOdds <= 30 ) :
+				elif iOdds <= 30:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_REJECT",())
-				else :
+				else:
 					bodStr += "\n\n" + localText.getText("TXT_KEY_REV_ADVISOR_NEUTRAL",())
 
-				popup.setBodyString( bodStr )
-				if( not vassalStyle == None ) :
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_VASSAL",()) )
+				popup.setBodyString(bodStr, 1<<0)
+				if not vassalStyle == None:
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_VASSAL",()))
 					buttons = ('vassal',)
-					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_INDEPENDENCE",()) )
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_INDEPENDENCE",()))
 					buttons += ('accept',)
-				else :
-					if( not bPeaceful and not bOfferPeace and joinPlayer == None and not pRevPlayer.isAlive() ) :
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_RECOGNIZE",()) )
-						buttons = ('accept',)
-					else :
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
-						buttons = ('accept',)
+				elif not bPeaceful and not bOfferPeace and joinPlayer == None and not pRevPlayer.isAlive():
+					popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_RECOGNIZE",()))
+					buttons = ('accept',)
+				else:
+					popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_ACCEPT",()) )
+					buttons = ('accept',)
 				popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_REJECT",()) )
 				buttons += ('reject',)
 				if( not joinPlayer == None and not bIsJoinWar and GC.getTeam(pPlayer.getTeam()).canDeclareWar(joinPlayer.getTeam()) ) :
@@ -4671,7 +4656,7 @@ class Revolution:
 				popup.setUserData( (buttons, pPlayer.getID(), iRevoltIdx) )
 				# Center camera on city
 				CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-				popup.launch(bCreateOkButton = False)
+				popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			elif (not pPlayer.isHuman()) :
 				# Make AI decision
@@ -4790,13 +4775,12 @@ class Revolution:
 				caesiumtextResolution = caesiumtR.split('x')
 				caesiumpasx = int(caesiumtextResolution[0])/10
 				caesiumpasy = int(caesiumtextResolution[1])/10
-				popup = PyPopup.PyPopup()
+				popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
 				if self.centerPopups:
-					popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+					popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 				# End additions by Caesium et al
-				bodStr = bodStr = localText.getText("TXT_KEY_REV_HUMAN_ELEC_BUYOFF",())
-				popup.setBodyString(bodStr)
-				popup.launch()
+				popup.setBodyString(localText.getText("TXT_KEY_REV_HUMAN_ELEC_BUYOFF",()), 1<<0)
+				popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 			revData.dict['bDidBuyOff'] = True
 			termsAccepted = False
 
@@ -4982,36 +4966,41 @@ class Revolution:
 					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Running an election for a new leader!")
 					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Adjusted approval rating is %d"%(iHappiness))
 
-					if( iHappiness < 40 ) :
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Election lost due to low approval rating")
+					if iHappiness < 40:
+						if self.LOG_DEBUG:
+							CvUtil.pyPrint("  Revolt - Election lost due to low approval rating")
 						# Continue to change leader code below
-					elif( GAME.getSorenRandNum(25,'Revolution: election results') + 30 > iHappiness ) :
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Election lost by probability")
-					else :
-						if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Election won!  Leader stays in power!")
-						if( self.isLocalHumanPlayer(pPlayer.getID()) ) :
+					elif GAME.getSorenRandNum(25,'Revolution: election results') + 30 > iHappiness:
+						if self.LOG_DEBUG:
+							CvUtil.pyPrint("  Revolt - Election lost by probability")
+					else:
+						if self.LOG_DEBUG:
+							CvUtil.pyPrint("  Revolt - Election won!  Leader stays in power!")
+
+						if self.isLocalHumanPlayer(pPlayer.getID()):
 							# Report election victory
 							# Additions by Caesium et al
 							caesiumtR = CyUserProfile().getResolutionString(CyUserProfile().getResolution())
 							caesiumtextResolution = caesiumtR.split('x')
 							caesiumpasx = int(caesiumtextResolution[0])/10
 							caesiumpasy = int(caesiumtextResolution[1])/10
-							popup = PyPopup.PyPopup()
-							if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+							popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+							if self.centerPopups:
+								popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 							# End additions by Caesium et al
-							bodStr = localText.getText("TXT_KEY_REV_HUMAN_ELEC_VICTORY",())
-							popup.setBodyString(bodStr)
-							popup.launch()
+							popup.setBodyString(localText.getText("TXT_KEY_REV_HUMAN_ELEC_VICTORY",()), 1<<0)
+							popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 						return
 
-				if( self.isLocalHumanPlayer(pPlayer.getID()) ) :
+				if self.isLocalHumanPlayer(pPlayer.getID()):
 					# Additions by Caesium et al
 					caesiumtR = CyUserProfile().getResolutionString(CyUserProfile().getResolution())
 					caesiumtextResolution = caesiumtR.split('x')
 					caesiumpasx = int(caesiumtextResolution[0])/10
 					caesiumpasy = int(caesiumtextResolution[1])/10
-					popup = PyPopup.PyPopup(RevDefs.controlLostPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL)
-					if( self.centerPopups ) : popup.setPosition(3*caesiumpasx,3*caesiumpasy)
+					popup = CyPopup(RevDefs.controlLostPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
+					if self.centerPopups:
+						popup.setPosition(3*caesiumpasx, 3*caesiumpasy)
 					# End additions by Caesium et al
 
 					gameSpeedMod = RevUtils.getGameSpeedMod()
@@ -5024,7 +5013,7 @@ class Revolution:
 						bodStr = localText.getText("TXT_KEY_REV_HUMAN_CEDE",())
 
 					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_HUMAN_CONTROL_RETURNED",()) + ' %d '%(iNumTurns) + localText.getText("TXT_KEY_TURNS",()).lower() + '.'
-					popup.setBodyString(bodStr)
+					popup.setBodyString(bodStr, 1<<0)
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
@@ -5038,7 +5027,7 @@ class Revolution:
 #-------------------------------------------------------------------------------------------------
 # END Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
-					popup.launch()
+					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 			#terms not accepted
 			else:
@@ -5426,35 +5415,34 @@ class Revolution:
 
 					vassalStyle = revData.dict.get('vassalStyle',None)
 					if( not bIsBarbRev and not vassalStyle == None ) :
-						if( vassalStyle == 'capitulated' ) :
+						if vassalStyle == 'capitulated':
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s is forming as capitulated vassal to %s"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0)))
 							pTeam.assignVassal( pRevPlayer.getTeam(), True )
 							GAME.updateScore(True)
-						else :
+						else:
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s is forming as vassal to %s"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0)))
 							pTeam.assignVassal( pRevPlayer.getTeam(), False )
 							GAME.updateScore(True)
 
-					if( bPeaceful ) :
+					if bPeaceful:
 						pTeam.signOpenBorders( pRevPlayer.getTeam() )
 
-				else :
+				else:
 					# Join cultural owner
 					joinPlayer = GC.getPlayer( revData.dict['iJoinPlayer'] )
-
+					'''
 					# Enable only for debugging join human popup
-					if( False ) :
-						if(pPlayer.isAlive()):
-							if(pPlayer.isHuman() or pPlayer.isHumanDisabled()):
-								GAME.setForcedAIAutoPlay(pPlayer.getID(), 0, False )
-						iPrevHuman = GAME.getActivePlayer()
-						RevUtils.changeHuman( joinPlayer.getID(), iPrevHuman )
+					if pPlayer.isAlive() and (pPlayer.isHuman() or pPlayer.isHumanDisabled()):
+						GAME.setForcedAIAutoPlay(pPlayer.getID(), 0, False)
+					iPrevHuman = GAME.getActivePlayer()
+					RevUtils.changeHuman(joinPlayer.getID(), iPrevHuman)
+					'''
 
-					if( self.isLocalHumanPlayer(joinPlayer.getID()) ) :
+					if self.isLocalHumanPlayer(joinPlayer.getID()):
 						# Offer human the option of accepting the cities
-						popup = PyPopup.PyPopup( RevDefs.joinHumanPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
+						popup = CyPopup(RevDefs.joinHumanPopup, EventContextTypes.EVENTCONTEXT_ALL, False)
 
-						popup.setHeaderString( localText.getText("TXT_KEY_REV_TITLE_GOOD_NEWS",()) )
+						popup.setHeaderString(localText.getText("TXT_KEY_REV_TITLE_GOOD_NEWS",()), 1<<2)
 
 						bodStr = getCityTextList(cityList, bPreCitizens = True)
 
@@ -5462,15 +5450,15 @@ class Revolution:
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_HUMAN_REGAIN",()) + ' %s.'%(pRevPlayer.getCivilizationShortDescription(0))
 						bodStr += '  ' + localText.getText("TXT_KEY_REV_HUMAN_JOIN_CHOICE",())
 
-						popup.setBodyString( bodStr )
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_WELCOME",()) )
+						popup.setBodyString(bodStr, 1<<0)
+						popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_WELCOME",()))
 						buttons = ('welcome',)
-						popup.addButton( localText.getText("TXT_KEY_REV_BUTTON_NOT_WANTED",()) )
+						popup.addButton(localText.getText("TXT_KEY_REV_BUTTON_NOT_WANTED",()))
 						buttons += ('goaway',)
 						popup.setUserData( (buttons, joinPlayer.getID(), iRevoltIdx) )
 						# Center camera on city
 						CyCamera().JustLookAt( cityList[0].plot().getPoint() )
-						popup.launch(bCreateOkButton = False)
+						popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
 
 					else :
 						joinPlayer = GC.getPlayer( revData.dict['iJoinPlayer'] )

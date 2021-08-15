@@ -2,7 +2,6 @@
 # AI_AUTO_PLAY_MOD
 #
 from CvPythonExtensions import *
-import Popup as PyPopup
 import RevDefs
 import SdToolKit
 import RevUtils
@@ -201,11 +200,11 @@ class AIAutoPlay :
 		popupSizeX = 400
 		popupSizeY = 250
 
-		popup = PyPopup.PyPopup(RevDefs.toAIChooserPopup,contextType = EventContextTypes.EVENTCONTEXT_ALL)
+		popup = CyPopup(RevDefs.toAIChooserPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
 		popup.setPosition((xResolution - popupSizeX )/2, (yResolution-popupSizeY)/2-50)
 		popup.setSize(popupSizeX,popupSizeY)
-		popup.setHeaderString( TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURN_ON", ()) )
-		popup.setBodyString( TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURNS", ()) )
+		popup.setHeaderString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURN_ON", ()), 1<<2)
+		popup.setBodyString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_TURNS", ()), 1<<0)
 		popup.addSeparator()
 		popup.createPythonEditBox('10', 'Number of turns to turn over to AI', 0)
 		popup.setEditBoxMaxCharCount(4, 2, 0)
@@ -214,7 +213,7 @@ class AIAutoPlay :
 		popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_NO", ()), 0, 2)
 		popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_FULLY", ()), 1, 2)
 
-		popup.popup.setSelectedPulldownID( 1, 2 )
+		popup.setSelectedPulldownID(1, 2)
 
 		popup.addSeparator()
 		popup.addButton("OK")

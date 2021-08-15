@@ -37,7 +37,7 @@ def canTriggerBlessedSea(argsList):
 	data = argsList[0]
 	MAP = GC.getMap()
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
 		return False
 
 	iMapMinLandmass = 2 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
@@ -1945,25 +1945,16 @@ def canTriggerTea(argsList):
 ######## HORSE WHISPERING ###########
 
 def canTriggerHorseWhispering(argsList):
-  data = argsList[0]
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
-    return False
-  return True
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 def getHelpHorseWhispering1(argsList):
-	iNumStables = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	return TRNSLTR.getText("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", (iNumStables, ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def canTriggerHorseWhisperingDone(argsList):
-  data = argsList[0]
-  trigger = GC.getEventTriggerInfo(data.eTrigger)
-  player = GC.getPlayer(data.ePlayer)
-
-  iStable = GC.getInfoTypeForString("BUILDING_STABLE")
-  if GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() > player.getBuildingCountWithUpgrades(iStable):
-    return False
-
-  return True
+	return (
+		GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() <=
+		GC.getPlayer(argsList[0].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_STABLE"))
+	)
 
 def getHelpHorseWhisperingDone1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_HORSE_WHISPERING_DONE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -1994,7 +1985,7 @@ def canTriggerHarbormaster(argsList):
   trigger = GC.getEventTriggerInfo(data.eTrigger)
   player = GC.getPlayer(data.ePlayer)
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
     return False
 
   map = GC.getMap()
@@ -2027,42 +2018,28 @@ def canTriggerHarbormasterDone(argsList):
 ######## CLASSIC LITERATURE ###########
 
 def canTriggerClassicLiterature(argsList):
-  data = argsList[0]
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
-    return False
-  return True
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 def getHelpClassicLiterature1(argsList):
-	iLibrariesRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	return TRNSLTR.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", (iLibrariesRequired, ))
-
+	return TRNSLTR.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def canTriggerClassicLiteratureDone(argsList):
-  data = argsList[0]
-  trigger = GC.getEventTriggerInfo(data.eTrigger)
-  player = GC.getPlayer(data.ePlayer)
-
-  iLibrary = GC.getInfoTypeForString("BUILDING_LIBRARY")
-  iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iLibrary):
-    return False
-
-  return True
+	return (
+		GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() <=
+		GC.getPlayer(argsList[0].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_LIBRARY"))
+	)
 
 def getHelpClassicLiteratureDone2(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_DONE_HELP_2", ())
 
 def canApplyClassicLiteratureDone2(argsList):
-  data = argsList[1]
-  player = GC.getPlayer(data.ePlayer)
+	player = GC.getPlayer(argsList[1].ePlayer)
+	iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
-  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
-
-  for iTech in xrange(GC.getNumTechInfos()):
-    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
-      return True
-
-  return False
+	for iTech in xrange(GC.getNumTechInfos()):
+		if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
+			return True
+	return False
 
 def applyClassicLiteratureDone2(argsList):
   data = argsList[1]
@@ -2109,101 +2086,99 @@ def applyClassicLiteratureDone3(argsList):
 ######## MASTER BLACKSMITH ###########
 
 def canTriggerMasterBlacksmith(argsList):
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(argsList[0].ePlayer).isHuman():
-		return False
-	return True
-
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 def getHelpMasterBlacksmith1(argsList):
-	iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	return TRNSLTR.getText("TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1", (iRequired, GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()))
-
+	return (
+		TRNSLTR.getText(
+			"TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1",
+			(
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(),
+				GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()
+			)
+		)
+	)
 
 def expireMasterBlacksmith1(argsList):
 	iPlayer = argsList[1].ePlayer
 	CyCity = GC.getPlayer(iPlayer).getCity(argsList[1].iCityId)
-	if not CyCity or CyCity.getOwner() != iPlayer:
-		return True
-	return False
-
+	return not CyCity or CyCity.getOwner() != iPlayer
 
 def canTriggerMasterBlacksmithDone(argsList):
-  data = argsList[0]
-  trigger = GC.getEventTriggerInfo(data.eTrigger)
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
 
-  iForge = GC.getInfoTypeForString("BUILDING_FORGE")
-  iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iForge):
-    return False
+	if GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() > player.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_FORGE")):
+		return False
 
-  kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
+	prereqEventData = player.getEventOccured(GC.getEventTriggerInfo(data.eTrigger).getPrereqEvent(0))
 
-  city = player.getCity(kOrigTriggeredData.iCityId)
-  if city == None or city.getOwner() != data.ePlayer:
-    return False
+	city = player.getCity(prereqEventData.iCityId)
+	if not city or city.getOwner() != data.ePlayer:
+		return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(data.iId)
-  kActualTriggeredDataObject.iCityId = kOrigTriggeredData.iCityId
+	eventData = player.getEventTriggered(data.iId)
+	eventData.iCityId = prereqEventData.iCityId
 
-  return True
+	return True
 
 def canApplyMasterBlacksmithDone1(argsList):
-  data = argsList[1]
-  player = GC.getPlayer(data.ePlayer)
+	#eEvent = argsList[0]
+	data = argsList[1]
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
-  city = player.getCity(data.iCityId)
+	player = GC.getPlayer(data.ePlayer)
+	city = player.getCity(data.iCityId)
+	if not city: return False
 
-  if city == None:
-    return False
+	iX = city.getX()
+	iY = city.getY()
+	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 
-  map = GC.getMap()
-  iBestValue = map.getGridWidth() + map.getGridHeight()
-  bestPlot = None
-  for plot in map.plots():
-    if (plot.getOwner() == data.ePlayer and plot.canHaveBonus(iBonus, False)):
-      iValue = plotDistance(city.getX(), city.getY(), plot.getX(), plot.getY())
-      if iValue < iBestValue:
-        iBestValue = iValue
-        bestPlot = plot
+	map = GC.getMap()
+	iBestValue = map.getGridWidth() + map.getGridHeight()
+	bestPlot = None
+	for plot in map.plots():
+		if plot.getOwner() == data.ePlayer and plot.canHaveBonus(iBonus, False):
+			iValue = plotDistance(iX, iY, plot.getX(), plot.getY())
+			if iValue < iBestValue:
+				iBestValue = iValue
+				bestPlot = plot
 
-  if bestPlot == None:
-    return False
+	if not bestPlot: return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(data.iId)
-  kActualTriggeredDataObject.iPlotX = bestPlot.getX()
-  kActualTriggeredDataObject.iPlotY = bestPlot.getY()
+	eventData = player.getEventTriggered(data.iId)
+	eventData.iPlotX = bestPlot.getX()
+	eventData.iPlotY = bestPlot.getY()
 
-  return True
+	return True
 
 def applyMasterBlacksmithDone1(argsList):
-  data = argsList[1]
-  player = GC.getPlayer(data.ePlayer)
+	#eEvent = argsList[0]
+	data = argsList[1]
 
-  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  city = player.getCity(data.iCityId)
+	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
+	GC.getMap().plot(data.iPlotX, data.iPlotY).setBonusType(iBonus)
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
-  plot.setBonusType(iBonus)
+	CyInterface().addMessage(
+		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
+		TRNSLTR.getText(
+			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+			(
+				GC.getBonusInfo(iBonus).getTextKey(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()
+			)
+		),
+		"AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(),
+		GC.getInfoTypeForString("COLOR_WHITE"), plot.getX(), plot.getY(), True, True
+	)
 
-  szBuffer = TRNSLTR.getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", (GC.getBonusInfo(iBonus).getTextKey(), city.getNameKey()))
-  CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(), GC.getInfoTypeForString("COLOR_WHITE"), plot.getX(), plot.getY(), True, True)
-
-def canApplyMasterBlacksmithDone3(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getStateReligion() > -1
 
 ######## THE BEST DEFENSE ###########
 
 def canTriggerBestDefense(argsList):
-	data = argsList[0]
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
-		return False
-	return True
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 def getHelpBestDefense1(argsList):
-	iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	return TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", (iRequired, ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def canTriggerBestDefenseDone(argsList):
   data = argsList[0]
@@ -2242,15 +2217,18 @@ def canApplyBestDefenseDone3(argsList):
 ######## NATIONAL SPORTS LEAGUE ###########
 
 def canTriggerSportsLeague(argsList):
-	data = argsList[0]
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
-		return False
-	return True
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 def getHelpSportsLeague1(argsList):
-	iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iBuilding = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
-	return TRNSLTR.getText("TXT_KEY_EVENT_SPORTS_LEAGUE_HELP_1", (iRequired, GC.getBuildingInfo(iBuilding).getTextKey()))
+	return (
+		TRNSLTR.getText(
+			"TXT_KEY_EVENT_SPORTS_LEAGUE_HELP_1",
+			(
+				GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(),
+				GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")).getTextKey()
+			)
+		)
+	)
 
 def canTriggerSportsLeagueDone(argsList):
   data = argsList[0]
@@ -3031,43 +3009,32 @@ def applyCorporateExpansionDone1(argsList):
 ######## HOSTILE TAKEOVER ###########
 
 def canTriggerHostileTakeover(argsList):
-  data = argsList[0]
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(data.ePlayer).isHuman():
-    return False
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+		return False
 
-  city = GAME.getHeadquarters(data.eCorporation)
-  if None == city:
-    return False
+	city = GAME.getHeadquarters(data.eCorporation)
+	if city is None: return False
 
-  # Hack to remember the number of cities you already have with the Corporation
-  kActualTriggeredDataObject = player.getEventTriggered(data.iId)
-  kActualTriggeredDataObject.iCityId = city.getID()
-  kActualTriggeredDataObject.iPlotX = city.getX()
-  kActualTriggeredDataObject.iPlotY = city.getY()
+	# Hack to remember the number of cities you already have with the Corporation
+	kActualTriggeredDataObject = player.getEventTriggered(data.iId)
+	kActualTriggeredDataObject.iCityId = city.getID()
+	kActualTriggeredDataObject.iPlotX = city.getX()
+	kActualTriggeredDataObject.iPlotY = city.getY()
 
-  bFound = False
-  for iBuilding in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(iBuilding).getFoundsCorporation() == data.eCorporation:
-      kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
-      bFound = True
-      break
+	for iBuilding in xrange(GC.getNumBuildingInfos()):
+		if GC.getBuildingInfo(iBuilding).getFoundsCorporation() == data.eCorporation:
+			kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
+			break
+	else: return False
 
-  if not bFound:
-    return False
-
-  listResources = getHostileTakeoverListResources(GC.getCorporationInfo(data.eCorporation), player)
-  if len(listResources) == 0:
-    return False
-
-  return True
+	return getHostileTakeoverListResources(GC.getCorporationInfo(data.eCorporation), player) != []
 
 def expireHostileTakeover1(argsList):
 	data = argsList[1]
-	player = GC.getPlayer(data.ePlayer)
-	city = player.getCity(data.iCityId)
-	return city is None
+	return GC.getPlayer(data.ePlayer).getCity(data.iCityId) is None
 
 def getHostileTakeoverListResources(corporation, player):
   listHave = []

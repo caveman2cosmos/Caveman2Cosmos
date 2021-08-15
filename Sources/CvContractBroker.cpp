@@ -262,8 +262,6 @@ void CvContractBroker::finalizeTenderContracts()
 
 	std::map<int,int>	tenderAllocations;
 
-	CvPathGenerator::EnableMaxPerformance(true);
-
 	//	No need to lock here - this is always run in a single threaded context
 
 	for(int iI = 0; iI < (int)m_workRequests.size(); iI++)
@@ -529,8 +527,6 @@ void CvContractBroker::finalizeTenderContracts()
 			}
 		}
 	}
-
-	CvPathGenerator::EnableMaxPerformance(false);
 
 	if( gUnitLogLevel >= 3 )
 	{
