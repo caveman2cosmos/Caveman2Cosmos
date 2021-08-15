@@ -420,6 +420,7 @@ void cvInternalGlobals::init()
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
+	CyGlobalContext::initStatics();
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);

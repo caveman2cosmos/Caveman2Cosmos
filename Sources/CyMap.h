@@ -16,7 +16,8 @@ class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap); // Call from C++
+	explicit CyMap(MapTypes eMap);
+
 	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 
 	int getType();
