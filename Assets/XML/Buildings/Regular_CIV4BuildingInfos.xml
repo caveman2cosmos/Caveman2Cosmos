@@ -72582,6 +72582,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<FreePromotion>PROMOTION_CACOPHONY</FreePromotion>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
