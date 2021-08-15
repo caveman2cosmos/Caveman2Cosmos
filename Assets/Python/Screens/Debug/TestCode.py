@@ -1030,7 +1030,7 @@ class TestCode:
 					iHappiness += CvReplacedBuildingInfo.getHappiness()
 					iHealth += CvReplacedBuildingInfo.getHealth()
 					iGreatPeopleRateChange += CvReplacedBuildingInfo.getGreatPeopleRateChange()
-					if CvBuildingInfo.getGreatPeopleUnitType() != -1 and CvReplacedBuildingInfo.getGreatPeopleUnitType() != -1 and CvBuildingInfo.getGreatPeopleUnitType() != CvReplacedBuildingInfo.getGreatPeopleUnitType():
+					if CvBuildingInfo.getGreatPeopleUnitType() != CvReplacedBuildingInfo.getGreatPeopleUnitType() and CvReplacedBuildingInfo.getGreatPeopleUnitType() != -1:
 						self.log("WARNING: "+CvBuildingInfo.getType()+", "+CvReplacedBuildingInfo.getType()+" have different GPs, remove GPUnitType from both buildings, or unify entire replacement tree")
 					iGreatPeopleRateModifier += CvReplacedBuildingInfo.getGreatPeopleRateModifier()
 					iFreeSpecialist += CvReplacedBuildingInfo.getFreeSpecialist()
@@ -1056,7 +1056,7 @@ class TestCode:
 					iGlobalExperience += CvReplacedBuildingInfo.getGlobalFreeExperience()
 					aFreePromotion = [CvReplacedBuildingInfo.getFreePromotion(), CvReplacedBuildingInfo.getFreePromotion_2(), CvReplacedBuildingInfo.getFreePromotion_3()]
 					for i in xrange(len(aBaseFreePromotion)):
-						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:						
+						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(aBaseFreePromotion[i])+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType()+" "+str(aImmediateReplacedNameList))
 
 				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3> in base
