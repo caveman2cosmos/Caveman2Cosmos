@@ -801,21 +801,6 @@ struct BuildingCommerceModifier
 /************************************************************************************************/
 
 
-
-struct FOWVis
-{
-	uint uiCount;
-	POINT* pOffsets;  // array of "Offset" points
-
-	FOWVis()
-		: uiCount(0)
-		, pOffsets(NULL)
-	{}
-
-	// python friendly accessors
-	POINT getOffsets(int i) const { return pOffsets[i]; }
-};
-
 struct DllExport PBGameSetupData
 {
 	PBGameSetupData();

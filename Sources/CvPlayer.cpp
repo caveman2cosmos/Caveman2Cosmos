@@ -791,7 +791,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-	algo::fill(m_startingPlotCoords, XYCoords());
+	algo::fill(m_startingCoords, XYCoords());
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -9415,7 +9415,7 @@ int CvPlayer::specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTy
 
 CvPlot* CvPlayer::getStartingPlot() const
 {
-	return m_startingPlotCoords[CURRENT_MAP].plot();
+	return m_startingCoords[CURRENT_MAP].plot();
 }
 
 
@@ -9443,7 +9443,7 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 
 		if (newPlot == NULL)
 		{
-			m_startingPlotCoords[CURRENT_MAP] = XYCoords(INVALID_PLOT_COORD, INVALID_PLOT_COORD);
+			m_startingCoords[CURRENT_MAP] = XYCoords();
 
 			if (bUpdateStartDist && oldPlot != NULL)
 			{
@@ -9454,7 +9454,7 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 		{
 			newPlot->setStartingPlot(true);
 
-			m_startingPlotCoords[CURRENT_MAP] = XYCoords(*newPlot);
+			m_startingCoords[CURRENT_MAP] = XYCoords(*newPlot);
 
 			newPlot->area()->changeNumStartingPlots(1);
 
@@ -18765,7 +18765,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		int m_iStartingX, m_iStartingY;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
-		m_startingPlotCoords[MAP_EARTH] = XYCoords(m_iStartingX, m_iStartingY);
+		m_startingCoords[MAP_EARTH] = XYCoords(m_iStartingX, m_iStartingY);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
@@ -20083,8 +20083,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 	if ( m_bEverAlive )
 	{
-		const int m_iStartingX = m_startingPlotCoords[MAP_EARTH].iX;
-		const int m_iStartingY = m_startingPlotCoords[MAP_EARTH].iY;
+		const int m_iStartingX = m_startingCoords[MAP_EARTH].iX;
+		const int m_iStartingY = m_startingCoords[MAP_EARTH].iY;
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingY);
 
