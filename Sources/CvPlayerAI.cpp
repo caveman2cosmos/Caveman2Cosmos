@@ -1562,8 +1562,6 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
-		CvPathGenerator::EnableMaxPerformance(true);
-
 		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL;)
 		{
 			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
@@ -1621,7 +1619,7 @@ void CvPlayerAI::AI_unitUpdate()
 				groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
 			}
 
-			std::sort(groupList.begin(), groupList.end());
+			algo::sort(groupList);
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(groupList[i].second);
@@ -1633,7 +1631,6 @@ void CvPlayerAI::AI_unitUpdate()
 				}
 			}
 		}
-		CvPathGenerator::EnableMaxPerformance(false);
 	}
 }
 

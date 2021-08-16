@@ -10,11 +10,6 @@
 // Python wrapper class for CvCity
 //
 
-CyCity::CyCity() : m_pCity(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
 	FAssert(m_pCity != NULL);

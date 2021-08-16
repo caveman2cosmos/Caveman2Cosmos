@@ -1700,10 +1700,9 @@ public:
 	virtual void AI_setExtraGoldTarget(int iNewValue) = 0;
 	virtual int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const = 0;
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
-protected:
 
-	int m_iStartingX;
-	int m_iStartingY;
+protected:
+	bst::array<XYCoords, NUM_MAPS> m_startingCoords;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
@@ -2346,18 +2345,7 @@ private:
 
 	std::vector<civcSwitchInstance> m_civicSwitchHistory;
 
-	static CRITICAL_SECTION	c_canConstructCacheSection;
-	static CRITICAL_SECTION	c_allCitiesPropertySection;
-	static CRITICAL_SECTION	c_buildingProcessingSection;
-	static CRITICAL_SECTION	c_GroupCycleSection;
 	static bool m_staticsInitialized;
-
-	bool m_bUpdatesDeferred;
-	bool m_bGoldenAgeStarted; // Used to defer reporting in update-deferred sections
-
-	void reportGoldenAgeStart();
-	void deferUpdates();
-	void resumeUpdates();
 
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;

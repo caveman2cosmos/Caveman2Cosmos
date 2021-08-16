@@ -208,12 +208,7 @@ static bool buildRemovedPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, voi
 	//	part of this plot group
 	if ( pLoopPlot->m_groupGenerationNumber != parm->groupGenNumber)
 	{
-		XYCoords xy;
-
-		xy.iX = pLoopPlot->getX();
-		xy.iY = pLoopPlot->getY();
-
-		parm->removedPlots.insertAtEnd(xy);
+		parm->removedPlots.insertAtEnd(XYCoords(*pLoopPlot));
 	}
 
 	return true;
@@ -228,12 +223,7 @@ static bool buildAllPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* p
 {
 	buildAllPlotListParams* parm = (buildAllPlotListParams*)params;
 
-	XYCoords xy;
-
-	xy.iX = pLoopPlot->getX();
-	xy.iY = pLoopPlot->getY();
-
-	parm->allPlots.insertAtEnd(xy);
+	parm->allPlots.insertAtEnd(XYCoords(*pLoopPlot));
 
 	//OutputDebugString(CvString::format("Enumerated plot: (%d,%d)\n", xy.iX,xy.iY).c_str());
 
@@ -302,7 +292,7 @@ void CvPlotGroup::recalculatePlots()
 			pPlotNode != NULL;
 			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = pPlotNode->m_data.plot();
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 

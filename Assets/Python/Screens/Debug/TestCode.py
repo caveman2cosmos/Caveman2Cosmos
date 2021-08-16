@@ -27,7 +27,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
-		self.main.addTestCode(screen, self.checkBuildingReplacingProductivity, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
+		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics or traits")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
@@ -922,7 +922,7 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 
 	#Building - check if replacing building has better yields, commerces, and other stats
-	def checkBuildingReplacingProductivity(self):
+	def checkBuildingReplacingQuality(self):
 		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -930,7 +930,7 @@ class TestCode:
 			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2])
 
 			#Ignore Stories Effect, Pollution, and Bans
-			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1 and CvBuildingInfo.getNumReplacedBuilding() != 0:
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
@@ -955,7 +955,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience> - base
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -986,6 +986,7 @@ class TestCode:
 				iBaseRiverDefensePenalty = CvBuildingInfo.getRiverDefensePenalty()
 				iBaseExperience = CvBuildingInfo.getFreeExperience()
 				iBaseGlobalExperience = CvBuildingInfo.getGlobalFreeExperience()
+				aBaseFreePromotion = [CvBuildingInfo.getFreePromotion(), CvBuildingInfo.getFreePromotion_2(), CvBuildingInfo.getFreePromotion_3()]
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -1020,7 +1021,7 @@ class TestCode:
 				iGlobalExperience = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
@@ -1029,7 +1030,7 @@ class TestCode:
 					iHappiness += CvReplacedBuildingInfo.getHappiness()
 					iHealth += CvReplacedBuildingInfo.getHealth()
 					iGreatPeopleRateChange += CvReplacedBuildingInfo.getGreatPeopleRateChange()
-					if CvBuildingInfo.getGreatPeopleUnitType() != -1 and CvReplacedBuildingInfo.getGreatPeopleUnitType() != -1 and CvBuildingInfo.getGreatPeopleUnitType() != CvReplacedBuildingInfo.getGreatPeopleUnitType():
+					if CvBuildingInfo.getGreatPeopleUnitType() != CvReplacedBuildingInfo.getGreatPeopleUnitType() and CvReplacedBuildingInfo.getGreatPeopleUnitType() != -1:
 						self.log("WARNING: "+CvBuildingInfo.getType()+", "+CvReplacedBuildingInfo.getType()+" have different GPs, remove GPUnitType from both buildings, or unify entire replacement tree")
 					iGreatPeopleRateModifier += CvReplacedBuildingInfo.getGreatPeopleRateModifier()
 					iFreeSpecialist += CvReplacedBuildingInfo.getFreeSpecialist()
@@ -1041,20 +1042,24 @@ class TestCode:
 					iWarWearinessModifier += CvReplacedBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
 					iGlobalWarWearinessModifier += CvReplacedBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
 					iEnemyWarWearinessModifier += CvReplacedBuildingInfo.getEnemyWarWearinessModifier()
-					iAllCityDefense = CvReplacedBuildingInfo.getAllCityDefenseModifier()
-					iBombardDefense = CvReplacedBuildingInfo.getBombardDefenseModifier()
-					iBuildingDefenseRecoverySpeedModifier = CvReplacedBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
-					iCityDefenseRecoverySpeedModifier = CvReplacedBuildingInfo.getCityDefenseRecoverySpeedModifier()
-					iDefense = CvReplacedBuildingInfo.getDefenseModifier()
-					iEspionageDefense = CvReplacedBuildingInfo.getEspionageDefenseModifier()
-					iLocalDynamicDefense = CvReplacedBuildingInfo.getLocalDynamicDefense()
-					iMinDefense = CvReplacedBuildingInfo.getMinDefense()
-					iNoEntryDefenseLevel = CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
-					iRiverDefensePenalty = CvReplacedBuildingInfo.getRiverDefensePenalty()
-					iExperience = CvReplacedBuildingInfo.getFreeExperience()
-					iGlobalExperience = CvReplacedBuildingInfo.getGlobalFreeExperience()
+					iAllCityDefense += CvReplacedBuildingInfo.getAllCityDefenseModifier()
+					iBombardDefense += CvReplacedBuildingInfo.getBombardDefenseModifier()
+					iBuildingDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
+					iCityDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getCityDefenseRecoverySpeedModifier()
+					iDefense += CvReplacedBuildingInfo.getDefenseModifier()
+					iEspionageDefense += CvReplacedBuildingInfo.getEspionageDefenseModifier()
+					iLocalDynamicDefense += CvReplacedBuildingInfo.getLocalDynamicDefense()
+					iMinDefense += CvReplacedBuildingInfo.getMinDefense()
+					iNoEntryDefenseLevel += CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
+					iRiverDefensePenalty += CvReplacedBuildingInfo.getRiverDefensePenalty()
+					iExperience += CvReplacedBuildingInfo.getFreeExperience()
+					iGlobalExperience += CvReplacedBuildingInfo.getGlobalFreeExperience()
+					aFreePromotion = [CvReplacedBuildingInfo.getFreePromotion(), CvReplacedBuildingInfo.getFreePromotion_2(), CvReplacedBuildingInfo.getFreePromotion_3()]
+					for i in xrange(len(aBaseFreePromotion)):
+						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(aBaseFreePromotion[i])+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType()+" "+str(aImmediateReplacedNameList))
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes

@@ -791,8 +791,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-	m_iStartingX = INVALID_PLOT_COORD;
-	m_iStartingY = INVALID_PLOT_COORD;
+	algo::fill(m_startingCoords, XYCoords());
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -1496,7 +1495,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_unitConstructionCounts.clear();
 
 	m_bMaintenanceDirty = false;
-	m_bUpdatesDeferred = false;
 	m_orbitalInfrastructureCountDirty = true;
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
@@ -4410,18 +4408,11 @@ void CvPlayer::updateCommerce(CommerceTypes eCommerce, bool bForce) const
 			updateCommerce((CommerceTypes)iI, bForce);
 		}
 	}
-	else if (!m_bUpdatesDeferred)
+	else if (bForce || m_abCommerceDirty[eCommerce])
 	{
-		if ( bForce || m_abCommerceDirty[eCommerce])
-		{
-			m_abCommerceDirty[eCommerce] = false;
+		m_abCommerceDirty[eCommerce] = false;
 
-			algo::for_each(cities(), CvCity::fn::updateCommerce(eCommerce, bForce));
-		}
-	}
-	else
-	{
-		m_abCommerceDirty[eCommerce] |= bForce;
+		algo::for_each(cities(), CvCity::fn::updateCommerce(eCommerce, bForce));
 	}
 }
 
@@ -9424,7 +9415,7 @@ int CvPlayer::specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTy
 
 CvPlot* CvPlayer::getStartingPlot() const
 {
-	return GC.getMap().plotSorenINLINE(m_iStartingX, m_iStartingY);
+	return m_startingCoords[CURRENT_MAP].plot();
 }
 
 
@@ -9452,8 +9443,7 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 
 		if (newPlot == NULL)
 		{
-			m_iStartingX = INVALID_PLOT_COORD;
-			m_iStartingY = INVALID_PLOT_COORD;
+			m_startingCoords[CURRENT_MAP] = XYCoords();
 
 			if (bUpdateStartDist && oldPlot != NULL)
 			{
@@ -9464,10 +9454,9 @@ void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 		{
 			newPlot->setStartingPlot(true);
 
-			m_iStartingX = newPlot->getX();
-			m_iStartingY = newPlot->getY();
+			m_startingCoords[CURRENT_MAP] = XYCoords(*newPlot);
 
-			getStartingPlot()->area()->changeNumStartingPlots(1);
+			newPlot->area()->changeNumStartingPlots(1);
 
 			if (bUpdateStartDist)
 			{
@@ -9603,14 +9592,6 @@ bool CvPlayer::isGoldenAge() const
 	return (getGoldenAgeTurns() > 0);
 }
 
-void CvPlayer::reportGoldenAgeStart()
-{
-	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
-	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
-
-	CvEventReporter::getInstance().goldenAge(getID());
-}
-
 void CvPlayer::changeGoldenAgeTurns(int iChange)
 {
 	if (iChange != 0)
@@ -9632,14 +9613,10 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 
 			if (isGoldenAge())
 			{
-				if ( m_bUpdatesDeferred )
-				{
-					m_bGoldenAgeStarted = true;
-				}
-				else
-				{
-					reportGoldenAgeStart();
-				}
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
+
+				CvEventReporter::getInstance().goldenAge(getID());
 			}
 			else
 			{
@@ -10901,47 +10878,11 @@ void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 
 int CvPlayer::getTotalMaintenance() const
 {
-	if (m_bMaintenanceDirty && !m_bUpdatesDeferred)
+	if (m_bMaintenanceDirty)
 	{
 		updateMaintenance();
 	}
 	return m_iTotalMaintenance / 100;
-}
-
-void CvPlayer::deferUpdates()
-{
-	if ( m_bMaintenanceDirty )
-	{
-		updateMaintenance();
-	}
-
-	m_bUpdatesDeferred = true;
-	m_bGoldenAgeStarted = false;
-}
-
-void CvPlayer::resumeUpdates()
-{
-	m_bUpdatesDeferred = false;
-
-	if ( m_bGoldenAgeStarted )
-	{
-		m_bGoldenAgeStarted = false;
-
-		reportGoldenAgeStart();
-	}
-
-	if ( m_bMaintenanceDirty )
-	{
-		updateMaintenance();
-	}
-
-	for(int iI = 0; iI < NUM_COMMERCE_TYPES; iI++ )
-	{
-		if ( m_abCommerceDirty[iI] )
-		{
-			updateCommerce((CommerceTypes)iI, false);
-		}
-	}
 }
 
 
@@ -10966,7 +10907,6 @@ void CvPlayer::changeLevelExperienceModifier(int iChange)
 {
 	m_iLevelExperienceModifier += iChange;
 }
-
 
 
 int CvPlayer::getExtraHealth() const
@@ -12665,21 +12605,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 
 		if (isEndTurn())
 		{
-			CvPathGenerator::EnableMaxPerformance(true);
-/************************************************************************************************/
-/* Afforess					  Start		 09/16/10											   */
-/*																							  */
-/* Advanced Automations																		 */
-/************************************************************************************************/
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
 				group->AI_update();
 			}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-			CvPathGenerator::EnableMaxPerformance(false);
 			setAutoMoves(true);
 		}
 	}
@@ -13408,7 +13338,7 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
-	if (!m_bUpdatesDeferred && m_abCommerceDirty[eIndex])
+	if (m_abCommerceDirty[eIndex])
 	{
 		updateCommerce(eIndex, false);
 	}
@@ -18831,8 +18761,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADOutgoing, SAVE_VALUE_ANY);
 		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADNukesCount, SAVE_VALUE_ANY);
 		// SAVEBREAK@
+
+		int m_iStartingX, m_iStartingY;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
+		m_startingCoords[MAP_EARTH] = XYCoords(m_iStartingX, m_iStartingY);
+
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
@@ -20149,8 +20083,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 	if ( m_bEverAlive )
 	{
+		const int m_iStartingX = m_startingCoords[MAP_EARTH].iX;
+		const int m_iStartingY = m_startingCoords[MAP_EARTH].iY;
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingX);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingY);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLand);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLandScored);

@@ -7198,12 +7198,8 @@ void CvGame::updateMoves()
 			{
 				PROFILE("CvGame::updateMoves.AI");
 
-				CvPathGenerator::EnableMaxPerformance(true);
-
 				// Always try to do automations first for the AI
 				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-				CvPathGenerator::EnableMaxPerformance(false);
 
 				if (!player.isAutoMoves())
 				{
