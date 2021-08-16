@@ -9,11 +9,6 @@
 // Python wrapper class for CvSelectionGroup
 //
 
-CySelectionGroup::CySelectionGroup() : m_pSelectionGroup(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup) : m_pSelectionGroup(pSelectionGroup)
 {
 	FAssert(m_pSelectionGroup != NULL);

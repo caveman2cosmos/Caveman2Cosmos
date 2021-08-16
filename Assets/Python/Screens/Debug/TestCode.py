@@ -27,7 +27,8 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
-		self.main.addTestCode(screen, self.checkBuildingReplacingProductivity, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
+		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
+		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics or traits")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
@@ -921,7 +922,7 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingTypeList)+" implicit: "+str(aImplicitReplacementUniqueList))
 
 	#Building - check if replacing building has better yields, commerces, and other stats
-	def checkBuildingReplacingProductivity(self):
+	def checkBuildingReplacingQuality(self):
 		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -954,7 +955,7 @@ class TestCode:
 						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> - base
+				#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3> - base
 				iBaseTradeRoutes = CvBuildingInfo.getTradeRoutes()
 				iBaseCoastalTradeRoutes = CvBuildingInfo.getCoastalTradeRoutes()
 				iBaseGlobalTradeRoutes = CvBuildingInfo.getGlobalTradeRoutes()
@@ -967,6 +968,25 @@ class TestCode:
 				iBaseFreeSpecialist = CvBuildingInfo.getFreeSpecialist()
 				iBaseAreaFreeSpecialist = CvBuildingInfo.getAreaFreeSpecialist()
 				iBaseGlobalFreeSpecialist = CvBuildingInfo.getGlobalFreeSpecialist()
+				iBaseMaintenanceModifier = CvBuildingInfo.getMaintenanceModifier() #iMaintenanceModifier - lower value is better
+				iBaseHappinessPercentPerPopulation = CvBuildingInfo.getHappinessPercentPerPopulation()
+				iBaseHealthPercentPerPopulation = CvBuildingInfo.getHealthPercentPerPopulation()
+				iBaseWarWearinessModifier = CvBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
+				iBaseGlobalWarWearinessModifier = CvBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
+				iBaseEnemyWarWearinessModifier = CvBuildingInfo.getEnemyWarWearinessModifier()
+				iBaseAllCityDefense = CvBuildingInfo.getAllCityDefenseModifier()
+				iBaseBombardDefense = CvBuildingInfo.getBombardDefenseModifier()
+				iBaseBuildingDefenseRecoverySpeedModifier = CvBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
+				iBaseCityDefenseRecoverySpeedModifier = CvBuildingInfo.getCityDefenseRecoverySpeedModifier()
+				iBaseDefense = CvBuildingInfo.getDefenseModifier()
+				iBaseEspionageDefense = CvBuildingInfo.getEspionageDefenseModifier()
+				iBaseLocalDynamicDefense = CvBuildingInfo.getLocalDynamicDefense()
+				iBaseMinDefense = CvBuildingInfo.getMinDefense()
+				iBaseNoEntryDefenseLevel = CvBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
+				iBaseRiverDefensePenalty = CvBuildingInfo.getRiverDefensePenalty()
+				iBaseExperience = CvBuildingInfo.getFreeExperience()
+				iBaseGlobalExperience = CvBuildingInfo.getGlobalFreeExperience()
+				aBaseFreePromotion = [CvBuildingInfo.getFreePromotion(), CvBuildingInfo.getFreePromotion_2(), CvBuildingInfo.getFreePromotion_3()]
 
 				#Analyze replacements by tag
 				iTradeRoutes = 0
@@ -981,9 +1001,27 @@ class TestCode:
 				iFreeSpecialist = 0
 				iAreaFreeSpecialist = 0
 				iGlobalFreeSpecialist = 0
+				iMaintenanceModifier = 0 #iMaintenanceModifier - lower value is better
+				iHappinessPercentPerPopulation = 0
+				iHealthPercentPerPopulation = 0
+				iWarWearinessModifier = 0 #iWarWearinessModifier - lower value is better
+				iGlobalWarWearinessModifier = 0 #iGlobalWarWearinessModifier - lower value is better
+				iEnemyWarWearinessModifier = 0
+				iAllCityDefense = 0
+				iBombardDefense = 0
+				iBuildingDefenseRecoverySpeedModifier = 0
+				iCityDefenseRecoverySpeedModifier = 0
+				iDefense = 0
+				iEspionageDefense = 0
+				iLocalDynamicDefense = 0
+				iMinDefense = 0
+				iNoEntryDefenseLevel = 0  #iNoEntryDefenseLevel - lower value is better
+				iRiverDefensePenalty = 0
+				iExperience = 0
+				iGlobalExperience = 0
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>
+					#<iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>
 					iTradeRoutes += CvReplacedBuildingInfo.getTradeRoutes()
 					iCoastalTradeRoutes += CvReplacedBuildingInfo.getCoastalTradeRoutes()
 					iGlobalTradeRoutes += CvReplacedBuildingInfo.getGlobalTradeRoutes()
@@ -998,8 +1036,30 @@ class TestCode:
 					iFreeSpecialist += CvReplacedBuildingInfo.getFreeSpecialist()
 					iAreaFreeSpecialist += CvReplacedBuildingInfo.getAreaFreeSpecialist()
 					iGlobalFreeSpecialist += CvReplacedBuildingInfo.getGlobalFreeSpecialist()
+					iMaintenanceModifier += CvReplacedBuildingInfo.getMaintenanceModifier() #iMaintenanceModifier - lower value is better
+					iHappinessPercentPerPopulation += CvReplacedBuildingInfo.getHappinessPercentPerPopulation()
+					iHealthPercentPerPopulation += CvReplacedBuildingInfo.getHealthPercentPerPopulation()
+					iWarWearinessModifier += CvReplacedBuildingInfo.getWarWearinessModifier() #iWarWearinessModifier - lower value is better
+					iGlobalWarWearinessModifier += CvReplacedBuildingInfo.getGlobalWarWearinessModifier() #iGlobalWarWearinessModifier - lower value is better
+					iEnemyWarWearinessModifier += CvReplacedBuildingInfo.getEnemyWarWearinessModifier()
+					iAllCityDefense += CvReplacedBuildingInfo.getAllCityDefenseModifier()
+					iBombardDefense += CvReplacedBuildingInfo.getBombardDefenseModifier()
+					iBuildingDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getBuildingDefenseRecoverySpeedModifier()
+					iCityDefenseRecoverySpeedModifier += CvReplacedBuildingInfo.getCityDefenseRecoverySpeedModifier()
+					iDefense += CvReplacedBuildingInfo.getDefenseModifier()
+					iEspionageDefense += CvReplacedBuildingInfo.getEspionageDefenseModifier()
+					iLocalDynamicDefense += CvReplacedBuildingInfo.getLocalDynamicDefense()
+					iMinDefense += CvReplacedBuildingInfo.getMinDefense()
+					iNoEntryDefenseLevel += CvReplacedBuildingInfo.getNoEntryDefenseLevel()  #iNoEntryDefenseLevel - lower value is better
+					iRiverDefensePenalty += CvReplacedBuildingInfo.getRiverDefensePenalty()
+					iExperience += CvReplacedBuildingInfo.getFreeExperience()
+					iGlobalExperience += CvReplacedBuildingInfo.getGlobalFreeExperience()
+					aFreePromotion = [CvReplacedBuildingInfo.getFreePromotion(), CvReplacedBuildingInfo.getFreePromotion_2(), CvReplacedBuildingInfo.getFreePromotion_3()]
+					for i in xrange(len(aBaseFreePromotion)):
+						if aBaseFreePromotion[i] != aFreePromotion[i] and aFreePromotion[i] != -1:						
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" base free promotion: "+str(aBaseFreePromotion[i])+" replaced free promotion: "+GC.getPromotionInfo(aFreePromotion[i]).getType()+" "+str(aImmediateReplacedNameList))
 
-				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist> in base
+				#Keep already existing <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3> in base
 				iFinalTradeRoutes = iBaseTradeRoutes + iTradeRoutes
 				iFinalCoastalTradeRoutes = iBaseCoastalTradeRoutes + iCoastalTradeRoutes
 				iFinalGlobalTradeRoutes = iBaseGlobalTradeRoutes + iGlobalTradeRoutes
@@ -1012,6 +1072,24 @@ class TestCode:
 				iFinalFreeSpecialist = iBaseFreeSpecialist + iFreeSpecialist
 				iFinalAreaFreeSpecialist = iBaseAreaFreeSpecialist + iAreaFreeSpecialist
 				iFinalGlobalFreeSpecialist = iBaseGlobalFreeSpecialist + iGlobalFreeSpecialist
+				iFinalMaintenanceModifier = iBaseMaintenanceModifier + iMaintenanceModifier #iMaintenanceModifier - lower value is better
+				iFinalHappinessPercentPerPopulation = iBaseHappinessPercentPerPopulation + iHappinessPercentPerPopulation
+				iFinalHealthPercentPerPopulation = iBaseHealthPercentPerPopulation + iHealthPercentPerPopulation
+				iFinalWarWearinessModifier = iBaseWarWearinessModifier + iWarWearinessModifier #iWarWearinessModifier - lower value is better
+				iFinalGlobalWarWearinessModifier = iBaseGlobalWarWearinessModifier + iGlobalWarWearinessModifier #iGlobalWarWearinessModifier - lower value is better
+				iFinalEnemyWarWearinessModifier = iBaseEnemyWarWearinessModifier + iEnemyWarWearinessModifier
+				iFinalAllCityDefense = iBaseAllCityDefense + iAllCityDefense
+				iFinalBombardDefense = iBaseBombardDefense + iBombardDefense
+				iFinalBuildingDefenseRecoverySpeedModifier = iBaseBuildingDefenseRecoverySpeedModifier + iBuildingDefenseRecoverySpeedModifier
+				iFinalCityDefenseRecoverySpeedModifier = iBaseCityDefenseRecoverySpeedModifier + iCityDefenseRecoverySpeedModifier
+				iFinalDefense = iBaseDefense + iDefense
+				iFinalEspionageDefense = iBaseEspionageDefense + iEspionageDefense
+				iFinalLocalDynamicDefense = iBaseLocalDynamicDefense + iLocalDynamicDefense
+				iFinalMinDefense = iBaseMinDefense + iMinDefense
+				iFinalNoEntryDefenseLevel = iBaseNoEntryDefenseLevel + iNoEntryDefenseLevel  #iNoEntryDefenseLevel - lower value is better
+				iFinalRiverDefensePenalty = iBaseRiverDefensePenalty + iRiverDefensePenalty
+				iFinalExperience = iBaseExperience + iExperience
+				iFinalGlobalExperience = iBaseGlobalExperience + iGlobalExperience
 
 				#Building shouldn't be worse than replaced one!
 				if iBaseTradeRoutes < iTradeRoutes:
@@ -1038,6 +1116,42 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Area free Specialist "+str(iFinalAreaFreeSpecialist)+" replaced: "+str(aImmediateReplacedNameList))
 				if iBaseGlobalFreeSpecialist < iGlobalFreeSpecialist:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global free Specialist "+str(iFinalGlobalFreeSpecialist)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseMaintenanceModifier > iMaintenanceModifier: #iMaintenanceModifier - lower value is better, as it increases cost of running city
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Maintaince Modifier "+str(iFinalMaintenanceModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHappinessPercentPerPopulation < iHappinessPercentPerPopulation:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Happiness per Pop "+str(iFinalHappinessPercentPerPopulation)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseHealthPercentPerPopulation < iHealthPercentPerPopulation:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Health per Pop "+str(iFinalHealthPercentPerPopulation)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseWarWearinessModifier > iWarWearinessModifier: #iWarWearinessModifier - lower value is better, as it increases unhappiness from war
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have War Weariness "+str(iFinalWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGlobalWarWearinessModifier > iGlobalWarWearinessModifier: #iGlobalWarWearinessModifier - lower value is better, as it increases unhappiness from war
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global War Weariness "+str(iFinalGlobalWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseEnemyWarWearinessModifier < iEnemyWarWearinessModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Enemy War Weariness "+str(iFinalEnemyWarWearinessModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseAllCityDefense < iAllCityDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have All City Defense "+str(iFinalAllCityDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseBombardDefense < iBombardDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Bombard Defense "+str(iFinalBombardDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseBuildingDefenseRecoverySpeedModifier < iBuildingDefenseRecoverySpeedModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Building Defense Recovery Speed "+str(iFinalBuildingDefenseRecoverySpeedModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseCityDefenseRecoverySpeedModifier < iCityDefenseRecoverySpeedModifier:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have City Defense Recovery Speed "+str(iFinalCityDefenseRecoverySpeedModifier)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseDefense < iDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Defense "+str(iFinalDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseEspionageDefense < iEspionageDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Espionage Defense "+str(iFinalEspionageDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseLocalDynamicDefense < iLocalDynamicDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Local Dynamic Defense "+str(iFinalLocalDynamicDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseMinDefense < iMinDefense:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Min Defense "+str(iFinalMinDefense)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseNoEntryDefenseLevel > iNoEntryDefenseLevel and not (iBaseNoEntryDefenseLevel > 0 and iNoEntryDefenseLevel == 0):  #iNoEntryDefenseLevel - lower value is better, as units have to dig trough to lower level of defense, value of 0 means no need to dig trough defense.
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have No Entry Defense Level "+str(iFinalNoEntryDefenseLevel)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseRiverDefensePenalty < iRiverDefensePenalty:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have River Defense Penalty "+str(iFinalRiverDefensePenalty)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseExperience < iExperience:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Free Experience "+str(iFinalExperience)+" replaced: "+str(aImmediateReplacedNameList))
+				if iBaseGlobalExperience < iGlobalExperience:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Free global Experience Penalty "+str(iFinalGlobalExperience)+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
@@ -1290,39 +1404,156 @@ class TestCode:
 					if aBaseTechHealthChanges[iTech] < aTechHealthChanges[iTech]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech health Changes "+str(aFinalTechHealthChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=============================================================================================================================
+				#<GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers> - base
+				aBaseGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aBaseGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aBaseBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aBaseBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
+					aBaseGlobalBuildingCostModifiers[pair.id] += pair.value
+				for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
+					aBaseGlobalBuildingProductionModifiers[pair.id] += pair.value
+				for pair in CvBuildingInfo.getBuildingHappinessChanges():
+					aBaseBuildingHappinessChanges[pair.id] += pair.value
+				for pair in CvBuildingInfo.getBuildingProductionModifiers():
+					aBaseBuildingProductionModifiers[pair.id] += pair.value
+
+				#Analyze replacements by tag
+				aGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers>
+					for pair in CvReplacedBuildingInfo.getGlobalBuildingCostModifiers():
+						aGlobalBuildingCostModifiers[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getGlobalBuildingProductionModifiers():
+						aGlobalBuildingProductionModifiers[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getBuildingHappinessChanges():
+						aBuildingHappinessChanges[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getBuildingProductionModifiers():
+						aBuildingProductionModifiers[pair.id] += pair.value
+
+				#Keep already existing <GlobalBuildingCostModifiers>, <GlobalBuildingProductionModifiers>, <BuildingHappinessChanges>, <BuildingProductionModifiers> in base
+				aFinalGlobalBuildingCostModifiers = [0]*GC.getNumBuildingInfos()
+				aFinalGlobalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				aFinalBuildingHappinessChanges = [0]*GC.getNumBuildingInfos()
+				aFinalBuildingProductionModifiers = [0]*GC.getNumBuildingInfos()
+				for iAffectedBuildings in xrange(GC.getNumBuildingInfos()):
+					aFinalGlobalBuildingCostModifiers[iAffectedBuildings] = aBaseGlobalBuildingCostModifiers[iAffectedBuildings] + aGlobalBuildingCostModifiers[iAffectedBuildings]
+					aFinalGlobalBuildingProductionModifiers[iAffectedBuildings] = aBaseGlobalBuildingProductionModifiers[iAffectedBuildings] + aGlobalBuildingProductionModifiers[iAffectedBuildings]
+					aFinalBuildingHappinessChanges[iAffectedBuildings] = aBaseBuildingHappinessChanges[iAffectedBuildings] + aBuildingHappinessChanges[iAffectedBuildings]
+					aFinalBuildingProductionModifiers[iAffectedBuildings] = aBaseBuildingProductionModifiers[iAffectedBuildings] + aBuildingProductionModifiers[iAffectedBuildings]
+
+				#Building shouldn't be worse than replaced one!
+				for iAffectedBuildings in xrange(GC.getNumBuildingInfos()):
+					if aBaseGlobalBuildingCostModifiers[iAffectedBuildings] < aGlobalBuildingCostModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Global Building cost Modifiers "+str(aFinalGlobalBuildingCostModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseGlobalBuildingProductionModifiers[iAffectedBuildings] < aGlobalBuildingProductionModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Global Building production Modifiers "+str(aFinalGlobalBuildingProductionModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseBuildingHappinessChanges[iAffectedBuildings] < aBuildingHappinessChanges[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building Happiness Changes "+str(aFinalBuildingHappinessChanges[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+					if aBaseBuildingProductionModifiers[iAffectedBuildings] < aBuildingProductionModifiers[iAffectedBuildings]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building production Modifiers "+str(aFinalBuildingProductionModifiers[iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<DomainFreeExperiences> - base
+				aBaseDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					aBaseDomainFreeExperiences[iDomain] += CvBuildingInfo.getDomainFreeExperience(iDomain)
+
+				#Analyze replacements by tag
+				aDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<DomainFreeExperiences>
+					for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+						aDomainFreeExperiences[iDomain] += CvReplacedBuildingInfo.getDomainFreeExperience(iDomain)
+
+				#Keep already existing <DomainFreeExperiences> in base
+				aFinalDomainFreeExperiences = [0]*DomainTypes.NUM_DOMAIN_TYPES
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					aFinalDomainFreeExperiences[iDomain] = aBaseDomainFreeExperiences[iDomain] + aDomainFreeExperiences[iDomain]
+
+				#Building shouldn't be worse than replaced one!
+				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+					if aBaseDomainFreeExperiences[iDomain] < aDomainFreeExperiences[iDomain]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getDomainInfo(iDomain).getType()+" Domain Free Experience "+str(aFinalDomainFreeExperiences[iDomain])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<UnitCombatFreeExperiences> - base
+				aBaseUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					aBaseUnitCombatFreeExperiences[iUnitCombat] += CvBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+
+				#Analyze replacements by tag
+				aUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<UnitCombatFreeExperiences>
+					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+						aUnitCombatFreeExperiences[iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+
+				#Keep already existing <UnitCombatFreeExperiences> in base
+				aFinalUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					aFinalUnitCombatFreeExperiences[iUnitCombat] = aBaseUnitCombatFreeExperiences[iUnitCombat] + aUnitCombatFreeExperiences[iUnitCombat]
+
+				#Building shouldn't be worse than replaced one!
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					if aBaseUnitCombatFreeExperiences[iUnitCombat] < aUnitCombatFreeExperiences[iUnitCombat]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat free Experience "+str(aFinalUnitCombatFreeExperiences[iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+
 				#===== 2D ENTRIES - coupling between two infotypes, like yield changing in presence of bonus =====#
-				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers> - base
+				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> - base
 				aBaseBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aBaseVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aBaseBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBaseBonusCommercePercentChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBaseBonusCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aBaseBonusYieldChanges[iBonus][iYield] += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
 						aBaseVicinityBonusYieldChanges[iBonus][iYield] += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
 						aBaseBonusYieldModifiers[iBonus][iYield] += CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aBaseBonusCommercePercentChanges[iBonus][iCommerce] += CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+						aBaseBonusCommerceModifiers[iBonus][iCommerce] += CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
 
 				#Analyze replacements by tag
 				aBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aBonusVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBonusCommercePercentChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aBonusCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>
+					#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers>
 					for iBonus in xrange(GC.getNumBonusInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 							aBonusYieldChanges[iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldChanges(iBonus, iYield)
 							aBonusVicinityBonusYieldChanges[iBonus][iYield] += CvReplacedBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
 							aBonusYieldModifiers[iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aBonusCommercePercentChanges[iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+							aBonusCommerceModifiers[iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
 
-				#Keep already existing <BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers> in base
+				#Keep already existing <BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> in base
 				aFinalBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aFinalBonusVicinityBonusYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				aFinalBonusYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aFinalBonusCommercePercentChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
+				aFinalBonusCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())]
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aFinalBonusYieldChanges[iBonus][iYield] = aBaseBonusYieldChanges[iBonus][iYield] + aBonusYieldChanges[iBonus][iYield]
 						aFinalBonusVicinityBonusYieldChanges[iBonus][iYield] = aBaseVicinityBonusYieldChanges[iBonus][iYield] + aBonusVicinityBonusYieldChanges[iBonus][iYield]
 						aFinalBonusYieldModifiers[iBonus][iYield] = aBaseBonusYieldModifiers[iBonus][iYield] + aBonusYieldModifiers[iBonus][iYield]
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aFinalBonusCommercePercentChanges[iBonus][iCommerce] = aBaseBonusCommercePercentChanges[iBonus][iCommerce] + aBonusCommercePercentChanges[iBonus][iCommerce]
+						aFinalBonusCommerceModifiers[iBonus][iCommerce] = aBaseBonusCommerceModifiers[iBonus][iCommerce] + aBonusCommerceModifiers[iBonus][iCommerce]
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1333,6 +1564,255 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus vicinity Yield Changes "+str(aFinalBonusVicinityBonusYieldChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 						if aBaseBonusYieldModifiers[iBonus][iYield] < aBonusYieldModifiers[iBonus][iYield]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Yield Modifiers "+str(aFinalBonusYieldModifiers[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aBaseBonusCommercePercentChanges[iBonus][iCommerce] < aBonusCommercePercentChanges[iBonus][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce percent Changes "+str(aFinalBonusCommercePercentChanges[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseBonusCommerceModifiers[iBonus][iCommerce] < aBonusCommerceModifiers[iBonus][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce Modifiers "+str(aFinalBonusCommerceModifiers[iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#======================================================================================================================================
+				#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
+				aBaseTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aBaseTechSpecialistChanges = [[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())]
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aBaseTechYieldChanges[iTech][iYield] += CvBuildingInfo.getTechYieldChange(iTech, iYield)
+						aBaseTechYieldModifiers[iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aBaseTechCommerceChanges[iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+						aBaseTechCommerceModifiers[iTech][iCommerce] += CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						aBaseTechSpecialistChanges[iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+
+				#Analyze replacements by tag
+				aTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aTechSpecialistChanges = [[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())]
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aTechYieldChanges[iTech][iYield] += CvReplacedBuildingInfo.getTechYieldChange(iTech, iYield)
+							aTechYieldModifiers[iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aTechCommerceChanges[iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+							aTechCommerceModifiers[iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							aTechSpecialistChanges[iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+
+				#Keep already existing <TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
+				aFinalTechYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechYieldModifiers = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())]
+				aFinalTechSpecialistChanges = [[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())]
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aFinalTechYieldChanges[iTech][iYield] = aBaseTechYieldChanges[iTech][iYield] + aTechYieldChanges[iTech][iYield]
+						aFinalTechYieldModifiers[iTech][iYield] = aBaseTechYieldModifiers[iTech][iYield] + aTechYieldModifiers[iTech][iYield]
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aFinalTechCommerceChanges[iTech][iCommerce] = aBaseTechCommerceChanges[iTech][iCommerce] + aTechCommerceChanges[iTech][iCommerce]
+						aFinalTechCommerceModifiers[iTech][iCommerce] = aBaseTechCommerceModifiers[iTech][iCommerce] + aTechCommerceModifiers[iTech][iCommerce]
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						aFinalTechSpecialistChanges[iTech][iSpecialist] = aBaseTechSpecialistChanges[iTech][iSpecialist] + aTechSpecialistChanges[iTech][iSpecialist]
+
+				#Building shouldn't be worse than replaced one!
+				for iTech in xrange(GC.getNumTechInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aBaseTechYieldChanges[iTech][iYield] < aTechYieldChanges[iTech][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Changes "+str(aFinalTechYieldChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseTechYieldModifiers[iTech][iYield] < aTechYieldModifiers[iTech][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Yield Modifiers "+str(aFinalTechYieldModifiers[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aBaseTechCommerceChanges[iTech][iCommerce] < aTechCommerceChanges[iTech][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Changes "+str(aFinalTechCommerceChanges[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+						if aBaseTechCommerceModifiers[iTech][iCommerce] < aTechCommerceModifiers[iTech][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Modifiers "+str(aFinalTechCommerceModifiers[iTech])+" replaced: "+str(aImmediateReplacedNameList))
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						if aBaseTechSpecialistChanges[iTech][iSpecialist] < aTechSpecialistChanges[iTech][iSpecialist]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType()+" replaced: "+str(aFinalTechSpecialistChanges))
+
+				#==============================================================================================================
+				#<GlobalBuildingExtraCommerces> - base
+				aBaseGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+					iAffectedBuilding = pBuildingCommerceChange.eBuilding
+					iCommerce = pBuildingCommerceChange.eCommerce
+					aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] += pBuildingCommerceChange.value
+
+				#Analyze replacements by tag
+				aGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<GlobalBuildingExtraCommerces>
+					for pBuildingCommerceChange in CvReplacedBuildingInfo.getGlobalBuildingCommerceChanges():
+						iAffectedBuilding = pBuildingCommerceChange.eBuilding
+						iCommerce = pBuildingCommerceChange.eCommerce
+						aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] += pBuildingCommerceChange.value
+
+				#Keep already existing <GlobalBuildingExtraCommerces> in base
+				aFinalGlobalBuildingExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBuildingInfos())]
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aFinalGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] = aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] + aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce]
+
+				#Building shouldn't be worse than replaced one!
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aBaseGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce] < aGlobalBuildingExtraCommerces[iAffectedBuilding][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuilding).getType()+" Global Building extra Commerces "+str(aFinalGlobalBuildingExtraCommerces[iAffectedBuilding])+" replaced: "+str(aImmediateReplacedNameList))
+
+	#Building - check if building replacements are present in tags affecting buildings
+	def checkBuildingReplacingAvailability(self):
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		#Buildings referencing buildings
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			#<GlobalBuildingExtraCommerces>
+			for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+				iAffectedBuilding = pBuildingCommerceChange.eBuilding
+				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+				aReplacementBuildingsList = []
+				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+				#If affected building replacement is listed, then remove it from buildings to be added
+				for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+					iAffectedBuilding = pBuildingCommerceChange.eBuilding
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+			#<GlobalBuildingCostModifiers>
+			for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
+				iAffectedBuilding = pair.id
+				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+				aReplacementBuildingsList = []
+				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+				#If affected building replacement is listed, then remove it from buildings to be added
+				for pair in CvBuildingInfo.getGlobalBuildingCostModifiers():
+					iAffectedBuilding = pair.id
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingCostModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+			#<GlobalBuildingProductionModifiers>
+			for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
+				iAffectedBuilding = pair.id
+				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+				aReplacementBuildingsList = []
+				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+				#If affected building replacement is listed, then remove it from buildings to be added
+				for pair in CvBuildingInfo.getGlobalBuildingProductionModifiers():
+					iAffectedBuilding = pair.id
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+			#<BuildingHappinessChanges>
+			for pair in CvBuildingInfo.getBuildingHappinessChanges():
+				iAffectedBuilding = pair.id
+				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+				aReplacementBuildingsList = []
+				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+				#If affected building replacement is listed, then remove it from buildings to be added
+				for pair in CvBuildingInfo.getBuildingHappinessChanges():
+					iAffectedBuilding = pair.id
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" BuildingHappinessChanges "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+			#<BuildingProductionModifiers>
+			for pair in CvBuildingInfo.getBuildingProductionModifiers():
+				iAffectedBuilding = pair.id
+				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+				aReplacementBuildingsList = []
+				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+							aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+				#If affected building replacement is listed, then remove it from buildings to be added
+				for pair in CvBuildingInfo.getBuildingProductionModifiers():
+					iAffectedBuilding = pair.id
+					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+				if len(aReplacementBuildingsList) > 0:
+					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+		#Civics referencing buildings
+		if 0:# There is currently no way to filter out already existing buildings
+			for iCivic in xrange(GC.getNumCivicInfos()):
+				CvCivicInfo = GC.getCivicInfo(iCivic)
+
+				#<BuildingHappinessChanges>
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					if CvCivicInfo.getBuildingHappinessChanges(iAffectedBuilding) != 0:
+						aReplacementBuildingsList = []
+						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingHappinessChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+				#<BuildingHealthChanges>
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					if CvCivicInfo.getBuildingHealthChanges(iAffectedBuilding) != 0:
+						aReplacementBuildingsList = []
+						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingHealthChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+				#<BuildingProductionModifiers>
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					if CvCivicInfo.getBuildingProductionModifier(iAffectedBuilding) != 0:
+						aReplacementBuildingsList = []
+						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+						if len(aReplacementBuildingsList) > 0:
+							self.log(CvCivicInfo.getType()+" BuildingProductionModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+				#<BuildingCommerceModifiers>
+				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
+					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if CvCivicInfo.getBuildingCommerceModifier(iAffectedBuilding, iCommerce) != 0:
+							aReplacementBuildingsList = []
+							if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+								for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+									if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+										aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
+							if len(aReplacementBuildingsList) > 0:
+								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
@@ -1528,7 +2008,7 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Commerce double time - wonders only, and ensure flat change exists
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or  CvBuildingInfo.getHolyCity() != -1):
+				if CvBuildingInfo.getCommerceChangeDoubleTime(iCommerce) != 0 and not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" Non-wonder has commerce change double time")
 
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1558,6 +2038,12 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" has extra free bonus tag, but actually doesn't give bonus")
 				if CvBuildingInfo.getExtraFreeBonus(i) == -1 and CvBuildingInfo.getExtraFreeBonusNum(i) != 0:
 					self.log(CvBuildingInfo.getType()+" has unspecified extra free bonus type")
+
+			#GlobalBuildingExtraCommerces is meant to be placed on wonders
+			for pBuildingCommerceChange in CvBuildingInfo.getGlobalBuildingCommerceChanges():
+				CvTargetBuilding = GC.getBuildingInfo(pBuildingCommerceChange.eBuilding)
+				if not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
+					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces should be swapped with "+CvTargetBuilding.getType())
 
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):

@@ -101,24 +101,19 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALCOCHOL_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Coricancha -->
 			<Type>BUILDING_ANDEAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ANDEAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_SHRINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ANDEAN_SHRINE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<HolyCity>RELIGION_ANDEANISM</HolyCity>
-			<!-- Construction cost -->
-			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -134,19 +129,15 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<!-- Great People effects -->
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_ANDEANISM</GlobalReligionCommerce>
-			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -562,7 +553,6 @@
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1475,8 +1465,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<iDefense>50</iDefense>
-			<iBombardDefense>20</iBombardDefense>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9475,7 +9463,6 @@
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10898,15 +10885,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -16895,7 +16873,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>5</iDefense>
 			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
 			<iLineOfSight>1</iLineOfSight>
 			<bAutoBuild>1</bAutoBuild>
@@ -17611,6 +17588,18 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
+					<BuildingType>BUILDING_STEAM_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MODERN_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WATERMILL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
@@ -17627,6 +17616,10 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AGROFOREST</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MODERN_MILL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
@@ -17639,8 +17632,16 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<iProductionModifier>-100</iProductionModifier>
+					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>3</iAsset>

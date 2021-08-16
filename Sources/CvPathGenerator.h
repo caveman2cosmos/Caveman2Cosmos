@@ -233,8 +233,7 @@ public:
 
 	const CvPath& getLastPath() const;
 	void SelfTest();
-	static void EnableMaxPerformance(bool bEnable) { m_bFastMode = bEnable; }
-	static bool IsMaxPerformance() { return m_bFastMode; }
+
 private:
 	class CvPathNodeComparer
 	{
@@ -287,8 +286,6 @@ private:
 	EdgeValidity						m_ValidFunc;
 	TerminusValidity					m_TerminusValidFunc;
 	TurnEndValidityCheckRequired		m_TurnEndValidCheckNeeded;
-
-	static bool							m_bFastMode;
 
 public:
 	int									m_nodesProcessed;

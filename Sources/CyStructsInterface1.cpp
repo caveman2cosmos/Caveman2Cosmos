@@ -188,12 +188,12 @@ void CyStructsPythonInterface1()
 		.def_readwrite("sUnitName", &CombatDetails::sUnitName)
 		;
 
-	python::class_<std::pair<int, int> >("CyPair")
+	python::class_<std::pair<int, int> >("CyPair", python::no_init)
 		.def_readwrite("id", &std::pair<int, int>::first)
 		.def_readwrite("value", &std::pair<int, int>::second)
 	;
 
-	python::class_<BuildingCommerceChange>("CyBuildingCommerceChange")
+	python::class_<BuildingCommerceChange>("CyBuildingCommerceChange", python::no_init)
 		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
 		.def_readwrite("eCommerce", &BuildingCommerceChange::eCommerce)
 		.def_readwrite("iChange", &BuildingCommerceChange::iChange)

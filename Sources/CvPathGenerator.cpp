@@ -353,8 +353,6 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 	}
 }
 
-bool CvPathGenerator::m_bFastMode = false;
-
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
 	: m_map(pMap)
 	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))
@@ -1885,8 +1883,6 @@ void CvPathGenerator::SelfTest()
 	//	Pick an arbitrary unit with more than 1 movement point
 	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
 
-	EnableMaxPerformance(true);
-
 	while( iPathsRemaining > 0 )
 	{
 		CvPlot*	pStartPlot = map.plotByIndex(rand.getInt()%iMapSize);
@@ -1953,8 +1949,6 @@ void CvPathGenerator::SelfTest()
 			GET_PLAYER((PlayerTypes)0).releaseTempUnit();
 		}
 	}
-
-	EnableMaxPerformance(false);
 
 	sprintf(buffer,"%d paths out of %d successful\r\n", iPathsSuccessful, NUM_PATHS);
 	OutputDebugString(buffer);
