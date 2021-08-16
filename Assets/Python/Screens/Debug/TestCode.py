@@ -930,7 +930,7 @@ class TestCode:
 			iTechID = max(self.checkBuildingTechRequirements(CvBuildingInfo)[2])
 
 			#Ignore Stories Effect, Pollution, and Bans
-			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1 and CvBuildingInfo.getNumReplacedBuilding() != 0:
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
