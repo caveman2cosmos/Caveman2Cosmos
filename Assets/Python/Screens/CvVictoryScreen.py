@@ -1424,7 +1424,7 @@ class CvVictoryScreen:
 		if not bWinner:
 			return -1
 		if iVoteCand > iVoteReq and bVictoryVote:
-			return GC.getInfoTypeForString("COLOR_RED")
+			return GC.getCOLOR_RED()
 		if iVoteTotal > iVoteReq:
 			return self.COLOR_GREEN
 		return -1

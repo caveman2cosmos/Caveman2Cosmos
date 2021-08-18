@@ -204,6 +204,7 @@ m_Properties(this)
 	}
 }
 
+
 CvUnit::~CvUnit()
 {
 	if (!isUsingDummyEntities())
@@ -324,7 +325,7 @@ void CvUnit::changeIdentity(UnitTypes eUnit)
 
 void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark)
 {
-	FAssert(NO_UNIT != eUnit);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 
 	//	If the current viewport is not yet initialized center it on the first unit created for the active player
 	if (GC.getGame().getActivePlayer() == eOwner
@@ -883,6 +884,386 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_worker = NULL;
 }
 
+CvUnit& CvUnit::operator=(const CvUnit& other)
+{
+	//uninit();
+	//clearCityOfOrigin();
+
+	//static_cast<CvUnitAI&>(*this) = static_cast<const CvUnitAI&>(other);
+
+	m_iHealUnitCombatCount = other.m_iHealUnitCombatCount;
+	m_iDCMBombRange = other.m_iDCMBombRange;
+	m_iDCMBombAccuracy = other.m_iDCMBombAccuracy;
+	//m_iID = other.m_iID;
+	//if (!bIdentityChange)
+	//{
+	//	m_iGroupID = other.m_iGroupID;
+	//}
+	m_iHotKeyNumber = other.m_iHotKeyNumber;
+	//m_iX = other.m_iX;
+	//m_iY = other.m_iY;
+	m_iLastMoveTurn = other.m_iLastMoveTurn;
+	m_iReconX = other.m_iReconX;
+	m_iReconY = other.m_iReconY;
+	m_iGameTurnCreated = other.m_iGameTurnCreated;
+	m_iDamage = other.m_iDamage;
+	m_iMoves = other.m_iMoves;
+	m_iExperience = other.m_iExperience;
+	m_iLevel = other.m_iLevel;
+	m_iCargo = other.m_iCargo;
+	m_iSMCargo = other.m_iSMCargo;
+	m_iAttackPlotX = other.m_iAttackPlotX;
+	m_iAttackPlotY = other.m_iAttackPlotY;
+	m_iCombatTimer = other.m_iCombatTimer;
+	m_iCombatFirstStrikes = other.m_iCombatFirstStrikes;
+	m_iFortifyTurns = other.m_iFortifyTurns;
+	m_iBlitzCount = other.m_iBlitzCount;
+	m_iRBombardForceAbilityCount = other.m_iRBombardForceAbilityCount;
+	m_iAmphibCount = other.m_iAmphibCount;
+	m_iRiverCount = other.m_iRiverCount;
+	m_iEnemyRouteCount = other.m_iEnemyRouteCount;
+	m_iAlwaysHealCount = other.m_iAlwaysHealCount;
+	m_iHillsDoubleMoveCount = other.m_iHillsDoubleMoveCount;
+	m_iImmuneToFirstStrikesCount = other.m_iImmuneToFirstStrikesCount;
+	m_iAlwaysInvisibleCount = other.m_iAlwaysInvisibleCount;
+	m_iDefensiveVictoryMoveCount = other.m_iDefensiveVictoryMoveCount;
+	m_iFreeDropCount = other.m_iFreeDropCount;
+	m_iOffensiveVictoryMoveCount = other.m_iOffensiveVictoryMoveCount;
+	m_iOneUpCount = other.m_iOneUpCount;
+	m_iPillageCultureCount = other.m_iPillageCultureCount;
+	m_iPillageEspionageCount = other.m_iPillageEspionageCount;
+	m_iPillageMarauderCount = other.m_iPillageMarauderCount;
+	m_iPillageOnMoveCount = other.m_iPillageOnMoveCount;
+	m_iPillageOnVictoryCount = other.m_iPillageOnVictoryCount;
+	m_iPillageResearchCount = other.m_iPillageResearchCount;
+	m_iAirCombatLimitChange = other.m_iAirCombatLimitChange;
+	m_iCelebrityHappy = other.m_iCelebrityHappy;
+	m_iCollateralDamageLimitChange = other.m_iCollateralDamageLimitChange;
+	m_iCollateralDamageMaxUnitsChange = other.m_iCollateralDamageMaxUnitsChange;
+	m_iCombatLimitChange = other.m_iCombatLimitChange;
+	m_iExtraDropRange = other.m_iExtraDropRange;
+	m_iSurvivorChance = other.m_iSurvivorChance;
+	m_iVictoryAdjacentHeal = other.m_iVictoryAdjacentHeal;
+	m_iVictoryHeal = other.m_iVictoryHeal;
+	m_iVictoryStackHeal = other.m_iVictoryStackHeal;
+	m_iExtraVisibilityRange = other.m_iExtraVisibilityRange;
+	m_iExtraMoves = other.m_iExtraMoves;
+	m_iExtraMoveDiscount = other.m_iExtraMoveDiscount;
+	m_iExtraAirRange = other.m_iExtraAirRange;
+	m_iExtraIntercept = other.m_iExtraIntercept;
+	m_iExtraEvasion = other.m_iExtraEvasion;
+	m_iExtraFirstStrikes = other.m_iExtraFirstStrikes;
+	m_iExtraChanceFirstStrikes = other.m_iExtraChanceFirstStrikes;
+	m_iExtraWithdrawal = other.m_iExtraWithdrawal;
+	m_iExtraAttackCombatModifier = other.m_iExtraAttackCombatModifier;
+	m_iExtraDefenseCombatModifier = other.m_iExtraDefenseCombatModifier;
+	m_iExtraPursuit = other.m_iExtraPursuit;
+	m_iExtraEarlyWithdraw = other.m_iExtraEarlyWithdraw;
+	m_iExtraVSBarbs = other.m_iExtraVSBarbs;
+	m_iExtraReligiousCombatModifier = other.m_iExtraReligiousCombatModifier;
+	m_iExtraArmor = other.m_iExtraArmor;
+	m_iExtraPuncture = other.m_iExtraPuncture;
+	m_iExtraOverrun = other.m_iExtraOverrun;
+	m_iExtraRepel = other.m_iExtraRepel;
+	m_iExtraFortRepel = other.m_iExtraFortRepel;
+	m_iExtraRepelRetries = other.m_iExtraRepelRetries;
+	m_iExtraUnyielding = other.m_iExtraUnyielding;
+	m_iExtraKnockback = other.m_iExtraKnockback;
+	m_iExtraKnockbackRetries = other.m_iExtraKnockbackRetries;
+	m_iStampedeCount = other.m_iStampedeCount;
+	m_iAttackOnlyCitiesCount = other.m_iAttackOnlyCitiesCount;
+	m_iIgnoreNoEntryLevelCount = other.m_iIgnoreNoEntryLevelCount;
+	m_iIgnoreZoneofControlCount = other.m_iIgnoreZoneofControlCount;
+	m_iFliesToMoveCount = other.m_iFliesToMoveCount;
+	m_iExtraStrAdjperRnd = other.m_iExtraStrAdjperRnd;
+	m_iExtraStrAdjperAtt = other.m_iExtraStrAdjperAtt;
+	m_iExtraStrAdjperDef = other.m_iExtraStrAdjperDef;
+	m_iExtraWithdrawAdjperAtt = other.m_iExtraWithdrawAdjperAtt;
+	m_iExtraUnnerve = other.m_iExtraUnnerve;
+	m_iExtraEnclose = other.m_iExtraEnclose;
+	m_iExtraLunge = other.m_iExtraLunge;
+	m_iExtraDynamicDefense = other.m_iExtraDynamicDefense;
+	m_iExtraStrength = other.m_iExtraStrength;
+	m_iSMStrength = other.m_iSMStrength;
+	m_iAnimalIgnoresBordersCount = other.m_iAnimalIgnoresBordersCount;
+	m_iOnslaughtCount = other.m_iOnslaughtCount;
+	m_iExtraFortitude = other.m_iExtraFortitude;
+#ifdef STRENGTH_IN_NUMBERS
+	m_iExtraFrontSupportPercent = other.m_iExtraFrontSupportPercent;
+	m_iExtraShortRangeSupportPercent = other.m_iExtraShortRangeSupportPercent;
+	m_iExtraMediumRangeSupportPercent = other.m_iExtraMediumRangeSupportPercent;
+	m_iExtraLongRangeSupportPercent = other.m_iExtraLongRangeSupportPercent;
+	m_iExtraFlankSupportPercent = other.m_iExtraFlankSupportPercent;
+	m_iSupportCount = other.m_iSupportCount;
+	m_iAttackFromPlotX = other.m_iAttackFromPlotX;
+	m_iAttackFromPlotY = other.m_iAttackFromPlotY;
+#endif // STRENGTH_IN_NUMBERS
+	m_iExtraDodgeModifier = other.m_iExtraDodgeModifier;
+	m_iExtraPrecisionModifier = other.m_iExtraPrecisionModifier;
+	m_iExtraPowerShots = other.m_iExtraPowerShots;
+	m_iExtraPowerShotCombatModifier = other.m_iExtraPowerShotCombatModifier;
+	m_iExtraPowerShotPunctureModifier = other.m_iExtraPowerShotPunctureModifier;
+	m_iExtraPowerShotPrecisionModifier = other.m_iExtraPowerShotPrecisionModifier;
+	m_iExtraPowerShotCriticalModifier = other.m_iExtraPowerShotCriticalModifier;
+	m_iExtraCriticalModifier = other.m_iExtraCriticalModifier;
+	m_iExtraEndurance = other.m_iExtraEndurance;
+	m_iColdDamage = other.m_iColdDamage;
+	m_iDealColdDamageCount = other.m_iDealColdDamageCount;
+	m_iColdImmuneCount = other.m_iColdImmuneCount;
+	m_iCombatPowerShots = other.m_iCombatPowerShots;
+	m_iCombatKnockbacks = other.m_iCombatKnockbacks;
+	m_iCombatRepels = other.m_iCombatRepels;
+	m_iExtraRoundStunProb = other.m_iExtraRoundStunProb;
+	m_iCombatStuns = other.m_iCombatStuns;
+	m_iExtraPoisonProbabilityModifier = other.m_iExtraPoisonProbabilityModifier;
+	m_iRetrainsAvailable = other.m_iRetrainsAvailable;
+	m_iQualityBaseTotal = other.m_iQualityBaseTotal;
+	m_iGroupBaseTotal = other.m_iGroupBaseTotal;
+	m_iSizeBaseTotal = other.m_iSizeBaseTotal;
+	m_iExtraQuality = other.m_iExtraQuality;
+	m_iExtraGroup = other.m_iExtraGroup;
+	m_iExtraSize = other.m_iExtraSize;
+	m_iSMCargoVolume = other.m_iSMCargoVolume;
+	m_iSMExtraCargoVolume = other.m_iSMExtraCargoVolume;
+	m_iSMCargoVolumeModifier = other.m_iSMCargoVolumeModifier;
+	m_iCannotMergeSplitCount = other.m_iCannotMergeSplitCount;
+	m_iExtraCaptureProbabilityModifier = other.m_iExtraCaptureProbabilityModifier;
+	m_iExtraCaptureResistanceModifier = other.m_iExtraCaptureResistanceModifier;
+	m_iExtraBreakdownChance = other.m_iExtraBreakdownChance;
+	m_iExtraBreakdownDamage = other.m_iExtraBreakdownDamage;
+	m_iExtraTaunt = other.m_iExtraTaunt;
+	m_iExtraCombatModifierPerSizeMore = other.m_iExtraCombatModifierPerSizeMore;
+	m_iExtraCombatModifierPerSizeLess = other.m_iExtraCombatModifierPerSizeLess;
+	m_iExtraCombatModifierPerVolumeMore = other.m_iExtraCombatModifierPerVolumeMore;
+	m_iExtraCombatModifierPerVolumeLess = other.m_iExtraCombatModifierPerVolumeLess;
+	m_iExtraMaxHP = other.m_iExtraMaxHP;
+	m_iExtraStrengthModifier = other.m_iExtraStrengthModifier;
+	m_iExtraDamageModifier = other.m_iExtraDamageModifier;
+	m_iExtraUpkeep100 = other.m_iExtraUpkeep100;
+	m_iUpkeepModifier = other.m_iUpkeepModifier;
+	m_iUpkeepMultiplierSM = other.m_iUpkeepMultiplierSM;
+	m_iUpkeep100 = other.m_iUpkeep100;
+	m_iSMAssetValue = other.m_iSMAssetValue;
+	m_iSMPowerValue = other.m_iSMPowerValue;
+	m_iSMHPValue = other.m_iSMHPValue;
+	m_iExtraRBombardDamage = other.m_iExtraRBombardDamage;
+	m_iExtraRBombardDamageLimit = other.m_iExtraRBombardDamageLimit;
+	m_iExtraRBombardDamageMaxUnits = other.m_iExtraRBombardDamageMaxUnits;
+	m_iExtraDCMBombRange = other.m_iExtraDCMBombRange;
+	m_iExtraDCMBombAccuracy = other.m_iExtraDCMBombAccuracy;
+	m_iBaseRBombardDamage = other.m_iBaseRBombardDamage;
+	m_iBaseRBombardDamageLimit = other.m_iBaseRBombardDamageLimit;
+	m_iBaseRBombardDamageMaxUnits = other.m_iBaseRBombardDamageMaxUnits;
+	m_iBaseDCMBombRange = other.m_iBaseDCMBombRange;
+	m_iBaseDCMBombAccuracy = other.m_iBaseDCMBombAccuracy;
+	m_iBombardDirectCount = other.m_iBombardDirectCount;
+	m_iExtraCollateralDamage = other.m_iExtraCollateralDamage;
+	m_iExtraBombardRate = other.m_iExtraBombardRate;
+	m_iSMBombardRate = other.m_iSMBombardRate;
+	m_iSMAirBombBaseRate = other.m_iSMAirBombBaseRate;
+	m_iSMBaseWorkRate = other.m_iSMBaseWorkRate;
+	m_iSMRevoltProtection = other.m_iSMRevoltProtection;
+	m_iExtraEnemyHeal = other.m_iExtraEnemyHeal;
+	m_iExtraNeutralHeal = other.m_iExtraNeutralHeal;
+	m_iExtraFriendlyHeal = other.m_iExtraFriendlyHeal;
+	m_iSameTileHeal = other.m_iSameTileHeal;
+	m_iAdjacentTileHeal = other.m_iAdjacentTileHeal;
+	m_iExtraCombatPercent = other.m_iExtraCombatPercent;
+	m_iExtraCityAttackPercent = other.m_iExtraCityAttackPercent;
+	m_iExtraCityDefensePercent = other.m_iExtraCityDefensePercent;
+	m_iExtraHillsAttackPercent = other.m_iExtraHillsAttackPercent;
+	m_iExtraHillsDefensePercent = other.m_iExtraHillsDefensePercent;
+	m_iRevoltProtection = other.m_iRevoltProtection;
+	m_iCollateralDamageProtection = other.m_iCollateralDamageProtection;
+	m_iPillageChange = other.m_iPillageChange;
+	m_iUpgradeDiscount = other.m_iUpgradeDiscount;
+	m_iExperiencePercent = other.m_iExperiencePercent;
+	m_iKamikazePercent = other.m_iKamikazePercent;
+	m_eFacingDirection = other.m_eFacingDirection;
+	m_iImmobileTimer = other.m_iImmobileTimer;
+	m_bCanRespawn = other.m_bCanRespawn;
+	m_bSurvivor = other.m_bSurvivor;
+	m_bMadeAttack = other.m_bMadeAttack;
+	m_iRoundCount = other.m_iRoundCount;
+	m_iAttackCount = other.m_iAttackCount;
+	m_iDefenseCount = other.m_iDefenseCount;
+	m_bMadeInterception = other.m_bMadeInterception;
+	m_bPromotionReady = other.m_bPromotionReady;
+	m_bDeathDelay = other.m_bDeathDelay;
+	m_bCombatFocus = other.m_bCombatFocus;
+	m_bInfoBarDirty = other.m_bInfoBarDirty;
+	m_bBlockading = other.m_bBlockading;
+	m_bAirCombat = other.m_bAirCombat;
+	m_bHasBuildUp = other.m_bHasBuildUp;
+	m_bInhibitMerge = other.m_bInhibitMerge;
+	m_bInhibitSplit = other.m_bInhibitSplit;
+	m_bIsBuildUp = other.m_bIsBuildUp;
+	m_bIsReligionLocked = other.m_bIsReligionLocked;
+	m_iCanMovePeaksCount = other.m_iCanMovePeaksCount;
+	m_iCanLeadThroughPeaksCount = other.m_iCanLeadThroughPeaksCount;
+	m_movementCharacteristicsHash = other.m_movementCharacteristicsHash;
+	m_iSleepTimer = other.m_iSleepTimer;
+	m_iCommanderID = other.m_iCommanderID;
+	m_iCommanderCacheTurn = other.m_iCommanderCacheTurn;
+	m_eOriginalOwner = other.m_eOriginalOwner;
+	m_eNewDomainCargo = other.m_eNewDomainCargo;
+	m_eNewSpecialCargo = other.m_eNewSpecialCargo;
+	m_eNewSMSpecialCargo = other.m_eNewSMSpecialCargo;
+	m_eNewSMNotSpecialCargo = other.m_eNewSMNotSpecialCargo;
+	m_eSpecialUnit = other.m_eSpecialUnit;
+	m_eSleepType = other.m_eSleepType;
+	m_iZoneOfControlCount = other.m_iZoneOfControlCount;
+	m_iExcileCount = other.m_iExcileCount;
+	m_iPassageCount = other.m_iPassageCount;
+	m_iNoNonOwnedCityEntryCount = other.m_iNoNonOwnedCityEntryCount;
+	m_iBarbCoExistCount = other.m_iBarbCoExistCount;
+	m_iBlendIntoCityCount = other.m_iBlendIntoCityCount;
+	m_iUpgradeAnywhereCount = other.m_iUpgradeAnywhereCount;
+	m_bAutoPromoting = other.m_bAutoPromoting;
+	m_bAutoUpgrading = other.m_bAutoUpgrading;
+	m_iHiddenNationalityCount = other.m_iHiddenNationalityCount;
+	m_bHasHNCapturePromotion = other.m_bHasHNCapturePromotion;
+	m_bHasAnyInvisibility = other.m_bHasAnyInvisibility;
+	m_bHasAnyInvisibilityAbility = other.m_bHasAnyInvisibilityAbility;
+	m_bRevealed = other.m_bRevealed;
+	m_shadowUnit = other.m_shadowUnit;
+	m_eDesiredDiscoveryTech = other.m_eDesiredDiscoveryTech;
+	m_eOwner = other.m_eOwner;
+	m_eCapturingPlayer = other.m_eCapturingPlayer;
+	m_eUnitType = other.m_eUnitType;
+	m_eReligionType = other.m_eReligionType;
+	m_pUnitInfo = other.m_pUnitInfo;
+	m_iBaseCombat = other.m_iBaseCombat;
+	m_eLeaderUnitType = other.m_eLeaderUnitType;
+	m_eGGExperienceEarnedTowardsType = other.m_eGGExperienceEarnedTowardsType;
+	m_iCargoCapacity = other.m_iCargoCapacity;
+	m_iSMCargoCapacity = other.m_iSMCargoCapacity;
+	m_iExtraSelfHealModifier = other.m_iExtraSelfHealModifier;
+	m_iExtraNumHealSupport = other.m_iExtraNumHealSupport;
+	m_iHealSupportUsed = other.m_iHealSupportUsed;
+	m_iExtraInsidiousness = other.m_iExtraInsidiousness;
+	m_iExtraInvestigation = other.m_iExtraInvestigation;
+	m_iNoSelfHealCount = other.m_iNoSelfHealCount;
+	m_iDebugCount = other.m_iDebugCount;
+	m_iAssassinCount = other.m_iAssassinCount;
+	m_iExtraStealthStrikes = other.m_iExtraStealthStrikes;
+	m_iExtraStealthCombatModifier = other.m_iExtraStealthCombatModifier;
+	m_iStealthDefenseCount = other.m_iStealthDefenseCount;
+	m_iOnlyDefensiveCount = other.m_iOnlyDefensiveCount;
+	m_iNoInvisibilityCount = other.m_iNoInvisibilityCount;
+	m_iNoCaptureCount = other.m_iNoCaptureCount;
+	m_iExtraTrapDamageMax = other.m_iExtraTrapDamageMax;
+	m_iExtraTrapDamageMin = other.m_iExtraTrapDamageMin;
+	m_iExtraTrapComplexity = other.m_iExtraTrapComplexity;
+	m_iExtraNumTriggers = other.m_iExtraNumTriggers;
+	m_iNumTimesTriggered = other.m_iNumTimesTriggered;
+	m_iTriggerBeforeAttackCount = other.m_iTriggerBeforeAttackCount;
+	m_iExtraNoDefensiveBonusCount = other.m_iExtraNoDefensiveBonusCount;
+	m_iExtraGatherHerdCount = other.m_iExtraGatherHerdCount;
+	m_bIsArmed = other.m_bIsArmed;
+	m_eCurrentBuildUpType = other.m_eCurrentBuildUpType;
+	m_eCapturingUnit = other.m_eCapturingUnit;
+	m_combatUnit = other.m_combatUnit;
+	m_transportUnit = other.m_transportUnit;
+#ifdef STRENGTH_IN_NUMBERS
+	afIUnit = other.afIUnit;
+	afIIUnit = other.afIIUnit;
+	asrIUnit = other.asrIUnit;
+	asrIIUnit = other.asrIIUnit;
+	amrIUnit = other.amrIUnit;
+	amrIIUnit = other.amrIIUnit;
+	alrIUnit = other.alrIUnit;
+	alrIIUnit = other.alrIIUnit;
+	aflIUnit = other.aflIUnit;
+	aflIIUnit = other.aflIIUnit;
+	dfIUnit = other.dfIUnit;
+	dfIIUnit = other.dfIIUnit;
+	dsrIUnit = other.dsrIUnit;
+	dsrIIUnit = other.dsrIIUnit;
+	dmrIUnit = other.dmrIUnit;
+	dmrIIUnit = other.dmrIIUnit;
+	dlrIUnit = other.dlrIUnit;
+	dlrIIUnit = other.dlrIIUnit;
+	dflIUnit = other.dflIUnit;
+	dflIIUnit = other.dflIIUnit;
+#endif // STRENGTH_IN_NUMBERS
+/*
+	if (other.m_aiExtraDomainModifier == nullptr)
+		m_aiExtraDomainModifier = nullptr;
+	else
+	{
+		m_aiExtraDomainModifier = new int[NUM_DOMAIN_TYPES];
+		memcpy(m_aiExtraDomainModifier, other.m_aiExtraDomainModifier, NUM_DOMAIN_TYPES * sizeof(int));
+	}
+	if (other.m_aiExtraVisibilityIntensity == nullptr)
+		m_aiExtraVisibilityIntensity = nullptr;
+	else
+	{
+		m_aiExtraVisibilityIntensity = new int[GC.getNumInvisibleInfos()];
+		memcpy(m_aiExtraVisibilityIntensity, other.m_aiExtraVisibilityIntensity, GC.getNumInvisibleInfos() * sizeof(int));
+	}
+	if (other.m_aiExtraInvisibilityIntensity == nullptr)
+		m_aiExtraInvisibilityIntensity = nullptr;
+	else
+	{
+		m_aiExtraInvisibilityIntensity = new int[GC.getNumInvisibleInfos()];
+		memcpy(m_aiExtraInvisibilityIntensity, other.m_aiExtraInvisibilityIntensity, GC.getNumInvisibleInfos() * sizeof(int));
+	}
+	if (other.m_aiExtraVisibilityIntensityRange == nullptr)
+		m_aiExtraVisibilityIntensityRange = nullptr;
+	else
+	{
+		m_aiExtraVisibilityIntensityRange = new int[GC.getNumInvisibleInfos()];
+		memcpy(m_aiExtraVisibilityIntensityRange, other.m_aiExtraVisibilityIntensityRange, GC.getNumInvisibleInfos() * sizeof(int));
+	}
+	if (other.m_aiExtraVisibilityIntensitySameTile == nullptr)
+		m_aiExtraVisibilityIntensitySameTile = nullptr;
+	else
+	{
+		m_aiExtraVisibilityIntensitySameTile = new int[GC.getNumInvisibleInfos()];
+		memcpy(m_aiExtraVisibilityIntensitySameTile, other.m_aiExtraVisibilityIntensitySameTile, GC.getNumInvisibleInfos() * sizeof(int));
+	}
+	if (other.m_aiNegatesInvisibleCount == nullptr)
+		m_aiNegatesInvisibleCount = nullptr;
+	else
+	{
+		m_aiNegatesInvisibleCount = new int[GC.getNumInvisibleInfos()];
+		memcpy(m_aiNegatesInvisibleCount, other.m_aiNegatesInvisibleCount, GC.getNumInvisibleInfos() * sizeof(int));
+	}
+*/
+	m_aExtraInvisibleTerrains = other.m_aExtraInvisibleTerrains;
+	m_aExtraInvisibleFeatures = other.m_aExtraInvisibleFeatures;
+	m_aExtraInvisibleImprovements = other.m_aExtraInvisibleImprovements;
+	m_aExtraVisibleTerrains = other.m_aExtraVisibleTerrains;
+	m_aExtraVisibleFeatures = other.m_aExtraVisibleFeatures;
+	m_aExtraVisibleImprovements = other.m_aExtraVisibleImprovements;
+	m_aExtraVisibleTerrainRanges = other.m_aExtraVisibleTerrainRanges;
+	m_aExtraVisibleFeatureRanges = other.m_aExtraVisibleFeatureRanges;
+	m_aExtraVisibleImprovementRanges = other.m_aExtraVisibleImprovementRanges;
+	m_szName = other.m_szName;
+	m_szScriptData = other.m_szScriptData;
+	m_aExtraAidChanges = other.m_aExtraAidChanges;
+
+	if (!other.m_promotionKeyedInfo.empty())
+		m_promotionKeyedInfo = other.m_promotionKeyedInfo;
+
+	if (!other.m_promotionLineKeyedInfo.empty())
+		m_promotionLineKeyedInfo = other.m_promotionLineKeyedInfo;
+
+	if (!other.m_terrainKeyedInfo.empty())
+		m_terrainKeyedInfo = other.m_terrainKeyedInfo;
+
+	if (!other.m_featureKeyedInfo.empty())
+		m_featureKeyedInfo = other.m_featureKeyedInfo;
+
+	if (!other.m_unitCombatKeyedInfo.empty())
+		m_unitCombatKeyedInfo = other.m_unitCombatKeyedInfo;
+
+	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
+	m_Properties = other.m_Properties;
+
+	return *this;
+}
 
 //////////////////////////////////////
 // graphical only setup
@@ -5745,17 +6126,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (pPlot->isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7354,28 +7725,19 @@ bool CvUnit::canUnload() const
 
 	if (isTrap())
 	{
-		if (m_pUnitInfo->isTerrainImpassableType(kPlot.getTerrainType()))
+		const TerrainTypes eTerrain = kPlot.getTerrainType();
+		if (eTerrain != NO_TERRAIN)
 		{
 			return false;
 		}
 		const FeatureTypes eFeature = kPlot.getFeatureType();
-		if (eFeature != NO_FEATURE && m_pUnitInfo->isFeatureImpassableType(eFeature))
+		if (eFeature != NO_FEATURE)
 		{
 			return false;
 		}
 	}
 
-	const int iCount = m_pUnitInfo->getNumMapTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (kPlot.isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7385,12 +7747,12 @@ bool CvUnit::canUnload() const
 		if (kPlot.isFriendlyCity(*this, true))
 		{
 			const int iNumAirUnits = kPlot.countNumAirUnits(getTeam());
-			const int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
 			const CvCity* pCity = kPlot.getPlotCity();
 			if (NULL != pCity)
 			{
 				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
+					const int iNumAirUnitCargoVolume = kPlot.countNumAirUnitCargoVolume(getTeam());
 					if (iNumAirUnitCargoVolume >= pCity->getSMAirUnitCapacity(getTeam()))
 					{
 						return false;
@@ -20524,7 +20886,8 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	//TB Debug Note: If the promotion being evaluated for is the sort you get from a leader as it attaches to the unit that then qualifies you for other
 	//promotions, and the check being called here is not for that specific purpose, then return false for that promotion.
 	if (!bForLeader && kPromotion.isLeader())
@@ -20561,40 +20924,15 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		return false;
 	}
-
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
+	if (!isMapCategory(*pPlot, kPromotion))
 	{
-		const int iCount = kPromotion.getNumMapTypes();
-		bool bFound = (iCount < 1);
-		if (pPlot != NULL)
-		{
-			for (int iI = 0; iI < iCount; iI++)
-			{
-				if (pPlot->isMapType((MapTypes)kPromotion.getMapType(iI)))
-				{
-					bFound = true;
-					break;
-				}
-			}
-			if (!bFound)
-			{
-				return false;
-			}
-		}
+		return false;
+	}
 
-		bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (m_pUnitInfo->isMapType((MapTypes)kPromotion.getMapType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
-		{
-			return false;
-		}
+	if (!isMapCategory(*m_pUnitInfo, kPromotion))
+	{
+		return false;
 	}
 
 	const PromotionLineTypes ePromotionLine = kPromotion.getPromotionLine();
@@ -20617,7 +20955,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
 			if (kPromotion.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))
 			{
@@ -20750,7 +21088,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		&& (
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isAffliction() ||
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 			kPromotion.isEquipment()))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -20789,7 +21127,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 			const int numPromotionInfos = GC.getNumPromotionInfos();
 			for (int iI = 0; iI < numPromotionInfos; iI++)
 			{
-				PromotionTypes ePrereq = (PromotionTypes)iI;
+				const PromotionTypes ePrereq = (PromotionTypes)iI;
 				if (isHasPromotion(ePrereq))
 				{
 					const CvPromotionInfo& kPrereqPromotion = GC.getPromotionInfo(ePrereq);
@@ -20845,7 +21183,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (!kPromotion.isAffliction())
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		{
 			if (kPromotion.getTechPrereq() != NO_TECH
 			&& !GET_TEAM(getTeam()).isHasTech(kPromotion.getTechPrereq()))

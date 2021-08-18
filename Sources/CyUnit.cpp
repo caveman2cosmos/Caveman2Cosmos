@@ -8,11 +8,6 @@
 // Python wrapper class for CvUnit
 //
 
-CyUnit::CyUnit() : m_pUnit(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyUnit::CyUnit(CvUnit* pUnit) : m_pUnit(pUnit)
 {
 	FAssert(m_pUnit != NULL);

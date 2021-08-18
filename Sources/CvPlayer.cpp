@@ -1496,7 +1496,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_unitConstructionCounts.clear();
 
 	m_bMaintenanceDirty = false;
-	m_bUpdatesDeferred = false;
 	m_orbitalInfrastructureCountDirty = true;
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
@@ -2174,7 +2173,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		iBestArea = findStartingArea();
 	}
 
-	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
@@ -2186,7 +2185,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapType(earth)
+			|| !plot->isMapCategoryType(earth)
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
@@ -3322,7 +3321,7 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 						}
 					}
 
-					if ( pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getViewportSelectionBorder()) )
+					if (pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 					{
 						return pLoopSelectionGroup;
 					}
@@ -4410,18 +4409,11 @@ void CvPlayer::updateCommerce(CommerceTypes eCommerce, bool bForce) const
 			updateCommerce((CommerceTypes)iI, bForce);
 		}
 	}
-	else if (!m_bUpdatesDeferred)
+	else if (bForce || m_abCommerceDirty[eCommerce])
 	{
-		if ( bForce || m_abCommerceDirty[eCommerce])
-		{
-			m_abCommerceDirty[eCommerce] = false;
+		m_abCommerceDirty[eCommerce] = false;
 
-			algo::for_each(cities(), CvCity::fn::updateCommerce(eCommerce, bForce));
-		}
-	}
-	else
-	{
-		m_abCommerceDirty[eCommerce] |= bForce;
+		algo::for_each(cities(), CvCity::fn::updateCommerce(eCommerce, bForce));
 	}
 }
 
@@ -6247,17 +6239,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			return false;
 		}
 	}
-	const int iCount = GC.getGoodyInfo(eGoody).getNumMapTypes();
-	bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (pPlot->isMapType((MapTypes)GC.getGoodyInfo(eGoody).getMapType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategory(*pPlot, GC.getGoodyInfo(eGoody)))
 	{
 		return false;
 	}
@@ -8296,12 +8278,11 @@ int64_t CvPlayer::calculateBaseNetGold() const
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 {
-	int iModifier = 100;
-
 	if (NO_TECH == eTech)
 	{
-		return iModifier;
+		return 100;
 	}
+	int iModifier = 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
@@ -8332,11 +8313,11 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 
 						knownExp += 0.5;
 
-						if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
+						if (GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()))
 						{
 							knownExp += 1.5;
 						}
-						else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
+						else if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 						{
 							knownExp += 0.5;
 						}
@@ -8407,7 +8388,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
-	return std::max(1,iModifier);
+	return std::max(1, iModifier);
 }
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
@@ -8620,7 +8601,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 		&& (iI == getID() || GET_PLAYER((PlayerTypes)iI).getCurrentResearch() == eTech))
 		{
 			iResearchRate += GET_PLAYER((PlayerTypes)iI).calculateResearchRate(eTech);
-			iOverflow += (GET_PLAYER((PlayerTypes)iI).getOverflowResearch() * calculateResearchModifier(eTech)) / 100;
+			iOverflow += GET_PLAYER((PlayerTypes)iI).getOverflowResearch() * calculateResearchModifier(eTech) / 100;
 		}
 	}
 
@@ -9614,14 +9595,6 @@ bool CvPlayer::isGoldenAge() const
 	return (getGoldenAgeTurns() > 0);
 }
 
-void CvPlayer::reportGoldenAgeStart()
-{
-	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
-	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
-
-	CvEventReporter::getInstance().goldenAge(getID());
-}
-
 void CvPlayer::changeGoldenAgeTurns(int iChange)
 {
 	if (iChange != 0)
@@ -9643,14 +9616,10 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 
 			if (isGoldenAge())
 			{
-				if ( m_bUpdatesDeferred )
-				{
-					m_bGoldenAgeStarted = true;
-				}
-				else
-				{
-					reportGoldenAgeStart();
-				}
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
+
+				CvEventReporter::getInstance().goldenAge(getID());
 			}
 			else
 			{
@@ -10732,17 +10701,10 @@ int CvPlayer::getOverflowResearch() const
 	return m_iOverflowResearch;
 }
 
-
-void CvPlayer::setOverflowResearch(int iNewValue)
-{
-	m_iOverflowResearch = iNewValue;
-	FASSERT_NOT_NEGATIVE(getOverflowResearch())
-}
-
-
 void CvPlayer::changeOverflowResearch(int iChange)
 {
-	setOverflowResearch(getOverflowResearch() + iChange);
+	m_iOverflowResearch += iChange;
+	FASSERT_NOT_NEGATIVE(m_iOverflowResearch)
 }
 
 
@@ -10919,47 +10881,11 @@ void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 
 int CvPlayer::getTotalMaintenance() const
 {
-	if (m_bMaintenanceDirty && !m_bUpdatesDeferred)
+	if (m_bMaintenanceDirty)
 	{
 		updateMaintenance();
 	}
 	return m_iTotalMaintenance / 100;
-}
-
-void CvPlayer::deferUpdates()
-{
-	if ( m_bMaintenanceDirty )
-	{
-		updateMaintenance();
-	}
-
-	m_bUpdatesDeferred = true;
-	m_bGoldenAgeStarted = false;
-}
-
-void CvPlayer::resumeUpdates()
-{
-	m_bUpdatesDeferred = false;
-
-	if ( m_bGoldenAgeStarted )
-	{
-		m_bGoldenAgeStarted = false;
-
-		reportGoldenAgeStart();
-	}
-
-	if ( m_bMaintenanceDirty )
-	{
-		updateMaintenance();
-	}
-
-	for(int iI = 0; iI < NUM_COMMERCE_TYPES; iI++ )
-	{
-		if ( m_abCommerceDirty[iI] )
-		{
-			updateCommerce((CommerceTypes)iI, false);
-		}
-	}
 }
 
 
@@ -10984,7 +10910,6 @@ void CvPlayer::changeLevelExperienceModifier(int iChange)
 {
 	m_iLevelExperienceModifier += iChange;
 }
-
 
 
 int CvPlayer::getExtraHealth() const
@@ -12683,21 +12608,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 
 		if (isEndTurn())
 		{
-			CvPathGenerator::EnableMaxPerformance(true);
-/************************************************************************************************/
-/* Afforess					  Start		 09/16/10											   */
-/*																							  */
-/* Advanced Automations																		 */
-/************************************************************************************************/
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
 				group->AI_update();
 			}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-			CvPathGenerator::EnableMaxPerformance(false);
 			setAutoMoves(true);
 		}
 	}
@@ -13426,7 +13341,7 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 
-	if (!m_bUpdatesDeferred && m_abCommerceDirty[eIndex])
+	if (m_abCommerceDirty[eIndex])
 	{
 		updateCommerce(eIndex, false);
 	}
@@ -15982,16 +15897,13 @@ void CvPlayer::doResearch()
 	const TechTypes eCurrentTech = getCurrentResearch();
 	if (eCurrentTech == NO_TECH)
 	{
-		changeOverflowResearch(100 * calculateResearchRate() / std::max(1, calculateResearchModifier(eCurrentTech)));
+		changeOverflowResearch(100 * calculateResearchRate() / calculateResearchModifier(eCurrentTech));
 	}
 	else
 	{
-		setOverflowResearch(0);
-		GET_TEAM(getTeam()).changeResearchProgress
-		(
-			eCurrentTech,
-			calculateResearchRate(eCurrentTech) + getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100, getID()
-		);
+		const int iOverflow = getOverflowResearch();
+		changeOverflowResearch(-iOverflow);
+		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + iOverflow * calculateResearchModifier(eCurrentTech) / 100, getID());
 	}
 
 	if (bForceResearchChoice)
@@ -24948,8 +24860,12 @@ int CvPlayer::getNewCityProductionValue() const
 
 int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
-	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD");
 
+	if (iPopulation > 1)
+	{
+		iThreshold += (iPopulation - 1) * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
+	}
 	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iThreshold /= 100;
 
@@ -27357,40 +27273,38 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 
 	FAssertMsg(eCurrentTech < GC.getNumTechInfos(), "eCurrentTech is expected to be within maximum bounds (invalid Index)");
 
-	if ( eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech) )
+	if (eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech))
 	{
-		if ( !isHuman() )
+		if (!isHuman())
 		{
 			AI_chooseResearch();
 			eCurrentTech = getCurrentResearch();
 		}
-		else
+		else // This shouldn't really happen but it's  safety precaution
 		{
-			//	This shouldn't really happen but it's  safety precaution
 			clearResearchQueue();
 		}
 	}
 
-	while (eCurrentTech != NO_TECH && ((100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech))) / std::max(1, calculateResearchModifier(eCurrentTech)) <= iOverflow))
+	while (eCurrentTech != NO_TECH
+	&& 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech) <= iOverflow)
 	{
 		//The Future Tech can cause strange infinite loops
-		if (GC.getTechInfo(eCurrentTech).isRepeat())
-			break;
+		if (GC.getTechInfo(eCurrentTech).isRepeat()) break;
 
-		iOverflow -= (100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech))) / std::max(1, calculateResearchModifier(eCurrentTech));
+		iOverflow -= 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech);
 		GET_TEAM(getTeam()).setHasTech(eCurrentTech, true, getID(), true, true);
+
 		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
 		{
 			GET_TEAM(getTeam()).setNoTradeTech(eCurrentTech, true);
 		}
-		if ( !isHuman() )
+		if (!isHuman())
 		{
 			AI_chooseResearch();
 		}
-
 		eCurrentTech = getCurrentResearch();
 	}
-
 	return std::max(0, iOverflow);
 }
 

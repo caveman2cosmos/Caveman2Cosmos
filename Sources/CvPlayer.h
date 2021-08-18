@@ -604,7 +604,6 @@ public:
 	void changeMaxConscript(int iChange);
 
 	int getOverflowResearch() const;
-	void setOverflowResearch(int iNewValue);
 	void changeOverflowResearch(int iChange);
 
 	int getNoUnhealthyPopulationCount() const;
@@ -2347,18 +2346,7 @@ private:
 
 	std::vector<civcSwitchInstance> m_civicSwitchHistory;
 
-	static CRITICAL_SECTION	c_canConstructCacheSection;
-	static CRITICAL_SECTION	c_allCitiesPropertySection;
-	static CRITICAL_SECTION	c_buildingProcessingSection;
-	static CRITICAL_SECTION	c_GroupCycleSection;
 	static bool m_staticsInitialized;
-
-	bool m_bUpdatesDeferred;
-	bool m_bGoldenAgeStarted; // Used to defer reporting in update-deferred sections
-
-	void reportGoldenAgeStart();
-	void deferUpdates();
-	void resumeUpdates();
 
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;

@@ -908,7 +908,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 				break;
 			}
 
-			if ( GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getViewportSelectionBorder()) )
+			if (GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 			{
 				gDLL->getInterfaceIFace()->lookAtCityOffset(pCity->getID());
 			}
@@ -922,7 +922,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 	case BUTTONPOPUP_RAZECITY:
 	case BUTTONPOPUP_DISBANDCITY:
 		{
-			CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
+			const CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
 
 			if (NULL == pCity || pCity->getOwner() != ePlayer)
 			{
@@ -930,7 +930,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 				break;
 			}
 
-			if ( GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getViewportSelectionBorder()) )
+			if (GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 			{
 				gDLL->getInterfaceIFace()->lookAtCityOffset(pCity->getID());
 			}

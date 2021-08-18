@@ -10,6 +10,16 @@
 		<Russian>[ICON_BULLET]Улучшится до [LINK=%s1_ImpType]%s2_ImpName[\LINK] через %d3_Num [NUM2:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
+		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_BUILDS_FASTER_WITH</Tag>
 		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
@@ -46,10 +56,6 @@
 		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
-		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
@@ -66,6 +72,10 @@
 		<Italian>[SPACE]per [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian>
 		<Spanish>[SPACE]por [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] en todas las ciudades</Spanish>
 		<Russian>[SPACE]от [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] во всех городах</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
+		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_LIKELY_TO_GENERATE</Tag>
@@ -126,21 +136,6 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
-		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
-		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
-		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
-		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
-		<English>Yield changes:</English>
-		<Russian>Измен. дохода:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
@@ -230,6 +225,14 @@
 		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих секироносцев!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
+		<English>The villagers are hostile!</English>
+		<French>Les villageois sont hostiles !</French>
+		<German>Die Bewohner sind Euch feindlich gesonnen!</German>
+		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
+		<Spanish>Los aldeanos son hostiles.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its bowmen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers long pour partager vos aventures!</French>
@@ -243,10 +246,34 @@
 		<Russian>[SPACE]Ваши исследователи натолкнулись на беглого преступника, скрывающегося среди этих людей!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
+		<English>The villagers have provided your unit with experience!</English>
+		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
+		<German>Die Bewohner haben Eure Einheit mit Erfahrung ausgestattet!</German>
+		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unità!</Italian>
+		<Spanish>Los aldeanos le han dado experiencia a la unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_GOLD</Tag>
+		<English>The villagers give you gold!</English>
+		<French>Les villageois vous donnent de l'or !</French>
+		<German>Die Bewohner geben Euch Gold!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato dell'oro!</Italian>
+		<Spanish>Los aldeanos os han dado oro.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALER</Tag>
 		<English>[SPACE]A local Healer has decided to join your cause!</English>
 		<French>[SPACE]Un guérisseur local a décidé de rejoindre votre cause!</French>
 		<Russian>[SPACE]Местный целитель решил присоединиться к вашему делу!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_HEALING</Tag>
+		<English>The villagers have healed your unit!</English>
+		<French>Les villageois ont soigné votre unité !</French>
+		<German>Die Bewohner haben Eure Einheit geheilt!</German>
+		<Italian>Gli abitanti del villaggio hanno curato la tua unità!</Italian>
+		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_INFANTRY</Tag>
@@ -261,6 +288,14 @@
 		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих булавоносцев!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GOODY_MAP</Tag>
+		<English>The villagers have provided you with a map!</English>
+		<French>Les villageois vous ont donné une carte !</French>
+		<German>Die Bewohner haben Euch eine Karte überlassen!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato una mappa!</Italian>
+		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GOODY_PIKEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its pikemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs piquiers pour partager vos aventures!</French>
@@ -272,6 +307,22 @@
 		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
 		<German>Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
 		<Russian>[SPACE]Жители деревни делятся информацией, которая ведет ваших исследователей к большому прорыву!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
+		<English>The villagers have provided you with a Scout!</English>
+		<French>Les villageois vous fournissent un éclaireur !</French>
+		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
+		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
+		<English>The villagers have provided you with a Settler!</English>
+		<French>Les villageois vous fournissent un colon !</French>
+		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
+		<Spanish>Los aldeanos os han dado un colono.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
@@ -292,11 +343,35 @@
 		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих мечников!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GOODY_TECH</Tag>
+		<English>The villagers have given you the secrets of a new Technology!</English>
+		<French>Les villageois vous ont enseigné une nouvelle technologie !</French>
+		<German>Die Bewohner haben Euch in die Geheimnisse einer neuen Technologie eingeweiht!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato il segreto di una nuova tecnologia!</Italian>
+		<Spanish>Lo aldeanos os han dado los secretos de una nueva tecnología.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
+		<English>The villagers have provided you with a Warrior!</English>
+		<French>Les villageois vous fournissent un guerrier !</French>
+		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
+		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
 		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
 		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_WORKER</Tag>
+		<English>The villagers have provided you with a Worker!</English>
+		<French>Les villageois vous fournissent un ouvrier !</French>
+		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
+		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
@@ -341,22 +416,6 @@
 		<Spanish>%s1 base: %d2 %F3</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
-		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
-		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
-		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
-		<English>[ICON_BULLET]%D1 %F2 from other</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
-		<English>Sum: %d1%% = %s2%F3</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
 	</TEXT>
@@ -368,6 +427,22 @@
 		<Italian>[ICON_BULLET]%D1%F2 commercio libero</Italian>
 		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
 		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
+		<English>Sum: %d1%% = %s2%F3</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from other</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED</Tag>
@@ -537,13 +612,13 @@
 		<Russian>(% óùåðáà çà õîä íà âðàæåñêîé òåððèòîðèè)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE</Tag>
-		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
-		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
-		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
-		<Italian>[ICON_BULLET]%D1_Change possibilità di 'Attacco improvviso'</Italian>
-		<Spanish>[ICON_BULLET]Probabilidad de %D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
-		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE</Tag>
+		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
+		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
+		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
+		<Italian>[ICON_BULLET]%d1_Num 'Attacco improvviso' [NUM1:supplementare:supplementari]</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
+		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES</Tag>
@@ -555,6 +630,15 @@
 		<Russian>[ICON_BULLET]%D1_Change Ïåðâûõ óäàðà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE</Tag>
+		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
+		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
+		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
+		<Italian>[ICON_BULLET]%D1_Change possibilità di 'Attacco improvviso'</Italian>
+		<Spanish>[ICON_BULLET]Probabilidad de %D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
+		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE</Tag>
 		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
 		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
@@ -562,15 +646,6 @@
 		<Italian>[ICON_BULLET]%d1_Num possibilità di [NUM1:'Attacco improvviso supplementare':'Attacchi improvvisi supplementari']</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad de %d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE</Tag>
-		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
-		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
-		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
-		<Italian>[ICON_BULLET]%d1_Num 'Attacco improvviso' [NUM1:supplementare:supplementari]</Italian>
-		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
-		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS</Tag>
@@ -591,15 +666,6 @@
 		<Russian>[ICON_BULLET]Ëå÷èò þíèòîâ íà îäíîé äîï. êëåòêå %d1_Amount%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
-		<English>[ICON_BULLET]%D1_Discount Terrain Movement Cost</English>
-		<French>[ICON_BULLET]Coût de mouvement réduit de %D1_Discount</French>
-		<German>[ICON_BULLET]%D1_Discount Bewegungskosten</German>
-		<Italian>[ICON_BULLET]%D1_Discount costo di movimento sul terreno</Italian>
-		<Spanish>[ICON_BULLET]%D1_Discount al coste del movimiento por terreno</Spanish>
-		<Russian>[ICON_BULLET]%D1_Discount ê øòðàôó ïåðåìåùåíèÿ ïî ïåðåñå÷åííîé ìåñòíîñòè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MOVE</Tag>
 		<English>[ICON_BULLET]%D1_Change Movement Range</English>
 		<French>[ICON_BULLET]Rayon d'action %D1_Change</French>
@@ -607,6 +673,15 @@
 		<Italian>[ICON_BULLET]%D1_Change raggio di movimento</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change al alcance del movimiento</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà äâèæåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
+		<English>[ICON_BULLET]%D1_Discount Terrain Movement Cost</English>
+		<French>[ICON_BULLET]Coût de mouvement réduit de %D1_Discount</French>
+		<German>[ICON_BULLET]%D1_Discount Bewegungskosten</German>
+		<Italian>[ICON_BULLET]%D1_Discount costo di movimento sul terreno</Italian>
+		<Spanish>[ICON_BULLET]%D1_Discount al coste del movimiento por terreno</Spanish>
+		<Russian>[ICON_BULLET]%D1_Discount ê øòðàôó ïåðåìåùåíèÿ ïî ïåðåñå÷åííîé ìåñòíîñòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS</Tag>
@@ -670,6 +745,18 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (qualsiasi giocatore)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (de cualquier jugador)[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (для любого игрока)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
+		<English>Civ leader</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
+		<English>Player name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
+		<English>Turn</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_FIRST_RECEIVES</Tag>
@@ -835,107 +922,20 @@
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü óäà÷íîãî îòñòóïëåíèÿ: %d1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
-		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
-		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
-		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UPGRADES</Tag>
 		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
 		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
 		<Russian>[ICON_BULLET]Улучшение:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_GOLD</Tag>
-		<English>The villagers give you gold!</English>
-		<French>Les villageois vous donnent de l'or !</French>
-		<German>Die Bewohner geben Euch Gold!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato dell'oro!</Italian>
-		<Spanish>Los aldeanos os han dado oro.</Spanish>
+		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
+		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
+		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_MAP</Tag>
-		<English>The villagers have provided you with a map!</English>
-		<French>Les villageois vous ont donné une carte !</French>
-		<German>Die Bewohner haben Euch eine Karte überlassen!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato una mappa!</Italian>
-		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
-		<English>The villagers have provided you with a Settler!</English>
-		<French>Les villageois vous fournissent un colon !</French>
-		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
-		<Spanish>Los aldeanos os han dado un colono.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
-		<English>The villagers have provided you with a Warrior!</English>
-		<French>Les villageois vous fournissent un guerrier !</French>
-		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
-		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
-		<English>The villagers have provided you with a Scout!</English>
-		<French>Les villageois vous fournissent un éclaireur !</French>
-		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
-		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_WORKER</Tag>
-		<English>The villagers have provided you with a Worker!</English>
-		<French>Les villageois vous fournissent un ouvrier !</French>
-		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
-		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
-		<English>The villagers have provided your unit with experience!</English>
-		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
-		<German>Die Bewohner haben Eure Einheit mit Erfahrung ausgestattet!</German>
-		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unità!</Italian>
-		<Spanish>Los aldeanos le han dado experiencia a la unidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_HEALING</Tag>
-		<English>The villagers have healed your unit!</English>
-		<French>Les villageois ont soigné votre unité !</French>
-		<German>Die Bewohner haben Eure Einheit geheilt!</German>
-		<Italian>Gli abitanti del villaggio hanno curato la tua unità!</Italian>
-		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_TECH</Tag>
-		<English>The villagers have given you the secrets of a new Technology!</English>
-		<French>Les villageois vous ont enseigné une nouvelle technologie !</French>
-		<German>Die Bewohner haben Euch in die Geheimnisse einer neuen Technologie eingeweiht!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato il segreto di una nuova tecnologia!</Italian>
-		<Spanish>Lo aldeanos os han dado los secretos de una nueva tecnología.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
-		<English>The villagers are hostile!</English>
-		<French>Les villageois sont hostiles !</French>
-		<German>Die Bewohner sind Euch feindlich gesonnen!</German>
-		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
-		<Spanish>Los aldeanos son hostiles.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
-		<English>Turn</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
-		<English>Player name</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
-		<English>Civ leader</English>
+		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
+		<English>Yield changes:</English>
+		<Russian>Измен. дохода:</Russian>
 	</TEXT>
 </Civ4GameText>

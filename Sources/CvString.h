@@ -222,7 +222,7 @@ public:
 		result.resize(size_needed);
 		WideCharToMultiByte(CP_UTF8, 0, w, len, &result[0], size_needed, nullptr, nullptr);
 		assign(result);
-}
+	}
 
 	// implicit conversion
 	operator const char*() const 	{ return c_str(); }

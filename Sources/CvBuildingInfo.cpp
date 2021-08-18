@@ -1411,23 +1411,6 @@ bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 	return true;
 }
 
-int CvBuildingInfo::getMapType(int i) const
-{
-	return m_aiMapTypes[i];
-}
-
-int CvBuildingInfo::getNumMapTypes() const
-{
-	return m_aiMapTypes.size();
-}
-
-bool CvBuildingInfo::isMapType(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_MAPS, i)
-	return algo::contains(m_aiMapTypes, i);
-}
-
-// int vector utilizing pairing without delayed resolution
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 {
 	return m_aUnitCombatRepelModifiers.size();
@@ -2126,10 +2109,9 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aEnabledCivilizationTypes[i].eCivilization);
 	}
 
-	// Vectors
 	CheckSumC(iSum, m_aiUnitCombatRetrainTypes);
 	CheckSumC(iSum, m_aiMayDamageAttackingUnitCombatTypes);
-	CheckSumC(iSum, m_aiMapTypes);
+	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSumC(iSum, m_aUnitCombatRepelModifiers);
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
@@ -3584,7 +3566,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalVector(&m_aiUnitCombatRetrainTypes, L"UnitCombatRetrainTypes");
 	pXML->SetOptionalVector(&m_aiMayDamageAttackingUnitCombatTypes, L"MayDamageAttackingUnitCombatTypes");
-	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 
 	// int vector utilizing pairing without delayed resolution
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatRepelModifiers, L"UnitCombatRepelModifiers");
@@ -4824,7 +4806,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiUnitCombatRetrainTypes, pClassInfo->m_aiUnitCombatRetrainTypes);
 
 	if (getNumMayDamageAttackingUnitCombatTypes() == 0)

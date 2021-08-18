@@ -10,6 +10,7 @@
 class CyPlot;
 class CvMap;
 class CyArea;
+class CyUnit;
 
 class CyMap
 {
@@ -31,6 +32,7 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
@@ -101,6 +103,8 @@ public:
 	bool generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
+
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
 	// Super Forts *canal* *choke*
 	void calculateCanalAndChokePoints();

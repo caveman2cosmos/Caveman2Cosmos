@@ -2694,22 +2694,6 @@ bool CvUnitInfo::isFeatureImpassableType(FeatureTypes e) const
 	return algo::contains(m_vFeatureImpassableTypes, e);
 }
 
-int CvUnitInfo::getMapType(int i) const
-{
-	return m_aiMapTypes[i];
-}
-
-int CvUnitInfo::getNumMapTypes() const
-{
-	return m_aiMapTypes.size();
-}
-
-bool CvUnitInfo::isMapType(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_MAPS, i)
-	return algo::contains(m_aiMapTypes, i);
-}
-
 int CvUnitInfo::getTrapSetWithPromotionType(int i) const
 {
 	return m_aiTrapSetWithPromotionTypes[i];
@@ -3985,7 +3969,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiHealAsTypes);
 	CheckSumC(iSum, m_vTerrainImpassableTypes);
 	CheckSumC(iSum, m_vFeatureImpassableTypes);
-	CheckSumC(iSum, m_aiMapTypes);
+	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSumC(iSum, m_aiTrapSetWithPromotionTypes);
 	CheckSumC(iSum, m_aiTrapImmunityUnitCombatTypes);
 	// int vectors utilizing struct with delayed resolution
@@ -4655,11 +4639,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aiCureAfflictionTypes, L"CureAfflictionTypes");
 	pXML->SetOptionalVector(&m_vTerrainImpassableTypes, L"TerrainImpassableTypes");
 	pXML->SetOptionalVector(&m_vFeatureImpassableTypes, L"FeatureImpassableTypes");
-	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 	pXML->SetOptionalVector(&m_aiTrapSetWithPromotionTypes, L"TrapSetWithPromotionTypes");
 	pXML->SetOptionalVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
 
-	// int vectors utilizing struct with delayed resolution
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictionFortitudeModifiers"))
 	{
 		int i = 0;
@@ -5643,7 +5626,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCureAfflictionTypes, pClassInfo->m_aiCureAfflictionTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vTerrainImpassableTypes, pClassInfo->m_vTerrainImpassableTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_vFeatureImpassableTypes, pClassInfo->m_vFeatureImpassableTypes);
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapSetWithPromotionTypes, pClassInfo->m_aiTrapSetWithPromotionTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapImmunityUnitCombatTypes, pClassInfo->m_aiTrapImmunityUnitCombatTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAfflictionFortitudeModifiers, pClassInfo->m_aAfflictionFortitudeModifiers);

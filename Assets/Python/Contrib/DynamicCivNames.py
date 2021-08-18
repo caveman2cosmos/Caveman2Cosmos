@@ -8,9 +8,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import Popup as PyPopup
 # --------- Revolution mod -------------
-import RevDefs
 import SdToolKit as SDTK
 import RevUtils
 import LeaderCivNames
@@ -80,7 +78,7 @@ class DynamicCivNames:
 		#eventType, key, mx, my, px, py = argsList
 		eventType = argsList[0]; key = argsList[1]
 
-		if eventType == RevDefs.EventKeyDown:
+		if eventType == 6:
 			theKey = int(key)
 
 			# For debug or trial only
@@ -209,9 +207,9 @@ class DynamicCivNames:
 				[newName,newShort,newAdj] = self.newNameByCivics(i)
 				bodStr += curDesc + '\t-> ' + newName + '\n'
 
-		popup = PyPopup.PyPopup()
-		popup.setBodyString(bodStr)
-		popup.launch()
+		popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+		popup.setBodyString(bodStr, 1<<0)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
 	def nameForNewPlayer(self, iPlayer):

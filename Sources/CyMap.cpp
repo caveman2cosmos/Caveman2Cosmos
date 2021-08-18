@@ -79,6 +79,11 @@ bool CyMap::isInViewport(int iX, int iY)
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
 }
 
+bool CyMap::isMidSwitch() const
+{
+	return CvMap::m_bSwitchInProgress;
+}
+
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
 {
 	GC.getCurrentViewport()->closeAdvisor(advisorWidth, iMinimapLeft, iMinimapRight, iMinimapTop, iMinimapBottom);
@@ -430,4 +435,9 @@ void CyMap::calculateCanalAndChokePoints()
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}
+}
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
 }

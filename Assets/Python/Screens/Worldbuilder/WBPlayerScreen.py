@@ -6,7 +6,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import Popup
 
 GC = CyGlobalContext()
 iChange = 1
@@ -424,12 +423,11 @@ class WBPlayerScreen:
 			self.interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "PlayerEditScriptData":
-			popup = Popup.PyPopup(1111, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(1111, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pPlayer.getID(),))
-			popup.createEditBox(pPlayer.getScriptData())
-			popup.launch()
-			return
+			popup.createEditBox(pPlayer.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		return 1
 

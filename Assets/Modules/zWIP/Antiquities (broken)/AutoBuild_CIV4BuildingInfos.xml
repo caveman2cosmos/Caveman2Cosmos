@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<BuildingInfo>
-			<Type>BUILDING_CAVE_NEAR_CITY</Type>
-			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
-			<FreeBuilding>BUILDING_CAVE_IN_NATION</FreeBuilding>
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAVE_IN_NATION</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_IN_NATION</Description>
@@ -33,7 +10,24 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAVE_NEAR_CITY</Type>
+			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<FreeBuilding>BUILDING_CAVE_IN_NATION</FreeBuilding>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELITE_HOUSING</Type>
