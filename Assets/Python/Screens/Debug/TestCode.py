@@ -1485,16 +1485,16 @@ class TestCode:
 				#=================================================================================================
 				#<UnitCombatFreeExperiences> - base
 				aBaseUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
-				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
-					aBaseUnitCombatFreeExperiences[iUnitCombat] += CvBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+				for pair in CvBuildingInfo.getUnitCombatFreeExperience():
+					aBaseUnitCombatFreeExperiences[pair.id] += pair.value
 
 				#Analyze replacements by tag
 				aUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<UnitCombatFreeExperiences>
-					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
-						aUnitCombatFreeExperiences[iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatFreeExperience(iUnitCombat)
+					for pair in CvReplacedBuildingInfo.getUnitCombatFreeExperience():
+						aUnitCombatFreeExperiences[pair.id] += pair.value
 
 				#Keep already existing <UnitCombatFreeExperiences> in base
 				aFinalUnitCombatFreeExperiences = [0]*GC.getNumUnitCombatInfos()
