@@ -1336,9 +1336,10 @@ class TestCode:
 				#<BonusHappinessChanges>, <BonusHealthChanges> - base
 				aBaseBonusHappinessChanges = [0]*GC.getNumBonusInfos()
 				aBaseBonusHealthChanges = [0]*GC.getNumBonusInfos()
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					aBaseBonusHappinessChanges[iBonus] += CvBuildingInfo.getBonusHappinessChanges(iBonus)
-					aBaseBonusHealthChanges[iBonus] += CvBuildingInfo.getBonusHealthChanges(iBonus)
+				for pair in CvBuildingInfo.getBonusHappiness():
+					aBaseBonusHappinessChanges[pair.id] += pair.value
+				for pair in CvBuildingInfo.getBonusHealth():
+					aBaseBonusHealthChanges[pair.id] += pair.value
 
 				#Analyze replacements by tag
 				aBonusHappinessChanges = [0]*GC.getNumBonusInfos()
@@ -1346,9 +1347,10 @@ class TestCode:
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<BonusHappinessChanges>, <BonusHealthChanges>
-					for iBonus in xrange(GC.getNumBonusInfos()):
-						aBonusHappinessChanges[iBonus] += CvReplacedBuildingInfo.getBonusHappinessChanges(iBonus)
-						aBonusHealthChanges[iBonus] += CvReplacedBuildingInfo.getBonusHealthChanges(iBonus)
+					for pair in CvReplacedBuildingInfo.getBonusHappiness():
+						aBonusHappinessChanges[pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getBonusHealth():
+						aBonusHealthChanges[pair.id] += pair.value
 
 				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges> in base
 				aFinalBonusHappinessChanges = [0]*GC.getNumBonusInfos()
