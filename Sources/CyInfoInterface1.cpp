@@ -440,6 +440,11 @@ void CyInfoPythonInterface1()
 		.def("isAnyTechCommerceChanges", &CvBuildingInfo::isAnyTechCommerceChanges, "bool ()")
 		.def("isAnyTechCommerceModifiers", &CvBuildingInfo::isAnyTechCommerceModifiers, "bool ()")
 		.def("isAnyTechSpecialistChanges", &CvBuildingInfo::isAnyTechSpecialistChanges, "bool ()")
+		.def("isAnyBonusYieldChanges", &CvBuildingInfo::isAnyBonusYieldChanges, "bool ()")
+		.def("isAnyVicinityBonusYieldChanges", &CvBuildingInfo::isAnyVicinityBonusYieldChanges, "bool ()")
+		.def("isAnyBonusYieldModifiers", &CvBuildingInfo::isAnyBonusYieldModifiers, "bool ()")
+		.def("isAnyBonusCommercePercentChanges", &CvBuildingInfo::isAnyBonusCommercePercentChanges, "bool ()")
+		.def("isAnyBonusCommerceModifiers", &CvBuildingInfo::isAnyBonusCommerceModifiers, "bool ()")
 
 
 		.def("getHotKey", &CvBuildingInfo::getHotKey, "string ()")

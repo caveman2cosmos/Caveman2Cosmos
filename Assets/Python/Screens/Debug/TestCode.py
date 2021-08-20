@@ -1438,27 +1438,52 @@ class TestCode:
 				aBonusYieldModifiers = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aBonusCommercePercentChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aBonusCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						aBonusYieldChanges[BASE][iBonus][iYield] += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
-						aVicinityBonusYieldChanges[BASE][iBonus][iYield] += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
-						aBonusYieldModifiers[BASE][iBonus][iYield] += CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						aBonusCommercePercentChanges[BASE][iBonus][iCommerce] += CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
-						aBonusCommerceModifiers[BASE][iBonus][iCommerce] += CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
+
+				if CvBuildingInfo.isAnyBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aBonusYieldChanges[BASE][iBonus][iYield] += CvBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aVicinityBonusYieldChanges[BASE][iBonus][iYield] += CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+				if CvBuildingInfo.isAnyBonusYieldModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aBonusYieldModifiers[BASE][iBonus][iYield] += CvBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+				if CvBuildingInfo.isAnyBonusCommercePercentChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aBonusCommercePercentChanges[BASE][iBonus][iCommerce] += CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+				if CvBuildingInfo.isAnyBonusCommerceModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aBonusCommerceModifiers[BASE][iBonus][iCommerce] += CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers>
-					for iBonus in xrange(GC.getNumBonusInfos()):
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							aBonusYieldChanges[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldChanges(iBonus, iYield)
-							aVicinityBonusYieldChanges[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
-							aBonusYieldModifiers[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldModifier(iBonus, iYield)
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							aBonusCommercePercentChanges[REPLACED][iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
-							aBonusCommerceModifiers[REPLACED][iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
+					if CvReplacedBuildingInfo.isAnyBonusYieldChanges():
+						for iBonus in xrange(GC.getNumBonusInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aBonusYieldChanges[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldChanges(iBonus, iYield)
+					if CvReplacedBuildingInfo.isAnyVicinityBonusYieldChanges():
+						for iBonus in xrange(GC.getNumBonusInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aVicinityBonusYieldChanges[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield)
+					if CvReplacedBuildingInfo.isAnyBonusYieldModifiers():
+						for iBonus in xrange(GC.getNumBonusInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aBonusYieldModifiers[REPLACED][iBonus][iYield] += CvReplacedBuildingInfo.getBonusYieldModifier(iBonus, iYield)
+					if CvReplacedBuildingInfo.isAnyBonusCommercePercentChanges():
+						for iBonus in xrange(GC.getNumBonusInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aBonusCommercePercentChanges[REPLACED][iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce)
+					if CvReplacedBuildingInfo.isAnyBonusCommerceModifiers():
+						for iBonus in xrange(GC.getNumBonusInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aBonusCommerceModifiers[REPLACED][iBonus][iCommerce] += CvReplacedBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce)
 
 				#Keep already existing <BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> in base
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1492,29 +1517,52 @@ class TestCode:
 				aTechCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechSpecialistChanges = [[[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-				for iTech in xrange(GC.getNumTechInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						aTechYieldChanges[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldChange(iTech, iYield)
-						aTechYieldModifiers[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						aTechCommerceChanges[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-						aTechCommerceModifiers[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
-					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-						aTechSpecialistChanges[BASE][iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+
+				if CvBuildingInfo.isAnyTechYieldChanges():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aTechYieldChanges[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldChange(iTech, iYield)
+				if CvBuildingInfo.isAnyTechYieldModifiers():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aTechYieldModifiers[BASE][iTech][iYield] += CvBuildingInfo.getTechYieldModifier(iTech, iYield)
+				if CvBuildingInfo.isAnyTechCommerceChanges():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aTechCommerceChanges[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+				if CvBuildingInfo.isAnyTechCommerceModifiers():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aTechCommerceModifiers[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+				if CvBuildingInfo.isAnyTechSpecialistChanges():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							aTechSpecialistChanges[BASE][iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
-					for iTech in xrange(GC.getNumTechInfos()):
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							aTechYieldChanges[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldChange(iTech, iYield)
-							aTechYieldModifiers[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							aTechCommerceChanges[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-							aTechCommerceModifiers[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
-						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-							aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
+					if CvReplacedBuildingInfo.isAnyTechYieldChanges():
+						for iTech in xrange(GC.getNumTechInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aTechYieldChanges[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldChange(iTech, iYield)
+					if CvReplacedBuildingInfo.isAnyTechYieldModifiers():
+						for iTech in xrange(GC.getNumTechInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aTechYieldModifiers[REPLACED][iTech][iYield] += CvReplacedBuildingInfo.getTechYieldModifier(iTech, iYield)
+					if CvReplacedBuildingInfo.isAnyTechCommerceChanges():
+						for iTech in xrange(GC.getNumTechInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aTechCommerceChanges[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+					if CvReplacedBuildingInfo.isAnyTechCommerceModifiers():
+						for iTech in xrange(GC.getNumTechInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aTechCommerceModifiers[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceModifier(iTech, iCommerce)
+					if CvReplacedBuildingInfo.isAnyTechSpecialistChanges():
+						for iTech in xrange(GC.getNumTechInfos()):
+							for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+								aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
 				#Keep already existing <TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
 				for iTech in xrange(GC.getNumTechInfos()):
@@ -2051,32 +2099,61 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iBuildingObsoleteTechLoc = self.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+
+			if CvBuildingInfo.isAnyBonusYieldChanges():
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							#<BonusYieldChanges>
+							if CvBuildingInfo.getBonusYieldChanges(iBonus, iYield) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldChanges")
+
+			if CvBuildingInfo.isAnyBonusYieldModifiers():
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							#<BonusYieldModifiers>
+							if CvBuildingInfo.getBonusYieldModifier(iBonus, iYield) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldModifiers")
+
+			if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							#<VicinityBonusYieldChanges>
+							if CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - VicinityBonusYieldChanges")
+
+			if CvBuildingInfo.isAnyBonusCommerceModifiers():
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							#<BonusCommerceModifiers>
+							if CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusCommerceModifiers")
+
+			if CvBuildingInfo.isAnyBonusCommercePercentChanges():
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							#<BonusCommercePercentChanges>
+							if CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - getBonusCommercePercentChanges")
+
 			for iBonus in xrange(GC.getNumBonusInfos()):
 				CvBonusInfo = GC.getBonusInfo(iBonus)
 				iBonusTechEnable = self.checkBonusTechRequirementLocation(CvBonusInfo)[2]
 				if iBuildingObsoleteTechLoc < iBonusTechEnable:
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						#<BonusYieldChanges>
-						if CvBuildingInfo.getBonusYieldChanges(iBonus, iYield) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldChanges")
-
-						#<BonusYieldModifiers>
-						if CvBuildingInfo.getBonusYieldModifier(iBonus, iYield) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldModifiers")
-
-						#<VicinityBonusYieldChanges>
-						if CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - VicinityBonusYieldChanges")
-
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						#<BonusCommerceModifiers>
-						if CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusCommerceModifiers")
-
-						#<BonusCommercePercentChanges>
-						if CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - getBonusCommercePercentChanges")
-
 					#<BonusHappinessChanges>
 					if CvBuildingInfo.getBonusHappinessChanges(iBonus) != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHappinessChanges")
