@@ -52,6 +52,7 @@ class PediaBonus:
 		ePanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 		ePanelEmpty			= PanelStyles.PANEL_STYLE_EMPTY
 		eNumYieldTypes 		= YieldTypes.NUM_YIELD_TYPES
+		eNumCommerceTypes 	= CommerceTypes.NUM_COMMERCE_TYPES
 
 		enumGBS = self.main.enumGBS
 		szfontEdge, szfont4b, szfont4, szfont3b, szfont3, szfont2b, szfont2 = self.main.aFontList
@@ -94,15 +95,21 @@ class PediaBonus:
 				aGOMBonusReqList.append([])
 			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
-			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
+			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):			
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
-			else:
+			if CvBuildingInfo.isAnyBonusYieldChanges() or CvBuildingInfo.isAnyVicinityBonusYieldChanges() or CvBuildingInfo.isAnyBonusYieldModifiers():
 				for eYield in xrange(eNumYieldTypes):
-					if CvBuildingInfo.getBonusYieldModifier(iTheBonus, eYield):
-						aAffectedBuildings.append(iBuilding)
-						bValid = False
-						break
+					if CvBuildingInfo.getBonusYieldChanges(iTheBonus, eYield) or CvBuildingInfo.getVicinityBonusYieldChanges(iTheBonus, eYield) or CvBuildingInfo.getBonusYieldModifier(iTheBonus, eYield):
+						if iBuilding not in aAffectedBuildings:
+							aAffectedBuildings.append(iBuilding)
+							bValid = False
+			if CvBuildingInfo.isAnyBonusCommercePercentChanges() or CvBuildingInfo.isAnyBonusCommerceModifiers():
+				for eCommerce in xrange(eNumCommerceTypes):
+					if CvBuildingInfo.getBonusCommercePercentChanges(iTheBonus, eCommerce) or CvBuildingInfo.getBonusCommerceModifier(iTheBonus, eCommerce):
+						if iBuilding not in aAffectedBuildings:
+							aAffectedBuildings.append(iBuilding)
+							bValid = False
 			if CvBuildingInfo.getFreeBonus() == iTheBonus:
 				aSourceOfBonus.append(iBuilding)
 			else:
