@@ -95,7 +95,7 @@ class PediaBonus:
 				aGOMBonusReqList.append([])
 			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
-			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):			
+			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
 			if CvBuildingInfo.isAnyBonusYieldChanges() or CvBuildingInfo.isAnyVicinityBonusYieldChanges() or CvBuildingInfo.isAnyBonusYieldModifiers():
