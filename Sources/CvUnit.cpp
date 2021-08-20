@@ -12394,34 +12394,39 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		return 0;
 	}
-	int iPrice = GC.getUNIT_UPGRADE_COST_PER_PRODUCTION() * (GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType()));
-
-	if (!isHuman() && !isNPC())
+	uint64_t iPrice = (
+		GC.getUNIT_UPGRADE_COST_PER_PRODUCTION()
+		* (
+			GET_PLAYER(getOwner()).getProductionNeeded(eUnit)
+			-
+			GET_PLAYER(getOwner()).getBaseUnitCost100(getUnitType()) / 100
+		)
+	);
 	{
-		iPrice *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpgradePercent();
-		iPrice /= 100;
-
-		iPrice *= std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()) + 100));
-		iPrice /= 100;
+		int iMod = GET_PLAYER(getOwner()).getUnitUpgradePriceModifier();
+		if (!isHuman())
+		{
+			iMod += (
+				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpgradePercent() - 100
+				+
+				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()
+			);
+		}
+		iPrice = getModifiedIntValue64(iPrice, iMod);
 	}
-
-	iPrice = getModifiedIntValue(iPrice, GET_PLAYER(getOwner()).getUnitUpgradePriceModifier());
-	iPrice -= iPrice * getUpgradeDiscount();
-
-	iPrice /= 100;
-
-	//ls612: Upgrade price is now dependent on the level of a unit
-	//if (iPrice != 0)
-	//{
-	//	iPrice *= std::max(100, (100 + (5 * ((getLevel()) - 4))));
-	//	iPrice /= 100;
-	//}
+	iPrice -= iPrice * getUpgradeDiscount() / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+		iPrice = applySMRank64(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER(), false);
 	}
-	return std::max(1, iPrice);
+	iPrice /= 100;
+
+	if (iPrice >= MAX_INT)
+	{
+		return MAX_INT;
+	}
+	return std::max(1, static_cast<int>(iPrice));
 }
 
 
@@ -38452,6 +38457,35 @@ int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 	}
 	return static_cast<int>(std::min<int64_t>(MAX_INT, lvalue / 100));
 }
+
+int64_t CvUnit::applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp)
+{
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
+	if (bScaleUp) value *= 100;
+
+	if (rankChange > 0)
+	{
+		for (int iI = 0; iI < rankChange; iI++)
+		{
+			value *= rankMultiplier;
+			value /= 100;
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < -rankChange; iI++)
+		{
+			value *= 100;
+			value /= rankMultiplier;
+		}
+	}
+	if (bScaleUp)
+	{
+		return value / 100;
+	}
+	return value;
+}
+
 
 int CvUnit::getNoSelfHealCount() const
 {
