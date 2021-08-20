@@ -797,6 +797,23 @@
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</Type>
+			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Description>
+			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_FRESCO</BuildingType>
+			</PrereqBuildings>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Type>
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
@@ -810,6 +827,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -826,6 +845,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
@@ -843,6 +864,8 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</OutcomeType>
 			</ReplaceOutcomes>

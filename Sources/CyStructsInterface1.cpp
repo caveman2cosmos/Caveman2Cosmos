@@ -36,12 +36,6 @@ void CyStructsPythonInterface1()
 		.def_readwrite("y", &POINT::y)
 		;
 
-	python::class_<XYCoords>("XYCoords")
-		.def(python::init<int, int>())	// ctor which takes 2 ints
-		.def_readwrite("iX", &XYCoords::iX)
-		.def_readwrite("iY", &XYCoords::iY)
-		;
-
 	python::class_<IDInfo>("IDInfo")
 		.def_readwrite("eOwner", &IDInfo::eOwner)
 		.def_readwrite("iID", &IDInfo::iID)
@@ -99,11 +93,6 @@ void CyStructsPythonInterface1()
 	python::class_<EventMessage>("EventMessage")
 		.def_readwrite("iExpirationTurn", &EventMessage::iExpirationTurn)
 		.def("getDescription", &EventMessage::getDescription)
-		;
-
-	python::class_<FOWVis>("FOWVis")
-		.def_readwrite("uiCount", &FOWVis::uiCount)
-		.def("getOffsets", &FOWVis::getOffsets)  // array of "Offset" points
 		;
 
 	python::class_<PBGameSetupData>("PBGameSetupData")
