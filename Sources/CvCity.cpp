@@ -5321,29 +5321,41 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeImprovementFreeSpecialists((ImprovementTypes)iI, kBuilding.getImprovementFreeSpecialist(iI) * iChange);
 	}
 
-	FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlotGroup::reset");
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
+	{
+		if (hasBonus(modifier.first))
+		{
+			if (modifier.second > 0)
+			{
+				changeBonusGoodHealth(modifier.second * iChange);
+			}
+			else
+			{
+				changeBonusBadHealth(modifier.second * iChange);
+			}
+		}
+	}
+
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappiness())
+	{
+		if (hasBonus(modifier.first))
+		{
+			if (modifier.second > 0)
+			{
+				changeBonusGoodHappiness(modifier.second * iChange);
+			}
+			else
+			{
+				changeBonusBadHappiness(modifier.second * iChange);
+			}
+		}
+	}
+
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		PROFILE("CvCity::processBuilding.Bonuses2");
 		if (hasBonus((BonusTypes)iI))
 		{
-			if (kBuilding.getBonusHealthChanges(iI) > 0)
-			{
-				changeBonusGoodHealth(kBuilding.getBonusHealthChanges(iI) * iChange);
-			}
-			else
-			{
-				changeBonusBadHealth(kBuilding.getBonusHealthChanges(iI) * iChange);
-			}
-			if (kBuilding.getBonusHappinessChanges(iI) > 0)
-			{
-				changeBonusGoodHappiness(kBuilding.getBonusHappinessChanges(iI) * iChange);
-			}
-			else
-			{
-				changeBonusBadHappiness(kBuilding.getBonusHappinessChanges(iI) * iChange);
-			}
-
 			if (kBuilding.getPowerBonus() == iI)
 			{
 				changePowerCount(iChange);
@@ -5368,9 +5380,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
 	{
-		changeUnitCombatFreeExperience(((UnitCombatTypes)iI), kBuilding.getUnitCombatFreeExperience(iI) * iChange);
+		changeUnitCombatFreeExperience(modifier.first, modifier.second * iChange);
 	}
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -9152,14 +9164,11 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	}
 
 	// Bonus
-	if (kBuilding.getBonusHappinessChanges(NO_BONUS) != 0)
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHappiness())
 	{
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
-			if ((hasBonus((BonusTypes)iI) || kBuilding.getFreeBonus() == iI || kBuilding.hasExtraFreeBonus((BonusTypes)iI)) && kBuilding.getNoBonus() != iI)
-			{
-				addGoodOrBad(kBuilding.getBonusHappinessChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 
@@ -9330,14 +9339,11 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	}
 
 	// Bonus
-	if (kBuilding.getBonusHealthChanges(NO_BONUS) != 0)
+	foreach_(const BonusModifier2& modifier, kBuilding.getBonusHealth())
 	{
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		if ((hasBonus(modifier.first) || kBuilding.getFreeBonus() == modifier.first || kBuilding.hasExtraFreeBonus(modifier.first)) && kBuilding.getNoBonus() != modifier.first)
 		{
-			if ((hasBonus((BonusTypes)iI) || kBuilding.getFreeBonus() == iI || kBuilding.hasExtraFreeBonus((BonusTypes)iI)) && kBuilding.getNoBonus() != iI)
-			{
-				addGoodOrBad(kBuilding.getBonusHealthChanges(iI), iGood, iBad);
-			}
+			addGoodOrBad(modifier.second, iGood, iBad);
 		}
 	}
 

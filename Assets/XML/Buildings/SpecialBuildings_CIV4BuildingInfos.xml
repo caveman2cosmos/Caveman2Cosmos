@@ -8851,11 +8851,23 @@
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
-				<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
 			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_CHILDCAREHUT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_DAYCARE_CENTER</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<ReplacementBuildings>
@@ -11162,8 +11174,12 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -11198,8 +11214,12 @@
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -11242,8 +11262,12 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
@@ -16644,9 +16668,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

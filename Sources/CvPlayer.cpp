@@ -7206,89 +7206,91 @@ bool CvPlayer::isProductionMaxedProject(ProjectTypes eProject) const
 }
 
 
-int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
+uint64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 {
-	int iInitialProduction = GC.getUnitInfo(eUnit).getProductionCost();
-	if (iInitialProduction < 0)
+	uint64_t iBaseCost = GC.getUnitInfo(eUnit).getProductionCost();
+
+	if (iBaseCost < 0)
 	{
 		return -1;
 	}
-	uint64_t iProductionNeeded = 100 * iInitialProduction;
-
-	int iModifier = 100;
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (iBaseCost > 0)
 	{
-		iModifier += getUnitCountSM(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
-	}
-	else iModifier += getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
+		// We keep the 100 multiplier from the gamespeed modifier on purpose.
+		iBaseCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
-	iProductionNeeded *= iModifier;
-	iProductionNeeded /= 100;
+		iBaseCost *= GC.getHandicapInfo(getHandicapType()).getTrainPercent();
+		iBaseCost /= 100;
 
-	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-	iProductionNeeded *= iModifier;
-	iProductionNeeded /= 100;
-
-	iModifier = GC.getHandicapInfo(getHandicapType()).getTrainPercent();
-	iProductionNeeded *= iModifier;
-	iProductionNeeded /= 100;
-
-	if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
-	{
-		EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
-		if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
+		int iMod = 100;
+		if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 		{
-			eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
+			EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
+			if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
+			{
+				eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
+			}
+			iMod = GC.getEraInfo(eEra).getTrainPercent();
 		}
-		iModifier = GC.getEraInfo(eEra).getTrainPercent();
-	}
-	else iModifier = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
+		else iMod = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
 
-	iProductionNeeded *= iModifier;
+		iBaseCost *= iMod;
+		iBaseCost /= 100;
+
+		// Trade units aren't impacted by SM production reduction due to ROI oddities. They can't merge anyway, so...
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
+		{
+			iMod = GC.getUNIT_PRODUCTION_PERCENT_SM();
+		}
+		else iMod = GC.getUNIT_PRODUCTION_PERCENT();
+
+		iBaseCost *= iMod;
+		iBaseCost /= 100;
+
+		if (!isHuman() && !isNPC())
+		{
+			if (isWorldUnit(eUnit))
+			{
+				iMod = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldTrainPercent();
+			}
+			else iMod = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
+
+			iBaseCost *= iMod;
+			iBaseCost /= 100;
+
+			iBaseCost *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+			iBaseCost /= 100;
+		}
+	}
+	// The getUnitExtraCost() is where we get the cost for a settler unit (that's ALL this does).
+	// The cost scales to GROWTH factors rather than training factors; gamespeed and other relevant modifiers are factored in.
+	return iBaseCost + 100 * getUnitExtraCost(eUnit);
+}
+
+int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
+{
+	uint64_t iProductionNeeded = getBaseUnitCost100(eUnit);
+	if (iProductionNeeded < 0)
+	{
+		return -1;
+	}
+	// Toffer - I split this last modifier away from the rest as it is only interesting when intending to create a new unit.
+	//	When upgrading a unit we need the cost of the unit to be upgraded, in the interest of getting rid of it rather than creating a new unit.
+	//	So when upgerading, we only want this last modifier to apply to the unit it is going to upgrade to when comparing their hammer costs to derive the gold cost of the upgrade.
+	{
+		const int iInstanceCostModifier = GC.getUnitInfo(eUnit).getInstanceCostModifier();
+		if (iInstanceCostModifier != 0)
+		{
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			{
+				iProductionNeeded = getModifiedIntValue64(iProductionNeeded, getUnitCountSM(eUnit) * iInstanceCostModifier);
+			}
+			else iProductionNeeded = getModifiedIntValue64(iProductionNeeded, getUnitCount(eUnit) * iInstanceCostModifier);
+		}
+	}
 	iProductionNeeded /= 100;
 
-	// Trade units aren't impacted by SM production reduction due to ROI oddities. They can't merge anyway, so...
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
-	{
-		iModifier = GC.getUNIT_PRODUCTION_PERCENT_SM();
-		iProductionNeeded *= iModifier;
-		iProductionNeeded /= 100;
-	}
-	else
-	{
-		iModifier = GC.getUNIT_PRODUCTION_PERCENT();
-		iProductionNeeded *= iModifier;
-		iProductionNeeded /= 100;
-	}
-
-
-	if (!isHuman() && !isNPC())
-	{
-		if (isWorldUnit(eUnit))
-		{
-			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldTrainPercent();
-			iProductionNeeded *= iModifier;
-			iProductionNeeded /= 100;
-		}
-		else
-		{
-			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
-			iProductionNeeded *= iModifier;
-			iProductionNeeded /= 100;
-		}
-
-		iModifier = std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
-		iProductionNeeded *= iModifier;
-		iProductionNeeded /= 100;
-	}
-
-	//The following is where we get the cost for a settler unit (that's ALL this does) and the cost scales to GROWTH factors rather than training factors.
-	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
-	iProductionNeeded += 100 * getUnitExtraCost(eUnit);
-
-	iProductionNeeded /= 100;
-
-	if (iProductionNeeded > MAX_INT)
+	if (iProductionNeeded >= MAX_INT)
 	{
 		return MAX_INT;
 	}
@@ -10286,7 +10288,7 @@ int CvPlayer::getUnitUpgradePriceModifier() const
 
 void CvPlayer::changeUnitUpgradePriceModifier(int iChange)
 {
-	m_iUnitUpgradePriceModifier = (m_iUnitUpgradePriceModifier + iChange);
+	m_iUnitUpgradePriceModifier += iChange;
 }
 
 
@@ -17732,29 +17734,23 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 
 			if (pPlot->getFeatureType() != NO_FEATURE)
 			{
-				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumFeatureImpassableTypes(); iI++)
+				if (algo::contains(GC.getUnitInfo(eUnit).getImpassableFeatures(), pPlot->getFeatureType()))
 				{
-					if ((FeatureTypes)GC.getUnitInfo(eUnit).getFeatureImpassableType(iI) == pPlot->getFeatureType())
+					const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(pPlot->getFeatureType());
+					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 					{
-						TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getFeaturePassableTech(pPlot->getFeatureType());
-						if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-						{
-							return -1;
-						}
+						return -1;
 					}
 				}
 			}
 			else
 			{
-				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumTerrainImpassableTypes(); iI++)
+				if (algo::contains(GC.getUnitInfo(eUnit).getImpassableTerrains(), pPlot->getTerrainType()))
 				{
-					if ((TerrainTypes)GC.getUnitInfo(eUnit).getTerrainImpassableType(iI) == pPlot->getTerrainType())
+					const TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(pPlot->getTerrainType());
+					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 					{
-						TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(pPlot->getTerrainType());
-						if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-						{
-							return -1;
-						}
+						return -1;
 					}
 				}
 			}
@@ -27094,7 +27090,7 @@ int CvPlayer::getReligionSpreadRate() const
 
 void CvPlayer::setReligionSpreadRate(int iValue)
 {
-	FAssertMsg(iValue >= 0, "iValue cannot be less than 0");
+	FASSERT_NOT_NEGATIVE(iValue);
 	m_iReligionSpreadRate = iValue;
 }
 
@@ -28484,6 +28480,9 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
+    // @SAVEBREAK DELETE - Toffer
+	m_unitCountSM.clear();
+    // SAVEBREAK@ */
 	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();

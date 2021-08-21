@@ -1803,9 +1803,10 @@
 				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_FERTILITYFESTIVAL_EFFECT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>

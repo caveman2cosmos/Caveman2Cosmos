@@ -720,9 +720,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		break;
 
-	case BUTTONPOPUP_SAVE_INFO_LOST:
-		break;
-
 	case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			if (1 == pPopupReturn->getButtonClicked())
@@ -1124,10 +1121,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		case BUTTONPOPUP_GET_SAVE_FORMAT:
 		{
 			return launchGetSaveFormatPopup(pPopup, info);
-		}
-		case BUTTONPOPUP_SAVE_INFO_LOST:
-		{
-			return launchGetSaveInfoLostPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
@@ -2899,18 +2892,6 @@ bool CvDLLButtonPopup::launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &in
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT").c_str(), NULL, 1, WIDGET_GENERAL);
 
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
-	return true;
-}
-
-bool CvDLLButtonPopup::launchGetSaveInfoLostPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR");
-
-	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szBuffer);
-
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, info.getText());
-
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup);
 	return true;
 }
 

@@ -3730,8 +3730,8 @@ class Revolution:
 								if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Homeless rebel (attitude) %s in area"%(playerI.getCivilizationDescription(0)))
 								rebelIDList.append(i)
 
-						if (playerI.getCitiesLost() < 3 and playerI.getNumCities() < 4
-						and GAME.getGameTurn() - playerI.getCapitalCity().getGameTurnAcquired() < 30
+						if (playerI.getCitiesLost() < 3 and playerI.getNumCities() < 4 \
+						and GAME.getGameTurn() - playerI.getCapitalCity().getGameTurnAcquired() < 30 \
 						and not GC.getPlayer(playerI.getCapitalCity().getPreviousOwner()).isNPC()):
 
 							if (playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv')):

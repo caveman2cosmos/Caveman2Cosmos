@@ -6111,9 +6111,6 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		bIsVisibleEnemyDefender = false;
 	}
 
-	const int iHill = GC.getTERRAIN_HILL();
-	const int iPeak = GC.getTERRAIN_PEAK();
-
 	if (!bIgnoreLocation && atPlot(pPlot))
 	{
 		return false;
@@ -6140,44 +6137,30 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	CvArea *pPlotArea = pPlot->area();
+	const CvArea* pPlotArea = pPlot->area();
 	TeamTypes ePlotTeam = pPlot->getTeam();
 	bool bCanEnterArea = canEnterArea(ePlotTeam, pPlotArea);
 	if (bCanEnterArea)
 	{
 		if (pPlot->getFeatureType() != NO_FEATURE)
 		{
-			for (int iI = 0; iI < m_pUnitInfo->getNumFeatureImpassableTypes(); iI++)
+			if (algo::contains(m_pUnitInfo->getImpassableFeatures(), pPlot->getFeatureType()))
 			{
-				if ((FeatureTypes)m_pUnitInfo->getFeatureImpassableType(iI) == pPlot->getFeatureType())
+				const TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
+				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 				{
-					TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
-					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
+					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
 					{
-						if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 			}
-			//if (m_pUnitInfo->getFeatureImpassable(pPlot->getFeatureType()))
-			//{
-			//	TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
-			//	if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-			//	{
-			//		if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
-			//		{
-			//			return false;
-			//		}
-			//	}
-			//}
 		}
 
-		if (pPlot->isAsPeak() && m_pUnitInfo->isTerrainImpassableType(iPeak)
-		|| pPlot->isHills() && m_pUnitInfo->isTerrainImpassableType(iHill))
+		if (pPlot->isAsPeak() && m_pUnitInfo->isTerrainImpassableType(GC.getTERRAIN_PEAK())
+		|| pPlot->isHills() && m_pUnitInfo->isTerrainImpassableType(GC.getTERRAIN_HILL()))
 		{
-			TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
+			const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 			{
 				if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
@@ -6189,19 +6172,16 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				}
 			}
 		}
-		for (int iI = 0; iI < m_pUnitInfo->getNumTerrainImpassableTypes(); iI++)
+		if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 		{
-			if ((TerrainTypes)m_pUnitInfo->getTerrainImpassableType(iI) == pPlot->getTerrainType())
+			const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
+			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 			{
-				TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
-				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
+				if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
 				{
-					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
+					if (bIgnoreLoad || !canLoad(pPlot))
 					{
-						if (bIgnoreLoad || !canLoad(pPlot))
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 			}
@@ -7668,15 +7648,12 @@ bool CvUnit::shouldLoadOnMove(const CvPlot* pPlot) const
 		break;
 	}
 
-	for (int iI = 0; iI < m_pUnitInfo->getNumTerrainImpassableTypes(); iI++)
+	if (algo::contains(m_pUnitInfo->getImpassableTerrains(), pPlot->getTerrainType()))
 	{
-		if ((TerrainTypes)m_pUnitInfo->getTerrainImpassableType(iI) == pPlot->getTerrainType())
+		const TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
+		if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 		{
-			TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
-			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -7751,18 +7728,12 @@ bool CvUnit::canUnload() const
 		const TerrainTypes eTerrain = kPlot.getTerrainType();
 		if (eTerrain != NO_TERRAIN)
 		{
-			if (m_pUnitInfo->isTerrainImpassableType((int)eTerrain))
-			{
-				return false;
-			}
+			return false;
 		}
 		const FeatureTypes eFeature = kPlot.getFeatureType();
 		if (eFeature != NO_FEATURE)
 		{
-			if (m_pUnitInfo->isFeatureImpassableType((int)eFeature))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -12423,34 +12394,39 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		return 0;
 	}
-	int iPrice = GC.getUNIT_UPGRADE_COST_PER_PRODUCTION() * (GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType()));
-
-	if (!isHuman() && !isNPC())
+	uint64_t iPrice = (
+		GC.getUNIT_UPGRADE_COST_PER_PRODUCTION()
+		* (
+			GET_PLAYER(getOwner()).getProductionNeeded(eUnit)
+			-
+			GET_PLAYER(getOwner()).getBaseUnitCost100(getUnitType()) / 100
+		)
+	);
 	{
-		iPrice *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpgradePercent();
-		iPrice /= 100;
-
-		iPrice *= std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()) + 100));
-		iPrice /= 100;
+		int iMod = GET_PLAYER(getOwner()).getUnitUpgradePriceModifier();
+		if (!isHuman())
+		{
+			iMod += (
+				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpgradePercent() - 100
+				+
+				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()
+			);
+		}
+		iPrice = getModifiedIntValue64(iPrice, iMod);
 	}
-
-	iPrice = getModifiedIntValue(iPrice, GET_PLAYER(getOwner()).getUnitUpgradePriceModifier());
-	iPrice -= iPrice * getUpgradeDiscount();
-
-	iPrice /= 100;
-
-	//ls612: Upgrade price is now dependent on the level of a unit
-	//if (iPrice != 0)
-	//{
-	//	iPrice *= std::max(100, (100 + (5 * ((getLevel()) - 4))));
-	//	iPrice /= 100;
-	//}
+	iPrice -= iPrice * getUpgradeDiscount() / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+		iPrice = applySMRank64(iPrice, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER(), false);
 	}
-	return std::max(1, iPrice);
+	iPrice /= 100;
+
+	if (iPrice >= MAX_INT)
+	{
+		return MAX_INT;
+	}
+	return std::max(1, static_cast<int>(iPrice));
 }
 
 
@@ -15728,27 +15704,14 @@ bool CvUnit::hasCombatType(UnitCombatTypes eCombatType) const
 	{
 		return true;
 	}
-	// AIAndy: That loop could be removed if the unit type sub combat types get added to the extra sub combat type counts
-	for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
-	{
-		if (m_pUnitInfo->getSubCombatType(iI) == ((int)eCombatType))
-		{
-			return true;
-		}
-	}
-	return false;
+	// AIAndy: This could be removed if the unit type sub combat types get added to the extra sub combat type counts
+	return algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);;
 }
 
 bool CvUnit::hasSubCombatType(UnitCombatTypes eCombatType) const
 {
-	bool bSubCombat = false;
-	for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
-	{
-		if (m_pUnitInfo->getSubCombatType(iI) == ((int)eCombatType))
-		{
-			bSubCombat = true;
-		}
-	}
+	bool bSubCombat = algo::contains(m_pUnitInfo->getSubCombatTypes(), eCombatType);
+
 	if ((bSubCombat || hasExtraSubCombatType(eCombatType)) && m_pUnitInfo->getUnitCombatType() != eCombatType && !hasRemovesUnitCombatType(eCombatType))
 	{
 		return true;
@@ -17062,6 +17025,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	if (pNewPlot != NULL)
 	{
+		setHasAnyInvisibility();
+
 		if ((pOldPlot != NULL && pOldPlot->isInViewport()) != pNewPlot->isInViewport())
 		{
 			reloadEntity();
@@ -17098,8 +17063,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	{
 		gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity());
 	}
-	//TBSET
-	setHasAnyInvisibility();
 
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
@@ -21247,130 +21210,127 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (plot() != NULL)
+	bool bValid = true;
+
+	for (int iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
 	{
-		bool bValid = true;
+		const TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
 
-		for (int iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
+		if (ePrereqTerrain != NO_TERRAIN)
 		{
-			const TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
+			bValid = false;
 
-			if (ePrereqTerrain != NO_TERRAIN)
+			if (ePrereqTerrain == GC.getTERRAIN_PEAK())
 			{
-				bValid = false;
+				if (plot()->isAsPeak())
+				{
+					bValid = true;
+					break;
+				}
+			}
+			else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+			{
+				if (plot()->isHills())
+				{
+					bValid = true;
+					break;
+				}
+			}
+			else if (ePrereqTerrain == plot()->getTerrainType())
+			{
+				bValid = true;
+				break;
+			}
+		}
+	}
+	if (!bValid)
+	{
+		return false;
+	}
 
-				if (ePrereqTerrain == GC.getTERRAIN_PEAK())
+	for (int iI = 0; iI < kPromotion.getNumPrereqFeatureTypes(); iI++)
+	{
+		const FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
+
+		if (ePrereqFeature != NO_FEATURE)
+		{
+			bValid = false;
+			if (plot()->getFeatureType() == ePrereqFeature)
+			{
+				bValid = true;
+				break;
+			}
+		}
+	}
+	if (!bValid)
+	{
+		return false;
+	}
+
+	// Improvements and buildings is an OR statement between all of them.
+	{
+		bool bFirst = true;
+
+		for (int iI = 0; iI < kPromotion.getNumPrereqImprovementTypes(); iI++)
+		{
+			ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
+			if (ePrereqImprovement != NO_IMPROVEMENT)
+			{
+				bFirst = false;
+				bValid = false;
+				if (plot()->isCity(true) && ePrereqImprovement == GC.getIMPROVEMENT_CITY())
 				{
-					if (plot()->isAsPeak())
-					{
-						bValid = true;
-						break;
-					}
+					bValid = true;
+					break;
 				}
-				else if (ePrereqTerrain == GC.getTERRAIN_HILL())
-				{
-					if (plot()->isHills())
-					{
-						bValid = true;
-						break;
-					}
-				}
-				else if (ePrereqTerrain == plot()->getTerrainType())
+				if (plot()->getImprovementType() == ePrereqImprovement)
 				{
 					bValid = true;
 					break;
 				}
 			}
 		}
-		if (!bValid)
+		if (bFirst || !bValid)
 		{
-			return false;
-		}
-
-		for (int iI = 0; iI < kPromotion.getNumPrereqFeatureTypes(); iI++)
-		{
-			const FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
-
-			if (ePrereqFeature != NO_FEATURE)
+			const int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
+			if (iNumPrereqLocalBuilding > 0)
 			{
 				bValid = false;
-				if (plot()->getFeatureType() == ePrereqFeature)
+				for (int iI = 0; iI < iNumPrereqLocalBuilding; iI++)
 				{
-					bValid = true;
-					break;
-				}
-			}
-		}
-		if (!bValid)
-		{
-			return false;
-		}
+					if (plot()->isCity(false)
 
-		// Improvements and buildings is an OR statement between all of them.
-		{
-			bool bFirst = true;
-
-			for (int iI = 0; iI < kPromotion.getNumPrereqImprovementTypes(); iI++)
-			{
-				ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
-				if (ePrereqImprovement != NO_IMPROVEMENT)
-				{
-					bFirst = false;
-					bValid = false;
-					if (plot()->isCity(true) && ePrereqImprovement == GC.getIMPROVEMENT_CITY())
-					{
-						bValid = true;
-						break;
-					}
-					if (plot()->getImprovementType() == ePrereqImprovement)
+					&& pPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
 					{
 						bValid = true;
 						break;
 					}
 				}
 			}
-			if (bFirst || !bValid)
-			{
-				const int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
-				if (iNumPrereqLocalBuilding > 0)
-				{
-					bValid = false;
-					for (int iI = 0; iI < iNumPrereqLocalBuilding; iI++)
-					{
-						if (plot()->isCity(false)
+		}
+	}
+	if (!bValid)
+	{
+		return false;
+	}
 
-						&& pPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
-						{
-							bValid = true;
-							break;
-						}
-					}
-				}
+	for (int iI = 0; iI < kPromotion.getNumPrereqPlotBonusTypes(); iI++)
+	{
+		const BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
+
+		if (ePrereqBonus != NO_BONUS)
+		{
+			bValid = false;
+			if (plot()->getBonusType(getTeam()) == ePrereqBonus)
+			{
+				bValid = true;
+				break;
 			}
 		}
-		if (!bValid)
-		{
-			return false;
-		}
-
-		for (int iI = 0; iI < kPromotion.getNumPrereqPlotBonusTypes(); iI++)
-		{
-			const BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
-
-			if (ePrereqBonus != NO_BONUS)
-			{
-				bValid = false;
-				if (plot()->getBonusType(getTeam()) == ePrereqBonus)
-				{
-					bValid = true;
-					break;
-				}
-			}
-		}
-		if (!bValid)
-		{
-			return false;
-		}
+	}
+	if (!bValid)
+	{
+		return false;
 	}
 
 	if (kPromotion.isPrereqNormInvisible() && !hasInvisibleAbility())
@@ -30287,13 +30247,11 @@ void CvUnit::setCommander(bool bNewVal)
 
 		GET_PLAYER(getOwner()).Commanders.push_back(this);
 
-		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
-			const UnitCombatTypes eUnitCombat = (UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI);
-
-			if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
+			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
 			{
-				setHasUnitCombat(eUnitCombat, false);
+				setHasUnitCombat(eSubCombat, false);
 			}
 		}
 	}
@@ -34062,7 +34020,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 	bool bNeedForBypass = false;
 	bool bBypass = false;
-	if (plot() != NULL && !kPromotion.isPlotPrereqsKeepAfter())
+	if (!kPromotion.isPlotPrereqsKeepAfter())
 	{
 		const TerrainTypes eTerrain = plot()->getTerrainType();
 		for (iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
@@ -36255,10 +36213,11 @@ void CvUnit::doSetUnitCombats()
 	bool bUpdated = false;
 	if (getUnitCombatType() != NO_UNITCOMBAT)
 	{
-		setHasUnitCombat(getUnitCombatType(),true);
-		for (int iI = 0; iI < m_pUnitInfo->getNumSubCombatTypes(); iI++)
+		setHasUnitCombat(getUnitCombatType(), true);
+
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
-			setHasUnitCombat((UnitCombatTypes)m_pUnitInfo->getSubCombatType(iI),true);
+			setHasUnitCombat(eSubCombat, true);
 			bUpdated = true;
 		}
 	}
@@ -37989,35 +37948,33 @@ int CvUnit::workRate(bool bMax) const
 	int iWorkMod = getWorkModifier() + GET_PLAYER(getOwner()).getWorkerSpeedModifier();
 
 	const CvPlot* pPlot = plot();
-	if (pPlot != NULL)
+	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
-		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+		if (pPlot->getFeatureType() == (FeatureTypes)iI)
 		{
-			if (pPlot->getFeatureType() == (FeatureTypes)iI)
-			{
-				iWorkMod += featureWorkPercent((FeatureTypes)iI);
-			}
+			iWorkMod += featureWorkPercent((FeatureTypes)iI);
 		}
-		iWorkMod += terrainWorkPercent(pPlot->getTerrainType());
-		{
-			const BuildTypes eBuild = getBuildType();
-
-			if (eBuild != NO_BUILD)
-			{
-				iWorkMod += buildWorkPercent(eBuild);
-			}
-		}
-
-		if (pPlot->isHills())
-		{
-			iWorkMod += hillsWorkModifier();
-		}
-		else if (pPlot->isAsPeak())
-		{
-			iWorkMod += peaksWorkModifier();
-		}
-		iRate = getModifiedIntValue(iRate, iWorkMod);
 	}
+	iWorkMod += terrainWorkPercent(pPlot->getTerrainType());
+	{
+		const BuildTypes eBuild = getBuildType();
+
+		if (eBuild != NO_BUILD)
+		{
+			iWorkMod += buildWorkPercent(eBuild);
+		}
+	}
+
+	if (pPlot->isHills())
+	{
+		iWorkMod += hillsWorkModifier();
+	}
+	else if (pPlot->isAsPeak())
+	{
+		iWorkMod += peaksWorkModifier();
+	}
+	iRate = getModifiedIntValue(iRate, iWorkMod);
+
 	if (!isHuman() && !isNPC())
 	{
 		iRate = getModifiedIntValue(iRate, GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier());
@@ -38500,6 +38457,35 @@ int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 	}
 	return static_cast<int>(std::min<int64_t>(MAX_INT, lvalue / 100));
 }
+
+int64_t CvUnit::applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp)
+{
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
+	if (bScaleUp) value *= 100;
+
+	if (rankChange > 0)
+	{
+		for (int iI = 0; iI < rankChange; iI++)
+		{
+			value *= rankMultiplier;
+			value /= 100;
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < -rankChange; iI++)
+		{
+			value *= 100;
+			value /= rankMultiplier;
+		}
+	}
+	if (bScaleUp)
+	{
+		return value / 100;
+	}
+	return value;
+}
+
 
 int CvUnit::getNoSelfHealCount() const
 {
@@ -38984,35 +38970,30 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 
 	iAmount += getExtraVisibilityIntensityType(eInvisibleType);
 
-	if (plot() != NULL)
+	const TerrainTypes eTerrain = plot()->getTerrainType();
+	iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
+
+	if (plot()->isAsPeak())
 	{
-		const TerrainTypes eTerrain = plot()->getTerrainType();
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
-		}
-		if (plot()->isAsPeak())
-		{
-			iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
-		}
-		else if (plot()->isHills())
-		{
-			iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
-		}
-		const FeatureTypes eFeature = plot()->getFeatureType();
-		if (eFeature != NO_FEATURE)
-		{
-			iAmount += extraVisibleFeature(eInvisibleType, eFeature);
-		}
-		const ImprovementTypes eImprovement = plot()->getImprovementType();
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraVisibleImprovement(eInvisibleType, eImprovement);
-		}
-		if (plot()->isCity(true))
-		{
-			iAmount += extraVisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
-		}
+		iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
+	}
+	else if (plot()->isHills())
+	{
+		iAmount += extraVisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
+	}
+	const FeatureTypes eFeature = plot()->getFeatureType();
+	if (eFeature != NO_FEATURE)
+	{
+		iAmount += extraVisibleFeature(eInvisibleType, eFeature);
+	}
+	const ImprovementTypes eImprovement = plot()->getImprovementType();
+	if (eImprovement != NO_IMPROVEMENT)
+	{
+		iAmount += extraVisibleImprovement(eInvisibleType, eImprovement);
+	}
+	if (plot()->isCity(true))
+	{
+		iAmount += extraVisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
 	}
 	return std::max(0, iAmount);
 }
@@ -39077,38 +39058,32 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 	}
 
 	int iAmount = m_pUnitInfo->getInvisibilityIntensityType(eInvisibleType);
-
 	iAmount += getExtraInvisibilityIntensityType(eInvisibleType);
 
-	if (plot() != NULL)
+	const TerrainTypes eTerrain = plot()->getTerrainType();
+	iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
+
+	if (plot()->isAsPeak())
 	{
-		const TerrainTypes eTerrain = plot()->getTerrainType();
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
-		}
-		if (plot()->isAsPeak())
-		{
-			iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
-		}
-		else if (plot()->isHills())
-		{
-			iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
-		}
-		const FeatureTypes eFeature = plot()->getFeatureType();
-		if (eFeature != NO_FEATURE)
-		{
-			iAmount += extraInvisibleFeature(eInvisibleType, eFeature);
-		}
-		const ImprovementTypes eImprovement = plot()->getImprovementType();
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraInvisibleImprovement(eInvisibleType, eImprovement);
-		}
-		if (plot()->isCity(true))
-		{
-			iAmount += extraInvisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
-		}
+		iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_PEAK());
+	}
+	else if (plot()->isHills())
+	{
+		iAmount += extraInvisibleTerrain(eInvisibleType, GC.getTERRAIN_HILL());
+	}
+	const FeatureTypes eFeature = plot()->getFeatureType();
+	if (eFeature != NO_FEATURE)
+	{
+		iAmount += extraInvisibleFeature(eInvisibleType, eFeature);
+	}
+	const ImprovementTypes eImprovement = plot()->getImprovementType();
+	if (eImprovement != NO_IMPROVEMENT)
+	{
+		iAmount += extraInvisibleImprovement(eInvisibleType, eImprovement);
+	}
+	if (plot()->isCity(true))
+	{
+		iAmount += extraInvisibleImprovement(eInvisibleType, GC.getIMPROVEMENT_CITY());
 	}
 	return std::max(0,iAmount);
 }
@@ -39166,35 +39141,30 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 
 	iAmount += getExtraVisibilityIntensityRangeType(eInvisibleType);
 
-	if (plot() != NULL)
+	const TerrainTypes eTerrain = plot()->getTerrainType();
+	iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
+
+	if (plot()->isAsPeak())
 	{
-		const TerrainTypes eTerrain = plot()->getTerrainType();
-		if (eTerrain != NO_TERRAIN)
-		{
-			iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
-		}
-		if (plot()->isAsPeak())
-		{
-			iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_PEAK());
-		}
-		else if (plot()->isHills())
-		{
-			iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_HILL());
-		}
-		const FeatureTypes eFeature = plot()->getFeatureType();
-		if (eFeature != NO_FEATURE)
-		{
-			iAmount += extraVisibleFeatureRange(eInvisibleType, eFeature);
-		}
-		const ImprovementTypes eImprovement = plot()->getImprovementType();
-		if (eImprovement != NO_IMPROVEMENT)
-		{
-			iAmount += extraVisibleImprovementRange(eInvisibleType, eImprovement);
-		}
-		if (plot()->isCity(true))
-		{
-			iAmount += extraVisibleImprovementRange(eInvisibleType, GC.getIMPROVEMENT_CITY());
-		}
+		iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_PEAK());
+	}
+	else if (plot()->isHills())
+	{
+		iAmount += extraVisibleTerrainRange(eInvisibleType, GC.getTERRAIN_HILL());
+	}
+	const FeatureTypes eFeature = plot()->getFeatureType();
+	if (eFeature != NO_FEATURE)
+	{
+		iAmount += extraVisibleFeatureRange(eInvisibleType, eFeature);
+	}
+	const ImprovementTypes eImprovement = plot()->getImprovementType();
+	if (eImprovement != NO_IMPROVEMENT)
+	{
+		iAmount += extraVisibleImprovementRange(eInvisibleType, eImprovement);
+	}
+	if (plot()->isCity(true))
+	{
+		iAmount += extraVisibleImprovementRange(eInvisibleType, GC.getIMPROVEMENT_CITY());
 	}
 	return iAmount;
 }

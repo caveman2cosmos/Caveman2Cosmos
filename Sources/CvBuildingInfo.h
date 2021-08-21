@@ -283,14 +283,23 @@ public:
 	int getReligionChange(int i) const;
 	int getSpecialistCount(int i) const;
 	int getFreeSpecialistCount(int i) const;
+
 	int getBonusHealthChanges(int i) const;
+	const IDValueMap<BonusTypes, int>& getBonusHealth() const { return m_piBonusHealthChanges; }
+	const python::list cyGetBonusHealth() const { return m_piBonusHealthChanges.makeList(); }
+
 	int getBonusHappinessChanges(int i) const;
+	const IDValueMap<BonusTypes, int>& getBonusHappiness() const { return m_piBonusHappinessChanges; }
+	const python::list cyGetBonusHappiness() const { return m_piBonusHappinessChanges.makeList(); }
+
 	int getBonusProductionModifier(int i) const;
-	int getUnitCombatFreeExperience(int i) const;
 	int getDomainFreeExperience(int i) const;
-	bool isAnyUnitCombatFreeExperience() const { return m_piUnitCombatFreeExperience != NULL; }
 	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
+
+	int getUnitCombatFreeExperience(UnitCombatTypes e) const;
+	const IDValueMap<UnitCombatTypes, int>& getUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience; }
+	const python::list cyGetUnitCombatFreeExperience() const { return m_aUnitCombatFreeExperience.makeList(); }
 
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
 	const python::list cyGetPrereqAndTechs() const;
@@ -778,10 +787,7 @@ private:
 	int* m_piReligionChange;
 	int* m_piSpecialistCount;
 	int* m_piFreeSpecialistCount;
-	int* m_piBonusHealthChanges;
-	int* m_piBonusHappinessChanges;
 	int* m_piBonusProductionModifier;
-	int* m_piUnitCombatFreeExperience;
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
@@ -832,6 +838,8 @@ private:
 	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
+	IDValueMap<BonusTypes, int> m_piBonusHealthChanges;
+	IDValueMap<BonusTypes, int> m_piBonusHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aGlobalBuildingProductionModifier;
 	IDValueMap<BuildingTypes, int> m_aPrereqNumOfBuilding;
@@ -840,6 +848,7 @@ private:
 	IDValueMap<TechTypes, int> m_aTechHappinessChanges;
 	IDValueMap<TechTypes, int> m_aTechHealthChanges;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
+	IDValueMap<UnitCombatTypes, int> m_aUnitCombatFreeExperience;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
