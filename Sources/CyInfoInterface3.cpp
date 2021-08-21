@@ -346,7 +346,7 @@ void CyInfoPythonInterface3()
 	;
 
 
-	python::class_<CvGameText, python::bases<CvInfoBase> >("CvGameText", python::no_init)
+	python::class_<CvGameText, python::bases<CvInfoBase> >("CvGameText")
 
 		.def("getText", &CvGameText::pyGetText, "wstring ()")
 		.def("setText", &CvGameText::setText, "void (wstring)")

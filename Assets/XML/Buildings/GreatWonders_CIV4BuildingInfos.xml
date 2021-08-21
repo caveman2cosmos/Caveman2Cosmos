@@ -7223,6 +7223,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_AMPLIFIED_WAVELENGTHS</PrereqTech>
 			<iCost>24870</iCost>
 			<CommerceChanges>
@@ -10898,6 +10899,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
