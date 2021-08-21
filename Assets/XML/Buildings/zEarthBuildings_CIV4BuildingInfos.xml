@@ -1808,6 +1808,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>110130</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

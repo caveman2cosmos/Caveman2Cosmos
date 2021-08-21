@@ -670,6 +670,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMinLatitude>45</iMinLatitude>
 			<FreeBuilding>BUILDING_DEER_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -771,6 +772,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMaxLatitude>45</iMaxLatitude>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
@@ -1266,6 +1268,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iMaxLatitude>45</iMaxLatitude>
 			<FreeBuilding>BUILDING_ZEBRA_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>
