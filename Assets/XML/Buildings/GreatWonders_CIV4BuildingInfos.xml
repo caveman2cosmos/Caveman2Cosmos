@@ -218,6 +218,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
 			<bWater>1</bWater>
+			<bPrereqPower>1</bPrereqPower>
 			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -291,6 +292,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AKSHARDHAM</Type>
@@ -736,6 +738,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMNESTY_INTERNATIONAL</Type>
@@ -757,6 +760,7 @@
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>1</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Type>
@@ -1003,6 +1007,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APADANA_PALACE</Type>
@@ -1316,6 +1321,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCOSANTI</Type>
@@ -1538,6 +1544,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASSYRIA_EKAL</Type>
@@ -1626,6 +1633,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AZADI</Type>
@@ -1909,6 +1917,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAUHAUS</Type>
@@ -2123,6 +2132,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAULIEU</Type>
@@ -2339,6 +2349,7 @@
 				<Bonus>BONUS_DISKETTES</Bonus>
 				<Bonus>BONUS_FLASH_MEMORY_DEVICES</Bonus>
 			</PrereqBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELL_ROCK</Type>
@@ -2385,6 +2396,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BERLIN_WALL</Type>
@@ -2537,6 +2549,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIZARRO_WORLD</Type>
@@ -2574,6 +2587,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MULTIVERSE_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKWATER_DRAW</Type>
@@ -3284,6 +3298,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURJ_KHALIFA</Type>
@@ -3346,6 +3361,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURNINGMAN</Type>
@@ -3646,6 +3662,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN</Type>
@@ -4598,6 +4615,7 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COIT_TOWER</Type>
@@ -5214,6 +5232,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_PALACE</Type>
@@ -5412,6 +5431,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CYBERNETIC_ORGAN_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARPA</Type>
@@ -6186,6 +6206,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_WORLD_CENTRAL</Type>
@@ -6495,6 +6516,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HEAT_SINK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EDINBURGH_CASTLE</Type>
@@ -6976,6 +6998,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMU_EGG</Type>
@@ -8271,6 +8294,7 @@
 					<iPropertyValue>-100</iPropertyValue>
 				</Property>
 			</Properties>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUTURE_VENICE</Type>
@@ -8318,6 +8342,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATEWAY_ARCH</Type>
@@ -9133,6 +9158,7 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_JAGUAR_TEMPLE</Type>
@@ -10916,6 +10942,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLLYWOOD</Type>
@@ -11058,6 +11085,7 @@
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_RIGHTS_DECLARATION</Type>
@@ -11170,6 +11198,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERLOOP</Type>
@@ -11194,6 +11223,7 @@
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ICE_HOTEL</Type>
@@ -11406,6 +11436,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ISHTAR</Type>
@@ -11739,6 +11770,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JEWISH_MASADA</Type>
@@ -12204,6 +12236,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Type>
@@ -12600,6 +12633,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iPrereqPopulation>3</iPrereqPopulation>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAS_VEGAS_STRIP</Type>
@@ -13452,6 +13486,7 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGELLAN</Type>
@@ -14799,6 +14834,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORSE_CODE</Type>
@@ -15868,6 +15904,7 @@
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_SPIRAL</Type>
@@ -16080,6 +16117,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 				<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORICHALCUM_FORGE</Type>
@@ -16117,6 +16155,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORIENT_EXPRESS</Type>
@@ -16450,6 +16489,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALM_ISLANDS</Type>
@@ -20401,6 +20441,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
@@ -21179,6 +21220,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAJ_MAHAL</Type>
@@ -21266,6 +21308,7 @@
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_TEMPLE_OF_HEAVEN</Type>
@@ -21856,6 +21899,7 @@
 			</PrereqInCityBuildings>
 			<iLineOfSight>3</iLineOfSight>
 			<iPrereqPopulation>13</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_TOWER</Type>
@@ -21902,6 +21946,7 @@
 			</PrereqInCityBuildings>
 			<iLineOfSight>2</iLineOfSight>
 			<iPrereqPopulation>7</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOPKAPI_PALACE</Type>
@@ -22102,6 +22147,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSATLANTIC_TUNNEL</Type>
@@ -22277,6 +22323,7 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TSUKIJI</Type>
@@ -22451,6 +22498,7 @@
 			<iHurryCostModifier>300</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
@@ -23495,6 +23543,7 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_WILLENDORF</Type>
@@ -24110,6 +24159,7 @@
 					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILLIS_TOWER</Type>
@@ -24163,6 +24213,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILLOWRUN</Type>
@@ -24859,6 +24910,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bOrbital>1</bOrbital>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

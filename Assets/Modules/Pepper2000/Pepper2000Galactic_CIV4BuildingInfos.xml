@@ -2337,6 +2337,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TIMEHOLE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FALSE_VACUUM_TRAP</Type>
@@ -2489,6 +2490,7 @@
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Type>
@@ -4894,6 +4896,7 @@
 				<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSMIUM_CORE_PLANET</Type>

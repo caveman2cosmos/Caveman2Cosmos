@@ -417,6 +417,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACOUSTIC_CROWD_CONTROL</Type>
@@ -450,6 +451,7 @@
 			</PropertyManipulators>
 			<iRevIdxLocal>-1</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACOUSTIC_DRILLING</Type>
@@ -929,6 +931,7 @@
 			</Flavors>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_SHIELDING</Type>
@@ -1048,6 +1051,7 @@
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AERIAL_HOTEL</Type>
@@ -1078,6 +1082,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER_HOTEL</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROGEL</Type>
@@ -1144,6 +1149,7 @@
 			</SpecialistCounts>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROSPACE_COMPLEX</Type>
@@ -1282,6 +1288,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AGAVE_PLANTATION</Type>
@@ -1774,6 +1781,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_GAME_DESIGNER</Type>
@@ -1794,6 +1802,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_INVESTMENT</Type>
@@ -1813,6 +1822,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_JOURNALIST</Type>
@@ -1841,6 +1851,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_LAWYER</Type>
@@ -1884,6 +1895,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_MUSICIAN</Type>
@@ -1906,6 +1918,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_POLICE_FORCE</Type>
@@ -1945,6 +1958,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_SURVEILLANCE</Type>
@@ -2015,6 +2029,7 @@
 					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALEPH_ASSEMBLER</Type>
@@ -2058,6 +2073,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALGAE_FARM</Type>
@@ -2398,6 +2414,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALUMINIUM_RECLAMATION_PLANT</Type>
@@ -3601,6 +3618,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROID_PARENTS</Type>
@@ -3639,6 +3657,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROID_SERVANT_STORE</Type>
@@ -4014,6 +4033,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TRAPS</Type>
@@ -4082,6 +4102,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMATION_STUDIO</Type>
@@ -4399,6 +4420,7 @@
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTELOPE_CAMP</Type>
@@ -4884,6 +4906,7 @@
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIMATTER_INITIATED_FUSION</Type>
@@ -4918,6 +4941,7 @@
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIQUE_SHOP</Type>
@@ -5844,6 +5868,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AQUARIUM</Type>
@@ -6393,6 +6418,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARENA</Type>
@@ -6846,6 +6872,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_REEF</Type>
@@ -6887,6 +6914,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTILLERY_BATTERY</Type>
@@ -7567,6 +7595,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_STUDIO</Type>
@@ -8090,6 +8119,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATMOSPHERIC_WATER_GENERATOR</Type>
@@ -8162,6 +8192,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATOMIC_ASSEMBLER</Type>
@@ -8238,6 +8269,7 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATOMIC_CLOCK</Type>
@@ -8316,6 +8348,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUCTION_HOUSE</Type>
@@ -8503,6 +8536,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUGUR</Type>
@@ -8913,6 +8947,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOMATED_TAXI</Type>
@@ -8933,6 +8968,7 @@
 				<BuildingType>BUILDING_AUTOMATED_PARKING_GARAGE</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOMATED_VEHICLE_DEALERSHIP</Type>
@@ -9294,6 +9330,7 @@
 			<iCost>3245</iCost>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BACTERIOPHAGE_THERAPY_CLINIC</Type>
@@ -9530,6 +9567,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAHAI_CATHEDRAL</Type>
@@ -11059,6 +11097,7 @@
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAUXITE_MINE</Type>
@@ -11619,6 +11658,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>5</iAsset>
 			<iConquestProb>75</iConquestProb>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEE_BOMBS</Type>
@@ -12271,6 +12311,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOINFO_LAB</Type>
@@ -12352,6 +12393,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOLOGICAL_WARFARE_LAB</Type>
@@ -12648,6 +12690,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOMORPHICS_LAB</Type>
@@ -12824,6 +12867,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOPOLYMER_FACTORY</Type>
@@ -13183,6 +13227,7 @@
 					<iAmountPerTurn>35</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_NET</Type>
@@ -13412,6 +13457,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</Type>
@@ -13456,6 +13502,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLOGS</Type>
@@ -17013,6 +17060,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BULK_DIAMOND</Type>
@@ -17050,6 +17098,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUNGEE_JUMPING_SITE</Type>
@@ -17961,6 +18010,7 @@
 				<BuildingType>BUILDING_CONSTRUCTION_FIRM</BuildingType>
 				<BuildingType>BUILDING_CGI_ANIMATION_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAESIUM_MINE</Type>
@@ -18253,6 +18303,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAMEL_FARM</Type>
@@ -19482,6 +19533,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARDONCACTUS_PLANTATION</Type>
@@ -20600,6 +20652,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CELLULASE_CAPSULE_FACTORY</Type>
@@ -20662,6 +20715,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CEMENT_BARRIER</Type>
@@ -20797,6 +20851,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTIPEDE</Type>
@@ -21833,6 +21888,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEMICAL_CONGLOMERATE</Type>
@@ -22973,6 +23029,7 @@
 				<BuildingType>BUILDING_RATIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHURCH_OF_STATE</Type>
@@ -23476,6 +23533,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_EM</BuildingType>
 			</PrereqNotInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CITRINE_MINE</Type>
@@ -23998,6 +24056,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLAYTRONIC_TOWER</Type>
@@ -24020,6 +24079,7 @@
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLAY_PIT</Type>
@@ -24388,6 +24448,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOUD_OBSERVERS_HUT</Type>
@@ -24448,6 +24509,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_FIBER_OPTIC_CABLES</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOVES_FARM</Type>
@@ -25170,6 +25232,7 @@
 			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLLECTIVE_FARM</Type>
@@ -25683,6 +25746,7 @@
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iAsset>6</iAsset>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMMUNICATION_TOWER</Type>
@@ -25956,6 +26020,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTER_FACTORY</Type>
@@ -26201,6 +26266,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TOWER</Type>
@@ -26226,6 +26292,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_COMPUTRONIUM</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONCH_DIVER</Type>
@@ -26676,6 +26743,7 @@
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSPIRATORS_HIDEOUT</Type>
@@ -26788,6 +26856,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONTROL_CENTER</Type>
@@ -29149,6 +29218,8 @@
 				<BuildingType>BUILDING_FISHTRAPS</BuildingType>
 			</PrereqInCityBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAFT_HUT</Type>
@@ -29854,6 +29925,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CUCUMBER_FARM</Type>
@@ -30359,6 +30431,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBERSECURITY_OFFICE</Type>
@@ -30390,6 +30463,7 @@
 					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBER_CHLOROPLASTIDA_BLOOM</Type>
@@ -30952,6 +31026,7 @@
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEBTOR_PRISON</Type>
@@ -31309,6 +31384,7 @@
 					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DENTIST</Type>
@@ -31423,6 +31499,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_PROBIOTICS_CLINIC</Type>
@@ -31610,6 +31687,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DICTATOR_MONUMENT</Type>
@@ -31838,6 +31916,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ONLINE_WAREHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_OFFICES</Type>
@@ -31934,6 +32013,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITIZED_MEMBRANE_FACTORY</Type>
@@ -32345,6 +32425,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIVE_BAR</Type>
@@ -32699,6 +32780,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CETACEA_SAPIENS</Bonus>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DONKEY_BREEDER</Type>
@@ -32897,6 +32979,7 @@
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRAFT_OFFICE</Type>
@@ -33464,6 +33547,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iRevIdxLocal>25</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DRUID_CATHEDRAL</Type>
@@ -36028,6 +36112,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ECOSYSTEM_SERVICES_MARKET</Type>
@@ -36060,6 +36145,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ECSTASY_LAB</Type>
@@ -36137,6 +36223,8 @@
 				<BuildingType>BUILDING_FISHTRAPS</BuildingType>
 			</PrereqInCityBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EGGPLANT_FARM</Type>
@@ -37072,6 +37160,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRUMSMITH</Type>
@@ -37767,6 +37856,7 @@
 				<BuildingType>BUILDING_CRYSTAL_JEWELLER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_DRINK_FACTORY</Type>
@@ -38750,6 +38840,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXOTIC_PARTICLE_LAB</Type>
@@ -38777,6 +38868,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXPERIMENTAL_QUANTUM_COMPUTER</Type>
@@ -38843,6 +38935,7 @@
 				<BuildingType>BUILDING_SPACETIME_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_E_BANK</Type>
@@ -39949,6 +40042,7 @@
 			</TechYieldChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARM_MECH_CONTROL_CENTER</Type>
@@ -40108,6 +40202,7 @@
 			</TechYieldChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARM_NANOBOT_CONTROL_CENTER</Type>
@@ -40266,6 +40361,7 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARM_SUPPLY</Type>
@@ -40458,6 +40554,7 @@
 				<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_FEMTOBOTS</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEMTOBOTIC_FIREFIGHTERS</Type>
@@ -40484,6 +40581,7 @@
 					<iPropertyValue>-100</iPropertyValue>
 				</Property>
 			</Properties>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEMTOBOTS</Type>
@@ -40510,6 +40608,7 @@
 			<FreeBonus>BONUS_FEMTOBOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FENCING_ACADEMY</Type>
@@ -40918,6 +41017,7 @@
 				<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIELD_HOSPITAL</Type>
@@ -41223,6 +41323,7 @@
 					<iPropertyValue>-40</iPropertyValue>
 				</Property>
 			</Properties>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIREWORKS_SHOP</Type>
@@ -41492,6 +41593,7 @@
 					<iPropertyValue>-25</iPropertyValue>
 				</Property>
 			</Properties>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRE_MYTH</Type>
@@ -42604,6 +42706,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLY_AGARIC</Type>
@@ -42954,6 +43057,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOOD_PROCESSING_PLANT</Type>
@@ -43230,6 +43334,7 @@
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORTIFIED_OUTPOST</Type>
@@ -43871,6 +43976,7 @@
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOXGLOVE_FARM</Type>
@@ -43974,6 +44080,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FREE_PORT</Type>
@@ -44183,6 +44290,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUNERAL_PYRE</Type>
@@ -44644,6 +44752,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CANTINA</Type>
@@ -46572,6 +46681,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENFARM_LAB</Type>
@@ -46789,6 +46899,7 @@
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEODE_MINE</Type>
@@ -47731,6 +47842,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOARD_FARM</Type>
@@ -48689,6 +48801,7 @@
 			</PropertyManipulators>
 			<iRevIdxLocal>-2</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITY_GENERATOR_FACTORY</Type>
@@ -48755,6 +48868,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITY_WAVE_DETECTOR</Type>
@@ -49299,6 +49413,7 @@
 					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREEN_FLOAT</Type>
@@ -51614,6 +51729,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGHTECHCOAL_PLANT</Type>
@@ -52431,6 +52547,7 @@
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HISTORY_REPAIR</Type>
@@ -52459,6 +52576,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOCKEY_RINK</Type>
@@ -52522,6 +52640,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHICA_APPAREL_SHOP</Type>
@@ -53583,6 +53702,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDRAULIC_FACTORY</Type>
@@ -53760,6 +53880,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROPONICS_LAB</Type>
@@ -53819,6 +53940,7 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROPONIC_CANNABIS</Type>
@@ -53857,6 +53979,8 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROPONIC_VEGETABLE_GARDEN</Type>
@@ -53886,6 +54010,8 @@
 			<FreeBonus>BONUS_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDRO_PLANT</Type>
@@ -53961,6 +54087,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERMARKET</Type>
@@ -54455,6 +54582,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPOCAUSTS</Type>
@@ -54861,6 +54989,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMMUNITY_DRUG_FACTORY</Type>
@@ -55327,6 +55456,7 @@
 					<iPropertyValue>-30</iPropertyValue>
 				</Property>
 			</Properties>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIAL_PARK</Type>
@@ -55435,6 +55565,7 @@
 				<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFO_NET</Type>
@@ -55519,6 +55650,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSANE_ASYLUM</Type>
@@ -55786,6 +55918,7 @@
 				<BuildingType>BUILDING_SPEECH_RECOGNITION_SOFTWARE</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_PORT</Type>
@@ -56259,6 +56392,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_IMMIGRATION</Type>
@@ -56411,6 +56545,7 @@
 				<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</Type>
@@ -56624,6 +56759,7 @@
 				<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IPS_OFFICES</Type>
@@ -56703,6 +56839,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRIS_FARM</Type>
@@ -56933,6 +57070,7 @@
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRRIGATION_CANALS</Type>
@@ -59496,6 +59634,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KUMQUAT_ORCHARD</Type>
@@ -60807,6 +60946,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEECH_CATCHER</Type>
@@ -61256,6 +61396,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LILY_FARM</Type>
@@ -61570,6 +61711,7 @@
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIZARD_CATCHER</Type>
@@ -61765,6 +61907,8 @@
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOCAL_COURTHOUSE</Type>
@@ -61964,6 +62108,7 @@
 				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOG_BRIDGE</Type>
@@ -62894,6 +63039,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ULTIMATE_COMBAT_ARENA</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGLEV_ELEVATORS</Type>
@@ -62920,6 +63066,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGLEV_LAUNCH</Type>
@@ -62955,6 +63102,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGNESIUM_MINE</Type>
@@ -63197,6 +63345,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMALIAN_HUT</Type>
@@ -64638,6 +64787,7 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATHEMATICAL_ORACLE</Type>
@@ -64661,6 +64811,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_COMPUTRONIUM</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATHEMATICS_ACADEMY</Type>
@@ -65372,6 +65523,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_CENTER</Type>
@@ -65593,6 +65745,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_PROSTETICS_LAB</Type>
@@ -65787,6 +65940,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGAFARM</Type>
@@ -65928,6 +66082,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGASTRONG_ALLOY_WALL</Type>
@@ -66611,6 +66766,7 @@
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGATOWER_SYBRIDGE</Type>
@@ -66710,6 +66866,7 @@
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGAVERSE</Type>
@@ -66731,6 +66888,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSE_PORTAL</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEME_GENERATOR</Type>
@@ -66756,6 +66914,7 @@
 				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
 				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEMORY_TRANSFER_STATION</Type>
@@ -67173,6 +67332,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAL_MEGACOMPLEX</Type>
@@ -68128,6 +68288,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_AIRBASE</Type>
@@ -69981,6 +70142,7 @@
 				<BuildingType>BUILDING_UNMANNED_MARKET</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_TAXI</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOBILE_PLANT</Type>
@@ -70014,6 +70176,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOB_STOREFRONT</Type>
@@ -70121,6 +70284,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_CARTOGRAPHER</Type>
@@ -70567,6 +70731,7 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOLECULAR_BIOLOGY_LAB</Type>
@@ -70674,6 +70839,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MONEY_PRESS</Type>
@@ -71736,6 +71902,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULTIVERSE_CITY</Type>
@@ -71763,6 +71930,7 @@
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULTIVERSE_STEERING</Type>
@@ -71790,6 +71958,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUNITIONS_FACTORY</Type>
@@ -72301,6 +72470,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYRH_PLANTATION</Type>
@@ -72665,6 +72835,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOGENERATOR_FACTORY</Type>
@@ -73082,6 +73253,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANO_RESEARCH_DEPARTMENT</Type>
@@ -73285,6 +73457,7 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIVE_AMERICA_TOTEM</Type>
@@ -75387,6 +75560,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NAVAL_ACADEMY</Type>
@@ -75756,6 +75930,7 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUROINDUCTION_FIELD</Type>
@@ -75989,6 +76164,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEWSPAPER_FACTORY</Type>
@@ -76485,6 +76661,7 @@
 				<BuildingType>BUILDING_AUTOMATED_TAXI</BuildingType>
 				<BuildingType>BUILDING_PEERTOPEER_RENTAL</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOOTROPIC_DISPENSARY</Type>
@@ -76550,6 +76727,7 @@
 					<iPropertyValue>-5</iPropertyValue>
 				</Property>
 			</Properties>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOVUS_REFINERY</Type>
@@ -76867,6 +77045,7 @@
 			<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NYLON_FACTORY</Type>
@@ -78129,6 +78308,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONION_FARM</Type>
@@ -78454,6 +78634,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORACLE_HYPERINTELLIGENCE</Type>
@@ -78546,6 +78727,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_HOTEL</Type>
@@ -79804,6 +79986,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PADDYSTRAW_MUSHROOM</Type>
@@ -81486,6 +81669,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEIR</Type>
@@ -81855,6 +82039,7 @@
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
 				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSONAL_ELECTRONICS_FACTORY</Type>
@@ -81928,6 +82113,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSONAL_RAPID_TRAIN</Type>
@@ -82011,6 +82197,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSONAL_WEB_CHANNEL</Type>
@@ -82046,6 +82233,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PESTICIDE_MANUFACTURER</Type>
@@ -82509,6 +82697,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHONOGRAPH_FACTORY</Type>
@@ -83751,6 +83940,7 @@
 					<iFlavor>6</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANTAIN_PLANTATION</Type>
@@ -84234,6 +84424,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iConquestProb>70</iConquestProb>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLUM_ORCHARD</Type>
@@ -84337,6 +84528,7 @@
 			<FreeBonus>BONUS_POCKET_UNIVERSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POCKET_UNIVERSE_HOTEL</Type>
@@ -84362,6 +84554,7 @@
 				<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POCKET_UNIVERSE_STORAGE</Type>
@@ -84386,6 +84579,7 @@
 				<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POISONCRAFTERS_HUT</Type>
@@ -84872,6 +85066,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iRevIdxLocal>-1</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLING_PLACE</Type>
@@ -85741,6 +85936,8 @@
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRAYINGMANTIS</Type>
@@ -86012,6 +86209,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRINTERS_WORKSHOP</Type>
@@ -86553,6 +86751,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUB</Type>
@@ -86748,6 +86947,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUBLIC_STONING</Type>
@@ -87121,6 +87321,7 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_DOT_FACTORY</Type>
@@ -87185,6 +87386,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</Type>
@@ -87224,6 +87426,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_QUANTUM_DOTS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_LAB</Type>
@@ -87328,6 +87531,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_QUANTUM_DOTS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_VACUUM</Type>
@@ -87353,6 +87557,7 @@
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUARTZ_MINE</Type>
@@ -88053,6 +88258,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RARE_EARTH_MINERAL_MINE</Type>
@@ -88224,6 +88430,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATTAN_GROVE</Type>
@@ -88354,6 +88561,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REALM_OF_TORMENT</Type>
@@ -88377,6 +88585,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REALM_OF_TRANQUILITY</Type>
@@ -88400,6 +88609,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REBEL_CAMP</Type>
@@ -88570,6 +88780,7 @@
 			</Flavors>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RECORD_STORE</Type>
@@ -89041,6 +89252,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REHABILITATION_CENTER</Type>
@@ -89584,6 +89796,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESURRECTION_HUB</Type>
@@ -89705,6 +89918,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REVIVALIST_CHURCH</Type>
@@ -89795,6 +90009,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RE_PET_SHOP</Type>
@@ -90165,6 +90380,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RIDING_SCHOOL</Type>
@@ -90716,6 +90932,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROBOTIC_TRAPS</Type>
@@ -90855,6 +91072,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROCK_ART</Type>
@@ -92074,6 +92292,7 @@
 			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SALOON</Type>
@@ -92497,6 +92716,8 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAPOTE_ORCHARD</Type>
@@ -93193,6 +93414,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCIENTOLOGY_MONASTERY</Type>
@@ -93243,6 +93465,7 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCIENTOLOGY_TEMPLE</Type>
@@ -93301,6 +93524,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCORPION</Type>
@@ -94050,6 +94274,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_TREE</Type>
@@ -94079,6 +94304,8 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bWater>1</bWater>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SECURITY_CENTER</Type>
@@ -94134,6 +94361,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELF_ASSEMBLY_FACTORY</Type>
@@ -94175,6 +94403,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELF_CONSTRUCTION_FIRM</Type>
@@ -94256,6 +94485,7 @@
 				<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEMICONDUCTOR_FACTORY</Type>
@@ -95657,6 +95887,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 				<BuildingType>BUILDING_IRREGULAR_ARCHITECTURE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHARK_NETS</Type>
@@ -96549,6 +96780,8 @@
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bWater>1</bWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SID_SUSHI_RESTAURANT</Type>
@@ -97108,6 +97341,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_WORLD</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_WORLD</Type>
@@ -97133,6 +97367,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_WORLD_MANIFESTATION</Type>
@@ -97158,6 +97393,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIMULATED_WORLD</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SINGULARITY_BRAIN_LAB</Type>
@@ -97508,6 +97744,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAMBALL_COURT</Type>
@@ -97606,6 +97843,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CITIZEN_EM</BuildingType>
 			</PrereqNotInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_MARKET</Type>
@@ -97868,6 +98106,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMART_GRID</Type>
@@ -98993,6 +99232,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_MEDIA_SURVEILLANCE</Type>
@@ -99025,6 +99265,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_NETWORKS</Type>
@@ -99128,6 +99369,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_ANDROIDS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SODA_FACTORY</Type>
@@ -99601,6 +99843,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SORGHUM_FARM</Type>
@@ -99658,6 +99901,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOYLENT_GREEN_FACTORY</Type>
@@ -99770,6 +100014,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER_COMMERCIAL_DISTRICT</Type>
@@ -99796,6 +100041,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER_FARM</Type>
@@ -99821,6 +100067,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER_INDUSTRIAL</Type>
@@ -99846,6 +100093,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACETIME_FACTORY</Type>
@@ -99878,6 +100126,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACEWAY</Type>
@@ -99920,6 +100169,7 @@
 					<iFlavor>7</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_CITY</Type>
@@ -99945,6 +100195,7 @@
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_WAREHOUSE</Type>
@@ -101494,6 +101745,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEAMBOAT_PORT</Type>
@@ -102555,6 +102807,7 @@
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRATOSPHERIC_TOWER</Type>
@@ -102588,6 +102841,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_DIAMOND_NANOTHREADS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRAWBERRY_FARM</Type>
@@ -102879,6 +103133,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBDIMENSIONAL_UNIVERSE</Type>
@@ -102904,6 +103159,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FIELD_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_CITY</Type>
@@ -102939,6 +103195,7 @@
 			</PrereqInCityBuildings>
 			<iNukeModifier>-50</iNukeModifier>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_CITY_EXPANSION</Type>
@@ -102964,6 +103221,7 @@
 				<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_FARM</Type>
@@ -102991,6 +103249,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_HOTEL</Type>
@@ -103021,6 +103280,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_LAB</Type>
@@ -103471,6 +103731,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERMARKET</Type>
@@ -103704,6 +103965,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERSTRONG_ALLOY_FOUNDRY</Type>
@@ -103854,6 +104116,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SURF_SHOP</Type>
@@ -104517,6 +104780,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_PUNCH_CARDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TACHYONIC_ANTITELEPHONE</Type>
@@ -106182,6 +106446,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TELEGRAPH_OFFICE</Type>
@@ -106398,6 +106663,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TENGRII_HORSE_BREEDER</Type>
@@ -106560,6 +106826,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERMITE_MOUND</Type>
@@ -106797,6 +107064,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEST_PILOT</Type>
@@ -107612,6 +107880,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_MACHINE</Type>
@@ -107639,6 +107908,7 @@
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_TOURIST_AGENCY</Type>
@@ -107661,6 +107931,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TINSMITH</Type>
@@ -109283,6 +109554,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRAVOIS_MAKER</Type>
@@ -109612,6 +109884,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRILOBITE_BREEDER</Type>
@@ -109632,6 +109905,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRUCK_WAREHOUSE</Type>
@@ -110169,6 +110443,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_MICROGENERATORS</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ULTIMATE_COMBAT_ARENA</Type>
@@ -110246,6 +110521,7 @@
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ULTRAFUEL_REFINERY</Type>
@@ -110384,6 +110660,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNDERWATER_HOTEL</Type>
@@ -110458,6 +110735,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNESCO_SITE</Type>
@@ -110803,6 +111081,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSE_PORTAL</Type>
@@ -110828,6 +111107,7 @@
 				<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY</Type>
@@ -111206,6 +111486,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_HIGH_SPEED_RAIL</Type>
@@ -111287,6 +111568,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_VILLAGE</Type>
@@ -111453,6 +111735,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VACATION_RESORT</Type>
@@ -111496,6 +111779,7 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>25</iConquestProb>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VACCINE_LAB</Type>
@@ -111630,6 +111914,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VACUUM_FACTORY</Type>
@@ -112376,6 +112661,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_GOVERNANCE</Type>
@@ -112411,6 +112697,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_SCHOOL</Type>
@@ -112478,6 +112765,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD</Type>
@@ -112503,6 +112791,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD_CLAN</Type>
@@ -112529,6 +112818,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD_DATA_ANALYSIS</Type>
@@ -112560,6 +112850,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD_DESIGN_CENTER</Type>
@@ -112593,6 +112884,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_WORLD_GUILD</Type>
@@ -112618,6 +112910,7 @@
 				<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VISION_QUEST</Type>
@@ -113911,6 +114204,7 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WATER_PIPES</Type>
@@ -114024,6 +114318,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WATER_TREATMENT_PLANT</Type>
@@ -114235,6 +114530,7 @@
 			<FreePromotion_3>PROMOTION_WEATHER_FORECAST_NAVAL</FreePromotion_3>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<iAsset>5</iAsset>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEATHER_VEINS</Type>
@@ -115088,6 +115384,7 @@
 				</Property>
 			</Properties>
 			<iAIWeight>1</iAIWeight>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WINERY</Type>
@@ -115415,6 +115712,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOODCARVERS_HUT</Type>
@@ -115888,6 +116186,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_POINT_MAKER</Type>
@@ -115912,6 +116211,7 @@
 				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 				<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZINC_MINE</Type>
@@ -116320,6 +116620,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -55,6 +55,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_PLANET</Type>
@@ -138,6 +139,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_EPITAXY_FACTORY</Type>
@@ -1458,6 +1460,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CANDLE</Type>
@@ -1498,6 +1501,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CORE</Type>
@@ -1534,6 +1538,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_UNIFICATION_ACCELERATOR</Type>
@@ -1920,6 +1925,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Type>
@@ -2014,6 +2020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KBO_OUTPOST</Type>
@@ -2881,6 +2888,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_SPACECRAFT_FACTORY</Type>
@@ -2915,6 +2923,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_VR</Type>
@@ -2999,6 +3008,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_BASE</Type>
@@ -3759,6 +3769,7 @@
 				<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE</Type>
@@ -3956,6 +3967,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
@@ -3983,6 +3995,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPERATURE_REGULATOR</Type>
@@ -4183,6 +4196,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_MERCURY</Type>

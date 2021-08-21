@@ -1924,6 +1924,14 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built below amount of teams "+str(CvBuildingRequirement.getNumTeamsPrereq()))
 				if CvBuildingInfo.getUnitLevelPrereq() < CvBuildingRequirement.getUnitLevelPrereq():
 					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built below unit level "+str(CvBuildingRequirement.getUnitLevelPrereq()))
+				if not CvBuildingInfo.isWater() and CvBuildingRequirement.isWater():
+					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built because of coastal requirement")
+				if not CvBuildingInfo.isRiver() and CvBuildingRequirement.isRiver():
+					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built because of river requirement")
+				if not CvBuildingInfo.isFreshWater() and CvBuildingRequirement.isFreshWater():
+					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built because of fresh water requirement")
+				if not CvBuildingInfo.isPrereqPower() and CvBuildingRequirement.isPrereqPower():
+					self.log(CvBuildingInfo.getType()+" requires "+CvBuildingRequirement.getType()+", and can't be built because of electricity requirement")
 
 			#Independently check OR and GOM OR requirements
 			aBuildingList = []
@@ -1934,6 +1942,10 @@ class TestCode:
 			aORNumCitiesPrereq = []
 			aORNumTeamsPrereq = []
 			aORUnitLevelPrereq = []
+			aORisWater = []
+			aORisRiver = []
+			aORisFreshWater = []
+			aORisPrereqPower = []
 			for iRequirement in xrange(len(aBuildingRequirementORList)):
 				CvBuildingRequirement = GC.getBuildingInfo(aBuildingRequirementORList[iRequirement])
 				aBuildingList.append(CvBuildingRequirement.getType())
@@ -1944,6 +1956,10 @@ class TestCode:
 				aORNumCitiesPrereq.append(CvBuildingRequirement.getNumCitiesPrereq())
 				aORNumTeamsPrereq.append(CvBuildingRequirement.getNumTeamsPrereq())
 				aORUnitLevelPrereq.append(CvBuildingRequirement.getUnitLevelPrereq())
+				aORisWater.append(CvBuildingRequirement.isWater())
+				aORisRiver.append(CvBuildingRequirement.isRiver())
+				aORisFreshWater.append(CvBuildingRequirement.isFreshWater())
+				aORisPrereqPower.append(CvBuildingRequirement.isPrereqPower())
 			if len(aBuildingList) > 0 and CvBuildingInfo.getMinLatitude() < min(aORMinLatitude):
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORMinLatitude.index(min(aORMinLatitude))]+", and can't be built below latitude of "+str(min(aORMinLatitude)))
 			if len(aBuildingList) > 0 and CvBuildingInfo.getMaxLatitude() > max(aORMaxLatitude):
@@ -1958,6 +1974,14 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORNumTeamsPrereq.index(min(aORNumTeamsPrereq))]+", and can't be built below amount of teams "+str(min(aORNumTeamsPrereq)))
 			if len(aBuildingList) > 0 and CvBuildingInfo.getUnitLevelPrereq() < min(aORUnitLevelPrereq):
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORUnitLevelPrereq.index(min(aORUnitLevelPrereq))]+", and can't be built below unit level "+str(min(aORUnitLevelPrereq)))
+			if len(aBuildingList) > 0 and CvBuildingInfo.isWater() < min(aORisWater):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisWater.index(min(aORisWater))]+", and can't be built because of coastal requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isRiver() < min(aORisRiver):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisRiver.index(min(aORisRiver))]+", and can't be built because of river requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isFreshWater() < min(aORisFreshWater):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisFreshWater.index(min(aORisFreshWater))]+", and can't be built because of fresh water requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isPrereqPower() < min(aORisPrereqPower):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisPrereqPower.index(min(aORisPrereqPower))]+", and can't be built because of electricity requirement")
 
 			aBuildingList = []
 			aORMinLatitude = []
@@ -1967,6 +1991,10 @@ class TestCode:
 			aORNumCitiesPrereq = []
 			aORNumTeamsPrereq = []
 			aORUnitLevelPrereq = []
+			aORisWater = []
+			aORisRiver = []
+			aORisFreshWater = []
+			aORisPrereqPower = []
 			for iRequirement in xrange(len(aBuildingRequirementGOMORList)):
 				CvBuildingRequirement = GC.getBuildingInfo(aBuildingRequirementGOMORList[iRequirement])
 				aBuildingList.append(CvBuildingRequirement.getType())
@@ -1977,6 +2005,10 @@ class TestCode:
 				aORNumCitiesPrereq.append(CvBuildingRequirement.getNumCitiesPrereq())
 				aORNumTeamsPrereq.append(CvBuildingRequirement.getNumTeamsPrereq())
 				aORUnitLevelPrereq.append(CvBuildingRequirement.getUnitLevelPrereq())
+				aORisWater.append(CvBuildingRequirement.isWater())
+				aORisRiver.append(CvBuildingRequirement.isRiver())
+				aORisFreshWater.append(CvBuildingRequirement.isFreshWater())
+				aORisPrereqPower.append(CvBuildingRequirement.isPrereqPower())
 			if len(aBuildingList) > 0 and CvBuildingInfo.getMinLatitude() < min(aORMinLatitude):
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORMinLatitude.index(min(aORMinLatitude))]+", and can't be built below latitude of "+str(min(aORMinLatitude)))
 			if len(aBuildingList) > 0 and CvBuildingInfo.getMaxLatitude() > max(aORMaxLatitude):
@@ -1991,6 +2023,14 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORNumTeamsPrereq.index(min(aORNumTeamsPrereq))]+", and can't be built below amount of teams "+str(min(aORNumTeamsPrereq)))
 			if len(aBuildingList) > 0 and CvBuildingInfo.getUnitLevelPrereq() < min(aORUnitLevelPrereq):
 				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORUnitLevelPrereq.index(min(aORUnitLevelPrereq))]+", and can't be built below unit level "+str(min(aORUnitLevelPrereq)))
+			if len(aBuildingList) > 0 and CvBuildingInfo.isWater() < min(aORisWater):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisWater.index(min(aORisWater))]+", and can't be built because of coastal requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isRiver() < min(aORisRiver):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisRiver.index(min(aORisRiver))]+", and can't be built because of river requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isFreshWater() < min(aORisFreshWater):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisFreshWater.index(min(aORisFreshWater))]+", and can't be built because of fresh water requirement")
+			if len(aBuildingList) > 0 and CvBuildingInfo.isPrereqPower() < min(aORisPrereqPower):
+				self.log(CvBuildingInfo.getType()+" requires "+aBuildingList[aORisPrereqPower.index(min(aORisPrereqPower))]+", and can't be built because of electricity requirement")
 
 	#Building requirement civic requirements
 	def checkBuildingRequirementCivics(self):
