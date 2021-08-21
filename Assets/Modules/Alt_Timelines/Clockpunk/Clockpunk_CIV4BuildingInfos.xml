@@ -52,7 +52,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>3</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>

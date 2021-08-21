@@ -9016,12 +9016,16 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_CONCRETE</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildings>
-				<PrereqBuilding>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqBuildings>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Quote>
 			<Sound>AS2D_TECH_WATERPROOF_CONCRETE</Sound>
 			<SoundMP>AS2D_TECH_WATERPROOF_CONCRETE</SoundMP>
@@ -12737,12 +12741,20 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildings>
-				<PrereqBuilding>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqBuildings>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Quote>TXT_KEY_TECH_LEAD_GLASS_QUOTE</Quote>
 			<Sound>AS2D_TECH_LEAD_GLASS</Sound>
 			<SoundMP>AS2D_TECH_LEAD_GLASS</SoundMP>

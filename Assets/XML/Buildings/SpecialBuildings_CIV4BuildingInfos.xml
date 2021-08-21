@@ -866,6 +866,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
@@ -1361,6 +1362,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_ENERGY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANAIR_ACT_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -1403,6 +1405,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_WATER</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANWATER_ACT_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -5954,6 +5957,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-7</iHealth>
 			<iHappiness>-7</iHappiness>
@@ -6011,6 +6015,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>2</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
@@ -6536,6 +6541,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1345</iCost>
 			<CommerceChanges>
@@ -8910,6 +8916,7 @@
 				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -12465,6 +12472,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<FreeBuilding>BUILDING_ALCOCHOL_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -12558,6 +12566,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<FreeBuilding>BUILDING_DRUG_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -12575,6 +12584,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<FreeBuilding>BUILDING_GAMBLING_BAN</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -12592,6 +12602,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<FreeBuilding>BUILDING_PROSTITUTION_BAN</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -12609,6 +12620,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1685</iCost>
 			<FreeBuilding>BUILDING_SMOKING_PROHIBITION</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -12709,6 +12721,7 @@
 				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
 			<FreeBuilding>BUILDING_GOOD_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
@@ -14916,6 +14929,7 @@
 				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
@@ -15724,6 +15738,7 @@
 				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1080</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -16185,6 +16200,7 @@
 				<BuildingType>BUILDING_GCA</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1475</iCost>
 			<FreeBuilding>BUILDING_TIRE_RECYCLE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -17317,6 +17333,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 			<iHealth>4</iHealth>
 			<CommerceChanges>
@@ -17746,6 +17763,7 @@
 				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>870</iCost>
 			<FreeBuilding>BUILDING_GOOD_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
