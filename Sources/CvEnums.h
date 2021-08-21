@@ -633,6 +633,7 @@ enum ButtonPopupTypes
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
+	BUTTONPOPUP_SAVE_INFO_LOST,		//	Non-fatal warning that some entities could not be instantiated
 
 	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,

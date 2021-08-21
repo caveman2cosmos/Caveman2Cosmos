@@ -170,6 +170,15 @@
 		<Russian>«Максимальная совместимость» позволяет загружать сохраненные игры в более поздние версии мода (в большинстве случаев), но с ней несколько дольше и медленнее загружаются старые сохранения. В настоящее время эта функция находится в стадии бета-версии.[NEWLINE]"Оригинальный BTS" - это формат сохранения, который ранее использовался в классической Civ4. Он более компактен и загружается немного быстрее стары сохранения, но обычно не поддерживает загрузку игры между новыми версиями мода.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR</Tag>
+		<English>Non-fatal load warning</English>
+		<French>Avertissement Non-fatal</French>
+		<Italian>Avviso di caricamento non fatale</Italian>
+		<Polish>Nie-krytyczne ostrzeżenie wczytywania</Polish>
+		<Spanish>Error no crítico al cargar</Spanish>
+		<Russian>Предупреждение о некритической ошибке в загрузке</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_POPUP_OLD_GAME_SAVE_FORMAT</Tag>
 		<English>Original BTS</English>
 		<Italian>BTS originale</Italian>
