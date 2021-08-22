@@ -874,6 +874,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CARPOOL</ArtDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARPOOL_EFFECT</Type>
@@ -6553,6 +6554,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EMISSION_ACT</ArtDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT_EFFECT</Type>
@@ -9797,6 +9799,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_FIREWALL_GOOD</ArtDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEALTH_SPA</Type>
@@ -10530,6 +10533,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_HDLW</Type>
@@ -10576,6 +10580,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_HDMW</Type>
@@ -10616,6 +10621,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_LDHW</Type>
@@ -10652,6 +10658,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_LDLW</Type>
@@ -10685,6 +10692,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_LDMW</Type>
@@ -10720,6 +10728,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_MDHW</Type>
@@ -10756,6 +10765,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_MDLW</Type>
@@ -10798,6 +10808,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA3_MDMW</Type>
@@ -10834,6 +10845,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_HDHW</Type>
@@ -10872,6 +10884,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_HDLW</Type>
@@ -10908,6 +10921,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_HDMW</Type>
@@ -10945,6 +10959,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_LDHW</Type>
@@ -10981,6 +10996,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_LDLW</Type>
@@ -11014,6 +11030,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_LDMW</Type>
@@ -11049,6 +11066,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_MDHW</Type>
@@ -11086,6 +11104,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_MDLW</Type>
@@ -11127,6 +11146,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_MDMW</Type>
@@ -11163,6 +11183,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_SDHW</Type>
@@ -11205,6 +11226,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDHW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_SDLW</Type>
@@ -11252,6 +11274,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDLW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA4_SDMW</Type>
@@ -11293,6 +11316,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDMW</ArtDefineTag>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE</Type>
@@ -14937,6 +14961,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHUTTLE_SERVICE_EFFECT</Type>
@@ -17182,6 +17207,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_BLACK_HAT_HIDEOUT</ArtDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Type>

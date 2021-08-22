@@ -292,6 +292,11 @@ bool CyPlayer::hasBuilding(int /*BuildingTypes*/ eBuilding) const
 	return m_pPlayer->hasBuilding((BuildingTypes) eBuilding);
 }
 
+int CyPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra) const
+{
+	return m_pPlayer->getBuildingPrereqBuilding(eBuilding, ePrereqBuilding, iExtra);
+}
+
 int CyPlayer::countNumCitiesConnectedToCapital() const
 {
 	return m_pPlayer->countNumCitiesConnectedToCapital();

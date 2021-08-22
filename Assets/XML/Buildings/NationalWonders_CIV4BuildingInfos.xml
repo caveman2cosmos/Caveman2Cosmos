@@ -559,6 +559,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
@@ -1073,6 +1074,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTER_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COMPUTER_CENTER</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
@@ -1183,6 +1185,7 @@
 				<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
@@ -1214,6 +1217,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYBERSECURITY_CENTER</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_RESEARCH</Type>
@@ -1264,6 +1268,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_RESEARCH</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
@@ -1455,6 +1460,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_WATER</Type>
@@ -1890,6 +1896,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
@@ -2825,6 +2832,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_FISHMONGER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_FISHMONGER</MovieDefineTag>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
@@ -3635,6 +3643,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_HOMELAND_SECURITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOMELAND_SECURITY</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_NATIONAL</Type>
@@ -3770,6 +3779,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRON_WORKS</Type>
@@ -4147,6 +4157,7 @@
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_DATABASE</Type>
@@ -4311,6 +4322,7 @@
 			<fVisibilityPriority>2</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_MIND_STORAGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MIND_STORAGE</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
@@ -5556,6 +5568,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SPORTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SPORTS_LEAGUE</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_TV_STATION</Type>
@@ -5675,6 +5688,7 @@
 			<fVisibilityPriority>5</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_WEATHER_SERVICE</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ZOO</Type>
@@ -5840,6 +5854,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONLINE_UNIVERSITY</Type>
@@ -5884,6 +5899,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ONLINE_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ONLINE_UNIVERSITY</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALACE</Type>
@@ -6541,6 +6557,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RUSSIAN_RESEARCH_INSTITUTE</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
@@ -6628,6 +6645,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_CREDIT_SYSTEM</Type>
@@ -6654,6 +6672,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_LABORATORY</Type>
@@ -6912,6 +6931,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERCOLLIDER</Type>
@@ -7277,6 +7297,7 @@
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOMB</Type>
@@ -7543,6 +7564,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TRAVEL_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRAVEL_AGENCY</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TREASURY</Type>
@@ -7663,6 +7685,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_UN_MISSION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UN_MISSION</MovieDefineTag>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEMBLEY</Type>

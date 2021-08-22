@@ -3308,6 +3308,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

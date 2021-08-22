@@ -89,6 +89,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_BANG_OBSERVATORY</Type>
@@ -937,6 +938,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
@@ -1144,6 +1146,7 @@
 					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_TELESCOPE</Type>
@@ -1433,6 +1436,7 @@
 				<BuildingType>BUILDING_METAMORPHIC_CISLUNAR_STATION</BuildingType>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFLATABLE_HABITAT</Type>
@@ -1802,6 +1806,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRIME_DIRECTIVE_EFFECT</Type>
