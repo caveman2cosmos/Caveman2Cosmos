@@ -62,7 +62,7 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObje
 						if (TryMoveToXmlNextSibling())
 						{
 						// if we successfuly get the node type for the current tag
-						
+
 							OutputDebugStringW(GetXmlTagName());
 
 							switch(GetXmlTagName()[0])
@@ -298,19 +298,19 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("FROZEN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("FROZEN_TERRAIN", idx);
-		
+
 		SetGlobalDefine("COLD_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("COLD_TERRAIN", idx);
-		
+
 		SetGlobalDefine("TEMPERATE_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("TEMPERATE_TERRAIN", idx);
-		
+
 		SetGlobalDefine("DRY_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("DRY_TERRAIN", idx);
-		
+
 		SetGlobalDefine("BARREN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("BARREN_TERRAIN", idx);
@@ -326,7 +326,7 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("WARM_FEATURE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WARM_FEATURE", idx);
-		
+
 		SetGlobalDefine("MARSH_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("MARSH_TERRAIN", idx);
@@ -826,6 +826,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	OutputDebugString("Begin load global infos\n");
 	LoadGlobalClassInfo(GC.m_paInvisibleInfo, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo", false);
+	LoadGlobalClassInfo(GC.m_paMapCategoryInfo, "CIV4MapCategoryInfos", "Terrain", L"/Civ4MapCategoryInfos/MapCategoryInfos/MapCategoryInfo", false);
 	LoadGlobalClassInfo(GC.m_paMapInfo, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", false);
 	LoadGlobalClassInfo(GC.m_paGameSpeedInfo, "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false, &GC.m_GameSpeedInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paGameOptionInfos, "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
@@ -870,7 +871,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	shouldHaveType = true;
 	LoadGlobalClassInfo(GC.m_paRouteInfo, "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, &GC.m_RouteInfoReplacements);
 	shouldHaveType = false;
-	LoadGlobalClassInfo(GC.m_paImprovementInfo, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, &GC.m_ImprovementInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paImprovementInfo, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", false, &GC.m_ImprovementInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paUnitCombatInfo, "CIV4UnitCombatInfos", "Units", L"/Civ4UnitCombatInfos/UnitCombatInfos/UnitCombatInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.m_paPromotionLineInfo, "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
@@ -897,7 +898,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	GC.registerMissions();
 	LoadGlobalClassInfo(GC.m_paMissionInfo, "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
 	LoadGlobalClassInfo(GC.m_paUnitInfo, "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", true, &GC.m_UnitInfoReplacements);
-	LoadGlobalClassInfo(GC.m_paTraitInfo, "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, &GC.m_TraitInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paTraitInfo, "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", false, &GC.m_TraitInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paLeaderHeadInfo, "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, &GC.m_LeaderHeadInfoReplacements);
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
@@ -916,7 +917,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 
 	LoadGlobalClassInfo(GC.m_paUnitArtStyleTypeInfo, "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
-	LoadGlobalClassInfo(GC.m_paCivilizationInfo, "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, &GC.m_CivilizationInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paCivilizationInfo, "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", false, &GC.m_CivilizationInfoReplacements);
 
 	LoadGlobalClassInfo(GC.m_paProjectInfo, "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, &GC.m_ProjectInfoReplacements);
 
@@ -1635,7 +1636,7 @@ void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* sz
 				texts.push_back(textInfo);
 
 				gDLL->addText(textInfo.getType() /*id*/, textInfo.getText(), textInfo.getGender(), textInfo.getPlural());
-			} 
+			}
 			while(TryMoveToXmlNextSibling());
 		}
 	}
@@ -1708,7 +1709,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
 				{
 					uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
-					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) 
+					if (TryMoveToXmlFirstChild(L"ReplacementCondition"))
 					{
 						// Replacement condition must be defined by the base object that
 						// names the particular Replacement ID; otherwise it won't work!
@@ -1735,7 +1736,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 							aInfos.push_back(pClassInfo.release());
 						}
 						else if (pReplacementCondition.get())	// has szTypeReplace
-						{	
+						{
 							// AIAndy: If the class is a replacement, add it to the replacements
 							// but also add a dummy to the normal array to reserve an ID
 							aInfos.push_back(new T());
@@ -1764,7 +1765,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 						else
 						{
 							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
-							if (pExisting) 
+							if (pExisting)
 							{
 								pClassInfo->copyNonDefaults(pExisting->getInfo());
 								pExisting->setInfo(pClassInfo.release());
@@ -2025,7 +2026,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 						{
 							SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 						}
-					}					
+					}
 				}
 
 /************************************************************************************************/
@@ -2107,7 +2108,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 						{
 							SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
 						}
-					}	
+					}
 				}
 
 /************************************************************************************************/
@@ -2168,7 +2169,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const
 	bool bLoaded = false;
 	GC.addToInfosVectors(&aInfos);
 
-#ifdef _DEBUG	
+#ifdef _DEBUG
 	logXmlCheckDoubleTypes("\nEntering: %s\n", szFileRoot);
 #endif
 	CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
@@ -2194,7 +2195,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const
 			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass);
 		}
 	}
-	
+
 	SAFE_DELETE(pModEnumVector);
 	SAFE_DELETE(p_szDirName);
 }*/
@@ -2308,7 +2309,6 @@ bool sortHotkeyPriority(const OrderIndex& orderIndex1, const OrderIndex& orderIn
 
 void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength)
 {
-	int iI;
 	int* piSortedIndex;
 	std::vector<OrderIndex> viOrderPriority;
 
@@ -2316,7 +2316,7 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	piSortedIndex = *ppiSortedIndex;
 
 	// set up vector
-	for(iI=0;iI<iLength;iI++)
+	for (int iI = 0; iI < iLength; iI++)
 	{
 		viOrderPriority[iI].m_iPriority = pHotkeyIndex[iI];
 		viOrderPriority[iI].m_iIndex = iI;
@@ -2326,7 +2326,7 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	std::sort(viOrderPriority.begin(), viOrderPriority.end(), sortHotkeyPriority);
 
 	// insert new order into the array to return
-	for (iI=0;iI<iLength;iI++)
+	for (int iI = 0; iI < iLength; iI++)
 	{
 		piSortedIndex[iI] = viOrderPriority[iI].m_iIndex;
 	}
@@ -3415,7 +3415,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 		DEBUG_LOG("MLF.log", "MLF not found, you will now load the modules without Modular Loading Control");
 		SAFE_DELETE(pProgramDir);
 		return false;
-	}	
+	}
 	else
 	{
 		if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
@@ -3432,7 +3432,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 				return false;   // abort without enumerating anything
 			}
 		}
-		else 
+		else
 		{
 			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
 			SAFE_DELETE(pProgramDir);
@@ -3447,14 +3447,14 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 		}
 
 		//	We want a top to bottom control mechanism. If in any new level there wasn't found a
-		//	new MLF we don't want to loop further downwards into the directory hyrarchy 
+		//	new MLF we don't want to loop further downwards into the directory hyrarchy
 		while (bContinue)
 		{
 			m_iDirDepth++;
 			bContinue = false;	//we want to stop the while loop, unless a new MLF will be found
 			//loop through all MLF's so far loaded
 			for ( int iInfos = 0; iInfos < GC.getNumModLoadControlInfos(); iInfos++)
-			{	
+			{
 				//only loop through files in the actual depth
 				if (GC.getModLoadControlInfos(iInfos).getDirDepth() + 1 == m_iDirDepth)
 				{
@@ -3465,9 +3465,9 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 						{
 
 							//each new loop we load the previous dir, and check if a MLF file exist on a lower level
-							szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);					
-							
-							//Check if this Modulefolder is parent to a child MLF							
+							szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);
+
+							//Check if this Modulefolder is parent to a child MLF
 							if ( pProgramDir->isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
 							{
 								bLoaded = LoadCivXml(NULL, CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot));
@@ -3490,7 +3490,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 									GetXmlVal(szConfigString, "NONE");
 
-									if (szConfigString == "NONE") 
+									if (szConfigString == "NONE")
 									{
 										DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str(), szFileRoot);
 									}
@@ -3506,7 +3506,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 					}
 				}
 			}
-		}		
+		}
 	}
 	SAFE_DELETE(pProgramDir);
 	return true;
@@ -3581,8 +3581,8 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 //
 //	for ( int iI = 0; iI < iLenghtInfos; iI++ )
 //	{
-//		int minIndex = iI; //stores index of the min array value		
-//	
+//		int minIndex = iI; //stores index of the min array value
+//
 //		for ( int iJ = iI + 1; iJ < iLenghtInfos; iJ++ )
 //		{
 //			if ( CvWString::format(aInfos[iJ]->getTextKeyWide()) < CvWString::format(aInfos[minIndex]->getTextKeyWide()) )
@@ -3590,8 +3590,8 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 //				minIndex = iJ;
 //			}
 //		}
-//	    
-//		//swap the Info classes at positions iI and minIndex		
+//
+//		//swap the Info classes at positions iI and minIndex
 //		pTempClassInfo = aInfos[minIndex];
 //		aInfos[minIndex] = aInfos[iI];
 //		aInfos[iI] = pTempClassInfo;		// This is the actual new order

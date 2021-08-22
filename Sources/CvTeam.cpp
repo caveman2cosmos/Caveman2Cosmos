@@ -1123,18 +1123,6 @@ void CvTeam::updateYield()
 }
 
 
-void CvTeam::updatePowerHealth()
-{
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
-		{
-			GET_PLAYER((PlayerTypes)iI).updatePowerHealth();
-		}
-	}
-}
-
-
 void CvTeam::updateCommerce()
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -4626,10 +4614,10 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 					player.changeProjectHappiness(kProject.getGlobalHappiness());
 					player.changeProjectHealth(kProject.getGlobalHealth());
 					player.changeProjectInflation(kProject.getInflationModifier());
-					player.changeMaintenanceModifier(GC.getProjectInfo(eIndex).getGlobalMaintenanceModifier());
-					player.changeDistanceMaintenanceModifier(GC.getProjectInfo(eIndex).getDistanceMaintenanceModifier());
-					player.changeNumCitiesMaintenanceModifier(GC.getProjectInfo(eIndex).getNumCitiesMaintenanceModifier());
-					player.changeConnectedCityMaintenanceModifier(GC.getProjectInfo(eIndex).getConnectedCityMaintenanceModifier());
+					player.changeMaintenanceModifier(kProject.getGlobalMaintenanceModifier());
+					player.changeDistanceMaintenanceModifier(kProject.getDistanceMaintenanceModifier());
+					player.changeNumCitiesMaintenanceModifier(kProject.getNumCitiesMaintenanceModifier());
+					player.changeConnectedCityMaintenanceModifier(kProject.getConnectedCityMaintenanceModifier());
 
 					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
@@ -4784,10 +4772,10 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 						{
 							pLoopCity->setNumRealBuilding(eIndex, 0);
 
-							const int iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
-							if (iObsoletesToBuilding != -1 && pLoopCity->getNumRealBuilding((BuildingTypes)iObsoletesToBuilding) == 0)
+							const BuildingTypes iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
+							if (iObsoletesToBuilding != NO_BUILDING && pLoopCity->getNumRealBuilding(iObsoletesToBuilding) == 0)
 							{
-								pLoopCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+								pLoopCity->setNumRealBuilding(iObsoletesToBuilding, 1);
 							}
 						}
 					}
@@ -4826,7 +4814,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
 		{
-			int iOverflow = (100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
+			int iOverflow = 100 * (getResearchProgress(eIndex) - getResearchCost(eIndex)) / GET_PLAYER(ePlayer).calculateResearchModifier(eIndex);
 
 			// Multiple Research
 			setHasTech(eIndex, true, ePlayer, true, true);
@@ -4839,9 +4827,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 void CvTeam::changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer)
 {
-	int iNewResearch = std::max(0, getResearchProgress(eIndex) + iChange);
-
-	setResearchProgress(eIndex, iNewResearch, ePlayer);
+	setResearchProgress(eIndex, std::max(0, getResearchProgress(eIndex) + iChange), ePlayer);
 }
 
 int CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)
@@ -7769,10 +7755,10 @@ bool CvTeam::isAnyVassal() const
 
 ImprovementTypes CvTeam::getImprovementUpgrade(ImprovementTypes eImprovement) const
 {
-	const ImprovementTypes eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+	const ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
 
 	if (eUpgrade != NO_IMPROVEMENT && GC.getImprovementInfo(eUpgrade).getPrereqTech() != NO_TECH
-	&& !isHasTech((TechTypes)GC.getImprovementInfo(eUpgrade).getPrereqTech()))
+	&& !isHasTech(GC.getImprovementInfo(eUpgrade).getPrereqTech()))
 	{
 		return NO_IMPROVEMENT;
 	}

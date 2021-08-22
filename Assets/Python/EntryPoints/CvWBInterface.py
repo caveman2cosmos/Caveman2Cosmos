@@ -28,7 +28,6 @@ def readAndApplyDesc(argsList):
 	'''
 	print "--- CvWBInterface.readAndApplyDesc(argsList) ---"
 	fileName = argsList[0]
-	if not adjustMap(fileName): return -1
 
 	if WBDesc.read(fileName) < 0:
 		return -1

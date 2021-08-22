@@ -304,17 +304,14 @@ public:
 class TerrainKeyedInfo
 {
 public:
-	TerrainKeyedInfo() :	m_iTerrainProtected(0),
-							m_iTerrainDoubleMoveCount(0),
-							m_iExtraTerrainAttackPercent(0),
-							m_iExtraTerrainDefensePercent(0),
-							m_iTerrainWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraTerrainWorkPercent(0),
-							m_iExtraWithdrawOnTerrainType(0)
-	{
-	}
+	TerrainKeyedInfo() :
+		m_iTerrainProtected(0),
+		m_iTerrainDoubleMoveCount(0),
+		m_iExtraTerrainAttackPercent(0),
+		m_iExtraTerrainDefensePercent(0),
+		m_iExtraTerrainWorkPercent(0),
+		m_iExtraWithdrawOnTerrainType(0)
+	{ }
 
 	bool Empty() const
 	{
@@ -322,7 +319,6 @@ public:
 			m_iTerrainDoubleMoveCount == 0 &&
 			m_iExtraTerrainAttackPercent == 0 &&
 			m_iExtraTerrainDefensePercent == 0 &&
-			m_iTerrainWorkPercent == 0 &&
 			m_iExtraTerrainWorkPercent == 0 &&
 			m_iExtraWithdrawOnTerrainType == 0);
 	}
@@ -331,10 +327,6 @@ public:
 	int	m_iTerrainDoubleMoveCount;
 	int	m_iExtraTerrainAttackPercent;
 	int	m_iExtraTerrainDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iTerrainWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraTerrainWorkPercent;
 	int m_iExtraWithdrawOnTerrainType;
 };
@@ -342,23 +334,19 @@ public:
 class FeatureKeyedInfo
 {
 public:
-	FeatureKeyedInfo() :	m_iFeatureDoubleMoveCount(0),
-							m_iExtraFeatureAttackPercent(0),
-							m_iExtraFeatureDefensePercent(0),
-							m_iFeatureWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraFeatureWorkPercent(0),
-							m_iExtraWithdrawOnFeatureType(0)
-	{
-	}
+	FeatureKeyedInfo() :
+		m_iFeatureDoubleMoveCount(0),
+		m_iExtraFeatureAttackPercent(0),
+		m_iExtraFeatureDefensePercent(0),
+		m_iExtraFeatureWorkPercent(0),
+		m_iExtraWithdrawOnFeatureType(0)
+	{ }
 
 	bool Empty() const
 	{
 		return (m_iFeatureDoubleMoveCount == 0 &&
 			m_iExtraFeatureAttackPercent == 0 &&
 			m_iExtraFeatureDefensePercent == 0 &&
-			m_iFeatureWorkPercent == 0 &&
 			m_iExtraFeatureWorkPercent == 0 &&
 			m_iExtraWithdrawOnFeatureType == 0);
 	}
@@ -366,10 +354,6 @@ public:
 	int	m_iFeatureDoubleMoveCount;
 	int	m_iExtraFeatureAttackPercent;
 	int	m_iExtraFeatureDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iFeatureWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraFeatureWorkPercent;
 	int m_iExtraWithdrawOnFeatureType;
 };
@@ -466,6 +450,8 @@ public:
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
+
+	CvUnit& operator=(const CvUnit& other);
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -1622,8 +1608,6 @@ public:
 	int getExtraFeatureDefensePercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange);
 
-	int getTerrainWorkPercent(TerrainTypes eIndex) const;
-	int getFeatureWorkPercent(FeatureTypes eIndex) const;
 	int getExtraTerrainWorkPercent(TerrainTypes eIndex) const;
 	void changeExtraTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getExtraFeatureWorkPercent(FeatureTypes eIndex) const;
@@ -2756,6 +2740,7 @@ public:
 	void changeBombardDirectCount(int iChange);
 
 	static int applySMRank(int value, int rankChange, int rankMultiplier);
+	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;

@@ -1,17 +1,72 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
-		<English>AB Matter</English>
-		<French>Matière AB</French>
-		<Italian>Materia AB</Italian>
-		<Russian>ÀÁ-ìàòåðèÿ</Russian>
+		<Tag>TXT_KEY_BONUSHELP_EFFECTS_BUILDING</Tag>
+		<English>Buildings affected</English>
+		<French>Bâtiments affectés</French>
+		<German>Auswirkungen auf</German>
+		<Italian>Edifici influenzati</Italian>
+		<Spanish>Edificios relacionados</Spanish>
+		<Polish>Wpływa na budynki</Polish>
+		<Russian>Связанные постройки</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]AB Matter[COLOR_REVERT] is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
-		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia AB[COLOR_REVERT] è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
-		<Russian>АБ-материя - гипотетическая форма ядерной материи, предложенная Александром Болонкиным.</Russian>
+		<Tag>TXT_KEY_BONUSHELP_EFFECTS_UNIT</Tag>
+		<English>Units built faster</English>
+		<French>Unités construites plus rapidement</French>
+		<German>schnellere Produktion</German>
+		<Italian>Produzione unità accelerata</Italian>
+		<Spanish>Unidades aceleradas</Spanish>
+		<Polish>Jednostki zbudowane szybciej</Polish>
+		<Russian>Ускоряет обучение отрядов</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_EXPORTS_PLAYER</Tag>
+		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
+		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
+		<German>[SPACE](%s2_player exportiert %d1_num_bonus)[SPACE]</German>
+		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
+		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
+		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
+		<Russian>[SPACE](%s2_player ýêñïîðòèðóåò %d1_num_bonus)[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_HAPPY</Tag>
+		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
+		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
+		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_HAPPY]</Italian>
+		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
+		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
+		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_IMPORTS_PLAYER</Tag>
+		<English>[SPACE](%s2_player is importing %d1_num_bonus)[SPACE]</English>
+		<French>[SPACE](%s2_player importe %d1_num_bonus)[SPACE]</French>
+		<German>[SPACE](%s2_player importiert %d1_num_bonus)[SPACE]</German>
+		<Italian>[SPACE](%s2_player importa %d1_num_bonus)[SPACE]</Italian>
+		<Spanish>[SPACE](%s2_player está importando %d1_num_bonus)[SPACE]</Spanish>
+		<Polish>[SPACE](%s2_player importuje %d1_num_bonus)[SPACE]</Polish>
+		<Russian>[SPACE](%s2_player èìïîðòèðóåò %d1_num_bonus)[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
+		<English>Qualifies %s1_ImpName to exist on plot</English>
+		<French>Permet %s1_ImpName d'exister sur la case</French>
+		<Italian>Permette a %s1_ImpName di esistere sul terreno</Italian>
+		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
+		<Russian>Допускает наличие %s1_ImpName на данном участке</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_UNHAPPY</Tag>
+		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
+		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
+		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_UNHAPPY]</Italian>
+		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
+		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
+		<Russian>Íåäîâîëüñòâî: +%d1_Change[ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_CIVILIZATION</Tag>
@@ -54,6 +109,19 @@
 		<Italian>Aborigeno</Italian>
 		<Polish>Aborygen</Polish>
 		<Russian>Àáîðèãåíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
+		<English>AB Matter</English>
+		<French>Matière AB</French>
+		<Italian>Materia AB</Italian>
+		<Russian>ÀÁ-ìàòåðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]AB Matter[COLOR_REVERT] is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
+		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia AB[COLOR_REVERT] è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
+		<Russian>АБ-материя - гипотетическая форма ядерной материи, предложенная Александром Болонкиным.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADENAN</Tag>
@@ -340,20 +408,6 @@
 		<Russian>Àíãîëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
-		<English>Anti-Gravity Field Generators</English>
-		<French>Générateurs de champ anti-gravité</French>
-		<Italian>Generatori di campo anti-gravità</Italian>
-		<Polish>Generatory pola antygrawitacyjnego</Polish>
-		<Russian>Àíòèãðàâû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
-		<English>An [COLOR_HIGHLIGHT_TEXT]anti-gravity field generator[COLOR_REVERT] is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
-		<Italian>Un [COLOR_HIGHLIGHT_TEXT]generatore di campo anti-gravità[COLOR_REVERT] è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
-		<Russian>Современные исследования антигравитационных технологий показали, что электромагнитные поля могут поднимать объект. Кроме того, эти поля также могут стать защитными и могут также обеспечивать репеллент от близлежащих планетных поверхностей, что позволяет подвешенному внутри объекту прыгать по небу, как скала, на фоне электромагнитных свойств поверхности под ним. В настоящее время, в XXI веке, исследование находится в зачаточном состоянии, но теоретически оно может привести к созданию аппарата, который может удерживаться в воздухе в своем собственном атмосферном пространстве и может двигаться по небу с огромной скоростью, что предполагает движение без трения. Часто наблюдаемые неопознанные летающие объекты в атмосфере Земли, наблюдаемые в нашу современную эпоху, движутся во многом таким же образом и могут достигать потрясающих скоростей с мгновенным полным ускорением. Теоретически это технологическое приложение позволяет им достичь этого движения.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANTIMATTER</Tag>
 		<English>Antimatter</English>
 		<French>Antimatière</French>
@@ -366,6 +420,20 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Antimatter[COLOR_REVERT] is defined by physics as matter composed of antiparticles of the corresponding particles of ordinary matter (in other words, a particle and its anti-particle have the same mass, but opposite electric charge and other differences in quantum numbers). Antimatter particles bind with each other to form antimatter, just as ordinary particles bind to form normal matter, and can be used as fuel, as trigger mechanism for weapons or in medical field for cancer therapy or radiation research.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]antimateria[COLOR_REVERT] è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente anti-particella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anti-cancro o nell'ambito di ricerca sulle radiazioni.</Italian>
 		<Russian>В физике элементарных частиц антивещество - это материал, состоящий из античастиц; которые имеют ту же массу, что и частицы обычного вещества, но имеют противоположный заряд и другие свойства частиц, такие как лептонное и барионное число, квантовый спин и т.д. (гамма-лучи), нейтрино и менее массивные пары частица-античастица. Масса любых образовавшихся нейтрино ничтожно мала, в то время как они содержат энергию, которая обычно остается недоступной после высвобождения аннигиляции частица-античастица. Полным следствием аннигиляции является высвобождение доступной для работы энергии, пропорциональной общей массе вещества и антивещества, в соответствии с уравнением эквивалентности массы и энергии E = mc2.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
+		<English>Anti-Gravity Field Generators</English>
+		<French>Générateurs de champ anti-gravité</French>
+		<Italian>Generatori di campo anti-gravità</Italian>
+		<Polish>Generatory pola antygrawitacyjnego</Polish>
+		<Russian>Àíòèãðàâû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
+		<English>An [COLOR_HIGHLIGHT_TEXT]anti-gravity field generator[COLOR_REVERT] is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
+		<Italian>Un [COLOR_HIGHLIGHT_TEXT]generatore di campo anti-gravità[COLOR_REVERT] è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
+		<Russian>Современные исследования антигравитационных технологий показали, что электромагнитные поля могут поднимать объект. Кроме того, эти поля также могут стать защитными и могут также обеспечивать репеллент от близлежащих планетных поверхностей, что позволяет подвешенному внутри объекту прыгать по небу, как скала, на фоне электромагнитных свойств поверхности под ним. В настоящее время, в XXI веке, исследование находится в зачаточном состоянии, но теоретически оно может привести к созданию аппарата, который может удерживаться в воздухе в своем собственном атмосферном пространстве и может двигаться по небу с огромной скоростью, что предполагает движение без трения. Часто наблюдаемые неопознанные летающие объекты в атмосфере Земли, наблюдаемые в нашу современную эпоху, движутся во многом таким же образом и могут достигать потрясающих скоростей с мгновенным полным ускорением. Теоретически это технологическое приложение позволяет им достичь этого движения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
@@ -1161,7 +1229,11 @@
 		<Tag>TXT_KEY_BONUS_CAMEL</Tag>
 		<English>Camel</English>
 		<French>Chameau</French>
-		<German>Kamel</German>
+		<German>
+			<Text>Kamele:Kamele:Kamelen:Kamele</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Cammello</Italian>
 		<Spanish>Camello</Spanish>
 		<Polish>Wielbłąd</Polish>
@@ -1170,6 +1242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMEL_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]camel[COLOR_REVERT] is an even-toed ungulate, that bears distinctive fatty deposits known as "humps" on its back. Camels have long been domesticated and, as livestock, they provide food (milk and meat) and textiles (fiber and felt from hair). Camels are working animals especially suited to their desert habitat and are a vital means of transport for passengers and cargo.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Kamele[COLOR_REVERT] (zur Abgrenzung von Lamas eigentlich Altweltkamele) sind Paarhufer, die einen (Dromedar) oder zwei (Trampeltier) markante Höcker auf dem Rücken tragen, die als Fettspeicher dienen. Wegen ihrer guten Anpassung an extreme Lebensräume, die es ihnen z.B. ermöglicht, in der Wüste lange ohne Wasser auszukommen, sind sie für den Menschen sehr interessant. Seit ihrer Domestizierung im letzten Jahrtausend v.Chr. werden sie vor allem als Last-, Zug- oder Reittiere eingesetzt. Aber sie sind auch gute Rohstofflieferanten. Neben Fleisch, Milch, Leder und Wolle werden besonders in nomadischen Kulturen sogar ihre Ausscheidungen genutzt. Der Dung stellt einen hervorragenden Brennstoff dar und mit dem Urin werden z.B. Läuse aus den Haaren gewaschen. Seit dem 9. Jahrhundert v.Chr. ist eine militärische Nutzung des Kamels bekannt. Kamelreitereinheiten gibt es auch heute noch in Ägypten und Indien. Im Spätmittelalter führten die Mongolen die Tradition der Kamelrennen ein, die sich in arabischen Ländern großer Beliebtheit erfreut. Bei den Beduinen sind Kamele Statussymbole, denn sie stehen für den Reichtum einer Familie.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]cammello[COLOR_REVERT] è un ungulato, che porta sul dorso dei distintivi depositi di grasso, noti come "gobbe". I cammelli sono stati da lungo tempo addomesticati e, come bestiame, forniscono cibo (latte e carne) e tessuti (fibre e feltro dai peli). I cammelli sono animali da lavoro particolarmente adatti a vivere nel deserto e rappresentano un mezzo di trasporto vitale per passeggeri e merci.</Italian>
 		<Russian>Верблюд - это копытное животное из рода Camelus, имеющее на спине характерные жировые отложения, известные как бугорки. Есть два вида верблюдов: дромадер или арабский верблюд имеет один горб, а двугорбый - два горба. Дромадеры происходят из засушливых пустынных районов Западной Азии, а бактрийские верблюды - из Центральной и Восточной Азии. Оба вида одомашнены; они дают молоко и мясо и являются рабочими животными.[PARAGRAPH:2]Термин «верблюд» также используется в более широком смысле для описания любого из шести верблюдоподобных существ в семействе Camelidae: двух настоящих верблюдов и четырех южноамериканских верблюдов: ламы, альпаки, гуанако и викуньи.[PARAGRAPH:2]Средняя продолжительность жизни верблюда составляет от 40 до 50 лет. Взрослый взрослый верблюд составляет 1,85 м (6 футов 1 дюйм) в плече и 2,15 м (7 футов 1 дюйм) на горбине. Горб поднимается над телом примерно на 30 дюймов (76,20 см). Верблюды могут бегать со скоростью до 65 км/ч (40 миль/ч) короткими рывками и выдерживать скорость до 40 км /ч (25 миль/ч).[PARAGRAPH:2]Ископаемые остатки указывают на то, что предки современных верблюдов развились в Северной Америке в период палеогена (см. также Камелопы), а затем распространились на большую часть Азии. Жители древнего Сомали или царства Пунт впервые приручили верблюдов задолго до 2000 года до нашей эры.</Russian>
 	</TEXT>
@@ -1352,17 +1425,17 @@
 		<Russian>Êîøêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
-		<English>A [COLOR_HIGHLIGHT_TEXT]cat[COLOR_REVERT] is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
-		<Italian>Un [COLOR_HIGHLIGHT_TEXT]gatto[COLOR_REVERT] è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
-		<Russian>Äîìàøíÿÿ êîøêà - ýòî íåáîëüøîé, êàê ïðàâèëî, ïóøèñòîå, äîìàøíåå, õèùíîå ìëåêîïèòàþùåå. Åå ÷àñòî íàçûâàþò äîìàøíåé êîøêîé, åñëè ñîäåðæàò â êà÷åñòâå äîìàøíåãî ïèòîìöà, èëè ïðîñòî êîøêà, êîãäà íåò íèêàêîé íåîáõîäèìîñòè îòëè÷èòü åå îò äðóãèõ êîøà÷üèõ. Êîøêè öåíÿòñÿ ëþäüìè ðàäè îáùåíèÿ è èç-çà ñïîñîáíîñòè îõîòèòüñÿ ãðûçóíîâ è áûòîâûõ íàñåêîìûõ-âðåäèòåëåé.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CATALONIAN</Tag>
 		<English>Catalonian</English>
 		<French>Catalane</French>
 		<Italian>Catalano</Italian>
 		<Russian>Êàòàëîíöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]cat[COLOR_REVERT] is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
+		<Italian>Un [COLOR_HIGHLIGHT_TEXT]gatto[COLOR_REVERT] è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
+		<Russian>Äîìàøíÿÿ êîøêà - ýòî íåáîëüøîé, êàê ïðàâèëî, ïóøèñòîå, äîìàøíåå, õèùíîå ìëåêîïèòàþùåå. Åå ÷àñòî íàçûâàþò äîìàøíåé êîøêîé, åñëè ñîäåðæàò â êà÷åñòâå äîìàøíåãî ïèòîìöà, èëè ïðîñòî êîøêà, êîãäà íåò íèêàêîé íåîáõîäèìîñòè îòëè÷èòü åå îò äðóãèõ êîøà÷üèõ. Êîøêè öåíÿòñÿ ëþäüìè ðàäè îáùåíèÿ è èç-çà ñïîñîáíîñòè îõîòèòüñÿ ãðûçóíîâ è áûòîâûõ íàñåêîìûõ-âðåäèòåëåé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELLPHONES</Tag>
@@ -1677,12 +1750,6 @@
 		<Russian>Áåëàÿ ãëèíà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Clay[COLOR_REVERT] is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
-		<Italian>L'[COLOR_HIGHLIGHT_TEXT]argilla[COLOR_REVERT] è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
-		<Russian>Глина - это силикат алюминия природного происхождения, состоящий в основном из мелкозернистых минералов. Глиняные месторождения в основном состоят из глинистых минералов, подтипа филлосиликатных минералов, которые придают пластичность и затвердевают при обжиге или сушке; они также могут содержать переменное количество воды, захваченной в минеральной структуре за счет полярного притяжения. Органические материалы, не придающие пластичности, также могут быть частью глинистых отложений.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
 		<French>Atomes claytroniques</French>
@@ -1694,6 +1761,12 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Claytronic atoms[COLOR_REVERT] (or "Catoms") are individual nanometer-scale computers, which can interact with each other to form tangible objects that a user can interact with. This idea is more broadly referred to as "programmable matter". Claytronic atoms have the potential to greatly affect many areas of daily life, such as telecommunication, human-computer interfaces, and entertainment.</English>
 		<Italian>Gli [COLOR_HIGHLIGHT_TEXT]atomi claytronici[COLOR_REVERT] (o "catomi") sono singoli computer di scala nanometrica che interagiscono fra loro per produrre oggetti tangibili, che un essere umano può a sua volta utilizzare. Questi atomi hanno il potenziale di influenzare notevolmente molte aree della vita quotidiana, come le telecomunicazioni, le interfacce uomo-computer e l'industria dell'intrattenimento.</Italian>
 		<Russian>Клэйтроника - это абстрактная концепция будущего, которая объединяет наноразмерную робототехнику и информатику для создания отдельных компьютеров нанометрового размера, называемых глинистыми атомами, или катомами, которые могут взаимодействовать друг с другом, образуя осязаемые трехмерные объекты, с которыми может взаимодействовать пользователь. Эта идея более широко упоминается как программируемый материал. У клэйтроники есть потенциал, чтобы сильно повлиять на многие области повседневной жизни, такие как телекоммуникации, человеко-компьютерные интерфейсы и развлечения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Clay[COLOR_REVERT] is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
+		<Italian>L'[COLOR_HIGHLIGHT_TEXT]argilla[COLOR_REVERT] è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
+		<Russian>Глина - это силикат алюминия природного происхождения, состоящий в основном из мелкозернистых минералов. Глиняные месторождения в основном состоят из глинистых минералов, подтипа филлосиликатных минералов, которые придают пластичность и затвердевают при обжиге или сушке; они также могут содержать переменное количество воды, захваченной в минеральной структуре за счет полярного притяжения. Органические материалы, не придающие пластичности, также могут быть частью глинистых отложений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOCKPUNK</Tag>
@@ -1718,12 +1791,6 @@
 		<Russian>Òêàíè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
-		<English>A [COLOR_HIGHLIGHT_TEXT]fabric[COLOR_REVERT] is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
-		<Italian>Un [COLOR_HIGHLIGHT_TEXT]tessuto[COLOR_REVERT] è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
-		<Russian>Ñëîâà òêàíü è ìàòåðèÿ øèðîêî èñïîëüçóþòñÿ (òàêèõ êàê ïîøèâ è êðîé) êàê ñèíîíèìû äëÿ òåêñòèëÿ. Îäíàêî, åñòü òîíêèå ðàçëè÷èÿ â ýòèõ ïîíÿòèÿõ. Òåêñòèëü îòíîñèòñÿ ê ëþáîìó ìàòåðèàëó, ñäåëàííûé èç ïåðåïëåòàþùèõñÿ âîëîêîí. Òêàíü æå îáîçíà÷àåò ëþáîé ìàòåðèàë, èçãîòîâëåííûé ïóòåì ïëåòåíèÿ, âÿçàíèÿ, êðþ÷êîì, èëè ñêëåèâàíèÿ. Ïîëîòíî îòíîñèòñÿ ê ãîòîâîìó êóñîê òêàíè, êîòîðûé ìîæåò áûòü èñïîëüçîâàí äëÿ öåëåé, òàêèõ êàê ïîêðûòèå êðîâàòè. [NEWLINE][TAB]Ïàðóñà èçãîòîâëÿëèñü èç òêàíè çà âñþ èçâåñòíóþ íàì èñòîðèþ. Êàê ïðàâèëî, ïàðóñà ñøèâàëèñü èç ëüíà, êîíîïëè èëè õëîïêà â ðàçëè÷íûõ ôîðìàõ, âêëþ÷àÿ õîëñò. Îäíàêî, ñîâðåìåííûå ïàðóñà ðåäêî äåëàþòñÿ èç íàòóðàëüíûõ âîëîêîí. ×àùå âñåãî ïàðóñà ñäåëàíû èç ñèíòåòè÷åñêèõ âîëîêîí, íà÷èíàÿ îò íåäîðîãîãî íåéëîíà ëèáî èç ïîëèýñòåðà è äîðîãîñòîÿùèõ àðàìèäíûõ âîëîêîí èëè óãëåðîäíûõ âîëîêîí. Íåäàâíèå óñïåõè â òåõíîëîãèè ñåé÷àñ ïðåäëàãàþò ìíîãî âàðèàíòîâ äëÿ èçãîòîâëåíèÿ ïàðóñîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTHING</Tag>
 		<English>Clothing</English>
 		<French>Vêtements</French>
@@ -1736,6 +1803,12 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]dress[COLOR_REVERT] is a specifically weaved fabric to be worn by a human being, covering it wholly or partially, and defining its external appearance. Depending on the culture, some clothes can have a very particular cultural and social significance, such as marking the belonging to a given community or of a particular (civil, social, religious) status within the community.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]vestito[COLOR_REVERT] è un tessuto realizzato appositamente per essere indossato da un essere umano, coprendolo in tutto o in parte e definendone l'aspetto esteriore. Alcuni vestiti, in base alla cultura, possono rivestire un significato culturale e sociale molto particolare, come l'appartenenza a una data comunità o la segnalazione di un particolare status (civile, sociale, religioso...) all'interno della comunità.</Italian>
 		<Russian>С2С хлопок -&gt; [Хлопк. фабрика] -&gt; одежда [TAB]Одежда в С2С позволяет получить доступ к "счастью" в комбинации с универсамом, магазином, или зданием пограничного контроля. Эффект является накопительным. Одежда - волокно и текстильный материал, носимый на теле. Ношение одежды одежды главным образом ограничено людьми и это особенность почти всех человеческих обществ. Количество и тип одежды носимого зависят от физических, социальных и географических соображений.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]fabric[COLOR_REVERT] is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
+		<Italian>Un [COLOR_HIGHLIGHT_TEXT]tessuto[COLOR_REVERT] è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
+		<Russian>Ñëîâà òêàíü è ìàòåðèÿ øèðîêî èñïîëüçóþòñÿ (òàêèõ êàê ïîøèâ è êðîé) êàê ñèíîíèìû äëÿ òåêñòèëÿ. Îäíàêî, åñòü òîíêèå ðàçëè÷èÿ â ýòèõ ïîíÿòèÿõ. Òåêñòèëü îòíîñèòñÿ ê ëþáîìó ìàòåðèàëó, ñäåëàííûé èç ïåðåïëåòàþùèõñÿ âîëîêîí. Òêàíü æå îáîçíà÷àåò ëþáîé ìàòåðèàë, èçãîòîâëåííûé ïóòåì ïëåòåíèÿ, âÿçàíèÿ, êðþ÷êîì, èëè ñêëåèâàíèÿ. Ïîëîòíî îòíîñèòñÿ ê ãîòîâîìó êóñîê òêàíè, êîòîðûé ìîæåò áûòü èñïîëüçîâàí äëÿ öåëåé, òàêèõ êàê ïîêðûòèå êðîâàòè. [NEWLINE][TAB]Ïàðóñà èçãîòîâëÿëèñü èç òêàíè çà âñþ èçâåñòíóþ íàì èñòîðèþ. Êàê ïðàâèëî, ïàðóñà ñøèâàëèñü èç ëüíà, êîíîïëè èëè õëîïêà â ðàçëè÷íûõ ôîðìàõ, âêëþ÷àÿ õîëñò. Îäíàêî, ñîâðåìåííûå ïàðóñà ðåäêî äåëàþòñÿ èç íàòóðàëüíûõ âîëîêîí. ×àùå âñåãî ïàðóñà ñäåëàíû èç ñèíòåòè÷åñêèõ âîëîêîí, íà÷èíàÿ îò íåäîðîãîãî íåéëîíà ëèáî èç ïîëèýñòåðà è äîðîãîñòîÿùèõ àðàìèäíûõ âîëîêîí èëè óãëåðîäíûõ âîëîêîí. Íåäàâíèå óñïåõè â òåõíîëîãèè ñåé÷àñ ïðåäëàãàþò ìíîãî âàðèàíòîâ äëÿ èçãîòîâëåíèÿ ïàðóñîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COAL</Tag>
@@ -2004,13 +2077,6 @@
 		<Russian>Õëîïîê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT] is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
-		<German>[COLOR_HIGHLIGHT_TEXT]Baumwolle[COLOR_REVERT] (Gossypium) gehört zur Familie der Malvengewächse (Malvaceae). Innerhalb der Gattung existieren etwa 50 verschiedene Arten, die allesamt als krautige Pflanzen oder Sträucher wachsen. Ihre kugeligen oder elipsoiden Kapselfrüchte enthalten giftige Samen, aus deren langen, wolligen, intensiv weißen Samenhaaren die begehrte Naturfaser gewonnen wird.[NEWLINE]Baumwolle wird seit Jahrtausenden zur Herstellung leichter Kleidung verwendet. Funde aus der neolithischen Siedlung Mehrgarh in Indien beweisen, dass sie dort schon ca. 6000 v.Chr. angebaut wurde. Im zweiten vorchristlichen Jahrtausend gelangte Baumwolle ins Babylonische Reich in Mesopotamien und nach Ägypten. Selbst die amerikanischen Völker nutzten die Baumwolle schon lange, bevor im Mittelalter ihr Anbau und ihre Verarbeitung durch die Araber über Spanien und Italien in Europa eingeführt wurde. Nicht nur Venedig und Augsburg verdanken einen Großteil ihres frühen Reichtums dem Baumwollhandel, auch der Erfolg der britischen Ostindien-Kompanie beruht zum großen Teil auf Baumwolle. Ende des 18./Anfang des 19. Jahrhunderts setzte sich die Baumwollfaser dann aufgrund ihrer größeren Verfügbarkeit durch den zunehmenden Anbau gerade auch in den Kolonien nach und nach gegen die Wolle durch.</German>
-		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cotone[COLOR_REVERT] è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
-		<Russian> Õëîïîê - ìÿãêîå âîëîêíî, êîòîðîå ðàñòåò âîêðóã ñåìÿí õëîïêîâîãî ðàñòåíèÿ (Gossypium spp.), êóñòàðíèêîâîãî óðîæåíöà òðîïè÷åñêèõ è ñóáòðîïè÷åñêèõ îáëàñòåé Ñòàðîãî è Íîâîãî ñâåòà. Âîëîêíî ÷àùå âñåãî ñêðó÷èâàþò â íèòü è èñïîëüçóþò ÷òîáû ñäåëàòü ìÿãêóþ, âîçäóõîïðîíèöàåìóþ òêàíü. Íåêîòîðûå àâòîðèòíûå ñïåöèàëèñòû óòâåðæäàþò, ÷òî âåðîÿòíî Åãèïòÿíå èìåëè õëîïîê óæå â 12 000 ã. äî í.ý, è ñâèäåòåëüñòâà èñïîëüçîâàíèÿ õëîïêà áûëè íàéäåíû â ìåêñèêàíñêèõ ïåùåðàõ (õëîïêîâàÿ òêàíü è ôðàãìåíòû îêðîâàâëåííîãî âîëîêíà, ñïëåòåííîãî ñ ïåðüÿìè è ìåõîì), êîòîðûå îòíîñÿòñÿ êî âðåìåíè îêîëî 7 000 ëåò íàçàä. Åñòü ÿñíîå àðõåîëîãè÷åñêîå ñâèäåòåëüñòâî, ÷òî ëþäè â Þæíîé Àìåðèêå è Èíäèè îäîìàøíèâàëè ðàçëè÷íûå âèäû õëîïêà íåçàâèñèìî òûñÿ÷è ëåò íàçàä. Ñàìîå ðàííåå ïèñüìåííîå óïîìèíàíèå î õëîïêå íàõîäèòñÿ â Èíäèè. Õëîïîê âûðàùèâàëñÿ â Èíäèè â òå÷åíèå áîëüøå ÷åì òðåõ òûñÿ÷ ëåò, è ýòî óïîìÿíóòî â Ðèãâåäå, íàïèñàííîé â 1500 ã. äî í.ý. Â Ïåðó õëîïîê áûë îñíîâîé ðàçâèòèÿ ïðèáðåæíûõ êóëüòóð òèïà Ìî÷å è Íàñêà. Õëîïîê âûðàùèâàëñÿ â âåðõîâüÿõ ðåê, ïðåâðàùàëñÿ â ñåòè è ïðîäàâàëñÿ ðûáàöêèì äåðåâíÿì íà ïîáåðåæüå äëÿ óâåëè÷åíèÿ äîáû÷è ðûáû. Â òå÷åíèå ïîçäíåãî ñðåäíåâåêîâîãî ïåðèîäà, õëîïîê ñòàë èçâåñòíûì êàê èìïîðòèðîâàííîå âîëîêíî â Ñåâåðíîé Åâðîïå. Ê êîíöó 16-îãî ñòîëåòèÿ íàøåé ýðû, õëîïîê âûðàùèâàëñÿ ïîâñþäó â áîëåå òåïëûõ îáëàñòÿõ â Àôðèêå, Åâðàçèè è Àìåðèêå. Èíäèéñêàÿ õëîïêîâàÿ îáðàáàòûâàþùàÿ ïðîìûøëåííîñòü ïðèøëà â óïàäîê âî âðåìÿ àíãëèéñêîé èíäóñòðèàëüíîé ðåâîëþöèè, êîãäà èçîáðåëè âðàùàþùóþñÿ ïðÿäèëüíóþ ìàøèíó (1764) è ïðÿäèëüíóþ ðàìêó Àðêðàéòà (1769) ïîçâîëèëî óäåøåâèòü ìàññîâîå ïðîèçâîäñòâî õëîïêîâîé òêàíè â Âåëèêîáðèòàíèè. Ïðîèçâîäèòåëüíîñòü áûëà åøå óëó÷øåíà ïîñëå èçîáðåòåíèÿ õëîïêîî÷èñòèòåëüíîé ìàøèíû Ýëè Óèòíè â 1793. Â Ñîåäèíåííûõ Øòàòàõ âûðàùèâàíèå òðåõ çåðíîâûõ êóëüòóð: õëîïêà, èíäèãî è òàáàêà èñòîðè÷åñêè áûëî îñíîâíûì çàíÿòèåì ðàáîâ. - Wikipedia</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS</Tag>
 		<English>Cotton Fibers</English>
 		<French>Fibres de coton</French>
@@ -2023,6 +2089,13 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Cotton fiber[COLOR_REVERT] is a fiber made of almost pure cellulose. It is most often spun into yarn or thread and used to make a soft, breathable textile. Cotton fibers occur naturally in colors of white, brown, pink and green, even though fears of contaminating the genetics of white cotton have led many cotton-growing locations to ban the growing of colored cotton varieties.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]fibra di cotone[COLOR_REVERT] è una fibra di cellulosa quasi pura. Viene spesso filata e utilizzata per creare un tessuto morbido e traspirante. Le fibre di cotone si presentano naturalmente nei colori bianco, marrone, rosa e verde, anche se i timori di contaminare i campi di cotone bianco hanno portato molte zone di coltivazione del cotone a vietare la coltivazione di varietà colorate.</Italian>
 		<Russian>Õëîïîê - ýòî ìÿãêîå, ïóøèñòîå øòàïåëüíîå âîëîêíî, êîòîðîå ðàñòåò â êîðîáî÷êàõ, èëè çàùèòíûå êàïñóëû âîêðóã ñåìÿí õëîï÷àòíèêà ðàñòåíèé ðîäà Gossypium. Âîëîêíà ïî ñóòè - ÷èñòàÿ öåëëþëîçà. Â åñòåñòâåííîì ñîñòîÿíèè âàòíûå øàðèêè áóäóò èìåòü òåíäåíöèþ ê óâåëè÷åíèþ ðàññåèâàíèÿ ñåìÿí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT] is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Baumwolle[COLOR_REVERT] (Gossypium) gehört zur Familie der Malvengewächse (Malvaceae). Innerhalb der Gattung existieren etwa 50 verschiedene Arten, die allesamt als krautige Pflanzen oder Sträucher wachsen. Ihre kugeligen oder elipsoiden Kapselfrüchte enthalten giftige Samen, aus deren langen, wolligen, intensiv weißen Samenhaaren die begehrte Naturfaser gewonnen wird.[NEWLINE]Baumwolle wird seit Jahrtausenden zur Herstellung leichter Kleidung verwendet. Funde aus der neolithischen Siedlung Mehrgarh in Indien beweisen, dass sie dort schon ca. 6000 v.Chr. angebaut wurde. Im zweiten vorchristlichen Jahrtausend gelangte Baumwolle ins Babylonische Reich in Mesopotamien und nach Ägypten. Selbst die amerikanischen Völker nutzten die Baumwolle schon lange, bevor im Mittelalter ihr Anbau und ihre Verarbeitung durch die Araber über Spanien und Italien in Europa eingeführt wurde. Nicht nur Venedig und Augsburg verdanken einen Großteil ihres frühen Reichtums dem Baumwollhandel, auch der Erfolg der britischen Ostindien-Kompanie beruht zum großen Teil auf Baumwolle. Ende des 18./Anfang des 19. Jahrhunderts setzte sich die Baumwollfaser dann aufgrund ihrer größeren Verfügbarkeit durch den zunehmenden Anbau gerade auch in den Kolonien nach und nach gegen die Wolle durch.</German>
+		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cotone[COLOR_REVERT] è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
+		<Russian> Õëîïîê - ìÿãêîå âîëîêíî, êîòîðîå ðàñòåò âîêðóã ñåìÿí õëîïêîâîãî ðàñòåíèÿ (Gossypium spp.), êóñòàðíèêîâîãî óðîæåíöà òðîïè÷åñêèõ è ñóáòðîïè÷åñêèõ îáëàñòåé Ñòàðîãî è Íîâîãî ñâåòà. Âîëîêíî ÷àùå âñåãî ñêðó÷èâàþò â íèòü è èñïîëüçóþò ÷òîáû ñäåëàòü ìÿãêóþ, âîçäóõîïðîíèöàåìóþ òêàíü. Íåêîòîðûå àâòîðèòíûå ñïåöèàëèñòû óòâåðæäàþò, ÷òî âåðîÿòíî Åãèïòÿíå èìåëè õëîïîê óæå â 12 000 ã. äî í.ý, è ñâèäåòåëüñòâà èñïîëüçîâàíèÿ õëîïêà áûëè íàéäåíû â ìåêñèêàíñêèõ ïåùåðàõ (õëîïêîâàÿ òêàíü è ôðàãìåíòû îêðîâàâëåííîãî âîëîêíà, ñïëåòåííîãî ñ ïåðüÿìè è ìåõîì), êîòîðûå îòíîñÿòñÿ êî âðåìåíè îêîëî 7 000 ëåò íàçàä. Åñòü ÿñíîå àðõåîëîãè÷åñêîå ñâèäåòåëüñòâî, ÷òî ëþäè â Þæíîé Àìåðèêå è Èíäèè îäîìàøíèâàëè ðàçëè÷íûå âèäû õëîïêà íåçàâèñèìî òûñÿ÷è ëåò íàçàä. Ñàìîå ðàííåå ïèñüìåííîå óïîìèíàíèå î õëîïêå íàõîäèòñÿ â Èíäèè. Õëîïîê âûðàùèâàëñÿ â Èíäèè â òå÷åíèå áîëüøå ÷åì òðåõ òûñÿ÷ ëåò, è ýòî óïîìÿíóòî â Ðèãâåäå, íàïèñàííîé â 1500 ã. äî í.ý. Â Ïåðó õëîïîê áûë îñíîâîé ðàçâèòèÿ ïðèáðåæíûõ êóëüòóð òèïà Ìî÷å è Íàñêà. Õëîïîê âûðàùèâàëñÿ â âåðõîâüÿõ ðåê, ïðåâðàùàëñÿ â ñåòè è ïðîäàâàëñÿ ðûáàöêèì äåðåâíÿì íà ïîáåðåæüå äëÿ óâåëè÷åíèÿ äîáû÷è ðûáû. Â òå÷åíèå ïîçäíåãî ñðåäíåâåêîâîãî ïåðèîäà, õëîïîê ñòàë èçâåñòíûì êàê èìïîðòèðîâàííîå âîëîêíî â Ñåâåðíîé Åâðîïå. Ê êîíöó 16-îãî ñòîëåòèÿ íàøåé ýðû, õëîïîê âûðàùèâàëñÿ ïîâñþäó â áîëåå òåïëûõ îáëàñòÿõ â Àôðèêå, Åâðàçèè è Àìåðèêå. Èíäèéñêàÿ õëîïêîâàÿ îáðàáàòûâàþùàÿ ïðîìûøëåííîñòü ïðèøëà â óïàäîê âî âðåìÿ àíãëèéñêîé èíäóñòðèàëüíîé ðåâîëþöèè, êîãäà èçîáðåëè âðàùàþùóþñÿ ïðÿäèëüíóþ ìàøèíó (1764) è ïðÿäèëüíóþ ðàìêó Àðêðàéòà (1769) ïîçâîëèëî óäåøåâèòü ìàññîâîå ïðîèçâîäñòâî õëîïêîâîé òêàíè â Âåëèêîáðèòàíèè. Ïðîèçâîäèòåëüíîñòü áûëà åøå óëó÷øåíà ïîñëå èçîáðåòåíèÿ õëîïêîî÷èñòèòåëüíîé ìàøèíû Ýëè Óèòíè â 1793. Â Ñîåäèíåííûõ Øòàòàõ âûðàùèâàíèå òðåõ çåðíîâûõ êóëüòóð: õëîïêà, èíäèãî è òàáàêà èñòîðè÷åñêè áûëî îñíîâíûì çàíÿòèåì ðàáîâ. - Wikipedia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COW</Tag>
@@ -2041,7 +2114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COW_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Cows[COLOR_REVERT] (or cattle) are the most common type of large domesticated ungulates. Cattle are commonly raised as livestock for meat (beef or veal), for milk, and for hides, which are used to make leather. They are used as riding animals and draft animals (oxen or bullocks, which pull carts, plows and other implements). Another product of cattle is dung, which can be used to create manure or fuel. In some regions, such as parts of India, cattle have significant religious meaning.</English>
-		<German>Rinder, die Nachkommen des Büffels und des Bisons, erwiesen sich in der Vergangenheit wie in der Gegenwart als sehr nützlich für den Menschen. Ursprünglich durchstreiften sie als wilde Herden Asien, Afrika und Europa. In der Frühzeit dienten sie den Menschen als Handelsgut und Nahrungsquelle und verrichteten schwere Arbeiten. Später wurde die Rolle des bevorzugten Lasttiers vom Pferd übernommen. Die Römer waren die Ersten, die sich an der Viehzucht versuchten, um bestimmte Eigenschaften zu verstärken. Ihre Neuzüchtungen zeichneten sich vor allem durch ihre Fähigkeit aus, selbst in unwirtlichen Gegenden überleben zu können, die sich nicht für die landwirtschaftliche Bebauung eigneten. Im Jahre 1521 brachten die Spanier Weidevieh nach Mexiko und in die Neue Welt, woraufhin vor allem in Texas und den benachbarten Regionen zahlreiche Viehzucht-Ranchen entstanden. Heute wird der Viehbestand allein in den Vereinigten Staaten von Amerika auf mehr als 100 Millionen Tiere beziffert.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Rinder[COLOR_REVERT], die Nachkommen des Büffels und des Bisons, erwiesen sich in der Vergangenheit wie in der Gegenwart als sehr nützlich für den Menschen. Ursprünglich durchstreiften sie als wilde Herden Asien, Afrika und Europa. In der Frühzeit dienten sie den Menschen als Handelsgut und Nahrungsquelle und verrichteten schwere Arbeiten. Später wurde die Rolle des bevorzugten Lasttiers vom Pferd übernommen. Die Römer waren die Ersten, die sich an der Viehzucht versuchten, um bestimmte Eigenschaften zu verstärken. Ihre Neuzüchtungen zeichneten sich vor allem durch ihre Fähigkeit aus, selbst in unwirtlichen Gegenden überleben zu können, die sich nicht für die landwirtschaftliche Bebauung eigneten. Im Jahre 1521 brachten die Spanier Weidevieh nach Mexiko und in die Neue Welt, woraufhin vor allem in Texas und den benachbarten Regionen zahlreiche Viehzucht-Ranchen entstanden. Heute wird der Viehbestand allein in den Vereinigten Staaten von Amerika auf mehr als 100 Millionen Tiere beziffert.</German>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]mucche[COLOR_REVERT] (o bovini) sono il tipo più comune di grandi ungulati domestici. I bovini vengono comunemente allevati come bestiame per carne (manzo o vitello) e per la produzione di latte e pelli. Sono usati come animali da sella e da tiro (carri, aratri e altri attrezzi). Un altro prodotto del bestiame è lo sterco, che può essere utilizzato per creare letame o carburante. In alcune regioni, come parti dell'India, i bovini hanno un significato religioso significativo.</Italian>
 		<Russian>Потомки буйвола и бизона, крупный рогатый скот много раз использовался в прошлом и настоящем человека. Первоначально дикие стада этих зверей бродили по обширным просторам Азии, Африки и Европы. Их ранний вклад в человечество состоял из труда, товаров и еды, хотя лошадь вскоре заменила их как предпочтительное вьючное животное. Римляне были первыми людьми, которые пытались разводить крупный рогатый скот, чтобы добиться определенных качеств по сравнению с другими. Их способность выживать в засушливых районах, непригодных для земледелия, стала главным преимуществом этих новых пород. В 1521 году испанцы представили их в Мексике и Новом Свете, что привело к обширному разведению крупного рогатого скота в Техасе и других соседних регионах. Сегодня только в США насчитывается более 100 миллионов голов крупного рогатого скота.</Russian>
 	</TEXT>
@@ -2080,6 +2153,15 @@
 		<Russian>Õîðâàòû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTALPUNK</Tag>
+		<English>Crystalpunk</English>
+		<Russian>Êðèñòàëïàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
 		<English>Crystal Glassware</English>
 		<French>Verrerie en cristal</French>
@@ -2090,15 +2172,6 @@
 		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Lead glass[COLOR_REVERT], commonly called crystal, is a variety of glass in which lead replaces the calcium content of a typical potash glass. It is retained from the Venetian word "cristallo" to describe the rock crystal imitated by Murano glassmakers. This naming convention has been maintained to describe decorative hollow-ware. The earliest known example is a blue glass fragment from Nippur (Mesopotamia) dated to 1400 BC. Lead glass also occurs in Han-period China (206 BC – 220 AD), where it was cast to imitate jade, both for ritual objects such as big and small figures, as well as jewellery and a limited range of vessels. In medieval and early modern Europe, lead glass was used as a base in coloured glasses, specifically in mosaic tesserae, enamels, stained-glass painting, and bijouterie, where it was used to imitate precious stones. English entrepreneur George Ravenscroft was the first to produce clear lead crystal glassware on an industrial scale, seeking to find an alternative to Venetian cristallo. From the 18th century on, English lead glass became popular throughout Europe, and was being produced in France, Hungary, Germany, and Norway.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]vetro-cristallo[COLOR_REVERT] o cristallo al piombo, comunemente chiamato cristallo, è una varietà di vetro in cui il piombo sostituisce il contenuto di calcio di un tipico vetro di carbonato di potassio. Il nome è ispirato al cristallo di rocca usato dai vetrai di Murano. Questa denominazione è stata mantenuta per descrivere questo tipo di oggetti decorativi. Il primo esempio conosciuto è un frammento di vetro blu di Nippur (Mesopotamia) datato 1400 a.C. Il vetro-cristallo si trova anche nella Cina del periodo Han (206 a.C. - 220 d.C.), dove veniva fuso per imitare la giada, sia per oggetti rituali come figure grandi e piccole, sia per gioielli e una gamma limitata di vasi. Nell'Europa medievale e della prima età moderna, il vetro al piombo era usato come base nei vetri colorati, in particolare nelle tessere di mosaico, negli smalti, nella pittura su vetro colorato e nella bigiotteria, dove veniva usato per imitare le pietre preziose. L'imprenditore inglese George Ravenscroft è stato il primo a produrre cristalli al piombo trasparenti su scala industriale, cercando di trovare un'alternativa al cristallo veneziano. Dal XVIII secolo in poi, il vetro al piombo inglese divenne popolare in tutta Europa e venne prodotto in Francia, Ungheria, Germania e Norvegia.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CRYSTALPUNK</Tag>
-		<English>Crystalpunk</English>
-		<Russian>Êðèñòàëïàíê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
@@ -2271,12 +2344,6 @@
 		<Russian>Àëìàçû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Diamond[COLOR_REVERT] is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
-		<Italian>Il [COLOR_HIGHLIGHT_TEXT]diamante[COLOR_REVERT] è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
-		<Russian>Алмаз - это аллотроп углерода. Это самый твердый из известных природных материалов и третий по твердости известный материал после агрегированных алмазных наностержней и сверхтвердого фуллерита. Его твердость и высокое рассеивание света делают его полезным для промышленного применения и ювелирных изделий.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
 		<French>Diamant nanothreads</French>
@@ -2288,6 +2355,12 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]diamond nanothread[COLOR_REVERT], also called carbon nanothread, is a one-dimensional carbon crystalline nanomaterial. Nanothreads consist of a stiff, strong carbon core surrounded by hydrogen atoms, and are more than 20,000 times thinner than a human hair. They are synthesized by compressing liquid benzene to extreme pressure of 20 GPa (around 200,000 times the air pressure at the surface of the Earth), and then slowly relieving that pressure. Their extremely high specific strength is used for space elevators and in other applications related to transportation, aerospace, and sports equipment.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]nanofilamento in diamante[COLOR_REVERT], chiamato anche nanofilamento di carbonio, è un nanomateriale di carbonio cristallino unidimensionale. I nanofilamenti sono costituiti da un nucleo di carbonio rigido circondato da atomi di idrogeno e sono oltre 20.000 volte più sottili di un capello umano. Sono sintetizzati comprimendo il benzene liquido a una pressione estrema di 20 GPa (circa 200.000 volte la pressione dell'aria sulla Terra) e quindi alleviando lentamente quella pressione. La loro resistenza estremamente elevata viene utilizzata per gli elevatori spaziali e in altre applicazioni relative al trasporto, al settore aerospaziale e alle attrezzature sportive.</Italian>
 		<Russian>Алмазная нить - это четырехгранный углеродный кристаллический наноматериал (плотноупакованная углеродная структура sp3). Его структура похожа на структуру алмаза. ДНТ имеют всего несколько атомов в поперечнике, более чем в 20000 раз тоньше человеческого волоса. Они синтезируются путем сжатия жидкого бензола до экстремального давления 20 ГПа (примерно в 200000 раз больше давления воздуха у поверхности Земли), а затем медленного сброса этого давления. Их чрезвычайно высокая удельная прочность используется для космических лифтов и других применений, связанных с транспортным, аэрокосмическим и спортивным оборудованием.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Diamond[COLOR_REVERT] is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
+		<Italian>Il [COLOR_HIGHLIGHT_TEXT]diamante[COLOR_REVERT] è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
+		<Russian>Алмаз - это аллотроп углерода. Это самый твердый из известных природных материалов и третий по твердости известный материал после агрегированных алмазных наностержней и сверхтвердого фуллерита. Его твердость и высокое рассеивание света делают его полезным для промышленного применения и ювелирных изделий.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIESELPUNK</Tag>
@@ -2359,7 +2432,11 @@
 		<Tag>TXT_KEY_BONUS_DONKEY</Tag>
 		<English>Donkey</English>
 		<French>Âne</French>
-		<German>Esel</German>
+		<German>
+			<Text>Esel:Esel:Eseln:Esel</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Asino</Italian>
 		<Spanish>Asnos</Spanish>
 		<Polish>Osły</Polish>
@@ -2368,6 +2445,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DONKEY_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]donkey[COLOR_REVERT], or ass, is a domesticated member of the horse family, and adapted to marginal desert lands. The donkey has been used as a working animal for at least 5,000 years, principally as drought or pack animals. Working donkeys are often associated with those living at or below subsistence levels, but continue to fill important roles in many places today. Small numbers of donkeys are kept for breeding or as pets in developed countries.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Esel[COLOR_REVERT] werden bereits seit mindestens 5000 Jahren als Arbeitstiere genutzt. Zunächst wurden Esel auch als Reit- und Zugtiere verwendet. Später wurden sie in der Regel von den schnelleren und kräftigeren Pferden verdrängt. Einzig in gebirgigen Regionen wurden sie weiter genutzt, weil sie im Gegensatz zu Pferden schwindelfrei sind. Wegen ihrer Zähigkeit setzte man sie außerdem weiter als Packtiere z.B. in Mühlen ein, wo sie Mehlsäcke transportieren mussten. Von Eseln wird häufig auch die Milch und das Leder, seltener auch das zähe Fleisch (meist zur Herstellung von Wurst) verwendet. In der Traditionellen Chinesischen Medizin stellen Gelees oder Pulver aus zermahlener Eselshaut ein potentes Heilmittel dar. Im Mittelalter wurde Eselshaut außerdem bevorzugt für die Herstellung von Pergament genutzt.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]asino[COLOR_REVERT] è un membro addomesticato della famiglia dei cavalli, adattatosi a vivere in terre semi-desertiche. L'asino è stato usato come animale da lavoro per almeno 5.000 anni, principalmente come animale da tiro o da soma. L'utilizzo degli asini in ambito lavorativo è spesso associato a coloro che vivono a livelli di sussistenza o inferiori, anche se gli asini continuano a ricoprire ruoli importanti ancora oggi. Una piccola frazione viene usata per la riproduzione o come animali domestici nei paesi sviluppati.</Italian>
 		<Russian>Осел или Equus africanus asinus, является домашним членом семейства лошадиных. Дикий предок осла - африканский дикий осел E. africanus. На западе США маленького осла иногда называют ослом (от испанского слова, обозначающего животное).[PARAGRAPH:2]Самец осла или осла называется джеком, самка - дженни, а потомство младше одного года - жеребенком (самец: жеребенок, самка: кобылка).[PARAGRAPH:2]Хотя разные виды семейства Equidae могут скрещиваться, потомство почти всегда бесплодно. Тем не менее, гибриды лошади и осла популярны благодаря своей прочности и выносливости. Мул - это потомство джека (осла-самца) и кобылы (самка лошади). Гораздо более редкое успешное спаривание коня и ослицы дает лошака.[PARAGRAPH:2]Впервые ослы были одомашнены около 3000 г. до н.э. или 4000 г. до н.э., вероятно, в Египте или Месопотамии, и распространились по всему миру. Сегодня они продолжают играть важные роли во многих местах. В то время как количество одомашненных видов увеличивается, африканский дикий осел и другой родственник, онагр, находятся под угрозой исчезновения. Как «вьючные животные» и спутники, ослы и мулы тысячелетиями работали вместе с людьми.</Russian>
 	</TEXT>
@@ -2491,26 +2569,6 @@
 		<French>Equatorienne</French>
 		<Italian>Ecuadoriano</Italian>
 		<Russian>Ýêâàäîðöû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_EFFECTS_BUILDING</Tag>
-		<English>Buildings affected</English>
-		<French>Bâtiments affectés</French>
-		<German>Auswirkungen auf</German>
-		<Italian>Edifici influenzati</Italian>
-		<Spanish>Edificios relacionados</Spanish>
-		<Polish>Wpływa na budynki</Polish>
-		<Russian>Связанные постройки</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_EFFECTS_UNIT</Tag>
-		<English>Units built faster</English>
-		<French>Unités construites plus rapidement</French>
-		<German>schnellere Produktion</German>
-		<Italian>Produzione unità accelerata</Italian>
-		<Spanish>Unidades aceleradas</Spanish>
-		<Polish>Jednostki zbudowane szybciej</Polish>
-		<Russian>Ускоряет обучение отрядов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EGGS</Tag>
@@ -2691,16 +2749,6 @@
 		<English>The universe is very large, therefore there are many [COLOR_HIGHLIGHT_TEXT]extremely unusual lifeforms[COLOR_REVERT] to be found in the distant cosmos. Whale-like creatures that are millions of kilometers across and capable of crossing the interstellar void are just one.</English>
 		<Italian>L'universo è molto ampio, pertanto ci sono molte [COLOR_HIGHLIGHT_TEXT]forme di vita estremamente inusuali[COLOR_REVERT] che abitano il cosmo lontano - per esempio, creature che ricordano le balene, lunghe milioni di chilometri e capaci di viaggiare nel vuoto interstellare.</Italian>
 		<Russian>Âñåëåííàÿ î÷åíü âåëèêà, è ïîýòîìó â äàëüíåì êîñìîñå ìîæíî íàéòè ìíîæåñòâî íåîáû÷íûõ ôîðì æèçíè è îáúåêòîâ. Êèòîïîäîáíûå ñóùåñòâà, ìèëëèîíû êèëîìåòðîâ â ïîïåðå÷íèêå è ñïîñîáíûå ïåðåñåêàòü ìåæçâåçäíóþ ïóñòîòó, - ýòî âñåãî ëèøü îäèí èç âàðèàíòîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_EXPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player exportiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
-		<Russian>[SPACE](%s2_player ýêñïîðòèðóåò %d1_num_bonus)[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES</Tag>
@@ -2925,13 +2973,6 @@
 		<Russian>Ðûáû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Fish[COLOR_REVERT] are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
-		<German>Vorherrschende Winde, Meeresströmungen und tiefe Gräben unter Wasser können zusammen für optimale Bedingungen für die Fischerei sorgen. An der Pazifikküste Zentral- und Südamerikas spülen ablandige Winde das warme Oberflächenwasser in tiefere Gewässerschichten, während die Unterwasserströmungen kalte, nährstoffreiche Wassermassen aus der Tiefe in Richtung Küste drängen. Der hohe Nährstoffgehalt dieses kälteren Wassers, der aus der Zersetzung organischen Materials in extremen Tiefen resultiert, schafft ideale Lebensbedingungen für Fische und andere Meereslebewesen. Völker, die in der Nähe eines fischbaren Gewässers angesiedelt waren, konnten ihre Nahrungserträge durch den Aufbau einer florierenden Fischereiindustrie bedeutend erhöhen.</German>
-		<Italian>I [COLOR_HIGHLIGHT_TEXT]pesci[COLOR_REVERT] sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
-		<Russian>Преобладающие ветры, океанские течения и глубокие канавы часто могут сочетаться, создавая оптимальные условия для рыбной ловли. В таких областях, как тихоокеанское побережье Центральной и Южной Америки, прибрежные ветры выталкивают теплые поверхностные воды в более глубокие воды. Подводные течения выталкивают холодную, богатую питательными веществами воду из глубин поверхности обратно к побережью. Высокая концентрация питательных веществ в этой более холодной воде, вызванная разложением органических веществ на очень большой глубине, создает идеальную среду для рыб и других морских обитателей. Цивилизации, имеющие доступ к таким местам, как эта, могут значительно увеличить свои запасы пищи, создав процветающую рыболовную промышленность.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FISH_OIL</Tag>
 		<English>Fish Oil</English>
 		<French>Huile de poisson</French>
@@ -2944,6 +2985,13 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Fish oil[COLOR_REVERT] is an oil derived from the tissues of oily fish. Fish oils contain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), precursors of certain eicosanoids that are known to reduce inflammation in human body and improve hypertriglyceridemia. Use of fish oil and omega-3 fatty acids have also been studied in a wide variety of other conditions, such as cardiovascular diseases, clinical depression, anxiety, cancer, and macular degeneration, yet their benefit in these conditions has also not been verified. Fish oil is also used as a component in aquaculture feed.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]olio di pesce[COLOR_REVERT] è un olio derivato dai tessuti dei pesci grassi. Gli oli di pesce contengono acidi grassi omega-3 come l'acido eicosapentaenoico (EPA) e l'acido docosaesaenoico (DHA), precursori di alcuni eicosanoidi che sono noti per ridurre le infiammazioni nel corpo umano e migliorare l'ipertrigliceridemia. L'uso di olio di pesce e acidi grassi omega-3 è stato studiato anche per un'ampia varietà di altre malattie, come malattie cardiovascolari, depressione clinica, ansia, cancro e degenerazione maculare, ma i loro benefici in queste condizioni non sono stati verificati. L'olio di pesce è anche usato come componente nei mangimi per l'acquacoltura.</Italian>
 		<Russian>Рыбий жир - это масло, полученное из тканей жирной рыбы. Рыбий жир содержит омега-3 жирные кислоты, эйкозапентаеновую кислоту (ЭПК) и докозагексаеновую кислоту (ДГК), предшественники некоторых эйкозаноидов, которые, как известно, уменьшают воспаление в организме человека и улучшают гипертриглицеридемию. Использование рыбьего жира и омега-3 жирных кислот также изучалось при большом количестве других состояний, таких как сердечно-сосудистые заболевания, клиническая депрессия, тревога, рак и дегенерация желтого пятна, но их польза в этих условиях также не была проверена. Рыбий жир также используется в качестве компонента кормов для аквакультуры.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Fish[COLOR_REVERT] are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
+		<German>Vorherrschende Winde, Meeresströmungen und tiefe Gräben unter Wasser können zusammen für optimale Bedingungen für die Fischerei sorgen. An der Pazifikküste Zentral- und Südamerikas spülen ablandige Winde das warme Oberflächenwasser in tiefere Gewässerschichten, während die Unterwasserströmungen kalte, nährstoffreiche Wassermassen aus der Tiefe in Richtung Küste drängen. Der hohe Nährstoffgehalt dieses kälteren Wassers, der aus der Zersetzung organischen Materials in extremen Tiefen resultiert, schafft ideale Lebensbedingungen für Fische und andere Meereslebewesen. Völker, die in der Nähe eines fischbaren Gewässers angesiedelt waren, konnten ihre Nahrungserträge durch den Aufbau einer florierenden Fischereiindustrie bedeutend erhöhen.</German>
+		<Italian>I [COLOR_HIGHLIGHT_TEXT]pesci[COLOR_REVERT] sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
+		<Russian>Преобладающие ветры, океанские течения и глубокие канавы часто могут сочетаться, создавая оптимальные условия для рыбной ловли. В таких областях, как тихоокеанское побережье Центральной и Южной Америки, прибрежные ветры выталкивают теплые поверхностные воды в более глубокие воды. Подводные течения выталкивают холодную, богатую питательными веществами воду из глубин поверхности обратно к побережью. Высокая концентрация питательных веществ в этой более холодной воде, вызванная разложением органических веществ на очень большой глубине, создает идеальную среду для рыб и других морских обитателей. Цивилизации, имеющие доступ к таким местам, как эта, могут значительно увеличить свои запасы пищи, создав процветающую рыболовную промышленность.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLASH_MEMORY_DEVICES</Tag>
@@ -2974,13 +3022,6 @@
 		<Russian>Ëåí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Flax[COLOR_REVERT] is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
-		<German>[COLOR_HIGHLIGHT_TEXT]Lein[COLOR_REVERT] (Linum usitatissimum) oder auch Flachs ist eine vielfältig verwendbare, alte Kulturpflanze mit fünfblättrigen weißen, violetten oder rosa Blüten, die heute hauptsächlich zur Faser- und Ölgewinnung angebaut wird.[NEWLINE]Die ältesten archäologischen Leinsamenfunde aus dem Iran und der Türkei werden auf etwa 7000 v.Chr. datiert. Leinverarbeitung ist seit dem Beginn des 4. Jahrtausends v.Chr. belegt. Die alten Ägypter nutzten die Fasern der Pflanze unter anderem für Mumienbinden. Vom Mittelalter bis zum 19. Jahrhundert wurde Leinen neben Hanf, Wolle und Nessel zur Herstellung von Textilien verwendet. Die Herstellung und der Handel mit Leinen verhalf Städten wie Venedig, Mailand, Augsburg, Ulm, Gent, Brügge und Antwerpen zu wirtschaftlicher Bedeutung und war auch für die Hanse wichtig. Das Aufkommen der billigeren und vor allem leichter zu verarbeitenden Baumwolle sorgte für einen drastischen Rückgang des Anbaus von Lein.[NEWLINE]Heute haben Leinenfasern bei den Textilien nur noch einen Marktanteil von 1%. Das als Nebenprodukt anfallende Werg wird in der Papierherstellung, in Füll-, Dämm- und Verbundwerkstoffen, das Leinwachs für Kosmetika und Pharmazeutika verwendet. Wichtig sind auch die Leinsamen, die überwiegend zur Ölgewinnung dienen.</German>
-		<Italian>Il [COLOR_HIGHLIGHT_TEXT]lino[COLOR_REVERT] è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
-		<Russian>Лен (Linum usitatissimum), также известный как лен обыкновенный или льняное семя, является представителем рода Linum в семействе Linaceae. Вероятно, он был родом из Юго-Западной Азии и Юго-Восточной Европы, но его точный ареал неизвестен из-за обширного древнего культивирования.[PARAGRAPH:2]Лен выращивают как для использования волокна, так и для его семян. Для изготовления льняной ткани используются тонкие сорта льна. Тканевые повязки мумий в ранних египетских гробницах делались из льняной ткани, изготовленной из льна. Для изготовления шпагата и веревки использовались более грубые сорта льна. Семена льна также используются для производства льняного масла, которое использовалось для высыхания масла при окраске и лакировании. (Переработано из мода Civilization 3 Conquest: Ancient Mediterranian.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS</Tag>
 		<English>Flax Fibers</English>
 		<French>Fibres de lin</French>
@@ -2993,6 +3034,13 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Flax fiber[COLOR_REVERT] is a soft, lustrous, and flexible fiber extracted from the bast beneath the surface of the stem of the flax plant. It is stronger than cotton fiber, but less elastic. The best grades are used for fabrics such as damasks, lace, and sheeting. Coarser grades are used for the manufacturing of twine and rope, and historically, for canvas and webbing equipment. Flax fiber is a raw material used in the high-quality paper industry for the use of printed banknotes, laboratory paper (blotting and filter), rolling paper for cigarettes, and tea bags.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]fibra di lino[COLOR_REVERT] è una fibra morbida, lucente e flessibile estratta dalla rafia sotto la superficie dello stelo della pianta di lino. È più forte della fibra di cotone, ma meno elastica. La qualità migliori sono usate per tessuti come damaschi, pizzi e teli. Le qualità più grossolane sono invece utilizzate per la produzione di spago e corda e, storicamente, per le tele e le attrezzature tessili. La fibra di lino è una materia prima utilizzata nell'industria della carta di alta qualità per l'uso di banconote stampate, carta da laboratorio (carta assorbente e filtro), carta in rotoli per sigarette e bustine di tè.</Italian>
 		<Russian>Ëüíÿíîå ïîëîòíî - ýòî òêàíü èçãîòîâëåíà èç âîëîêîí ëüíà, èëè Linum usitatissimum. Ëüíÿíàÿ òêàíü ÿâëÿåòñÿ òðóäîåìêîé â èçãîòîâëåíèè, íî êîãäà èç íåãî äåëàþò îäåæäó, îíà öåíèòñÿ çà ñâîþ èñêëþ÷èòåëüíóþ ïðîõëàäó è ñâåæåñòü â æàðêóþ ïîãîäó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Flax[COLOR_REVERT] is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Lein[COLOR_REVERT] (Linum usitatissimum) oder auch Flachs ist eine vielfältig verwendbare, alte Kulturpflanze mit fünfblättrigen weißen, violetten oder rosa Blüten, die heute hauptsächlich zur Faser- und Ölgewinnung angebaut wird.[NEWLINE]Die ältesten archäologischen Leinsamenfunde aus dem Iran und der Türkei werden auf etwa 7000 v.Chr. datiert. Leinverarbeitung ist seit dem Beginn des 4. Jahrtausends v.Chr. belegt. Die alten Ägypter nutzten die Fasern der Pflanze unter anderem für Mumienbinden. Vom Mittelalter bis zum 19. Jahrhundert wurde Leinen neben Hanf, Wolle und Nessel zur Herstellung von Textilien verwendet. Die Herstellung und der Handel mit Leinen verhalf Städten wie Venedig, Mailand, Augsburg, Ulm, Gent, Brügge und Antwerpen zu wirtschaftlicher Bedeutung und war auch für die Hanse wichtig. Das Aufkommen der billigeren und vor allem leichter zu verarbeitenden Baumwolle sorgte für einen drastischen Rückgang des Anbaus von Lein.[NEWLINE]Heute haben Leinenfasern bei den Textilien nur noch einen Marktanteil von 1%. Das als Nebenprodukt anfallende Werg wird in der Papierherstellung, in Füll-, Dämm- und Verbundwerkstoffen, das Leinwachs für Kosmetika und Pharmazeutika verwendet. Wichtig sind auch die Leinsamen, die überwiegend zur Ölgewinnung dienen.</German>
+		<Italian>Il [COLOR_HIGHLIGHT_TEXT]lino[COLOR_REVERT] è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
+		<Russian>Лен (Linum usitatissimum), также известный как лен обыкновенный или льняное семя, является представителем рода Linum в семействе Linaceae. Вероятно, он был родом из Юго-Западной Азии и Юго-Восточной Европы, но его точный ареал неизвестен из-за обширного древнего культивирования.[PARAGRAPH:2]Лен выращивают как для использования волокна, так и для его семян. Для изготовления льняной ткани используются тонкие сорта льна. Тканевые повязки мумий в ранних египетских гробницах делались из льняной ткани, изготовленной из льна. Для изготовления шпагата и веревки использовались более грубые сорта льна. Семена льна также используются для производства льняного масла, которое использовалось для высыхания масла при окраске и лакировании. (Переработано из мода Civilization 3 Conquest: Ancient Mediterranian.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLEMISH</Tag>
@@ -3050,20 +3098,6 @@
 		<Russian>В наше время люди по-прежнему ищут способы выращивать, покупать, носить или иным образом находиться рядом с цветами и цветущими растениями, отчасти из-за их приятного внешнего вида и запаха.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
-		<English>Fossil Beds</English>
-		<French>Lagerstätte</French>
-		<German>Fossillagerstätte</German>
-		<Italian>Lagerstätte</Italian>
-		<Russian>Èñêîïàåìûå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
-		<English>A [COLOR_HIGHLIGHT_TEXT]fossil bed[COLOR_REVERT] ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
-		<Italian>Una [COLOR_HIGHLIGHT_TEXT]Lagerstätte[COLOR_REVERT] è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
-		<Russian>Окаменелости (от латинского fossus, буквально «выкопанные») - это сохранившиеся останки или следы животных (также известных как зоолиты), растений и других организмов из далекого прошлого. Совокупность окаменелостей, как обнаруженных, так и неоткрытых, и их размещение в содержащих окаменелости (содержащих окаменелости) скальных образованиях и осадочных слоях (пластах) известно как летопись окаменелостей.[PARAGRAPH:2]Изучение окаменелостей в геологическом времени, их образования и эволюционных отношений между таксонами (филогения) - одни из наиболее важных функций науки палеонтологии. Такой сохранившийся образец называется «окаменелостью», если он старше некоторого минимального возраста, чаще всего условной даты - 10 000 лет назад. Следовательно, возраст окаменелостей варьируется от самых молодых в начале эпохи голоцена до самых старых из архейского эона, возраст которых составляет до 3,4 миллиарда лет. Наблюдения за тем, что определенные окаменелости были связаны с определенными пластами горных пород, привели первых геологов к определению геологической временной шкалы в 19 веке. Развитие методов радиометрического датирования в начале 20 века позволило геологам определить числовой или «абсолютный» возраст различных слоев и, таким образом, включенных окаменелостей.[PARAGRAPH:2]Как и существующие организмы, окаменелости различаются по размеру от микроскопических, таких как отдельные бактериальные клетки диаметром всего один микрометр, до гигантских, таких как динозавры и деревья длиной в несколько метров и весом в несколько тонн. Ископаемое обычно сохраняет только часть умершего организма, обычно ту часть, которая была частично минерализована в течение жизни, например кости и зубы позвоночных, или хитиновые или известковые экзоскелеты беспозвоночных. Сохранение мягких тканей в летописи окаменелостей встречается редко. Окаменелости также могут состоять из следов, оставленных организмом при жизни, таких как следы или фекалии (копролиты) рептилии. Эти типы окаменелостей называются следами окаменелостей (или ихнофоссилиями), в отличие от окаменелостей тела. Наконец, прошлая жизнь оставляет некоторые маркеры, которые нельзя увидеть, но которые можно обнаружить в форме биохимических сигналов; они известны как хемофоссилии или биомаркеры.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FOSSILS</Tag>
 		<English>Fossils</English>
 		<French>Fossiles</French>
@@ -3076,6 +3110,20 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]fossil[COLOR_REVERT] is any preserved remains, impression, or trace of any once-living thing from a past geological age. Examples include bones, shells, exoskeletons, stone imprints of animals or microbes, objects preserved in amber, hair, petrified wood, oil, coal, and DNA remnants. The totality of fossils is known as the fossil record.</English>
 		<Italian>Il termine "[COLOR_HIGHLIGHT_TEXT]fossile[COLOR_REVERT]" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
 		<Russian>Îêàìåíåëîñòè - ýòî ñîõðàíèâøèåñÿ îñòàíêè èëè ñëåäû æèâîòíûõ, ðàñòåíèé è äðóãèõ âûìåðøèõ îðãàíèçìîâ èç äàëåêîãî ïðîøëîãî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
+		<English>Fossil Beds</English>
+		<French>Lagerstätte</French>
+		<German>Fossillagerstätte</German>
+		<Italian>Lagerstätte</Italian>
+		<Russian>Èñêîïàåìûå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]fossil bed[COLOR_REVERT] ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
+		<Italian>Una [COLOR_HIGHLIGHT_TEXT]Lagerstätte[COLOR_REVERT] è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
+		<Russian>Окаменелости (от латинского fossus, буквально «выкопанные») - это сохранившиеся останки или следы животных (также известных как зоолиты), растений и других организмов из далекого прошлого. Совокупность окаменелостей, как обнаруженных, так и неоткрытых, и их размещение в содержащих окаменелости (содержащих окаменелости) скальных образованиях и осадочных слоях (пластах) известно как летопись окаменелостей.[PARAGRAPH:2]Изучение окаменелостей в геологическом времени, их образования и эволюционных отношений между таксонами (филогения) - одни из наиболее важных функций науки палеонтологии. Такой сохранившийся образец называется «окаменелостью», если он старше некоторого минимального возраста, чаще всего условной даты - 10 000 лет назад. Следовательно, возраст окаменелостей варьируется от самых молодых в начале эпохи голоцена до самых старых из архейского эона, возраст которых составляет до 3,4 миллиарда лет. Наблюдения за тем, что определенные окаменелости были связаны с определенными пластами горных пород, привели первых геологов к определению геологической временной шкалы в 19 веке. Развитие методов радиометрического датирования в начале 20 века позволило геологам определить числовой или «абсолютный» возраст различных слоев и, таким образом, включенных окаменелостей.[PARAGRAPH:2]Как и существующие организмы, окаменелости различаются по размеру от микроскопических, таких как отдельные бактериальные клетки диаметром всего один микрометр, до гигантских, таких как динозавры и деревья длиной в несколько метров и весом в несколько тонн. Ископаемое обычно сохраняет только часть умершего организма, обычно ту часть, которая была частично минерализована в течение жизни, например кости и зубы позвоночных, или хитиновые или известковые экзоскелеты беспозвоночных. Сохранение мягких тканей в летописи окаменелостей встречается редко. Окаменелости также могут состоять из следов, оставленных организмом при жизни, таких как следы или фекалии (копролиты) рептилии. Эти типы окаменелостей называются следами окаменелостей (или ихнофоссилиями), в отличие от окаменелостей тела. Наконец, прошлая жизнь оставляет некоторые маркеры, которые нельзя увидеть, но которые можно обнаружить в форме биохимических сигналов; они известны как хемофоссилии или биомаркеры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FRANKISH</Tag>
@@ -3148,13 +3196,6 @@
 		<Russian>Ïóøíûå çâåðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
-		<German>Schon von jeher galten Tierpelze als wertvolle Gebrauchsartikel und Handelsgüter. Viele verschiedene Tierarten wie Nerze, Kaninchen und Biber wurden wegen ihrer Felle von Pelzjägern gefangen, damit daraus Kleidung und andere Erzeugnisse hergestellt werden konnten. Die Entdeckung und Kolonisierung der Neuen Welt führte zu einem regelrechten Boom in der Pelzindustrie, da nun eine größere Vielfalt an Pelzsorten für den Markt zur Verfügung stand. Ende des 19. Jahrhunderts errichtete man sogar spezielle Farmen zur Aufzucht von Tieren, die einzig für die Pelzindustrie gedacht waren. In den 70er Jahren des 20. Jahrhunderts etablierten sich schließlich Umwelt- und Tierschutzgruppen, die sich um eine Änderung der öffentlichen Meinung hinsichtlich der Beschaffung und Vermarktung von Pelzen bemühten. Trotz dieser Proteste bleibt die Pelzindustrie weiterhin profitabel, wenngleich sie heute nicht mehr so weit verbreitet ist.</German>
-		<Italian>La [COLOR_HIGHLIGHT_TEXT]pelliccia[COLOR_REVERT] è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
-		<Russian>На протяжении всей истории меха животных были ценным товаром для торговли и продажи. Множество различных видов животных, включая норок, кроликов и бобров, были пойманы охотниками с целью получения их шкур для изготовления одежды и других предметов. Освоение и колонизация Нового Света вызвали бум меховых промыслов, сделав доступным широкий выбор пушнины. К концу 1800-х годов были созданы фермы специально для выращивания животных для меховой промышленности. Начиная с 1970-х годов, защитники окружающей среды и группы по защите прав животных лоббировали изменение общественного мнения в отношении сбора и продажи мехов. Несмотря на эти вокальные группы, меховая промышленность остается прибыльной, если не столь широко распространенной, в современном мире.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
 		<Russian>Ôîð</Russian>
@@ -3174,6 +3215,13 @@
 		<Russian>RI Ïðîöåññ:
 Äðåâåñèíà -&gt; [Ìåáåëüíàÿ ôàáðèêà] -&gt; ìåáåëü
 Ìåáåëü - ñîáèðàòåëüíûé òåðìèí äëÿ ïîäâèæíûõ âåùåé, êîòîðûå ìîãóò ïîääåðæèâàòü ÷åëîâå÷åñêîå òåëî (ìåáåëü äëÿ ñèäåíèÿ è êðîâàòè), îáåñïå÷èâàòü õðàíåíèå, èëè ïîääåðæèâàòü ïðåäìåòû íà ãîðèçîíòàëüíûõ ïîâåðõíîñòÿõ âûøå çåìëè. Ìåáåëü õðàíåíèÿ (â êîòîðûé ÷àñòî èñïîëüçóþò äâåðè, ÿùèêè è ïîëêè) èñïîëüçóåòñÿ, ÷òîáû äåðæàòü èëè ñîäåðæàòü ìåíüøèå âåùè, òèïà îäåæäû, èíñòðóìåíòîâ, êíèã è äîìàøíèõ òîâàðîâ. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
+		<German>Schon von jeher galten Tierpelze als wertvolle Gebrauchsartikel und Handelsgüter. Viele verschiedene Tierarten wie Nerze, Kaninchen und Biber wurden wegen ihrer Felle von Pelzjägern gefangen, damit daraus Kleidung und andere Erzeugnisse hergestellt werden konnten. Die Entdeckung und Kolonisierung der Neuen Welt führte zu einem regelrechten Boom in der Pelzindustrie, da nun eine größere Vielfalt an Pelzsorten für den Markt zur Verfügung stand. Ende des 19. Jahrhunderts errichtete man sogar spezielle Farmen zur Aufzucht von Tieren, die einzig für die Pelzindustrie gedacht waren. In den 70er Jahren des 20. Jahrhunderts etablierten sich schließlich Umwelt- und Tierschutzgruppen, die sich um eine Änderung der öffentlichen Meinung hinsichtlich der Beschaffung und Vermarktung von Pelzen bemühten. Trotz dieser Proteste bleibt die Pelzindustrie weiterhin profitabel, wenngleich sie heute nicht mehr so weit verbreitet ist.</German>
+		<Italian>La [COLOR_HIGHLIGHT_TEXT]pelliccia[COLOR_REVERT] è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
+		<Russian>На протяжении всей истории меха животных были ценным товаром для торговли и продажи. Множество различных видов животных, включая норок, кроликов и бобров, были пойманы охотниками с целью получения их шкур для изготовления одежды и других предметов. Освоение и колонизация Нового Света вызвали бум меховых промыслов, сделав доступным широкий выбор пушнины. К концу 1800-х годов были созданы фермы специально для выращивания животных для меховой промышленности. Начиная с 1970-х годов, защитники окружающей среды и группы по защите прав животных лоббировали изменение общественного мнения в отношении сбора и продажи мехов. Несмотря на эти вокальные группы, меховая промышленность остается прибыльной, если не столь широко распространенной, в современном мире.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
@@ -3558,16 +3606,6 @@
 		<Russian>Ãàèòÿíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_HAPPY</Tag>
-		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
-		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
-		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
-		<Italian>Morale: +%d1_Change[ICON_HAPPY]</Italian>
-		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
-		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
-		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HATS</Tag>
 		<English>Hats</English>
 		<French>Chapeaux</French>
@@ -3674,12 +3712,6 @@
 		<Russian>Êîíîïëÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Hemp[COLOR_REVERT] is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
-		<German>[COLOR_HIGHLIGHT_TEXT]Hanf[COLOR_REVERT] (Cannabis sativa L.) ist eine der ältesten Kulturpflanzen der Welt. Markant für die Pflanze sind ihre handförmigen Blätter mit den gesägten Rändern.[NEWLINE]In China wurde er schon vor mindestens 10000 Jahren genutzt. Die nahrhaften, wohlschmeckenden Samen wurden gern verzehrt, aber auch die Stängel mit ihren besonders langen und nahezu unverwüstlichen Fasern wusste man schon früh zu schätzen. Außerdem wurde Hanf als Heilmittel gegen Malaria, Rheuma und viele andere Krankheiten eingesetzt. Über Indien und die antiken Hochkulturen im heutigen Irak verbreitete sich diese universelle Pflanze um die ganze Welt. Kleidung aus Hanfgewebe war schon bei den alten Griechen und Ägyptern beliebt. Die mittelalterlichen Langbögen wären ohne robuste und widerstandsfähige Hanffasern nicht möglich gewesen. Ab dem 13. Jahrhundert wurde Hanf der wichtigste Rohstoff für die Papierherstellung. Hanfseile und Segeltuch aus Hanf waren in der Schifffahrt wichtig, da die Faser sehr widerstandsfähig gegenüber Salzwasser ist und weniger Wasser aufnimmt als beispielsweise Baumwolle.[NEWLINE]Bestimmte Pflanzenteile der weiblichen Hanfpflanze (hauptsächlich die Blüten und blütennahen Blätter) können eine berauschende Wirkung hervorrufen. Man nennt diese umgangssprachlich Marihuana (oder auch Gras oder Weed). Haschisch hingegen ist das daraus gewonnene und gepresste Harz. Entscheidend für die berauschende Wirkung ist der Wirkstoff Tetrahydrocannabinol (THC), der aber nicht in allen Hanfarten in entsprechender Menge enthalten ist. Besitz und Weitergabe von Cannabis oder Cannabisprodukten ist in den meisten Ländern verboten.</German>
-		<Italian>La [COLOR_HIGHLIGHT_TEXT]canapa[COLOR_REVERT] è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS</Tag>
 		<English>Hemp Fibers</English>
 		<French>Fibres de chanvre</French>
@@ -3692,6 +3724,12 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Hemp fiber[COLOR_REVERT] has been extensively used throughout history for items ranging from rope to fabrics. Pure hemp has a texture similar to linen and, because of its versatility, today it is used in a number of consumer goods, including clothing, shoes, accessories, dog collars, and home wares.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]fibra di canapa[COLOR_REVERT] è stata ampiamente utilizzata nel corso della storia per oggetti che vanno dalla corda ai tessuti. La canapa pura ha una consistenza simile al lino e, per la sua versatilità d'uso, viene utilizzata in numerosi beni di consumo, tra cui abbigliamento, scarpe, accessori, collari per cani e articoli per la casa.</Italian>
 		<Russian>Êîíîïëÿíîå âîëîêíî øèðîêî èñïîëüçîâàëîñü íà ïðîòÿæåíèè âñåé èñòîðèè. Ìíîãèå èçäåëèÿ, íà÷èíàÿ îò âåðåâîê, òêàíåé, ïðîìûøëåííûõ ìàòåðèàëîâ, áûëè èçãîòîâëåíû èç êîíîïëÿíîãî âîëîêíà. Êîíîïëÿ ÷àñòî èñïîëüçóåòñÿ ïðè èçãîòîâëåíèè ïàðóñèíû è ïèñ÷åé áóìàãè. Â íàñòîÿùååâ âðåìÿ êîíîïëÿíûå âîëîêíà ìîãóò áûòü èñïîëüçîâàíû â èçãîòîâëåíèè îäåæäû. Òåêñòóðà ÷èñòîé êîíîïëè ïîõîæà íà ëåí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Hemp[COLOR_REVERT] is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Hanf[COLOR_REVERT] (Cannabis sativa L.) ist eine der ältesten Kulturpflanzen der Welt. Markant für die Pflanze sind ihre handförmigen Blätter mit den gesägten Rändern.[NEWLINE]In China wurde er schon vor mindestens 10000 Jahren genutzt. Die nahrhaften, wohlschmeckenden Samen wurden gern verzehrt, aber auch die Stängel mit ihren besonders langen und nahezu unverwüstlichen Fasern wusste man schon früh zu schätzen. Außerdem wurde Hanf als Heilmittel gegen Malaria, Rheuma und viele andere Krankheiten eingesetzt. Über Indien und die antiken Hochkulturen im heutigen Irak verbreitete sich diese universelle Pflanze um die ganze Welt. Kleidung aus Hanfgewebe war schon bei den alten Griechen und Ägyptern beliebt. Die mittelalterlichen Langbögen wären ohne robuste und widerstandsfähige Hanffasern nicht möglich gewesen. Ab dem 13. Jahrhundert wurde Hanf der wichtigste Rohstoff für die Papierherstellung. Hanfseile und Segeltuch aus Hanf waren in der Schifffahrt wichtig, da die Faser sehr widerstandsfähig gegenüber Salzwasser ist und weniger Wasser aufnimmt als beispielsweise Baumwolle.[NEWLINE]Bestimmte Pflanzenteile der weiblichen Hanfpflanze (hauptsächlich die Blüten und blütennahen Blätter) können eine berauschende Wirkung hervorrufen. Man nennt diese umgangssprachlich Marihuana (oder auch Gras oder Weed). Haschisch hingegen ist das daraus gewonnene und gepresste Harz. Entscheidend für die berauschende Wirkung ist der Wirkstoff Tetrahydrocannabinol (THC), der aber nicht in allen Hanfarten in entsprechender Menge enthalten ist. Besitz und Weitergabe von Cannabis oder Cannabisprodukten ist in den meisten Ländern verboten.</German>
+		<Italian>La [COLOR_HIGHLIGHT_TEXT]canapa[COLOR_REVERT] è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
@@ -3758,14 +3796,11 @@
 		<Russian>Õèìüÿðèòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE</Tag>
-		<English>Hit Animated Movie</English>
-		<Italian>Film di animazione di successo</Italian>
-		<Russian>Àíèìå-õèò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Tag>
-		<English>TBD</English>
+		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
+		<English>Hittite</English>
+		<Italian>Ittita</Italian>
+		<Polish>Hetycka</Polish>
+		<Russian>Õåòòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
@@ -3826,13 +3861,6 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]hit single[COLOR_REVERT], also known as hit song, hit record, or simply hit, is a recorded song or instrumental that becomes broadly popular or well-known. Although hit song means any widely played or big-selling song, the specific term usually refers to a single that has appeared in an official music chart, through repeated radio airplay or significant commercial sales.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]canzone di successo[COLOR_REVERT] è un brano registrato o strumentale che diventa ampiamente popolare o noto. Sebbene il termine "canzone di successo" sia comunemente usato per indicare qualsiasi canzone ampiamente suonata o conosciuta, il termine specifico di solito si riferisce a un singolo che è apparso in una classifica musicale ufficiale, attraverso ripetute trasmissioni radiofoniche o vendite commerciali significative.</Italian>
 		<Russian>Шлягер - это записанная песня или инструментал, который становится широко популярным или широко известным. Хотя хитовая песня означает любую широко исполняемую или пользующуюся большим спросом песню, конкретный термин обычно относится к синглу, который появился в официальном музыкальном чарте, благодаря неоднократным трансляциям по радио или значительным коммерческим продажам.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
-		<English>Hittite</English>
-		<Italian>Ittita</Italian>
-		<Polish>Hetycka</Polish>
-		<Russian>Õåòòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLOGRAPHIC_PROJECTORS</Tag>
@@ -3905,7 +3933,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HORSE_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]horse[COLOR_REVERT] is an odd-toed ungulate mammal, belonging to the taxonomic family Equidae. Horses are adapted to run, allowing them to quickly escape predators, possessing an excellent sense of balance and a strong fight-or-flight response. Humans began domesticating horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC, being historically used in warfare. With time, horses were also employed in working activities such as police work, agriculture, entertainment, sporting, and therapy. Many products are derived from horses, including meat, milk, hide, hair, bone, and pharmaceuticals extracted from the urine of pregnant mares.</English>
-		<German>Pferde gibt es seit mehr als 50 Millionen Jahren. Sie sind die wohl nützlichsten domestizierten Tiere in der Geschichte der Menschheit. Obwohl sich ihr Äußeres im Laufe der Jahre kaum verändert hat, haben die Pferde eine bedeutende Evolution durchlaufen. Immerhin waren ihre frühzeitlichen Artgenossen nur etwa 30 cm groß. Ursprünglich jagten die Menschen Pferde zu Nahrungszwecken. Erst um 2500 vor Christus tauchten die ersten domestizierten Züchtungen in Asien auf. Diese Idee wurde so gut angenommen, dass sie sich schnell in andere Länder ausbreitete. Ihr Beitrag zur Ausbreitung der Völker war enorm, da erst die Pferde die gewaltigen Feldzüge Dschingis Khans und Alexanders des Großen ermöglichten. Im 16. Jahrhundert brachten die Spanier die heutigen Pferderassen nach Nordamerika. Oft ließen sie dort ihre Herden zurück, um auf ihren Schiffen mehr Platz für Gold und andere erbeutete Schätze zu haben. Obwohl die Bedeutung des Pferdes seit der Erfindung des Verbrennungsmotors deutlich rückläufig ist, hat es in der Landwirtschaft und im Sport bis heute einen festen Platz.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Pferde[COLOR_REVERT] gibt es seit mehr als 50 Millionen Jahren. Sie sind die wohl nützlichsten domestizierten Tiere in der Geschichte der Menschheit. Obwohl sich ihr Äußeres im Laufe der Jahre kaum verändert hat, haben die Pferde eine bedeutende Evolution durchlaufen. Immerhin waren ihre frühzeitlichen Artgenossen nur etwa 30 cm groß. Ursprünglich jagten die Menschen Pferde zu Nahrungszwecken. Erst um 2500 vor Christus tauchten die ersten domestizierten Züchtungen in Asien auf. Diese Idee wurde so gut angenommen, dass sie sich schnell in andere Länder ausbreitete. Ihr Beitrag zur Ausbreitung der Völker war enorm, da erst die Pferde die gewaltigen Feldzüge Dschingis Khans und Alexanders des Großen ermöglichten. Im 16. Jahrhundert brachten die Spanier die heutigen Pferderassen nach Nordamerika. Oft ließen sie dort ihre Herden zurück, um auf ihren Schiffen mehr Platz für Gold und andere erbeutete Schätze zu haben. Obwohl die Bedeutung des Pferdes seit der Erfindung des Verbrennungsmotors deutlich rückläufig ist, hat es in der Landwirtschaft und im Sport bis heute einen festen Platz.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]cavallo[COLOR_REVERT] è un mammifero ungulato, appartenente alla famiglia tassonomica degli equidi. I cavalli sono naturalmente portati alla corsa, cosa che gli permette di sfuggire rapidamente ai predatori, e possiedono un eccellente senso di equilibrio e una forte attitudine alla lotta e alla fuga. Gli umani iniziarono ad addomesticare i cavalli intorno al 4000 a.C. e si ritiene che la loro domesticazione fosse diffusa nel 3000 a.C., venendo storicamente impiegati anche in guerra. Con il tempo, i cavalli sono stati impiegati dalle forze di polizia e anche in attività lavorative come l'agricoltura, l'intrattenimento, lo sport e la terapia. I cavalli sono utilizzati anche per la carne, il latte, la pelle, i peli, le ossa e per prodotti farmaceutici estratti dall'urina delle cavalle in gravidanza.</Italian>
 		<Russian>Пожалуй, самые полезные домашние животные в истории человечества, лошади существуют как вид около 50 миллионов лет. Хотя произошла значительная эволюция (ранние предки были ниже фута), внешний вид лошади остался относительно неизменным. Самое раннее взаимодействие между лошадьми и людьми было связано с охотой, когда человек охотился на них ради пропитания. Около 2500 г. до н.э. в Азии начали появляться первые признаки одомашнивания, но эта идея быстро распространилась. Вклад лошади в завоевание человеком своих собратьев был огромен, что позволило Чингисхану и Александру Великому проводить обширные кампании. Испанцы завезли эту современную породу в Северную Америку в 16 веке, часто выпуская импортированные стада перед возвращением в Европу (освобождая драгоценное место для золота и других сокровищ). Хотя значение лошадей уменьшилось с момента появления двигателя внутреннего сгорания, они остаются благом в сферах развлечений и сельского хозяйства.</Russian>
 	</TEXT>
@@ -3931,12 +3959,6 @@
 		<French>Huaxtèque</French>
 		<Italian>Huasteco</Italian>
 		<Russian>Óàñòåêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Human Modification[COLOR_REVERT] represents a permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Gli [COLOR_HIGHLIGHT_TEXT]umani augmentati[COLOR_REVERT] sono degli umani a cui sono stati applicati dei cambiamenti permanenti di tipo psichico, fisiologico o naturale.</Italian>
-		<Russian>[COLOR_BONUS_TEXT]Модификация человека[COLOR_REVERT] представляет собой постоянное изменение психики, физиологии или природы человека.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
@@ -4100,6 +4122,12 @@
 		<Russian>Постлюди (Псионики)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Human Modification[COLOR_REVERT] represents a permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Gli [COLOR_HIGHLIGHT_TEXT]umani augmentati[COLOR_REVERT] sono degli umani a cui sono stati applicati dei cambiamenti permanenti di tipo psichico, fisiologico o naturale.</Italian>
+		<Russian>[COLOR_BONUS_TEXT]Модификация человека[COLOR_REVERT] представляет собой постоянное изменение психики, физиологии или природы человека.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
 		<English>Human Mod (Pure Energy)</English>
 		<French>Modification humaine (Énergie pure)</French>
@@ -4218,6 +4246,14 @@
 		<Russian>Ìåäèöèíñêèé èíñòðóìåíò, èñïîëüçóåìûé äëÿ ââåäåíèÿ ëåêàðñòâåííûõ âåùåñòâ ïîäêîæíî, âíóòðèìûøå÷íî, âíóòðèâåííî, â óñëîâèÿõ òùàòåëüíîãî êîíòðîëÿ çà äîçèðîâêîé ïðåïàðàòîâ. Ïðåïàðàòû ââîäÿòñÿ ïîñðåäñòâîì òî÷å÷íîãî, íàõîäÿùåãîñÿ ïîä âûñîêèì äàâëåíèåì, ìàëîîáúåìíîãî, ìèêðîñêîïè÷åñêîãî ïîòîêà âîçäóøíîé ñóñïåíçèè. Ýòî ïîçâîëÿåò ïðåïàðàòàì ïðîíèêàòü ÷åðåç êîæó áåç åå ìåõàíè÷åñêîãî ïîâðåæäåíèÿ. Âåëè÷èíà ïëîùàäè âîçäåéñòâèÿ è ãëóáèíà ïðîíèêíîâåíèÿ ìîãóò âàðüèðîâàòüñÿ.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
+		<English>Icelandic</English>
+		<French>Icelandais</French>
+		<Italian>Islandese</Italian>
+		<Polish>Islandzka</Polish>
+		<Russian>Èñëàíäöû</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICE_CREAM</Tag>
 		<English>Ice Cream</English>
 		<French>Glaces</French>
@@ -4230,14 +4266,6 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Ice cream[COLOR_REVERT] is a sweetened, smooth, semi-solid food, typically eaten as a snack or dessert. It may be made from dairy milk or cream and is flavoured with a sweetener (either sugar or an alternative) and any spice, such as cocoa or vanilla. Colourings are usually added, in addition to stabilizers. The mixture is stirred to incorporate air spaces and cooled below the freezing point of water to prevent detectable ice crystals from forming. Ice cream may be served in dishes, for eating with a spoon, or licked from edible cones. Ice cream may be served with other desserts, such as apple pie, or as an ingredient in ice cream floats, sundaes, milkshakes, ice cream cakes and even baked items.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]gelato[COLOR_REVERT] è un alimento zuccherato semi-solido, tipicamente consumato come spuntino o dessert. Può essere fatto con latte o crema di latte ed è aromatizzato con un dolcificante (come lo zucchero o simili) e qualsiasi spezia, come il cacao o la vaniglia. Di solito vengono aggiunti coloranti, oltre agli stabilizzanti. La miscela viene agitata per incorporare aria e raffreddata sotto la temperatura di congelamento dell'acqua per impedire la formazione di cristalli di ghiaccio rilevabili. Il gelato può essere servito in un piatto, mangiato con un cucchiaio o leccato su un cono commestibile. Il gelato può essere servito con altri dessert, come la torta di mele, o come ingrediente in gelati, sunda, frappè, torte gelato e persino prodotti da forno.</Italian>
 		<Russian>Мороженое - это охлажденный десерт, который обычно готовят из молочных продуктов, таких как молоко и сливки, и часто сочетают с фруктами или другими ингредиентами и ароматизаторами. Большинство сортов содержат сахар, хотя некоторые из них сделаны с другими подсластителями. В некоторых случаях в дополнение или вместо натуральных ингредиентов используются искусственные ароматизаторы и красители. Мороженое можно подавать в посуде, есть ложкой или слизывать из съедобных стаканчиков. Мороженое можно подавать с другими десертами, такими как яблочный пирог, или в качестве ингредиента для мороженого, мороженого, молочных коктейлей, тортов с мороженым и даже выпечки.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
-		<English>Icelandic</English>
-		<French>Icelandais</French>
-		<Italian>Islandese</Italian>
-		<Polish>Islandzka</Polish>
-		<Russian>Èñëàíäöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
@@ -4265,16 +4293,6 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Immunity drugs[COLOR_REVERT], better known as immunosuppressive drugs or agents, are drugs that inhibit or prevent activity of the immune system. They are mainly used to prevent the rejection of transplanted organs and tissues, to treat autoimmune diseases or diseases that are most likely of autoimmune origin (e.g. rheumatoid arthritis, multiple sclerosis, psoriasis, Crohn's disease, Behcet's Disease, etc.), and to treat other non-autoimmune inflammatory diseases (e.g. long-term allergic asthma control).</English>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]farmaci immunitari[COLOR_REVERT], meglio noti come farmaci o agenti immunosoppressori, sono farmaci che inibiscono o impediscono l'attività del sistema immunitario. Sono principalmente utilizzati per prevenire il rigetto di organi e tessuti trapiantati, per il trattamento di malattie autoimmuni o patologie che sono molto probabilmente di origine autoimmune (ad es. artrite reumatoide, sclerosi multipla, psoriasi, morbo di Crohn, malattia di Behcet, ecc.) e per il trattamento altre malattie infiammatorie non autoimmuni (ad es. controllo allergico dell'asma a lungo termine).</Italian>
 		<Russian>Иммунная система - это система многих биологических структур и процессов внутри организма, которая защищает от болезней. Для правильного функционирования иммунная система должна обнаруживать широкий спектр агентов, известных как патогены, от вирусов до паразитических червей, и отличать их от собственной здоровой ткани организма. У многих видов иммунную систему можно разделить на подсистемы, такие как врожденная иммунная система по сравнению с адаптивной иммунной системой или гуморальный иммунитет по сравнению с клеточно-опосредованным иммунитетом.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_IMPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is importing %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player importe %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player importiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player importa %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está importando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player importuje %d1_num_bonus)[SPACE]</Polish>
-		<Russian>[SPACE](%s2_player èìïîðòèðóåò %d1_num_bonus)[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INCAN</Tag>
@@ -4484,13 +4502,6 @@
 		<Russian>Íåôðèò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Jade[COLOR_REVERT] is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
-		<German>Ein grünliches Mineral, Jade ist extrem hart und robust und ist im Gebrauch für viele Tausenden Jahre gewesen. Jade wurde ursprünglich in den Werkzeugen und in den Waffen benutzt, aber, während andere wirkungsvollere Substanzen (wie Bronze und Eisen) entdeckt wurden, würde Jade groß für dekorative Zwecke verwendet werden. Jade war erste allgemein verwendet in China während der neolithischen Periode. Überzeit als die zugänglichsten Quellen wurden verbraucht, es wurde wertvoller als Gold. Heute wird Jade noch in den Schmucksachen benutzt und in einer Vielzahl von Trinkets, obwohl es nicht mehr das Prestige trägt oder bewertet, sie einmal.</German>
-		<Italian>La [COLOR_HIGHLIGHT_TEXT]giada[COLOR_REVERT] è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
-		<Russian>Зеленоватый минерал, нефрит чрезвычайно твердый и прочный, его использовали многие тысячи лет. Изначально нефрит использовался в инструментах и оружии, но когда были обнаружены другие более эффективные вещества (например, бронза и железо), он стал использоваться в основном в декоративных целях. Впервые нефрит начали широко использовать в Китае в период неолита. Со временем, когда наиболее доступные источники истощились, он стал дороже золота. Сегодня нефрит по-прежнему используется в ювелирных изделиях и в различных безделушках, хотя он больше не имеет того престижа или ценности, как раньше.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS</Tag>
 		<English>Jade Death Masks</English>
 		<French>Masques de mort en jade</French>
@@ -4514,6 +4525,13 @@
 натрия, алюминия, железа и хрома в разных пропорциях. Прозрачность тоже может варьироваться, начиная с образцов от практически бесцветных до полностью светонепроницаемых.
 Среди мезоамериканских археологов, «нефрит» иногда используется таким образом, когда не делаются различия между жадеитом и другими внешне похожими
 зелеными самоцветами таких как альбитит, омфацит, хризопраз и кварцит.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Jade[COLOR_REVERT] is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
+		<German>Ein grünliches Mineral, Jade ist extrem hart und robust und ist im Gebrauch für viele Tausenden Jahre gewesen. Jade wurde ursprünglich in den Werkzeugen und in den Waffen benutzt, aber, während andere wirkungsvollere Substanzen (wie Bronze und Eisen) entdeckt wurden, würde Jade groß für dekorative Zwecke verwendet werden. Jade war erste allgemein verwendet in China während der neolithischen Periode. Überzeit als die zugänglichsten Quellen wurden verbraucht, es wurde wertvoller als Gold. Heute wird Jade noch in den Schmucksachen benutzt und in einer Vielzahl von Trinkets, obwohl es nicht mehr das Prestige trägt oder bewertet, sie einmal.</German>
+		<Italian>La [COLOR_HIGHLIGHT_TEXT]giada[COLOR_REVERT] è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
+		<Russian>Зеленоватый минерал, нефрит чрезвычайно твердый и прочный, его использовали многие тысячи лет. Изначально нефрит использовался в инструментах и оружии, но когда были обнаружены другие более эффективные вещества (например, бронза и железо), он стал использоваться в основном в декоративных целях. Впервые нефрит начали широко использовать в Китае в период неолита. Со временем, когда наиболее доступные источники истощились, он стал дороже золота. Сегодня нефрит по-прежнему используется в ювелирных изделиях и в различных безделушках, хотя он больше не имеет того престижа или ценности, как раньше.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -4997,7 +5015,11 @@
 		<Tag>TXT_KEY_BONUS_LLAMA</Tag>
 		<English>Llama</English>
 		<French>Lama</French>
-		<German>Lama</German>
+		<German>
+			<Text>Lamas:Lamas:Lamas:Lamas</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Lama</Italian>
 		<Polish>Lamy</Polish>
 		<Russian>Ëàìû</Russian>
@@ -5005,6 +5027,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LLAMA_PEDIA</Tag>
 		<English>The llama (Lama glama) is a South American camelid, widely used as a meat and pack animal by Andean cultures since pre-Hispanic times. The Moche people frequently placed llamas and llama parts in the burials of important people, as offerings or provisions for the afterlife. The Moche culture of pre-Columbian Peru depicted llamas quite realistically in their ceramics. In the Inca empire, llamas were the only beasts of burden, and many of the peoples dominated by the Inca had long traditions of llama herding. For the Inca nobility, the llama was of symbolic significance, and llama figures were often buried with the dead. In South America, llamas are still used as beasts of burden, as well as for the production of fibre and meat.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Lamas[COLOR_REVERT] sind eine beliebte Nutztierart in den südamerikanischen Anden, die zur Familie der Kamele zählen, aber im Gegensatz zu ihren Altweltvettern über keine Höcker verfügen. Sie wurden bereits vor mehr als 5000 Jahren aus den wilden Guanakos domestiziert und waren lange Zeit das einzige verfügbare Lasttier auf dem amerikanischen Kontinent. Außerdem wurden Wolle und Fleisch des Lamas genutzt und ähnlich wie beim Kamel dienten die Exkremente als guter Brennstoff, während die Haut für Lederwaren und das Fett zur Kerzenherstellung verwendet wurde. Heute werdem Lamas hauptsächlich wegen ihrer Wolle und ihres Fleisches gezüchtet, inzwischen sogar in Europa.</German>
 		<Russian>Лама (Lama glama) - южноамериканский верблюд, широко используемый в андских культурах в качестве мясного и вьючного животного с доиспанских времен. Люди моче часто помещали лам и их части в могилы важных людей в качестве подношений или провизии для загробной жизни. В культуре моче доколумбового Перу ламы довольно реалистично изображались в керамике. В империи инков ламы были единственными вьючными животными, и многие народы, в которых доминировали инки, имели давние традиции пасти лам. Для знати инков лама имела символическое значение, и фигуры лам часто хоронили вместе с мертвыми. В Южной Америке ламы до сих пор используются в качестве вьючных животных, а также для производства клетчатки и мяса.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6172,14 +6195,6 @@
 		<Russian>Обсидиан - это стекло естественного происхождения, образованное в виде экструзивной вулканической породы. Он образуется, когда кислая лава, вытесненная из вулкана, охлаждается без роста кристаллов. Обсидиан обычно находится на границах риолитовых потоков лавы, известных как потоки обсидиана, где химический состав (высокое содержание кремнезема) вызывает высокую вязкость и степень полимеризации лавы. Подавление атомной диффузии через эту высоковязкую и полимеризованную лаву объясняет отсутствие роста кристаллов. Из-за отсутствия кристаллической структуры края лезвия обсидиана могут достигать почти молекулярной толщины, что привело к его древнему использованию в качестве метательных точек и современному использованию в качестве лезвий хирургических скальпелей.[PARAGRAPH:2]Обсидиан подобен минералу, но это не настоящий минерал, потому что как стекло он не кристаллический; кроме того, его состав слишком сложен, чтобы включать один минерал. Иногда его относят к минералоидам. Хотя обсидиан имеет темный цвет, похожий на основные породы, такие как базальт, состав обсидиана чрезвычайно кислый.[PARAGRAPH:2]Чистый обсидиан обычно темный на вид, хотя цвет варьируется в зависимости от наличия примесей. Железо и магний обычно придают обсидиану цвет от темно-зеленого до коричневого или черного. Очень немногие образцы почти бесцветны. В некоторых камнях включение маленьких белых кристаллов кристобалита, сгруппированных по радиусу в черном стекле, дает пятнистый или снежный узор (снежинка обсидиана). Он может содержать узоры из пузырьков газа, оставшихся от потока лавы, выровненных вдоль слоев, созданных во время течения расплавленной породы перед охлаждением. Эти пузыри могут создавать интересные эффекты, такие как золотой блеск (сияющий обсидиан) или радужный блеск (радужный обсидиан).[PARAGRAPH:2]Обсидиан ценился в культурах каменного века, потому что, как и кремень, его можно было сломать, чтобы получить острые лезвия или наконечники стрел. Подобно всему стеклу и некоторым другим типам природных пород, обсидиан раскалывается с характерной раковиной трещины. Он также был отполирован для создания ранних зеркал. Доколумбовые мезоамериканцы использовали обсидиан широко и изощренно, включая резной и обработанный обсидиан для инструментов и декоративных предметов. Жители Мезоамерики также сделали меч с обсидиановыми лезвиями, закрепленными в деревянном корпусе. Это оружие, получившее название макуауитль, способно наносить ужасные травмы, сочетая острый край обсидианового лезвия с зазубринами зазубренного оружия. Литический анализ может помочь понять доиспанские группы в Мезоамерике. Тщательный анализ обсидиана в культуре или месте может быть полезен для реконструкции торговли, производства, распределения и, таким образом, понимания экономических, социальных и политических аспектов цивилизации. Так обстоит дело в Яшчилане, городе майя, где изучались даже последствия войны, связанные с использованием обсидиана и его обломками.[PARAGRAPH:2]Обсидиан используется в кардиохирургии, так как лезвия из обсидиана качественной обработки имеют режущую кромку во много раз острее, чем хирургические скальпели из высококачественной стали, а ширина кромки лезвия составляет всего около 3 нанометров. Даже самый острый металлический нож имеет зазубренное лезвие неправильной формы, если смотреть под достаточно сильным микроскопом. При исследовании под электронным микроскопом обсидиановое лезвие остается гладким и ровным. Одно исследование показало, что обсидиан вызывает более узкие рубцы, меньше воспалительных клеток и меньше грануляционной ткани в группе крыс.[PARAGRAPH:2]Обсидиан также используется в декоративных целях и как драгоценный камень. Он обладает свойством выглядеть по-разному в зависимости от способа огранки. Если разрезать в одном направлении, это красивый угольно-черный; при разрезании в другом направлении он блестит серым. «Слезы апачей» - это маленькие округлые самородки обсидиана, встроенные в серовато-белую матрицу перлита.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
-		<English>Qualifies %s1_ImpName to exist on plot</English>
-		<French>Permet %s1_ImpName d'exister sur la case</French>
-		<Italian>Permette a %s1_ImpName di esistere sul terreno</Italian>
-		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
-		<Russian>Допускает наличие %s1_ImpName на данном участке</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
 		<Russian>Îäàâà</Russian>
@@ -6206,20 +6221,6 @@
 		<Russian>Люди знали о нефти с древних времен. Найденные на поверхности нефтяные отложения веками использовались для гидроизоляции и в качестве топлива. Но только с приходом промышленной революции цивилизации начали зависеть от нефтепродуктов. Широкое использование нефти в качестве топлива, смазки и других целей привело к постоянному поиску еще более крупных месторождений. В середине 1800-х годов в Пенсильвании были пробурены первые нефтяные скважины, что положило начало чрезвычайно важной и прибыльной отрасли. Сегодня, когда мировые запасы нефти сокращаются, а спрос на нефть постоянно растет, нефть является более ценным ресурсом, чем когда-либо.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
-		<English>Olive Oil</English>
-		<French>Huile d'olive</French>
-		<Italian>Olio d'oliva</Italian>
-		<Polish>Oliwa z oliwek</Polish>
-		<Russian>Îëèâêîâîå ìàñëî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
-		<English>Olive oil is a liquid fat obtained by pressing whole olives. It is commonly used in cooking, for frying foods or as a salad dressing. It is also used in cosmetics, pharmaceuticals, and soaps, and as a fuel for traditional oil lamps, and has additional uses in some religions. There is limited evidence of its possible health benefits. The composition of olive oil varies with the cultivar, altitude, time of harvest and extraction process. It consists mainly of oleic acid (up to 83%), with smaller amounts of other fatty acids including linoleic acid (up to 21%) and palmitic acid (up to 20%). Extra virgin olive oil is required to have no more than 0.8% free acidity and is considered to have favorable flavor characteristics.</English>
-		<Italian>L'olio d'oliva è un grasso liquido ottenuto dalla spremitura di olive intere. È comunemente usato in cucina, per friggere cibi o come condimento per insalate. È anche usato per cosmetici, prodotti farmaceutici e saponi e come combustibile per le tradizionali lampade a olio e ha usi aggiuntivi in alcune religioni. Vi sono prove limitate dei suoi possibili benefici per la salute. La composizione dell'olio d'oliva varia a seconda della cultivar, dell'altitudine, del tempo di raccolta e del processo di estrazione. È costituito principalmente da acido oleico (fino all'83%), con quantità minori di altri acidi grassi tra cui acido linoleico (fino al 21%) e acido palmitico (fino al 20%). L'olio extra vergine di oliva deve avere un'acidità libera non superiore allo 0,8% ed è considerato avere caratteristiche aromatiche favorevoli.</Italian>
-		<Russian>Оливковое масло - это жидкий растительный жир, получаемый путем прессования целых оливок. Он обычно используется в кулинарии, для жарки продуктов или как заправка для салатов. Он также используется в косметике, фармацевтике и мыле, а также в качестве топлива для традиционных масляных ламп и имеет дополнительное применение в некоторых религиях. Имеются ограниченные данные о его возможной пользе для здоровья. Состав оливкового масла зависит от сорта, высоты над уровнем моря, времени сбора урожая и процесса экстракции. Он состоит в основном из олеиновой кислоты (до 83%) с меньшим количеством других жирных кислот, включая линолевую кислоту (до 21%) и пальмитиновую кислоту (до 20%). Оливковое масло первого холодного отжима должно иметь не более 0,8% свободной кислотности и имеет хорошие вкусовые характеристики.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
 		<English>Olives</English>
 		<German>
@@ -6237,6 +6238,20 @@
 		<German>Der [COLOR_HIGHLIGHT_TEXT]Olivenbaum[COLOR_REVERT] (Olea Europaea) ist ein kleiner, im östlichen Mittelmeerraum beheimateter Baum, der die sogenannten Olivenfrüchte trägt. Die Olive ist eine bittere, aber essbare Frucht (normalerweise nach einem Gärungsvorgang oder dem Marinieren/Einlegen z.B. in Wasser) und dient als Grundlage für die Herstellung von Olivenöl.[NEWLINE]Wann genau die Olivenbäume erstmals von den Menschen kultiviert wurden, ist nicht bekannt, aber sie werden seit mindestens 3000 v.Chr. landwirtschaftlich genutzt. Ursprünglich in Griechenland und Palästina heimisch, fand die Olive später auch im westlichen Mittelmeerraum und schließlich in der ganzen Welt Verbreitung. Heute wird sie sogar in Kalifornien und Australien angebaut. Oliven und Olivenöl hatten für die Griechen der Antike eine besondere religiöse Bedeutung. Überlieferungen zufolge soll der Olivenbaum von der Göttin Athene erschaffen worden sein, die damit einen Wettstreit gegen Poseidon gewinnen wollte, bei dem entschieden wurde, wer von den beiden eine neue Stadt nach sich benennen darf. Am Ende konnte sich Athene mit ihrer Olive durchsetzen und so wurde die Stadt Athen nach ihr benannt. Für die Griechen der Antike war die Olive eine heilige Frucht: Sie symbolisierte Frieden, Weisheit und den Triumph. Aus diesem Grund wurden siegreiche Olympioniken schon damals mit einem Olivenzweig geehrt. Das Olivenöl wurde in religiösen hellenistischen Zeremonien verwendet und hat in der griechisch-orthodoxen Kirche nach wie vor besondere Bedeutung. Außerdem stellt die Olive bis heute auch einen wichtigen Wirtschaftsfaktor für Griechenland dar, das jedes Jahr mehr als 400000 Tonnen Olivenöl in die ganze Welt exportiert.</German>
 		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
 		<Russian>Îëèâà (Olea europaea) - íåâûñîêîå äåðåâî, ðàñòóùåå íà âîñòî÷íîì ïîáåðåæüå Ñðåäèçåìíîãî ìîðÿ. Åãî ïëîäû, îëèâêè, ñàìè ïî ñåáå ãîðüêè íà âêóñ, íî óïîòðåáëÿþòñÿ â ïèùó â ìàðèíîâàííîì âèäå, èç íèõ òàêæå âûæèìàþò ìàñëî. Ïåðâûå ñâèäåòåëüñòâà èñïîëüçîâàíèÿ îëèâîê äàòèðîâàíû 3000 ã. äî í.ý. Ðîäèíà îëèâîê - Ãðåöèÿ è Ïàëåñòèíà, íî ñî âðåìåíåì èõ íà÷àëè âûðàùèâàòü âî âñåì ìèðå, â òîì ÷èñëå Êàëèôîðíèè è Àâñòðàëèè.[PARAGRAPH:1]Äëÿ äðåâíèõ ãðåêîâ îëèâêè è îëèâêîâîå ìàñëî îáëàäàëè îñîáûì ðåëèãèîçíûì çíà÷åíèåì. Ïî ëåãåíäå, Àôèíà ñîçäàëà îëèâêîâîå äåðåâî, ÷òîáû âûèãðàòü ñïîð ñ Ïîñåéäîíîì çà ïðàâî íàçâàòü íîâûé ãîðîä, êîòîðûé è ïî ñåé äåíü íîñèò åå èìÿ. Ãðåêè ïî÷èòàëè îëèâó êàê ñâÿùåííîå äåðåâî; îíà ÿâëÿåòñÿ ñèìâîëîì ìèðà, ìóäðîñòè è òðèóìôà. Âåíêè èç îëèâêîâûõ âåòâåé íàãðàæäàëè îëèìïèéñêèõ ÷åìïèîíîâ. Ìàñëî èñïîëüçîâàëîñü â ðåëèãèîçíûõ öåðåìîíèÿõ, è ñåãîäíÿ îíî èãðàåò âàæíóþ ðîëü â îáðÿäàõ ãðå÷åñêîé ïðàâîñëàâíîé öåðêâè. Òàêæå ýòî îäèí èç îñíîâíûõ èñòî÷íèêîâ äîõîäà Ãðåöèè, ýêñïîðòèðóþùåé áîëåå 400 000 òîíí îëèâêîâîãî ìàñëà åæåãîäíî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
+		<English>Olive Oil</English>
+		<French>Huile d'olive</French>
+		<Italian>Olio d'oliva</Italian>
+		<Polish>Oliwa z oliwek</Polish>
+		<Russian>Îëèâêîâîå ìàñëî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
+		<English>Olive oil is a liquid fat obtained by pressing whole olives. It is commonly used in cooking, for frying foods or as a salad dressing. It is also used in cosmetics, pharmaceuticals, and soaps, and as a fuel for traditional oil lamps, and has additional uses in some religions. There is limited evidence of its possible health benefits. The composition of olive oil varies with the cultivar, altitude, time of harvest and extraction process. It consists mainly of oleic acid (up to 83%), with smaller amounts of other fatty acids including linoleic acid (up to 21%) and palmitic acid (up to 20%). Extra virgin olive oil is required to have no more than 0.8% free acidity and is considered to have favorable flavor characteristics.</English>
+		<Italian>L'olio d'oliva è un grasso liquido ottenuto dalla spremitura di olive intere. È comunemente usato in cucina, per friggere cibi o come condimento per insalate. È anche usato per cosmetici, prodotti farmaceutici e saponi e come combustibile per le tradizionali lampade a olio e ha usi aggiuntivi in alcune religioni. Vi sono prove limitate dei suoi possibili benefici per la salute. La composizione dell'olio d'oliva varia a seconda della cultivar, dell'altitudine, del tempo di raccolta e del processo di estrazione. È costituito principalmente da acido oleico (fino all'83%), con quantità minori di altri acidi grassi tra cui acido linoleico (fino al 21%) e acido palmitico (fino al 20%). L'olio extra vergine di oliva deve avere un'acidità libera non superiore allo 0,8% ed è considerato avere caratteristiche aromatiche favorevoli.</Italian>
+		<Russian>Оливковое масло - это жидкий растительный жир, получаемый путем прессования целых оливок. Он обычно используется в кулинарии, для жарки продуктов или как заправка для салатов. Он также используется в косметике, фармацевтике и мыле, а также в качестве топлива для традиционных масляных ламп и имеет дополнительное применение в некоторых религиях. Имеются ограниченные данные о его возможной пользе для здоровья. Состав оливкового масла зависит от сорта, высоты над уровнем моря, времени сбора урожая и процесса экстракции. Он состоит в основном из олеиновой кислоты (до 83%) с меньшим количеством других жирных кислот, включая линолевую кислоту (до 21%) и пальмитиновую кислоту (до 20%). Оливковое масло первого холодного отжима должно иметь не более 0,8% свободной кислотности и имеет хорошие вкусовые характеристики.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
@@ -6302,7 +6317,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPIUM_PEDIA</Tag>
 		<English>Opium, or poppy tears, is dried latex obtained from the seed capsules of the opium poppy. Approximately 12% of opium is made up of morphine, which is processed chemically to produce heroin and other synthetic opioids for medicinal use and for illegal drug trade. The latex also contains the closely related opiates codeine and thebaine, and non-analgesic alkaloids such as papaverine and noscapine. In its legal uses, it is used (in controlled doses) for treatment of neuropathic pain and other forms of chronic pain, and on a smaller scale, to treat diarrhea.</English>
-		<German>[COLOR_HIGHLIGHT_TEXT]Opium[COLOR_REVERT] ist ein Rausch-, Betäubungs- und Arzneimittel, das aus dem Milchsaft des Schlafmohns (Papaver somniferum L.) gewonnen wird. Seine Wirkung beruht hauptsächlich auf den Alkaloiden Morphin, Codein und Thebain.[NEWLINE]Mohn gehört zu den ältesten Kulturpflanzen. Bereits um 4000 v. Chr. wurde er zur Herstellung von Pharmazeutika verwendet. In Ägypten wurden Opiummixturen ab etwa 1800 v. Chr. für Kulthandlungen verwendet. Das Opium wurde zunächst von Zypern importiert und später im Niltal angebaut. Auch im alten Griechenland wurd Opium für kultische und medizinische Zwecke gebraucht. Die Mohnkapsel war das Symbol für den Schlafgott Hypnos, für Morpheus, den Gott des Traumes, für Nyx, die Göttin der Nacht, und für Thanatos, den Gott des Todes. Im römischen Reich wurde Opium zur Wohlstandsdroge. Im frühen Christentum wurde die Anwendung von Opium als schmerzstillendes Mittel vielerorts verboten und erst mit der arabischen Medizin kehrte es schließlich nach Europa zurück.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Opium[COLOR_REVERT] ist ein Rausch-, Betäubungs- und Arzneimittel, das aus dem Milchsaft des Schlafmohns (Papaver somniferum L.) gewonnen wird. Seine Wirkung beruht hauptsächlich auf den Alkaloiden Morphin, Codein und Thebain.[NEWLINE]Mohn gehört zu den ältesten Kulturpflanzen. Bereits um 4000 v.Chr. wurde er zur Herstellung von Pharmazeutika verwendet. In Ägypten wurden Opiummixturen ab etwa 1800 v.Chr. für Kulthandlungen verwendet. Das Opium wurde zunächst von Zypern importiert und später im Niltal angebaut. Auch im alten Griechenland wurd Opium für kultische und medizinische Zwecke gebraucht. Die Mohnkapsel war das Symbol für den Schlafgott Hypnos, für Morpheus, den Gott des Traumes, für Nyx, die Göttin der Nacht, und für Thanatos, den Gott des Todes. Im römischen Reich wurde Opium zur Wohlstandsdroge. Im frühen Christentum wurde die Anwendung von Opium als schmerzstillendes Mittel vielerorts verboten und erst mit der arabischen Medizin kehrte es schließlich nach Europa zurück.</German>
 		<Italian>L'oppio, o lacrime di papavero, è il lattice essiccato ottenuto dalle capsule di semi del papavero da oppio. Circa il 12% dell'oppio è costituito da morfina, che viene poi elaborata chimicamente per produrre eroina e altri oppioidi sintetici per uso medicinale e per il commercio illegale di droghe. Il lattice contiene anche codeina e tebaina, oppiacei strettamente correlati, e alcaloidi non analgesici come papaverina e noscapina. Nei suoi usi legali, è usato (in dosi controllate) per il trattamento di dolori neuropatici, di altre forme di dolore cronico e, su scala ridotta, per il trattamento della diarrea.</Italian>
 		<Russian>Опийный мак (Papaver somniferum) - это вид мака, из которого можно извлечь опий и все другие очищенные опиаты, такие как морфин. Опийный мак, вероятно, возник в восточной части Средиземноморья и впоследствии распространился на его современный ареал, который охватывает большую часть Южной Азии и за ее пределами. Опиум использовался в древнем Средиземноморье из-за его лечебных свойств и в качестве развлекательного наркотика. Использование опийного мака, скорее всего, предшествовало письменной истории, но первые известные исторические проявления опийного мака - это изображения, найденные в древних шумерских артефактах, датируемых примерно 4000 годом до нашей эры. Использование опийного мака распространилось и к 5 веку до н.э. был также известен грекам, которые дали опиуму его нынешнее название. (Переработано на основе мода Civilization 3 Conquests: The Ancient Maditerranean).</Russian>
 	</TEXT>
@@ -6831,7 +6846,7 @@
 		<Tag>TXT_KEY_BONUS_PIG_PEDIA</Tag>
 		<English>The pig has been domesticated for about 5,000 to 7,000 years and the animal is found across Europe, the Middle East, and extends in Asia as far as Indonesia and Japan. Pigs are one of the most intelligent animals, and some are even kept as pets. Pigs are reportedly more trainable than dogs and cats.</English>
 		<French>Le cochon a été domestiqué il y a 5 à 7 000 ans. On le trouve dans toute l'Europe, au Moyen-Orient et jusqu'en Indonésie et au japon. Le cochon est un des animaux les plus intelligents, et il arrive parfois que l'on en fasse un animal de compagnie. Aux dires de certains, il serait même plus facile à dresser que le chat ou le chien.</French>
-		<German>Das Schwein wurde vor etwa 7000 Jahren domestiziert und ist in Europa, dem Mittleren Osten, Asien, Indonesien und Japan anzutreffen. Schweine sind überaus intelligent und werden heute vermehrt als Haustiere gehalten. Neuen Studien zufolge sind Schweine sogar gelehriger als Hunde und Katzen.</German>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Schwein[COLOR_REVERT] wurde vor etwa 7000 Jahren domestiziert und ist in Europa, dem Mittleren Osten, Asien, Indonesien und Japan anzutreffen. Schweine sind überaus intelligent und werden heute vermehrt als Haustiere gehalten. Neuen Studien zufolge sind Schweine sogar gelehriger als Hunde und Katzen. Gezüchtet wird es hauptsächlich als Fleischlieferant, auch wenn in verschiedenen Religionen das Schweinefleisch tabu ist. Außerdem werden Innereien, Knochen (für Suppen und als Dünger), Haut (früher für Leder, heute hauptsächlich für Gelatine) und Borsten (für Bürsten und Pinsel) verwendet.</German>
 		<Italian>Il primo maiale addomesticato risale a circa 5.000 o 7.000 anni fa. Questo animale è comunemente diffuso in Europa, Medio Oriente, Asia e persino in Indonesia e Giappone. I maiali sono tra gli animali più intelligenti e possono essere addirittura degli animali da compagnia, poiché sono più facilmente addestrabili di cani e gatti.</Italian>
 		<Russian>Свинью приручили от 5000 до 7000 лет, и это животное встречается по всей Европе, на Ближнем Востоке и распространяется в Азии до Индонезии и Японии. Свиньи - одни из самых умных животных, и некоторых из них даже содержат в качестве домашних животных. Сообщается, что свиней легче дрессировать, чем собак и кошек.</Russian>
 	</TEXT>
@@ -7875,6 +7890,19 @@
 		<Russian>Ñêèôû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
+		<English>Seasoning</English>
+		<French>Condiments</French>
+		<Italian>Condimenti</Italian>
+		<Russian>Ïðÿíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
+		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
+		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
+		<Russian>Ñïåöèè - ýòî âûñóøåííûå ñåìåíà, ôðóêòû, êîðíè, êîðà, èëè âåãåòàòèâíûå âåùåñòâà, èñïîëüçóåìûå äëÿ ïèùè â íåçíà÷èòåëüíûõ êîëè÷åñòâàõ â êà÷åñòâå ïèùåâîé äîáàâêè äëÿ âêóñà, öâåòà, èëè êàê êîíñåðâàíòà, êîòîðûé óáèâàåò âðåäíûå áàêòåðèè è ïðåäîòâðàùàåò èõ ðàçìíîæåíèå.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Sea Lion and Seal</English>
 		<French>Lion de mer et phoque</French>
@@ -7889,19 +7917,6 @@
 		<English>Sea lions and fur seals constitute the Otariidae family, collectively known as eared seals. The major distinction between them is the presence of a thick underfur layer in the latter. Otariids have proportionately large foreflippers and pectoral muscles, and have the ability to turn their hind limbs forward and walk on all fours, making them far more maneuverable on land. They are generally considered to be less adapted to an aquatic lifestyle than true seals; however, they can attain higher bursts of speed and have greater maneuverability in the water. They were, and still are, hunted for their skins, their meat and also their blubber, used to make seal oil.</English>
 		<Italian>I leoni marini e le foche costituiscono la famiglia delle Otariidae. La principale distinzione tra loro è la presenza di uno spesso strato di lanugine sotto la pelliccia nelle foche. Gli otariidi hanno proporzionalmente grandi pinne e muscoli pettorali e hanno la capacità di girare in avanti gli arti posteriori e camminare a quattro zampe, caratteristica che gli permette di camminare meglio sulla terraferma. Sono generalmente considerati meno adattati a uno stile di vita acquatico; tuttavia, possono raggiungere picchi di velocità più elevati e avere una maggiore manovrabilità in acqua. Erano, e sono tuttora, cacciati per le loro pelli, la loro carne e anche il loro grasso, usati per produrre olio di foca.</Italian>
 		<Russian>Морские львы и морские котики составляют семейство Otariidae, известное как ушастые тюлени. Основное различие между ними - наличие у последних толстого подшерстка. У отариидов пропорционально большие передние ласты и грудные мышцы, а также способность поворачивать задние конечности вперед и ходить на четвереньках, что делает их гораздо более маневренными на суше. Обычно считается, что они менее приспособлены к водному образу жизни, чем настоящие тюлени; тем не менее, они могут развивать более высокие скорости и маневренность в воде. На них охотились и продолжают охотиться из-за кожи, мяса, а также жира, из которого делают тюленьий жир.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
-		<English>Seasoning</English>
-		<French>Condiments</French>
-		<Italian>Condimenti</Italian>
-		<Russian>Ïðÿíîñòè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
-		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
-		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
-		<Russian>Ñïåöèè - ýòî âûñóøåííûå ñåìåíà, ôðóêòû, êîðíè, êîðà, èëè âåãåòàòèâíûå âåùåñòâà, èñïîëüçóåìûå äëÿ ïèùè â íåçíà÷èòåëüíûõ êîëè÷åñòâàõ â êà÷åñòâå ïèùåâîé äîáàâêè äëÿ âêóñà, öâåòà, èëè êàê êîíñåðâàíòà, êîòîðûé óáèâàåò âðåäíûå áàêòåðèè è ïðåäîòâðàùàåò èõ ðàçìíîæåíèå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
@@ -7991,7 +8006,7 @@
 		<Tag>TXT_KEY_BONUS_SHEEP_PEDIA</Tag>
 		<English>For centuries, sheep have had associations with many Mediterranean cultures. Many religions, such as Judaism and Christianity, use sheep-related images and parables. Raising sheep provided a steady source of income to ancient farmers since the animal can give milk, wool, and meat. Even in the 21st Century, sheep can provide a return on investment of up to 400%% of their annual cost (including reproduction gains).</English>
 		<French>Le mouton est depuis des siècles associé à de nombreuses civilisations méditerranéennes. De nombreuses religions, comme le Judaïsme et le Christianisme, utilisent des paraboles et une imagerie se rapportant au mouton. L'élevage de mouton offrait une source de revenus régulière aux agriculteurs de l'Antiquité, cet animal offrant du lait, de la laine et de la viande. Encore aujourd'hui, le mouton peut offrir un retour sur investissement de l'ordre de 400 %% de son coût annuel (bénéfice de la reproduction compris).</French>
-		<German>Schafe waren traditionell das Symbol mediterraner Kulturen. Nicht zuletzt deshalb spielt das Schaf in jüdischen und christlichen Bildern und Parabeln eine wichtige Rolle. Die Schafzucht bot den Bauern eine solide Einkommensquelle, da die Schafe Milch, Wolle und Fleisch lieferten. Auch im 21. Jahrhundert liegt der Kapitalertrag eines Schafs abzüglich der Haltungskosten noch bei bis zu 400%%.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Schafe[COLOR_REVERT] waren traditionell das Symbol mediterraner Kulturen. Nicht zuletzt deshalb spielt das Schaf in jüdischen und christlichen Bildern und Parabeln eine wichtige Rolle. Die Schafzucht bot den Bauern eine solide Einkommensquelle, da die Schafe Milch, Wolle und Fleisch lieferten. Auch im 21. Jahrhundert liegt der Kapitalertrag eines Schafs abzüglich der Haltungskosten noch bei bis zu 400%%.</German>
 		<Russian>На протяжении веков овцы ассоциировались со многими средиземноморскими культурами. Многие религии, такие как иудаизм и христианство, используют изображения и притчи, связанные с овцами. Разведение овец было постоянным источником дохода для древних фермеров, так как животные могли давать молоко, шерсть и мясо. Даже в 21 веке овцы могут обеспечить рентабельность инвестиций до 400%% от их годовой стоимости (включая прирост воспроизводства).</Russian>
 	</TEXT>
 	<TEXT>
@@ -8096,13 +8111,6 @@
 		<Russian>Øåëê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
-		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
-		<German>Seit ihrer Entdeckung im 27. Jahrhundert vor Christus gilt [COLOR_HIGHLIGHT_TEXT]Seide[COLOR_REVERT] als ein wertvolles Material zur Herstellung von Textilien. Sie wird aus den Kokons der Seidenraupen gewonnen. Es handelt sich um die domestizierten Larven des Seidenspinners oder Maulbeerspinners (Bombyx mori), eines ursprünglich nur in China beheimateten Schmetterlings. Seidenraupen ernähren sich ausschließlich von den Blättern der Maulbeerbäume, deren Anbau deshalb für die Seidenproduktion unabdingbar ist. Seide ist die einzige in der Natur vorkommende textile Endlosfaser und besteht hauptsächlich aus Protein. Die feinen Fasern werden zu einem Stoff gewebt, der zur Fertigung aller Arten von Kleidung verwendet wird.[NEWLINE]Rohseide wurde bis 550 nach Christus nur aus Asien bezogen, bis zwei vom Römischen Reich nach China entsandte Mönche heimlich einige Seidenspinnereier stahlen und nach Europa brachten. Auf diese Weise breiteten sich die Seidenspinner schließlich in vielen Gebieten der ganzen Welt aus. Obwohl sich der Seidenhandel durch die Verfügbarkeit billigerer synthetischer Fasern im 20. Jahrhundert rückläufig entwickelte, ist Seide auch heute noch ein sehr beliebter Stoff für Kleidung und andere Waren.</German>
-		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
-		<Russian>Шелк был ценным товаром для текстиля с тех пор, как его свойства были обнаружены в 27 веке до нашей эры. Шелк получают из кокона тутового шелкопряда, который изначально был произрастанием в лесах Китая. Тонкие волокна кокона вплетены в ткань, из которой шьют все виды одежды. Шелк-сырец добывался только в Азии до 550 г. н.э., когда два монаха, присланные из Римской империи, тайно украли яйца тутового шелкопряда из Китая и привезли их в Европу. В конце концов шелкопряда были обнаружены во многих областях по всему миру. Менее дорогие синтетические волокна 20-го века привели к упадку на рынке шелка, но шелк по-прежнему очень популярен во многих типах одежды и других товарах.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
 		<English>Silk Fibers</English>
 		<French>Fibres de soie</French>
@@ -8114,6 +8122,13 @@
 		<English>A single thread filament is too thin to use on its own so women combine many threads to produce a thicker, usable fiber. They do this by hand-reeling the threads onto a wooden spindle to produce a uniform strand of raw silk. The process takes around 40 hours to produce a half kilogram of silk.</English>
 		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
 		<Russian>Åäèíàÿ òîí÷àéøàÿ íèòü, äëÿ èñïîëüçîâàíèÿ ñàìîé ïî ñåáå, ïîýòîìó æåíùèíàì ïðèõîäèòñÿ ñî÷åòàòü ìíîãî óòîêîâ, ÷òîáû ñîçäàòü áîëåå ïëîòíóþ ìàòåðèþ. Îíè äåëàþò ýòî ïóòåì ðó÷íîé íàìîòêè íèòè íà äåðåâÿííóþ ìàòðèöó äëÿ ïîëó÷åíèÿ ðàâíîìåðíîé íèòè øåëêà-ñûðöà. Ïðîöåññ çàíèìàåò îêîëî 40 ÷àñîâ, ÷òîáû ïðîèçâåñòè ïîëêèëî øåëêà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
+		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
+		<German>Seit ihrer Entdeckung im 27. Jahrhundert vor Christus gilt [COLOR_HIGHLIGHT_TEXT]Seide[COLOR_REVERT] als ein wertvolles Material zur Herstellung von Textilien. Sie wird aus den Kokons der Seidenraupen gewonnen. Es handelt sich um die domestizierten Larven des Seidenspinners oder Maulbeerspinners (Bombyx mori), eines ursprünglich nur in China beheimateten Schmetterlings. Seidenraupen ernähren sich ausschließlich von den Blättern der Maulbeerbäume, deren Anbau deshalb für die Seidenproduktion unabdingbar ist. Seide ist die einzige in der Natur vorkommende textile Endlosfaser und besteht hauptsächlich aus Protein. Die feinen Fasern werden zu einem Stoff gewebt, der zur Fertigung aller Arten von Kleidung verwendet wird.[NEWLINE]Rohseide wurde bis 550 nach Christus nur aus Asien bezogen, bis zwei vom Römischen Reich nach China entsandte Mönche heimlich einige Seidenspinnereier stahlen und nach Europa brachten. Auf diese Weise breiteten sich die Seidenspinner schließlich in vielen Gebieten der ganzen Welt aus. Obwohl sich der Seidenhandel durch die Verfügbarkeit billigerer synthetischer Fasern im 20. Jahrhundert rückläufig entwickelte, ist Seide auch heute noch ein sehr beliebter Stoff für Kleidung und andere Waren.</German>
+		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
+		<Russian>Шелк был ценным товаром для текстиля с тех пор, как его свойства были обнаружены в 27 веке до нашей эры. Шелк получают из кокона тутового шелкопряда, который изначально был произрастанием в лесах Китая. Тонкие волокна кокона вплетены в ткань, из которой шьют все виды одежды. Шелк-сырец добывался только в Азии до 550 г. н.э., когда два монаха, присланные из Римской империи, тайно украли яйца тутового шелкопряда из Китая и привезли их в Европу. В конце концов шелкопряда были обнаружены во многих областях по всему миру. Менее дорогие синтетические волокна 20-го века привели к упадку на рынке шелка, но шелк по-прежнему очень популярен во многих типах одежды и других товарах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_INGOTS</Tag>
@@ -8768,17 +8783,17 @@
 		<Russian>Äåãîòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
-		<English>Tar is a dark brown or black viscous liquid made of hydrocarbons and free carbon, obtained from a wide variety of organic materials through destructive distillation. Tar can be produced from coal, wood, petroleum, or peat. Tar-like products can also be produced from other forms of organic matter. Tar was used as seal for roofing shingles and tar paper, to seal the hulls of ships and boats, and also a general disinfectant. Tar was also used for public humiliation, known as "tarring and feathering", but it was quickly abandoned due to the temporary and permanent physical damage caused by the burns of the tar from the application.</English>
-		<Italian>Il catrame è un liquido viscoso marrone scuro o nero prodotto da idrocarburi e carbonio libero, ottenuto da un'ampia varietà di materiali organici attraverso distillazione distruttiva. Il catrame può essere prodotto da carbone, legno, petrolio o torba. Prodotti simili al catrame possono anche essere ottenuti da altre forme di materia organica. Il catrame veniva usato come impermeabilizzante per tegole e carta catramata, per gli scafi di navi e imbarcazioni e anche come disinfettante generale. Il catrame è stato anche usato come forma di tortura e punizione, nel quale una persona veniva incatramata e poi ricoperta di piume; il metodo fu rapidamente abbandonato a causa dei danni fisici temporanei e permanenti delle ustioni provocate del catrame ancora caldo.</Italian>
-		<Russian>Ñìîëà èñïîëüçóåòñÿ êàê óïëîòíèòåëü äëÿ êðîâåëüíîé ÷åðåïèöû è óïëîòíåíèÿ êîðïóñîâ ñóäîâ è ëîäîê. Íà ïðîòÿæåíèè òûñÿ÷åëåòèé äðåâåñíàÿ ñìîëà èñïîëüçîâàëàñü äëÿ ãèäðîèçîëÿöèè ïàðóñà è ëîäêè, íî ñåãîäíÿ ïàðóñà, ñäåëàííûå èç âîäîíåïðîíèöàåìîãî ñèíòåòè÷åñêîãî ïî ñâîåé ïðèðîäå âåùåñòâà ñâåëè íà íåò íåîáõîäèìîñòü â ñìîëå. Äðåâåñíàÿ ñìîëà äî ñèõ ïîð èñïîëüçóåòñÿ äëÿ óïëîòíåíèÿ òðàäèöèîííûõ äåðåâÿííûõ ëîäîê è êðîâåëü äåðåâÿííûõ öåðêâåé, à òàêæå â ïîêðûòèè íàðóæíûõ ñòåí áðåâåí÷àòûõ äîìîâ. Êðîìå òîãî, ñìîëà ÿâëÿåòñÿ îáùèì äåçèíôèöèðóþùèì ñðåäñòâîì.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_TARASCAN</Tag>
 		<English>Tarascan</English>
 		<Italian>Tarasco</Italian>
 		<Polish>Taraskańska</Polish>
 		<Russian>Òàðàñêàíöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
+		<English>Tar is a dark brown or black viscous liquid made of hydrocarbons and free carbon, obtained from a wide variety of organic materials through destructive distillation. Tar can be produced from coal, wood, petroleum, or peat. Tar-like products can also be produced from other forms of organic matter. Tar was used as seal for roofing shingles and tar paper, to seal the hulls of ships and boats, and also a general disinfectant. Tar was also used for public humiliation, known as "tarring and feathering", but it was quickly abandoned due to the temporary and permanent physical damage caused by the burns of the tar from the application.</English>
+		<Italian>Il catrame è un liquido viscoso marrone scuro o nero prodotto da idrocarburi e carbonio libero, ottenuto da un'ampia varietà di materiali organici attraverso distillazione distruttiva. Il catrame può essere prodotto da carbone, legno, petrolio o torba. Prodotti simili al catrame possono anche essere ottenuti da altre forme di materia organica. Il catrame veniva usato come impermeabilizzante per tegole e carta catramata, per gli scafi di navi e imbarcazioni e anche come disinfettante generale. Il catrame è stato anche usato come forma di tortura e punizione, nel quale una persona veniva incatramata e poi ricoperta di piume; il metodo fu rapidamente abbandonato a causa dei danni fisici temporanei e permanenti delle ustioni provocate del catrame ancora caldo.</Italian>
+		<Russian>Ñìîëà èñïîëüçóåòñÿ êàê óïëîòíèòåëü äëÿ êðîâåëüíîé ÷åðåïèöû è óïëîòíåíèÿ êîðïóñîâ ñóäîâ è ëîäîê. Íà ïðîòÿæåíèè òûñÿ÷åëåòèé äðåâåñíàÿ ñìîëà èñïîëüçîâàëàñü äëÿ ãèäðîèçîëÿöèè ïàðóñà è ëîäêè, íî ñåãîäíÿ ïàðóñà, ñäåëàííûå èç âîäîíåïðîíèöàåìîãî ñèíòåòè÷åñêîãî ïî ñâîåé ïðèðîäå âåùåñòâà ñâåëè íà íåò íåîáõîäèìîñòü â ñìîëå. Äðåâåñíàÿ ñìîëà äî ñèõ ïîð èñïîëüçóåòñÿ äëÿ óïëîòíåíèÿ òðàäèöèîííûõ äåðåâÿííûõ ëîäîê è êðîâåëü äåðåâÿííûõ öåðêâåé, à òàêæå â ïîêðûòèè íàðóæíûõ ñòåí áðåâåí÷àòûõ äîìîâ. Êðîìå òîãî, ñìîëà ÿâëÿåòñÿ îáùèì äåçèíôèöèðóþùèì ñðåäñòâîì.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TASMANIAN</Tag>
@@ -9229,7 +9244,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURQUOISE_PEDIA</Tag>
 		<English>Turquoise is an opaque, blue-to-green mineral that is a hydrous phosphate of copper and aluminium. It is rare and valuable in finer grades and has been prized as a gem and ornamental stone for thousands of years owing to its unique hue.</English>
-		<German>Das Mineral Türkis ist ein eher selten vorkommendes, wasserhaltiges Kupfer-Aluminium-Phosphat aus der Mineralklasse der "Phosphate, Arsenate und Vanadate". Seiner charakteristischen blaugrünen Farbe verdankt die Farbe Türkis ihren Namen. Die frühere Bezeichnung "Kallait" - lateinisch Callaina - wurde schon bei Plinius "Naturalis historia" verwendet und geht zurück auf das altgriechische Wort für blau und grün schillernd. Etwa Anfang des 13. Jahrhunderts kam die französische Bezeichnung Turkoys auf, die sich ab dem frühen 15. Jahrhundert in die Bezeichnung pierre turquoise wandelte und übersetzt "türkischer Stein" bedeutet. Diese Wortschöpfung beruht jedoch auf einem Mißverständnis, denn Türkis wurde damals lediglich aus dem Gebiet des heutigen Iran in die Türkei importiert und dort gehandelt. Heimkehrende Kreuzfahrer machten ihn schließlich auch in Europa bekannt. Türkis gehört zu den ersten Mineralen, die bergmännisch abgebaut wurden, aber von den alten Minen sind heute nur noch wenige in Betrieb. Sie werden saisonabhängig und in kleinem Umfang, oft ohne oder nur mit geringer technischer Hilfe betrieben, da Türkis relativ selten ist. In großen Kupferminen, besonders in den USA, wird Türkis jedoch oft als Nebenprodukt entdeckt. Die bedeutendsten Fundstätten aus geschichtlicher wie aus mengenmäßiger Sicht dürften wohl diejenigen der südwestlichen USA, Mexiko, Sinai, Iran, China und des südöstlichen Australien sein. Einige wenige Fundstellen sind aber auch in Europa und Afrika bekannt. Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastelltönen schon seit dem Altertum viele Völker in seinen Bann gezogen. Er schmückte die Herrscher des antiken Ägypten, der Azteken (und wahrscheinlich auch der vor-kolumbianischen Mesoamerikaner), der Perser und Mesopotamier, sowie Adlige im Indus und teilweise auch im antiken China seit der letzten Shang-Dynastie. Türkis gelangte mit den Händlern der Seidenstraße das erste Mal nach Europa. Durch Grabbeigaben ist belegt, dass die alten Ägypter Türkis bereits seit Vordynastischer Zeit (etwa 5500 v. Chr.) als Schmuckstein verwendeten. Die berühmtesten Stücke dürften allerdings aus Tutanchamuns Grab stammen. Besonders die Totenmaske des Pharaos, großzügig mit Türkis verziert, ist allgemein bekannt. Türkis war der Edelstein der ägyptischen Göttin Hathor und war bei den antiken Ägyptern so begehrt, dass er als einer der ersten Edelsteine imitiert wurde. Die Azteken gestalteten mit Türkis, aber auch Gold, Quarz, Malachit, Gagat, Jade, Korallen und Muscheln abschreckende, und wahrscheinlich rituelle, mit Mosaik verzierte Objekte, wie beispielsweise Masken, Messer und Schilde. Als Untergrund für ein Mosaik konnten Holz, Knochen und Muscheln und als Kleber Harze, Bitumen sowie Wachs dienen. In Persien war Türkis seit Jahrtausenden der Nationaledelstein. Er wurde zur Dekoration verschiedenster Alltagsobjekte (Turbane), Moscheen und anderer wichtiger Gebäude wie der Madrassa-I Schah Hussein Moschee in Isfahan eingesetzt. Während des Mogul Kaisertums kam der persische Stil und Gebrauch von Türkis auch nach Indien, wo man ihn in edlem Goldschmuck (zusammen mit Rubinen und Diamanten) und Gebäuden wie dem Taj Mahal bewundern kann. Persischer Türkis wurde oft mit arabischer Schrift graviert und dann mit Gold verziert.</German>
+		<German>Das Mineral Türkis ist ein eher selten vorkommendes, wasserhaltiges Kupfer-Aluminium-Phosphat aus der Mineralklasse der "Phosphate, Arsenate und Vanadate". Seiner charakteristischen blaugrünen Farbe verdankt die Farbe Türkis ihren Namen. Die frühere Bezeichnung "Kallait" - lateinisch Callaina - wurde schon bei Plinius "Naturalis historia" verwendet und geht zurück auf das altgriechische Wort für blau und grün schillernd. Etwa Anfang des 13. Jahrhunderts kam die französische Bezeichnung Turkoys auf, die sich ab dem frühen 15. Jahrhundert in die Bezeichnung pierre turquoise wandelte und übersetzt "türkischer Stein" bedeutet. Diese Wortschöpfung beruht jedoch auf einem Mißverständnis, denn Türkis wurde damals lediglich aus dem Gebiet des heutigen Iran in die Türkei importiert und dort gehandelt. Heimkehrende Kreuzfahrer machten ihn schließlich auch in Europa bekannt. Türkis gehört zu den ersten Mineralen, die bergmännisch abgebaut wurden, aber von den alten Minen sind heute nur noch wenige in Betrieb. Sie werden saisonabhängig und in kleinem Umfang, oft ohne oder nur mit geringer technischer Hilfe betrieben, da Türkis relativ selten ist. In großen Kupferminen, besonders in den USA, wird Türkis jedoch oft als Nebenprodukt entdeckt. Die bedeutendsten Fundstätten aus geschichtlicher wie aus mengenmäßiger Sicht dürften wohl diejenigen der südwestlichen USA, Mexiko, Sinai, Iran, China und des südöstlichen Australien sein. Einige wenige Fundstellen sind aber auch in Europa und Afrika bekannt. Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastelltönen schon seit dem Altertum viele Völker in seinen Bann gezogen. Er schmückte die Herrscher des antiken Ägypten, der Azteken (und wahrscheinlich auch der vor-kolumbianischen Mesoamerikaner), der Perser und Mesopotamier, sowie Adlige im Indus und teilweise auch im antiken China seit der letzten Shang-Dynastie. Türkis gelangte mit den Händlern der Seidenstraße das erste Mal nach Europa. Durch Grabbeigaben ist belegt, dass die alten Ägypter Türkis bereits seit Vordynastischer Zeit (etwa 5500 v.Chr.) als Schmuckstein verwendeten. Die berühmtesten Stücke dürften allerdings aus Tutanchamuns Grab stammen. Besonders die Totenmaske des Pharaos, großzügig mit Türkis verziert, ist allgemein bekannt. Türkis war der Edelstein der ägyptischen Göttin Hathor und war bei den antiken Ägyptern so begehrt, dass er als einer der ersten Edelsteine imitiert wurde. Die Azteken gestalteten mit Türkis, aber auch Gold, Quarz, Malachit, Gagat, Jade, Korallen und Muscheln abschreckende, und wahrscheinlich rituelle, mit Mosaik verzierte Objekte, wie beispielsweise Masken, Messer und Schilde. Als Untergrund für ein Mosaik konnten Holz, Knochen und Muscheln und als Kleber Harze, Bitumen sowie Wachs dienen. In Persien war Türkis seit Jahrtausenden der Nationaledelstein. Er wurde zur Dekoration verschiedenster Alltagsobjekte (Turbane), Moscheen und anderer wichtiger Gebäude wie der Madrassa-I Schah Hussein Moschee in Isfahan eingesetzt. Während des Mogul Kaisertums kam der persische Stil und Gebrauch von Türkis auch nach Indien, wo man ihn in edlem Goldschmuck (zusammen mit Rubinen und Diamanten) und Gebäuden wie dem Taj Mahal bewundern kann. Persischer Türkis wurde oft mit arabischer Schrift graviert und dann mit Gold verziert.</German>
 		<Russian>Бирюза - это непрозрачный минерал от голубого до зеленого, представляющий собой водный фосфат меди и алюминия. Он является редким и ценным в более мелких сортах и ??ценится как драгоценный камень и поделочный камень на протяжении тысячелетий благодаря своему уникальному оттенку. Вещество было известно под разными названиями, но слово бирюза, датируемое 16 веком, происходит от древнефранцузского слова, означающего «турецкий», поскольку минерал был впервые привезен в Европу из Турции, из шахт в историческом Хорасане. Провинция Ирана. Плиний Старший называл этот минерал «каллайс», иранцы называли его «пирузех», а ацтеки знали его как «Теоксихуитль».[PARAGRAPH:2][TAB]На протяжении как минимум 2000 лет Иран, ранее известный как Персия, оставался важным источником бирюзы, которую иранцы назвали сначала «пирузех», что означает «победа», а затем, после арабского вторжения, «фирузех». В иранской архитектуре голубая бирюза использовалась для покрытия куполов иранских дворцов, потому что ее интенсивный синий цвет также был символом небес на земле. Это месторождение, которое от природы имеет синий цвет и становится зеленым при нагревании из-за обезвоживания, ограничено изрезанным минами регионом в Нишапуре, вершине горы Али-Мерсаи на высоту 2012 м.[PARAGRAPH:2][TAB]По крайней мере, со времен Первой династии (3000 г. до н.э.), а, возможно, и до того времени, бирюза использовалась египтянами и добывалась ими на Синайском полуострове, который местные жители Мониту называли «страной бирюзы». В регионе есть шесть шахт, все на юго-западном побережье полуострова, площадью около 650 квадратных километров. Двумя наиболее важными из этих шахт с исторической точки зрения являются Серабит эль-Хадим и Вади Магара, которые считаются одними из старейших из известных шахт. Бывшая шахта расположена примерно в 4 км от древнего храма, посвященного Хатхор. Крупномасштабная добыча бирюзы сегодня невыгодна, но месторождения спорадически добываются бедуинами с использованием самодельного пороха.[PARAGRAPH:2][TAB]Юго-запад Соединенных Штатов - важный источник бирюзы; Аризона, Калифорния, Колорадо, Нью-Мексико и Невада особенно богаты (или были). Ацтеки инкрустировали бирюзой вместе с золотом, кварцем, малахитом, гагатом, нефритом, кораллами и ракушками в провокационные (и предположительно церемониальные) мозаичные объекты, такие как маски (некоторые с человеческим черепом в качестве основы), ножи и щиты. Природные смолы, битум и воск были использованы для приклеивания бирюзы к основному материалу предметов; Обычно это было дерево, но также использовались кость и панцирь. Подобно ацтекам, племена пуэбло, навахо и апачи дорожили бирюзой как амулетом; последнее племя считает, что камень дает лучнику мертвую цель. У этих народов бирюза использовалась в мозаичной инкрустации, в скульптурных работах, из нее делали тороидальные бусины и подвески произвольной формы. Считается, что предки пуэблоанцев (анасази) каньона Чако и его окрестностей значительно преуспели благодаря производству и торговле бирюзовыми предметами, а ювелирные изделия появляются даже в Чичен-Ице.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9273,16 +9288,6 @@
 		<English>Ultrafuel is a highly adaptive fuel product that can be specifically designed for any range of fuel needs (from solid fuel to liquid, to gas), with any designated degree of flamability, flash point, and durability. The pinnacle of genetically enhanced crops and biofuel chemistry, it has made completely obsolete any kind of fossil fuel. It is used in shockwave engines as a catalyst fuel, as well as primary power source for many kind of air and space vehicles.</English>
 		<Italian>L'ultracarburante è un carburante altamente adattivo che può essere progettato specificamente per qualsiasi gamma di esigenze di carburante (dal combustibile solido al liquido, al gas), con qualsiasi grado designato di infiammabilità, punto di infiammabilità e durata. Il picco della combinazione fra colture geneticamente migliorate e chimica dei biocarburanti, ha reso completamente obsoleto qualsiasi tipo di combustibile fossile. È utilizzato nei motori a onda d'urto come combustibile catalizzatore, nonché come fonte di energia primaria per molti tipi di veicoli aerei e spaziali.</Italian>
 		<Russian>Вершина генетически модифицированных сельскохозяйственных культур и химии биотоплива, Супертопливо - это высокоадаптивный топливный продукт, который может быть специально разработан для любого диапазона потребностей в топливе, от твердого топлива до жидкости и газа. Абсолютно точный и чрезвычайно мощный с любой заданной степенью воспламеняемости, температурой вспышки и долговечностью. В ударно-волновом двигателе, наиболее часто используемом после адаптации к потребностям рынка, он образует каталитическое топливо для остальной части двигателя, которая в противном случае работает на жидком металле в высокостабильной среде ядерной реакции с плавлением. Ультратопливо также становится основным источником энергии для всех нужд полета и полностью исключает необходимость в топливе на основе нефти.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSHELP_UNHAPPY</Tag>
-		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
-		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
-		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
-		<Italian>Morale: +%d1_Change[ICON_UNHAPPY]</Italian>
-		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
-		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
-		<Russian>Íåäîâîëüñòâî: +%d1_Change[ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UNMANNED_AIRCRAFTS</Tag>
@@ -9572,6 +9577,19 @@
 		<Russian>Ñòèðàëüíàÿ ìàøèíà - óñòðîéñòâî äëÿ ñòèðêè áåëüÿ, òàêîãî êàê îäåæäà è ïðîñòûíè. Íàçâàíèå â îñíîâíîì ïðèìåíÿåòñÿ òîëüêî ê ìàøèíàì, êîòîðûå èñïîëüçóþò âîäó â îòëè÷èå îò õèì÷èñòêè (êîòîðàÿ èñïîëüçóåò àëüòåðíàòèâíûé ñïîñîá î÷èñòêè æèäêîñòåé, è îñóùåñòâëÿåòñÿ ñïåöèàëèñòîì ïðåäïðèÿòèÿ) èëè óëüòðàçâóêîâûõ âàíí. Ñòèðêà âêëþ÷àåò â ñåáÿ ïîãðóæåíèå, çàìà÷èâàíèå, ñòèðàíèå â âîäå è âûæèìêó, îáû÷íî èñïîëüçóåòñÿ ñî ñòèðàëüíûì ïîðîøêîì èëè îòáåëèâàòåëåì. Ïðîñòåéøàÿ ìàøèíà ìîæåò ïðîñòî îòñòèðûâàòü îäåæäó â âîäå, ïîêà îíà âêëþ÷åíà; àâòîìàòè÷åñêèå ìàøèíû ìîãóò çàïîëíèòü ïóñòóþùóþ ñòèðàëêó, âðàùàòü, è íàãðåâàòü âîäó. Áîëüøèíñòâî ñòèðàëüíûõ ìàøèí ïîòðåáëÿþò çíà÷èòåëüíîå êîëè÷åñòâî âîäû äî êîíöà ñòèðêè, îòæèìàþò áåëüå, íî íå ïîëíîñòüþ âûñóøèâàåò åãî.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
+		<English>Waterproof Cement</English>
+		<French>Ciment imperméable</French>
+		<Italian>Cemento impermeabile</Italian>
+		<Russian>Âîäîñòîéêèé öåìåíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Tag>
+		<English>Waterproof cement is a composite material composed of fine and coarse aggregate bonded together with a fluid cement ("cement paste") that hardens over time, with the addition of crystalline admixtures during batching to lower permeability. The reaction takes place when exposed to water and un-hydrated cement particles to form insoluble needle-shaped crystals, which fill capillary pores and micro-cracks. The mixture can expect to self-seal as constant exposure to water will continuously initiate crystallization to ensure permanent waterproof protection.</English>
+		<Italian>Il cemento impermeabile è un materiale composito fatto da aggregato fine e grossolano unito con un cemento fluido ("pasta di cemento") che si indurisce nel tempo, con l'aggiunta di additivi cristallini durante il dosaggio per ridurre la permeabilità. La reazione ha luogo quando acqua e particelle di cemento non idratate entrano in contatto, formando cristalli insolubili a forma di ago, che riempiono i pori e le micro-crepe. La mistura di fatto si autosigilla, poiché l'esposizione costante all'acqua avvia continuamente la cristallizzazione per garantire una protezione impermeabile permanente.</Italian>
+		<Russian>Водостойкий цемент - это композитный материал, состоящий из мелкого и крупного наполнителя, связанного вместе с жидким цементом («цементная паста»), который со временем затвердевает с добавлением кристаллических примесей во время дозирования для снижения проницаемости. Реакция протекает под воздействием воды и негидратированных частиц цемента с образованием нерастворимых игольчатых кристаллов, заполняющих капиллярные поры и микротрещины. Смесь со временем самоуплотненяется, поскольку постоянное воздействие воды будет непрерывно инициировать кристаллизацию, чтобы обеспечить постоянную водонепроницаемую защиту.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WATER_BOTTLES</Tag>
 		<English>Water Bottles</English>
 		<French>Bouteilles d'eau</French>
@@ -9584,19 +9602,6 @@
 		<English>A water bottle is a container used to hold water for consumption. This allows an individual to transport or carry the bottled water from one place to another. A water bottle is usually made of plastic, glass, or metal, and so most can be recycled.</English>
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 		<Russian>Áóòûëêè - ýòî êîíòåéíåðû èñïîëüçóåìûå äëÿ õðàíåíèÿ ïèòüåâîé âîäû è ïðî÷èõ æèäêîñòåé. Ýòî ïîçâîëÿåò ÷åëîâåêó ñâîáîäíî ïåðåâîçèòü âîäó â áóòûëêàõ èç îäíîãî ìåñòà â äðóãîå. Áóòûëêè îáû÷íî èçãîòàâëèâàþòñÿ èç ïëàñòèêà, ñòåêëà èëè ìåòàëëà, è ïîýòîìó áîëüøèíñòâî èç íèõ ìîãóò áûòü ïåðåðàáîòàíû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
-		<English>Waterproof Cement</English>
-		<French>Ciment imperméable</French>
-		<Italian>Cemento impermeabile</Italian>
-		<Russian>Âîäîñòîéêèé öåìåíò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Tag>
-		<English>Waterproof cement is a composite material composed of fine and coarse aggregate bonded together with a fluid cement ("cement paste") that hardens over time, with the addition of crystalline admixtures during batching to lower permeability. The reaction takes place when exposed to water and un-hydrated cement particles to form insoluble needle-shaped crystals, which fill capillary pores and micro-cracks. The mixture can expect to self-seal as constant exposure to water will continuously initiate crystallization to ensure permanent waterproof protection.</English>
-		<Italian>Il cemento impermeabile è un materiale composito fatto da aggregato fine e grossolano unito con un cemento fluido ("pasta di cemento") che si indurisce nel tempo, con l'aggiunta di additivi cristallini durante il dosaggio per ridurre la permeabilità. La reazione ha luogo quando acqua e particelle di cemento non idratate entrano in contatto, formando cristalli insolubili a forma di ago, che riempiono i pori e le micro-crepe. La mistura di fatto si autosigilla, poiché l'esposizione costante all'acqua avvia continuamente la cristallizzazione per garantire una protezione impermeabile permanente.</Italian>
-		<Russian>Водостойкий цемент - это композитный материал, состоящий из мелкого и крупного наполнителя, связанного вместе с жидким цементом («цементная паста»), который со временем затвердевает с добавлением кристаллических примесей во время дозирования для снижения проницаемости. Реакция протекает под воздействием воды и негидратированных частиц цемента с образованием нерастворимых игольчатых кристаллов, заполняющих капиллярные поры и микротрещины. Смесь со временем самоуплотненяется, поскольку постоянное воздействие воды будет непрерывно инициировать кристаллизацию, чтобы обеспечить постоянную водонепроницаемую защиту.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
@@ -9645,13 +9650,6 @@
 		<Russian>Êèòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Whales[COLOR_REVERT] are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
-		<German>Walfang, die organisierte Jagd auf Wale, um Tran und andere Nebenprodukte zu gewinnen, wurde bereits um 875 nach Christus ausgeübt. Im 16. Jahrhundert war dies der wichtigste Industriezweig der Küstenregionen Spaniens und Frankreichs. Die Walfangindustrie fand weltweite Verbreitung und entwickelte sich zu einem profitablen Geschäft. Manche Meeresregionen, entlang der Wanderrouten der Wale, hatten eine besonders dichte Walpopulation und wurden Ziel großer Walfangflotten. Das Wachstum der Walfangindustrie hielt bis weit in das 20. Jahrhundert an. Angesichts der Tatsache, dass durch diesen Raubbau mittlerweile zahlreiche Walarten vom Aussterben bedroht waren, verhängten viele Länder im Jahre 1969 ein generelles Walfangverbot. In den späten Achtziger Jahren endete der industrielle Walfang weltweit.</German>
-		<Italian>Le [COLOR_HIGHLIGHT_TEXT]balene[COLOR_REVERT] sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
-		<Russian>Китобойный промысел, охота и убийство китов для добычи нефти и других побочных продуктов, практиковались как организованная отрасль еще в 875 году нашей эры. К 16 веку он стал основной промышленностью в прибрежных регионах Испании и Франции. Индустрия распространилась по всему миру и становилась все более прибыльной с точки зрения торговли и ресурсов. В некоторых регионах Мирового океана, вдоль маршрутов миграции животных, была особенно плотная популяция китов, и они стали объектами больших скоплений китобойных судов, и эта отрасль продолжала развиваться и в 20 веке. Истощение некоторых видов китов на грани исчезновения привело к запрету китобойного промысла во многих странах к 1969 году и к прекращению китобойного промысла как отрасли во всем мире в конце 1980-х годов.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL</Tag>
 		<English>Whale Oil</English>
 		<French>Huile de baleine</French>
@@ -9664,6 +9662,13 @@
 		<English>In much later times whale oil was favoured for its cleaner burning flame.</English>
 		<Italian>In tempi recenti l'olio di balena era molto usato per la sua fiamma più pulita.</Italian>
 		<Russian>Â ãîðàçäî áîëåå ïîçäíèå âðåìåíà êèòîâûé æèð ÷àñòåíüêî èñïîëüçîâàëñÿ äëÿ ïîëó÷åíèÿ ÿðêîãî ïëàìåíè â ëàìïàõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Whales[COLOR_REVERT] are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
+		<German>Walfang, die organisierte Jagd auf Wale, um Tran und andere Nebenprodukte zu gewinnen, wurde bereits um 875 nach Christus ausgeübt. Im 16. Jahrhundert war dies der wichtigste Industriezweig der Küstenregionen Spaniens und Frankreichs. Die Walfangindustrie fand weltweite Verbreitung und entwickelte sich zu einem profitablen Geschäft. Manche Meeresregionen, entlang der Wanderrouten der Wale, hatten eine besonders dichte Walpopulation und wurden Ziel großer Walfangflotten. Das Wachstum der Walfangindustrie hielt bis weit in das 20. Jahrhundert an. Angesichts der Tatsache, dass durch diesen Raubbau mittlerweile zahlreiche Walarten vom Aussterben bedroht waren, verhängten viele Länder im Jahre 1969 ein generelles Walfangverbot. In den späten Achtziger Jahren endete der industrielle Walfang weltweit.</German>
+		<Italian>Le [COLOR_HIGHLIGHT_TEXT]balene[COLOR_REVERT] sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
+		<Russian>Китобойный промысел, охота и убийство китов для добычи нефти и других побочных продуктов, практиковались как организованная отрасль еще в 875 году нашей эры. К 16 веку он стал основной промышленностью в прибрежных регионах Испании и Франции. Индустрия распространилась по всему миру и становилась все более прибыльной с точки зрения торговли и ресурсов. В некоторых регионах Мирового океана, вдоль маршрутов миграции животных, была особенно плотная популяция китов, и они стали объектами больших скоплений китобойных судов, и эта отрасль продолжала развиваться и в 20 веке. Истощение некоторых видов китов на грани исчезновения привело к запрету китобойного промысла во многих странах к 1969 году и к прекращению китобойного промысла как отрасли во всем мире в конце 1980-х годов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHEAT</Tag>
@@ -9726,13 +9731,6 @@
 		<Russian>Äåðåâî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Wood[COLOR_REVERT] is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
-		<German>Die harten Gewebeteile von Bäumen und Sträuchern (insbesondere Stamm, Äste und Zweige) werden [COLOR_HIGHLIGHT_TEXT]Holz[COLOR_REVERT] genannt. Gehölze werden von Menschen schon seit der Frühgeschichte genutzt, sie zählen zu den ältesten Nutzpflanzen. Als nachwachsender Rohstoff ist Holz bis heute eines der wichtigsten Pflanzenprodukte. Wegen seiner guten thermischen Eigenschaften wird es seit der Steinzeit als Brennstoff genutzt. Als Baustoff findet man es in diversen Bauwerken in nahezu allen Epochen der Kulturgeschichte. Neben direkten Holzbauwerken wie Palisaden, Pfahlbauten, Forts, Brücken oder Türmen aus Holz wird es auch zur Abstützung (z.B. von Bergwerksschächten) oder als reines Dekorationselement verwendet. Holz ist auch ein guter Werkstoff zur Herstellung von Waffen (Pfeile, Bögen), Rüstungen (Schilde, Harnische) und Werkzeugen (Holzbesteck, Hobel). Schnitzer und Drechsler erschaffen Schmuckstücke, Spielzeug und wahre Kunstobjekte aus dem vielseitigen Material.[NEWLINE]Holz ist zwar ein regenerativer Rohstoff, aber nicht unbegrenzt vorhanden. Bestehende Wälder müssen geschützt werden, da es äußerst schwer bis unmöglich ist, einen komplett abgeholzten Wald wieder aufzuforsten. Nach jahrhundertelangem Raubbau, besonders im Rahmen der Industrialisierung, hat sich in Europa etwa ab dem 19. Jahrhundert eine nachhaltige Form der Holznutzung durchgesetzt.</German>
-		<Italian>Il [COLOR_HIGHLIGHT_TEXT]legno[COLOR_REVERT] è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
-		<Russian>Äðåâåñèíà ÿâëÿåòñÿ òâåðäîé, ôèáðîçíîé òêàíüþ îáíàðóæåííîé âî ìíîãèõ ðàñòåíèÿõ. Îíà èñïîëüçîâàëàñü íà ïðîòÿæåíèè âåêîâ â êà÷åñòâå òîïëèâà è ñòðîèòåëüíîãî ìàòåðèàëà äëÿ íåñêîëüêèõ òèïîâ æèëûõ ïîìåùåíèé â äîìàõ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS</Tag>
 		<English>Woodwind Instruments</English>
 		<French>Instruments à vent</French>
@@ -9746,6 +9744,13 @@
 		<Italian>Uno [COLOR_HIGHLIGHT_TEXT]strumento a fiato[COLOR_REVERT] è uno strumento musicale che produce suoni quando il musicista soffia attraverso un'apertura dello strumento, facendo vibrare l'aria all'interno della cassa di risonanza. La maggior parte di questi strumenti sono fatti in legno, ma possono essere costruiti anche in metallo o in plastica.</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Instrument dęty drewniany[COLOR_REVERT] - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
 		<Russian>Деревянный духовой инструмент - это музыкальный инструмент, который издает звук, когда игрок направляет воздух на острый край или через язычок, вызывая колебания воздуха внутри резонатора (как правило, в виде струи воздуха). Большинство этих инструментов сделаны из дерева, но могут быть изготовлены и из других материалов, таких как металлы или пластмассы.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Wood[COLOR_REVERT] is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
+		<German>Die harten Gewebeteile von Bäumen und Sträuchern (insbesondere Stamm, Äste und Zweige) werden [COLOR_HIGHLIGHT_TEXT]Holz[COLOR_REVERT] genannt. Gehölze werden von Menschen schon seit der Frühgeschichte genutzt, sie zählen zu den ältesten Nutzpflanzen. Als nachwachsender Rohstoff ist Holz bis heute eines der wichtigsten Pflanzenprodukte. Wegen seiner guten thermischen Eigenschaften wird es seit der Steinzeit als Brennstoff genutzt. Als Baustoff findet man es in diversen Bauwerken in nahezu allen Epochen der Kulturgeschichte. Neben direkten Holzbauwerken wie Palisaden, Pfahlbauten, Forts, Brücken oder Türmen aus Holz wird es auch zur Abstützung (z.B. von Bergwerksschächten) oder als reines Dekorationselement verwendet. Holz ist auch ein guter Werkstoff zur Herstellung von Waffen (Pfeile, Bögen), Rüstungen (Schilde, Harnische) und Werkzeugen (Holzbesteck, Hobel). Schnitzer und Drechsler erschaffen Schmuckstücke, Spielzeug und wahre Kunstobjekte aus dem vielseitigen Material.[NEWLINE]Holz ist zwar ein regenerativer Rohstoff, aber nicht unbegrenzt vorhanden. Bestehende Wälder müssen geschützt werden, da es äußerst schwer bis unmöglich ist, einen komplett abgeholzten Wald wieder aufzuforsten. Nach jahrhundertelangem Raubbau, besonders im Rahmen der Industrialisierung, hat sich in Europa etwa ab dem 19. Jahrhundert eine nachhaltige Form der Holznutzung durchgesetzt.</German>
+		<Italian>Il [COLOR_HIGHLIGHT_TEXT]legno[COLOR_REVERT] è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
+		<Russian>Äðåâåñèíà ÿâëÿåòñÿ òâåðäîé, ôèáðîçíîé òêàíüþ îáíàðóæåííîé âî ìíîãèõ ðàñòåíèÿõ. Îíà èñïîëüçîâàëàñü íà ïðîòÿæåíèè âåêîâ â êà÷åñòâå òîïëèâà è ñòðîèòåëüíîãî ìàòåðèàëà äëÿ íåñêîëüêèõ òèïîâ æèëûõ ïîìåùåíèé â äîìàõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL</Tag>

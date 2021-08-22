@@ -640,7 +640,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		if ((PropertyTypes)widgetDataStruct.m_iData1 != NO_PROPERTY)
 		{
 			szBuffer.append(GC.getPropertyInfo((PropertyTypes)widgetDataStruct.m_iData1).getText());
-			CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+			const CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 			if (NULL != pCity)
 			{
 				szBuffer.append(NEWLINE);
@@ -653,8 +653,8 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 	case WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE:
 		if (widgetDataStruct.m_iData1 != NO_IMPROVEMENT)
 		{
-			ImprovementTypes eNewImprovement = (ImprovementTypes)widgetDataStruct.m_iData1;
-			ImprovementTypes eOldImprovement = (ImprovementTypes)GC.getImprovementInfo(eNewImprovement).getImprovementPillage();
+			const ImprovementTypes eNewImprovement = (ImprovementTypes)widgetDataStruct.m_iData1;
+			const ImprovementTypes eOldImprovement = GC.getImprovementInfo(eNewImprovement).getImprovementPillage();
 
 			if (eOldImprovement != NO_IMPROVEMENT)
 			{
@@ -769,13 +769,11 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		break;
 
 	case WIDGET_CITIZEN:
-	case WIDGET_DISABLED_CITIZEN:
 		doEmphasizeSpecialist(widgetDataStruct);
 		break;
 
+	case WIDGET_DISABLED_CITIZEN:
 	case WIDGET_FREE_CITIZEN:
-		break;
-
 	case WIDGET_ANGRY_CITIZEN:
 		break;
 
@@ -1180,9 +1178,7 @@ void CvDLLWidgetData::doLiberateCity()
 
 void CvDLLWidgetData::doRenameCity()
 {
-	CvCity* pHeadSelectedCity;
-
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
 	{
@@ -1562,10 +1558,8 @@ void CvDLLWidgetData::doBuildingFilter(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doGoToCity(CvWidgetDataStruct &widgetDataStruct)
 {
-	CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(widgetDataStruct.m_iData1);
-	CvPlot* pPlot = pCity->plot();
-
-	GC.getGame().selectionListMove(pPlot, false, false, false);
+	const CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(widgetDataStruct.m_iData1);
+	GC.getGame().selectionListMove(pCity->plot(), false, false, false);
 }
 
 // This is not triggered
@@ -1795,16 +1789,14 @@ void CvDLLWidgetData::doPediaDescription(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	ImprovementTypes eImprovement = NO_IMPROVEMENT;
-	BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
+	const BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
 	if (NO_BUILD != eBuild)
 	{
-		eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
-	}
-
-	if (NO_IMPROVEMENT != eImprovement)
-	{
-		Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
+		const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+		if (NO_IMPROVEMENT != eImprovement)
+		{
+			Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
+		}
 	}
 }
 
@@ -1820,7 +1812,7 @@ void CvDLLWidgetData::doGotoTurnEvent(CvWidgetDataStruct &widgetDataStruct)
 	}
 }
 
-void CvDLLWidgetData::doMenu( void )
+void CvDLLWidgetData::doMenu()
 {
 	if (!gDLL->isGameInitializing())
 	{
@@ -2925,10 +2917,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 					}
-					if (!(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq())))
+					if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getTechPrereq()).getType()).GetCString(), GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
 					}
 
 					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH)
@@ -3004,7 +2996,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (featureTechRequired != NO_TECH)
 							{
 								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-								if ((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+								if (GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
 									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
 								{
 									// If the base never obsoletes OR we don't have the tech which obsoletes it
@@ -3044,7 +3036,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
 								if (terrainTechRequired != NO_TECH
 									&& terrainTechRequired != featureTechRequired
-									&& terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+									&& terrainTechRequired != GC.getBuildInfo(eBuild).getTechPrereq()
 									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
 									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
 										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech())))
@@ -3304,30 +3296,17 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (GC.getImprovementInfo(eImprovement).getDefenseModifier() != 0)
 					{
 						szBuffer.append(NEWLINE);
-						// Super Forts begin *bombard* *text*
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", (GC.getImprovementInfo(eImprovement).getDefenseModifier() - pMissionPlot->getDefenseDamage())));
-						// szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", GC.getImprovementInfo(eImprovement).getDefenseModifier())); - Original Code
-						// Super Forts end
 					}
-					/************************************************************************************************/
-					/* Afforess	                  Start		 05/23/10                                               */
-					/*                                                                                              */
-					/*                                                                                              */
-					/************************************************************************************************/
-					/*
-					if (GC.getImprovementInfo(eImprovement).getImprovementUpgrade() != NO_IMPROVEMENT)
-					*/
+
 					if (GET_TEAM(pHeadSelectedUnit->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
-					/************************************************************************************************/
-					/* Afforess	                     END                                                            */
-					/************************************************************************************************/
 					{
-						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
+						const int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP",
-							CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
-							GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
+							CvWString(GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
+							GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
 							iTurns));
 					}
 				}

@@ -168,14 +168,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>410</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>

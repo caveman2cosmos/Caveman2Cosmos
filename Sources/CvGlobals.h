@@ -119,6 +119,7 @@ class CvPropertyInfo;
 class CvOutcomeInfo;
 class CvUnitCombatInfo;
 class CvPromotionLineInfo;
+class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
@@ -179,15 +180,11 @@ public:
 	const bst::array<CvMap*, NUM_MAPS>& getMaps() const { return m_maps; }
 
 	CvViewport* getCurrentViewport() const;
-	int	getViewportSizeX() const;
-	int	getViewportSizeY() const;
-	int getViewportSelectionBorder() const;
 	int getViewportCenteringBorder() const;
 	CvMapExternal& getMapExternal() const;
 
 	bool bugInitCalled() const;
 	bool viewportsEnabled() const;
-	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
 
@@ -208,13 +205,13 @@ public:
 	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
 	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
 	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
-	FAStar& getPathFinder() const 				{ return *m_pathFinder; }
-	FAStar& getInterfacePathFinder() const 		{ return *m_interfacePathFinder; }
-	FAStar& getStepFinder() const 				{ return *m_stepFinder; }
-	FAStar& getRouteFinder() const 				{ return *m_routeFinder; }
-	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
-	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
-	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
+	FAStar& getPathFinder() const;
+	FAStar& getInterfacePathFinder() const;
+	FAStar& getStepFinder() const;
+	FAStar& getRouteFinder() const;
+	FAStar& getBorderFinder() const;
+	FAStar& getAreaFinder() const;
+	FAStar& getPlotGroupFinder() const;
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;
@@ -477,6 +474,9 @@ public:
 	int getNumPromotionLineInfos() const;
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 
+	int getNumMapCategoryInfos() const;
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
+
 	int getNumIdeaClassInfos() const;
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
@@ -535,6 +535,7 @@ public:
 
 	int getNumBuildInfos() const;
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
+	const std::vector<CvBuildInfo*>& getBuildInfos() const { return m_paBuildInfo; }
 
 	int getNumHandicapInfos() const;
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
@@ -583,6 +584,7 @@ public:
 
 	int getNumReligionInfos() const;
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
+	const std::vector<CvReligionInfo*>& getReligionInfos() const { return m_paReligionInfo; }
 
 	int getNumCorporationInfos() const;
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
@@ -814,6 +816,8 @@ protected:
 	CvPortal* m_portal;
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
+	CvDiplomacyScreen* m_diplomacyScreen;
+	CMPDiplomacyScreen* m_mpDiplomacyScreen;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -824,16 +828,13 @@ protected:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	CvDiplomacyScreen* m_diplomacyScreen;
-	CMPDiplomacyScreen* m_mpDiplomacyScreen;
-
-	FAStar* m_pathFinder;
-	FAStar* m_interfacePathFinder;
-	FAStar* m_stepFinder;
-	FAStar* m_routeFinder;
-	FAStar* m_borderFinder;
-	FAStar* m_areaFinder;
-	FAStar* m_plotGroupFinder;
+	bst::array<FAStar*, NUM_MAPS> m_pathFinders;
+	bst::array<FAStar*, NUM_MAPS> m_interfacePathFinders;
+	bst::array<FAStar*, NUM_MAPS> m_stepFinders;
+	bst::array<FAStar*, NUM_MAPS> m_routeFinders;
+	bst::array<FAStar*, NUM_MAPS> m_borderFinders;
+	bst::array<FAStar*, NUM_MAPS> m_areaFinders;
+	bst::array<FAStar*, NUM_MAPS> m_plotGroupFinders;
 
 	int* m_aiPlotDirectionX;	// [NUM_DIRECTION_TYPES];
 	int* m_aiPlotDirectionY;	// [NUM_DIRECTION_TYPES];
@@ -991,6 +992,7 @@ protected:
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
+	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
 	std::vector<CvInfoBase*> m_paDomainInfo;
@@ -1105,14 +1107,10 @@ protected:
 
 	float m_fPLOT_SIZE;
 
-	bool m_bViewportsEnabled;
-	int	m_iViewportFocusBorder;
-	int m_iViewportSizeX;
-	int m_iViewportSizeY;
 	int m_iViewportCenterOnSelectionCenterBorder;
 
 	const char* m_szAlternateProfilSampleName;
-	FProfiler* m_Profiler;		// profiler
+	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
 
 public:

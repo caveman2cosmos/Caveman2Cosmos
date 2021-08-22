@@ -870,6 +870,13 @@
 		<Russian>[ICON_BULLET]Отряды, атакующие город через реку, получают штраф на %D1%% меньше, чем обычно.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBATHELP_FREE_EXPERIENCE</Tag>
+		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_UNITCOMBAT type unit[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type %s2_UNITCOMBAT [COLOR_REVERT]</French>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 za bycie %s2_UNITCOMBAT rodzajem jednostki[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 для всех отрядов %s2_UNITCOMBAT[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ADMINISTRATOR</Tag>
 		<English>Administrator</English>
 		<French>
@@ -8412,13 +8419,6 @@
 		</Spanish>
 		<Polish>Ryba (Rekin)</Polish>
 		<Russian>Àêóëû</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBATHELP_FREE_EXPERIENCE</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_UNITCOMBAT type unit[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type %s2_UNITCOMBAT [COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 za bycie %s2_UNITCOMBAT rodzajem jednostki[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 для всех отрядов %s2_UNITCOMBAT[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_GRAVITY_DRIVE_SHIPS</Tag>

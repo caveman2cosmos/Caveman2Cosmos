@@ -36,12 +36,6 @@ void CyStructsPythonInterface1()
 		.def_readwrite("y", &POINT::y)
 		;
 
-	python::class_<XYCoords>("XYCoords")
-		.def(python::init<int, int>())	// ctor which takes 2 ints
-		.def_readwrite("iX", &XYCoords::iX)
-		.def_readwrite("iY", &XYCoords::iY)
-		;
-
 	python::class_<IDInfo>("IDInfo")
 		.def_readwrite("eOwner", &IDInfo::eOwner)
 		.def_readwrite("iID", &IDInfo::iID)
@@ -101,11 +95,6 @@ void CyStructsPythonInterface1()
 		.def("getDescription", &EventMessage::getDescription)
 		;
 
-	python::class_<FOWVis>("FOWVis")
-		.def_readwrite("uiCount", &FOWVis::uiCount)
-		.def("getOffsets", &FOWVis::getOffsets)  // array of "Offset" points
-		;
-
 	python::class_<PBGameSetupData>("PBGameSetupData")
 		.def_readwrite("iSize", &PBGameSetupData::iSize)
 		.def_readwrite("iClimate", &PBGameSetupData::iClimate)
@@ -124,7 +113,7 @@ void CyStructsPythonInterface1()
 		.def("getOptionAt", &PBGameSetupData::getOptionAt)
 		.def("getMPOptionAt", &PBGameSetupData::getMPOptionAt)
 		;
-		
+
 	python::class_<PBPlayerSetupData>("PBPlayerSetupData")
 		.def_readwrite("iWho", &PBPlayerSetupData::iWho)
 		.def_readwrite("iCiv", &PBPlayerSetupData::iCiv)
@@ -142,7 +131,7 @@ void CyStructsPythonInterface1()
 		.def_readwrite("bClaimed", &PBPlayerAdminData::bClaimed)
 		.def_readwrite("bTurnActive", &PBPlayerAdminData::bTurnActive)
 		;
-	//Added ST
+
 	python::class_<CombatDetails>("CombatDetails")
 		.def_readwrite("iExtraCombatPercent", &CombatDetails::iExtraCombatPercent)
 		.def_readwrite("iAnimalCombatModifierTA", &CombatDetails::iAnimalCombatModifierTA)
@@ -188,8 +177,14 @@ void CyStructsPythonInterface1()
 		.def_readwrite("sUnitName", &CombatDetails::sUnitName)
 		;
 
-	python::class_<std::pair<int, int> >("CyPair")
+	python::class_<std::pair<int, int> >("CyPair", python::no_init)
 		.def_readwrite("id", &std::pair<int, int>::first)
 		.def_readwrite("value", &std::pair<int, int>::second)
+	;
+
+	python::class_<BuildingCommerceChange>("CyBuildingCommerceChange", python::no_init)
+		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readwrite("eCommerce", &BuildingCommerceChange::eCommerce)
+		.def_readwrite("iChange", &BuildingCommerceChange::iChange)
 	;
 }

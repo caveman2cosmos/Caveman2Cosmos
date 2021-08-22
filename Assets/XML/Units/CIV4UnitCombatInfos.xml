@@ -3337,41 +3337,6 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_MAMMAL_URSINE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_URSINE</Description>
-			<iPursuitChange>10</iPursuitChange>
-			<FeatureAttacks>
-				<FeatureAttack>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iFeatureAttack>10</iFeatureAttack>
-				</FeatureAttack>
-			</FeatureAttacks>
-			<FeatureDefenses>
-				<FeatureDefense>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iFeatureDefense>20</iFeatureDefense>
-				</FeatureDefense>
-			</FeatureDefenses>
-			<InvisibleFeatureChanges>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVES</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-			</InvisibleFeatureChanges>
-			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RACCOON</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RACCOON</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
@@ -3436,11 +3401,6 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_TAPIR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_TAPIR</Description>
-			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
-			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RHINO</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5512,216 +5472,144 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_JUDAISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_JUDAISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_JUDAISM</Description>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_judaism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_CHRISTIANITY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_CHRISTIANITY</Description>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_christianity.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_ISLAM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ISLAM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ISLAM</Description>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_islam.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_HINDUISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_HINDUISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_HINDUISM</Description>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_hinduism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_BUDDHISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_BUDDHISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_BUDDHISM</Description>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_buddism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_CONFUCIANISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_CONFUCIANISM</Description>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_confucianism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_TAOISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_TAOISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_TAOISM</Description>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_taosim.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_ZOROASTRIANISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_ZOROASTRIANISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ZOROASTRIANISM</Description>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_zoroastrianism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_NGAIISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_NGAIISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISM</Description>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_ngaiism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_KEMETISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_KEMETISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_KEMETISM</Description>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_kemetism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_HELLENISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_HELLENISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_HELLENISM</Description>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_hellenism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_NAGHUALISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NAGHUALISM</Description>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_naghualism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_MORMON</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MORMON</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MORMON</Description>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_mormon.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_YORUBA</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_YORUBA</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_YORUBA</Description>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_yoruba.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_TENGRIISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_TENGRIISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_TENGRIISM</Description>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_tengrism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_SHINTO</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHINTO</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHINTO</Description>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_shinto.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_VOODOO</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_VOODOO</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_VOODOO</Description>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_voodoo.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Description>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_druidism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_SHAMANISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMANISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISM</Description>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_shamanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_MESOPOTAMISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISM</Description>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_mesopotamism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_SCIENTOLOGY</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SCIENTOLOGY</Description>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_scientology.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_JAINISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_JAINISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_JAINISM</Description>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_jainism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_SIKHISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_SIKHISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SIKHISM</Description>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_sikhism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_CANAANISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANISM</DependencyType>
-			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_CANAANISM</Description>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_canaanism.dds</Button>
@@ -6641,12 +6529,6 @@
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wild.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_SUBDUED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_SUBDUED</Description>
-			<bCannotMergeSplit>1</bCannotMergeSplit>
-			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_IDEA</Type>
@@ -9273,6 +9155,24 @@
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_ZIMBABWE</Description>
 			<CultureType>BONUS_ZIMBABWEAN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_ANDEANISM</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Description>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_andeanism.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_ASATRU</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Description>
+			<ReligionType>RELIGION_ASATRU</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_asatru.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_RELIGION_BAHAI</Type>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Description>
+			<ReligionType>RELIGION_BAHAI</ReligionType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/religion_bahai.dds</Button>
 		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>

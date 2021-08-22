@@ -2092,68 +2092,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
-		<!-- Removed from game because "unfun". Available in two forms in the Bad_Karma modules.
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_NATIVE</Type>
-			<UnitType>UNIT_LOCUST</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>600</iTurns>
-			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
-			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
-			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>800</iTurns>
-			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
-			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
-			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>1200</iTurns>
-			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
-			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
--->
+		<!-- Bigger variants are removed from game because "unfun". Available in three forms in the Bad_Karma modules -->
 		<SpawnInfo>
 			<Type>SPAWN_ANTEATER_NATIVE</Type>
 			<UnitType>UNIT_ANTEATER</UnitType>
@@ -4441,6 +4380,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+				<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>

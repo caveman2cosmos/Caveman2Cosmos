@@ -87,20 +87,20 @@
 		<Russian>Эту территорию заняли [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT]. Нарушение границ приведет к войне. Продолжить?</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER</Tag>
-		<English>A new mysticism</English>
-		<French>Un nouveau mystique</French>
-		<German>Ein neuer Kult</German>
-		<Italian>Un nuovo culto</Italian>
-		<Russian>Новый культ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION</Tag>
 		<English>A wandering man has arrived in your capital, and he's talking about a religion, founded in the recent years in a far away land. The new religion is called %s1, and the wise man is so amazed by this religion, that he has decided to found a new school in your city to teach it to your citizens.</English>
 		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
 		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
 		<Italian>Un uomo errante è arrivato nella tua capitale e sta parlando di una nuova religione, fondata di recente in una terra lontana. La nuova religione si chiama %s1 e l'uomo ne è così ammirato, che ha deciso di fondare una scuola nella tua città per diffonderla tra i tuoi cittadini.</Italian>
 		<Russian>В вашу столицу прибыл странник, который поведал нам о религии, основанной в последние годы в далекой стране. Новая религия называется %s1, и мудрец был ей так впечатлен, что решил основать новую миссию в вашем городе, чтобы проповедовать там новое учение нашему народу.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER</Tag>
+		<English>A new mysticism</English>
+		<French>Un nouveau mystique</French>
+		<German>Ein neuer Kult</German>
+		<Italian>Un nuovo culto</Italian>
+		<Russian>Новый культ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_GOTO_CITY</Tag>
@@ -168,15 +168,6 @@
 		<Polish>Maksymalna Kompatybilność pozwala wczytywać savy z wcześniejszych wersji modu ale jest większy i wolniejszy w zapisze i odczycie.[NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcześniejszych wersji zapisów modu.</Polish>
 		<Spanish>"Máxima compatibilidad" permite que las partidas guardadas puedan ser cargadas en versiones posteriores del mod (en la mayoría de los casos), pero su tamaño será mayor y la carga/guardado será un poco más lenta. Actualmente se encuentra en fase beta.[NEWLINE]"Original de BTS" es el formato de guardado que utiliza Civilization 4. Su tamaño es menor y es algo más rápido al cargar/guardar, pero su uso en versiones distintas de un mod no está soportado (normalmente).</Spanish>
 		<Russian>«Максимальная совместимость» позволяет загружать сохраненные игры в более поздние версии мода (в большинстве случаев), но с ней несколько дольше и медленнее загружаются старые сохранения. В настоящее время эта функция находится в стадии бета-версии.[NEWLINE]"Оригинальный BTS" - это формат сохранения, который ранее использовался в классической Civ4. Он более компактен и загружается немного быстрее стары сохранения, но обычно не поддерживает загрузку игры между новыми версиями мода.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR</Tag>
-		<English>Non-fatal load warning</English>
-		<French>Avertissement Non-fatal</French>
-		<Italian>Avviso di caricamento non fatale</Italian>
-		<Polish>Nie-krytyczne ostrzeżenie wczytywania</Polish>
-		<Spanish>Error no crítico al cargar</Spanish>
-		<Russian>Предупреждение о некритической ошибке в загрузке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_OLD_GAME_SAVE_FORMAT</Tag>

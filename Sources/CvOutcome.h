@@ -42,7 +42,7 @@ public:
 	int getChancePerPop() const;
 	bool isKill() const;
 	void compilePython();
-	
+
 	bool isPossible(const CvUnit& kUnit) const;
 	bool isPossibleSomewhere(const CvUnit& kUnit) const;
 	bool isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
@@ -55,8 +55,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcome* pOutcome);
+	void getCheckSum(uint32_t& iSum) const;
 
-	void getCheckSum(unsigned int& iSum) const;
 protected:
 	OutcomeTypes m_eType;
 	const IntExpr* m_iChance;

@@ -429,11 +429,11 @@ void CvPropertySolver::doTurn()
 	PROFILE_FUNC();
 
 	resetPropertyChanges();
-	
+
 	gatherGlobalManipulators();
 
 	gatherAndSolve();
-	
+
 	m_apGlobalManipulators.clear();
 }
-	
+

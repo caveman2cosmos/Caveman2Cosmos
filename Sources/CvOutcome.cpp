@@ -290,7 +290,7 @@ void CvOutcome::compilePython()
 	{
 		return;
 	}
-	
+
 	PyObject* pDictionary = PyModule_GetDict(pModule);   // borrowed reference
 
 	PyObject* pFunc = PyDict_GetItemString(pDictionary, "isPossible");     // borrowed reference
@@ -466,7 +466,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -576,10 +576,10 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
 		CyPlot cyPlot(const_cast<CvPlot*>(kUnit.plot()));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
-		
+
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonPossibleFunc, pyUnit, pyPlot, NULL);
 		bool bResult = boost::python::extract<bool>(pyResult);
-		
+
 		Py_XDECREF(pyResult);
 		Py_DECREF(pyUnit);
 		Py_DECREF(pyPlot);
@@ -639,7 +639,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -798,7 +798,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -955,7 +955,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -1306,7 +1306,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (!m_szPythonCallback.empty())
 	{
-		Cy::call(PYRandomEventModule, m_szPythonCallback, Cy::Args() << &kUnit << eDefeatedUnitPlayer << eDefeatedUnitType);
+		Cy::call("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << &kUnit << eDefeatedUnitPlayer << eDefeatedUnitType);
 	}
 
 	if (m_pPythonExecFunc)
@@ -1372,7 +1372,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		{
 			iValue += iTempValue;
 		}
-		
+
 		kPlayer.deleteEventTriggered(pTriggerData->getID());
 	}
 
@@ -1510,13 +1510,13 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
 	pXML->GetOptionalChildXmlValByName(m_szPythonModuleName, L"PythonName");
 	pXML->GetOptionalChildXmlValByName(m_szPythonCode, L"Python");
-	
+
 	if (!m_szPythonCode.empty())
 	{
 		preparePython(m_szPythonCode);
 		compilePython();
 	}
-	
+
 	if(pXML->TryMoveToXmlFirstChild(L"Yields"))
 	{
 		if(pXML->TryMoveToXmlFirstChild())
@@ -1715,8 +1715,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
-		m_eUnitType > NO_UNIT && 
+	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) &&
+		m_eUnitType > NO_UNIT &&
 		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
 		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))
 	{
@@ -1854,7 +1854,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 	//iGoldTimes100 += m_aiCommerce[COMMERCE_GOLD] * 100;
 	//iResearchTimes100 += m_aiCommerce[COMMERCE_RESEARCH] * 100;
-	
+
 	//if (iGoldTimes100)
 	if (m_aiCommerce[COMMERCE_GOLD])
 	{
@@ -1963,7 +1963,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum) const
+void CvOutcome::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);

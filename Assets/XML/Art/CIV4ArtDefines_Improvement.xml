@@ -975,5 +975,14 @@
 			<KFM>Art/Structures/Improvements/ForestPreserve/ForestPreserve.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
 		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_MACHU_PICCHU</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
+		</ImprovementArtInfo>
 	</ImprovementArtInfos>
 </Civ4ArtDefines>

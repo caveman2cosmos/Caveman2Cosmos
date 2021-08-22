@@ -661,7 +661,7 @@ public:
 	void updateIrrigated();
 
 	bool isPotentialCityWork() const;
-	bool isPotentialCityWorkForArea(CvArea* pArea) const;
+	bool isPotentialCityWorkForArea(const CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
@@ -1119,17 +1119,11 @@ public:
 	//	Toggle plot in/out of contribution
 	void ToggleInPlotGroupsZobristContributors();
 
-	inline int getZobristContribution() const
-	{
-		return m_zobristContribution;
-	}
+	inline int getZobristContribution() const { return m_zobristContribution; }
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-#endif
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 
@@ -1139,11 +1133,15 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapType(MapTypes eIndex) const;
+	bool isMapCategoryType(MapCategoryTypes eMapCategory) const;
+	const std::vector<MapCategoryTypes>& getMapCategories() const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 	int getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 protected:
 	// AIAndy: Properties

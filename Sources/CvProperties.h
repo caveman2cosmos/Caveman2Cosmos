@@ -41,7 +41,7 @@ class CvProperties
 {
 public:
 	CvProperties();
-	
+
 	explicit CvProperties(CvGame* pGame);
 	explicit CvProperties(CvTeam* pTeam);
 	explicit CvProperties(CvPlayer* pPlayer);
@@ -66,7 +66,7 @@ public:
 	void changeValueByProperty(PropertyTypes eProp, int iChange);
 	void changeChangeByProperty(PropertyTypes eProp, int iChange);
 	void propagateChange(PropertyTypes eProp, int iChange);
-	
+
 	void addProperties(const CvProperties* pProp);
 	void subtractProperties(const CvProperties* pProp);
 
@@ -93,7 +93,7 @@ public:
 
 	// For Python
 	std::wstring getPropertyDisplay(int index) const;
-	
+
 	void read(FDataStreamBase* pStream);
 	void readWrapper(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -127,7 +127,7 @@ private:
 
 	PropertyValueVector m_aiProperty;
 	PropertyValueVector m_aiPropertyChange;
-	
+
 	// Pointer to the object to which the properties belong
 	CvGameObject* m_pGameObject;
 };

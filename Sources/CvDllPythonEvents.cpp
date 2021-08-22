@@ -278,7 +278,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 	eventData.pyArgs << gDLL->shiftKey();
 	eventData.pyArgs << (gDLL->getChtLvl() > 0);
 
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
+#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
 
@@ -312,7 +312,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 		pSample = itr->second;
 	}
 
-	CProfileScope detailedScope(pSample);		
+	CProfileScope detailedScope(pSample);
 #endif
 #endif
 
@@ -637,8 +637,13 @@ void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityBuilt")
-		.arg("pCity", pCity)
-		.arg("pUnit", pUnit);
+		.arg("pCity", pCity);
+
+	if (pUnit)
+		eventData.arg("pUnit", pUnit);
+	else
+		eventData.arg("pUnit", NULL);
+
 	postEvent(eventData, "cityBuilt");
 }
 
@@ -959,9 +964,14 @@ void CvDllPythonEvents::reportGoodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyP
 	eventData
 		.arg("event", "goodyReceived")
 		.arg("ePlayer", ePlayer)
-		.arg("pGoodyPlot", pGoodyPlot)
-		.arg("pGoodyUnit", pGoodyUnit)
-		.arg("eGoodyType", eGoodyType);
+		.arg("pGoodyPlot", pGoodyPlot);
+
+	if (pGoodyUnit)
+		eventData.arg("pGoodyUnit", pGoodyUnit);
+	else
+		eventData.arg("pGoodyUnit", NULL);
+
+	eventData.arg("eGoodyType", eGoodyType);
 	postEvent(eventData, "goodyReceived");
 }
 

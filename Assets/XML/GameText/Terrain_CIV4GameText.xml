@@ -22,6 +22,15 @@
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность никогда не разрушается городом.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
+		<English>Fresh Water</English>
+		<French>Eau douce</French>
+		<German>Süßwasser</German>
+		<Italian>Acqua dolce</Italian>
+		<Spanish>Agua dulce</Spanish>
+		<Russian>Ïðåñíàÿ âîäà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PLOT_MOVEMENT_COST</Tag>
 		<English>[NEWLINE]Movement Cost: %d1[ICON_MOVES]</English>
 		<German>[NEWLINE]Fortbewegungskosten: %d1[ICON_MOVES]</German>
@@ -36,13 +45,29 @@
 		<Russian>[NEWLINE]Очков движения: %s1(%s2)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
-		<English>Fresh Water</English>
-		<French>Eau douce</French>
-		<German>Süßwasser</German>
-		<Italian>Acqua dolce</Italian>
-		<Spanish>Agua dulce</Spanish>
-		<Russian>Ïðåñíàÿ âîäà</Russian>
+		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>
+		<English>[NEWLINE][ICON_BULLET]Improvements take %D1%% time to build</English>
+		<French>[NEWLINE][ICON_BULLET]La construction d'aménagements prend %D1%% tours</French>
+		<German>[NEWLINE][ICON_BULLET]erforderliche Zeit für Ausbau: %D1%%</German>
+		<Italian>[NEWLINE][ICON_BULLET]I miglioramenti impiegheranno %D1%% per essere realizzati</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Construir mejoras cuesta un %D1%% del tiempo</Spanish>
+		<Russian>[NEWLINE][ICON_BULLET]Улучшение будет строиться %D1%% ходов до завершения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_NO_CITIES</Tag>
+		<English>[NEWLINE][ICON_BULLET]Cannot build cities here[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Impossible de construire une ville ici[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]keine Stadtgründung möglich[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Qui è impossibile costruire una città[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Aquí no se pueden construir ciudades[SPACE]</Spanish>
+		<Russian>[NEWLINE][ICON_BULLET]Невозможно строить города на этой клетке[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_TURN_DAMAGE</Tag>
+		<English>[NEWLINE][ICON_BULLET]Damage per Turn: %d1_Amt%%</English>
+		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
+		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
+		<Russian>[NEWLINE][ICON_BULLET]Урона за ход: %d1_Amt%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
@@ -72,15 +97,6 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Karge Vegetation[COLOR_REVERT] bedeutet nur spärlichen Pflanzenwuchs oder eine sehr geringe Pflanzenvielfalt in einem bestimmten Gebiet, meist aufgrund von unfruchtbarem Boden. Diese Unfruchtbarkeit kann durch starke Winde, extremes Klima, natürliche Versalzung oder vulkanische Aktivitäten entstehen. Sie wird aber häufig auch vom Menschen durch Überdüngung, Verseuchung, übermäßige Nutzung der natürlichen Ressourcen und Überwirtschaftung verursacht oder zumindest beschleunigt.</German>
 		<Italian>Il termine sterile descrive un'area dove la crescita delle piante è scarsa, stentata, oppure possiede poca biodiversità. Una scarsa crescita può derivare da forti venti, clima, ammassi salini, suolo tossico o non fertile, oppure un intenso sfruttamento da parte dell'uomo.</Italian>
 		<Russian>Термин «пустошь» или просто бесплодные земли описывает территорию, где рост растений сильно угнетен неблагоприятными условиями, а существуюие виды как правило низкорослые или отличаются малым биоразнообразием. Сильные ветра, климат, засоление почв, неплодородная или токсичной почва или чрезмерная эксплуатация земли человеком - вот ключевые факторы, приводящие к замедленной вегетации растений.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>
-		<English>[NEWLINE][ICON_BULLET]Improvements take %D1%% time to build</English>
-		<French>[NEWLINE][ICON_BULLET]La construction d'aménagements prend %D1%% tours</French>
-		<German>[NEWLINE][ICON_BULLET]erforderliche Zeit für Ausbau: %D1%%</German>
-		<Italian>[NEWLINE][ICON_BULLET]I miglioramenti impiegheranno %D1%% per essere realizzati</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Construir mejoras cuesta un %D1%% del tiempo</Spanish>
-		<Russian>[NEWLINE][ICON_BULLET]Улучшение будет строиться %D1%% ходов до завершения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST</Tag>
@@ -727,15 +743,6 @@
 		<Russian>У этого ландшафта есть все категории карт. Полезен для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAINHELP_NO_CITIES</Tag>
-		<English>[NEWLINE][ICON_BULLET]Cannot build cities here[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Impossible de construire une ville ici[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]keine Stadtgründung möglich[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Qui è impossibile costruire una città[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Aquí no se pueden construir ciudades[SPACE]</Spanish>
-		<Russian>[NEWLINE][ICON_BULLET]Невозможно строить города на этой клетке[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN</Tag>
 		<English>Ocean</English>
 		<French>
@@ -1093,12 +1100,5 @@
 		<French>En géographie physique, la toundra est un type de biome où la croissance des arbres est entravée par les basses températures et les courtes saisons de croissance. Le terme toundra vient du russe (tûndra) du mot Kildin Sami tundâr "uplands", "montagne sans arbres". Il existe trois types de toundra: la toundra arctique, la toundra alpine et la toundra antarctique. Dans la toundra, la végétation est composée d'arbustes nains, de carex et de graminées, de mousses et de lichens. Des arbres épars poussent dans certaines régions de la toundra. Le mot «toundra» se réfère généralement uniquement aux zones où le sous-sol est du pergélisol ou du sol gelé en permanence. La toundra du pergélisol comprend de vastes régions du nord de la Russie et du Canada. La toundra polaire abrite plusieurs peuples qui sont principalement des éleveurs de rennes nomades, tels que les Nganasan et les Nenets dans la zone de pergélisol (et les Samis à Sápmi).</French>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Tundra[COLOR_REVERT] wird eine Kältesteppe zumeist auf Permafrostböden bezeichnet. Es handelt sich um offene, baumfreie Landschaften, in denen hauptsächlich Flechten, Moose, Gräser und sommergrünen Zwergsträucher gedeihen. Tundren entstehen nicht nur in den Polregionen, auch im Hochgebirge ist dieser Vegetationstyp zu finden.</German>
 		<Russian>В физической географии тундра - это тип биома, где росту деревьев препятствуют низкие температуры и короткие вегетационные периоды. Термин тундра происходит от русского языка (тундра) от кильдинского саамского слова tundar «нагорье», «безлесный горный тракт». Существует три типа тундры: арктическая тундра, альпийская тундра и антарктическая тундра. В тундре растительность состоит из карликовых кустарников, осок и трав, мхов и лишайников. Отдельные деревья растут в некоторых районах тундры. Слово «тундра» обычно относится только к тем участкам, где недра вечной мерзлоты или постоянно мерзлая почва. Тундра вечной мерзлоты охватывает обширные территории севера России и Канады. Полярная тундра является домом для нескольких народов, в основном кочевых оленеводов, таких как нганасан и ненцы в зоне вечной мерзлоты.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAINHELP_TURN_DAMAGE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Damage per Turn: %d1_Amt%%</English>
-		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
-		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
-		<Russian>[NEWLINE][ICON_BULLET]Урона за ход: %d1_Amt%%</Russian>
 	</TEXT>
 </Civ4GameText>

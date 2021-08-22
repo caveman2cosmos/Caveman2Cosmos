@@ -10,7 +10,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import Popup
 GC = CyGlobalContext()
 
 iChange = 1
@@ -331,7 +330,7 @@ class WBCityEditScreen:
 				iRow += 1
 
 		for i in xrange(GC.getNumProcessInfos()):
-			if pCity.canMaintain(i, True):
+			if pCity.canMaintain(i):
 				if iRow > iMaxRow:
 					screen.appendTableRow("WBCityProduction")
 					iMaxRow = iRow
@@ -516,12 +515,11 @@ class WBCityEditScreen:
 			self.placeProduction()
 
 		elif inputClass.getFunctionName().find("CityEditScriptData") > -1:
-			popup = Popup.PyPopup(2222, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(2222, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pCity.getOwner(), pCity.getID()))
-			popup.createEditBox(pCity.getScriptData())
-			popup.launch()
-			return
+			popup.createEditBox(pCity.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "Commands":
 			iIndex = screen.getPullDownData("Commands", screen.getSelectedPullDownID("Commands"))

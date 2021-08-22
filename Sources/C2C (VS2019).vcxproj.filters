@@ -306,6 +306,9 @@
     <ClCompile Include="CyArtFileMgrInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CyBoolExprInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CyCity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

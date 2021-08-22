@@ -87,6 +87,28 @@ CvUnitAI::~CvUnitAI()
 }
 
 
+CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
+{
+	m_iBirthmark = other.m_iBirthmark;
+	m_eUnitAIType = other.m_eUnitAIType;
+	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
+	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
+	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
+	m_contractualState = other.m_contractualState;
+	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
+	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
+	m_bHasAttacked = other.m_bHasAttacked;
+	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
+	m_iGarrisonCity = other.m_iGarrisonCity;
+	m_iGenericValue = other.m_iGenericValue;
+	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
+
+	//static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other)
+
+	return *this;
+}
+
+
 void CvUnitAI::AI_init(UnitAITypes eUnitAI, int iBirthmark)
 {
 	AI_reset(eUnitAI);
@@ -257,7 +279,7 @@ bool CvUnitAI::AI_update()
 						break;
 					}
 				case NO_DOMAIN:
-				case DOMAIN_IMMOBILE: 
+				case DOMAIN_IMMOBILE:
 				case NUM_DOMAIN_TYPES:
 				default:
 					{
@@ -797,7 +819,7 @@ bool CvUnitAI::AI_promote()
 	PROFILE_FUNC();
 
 	if (!isPromotionReady()) return false;
-	
+
 	int iBestValue = 0;
 	PromotionTypes eBestPromotion = NO_PROMOTION;
 
@@ -1745,8 +1767,8 @@ void CvUnitAI::AI_settleMove()
 	// Don't found new cities if that would cause more unhappiness when we already have happiness issues
 	bool bInhibitFounding = false;
 
-	
-	
+
+
 	if (GET_PLAYER(getOwner()).getCityLimit() > 0)
 	{
 		if (GET_PLAYER(getOwner()).getCityOverLimitUnhappy() > 0)
@@ -2055,7 +2077,7 @@ void CvUnitAI::AI_workerMove()
 			return;
 		}
 	}
-		
+
 	if (!isHuman() && !isNPC())
 	{
 		if (AI_workerReleaseDefenderIfNotNeeded())
@@ -2118,7 +2140,7 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// Afforess - worker financial trouble check
-	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated 
+	if (!isHuman() && AI_getUnitAIType() == UNITAI_WORKER && GET_PLAYER(getOwner()).AI_isFinancialTrouble()) // not evaluated
 	{
 		const int iWorkers = GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER);
 
@@ -13665,7 +13687,7 @@ bool CvUnitAI::AI_spreadReligion()
 	const ReligionTypes eStateReligion = owner.getStateReligion();
 
 	// More often than not, it is the state religion the AI spreads.
-	ReligionTypes eReligion = 
+	ReligionTypes eReligion =
 	(
 		(eStateReligion != NO_RELIGION && m_pUnitInfo->getReligionSpreads(eStateReligion) > 0)
 		?
@@ -23585,7 +23607,7 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 				}
 			}
 			int iClosestCityPathTurns;
-			const CvPlot* pThisTurnPlotForAirlift = 
+			const CvPlot* pThisTurnPlotForAirlift =
 			(
 				generatePath(pClosestCity->plot(), 0, true, &iClosestCityPathTurns)
 				?
@@ -27972,7 +27994,7 @@ bool CvUnitAI::AI_StrategicForts()
 				if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
 				{
 					//	Koshling - adjusted a bit to take advantage of super forts choke calculations
-					const int iValue = 
+					const int iValue =
 					(
 						1000
 						*
@@ -30127,34 +30149,32 @@ bool CvUnitAI::AI_foundReligion()
 {
 	PROFILE_FUNC();
 
-	ReligionTypes eBestReligion;
 	ReligionTypes eReligion;
 	int iI;
 	int iJ;
 	int value;
 	int bestValue;
-	int iProphetCount;
 
-	eBestReligion = NO_RELIGION;
-	iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
+	ReligionTypes eBestReligion = NO_RELIGION;
+	int iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
 
-	ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
+	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
 	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
-		if (canSpread(plot(), eFavorite))
+		if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
 		{
-		//if favorite religion of current player was not founded:
-			if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
+			if (canSpread(plot(), eFavorite))
 			{
+		//if favorite religion of current player was not founded:
 //	push mission 'found religion' with parameter 'favorite religion' and return true
 				getGroup()->pushMission(MISSION_SPREAD, eFavorite);
 				return true;
 			}
 		}
 //if favorite religion was not founded and CAN'T yet be, hold on to one prophet.			   GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion()(GC.getTechInfo((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechCityTrade())).getEra()
-		if ((eFavorite != NO_RELIGION) &&
-			(!GC.getGame().isReligionFounded(eFavorite)) &&
-			(((int)(GC.getTechInfo((TechTypes)GC.getReligionInfo((ReligionTypes)eFavorite).getTechPrereq()).getEra()) - (int)(GET_PLAYER(getOwner()).getCurrentEra()) < 2)) &&
+		if (eFavorite != NO_RELIGION &&
+			!GC.getGame().isReligionFounded(eFavorite) &&
+			(((int)(GC.getTechInfo(GC.getReligionInfo(eFavorite).getTechPrereq()).getEra()) - (int)(GET_PLAYER(getOwner()).getCurrentEra()) < 2)) &&
 			(iProphetCount == 1))
 		{
 			getGroup()->pushMission(MISSION_SKIP);

@@ -1560,7 +1560,7 @@
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Grape Gathering Camp -> Grape Picker -->
@@ -1845,7 +1845,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_DERIVATIVES</PrereqTech>
 					<TechYields>
@@ -8268,7 +8268,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -8409,7 +8409,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
@@ -8542,7 +8542,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
 		<!-- Cottage -> Hamlet Era -->
@@ -9905,6 +9905,34 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
+		</ImprovementInfo>
+		<!-- Machu Picchu  | Independent -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_MACHU_PICCHU</CreatingBuild>
+			</CreatingBuilds>
+			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MACHU_PICCHU</ArtDefineTag>
+			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
+			<bPeakMakesValid>1</bPeakMakesValid>
+			<bPeakImprovement>1</bPeakImprovement>
+			<YieldChanges>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>6</iYieldChange>
+			</YieldChanges>
+			<bPermanent>1</bPermanent>
+			<bActsAsCity>0</bActsAsCity>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iAirBombDefense>-1</iAirBombDefense>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 		</ImprovementInfo>
 		<!-- PREHISTORIC CAMPS -->
 		<!-- Jungle Camp | End - Information Lifestyle -->
@@ -12236,6 +12264,30 @@
 			</FeatureMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
+			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<bActsAsCity>0</bActsAsCity>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<FeatureMakesValids>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+			</FeatureMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
 		<!-- Beacons -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_CORAL</Type>
@@ -12272,6 +12324,26 @@
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_REEF</FeatureType>
+					<bMakesValid>1</bMakesValid>
+				</FeatureMakesValid>
+			</FeatureMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Type>
+			<CreatingBuilds>
+				<CreatingBuild>BUILD_BEACON_GREAT_BARRIER_REEF</CreatingBuild>
+			</CreatingBuilds>
+			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<bActsAsCity>0</bActsAsCity>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<FeatureMakesValids>
+				<FeatureMakesValid>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -12651,7 +12723,7 @@
 						<iYield>1</iYield>
 						<iYield>1</iYield>
 					</TechYields>
-				</TechYieldChange>				
+				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>

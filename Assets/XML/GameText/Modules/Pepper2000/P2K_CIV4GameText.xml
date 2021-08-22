@@ -183,6 +183,15 @@
 		<Russian>Ñòðîèòü ãàçîêîìïðåññîð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_ARCOLOGY</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Lunar Arcology[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Arcologie Lunaire[\LINK]</French>
@@ -217,6 +226,11 @@
 		<English>Build [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Outpost[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_OUTPOST]Avant-Poste Lunaire[\LINK]</French>
 		<Russian>Ëóííûé àâàíïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
+		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARTIAN_FARM</Tag>
@@ -287,10 +301,21 @@
 		<English>Create [LINK=FEATURE_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
+		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
 		<English>Build [LINK=IMPROVEMENT_SATELLITE_STATION]Satellite Station[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SATELLITE_STATION]Station Satellite[\LINK]</French>
 		<Russian>Ñòðîèòü îðá. ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
+		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
@@ -313,12 +338,6 @@
 		<English>Build [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Space Solar Array[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Réseau solaire spatial[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. áàòàðåþ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
-		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
-		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV1</Tag>
@@ -759,6 +778,19 @@
 		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò öåííûå ðåñóðñû èç âíåøíåé àòìîñôåðû ãàçîâîãî ãèãàíòà.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
+		<English>Listening Node</English>
+		<French>Station d'écoute</French>
+		<Italian>Nodo d'ascolto</Italian>
+		<Spanish>
+			<Text>Nodo de escucha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja Nasłuchowa</Polish>
+		<Russian>Óçåë ñâÿçè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Tag>
 		<English>Lunar Arcology</English>
 		<French>Arcologie Lunaire</French>
@@ -1137,6 +1169,18 @@
 		<English>Capture an asteroid</English>
 		<French>Capturer un astéroïde</French>
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
+		<English>Become Bulldozer</English>
+		<French>Convertir en Bulldozer</French>
+		<Russian>Ñáîðêà Êîìáàéíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
+		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
+		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
+		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -1580,18 +1624,6 @@
 		<English>Analyze Mission Data</English>
 		<French>Analyser les Données de Mission</French>
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Become Bulldozer</English>
-		<French>Convertir en Bulldozer</French>
-		<Russian>Ñáîðêà Êîìáàéíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
-		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
-		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Tag>
@@ -2092,6 +2124,11 @@
 		<Russian>Ãèïåðëàéí</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
+		<English>Lunar Path</English>
+		<Russian>Лунная дорога</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE</Tag>
 		<English>Megawormhole</English>
 		<French>Méga-Trou de Ver</French>
@@ -2102,6 +2139,11 @@
 		<English>Orbital Trajectory</English>
 		<French>Trajectoire Orbitale</French>
 		<Russian>Îðáèò. òðàåêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
+		<English>Planetary Maglev</English>
+		<Russian>Планетарный маглев</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Tag>
@@ -2273,7 +2315,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. It also can be transformed to Lunar bulldozer to build lunar mines and route.</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2402,16 +2444,8 @@
 		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT][NEWLINE][ICON_BULLET]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ñîáðàíî íà Çåìëå, îíî ïîëåçíî òîëüêî çà ïðåäåëàìè ðîäíîé ïëàíåòû.[NEWLINE]Îáíîâëåíèå äî êîñìè÷åñêîãî ïîñåëåíöà íà óðîâíå êîñìè÷åñêîé ñòàíöèè. 3</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
-		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
-		<French>Cette fusée lourde développée commercialement est une mise à niveau de vos anciennes navettes spatiales.</French>
-		<Russian>Ýòà òÿæåëàÿ, êîììåð÷åñêè ðàçðàáîòàííàÿ ðàêåòà ÿâëÿåòñÿ îáíîâëåíèåì âàøèõ ñòàðûõ êîñìè÷åñêèõ êîðàáëåé.</Russian>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2635,7 +2669,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2671,6 +2705,21 @@
 		<English>A reward from exploring the Moon</English>
 		<French>Une récompense de l'exploration de la Lune</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
+		<English>Lunar Rover</English>
+		<French>Véhicule Lunaire</French>
+		<Italian>Rover lunare</Italian>
+		<Polish>Łazik Księżycowy</Polish>
+		<Russian>Ëóíîõîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
+		<English>Lunar Exploration Unit.</English>
+		<Italian>Unità da esplorazione lunare.</Italian>
+		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_WORKER</Tag>
@@ -2953,7 +3002,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
 	</TEXT>
@@ -3199,65 +3248,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains.[NEWLINE]Interstellar and Stellar colonies are completely different.</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
-		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
-		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
-		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
-		<English>Lunar Path</English>
-		<Russian>Лунная дорога</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
-		<English>Planetary Maglev</English>
-		<Russian>Планетарный маглев</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
-		<English>Lunar Rover</English>
-		<French>Véhicule Lunaire</French>
-		<Italian>Rover lunare</Italian>
-		<Polish>Łazik Księżycowy</Polish>
-		<Russian>Ëóíîõîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
-		<English>Lunar Exploration Unit.</English>
-		<Italian>Unità da esplorazione lunare.</Italian>
-		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
-		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
-		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
-		<English>Listening Node</English>
-		<French>Station d'écoute</French>
-		<Italian>Nodo d'ascolto</Italian>
-		<Spanish>
-			<Text>Nodo de escucha</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Boja Nasłuchowa</Polish>
-		<Russian>Óçåë ñâÿçè</Russian>
 	</TEXT>
 </Civ4GameText>

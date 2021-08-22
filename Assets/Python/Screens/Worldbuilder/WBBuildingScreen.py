@@ -197,7 +197,7 @@ class WBBuildingScreen:
 		iHeight = iMaxRows * 24 + 2
 		screen.addTableControlGFC("WBWonders", nColumns, screen.getXResolution()/4, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
 		for i in xrange(nColumns):
-			screen.setTableColumnHeader( "WBWonders", i, "", iWidth/nColumns)		
+			screen.setTableColumnHeader( "WBWonders", i, "", iWidth/nColumns)
 
 		nRows = (len(lWonders) + nColumns - 1) / nColumns
 		for i in xrange(nRows):

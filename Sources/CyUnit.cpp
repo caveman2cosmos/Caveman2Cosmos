@@ -8,11 +8,6 @@
 // Python wrapper class for CvUnit
 //
 
-CyUnit::CyUnit() : m_pUnit(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyUnit::CyUnit(CvUnit* pUnit) : m_pUnit(pUnit)
 {
 	FAssert(m_pUnit != NULL);
@@ -45,7 +40,7 @@ void CyUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 
 bool CyUnit::canMoveInto(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const
 {
-	return m_pUnit->canMoveInto(kPlot.getPlot(), 
+	return m_pUnit->canMoveInto(kPlot.getPlot(),
 		(bAttack ? MoveCheck::Attack : MoveCheck::None) |
 		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
 		(bIgnoreLoad ? MoveCheck::IgnoreLoad : MoveCheck::None)

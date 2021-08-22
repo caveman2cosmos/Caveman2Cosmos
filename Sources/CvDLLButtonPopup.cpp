@@ -720,9 +720,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		break;
 
-	case BUTTONPOPUP_SAVE_INFO_LOST:
-		break;
-
 	case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			if (1 == pPopupReturn->getButtonClicked())
@@ -908,7 +905,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 				break;
 			}
 
-			if ( GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getViewportSelectionBorder()) )
+			if (GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 			{
 				gDLL->getInterfaceIFace()->lookAtCityOffset(pCity->getID());
 			}
@@ -922,7 +919,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 	case BUTTONPOPUP_RAZECITY:
 	case BUTTONPOPUP_DISBANDCITY:
 		{
-			CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
+			const CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
 
 			if (NULL == pCity || pCity->getOwner() != ePlayer)
 			{
@@ -930,7 +927,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 				break;
 			}
 
-			if ( GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getViewportSelectionBorder()) )
+			if (GC.getCurrentViewport()->isInViewport(pCity->getX(), pCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 			{
 				gDLL->getInterfaceIFace()->lookAtCityOffset(pCity->getID());
 			}
@@ -1124,10 +1121,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		case BUTTONPOPUP_GET_SAVE_FORMAT:
 		{
 			return launchGetSaveFormatPopup(pPopup, info);
-		}
-		case BUTTONPOPUP_SAVE_INFO_LOST:
-		{
-			return launchGetSaveInfoLostPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
@@ -2902,18 +2895,6 @@ bool CvDLLButtonPopup::launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &in
 	return true;
 }
 
-bool CvDLLButtonPopup::launchGetSaveInfoLostPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_NON_FATAL_FORMAT_LOAD_ERROR");
-
-	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szBuffer);
-
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, info.getText());
-
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup);
-	return true;
-}
-
 bool CvDLLButtonPopup::launchModifierRecalculationPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_MODIFIER_RECALCULATION");
@@ -3396,7 +3377,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
 		//if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getGold())
 		{
-			if ((ImprovementTypes)kImprovement.getImprovementUpgrade() == eImprovement)
+			if (kImprovement.getImprovementUpgrade() == eImprovement)
 			{
 				if (pPlot->canHaveImprovement(eImprovement, eTeam, false, true))
 				{

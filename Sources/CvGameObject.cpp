@@ -404,9 +404,7 @@ CvGameObjectPlayer* CvGameObjectUnit::getOwner() const
 
 CvGameObjectPlayer* CvGameObjectPlot::getOwner() const
 {
-	if (m_pPlot->getOwner() != NO_PLAYER)
-		return GET_PLAYER(m_pPlot->getOwner()).getGameObject();
-	return NULL;
+	return m_pPlot->getOwner() != NO_PLAYER ? GET_PLAYER(m_pPlot->getOwner()).getGameObject() : NULL;
 }
 
 CvGameObjectTeam* CvGameObjectGame::getTeam() const
@@ -436,9 +434,7 @@ CvGameObjectTeam* CvGameObjectUnit::getTeam() const
 
 CvGameObjectTeam* CvGameObjectPlot::getTeam() const
 {
-	if (m_pPlot->getTeam() != NO_TEAM)
-		return GET_TEAM(m_pPlot->getTeam()).getGameObject();
-	return NULL;
+	return m_pPlot->getTeam() != NO_TEAM ? GET_TEAM(m_pPlot->getTeam()).getGameObject() : NULL;
 }
 
 CvGameObjectPlot* CvGameObjectGame::getPlot() const
@@ -514,10 +510,7 @@ void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRela
 	{
 		foreachRelated(eType, eRelation, bind(callFuncIf, _1, pExpr, func), iData);
 	}
-	else
-	{
-		foreachRelated(eType, eRelation, func, iData);
-	}
+	else foreachRelated(eType, eRelation, func, iData);
 }
 
 //helper function to add game object to vector
@@ -557,10 +550,7 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(const
 	{
 		func(this);
 	}
-	else
-	{
-		foreach(eType, func);
-	}
+	else foreach(eType, func);
 }
 
 void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
@@ -601,24 +591,18 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 			}
 		}
 	}
-	else
-	{
-		CvGameObject::foreachRelated(eType, eRelation, func, iData);
-	}
+	else CvGameObject::foreachRelated(eType, eRelation, func, iData);
 }
 
 void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(const CvGameObject*)> func, int iData) const
 {
-	if (eRelation == RELATION_WORKING)
-	{
-		if (eType == GAMEOBJECT_CITY)
-		{
-			func(m_pPlot->getWorkingCity()->getGameObject());
-		}
-	}
-	else
+	if (eRelation != RELATION_WORKING)
 	{
 		CvGameObject::foreachRelated(eType, eRelation, func, iData);
+	}
+	else if (eType == GAMEOBJECT_CITY)
+	{
+		func(m_pPlot->getWorkingCity()->getGameObject());
 	}
 }
 
@@ -738,61 +722,6 @@ void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 
 void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
-}
-
-void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
-{
-	//CvString szBuffer;
-	//TB Combat Mods (disease special manifestation and removal system)
-	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
-
-	//if (eProperty != eDiseaseType)
-	//{
-	//
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (!GC.getPropertyInfo(eProperty).isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
-#endif
-	{
-		//TB Combat Mods end
-		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
-		{
-			foreach_(const PropertyBuilding& kBuilding, GC.getPropertyInfo(eProperty).getPropertyBuildings())
-			{
-				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
-				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
-				if (!bInRange)
-				{
-					if (bHasBuilding)
-					{//TBWORKINGHERE
-						//szBuffer.format("Removing Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-						//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-						m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
-					}
-				}
-				else
-				{
-					if (m_pCity->canConstruct(kBuilding.eBuilding, false, false, true, true))
-					{
-						if (!bHasBuilding)
-						{
-							//szBuffer.format("Adding Building, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-							//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-							m_pCity->setNumRealBuilding(kBuilding.eBuilding, 1);
-						}
-					}
-					else
-					{
-						if (bHasBuilding)
-						{
-							//szBuffer.format("Removing Building - no longer qualified, Player %s, Building %s, iNewValue %i.", GET_PLAYER(m_pCity->getOwner()).getNameKey(), GC.getBuildingInfo(kBuilding.eBuilding).getTextKeyWide(), iNewValue);
-							//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-							m_pCity->setNumRealBuilding(kBuilding.eBuilding, 0);
-						}
-					}
-				}
-			}
-		}
-	}
 }
 
 void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
@@ -975,7 +904,7 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 
 int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 {
-	int iCount = 0; 
+	int iCount = 0;
 
 	switch (eAttribute)
 	{
@@ -1023,7 +952,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the entire game, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -1123,7 +1052,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the entire team, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -1231,7 +1160,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 		case GOM_PROMOTION:
 			// This is not stored in a readily accessible way for the player, so return false
 			return false;
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if this player has the trait
@@ -1336,7 +1265,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pCity->isFreePromotion(ePromotion);
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
@@ -1467,7 +1396,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pUnit->isHasPromotion(ePromotion);
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
@@ -1589,7 +1518,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_UNIT, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-	
+
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait

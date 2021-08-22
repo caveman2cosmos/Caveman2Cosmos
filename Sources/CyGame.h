@@ -266,14 +266,15 @@ public:
 	std::wstring getReplayMessageText(int i) const;
 	uint getNumReplayMessages() const;
 	CyReplayInfo* getReplayInfo() const;
+	void saveReplay(PlayerTypes ePlayer);
+	void addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std::wstring pszText, int iPlotX, int iPlotY, ColorTypes eColor);
+
 	bool hasSkippedSaveChecksum() const;
 
-	void saveReplay(int iPlayer);
-
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive);
-	void changeHumanPlayer(PlayerTypes eOldHuman , PlayerTypes eNewHuman);
-	void addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std::wstring pszText, int iPlotX, int iPlotY, ColorTypes eColor);
-	void log(TCHAR* str);
+	void changeHumanPlayer(PlayerTypes eOldHuman, PlayerTypes eNewHuman);
+
+	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
 	int getCultureThreshold(CultureLevelTypes eLevel) const;

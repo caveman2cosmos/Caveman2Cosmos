@@ -150,20 +150,20 @@
 		<Russian>Â ãîðîäå áûëî %d1 èíæåíåðîâ. Âû êàçíèëè %d1 è %d1 ïîïàëè â ïëåí. (Ïëåííèê - èíæåíåð).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_CITY_HAD_MERCHANTS</Tag>
-		<English>The city had %d1 Merchants. You killed %d1 and %d1 were captured. (Captive - Merchant).</English>
-		<French>La Ville a %d1 Ingénieurs. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Ingénieur).</French>
-		<Italian>La città aveva %d1 ingegneri; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Ingegnere).</Italian>
-		<Polish>Miasto miało %d1 Inżynierów. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Inżynier).</Polish>
-		<Russian>Â ãîðîäå áûëî %d1 èíæåíåðîâ. Âû êàçíèëè %d1 è %d1 ïîïàëè â ïëåí. (Ïëåííèê - èíæåíåð).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_GENERALS</Tag>
 		<English>The city had %d1 Generals. You killed %d1. %d1 now lead rebels or partisans and %d1 were captured. (Captive - General).</English>
 		<French>La Ville a %d1 Généraux. Vous en tuez %d1. %d1 conduisent les rebelles et %d1 sont faits prisonniers. (Prisonnier - Général).</French>
 		<Italian>La città aveva %d1 generali: ne hai uccisi %d1. %d1 ora guidano ribelli e partigiani, mentre %d1 sono stati catturati. (Prigioniero - Generale).</Italian>
 		<Polish>Obroną miasta dowodziło %d1 Generałów. Zabiłeś %d1. %d1 przeszło do podziemia i dowodzi teraz partyzantami a %d1 zostało pojmanych. (Jeniec - Generał).</Polish>
 		<Russian>Â ãîðîäå áûëî %d1 ãåíåðàëîâ. Âû êàçíèëè %d1. %d1 òåïåðü âîçãëàâèëè ïîâñòàíöåâ, à %d1 ïîïàëè â ïëåí. (Ïëåííèê - ãåíåðàë).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_CITY_HAD_MERCHANTS</Tag>
+		<English>The city had %d1 Merchants. You killed %d1 and %d1 were captured. (Captive - Merchant).</English>
+		<French>La Ville a %d1 Ingénieurs. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Ingénieur).</French>
+		<Italian>La città aveva %d1 ingegneri; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Ingegnere).</Italian>
+		<Polish>Miasto miało %d1 Inżynierów. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Inżynier).</Polish>
+		<Russian>Â ãîðîäå áûëî %d1 èíæåíåðîâ. Âû êàçíèëè %d1 è %d1 ïîïàëè â ïëåí. (Ïëåííèê - èíæåíåð).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_PRIESTS</Tag>

@@ -7,7 +7,7 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import RevInstances
-import ParallelMaps
+#import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -1069,11 +1069,14 @@ class CvMainInterface:
 
 				x -= iSize + 2
 				ID = "CitizenDisabledButton" + szInc
-				screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
+				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
+				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidDisabledCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, False)
 				screen.hide(ID)
 				ID = "CitizenButton" + szInc
-				screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
+				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
+				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
+				screen.enable(ID, True)
 				screen.hide(ID)
 				n += 1
 		self.yTopCitizen = y
@@ -1199,7 +1202,7 @@ class CvMainInterface:
 				if dataTT[3]:
 					szTxt = CyGameTextMgr().getSpecificUnitHelp(dataTT[4], False, False)
 					self.updateTooltip(screen, szTxt, self.xRes / 4, self.yPlotListTT)
-				elif not ParallelMaps.bIsSwitchingMap:
+				elif not GC.getMap().isMidSwitch():
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT = False
@@ -3122,16 +3125,9 @@ class CvMainInterface:
 			#Corporations
 			for i in xrange(self.iNumCorporationInfos):
 				if CyCity.isHasCorporation(i):
-					n = 0
-					while True:
-						iPrereq = GC.getCorporationInfo(i).getPrereqBonuses(n)
-						if iPrereq > -1:
-							if iPrereq == iBonus:
-								szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
-								break
-						else:
-							break
-						n += 1
+					for eBonus in GC.getCorporationInfo(i).getPrereqBonuses():
+						if eBonus == iBonus:
+							szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
 			screen.appendTableRow(ID)
 			screen.setTableText(ID, 0, iRow, szLeftBuffer, "", iWidget, iBonus, -1, 1<<0)
 			screen.setTableText(ID, 1, iRow, szRightBuffer, "", iWidget, iBonus, -1, 1<<1)
@@ -3382,7 +3378,7 @@ class CvMainInterface:
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		x = 0
 		for i in xrange(self.iNumProcessInfos):
-			if CyCity.canMaintain(i, False):
+			if CyCity.canMaintain(i):
 				BTN = GC.getProcessInfo(i).getButton()
 				Btn = "WID|PROCESS|CityWork" + str(i)
 				screen.setImageButtonAt(Btn, Pnl, BTN, x, 0, iSize, iSize, eWidGen, 1, 1)
@@ -4831,8 +4827,7 @@ class CvMainInterface:
 			bOwnCity = InCity.iPlayer == self.iPlayer
 
 		bAutomated = CyCity.isCitizensAutomated()
-		if not bAutomated:
-			iFreeSpecialistPopulationRatio = CyCity.getPopulation() + CyCity.totalFreeSpecialists()
+		iMinCount = 0
 
 		for i in xrange(self.iNumSpecialistInfos):
 			szInc = str(i)
@@ -4840,26 +4835,28 @@ class CvMainInterface:
 			if GC.getSpecialistInfo(i).isVisible():
 
 				iCount = CyCity.getSpecialistCount(i)
-				bAvailable = False
 				if bOwnCity:
 					if bAutomated:
-						iCount = max(iCount, CyCity.getForceSpecialistCount(i))
+						iMinCount = iCount - CyCity.getForceSpecialistCount(i)
 
-					if CyCity.isSpecialistValid(i, 1) and (bAutomated or iCount < iFreeSpecialistPopulationRatio):
-						bAvailable = True
+					if CyCity.isSpecialistValid(i, 1):
 						screen.show("IncreaseSpecialist" + szInc)
 
-					if iCount > 0:
-						bAvailable = True
+					if iCount > iMinCount:
 						screen.show("DecreaseSpecialist" + szInc)
 
 				ID = "CitizenCount" + szInc
 				screen.modifyLabel(ID, uFont + str(iCount), 1<<1)
 				screen.show(ID)
-				if bAvailable:
-					screen.show("CitizenButton" + szInc)
+
+				if bOwnCity and CyCity.isSpecialistValid(i, 0):
+					ID = "CitizenButton" + szInc
+					screen.show(ID)
+					screen.setState(ID, CyCity.AI_isEmphasizeSpecialist(i))
 				else:
-					screen.show("CitizenDisabledButton" + szInc)
+					ID = "CitizenDisabledButton" + szInc
+					screen.show(ID)
+					screen.setState(ID, CyCity.AI_isEmphasizeSpecialist(i))
 
 	# FoV
 	def setFieldofView(self, iFoV):
@@ -5158,7 +5155,7 @@ class CvMainInterface:
 					return 1
 			return 0
 
-		elif iCode == 17: # Key Up
+		if iCode == 17: # Key Up
 			if iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
 				if dataTT:

@@ -1192,7 +1192,7 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTER_GATHERER</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTER_GATHERER</Description>
-			<Button>art/Buttons/Traits/TraitPolitician.dds</Button>
+			<Button>art/Buttons/Traits/TraitHunterGatherer.dds</Button>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARBARIAN</Type>
@@ -3351,6 +3351,25 @@
 				<DomainType>DOMAIN_AIR</DomainType>
 			</NotOnDomainTypes>
 			<bBuildUp>1</bBuildUp>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_BUSHIDO</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_BUSHIDO</Description>
+			<Button>Art/Interface/Buttons/Promotions/Bushido1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_ARCHER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_WIND_HORSE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_WIND_HORSE</Description>
+			<Button>Art/Interface/Buttons/Promotions/Windhorse1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_MOUNTED</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 	</PromotionLineInfos>
 </Civ4PromotionLineInfos>

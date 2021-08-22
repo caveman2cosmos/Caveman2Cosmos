@@ -186,7 +186,7 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
 		|| !buildingInfo.getFreePromoTypes().empty()
 		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
-		|| buildingInfo.isAnyUnitCombatFreeExperience()
+		|| !buildingInfo.getUnitCombatFreeExperience().empty()
 		|| buildingInfo.isAnyDomainFreeExperience();
 }
 
@@ -202,27 +202,27 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		if(buildingInfo.getFrontSupportPercentModifier() > 0
-		|| buildingInfo.getShortRangeSupportPercentModifier() > 0 
-		|| buildingInfo.getMediumRangeSupportPercentModifier() > 0 
-		|| buildingInfo.getLongRangeSupportPercentModifier() > 0 
+		|| buildingInfo.getShortRangeSupportPercentModifier() > 0
+		|| buildingInfo.getMediumRangeSupportPercentModifier() > 0
+		|| buildingInfo.getLongRangeSupportPercentModifier() > 0
 		|| buildingInfo.getFlankSupportPercentModifier() > 0)
 		{
 			return true;
 		}
 	}
 #endif
-	return buildingInfo.getDefenseModifier() > 0 
+	return buildingInfo.getDefenseModifier() > 0
 		|| buildingInfo.getAllCityDefenseModifier() > 0
-		|| buildingInfo.getAdjacentDamagePercent() > 0 
+		|| buildingInfo.getAdjacentDamagePercent() > 0
 		|| buildingInfo.getBombardDefenseModifier() > 0
-		|| buildingInfo.getNumUnitCombatRepelModifiers() > 0 
-		|| buildingInfo.getLocalCaptureProbabilityModifier() > 0 
-		|| buildingInfo.getLocalCaptureResistanceModifier() > 0 
-		|| buildingInfo.getNationalCaptureResistanceModifier() > 0 
-		|| buildingInfo.getRiverDefensePenalty() < 0 
-		|| buildingInfo.getLocalRepel() > 0 
-		|| buildingInfo.getMinDefense() > 0 
-		|| buildingInfo.getBuildingDefenseRecoverySpeedModifier() > 0 
+		|| buildingInfo.getNumUnitCombatRepelModifiers() > 0
+		|| buildingInfo.getLocalCaptureProbabilityModifier() > 0
+		|| buildingInfo.getLocalCaptureResistanceModifier() > 0
+		|| buildingInfo.getNationalCaptureResistanceModifier() > 0
+		|| buildingInfo.getRiverDefensePenalty() < 0
+		|| buildingInfo.getLocalRepel() > 0
+		|| buildingInfo.getMinDefense() > 0
+		|| buildingInfo.getBuildingDefenseRecoverySpeedModifier() > 0
 		|| buildingInfo.getCityDefenseRecoverySpeedModifier() > 0
 		|| buildingInfo.getNumUnitCombatRepelAgainstModifiers() > 0
 		|| buildingInfo.getNumUnitCombatDefenseAgainstModifiers() > 0;

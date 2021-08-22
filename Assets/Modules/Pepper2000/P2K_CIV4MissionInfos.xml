@@ -33,6 +33,7 @@
 			<bVisible>1</bVisible>
 			<Button>Art/interface/buttons/units/satellite.dds</Button>
 		</MissionInfo>
+		<!-- Delete MISSION_EXPLORE_MOON after finishing multimaps if we doesn't want single map space scenario support -->
 		<MissionInfo>
 			<Type>MISSION_EXPLORE_MOON</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MOON</Description>

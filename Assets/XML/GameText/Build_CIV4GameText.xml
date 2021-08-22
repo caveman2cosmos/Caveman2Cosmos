@@ -1,6 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_REQUIRES_BONUS</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]To place with %s1_Build requires %s2_Bonus[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Разместить с %s1_Build (требуется %s2_Bonus)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
+		<Russian>, [LINK=%s1_Build]%s2_Build[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Modifier%% alla velocità dei lavoratori per costruire %s2_Build</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator szybkości Robotnika przy budowie %s2_Build</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости рабочим при возведении [LINK=%s2_Build]%s3_Build[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
@@ -277,6 +297,29 @@
 		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_FARM]ôåðìû[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_BOATS</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_BOATS]Fishing Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de pêche[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
+		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK]</English>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_FOREST_PRESERVE]Ëåñíîé çàïîâåäíèê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORT</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORT]Fort[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_FORT]Fort[\LINK]</French>
@@ -379,11 +422,6 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Pozo de agua subterránea[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GROUNDWATER_WELL]Studnię Głębinową[\LINK]</Polish>
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_GROUNDWATER_WELL]Ñêâàæèíà ïîäçåìíûõ âîä[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
-		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK]</English>
-		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_FOREST_PRESERVE]Ëåñíîé çàïîâåäíèê[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
@@ -534,16 +572,6 @@
 		<Russian>Строить [LINK=FEATURE_REEF_LIGHTHOUSE]Маяк[\LINK] (Риф)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER</Tag>
-		<English>Shows the Build List Screen.</English>
-		<French>Affiche l'écran des Listes de constructions.</French>
-		<German>Zeigt die Bauliste an.</German>
-		<Italian>Mostra lo schermo delle liste di costruzione.</Italian>
-		<Spanish>Muestra la vista de Listas de construcción.</Spanish>
-		<Polish>Pokaż okno Listy Budowy.</Polish>
-		<Russian>Ïîêàçàòü Ýêðàí ñïèñêà ïîñòðîåê.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERJACK</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumberjack[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUMBERJACK]Camp de bûcherons[\LINK]</French>
@@ -637,7 +665,7 @@
 		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Consumed)</German>
+		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
@@ -662,6 +690,14 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_NOMADIC_HERD]Pastizal nómada[\LINK]</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_NOMADIC_HERD]Koczownicze Stado[\LINK]</Polish>
 		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_NOMADIC_HERD]Êî÷åâîå ñòàäî[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Tag>
+		<English>Build [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Offshore Platform[\LINK]</English>
+		<French>construire une [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plate-forme offshore[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Bohrinsel[\LINK] errichten</German>
+		<Italian>Creare una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]piattaforma petrolifera[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrolífera[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORCHARD</Tag>
@@ -758,10 +794,19 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_RADAR_TOWER]Ðàäàðíóþ âûøêó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_RADIO_TOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_RADIO_TOWER]Radio Tower[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_RADIO_TOWER]Ðàäèîâûøêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_RAILROAD</Tag>
 		<English>Make [LINK=ROUTE_RAILROAD]Railroad[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_RAILROAD]Chemin de fer[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=ROUTE_RAILROAD]Æåëåçíàÿ äîðîãà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RECLAIM_LAND</Tag>
+		<English>Remove [LINK=FEATURE_FOREST]Any Feature[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Tag>
@@ -770,16 +815,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_VEGETATION</Tag>
 		<English>Remove [LINK=FEATURE_FOREST]Vegetation[\LINK]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_RECLAIM_LAND</Tag>
-		<English>Remove [LINK=FEATURE_FOREST]Any Feature[\LINK]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDHELP_REQUIRES_BONUS</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]To place with %s1_Build requires %s2_Bonus[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Разместить с %s1_Build (требуется %s2_Bonus)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROAD</Tag>
@@ -807,11 +842,31 @@
 		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_SCAVENGING_CAMP]Lager der Aasverwerter[\LINK]</German>
+		<German>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Fleisch sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo degli spazzini[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campamento de recolección[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SCAVENGING_CAMP]Obóz Zbieraczy[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SCAVENGING_CAMP]Ëàãåðü ñâåæåâàíèÿ[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT</Tag>
+		<English>Remove [LINK=FEATURE_FALLOUT]Fallout[\LINK]</English>
+		<French>[LINK=FEATURE_FALLOUT]Décontaminer[\LINK]</French>
+		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
+		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
+		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
@@ -826,10 +881,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK]</English>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
@@ -860,11 +917,6 @@
 		<Spanish>Construir unos [LINK=IMPROVEMENT_SOLAR_PANELS]Paneles solares[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele Słoneczne[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SOLAR_PANELS]Ñîëíå÷íóþ áàòàðåþ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_RADIO_TOWER</Tag>
-		<English>Build [LINK=IMPROVEMENT_RADIO_TOWER]Radio Tower[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_RADIO_TOWER]Ðàäèîâûøêó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STEEL_WATCHTOWER</Tag>
@@ -1099,6 +1151,14 @@
 		<Russian>Строить [LINK=IMPROVEMENT_WETLANDS_CAMP]Болотный лагерь[\LINK] (Собиратель)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
+		<English>Build [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walfänger[\LINK] bauen</German>
+		<Italian>Creare delle [LINK=IMPROVEMENT_WHALING_BOATS]baleniere[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_WHALING_BOATS]barcos balleneros[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_WHALING_SHIPS</Tag>
 		<English>Build [LINK=IMPROVEMENT_WHALING_SHIPS]Whaling Ships[\LINK]</English>
 	</TEXT>
@@ -1165,20 +1225,6 @@
 		<English>Build [LINK=IMPROVEMENT_WOOD_GATHERER]Wood Gatherer[\LINK] (Consumed)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
-		<Russian>, [LINK=%s1_Build]%s2_Build[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
-		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
-		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Modifier%% alla velocità dei lavoratori per costruire %s2_Build</Italian>
-		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator szybkości Robotnika przy budowie %s2_Build</Polish>
-		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости рабочим при возведении [LINK=%s2_Build]%s3_Build[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKSHOP</Tag>
 		<English>Build [LINK=IMPROVEMENT_WORKSHOP]Workshop[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WORKSHOP]Atelier[\LINK]</French>
@@ -1189,57 +1235,13 @@
 		<English>Create [LINK=FEATURE_FOREST_YOUNG]Young Forest[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
-		<English>Build [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
-		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walfänger[\LINK] bauen</German>
-		<Italian>Creare delle [LINK=IMPROVEMENT_WHALING_BOATS]baleniere[\LINK]</Italian>
-		<Spanish>Crear [LINK=IMPROVEMENT_WHALING_BOATS]barcos balleneros[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT</Tag>
-		<English>Remove [LINK=FEATURE_FALLOUT]Fallout[\LINK]</English>
-		<French>[LINK=FEATURE_FALLOUT]Décontaminer[\LINK]</French>
-		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
-		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
-		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Tag>
-		<English>Build [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Offshore Platform[\LINK]</English>
-		<French>construire une [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plate-forme offshore[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Bohrinsel[\LINK] errichten</German>
-		<Italian>Creare una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]piattaforma petrolifera[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrolífera[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_BOATS</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_BOATS]Fishing Boats[\LINK]</English>
-		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de pêche[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
-		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
-		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
+		<Tag>TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER</Tag>
+		<English>Shows the Build List Screen.</English>
+		<French>Affiche l'écran des Listes de constructions.</French>
+		<German>Zeigt die Bauliste an.</German>
+		<Italian>Mostra lo schermo delle liste di costruzione.</Italian>
+		<Spanish>Muestra la vista de Listas de construcción.</Spanish>
+		<Polish>Pokaż okno Listy Budowy.</Polish>
+		<Russian>Ïîêàçàòü Ýêðàí ñïèñêà ïîñòðîåê.</Russian>
 	</TEXT>
 </Civ4GameText>

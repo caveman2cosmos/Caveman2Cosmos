@@ -80,6 +80,11 @@
 		<Russian>«Сказки о животных» представляют собой образовательное улучшение от прирученных животных после изучения [LINK=TECH_LITERATURE]Литературы[\LINK] - требуются [LINK=BUILDING_LIBRARY]Библиотеки[\LINK] для создания [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Сказки о животном[\LINK].[NEWLINE]Это реализовано, как дополнение к библиотекам.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
+		<English>Autobuild - Animal Stories Requirement</English>
+		<Russian>Сказка о животном</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
 		<English>Animal Story buildings represent cultural and educational inspiration from animals after invention of [LINK=TECH_WRITING]Writing[\LINK].</English>
 		<French>Les bâtiments d'Histoire(s) d'animaux représentent une inspiration culturelle et éducative des animaux avant l'invention de [LINK=TECH_WRITING]l'Ecriture[\LINK].</French>
@@ -91,11 +96,6 @@
 		<French>Pré-requis pour Histoire Animale</French>
 		<German>Grundlage für Tiergeschichten</German>
 		<Russian>Ñêàçêà î æèâîòíîì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
-		<English>Autobuild - Animal Stories Requirement</English>
-		<Russian>Сказка о животном</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>

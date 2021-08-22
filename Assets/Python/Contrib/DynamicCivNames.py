@@ -1,6 +1,15 @@
+# DynamicCivNames
+#
+# by jdog5000
+# Version 1.0
+#
+# French compatibility from calvitix
+#
+
 from CvPythonExtensions import *
 from CvEventInterface import getEventManager
 import CvUtil
+# --------- Revolution mod -------------
 import SdToolKit as SDTK
 import RevUtils
 

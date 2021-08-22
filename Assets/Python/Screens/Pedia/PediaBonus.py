@@ -5,6 +5,9 @@ from CvPythonExtensions import *
 class PediaBonus:
 
 	def __init__(self, parent, H_BOT_ROW):
+		import TestCode
+		self.GOMReqs = TestCode.TestCode([0])
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -49,6 +52,7 @@ class PediaBonus:
 		ePanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 		ePanelEmpty			= PanelStyles.PANEL_STYLE_EMPTY
 		eNumYieldTypes 		= YieldTypes.NUM_YIELD_TYPES
+		eNumCommerceTypes 	= CommerceTypes.NUM_COMMERCE_TYPES
 
 		enumGBS = self.main.enumGBS
 		szfontEdge, szfont4b, szfont4, szfont3b, szfont3, szfont2b, szfont2 = self.main.aFontList
@@ -86,16 +90,26 @@ class PediaBonus:
 		aSourceOfBonus = []
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
-			else:
+			if CvBuildingInfo.isAnyBonusYieldChanges() or CvBuildingInfo.isAnyVicinityBonusYieldChanges() or CvBuildingInfo.isAnyBonusYieldModifiers():
 				for eYield in xrange(eNumYieldTypes):
-					if CvBuildingInfo.getBonusYieldModifier(iTheBonus, eYield):
-						aAffectedBuildings.append(iBuilding)
-						bValid = False
-						break
+					if CvBuildingInfo.getBonusYieldChanges(iTheBonus, eYield) or CvBuildingInfo.getVicinityBonusYieldChanges(iTheBonus, eYield) or CvBuildingInfo.getBonusYieldModifier(iTheBonus, eYield):
+						if iBuilding not in aAffectedBuildings:
+							aAffectedBuildings.append(iBuilding)
+							bValid = False
+			if CvBuildingInfo.isAnyBonusCommercePercentChanges() or CvBuildingInfo.isAnyBonusCommerceModifiers():
+				for eCommerce in xrange(eNumCommerceTypes):
+					if CvBuildingInfo.getBonusCommercePercentChanges(iTheBonus, eCommerce) or CvBuildingInfo.getBonusCommerceModifier(iTheBonus, eCommerce):
+						if iBuilding not in aAffectedBuildings:
+							aAffectedBuildings.append(iBuilding)
+							bValid = False
 			if CvBuildingInfo.getFreeBonus() == iTheBonus:
 				aSourceOfBonus.append(iBuilding)
 			else:
@@ -105,7 +119,6 @@ class PediaBonus:
 						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
-			#Trigger this loop only if building has Or Vicinity prereq at first place!
 			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
 				aVicinityBuildings.append(iBuilding)
 			for iBonus in CvBuildingInfo.getPrereqOrRawVicinityBonuses():
@@ -113,7 +126,8 @@ class PediaBonus:
 					aVicinityBuildings.append(iBuilding)
 			if bValid:
 				if CvBuildingInfo.getPrereqAndBonus() == iTheBonus \
-				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses():
+				or iTheBonus in CvBuildingInfo.getPrereqOrBonuses() \
+				or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 					aNeededByBuildings.append(iBuilding)
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
@@ -121,10 +135,15 @@ class PediaBonus:
 		bValid = True
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
+			aGOMBonusReqList = []
+			for i in range(2):
+				aGOMBonusReqList.append([])
+			self.GOMReqs.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False
-			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses():
+			elif iTheBonus in CvUnitInfo.getPrereqOrBonuses() \
+			or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_AND] or iTheBonus in aGOMBonusReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aNeededByUnits.append(iUnit)
 			if bValid:
 				iBonusProductionModifier = CvUnitInfo.getBonusProductionModifier(iTheBonus)

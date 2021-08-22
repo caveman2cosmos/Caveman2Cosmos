@@ -548,7 +548,7 @@ class Pedia:
 				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
 					## Culture resource
 					szSubCat = self.mapSubCat.get(iCategory)[2]
-				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_GENMODS"): 
+				elif CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_GENMODS"):
 					## Genmod resources
 					szSubCat = self.mapSubCat.get(iCategory)[3]
 				else: ## Wonder resource
@@ -771,7 +771,7 @@ class Pedia:
 		print "Creating item list for category: Corporate/Religion spreading Units"
 		self.aList = self.getSortedUnitList(False, False, False, True, False)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, GC.getUnitInfo)
-		
+
 	def placeMiscUnits(self):
 		print "Creating item list for category: Misc Units"
 		self.aList = self.getSortedUnitList(False, False, False, False, True)
@@ -925,7 +925,7 @@ class Pedia:
 		print "Category: Animalistic Buildings"
 		self.aList = self.getBuildingList(6)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, GC.getBuildingInfo)
-		
+
 	def placeSpaceBuildings(self):
 		print "Category: Space Buildings"
 		self.aList = self.getBuildingList(7)
@@ -959,8 +959,8 @@ class Pedia:
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
-		
-		if not CvBuildingInfo.isMapType(GC.getInfoTypeForString("MAPCATEGORY_EARTH")):
+
+		if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
 			return 7
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
@@ -1076,12 +1076,12 @@ class Pedia:
 		print "Category: Culture Bonuses"
 		self.aList = self.getBonusList(2)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
-		
+
 	def placeTechnoculturalBonuses(self):
 		print "Category: Genmod Bonuses"
 		self.aList = self.getBonusList(3)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, GC.getBonusInfo)
-		
+
 	def placeWonderBonuses(self):
 		print "Category: Wonder Bonuses"
 		self.aList = self.getBonusList(4)

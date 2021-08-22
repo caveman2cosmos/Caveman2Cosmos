@@ -3094,10 +3094,6 @@
 			<Path>Art/Movies/special/CULTURAL_ACHIEVEMENT.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ANIMATION_STUDIO</Type>
-			<Path>Art/Movies/special/ANIMATION_STUDIO.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ASTEROID_DEFLECTION_SYSTEM</Type>
 			<Path>Art/Movies/special/ASTEROID_DEFLECTION_SYSTEM.dds</Path>
 		</MovieArtInfo>
