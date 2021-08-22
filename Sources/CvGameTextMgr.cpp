@@ -17552,9 +17552,9 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				if (GC.getGame().getActivePlayer() != NO_PLAYER)
 				{
 					const BuildingTypes eBuildingX = GC.getTechInfo(eTech).getPrereqOrBuilding(iI).eBuilding;
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS", GC.getBuildingInfo(eBuildingX).getTextKeyWide(), GET_PLAYER(GC.getGame().getActivePlayer()).getBuildingCount(eBuildingX), iPrereq).c_str());
+					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_OR_NUM_SPECIAL_BUILDINGS", GC.getBuildingInfo(eBuildingX).getTextKeyWide(), GET_PLAYER(GC.getGame().getActivePlayer()).getBuildingCount(eBuildingX), iPrereq).c_str());
 				}
-				else szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo(GC.getTechInfo(eTech).getPrereqOrBuilding(iI).eBuilding).getTextKeyWide(), iPrereq).c_str());
+				else szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_OR_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo(GC.getTechInfo(eTech).getPrereqOrBuilding(iI).eBuilding).getTextKeyWide(), iPrereq).c_str());
 
 				szBuffer.append(szTempBuffer);
 			}

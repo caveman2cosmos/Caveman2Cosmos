@@ -3066,6 +3066,11 @@
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumCurr de un total de %d3_NumTotal)[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_OR_NUM_SPECIAL_BUILDINGS</Tag>
+		<!-- %s1_Name = Can be Buildings, Units, etc -->
+		<English>[COLOR_WARNING_TEXT]May need %s1_Name (%d2_NumCurr/%d3_NumTotal Total)[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY</Tag>
 		<!-- %s1_Name = Can be Buildings, Units, etc -->
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Name (%d2_NumTotal Total)[COLOR_REVERT]</English>
@@ -3073,6 +3078,11 @@
 		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Name (%d2_NumTotal gesamt)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Name (%d2_NumTotal totali)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumTotal en total)[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_OR_NUM_SPECIAL_BUILDINGS_NO_CITY</Tag>
+		<!-- %s1_Name = Can be Buildings, Units, etc -->
+		<English>[COLOR_WARNING_TEXT]May need %s1_Name (%d2_NumTotal Total)[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_TEAMS</Tag>
