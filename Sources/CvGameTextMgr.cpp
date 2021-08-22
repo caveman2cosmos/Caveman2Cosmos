@@ -17546,7 +17546,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 							L"%s%s", NEWLINE,
 							gDLL->getText(
 								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
-								GC.getBuildingInfo(eBuildingX).getType(),
+								CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(),
 								GC.getBuildingInfo(eBuildingX).getDescription(),
 								iPrereq
 							).c_str()
@@ -17560,7 +17560,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 							L"%s%s", NEWLINE,
 							gDLL->getText(
 								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1",
-								GC.getBuildingInfo(eBuildingX).getType(),
+								CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(),
 								GC.getBuildingInfo(eBuildingX).getDescription(),
 								playerAct->getBuildingCount(eBuildingX),
 								iPrereq
@@ -23711,7 +23711,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 							L"%s%s", NEWLINE,
 							gDLL->getText(
 								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
-								GC.getBuildingInfo(modifier.first).getType(),
+								CvWString(GC.getBuildingInfo(modifier.first).getType()).GetCString(),
 								GC.getBuildingInfo(modifier.first).getDescription(),
 								modifier.second
 							).c_str()
@@ -23725,7 +23725,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 							L"%s%s", NEWLINE,
 							gDLL->getText(
 								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1",
-								GC.getBuildingInfo(modifier.first).getType(),
+								CvWString(GC.getBuildingInfo(modifier.first).getType()).GetCString(),
 								GC.getBuildingInfo(modifier.first).getDescription(),
 								GET_PLAYER(ePlayer).getBuildingCount(modifier.first),
 								GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, modifier.first)
@@ -26604,7 +26604,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 					L"%s%s", NEWLINE,
 					gDLL->getText(
 						"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
-						GC.getBuildingInfo((BuildingTypes)iI).getType(),
+						CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(),
 						GC.getBuildingInfo((BuildingTypes)iI).getDescription(),
 						kCorporation.getPrereqBuilding(iI)
 					).c_str()

@@ -2500,7 +2500,17 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (kCorporation.getPrereqBuilding(iI) > 0)
 							{
-								szBuffer.append(CvWString::format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0", GC.getBuildingInfo((BuildingTypes)iI).getType(), GC.getBuildingInfo((BuildingTypes)iI).getDescription(), kCorporation.getPrereqBuilding(iI)).c_str()));
+								szBuffer.append(
+									CvWString::format(
+										L"%s%s", NEWLINE,
+										gDLL->getText(
+											"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
+											CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(),
+											GC.getBuildingInfo((BuildingTypes)iI).getDescription(),
+											kCorporation.getPrereqBuilding(iI)
+										).c_str()
+									)
+								);
 							}
 						}
 					}
