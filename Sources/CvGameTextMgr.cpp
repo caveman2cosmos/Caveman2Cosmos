@@ -17106,7 +17106,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	const PlayerTypes ePlayerAct = GC.getGame().getActivePlayer();
 	FAssert(ePlayerAct != NO_PLAYER || !bPlayerContext);
 
-	const CvPlayer* playerAct = bPlayerContext ? &GET_PLAYER(ePlayerAct) : NULL;
+	const CvPlayer* playerAct = ePlayerAct != NO_PLAYER ? &GET_PLAYER(ePlayerAct) : NULL;
 
 	if (bTreeInfo && (NO_TECH != eFromTech))
 	{
