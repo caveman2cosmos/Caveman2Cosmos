@@ -427,7 +427,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALAMUT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALAMUT</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -5124,7 +5123,6 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
 			<iCost>1860</iCost>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -12987,7 +12985,6 @@
 			</MapCategoryTypes>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -18809,7 +18806,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAOLIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHAOLIN</MovieDefineTag>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<FreePromotion>PROMOTION_MARTIAL_ARTS</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>

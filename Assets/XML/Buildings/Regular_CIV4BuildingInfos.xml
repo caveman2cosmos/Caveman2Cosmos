@@ -7790,7 +7790,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>225</iCost>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -10187,7 +10186,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>0</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_GUERRILLA_WARFARE</ObsoleteTech>
 			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -13112,7 +13110,6 @@
 				<Bonus>BONUS_AMMUNITION</Bonus>
 			</PrereqBonuses>
 			<iCost>1130</iCost>
-			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -19018,7 +19015,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SULPHUR</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>410</iCost>
 			<iHealth>-1</iHealth>
 			<UnitProductionModifiers>
@@ -19139,7 +19135,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<iCost>74</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -19416,7 +19411,6 @@
 				<BuildingType>BUILDING_OXEN_FARM</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MERCANTILISM</ObsoleteTech>
 			<iCost>153</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iAsset>3</iAsset>
@@ -19674,7 +19668,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -21477,7 +21470,6 @@
 				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<iCost>139</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -26757,7 +26749,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
-			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -32832,7 +32823,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DONKEY</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -38747,7 +38737,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iCost>20</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -41029,7 +41018,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BATTLEFIELD_MEDICINE</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>440</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -49707,7 +49695,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
-			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
@@ -51963,7 +51950,6 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>0</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<iCost>425</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -61765,7 +61751,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -61817,7 +61802,6 @@
 				<BuildingType>BUILDING_LLAMA_FARM</BuildingType>
 				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>92</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -66953,7 +66937,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>184</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -67008,7 +66991,6 @@
 				<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -70196,7 +70178,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<iCost>830</iCost>
 			<iInsidiousness>35</iInsidiousness>
 			<iHealth>-1</iHealth>
@@ -71490,7 +71471,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<ObsoleteTech>TECH_LEVITATION</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -75658,7 +75638,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
@@ -78779,7 +78758,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>2865</iCost>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -81315,7 +81293,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
 			<iCost>1030</iCost>
 			<CommerceChanges>
 				<iCommerce>12</iCommerce>
@@ -84605,7 +84582,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<iCost>40</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -84740,7 +84716,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<ConstructCondition>
 				<Or>
@@ -88623,7 +88598,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<Bonus>BONUS_AMMUNITION</Bonus>
-			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			<iCost>1030</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -92309,7 +92283,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
@@ -96353,7 +96326,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>132</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -96927,7 +96899,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>225</iCost>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -98797,7 +98768,6 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<iCost>160</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -101570,7 +101540,6 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -112044,7 +112013,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
-			<ObsoleteTech>TECH_MYTHOLOCIAL_BEASTIARY</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_CAT_BREEDER</BuildingType>
@@ -113702,7 +113670,6 @@
 				<BuildingType>BUILDING_GARRISON</BuildingType>
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<iCost>216</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -113892,7 +113859,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 			</PrereqBonuses>
