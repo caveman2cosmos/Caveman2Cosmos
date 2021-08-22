@@ -7543,7 +7543,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 
 	if (!isLimitedWonder(eBuilding))
 	{
-		iPrereqs *= (getBuildingCount(eBuilding) + iExtra + 1);
+		iPrereqs *= 1 + getBuildingCount(eBuilding) + iExtra;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())

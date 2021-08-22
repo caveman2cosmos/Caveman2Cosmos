@@ -408,14 +408,13 @@ class PediaBuilding:
 
 		# Empire building requirements
 		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			j = pair.id
+			eBuildingX = pair.id
 			iPrereqNumOfBuilding = pair.value
-			if CyPlayer:
-				if iPrereqNumOfBuilding > 0:
-					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
-					aList3.append((j, iPrereqNumOfBuilding))
-			elif iPrereqNumOfBuilding > 0:
-				aList3.append((j, iPrereqNumOfBuilding))
+			if iPrereqNumOfBuilding > 0:
+				if CyPlayer:
+					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
+				else:
+					aList3.append((eBuildingX, iPrereqNumOfBuilding))
 
 		# Or building requirements
 		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
