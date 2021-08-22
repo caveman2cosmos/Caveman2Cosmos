@@ -3118,3 +3118,11 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 	}
 	return iSum;
 }
+
+void cvInternalGlobals::doPostLoadCaching()
+{
+	for (int i = 0, num = getNumBuildingInfos(); i < num; i++)
+	{
+		m_paBuildingInfo[i]->doPostLoadCaching(static_cast<BuildingTypes>(i));
+	}
+}

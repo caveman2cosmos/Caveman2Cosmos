@@ -276,7 +276,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 {
-	OutputDebugString("Setting Post Global Defines: Start");
+	OutputDebugString("Setting Post Global Defines: Start\n");
 
 	const char* szVal=NULL;		// holds the string value from the define queue
 	int idx;
@@ -489,7 +489,7 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 	sprintf( szMessage, "Size of Global Defines is not greater than 0. \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 	gDLL->MessageBox(szMessage, "XML Load Error");
 
-	OutputDebugString("Setting Post Global Defines: End");
+	OutputDebugString("Setting Post Global Defines: End\n");
 
 	return false;
 }
@@ -1044,6 +1044,8 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo(eUnit).setQualifiedPromotionTypes();
 		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
 	}
+
+	GC.doPostLoadCaching();
 
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();

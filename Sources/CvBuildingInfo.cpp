@@ -272,7 +272,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_bAutoBuild(false)
 ,m_bEnablesOtherBuildingsCalculated(false)
 ,m_bEnablesOtherBuildingsValue(false)
-,m_bEnablesUnitsCalculated(false)
 ,m_bEnablesUnits(false)
 //Team Project (3)
 //TB Building Tags
@@ -1645,15 +1644,11 @@ bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
 	return false;
 }
 
-bool CvBuildingInfo::EnablesUnits() const
+
+namespace CvBuildingInternal
 {
-	if ( !m_bEnablesUnitsCalculated )
+	bool calculateEnablesUnits(const CvBuildingInfo& kBuilding, BuildingTypes eBuilding)
 	{
-		const int eBuilding = GC.getInfoTypeForString(m_szType);
-
-		m_bEnablesUnitsCalculated = true;
-		m_bEnablesUnits = false;
-
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
 		std::vector<GOMQuery> queries;
 		GOMQuery query;
@@ -1661,14 +1656,14 @@ bool CvBuildingInfo::EnablesUnits() const
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = getFreeBonus();
+		query.id = kBuilding.getFreeBonus();
 		if (query.id != NO_BONUS)
 		{
 			queries.push_back(query);
 		}
-		for (int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++)
+		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
 		{
-			query.id = getExtraFreeBonus(iJ);
+			query.id = kBuilding.getExtraFreeBonus(iJ);
 			queries.push_back(query);
 		}
 
@@ -1677,52 +1672,47 @@ bool CvBuildingInfo::EnablesUnits() const
 			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
 			const BoolExpr* condition = kUnit.getTrainCondition();
-			if (condition != NULL)
+			if (condition != NULL && condition->getInvolvesGOM(queries))
 			{
-				if (condition->getInvolvesGOM(queries))
-				{
-					m_bEnablesUnits = true;
-					return m_bEnablesUnits;
-				}
+				return true;
 			}
 
 			if (kUnit.isPrereqAndBuilding(eBuilding))
 			{
-				m_bEnablesUnits = true;
-				return m_bEnablesUnits;
+				return true;
 			}
 
 			for (int iK = 0; iK < kUnit.getPrereqOrBuildingsNum(); iK++)
 			{
 				if (kUnit.getPrereqOrBuilding((BuildingTypes)iK) == eBuilding)
 				{
-					m_bEnablesUnits = true;
-					return m_bEnablesUnits;
+					return true;
 				}
 			}
 
-			if ( kUnit.getPrereqAndBonus() != NO_BONUS )
+			if (kUnit.getPrereqAndBonus() != NO_BONUS && kBuilding.isFreeBonusOfBuilding((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
-				if ( isFreeBonusOfBuilding( (BonusTypes)kUnit.getPrereqAndBonus()) )
-				{
-					m_bEnablesUnits = true;
-					return m_bEnablesUnits;
-				}
+				return true;
 			}
 
 			foreach_(const BonusTypes eXtraFreeBonus, kUnit.getPrereqOrBonuses())
 			{
-				if (isFreeBonusOfBuilding(eXtraFreeBonus))
+				if (kBuilding.isFreeBonusOfBuilding(eXtraFreeBonus))
 				{
-					m_bEnablesUnits = true;
-					return m_bEnablesUnits;
+					return true;
 				}
 			}
 		}
+		return false;
 	}
-
-	return m_bEnablesUnits;
 }
+
+
+void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
+{
+	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
+}
+
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
