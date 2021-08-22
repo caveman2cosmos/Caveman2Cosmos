@@ -12394,7 +12394,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	{
 		return 0;
 	}
-	uint64_t iPrice = (
+	int64_t iPrice = (
 		GC.getUNIT_UPGRADE_COST_PER_PRODUCTION()
 		* (
 			GET_PLAYER(getOwner()).getProductionNeeded(eUnit)
@@ -12402,6 +12402,10 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 			GET_PLAYER(getOwner()).getBaseUnitCost100(getUnitType()) / 100
 		)
 	);
+	if (iPrice < 1)
+	{
+		return 1;
+	}
 	{
 		int iMod = GET_PLAYER(getOwner()).getUnitUpgradePriceModifier();
 		if (!isHuman())
@@ -12414,7 +12418,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 		}
 		iPrice = getModifiedIntValue64(iPrice, iMod);
 	}
-	iPrice -= iPrice * getUpgradeDiscount() / 100;
+	iPrice -= iPrice * std::min(100, getUpgradeDiscount()) / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
