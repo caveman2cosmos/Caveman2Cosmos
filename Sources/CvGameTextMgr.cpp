@@ -17537,14 +17537,37 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			const int iPrereq = GC.getTechInfo(eTech).getPrereqBuilding(iI).iMinimumRequired;
 			if (iPrereq > 0)
 			{
-				if (ePlayerAct != NO_PLAYER)
-				{
-					const BuildingTypes eBuildingX = GC.getTechInfo(eTech).getPrereqBuilding(iI).eBuilding;
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS", GC.getBuildingInfo(eBuildingX).getTextKeyWide(), playerAct->getBuildingCount(eBuildingX), iPrereq).c_str());
-				}
-				else szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo(GC.getTechInfo(eTech).getPrereqBuilding(iI).eBuilding).getTextKeyWide(), iPrereq).c_str());
+				const BuildingTypes eBuildingX = GC.getTechInfo(eTech).getPrereqBuilding(iI).eBuilding;
 
-				szBuffer.append(szTempBuffer);
+				if (ePlayerAct == NO_PLAYER)
+				{
+					szBuffer.append(
+						CvWString::format(
+							L"%s%s", NEWLINE,
+							gDLL->getText(
+								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
+								GC.getBuildingInfo(eBuildingX).getType(),
+								GC.getBuildingInfo(eBuildingX).getDescription(),
+								iPrereq
+							).c_str()
+						)
+					);
+				}
+				else
+				{
+					szBuffer.append(
+						CvWString::format(
+							L"%s%s", NEWLINE,
+							gDLL->getText(
+								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1",
+								GC.getBuildingInfo(eBuildingX).getType(),
+								GC.getBuildingInfo(eBuildingX).getDescription(),
+								playerAct->getBuildingCount(eBuildingX),
+								iPrereq
+							).c_str()
+						)
+					);
+				}
 			}
 		}
 		bFirst = true;
@@ -23677,27 +23700,44 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 		}
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
 		{
-			if (ePlayer == NO_PLAYER && kBuilding.getPrereqNumOfBuilding((BuildingTypes)iI) > 0)
+			if (modifier.second > 0)
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), kBuilding.getPrereqNumOfBuilding((BuildingTypes)iI)).c_str());
-				szBuffer.append(szTempBuffer);
-			}
-			else if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iI) > 0)
-			{
-				if (pCity == NULL || GET_PLAYER(ePlayer).getBuildingCount((BuildingTypes)iI) < GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iI))
+				if (ePlayer == NO_PLAYER)
 				{
-					if (pCity != NULL)
-					{
-						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), GET_PLAYER(ePlayer).getBuildingCount((BuildingTypes)iI), GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iI)).c_str());
-					}
-					else szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iI)).c_str());
-
-					szBuffer.append(szTempBuffer);
+					szBuffer.append(
+						CvWString::format(
+							L"%s%s", NEWLINE,
+							gDLL->getText(
+								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
+								GC.getBuildingInfo(modifier.first).getType(),
+								GC.getBuildingInfo(modifier.first).getDescription(),
+								modifier.second
+							).c_str()
+						)
+					);
+				}
+				else
+				{
+					szBuffer.append(
+						CvWString::format(
+							L"%s%s", NEWLINE,
+							gDLL->getText(
+								"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1",
+								GC.getBuildingInfo(modifier.first).getType(),
+								GC.getBuildingInfo(modifier.first).getDescription(),
+								GET_PLAYER(ePlayer).getBuildingCount(modifier.first),
+								GET_PLAYER(ePlayer).getBuildingPrereqBuilding(eBuilding, modifier.first)
+							).c_str()
+						)
+					);
 				}
 			}
-			else if (kBuilding.isPrereqInCityBuilding(iI) && (pCity == NULL || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI) && pCity->getNumActiveBuilding((BuildingTypes)iI) == 0))
+		}
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		{
+			if (kBuilding.isPrereqInCityBuilding(iI) && (pCity == NULL || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI) && pCity->getNumActiveBuilding((BuildingTypes)iI) == 0))
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
@@ -26559,8 +26599,17 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 	{
 		if (kCorporation.getPrereqBuilding(iI) > 0)
 		{
-			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), kCorporation.getPrereqBuilding(iI)).c_str());
-			szBuffer.append(szTempBuffer);
+			szBuffer.append(
+				CvWString::format(
+					L"%s%s", NEWLINE,
+					gDLL->getText(
+						"TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0",
+						GC.getBuildingInfo((BuildingTypes)iI).getType(),
+						GC.getBuildingInfo((BuildingTypes)iI).getDescription(),
+						kCorporation.getPrereqBuilding(iI)
+					).c_str()
+				)
+			);
 		}
 	}
 	if (kCorporation.getObsoleteTech() != NO_TECH)
