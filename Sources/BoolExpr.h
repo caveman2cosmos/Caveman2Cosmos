@@ -50,6 +50,14 @@ enum BoolExprChange
 
 struct GOMQuery
 {
+	GOMQuery(GOMTypes GOM, int id)
+		: GOM(GOM)
+		, id(id)
+	{
+		FASSERT_NOT_NEGATIVE(GOM);
+		FASSERT_NOT_NEGATIVE(id);
+	}
+
 	GOMTypes GOM;
 	int id;
 };

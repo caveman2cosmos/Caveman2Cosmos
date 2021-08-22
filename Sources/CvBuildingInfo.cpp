@@ -1578,20 +1578,17 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
 		std::vector<GOMQuery> queries;
-		GOMQuery query;
-		query.GOM = GOM_BUILDING;
-		query.id = iId;
-		queries.push_back(query);
-		query.GOM = GOM_BONUS;
-		query.id = getFreeBonus();
-		if (query.id != NO_BONUS)
+
+		queries.push_back(GOMQuery(GOM_BUILDING, iId));
+
+		const BonusTypes eBonus = (BonusTypes)getFreeBonus();
+		if (eBonus != NO_BONUS)
 		{
-			queries.push_back(query);
+			queries.push_back(GOMQuery(GOM_BONUS, eBonus));
 		}
 		for (int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++)
 		{
-			query.id = getExtraFreeBonus(iJ);
-			queries.push_back(query);
+			queries.push_back(GOMQuery(GOM_BONUS, getExtraFreeBonus(iJ)));
 		}
 
 		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
@@ -1651,20 +1648,17 @@ namespace CvBuildingInternal
 	{
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
 		std::vector<GOMQuery> queries;
-		GOMQuery query;
-		query.GOM = GOM_BUILDING;
-		query.id = eBuilding;
-		queries.push_back(query);
-		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+
+		queries.push_back(GOMQuery(GOM_BUILDING, eBuilding));
+
+		const BonusTypes eBonus = (BonusTypes)kBuilding.getFreeBonus();
+		if (eBonus != NO_BONUS)
 		{
-			queries.push_back(query);
+			queries.push_back(GOMQuery(GOM_BONUS, eBonus));
 		}
 		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
 		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
-			queries.push_back(query);
+			queries.push_back(GOMQuery(GOM_BONUS, kBuilding.getExtraFreeBonus(iJ)));
 		}
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
