@@ -275,7 +275,7 @@ public:
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
 
-	uint64_t getBaseUnitCost100(const UnitTypes eUnit) const;
+	int64_t getBaseUnitCost100(const UnitTypes eUnit) const;
 
 	int getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra = 0) const;
 	void removeBuilding(BuildingTypes building);

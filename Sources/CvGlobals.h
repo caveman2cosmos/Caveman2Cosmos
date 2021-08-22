@@ -791,6 +791,8 @@ public:
 	void deleteInfoArrays();
 
 protected:
+	void doPostLoadCaching();
+
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;

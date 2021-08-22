@@ -7206,13 +7206,13 @@ bool CvPlayer::isProductionMaxedProject(ProjectTypes eProject) const
 }
 
 
-uint64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
+int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 {
-	uint64_t iBaseCost = GC.getUnitInfo(eUnit).getProductionCost();
+	int64_t iBaseCost = GC.getUnitInfo(eUnit).getProductionCost();
 
 	if (iBaseCost < 0)
 	{
-		return -1;
+		return -100;
 	}
 	if (iBaseCost > 0)
 	{
@@ -7269,10 +7269,14 @@ uint64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 
 int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 {
-	uint64_t iProductionNeeded = getBaseUnitCost100(eUnit);
-	if (iProductionNeeded < 0)
+	int64_t iProductionNeeded = getBaseUnitCost100(eUnit);
+	if (iProductionNeeded < 1)
 	{
-		return -1;
+		if (iProductionNeeded < 0)
+		{
+			return -1;
+		}
+		return 1;
 	}
 	// Toffer - I split this last modifier away from the rest as it is only interesting when intending to create a new unit.
 	//	When upgrading a unit we need the cost of the unit to be upgraded, in the interest of getting rid of it rather than creating a new unit.
@@ -7530,24 +7534,26 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 	{
 		return 0;
 	}
-
 	if (kBuilding.isForceNoPrereqScaling() || isLimitedWonder(ePrereqBuilding))
+	{
+		if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+		{
+			return 1;
+		}
 		return iPrereqs;
-
-	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier() + 100));
-	iPrereqs /= 100;
+	}
+	iPrereqs = getModifiedIntValue(iPrereqs, GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier());
 
 	if (!isLimitedWonder(eBuilding))
 	{
-		iPrereqs *= (getBuildingCount(eBuilding) + iExtra + 1);
+		iPrereqs *= 1 + getBuildingCount(eBuilding) + iExtra;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 	{
-		iPrereqs = std::min(1, iPrereqs);
+		return 1;
 	}
-
-	return iPrereqs;
+	return std::max(1, iPrereqs);
 }
 
 

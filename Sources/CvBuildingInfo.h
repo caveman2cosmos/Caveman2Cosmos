@@ -68,7 +68,7 @@ public:
 	bool isQuarantine() const;
 	bool getNotShowInCity() const;
 	bool EnablesOtherBuildings() const;
-	bool EnablesUnits() const;
+	bool EnablesUnits() const						{ return m_bEnablesUnits; }
 
 	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; }
 	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; }
@@ -535,6 +535,7 @@ public:
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(BuildingTypes eThis);
 
 private:
 	void setNotShowInCity();
@@ -580,8 +581,7 @@ private:
 	bool m_bQuarantine;
 	mutable bool m_bEnablesOtherBuildingsCalculated;
 	mutable bool m_bEnablesOtherBuildingsValue;
-	mutable bool m_bEnablesUnitsCalculated;
-	mutable bool m_bEnablesUnits;
+	bool m_bEnablesUnits;
 
 	int m_iFreePromotion_2;
 	int m_iFreePromotion_3;
