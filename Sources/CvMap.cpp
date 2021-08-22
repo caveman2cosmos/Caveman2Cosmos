@@ -386,10 +386,8 @@ void CvMap::updateIncomingUnits()
 	{
 		if (travelingUnit->numTurnsUntilArrival-- <= 0)
 		{
-			//if (!plotsInitialized())
-			{
-				GC.switchMap(m_eType);
-			}
+			GC.switchMap(m_eType);
+
 			const CvUnitAI& unit = travelingUnit->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
@@ -409,9 +407,16 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	if (plotsInitialized())
 	{
-		plotByIndex(iI)->doTurn();
+		GC.switchMap(m_eType);
+
+		updateIncomingUnits();
+
+		for (int iI = 0; iI < numPlots(); iI++)
+		{
+			plotByIndex(iI)->doTurn();
+		}
 	}
 }
 
