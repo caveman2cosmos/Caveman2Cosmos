@@ -46499,7 +46499,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>	
+		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SPARTACUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

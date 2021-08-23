@@ -9699,7 +9699,7 @@
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
