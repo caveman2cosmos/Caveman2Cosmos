@@ -15970,10 +15970,6 @@
 					<UnitType>UNIT_WORKER_MODERN</UnitType>
 					<iProductionModifier>5</iProductionModifier>
 				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
-					<iProductionModifier>25</iProductionModifier>
-				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<Flavors/>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>

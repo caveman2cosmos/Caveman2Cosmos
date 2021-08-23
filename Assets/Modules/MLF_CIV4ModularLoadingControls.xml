@@ -13,6 +13,10 @@
 					<Directory>Alt_Timelines</Directory>
 					<bLoad>1</bLoad>
 				</Module>
+				<Module> <!-- Cultural wonders and units -->
+					<Directory>Cultures</Directory>
+					<bLoad>1</bLoad>
+				</Module>
 				<Module> <!-- Pepper Space Program -->
 					<Directory>Pepper2000</Directory>
 					<bLoad>1</bLoad>

@@ -105752,10 +105752,6 @@
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
-					<UnitType>UNIT_PORTUGAL_CARRACK</UnitType>
-					<iProductionModifier>10</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
 					<UnitType>UNIT_FLUYT</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
@@ -105765,10 +105761,6 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_GALLEON</UnitType>
-					<iProductionModifier>10</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_NETHERLANDS_OOSTINDIEVAARDER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
+<Civ4BuildingInfos xmlns="x-schema:../../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ABBASID_EMBASSY</Type>
@@ -9699,115 +9699,7 @@
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NEANDERTHAL_EMBASSY</Type>
-			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
-			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STONE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_CAVES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_ARCH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_ARCH2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_FORM1</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_FORM2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_FORM3</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_POLAR_ROCK_FORM4</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_ARCH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_ARCH2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_FORM1</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_FORM2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_FORM3</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_DARK_ROCK_FORM4</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_ARCH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_ARCH2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_FORM1</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_FORM2</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_FORM3</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_ROCK_FORM4</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
-			<iCost>60</iCost>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>200</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_NEPAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
