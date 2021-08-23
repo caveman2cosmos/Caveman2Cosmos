@@ -686,24 +686,12 @@ public:
 	{
 		foreach_(const T& it, source)
 		{
-			if (it > -1 && !algo::contains(target, it))
+			if (/*it > -1 &&*/ !algo::contains(target, it))
 			{
 				target.push_back(it);
 			}
 		}
 
-		std::sort(target.begin(), target.end());
-	}
-
-	static void CopyNonDefaultsFromStringVector(std::vector<CvWString>& target, const std::vector<CvWString>& source)
-	{
-		foreach_(const CvWString& i, source)
-		{
-			if (!algo::contains(target, i))
-			{
-				target.push_back(i);
-			}
-		}
 		std::sort(target.begin(), target.end());
 	}
 

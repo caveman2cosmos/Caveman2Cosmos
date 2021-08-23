@@ -29493,8 +29493,8 @@ void CvEventTriggerInfo::copyNonDefaults(const CvEventTriggerInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiReligionsRequired, pClassInfo->m_aiReligionsRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCorporationsRequired, pClassInfo->m_aiCorporationsRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTextEra, pClassInfo->m_aiTextEra);
-	CvXMLLoadUtility::CopyNonDefaultsFromStringVector(m_aszText, pClassInfo->m_aszText);
-	CvXMLLoadUtility::CopyNonDefaultsFromStringVector(m_aszWorldNews, pClassInfo->m_aszWorldNews);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aszText, pClassInfo->m_aszText);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aszWorldNews, pClassInfo->m_aszWorldNews);
 
 	if (isSinglePlayer() == bDefault) m_bSinglePlayer = pClassInfo->isSinglePlayer();
 	if (isTeam() == bDefault) m_bTeam = pClassInfo->isTeam();
