@@ -3986,8 +3986,9 @@ def getHelpPiratesoftheNeutralZones1(argsList):
 def applyPiratesoftheNeutralZones1(argsList):
 	iPlayer = argsList[1].ePlayer
 
+	MAP = GC.getMap()
 	plots = []
-	for plot in GC.getMap().plots():
+	for plot in MAP.plots():
 		if plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.isLake() and plot.isAdjacentPlayer(iPlayer, True) and not plot.getNumUnits():
 			plots.append(plot)
 
