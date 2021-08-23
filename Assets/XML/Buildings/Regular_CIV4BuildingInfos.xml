@@ -3077,7 +3077,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>132</iCost>
+			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>15</iDefense>
@@ -3408,7 +3408,7 @@
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -6053,7 +6053,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>225</iCost>
+			<iCost>320</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7444,7 +7444,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>216</iCost>
+			<iCost>225</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<HealUnitCombatTypes>
@@ -7511,7 +7511,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>225</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -9581,7 +9581,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>630</iCost>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -9661,7 +9661,7 @@
 					<iHeal>2</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<iCost>216</iCost>
+			<iCost>630</iCost>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -9719,7 +9719,7 @@
 				<Bonus>BONUS_TABLETS</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>630</iCost>
 			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
 			<CommerceChanges>
@@ -14525,7 +14525,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
-			<iCost>176</iCost>
+			<iCost>200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -16858,7 +16858,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>225</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -16915,7 +16915,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>225</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -18557,7 +18557,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>192</iCost>
 			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -19209,7 +19209,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>950</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -19270,7 +19270,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>216</iCost>
+			<iCost>950</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -19309,7 +19309,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>950</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -20301,7 +20301,7 @@
 			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<Bonus>BONUS_CAT</Bonus>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<iCost>92</iCost>
+			<iCost>146</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -22733,7 +22733,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>280</iCost>
+			<iCost>310</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -22817,7 +22817,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
-			<iCost>216</iCost>
+			<iCost>310</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -22891,7 +22891,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
-			<iCost>160</iCost>
+			<iCost>310</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -26612,7 +26612,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>252</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -26671,7 +26671,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>252</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -33762,7 +33762,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -33793,7 +33793,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -33824,7 +33824,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -33855,7 +33855,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -33888,7 +33888,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -33919,7 +33919,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -33952,7 +33952,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -33983,7 +33983,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -34014,7 +34014,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -34045,7 +34045,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -34076,7 +34076,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
@@ -34107,7 +34107,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -34138,7 +34138,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -34169,7 +34169,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -34200,7 +34200,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -34231,7 +34231,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -34262,7 +34262,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -34293,7 +34293,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -34324,7 +34324,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -34355,7 +34355,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -34388,7 +34388,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -34419,7 +34419,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -34450,7 +34450,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -34483,7 +34483,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -34514,7 +34514,7 @@
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -34590,7 +34590,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -34624,7 +34624,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -34658,7 +34658,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -34692,7 +34692,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -34728,7 +34728,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
@@ -34762,7 +34762,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -34798,7 +34798,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
@@ -34832,7 +34832,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
@@ -34866,7 +34866,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -34900,7 +34900,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
@@ -34934,7 +34934,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
@@ -34968,7 +34968,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -35002,7 +35002,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
@@ -35036,7 +35036,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
@@ -35070,7 +35070,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
@@ -35104,7 +35104,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
@@ -35138,7 +35138,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
@@ -35172,7 +35172,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -35206,7 +35206,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
@@ -35240,7 +35240,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -35276,7 +35276,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -35310,7 +35310,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
@@ -35344,7 +35344,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -35380,7 +35380,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -35414,7 +35414,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -51005,7 +51005,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>216</iCost>
+			<iCost>234</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -51075,7 +51075,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>234</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -51134,7 +51134,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>234</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -52377,7 +52377,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -56301,7 +56301,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -56571,7 +56571,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -56935,7 +56935,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -57118,7 +57118,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>280</iCost>
+			<iCost>320</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -57202,7 +57202,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>320</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -57272,7 +57272,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -57638,7 +57638,7 @@
 				<Bonus>BONUS_FURNITURE</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>216</iCost>
+			<iCost>270</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -57694,7 +57694,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>270</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -58306,7 +58306,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -58407,7 +58407,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -65032,7 +65032,7 @@
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</ReplacementBuildings>
-			<iCost>234</iCost>
+			<iCost>243</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -67085,7 +67085,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>216</iCost>
+			<iCost>243</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -67152,7 +67152,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>243</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -67206,7 +67206,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>243</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -71200,7 +71200,7 @@
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>770</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -71272,7 +71272,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>770</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -72550,7 +72550,7 @@
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_GUARDIAN</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -73468,7 +73468,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
-			<iCost>74</iCost>
+			<iCost>80</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -76292,7 +76292,7 @@
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_VENGEANCE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -76347,7 +76347,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -76408,7 +76408,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
@@ -76448,7 +76448,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
@@ -76488,7 +76488,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
@@ -91294,7 +91294,7 @@
 			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>216</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -93067,7 +93067,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -93327,7 +93327,7 @@
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>1180</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -93453,7 +93453,7 @@
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>1180</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -95133,7 +95133,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95172,7 +95172,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95211,7 +95211,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95250,7 +95250,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95289,7 +95289,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95328,7 +95328,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95367,7 +95367,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95406,7 +95406,7 @@
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95486,7 +95486,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95522,7 +95522,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95558,7 +95558,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95594,7 +95594,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95630,7 +95630,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95666,7 +95666,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -95702,7 +95702,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqRawVicinityBonuses>
@@ -95738,7 +95738,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<iCost>40</iCost>
+			<iCost>80</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
@@ -96265,7 +96265,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>176</iCost>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -96995,7 +96995,7 @@
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>425</iCost>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>6</iAsset>
@@ -100214,7 +100214,7 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
-			<iCost>300</iCost>
+			<iCost>310</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -105361,7 +105361,7 @@
 			</ConstructCondition>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
-			<iCost>216</iCost>
+			<iCost>261</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -105420,7 +105420,7 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>261</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -107492,7 +107492,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -107578,7 +107578,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<FreePromotion>PROMOTION_MJOLNIR</FreePromotion>
-			<iCost>216</iCost>
+			<iCost>225</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>2</iAsset>
@@ -107701,7 +107701,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>89</iCost>
+			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
@@ -108512,7 +108512,7 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_DUNGEON</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
-			<iCost>178</iCost>
+			<iCost>356</iCost>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
@@ -108671,7 +108671,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<iCost>160</iCost>
+			<iCost>192</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
@@ -113096,7 +113096,7 @@
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>280</iCost>
+			<iCost>320</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>6</iAsset>
@@ -113173,7 +113173,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>216</iCost>
+			<iCost>320</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>3</iAsset>
@@ -113225,7 +113225,7 @@
 			</PrereqBonuses>
 			<iHurryAngerModifier>-10</iHurryAngerModifier>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -116484,7 +116484,7 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
-			<iCost>160</iCost>
+			<iCost>192</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

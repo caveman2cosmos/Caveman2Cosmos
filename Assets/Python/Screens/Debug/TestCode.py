@@ -41,6 +41,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion - those bonus tags affect buildings in various ways")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
 		self.main.addTestCode(screen, self.checkBuildingCivicInfluences, "Building - check civic tags", "Check if building is available when civic is active")
+		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
 		self.main.addTestCode(screen, self.checkUnitRequirements, "Unit - check building requirements", "Checks building requirements of units")
@@ -2420,6 +2421,40 @@ class TestCode:
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
 							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingCommerceModifiers")
+
+	#Building - Check if buildings have proper costs
+	def checkBuildingCosts(self):
+		aBaseCostList = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 111, 118, 125, 132, 139, 146, 153, 160, 168, 176, 184, 192, 200, 208, 216, 225, 234, 243, 252, 261, 270, 280, 290, 300, 310, 320, 332, 344, 356, 368, 380, 395, 410, 425, 440, 455, 475, 495, 515, 535, 555, 580, 605, 630, 655, 680, 710, 740, 770, 800, 830, 870, 910, 950, 990, 1030, 1080, 1130, 1180, 1230, 1280, 1345, 1410, 1475, 1540, 1605, 1685, 1765, 1845, 1925, 2005, 2105, 2205, 2305, 2405, 2505, 2625, 2745, 2865, 2985, 3105, 3245, 3385, 3525, 3665, 3805, 3975, 4145, 4315, 4485, 4655, 4855, 5055, 5255, 5455, 5655, 5905, 6155, 6405, 6655, 6905, 7205, 7505, 7805, 8105, 8405, 8755, 9105, 9455, 9805, 10155, 10555, 10955, 11355, 11755, 12155, 12655, 13155, 13655, 14155, 14655, 15255, 15855, 16455, 17055, 17655, 18355, 19055, 19755, 20455, 21155, 21955, 22755, 23555, 24355, 25155, 26055, 26955, 27855, 28755, 29655, 30655] #Building cost depend on most advanced tech to unlock. *2 for National, *4 for Group, *6 for World wonders, *8 for Projects
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			if CvBuildingInfo.getProductionCost() > 0 and GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and iBuilding != GC.getInfoTypeForString("BUILDING_PALACE") and CvBuildingInfo.getType().find("_CULTURE_LOCAL_") == -1:
+				iTechLoc = self.checkBuildingTechRequirements(CvBuildingInfo)[0] #Pick one of most advanced: Main/TechTypes/Religious/Special/GOM OR (earliest)
+				iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+
+				#Regular
+				if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() != aBaseCostList[iTechLoc]:
+					self.log(CvBuildingInfo.getType()+" should have Cost of "+str(aBaseCostList[iTechLoc]))
+
+				#National Wonder
+				if isNationalWonder(iBuilding) and CvBuildingInfo.getProductionCost() != 2*aBaseCostList[iTechLoc]:
+					self.log(CvBuildingInfo.getType()+" should have Cost of "+str(2*aBaseCostList[iTechLoc]))
+
+				#Group Wonder
+				if iSpecialBuilding != -1 and GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1 and CvBuildingInfo.getProductionCost() != 4*aBaseCostList[iTechLoc]:
+					self.log(CvBuildingInfo.getType()+" should have Cost of "+str(4*aBaseCostList[iTechLoc]))
+
+				#World Wonder
+				if isWorldWonder(iBuilding) and not (iSpecialBuilding != -1 and GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1) and CvBuildingInfo.getProductionCost() != 6*aBaseCostList[iTechLoc]:
+					self.log(CvBuildingInfo.getType()+" should have Cost of "+str(6*aBaseCostList[iTechLoc]))
+
+		#Project
+		for iProject in xrange(GC.getNumProjectInfos()):
+			CvProjectInfo = GC.getProjectInfo(iProject)
+			iTechLoc = GC.getTechInfo(CvProjectInfo.getTechPrereq()).getGridX()
+
+			if CvProjectInfo.getProductionCost() != 8*aBaseCostList[iTechLoc]:
+				self.log(CvProjectInfo.getType()+" should have Cost of "+str(8*aBaseCostList[iTechLoc]))
 
 	#Unit - check unit upgrades
 	def checkUnitUpgrades(self):
