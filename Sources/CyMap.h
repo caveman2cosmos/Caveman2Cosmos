@@ -10,12 +10,14 @@
 class CyPlot;
 class CvMap;
 class CyArea;
+class CyUnit;
 
 class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap); // Call from C++
+	explicit CyMap(MapTypes eMap);
+
 	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 
 	int getType();
@@ -102,6 +104,8 @@ public:
 	bool generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
+
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
 	// Super Forts *canal* *choke*
 	void calculateCanalAndChokePoints();

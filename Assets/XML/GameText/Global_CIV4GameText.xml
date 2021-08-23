@@ -3057,24 +3057,6 @@
 		<Spanish>[COLOR_WARNING_TEXT]Requiere al menos %d1_Num [NUM1:ciudad:ciudades][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS</Tag>
-		<!-- %s1_Name = Can be Buildings, Units, etc -->
-		<English>[COLOR_WARNING_TEXT]Requires %s1_Name (%d2_NumCurr/%d3_NumTotal Total)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Name (%d2_NumCurr/%d3_NumTotal au total)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Name (%d2_NumCurr/%d3_NumTotal gesamt)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Name (%d2_NumCurr/%d3_NumTotal totali)[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumCurr de un total de %d3_NumTotal)[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY</Tag>
-		<!-- %s1_Name = Can be Buildings, Units, etc -->
-		<English>[COLOR_WARNING_TEXT]Requires %s1_Name (%d2_NumTotal Total)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Name (%d2_NumTotal au total)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Name (%d2_NumTotal gesamt)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Name (%d2_NumTotal totali)[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Name (%d2_NumTotal en total)[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_TEAMS</Tag>
 		<English>[ICON_BULLET]Requires at least %d1_Num Teams</English>
 		<French>[ICON_BULLET]Requiert au moins %d1_Num équipes</French>
@@ -15222,6 +15204,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_EARTH</Tag>
 		<English>Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_SUBTERRAIN</Tag>
+		<English>Underground</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Tag>
@@ -30956,7 +30942,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TIME_AD_SAVE</Tag>
 		<English>AD-%s1_Date</English>
 		<French>%s1_Date ap. J.C</French>
-		<German>n. Chr.-%s1_Date</German>
+		<German>n.Chr.-%s1_Date</German>
 		<Italian>d.C. - %s1_Date</Italian>
 		<Spanish>%s1_Date d. C.</Spanish>
 	</TEXT>
@@ -30974,7 +30960,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TIME_BC_SAVE</Tag>
 		<English>BC-%s1_Date</English>
 		<French>%s1_Date av. J-C.</French>
-		<German>v. Chr.-%s1_Date</German>
+		<German>v.Chr.-%s1_Date</German>
 		<Italian>a. C. - %s1_Date</Italian>
 		<Spanish>%s1_Date a. C.</Spanish>
 	</TEXT>

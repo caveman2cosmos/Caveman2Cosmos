@@ -3677,33 +3677,6 @@ Current techs which are not in this file:-
 			<Button>,Art/Interface/Buttons/TechTree/Mysticism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,11</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_MEGAFAUNA_DOMESTICATION</Type>
-			<Description>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION</Description>
-			<Civilopedia>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>60</iCost>
-			<Era>C2C_ERA_PREHISTORIC</Era>
-			<iAsset>4</iAsset>
-			<iPower>1</iPower>
-			<bTrade>1</bTrade>
-			<bGoodyTech>1</bGoodyTech>
-			<iGridX>18</iGridX>
-			<iGridY>13</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION_QUOTE</Quote>
-			<Sound>AS2D_TECH_MEGAFAUNA_DOMESTICATION</Sound>
-			<SoundMP>AS2D_TECH_MEGAFAUNA_DOMESTICATION</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/megafaunadomestication.dds</Button>
-		</TechInfo>
-		<TechInfo>
 			<Type>TECH_MEGALITH_CONSTRUCTION</Type>
 			<Description>TXT_KEY_TECH_MEGALITH_CONSTRUCTION</Description>
 			<Civilopedia>TXT_KEY_TECH_MEGALITH_CONSTRUCTION_PEDIA</Civilopedia>
@@ -3742,6 +3715,33 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_MEGALITH_CONSTRUCTION</Sound>
 			<SoundMP>AS2D_TECH_MEGALITH_CONSTRUCTION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/megalithconstruction.dds</Button>
+		</TechInfo>
+		<TechInfo>
+			<Type>TECH_MEGAFAUNA_DOMESTICATION</Type>
+			<Description>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION</Description>
+			<Civilopedia>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>60</iCost>
+			<Era>C2C_ERA_PREHISTORIC</Era>
+			<iAsset>4</iAsset>
+			<iPower>1</iPower>
+			<bTrade>1</bTrade>
+			<bGoodyTech>1</bGoodyTech>
+			<iGridX>18</iGridX>
+			<iGridY>13</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+			</OrPreReqs>
+			<Quote>TXT_KEY_TECH_MEGAFAUNA_DOMESTICATION_QUOTE</Quote>
+			<Sound>AS2D_TECH_MEGAFAUNA_DOMESTICATION</Sound>
+			<SoundMP>AS2D_TECH_MEGAFAUNA_DOMESTICATION</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/megafaunadomestication.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SEDENTARY_LIFESTYLE</Type>
@@ -9016,12 +9016,16 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_CONCRETE</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildings>
-				<PrereqBuilding>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqBuildings>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Quote>
 			<Sound>AS2D_TECH_WATERPROOF_CONCRETE</Sound>
 			<SoundMP>AS2D_TECH_WATERPROOF_CONCRETE</SoundMP>
@@ -12737,12 +12741,20 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildings>
-				<PrereqBuilding>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqBuildings>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Quote>TXT_KEY_TECH_LEAD_GLASS_QUOTE</Quote>
 			<Sound>AS2D_TECH_LEAD_GLASS</Sound>
 			<SoundMP>AS2D_TECH_LEAD_GLASS</SoundMP>
@@ -15013,6 +15025,45 @@ Current techs which are not in this file:-
 			<Button>,Art/Interface/Buttons/TechTree/organicChemistry.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,14</Button>
 		</TechInfo>
 		<TechInfo>
+			<Type>TECH_TELEGRAPH</Type>
+			<Description>TXT_KEY_TECH_TELEGRAPH</Description>
+			<Civilopedia>TXT_KEY_TECH_TELEGRAPH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<iCost>6042</iCost>
+			<Era>C2C_ERA_INDUSTRIAL</Era>
+			<iAsset>48</iAsset>
+			<iPower>4</iPower>
+			<bTrade>1</bTrade>
+			<iGridX>65</iGridX>
+			<iGridY>1</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>9</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			</OrPreReqs>
+			<Quote>TXT_KEY_TECH_TELEGRAPH_QUOTE</Quote>
+			<Sound>AS2D_TECH_TELEGRAPH</Sound>
+			<SoundMP>AS2D_TECH_TELEGRAPH</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/telegraph.dds</Button>
+			<bDCMAirBombTech1>0</bDCMAirBombTech1>
+		</TechInfo>
+		<TechInfo>
 			<Type>TECH_FIREFIGHTING</Type>
 			<Description>TXT_KEY_TECH_FIREFIGHTING</Description>
 			<Civilopedia>TXT_KEY_TECH_FIREFIGHTING_PEDIA</Civilopedia>
@@ -15125,6 +15176,38 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_REFINING</Sound>
 			<SoundMP>AS2D_TECH_REFINING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Refining.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,2,15</Button>
+		</TechInfo>
+		<TechInfo>
+			<Type>TECH_METEOROLOGY</Type>
+			<Description>TXT_KEY_TECH_METEOROLOGY</Description>
+			<Civilopedia>TXT_KEY_TECH_METEOROLOGY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<iCost>6351</iCost>
+			<Era>C2C_ERA_INDUSTRIAL</Era>
+			<iAsset>40</iAsset>
+			<iPower>2</iPower>
+			<bTrade>1</bTrade>
+			<iGridX>66</iGridX>
+			<iGridY>1</iGridY>
+			<DomainExtraMoves>
+				<DomainExtraMove>
+					<DomainType>DOMAIN_AIR</DomainType>
+					<iExtraMoves>1</iExtraMoves>
+				</DomainExtraMove>
+			</DomainExtraMoves>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>7</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_TELEGRAPH</PrereqTech>
+			</OrPreReqs>
+			<Quote>TXT_KEY_TECH_METEOROLOGY_QUOTE</Quote>
+			<Sound>AS2D_TECH_METEOROLOGY</Sound>
+			<SoundMP>AS2D_TECH_METEOROLOGY</SoundMP>
+			<Button>Art/Interface/Buttons/techtree/Meteorology.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_MODERN_SANITATION</Type>
@@ -15978,43 +16061,37 @@ Current techs which are not in this file:-
 			<Button>,Art/Interface/Buttons/TechTree/Refrigeration.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,7</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_TELEGRAPH</Type>
-			<Description>TXT_KEY_TECH_TELEGRAPH</Description>
-			<Civilopedia>TXT_KEY_TECH_TELEGRAPH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>6042</iCost>
+			<Type>TECH_TELEPHONE</Type>
+			<Description>TXT_KEY_TECH_TELEPHONE</Description>
+			<Civilopedia>TXT_KEY_TECH_TELEPHONE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<iAITradeModifier>10</iAITradeModifier>
+			<iCost>7008</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
-			<iAsset>48</iAsset>
-			<iPower>4</iPower>
+			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
-			<iGridX>65</iGridX>
-			<iGridY>1</iGridY>
+			<iGridX>68</iGridX>
+			<iGridY>9</iGridY>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>9</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_JOURNALISM</PrereqTech>
+				<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_TELEGRAPH_QUOTE</Quote>
-			<Sound>AS2D_TECH_TELEGRAPH</Sound>
-			<SoundMP>AS2D_TECH_TELEGRAPH</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/telegraph.dds</Button>
-			<bDCMAirBombTech1>0</bDCMAirBombTech1>
+			<AndPreReqs>
+				<PrereqTech>TECH_TELEGRAPH</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_TELEPHONE_QUOTE</Quote>
+			<Sound>AS2D_TECH_GENERIC</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Buttons/Techs/telephone.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CIVIL_ENGINEERING</Type>
@@ -16332,71 +16409,6 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_MOTORIZED_TRANSPORTATION</Sound>
 			<SoundMP>AS2D_TECH_MOTORIZED_TRANSPORTATION</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Motorized_transportation.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,12</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_METEOROLOGY</Type>
-			<Description>TXT_KEY_TECH_METEOROLOGY</Description>
-			<Civilopedia>TXT_KEY_TECH_METEOROLOGY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>6351</iCost>
-			<Era>C2C_ERA_INDUSTRIAL</Era>
-			<iAsset>40</iAsset>
-			<iPower>2</iPower>
-			<bTrade>1</bTrade>
-			<iGridX>66</iGridX>
-			<iGridY>1</iGridY>
-			<DomainExtraMoves>
-				<DomainExtraMove>
-					<DomainType>DOMAIN_AIR</DomainType>
-					<iExtraMoves>1</iExtraMoves>
-				</DomainExtraMove>
-			</DomainExtraMoves>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>7</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_TELEGRAPH</PrereqTech>
-			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_METEOROLOGY_QUOTE</Quote>
-			<Sound>AS2D_TECH_METEOROLOGY</Sound>
-			<SoundMP>AS2D_TECH_METEOROLOGY</SoundMP>
-			<Button>Art/Interface/Buttons/techtree/Meteorology.dds</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_TELEPHONE</Type>
-			<Description>TXT_KEY_TECH_TELEPHONE</Description>
-			<Civilopedia>TXT_KEY_TECH_TELEPHONE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iAITradeModifier>10</iAITradeModifier>
-			<iCost>7008</iCost>
-			<Era>C2C_ERA_INDUSTRIAL</Era>
-			<iAsset>40</iAsset>
-			<bTrade>1</bTrade>
-			<iGridX>68</iGridX>
-			<iGridY>9</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_TELEGRAPH</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_TELEPHONE_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>Art/Buttons/Techs/telephone.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_MANAGEMENT</Type>
@@ -23993,6 +24005,46 @@ Current techs which are not in this file:-
 			<Button>Art/Buttons/Techs/NanotechTech.dds</Button>
 		</TechInfo>
 		<TechInfo>
+			<Type>TECH_NANO_ARCHITECTURE</Type>
+			<Description>TXT_KEY_TECH_NANO_ARCHITECTURE</Description>
+			<Civilopedia>TXT_KEY_TECH_NANO_ARCHITECTURE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Era>C2C_ERA_NANOTECH</Era>
+			<iAsset>48</iAsset>
+			<bTrade>1</bTrade>
+			<iCost>36429</iCost>
+			<iGridX>100</iGridX>
+			<iGridY>1</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_NANO_ARCHITECTURE_QUOTE</Quote>
+			<Sound>AS2D_TECH_GENERIC</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/interface/buttons/TechTree/nano_architecture.dds</Button>
+		</TechInfo>
+		<TechInfo>
 			<Type>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Type>
 			<Description>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Description>
 			<Civilopedia>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS_PEDIA</Civilopedia>
@@ -24038,46 +24090,6 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS2</Sound>
 			<SoundMP>AS2D_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS2</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/advancedenvironmentalsystems.dds</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_NANO_ARCHITECTURE</Type>
-			<Description>TXT_KEY_TECH_NANO_ARCHITECTURE</Description>
-			<Civilopedia>TXT_KEY_TECH_NANO_ARCHITECTURE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<Era>C2C_ERA_NANOTECH</Era>
-			<iAsset>48</iAsset>
-			<bTrade>1</bTrade>
-			<iCost>36429</iCost>
-			<iGridX>100</iGridX>
-			<iGridY>1</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_NANO_ARCHITECTURE_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>Art/interface/buttons/TechTree/nano_architecture.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_BIOMETRIC_WARFARE</Type>

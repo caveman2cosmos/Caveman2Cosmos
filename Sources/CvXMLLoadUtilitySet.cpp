@@ -1009,6 +1009,8 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo(eUnit).setCanAnimalIgnores();
 	}
 
+	GC.doPostLoadCaching();
+
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();
 	GC.m_paReligionInfo.insert(GC.m_paReligionInfo.end(), GC.getGAMEFONT_TGA_RELIGIONS() - GC.m_paReligionInfo.size(), pReligionBogus);

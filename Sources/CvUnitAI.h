@@ -26,7 +26,6 @@ class CvUnitAI : public CvUnit
 {
 public:
 	CvUnitAI(bool bIsDummy = false);
-	CvUnitAI(const CvUnitAI& other);
 	virtual ~CvUnitAI();
 
 	CvUnitAI& operator=(const CvUnitAI& other);

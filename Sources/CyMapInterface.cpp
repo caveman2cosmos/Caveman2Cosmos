@@ -101,5 +101,7 @@ void CyMapPythonInterface()
 
 		// Super Forts *canal* *choke*
 		.def("calculateCanalAndChokePoints", &CyMap::calculateCanalAndChokePoints, "void ()")
+
+		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 	;
 }

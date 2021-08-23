@@ -55,6 +55,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_PLANET</Type>
@@ -138,6 +139,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_EPITAXY_FACTORY</Type>
@@ -482,6 +484,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_NOBLE_GAS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1455,6 +1460,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CANDLE</Type>
@@ -1495,6 +1501,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CORE</Type>
@@ -1531,6 +1538,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_UNIFICATION_ACCELERATOR</Type>
@@ -1917,6 +1925,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Type>
@@ -2011,6 +2020,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KBO_OUTPOST</Type>
@@ -2372,18 +2382,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NANOMORPHIC_HABITATS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ADVANCED_REPLICATORS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NANOMORPHIC_HABITATS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_ADVANCED_REPLICATORS</Bonus>
+			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_ANTIMATTER</Type>
@@ -2522,6 +2524,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MERCURY_SUNSHADE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
+			</TechTypes>
 			<iCost>9454</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2883,6 +2888,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_SPACECRAFT_FACTORY</Type>
@@ -2917,6 +2923,7 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_VR</Type>
@@ -3001,6 +3008,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_BASE</Type>
@@ -3761,6 +3769,7 @@
 				<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE</Type>
@@ -3958,6 +3967,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
@@ -3985,6 +3995,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPERATURE_REGULATOR</Type>
@@ -4185,6 +4196,7 @@
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 				<BuildingType>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_MERCURY</Type>
@@ -4720,7 +4732,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VERTICAL_REEF</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
+			</TechTypes>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

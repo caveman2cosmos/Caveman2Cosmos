@@ -568,7 +568,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -628,7 +628,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -670,7 +669,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -814,7 +813,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
 			<iCost>176</iCost>
 			<iAsset>4</iAsset>
 			<iAIWeight>1</iAIWeight>
@@ -3405,7 +3403,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3482,7 +3480,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4499,7 +4497,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4985,8 +4983,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 				<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>92</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5016,7 +5014,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5072,7 +5070,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7841,7 +7839,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8562,10 +8560,10 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_GENETICS</ObsoleteTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -9783,7 +9781,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10500,7 +10498,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10591,7 +10589,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10832,7 +10830,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10887,7 +10885,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19512,7 +19510,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MULE_TRAINER</ArtDefineTag>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<iCost>92</iCost>
 			<MapCategoryTypes>
@@ -21272,7 +21269,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21327,7 +21324,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21734,6 +21731,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</FreeBuilding>
@@ -22318,6 +22316,7 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -22533,6 +22532,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
@@ -23299,7 +23299,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23360,7 +23360,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -25010,7 +25010,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -25073,7 +25073,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -26510,7 +26510,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -26565,7 +26565,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -27183,7 +27183,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -27238,7 +27238,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -28417,7 +28417,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -28472,7 +28472,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -29945,7 +29945,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -31131,7 +31131,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -32903,7 +32903,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<iCost>250</iCost>
+			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -32970,7 +32970,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<iCost>450</iCost>
+			<iCost>225</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

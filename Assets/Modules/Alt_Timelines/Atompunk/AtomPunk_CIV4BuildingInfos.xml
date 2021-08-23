@@ -36,6 +36,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_URANIUM</Bonus>
@@ -57,7 +58,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -80,6 +81,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -99,6 +101,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -177,6 +180,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -193,7 +197,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-25</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -211,6 +215,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
@@ -239,6 +244,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_PLANT</Type>
@@ -261,6 +267,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -756,7 +763,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
-			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -777,6 +784,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
+			<iHealth>-1</iHealth>
 			<iTradeRoutes>2</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>

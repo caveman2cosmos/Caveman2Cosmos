@@ -89,6 +89,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_BANG_OBSERVATORY</Type>
@@ -257,7 +258,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_BIOLOGICAL_CORE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
+			</TechTypes>
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -934,6 +938,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
@@ -1038,6 +1043,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
+			</TechTypes>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1138,6 +1146,7 @@
 					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_TELESCOPE</Type>
@@ -1427,6 +1436,7 @@
 				<BuildingType>BUILDING_METAMORPHIC_CISLUNAR_STATION</BuildingType>
 				<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFLATABLE_HABITAT</Type>
@@ -1796,6 +1806,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRIME_DIRECTIVE_EFFECT</Type>

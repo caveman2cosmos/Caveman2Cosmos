@@ -454,6 +454,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_DEUTERIUM_EXPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -466,6 +469,7 @@
 				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
@@ -537,6 +541,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -949,6 +956,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

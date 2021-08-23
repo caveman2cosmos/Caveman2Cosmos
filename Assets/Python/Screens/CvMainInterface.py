@@ -3125,16 +3125,9 @@ class CvMainInterface:
 			#Corporations
 			for i in xrange(self.iNumCorporationInfos):
 				if CyCity.isHasCorporation(i):
-					n = 0
-					while True:
-						iPrereq = GC.getCorporationInfo(i).getPrereqBonuses(n)
-						if iPrereq > -1:
-							if iPrereq == iBonus:
-								szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
-								break
-						else:
-							break
-						n += 1
+					for eBonus in GC.getCorporationInfo(i).getPrereqBonuses():
+						if eBonus == iBonus:
+							szRightBuffer += u'%c' %(GC.getCorporationInfo(i).getChar())
 			screen.appendTableRow(ID)
 			screen.setTableText(ID, 0, iRow, szLeftBuffer, "", iWidget, iBonus, -1, 1<<0)
 			screen.setTableText(ID, 1, iRow, szRightBuffer, "", iWidget, iBonus, -1, 1<<1)

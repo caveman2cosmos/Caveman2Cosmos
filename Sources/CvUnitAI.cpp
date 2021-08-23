@@ -81,16 +81,11 @@ CvUnitAI::CvUnitAI(bool bIsDummy) : CvUnit(bIsDummy)
 }
 
 
-CvUnitAI::CvUnitAI(const CvUnitAI& other) : CvUnit(other)
-{
-	*this = other;
-}
-
-
 CvUnitAI::~CvUnitAI()
 {
 	AI_uninit();
 }
+
 
 CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 {
@@ -108,8 +103,11 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_iGenericValue = other.m_iGenericValue;
 	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
 
+	//static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other)
+
 	return *this;
 }
+
 
 void CvUnitAI::AI_init(UnitAITypes eUnitAI, int iBirthmark)
 {

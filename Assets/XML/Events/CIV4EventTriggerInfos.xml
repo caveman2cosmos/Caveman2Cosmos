@@ -1558,7 +1558,6 @@
 				<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
-				<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			</ImprovementsRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>
@@ -6015,37 +6014,9 @@
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
 		</EventTriggerInfo>
+		<!-- @SAVEBREAK delete EVENTTRIGGER_TOXCATL once we can remove event triggers - cultures are modularized -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_TOXCATL</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_TOXCATL</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TOXCATL</Text>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/Toxcatl.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<iNumUnits>1</iNumUnits>
-			<BuildingsRequired>
-				<Building>BUILDING_COURTHOUSE</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<BonusesRequired>
-				<BonusType>BONUS_AZTEC</BonusType>
-			</BonusesRequired>
-			<Events>
-				<Event>EVENT_TOXCATL_1</Event>
-				<Event>EVENT_TOXCATL_2</Event>
-			</Events>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>

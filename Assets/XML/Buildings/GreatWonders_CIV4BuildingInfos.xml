@@ -218,6 +218,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
 			<bWater>1</bWater>
+			<bPrereqPower>1</bPrereqPower>
 			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -291,6 +292,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AKSHARDHAM</Type>
@@ -425,7 +427,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALAMUT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALAMUT</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -566,7 +567,7 @@
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
+			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ALHAMBRA_2</ObsoletesToBuilding>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -736,6 +737,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMNESTY_INTERNATIONAL</Type>
@@ -757,6 +759,7 @@
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>1</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Type>
@@ -928,6 +931,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1000,6 +1006,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_APADANA_PALACE</Type>
@@ -1023,7 +1030,7 @@
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iCitiesPrereq>8</iCitiesPrereq>
-			<iCost>1008</iCost>
+			<iCost>1152</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1145,12 +1152,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
+				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_APPIAN_WAY_HELP</Help>
 		</BuildingInfo>
@@ -1313,6 +1320,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCOSANTI</Type>
@@ -1343,6 +1351,14 @@
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<Bonus>BONUS_BRONZE_WARES</Bonus>
 			<PropertyManipulators>
@@ -1370,7 +1386,7 @@
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
-			<iCost>960</iCost>
+			<iCost>1200</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -1527,6 +1543,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASSYRIA_EKAL</Type>
@@ -1615,6 +1632,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AZADI</Type>
@@ -1721,7 +1739,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
-			<iCost>1296</iCost>
+			<iCost>1458</iCost>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1898,6 +1916,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAUHAUS</Type>
@@ -2112,6 +2131,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAULIEU</Type>
@@ -2328,6 +2348,7 @@
 				<Bonus>BONUS_DISKETTES</Bonus>
 				<Bonus>BONUS_FLASH_MEMORY_DEVICES</Bonus>
 			</PrereqBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELL_ROCK</Type>
@@ -2374,6 +2395,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bWater>1</bWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BERLIN_WALL</Type>
@@ -2526,6 +2548,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIZARRO_WORLD</Type>
@@ -2563,6 +2586,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MULTIVERSE_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKWATER_DRAW</Type>
@@ -2638,6 +2662,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
+				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_BLARNEY_HELP</Help>
@@ -3269,6 +3297,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURJ_KHALIFA</Type>
@@ -3331,6 +3360,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURNINGMAN</Type>
@@ -3443,7 +3473,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<iCost>224</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -3631,6 +3661,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN</Type>
@@ -4109,9 +4140,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_CHEOMSEONGDAE</ConstructSound>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqTech>TECH_STARGAZING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MASONRY</PrereqTech>
+				<PrereqTech>TECH_STARGAZING</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -4358,12 +4389,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_URBAN_HIGH_SPEED_RAIL</FreeBuilding>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_JAPANESE</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -4419,15 +4444,11 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_HIPPODROME</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIPPODROME</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+				<BuildingType>BUILDING_SPEEDWAY</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TOURNAMENTS</ObsoleteTech>
 			<iCost>834</iCost>
 			<CommerceChanges>
@@ -4587,6 +4608,7 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COIT_TOWER</Type>
@@ -4697,6 +4719,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
@@ -5094,7 +5117,6 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
 			<iCost>1860</iCost>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -5202,6 +5224,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_PALACE</Type>
@@ -5400,6 +5423,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CYBERNETIC_ORGAN_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARPA</Type>
@@ -5537,12 +5561,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_INDIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
@@ -5986,6 +6004,31 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
+			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
+			<iCost>30330</iCost>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>200</iHurryCostModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_DORADO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
@@ -6174,6 +6217,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_WORLD_CENTRAL</Type>
@@ -6202,12 +6246,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_ARABIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6483,6 +6521,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HEAT_SINK</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EDINBURGH_CASTLE</Type>
@@ -6500,9 +6539,34 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGH_WALLS</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_BARRICADES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_CEMENT_BARRIER</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_METAMATERIAL_WALL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SUPERSTRONG_ALLOY_WALL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MEGASTRONG_ALLOY_WALL</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
@@ -6833,6 +6897,7 @@
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<bNoHolyCity>1</bNoHolyCity>
 			<PropertyManipulators>
@@ -6938,6 +7003,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMU_EGG</Type>
@@ -7185,6 +7251,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_AMPLIFIED_WAVELENGTHS</PrereqTech>
 			<iCost>24870</iCost>
 			<CommerceChanges>
@@ -7223,6 +7290,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EURO_ELT</Type>
@@ -7253,6 +7323,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EYE_IN_SKY</Type>
@@ -7671,6 +7744,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
@@ -7840,9 +7914,13 @@
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
+			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iCost>1404</iCost>
@@ -8144,7 +8222,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<iCost>1296</iCost>
+			<iCost>1350</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<HealUnitCombatTypes>
@@ -8221,6 +8299,7 @@
 					<iPropertyValue>-100</iPropertyValue>
 				</Property>
 			</Properties>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUTURE_VENICE</Type>
@@ -8268,6 +8347,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GATEWAY_ARCH</Type>
@@ -8339,6 +8419,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUNDIAL</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<ObsoleteTech>TECH_CLOCKWORKS</ObsoleteTech>
 			<iCost>1056</iCost>
 			<CommerceChanges>
@@ -8756,6 +8839,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>4980</iCost>
@@ -9079,6 +9163,7 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_JAGUAR_TEMPLE</Type>
@@ -9364,7 +9449,7 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
-			<iCost>1404</iCost>
+			<iCost>1458</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -9444,7 +9529,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
-			<iCost>1404</iCost>
+			<iCost>1458</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
@@ -9952,9 +10037,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HANGING_GARDEN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HANGING_GARDENS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_GARDENING</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
+				<PrereqTech>TECH_GARDENING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
@@ -10269,7 +10354,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<iCost>1296</iCost>
+			<iCost>1350</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -10330,7 +10415,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
-			<iCost>1860</iCost>
+			<iCost>1920</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -10591,12 +10676,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HIMEJI_CASTLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>1800</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10827,13 +10915,22 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
 			</PrereqInCityBuildings>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
@@ -10850,6 +10947,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLLYWOOD</Type>
@@ -10905,7 +11003,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_WISDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_WISDOM</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
+			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
@@ -10992,6 +11090,7 @@
 				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_RIGHTS_DECLARATION</Type>
@@ -11055,7 +11154,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HUMPHREY_METRODOME</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
@@ -11104,6 +11203,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERLOOP</Type>
@@ -11128,6 +11228,7 @@
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ICE_HOTEL</Type>
@@ -11340,6 +11441,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ISHTAR</Type>
@@ -11361,15 +11463,30 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_GLASSSMITH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_GLASS_FACTORY</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MANUFACTURING_DISTRICT</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+				<BuildingType>BUILDING_BARRICADES</BuildingType>
+				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>1566</iCost>
@@ -11658,6 +11775,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JEWISH_MASADA</Type>
@@ -11678,7 +11796,7 @@
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
-			<iCost>1104</iCost>
+			<iCost>1200</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -12123,6 +12241,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Type>
@@ -12270,9 +12389,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KRAK_DES_CHEVS</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
-			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_STONE</Bonus>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
@@ -12298,6 +12417,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
+				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
@@ -12432,6 +12555,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
 				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 				<BuildingType>BUILDING_FRESCO</BuildingType>
 			</PrereqOrBuildings>
@@ -12514,6 +12638,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iPrereqPopulation>3</iPrereqPopulation>
+			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAS_VEGAS_STRIP</Type>
@@ -12867,7 +12992,6 @@
 			</MapCategoryTypes>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -12875,7 +12999,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
-			<iCost>1296</iCost>
+			<iCost>1350</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -13366,6 +13490,7 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGELLAN</Type>
@@ -13383,10 +13508,12 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
-			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
+				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
 			<iCost>2640</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13601,6 +13728,7 @@
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
@@ -14022,7 +14150,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_MINING</ObsoleteTech>
 			<iCost>248</iCost>
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -14161,9 +14289,13 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
+				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>876</iCost>
 			<CommerceChanges>
@@ -14211,7 +14343,7 @@
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
-			<iCost>1404</iCost>
+			<iCost>1458</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -14552,7 +14684,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -14706,6 +14838,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORSE_CODE</Type>
@@ -14734,6 +14867,10 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TELEGRAPH_OFFICE</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -14965,7 +15102,7 @@
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iCost>1104</iCost>
+			<iCost>1350</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAnarchyModifier>-50</iAnarchyModifier>
@@ -15117,6 +15254,114 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NEANDERTHAL_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_STONE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_CAVES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM4</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<iCost>60</iCost>
+			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>200</iHurryCostModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NECROMANTEION</Type>
@@ -15497,7 +15742,7 @@
 				<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
 				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<iCost>708</iCost>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -15629,7 +15874,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15771,6 +16016,7 @@
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_SPIRAL</Type>
@@ -15824,12 +16070,14 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
+				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1404</iCost>
 			<iHappiness>10</iHappiness>
@@ -15981,6 +16229,7 @@
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 				<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORICHALCUM_FORGE</Type>
@@ -16018,6 +16267,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORIENT_EXPRESS</Type>
@@ -16179,7 +16429,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -16190,7 +16439,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -16323,6 +16572,28 @@
 				<BuildingType>BUILDING_TREX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PTERADACTYL_BREEDER</BuildingType>
 			</PrereqOrBuildings>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_PTERADACTYL_BREEDER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_RAPTOR_BREEDER</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TREX_BREEDER</BuildingType>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TRILOBITE_BREEDER</BuildingType>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16330,6 +16601,7 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALM_ISLANDS</Type>
@@ -16986,7 +17258,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PHYSICS</ObsoleteTech>
+			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<iCost>1296</iCost>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -17762,7 +18034,7 @@
 			<PrereqTech>TECH_ANIMISM</PrereqTech>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>296</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -18034,6 +18306,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<iTradeRoutes>2</iTradeRoutes>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -18361,13 +18636,20 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARKET</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SUPERMARKET</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -18378,6 +18660,16 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MARKET</BuildingType>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -18422,6 +18714,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEASIDE</Type>
@@ -18626,7 +18921,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAOLIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHAOLIN</MovieDefineTag>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<FreePromotion>PROMOTION_MARTIAL_ARTS</FreePromotion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -18781,7 +19075,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Bonus>BONUS_SIAMESE</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
@@ -18884,15 +19177,11 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SILK</Bonus>
 			</PrereqBonuses>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BAZAAR</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MERCANTILISM</ObsoleteTech>
 			<iCost>1350</iCost>
 			<CommerceModifiers>
@@ -19109,6 +19398,9 @@
 				<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
@@ -19472,12 +19764,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_KOREAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20259,6 +20545,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
@@ -20452,6 +20739,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -21034,6 +21324,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAJ_MAHAL</Type>
@@ -21121,6 +21412,7 @@
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_TEMPLE_OF_HEAVEN</Type>
@@ -21334,9 +21626,6 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROMAN</BonusType>
-			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
@@ -21623,7 +21912,7 @@
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<FreeBuilding>BUILDING_THOR_ALTAR</FreeBuilding>
-			<iCost>1296</iCost>
+			<iCost>1350</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
@@ -21701,12 +21990,17 @@
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iHappinessChange>3</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iLineOfSight>3</iLineOfSight>
 			<iPrereqPopulation>13</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_TOWER</Type>
@@ -21739,12 +22033,21 @@
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iLineOfSight>2</iLineOfSight>
 			<iPrereqPopulation>7</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOPKAPI_PALACE</Type>
@@ -21945,6 +22248,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSATLANTIC_TUNNEL</Type>
@@ -22013,9 +22317,11 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MARKET</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SUPERMARKET</BuildingType>
+				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -22030,6 +22336,21 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MARKET</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22103,6 +22424,7 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TSUKIJI</Type>
@@ -22277,6 +22599,7 @@
 			<iHurryCostModifier>300</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
@@ -22832,7 +23155,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -22843,7 +23165,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -22935,7 +23257,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Add a fitting promo when we can
 			<FreePromoTypes>
 				<FreePromoType>
 					<PromotionType>PROMOTION_INSPIRE1</PromotionType>
@@ -22946,7 +23267,7 @@
 						</Has>
 					</FreePromotionCondition>
 				</FreePromoType>
-			</FreePromoTypes> -->
+			</FreePromoTypes>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -23180,7 +23501,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iCost>1800</iCost>
+			<iCost>1860</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
@@ -23258,9 +23579,11 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>2460</iCost>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -23321,6 +23644,7 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_WILLENDORF</Type>
@@ -23647,12 +23971,26 @@
 			<Civilopedia>TXT_KEY_BUILDING_WANG_ZHEN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WATERMILL</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_WATERMILL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MODERN_MILL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOOD_MANUFACTURING_DISTRICT</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
+				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1680</iCost>
@@ -23922,6 +24260,7 @@
 					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILLIS_TOWER</Type>
@@ -23975,6 +24314,7 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILLOWRUN</Type>
@@ -24580,6 +24920,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
+				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE2</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
@@ -24670,6 +25011,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bOrbital>1</bOrbital>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

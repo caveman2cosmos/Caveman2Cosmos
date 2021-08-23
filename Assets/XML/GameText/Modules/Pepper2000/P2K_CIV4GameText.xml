@@ -2315,7 +2315,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. It also can be transformed to Lunar bulldozer to build lunar mines and route.</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2444,16 +2444,8 @@
 		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT][NEWLINE][ICON_BULLET]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ñîáðàíî íà Çåìëå, îíî ïîëåçíî òîëüêî çà ïðåäåëàìè ðîäíîé ïëàíåòû.[NEWLINE]Îáíîâëåíèå äî êîñìè÷åñêîãî ïîñåëåíöà íà óðîâíå êîñìè÷åñêîé ñòàíöèè. 3</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
-		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
-		<French>Cette fusée lourde développée commercialement est une mise à niveau de vos anciennes navettes spatiales.</French>
-		<Russian>Ýòà òÿæåëàÿ, êîììåð÷åñêè ðàçðàáîòàííàÿ ðàêåòà ÿâëÿåòñÿ îáíîâëåíèåì âàøèõ ñòàðûõ êîñìè÷åñêèõ êîðàáëåé.</Russian>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2677,7 +2669,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE][ICON_BULLET]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3010,7 +3002,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
-		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][ICON_BULLET][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
 	</TEXT>
@@ -3256,7 +3248,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains.[NEWLINE]Interstellar and Stellar colonies are completely different.</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
 	</TEXT>

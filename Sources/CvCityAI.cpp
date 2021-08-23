@@ -557,16 +557,7 @@ bool CvCityAI::AI_avoidGrowth()
 bool CvCityAI::AI_ignoreGrowth()
 {
 	PROFILE_FUNC();
-
-	if (!AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople())
-	{
-		if (!AI_foodAvailable((isHuman()) ? 0 : 1))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return !AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople() && !AI_foodAvailable(!isHuman());
 }
 
 
@@ -5098,13 +5089,16 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					iValue += (kBuilding.getFreeExperience() * (bMetAnyCiv ? 12 : 6));
 
+					foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
+					{
+						if (canTrain(modifier.first))
+						{
+							iValue += modifier.second * (bMetAnyCiv ? 6 : 3);
+						}
+					}
+
 					for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 					{
-						if (kBuilding.getUnitCombatFreeExperience((UnitCombatTypes)iI) != 0 && canTrain((UnitCombatTypes)iI))
-						{
-							iValue += (kBuilding.getUnitCombatFreeExperience((UnitCombatTypes)iI) * (bMetAnyCiv ? 6 : 3));
-						}
-
 						if (kBuilding.isUnitCombatRetrainType((UnitCombatTypes)iI))
 						{
 							iValue += 20;
@@ -5382,23 +5376,23 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 					{
 						const CvUnitInfo& kUnitInfo = GC.getUnitInfo((UnitTypes)iI);
-						int iCombatType = kUnitInfo.getUnitCombatType();
+						UnitCombatTypes eCombatType = (UnitCombatTypes)kUnitInfo.getUnitCombatType();
 
-						if (iCombatType != NO_UNITCOMBAT
+						if (eCombatType != NO_UNITCOMBAT
 							&& kUnitInfo.getDomainType() == DOMAIN_SEA
 							&& canTrain((UnitTypes)iI))
 						{
-							iValue += (kBuilding.getUnitCombatFreeExperience(iCombatType) * (bMetAnyCiv ? 6 : 3));
+							iValue += (kBuilding.getUnitCombatFreeExperience(eCombatType) * (bMetAnyCiv ? 6 : 3));
 
-							if (kBuilding.isUnitCombatRetrainType((UnitCombatTypes)iCombatType))
+							if (kBuilding.isUnitCombatRetrainType(eCombatType))
 							{
 								iValue += 20;
 							}
 
 							if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
 							{
-								int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType);
-								if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iCombatType))
+								int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType);
+								if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement(eCombatType))
 								{
 									iValue = 10 * (20 - iDuration);
 								}
@@ -7236,7 +7230,7 @@ void CvCityAI::AI_updateRouteToCity() const
 		allAreaCitiesConnected->clear();
 	}
 
-	CvCity* pBestCity = NULL;
+	const CvCity* pBestCity = NULL;
 	stdext::hash_map<int, bool>::const_iterator itr;
 	if ((itr = allAreaCitiesConnected->find(area()->getID())) == allAreaCitiesConnected->end() ||
 		!(itr->second))
@@ -7244,7 +7238,6 @@ void CvCityAI::AI_updateRouteToCity() const
 		gDLL->getFAStarIFace()->ForceReset(&GC.getRouteFinder());
 
 		int iBestValue = MAX_INT;
-		pBestCity = NULL;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -14472,7 +14465,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		|| kBuilding.getWarWearinessModifier() < 0
 		|| kBuilding.getGlobalWarWearinessModifier() < 0
 		|| kBuilding.getCommerceHappiness(NO_COMMERCE) > 0
-		|| kBuilding.getBonusHappinessChanges(NO_BONUS) > 0
+		|| !kBuilding.getBonusHappiness().empty()
 		|| !kBuilding.getBuildingHappinessChanges().empty()
 		|| GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0)
 		{
@@ -14513,7 +14506,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		if (kBuilding.getFreeExperience() > 0 ||
 			kBuilding.getGlobalFreeExperience() > 0 ||
 			kBuilding.getFreePromotion() != NO_PROMOTION ||
-			kBuilding.getUnitCombatFreeExperience(NO_UNITCOMBAT) > 0 ||
+			!kBuilding.getUnitCombatFreeExperience().empty() ||
 			kBuilding.getDomainFreeExperience(NO_DOMAIN) > 0 ||
 			kBuilding.getFreePromotion_2() != NO_PROMOTION ||
 			kBuilding.getFreePromotion_3() != NO_PROMOTION ||
@@ -14523,7 +14516,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getNumUnitCombatRetrainTypes() > 0 ||
 			kBuilding.getNationalCaptureProbabilityModifier() > 0 ||
 			kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0 ||
-			kBuilding.isAnyUnitCombatFreeExperience() ||
+			!kBuilding.getUnitCombatFreeExperience().empty() ||
 			kBuilding.isAnyDomainFreeExperience())
 		{
 			return true;
@@ -15212,13 +15205,16 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				int iValue = 0;
 				iValue += kBuilding.getFreeExperience() * (bMetAnyCiv ? 12 : 6);
 
+				foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
+				{
+					if (canTrain(modifier.first))
+					{
+						iValue += modifier.second * (bMetAnyCiv ? 6 : 3);
+					}
+				}
+
 				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 				{
-					if (kBuilding.getUnitCombatFreeExperience((UnitCombatTypes)iI) != 0 && canTrain((UnitCombatTypes)iI))
-					{
-						iValue += kBuilding.getUnitCombatFreeExperience(iI) * (bMetAnyCiv ? 6 : 3);
-					}
-
 					if (kBuilding.isUnitCombatRetrainType((UnitCombatTypes)iI))
 					{
 						iValue += 20;
@@ -15512,23 +15508,24 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 				{
 					const CvUnitInfo& kUnitInfo = GC.getUnitInfo((UnitTypes)iI);
-					int iCombatType = kUnitInfo.getUnitCombatType();
+					UnitCombatTypes eCombatType = (UnitCombatTypes)kUnitInfo.getUnitCombatType();
 
-					if (iCombatType != NO_UNITCOMBAT && kUnitInfo.getDomainType() == DOMAIN_SEA && canTrain((UnitTypes)iI))
+					if (eCombatType != NO_UNITCOMBAT && kUnitInfo.getDomainType() == DOMAIN_SEA && canTrain((UnitTypes)iI))
 					{
-						iValue += kBuilding.getUnitCombatFreeExperience(iCombatType) * (bMetAnyCiv ? 6 : 3);
+						iValue += kBuilding.getUnitCombatFreeExperience(eCombatType) * (bMetAnyCiv ? 6 : 3);
 
-						if (kBuilding.isUnitCombatRetrainType((UnitCombatTypes)iCombatType))
+						if (kBuilding.isUnitCombatRetrainType(eCombatType))
 						{
 							iValue += 20;
 						}
-
+#ifdef ONGOING_TRAINING
 						if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType) > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType) < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iCombatType))
+							&& kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType) > 0
+							&& kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType) < getUnitCombatOngoingTrainingTimeIncrement(eCombatType))
 						{
-							iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(iCombatType)) * 10;
+							iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType)) * 10;
 						}
+#endif // ONGOING_TRAINING
 					}
 				}
 

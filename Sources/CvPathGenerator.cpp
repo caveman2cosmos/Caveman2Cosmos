@@ -353,8 +353,6 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 	}
 }
 
-bool CvPathGenerator::m_bFastMode = false;
-
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
 	: m_map(pMap)
 	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))
@@ -1835,7 +1833,6 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 {
 	PROFILE_FUNC();
 
-	bool bResult;
 	CvUnit*	pTempUnit = GET_PLAYER(ePlayer).getTempUnit(eUnit, pFrom->getX(), pFrom->getY());
 
 	pTempUnit->finishMoves();
@@ -1847,7 +1844,7 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 	//	FUTURE - might want to move the no-land-units-across-water flags up to the callers once they
 	//	become aware of it.  For now it's here to prevent paths Python generates to build roads etc
 	//	crossing water
-	bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
+	const bool bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
 
 	GET_PLAYER(ePlayer).releaseTempUnit();
 
@@ -1885,8 +1882,6 @@ void CvPathGenerator::SelfTest()
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
 	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
-
-	EnableMaxPerformance(true);
 
 	while( iPathsRemaining > 0 )
 	{
@@ -1954,8 +1949,6 @@ void CvPathGenerator::SelfTest()
 			GET_PLAYER((PlayerTypes)0).releaseTempUnit();
 		}
 	}
-
-	EnableMaxPerformance(false);
 
 	sprintf(buffer,"%d paths out of %d successful\r\n", iPathsSuccessful, NUM_PATHS);
 	OutputDebugString(buffer);

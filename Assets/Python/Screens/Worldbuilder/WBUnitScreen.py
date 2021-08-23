@@ -8,7 +8,6 @@ import WBEventScreen
 import WBPlayerUnits
 import WorldBuilder
 import WBInfoScreen
-import Popup
 
 GC = CyGlobalContext()
 
@@ -693,12 +692,12 @@ class WBUnitScreen:
 			self.sortUnits()
 
 		elif sName == "UnitScreenHeader":
-			popup = Popup.PyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL)
+			popup = CyPopup(5006, EventContextTypes.EVENTCONTEXT_ALL, True)
 			popup.setUserData((pUnit.getOwner(), pUnit.getID()))
-			popup.setBodyString(CyTranslator().getText("TXT_KEY_RENAME_UNIT", ()))
-			popup.createEditBox(pUnit.getNameNoDesc())
-			popup.setEditBoxMaxCharCount(25)
-			popup.launch()
+			popup.setBodyString(CyTranslator().getText("TXT_KEY_RENAME_UNIT", ()), 1<<0)
+			popup.createEditBox(pUnit.getNameNoDesc(), 0)
+			popup.setEditBoxMaxCharCount(25, 32, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif sName == "WBCurrentUnit":
 			iPlayer = inputClass.getData1() - 8300
@@ -806,12 +805,11 @@ class WBUnitScreen:
 			self.placeDirection()
 
 		elif sName == "UnitEditScriptData":
-			popup = Popup.PyPopup(3333, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(3333, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pUnit.getOwner(), pUnit.getID()))
-			popup.createEditBox(pUnit.getScriptData())
-			popup.launch()
-			return
+			popup.createEditBox(pUnit.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif sName == "CopyStats":
 			self.handleCopyAll()

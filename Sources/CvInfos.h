@@ -1914,7 +1914,7 @@ public:
 
 	UnitCombatTypes getSubCombatType(int i) const;
 	int getNumSubCombatTypes() const;
-	bool isSubCombatType(int i) const;
+	bool isSubCombatType(UnitCombatTypes e) const;
 	const std::vector<UnitCombatTypes>& getSubCombatTypes() const;
 
 	int getCureAfflictionType(int i) const;
@@ -1926,13 +1926,11 @@ public:
 	bool isHealAsType(int i) const;
 	void setHealAsTypes();
 
-	int getTerrainImpassableType(int i) const;
-	int getNumTerrainImpassableTypes() const;
-	bool isTerrainImpassableType(int i) const;
+	bool isTerrainImpassableType(TerrainTypes e) const;
+	const std::vector<TerrainTypes>& getImpassableTerrains() const { return m_vTerrainImpassableTypes; }
 
-	int getFeatureImpassableType(int i) const;
-	int getNumFeatureImpassableTypes() const;
-	bool isFeatureImpassableType(int i) const;
+	bool isFeatureImpassableType(FeatureTypes e) const;
+	const std::vector<FeatureTypes>& getImpassableFeatures() const { return m_vFeatureImpassableTypes; }
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
@@ -2237,8 +2235,6 @@ public:
 	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
 
-	//bool getTerrainImpassable(int i) const;
-	//bool getFeatureImpassable(int i) const;
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
 	bool getFreePromotions(int i) const;
@@ -2364,7 +2360,6 @@ protected:
 	std::vector<BuildTypes> m_workerBuilds;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
-
 	std::vector<int> m_aiTargetUnit;
 	std::vector<int> m_aiDefendAgainstUnit;
 	std::vector<int> m_aiSupersedingUnits;
@@ -2589,8 +2584,8 @@ protected:
 	std::vector<UnitCombatTypes> m_aiSubCombatTypes;
 	std::vector<int> m_aiCureAfflictionTypes;
 	std::vector<int> m_aiHealAsTypes;
-	std::vector<int> m_aiTerrainImpassableTypes;
-	std::vector<int> m_aiFeatureImpassableTypes;
+	std::vector<TerrainTypes> m_vTerrainImpassableTypes;
+	std::vector<FeatureTypes> m_vFeatureImpassableTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiTrapSetWithPromotionTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
@@ -3745,15 +3740,12 @@ private:
 	int m_iAIWarWearinessPercent;
 	int m_iAIPerEraModifier;
 	int m_iAIAdvancedStartPercent;
-	int m_iNumGoodies;
 
 	CvString m_szHandicapName;
 
 	IDValueMapPercent m_Percent;
 
-	// Arrays
-
-	int* m_piGoodies;
+	std::vector<int> m_piGoodies;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

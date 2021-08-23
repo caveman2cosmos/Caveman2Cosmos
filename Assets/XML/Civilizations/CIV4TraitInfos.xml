@@ -1217,10 +1217,6 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
-					<iUnitProductionModifier>25</iUnitProductionModifier>
-				</UnitProductionModifierType>
-				<UnitProductionModifierType>
 					<UnitType>UNIT_PARK_RANGER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -4715,10 +4711,6 @@
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_CONSTRUCT_SHIP</UnitType>
-					<iUnitProductionModifier>25</iUnitProductionModifier>
-				</UnitProductionModifierType>
-				<UnitProductionModifierType>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>

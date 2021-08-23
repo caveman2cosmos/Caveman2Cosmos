@@ -1127,6 +1127,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COLONY_EUGENICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CULTURAL_EVOLUTION</PrereqTech>
+			</TechTypes>
 			<iCost>1757</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1879,7 +1882,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESIGNER_CASTE_MISSION_CONTROL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
+			<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
+			</TechTypes>
 			<iCost>1757</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2331,6 +2337,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TIMEHOLE</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FALSE_VACUUM_TRAP</Type>
@@ -2483,6 +2490,7 @@
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Type>
@@ -2517,7 +2525,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
+			</TechTypes>
 			<iCost>29200</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -2969,6 +2980,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GRAVITON_DETECTOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
+				<PrereqTech>TECH_ADAPTIVE_ARCHITECTURE</PrereqTech>
+			</TechTypes>
 			<iCost>2856</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4881,6 +4896,7 @@
 				<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSMIUM_CORE_PLANET</Type>
@@ -5243,7 +5259,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRECIOUS_METAL_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -5299,6 +5318,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROGRAMMED_WORK_ETHIC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CULTURAL_EVOLUTION</PrereqTech>
+			</TechTypes>
 			<iCost>1757</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -5870,6 +5892,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SELF_REPLICATING_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ADAPTIVE_ARCHITECTURE</PrereqTech>
+			</TechTypes>
 			<iCost>2856</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -5934,6 +5959,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPHEREWORLD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
+			</TechTypes>
 			<iCost>3611</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -6095,7 +6123,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STAR_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -6120,7 +6152,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STELLAR_FUSION_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -6290,18 +6325,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_CORE_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARP_DRIVES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AB_MATTER</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_WARP_DRIVES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_AB_MATTER</Bonus>
+			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GAS_GIANT</Type>
@@ -6594,6 +6621,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOROIDAL_PLANET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PLANETS</PrereqTech>
+			</TechTypes>
 			<iCost>3611</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -6618,6 +6648,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRACTOR_BEAM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
+			</TechTypes>
 			<iCost>3212</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

@@ -101,13 +101,13 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_statsReporter(NULL)
 	, m_diplomacyScreen(NULL)
 	, m_mpDiplomacyScreen(NULL)
-	, m_pathFinder(NULL)
-	, m_interfacePathFinder(NULL)
-	, m_stepFinder(NULL)
-	, m_routeFinder(NULL)
-	, m_borderFinder(NULL)
-	, m_areaFinder(NULL)
-	, m_plotGroupFinder(NULL)
+	//, m_pathFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_interfacePathFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_stepFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_routeFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_borderFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_areaFinders(bst::array<FAStar*, NUM_MAPS>())
+	//, m_plotGroupFinders(bst::array<FAStar*, NUM_MAPS>())
 	, m_aiPlotDirectionX(NULL)
 	, m_aiPlotDirectionY(NULL)
 	, m_aiPlotCardinalDirectionX(NULL)
@@ -386,6 +386,17 @@ void cvInternalGlobals::init()
 
 	gDLL->initGlobals();	// some globals need to be allocated outside the dll
 
+	for (int i = 1; i < NUM_MAPS; i++)
+	{
+		m_pathFinders[i]			= gDLL->getFAStarIFace()->create();
+		m_interfacePathFinders[i]	= gDLL->getFAStarIFace()->create();
+		m_stepFinders[i]			= gDLL->getFAStarIFace()->create();
+		m_routeFinders[i]			= gDLL->getFAStarIFace()->create();
+		m_borderFinders[i]			= gDLL->getFAStarIFace()->create();
+		m_areaFinders[i]			= gDLL->getFAStarIFace()->create();
+		m_plotGroupFinders[i]		= gDLL->getFAStarIFace()->create();
+	}
+
 	m_game = new CvGameAI;
 
 	for (int i = 0; i < NUM_MAPS; i++)
@@ -395,6 +406,7 @@ void cvInternalGlobals::init()
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
+	CyGlobalContext::initStatics();
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);
@@ -412,6 +424,15 @@ void cvInternalGlobals::init()
 	m_bResourceLayerOn = false;
 
 	OutputDebugString("Initializing Internal Globals: End\n");
+}
+
+namespace
+{
+	void deleteFAStar(FAStar* ptr)
+	{
+		gDLL->getFAStarIFace()->destroy(ptr);
+		ptr = NULL;
+	}
 }
 
 //
@@ -450,24 +471,25 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE(m_VarSystem);
 
 	// already deleted outside of the dll, set to null for safety
-	m_messageQueue=NULL;
-	m_hotJoinMsgQueue=NULL;
-	m_messageControl=NULL;
-	m_setupData=NULL;
-	m_messageCodes=NULL;
-	m_dropMgr=NULL;
-	m_portal=NULL;
-	m_statsReporter=NULL;
-	m_interface=NULL;
-	m_diplomacyScreen=NULL;
-	m_mpDiplomacyScreen=NULL;
-	m_pathFinder=NULL;
-	m_interfacePathFinder=NULL;
-	m_stepFinder=NULL;
-	m_routeFinder=NULL;
-	m_borderFinder=NULL;
-	m_areaFinder=NULL;
-	m_plotGroupFinder=NULL;
+	m_messageQueue = NULL;
+	m_hotJoinMsgQueue = NULL;
+	m_messageControl = NULL;
+	m_setupData = NULL;
+	m_messageCodes = NULL;
+	m_dropMgr = NULL;
+	m_portal = NULL;
+	m_statsReporter = NULL;
+	m_interface = NULL;
+	m_diplomacyScreen = NULL;
+	m_mpDiplomacyScreen = NULL;
+
+	algo::for_each(m_pathFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_interfacePathFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_stepFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_routeFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_borderFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_areaFinders, bind(deleteFAStar, _1));
+	algo::for_each(m_plotGroupFinders, bind(deleteFAStar, _1));
 
 	m_typesMap.clear();
 	m_aInfoArrays.clear();
@@ -570,11 +592,6 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 bool cvInternalGlobals::viewportsEnabled() const
 {
 	return m_ENABLE_VIEWPORTS;
-}
-
-bool cvInternalGlobals::getReprocessGreatWallDynamically() const
-{
-	return m_ENABLE_VIEWPORTS || getDefineBOOL("DYNAMIC_GREAT_WALL");
 }
 
 int cvInternalGlobals::getNumMapInfos() const
@@ -2213,7 +2230,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start/n");
+	OutputDebugString("Caching Globals: Start\n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2241,7 +2258,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End/n");
+	OutputDebugString("Caching Globals: End\n");
 }
 
 
@@ -2548,7 +2565,7 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {
-	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 
 	if (eMap != CURRENT_MAP)
 	{
@@ -2654,7 +2671,42 @@ int cvInternalGlobals::getNumMissionInfos() const
 
 CvMap& cvInternalGlobals::getMap() const
 {
-	return *m_maps[GC.getGame().getCurrentMap()];
+	return *m_maps[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getPathFinder() const
+{
+	return *m_pathFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getInterfacePathFinder() const
+{
+	return *m_interfacePathFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getStepFinder() const
+{
+	return *m_stepFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getRouteFinder() const
+{
+	return *m_routeFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getBorderFinder() const
+{
+	return *m_borderFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getAreaFinder() const
+{
+	return *m_areaFinders[CURRENT_MAP];
+}
+
+FAStar& cvInternalGlobals::getPlotGroupFinder() const
+{
+	return *m_plotGroupFinders[CURRENT_MAP];
 }
 
 CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
@@ -2672,14 +2724,41 @@ void cvInternalGlobals::setMessageCodeTranslator(CvMessageCodeTranslator* pVal) 
 void cvInternalGlobals::setDropMgr(CvDropMgr* pVal) { m_dropMgr = pVal; }
 void cvInternalGlobals::setPortal(CvPortal* pVal) { m_portal = pVal; }
 void cvInternalGlobals::setStatsReport(CvStatsReporter* pVal) { m_statsReporter = pVal; }
-void cvInternalGlobals::setPathFinder(FAStar* pVal) { m_pathFinder = pVal; }
-void cvInternalGlobals::setInterfacePathFinder(FAStar* pVal) { m_interfacePathFinder = pVal; }
-void cvInternalGlobals::setStepFinder(FAStar* pVal) { m_stepFinder = pVal; }
-void cvInternalGlobals::setRouteFinder(FAStar* pVal) { m_routeFinder = pVal; }
-void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
-void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
-void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
 
+void cvInternalGlobals::setPathFinder(FAStar* pVal)
+{
+	m_pathFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setInterfacePathFinder(FAStar* pVal)
+{
+	m_interfacePathFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setStepFinder(FAStar* pVal)
+{
+	m_stepFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setRouteFinder(FAStar* pVal)
+{
+	m_routeFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setBorderFinder(FAStar* pVal)
+{
+	m_borderFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setAreaFinder(FAStar* pVal)
+{
+	m_areaFinders[MAP_EARTH] = pVal;
+}
+
+void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal)
+{
+	m_plotGroupFinders[MAP_EARTH] = pVal;
+}
 
 static bool bBugInitCalled = false;
 
@@ -2758,4 +2837,12 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 		}
 	}
 	return iSum;
+}
+
+void cvInternalGlobals::doPostLoadCaching()
+{
+	for (int i = 0, num = getNumBuildingInfos(); i < num; i++)
+	{
+		m_paBuildingInfo[i]->doPostLoadCaching(static_cast<BuildingTypes>(i));
+	}
 }

@@ -29,15 +29,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_CROPS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_CROPS</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_BIOFACTORY</Type>
@@ -75,18 +69,10 @@
 				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CARBON_DIOXIDE_ICE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_MANUFACTURED_GOODS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_CARBON_DIOXIDE_ICE</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_MARTIAN_ALGAE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -124,18 +110,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_ELECTRONICS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_ALGAE</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_ELECTRONICS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_MARTIAN_ALGAE</Bonus>
+			</PrereqBonuses>
 			<bPrereqPower>1</bPrereqPower>
 			<PropertyManipulators>
 				<PropertySource>
@@ -208,6 +186,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_ECO</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+			</TechTypes>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -230,6 +211,7 @@
 					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_FACTORY</Type>
@@ -293,6 +275,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_HITECH</Type>
@@ -335,10 +318,12 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_ELECTROMAGNETIC_FIELD_SHIELDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ASTROECOLOGY</ObsoleteTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -419,15 +404,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARTIAN_FRUIT</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_MARTIAN_FRUIT</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_METRO</Type>
@@ -456,14 +435,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NOVUS_CHEMICALS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -472,6 +444,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iRevIdxLocal>-10</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_MINE</Type>
@@ -540,6 +513,7 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_RADIATION</Type>
@@ -625,6 +599,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA</Type>
@@ -685,6 +660,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA_EFFECT</Type>
@@ -739,6 +715,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALBEDO_REDUCTION</Type>
@@ -748,6 +725,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ALBEDO_REDUCTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
+			</TechTypes>
 			<iCost>3065</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -760,6 +740,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ALGAE_FARM</Type>
@@ -768,7 +749,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ALGAE_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_DYSTOPIA_PATHOGENS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+				<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
+			</TechTypes>
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -787,6 +772,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</Type>
@@ -808,6 +794,7 @@
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_AREOTHERMAL</Type>
@@ -841,6 +828,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
+			<iCost>800</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
@@ -916,6 +904,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CFC_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
+			</TechTypes>
 			<iCost>3065</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -928,14 +919,8 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NOVUS_CHEMICALS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CLAYTRONIC_CITY</Type>
@@ -958,6 +943,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_CO2_SUBLIMATION</Type>
@@ -978,6 +964,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_COMMUNICATION_BEACON</Type>
@@ -1011,6 +998,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			</TechTypes>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1036,6 +1026,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CYBERNETIC_CHLOROPLASTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEFENSE</Type>
@@ -1062,6 +1053,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Type>
@@ -1083,6 +1075,7 @@
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DEUTERIUM_MINE</Type>
@@ -1104,6 +1097,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_DNT_IMPORTER</Type>
@@ -1138,6 +1132,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Type>
@@ -1176,6 +1171,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Type>
@@ -1200,6 +1196,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_EXPANDED_HABITAT</Type>
@@ -1233,6 +1230,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_FROST_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FROST_BEAMS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+			</TechTypes>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1250,6 +1250,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_FUSION_PLANT</Type>
@@ -1289,6 +1290,7 @@
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GARDEN</Type>
@@ -1298,6 +1300,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_GARDEN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+			</TechTypes>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1321,6 +1326,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GEOLOGY_LAB</Type>
@@ -1375,6 +1381,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iRevIdxLocal>-10</iRevIdxLocal>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HOTEL</Type>
@@ -1401,6 +1408,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HYDROPONICS</Type>
@@ -1410,6 +1418,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1483,6 +1492,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_MASS_DRIVER</Type>
@@ -1509,6 +1519,7 @@
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOMAD</Type>
@@ -1534,6 +1545,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Type>
@@ -1568,6 +1580,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Type>
@@ -1589,6 +1602,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Type>
@@ -1610,6 +1624,7 @@
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SIMULATED_WORLD</Type>
@@ -1641,6 +1656,7 @@
 					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYHOOK</Type>
@@ -1667,14 +1683,8 @@
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIAMOND_NANOTHREADS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_DIAMOND_NANOTHREADS</Bonus>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SKYSCRAPER</Type>
@@ -1703,6 +1713,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SOLAR_ARRAY</Type>
@@ -1733,7 +1744,10 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SPACEPORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+			</TechTypes>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1745,6 +1759,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_STARPORT</Type>
@@ -1772,6 +1787,7 @@
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_VERTICAL_FARM</Type>
@@ -1813,6 +1829,7 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_WATER</Type>
@@ -1860,6 +1877,7 @@
 				<BuildingType>BUILDING_MARS_ECO</BuildingType>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Type>
@@ -1885,6 +1903,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RING_OF_MARS</Type>
@@ -1928,6 +1947,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERAVERSE</Type>
@@ -1959,6 +1979,7 @@
 				<BuildingType>BUILDING_MARTIAN_STARPORT</BuildingType>
 				<BuildingType>BUILDING_VENUS_MEGAFACTORY</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MARS</Type>
@@ -2005,6 +2026,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

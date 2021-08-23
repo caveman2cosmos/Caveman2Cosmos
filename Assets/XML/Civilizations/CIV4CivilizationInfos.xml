@@ -1549,6 +1549,10 @@
 					<LeaderName>LEADER_PERICLES</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_LEONIDAS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_GREECE_SELECT</CivilizationSelectionSound>
@@ -3331,10 +3335,6 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_LENIN</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_LEONIDAS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

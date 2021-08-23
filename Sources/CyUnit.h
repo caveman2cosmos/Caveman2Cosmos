@@ -15,7 +15,6 @@ class CySelectionGroup;
 class CyUnit
 {
 public:
-	CyUnit();
 	DllExport explicit CyUnit(CvUnit* pUnit);		// Call from C++
 
 	CvUnit* getUnit() const { return m_pUnit; };	// Call from C++

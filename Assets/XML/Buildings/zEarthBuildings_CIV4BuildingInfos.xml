@@ -47,6 +47,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_ALIEN_HYBRID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIMATTER_IMPORTER</Type>
@@ -87,6 +88,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_ARCHAILECT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_GATE</Type>
@@ -105,18 +107,10 @@
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<PrereqTech>TECH_ASCENSION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COMPUTERS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NANOTUBES</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_COMPUTERS</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_NANOTUBES</Bonus>
+			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
@@ -126,7 +120,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>167130</iCost>
+			<iCost>177930</iCost>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
 			<VictoryThresholds>
@@ -147,6 +141,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_DEFLECTION_SYSTEM</Type>
@@ -202,7 +197,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<iCost>2505</iCost>
+			<iCost>2745</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
@@ -230,6 +225,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
@@ -285,6 +281,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATEMPORAL</Type>
@@ -328,6 +325,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOSPHERE_2</Type>
@@ -357,6 +357,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_ASTEROID</Type>
@@ -385,6 +386,7 @@
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CASSINI_HUYGENS</Type>
@@ -468,6 +470,7 @@
 				</And>
 			</ConstructCondition>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_EFFECT</Type>
@@ -509,6 +512,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
@@ -567,21 +571,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_ROBOTIC_BODY</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_ENLIGHTENED</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY</Type>
@@ -603,6 +600,7 @@
 				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
@@ -766,6 +764,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
@@ -794,6 +793,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENLIGHTENED</Type>
@@ -809,18 +809,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UTOPIA_DESTINY</PrereqTech>
 			<iCost>10510</iCost>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_DESIGNER_BABIES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -877,6 +869,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iGlobalPopulationChange>-1</iGlobalPopulationChange>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLATLAND</Type>
@@ -900,6 +893,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_ECONOMY</Type>
@@ -931,6 +925,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_EFFECT</Type>
@@ -992,6 +987,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GILLS</Type>
@@ -1050,6 +1046,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
@@ -1105,6 +1102,7 @@
 				<iYield>35</iYield>
 			</YieldModifiers>
 			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IKAROS</Type>
@@ -1146,18 +1144,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IMMORTALITY</PrereqTech>
 			<iCost>31710</iCost>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_TRANSAPIENT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_TRANSAPIENT</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -1183,6 +1173,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFORMATION_BASED</Type>
@@ -1256,6 +1247,7 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_PROBE</Type>
@@ -1335,6 +1327,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1512,6 +1507,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SCIENCE_LAB</Type>
@@ -1565,6 +1561,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAPHYSICAL</Type>
@@ -1684,6 +1681,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_TO_CALLISTO</Type>
@@ -1708,6 +1706,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_IMPORTER</Type>
@@ -1734,6 +1733,7 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MITHRIL</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_ROCK_LAB</Type>
@@ -1834,6 +1834,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>110130</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1970,18 +1971,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SYNTHETIC_SYNESTHESIA</PrereqTech>
 			<iCost>10110</iCost>
-			<ConstructCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_NEUROIMPLANTS</ID>
-					</Has>
-				</And>
-			</ConstructCondition>
+			<Bonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_NEUROIMPLANTS</Bonus>
+			</PrereqBonuses>
 			<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -2236,7 +2229,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>7680</iCost>
+			<iCost>8460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -2244,6 +2237,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ROCKET_FUEL_REFINERY</BuildingType>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>10</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2303,6 +2301,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			</TechTypes>
 			<iCost>11810</iCost>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
@@ -2311,6 +2312,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SECTION_31</Type>
@@ -2428,6 +2430,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SKYLAB</Type>
@@ -2505,6 +2508,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_EFFECT</Type>
@@ -2604,6 +2608,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPUTNIK</Type>
@@ -2684,6 +2689,7 @@
 			<FreeBonus>BONUS_HUMAN_MOD_TRANSAPIENT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNITED_FEDERATION_OF_PLANETS</Type>
@@ -2741,6 +2747,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_EFFECT</Type>

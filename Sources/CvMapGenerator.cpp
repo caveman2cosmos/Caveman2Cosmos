@@ -877,31 +877,17 @@ void CvMapGenerator::generateRandomMap()
 
 void CvMapGenerator::generatePlotTypes()
 {
-	int* paiPlotTypes = new int[GC.getMap().numPlots()];
-
-	int iNumPlots = GC.getMap().numPlots();
-
-	std::vector<int> plotTypesOut;
-	if (Cy::call_override(GC.getMap().getMapScript(), "generatePlotTypes", plotTypesOut))
+	std::vector<int> plotTypes;
+	if (Cy::call_override(GC.getMap().getMapScript(), "generatePlotTypes", plotTypes))
 	{
-		// Python override
-		FAssertMsg((int)plotTypesOut.size() == iNumPlots, "python generatePlotTypes() should return list with length numPlots");
-		for (int iI = 0; iI < iNumPlots; iI++)
-		{
-			paiPlotTypes[iI] = plotTypesOut[iI];
-		}
+		FAssertMsg((int)plotTypes.size() == GC.getMap().numPlots(), "python generatePlotTypes() should return list with length numPlots");
 	}
 	else
 	{
-		for (int iI = 0; iI < iNumPlots; iI++)
-		{
-			paiPlotTypes[iI] = PLOT_LAND;
-		}
+		plotTypes.resize(GC.getMap().numPlots(), PLOT_LAND);
 	}
 
-	setPlotTypes(paiPlotTypes);
-
-	SAFE_DELETE_ARRAY(paiPlotTypes);
+	setPlotTypes(plotTypes);
 }
 
 void CvMapGenerator::generateTerrain()
@@ -931,17 +917,14 @@ void CvMapGenerator::afterGeneration()
 	Cy::call_optional(GC.getMap().getMapScript(), "afterGeneration");
 }
 
-void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
+void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 {
-	CvPlot* pLoopPlot;
-	int iNumPlots;
-
-	iNumPlots = GC.getMap().numPlots();
+	const int iNumPlots = GC.getMap().numPlots();
 
 	for (int iI = 0; iI < iNumPlots; iI++)
 	{
 		gDLL->callUpdater();
-		GC.getMap().plotByIndex(iI)->setPlotType(((PlotTypes)(paiPlotTypes[iI])), false, false);
+		GC.getMap().plotByIndex(iI)->setPlotType((PlotTypes)plotTypes[iI], false, false);
 	}
 
 	GC.getMap().recalculateAreas();
@@ -949,7 +932,7 @@ void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
 	for (int iI = 0; iI < iNumPlots; iI++)
 	{
 		gDLL->callUpdater();
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isWater())
 		{

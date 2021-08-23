@@ -52,7 +52,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>3</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
@@ -71,6 +71,7 @@
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
@@ -107,7 +108,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -156,7 +156,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

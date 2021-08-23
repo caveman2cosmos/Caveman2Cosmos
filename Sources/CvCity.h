@@ -183,6 +183,7 @@ public:
 
 	void doTurn();
 	void doAutobuild();
+	void checkPropertyBuildings();
 
 	bool isCitySelected() const;
 	DllExport bool canBeSelected() const;

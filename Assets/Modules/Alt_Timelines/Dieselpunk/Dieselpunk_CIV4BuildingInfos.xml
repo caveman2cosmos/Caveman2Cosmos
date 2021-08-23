@@ -35,6 +35,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -97,6 +98,7 @@
 				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
@@ -155,7 +157,7 @@
 					<iHeal>15</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<iHealth>-5</iHealth>
+			<iHealth>-1</iHealth>
 			<iTradeRoutes>3</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -269,7 +271,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNICATION_NETWORKS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

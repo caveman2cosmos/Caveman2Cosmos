@@ -292,6 +292,11 @@ bool CyPlayer::hasBuilding(int /*BuildingTypes*/ eBuilding) const
 	return m_pPlayer->hasBuilding((BuildingTypes) eBuilding);
 }
 
+int CyPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra) const
+{
+	return m_pPlayer->getBuildingPrereqBuilding(eBuilding, ePrereqBuilding, iExtra);
+}
+
 int CyPlayer::countNumCitiesConnectedToCapital() const
 {
 	return m_pPlayer->countNumCitiesConnectedToCapital();
@@ -557,14 +562,11 @@ bool CyPlayer::hasHeadquarters(int /*CorporationTypes*/ eCorporation) const
 	return m_pPlayer->hasHeadquarters((CorporationTypes)eCorporation);
 }
 
-int CyPlayer::getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics) const
+int CyPlayer::getCivicAnarchyLength(const python::list& /*CivicTypes*/ lNewCivics) const
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
-
-	const int iRet = m_pPlayer->getCivicAnarchyLength((CivicTypes*)pCivics);
-	delete [] pCivics;
-	return iRet;
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lNewCivics);
+	return m_pPlayer->getCivicAnarchyLength(&v[0]);
 }
 
 int CyPlayer::getReligionAnarchyLength() const
@@ -1431,7 +1433,8 @@ int CyPlayer::getNumCities() const
 
 CyCity* CyPlayer::getCity(int iID) const
 {
-	return new CyCity(m_pPlayer->getCity(iID));
+	CvCity* city = m_pPlayer->getCity(iID);
+	return city ? new CyCity(city) : NULL;
 }
 
 python::list CyPlayer::units() const
@@ -1727,12 +1730,11 @@ void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)
 	m_pPlayer->setModderOption((ModderOptionTypes)eIndex, iNewValue);
 }
 
-void CyPlayer::doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce)
+void CyPlayer::doRevolution(const python::list& /*CivicTypes*/ lNewCivics, bool bForce)
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
-	m_pPlayer->revolution((CivicTypes*)pCivics, bForce);
-	delete [] pCivics;
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lNewCivics);
+	m_pPlayer->revolution(&v[0], bForce);
 }
 
 bool CyPlayer::isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const
