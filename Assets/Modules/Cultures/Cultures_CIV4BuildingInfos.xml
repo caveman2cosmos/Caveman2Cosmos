@@ -833,6 +833,10 @@
 					<BuildingType>BUILDING_BURJ_KHALIFA</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DUBAI_WORLD_CENTRAL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
@@ -3531,32 +3535,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
-			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
-			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
-			<iCost>30330</iCost>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>200</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_DRAVIDIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5832,6 +5810,10 @@
 					<BuildingType>BUILDING_LOTUS_TEMPLE</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
@@ -6264,6 +6246,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOKYO_TOWER</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CHUO_SHINKANSEN</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -6906,6 +6892,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DOSAN_SEOWON</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

@@ -4389,12 +4389,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_URBAN_HIGH_SPEED_RAIL</FreeBuilding>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_JAPANESE</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -5567,12 +5561,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_INDIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
@@ -6016,6 +6004,31 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
+			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
+			<iCost>30330</iCost>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>200</iHurryCostModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_DORADO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
@@ -6233,12 +6246,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_ARABIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19068,7 +19075,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Bonus>BONUS_SIAMESE</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
@@ -19758,12 +19764,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_KOREAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21626,9 +21626,6 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROMAN</BonusType>
-			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>

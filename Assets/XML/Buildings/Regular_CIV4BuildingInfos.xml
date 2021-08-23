@@ -50163,18 +50163,6 @@
 				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqBonuses>
-				<BonusType>BONUS_ABORIGINE</BonusType>
-				<BonusType>BONUS_FIJIAN</BonusType>
-				<BonusType>BONUS_HAWAIIAN</BonusType>
-				<BonusType>BONUS_MAORI</BonusType>
-				<BonusType>BONUS_NEW_ZEALANDER</BonusType>
-				<BonusType>BONUS_POLYNESIAN</BonusType>
-				<BonusType>BONUS_RAPA_NUI</BonusType>
-				<BonusType>BONUS_SAMOAN</BonusType>
-				<BonusType>BONUS_TAHITIAN</BonusType>
-				<BonusType>BONUS_TONGAN</BonusType>
-			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAMSTER_BREEDER</Type>
@@ -61146,9 +61134,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_LIANGZHU</Bonus>
-			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
@@ -65020,12 +65005,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_MAYAN</Bonus>
-				<Bonus>BONUS_AZTEC</Bonus>
-				<Bonus>BONUS_OLMEC</Bonus>
-				<Bonus>BONUS_ZAPOTEC</Bonus>
-			</PrereqBonuses>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ObsoleteTech>TECH_REALISM</ObsoleteTech>
 			<ReplacementBuildings>
@@ -77994,9 +77973,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_OLMEC</Bonus>
-			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
@@ -95777,9 +95753,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_SHANG</Bonus>
-			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
 				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
