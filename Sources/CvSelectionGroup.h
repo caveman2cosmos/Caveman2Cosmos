@@ -51,7 +51,7 @@ struct StackCompare
 };
 DECLARE_FLAGS(StackCompare::flags);
 
-class CvSelectionGroup
+class CvSelectionGroup : bst::noncopyable
 {
 
 public:
@@ -320,34 +320,19 @@ public:
 	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
 	virtual CvUnit* AI_getMissionAIUnit() const = 0;
-	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
-	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const = 0;
-	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity) = 0;
+	virtual CvUnit* AI_ejectBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
+	virtual bool AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const = 0;
+	virtual CvUnit* AI_ejectBestPropertyManipulator(const CvCity* pTargetCity) = 0;
 	virtual void AI_separateNonAI(UnitAITypes eUnitAI) = 0;
 	virtual void AI_separateAI(UnitAITypes eUnitAI) = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	virtual void AI_separateImpassable() = 0;
 	virtual void AI_separateEmptyTransports() = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	virtual bool AI_isFull() const = 0;
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const = 0;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - SA: Stack Attack START
+
 	bool groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
-	// Dale - SA: Stack Attack END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;

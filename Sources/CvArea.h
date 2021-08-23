@@ -21,7 +21,7 @@ typedef std::vector<CombatResultRecord> TurnCombatResults;
 // Rolling record of this number of turns combat are kept for AI analysis
 #define COMBAT_RECORD_LENGTH 20
 
-class CvArea
+class CvArea : bst::noncopyable
 {
 //
 // Functions
@@ -126,7 +126,6 @@ public:
 	int getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const;
 	int getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const;
 
-	int getCleanPowerCount(TeamTypes eIndex) const;
 	bool isCleanPower(TeamTypes eIndex) const;
 	void changeCleanPowerCount(TeamTypes eIndex, int iChange);
 

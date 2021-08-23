@@ -38,7 +38,7 @@ public:
 	void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"PropertyManipulators");
-	void copyNonDefaults(CvPropertyManipulators* pProp, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(const CvPropertyManipulators* pProp);
 
 	void getCheckSum(unsigned int& iSum) const;
 

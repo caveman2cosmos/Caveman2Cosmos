@@ -7,9 +7,9 @@ class EventTriggerScreen:
 		import ScreenResolution
 		xRes = ScreenResolution.x
 		yRes = ScreenResolution.y
-		self.bLockedTT = False
-		self.iOffsetTT = []
-		self.szTextTT = ""
+
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
 
 		if yRes > 1000:
 			H_EDGE_PANEL = 38
@@ -27,15 +27,12 @@ class EventTriggerScreen:
 			else:
 				self.nLists = nLists = 4
 			szFont = "<font=3>"
-			self.szFontTT = "<font=2>"
 		elif xRes > 1200:
 			self.nLists = nLists = 3
 			szFont = "<font=2>"
-			self.szFontTT = "<font=1>"
 		else:
 			self.nLists = nLists = 2
 			szFont = "<font=1>"
-			self.szFontTT = "<font=0>"
 
 		Y_INDEX = H_EDGE_PANEL - 6
 		H_INDEX = yRes - H_EDGE_PANEL * 2 + 14
@@ -60,7 +57,7 @@ class EventTriggerScreen:
 
 		stTxt = szFontEdge + CyTranslator().getText("TXT_KEY_POPUP_SELECT_EVENT",())
 		screen.setLabel("Header", "", stTxt, 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 1)
-		stTxt = szFontEdge + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ())
+		stTxt = szFontEdge + CyTranslator().getText("TXT_WORD_EXIT", ())
 		screen.setText("Exit", "", stTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		LIST = []
@@ -108,46 +105,21 @@ class EventTriggerScreen:
 		import HandleInputUtil
 		self.debugInput = HandleInputUtil.debugInput
 		self.mouseFlags = HandleInputUtil.MOUSE_FLAGS.get
-		import PythonToolTip
-		self.makeTooltip = PythonToolTip.makeTooltip
 
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.szFontTT
-			iX, iY = self.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
 
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
-
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
-		ID		= inputClass.iItemID
+		#iData	= inputClass.iData
+		#ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		iData1	= inputClass.iData1
 
@@ -157,15 +129,14 @@ class EventTriggerScreen:
 		if iCode == 4: # Mouse Enter
 			return
 
-		screen.hide("Tooltip")
-		self.bLockedTT = False
+		self.tooltip.reset(screen)
 
 		if iCode == 11: # List Select
 			if iData1 > -1:
 				info = CyGlobalContext().getEventTriggerInfo(iData1)
 				if inputClass.bShift or inputClass.bCtrl or inputClass.bAlt:
 					szTxt = "Desc: " + info.getDescription() + "\nPedia: " + info.getCivilopedia() + "\nHelp: " + info.getHelp() + "\nStrat: " + info.getStrategy() + "\nText: " + info.getText()
-					self.updateTooltip(screen, szTxt)
+					self.tooltip.handle(screen, szTxt)
 				else:
 					screen.hideScreen()
 					CyInterface().addImmediateMessage('Event: %s[%d]' % (info.getType(), iData1), "")

@@ -12,17 +12,13 @@
 # where configFileName is nominally "Revolution.ini".
 
 from CvPythonExtensions import *
-import Popup as PyPopup
-
 import RevEvents
 import BarbarianCiv
 import AIAutoPlay
 import ChangePlayer
 import Revolution
 import RevInstances
-
 import BugCore
-import RevDCM
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -134,14 +130,12 @@ class RevolutionInit:
 		bodStr += TRNSLTR.getText("TXT_KEY_REV_MOD_TURNS_IN_GAME",( GAME.getMaxTurns(), ))
 		bodStr += TRNSLTR.getText("TXT_KEY_REV_MOD_DEFAULT_NUM_PLAYERS",( revDefaultNumPlayers, ))
 
-		popup = PyPopup.PyPopup()
-		popup.setBodyString(bodStr)
-		popup.setPosition(0,12)
-		screen = CyGInterfaceScreen("",0)
-		dx = screen.getXResolution() / 4
-		dy = screen.getYResolution() - 64
-		popup.setSize(dx, dy)
-		popup.launch()
+		popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
+		popup.setBodyString(bodStr, 1<<0)
+		popup.setPosition(0, 12)
+		screen = CyGInterfaceScreen("", 0)
+		popup.setSize(screen.getXResolution() / 4, screen.getYResolution() - 64)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	#RevolutionDCM
 	def getRevComponentsText(self):

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Basic Infos -->
+<Civ4InvisibleInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<InvisibleInfos>
+		<!-- Mine Warfare Mod -->
+		<InvisibleInfo>
+			<Type>INVISIBLE_NAVAL_MINE</Type>
+			<Description>TXT_KEY_INVISIBLE_NAVAL_MINE</Description>
+		</InvisibleInfo>
+		<InvisibleInfo>
+			<Type>INVISIBLE_LAND_MINE</Type>
+			<Description>TXT_KEY_INVISIBLE_LAND_MINE</Description>
+		</InvisibleInfo>
+		<!-- End Mine Warfare Mod -->
+	</InvisibleInfos>
+</Civ4InvisibleInfos>

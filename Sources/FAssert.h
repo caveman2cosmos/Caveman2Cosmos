@@ -164,6 +164,14 @@ enum AssertScopeTypes
 		FAssertMsg(index < upper, acOut); \
 	}
 
+#define FASSERT_NOT_NEGATIVE(value) \
+	if (value < 0) \
+	{ \
+		char acOut[256]; \
+		sprintf(acOut, "Value (%d) is expected to be >= 0", value); \
+		FAssertMsg(value >= 0, acOut) \
+	} \
+
 #else
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
@@ -180,6 +188,7 @@ enum AssertScopeTypes
 #define FAssertNotInScope(_id_)
 
 #define FASSERT_BOUNDS(lower, upper, index)
+#define FASSERT_NOT_NEGATIVE(value)
 
 #endif
 

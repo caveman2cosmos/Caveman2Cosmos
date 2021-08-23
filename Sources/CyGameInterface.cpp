@@ -45,13 +45,11 @@ void CyGamePythonInterface()
 		.def("getSecretaryGeneral", &CyGame::getSecretaryGeneral, "int (int eVoteSource)")
 		.def("canHaveSecretaryGeneral", &CyGame::canHaveSecretaryGeneral, "bool (int eVoteSource)")
 		.def("getVoteSourceReligion", &CyGame::getVoteSourceReligion, "int (int /*VoteSourceTypes*/ eVoteSource)")
-		.def("setVoteSourceReligion", &CyGame::setVoteSourceReligion, "void (int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)")
 
 		.def("countCivPlayersAlive", &CyGame::countCivPlayersAlive, "int ()")
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
 		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
 		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
-		.def("countHumanPlayersAlive", &CyGame::countHumanPlayersAlive, "int ()")
 
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
@@ -79,9 +77,6 @@ void CyGamePythonInterface()
 
 		.def("isModem", &CyGame::isModem, "bool () - Using a modem? ")
 		.def("setModem", &CyGame::setModem, "void (bool bModem) - Use a modem! (or don't)")
-
-		.def("reviveActivePlayer", &CyGame::reviveActivePlayer, "void ()")
-		.def("revivePlayer", &CyGame::revivePlayer, "void ()")
 
 		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
 		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
@@ -132,9 +127,6 @@ void CyGamePythonInterface()
 		.def("getInitLand", &CyGame::getInitLand)
 		.def("getInitTech", &CyGame::getInitTech)
 		.def("getInitWonders", &CyGame::getInitWonders)
-
-		.def("getLastNukeStrikePlot", &CyGame::getLastNukeStrikePlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setLastNukeStrikePlot", &CyGame::setLastNukeStrikePlot, "void (CyPlot* pPlot)")
 
 		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
 		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
@@ -267,7 +259,7 @@ void CyGamePythonInterface()
 		//.def("addPlayer", &CyGame::addPlayer, "void (int eNewPlayer, int eLeader, int eCiv, [bool bSetAlive = true]) - if bSetAlive = false new player isn't set to be alive and won't die if not given units or cities")
 		.def("changeHumanPlayer", &CyGame::changeHumanPlayer, "void ( int /*PlayerTypes*/ eOldHuman, int /*PlayerTypes*/ eNewHuman )" )
 		.def("addReplayMessage", &CyGame::addReplayMessage, "void (int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)" )
-		.def("log", &CyGame::log, "void log(str)")
+		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
@@ -293,7 +285,6 @@ void CyGamePythonInterface()
 		.def("getDiplomaticVictoryAchieved", &CyGame::getDiplomaticVictoryAchieved, "bool ()")
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
-		.def("cheatCodesEnabled", &CyGame::cheatCodesEnabled)
 		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
 
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
@@ -306,6 +297,8 @@ void CyGamePythonInterface()
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
 
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
 	;
 
 

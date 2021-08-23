@@ -1,10 +1,8 @@
 ## Ruff StatusDump
 
 from CvPythonExtensions import *
-import autolog
 import time
 import BugCore
-import string
 import BugFile
 
 GC = CyGlobalContext()
@@ -39,7 +37,7 @@ class StatusDumpEvent(AbstractStatusDumpEvent):
 	def onKbdEvent(self, argsList):
 		eventType,key,mx,my,px,py = argsList
 
-		if eventType == self.eventMgr.EventKeyDown and int(key) == int(InputTypes.KB_D) and self.eventMgr.bCtrl and self.eventMgr.bAlt:
+		if eventType == 6 and int(key) == int(InputTypes.KB_D) and self.eventMgr.bCtrl and self.eventMgr.bAlt:
 			print "StatusDump-Start-2"
 			self.DumpStatus()
 			return 1
@@ -135,7 +133,7 @@ class StatusDumpEvent(AbstractStatusDumpEvent):
 		return TRNSLTR.getText("TXT_KEY_TIME_AD", (iYear,))
 
 	def _getGameTurn(self):
-		zcurrturn = GAME.getElapsedGameTurns() + 1 + BugAutolog.get4000BCTurn()
+		zcurrturn = GAME.getElapsedGameTurns() + 1 + BugAutolog.getStartDateTurn()
 		zmaxturn = GAME.getMaxTurns()
 		if zmaxturn:
 			return "%i/%i" % (zcurrturn, zmaxturn)

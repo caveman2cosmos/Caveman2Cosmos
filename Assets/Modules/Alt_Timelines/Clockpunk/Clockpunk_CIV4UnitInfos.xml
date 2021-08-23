@@ -29,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLOCKWORK_GOLEM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLOCKWORK_GOLEM_STRATEGY</Strategy>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitAIs>
 				<UnitAI>
@@ -136,7 +135,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DAVINCI_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_DAVINCI_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DAVINCI_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -170,14 +168,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>410</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>
@@ -230,7 +223,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ORNITHOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORNITHOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORNITHOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -314,7 +306,6 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -413,7 +404,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ZEPHYR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZEPHYR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ZEPHYR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>

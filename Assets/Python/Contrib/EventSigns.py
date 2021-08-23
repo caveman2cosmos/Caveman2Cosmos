@@ -8,8 +8,6 @@
 ##
 
 from CvPythonExtensions import *
-from operator import itemgetter
-
 import BugUtil
 import CvUtil
 import CvRandomEventInterface
@@ -269,7 +267,7 @@ class MapSigns:
 		if not thisKey:
 			BugUtil.warn("MapSigns.storeSign() could not determine valid keyname for Plot %s." % (str(pPlot)))
 			return False
-		if not thisKey in self.plotDict:
+		if thisKey not in self.plotDict:
 			self.plotDict[thisKey] = PlotSigns(pPlot)
 		self.plotDict[thisKey].setSign(ePlayer, szCaption)
 
@@ -525,11 +523,10 @@ def applySaltpeter(argsList):
 	# Add landmark for initial plot, if there is still a yield change
 	placeLandmark(CyPlot, sEventType, iFood, iProd, iComm, True, -1)
 
-	iForest = GC.getInfoTypeForString('FEATURE_FOREST')
+	iForest = GC.getFEATURE_FOREST()
 
 	listPlots = []
-	for i in range(MAP.numPlots()):
-		CyPlot = MAP.plotByIndex(i)
+	for CyPlot in MAP.plots():
 		if (CyPlot.getOwner() == iPlayer and CyPlot.getFeatureType() == iForest and CyPlot.isHills()):
 			iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, CyPlot.getX(), CyPlot.getY())
 			if iDistance > 0:

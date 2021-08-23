@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
-    PlatyPing's natural wonders
+	PlatyPing's natural wonders
 -->
 <mod id="NaturalWonders" module="NaturalWonder_EM">
- 	<event type="plotRevealed" function="onPlotRevealed"/>
-<!--  	<event type="cityBuilt" function="onCityBuilt"/>
-  	<event type="cityRazed" function="onCityRazed"/>
+	<event type="plotRevealed" function="onPlotRevealed"/>
+<!-- <event type="cityBuilt" function="onCityBuilt"/>
+	<event type="cityRazed" function="onCityRazed"/>
 -->
 </mod>
 

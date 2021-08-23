@@ -7,7 +7,6 @@ import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
-import Popup
 
 GC = CyGlobalContext()
 
@@ -36,7 +35,7 @@ class WBPlotScreen:
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.setText("PlotExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("PlotExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iX = 10
 		iY = 50
@@ -622,8 +621,7 @@ class WBPlotScreen:
 			if iEditType == 0:
 				pPlot.setPlotType(PlotTypes(inputClass.getData()), True, True)
 			elif iEditType == 1:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if pLoopPlot.getArea() == pPlot.getArea():
 						pLoopPlot.setPlotType(PlotTypes(inputClass.getData()), True, True)
@@ -636,8 +634,7 @@ class WBPlotScreen:
 			if iEditType == 0:
 				pPlot.setTerrainType(iTerrain, True, True)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1:
 						if pLoopPlot.getArea() == pPlot.getArea():
@@ -659,8 +656,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setBonusType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					iOld = pLoopPlot.getBonusType(-1)
@@ -682,8 +678,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setImprovementType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					if bAdd:
@@ -712,8 +707,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setFeatureType(-1, 0)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					iOldFeature = pLoopPlot.getFeatureType()
@@ -736,8 +730,7 @@ class WBPlotScreen:
 				else:
 					pPlot.setRouteType(-1)
 			else:
-				for i in xrange(CyMap().numPlots()):
-					pLoopPlot = CyMap().plotByIndex(i)
+				for pLoopPlot in CyMap().plots():
 					if pLoopPlot.isNone(): continue
 					if bSensibility:
 						if pLoopPlot.isImpassable(): continue
@@ -751,11 +744,11 @@ class WBPlotScreen:
 			self.placeRoutes()
 
 		elif inputClass.getFunctionName() == "PlotEditScriptData":
-			popup = Popup.PyPopup(5555, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(5555, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pPlot.getX(), pPlot.getY()))
-			popup.createEditBox(pPlot.getScriptData())
-			popup.launch()
+			popup.createEditBox(pPlot.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "EditLandMark":
 			iIndex = -1
@@ -769,11 +762,11 @@ class WBPlotScreen:
 					sText = pSign.getCaption()
 					break
 
-			popup = Popup.PyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()))
+			popup = CyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()), 1<<2)
 			popup.setUserData((pPlot.getX(), pPlot.getY(), iCulturePlayer, iIndex))
-			popup.createEditBox(sText)
-			popup.launch()
+			popup.createEditBox(sText, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "SensibilityCheck":
 			bSensibility = not bSensibility

@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following)
 	Formatting: (note: may use this set multiple times to indicate more options that fall under the same enforcement guideline)
-				<EnforcesGameOptionOnTypes>
-					<EnforcesGameOptionOnType>
-						<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
-						<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-					</EnforcesGameOptionOnType>
-				</EnforcesGameOptionOnTypes>
+			<EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 	These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes.
 	EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not.
 	EnforcesGameOptionOff does the opposite: turns the indicated option(s) off if the option with the tag in use is on.
@@ -37,7 +34,7 @@
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LOCK_MODS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS</Help>
+			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
@@ -98,8 +95,8 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
- 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
@@ -488,6 +485,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<!-- Delete all references to LS traits on @SAVEBREAK -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_LS612_TRAITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LS612_TRAITS</Description>
@@ -523,8 +521,8 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
- 				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
- 			</EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_WITHOUT_WARNING</Type>
@@ -694,6 +692,13 @@
 			<Type>GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Description>
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

@@ -4,26 +4,26 @@
 #define CyMap_h
 
 //
-// Python wrapper class for CvMap 
+// Python wrapper class for CvMap
 //
 
 class CyPlot;
 class CvMap;
 class CyArea;
+class CyUnit;
 
 class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap); // Call from C++
-	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
-	bool isNone() const { return m_pMap == NULL; }
+	explicit CyMap(MapTypes eMap);
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
+
 	int getType();
 	CyMap& operator = (CvMap& kMap);
+
+	bool plotsInitialized() const;
 
 	bool viewportsEnabled();
 	int	getViewportWidth();
@@ -33,12 +33,10 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	void verifyUnitValidPlot();
 
@@ -53,7 +51,6 @@ public:
 	CyArea* findBiggestArea(bool bWater);
 
 	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
 	bool isPlot(int iX, int iY);
 	int numPlots();
 	int plotNum(int iX, int iY);
@@ -82,15 +79,17 @@ public:
 	int getNumBonuses(int /* BonusTypes */ eIndex);
 	int getNumBonusesOnLand(int /* BonusTypes */ eIndex);
 
+	python::list plots() const;
 	CyPlot* plotByIndex(int iIndex);
 	CyPlot* sPlotByIndex(int iIndex);
 	CyPlot* plot(int iX, int iY);
 	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
-	int getIndexAfterLastArea();
+
 	int getNumAreas();
 	int getNumLandAreas();
 	CyArea* getArea(int iID);
+	python::list areas() const;
 	void recalculateAreas();
 	void resetPathDistance();
 
@@ -105,6 +104,8 @@ public:
 	bool generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
+
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
 	// Super Forts *canal* *choke*
 	void calculateCanalAndChokePoints();

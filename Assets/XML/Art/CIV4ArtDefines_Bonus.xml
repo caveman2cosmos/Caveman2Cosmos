@@ -999,11 +999,20 @@
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ANCIENT_RELICS</Type>
-			<fScale>0.08</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/LostCiv1/oldtemple.nif</NIF>
 			<KFM></KFM>
 			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,2,2</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MACHU_PICCHU_PLANS</Type>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
 			<FontButtonIndex>90</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

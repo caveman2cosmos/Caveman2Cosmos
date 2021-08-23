@@ -2,7 +2,6 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Re-Modified by StrategyOnly -->
 <!-- Master Load File -->
-<!-- -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Alternate_Timelines_1</DefaultConfiguration>
 	<ConfigurationInfos>
@@ -13,68 +12,67 @@
 				<Module>
 					<Directory>Lara_Croft</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
-					<Directory>Megafauna_Units</Directory>
+					<Directory>Megafauna</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
-					<!--> NOTE: This contains sub modules turn all off here or selected ones using the folders MLF file <-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Clockpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Steampunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Dieselpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
+					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Biopunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  Yes  <-->
+					<!--> Modular? Yes <-->
 				</Module>
 				<Module>
 					<Directory>Cyberpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  Yes  <-->
+					<!--> Modular? Yes <-->
 				</Module>
 				<Module>
 					<Directory>Apocalypse</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   not started<-->
+					<!--> Modular? NO not started<-->
 				</Module>
 				<Module>
 					<Directory>Atompunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Nanopunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> Modular? Yes v38 Initial Test Only<-->
 				</Module>
 				<Module>
 					<Directory>Crystalpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
+					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Spacepunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
+					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Starpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
+					<!--> Modular? NO Work is in progress but early stages at the moment<-->
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

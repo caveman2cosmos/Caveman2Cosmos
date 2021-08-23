@@ -1,0 +1,2581 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BOMBARD</Tag>
+		<English>[ICON_BULLET]Can be bombarded</English>
+		<French>[ICON_BULLET]Peut être bombardé</French>
+		<German>[ICON_BULLET]Beschossen werden kann</German>
+		<Italian>[ICON_BULLET]Può essere bombardati</Italian>
+		<Spanish>[ICON_BULLET]Puede ser bombardeado</Spanish>
+		<Polish>[ICON_BULLET]Może być zbombardowany.</Polish>
+		<Russian>[ICON_BULLET]Ìîæåò áûòü îáñòðåëÿí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
+		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
+		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
+		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
+		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
+		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
+		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CULTURE_RANGE</Tag>
+		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
+		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
+		<German>[ICON_BULLET]Einflüsse Plots innerhalb einer Entfernung von %d1_Num</German>
+		<Italian>[ICON_BULLET]Trame influenze entro una distanza di %d1_Num</Italian>
+		<Spanish>[ICON_BULLET]Se propaga por las casillas situadas en un radio de %d1_Num</Spanish>
+		<Polish>[ICON_BULLET]Wpływa na teren o zasięgu %d1_Num pól</Polish>
+		<Russian>[ICON_BULLET]Ðàñøèðÿåò ó÷àñòêè â ïðåäåëàõ ðàññòîÿíèÿ %d1_Num</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
+		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
+		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FORTIFY_TO_UPGRADE</Tag>
+		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
+		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
+		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
+		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
+		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
+		<Polish>[ICON_BULLET]Jednostka musi być trybie obronnym, aby została ulepszona.</Polish>
+		<Russian>[ICON_BULLET]Îòðÿä äîëæåí áûòü óêðåïëåí, äëÿ òîãî ÷òîáû åãî óëó÷øèòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
+		<English>[ICON_BULLET]May only be placed once in a game.</English>
+		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
+		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
+		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
+		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
+		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
+		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
+		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
+		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
+		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_ZOC_SOURCE</Tag>
+		<English>[ICON_BULLET]Provides a zone of control</English>
+		<French>[ICON_BULLET]Procure une zone de contrôle</French>
+		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
+		<Polish>[ICON_BULLET]Wprowadza strefę kontroli</Polish>
+		<Russian>[ICON_BULLET]Èìååò çîíó êîíòðîëÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
+		<English>[ICON_BULLET]May only be placed once by a given player.</English>
+		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NOT_ON_ANY_BONUS</Tag>
+		<English>[ICON_BULLET]May not be added to a plot that already has a resource, whether visible or not.</English>
+		<Polish>[ICON_BULLET]Nie można dodać do pola, które już posiada surowiec (widoczny lub nie)</Polish>
+		<Russian>[ICON_BULLET]Не может быть добавлен на участок, на котором уже есть видимый или не открытый еще ресурс.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PILLAGE_YIELDS</Tag>
+		<English>[ICON_BULLET]Pillage yields %d1_Num[ICON_GOLD] on average</English>
+		<French>[ICON_BULLET]Le pillage rapporte en moyenne %d1_Num[ICON_GOLD].</French>
+		<German>[ICON_BULLET]Plünderung bringt durchschnittlich %d1_Num[ICON_GOLD]</German>
+		<Italian>[ICON_BULLET]Saccheggia in media %d1_Num[ICON_GOLD] prodotti</Italian>
+		<Spanish>[ICON_BULLET]El saqueo reporta %d1_Num[ICON_GOLD] de media</Spanish>
+		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
+		<Russian>[ICON_BULLET]Ãðàáåæ ïðèíîñèò â ñðåäíåì %d1_Num[ICON_GOLD] </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PLOT_CULTURE</Tag>
+		<English>[ICON_BULLET]%D1_Change[ICON_CULTURE] for owner in plot</English>
+		<French>[ICON_BULLET]%D1_Change[ICON_CULTURE] pour le propriétaire dans la parcelle</French>
+		<German>[ICON_BULLET]%D1_Change[ICON_CULTURE] für Besitzer in Plot</German>
+		<Italian>[ICON_BULLET]%D1_Change[ICON_CULTURE] per il proprietario di complotto</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change[ICON_CULTURE] para el dueño en la casilla</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change[ICON_CULTURE] dla wlaściciela pola.</Polish>
+		<Russian>[ICON_BULLET]%D1_Change[ICON_CULTURE] äëÿ âëàäåëüöà òåððèòîðèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
+		<English>[ICON_BULLET]Requires peak</English>
+		<French>[ICON_BULLET]Requiert Montagnes</French>
+		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
+		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
+		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
+		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>
+		<Russian>[ICON_BULLET]%D1_Change Âûñîòà âèäèìîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
+		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
+		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
+		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
+		<Italian>[ICON_BULLET]Non è possibile costruire un altro ad una distanza di %d1_Num</Italian>
+		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
+		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
+		<Russian>[ICON_BULLET]Íåâîçìîæíî ñòðîèòü íà ðàññòîÿíèè îò %d1_Num</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
+		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
+		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
+		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
+		<English>Bother me another time!</English>
+		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
+		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
+		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
+		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
+		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
+		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
+		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate on all improvements</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration des aménagements</French>
+		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di tutti i miglioramenti delle caselle</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator do czasu trwania ulepszania wszystkich ulepszeń</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления всех улучшений</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
+		<English>Improvements</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
+		<Russian> улучшения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
+		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
+		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
+		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
+		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
+		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change al alcance de la visibilidad</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change Zasięg Widoczności</Polish>
+		<Russian>[ICON_BULLET]%D1_Change Ðàäèóñ îáíàðóæåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Tag>
+		<English>Abatis (Thorn Hedge)</English>
+		<French>Abattis (Haies épineuses)</French>
+		<Italian>Abbattuta con siepe di spine</Italian>
+		<Spanish>Abatis con cerco espinoso</Spanish>
+		<Polish>Zasieki (Kolczasty żywopłot)</Polish>
+		<Russian>Êîëþ÷àÿ èçãîðîäü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Tag>
+		<English>Aquatic Anti-Air Defense</English>
+		<French>Poste aquatique de Défense Anti-Aérienne</French>
+		<German>Wasser-Luftschutz</German>
+		<Italian>Stazione marina di difesa anti-aerea</Italian>
+		<Spanish>
+			<Text>Estación acuática de defensa antiaérea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Nawodna Obrona Przeciw-powietrzna</Polish>
+		<Russian>Áåðåãîâàÿ ÏÂÎ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Tag>
+		<English>[ICON_BULLET]+50%% Air Defense</English>
+		<French>[ICON_BULLET]+50%% Défense Aérienne</French>
+		<German>[ICON_BULLET]+50%% Luftverteidigung</German>
+		<Italian>[ICON_BULLET]+50%% di difesa anti-aerea</Italian>
+		<Spanish>[ICON_BULLET]+50%% a la defensa aérea</Spanish>
+		<Polish>[ICON_BULLET]+50%% obrony przeciw powietrznej</Polish>
+		<Russian>[ICON_BULLET]+50%% Çàùèòû îò àâèàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Tag>
+		<English>Aquatic Anti-Air Defense are forts for anti-aircraft defense. These were larger installations comprising seven interconnected steel platforms, six carried guns arranged in a semicircle around the control center and accommodation while the seventh, set further out than the gun towers, was the searchlight tower.</English>
+		<Russian>Водная батарея ПВО представляет собой морские форты противовоздушной обороны. Это были более крупные установки, состоящие из семи соединенных между собой стальных платформ, шесть из которых несут орудия, расположенные полукругом вокруг центра управления и жилых помещений, а седьмая, расположенная дальше, чем артиллерийские башни, была прожекторной вышкой.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Tag>
+		<English>Aquatic Forcefield</English>
+		<French>Champ de Force Aquatique</French>
+		<German>Wasser-Schutzschild</German>
+		<Italian>Campo di forza acquatico</Italian>
+		<Spanish>
+			<Text>Campo de fuerza acuático</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Nawodne Pole Siłowe</Polish>
+		<Russian>Ìîðñêîé ùèò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Tag>
+		<English>Aquatic Force Field, a sea barrier made up of energy or particles to protect a person, area or object from attacks or intrusions or as a means of containment or confinement. Sometimes known as an energy shield, force shield, or deflector shield, is a barrier made of energy or particles. It protects a person, area, or object from attacks or intrusions. This technology is created as a field of energy without mass that acts as a wall, so that objects affected by the particular force relating to the field are unable to pass through the field and reach the other side.</English>
+		<Russian>Водное силовое поле, морской щит, состоящий из энергии или частиц, для защиты человека, территории или объекта от атак или вторжений или как средство сдерживания или ограничения. Иногда известный как энергетический щит, силовой щит или дефлекторный щит, представляет собой барьер, состоящий из энергии или частиц. Он защищает суда, территорию или объект от атак или вторжений. Эта технология создается как поле энергии без массы, которое действует как стена, так что объекты, на которые действует определенная сила, относящаяся к полю, не могут пройти через поле и достичь другой стороны.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE</Tag>
+		<English>Archeological Site</English>
+		<French>Site Archéologique</French>
+		<German>Archäologische Stätte</German>
+		<Italian>Sito archeologico</Italian>
+		<Spanish>
+			<Text>Enclave arqueológico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Stanowisko archeologiczne</Polish>
+		<Russian>Ëàãåðü àðõåîëîãîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE_PEDIA</Tag>
+		<English>This means that the ancient temple has been examined and now can be exploited.</English>
+		<French>Cela signifie que l'ancient Temple a été étudié et éxaminé, et peut maintenant être exploité.</French>
+		<Spanish>Esto indica que el templo ancestal ha sido explorado, y ya se puede investigar a fondo.</Spanish>
+		<Polish>Znaczy że Starożytna Świątynia może zostać zbadana.</Polish>
+		<Russian>Этот недавно обнаруженный древний храм теперь ждет своего исследователя, скрывая в себе древние рукописи, артефакты и сокровища давно забытой цивилизации.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARCOLOGY_RUINS</Tag>
+		<English>Arcology Ruins</English>
+		<French>
+			<Text>Arcology Ruines</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Arkologieruinen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Rovine arcologiche</Italian>
+		<Spanish>
+			<Text>Ruinas de arcología</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Ruiny Arkologii</Polish>
+		<Russian>Ðóèíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ASIAN_TEMPLE</Tag>
+		<English>Asian Temple</English>
+		<French>Temple asiatique</French>
+		<German>Asiatischen Tempel</German>
+		<Italian>Tempio asiatico</Italian>
+		<Spanish>Templo asiático</Spanish>
+		<Polish>Azjatycka Świątynia</Polish>
+		<Russian>Àçèàòñêèé õðàì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BEACON_CORAL</Tag>
+		<English>Beacon (Coral)</English>
+		<French>
+			<Text>Balise (Corail)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Torre di segnalazione</Italian>
+		<Spanish>
+			<Text>Baliza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja (Koral)</Polish>
+		<Russian>Áóé(Êîðàëëû)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BEACON_REEF</Tag>
+		<English>Beacon (Reef)</English>
+		<French>
+			<Text>Balise (Récif)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Torre di segnalazione</Italian>
+		<Spanish>
+			<Text>Baliza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja (Rafa)</Polish>
+		<Russian>Áóé(Ðèô)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Tag>
+		<English>Cities are the primary means of tracking populations.</English>
+		<French>Les villes sont les moyens primaire de localiser les populations</French>
+		<Russian>Города являются основным средством проживания населения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CITY_RUINS</Tag>
+		<English>City Ruins</English>
+		<French>
+			<Text>Ville Ruines</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ruinen</German>
+		<Italian>
+			<Text>Rovina cittadina:Rovine cittadine</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ruinas de ciudad</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Ruiny Miasta</Polish>
+		<Russian>Ðàçâàëèíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Tag>
+		<English>Ruins are the remains of human-made architecture: structures that were once complete, as time went by, have fallen into a state of partial or complete disrepair, due to lack of maintenance or deliberate acts of destruction. Disasters, war and depopulation are the most common root causes, with many structures becoming progressively derelict over time due to long-term weathering and scavenging.</English>
+		<Polish>Ruina lub ruiny (z łac. ruere - przewracać się) - widoczne pozostałości zniszczonego, lecz niecałkowicie rozebranego obiektu budowlanego. Ruiny powstają na skutek opuszczenia przez użytkowników budowli lub budynków, których dalsze użytkowanie nie jest możliwe lub opłacalne. Proces przekształcania obiektu w ruinę może być również zainicjowany przez zniszczenia wojenne czy katastrofy naturalne. Dalsze niszczenie następuje np. poprzez wpływ warunków atmosferycznych lub pozyskiwanie elementów budowlanych z opuszczonego obiektu (kamień, złom stalowy itp.).</Polish>
+		<Russian>Руины - это остатки искусственных сооружений: древние архитектурные памятники, пришедшие со временем в состояние частичного или полного запустения из-за отсутствия технического обслуживания или преднамеренного разрушения. Стихийные бедствия, войны и обезлюдение местности являются наиболее распространенными первопричинами. Таким образом, многие сооружения оказались постепенно заброшены из-за длительного выветривания и эрозии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Tag>
+		<English>Colony Extraction Facility</English>
+		<French>Colonie Installation d'extraction</French>
+		<German>Kolonie Extraktionsanlage</German>
+		<Italian>Impianto di estrazione di Colonia</Italian>
+		<Spanish>
+			<Text>Plataforma de extracción colonial</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kolonialna Kopalnia</Polish>
+		<Russian>Øàõòåðñêàÿ êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY_PEDIA</Tag>
+		<English>Colony mining of uninhabited planets and moons is vitally important in New Eden for any manufacturing station that wants to compete on equal footing with stations orbiting inhabited planets. Although such stations do occasionally exist without the support of a mineral rich stellar body, they must then rely on minerals being transported to them, which is always more cumbersome and expensive. This has made uninhabited but mineral-rich planets gold mines - often in the literal sense - for anyone aspiring to large-scale manufacturing.</English>
+		<Russian>Горнодобывающие колонии на необитаемых планетах и лунах жизненно важна в Новом Эдеме для любой производственной станции, которая хочет на равных конкурировать со станциями, вращающимися вокруг обитаемых планет. Хотя такие станции иногда существуют без поддержки богатого минералами звездного тела, в этом случае они должны полагаться на минералы, которые доставляются к ним, что всегда более громоздко и дорого. Это сделало необитаемые, но богатые минералами планеты золотыми приисками - часто в буквальном смысле - для всех, кто стремится к крупномасштабному производству.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Tag>
+		<English>Colony Habitat (Huge)</English>
+		<French>Colonie Habitations (Immenses)</French>
+		<German>Kolonie Lebensraum (Riesig)</German>
+		<Italian>Colonia Habitat (Enorme)</Italian>
+		<Spanish>
+			<Text>Hábitat colonial enorme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Siedlisko (Ogromne)</Polish>
+		<Russian>Îãðîìíàÿ êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Tag>
+		<English>Colony Habitat (Large)</English>
+		<French>Colonie Habitations (Grandes)</French>
+		<German>Kolonie Lebensraum (Gross)</German>
+		<Italian>Colonia Habitat (Grande)</Italian>
+		<Spanish>
+			<Text>Hábitat colonial grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Siedlisko (Duże)</Polish>
+		<Russian>Áîëüøàÿ êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Tag>
+		<English>Colony Habitat (Medium)</English>
+		<French>Colonie Habitations (Moyennes)</French>
+		<German>Kolonie Lebensraum (Mittel)</German>
+		<Italian>Colonia Habitat (Medio)</Italian>
+		<Spanish>
+			<Text>Hábitat colonial mediano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Siedlisko (Średnie)</Polish>
+		<Russian>Ñðåäíÿÿ êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Tag>
+		<English>Colony Habitat (Small)</English>
+		<French>Colonie Habitations (Petites)</French>
+		<German>Kolonie Lebensraum (Klein)</German>
+		<Italian>Colonia Habitat (Piccolo)</Italian>
+		<Spanish>
+			<Text>Hábitat colonial pequeño</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Siedlisko (Małe)</Polish>
+		<Russian>Ìàëåíüêàÿ êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS</Tag>
+		<English>Colony Hydroponics</English>
+		<French>Colonie Hydroponique</French>
+		<German>Kolonie Hydrokultur</German>
+		<Italian>Idroponica Colonia</Italian>
+		<Spanish>
+			<Text>Hidrocultivo colonial</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kolonialna Hydroponika</Polish>
+		<Russian>Ãèäðîïîííûå òåïëèöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_HYDROPONICS_PEDIA</Tag>
+		<English>Hydroponics is a subset of hydroculture and is a method of growing plants using mineral nutrient solutions, in water, without soil. Terrestrial plants may be grown with their roots in the mineral nutrient solution only or in an inert medium, such as perlite or gravel. Plants that are not traditionally grown in a climate would be possible to grow using a controlled environment system like hydroponics. NASA has also looked to utilize hydroponics in the space program. Ray Wheeler,a plant physiologist at Kennedy Space Center's Space Life Science Lab, believes that hydroponics will create advances within space travel.</English>
+		<Russian>Гидропоника - это разновидность гидрокультуры и метод выращивания растений с использованием растворов минеральных питательных веществ в воде, без почвы. Наземные растения можно выращивать с корнями только в минеральном питательном растворе или в инертной среде, такой как перлит или гравий. Растения, которые традиционно не выращиваются в климатических условиях, можно было бы выращивать с использованием системы контролируемой среды, такой как гидропоника. НАСА также рассматривало возможность использования гидропоники в космической программе. Рэй Уиллер, физиолог растений из лаборатории космических наук о жизни Космического центра Кеннеди, считает, что гидропоника приведет к успеху в космических путешествиях.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY</Tag>
+		<English>Colony Manufactory</English>
+		<French>Colonie Manufacture</French>
+		<German>Kolonie Manufaktur</German>
+		<Italian>Fabbrica Colonia</Italian>
+		<Spanish>
+			<Text>Fábrica colonial</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kolonialna Fabryka</Polish>
+		<Russian>Ïðîì. êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_MANUFACTORY_PEDIA</Tag>
+		<English>Colony Manufactory, also known as factories, are used to convert one type of planetary resource or product into a different product. The purpose of Planetary industrialisation is to produce things from stuff you have extracted from planets and make money by selling it on the market.</English>
+		<Russian>Промышленные колонии, также известные как экзофабрики, используются для преобразования одного типа планетарного ресурса или продукта в другой продукт. Цель индустриализации планет Солнечной системы и прочих дальних миров - производить вещи из сырья, добытого на этих планетах, и получение прибыли с их продажи на рынке.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COLONY_SOLAR_ARRAY</Tag>
+		<English>Colony Solar Array</English>
+		<French>Colonie Solaire Assemblée</French>
+		<German>Kolonie Solar Aufstellung</German>
+		<Italian>Solare Apparato di Colonia</Italian>
+		<Spanish>
+			<Text>Paneles solares coloniales</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Kolonialne Panele Słoneczne</Polish>
+		<Russian>Ñîëíå÷íàÿ ñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Tag>
+		<English>Command Bunker</English>
+		<French>Bunker de Commandement</French>
+		<Spanish>
+			<Text>Refugio de mando</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bunkier</Polish>
+		<Russian>Áóíêåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Tag>
+		<English>A Command bunker was a defensive military fortification specially outfitted for military commanders. Bunkers are mostly underground, compared to blockhouses which are mostly above ground. They were used extensively in World War I, World War II, and the Cold War for weapons facilities, command and control centers, and storage facilities (for example, in the event of nuclear war).</English>
+		<French>Un Bunker de commandement est une fortification militaire spécialement équipé pour les commandants militaires. Placés en hauteur, disposant des moyens de communications adéquats.</French>
+		<Russian>Командный бункер был оборонительным военным укреплением, специально оборудованным для руководства. Бункеры, как правило, строятся под землей, в отличие от блокпостов, которые в основном размещают на поверхности. Они широко использовались во время Первой мировой войны, Второй мировой войны и холодной войны для создания военных объектов, центров управления и контроля и хранилищ (например, на случай ядерной войны).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Tag>
+		<English>Command Center</English>
+		<French>Centre de Commandement</French>
+		<German>Kommandozentrum</German>
+		<Italian>Centro di comando</Italian>
+		<Spanish>
+			<Text>Centro de mando</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bunkier Przyszłości</Polish>
+		<Russian>Êîìàíäíûé öåíòð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Tag>
+		<English>A command center or command centre (often called a war room) is any place that is used to provide centralized command for some purpose. While frequently considered to be a military facility, these can be used in many other cases by governments or businesses. The term "war room" is also often used in politics to refer to teams of communications people who monitor and listen to the media and the public, respond to inquiries, and synthesize opinions to determine the best course of action.</English>
+		<Russian>Командный центр (часто называемый полевым штабом) - это любое место, которое используется для централизованного управления с определенной целью. Хотя они часто считаются военными объектами, они могут использоваться во многих других случаях правительствами или предприятиями. Термин «штаб» также часто используется в политике для обозначения групп людей, занимающихся связями, которые следят за СМИ и общественностью и слушают их, отвечают на запросы и обобщают мнения, чтобы определить наилучший курс действий.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CORE_MINE</Tag>
+		<English>Core Mine</English>
+		<French>
+			<Text>Mine Profonde</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Spanish>
+			<Text>Mina profunda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kopalnie Głębinowe</Polish>
+		<Russian>Ãëóáèííàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COTTAGE</Tag>
+		<English>Cottage</English>
+		<French>Cottage</French>
+		<German>Gehöft</German>
+		<Italian>
+			<Text>Villetta:Villette</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Villa:Villas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Chatka</Polish>
+		<Russian>Äîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Tag>
+		<English>In modern usage, a cottage is usually a modest, often cozy dwelling, typically in a rural or semi-rural location. However there are cottage-style dwellings in cities, and in places such as Canada the term exists with no connotations of size at all (cf. vicarage or hermitage). In the United Kingdom the term cottage also tends to denote rural dwellings of traditional build, although it can also be applied to dwellings of modern construction which are designed to resemble traditional ones ("mock cottages").</English>
+		<Polish>Chaty często składały się z trzech izb: środkowej - sieni i dwóch bocznych - czarnej i białej. Izba czarna była głównym pomieszczeniem, stał w niej piec. Pełniła rolę kuchni a czasem sypialni. Izba biała była pomieszczeniem bardziej reprezentacyjnym. Służyła tylko celom mieszkaniowym. Obok białej izby budowano często dodatkowe pomieszczenie - komorę, służącą jako magazyn. Jeszcze innym pomieszczeniem był służący jako sypialnia alkierz.</Polish>
+		<Russian>В современном использовании коттедж обычно представляет собой скромное, часто уютное жилище, обычно в сельской или полусельской местности. Однако в городах есть жилища в стиле коттеджей, а в таких местах, как Канада, этот термин вообще не имеет коннотации размера (ср. священник или отшельник). В Соединенном Королевстве термин коттедж также имеет тенденцию обозначать сельские жилища традиционной постройки, хотя он также может применяться к жилищам современной постройки, которые спроектированы так, чтобы напоминать традиционные («имитирующие коттеджи»).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DESERT_CAMP</Tag>
+		<English>Desert Camp</English>
+		<French>Camp de Desert</French>
+		<German>Wuste Feldlager</German>
+		<Italian>Campo nella deserto</Italian>
+		<Spanish>
+			<Text>Campamento de desierto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Pustynny obóz</Polish>
+		<Russian>Ïóñòûííûé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DESERT_CAMP_PEDIA</Tag>
+		<English>Desert Camp</English>
+		<French>Camp de Desert</French>
+		<German>Wuste Feldlager</German>
+		<Italian>Campo nella deserto</Italian>
+		<Spanish>Campamento de desierto</Spanish>
+		<Polish>Pustynny obóz</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Tag>
+		<English>Early Mountain Mine</English>
+		<French>Mine de montagne primitive</French>
+		<Russian>Äðåâíèå êîïè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Tag>
+		<English>Ancient mining site for mountains</English>
+		<French>Une Mine primitive située dans les montagnes</French>
+		<Russian>Древнее месторождение для добычи руды</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Tag>
+		<English>Early Quarry</English>
+		<French>Carrière antique</French>
+		<Polish>Wczesny Kamieniołom</Polish>
+		<Russian>Ïðèèñê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY</Tag>
+		<English>Extraction Facility</English>
+		<French>Usine flottante d'Extraction</French>
+		<German>Extraktionsanlage</German>
+		<Italian>Impianto d'estrazione</Italian>
+		<Spanish>
+			<Text>Plataforma de extracción</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Platforma wydobywcza</Polish>
+		<Russian>Äîáûâàþùàÿ ñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY_PEDIA</Tag>
+		<English>Deep sea mining is a relatively new mineral retrieval process that takes place on the ocean floor. Ocean mining sites are usually around large areas of polymetallic nodules or active and extinct hydrothermal vents at about 1,400 - 3,700 m below the ocean's surface. The vents create sulfide deposits, which contain valuable metals such as silver, gold, copper, manganese, cobalt, and zinc. The deposits are mined using either hydraulic pumps or bucket systems that take ore to the surface to be processed. As with all mining operations, deep sea mining raises questions about potential environmental impact on surrounding areas. Environmental advocacy groups such as Greenpeace have argued that seabed mining should not be permitted in most of the world's oceans because of the potential for damage to deepsea ecosystems.</English>
+		<Russian>Глубоководная добыча полезных ископаемых является относительно новым процессом добычи полезных ископаемых, который происходит на дне океана. Океанические месторождения обычно расположены вокруг больших площадей полиметаллических конкреций или активных и потухших гидротермальных жерл на глубине примерно 1400 - 3700 м ниже поверхности океана. В геологических пластах нередко находятся отложения сульфидов, содержащие в себе ценные металлы, такие как серебро, золото, медь, марганец, кобальт и цинк. Месторождения разрабатываются с помощью гидравлических насосов или ковшовых систем, которые доставляют руду на обрабатываемую поверхность. Как и во всех горных работах, глубоководная добыча поднимает вопросы о потенциальном воздействии на окружающую среду. Группы защитников окружающей среды, такие как Гринпис, утверждают, что добыча с морского дна недопустима в большинстве мировых океанов из-за потенциального ущерба для глубоководных экосистем.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FACTORY</Tag>
+		<English>Factory</English>
+		<French>Usine</French>
+		<Italian>Fabbrica</Italian>
+		<Spanish>
+			<Text>Fábrica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Fabryka</Polish>
+		<Russian>Ôàáðèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FARM</Tag>
+		<English>Farm</English>
+		<French>
+			<Text>Ferme[SPACE]</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Getreidefeld</German>
+		<Italian>
+			<Text>Fattoria:Fattorie</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Granja:Granjas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Farma</Polish>
+		<Russian>Ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Tag>
+		<English>A farm is an area of land, including various structures, devoted primarily to the practice of producing and managing food (produce, grains, or livestock), fibres and, increasingly, fuel. It is the basic production facility in food production. Farms may be owned and operated by a single individual, family, community, corporation or a company. A farm can be a holding of any size from a fraction of a hectare to several thousand hectares.</English>
+		<Polish>Farma - zazwyczaj duże gospodarstwo rolne, zmechanizowane i specjalizujące się w uprawie wybranych roślin lub hodowli wybranych zwierząt. Z reguły zatrudnia najemną siłę roboczą.</Polish>
+		<Russian>* Êîëõîç: Korea
+* Ôåðìà êåìåò: Åãèïåò
+* Ìåõàíèç. ôåðìà: âñå öèâèëèçàöèè
+Ôåðìà - îáëàñòü çåìëè, èëè, äëÿ àêâàêóëüòóðû, îçåðà, ðåêè èëè ìîðÿ, âêëþ÷àÿ ðàçëè÷íûå ñòðóêòóðû, ïîñâÿùåííûå ïðåæäå âñåãî ïðàêòèêå ñîçäàíèÿ è ñáåðåæåíèÿ ïèùè (ñåëüõîçïðîäóêöèÿ, çåðíî, èëè äîìàøíèé ñêîò), âîëîêíà è, âñå â áîëüøåé ñòåïåíè, òîïëèâî. Ýòî - îñíîâíîå ñðåäñòâî ïðîèçâîäñòâà â ïðîèçâîäñòâå ïèùè. Ôåðìû ìîãóò áûòü ïðèíàäëåæàòü è óïðàâëÿòüñÿ îòäåëüíûì ëèöîì, ñåìüåé, îáùèíîé, êîðïîðàöèåé èëè êîìïàíèåé. Ôåðìà ìîæåò âëàäåòü ëþáûì ðàçìåðîì îò äîëè ãåêòàðà äî íåñêîëüêèõ òûñÿ÷ ãåêòàðîâ. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Tag>
+		<English>Fishing Boats</English>
+		<French>
+			<Text>Bateaux de pêche</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Fischerboote</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Peschereccio:Pescherecci</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Barco pesquero:Barcos pesqueros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Sieć Rybacka</Polish>
+		<Russian>Ðûáàöêèå ëîäêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_BOATS_PEDIA</Tag>
+		<English>A fishing vessel is a boat or ship used to catch fish in the sea, or on a lake or river. Many different kinds of vessels are used in commercial, artisanal and recreational fishing.</English>
+		<Polish>Kuter rybacki - najmniejsza jednostka połowowa, która służy rybakom do połowu ryb w systemie zbliżonym do połowu trawlerami.</Polish>
+		<Russian>Рыболовное судно - это лодка или корабль, используемые для ловли рыбы в море, на озере или реке. Многие виды судов используются для коммерческого, кустарного и любительского рыболовства.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
+		<English>Fishing Camp</English>
+		<Russian>Ðûáàöêèé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
+		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
+		<Russian>Рыболовецкий лагерь - место, где рыбаки, путешественники и старатели упорно трудятся ради добычи морского зверя, рыбы, растений и минералов. В конце концов, они уезжают и позволяют вашим гражданам здесь работать.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Tag>
+		<English>Forest Preserve</English>
+		<French>
+			<Text>Réserve forestière:Réserves forestières</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>Landschaftsschutzgebiet</German>
+		<Italian>
+			<Text>Riserva forestale:Riserve forestali</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reserva forestal:Reservas forestales</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Rezerwat przyrody</Polish>
+		<Russian>Ëåñíîé çàïîâåäíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE_PEDIA</Tag>
+		<English>A nature reserve (natural reserve, nature preserve, natural preserve) is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions, regardless of nationality. Nature reserves fall into different IUCN categories depending on the level of protection afforded by local laws.</English>
+		<Polish>Rezerwat przyrody - obszarowa forma ochrony przyrody w Polsce. Podobne pod względem funkcji tereny chronione powoływane są też w wielu innych krajach na świecie.</Polish>
+		<Russian>Заповедник - это охраняемая территория, имеющая значение для дикой природы, флоры, фауны или геологических или других особых интересов, которая зарезервирована и управляется для сохранения и предоставляет особые возможности для изучения или исследований. Заповедники могут быть созданы государственными учреждениями в некоторых странах или частными землевладельцами, либо юридическими лицами, такими как благотворительные организации и исследовательские учреждения, независимо от национальности. Заповедники попадают в различные категории МСОП в зависимости от уровня защиты, предусмотренного местным законодательством.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FORT</Tag>
+		<English>Fort</English>
+		<German>
+			<Text>Festung</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fortezza:Fortezze</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fuerte:Fuertes</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Fortyfikacja</Polish>
+		<Russian>Ôîðò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Tag>
+		<English>Fortified Cave</English>
+		<French>Caverne fortifiée</French>
+		<Italian>Grotta fortificata</Italian>
+		<Spanish>
+			<Text>Caverna fortificada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Ufortyfikowana Jaskinia</Polish>
+		<Russian>Óêðåïëåííàÿ ïåùåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Tag>
+		<English>A cave is an excellent spot for a defensive standoff, especially if it is outfitted with weapons, traps, barricades and rations.</English>
+		<Italian>Fortificazioni più o meno complesse, che rendono la difesa di una grotta più sicura e agevole.</Italian>
+		<Russian>Пещера - отличное место для обороны, особенно если в ней складировано оружие или она укреплена ловушками, баррикадами и замаскированными кольями.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Tag>
+		<English>Fortified Cave with Cache</English>
+		<French>Caverne fortifiée, avec cache</French>
+		<Italian>Grotta fortificata con nascondigli</Italian>
+		<Spanish>
+			<Text>Caverna fortificada con escondrijo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Ufortyfikowana Jaskinia ze Schowkiem</Polish>
+		<Russian>Òàéíàÿ ïåùåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Tag>
+		<English>Fortifications are military constructions and buildings designed for defence in warfare and military bases. Humans have constructed defensive works for many thousands of years, in a variety of increasingly complex designs. The term is derived from the Latin fortis ("strong") and facere ("to make").</English>
+		<Russian>Ôîðòû - âîåííûå ñîîðóæåíèÿ è çäàíèÿ, ïðåäíàçíà÷åííûå äëÿ çàùèòû íà âîéíå è âîåííûõ áàç. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Tag>
+		<English>Fossil Dig Site</English>
+		<French>Site de Fossiles Archéologiques</French>
+		<German>Fossile Ausgrabungsstätte</German>
+		<Italian>Scavo archeologico: fossili</Italian>
+		<Spanish>
+			<Text>Excavación paleontológica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Wykopaliska Archeologiczne</Polish>
+		<Russian>Ðàñêîïêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Tag>
+		<English>Fossils are the preserved remains or traces of animals, plants, and other organisms from the remote past. The totality of fossils, both discovered and undiscovered, and their placement in fossiliferous (fossil-containing) rock formations and sedimentary layers (strata) is known as the fossil record. The study of fossils across geological time, how they were formed, and the evolutionary relationships between taxa (phylogeny) are some of the most important functions of the science of paleontology.</English>
+		<Russian>Окаменелости - это сохранившиеся останки или следы животных, растений и других организмов из далекого прошлого. Совокупность окаменелостей, как открытых, так и неоткрытых, а также их размещение в окаменелостях (содержащих окаменелости) скальных образованиях и осадочных слоях (пластах) известно как летопись окаменелостей. Изучение окаменелостей в геологическом времени, их образования и эволюционных взаимоотношений между таксонами (филогения) - одни из самых важных функций науки палеонтологии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Tag>
+		<English>Fruit Gathering Camp</English>
+		<French>Camp de Récolte de Fruits</French>
+		<German>
+			<Text>Obstsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di raccolta di frutti</Italian>
+		<Spanish>
+			<Text>Campo de cultivo de frutas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Szałas Zbieraczy Owoców</Polish>
+		<Russian>Ñáîð ôðóêòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Tag>
+		<English>Intensive gathering entails the tending-to of wild plants. Intensive gathering or "tending" methods include weeding, discouraging predators, pot-irrigation, and limited harvesting to ensure reproduction. The same system of methods is involved in cultivation, a process which additionally requires systematic soil preparation and planting to tending and harvesting. This human manipulation results in the domestication of involved plant life.</English>
+		<German>[COLOR_BUILDING_TEXT]Obst- und Traubensammler[COLOR_REVERT] gehen auf die Suche nach Trauben, Beeren, Nüssen und anderen Früchten. Dabei müssen sie größte Sorgfalt walten lassen, denn manch lecker aussehende Frucht ist für Menschen ungenießbar oder sogar giftig. Außerdem gilt es auf den Reifegrad zu achten, denn sowohl unreife als auch überreife Früchte können gesundheitliche Probleme verursachen. Schon frühzeitig wurden gut schmeckende und nahrhafte Sorten bevorzugt und besonders gehegt, wodurch sie einen nicht zu unterschätzenden Vorteil gegenüber den unerwünschten Sorten bekamen. Diese Auslese war der erste Schritt zur Kultivierung von Obstpflanzen.</German>
+		<Russian>Интенсивный сбор предполагает уход за дикими растениями. Методы интенсивного сбора или «ухода» включают прополку, отпугивание или истребление вредителей, орошение почвы и ограниченный сбор урожая для обеспечения воспроизводства. Та же система методов используется при выращивании - процессе, который дополнительно требует систематической подготовки почвы и посадки до ухода и сбора урожая. Эта человеческая манипуляция приводит к окультуриванию вовлеченных растений.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Tag>
+		<English>Fruit Picking Camp</English>
+		<French>Camp de Cueillette de Fruits</French>
+		<German>
+			<Text>Obstpflücker</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di coltivazione di frutti</Italian>
+		<Spanish>
+			<Text>Campamento de recolección de frutas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Zbieraczy Owoców</Polish>
+		<Russian>Îáðàáîòêà ôðóêòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GEOGLYPH</Tag>
+		<English>Geoglyph</English>
+		<French>Géoglyphe</French>
+		<German>
+			<Text>Geoglyph</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Geoglyph</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Geoglifo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Geoglif</Polish>
+		<Russian>Ãåîãëèô</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY</Tag>
+		<English>Geothermal Factory</English>
+		<French>Forage Géothermique</French>
+		<German>Geothermalfabrik</German>
+		<Italian>Impianto geotermico</Italian>
+		<Spanish>
+			<Text>Planta geotérmica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Zakład Geotermalny</Polish>
+		<Russian>Ãåîòåðì. ñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY_PEDIA</Tag>
+		<English>Geothermal Borehole penetrates to Planet's mantle and provides significant minerals and energy. Boreholes have a significant negative ecological impact. Borehole Mining (BHM) is a remote operated method of extracting (mining) mineral resources through boreholes by means of high pressure water jets. This process can be carried-out from land surface, open pit floor, underground mine or floating platform or vessel through pre-drilled boreholes.</English>
+		<Russian>Геотермальная скважина проникает в мантию планеты и дает значительные минералы и энергию. Скважины оказывают значительное негативное экологическое воздействие. Бурение - это дистанционно управляемый метод добычи (извлечения) полезных ископаемых через скважины с помощью струй воды под высоким давлением. Этот процесс может осуществляться с поверхности земли, дна карьера, подземной шахты, плавучей платформы или судна через предварительно пробуренные скважины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GOODY_HUT</Tag>
+		<English>Tribal Village</English>
+		<French>Village tribal</French>
+		<German>
+			<Text>Eingeborenendorf</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Villaggio tribale:Villaggi tribali</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aldea tribal:Aldeas tribales</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wioska Plemienna</Polish>
+		<Russian>Òóçåìíàÿ äåðåâíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GOODY_HUT_PEDIA</Tag>
+		<English>An inhabited point of interest.</English>
+		<German>[COLOR_BUILDING_TEXT]Eingeborenendörfer[COLOR_REVERT] sind die einzigen Verbesserungen, die nicht von Spielern errichtet werden können. Sie werden bei Spielstart willkürlich auf der Karte verteilt und sollten durch eigene Einheiten erforscht werden. Friedliche Eingeborene liefern unter Umständen neues Wissen, Geld oder Einheiten. Sind die Eingeborenen feindlich gesonnen, kann es hingegen zum Kampf kommen.</German>
+		<Polish>Zagroda, okół, obejście - zespół budynków gospodarskich i mieszkalnych niewielkiego gospodarstwa wiejskiego wraz z podwórzem i otoczeniem. Zagroda składa się z domu mieszkalnego (chaty) i budynków gospodarczych: (stodoły, obory, spichlerza). Zabudowania najczęściej otoczone są płotem i ustawione wokół wewnętrznego podwórza.</Polish>
+		<Russian>Деревня, в которой проживает аборигенное население. Когда вы отправляете отряд в одну из таких деревень, могут произойти различные события - и хорошие, и плохие. Возможные результаты: от изучения новой технологии до битвы с недружественно настроенными обитателями деревни.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GOODY_ISLAND</Tag>
+		<English>Unexplored Island</English>
+		<French>
+			<Text>Ile inexplorée</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Unerforschte Insel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>unknown island</Italian>
+		<Spanish>
+			<Text>Isla inexplorada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Niezbadana Wyspa</Polish>
+		<Russian>Íåîáèòàåìûé îñòðîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Tag>
+		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (coast or sea).</English>
+		<German>[COLOR_BUILDING_TEXT]Unerforschte Inseln[COLOR_REVERT] sind das Meeresäquivalent zum Eingeborenendorf. Sie können nur in küstennahen Gewässern entdeckt werden und haben die gleichen Auswirkungen.</German>
+		<Spanish>Las Islas inexploradas son el equivalente marino a la Aldea tribal. Sólo se pueden encontrar en aguas costeras.</Spanish>
+		<Russian>Íåîáèòàåìûå îñòðîâà - ýòî ìîðñêèå ýêâèâàëåíòû âàðâàðñêèõ äåðåâåíü. Îíè âñòðå÷àþòñÿ òîëüêî îêîëî ïîáåðåæèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Tag>
+		<English>Grape Gathering Camp</English>
+		<French>Camp de Récolte de Raisin</French>
+		<German>
+			<Text>Traubensammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di raccolta di uva</Italian>
+		<Spanish>
+			<Text>Campo de cultivo de uvas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Szałas Zbieraczy Winogron</Polish>
+		<Russian>Ñáîð âèíîãðàäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Tag>
+		<English>Grape Picking Camp</English>
+		<French>Camp de Cueillette de Raisins</French>
+		<German>
+			<Text>Traubenleser</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di coltivazione di uva</Italian>
+		<Spanish>
+			<Text>Campamento de recolección de uvas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Zbieraczy Winogron</Polish>
+		<Russian>Îáðàáîòêà âèíîãðàäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Tag>
+		<English>Groundwater Well</English>
+		<French>Puits Souterrain</French>
+		<German>Grundwasserbrunnen</German>
+		<Italian>Pozzo d'irrigazione</Italian>
+		<Spanish>
+			<Text>Pozo de agua subterránea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Studnia Głębinowa</Polish>
+		<Russian>Âîäÿíàÿ ñêâàæèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL_PEDIA</Tag>
+		<English>Groundwater Wells are typically created using either top-head rotary style, table rotary, or cable tool drilling machines, all of which use drilling stems that are turned to create a cutting action in the formation, hence the term drilling. Drilled wells can be excavated by simple hand drilling methods (augering, sludging, jetting, driving, hand percussion) or machine drilling (rotary, percussion, down the hole hammer). Deeprock rotary drilling method is most common. Rotary can be used in 90% of formation types.</English>
+		<Russian>Артезианские скважины обычно создаются с использованием вращающихся машин с верхним расположением головок, станков с вращающимся столом или буровых станков с канатным инструментом, все из которых используют буровые штанги, которые поворачиваются для создания режущего действия в пласте, отсюда и термин «бурение». Пробуренные скважины можно вырыть простыми методами ручного бурения (шнековое бурение, отстой, забрызгивание, забивание, ручной удар) или машинным бурением (роторным, ударным, ударным молотком). Наиболее распространен метод роторного бурения в глубоких породах. Роторный может использоваться в 90% типов пластов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST</Tag>
+		<English>Grow Forest</English>
+		<Russian>Роща</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Tag>
+		<English>Nurse a young forest into a mature one.</English>
+		<Russian>Выращивайте молодой лес до зрелого.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HAMLET</Tag>
+		<English>Hamlet</English>
+		<French>Hameau</French>
+		<German>
+			<Text>Weiler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Casale:Casali</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caserío:Caseríos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Osada</Polish>
+		<Russian>Ïîñåëîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HAMLET_PEDIA</Tag>
+		<English>A hamlet is usually a rural settlement which is too small to be considered a village, though sometimes the word is used for a different sort of community. The name comes from Anglo-Norman hamelet (t)e; Old French hamelet, the diminutive of Old French hamel. Another diminutive of Old French ham is possibly a cognate with similar words of Germanic origin. Compare with Dutch heem, German Heim, Swiss German cham or -kon, Old English ham and Modern English home, all derived from the Proto-Germanic *kham-. Historically, when a hamlet became large enough to justify building a church, it was then classified as a village. One example of a hamlet is a small cluster of houses surrounding a mill.</English>
+		<Polish>Według definicji etnologicznych osada jest miejscem dłuższego pobytu grupy ludzi wraz z szeregiem urządzeń wykonanych przez nich dla zapewnienia sobie warunków niezbędnych do prowadzenia przyjętego przez tę grupę ludzką trybu i poziomu życia.</Polish>
+		<Russian>Поселок - это обычно сельское поселение, которое слишком мало, чтобы считаться деревней, хотя иногда это слово используется для обозначения другого типа сообщества. Исторически сложилось так, что когда поселок становился достаточно большим, чтобы в нем было оправдано строительство церкви, он считался к деревней или селом. Один из примеров поселка - это небольшая группа домов, окружающая мельницу.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HARVEST_KELP</Tag>
+		<English>Harvest Kelp</English>
+		<French>Récolter les Algues</French>
+		<German>Ernte Seetang</German>
+		<Italian>Raccogli Kelp</Italian>
+		<Spanish>
+			<Text>Recolectores de algas</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Uprawa Wodorostów</Polish>
+		<Russian>Ñáîð âîäîðîñëåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HARVEST_KELP_PEDIA</Tag>
+		<English>Kelp has been harvested for food and fertilizer since ancient times.</English>
+		<Italian>Il Kelp può essere raccolto come cibo e fertilizzante sin dai tempi antichi.</Italian>
+		<Spanish>Las algas han sido recolectadas y usadas como alimento y fertilizante desde la Antigüedad.</Spanish>
+		<Polish>Wodorosty były zbierane i używane jako pożywienie oraz nawozy od czasów starożytnych.</Polish>
+		<Russian>Ñ äðåâíåéøèõ âðåìåí âîäîðîñëè ñëóæèëè â êà÷åñòâå èñòî÷íèêà äëÿ ïðîïèòàíèÿ è óäîáðåíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Tag>
+		<English>Hunting Camp</English>
+		<French>Camp de Chasse</French>
+		<German>Jagdlager</German>
+		<Italian>
+			<Text>Caccia Campo:Caccia Campi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campamento de caza:Campamentos de caza</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Obozowisko</Polish>
+		<Russian>Îõîòíè÷èé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Tag>
+		<English>The term camp comes from the Latin word campus, meaning "field". Therefore, a campsite consists typically of open pieces of ground where a camper can pitch a tent or park a camper. More specifically a campsite is a dedicated area set aside for camping and for which often a user fee is charged. Campsites typically feature a few (but sometimes no) improvements.</English>
+		<French>Provenant du latin campus, signifiant "champ". Ainsi, un campement est généralement un lieu plat ou le campeur peut installer une tente, avec éventuellement quelques aménagements pour améliorer son confort.</French>
+		<Russian>* Лагерь: все цивилизации
+* Лагерь охотника-собирателя: варвары
+* Лагерь лесорубов: все цивилизации
+* Лагерь погонщиков слонов: все цивилизации
+* Домик траппера: все цивилизации (меховые ресурсы)
+Лагерь - место с временными приспособлениями хижин, палаток, или других структур, обычно используемых солдатами, беженцами, заключенными, или путешественниками.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_PRESERVE</Tag>
+		<English>Hunting Preserve</English>
+		<French>Chasse gardée</French>
+		<German>Wildgehege</German>
+		<Italian>Riserva di caccia:Riserva di caccia</Italian>
+		<Spanish>
+			<Text>Coto de caza</Text>
+			<Gender>Memale</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Rezerwat Myśliwski</Polish>
+		<Russian>Çàêàçíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYBRID_FOREST</Tag>
+		<English>Hybrid Forest</English>
+		<French>
+			<Text>Forêt Hybride</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Hybrider Wald</German>
+		<Italian>Foresta ibrida</Italian>
+		<Spanish>
+			<Text>Bosque híbrido</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Las Hybrydowy</Polish>
+		<Russian>Ãèáðèäíûé ëåñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYBRID_FOREST_PEDIA</Tag>
+		<English>You see in this dome the intermingling of native and earth plants. Outside, they are competitors, struggling over the trace elements required for life. Often, one destroys the other. Here, they are tended with care and kept well nourished. They thrive together, and the native fungus does not unleash its terrible defenses. As you can see, competition is unnecessary when resources are plentiful and population growth is controlled.</English>
+		<Russian>Вы видите под этим куполом смешение местных и земных растений. Снаружи они являются конкурентами, борющимися за микроэлементы, необходимые для жизни. Часто один вид уничтожает другой. Здесь они содержатся с заботой и хорошо питаются. Они совместно процветают, а родной гриб не раскрывает своей ужасной защиты. Как видите, конкуренция не нужна, когда ресурсов много, а рост населения контролируется.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL</Tag>
+		<English>Hydrocarbon Well</English>
+		<French>Puits d'Hydrocarbures</French>
+		<German>Bohrturm</German>
+		<Italian>
+			<Text>Idrocarburo Pozzo:Idrocarburo Pozzi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pozo petrolífero:Pozos petrolíferos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Szyb Węglowodorów</Polish>
+		<Russian>Íåôòÿíàÿ ñêâàæèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL_PEDIA</Tag>
+		<English>An oil well is a general term for any boring through the earth's surface that is designed to find and acquire petroleum oil hydrocarbons. Usually some natural gas is produced along with the oil. A well that is designed to produce mainly or only gas may be termed a gas well.</English>
+		<Polish>Szyb naftowy - otwór wiertniczy (odwiert) wykonany w górotworze oraz zespół urządzeń zlokalizowanych w pobliżu otworu służących do wydobywania ropy naftowej otworem. W przeszłości szyby naftowe wykonywane były ręcznie.</Polish>
+		<Russian>Нефтяная скважина - это общее понятие для любого бурения на поверхности земли, предназначенного для поиска и добычи углеводородов. Обычно вместе с нефтью добывается немного природного газа. Скважина, которая предназначена для добычи в основном или только газа, может быть названа газовой скважиной.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYDRO_DAM</Tag>
+		<English>Hydro Dam</English>
+		<French>Barrage Hydroélectrique</French>
+		<German>Wasserkraftwerk</German>
+		<Italian>Diga Idroelettrica</Italian>
+		<Spanish>
+			<Text>Presa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Tama</Polish>
+		<Russian>Äàìáà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYDRO_DAM_PEDIA</Tag>
+		<English>Hydro Plant</English>
+		<French>Barrage Hydroélectrique</French>
+		<German>Wasserkraftwerk</German>
+		<Italian>Diga Idroelettrica</Italian>
+		<Spanish>Central hidroeléctrica</Spanish>
+		<Polish>Hydroelektrownia</Polish>
+		<Russian>Ãèäðîýëåêòðîñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Tag>
+		<English>Indigenous Community</English>
+		<French>
+			<Text>Communauté Indigène</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Comunità indigena</Italian>
+		<Spanish>
+			<Text>Comunidad indígena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Tubylcy</Polish>
+		<Russian>Òóçåìíàÿ îáùèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Tag>
+		<English>Indigenous Communities represent the enduring settlements of primative peoples. Many countries, such as the United States with the American Indians or the primative tribes that dot South American nations, must balance the sovereign and human rights of these people with the demands of development.</English>
+		<Italian>Le comunità indigene rappresentano gli stabilimenti permanenti di popoli primitivi. La maggior parte dei paesi, come gli Stati Uniti con gli Indiani d'America, devono bilanciare la sovranità e i diritti umani di questi popoli con la necessità di progresso.</Italian>
+		<Polish>Według profesora Andrzeja Saksona, socjologa specjalizującego się w badaniach mniejszości etnicznych termin autochton określa także mieszkańca pogranicza polsko-niemieckiego, byłego obywatela III Rzeszy, deklarującego polskie pochodzenie. Termin ten bywał niezrozumiały dla osób nim obdarzanych, bywał też stygmatyzujący. Polskojęzyczni mieszkańcy dawnych Prus Wschodnich pochodzili głównie z Mazowsza (z Kurpiów). W ścisłym tego słowa znaczeniu autochtonami nie byli. Pomimo tego, ze względów propagandowych termin ten od 1945 r. został narzucony przez władze PRL. Przyjął się i bywa używany do dziś, także w innych językach. Za rdzennych (autochtonicznych) mieszkańców tych terenów uznać należałoby Prusów.</Polish>
+		<Russian>Îáùèíû êîðåííûõ íàðîäîâ íûíå ïðîæèâàþò â ïîñòîÿííûõ ïîñåëåíèÿõ ñ ïðèìèòèâíûì óêëàäîì æèçíè. Âî ìíîãèõ ñòðàíàõ, òàêèõ êàê ÑØÀ ñ ïðîáëåìîé àìåðèêàíñêèõ èíäåéöåâ è äð. ïðèìèòèâíûõ ïëåìåí, ðàññåëèâøèõñÿ â Ëàòèíñêîé Àìåðèêå, èìååòñÿ ïðîáëåìà â ïëàíå îáåñïå÷åíèÿ èõ âñåìè äîñòèæåíèÿìè ñîâðåìåííîãî ìèðà è îäíîâðåìåííîãî ñîõðàíåíèÿ èõ ñàìîáûòíîñòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX</Tag>
+		<English>Manufacturing Complex</English>
+		<French>Complexe Fabrication</French>
+		<German>Fabrikation Zentrum</German>
+		<Italian>Complesso Produzione</Italian>
+		<Spanish>
+			<Text>Polígono industrial</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kompleks Przemysłowy</Polish>
+		<Russian>Ïðîì. êîìïëåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP</Tag>
+		<English>Jungle Camp</English>
+		<French>Camp de Jungle</French>
+		<German>Dschungelcamp</German>
+		<Italian>Campo nella giungla</Italian>
+		<Spanish>
+			<Text>Campamento selvático</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz w Dżungli</Polish>
+		<Russian>Ëàãåðü â äæóíãëÿõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP_PEDIA</Tag>
+		<English>Jungle Camp</English>
+		<French>Camp de Jungle</French>
+		<German>Dschungelcamp</German>
+		<Italian>Campo nella giungla</Italian>
+		<Spanish>Campamento selvático</Spanish>
+		<Polish>Obóz w Dżungli</Polish>
+		<Russian>Ëàãåðü â äæóíãëÿõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LAND_WORKED</Tag>
+		<English>Land Worked</English>
+		<French>Terre aménagée</French>
+		<German>Genutztes Land</German>
+		<Italian>
+			<Text>Terreno bonificato:Terreni bonificati</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tierra trabajada:Tierras trabajadas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Prace lądowe</Polish>
+		<Russian>Ïàøíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Tag>
+		<English>Land may refer to: The part of the Earth that is not covered by water Terrestrial ecoregion, an ecoregion based on soil instead of water.</English>
+		<Polish>Teren - każdy dowolnie określony fragment powierzchni lądowej. Termin spełniający taką samą funkcję jak akwen w odniesieniu do powierzchni wodnej.</Polish>
+		<Russian>Земля может означать: часть литосферы, которая не покрыта водой. Наземный экорегион, где преобладает суша, а не на вода.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Tag>
+		<English>Lighthouse (Coral)</English>
+		<French>Phare (Corail)</French>
+		<German>Ein Leuchtturm</German>
+		<Italian>Un Faro</Italian>
+		<Spanish>
+			<Text>Un Faro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Latarnia Morska</Polish>
+		<Russian>Маяк (Кораллы)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Tag>
+		<English>Can only be built on Reefs and Coral. Before the development of clearly defined ports mariners were guided by fires built on hilltops. Since raising the fire would improve the visibility, placing the fire on a platform became a practice that led to the development of the lighthouse. In antiquity, the lighthouse functioned more as an entrance marker to ports than as a warning signal for reefs and promontories, unlike many modern lighthouses.</English>
+		<Italian>Può essere costruito solo su scogli e coralli. Prima dello sviluppo di porti chiaramente definiti, i marinai erano guidati da fuochi accesi in cima alle colline. Dato che alzare il fuoco migliorava la visibilità, posizionare il fuoco su una piattaforma divenne una pratica che portò allo sviluppo del faro. Nell'antichità, il faro funzionava più come segnale d'entrata ai porti piuttosto che segnale per scogli e promontori, a differenza della maggior parte dei fari moderni.</Italian>
+		<Polish>Latarnia morska - znak nawigacyjny w postaci charakterystycznej wieży umieszczonej na brzegu lub w wodzie (latarniowiec). Wbrew nazwie może występować również na brzegu odpowiednio dużego zbiornika śródlądowego (jeziora), na którym prowadzona jest żegluga.</Polish>
+		<Russian>Ìîæåò áûòü ïîñòðîåí òîëüêî íà ðèôàõ èëè êîðàëëîâûõ ðèôàõ[PARAGRAPH:2]Äî ïîÿâëåíèÿ ìîðñêèõ ïîðòîâ êàê òàêîâûõ ìîðÿêè ðóêîâîäñòâîâàëèñü êîñòðèùàìè, ðàçîææåííûõ íà âîçâûøåííîòÿõ. Ïîñêîëüêó ðàçâåäåíèå êîñòðà äàâàëî âîçìîæíîñòü îïîâåñòèòü ñóäíî çàðàíåå, ðàçìåùåíèå èñòî÷íèêà ñâåòà íà ïëàòôîðìå ñòàëî ïðàêòèêîé, ÷òî è ïðèâåëî ê ïîÿâëåíèþ ìàÿêîâ. Â îòëè÷èå îò ìíîãèõ ñîâðåìåííûõ ìàÿêîâ, â äðåâíîñòè îíè ôóíêöèîíèðîâàëè ñêîðåå êàê îáîçíà÷åíèå âõîäà â ãàâàíè, íåæåëè ÷åì â êà÷åñòâå ïðåäóïðåäèòåëüíîãî ñèãíàëà î áëèçîñòè ðèôîâ è ìûñîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Tag>
+		<English>Lighthouse (Reef)</English>
+		<French>Phare (Récif)</French>
+		<German>Ein Leuchtturm</German>
+		<Italian>Un Faro</Italian>
+		<Spanish>
+			<Text>Un Faro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Latarnia Morska</Polish>
+		<Russian>Маяк (Рифы)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUMBERJACK</Tag>
+		<English>Lumberjack</English>
+		<French>Camp de bûcherons</French>
+		<German>Holzfällerlager</German>
+		<Italian>Campo di legname</Italian>
+		<Spanish>
+			<Text>Campamento maderero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Prymitywny Tartak</Polish>
+		<Russian>Лесоруб</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUMBERMILL</Tag>
+		<English>Lumbermill</English>
+		<French>
+			<Text>Scierie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sägewerk</German>
+		<Italian>
+			<Text>Segheria:Segherie</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aserradero:Aserraderos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Tartak</Polish>
+		<Russian>Ëåñîïèëêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUMBERMILL_PEDIA</Tag>
+		<English>A sawmill is a facility where logs are cut into boards.</English>
+		<Polish>Tartak - zakład, w którym dokonuje się przerobu drewna okrągłego na tarcicę w procesie technologicznym tarcia (inaczej: przecierania), czyli rozpiłowywania za pomocą urządzenia zwanego trakiem. Tarcicę przerabia się na elementy drewniane określonego przeznaczenia (łaty giętarskie, części meblarskie, stolarkę budowlaną, a także fryzy posadzkowe).</Polish>
+		<Russian>* Ëåñîïèëêà: âñå öèâèëèçàöèè
+Ëåñîïèëêà ýòî îáúåêò ãäå áðåâíà ðàçðåçàþòñÿ íà äîñêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUMBERYARD_PEDIA</Tag>
+		<English>A [COLOR_BUILDING_TEXT]Lumberyard[COLOR_REVERT] is a retail location for lumber and wood related products used in construction and/or home improvement projects. Lumber yards can also provide services such as the use of a planer and other large machines.</English>
+		<Polish>[COLOR_BUILDING_TEXT]Prymitywny tartak[COLOR_REVERT] to miejsce pozyskiwania drewna na potrzeby konstrukcji szałasów, domów czy innych budowli.</Polish>
+		<Russian>[COLOR_BUILDING_TEXT]Лесопилка[COLOR_REVERT] - это торговая площадка для продажи пиломатериалов и изделий из древесины, используемых в строительстве и / или проектах по благоустройству дома. Лесные склады также могут предоставлять такие услуги, как использование строгального станка и других больших машин.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE</Tag>
+		<English>Marine Preserve</English>
+		<French>Réserve naturelle Marine</French>
+		<Spanish>
+			<Text>Reserva marina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Rezerwat Morski</Polish>
+		<Russian>Ìîðñêîé çàïîâåäíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE_PEDIA</Tag>
+		<English>A marine preserve is a park consisting of an area of sea (or lake) sometimes protected for recreational use, but more often set aside to preserve a specific habitat and ensure the ecosystem is sustained for the organisms that exist there. Most marine parks are designated by governments, and organized like 'watery' national parks. Although for many uses it is sufficient to designate the boundaries of the marine park and to inform commercial fishing boats and other maritime enterprises, some parks have gone to additional effort to make their wonders accessible to visitors. These can range from glass-bottomed boats and small submarines, to windowed undersea tubes.</English>
+		<Russian>Морской заповедник - это природоохранная зона, состоящий из участка моря (или озера), который иногда охраняется для рекреационного использования, но чаще выделяется для сохранения определенной среды обитания и обеспечения устойчивости экосистемы для организмов, которые там существуют. Большинство морских заповедников назначаются правительствами и организованы как «водные» национальные парки. Хотя для многих целей достаточно обозначить границы морского парка и проинформировать коммерческие рыболовные суда и другие морские предприятия, некоторые парки приложили дополнительные усилия, чтобы сделать свои чудеса доступными для посетителей. Они могут варьироваться от лодок со стеклянным дном и небольших подводных лодок до подводных труб с окнами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MESOAMERICAN_TEMPLE</Tag>
+		<English>Mesoamerican Temple</English>
+		<French>Temple Mésoaméricain</French>
+		<German>Mesoamerikanischen Tempel</German>
+		<Italian>Temple Mesoamericana</Italian>
+		<Spanish>
+			<Text>Templo mesoamericano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Świątynia Mezoamerykańska</Polish>
+		<Russian>Èíäåéñêèé õðàì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MINE</Tag>
+		<English>Mine</English>
+		<French>
+			<Text>Mine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Miniera:Miniere</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mina:Minas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Kopalnia</Polish>
+		<Russian>Øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Tag>
+		<English>Mine or mines can refer to: Mining, extraction of mineral resources from the ground.</English>
+		<Polish>Kopalnia - zakład i przedsiębiorstwo górnicze zajmujące się wydobyciem (eksploatacją) z ziemi kopalin użytecznych.</Polish>
+		<Russian>* Øàõòà: âñå öèâèëèçàöèè
+* Øàõòà (íåì.): Ãåðìàíèÿ
+* Øàõòà (èñï.): Èñïàíèÿ
+Ãîðíàÿ ïðîìûøëåííîñòü - èçâëå÷åíèå öåííûõ ïîëåçíûõ èñêîïàåìûõ èëè äðóãèõ ãåîëîãè÷åñêèõ ìàòåðèàëîâ èç çåìëè, æèëû, (óãîëüíîãî) ïëàñòà èëè ðèôà, êîòîðûé ôîðìèðóåò ìèíåðàëèçîâàííûé ãîðèçîíò è ìåñòî ýêîíîìè÷åñêîãî èíòåðåñà äëÿ øàõòåðà. Ìàòåðèàëû ýêîíîìè÷åñêîãî èíòåðåñà (íàçûâàåìûå èíà÷å ðóäîé) íàéäåííûå ãîðíîé ïðîìûøëåííîñòüþ âêëþ÷àþò öâåòíûå ìåòàëëû, äðàãîöåííûå ìåòàëëû, æåëåçî, óðàí, óãîëü, àëìàçû, èçâåñòíÿê, íåôòÿíîé ñëàíåö, êàìåííàÿ ñîëü è ïîòàø. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MOAI</Tag>
+		<English>Moai</English>
+		<French>Statue Moai</French>
+		<Spanish>
+			<Text>Estatuas moái</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Russian>Ìîàè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MODERNWINDMILL</Tag>
+		<English>Modern Windmill</English>
+		<French>Moderne Moulin à vent</French>
+		<German>Modern-Windrad</German>
+		<Italian>Moderno Mulino a vento</Italian>
+		<Spanish>
+			<Text>Aerogenerador</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Współczesny Wiatrak</Polish>
+		<Russian>Âåòðîãåíåðàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MODERN_MINE</Tag>
+		<English>Modern Mine</English>
+		<French>
+			<Text>Mine Moderne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Moderne Mine</German>
+		<Italian>Miniera moderna</Italian>
+		<Spanish>
+			<Text>Mina moderna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Nowoczesna Kopalnia</Polish>
+		<Russian>Ñîâðåìåííàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MODERN_MINE_PEDIA</Tag>
+		<English>As the 21st century begins, a globalized mining industry of large multinational corporations has arisen. Peak minerals and environmental impacts have also become a concern. Different elements, particularly rare earth minerals, have begun to increase in demand as a result of new technologies.</English>
+		<Russian>В начале XXI века возникла глобализированная горнодобывающая промышленность крупных транснациональных корпораций. Горные полезные ископаемые и воздействие на окружающую среду также стали насущной проблемой. Спрос на различные элементы, особенно редкоземельные минералы, стал расти в результате появления новых технологий.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Tag>
+		<English>Mountain Mine</English>
+		<French>Mine de montagne</French>
+		<German>Mine des Berges</German>
+		<Italian>Miniera della montagna</Italian>
+		<Spanish>
+			<Text>Mina de montaña</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Górska Kopalnia</Polish>
+		<Russian>Ðóäíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE_PEDIA</Tag>
+		<English>Mountaintop removal mining, also known as mountaintop mining, is a form of surface mining that involves the mining of the summit or summit ridge of a mountain. Coal seams are extracted from a mountain by removing the land, or overburden, above the seams. The MTR process involves the removal of coal seams by first fully removing the overburden laying atop them, exposing the seams from above. This method differs from more traditional underground mining, where typically a narrow shaft is dug which allows miners to collect seams using various underground methods, while leaving the vast majority of the overburden undisturbed. The overburden from MTR is either placed back on the ridge, attempting to reflect the approximate original contour of the mountain, and/or it is moved into neighboring valleys.</English>
+		<Russian>Горные разработки представляет собой форму добычи на поверхности, включающую в себя освоение вершины или гребня горы. Угольные пласты извлекаются из гор путем удаления грунта или покрывающих пород над пластами. Процесс MTR включает удаление угольных пластов, сначала полностью удаляя покрывающую толщу, лежащую на них, обнажая пласты сверху. Этот метод отличается от более традиционных подземных горных работ, когда обычно выкапывается узкая шахта, что позволяет горнякам собирать пласты, используя различные подземные методы, при этом подавляющая часть вскрытых пород остается нетронутой. Покрывающая порода от MTR либо помещается обратно на гребень, пытаясь отразить приблизительный исходный контур горы, либо перемещается в соседние долины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Tag>
+		<English>Mushroom Gatherer</English>
+		<French>
+			<Text>Champignonnière</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pilzsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Funghi raccoglitori</Italian>
+		<Spanish>
+			<Text>Recolector de setas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Chata Zbieracza Grzybów</Polish>
+		<Russian>Ãðèáíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Tag>
+		<English>Mushroom hunting, mushrooming, mushroom picking, mushroom foraging, and similar terms describe the activity of gathering mushrooms in the wild, typically for eating. This is popular in most of Europe, including the Nordic, Baltic, and Slavic countries and the Mediterranean Basin, as well as in Australia, Japan, Korea, Canada, the Indian subcontinent, and the northwestern, northeastern, Midwestern and Appalachian United States.</English>
+		<German>Das Sammeln von Pilzen ist eine beliebte Freizeitbeschäftigung in nahezu allen Teilen der Welt. [COLOR_BUILDING_TEXT]Pilzsammler[COLOR_REVERT] gehen auf die Suche nach essbaren Wildpilzen, normalerweise um diese zu verzehren oder zu verkaufen. Sie müssen dabei allerdings größte Sorgfalt walten lassen, um nicht durch versehentlich geerntete Giftpilze eine Pilzvergiftung zu riskieren. Da es teils ähnlich aussehende Speise- und Giftpilze gibt und manche Pilze erst nach entsprechender Zubereitung genießbar werden, sind botanische Kenntnisse dringend erforderlich und jeder Sammler sollte nur die Pilze verwenden, die er zweifelsfrei identifizieren kann.</German>
+		<Russian>Охота за грибами, сбор грибов и аналогичные термины описывают деятельность по собирательсттву грибов на дикой природе, чаще всего для употребления в пищу. Она весьма популярна в большинстве стран Европы, включая Северные, Балтийские и Славянские страны и Средиземноморский бассейн, а также в Австралии, Японии, Корее, Канаде, Индийском субконтиненте, а также на северо-западе, северо-востоке, Среднем Западе и Аппалачах США.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE</Tag>
+		<English>Nature Preserve</English>
+		<French>
+			<Text>Réserve Naturelle</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Natur bewahren</German>
+		<Italian>Riserva naturale</Italian>
+		<Spanish>
+			<Text>Reserva natural</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Rezerwat</Polish>
+		<Russian>Ïðèðîäíûé çàïîâåäíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE_PEDIA</Tag>
+		<English>A nature reserve is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions, regardless of nationality. Nature reserves fall into different IUCN categories depending on the level of protection afforded by local laws.</English>
+		<Russian>Природный заповедник - это охраняемая территория, имеющая важное значение для дикой природы, флоры, фауны или геологических или других особых интересов, которая зарезервирована и управляется для сохранения и предоставления особых возможностей для изучения или исследования. Заповедники могут быть созданы государственными учреждениями в некоторых странах или частными землевладельцами, такими как благотворительные организации и исследовательские учреждения, независимо от национальности. Заповедники попадают в различные категории МСОП в зависимости от уровня защиты, предусмотренного местным законодательством.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Tag>
+		<English>Nomadic Herd</English>
+		<French>
+			<Text>Harde Nomade</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Nomadenherde</German>
+		<Italian>Pascolo nomade</Italian>
+		<Spanish>
+			<Text>Pastizal nómada</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Koczownicze Stado</Polish>
+		<Russian>Êî÷åâûå ñòàäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Nomadic Herds[COLOR_REVERT] are more than just scavenging and hunting of herbavours...</English>
+		<Spanish>Los [COLOR_BUILDING_TEXT]Pastizales nómadas[COLOR_REVERT] son más que zonas de recolección y caza de herbívoros...</Spanish>
+		<Polish>[COLOR_BUILDING_TEXT]Koczownicza Trzoda[COLOR_REVERT] to coś więcej niż polowanie na roślinożerców...</Polish>
+		<Russian>[COLOR_BUILDING_TEXT]Кочевые стада[COLOR_REVERT] - уже более подвинутый способ для пропитания, чем собирательство и охота на дичь...</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Tag>
+		<English>Observation posts are poorly defended but allow you to remove the fog of war.</English>
+		<Italian>Le torri d'osservazione sono difese in modo poco efficace, ma permettono di rimuovere la nebbia di guerra.</Italian>
+		<Spanish>Los puestos de vigilancia proporcionan poca defensa, pero te permiten eliminar la niebla de guerra.</Spanish>
+		<Polish>Punkty obserwacyjne nie dostarczają obrony, ale pozwalają obserwować teren wokół nich.</Polish>
+		<Russian>Íàáëþäàòåëüíûå ïóíêòû ìàëîïðèãîäíû äëÿ îáîðîíû, íî ïîçâîëÿþò óáðàòü òóìàí âîéíû. Îíè åùå íå äîñòóïíû, òðåáóþùèå íåêîòîðûì èãðîêàì ÈÈ ðàáîòó äëÿ èõ èíòåãðèðàöèè è ïîëó÷åíèÿ âîçìîæíîñòè äëÿ ÈÈ èõ èñïîëüçîâàòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM</Tag>
+		<English>Offshore Platform</English>
+		<French>
+			<Text>Plate-forme offshore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bohrinsel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piattaforma petrolifera:Piattaforme petrolifere</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Plataforma petrolífera:Plataformas petrolíferas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Platforma Wiertnicza</Polish>
+		<Russian>Áåðåãîâàÿ ïëàòôîðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM_PEDIA</Tag>
+		<English>An offshore platform, also referred to as an oil platform or oil rig, is a large structure with facilities to drill wells and extract and process oil and natural gas and export the products to shore.</English>
+		<Polish>Platforma wiertnicza - najczęściej konstrukcja pływająca wyposażona w urządzenie wiertnicze, przeznaczona do wykonywania odwiertów pod dnem akwenu. Sporadycznie bywają wykorzystywane do eksploatacji podmorskich złóż węglowodorów (gaz ziemny, ropa naftowa) - w odróżnieniu od platform wydobywczych.</Polish>
+		<Russian>* Ïðèáðåæí. ïëàòôîðìà: âñå öèâèëèçàöèè
+Íåôòÿíàÿ ïëàòôîðìà, ÷àñòî íàçûâàåìàÿ îôôøîðíîé ïëàòôîðìîé èëè, íåñêîëüêî íåïðàâèëüíî, áóðîâàÿ ïëàòôîðìà, ÿâëÿåòñÿ áîëüøîé ñòðóêòóðîé ñî ñðåäñòâàìè îáñëóæèâàíèÿ ñâåðëåíèÿ ñêâàæèíû, èçâëå÷åíèÿ è îáðàáîòêè íåôòè è ïðèðîäíîãî ãàçà, è âðåìåííîãî ñîõðàíåíèÿ ïðîäóêòà, ïîêà îí íå ìîæåò áûòü ïåðåíåñåí íà áåðåã äëÿ î÷èñòêè è ïðîäàæè. Âî ìíîãèõ ñëó÷àÿõ, ïëàòôîðìà ïðåäîñòàâëÿåò âîçìîæíîñòü ïðîæèâàíèÿ ðàáî÷åé ñèëû òàêæå.
+Â çàâèñèìîñòè îò îáñòîÿòåëüñòâ, ïëàòôîðìà ìîæåò áûòü óñòàíîâëåíà íà îêåàíñêîå äíî, ìîæåò ñîñòîÿòü èç èñêóññòâåííîãî îñòðîâà, èëè ìîæåò ïëàâàòü. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ORCHARD</Tag>
+		<English>Orchard</English>
+		<French>Verger d'arbres Fruitiers</French>
+		<German>Obstplantage</German>
+		<Italian>Frutteto</Italian>
+		<Spanish>
+			<Text>Huerta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Sad</Polish>
+		<Russian>Ôðóêòîâûé ñàä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Tag>
+		<English>An orchard is an intentional planting of trees or shrubs that is maintained for food production. Orchards comprise fruit, vegetable, and nut-producing trees which are grown for commercial production. Orchards are also sometimes a feature of large gardens, where they serve an aesthetic as well as a productive purpose. A fruit garden is generally synonymous with an orchard, although it is set on a smaller non-commercial scale and may emphasize berry shrubs in preference to fruit trees. Most temperate-zone orchards are laid out in a regular grid, with a grazed or mown grass or bare soil base that makes maintenance and fruit gathering easy.</English>
+		<Russian>Фруктовый сад - это запланированная посадка деревьев или кустарников, предназначенная для выращивания продуктов питания. В садах представлены фруктовые и ореховые деревья, а также овощи, выращиваемые на продажу или личное потребление. Фруктовые сады также иногда являются отличительной чертой больших садов, где они служат как эстетическим, так и продуктивным целям. Фруктовый сад обычно является синонимом сада, хотя он создан в меньшем некоммерческом масштабе и может отдавать предпочтение ягодным кустарникам, а не фруктовым деревьям. Большинство садов умеренного пояса разбиты по регулярной сетке с подстриженной или скошенной травой или голой почвой, что упрощает уход и сбор урожая.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PASTURE</Tag>
+		<English>Pasture</English>
+		<French>Pâturage</French>
+		<German>Gehege</German>
+		<Italian>
+			<Text>Pascolo:Pascoli</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pastizal:Pastizales</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Pastwisko</Polish>
+		<Russian>Ïàñòáèùå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PASTURE_PEDIA</Tag>
+		<English>Pasture is land with vegetation cover used for grazing of livestock as part of a farm, or in ranching or other unenclosed pastoral systems or used by wild animals for grazing or browsing. Prior to the advent of factory farming, pasture was the primary source of food for grazing animals such as cattle and horses. It is still used extensively, particularly in arid regions where pasture land is unsuitable for any other agricultural production. In more humid regions, pasture grazing is exploited extensively for free range and organic farming.</English>
+		<Polish>Pastwisko - rodzaj użytków zielonych porośniętych głównie wieloletnimi trawami, których wegetacja trwa niezależnie od tego, czy są to tereny uprawowe, czy też nieużytki. Zwykle od wiosny do jesieni na pastwiskach wypasa się zwierzęta hodowlane, takie jak bydło domowe, owce czy też kozy. Pastwiska uprawowe powstają najczęściej w trzecim roku tzw. płodozmianu, a ich okres eksploatowania wynosi najczęściej kilka lat (3-5). Corocznie wymagają pewnych zabiegów rolniczych jak włókowanie, bronowanie i nawożenie. Włókowanie i bronowanie ma na celu pobudzenie systemu korzennego traw, ale również zniwelowanie kretowisk i usunięcie tzw. "niedojadów". Użytkowe pastwiska są najczęściej ogrodzone i umożliwiają dowóz wody dla zwierząt. Pastwiska-nieużytki najczęściej są eksploatowane przez hodowców owiec i kóz, ze względu na ich skromniejsze wymagania żywieniowe. Nie oznacza to jednak, że tego typu pastwiska nie wymagają pewnych zabiegów pratotechnicznych. Często stosuje się ogrodzenia np. płot elektryczny, w celu uniemożliwienia zwierzętom przekroczenia granicy pastwiska.</Polish>
+		<Russian>* Ïàñòáèùå: âñå öèâèëèçàöèè
+* Âûñîêîãîðíûé âûïàñ: Àðìåíèÿ
+Âûñîêîãîðíûé âûïàñ âûøå 1000ì (3500 ôò).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PEAT_CUTTER</Tag>
+		<English>Peat Cutter</English>
+		<French>Récolteur de Tourbe</French>
+		<Spanish>
+			<Text>Recolector de turba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Chata Zbieracza Torfu</Polish>
+		<Russian>Ñáîð òîðôà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PEAT_CUTTER_PEDIA</Tag>
+		<English>Peat is harvested as an important source of fuel in certain parts of the world. By volume, there are about 4 trillion cubic meters of peat in the world covering a total of around 2% of global land area (about 3 million square kms), containing about 8 billion terajoules of energy.</English>
+		<Polish>Torf - skała osadowa powstała w wyniku zachodzących w szczególnych warunkach przemian obumarłych szczątków roślinnych, najmłodszy węgiel kopalny. Zawiera mniej niż 60% węgla. Torf jest utworem będącym efektem niepełnego rozkładu szczątków roślinnych, zachodzącego w warunkach długotrwałego lub stałego zabagnienia wierzchniej warstwy gleby. Torf składa się z nierozłożonych szczątków roślin oraz amorficznej masy humusu. Torf jest w różnym stopniu nasycony substancjami mineralnymi. Najczęściej jest to piasek, czasami wytrącone związki żelaza, rzadko związki fosforu.</Polish>
+		<Russian>Торф заготавливается как важный источник топлива в некоторых частях мира. По объему в мире насчитывается около 4 триллионов кубометров торфа, покрывающих в общей сложности около 2% общей площади суши (около 3 миллионов квадратных километров), содержащих около 8 миллиардов тераджоулей энергии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANTATION</Tag>
+		<English>Plantation</English>
+		<French>
+			<Text>Plantation</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Plantage</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piantagione:Piantagioni</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Plantación:Plantaciones</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Plantacja</Polish>
+		<Russian>Ïëàíòàöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANTATION_PEDIA</Tag>
+		<English>A plantation is a large artificially established forest, farm or estate, where crops are grown for sale, often in distant markets rather than for local on-site consumption. The term plantation is informal and not precisely defined.</English>
+		<Polish>Plantacja - duży teren przeznaczony pod uprawę jednej rośliny (monokultura).</Polish>
+		<Russian>* Òîâàðíàÿ ïëàíòàöèÿ: Ïåðñèÿ
+* Ïëàíòàöèÿ ïèùåâîé êóëüòóðû: âñå öèâèëèçàöèè
+* Èíäóñòðèàëüíàÿ ïëàíòàöèÿ: âñå öèâèëèçàöèè
+Ïëàíòàöèÿ - äëèííûé èñêóññòâåííî ñîçäàííûé ëåñ, ôåðìà èëè ïîìåñòüå, ãäå óðîæàé âûðàùèâàåòñÿ äëÿ ïðîäàæè, ÷àñòî íà îòäàëåííûõ ðûíêàõ, à íå äëÿ ìåñòíîãî ëîêàëüíîãî ïîòðåáëåíèÿ. Òåðìèí ïëàíòàöèÿ íåîôèöèàëåí è íå òî÷íî îïðåäåëåíí. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Tag>
+		<English>Plant Gathering Camp</English>
+		<French>Installer un camp de récolte</French>
+		<German>
+			<Text>Pflanzensucher</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di raccolta di piante</Italian>
+		<Spanish>Campo de cultivo de plantas</Spanish>
+		<Polish>Szałas Zbieraczy Roślin</Polish>
+		<Russian>Ñáîð òðàâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Tag>
+		<English>Intensive gathering entails the tending-to of wild plants. Intensive gathering or "tending" methods include weeding, discouraging predators, pot-irrigation, and limited harvesting to ensure reproduction. The same system of methods is involved in cultivation, a process which additionally requires systematic soil preparation and planting to tending and harvesting. This human manipulation results in the domestication of involved plant life.</English>
+		<German>[COLOR_BUILDING_TEXT]Pflanzensucher[COLOR_REVERT] sammeln nützliche Pflanzen und Pflanzenteile, die nicht der Ernährung dienen. Es kann sich dabei z.B. um Baumaterialien, Farbstoffe oder Fasern für die Herstellung von Kleidung handeln. Während zunächst einfach alles zusammengerafft wurde, dessen man habhaft werden konnte, gingen die Menschen später immer gezielter vor. Sie vernichteten die Pflanzen nicht mehr komplett, sondern achteten darauf, nur die verwertbaren Teile zu verwenden. Um beste Erträge zu garantieren, wurden die Pflanzen in Trockenzeiten gegossen, unwichtige Nahrungskonkurrenten (Unkräuter) gejätet, Schädlinge und Raubtiere ferngehalten. Mit dieser Hege und Bevorzugung nützlicher Pflanzen waren die Grundlagen für die Kultivierung und den Feldbau gelegt.</German>
+		<Russian>Интенсивный сбор предполагает уход за дикими растениями. Методы интенсивного сбора или «ухода» включают прополку, отпугивание или уничтожение вредителей, орошение участка и ограниченный сбор урожая для обеспечения воспроизводства. Та же система методов используется при выращивании - процессе, который дополнительно требует систематической подготовки почвы и посадки до ухода и сбора урожая. Подобная манипуляция приводит к окультуриванию отобранных растений.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Tag>
+		<English>Plant Picking Camp</English>
+		<French>Installer un Camp de Cueillette</French>
+		<German>
+			<Text>Pflanzenpflücker</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo di coltivazione di piante</Italian>
+		<Spanish>
+			<Text>Campamento de recolección de plantas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Zbieraczy Roślin</Polish>
+		<Russian>Îáðàáîòêà òðàâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PYRAMIDS</Tag>
+		<English>Pyramids</English>
+		<French>Pyramides</French>
+		<German>Pyramiden</German>
+		<Italian>Piramidi</Italian>
+		<Spanish>
+			<Text>Pirámides</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Piramidy</Polish>
+		<Russian>Ïèðàìèäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_QUARRY</Tag>
+		<English>Quarry</English>
+		<French>
+			<Text>Carrière</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Steinbruch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cava:Cave</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cantera:Canteras</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Kamieniołom</Polish>
+		<Russian>Êàðüåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Tag>
+		<English>A quarry is a type of open-pit mine from which rock or minerals are extracted. Quarries are generally used for extracting building materials, such as dimension stone, construction aggregate, riprap, sand, and gravel. They are often colocated with concrete and asphalt plants due to the requirement for large amounts of aggregate in those materials. The word quarry can include underground quarrying for stone, such as Bath stone.</English>
+		<Polish>Kamieniołom - kopalnia odkrywkowa kamienia użytkowego (skały zwięzłej o dużej twardości). Kamieniołomów nie należy mylić z kopalniami odkrywkowymi wydobywającymi skały sypkie (piaskownie, żwirownie). Nie są nimi także odkrywkowe zakłady górnicze eksploatujące skały zwięzłe o stosunkowo małej twardości (węgiel brunatny, glinka ogniotrwała), czyli takie, które można urabiać za pomocą koparek. W Polsce w kamieniołomach wydobywa się głównie: granit, bazalt, wapień, piaskowiec, marmur, melafir, sjenit.</Polish>
+		<Russian>* Êàðüåð: âñå öèâèëèçàöèè
+Êàðüåð - òèï îòêðûòîãî ðàçðåçà, êîïè, èç êîòîðîãî èçâëåêàþòñÿ êàìåíü èëè ïîëåçíûå èñêîïàåìûå. Êàðüåðû â îñíîâíîì èñïîëüçóþòñÿ äëÿ òîãî, ÷òîáû èçâëå÷ü ñòðîèòåëüíûå ìàòåðèàëû, òèïà ìåðíûõ êàìíåé, ñòðîèòåëüíûõ óçëîâ, ùåáåíêè, ïåñêà è ãðàâèÿ. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_RADAR_TOWER</Tag>
+		<English>Radar Tower</English>
+		<French>Tour Radar</French>
+		<Italian>Torre radar</Italian>
+		<Spanish>
+			<Text>Torre de radar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Wieża Radarowa</Polish>
+		<Russian>Ðàäàðíàÿ áàøíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Tag>
+		<English>Radio Tower</English>
+		<French>Tour Radio</French>
+		<Polish>Wieża Radiowa</Polish>
+		<Russian>Ðàäèîâûøêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER_PEDIA</Tag>
+		<English>Radio towers emits and conveys radio signals.</English>
+		<Russian>Радиовышки излучают и передают радиосигналы.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Tag>
+		<English>Make use of marginal terrain to build a Moai, Geoglyph, Stone Circle, Mesoamerican Temple, Asian Temple, Ziggurat or Pyramids according to your regional culture. These sacred sites will generate commerce and culture in the surrounding area, and enable special buildingd in the nearest city.</English>
+		<Polish>Sanktuarium - termin, którym określa się miejsce uznawane za święte, często identyfikowane ze świątynią, budowlą wzniesioną na miejscu uznawanym za święte. Występuje w wielu religiach. Za jedno z najstarszych sanktuariów w Europie uznawana jest monumentalna budowla w Stonehenge. U dawnych Słowian na sanktuaria obierane były zazwyczaj miejsca szczególne pod względem geograficznym i przyrodniczym, wyróżniające się z najbliższego otoczenia - szczyty gór i większych wzniesień, zakola rzek, wyspy i półwyspy. Takie święte miejsca zwane były kapiszczami lub trzebiszczami. W trakcie chrystianizacji powszechne było ich niszczenie lub budowanie na ich miejscu świątyń chrześcijańskich.</Polish>
+		<Russian>Åñëè îêðåñòíîñòè ãîðîäà êðàéíå áåäíû áîóñíûìè ðåñóðñàìè è ïðèíîñÿò ìàëî äîõîäà, òî ïîñòðîéêà Ìîàè, Ãåîãëèôà, Êàìåííîãî êðóãà, Ìåçîàìåðèêàíñêîãî õðàìà, Àçèàòñêîãî õðàìà, Çèêêóðàòà èëè Ïèðàìèä â çàâèñèìîñòè ðåãèîíàëüíîé êóëüòóðû ðåøèò ýòó ïðîáëåìó. Ýòè ñâÿòûíè áóäóò ãåíåðèðîâàòü äîõîäû îò êîììåðöèè è êóëüòóðó â îêðåñòíîñòÿõ, âêëþ÷àÿ îñîáûå çäàíèÿ â áëèæàéøèõ ãîðîäàõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
+		<English>Salt Gatherer</English>
+		<French>Récolteur de Sel</French>
+		<Polish>Zbieracz Soli</Polish>
+		<Russian>Ñîëÿíîé êàðüåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Tag>
+		<English>New ideas from the Shire book "The Salt Industry" by Andrew and Annelise Fielding.</English>
+		<Polish>Kopalnia soli - kopalnia eksploatująca złoże solne typowymi wyrobiskami górniczymi (głębinowymi) w odróżnieniu od kopalni solankowej.</Polish>
+		<Russian>Новые идеи из книги Шира «Соляная промышленность» Эндрю и Аннелиз Филдинг.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Tag>
+		<English>Sanitizes an ocean or coast plot of its infection, restoring it to perfect health.</English>
+		<French>Assainit une case d'océan ou de côtes de ces infections, lui restaurant des conditions sanitaires parfaites.</French>
+		<German>Dadurch werden alle Viren und Keime aus dem Wasser entfernt.</German>
+		<Italian>Disinfetta una casella di costa o oceano, riportandola alla sua salute massima.</Italian>
+		<Spanish>Desinfecta una casilla de costa u océano, restaurándola a un perfecto estado.</Spanish>
+		<Polish>Czyści pola oceanu i wybrzeży z infekcji przywracając perfekcyjną czystość.</Polish>
+		<Russian>Дезинфицирует участок океана или побережья от заражения, восстанавливая его до идеальной чистоты.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SANITIZE_WATER</Tag>
+		<English>Sanitize Water</English>
+		<French>Assainir l'Eau</French>
+		<German>Wasser desinfizieren</German>
+		<Italian>Disinfetta l'acqua</Italian>
+		<Spanish>Desinfectar agua</Spanish>
+		<Polish>Wyczyść wodę</Polish>
+		<Russian>Äåçèíôåêòîð âîäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Tag>
+		<English>Scavenging Camp</English>
+		<French>Camp de Récupérateurs</French>
+		<German>
+			<Text>Fleischsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo degli spazzini</Italian>
+		<Spanish>
+			<Text>Campamento de recolección</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Zbieraczy Padliny</Polish>
+		<Russian>Ëàãåðü ñâåæåâàíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Tag>
+		<English>A Scavenging Camp provides extra food. If built on an animal resource (for example [COLOR_HIGHLIGHT_TEXT]cow[COLOR_REVERT]) it also provides the resource.</English>
+		<German>Bevor entsprechende Waffen und Jagdtechniken entwickelt wurden, waren die Menschen gezwungen, sich die tierischen Bestandteile ihrer Nahrung wie Fleisch und Knochenmark zusammenzusuchen. [COLOR_BUILDING_TEXT]Fleischsammler[COLOR_REVERT] gingen auf die Suche nach kleinen Tieren wie Ameisen und Würmern. Wenn sich die Möglichkeit bot, wurden aber auch verwertbare Stücke von toten Tieren eingesammelt. Hierbei musste behutsam vorgegangen werden, denn zu Beginn des Fäulnisprozesses ist das Fleisch für Menschen zwar noch essbar, bereits stärker verwestes Fleisch wird jedoch ungenießbar und führt zu Krankheit oder gar dem Tod. Dies liegt an den enthaltenen Bakterien und den von ihnen produzierten Abbauprodukten wie z.B. Botulinumtoxin, die für den Menschen stark toxisch sind.</German>
+		<Italian>Un campo dei recuperatori fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
+		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
+		<Polish>Padlina - określenie zwierzęcych zwłok. Określenia tego nie używa się w stosunku do zwłok ludzkich. Padlina jest podstawowym pokarmem wielu drapieżników i zwierząt wszystkożernych, takich jak diabły tasmańskie, hieny, kondory i sępy. Padlina to także siedlisko występowania bezkręgowców zaliczanych do nekrofauny. Niektóre rośliny potrafią wytwarzać zapach rozkładającej się padliny, by zwabić zapylające je owady, takie jak muchy.</Polish>
+		<Russian>Лагерь свежевания обеспечивает ваш народ дополнительной пищей на ранних стадиях игры. Если он построен на животном ресурсе (например, на [COLOR_HIGHLIGHT_TEXT]коровах[COLOR_REVERT]) он также предоставит этот ресурс в город.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Tag>
+		<English>Seasonal Camp</English>
+		<German>
+			<Text>Lager</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ñåçîííûé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
+		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
+		<German>Von einem [COLOR_BUILDING_TEXT]Lager[COLOR_REVERT] aus machen sich Späher, Forscher und Wissenschaftler auf die Suche nach Tieren, Pflanzen und Mineralien. Irgendwann ziehen sie fort und überlassen den Bürgern der Stadt das Gelände.</German>
+		<Russian>Сезонный лагерь - место, где разведчики, исследователи и следопыты упорно трудятся ради добычи ценных растений, дичи и минералов. В конце концов, они уезжают и позволяют гражданам здесь работать.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
+		<English>Sea Mill</English>
+		<French>Moulin à eau</French>
+		<Spanish>
+			<Text>Molino marino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Młyn Morski</Polish>
+		<Russian>Ïðèëèâíîé ãåíåðàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEED_CAMP</Tag>
+		<English>Seed Camp</English>
+		<French>Dépot de graines</French>
+		<German>
+			<Text>Körnersammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Campo seminato</Italian>
+		<Spanish>
+			<Text>Campo sembrado</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Zbieraczy Ziarna</Polish>
+		<Russian>Çåðíîõðàíèëèùå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEED_CAMP_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Seed Camps[COLOR_REVERT] first appeared in the Stone Ages. Prehistoric humans used to obtain food from Hunting and Grain Gathering. Seed Camps were special places were [COLOR_UNIT_TEXT]Gatherers[COLOR_REVERT] kept the gathered seeds that where used to feed the Tribe.</English>
+		<German>[COLOR_BUILDING_TEXT]Körnersammler[COLOR_REVERT] gingen auf die Suche nach aus den reifen Ähren von Süßgräsern gefallenen genießbaren Körnern oder den Samen anderer Pflanzen. Im Vergleich zur Jagd war dies eine relativ einfache Arbeit, die auch schon Kinder verrichten konnten. Korn war schon für die frühen Menschen ein Hauptnahrungsmittel, es konnte entweder direkt gegessen oder zu nahrhaften und sättigenden Breien weiterverarbeitet werden.</German>
+		<Polish>[COLOR_BUILDING_TEXT]Obóz Zbieraczy Ziarna[COLOR_REVERT] pojawił się w epoce kamienia. Prehistoryczni ludzie zdobywali pożywienie poprzez polowanie i zbieranie ziarna. Obóz Zbieraczy Ziarna był specjalnym miejscem gdzie [COLOR_UNIT_TEXT]Zbieracze[COLOR_REVERT] przechowywali zgromadzone ziarna, by mogło z nich korzystać całe plemię.</Polish>
+		<Russian>[COLOR_BUILDING_TEXT]Зернохранилища[COLOR_REVERT] впервые появились в каменном веке. Первобытные люди добывали пищу во время охоты и сбора злаков или корнеплодов. Зернохранилища были особыми местами, в которых [COLOR_UNIT_TEXT]Собиратели[COLOR_REVERT] хранили собранные семена, которые использовались для прокорма всего племени.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SHAFT_MINE</Tag>
+		<English>Shaft Mine</English>
+		<French>Puits de mine</French>
+		<German>Schachtmine</German>
+		<Italian>Pozzo minerario</Italian>
+		<Spanish>
+			<Text>Pozo minero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kopalnia Szybowa</Polish>
+		<Russian>Ãëóáîêàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SHAFT_MINE_PEDIA</Tag>
+		<English>Shaft mining or shaft sinking refers to the method of excavating a vertical or near-vertical tunnel from the top down, where there is initially no access to the bottom. Shaft sinking refers to the general activity, however shallow shafts, typically sunk for civil engineering projects differ greatly in execution method from deep shafts, typically sunk for mining projects. When the top of the excavation is the ground surface, it is referred to as a shaft; when the top of the excavation is underground, it is called a winze or a sub-shaft. Small shafts may be excavated upwards from within an existing mine as long as there is access at the bottom, in which case they are called Raises.</English>
+		<Russian>Глубокая шахта или скважина относится к методу выемки породы в вертикальном туннеле сверху вниз, где изначально нет доступа к жиле. Опускание ствола относится к основной деятельности, однако мелкие отводы, обычно затопленные для проектов гражданского строительства, значительно отличаются по способу выполнения от глубоких стволов, обычно затопляемых для добычи полезных ископаемых. Когда вершина раскопок выходит на поверхность земли, она называется шахтой; когда же она находится под землей, ее называют штольней или вспомогательным штреком. Небольшие шахты могут быть выкопаны повверх из существующей шахты, если есть доступ к породе, и в этом случае они называются штольнями.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SILK_FARM</Tag>
+		<English>Silk Farm</English>
+		<French>
+			<Text>Culture de Vers à Soie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Seidenfarm</German>
+		<Italian>Coltura di bachi da seta</Italian>
+		<Spanish>
+			<Text>Cultivo de seda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Farma Jedwabiu</Polish>
+		<Russian>Øåëêîâàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SILK_FARM_PEDIA</Tag>
+		<English>Sericulture, or silk farming, is the rearing of silkworms for the production of silk. Although there are several commercial species of silkworms, Bombyx mori is the most widely used and intensively studied silkworm. Silk was first produced in China as early as the Neolithic period. Sericulture has become an important cottage industries in countries such as Brazil, China, France, India, Italy, Japan, Korea, and Russia. Today, China and India are the two main producers, with more than 60% of the world's annual production.</English>
+		<Russian>Шелководство или шелкопрядение - это выращивание шелкопряда для производства шелка. Хотя существует несколько промысловых видов тутового шелкопряда, Bombyx mori является наиболее широко используемым и интенсивно изучаемым шелкопрядом. Шелк впервые начали производить в Китае еще в период неолита. Шелководство стало важным надомным производством в таких странах, как Бразилия, Китай, Франция, Индия, Италия, Япония, Корея и Россия. Сегодня Китай и Индия являются двумя основными производителями, на долю которых приходится более 60% годового производства в мире.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_PANELS</Tag>
+		<English>Solar Panels</English>
+		<French>Panneaux Solaires</French>
+		<German>Sonnenkollektoren</German>
+		<Italian>Pannelli solari</Italian>
+		<Spanish>
+			<Text>Paneles solares</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Panele Słoneczne</Polish>
+		<Russian>Ñîëíå÷íàÿ áàòàðåÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Tag>
+		<English>Modern solar panel stations are being built now in desert areas, away from potentially crippling weather. These "solar farms" can be used to generate electricity, purify water, run a factory, or produce fuel.</English>
+		<Polish>Kolektor słoneczny - urządzenie do konwersji energii promieniowania słonecznego na ciepło. Energia słoneczna docierająca do kolektora zamieniana jest na energię cieplną nośnika ciepła, którym może być ciecz (glikol,woda) lub gaz (np. powietrze).</Polish>
+		<Russian>Современные станции солнечных батарей строятся сейчас в пустынных районах, вдали от потенциально опасной погоды. Эти «солнечные фермы» можно использовать для выработки электроэнергии, очистки воды, управления фабрикой или производства топлива.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Tag>
+		<English>Steel Watchtower</English>
+		<French>Tour d'observation en acier</French>
+		<German>
+			<Text>Stahlwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Torre d'osservazione in acciaio</Italian>
+		<Spanish>
+			<Text>Torre de vigilancia de acero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Stalowa Wieża Obserwacyjna</Polish>
+		<Russian>Íàáëþäàòåëüíàÿ áàøíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STONE_CIRCLE</Tag>
+		<English>Stone Circle</English>
+		<French>Cercle de pierres</French>
+		<German>Steinkreis</German>
+		<Italian>Cerchio di pietre</Italian>
+		<Spanish>
+			<Text>Círculo de piedras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kamienny Krąg</Polish>
+		<Russian>Êàìåííûé êðóã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Tag>
+		<English>Stone Tools Workshop</English>
+		<French>Atelier d'Outils de pierre</French>
+		<German>Steinwerkstatt</German>
+		<Italian>Raccoglitore di pietre</Italian>
+		<Spanish>
+			<Text>Taller de herramientas de piedra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Warsztat Kamiennych Narzędzi</Polish>
+		<Russian>Êàìåíîëîìíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Stone Workshops[COLOR_REVERT] first appeared in the Stone Ages. Prehistoric humans used stone to fashion tools.</English>
+		<Spanish>Los primeros [COLOR_BUILDING_TEXT]Talleres de herramientas de piedra[COLOR_REVERT] aparecieron en la Edad de Piedra. Los hombres de la Prehistoria los usaron para amoldar herramientas a partir de las piedras.</Spanish>
+		<Polish>[COLOR_BUILDING_TEXT]Warsztat Kamiennych Narzędzi[COLOR_REVERT] pojawił się w epoce kamienia. Prehistoryczni ludzie wytwarzali w nim narzędzia z kamienia.</Polish>
+		<Russian>[COLOR_BUILDING_TEXT]Каменоломни[COLOR_REVERT] впервые появились в Каменном веке. Первобытные люди использовали камень для изготовления орудий труда.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Tag>
+		<English>Stone Watchtower</English>
+		<French>Tour d'observation en pierres</French>
+		<German>
+			<Text>Steinwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Torre d'osservazione in pietra</Italian>
+		<Spanish>
+			<Text>Puesto de avanzada de piedra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kamienna Wieża Obserwacyjna</Polish>
+		<Russian>Êàìåííàÿ áàøíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN</Tag>
+		<English>Submerged Town</English>
+		<French>
+			<Text>Ville Sous-marine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Unterwasserstadt</German>
+		<Italian>Insediamento sottomarino</Italian>
+		<Spanish>
+			<Text>Asentamiento submarino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Zatopione miasto</Polish>
+		<Russian>Ìîðñêîé ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_PEDIA</Tag>
+		<English>Underwater habitats are underwater structures in which people can live for extended periods and carry out most of the basic human functions of a 24-hour day, such as working, resting, eating, attending to personal hygiene, and sleeping. In this context 'habitat' is generally used in a narrow sense to mean the interior and immediate exterior of the structure and its fixtures, but not its surrounding marine environment. Most early underwater habitats lacked regenerative systems for air, water, food, electricity, and other resources. However, recently some new underwater habitats allow for these resources to be delivered using pipes, or generated within the habitat, rather than manually delivered.</English>
+		<Russian>Подводные жилища - это тип подводных сооружений, в котором люди могут жить в течение длительных периодов времени и выполнять большинство основных задач в течение 24 часов, таких как работа, отдых, еда, забота о личной гигиене и сон. В этом контексте «среда обитания» обычно используется в узком смысле, чтобы обозначать внутреннюю и непосредственную внешность конструкции и ее приспособлений, но не окружающую морскую среду. В большинстве ранних подводных жилищ отсутствовали регенеративные системы для воздуха, воды, пищи, электричества и других ресурсов. Однако в последнее время некоторые новые подводные места обитания позволяют доставлять эти ресурсы по трубам или генерировать в среде обитания, а не поставлять их вручную.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUBURBS</Tag>
+		<English>Suburbs</English>
+		<French>
+			<Text>Banlieue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Vorstadt</German>
+		<Italian>Sobborghi</Italian>
+		<Spanish>
+			<Text>Barrio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Przedmieście</Polish>
+		<Russian>Ïðèãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Tag>
+		<English>A suburb is a residential area or a mixed use area, either existing as part of a city or urban area, or as a separate residential community within commuting distance of a city.</English>
+		<Russian>Пригород - общее название населенной территории или населенного пункта, находящегося за административной границей города, неподалеку от нее. Большинство современных пригородов являются «спальными районами» со множеством жилых домов. У многих пригородов есть некоторая степень политической автономии и в них более низкая плотность населения, чем во внутренних районах города, в основном за счет индивидуального жилья. Механический транспорт, включая автомобили и высокоскоростные поезда, в XX веке позволил пригородам разрастись, что дало толчок к быстрому увеличению близлежащих поселений с обилием земельных территорий, пригодных для заселения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Tag>
+		<English>Tar Gatherer</English>
+		<French>Récolteur de goudron</French>
+		<Spanish>
+			<Text>Recolector de alquitrán</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Chata Zbieracza Smoły</Polish>
+		<Russian>Ñáîð ñìîëû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER_PEDIA</Tag>
+		<English>Tar is a black mixture of hydrocarbons and free carbon obtained from a wide variety of organic materials through destructive distillation. Tar can be produced from coal, wood, petroleum, or peat. Production and trade in pine-derived tar was a major contributor in the economies of Northern Europe and Colonial America. Its main use was in preserving wooden vessels against rot. The largest user was the Royal Navy. Demand for tar declined with the advent of iron and steel ships.</English>
+		<Russian>Гудрон представляет собой черную смесь углеводородов и свободного углерода, полученную из самых разных органических материалов путем деструктивной перегонки. Смолу можно производить из угля, древесины, нефти или торфа. Производство и торговля смолой, полученной из сосны, вносят большой вклад в экономику стран Северной Европы и Колониальной Америки. Его основное применение заключалось в защите деревянных сосудов от гниения. Самым крупным пользователем был Королевский флот. Спрос на гудрон снизился с появлением чугунных и стальных судов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER</Tag>
+		<English>Thatch Cutter</English>
+		<French>Récolteur de Chaume</French>
+		<Spanish>
+			<Text>Recolector de paja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Zbieracz Słomy</Polish>
+		<Russian>Ñáîð ñîëîìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER_PEDIA</Tag>
+		<English>Thatching is the craft of building a roof with dry vegetation such as straw, water reed, sedge (Cladium mariscus), rushes, or heather, layering the vegetation so as to shed water away from the inner roof. It is a very old roofing method and has been used in both tropical and temperate climates. Thatch is still employed by builders in developing countries, usually with low-cost, local vegetation. By contrast in some developed countries it is now the choice of affluent people who desire a rustic look for their home, would like a more ecologically friendly roof, or who have purchased an originally thatched abode.</English>
+		<Polish>Strzecha - pokrycie dachowe ze słomy lub trzciny wykonywane na dachach o dużym spadku. Obecnie przeżywa renesans w budownictwie regionalnym (zajazdy) jak i w budownictwie mieszkalnym. Grubość strzechy na budynkach mieszkalnych to ok. 35 cm. Oryginalne dachy kryte strzechą można spotkać m.in. na Pogórzu Karpackim, Mazowszu, Polesiu, Kaszubach i w Zachodniopomorskim. Strzechę dawniej wykonywano ze słomy żytniej. Słoma musiała być skoszona wcześnie - kiedy była jeszcze zielona - nie nadawała się stara, przestała i krótka. Strzecharz oczyszczał materiał przez wytrząsanie. Robił to chwytając słomę za kłosy i mocno potrząsając. Wtedy trawa, chwasty i krótkie źdźbła wypadały. Słoma żytnia musiała być dokładnie wymłócona, w przeciwnym wypadku pozostałe w słomie ziarna mogły kiełkować jak i zwabić myszy, które mogły uszkodzić strzechę. Następnym zabiegiem było kręcenie, w specjalnych skrzynkach, głowaczy zwanych też kiczkami (podwójnych skręconych snopów). Rzemieślnik brał dwa snopy, układał je jeden na drugim w skrzyni, wiązał powrósło. Następnie dwa snopy związywał powrósłem tuż pod kłosami, wsadzał kijek między snopki i obracał jeden snopek wokół drugiego o 360 stopni. Taki wykręcak następnie kładło się na dach i przywiązywało do łat. Słomę układało się od dołu warstwowo w taki sposób, aby następna warstwa zakrywała przewiąsła poprzedniej. Na koniec na kalenicy układało się drewniane kozły i przybijało się kolki w poprzek dachu dla ochrony przed wiatrem.</Polish>
+		<Russian>Кровельщик - это ремесленник, изготавливающий крыши из сухой растительности, такой как солома, тростник, осока (Cladium mariscus), камыш или вереск, наслоение растительности слоями для отвода воды с внутренней крыши. Это очень старый метод кровли, который использовался как в тропическом, так и в умеренном климате. Солома по-прежнему используется строителями в развивающихся странах, как правило, с недорогой местной растительностью. Напротив, в некоторых развитых странах сейчас это выбор богатых людей, которые хотят, чтобы их дом выглядел в деревенском стиле, хотел бы более экологически чистую крышу или которые приобрели изначально соломенное жилище.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS</Tag>
+		<English>Tidal Harness</English>
+		<French>
+			<Text>Usine marémotrice</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Gezeitenbaum</German>
+		<Spanish>
+			<Text>Presa de marea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Wiatraki Wodne</Polish>
+		<Russian>Êîíòðîëü ïðèëèâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TOWN</Tag>
+		<English>Town</English>
+		<French>
+			<Text>Ville[SPACE]</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kleinstadt</German>
+		<Italian>
+			<Text>Paese:Paesi</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pueblo:Pueblos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Miasteczko</Polish>
+		<Russian>Ãîðîäîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TOWN_PEDIA</Tag>
+		<English>A town is a human settlement larger than a village but smaller than a city. The size a settlement must be in order to be called a "town" varies considerably in different parts of the world, so that, for example, many American "small towns" seem to British people to be no more than villages, while many British "small towns" would qualify as cities in the United States.</English>
+		<Polish>Miasteczko (łac. oppidum, niem. Stadtlein, Stadtchen, Markt, Flecken, jid. sztetl) - prawno-administracyjna jednostka osadnicza o charakterze przejściowym między miastem a wsią, z charakterystycznym handlowo-przemysłowym (dawniej rzemieślniczym) wyodrębnieniem specjalności i analogiczną morfologią oraz infrastrukturą co (małe) miasto.</Polish>
+		<Russian>Городок - это человеческое поселение, которое больше деревни, но меньше города. Размер поселения, чтобы его можно было назвать «городком», значительно различается в разных частях мира, так что, например, многие американские «городки» кажутся британцам не более чем деревнями, в то время как многие британцы «городки» будут квалифицироваться как города в Соединенных Штатах.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TREEFARM</Tag>
+		<English>Treefarm</English>
+		<French>Verger</French>
+		<German>Baumschule</German>
+		<Italian>Coltivazione di alberi</Italian>
+		<Spanish>
+			<Text>Vergel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Plantacja Drzew</Polish>
+		<Russian>Äðåâåñíàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TREEFARM_PEDIA</Tag>
+		<English>A tree farm is a privately owned forest managed for timber production. The term, tree farm, also is used to refer to tree plantations, tree nurseries, and Christmas tree farms. Because tree farms are managed to enhance rapid growth, a tree farm tends to sequester carbon more quickly than an unmanaged forest, considering only the sequestration side of the equation and not the carbon release due to rot, fire, or harvest. The fact that managed woodlands tend to be younger and younger trees grow faster and die less contributes to this distinction.</English>
+		<Russian>Древесная ферма - это частный лесопитомник, в котором ведется производство древесины. Термин «древесная ферма» также используется для обозначения плантаций деревьев, питомников деревьев и ферм по выращиванию рождественских елок. Поскольку древофермы управляются для ускорения роста, древесные фермы имеют тенденцию улавливать углерод быстрее, чем неуправляемые леса, учитывая только часть уравнения, связанную с секвестрацией, а не выбросы углерода из-за гниения, пожара или урожая. Тот факт, что управляемые лесные массивы обычно моложе, а молодые деревья растут быстрее и реже умирают, способствует этому различию.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Tag>
+		<English>Vertical Farm</English>
+		<French>
+			<Text>Ferme verticale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Vetikale Farm</German>
+		<Italian>Fattoria Verticale</Italian>
+		<Spanish>
+			<Text>Granja vertical</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Farmy Wertykalne</Polish>
+		<Russian>Âåðòèêàëüíàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE</Tag>
+		<English>Village</English>
+		<German>
+			<Text>Dorf</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Villaggio:Villaggi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aldea:Aldeas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wioska</Polish>
+		<Russian>Äåðåâíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE_PEDIA</Tag>
+		<English>A village is a clustered human settlement or community, larger than a hamlet with the population ranging from a few hundred to a few thousands (sometimes tens of thousands), Though often located in rural areas, the term urban village is also applied to certain urban neighbourhoods, such as the West Village in Manhattan, New York City and the Saifi Village in Beirut, Lebanon, as well as Hampstead Village in the London conurbation. Villages are normally permanent, with fixed dwellings; however, transient villages can occur. Further, the dwellings of a village are fairly close to one another, not scattered broadly over the landscape, as a dispersed settlement.</English>
+		<Polish>Wieś (łac. pagus, rus) - jednostka osadnicza o zwartej, skupionej lub rozproszonej zabudowie i istniejących funkcjach rolniczych lub związanych z nimi usługowych lub turystycznych, nieposiadająca praw miejskich lub statusumiasta (art. 2 ustawy z 29 sierpnia 2003 o urzędowych nazwach miejscowości i obiektów fizjograficznych).</Polish>
+		<Russian>Деревня представляет собой сгруппированное человеческое поселение или сообщество, больше, чем деревня, с населением от нескольких сотен до нескольких тысяч (иногда десятков тысяч). Хотя часто она расположена в сельской местности, термин городская деревня также применяется к определенным городским поселениям. районы, такие как Уэст-Виллидж на Манхэттене, Нью-Йорке и Сайфи-Виллидж в Бейруте, Ливан, а также Хэмпстед-Виллидж в пригороде Лондона. Деревни обычно постоянные, с постоянными жилищами; однако временные деревни могут возникать. Кроме того, дома в деревне расположены довольно близко друг к другу, а не разбросаны широко по ландшафту, как рассредоточенное поселение.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WATERMILL</Tag>
+		<English>Watermill</English>
+		<French>Moulin à eau</French>
+		<German>Wassermühle</German>
+		<Italian>
+			<Text>Mulino ad acqua:Mulini ad acqua</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Molino de agua:Molinos de agua</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Młyn Wodny</Polish>
+		<Russian>Âîäÿíàÿ ìåëüíèöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WATERMILL_PEDIA</Tag>
+		<English>A watermill is a structure that uses a water wheel or turbine to drive a mechanical process such as flour, lumber or textile production, or metal shaping (rolling, grinding or wire drawing).</English>
+		<Polish>Młyn wodny - budowla z urządzeniem do przemiału ziarna na mąkę i kaszę, poruszanym za pomocą koła wodnego lub turbiny wodnej, usytuowana nad rzekami. Bardzo rzadko budowane były młyny pływające</Polish>
+		<Russian>* Âîäÿíîå êîëåñî: âñå öèâèëèçàöèè
+Âîäÿíîå êîëåñî - ñòðóêòóðà, êîòîðàÿ èñïîëüçóåò âîäíîå êîëåñî èëè òóðáèíó, ÷òîáû êðóòèòü ìåõàíè÷åñêèé õîä, òèïà ìóêè, äðåâåñèíû, òåêñòèëüíîãî ïðîèçâîäñòâà èëè ôîðìîâêè ìåòàëëà (âðàùåíèå, ðàçìàëûâàíèå èëè âîëî÷åíèå ïðîâîëîêè).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WATER_WORKED</Tag>
+		<English>Water Worked</English>
+		<French>Irrigué</French>
+		<German>Genutztes Gewässer</German>
+		<Italian>
+			<Text>Irrigazione:Irrigazioni</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Agua faenada:Aguas faenadas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Nawadnianie</Polish>
+		<Russian>Îñâîåííûå âîäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WATER_WORKED_PEDIA</Tag>
+		<English>Water is a chemical substance with the chemical formula H2O. Its molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam). Water also exists in a liquid crystal state near hydrophilic surfaces.</English>
+		<Polish>Irygacja (nawadnianie, system irygacyjny) - jeden z systemów melioracji polegający na dostarczaniu wody do gleby w celu zapewnienia odpowiednich warunków wegetacji roślin uprawnych. Stosowana od starożytności (starożytny Egipt, Mezopotamia, starożytny Iran, Indie, Sri Lanka, Chiny, Peru). Wielowiekowy rozwój rolnictwa nawadnianego doprowadził do wykształcenia się odmiennych systemów nawadniania. Różnią się one od siebie czynnościami nieznanymi innym systemom rolnictwa: sposobami poboru wód i ich doprowadzenia na miejsce przeznaczenia (na pole uprawne), sposobami rozprowadzania wód po polu, sposobami podnoszenia wód (gdy ich poziom jest niższy niż poziom pola, wyrównywaniem lub niwelacją poziomu pól, jeśli są one nierówne oraz ewentualnie sposobem odprowadzenia nadmiaru wód).</Polish>
+		<Russian>Вода - это химическое вещество с химической формулой H2O. Его молекула содержит один атом кислорода и два атома водорода, связанных ковалентными связями. В условиях окружающей среды вода является жидкостью, но на Земле она часто сосуществует со своим твердым состоянием, льдом и газообразным состоянием (водяной пар или пар). Вода также существует в жидкокристаллическом состоянии рядом с гидрофильными поверхностями.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WETLANDS_CAMP</Tag>
+		<English>Wetlands Camp</English>
+		<French>Camp de zones humides</French>
+		<German>Feuchtgebiete Feldlager</German>
+		<Italian>Campo nella zone umide</Italian>
+		<Spanish>
+			<Text>Campamento de humedal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz na bagnach</Polish>
+		<Russian>Áîëîòíûé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WETLANDS_CAMP_PEDIA</Tag>
+		<English>Wetlands Camp</English>
+		<French>Camp de zones humides</French>
+		<German>Feuchtgebiete Feldlager</German>
+		<Italian>Campo nella zone imude</Italian>
+		<Spanish>Campamento de humedal</Spanish>
+		<Polish>Obóz na bagnach</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WHALING_BOATS</Tag>
+		<English>Whaling Boats</English>
+		<French>
+			<Text>Baleiniers</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Walfänger</German>
+		<Italian>
+			<Text>Baleniera:Baleniere</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bote ballenero:Botes balleneros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Okręt Wielorybniczy</Polish>
+		<Russian>Êèòîáîéíûå ëîäêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WHALING_SHIPS</Tag>
+		<English>Whaling Ships</English>
+		<French>
+			<Text>Baleiniers</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Walfangschiffe</German>
+		<Italian>Baleniere</Italian>
+		<Spanish>
+			<Text>Barco ballenero:Barcos balleneros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Statki Wielorybnicze</Polish>
+		<Russian>Êèòîáîéíûå ñóäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY</Tag>
+		<English>Wildlife Sanctuary</English>
+		<French>Sanctuaire de la faune</French>
+		<German>Naturschutzgebiet</German>
+		<Italian>Santuario della fauna selvatica</Italian>
+		<Spanish>
+			<Text>Reserva salvaje</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Safari</Polish>
+		<Russian>Ñàôàðè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY_PEDIA</Tag>
+		<English>A wildlife refuge, also called a wildlife sanctuary, is a naturally occurring sanctuary, such as an island, that provides protection for species from hunting, predation or competition, it is a protected area, a geographic territory within which wildlife is protected. Such wildlife refuges are generally officially designated territories. It is created by government legislation, publicly or privately owned. Also, the Chernobyl nuclear accident site has accidentally become a wildlife refuge. It preserves the animals that are endangered or about to be extinct.</English>
+		<Russian>Заказник, также называемое заповедником дикой природы, представляет собой природный парк, такой как остров, который обеспечивает защиту диких видов от охоты, хищничества или конкуренции. Это охраняемая территория, географическая территория, на которой сохраняется дикая природа. Такие заповедники обычно являются официально обозначенными территориями. Он создается согласно государственному законодательству в государственной или частной собственности. Кроме того, место аварии на Чернобыльской АЭС случайно стало заповедником дикой природы. Он сохраняет животных, находящихся под угрозой исчезновения или находящихся на грани исчезновения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WINDMILL</Tag>
+		<English>Windmill</English>
+		<French>Moulin à vent</French>
+		<German>Windmühle</German>
+		<Italian>
+			<Text>Mulino a vento:Mulini a vento</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Molino de viento:Molinos de viento</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wiatrak</Polish>
+		<Russian>Âåòðÿíàÿ ìåëüíèöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Tag>
+		<English>A windmill is a machine which converts the energy of wind into rotational motion by means of adjustable vanes called sails or blades. The main use was originally for a grinding mill powered by the wind, reducing a solid or coarse substance into pulp or minute grains, by crushing, grinding, or pressing. Windmills have also been used to power sawmills and other industrial processes and as windpumps for obtaining fresh water from underground or for drainage of land.</English>
+		<Polish>Wiatrak - budowla drewniana, niekiedy murowana, wyposażona w skrzydła poruszane siłą wiatru i napędzające urządzenia. Jest najstarszym silnikiem wiatrowym - przetwarza energię wiatru na energię kinetyczną wruchu obrotowym. Jest poprzednikiem turbiny wiatrowej, którą czasami również nazywa się wiatrakiem.</Polish>
+		<Russian>* Âåòðÿíàÿ ìåëüíèöà: âñå öèâèëèçàöèè
+Âåòðÿíàÿ ìåëüíèöà - ìàøèíà, êîòîðàÿ ïðåîáðàçóåò ýíåðãèþ âåòðà âî âðàùàòåëüíóþ ýíåðãèþ ïîñðåäñòâîì ëîïàñòåé, íàçûâàåìûõ êðûëüÿìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>
+		<English>Winery</English>
+		<French>
+			<Text>Exploitation vinicole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Weingut</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Azienda vinicola:Aziende vinicole</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Viñedo:Viñedos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Winnica</Polish>
+		<Russian>Âèíîêóðíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Tag>
+		<English>A winery is a building or property that produces wine, or a business involved in the production of wine, such as a wine company. Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world found to date is a 6,000 year old winery in the Areni region of Armenia, which is still a wine making region today.</English>
+		<Russian>* Âèíîäåëüíÿ: âñå öèâèëèçàöèè
+Âèíîäåëüíÿ - çäàíèå èëè èìåíèå, êîòîðîå ïðîèçâîäèò âèíî, èëè áèçíåñ, âîâëå÷åííûé â ïðîèçâîäñòâî âèíà, òèïà âèííîé êîìïàíèè. Íåêîòîðûå âèííûå êîìïàíèè èìåþò ìíîãî âèííûõ çàâîäîâ. Ïîìèìî âèíîäåëü÷åñêîãî îáîðóäîâàíèÿ, áîëüøèå âèííûå çàâîäû ìîãóò òàêæå îòëè÷àòüñÿ ñêëàäàìè, ëèíèÿìè áóòûëî÷íîãî ðîçëèâà, ëàáîðàòîðèÿìè, è áîëüøèìè ïðîòÿæåíèÿìè ðåçåðâóàðîâ, èçâåñòíûõ êàê ôåðìû ðåçåðâóàðîâ. Ñàìûé ñòàðûé âèííûé çàâîä â ìèðå, íàéäåííûé äî íàñòîÿùåãî âðåìåíè - 6 000-ëåòíèé âèííûé çàâîä â îáëàñòè Àðíè Àðìåíèè, êîòîðàÿ ñåãîäíÿ âñå åùå ÿâëÿåòñÿ âèíîäåëü÷åñêîé îáëàñòüþ. - Wikipedia</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Tag>
+		<English>Wooden Palisade</English>
+		<French>Palissade en bois</French>
+		<Italian>Palizzata in legno</Italian>
+		<Spanish>
+			<Text>Empalizada de madera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Drewniana Palisada</Polish>
+		<Russian>×àñòîêîë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Tag>
+		<English>Wooden Watchtower</English>
+		<French>Tour d'observation en bois</French>
+		<German>
+			<Text>Holzwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Torre d'osservazione in legno</Italian>
+		<Spanish>
+			<Text>Puesto de avanzada de madera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Drewniana Wieża Obserwacyjna</Polish>
+		<Russian>Äåðåâÿííàÿ áàøíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Tag>
+		<English>Wood Gatherer</English>
+		<French>Récolteur de bois</French>
+		<German>Lager der Holzsammler</German>
+		<Italian>Raccoglitore di legno</Italian>
+		<Spanish>
+			<Text>Recolector de leña</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Obóz Drwali</Polish>
+		<Russian>Ñáîð äðåâåñèíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WORKSHOP</Tag>
+		<English>Workshop</English>
+		<French>Atelier</French>
+		<German>
+			<Text>Werkstatt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bottega:Botteghe</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taller:Talleres</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Warsztat</Polish>
+		<Russian>Ìàñòåðñêàÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WORKSHOP_PEDIA</Tag>
+		<English>A workshop is a room or building which provides both the area and tools (or machinery) that may be required for the manufacture or repair of manufactured goods. Apart from the larger factories, workshops were the only places of production in the days before industrialisation.</English>
+		<Russian>* Ìàñòåðñêàÿ: âñå öèâèëèçàöèè
+Âî âðåìÿ "èíäóñòðèàëüíîé ýðû", ìàñòåðñêàÿ ìîæåò áûòü çàëîì èëè çäàíèåì, êîòîðîå îáåñïå÷èâàåò è îáëàñòü è èíñòðóìåíòû (èëè ìàøèíû), êîòîðûå ìîãóò ïîòðåáîâàòüñÿ äëÿ èçãîòîâëåíèÿ èëè ðåìîíòà ïðîìûøëåííûõ òîâàðîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Tag>
+		<English>This is a pseudo improvement that, when built, creates a [LINK=FEATURE_FOREST_YOUNG]Young Forest[\LINK] on the plot without leaving an improvement behind.</English>
+		<Russian>Молодой лес все еще далек до подлинного расцвета.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ZIGGURAT</Tag>
+		<English>Ziggurat</English>
+		<French>Ziggourat</French>
+		<German>Zikkurat</German>
+		<Spanish>Zigurat</Spanish>
+		<Russian>Çèêêóðàò</Russian>
+	</TEXT>
+</Civ4GameText>

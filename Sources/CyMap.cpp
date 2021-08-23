@@ -1,7 +1,3 @@
-//
-// Python wrapper class for CvMap 
-// 
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvInitCore.h"
@@ -14,18 +10,17 @@
 #include "CyMap.h"
 #include "CyPlot.h"
 
-CyMap::CyMap() : m_pMap(NULL)
-{
-	m_pMap = &GC.getMap();
-}
+//
+// Python wrapper class for CvMap
+//
 
-CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
-{
-}
+CyMap::CyMap()
+	: m_pMap(&GC.getMap())
+{ }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
+CyMap::CyMap(MapTypes eMap)
+	: m_pMap(&GC.getMapByIndex(eMap))
+{ }
 
 int CyMap::getType()
 {
@@ -36,6 +31,11 @@ CyMap& CyMap::operator=(CvMap& kMap)
 {
 	m_pMap = &kMap;
 	return *this;
+}
+
+bool CyMap::plotsInitialized() const
+{
+	return m_pMap->plotsInitialized();
 }
 
 bool CyMap::viewportsEnabled()
@@ -72,10 +72,15 @@ int	CyMap::getViewportYFromMapY(int iY)
 {
 	return GC.getCurrentViewport()->getViewportYFromMapY(iY);
 }
-	
+
 bool CyMap::isInViewport(int iX, int iY)
 {
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
+}
+
+bool CyMap::isMidSwitch() const
+{
+	return CvMap::m_bSwitchInProgress;
 }
 
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
@@ -87,10 +92,6 @@ void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool 
 {
 	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
 }
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 void CyMap::erasePlots()
 {
@@ -136,17 +137,13 @@ CyPlot* CyMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 
 CyArea* CyMap::findBiggestArea(bool bWater)
 {
-	return m_pMap ? new CyArea(m_pMap->findBiggestArea(bWater)) : NULL;
+	CvArea* area = m_pMap->findBiggestArea(bWater);
+	return area ? new CyArea(area) : NULL;
 }
 
 int CyMap::getMapFractalFlags()
 {
 	return m_pMap ? m_pMap->getMapFractalFlags() : -1;
-}
-
-bool CyMap::findWater(CyPlot* pPlot, int iRange, bool bFreshWater)
-{
-	return m_pMap ? m_pMap->findWater(pPlot->getPlot(), iRange, bFreshWater) : false;
 }
 
 bool CyMap::isPlot(int iX, int iY)
@@ -174,7 +171,7 @@ int CyMap::plotY(int iIndex)
 	return m_pMap ? m_pMap->plotY(iIndex) : -1;
 }
 
-int CyMap::getGridWidth() 
+int CyMap::getGridWidth()
 {
 	return m_pMap->getGridWidth();
 }
@@ -265,6 +262,17 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 	return m_pMap ? m_pMap->getNumBonusesOnLand((BonusTypes)eIndex) : -1;
 }
 
+python::list CyMap::plots() const
+{
+	python::list list = python::list();
+
+	for (int i = 0, numPlots = m_pMap->numPlots(); i < numPlots; i++)
+	{
+		list.append(CyPlot(m_pMap->plotByIndex(i)));
+	}
+	return list;
+}
+
 CyPlot* CyMap::plotByIndex(int iIndex)
 {
 	return m_pMap ? new CyPlot(m_pMap->plotByIndex(iIndex)) : NULL;
@@ -284,7 +292,7 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 	return NULL;
 }
 
-CyPlot* CyMap::plot(int iX, int iY) 
+CyPlot* CyMap::plot(int iX, int iY)
 {
 	return new CyPlot(m_pMap->plot(iX, iY));
 }
@@ -292,7 +300,7 @@ CyPlot* CyMap::plot(int iX, int iY)
 //
 // static version
 //
-CyPlot* CyMap::sPlot(int iX, int iY) 
+CyPlot* CyMap::sPlot(int iX, int iY)
 {
 	static CyPlot p;
 	p.setPlot(m_pMap->plot(iX, iY));
@@ -302,11 +310,6 @@ CyPlot* CyMap::sPlot(int iX, int iY)
 CyPlot* CyMap::pointToPlot(float fX, float fY)
 {
 	return m_pMap ? new CyPlot(m_pMap->pointToPlot(fX, fY)) : NULL;
-}
-
-int CyMap::getIndexAfterLastArea()
-{
-	return m_pMap ? m_pMap->getIndexAfterLastArea() : -1;
 }
 
 int CyMap::getNumAreas()
@@ -322,6 +325,17 @@ int CyMap::getNumLandAreas()
 CyArea* CyMap::getArea(int iID)
 {
 	return m_pMap ? new CyArea(m_pMap->getArea(iID)) : NULL;
+}
+
+python::list CyMap::areas() const
+{
+	python::list list = python::list();
+
+	foreach_(CvArea* area, m_pMap->areas())
+	{
+		list.append(new CyArea(area));
+	}
+	return list;
 }
 
 void CyMap::recalculateAreas()
@@ -420,4 +434,9 @@ void CyMap::calculateCanalAndChokePoints()
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}
+}
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
 }

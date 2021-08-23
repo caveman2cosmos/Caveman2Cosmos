@@ -153,7 +153,7 @@ void CvUnitList::doGroup()
 
 	for (int i=0; i < iSize; i++)
 		mmap_Units.insert(std::pair<int,UnitTypes>(m_UnitGrouping.getGroup(m_aiUnitList[i]), m_aiUnitList[i]));
-	
+
 	int index = -1;
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, UnitTypes>::iterator it = mmap_Units.begin(); it != mmap_Units.end(); ++it)
@@ -208,4 +208,4 @@ UnitTypes CvUnitList::getSelectedUnit() const
 	return m_eSelectedUnit;
 }
 
-	
+

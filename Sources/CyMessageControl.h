@@ -3,18 +3,12 @@
 #ifndef _CYMESSAGECONTROL_H
 #define _CYMESSAGECONTROL_H
 
-#ifndef __INTELLISENSE__
-#include <boost/python/list.hpp>
-#include <boost/python/tuple.hpp>
-namespace python = boost::python;
-#endif
-
 class CyMessageControl
 {
 public:
 	void sendPushOrder(int iCityID, int eOrder, int iData, bool bAlt, bool bShift, bool bCtrl);
 	void sendDoTask(int iCity, int eTask, int iData1, int iData2, bool bOption, bool bAlt, bool bShift, bool bCtrl);
-	void sendUpdateCivics(boost::python::list& iCivics);
+	void sendUpdateCivics(const python::list& lCivics);
 	void sendResearch(int eTech, bool bShift);
 	void sendPlayerOption(int /*PlayerOptionTypes*/ eOption, bool bValue);
 	void sendEspionageSpendingWeightChange(int /*TeamTypes*/ eTargetTeam, int iChange);

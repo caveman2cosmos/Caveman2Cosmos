@@ -8,57 +8,35 @@
 void CyInfoPythonInterface4()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface4\n");
-	
-	python::class_<CvQuestInfo, python::bases<CvInfoBase> >("CvQuestInfo")
-		.def("getQuestMessages", &CvQuestInfo::getQuestMessages, "int ()")
-		.def("getNumQuestLinks", &CvQuestInfo::getNumQuestLinks, "int ()")
 
-		.def("getQuestObjective", &CvQuestInfo::getQuestObjective, "string ()")
-		.def("getQuestBodyText", &CvQuestInfo::getQuestBodyText, "string ()")
-		.def("getNumQuestMessages", &CvQuestInfo::getNumQuestMessages, "string ()")
-		.def("getQuestSounds", &CvQuestInfo::getQuestSounds, "string ()")
-
-
+	python::class_<CvAutomateInfo, python::bases<CvInfoBase> >("CvAutomateInfo", python::no_init)
 		;
 
-	python::class_<CvTutorialMessage>("CvTutorialMessage")
-		.def("getText", &CvTutorialMessage::getText, "string ()")
-		.def("getSound", &CvTutorialMessage::getSound, "string ()")
-
+	python::class_<CvCommandInfo, python::bases<CvInfoBase> >("CvCommandInfo", python::no_init)
 		;
 
-	python::class_<CvTutorialInfo, python::bases<CvInfoBase> >("CvTutorialInfo")
-
-		;
-
-	python::class_<CvAutomateInfo, python::bases<CvInfoBase> >("CvAutomateInfo")
-		;
-
-	python::class_<CvCommandInfo, python::bases<CvInfoBase> >("CvCommandInfo")
-		;
-
-	python::class_<CvGameOptionInfo, python::bases<CvInfoBase> >("CvGameOptionInfo")
+	python::class_<CvGameOptionInfo, python::bases<CvInfoBase> >("CvGameOptionInfo", python::no_init)
 		.def("getDefault", &CvGameOptionInfo::getDefault, "bool ()")
 		.def("getVisible", &CvGameOptionInfo::getVisible, "bool ()")
 		;
 
-	python::class_<CvMPOptionInfo, python::bases<CvInfoBase> >("CvMPOptionInfo")
+	python::class_<CvMPOptionInfo, python::bases<CvInfoBase> >("CvMPOptionInfo", python::no_init)
 		.def("getDefault", &CvMPOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvForceControlInfo, python::bases<CvInfoBase> >("CvForceControlInfo")
+	python::class_<CvForceControlInfo, python::bases<CvInfoBase> >("CvForceControlInfo", python::no_init)
 		.def("getDefault", &CvForceControlInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvPlayerOptionInfo, python::bases<CvInfoBase> >("CvPlayerOptionInfo")
+	python::class_<CvPlayerOptionInfo, python::bases<CvInfoBase> >("CvPlayerOptionInfo", python::no_init)
 		.def("getDefault", &CvPlayerOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvGraphicOptionInfo, python::bases<CvInfoBase> >("CvGraphicOptionInfo")
+	python::class_<CvGraphicOptionInfo, python::bases<CvInfoBase> >("CvGraphicOptionInfo", python::no_init)
 		.def("getDefault", &CvGraphicOptionInfo::getDefault, "bool ()")
 		;
 
-	python::class_<CvEventTriggerInfo, python::bases<CvInfoBase> >("CvEventTriggerInfo")
+	python::class_<CvEventTriggerInfo, python::bases<CvInfoBase> >("CvEventTriggerInfo", python::no_init)
 		.def("getNumUnits", &CvEventTriggerInfo::getNumUnits, "int ()")
 		.def("getNumBuildings", &CvEventTriggerInfo::getNumBuildings, "int ()")
 		.def("getCivic", &CvEventTriggerInfo::getCivic, "int ()")
@@ -77,7 +55,7 @@ void CyInfoPythonInterface4()
 		.def("isStateReligion", &CvEventTriggerInfo::isStateReligion, "bool ()")
 		;
 
-	python::class_<CvEventInfo, python::bases<CvInfoBase> >("CvEventInfo")
+	python::class_<CvEventInfo, python::bases<CvInfoBase> >("CvEventInfo", python::no_init)
 		.def("isQuest", &CvEventInfo::isQuest, "bool ()")
 		.def("isTeam", &CvEventInfo::isTeam, "bool ()")
 		.def("isGoldenAge", &CvEventInfo::isGoldenAge, "bool ()")
@@ -109,7 +87,7 @@ void CyInfoPythonInterface4()
 		.def("getBuildingHealthChange", &CvEventInfo::getBuildingHealthChange, "int (int /*BuildingTypes*/)")
 		;
 
-	python::class_<CvEspionageMissionInfo, python::bases<CvInfoBase> >("CvEspionageMissionInfo")
+	python::class_<CvEspionageMissionInfo, python::bases<CvInfoBase> >("CvEspionageMissionInfo", python::no_init)
 		.def("getCost", &CvEspionageMissionInfo::getCost, "int ()")
 		.def("isPassive", &CvEspionageMissionInfo::isPassive, "bool ()")
 		.def("isTargetsCity", &CvEspionageMissionInfo::isTargetsCity, "bool ()")
@@ -120,17 +98,17 @@ void CyInfoPythonInterface4()
 		.def("getCounterespionageMod", &CvEspionageMissionInfo::getCounterespionageMod, "int ()")
 		;
 
-	python::class_<CvVoteSourceInfo, python::bases<CvInfoBase> >("CvVoteSourceInfo")
+	python::class_<CvVoteSourceInfo, python::bases<CvInfoBase> >("CvVoteSourceInfo", python::no_init)
 		.def("getCivic", &CvVoteSourceInfo::getCivic, "int ()")
 		.def("getFreeSpecialist", &CvVoteSourceInfo::getFreeSpecialist, "int ()")
 		.def("getReligionCommerce", &CvVoteSourceInfo::getReligionCommerce, "int (int)")
 		.def("getSecretaryGeneralText", &CvVoteSourceInfo::pyGetSecretaryGeneralText, "wstring ()")
 		;
 
-	python::class_<CvMainMenuInfo, python::bases<CvInfoBase> >("CvMainMenuInfo")
+	python::class_<CvMainMenuInfo, python::bases<CvInfoBase> >("CvMainMenuInfo", python::no_init)
 		;
 
-	python::class_<CvPropertyInfo, python::bases<CvInfoBase> >("CvPropertyInfo")
+	python::class_<CvPropertyInfo, python::bases<CvInfoBase> >("CvPropertyInfo", python::no_init)
 		.def("getChar", &CvPropertyInfo::getChar, "int ()")
 		;
 }

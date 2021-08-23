@@ -9,9 +9,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import MultilayeredFractal
+#from CvMapGeneratorUtil import MultilayeredFractal
 from CvMapGeneratorUtil import HintedWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
@@ -601,15 +600,13 @@ def findStartingPlot(argsList):
 		pPlot = map.plot(x, y)
 
 		if (pPlot.getArea() != map.findBiggestArea(False).getID()):
-			return false
+			return False
 
 		if isTeamGame:
 			pWaterArea = pPlot.waterArea()
-			if (pWaterArea.isNone()):
-				return false
-			return not pWaterArea.isLake()
+			return pWaterArea is not None and not pWaterArea.isLake()
 		else:
-			return true
+			return True
 
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 

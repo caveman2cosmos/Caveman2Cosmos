@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Player Color -->
 <Civ4PlayerColorInfos xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
 	<PlayerColorInfos>
@@ -335,6 +334,42 @@
 			<ColorTypePrimary>COLOR_PLAYER_BLACK</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_BROWN</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_BLACK</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ABORIGINES</Type>
+			<ColorTypePrimary>COLOR_HONEYDEW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
+			<TextColorType>COLOR_HONEYDEW</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BRAZIL</Type>
+			<ColorTypePrimary>COLOR_DARK_GOLDENROD</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_DARK_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_DARK_GOLDENROD</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ISRAEL</Type>
+			<ColorTypePrimary>COLOR_PLAYER_ISRAEL</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ISRAEL</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_JIVARO</Type>
+			<ColorTypePrimary>COLOR_PLAYER_DARK_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_DARK_RED</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MAORI</Type>
+			<ColorTypePrimary>COLOR_BLACK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_MISTYROSE</ColorTypeSecondary>
+			<TextColorType>COLOR_BLACK</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_NEANDERTHAL_EMPIRE</Type>
+			<ColorTypePrimary>COLOR_BROWNNEANDERTHAL1</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_BROWNNEANDERTHAL2</ColorTypeSecondary>
+			<TextColorType>COLOR_BROWNNEANDERTHAL1</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>

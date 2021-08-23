@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AERODROME</Tag>
+		<English>Aerodrome</English>
+		<French>
+			<Text>Complexe Aérien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Aerodromo</Italian>
+		<Polish>Aerodrom</Polish>
+		<Russian>Àýðîäðîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AERODROME_PEDIA</Tag>
+		<English>This wide open field, sometimes paved, sometimes not, sometimes underwater, usually surrounded by hangers, workshops and the like, serves as an arrival and departure point for all manner of aircraft. The emerging airliner industry appreciates a place to park their airships and seaplanes to take on more paying customers.</English>
+		<Italian>Questo ampio spazio aperto, a volte pavimentato mentre altre no, a volte sull'acqua, solitamente circondato da hangar, officine e altre strutture simili serve come punto di arrivo e partenza per molti aerei. L'industria aerea emergente apprezza questo spazio per posteggiare i loro velivoli e idrovolanti per imbarcare i viaggiatori paganti.</Italian>
+		<Polish>Aerodrom - obszar, na którym lądują, startują i kołują statki powietrzne (samoloty, śmigłowce, sterowce). Ich wyposażenie zróżnicowane jest w zależności od liczby odprawianych pasażerów i przeładowywanych towarów.</Polish>
+		<Russian>Àýðîäðîì - çåìåëüíûé èëè âîäíûé ó÷àñòîê ñ âîçäóøíûì ïðîñòðàíñòâîì, ñîîðóæåíèÿìè è îáîðóäîâàíèåì, îáåñïå÷èâàþùèìè âçëåò, ïîñàäêó, ðóëåíèå, ðàçìåùåíèå è îáñëóæèâàíèå ñàìîëåòîâ, âåðòîëåòîâ è ïëàíåðîâ.[PARAGRAPH:2]Ðàçâèâàþùàÿñÿ èíäóñòðèÿ àâèàïåðåâîçîê íóæäàåòñÿ â ìåñòå äëÿ áàçèðîâàíèÿ äèðèæàáëåé è ãèäðîïëàíîâ, ÷òîáû îáåñïå÷èòü êîìôîðòíûå óñëîâèÿ äëÿ ïîñàäêè áîãàòûõ êëèåíòîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Tag>
+		<English>Culture (Dieselpunk)</English>
+		<Italian>Cultura (Dieselpunk)</Italian>
+		<Polish>Kultura (Dieselpunk)</Polish>
+		<Russian>Äèçåëüïàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Tag>
+		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
+		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
+		<Russian>Äèçåëüïàíê - ðàçâèâàþùèéñÿ æàíð ôàíòàñòèêè, ïðîèçâîäíûé îò êèáåðïàíêà, îïèñûâàþùèé ìèð, áàçèðóþùèéñÿ íà òåõíîëîãèÿõ óðîâíÿ 20-õ - 50-õ ãã. XX âåêà (ïåðèîä ñ Ïåðâîé ìèðîâîé âîéíû ïî Âòîðóþ ìèðîâóþ âîéíó), à òàêæå çàðîæäàþùàÿñÿ ñóáêóëüòóðà, ñî÷åòàþùàÿ â ñåáå ýñòåòèêó òîãî âðåìåíè ñ ïîñòìîäåðíèñòñêèìè òåõíîëîãèÿìè è ÷óâñòâàìè.[PARAGRAPH:2]Òåðìèí ïîÿâèëñÿ â 2001 ãîäó êàê ìàðêåòèíãîâûé õîä, êîòîðûé ïðèäóìàë èãðîâîé äèçàéíåð Ëüþèñ Ïîëëàê, ÷òîáû îïèñàòü åãî íàñòîëüíóþ ðîëåâóþ èãðó «Children of the Sun». Ïîñëå ýòîãî òåðìèí ïðèìåíÿëñÿ, ÷òîáû îïèñàòü îñîáûé ñòèëü èçîáðàçèòåëüíîãî èñêóññòâà, ìóçûêè, êèíî, õóäîæåñòâåííîé ëèòåðàòóðû, è ìîääèíãà òåõíèêè.[PARAGRAPH:1]Ñëîâî "äèçåëüïàíê" ÿâëÿåòñÿ ïðîèçâîäíûì îò íàçâàíèÿ æàíðà êèáåðïàíê, è èñïîëüçóåòñÿ äëÿ ïðåäñòàâëåíèÿ ïåðèîäà âðåìåíè, êîãäà äèçåëüíûé äâèãàòåëü áûë â îñíîâå ïåðåäâèæåíèÿ â çàïàäíîé êóëüòóðå è "ïàíê" - ñóôôèêñ, ñâÿçàííûé ñ æàíðàìè õóäîæåñòâåííûõ ïðîèçâåäåíèé, â êîòîðûõ îáùåñòâî íàõîäèòñÿ â ãëóáîêîì óïàäêå èëè íà ñòàäèè ðàäèêàëüíûõ ïåðåìåí â ñîöèàëüíîì óñòðîéñòâå. Òàêæå òåðìèí ññûëàåòñÿ íà ñòèìïàíê, äðóãóþ ïðîèçâîäíóþ êèáåðïàíêà, â êîòîðîì, êàê ïðàâèëî, îñíîâíîå âíèìàíèå îáðàùàåòñÿ íå íà ïðîáëåìû îáùåñòâà, à íà ýñòåòèêó âèêòîðèàíñêîé ýïîõè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Tag>
+		<English>Dirigible Terminal</English>
+		<French>
+			<Text>Terminal de Dirigeable</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Terminal per dirigibili</Italian>
+		<Polish>Terminal Zeppelinów</Polish>
+		<Russian>Âîçäóøíûé ïðè÷àë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Tag>
+		<English>The Art Deco spire of the Empire State Building was originally if impractically designed to serve as a dirigible terminal for Zeppelins and other airships to dock. The Hindenburg disaster in 1937, along with political and economic issues, hastened the demise of the Zeppelin.</English>
+		<Italian>L'antenna art decò dell'Empire State Building era stata originalmente progettata per servire come terminal per gli Zeppelin e altri dirigibili. Il disastro dell'Hindenburg del 1937, assieme a problemi politici ed economici, causò il declino degli Zeppelin.</Italian>
+		<Polish>Zeppelin - Sterowiec szkieletowy - rodzaj aerostatu z silnikiem, którego szkielet kadłuba jest wykonany z drewna (dawniej) lub duraluminium (później), po czym pokryty specjalną powłoką, powlekaną od zewnątrz substancjami zapewniającymi dużą gładkość powierzchni oraz odporność na promieniowanie słoneczne i wilgoć.</Polish>
+		<Russian>Ïåðâîíà÷àëüíî øïèëü Ýìïàéð-ñòåéò-áèëäèíã ïðåäïîëàãàëîñü èñïîëüçîâàòü â êà÷åñòâå ïðè÷àëüíîé ìà÷òû äëÿ äèðèæàáëåé. 102-é ýòàæ áûë ñïðîåêòèðîâàí òàêèì îáðàçîì, ÷òî ïðåêðàñíî ñïðàâèëñÿ áû ñ ðîëüþ ïðè÷àëüíîé ïëàòôîðìû ñî ñõîäíÿìè äëÿ ïîäúåìà íà äèðèæàáëü.[PARAGRAPH:1]Îäíàêî ñåðüåçíûì ïðåïÿòñòâèåì äëÿ âîïëîùåíèÿ ýòîé èäåè ïîñëóæèëè íåáëàãîïðèÿòíûå ïîãîäíûå óñëîâèÿ - äèðèæàáëü íå ìîã ïðè÷àëèòü ê øïèëþ çäàíèÿ èç-çà ñèëüíûõ è íåñòàáèëüíûõ âîçäóøíûõ ïîòîêîâ íà òàêîé âûñîòå. Ýòî ñòàëî ïîíÿòíî ïîñëå ïåðâîé æå ïîïûòêè öåïïåëèíà ïðèøâàðòîâàòüñÿ, è â 1952-ì ãîäó âëàäåëüöû çäàíèÿ îêîí÷àòåëüíî îòêàçàëèñü îò ýòîé èäåè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB</Tag>
+		<English>Farnsworth Electronics Lab</English>
+		<French>
+			<Text>Laboratoire d'Electronique de Farnsworth</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Laboratorio di elettronica di Farnsworth</Italian>
+		<Polish>Laboratorium Elektroniki Farnswortha</Polish>
+		<Russian>Ëàá. ýëåêòðîíèêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Tag>
+		<English>Farnsworth called his device an image dissector because it converted individual elements of the image into electricity one at a time. He replaced the spinning disks with cesium, an element that emits electrons when exposed to light.</English>
+		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
+		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>
+		<Russian>Ôàðíñâîðò íàçâàë ñâîå óñòðîéñòâî "äèññåêòîð", ïîòîìó ÷òî îíî ïðåîáðàçóåò îòäåëüíûå ýëåìåíòû îïòè÷åñêîãî èçîáðàæåíèÿ â ýëåêòðè÷åñòâî. Îí çàìåíèë âðàùàþùèåñÿ äèñêè öåçèåì - ýëåìåíòîì, êîòîðûé èñïóñêàåò ýëåêòðîíû ïðè îáëó÷åíèè ñâåòîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_AERODROME</Tag>
+		<English>Grand Aerodrome</English>
+		<French>
+			<Text>Grand Complexe Aérien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Grande Aerodromo</Italian>
+		<Polish>Wielki Aerodrom</Polish>
+		<Russian>Áîëüøîé àýðîäðîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Tag>
+		<English>A metropolis on the move needs an aerodrome that can handle the needs of those swarms of dames and gents that want to be halfway 'round the world by yesterday and want to do it in style. With its sweeping marble columns, attractive statuary, dozens of duty free luxury shops and connections to all the city's forms of mass transit, the average Grand Aerodrome attracts far more and richer clientele.</English>
+		<Italian>Una metropoli moderna ha bisogno di un aerodromo in grado di soddisfare i bisogni di queste nubi di dame e gentiluomini che vogliono essere dall'altra parte del mondo in un giorno, e vogliono farlo con stile. Con le sue colonne in marmo, statue attrattive, dozzine di negozi di beni di lusso e collegamenti a tutte le forme di trasporto di massa, ogni Grande Aerodromo attrae una clientela maggiore e più ricca.</Italian>
+		<Polish>Pierwsze miejsca przystosowane do startów i lądowań samolotów wyznaczano na płaskich polach o nawierzchni gruntowej lub trawiastej, bez wyznaczonych dróg startowych - lądowano pod dowolnym kątem, w zależności np. od warunków atmosferycznych. Infrastruktura lotniska w początkach lotnictwa składała się zazwyczaj jedynie z hangaru, często posiadały widownie umożliwiające wykorzystanie lotniska w celach rozrywkowych. Jednym z pierwszych lądowisk tego typu było lotnisko Taliedo w Mediolanie, otwarte w 1910, przekształcone w 1920 w port lotniczy o zastosowaniu komercyjnym.</Polish>
+		<Russian>Äëÿ ïåðåìåùåíèé ìåãàïîëèñàì òðåáóåòñÿ àýðîäðîì, êîòîðûé ñìîã áû óäîâëåòâîðÿòü ïîòðåáíîñòÿì äàì è ãîñïîä, êîòîðûå åùå â÷åðà áûëè íà äðóãîì êîíöå ñâåòà, è äåëàë áû ýòî ñ øèêîì. Âåëèêîëåïíûå ìðàìîðíûå êîëîííû, ïðåêðàñíûå ñêóëüïòóðû, äåñÿòêè ðîñêîøíûõ ìàãàçèíîâ è îñòàíîâîê âñåõ âèäîâ îáùåñòâåííîãî òðàíñïîðòà, áîëüøîé àýðîäðîì ïðèâëåêàåò íàèáîëåå áîãàòûõ êëèåòíîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RADIOPLEX</Tag>
+		<English>Radioplex</English>
+		<French>
+			<Text>Radioplexe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Radiopleks</Polish>
+		<Russian>Ðàäèîïëåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Tag>
+		<English>Radio theater is a dramatized, purely acoustic performance, broadcast on radio or published on audio media, such as tape or CD. With no visual component, radio drama depends on dialogue, music and sound effects to help the listener imagine the characters and story. It is auditory in the physical dimension but equally powerful as a visual force in the psychological dimension.</English>
+		<Italian>Il teatro radio è una performance drammatizzata, puramente acustica, trasmessa alla radio o pubblicata su file audio, come cassette o CD. Senza effetti visivi, le trasmissioni radiofoniche dipendono dal dialogo, dalla musica e dagli effetti sonori per aiutare l'ascoltatore a immaginare i personaggi e la storia. Nella dimensione psicologica, ha la stessa forza di una rappresentazione visiva.</Italian>
+		<Russian>Ðàäèîòåàòð - ýòî òåàòðàëèçîâàííîå, èñêëþ÷èòåëüíî àêóñòè÷åñêîå ïðåäñòàâëåíèå, òðàíñëèðóåìîå ïî ðàäèî èëè çàïèñàííîå íà àóäèîíîñèòåëü, ê ïðèìåðó ìàãíèòíóþ ëåíòó èëè êîìïàêò-äèñê.[PARAGRAPH:1]Â îòñóòñòâèè âèçóàëüíîé ñîñòàâëÿþùåé, ðàäèîñïåêòàêëü çàâèñèò îò äèàëîãîâ, ìóçûêè è çâóêîâûõ ýôôåêòîâ, ÷òîáû ïîìî÷ü ñëóøàòåëþ ïðåäñòàâèòü ñåáå ãåðîåâ è ñþæåò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY</Tag>
+		<English>Theremin Factory</English>
+		<French>
+			<Text>Usine de thérémine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Fabbrica di theremin</Italian>
+		<Polish>Fabryka Thereminów</Polish>
+		<Russian>Ôàáðèêà òåðìåíâîêñîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Tag>
+		<English>A theremin factory is an industrial site where workers manufacture theremins, an early electronic musical instrument controlled without discernible physical contact from the player. It is named after its Russian inventor, Professor Léon Theremin, who patented the device in 1928. The controlling section usually consists of two metal antennas which sense the position of the player's hands and control oscillators for frequency with one hand, and amplitude (volume) with the other, so it can be played without being touched. The electric signals from the theremin are amplified and sent to a loudspeaker.</English>
+		<Italian>Una fabbrica di theremin è un sito industriale dove i lavoratori producono theremin, uno dei primi strumenti musicali elettronici, che può essere suonato anche senza un contatto fisico completo. Prende il nome dal suo inventore, il professore russo Léon Theremin, che brevettò il dispositivo nel 1928. La sezione di controllo consiste solitamente di due antenne metalliche, che rilevano la posizione delle mani del musicista e in base a esse controllano rispettivamente gli oscillatori di frequenza e l'ampiezza (ossia il volume) senza che li si tocchi direttamente. I segnali elettrici del theremin vengono poi amplificati e inviati a un altoparlante.</Italian>
+		<Russian>Òåðìåíâîêñ - ýòî èíñòðóìåíò,ñîçäàííûé â 1919 ãîäó ðóññêèì èçîáðåòàòåëåì Ëüâîì Ñåðãååâè÷åì Òåðìåíîì, íà êîòîðîì ìîæíî èãðàòü, íå êàñàÿñü åãî ïàëüöàìè. Ïîä âîçäåéñòâèåì ðóêè, îí ðåàãèðóåò íà èçìåíåíèå ýëåêòðîìàãíèòíûõ ïîëåé, ãåíåðèðóåìûõ àíòåííàìè.[PARAGRAPH:2]Èãðà íà òåðìåíâîêñå çàêëþ÷àåòñÿ â èçìåíåíèè ìóçûêàíòîì ðàññòîÿíèÿ îò ñâîèõ ðóê äî àíòåíí èíñòðóìåíòà, çà ñ÷åò ÷åãî èçìåíÿåòñÿ åìêîñòü êîëåáàòåëüíîãî êîíòóðà è, êàê ñëåäñòâèå, ÷àñòîòà çâóêà. Âåðòèêàëüíàÿ ïðÿìàÿ àíòåííà îòâå÷àåò çà òîí çâóêà, ãîðèçîíòàëüíàÿ ïîäêîâîîáðàçíàÿ - çà åãî ãðîìêîñòü. Äëÿ èãðû íà òåðìåíâîêñå íåîáõîäèìî îáëàäàòü õîðîøî ðàçâèòûì ìóçûêàëüíûì ñëóõîì: âî âðåìÿ èãðû ìóçûêàíò íå êàñàåòñÿ èíñòðóìåíòà è ïîýòîìó íå ìîæåò ôèêñèðîâàòü ïîëîæåíèå ðóê îòíîñèòåëüíî íåãî è äîëæåí ïîëàãàòüñÿ òîëüêî íà ñâîé ñëóõ.[PARAGRAPH:1]Èíñòðóìåíò ïðåäíàçíà÷åí äëÿ èñïîëíåíèÿ ëþáûõ (êëàññè÷åñêèõ, ýñòðàäíûõ, äæàçîâûõ) ìóçûêàëüíûõ ïðîèçâåäåíèé â ïðîôåññèîíàëüíîé è ñàìîäåÿòåëüíîé ìóçûêàëüíîé ïðàêòèêå, à òàêæå äëÿ ñîçäàíèÿ ðàçëè÷íûõ çâóêîâûõ ýôôåêòîâ (ïåíèå ïòèö, ñâèñò è äð.), êîòîðûå ìîãóò íàéòè ïðèìåíåíèå ïðè îçâó÷èâàíèè ôèëüìîâ, â òåàòðàëüíûõ ïîñòàíîâêàõ, öèðêîâûõ ïðîãðàììàõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER</Tag>
+		<English>Zuse Computer</English>
+		<French>
+			<Text>Ordinateur de Zuse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Calcolatore Zuse</Italian>
+		<Polish>Komputer Zuse</Polish>
+		<Russian>Âû÷èñëèòåëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Tag>
+		<English>The Z4 was the world's first commercial digital computer, designed by German engineer Konrad Zuse and built by his company Zuse Apparatebau between 1942 and 1945.</English>
+		<Italian>Lo Z4 è stato il primo calcolatore commerciale digitale, progettato dall'ingegnere tedesco Konrad Zuse e costruito dalla compagnia Zuse Apparatebau tra il 1942 e il 1945.</Italian>
+		<Polish>Pierwsze maszyny Zusego Z1, Z2 i Z3 nosiły początkowo nazwy V1, V2 i V3 (Versuchsmodell - model eksperymentalny); zmienił ten kryptonim, by nie popaść w kolizję z nazwami niemieckich broni V. Wszystkie oryginalne egzemplarze tych maszyn uległy zniszczeniu w trakcie wojny. Maszyna Z4 (konstruowana w latach 1942-1945), częściowo zachowana po wojnie, została skompletowana i uruchomiona w 1950 roku w słynnej politechnice Eidgenössische Technische Hochschule ETHZ w Zurychu w Szwajcarii, gdzie była używana do obliczeń naukowych. Kolejna maszyna, Z5, posłużyła do obliczeń w dziedzinie optyki dla przedsiębiorstwa Leitz.</Polish>
+		<Russian>Z4 - âû÷èñëèòåëüíàÿ ìàøèíà íåìåöêîãî èíæåíåðà Êîíðàäà Öóçå.[PARAGRAPH:2]Öóçå íà÷àë ñîçäàâàòü Z4 â êîíöå Âòîðîé ìèðîâîé âîéíû. Åãî ëàáîðàòîðèÿ âìåñòå ñ áîëüøåé ÷àñòüþ ðàçðàáîòàííîãî îáîðóäîâàíèÿ ïîãèáëà ïðè íàëåòå àâèàöèè ñîþçíèêîâ. Òåì íå ìåíåå, ïî÷òè çàêîí÷åííûé Z4 óöåëåë.[PARAGRAPH:1]Ïîñëå îêîí÷àíèÿ âîéíû Öóçå ïðîäîëæèë èçãîòîâëåíèå êîìïüþòåðà. Z4 áûë çàêîí÷åí â ñåíòÿáðå 1950 ãîäà, ïîñëå ÷åãî îí áûë êóïëåí Øâåéöàðñêîé âûñøåé òåõíè÷åñêîé øêîëîé. Â òî âðåìÿ ýòî áûëà åäèíñòâåííàÿ ðàáîòàþùàÿ âû÷èñëèòåëüíàÿ ìàøèíà â êîíòèíåíòàëüíîé Åâðîïå. Z4 ñòàë òàêæå ïåðâûì êîìïüþòåðîì â ìèðå, êîòîðûé áûë ïðîäàí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DIESELPUNK</Tag>
+		<English>Dieselpunk</English>
+		<French>Diesel-punk</French>
+		<Spanish>
+			<Text>Dieselpunk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Дизельпанк</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DIESELPUNK_PEDIA</Tag>
+		<English>[BOLD]Dieselpunk[\BOLD], A manipulation on an alternate version of a future 1950s from the developed technology and society of the 1930's, where the Great Depression never arrived and World War II is still being fought as a prolonged Cold War. In turn, Japan continues its progress towards technological modernization, developing the earliest computers and terminals. Nazi scientists continue experimenting by taking the route of biotechnology, sparking off a genetic revolution of bio-mods, clones, and organ harvesting. Whilst the Americans and British take both of these technologies to develop mind-control devices, spawning man-machine interfaces and sparking the atomic-powered machine age.</English>
+		<Russian>[BOLD]Дизельпанк[\BOLD] - манипуляция альтернативной версией будущего 1950-х годов из развитой технологии и общества 1930-х годов, когда Великая Депрессия так и не наступила, а Вторая мировая война все еще ведется как длительная холодная война. В свою очередь, Япония продолжает продвижение к технологической модернизации, разрабатывая самые ранние компьютеры и терминалы. Нацистские ученые продолжают экспериментировать, выбирая путь биотехнологии, инициируя генетическую революцию биомодов, клонов и извлечения органов. В то время как американцы и британцы используют обе эти технологии для разработки устройств контроля сознания, порождающих человеко-машинные интерфейсы и вызывающих атомную эру машинного века.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DIESELPUNK_QUOTE</Tag>
+		<English>"Progress has not followed a straight ascending line, but a spiral with rhythms of progress and retrogression, of evolution and dissolution." - Johann Wolfgang von Goethe</English>
+		<French>"Le Progrès n'évolue pas comme une ligne droite ascendante, mais plutôt comme une spirale, avec des périodes de progrès, d'autres de régression. De l'évolution et de la dissolution." - Johann Wolfgang von Goethe</French>
+		<Russian>«Прогресс идет не по прямой восходящей линии, а по спирали с ритмами прогресса и регресса, эволюции и распада». - Иоганн Вольфганг фон Гете</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BIG_BERTHA</Tag>
+		<English>Big Bertha</English>
+		<French>Grosse Bertha</French>
+		<Polish>Wielka Berta</Polish>
+		<Russian>Áîëüøàÿ Áåðòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BIG_BERTHA_PEDIA</Tag>
+		<English>The Big Bertha is a massive artillery unit, the companion unit to the Railroad Artillery. It sacrifices movement for firepower even more than normal siege units, meaning that it can be captured.</English>
+		<Italian>La Big Bertha è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturata.</Italian>
+		<Polish>M-Gerät, popularnie znana jako Dicke Bertha (pol. gruba berta) - ciężki moździerz oblężniczy kalibru 420 mm, produkowany przez zakłady Kruppa w Essen. Był to najcięższy moździerz I wojny światowej zdolny przebić stropy wszystkich fortów tamtego okresu o grubości 2,5 m oraz osłony pancerne o grubości do 300 mm. Istniała stacjonarna wersja działa oznaczona jako Gamma wz. 1913 i jej ciągniona wersja oznaczona typ M wz. 1914. Obydwie wersje powstały w firmie Krupp pod kierunkiem prof. Rausenbergera. Niemcy w chwili wybuchu I wojny światowej dysponowali 5 moździerzami stacjonarnymi i 2 ciągnionymi. Użyto je do burzenia fortów belgijskich (Liege, Namur) i francuskich (Manonvillers). Były również wykorzystane do ostrzeliwania twierdzy Modlin, którą broniła 105-tysięczna załoga rosyjska oraz ostatecznego rozbicia wzniesionej przez Austriaków, a następnie opanowanej przez Rosjan twierdzy Przemyśl.</Polish>
+		<Russian>Áîëüøàÿ Áåðòà - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò, ñïóòíèê áðîíåïîåçäîâ. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Tag>
+		<English>Chromium Gunman</English>
+		<French>Fusilier Chromium</French>
+		<Polish>Strzelec Chromium</Polish>
+		<Russian>Õðîìîâûé ñòðåëîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN_PEDIA</Tag>
+		<English>The Chromium Gunman is an internal-combustion-powered denizen of the Dieselpunk culture. He is an automaton born of Henry Ford's grand vision of assembly line mass production, and his polished but unpainted metal exterior is "so in right now" (in the 1920s and 30s that is).</English>
+		<Polish>Strzelec Chromium to prymitywny android napędzany przez silnik spalinowy Henriego Forda.</Polish>
+		<Russian>Õðîìîâûé ñòðåëîê - ýòî ïðåäñòàâèòåëü êóëüòóðû äèçåëüïàíêà ñ äâèãàòåëåì âíóòðåííåãî ñãîðàíèÿ. Îí ïðåäñòàâëÿåò ñîáîé àâòîìàòîí èç îòïîëèðîâàííîãî íåîêðàøåííîãî ìåòàëëà ðîæäåííûé âåëèêèì ïðîâèäöåì Ãåíðè Ôîðäîì íà êîíâååðíîé ëèíèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE</Tag>
+		<English>Double Biplane</English>
+		<French>Biplane Double</French>
+		<Italian>Biplano doppio</Italian>
+		<Polish>Podwójny Dwupłatowiec</Polish>
+		<Russian>Áèïëàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE_PEDIA</Tag>
+		<English>The Double Biplane is an experimental airplane. It fuses two fuselages into one plane and can engage both land and air targets effectively.</English>
+		<Italian>Il biplano doppio è un aeroplano sperimentale. Fonde due fusoliere in un unico aeroplano e può ingaggiare con ottimi effetti bersagli a terra e in aria.</Italian>
+		<Polish>Ciężki, wielosilnikowy samolot bombowy, skonstruowany przez Igora Sikorskiego. Pierwsza tego typu konstrukcja w dziejach lotnictwa budowana seryjnie.</Polish>
+		<Russian>Áèïëàí - ýêñïåðèìåíòàëüíûé ñàìîëåò. Äâà ôþçåëÿæà â íåì îáúåäèíåíû â îäíó êîíñòðóêöèþ è ïîçâîëÿþò îòñëåæèâàòü êàê íàçåìíûå òàê è âîçäóøíûå öåëè íàèáîëåå ýôôåêòèâíî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER</Tag>
+		<English>Drache Helicopter</English>
+		<French>Hélicoptère Drache</French>
+		<Italian>Elicottero Drache</Italian>
+		<Polish>Smigłowiec Drache</Polish>
+		<Russian>Ïàðÿùèé äðàêîí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Tag>
+		<English>The Drache Helicopter is a massive helicopter, which is equipped with heavy anti-ground weapons. It is weak against naval units.</English>
+		<Italian>L'elicottero Drache è un potente elicottero, equipaggiato con armi pesanti aria-terra. È però debole contro le unità navali.</Italian>
+		<Polish>Smigłowiec wielozadaniowy Fa 223 był kontynuacją założeń wykorzystanych przy budowie poprzedniej konstrukcji profesora Focke - Focke-Wulfa Fw 61. Elementem nośnym tych maszyn były dwa wirniki umieszczone na końcach kratownicowych ramion umieszczonych na bokach kadłuba. Były one napędzane przez silnik umieszczony w kadłubie. Układ dwuwirnikowy umożliwiał rezygnację ze śmigła ogonowego.</Polish>
+		<Russian>Ïàðÿùèé äðàêîí - ýòî ìàññèâíûé âåðòîëåò, êîòîðûé îñíàùåí òÿæåëûì ïðîòèâîïåõîòíûì âîîðóæåíèåì. Îí ìàëîýôôåêòèâåí ïðîòèâ âîåííî-ìîðñêèõ þíèòîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Tag>
+		<English>Goliath Airship</English>
+		<French>Dirigeable Goliath</French>
+		<Italian>Dirigibile Goliath</Italian>
+		<Polish>Sterowiec Goliat</Polish>
+		<Russian>Ãîëèàô</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP_PEDIA</Tag>
+		<English>Nearly twice as large as the majestic Hindenburg class airships, the stupendous Goliath Class airship, wonder of the skies, provides unparalleled luxury for its obscenely wealthy passengers (on the other hand, if not obscenely wealthy, then how would they afford a ticket?). But in times of war this exceedingly versatile craft can be configured to provide air superiority where you need it, when you need it while still providing its crew of over 300 able airmen with the luxury of heated and well lit living quarters thanks to the wonders of electricity.</English>
+		<Italian>Grande più del doppio rispetto all'Hindenburg, il dirigibile Goliath, meraviglia dei cieli, fornisce un lusso sfrenato per i suoi passeggeri oscenamente ricchi (d'altronde, se non fossero oscenamente ricchi, come potrebbero permettersi il biglietto?). In tempi di guerra questo versatile velivolo può fornire superiorità aerea dove è necessario e quando è necessario, fornendo all'equipaggio di 300 persone alloggi caldi e puliti grazie al potere dell'elettricità.</Italian>
+		<Polish>Gigantyczny sterowiec, prawie dwa razy większy od Zeppelina Graf Von Hinderburga.</Polish>
+		<Russian>Ïî÷òè â äâà ðàçà áîëüøèé, ÷åì ãðîìàäíûé Ãèíäåíáóðã, êëàññ äèðèæàáëåé. Êîëîññàëüíûé äèðèæàáëü êëàññà Ãîëèàô - ÷óäî íåáåñ, îáåñïå÷èâàåò íåïðåâçîéäåííûé óðîâåíü ðîñêîøè äëÿ ñâîèõ íåïðèëè÷íî áîãàòûõ ïàññàæèðîâ (åñëè âû íå íåïðèëè÷íî áîãàòû, òî êàê âû òîãäà ñìîæåòå ïîçâîëèòü ñåáå áèëåò). Íî âî âðåìÿ âîéíû ýòîò ìíîãîöåëåâîé êîðàáëü ìîæåò áûòü ïåðåñòðîåí äëÿ òîãî, ÷òîáû îáåñïå÷èòü ïðåâîñõîäñòâî â âîçäóõå, òàì ãäå âàì ýòî íóæíî è êîãäà âàì ýòî íóæíî, îáåñïå÷èâàÿ ýêèïàæ èç áîëåå 300 ÷åëîâåê ëþêñîâûì îáîãðåâîì è îñâåùåíèåì æèëûõ ïîìåùåíèé áëàãîäàðÿ ìàãèè ýëåêòðè÷åñòâà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Tag>
+		<English>Railroad Artillery</English>
+		<French>Artillerie sur Train</French>
+		<Italian>Cannone ferroviario</Italian>
+		<Polish>Artyleria Kolejowa</Polish>
+		<Russian>Áðîíåïîåçä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY_PEDIA</Tag>
+		<English>The Railroad Artillery is a massive artillery piece. It sacrifices movement for firepower even more than normal siege units, meaning that it can be captured.</English>
+		<Italian>Il cannone ferroviario è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturato.</Italian>
+		<Polish>Artyleria kolejowa - artyleria wielkiej mocy składająca się z dział dalekonośnych, przewożonych na specjalnych wieloosiowych platformach kolejowych. Masa dział artylerii kolejowej wynosi od kilkudziesięciu do kilkuset ton. Pierwsze działa kolejowe użyte zostały w czasie I wojny światowej. Niewielka liczba dział kolejowych (o kalibrach nawet do 800 mm) była użyta podczas II wojny światowej, głównie przez Niemców, przede wszystkim do obrony wybrzeża. Po 1945 artyleria kolejowa wyparta została przez artylerię rakietową.</Polish>
+		<Russian>Áðîíåïîåçä - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TZAR_TANK</Tag>
+		<English>Tzar Tank</English>
+		<French>Tank 'Tzar'</French>
+		<Italian>Carro armato Tzar</Italian>
+		<Polish>Czołg-Car</Polish>
+		<Russian>Öàðü-òàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Tag>
+		<English>The Tzar Tank is a powerful tank. It uses state of the art engines to move it's bulk around the battlefield and it's 105 mm auto-cannons can vaporize all opposition.</English>
+		<Italian>Il carro armato Tzar è un potente carro armato. Usa potenti motori per spostarsi sul campo di battaglia, e i suoi cannoni da 105mm possono vaporizzare tutti gli oppositori.</Italian>
+		<Polish>Car tank lub Car wśród czołgów, zwany też Nietoperz lub czołg Lebiedenki - prototypowy rosyjski pojazd opancerzony skonstruowany w latach 1914-1915. Projekt został zarzucony po testach, które wykazały, że zastosowane silniki są zbyt słabe, a sam pojazd podatny na ogień artylerii.</Polish>
+		<Russian>Öàðü-òàíê - ýòî î÷åíü ìîùíûé òàíê. Îí èñïîëüçóåò ñîâðåìåííûå äâèãàòåëè äëÿ ïåðåìåùåíèÿ ïî ïîëþ áîÿ è 105-ìèëëèìåòðîâóþ àâòîìàòè÷åñêóþ ïóøêó äëÿ óíè÷òîæåíèÿ ïðîòèâíèêà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Tag>
+		<English>Very Heavy Tank</English>
+		<French>Tank Lourd Blindé</French>
+		<Italian>Carro blindato pesante</Italian>
+		<Polish>Superciężki Czołg</Polish>
+		<Russian>Ñâåðõòÿæåëûé òàíê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_PEDIA</Tag>
+		<English>The Very Heavy tank was a design much talked about after the Second World War for an armored vehicle. It never achieved fruition, but is here under the Dieselpunk alt-timeline.</English>
+		<Italian>Il carro blindato pesante fu un progetto su cui si discusse molto dopo la Seconda guerra mondiale. Non fu mai realizzato.</Italian>
+		<Polish>Landkreuzer P-1000 Ratte ("Szczur") - prototypowy czołg superciężki, przeznaczony dla sił zbrojnych III Rzeszy. Ważący 1000 ton P-1000 Ratte (w planach) byłby ponad 5 razy cięższy od największego wyprodukowanego kiedykolwiek czołgu Maus. Zaprojektowany przez zakłady Friedrich Krupp AG w 1942 i zaaprobowany przez Adolfa Hitlera, został ostatecznie zarzucony na początku 1943 z inicjatywy Alberta Speera.</Polish>
+		<Russian>Î ñîçäàíèè ñâåðõòÿæåëîãî òàíêà ìíîãî ãîâîðèëè ïîñëå Âòîðîé ìèðîâîé âîéíû. Íî ýòîò ïðîåêò òàê è íå áûë îñóùåñòâëåí, îñòàâøèñü â àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà.</Russian>
+	</TEXT>
+</Civ4GameText>

@@ -107,10 +107,8 @@ v. 0.41
 """
 
 from CvPythonExtensions import *
-import CvUtil
 from CvUtil import *
 import CvMapGeneratorUtil
-from CvMapGeneratorUtil import *
 import math
 import sys
 import gc
@@ -118,6 +116,7 @@ try:
 	import cPickle as pickle
 except:
 	import pickle
+
 
 VERSION = "0_68"
 
@@ -1360,7 +1359,7 @@ class TileBuilder:
 				r = getRand(dice) * (this_scatt + 1) + 1
 				rx = int(r * math.cos(t))
 				ry = r * math.sin(t)
-				if not scale == 0:
+				if scale != 0:
 					if scale > 0:
 						if ry < 0:
 							ry = int(ry - scale * shift * ry)
@@ -2086,7 +2085,7 @@ def generatePlotTypes():
 		for index in range(len(possibleIslandList)):
 			possibleTile = possibleIslandList.random(dice)
 			if possibleTile == None:
-				break;
+				break
 			x, y = possibleTile
 			islandStartList[world.getOffset([x,y])] = [x, y]
 			tileList = getTilesAroundDistance(x,y,islandAreaRadius * 2)
@@ -3730,37 +3729,14 @@ def getRand(dice):
 import os
 import os.path
 
-if (sys.platform == 'darwin'):
-	def civFilePath():
-		try:
-			civ4Dir = os.path.basename(os.getcwd())
-			if "Warlords" in civ4Dir:
-				civ4Dir = "Civilization IV Warlords"
-			myDocuments = os.path.join(os.environ['HOME'], "Documents")
-			finalFolder =  os.path.join(myDocuments, civ4Dir)
-			return finalFolder
-		except:
-			return ""
-else:
-	import _winreg
-	def regRead(registry, path, field):
-		try:
-			pathKey = _winreg.OpenKey(registry, path)
-			fieldValue = _winreg.QueryValueEx(pathKey, field)
-			return fieldValue[0]
-		finally:
-			pathKey.Close()
-	def civFilePath():
-		try:
-			userFolder = regRead(_winreg.HKEY_CURRENT_USER,"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders","Personal")
-			#print "	userFolder",userFolder
-			civFolder = os.path.basename(regRead(_winreg.HKEY_LOCAL_MACHINE,"Software\\Firaxis Games\\Sid Meier's Civilization 4","INSTALLDIR"))
-			#print "	civFolder",civFolder
-			finalFolder = os.path.join(os.path.join(userFolder, "My Games"), civFolder)
-			#print "	finalFolder",finalFolder
-			return finalFolder
-		except:
-			return ""
+def civFilePath():
+	try:
+		folder = os.path.dirname(os.path.realpath(__file__))
+		folder = os.path.join(folder[:-6], "Mods\Caveman2Cosmos\UserSettings")
+		return folder
+	except:
+		return ""
+
 #----------------------------------------------
 """Other functions"""
 #----------------------------------------------

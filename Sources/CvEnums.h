@@ -243,7 +243,7 @@ enum InterfaceModeTypes
 	INTERFACEMODE_RANGE_ATTACK,
 	INTERFACEMODE_AIRSTRIKE,
 	INTERFACEMODE_REBASE,
-	INTERFACEMODE_PYTHON_PICK_PLOT,
+	INTERFACEMODE_DOTMAP,
 	INTERFACEMODE_SAVE_PLOT_NIFS,
 
 	INTERFACEMODE_AIRBOMB1,
@@ -254,15 +254,9 @@ enum InterfaceModeTypes
 	INTERFACEMODE_BOMBARD,
 	INTERFACEMODE_FENGAGE,
 
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	INTERFACEMODE_GO_TO_SENTRY,
 #endif
-// BUG - Sentry Actions - end
-	// < M.A.D. Nukes Start >
-	INTERFACEMODE_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
-
 	INTERFACEMODE_SHADOW_UNIT,
 
 	NUM_INTERFACEMODE_TYPES
@@ -639,7 +633,6 @@ enum ButtonPopupTypes
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-	BUTTONPOPUP_SAVE_INFO_LOST,		//	Non-fatal warning that some entities could not be instantiated
 
 	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
@@ -685,25 +678,35 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
-	MAP_INITIAL,
-	MAX_MAPS = 10,
+
+	MAP_EARTH,
+	MAP_SUBTERRAIN,
+	MAP_CISLUNAR,
+	MAP_MOON,
+	MAP_MARS,
+	MAP_VENUS,
+	MAP_INNER_SOLAR_SYSTEM,
+	MAP_OUTER_SOLAR_SYSTEM,
+	MAP_TITAN,
+	MAP_TRANSNEPTUNIAN,
+	MAP_NEARBY_STARS,
+	MAP_ORION_ARM,
+	MAP_MILKY_WAY,
+	MAP_LOCAL_GROUP,
+	MAP_VIRGO_SUPERCLUSTER,
+	MAP_UNIVERSE,
+	MAP_DISTANT_COSMOS,
+
+	NUM_MAPS
 };
 
-enum MapSwitchTypes
+enum MapCategoryTypes
 {
-	NO_MAPSWITCH = -1,
+	NO_MAPCATEGORY = -1,
 };
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -875,7 +878,8 @@ enum GameOptionTypes
 	GAMEOPTION_ONE_CITY_CHALLENGE,
 	GAMEOPTION_CHALLENGE_CUT_LOSERS,
 	GAMEOPTION_CHALLENGE_HIGH_TO_LOW,
-	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY
+	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY,
+	GAMEOPTION_ADVANCED_ROUTES
 };
 
 #define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
@@ -1407,15 +1411,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes
@@ -1697,9 +1696,7 @@ enum MissionTypes
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
-	// < M.A.D. Nukes Start >
-	MISSION_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
+
 	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,
@@ -1850,12 +1847,10 @@ enum ControlTypes
 	CONTROL_PING,
 	CONTROL_SIGN,
 	CONTROL_GRID,
-	CONTROL_BARE_MAP,
 	CONTROL_YIELDS,
 	CONTROL_RESOURCE_ALL,
 	CONTROL_UNIT_ICONS,
 	CONTROL_GLOBELAYER,
-	CONTROL_SCORES,
 	CONTROL_LOAD_GAME,
 	CONTROL_OPTIONS_SCREEN,
 	CONTROL_RETIRE,
@@ -3102,7 +3097,6 @@ enum GlobeLayerTypes
 	GLOBE_LAYER_RESOURCE,
 	GLOBE_LAYER_RELIGION,
 	GLOBE_LAYER_CULTURE,
-	GLOBE_LAYER_DEBUG,
 
 	NUM_GLOBE_LAYER_TYPES
 };
@@ -3154,35 +3148,15 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-enum RankingTypes
-{
-	RANKING_POWER,
-	RANKING_POPULATION,
-	RANKING_LAND,
-	RANKING_CULTURE,
-	RANKING_ESPIONAGE,
-	RANKING_WONDERS,
-	RANKING_TECH,
-	NUM_RANKINGS
-};
-
 enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3193,12 +3167,9 @@ enum ModderOptionTypes
 	NO_MODDEROPTION = -1,
 
 	MODDEROPTION_FLEXIBLE_DIFFICULTY,
-	MODDEROPTION_SHOW_COASTAL_BUILDINGS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDINGS,
 	MODDEROPTION_HIDE_REPLACED_BUILDINGS,
 	MODDEROPTION_NO_FRIENDLY_PILLAGING,
 	MODDEROPTION_HIDE_UNAVAILBLE_BUILDS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDS,
 	MODDEROPTION_SHOW_REV_EFFECTS,
 	MODDEROPTION_USE_LANDMARK_NAMES,
 	MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS,
@@ -3270,9 +3241,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes

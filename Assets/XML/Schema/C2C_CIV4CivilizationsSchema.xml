@@ -1,36 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -93,8 +93,8 @@
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!--TB's Tags Begin-->
@@ -561,10 +561,10 @@
 	</ElementType>
 	<ElementType name="LeaderHeadInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
@@ -667,7 +667,7 @@
 		<element type="LeaderHeadInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -675,7 +675,7 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="ShortDescription" content="textOnly"/>
 	<ElementType name="Help" content="textOnly"/>
 	<ElementType name="iHealth" content="textOnly" dt:type="int"/>
@@ -757,10 +757,10 @@
 	<!--Afforess-->
 	<ElementType name="TraitInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="ShortDescription" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -984,10 +984,10 @@
 	<ElementType name="UnitArtStyleType" content="textOnly"/>
 	<ElementType name="CivilizationInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="ShortDescription" minOccurs="0"/>
 		<element type="Adjective" minOccurs="0"/>
@@ -1042,10 +1042,10 @@
 	</ElementType>
 	<ElementType name="UnitArtStyleTypeInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="StyleUnits" minOccurs="0" maxOccurs="1"/>
 	</ElementType>
 	<ElementType name="UnitArtStyleTypeInfos" content="eltOnly">

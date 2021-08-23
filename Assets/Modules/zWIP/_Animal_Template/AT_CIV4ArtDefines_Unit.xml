@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Unit art path information -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<UnitArtInfos>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_CROW</Type>
+			<Button>Art/Interface/Buttons/Units/Crow.dds</Button>
+			<fScale>0.2</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<NIF>Art/Units/Animals/Crow/bird.nif</NIF>
+			<KFM>Art/Units/animals/Hawk/bird.kfm</KFM>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/FighterShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>1.1</fBattleDistance>
+			<fRangedDeathTime>0.35</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<ActionSound/>
+		</UnitArtInfo>
+	</UnitArtInfos>
+</Civ4ArtDefines>

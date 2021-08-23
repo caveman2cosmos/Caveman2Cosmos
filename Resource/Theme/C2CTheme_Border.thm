@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Border.thm
 Content		:	Civ4 - GBorder control theme
@@ -9,7 +9,7 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 
 **********************************************************************/
 
-// Main Border control namespace 
+// Main Border control namespace
 with GFC_Control_Border
 {
 	// Default Border Style
@@ -442,7 +442,7 @@ with GFC_Control_Border
 					layer
 					{
 						LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-						CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG; 
+						CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
 					}
 					layer {
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);

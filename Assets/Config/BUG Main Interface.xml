@@ -3,8 +3,8 @@
 	BUG Main Interface
 	Copyright (c) 2008 The BUG Mod.
 -->
-<mod id="MainInterface" name="BUG Main Interface" author="EmperorFool, Impaler[WrG], NeverMind, SimCutie" 
-	 version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
+<mod id="MainInterface" name="BUG Main Interface" author="EmperorFool, Impaler[WrG], NeverMind, SimCutie"
+	version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268">
 
 	<options id="MainInterface" file="BUG Main Interface.ini">
 		<section id="Main">
@@ -20,6 +20,7 @@
 
 			<!-- Auto-end decisionless turns -->
 			<option id="AutoEndDecisionlessTurns" key="AutoEndDecisionlessTurns" type="boolean" default="False" get="isAutoEndDecisionlessTurns" dirtyBit="MiscButtons"/>
+			<list id="AutoEndTurnDelay" key="AutoEndTurnDelay" type="int" default="2" listType="int" values="0,1,2,3,4,5,6,7,8,9" get="getAutoEndTurnDelay" set="setAutoEndTurnDelay"/>
 
 			<!-- Execute AI moves in minimal turn slices -->
 			<option id="MinimizeAITurnSlices" key="MinimizeAITurnSlices" type="boolean" default="True" get="isMinimizeAITurnSlices" dirtyBit="MiscButtons"/>
@@ -47,7 +48,6 @@
 			<!-- Build/Action Icon Size by EmperorFool -->
 			<list id="UnitIconSize" key="Unit Icon Size" type="int" default="56" listType="int" values="64, 60, 56, 52, 48, 44, 40, 36, 33"
 				get="getUnitIconSize" set="setUnitIconSize" dirtyBit="SelectionButtons"/>
-			<option id="BuildIconSize" key="Build Icon Size" type="int" default="64" get="getBuildIconSize" set="setBuildIconSize"/>
 		</section>
 	</options>
 </mod>

@@ -1,90 +1,45 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-	<!-- Re-Modified by StrategyOnly -->
-	<!-- Master Load File -->
-	<!-- -->
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re-Modified by StrategyOnly -->
+<!-- Master Load File -->
 <Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Xml\Schema\Caveman2Cosmos.xsd">
 	<DefaultConfiguration>Modules_Main_1</DefaultConfiguration>
 	<ConfigurationInfos>
 		<ConfigurationInfo>
 			<Type>Modules_Main_1</Type>
 			<Description>Initialize ALL Modules by using the MLF file structure</Description>
-			<Modules>				
-				<Module>
-					<Directory>Custom_Leaderheads</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Custom_Civilizations</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>OrionsMods</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>DancingHoskuld</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>NotSoGood</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Static</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>ls612</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>StrategyOnly</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Thunderbrd</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Custom_Religions</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
+			<Modules>
+				<Module> <!-- Various punk stuff -->
 					<Directory>Alt_Timelines</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module>
-					<Directory>NomadDemo</Directory>
-					<bLoad>0</bLoad>
-				</Module>
-				<Module>
-					<Directory>My_Mods</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Natural_Wonders</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>My_Mods (unloaded)</Directory>
-					<bLoad>0</bLoad>
-				</Module>
-				<Module>
+				<Module> <!-- Pepper Space Program -->
 					<Directory>Pepper2000</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module> <!-- Pepper Space Program - units converted to support MultiMaps -->
+					<Directory>P2K_Multimaps_Test</Directory>
+					<bLoad>0</bLoad>
+				</Module>
+				<Module> <!-- Complex Traits -->
+					<Directory>Thunderbrd</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module> <!-- Great Farmer with bonus placing ability -->
+					<Directory>NotSoGood</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module> <!-- Events - some may be unfinished -->
+					<Directory>StrategyOnly</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module> <!-- Only Locust swarms and building meltdown are usable in this -->
 					<Directory>Bad_Karma</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module>
-					<Directory>zInterdependencies</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-                <Module>
-					<Directory>zTerrains</Directory>
-					<bLoad>1</bLoad>
+				<Module> <!-- This module contains unfinished/early stage work, and things meant to be templates -->
+					<Directory>zWIP</Directory>
+					<bLoad>0</bLoad>
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

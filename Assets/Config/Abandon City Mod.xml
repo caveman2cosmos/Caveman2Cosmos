@@ -6,8 +6,8 @@
 	for The BUG Mod.
 -->
 <mod id="AbandonCity" module="AbandonCityEventManager" name="AbandonCity"
-	 author="unknown, Bhruic, Nemo, OrionVetran, Dancing Hoskuld" 
-	 version="1.01" date="20/03/2009" url="http://forums.civfanatics.com/showthread.php?t=252243">
+	author="unknown, Bhruic, Nemo, OrionVetran, Dancing Hoskuld"
+	version="1.01" date="20/03/2009" url="http://forums.civfanatics.com/showthread.php?t=252243">
 
 	<shortcut key="Ctrl A" function="onHotKeyStart"/>
 </mod>

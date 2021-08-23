@@ -42,7 +42,7 @@ class CvWBParser:
 			return l[1]
 
 	# Find the next line that contains token, breakpoints should be a token without value.
-	# returns token with value if 
+	# returns token with value if
 	def findToken(self, f, token, breakPoint=None):
 		if token:
 			while True:
@@ -879,7 +879,7 @@ class CvUnitDesc:
 		self.level = 0
 		self.experience = 0
 		self.promotionType = []
-		self.facingDirection = DirectionTypes.NO_DIRECTION;
+		self.facingDirection = DirectionTypes.NO_DIRECTION
 		self.isSleep = False
 		self.isIntercept = False
 		self.isPatrol = False
@@ -1708,7 +1708,9 @@ class CvSignDesc:
 		f.write("\tplotX=%d\n" % plot.getX())
 		f.write("\tplotY=%d\n" % plot.getY())
 		iPlayer = sign.getPlayerType()
-		f.write("\tplayerType=%d, (%s)\n" %(iPlayer, GC.getPlayer(iPlayer).getName().encode(fEncode)))
+		if iPlayer > -1:
+			f.write("\tplayerType=%d, (%s)\n" %(iPlayer, GC.getPlayer(iPlayer).getName().encode(fEncode)))
+		else: f.write("\tplayerType=%d\n" %iPlayer)
 		f.write("\tcaption=%s\n" % sign.getCaption())
 		f.write("EndSign\n")
 
@@ -1924,6 +1926,7 @@ Randomize Resources=0\nEndMap\n"
 	# add player starting plots if using random civs
 	def getAssignedStartingPlots(self):
 		MAP = GC.getMap()
+
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			pPlayer = GC.getPlayer(i)
 			if pPlayer.isAlive():
@@ -1931,7 +1934,9 @@ Randomize Resources=0\nEndMap\n"
 
 				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
-				else: pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
+
+		GAME.assignStartingPlots(True, False)
+
 		self.clearCache()
 		return 0 # ok
 
@@ -2010,10 +2015,10 @@ Randomize Resources=0\nEndMap\n"
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
 
-			if pWBPlayer.bRandomStartLocation:
-				player.setStartingPlot(player.findStartingPlot(True), True)
-			else:
+			if not pWBPlayer.bRandomStartLocation:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
+
+		GAME.assignStartingPlots(True, False)
 
 		# Apply city data
 		for item in self.plotDesc:
