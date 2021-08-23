@@ -22864,7 +22864,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getUnitCombatInfo(modifier.first).getTextKeyWide(), modifier));
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_FREE_XP", GC.getUnitCombatInfo(modifier.first).getTextKeyWide(), modifier.second));
 		}
 
 		for (int iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
