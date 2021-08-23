@@ -22,12 +22,10 @@ void CvGame::updateColoredPlots()
 	PROFILE_FUNC();
 
 	CLLNode<IDInfo>* pSelectedCityNode;
-	CLLNode<IDInfo>* pSelectedUnitNode;
 	CvCity* pHeadSelectedCity;
 	CvCity* pSelectedCity;
 	CvCity* pCity;
 	CvUnit* pHeadSelectedUnit;
-	CvUnit* pSelectedUnit;
 	CvPlot* pRallyPlot;
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
@@ -457,14 +455,10 @@ void CvGame::updateColoredPlots()
 		{
 			int iMaxAirRange = 0;
 
-			pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (pSelectedUnit != NULL)
+				FAssert(pSelectedUnit != NULL);
+				//if (pSelectedUnit != NULL)
 				{
 					iMaxAirRange = std::max(iMaxAirRange, pSelectedUnit->getDCMBombRange());
 				}
@@ -502,14 +496,10 @@ void CvGame::updateColoredPlots()
 		{
 			int iMaxAirRange = 0;
 
-			pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (pSelectedUnit != NULL)
+				FAssert(pSelectedUnit != NULL);
+				//if (pSelectedUnit != NULL)
 				{
 					iMaxAirRange = std::max(iMaxAirRange, pSelectedUnit->airRange());
 				}
@@ -1091,11 +1081,9 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 	}
 	const bool bAskToDeclareWar = getBugOptionBOOL("Actions__AskDeclareWarUnits", true, "BUG_ASK_DECLARE_WAR_UNITS");
 
-	CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-	while (pSelectedUnitNode != NULL)
+	foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 	{
-		const TeamTypes eRivalTeam = ::getUnit(pSelectedUnitNode->m_data)->getDeclareWarMove(pPlot);
+		const TeamTypes eRivalTeam = pSelectedUnit->getDeclareWarMove(pPlot);
 
 		// only ask if option is off or moving into rival territory without open borders
 		if (eRivalTeam != NO_TEAM && (pPlot->getTeam() == eRivalTeam || bAskToDeclareWar))
@@ -1112,7 +1100,6 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 			}
 			return;
 		}
-		pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
 	}
 
 	selectionListGameNetMessageInternal(GAMEMESSAGE_PUSH_MISSION, MISSION_MOVE_TO, pPlot->getX(), pPlot->getY(), 0, false, bShift, false);
@@ -1137,24 +1124,15 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 	{
 		case GAMEMESSAGE_JOIN_GROUP:
 		{
-			CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
+			foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 			{
-				CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (!bShift)
+				if (bShift || pSelectedUnit == pHeadSelectedUnit)
 				{
-					if (pSelectedUnit == pHeadSelectedUnit)
-					{
-						CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
-					}
-					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), pHeadSelectedUnit->getID());
+					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
 				}
 				else
 				{
-					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), FFreeList::INVALID_INDEX);
+					CvMessageControl::getInstance().sendJoinGroup(pSelectedUnit->getID(), pHeadSelectedUnit->getID());
 				}
 			}
 			if (bShift)
@@ -1167,11 +1145,11 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 		{
 			if (iData2 == COMMAND_DELETE && bAlt)
 			{
-				const UnitTypes kType = ::getUnit(gDLL->getInterfaceIFace()->headSelectionListNode()->m_data)->getUnitType();
+				const UnitTypes eType = pHeadSelectedUnit->getUnitType();
 
 				foreach_(const CvUnit* pLoopUnit, GET_PLAYER(pHeadSelectedUnit->getOwner()).units())
 				{
-					if (pLoopUnit->getUnitType() == kType)
+					if (pLoopUnit->getUnitType() == eType)
 					{
 						CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), (CommandTypes)iData2, iData3, iData4, bAlt);
 					}
@@ -1179,13 +1157,8 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			}
 			else
 			{
-				CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-				while (pSelectedUnitNode != NULL)
+				foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
 				{
-					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-					pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
 					CvMessageControl::getInstance().sendDoCommand(pSelectedUnit->getID(), (CommandTypes)iData2, iData3, iData4, bAlt);
 				}
 			}
@@ -1205,7 +1178,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			}
 			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || /*iData2 == MISSION_ESTABLISH || iData2 == MISSION_ESCAPE ||*/ iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
 			{
-				const UnitTypes eUnit = ::getUnit(gDLL->getInterfaceIFace()->headSelectionListNode()->m_data)->getUnitType();
+				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
 
 				foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(pHeadSelectedUnit->getOwner()).groups())
 				{

@@ -3582,9 +3582,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		if (!mergedList.isEmpty())
 		{
-			if (gDLL->getInterfaceIFace()->headSelectionListNode())
+			//if (gDLL->getInterfaceIFace()->headSelectionListNode())
 			{
-				CvUnit* pSelectedUnit = ::getUnit(gDLL->getInterfaceIFace()->headSelectionListNode()->m_data);
+				CvUnit* pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 				if (pSelectedUnit)
 				{
 					if (mergedList.isPossible(*pSelectedUnit))
