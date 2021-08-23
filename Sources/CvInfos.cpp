@@ -29281,7 +29281,6 @@ void CvEventTriggerInfo::getCheckSum(uint32_t& iSum) const
 
 bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTextVal;
 
 	if (!CvInfoBase::read(pXML))
@@ -29493,8 +29492,8 @@ void CvEventTriggerInfo::copyNonDefaults(const CvEventTriggerInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiRoutesRequired, pClassInfo->m_aiRoutesRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiReligionsRequired, pClassInfo->m_aiReligionsRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCorporationsRequired, pClassInfo->m_aiCorporationsRequired);
-	CvXMLLoadUtility::CopyNonDefaultsFromStringVector(m_aszText, pClassInfo->m_aszText);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTextEra, pClassInfo->m_aiTextEra);
+	CvXMLLoadUtility::CopyNonDefaultsFromStringVector(m_aszText, pClassInfo->m_aszText);
 	CvXMLLoadUtility::CopyNonDefaultsFromStringVector(m_aszWorldNews, pClassInfo->m_aszWorldNews);
 
 	if (isSinglePlayer() == bDefault) m_bSinglePlayer = pClassInfo->isSinglePlayer();

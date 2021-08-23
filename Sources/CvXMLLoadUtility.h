@@ -695,11 +695,11 @@ public:
 		std::sort(target.begin(), target.end());
 	}
 
-	static void CopyNonDefaultsFromStringVector(std::vector<CvWString>& target, std::vector<CvWString>& source)
+	static void CopyNonDefaultsFromStringVector(std::vector<CvWString>& target, const std::vector<CvWString>& source)
 	{
 		foreach_(const CvWString& i, source)
 		{
-			if (find(target.begin(), target.end(), i) == target.end())
+			if (!algo::contains(target, i))
 			{
 				target.push_back(i);
 			}
