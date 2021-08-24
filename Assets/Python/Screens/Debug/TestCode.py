@@ -1786,7 +1786,7 @@ class TestCode:
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" BuildingProductionModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+					self.log(CvTraitInfo.getType()+" BuildingProductionModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 			#<BuildingHappinessModifierTypes>
 			for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
@@ -1803,7 +1803,7 @@ class TestCode:
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
-					self.log(CvBuildingInfo.getType()+" BuildingHappinessModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+					self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
