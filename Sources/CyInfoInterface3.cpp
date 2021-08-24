@@ -163,6 +163,8 @@ void CyInfoPythonInterface3()
 		.def("getLevelExperienceModifier", &CvTraitInfo::getLevelExperienceModifier, "int ()")
 		.def("getGreatPeopleRateModifier", &CvTraitInfo::getGreatPeopleRateModifier, "int ()")
 		.def("getGreatGeneralRateModifier", &CvTraitInfo::getGreatGeneralRateModifier, "int ()")
+		.def("getNumBuildingProductionModifiers", &CvTraitInfo::getNumBuildingProductionModifiers, "int ()")
+		.def("getNumBuildingHappinessModifiers", &CvTraitInfo::getNumBuildingHappinessModifiers, "int ()")
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
@@ -177,6 +179,7 @@ void CyInfoPythonInterface3()
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
 		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
+		.def("getBuildingHappinessModifier", &CvTraitInfo::getBuildingHappinessModifier)
 
 		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
 	;
