@@ -10057,7 +10057,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_BAMBOO</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_WOOD</Bonus>
+				<Bonus>BONUS_BAMBOO</Bonus>
+			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRAILS</BuildingType>
 				<BuildingType>BUILDING_ROADS</BuildingType>
@@ -16338,11 +16341,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_BRICKS</Bonus>
+			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_PRIME_TIMBER</Bonus>
-				<Bonus>BONUS_BAMBOO</Bonus>
+				<Bonus>BONUS_STONE</Bonus>
+				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRAILS</BuildingType>
