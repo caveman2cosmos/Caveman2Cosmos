@@ -2954,7 +2954,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingHappinessModifier>2</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
@@ -3167,7 +3167,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
-					<iBuildingHappinessModifier>3</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<PropertyManipulators>
@@ -6709,7 +6709,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_POLIS_COUNCIL</BuildingType>
-					<iBuildingHappinessModifier>2</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iCivicAnarchyTimeModifier>-30</iCivicAnarchyTimeModifier>
@@ -6924,7 +6924,7 @@
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
-					<iBuildingHappinessModifier>3</iBuildingHappinessModifier>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
