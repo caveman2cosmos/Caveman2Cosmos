@@ -187,4 +187,9 @@ void CyStructsPythonInterface1()
 		.def_readwrite("eCommerce", &BuildingCommerceChange::eCommerce)
 		.def_readwrite("iChange", &BuildingCommerceChange::iChange)
 	;
+
+	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
+		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readwrite("iModifier", &BuildingCommerceChange::iModifier)
+	;
 }
