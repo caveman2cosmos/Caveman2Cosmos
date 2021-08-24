@@ -9325,6 +9325,12 @@ int CvCivicInfo::getUnitProductionModifier(int i) const
 	return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 }
 
+int CvCivicInfo::getBuildingProductionModifier(BuildingTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), e);
+	return m_aBuildingProductionModifier.getValue(e);
+}
+
 int CvCivicInfo::getImprovementHappinessChanges(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
