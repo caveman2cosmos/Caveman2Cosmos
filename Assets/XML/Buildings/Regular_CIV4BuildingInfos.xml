@@ -40668,6 +40668,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1030</iCost>
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
@@ -57061,6 +57064,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<bRiver>1</bRiver>
 			<iCost>160</iCost>
 			<CommerceChanges>
@@ -61106,6 +61112,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<bRiver>1</bRiver>
 			<iCost>630</iCost>
 			<RiverPlotYieldChanges>
@@ -76670,8 +76679,14 @@
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-				<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+				<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
+			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>280</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -90433,6 +90448,31 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_RIVER_ADMINISTRATION</Type>
+			<Description>TXT_KEY_BUILDING_RIVER_ADMINISTRATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RIVER_ADMINISTRATION_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_RIVER_ADMINISTRATION</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_MEGACITIES</PrereqTech>
+			<bRiver>1</bRiver>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
+			<iCost>2625</iCost>
+			<RiverPlotYieldChanges>
+				<iYield>3</iYield>
+				<iYield>2</iYield>
+				<iYield>5</iYield>
+			</RiverPlotYieldChanges>
+			<iHealth>1</iHealth>
+			<iTradeRouteModifier>10</iTradeRouteModifier>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_RIVER_AUTHORITY</Type>
 			<Description>TXT_KEY_BUILDING_RIVER_AUTHORITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RIVER_AUTHORITY_PEDIA</Civilopedia>
@@ -90455,6 +90495,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
 				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>225</iCost>
 			<RiverPlotYieldChanges>
@@ -90507,6 +90548,7 @@
 				<BuildingType>BUILDING_RIVER_AUTHORITY</BuildingType>
 				<BuildingType>BUILDING_STEAMBOAT_PORT</BuildingType>
 				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>74</iCost>
 			<RiverPlotYieldChanges>
@@ -101711,6 +101753,7 @@
 			<ObsoleteTech>TECH_ROBOTICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FERRY_TERMINAL</BuildingType>
+				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>630</iCost>
 			<RiverPlotYieldChanges>
