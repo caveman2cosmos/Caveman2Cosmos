@@ -178,18 +178,18 @@ void CyStructsPythonInterface1()
 		;
 
 	python::class_<std::pair<int, int> >("CyPair", python::no_init)
-		.def_readwrite("id", &std::pair<int, int>::first)
-		.def_readwrite("value", &std::pair<int, int>::second)
+		.def_readonly("id", &std::pair<int, int>::first)
+		.def_readonly("value", &std::pair<int, int>::second)
 	;
 
-	python::class_<BuildingCommerceChange>("CyBuildingCommerceChange", python::no_init)
-		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
-		.def_readwrite("eCommerce", &BuildingCommerceChange::eCommerce)
-		.def_readwrite("iChange", &BuildingCommerceChange::iChange)
+	python::class_<BuildingCommerceChange>("BuildingCommerceChange", python::no_init)
+		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readonly("eCommerce", &BuildingCommerceChange::eCommerce)
+		.def_readonly("iChange", &BuildingCommerceChange::iChange)
 	;
 
 	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
-		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
-		.def_readonly("iModifier", &BuildingCommerceChange::iModifier)
+		.def_readonly("id", &BuildingModifier::eBuilding)
+		.def_readonly("value", &BuildingModifier::iModifier)
 	;
 }
