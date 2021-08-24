@@ -176,6 +176,7 @@ void CyInfoPythonInterface3()
 		.def("getShortDescription", &CvTraitInfo::getShortDescription, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
+		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
 
 		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
 	;
