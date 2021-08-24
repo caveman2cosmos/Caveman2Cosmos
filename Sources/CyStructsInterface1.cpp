@@ -189,7 +189,7 @@ void CyStructsPythonInterface1()
 	;
 
 	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
-		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
-		.def_readwrite("iModifier", &BuildingCommerceChange::iModifier)
+		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readonly("iModifier", &BuildingCommerceChange::iModifier)
 	;
 }
