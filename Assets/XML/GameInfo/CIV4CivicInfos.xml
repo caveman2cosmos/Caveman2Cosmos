@@ -7347,16 +7347,6 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-			</ImprovementYieldChanges>
 			<!-- Revolution Mod Start -->
 			<iRevIdxLocal>0</iRevIdxLocal>
 			<iRevIdxNational>0</iRevIdxNational>
@@ -7615,16 +7605,6 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-			</ImprovementYieldChanges>
 			<!-- Revolution Mod Start -->
 			<iRevIdxLocal>0</iRevIdxLocal>
 			<bAllowInquisitions>0</bAllowInquisitions>
@@ -9063,14 +9043,6 @@
 						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
@@ -15969,10 +15941,6 @@
 				<UnitProductionModifier>
 					<UnitType>UNIT_WORKER_MODERN</UnitType>
 					<iProductionModifier>5</iProductionModifier>
-				</UnitProductionModifier>
-				<UnitProductionModifier>
-					<UnitType>UNIT_RAPANUIWORKER</UnitType>
-					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<Flavors/>

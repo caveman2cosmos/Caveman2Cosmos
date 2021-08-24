@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4EventTriggerInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4EventSchema.xml">
+	<EventTriggerInfos>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_BLIZZARD</Type>
+			<ImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
+			</ImprovementsRequired>
+		</EventTriggerInfo>
+	</EventTriggerInfos>
+</Civ4EventTriggerInfos>

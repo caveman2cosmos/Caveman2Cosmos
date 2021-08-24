@@ -108,29 +108,6 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 	SAFE_DELETE_ARRAY(m_paszTempList);
 }
 
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const
-{
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{
-		if ( ppiListNew[j] == iValueOld)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const
-{
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{
-		if ( ppiListNew[j] == wValueOld)
-		{
-			return true;
-		}
-	}
-	return false;
-}
 
 bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 {
