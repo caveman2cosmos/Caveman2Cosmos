@@ -60267,7 +60267,7 @@
 			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>42</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
-			<iTradeRouteModifier>26</iTradeRouteModifier>
+			<iTradeRouteModifier>28</iTradeRouteModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -97945,7 +97945,7 @@
 			<iDefense>-1</iDefense>
 			<iRiverDefensePenalty>39</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
-			<iTradeRouteModifier>24</iTradeRouteModifier>
+			<iTradeRouteModifier>26</iTradeRouteModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
