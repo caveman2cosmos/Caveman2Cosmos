@@ -30,7 +30,7 @@ public:
 	GameObjectTypes getPayerType() const;
 
 	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
-	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
+	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const;
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);

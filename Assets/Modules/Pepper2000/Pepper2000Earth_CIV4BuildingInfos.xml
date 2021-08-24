@@ -34,7 +34,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>237240</iCost>
+			<iCost>177930</iCost>
 			<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
@@ -131,7 +131,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<iCost>2505</iCost>
+			<iCost>2745</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
@@ -1524,7 +1524,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>7680</iCost>
+			<iCost>8460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>

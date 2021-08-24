@@ -1604,7 +1604,6 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_DUTCH</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -5114,7 +5113,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>292</iCost>
+			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>-1</iHealth>
@@ -5169,7 +5168,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>306</iCost>
+			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>-1</iHealth>
@@ -5279,7 +5278,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>292</iCost>
+			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>-1</iHealth>
@@ -5389,7 +5388,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>306</iCost>
+			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>-1</iHealth>
@@ -5444,7 +5443,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>368</iCost>
+			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHealth>-1</iHealth>

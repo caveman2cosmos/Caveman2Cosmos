@@ -108,7 +108,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</ArtDefineTag>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<iCost>444</iCost>
+			<iCost>472</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
 					<UnitCombatProd>UNITCOMBAT_ARCHER</UnitCombatProd>
@@ -149,7 +149,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FIST</ArtDefineTag>
 			<PrereqTech>TECH_COMMUNITY</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<iCost>444</iCost>
+			<iCost>472</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
 					<UnitCombatProd>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatProd>
@@ -230,7 +230,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</ArtDefineTag>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-			<iCost>444</iCost>
+			<iCost>500</iCost>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
 					<UnitCombatProd>UNITCOMBAT_CRIMINAL</UnitCombatProd>
