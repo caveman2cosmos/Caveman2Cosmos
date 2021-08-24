@@ -10055,7 +10055,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_BAMBOO</Bonus>
 			<PrereqOrBuildings>
@@ -10066,7 +10066,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
+			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STONE_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_BRICK_BRIDGE</BuildingType>
@@ -10080,7 +10080,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>68</iCost>
+			<iCost>111</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -16336,7 +16336,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -16352,7 +16352,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
+			<ObsoleteTech>TECH_INVENTION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
@@ -16364,7 +16364,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>146</iCost>
+			<iCost>234</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -20379,7 +20379,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -20403,7 +20403,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>252</iCost>
+			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -21163,7 +21163,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<PrereqTech>TECH_PHYSICS</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_IRON_WARES</Bonus>
 			<PrereqBonuses>
@@ -21185,7 +21185,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>300</iCost>
+			<iCost>515</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -29064,7 +29064,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -29077,7 +29077,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
+			<ObsoleteTech>TECH_METALLURGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_VIADUCT</BuildingType>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
@@ -29088,7 +29088,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>234</iCost>
+			<iCost>300</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -60214,7 +60214,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STEEL</PrereqTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
+			</TechTypes>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqOrBuildings>
@@ -60223,12 +60226,12 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoleteTech>TECH_NEW_URBANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>740</iCost>
+			<iCost>830</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -60248,10 +60251,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqOrBuildings>
@@ -60260,7 +60260,7 @@
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iCost>830</iCost>
+			<iCost>1540</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -62102,7 +62102,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BAMBOO_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_STONE_BRIDGE</BuildingType>
@@ -91410,7 +91410,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MEGALITH_CONSTRUCTION</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LOG_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_BAMBOO_BRIDGE</BuildingType>
@@ -97900,7 +97900,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoleteTech>TECH_HIGHWAY_SYSTEMS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
@@ -97926,10 +97926,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqOrBuildings>
@@ -97937,11 +97934,11 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>830</iCost>
+			<iCost>1130</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -102525,7 +102522,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STONE</Bonus>
 			<PrereqOrBuildings>
@@ -102536,7 +102533,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_CONSTRUCTION</ObsoleteTech>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BRICK_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_COVERED_BRIDGE</BuildingType>
@@ -102549,7 +102546,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>104</iCost>
+			<iCost>146</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -109891,7 +109888,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SMALL_ARCH_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
@@ -112037,7 +112034,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -112052,7 +112049,7 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
+			<ObsoleteTech>TECH_PHYSICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAUSWAY</BuildingType>
 				<BuildingType>BUILDING_CHAIN_BRIDGE</BuildingType>
@@ -112062,7 +112059,7 @@
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 			</ReplacementBuildings>
-			<iCost>234</iCost>
+			<iCost>344</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>

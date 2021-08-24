@@ -8833,9 +8833,22 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LARGE_ARCH_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SMALL_SUSPENSION_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
@@ -8855,7 +8868,7 @@
 			<iRiverDefensePenalty>45</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<FreeBuilding>BUILDING_LARGE_SUSPENSION_BRIDGE</FreeBuilding>
+			<FreeBuilding>BUILDING_LARGE_ARCH_BRIDGE</FreeBuilding>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
