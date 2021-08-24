@@ -1772,10 +1772,11 @@ class TestCode:
 			CvTraitInfo = GC.getTraitInfo(iTrait)
 
 			#<BuildingProductionModifierTypes>
+			aReplacementBuildingsList = []
+			aUniqueReplacementBuildingsList = []
 			for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
 						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
@@ -1785,14 +1786,20 @@ class TestCode:
 					iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i).id
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacementBuildingsList) > 0:
-					self.log(CvTraitInfo.getType()+" BuildingProductionModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#Get unique unlisted replacements
+			for i in xrange(len(aReplacementBuildingsList)):
+				iBuilding = GC.getInfoTypeForString(aReplacementBuildingsList[i])
+				if aReplacementBuildingsList[i] not in aUniqueReplacementBuildingsList and GC.getBuildingInfo(iBuilding).getProductionCost() > 0:
+					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
+			if len(aUniqueReplacementBuildingsList) > 0:
+				self.log(CvTraitInfo.getType()+" BuildingProductionModifierTypes "+str(aUniqueReplacementBuildingsList))
 
 			#<BuildingHappinessModifierTypes>
+			aReplacementBuildingsList = []
+			aUniqueReplacementBuildingsList = []
 			for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
 				iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
 				CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-				aReplacementBuildingsList = []
 				if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
 					for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
 						if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
@@ -1802,8 +1809,12 @@ class TestCode:
 					iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i).id
 					if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
-				if len(aReplacementBuildingsList) > 0:
-					self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#Get unique unlisted replacements
+			for i in xrange(len(aReplacementBuildingsList)):
+				if aReplacementBuildingsList[i] not in aUniqueReplacementBuildingsList:
+					aUniqueReplacementBuildingsList.append(aReplacementBuildingsList[i])
+			if len(aUniqueReplacementBuildingsList) > 0:
+				self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+str(aUniqueReplacementBuildingsList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
