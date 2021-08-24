@@ -1714,7 +1714,7 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 		#Civics referencing buildings
-		if 0:# There is currently no way to filter out already existing buildings
+		if 0:# There is currently no way to filter out already existing buildings - filtering would be EXTREMELY slow
 			for iCivic in xrange(GC.getNumCivicInfos()):
 				CvCivicInfo = GC.getCivicInfo(iCivic)
 
@@ -1766,6 +1766,44 @@ class TestCode:
 										aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
 							if len(aReplacementBuildingsList) > 0:
 								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+		if 0:#Currently no python support
+			for iTrait in xrange(GC.getNumTraitInfos()):
+				CvTraitInfo = GC.getTraitInfo(iTrait)
+				
+				#<BuildingProductionModifierTypes>
+				for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
+					iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i)
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					aReplacementBuildingsList = []
+					if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+						for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+							if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+								aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+					#If affected building replacement is listed, then remove it from buildings to be added
+					for i in xrange(CvTraitInfo.getNumBuildingProductionModifiers()):
+						iAffectedBuilding = CvTraitInfo.getBuildingProductionModifier(i)
+						if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+							aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+					if len(aReplacementBuildingsList) > 0:
+						self.log(CvBuildingInfo.getType()+" BuildingProductionModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+				
+				#<BuildingHappinessModifierTypes>
+				for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
+					iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i)
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					aReplacementBuildingsList = []
+					if iAffectedBuilding not in aSpecialBuildingsList and CvAffectedBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+						for i in xrange(CvAffectedBuildingInfo.getNumReplacementBuilding()):
+							if CvAffectedBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
+								aReplacementBuildingsList.append(GC.getBuildingInfo(CvAffectedBuildingInfo.getReplacementBuilding(i)).getType())
+					#If affected building replacement is listed, then remove it from buildings to be added
+					for i in xrange(CvTraitInfo.getNumBuildingHappinessModifiers()):
+						iAffectedBuilding = CvTraitInfo.getBuildingHappinessModifier(i)
+						if GC.getBuildingInfo(iAffectedBuilding).getType() in aReplacementBuildingsList:
+							aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
+					if len(aReplacementBuildingsList) > 0:
+						self.log(CvBuildingInfo.getType()+" BuildingHappinessModifierTypes "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
