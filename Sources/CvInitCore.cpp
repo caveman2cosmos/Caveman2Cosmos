@@ -560,28 +560,14 @@ void CvInitCore::resetGame()
 
 	m_bWBMapNoPlayers = false;
 
-	int iReturn = 0;
-
 	// Standard game parameters
-	m_eWorldSize = NO_WORLDSIZE; // STANDARD_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_CLIMATE", iReturn);
-	m_eClimate = static_cast<ClimateTypes>(iReturn); // NO_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_SEALEVEL", iReturn);
-	m_eSeaLevel = static_cast<SeaLevelTypes>(iReturn); // NO_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_ERA", iReturn);
-	m_eEra = static_cast<EraTypes>(iReturn); // NO_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_GAMESPEED", iReturn);
-	m_eGameSpeed = static_cast<GameSpeedTypes>(iReturn); // NO_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_TURNTIMER", iReturn);
-	m_eTurnTimer = static_cast<TurnTimerTypes>(iReturn); // NO_ option?
-
-	GC.getDefinesVarSystem()->GetValue("STANDARD_CALENDAR", iReturn);
-	m_eCalendar = static_cast<CalendarTypes>(iReturn); // NO_ option?
+	m_eWorldSize = NO_WORLDSIZE;											// STANDARD_ option?
+	m_eClimate = (ClimateTypes)GC.getDefineINT("STANDARD_CLIMATE");			// NO_ option?
+	m_eSeaLevel = (SeaLevelTypes)GC.getDefineINT("STANDARD_SEALEVEL");		// NO_ option?
+	m_eEra = (EraTypes)GC.getDefineINT("STANDARD_ERA");						// NO_ option?
+	m_eGameSpeed = (GameSpeedTypes)GC.getDefineINT("STANDARD_GAMESPEED");	// NO_ option?
+	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
+	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
 
 	m_uiSavegameAssetCheckSum = -1;
 
@@ -744,13 +730,10 @@ void CvInitCore::resetPlayer(PlayerTypes eID)
 		m_aeCiv[eID] = NO_CIVILIZATION;
 		m_aeLeader[eID] = NO_LEADER;
 		m_aeTeam[eID] = (TeamTypes)eID;
-
-		int iReturn = 0;
-		GC.getDefinesVarSystem()->GetValue("STANDARD_HANDICAP", iReturn);
-		m_aeHandicap[eID] = static_cast<HandicapTypes>(iReturn);
-
+		m_aeHandicap[eID] = (HandicapTypes)GC.getDefineINT("STANDARD_HANDICAP");
 		m_aeColor[eID] = NO_PLAYERCOLOR;
 		m_aeArtStyle[eID] = NO_ARTSTYLE;
+
 
 		// Slot data
 		if (eID < MAX_PC_PLAYERS)

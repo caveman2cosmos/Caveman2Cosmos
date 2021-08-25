@@ -2421,35 +2421,35 @@ void cvInternalGlobals::cacheGlobals()
 }
 
 
-bool cvInternalGlobals::getDefineBOOL(const char * szName, bool bDefault) const
+bool cvInternalGlobals::getDefineBOOL(const char* szName, bool bDefault) const
 {
-	const bool success = GC.getDefinesVarSystem()->GetValue(szName, bDefault);
-	FAssertMsg(success, szName);
+	const bool success = m_VarSystem->GetValue(szName, bDefault);
+	//FAssertMsg(success, szName);
 	return bDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName, int iDefault) const
+int cvInternalGlobals::getDefineINT(const char* szName, int iDefault) const
 {
-	const bool success = GC.getDefinesVarSystem()->GetValue(szName, iDefault);
-	FAssertMsg(success, szName);
+	const bool success = m_VarSystem->GetValue(szName, iDefault);
+	//FAssertMsg(success, szName);
 	return iDefault;
 }
 
-float cvInternalGlobals::getDefineFLOAT(const char * szName, float fDefault) const
+float cvInternalGlobals::getDefineFLOAT(const char* szName, float fDefault) const
 {
-	const bool success = GC.getDefinesVarSystem()->GetValue(szName, fDefault);
-	FAssertMsg(success, szName);
+	const bool success = m_VarSystem->GetValue(szName, fDefault);
+	//FAssertMsg(success, szName);
 	return fDefault;
 }
 
-const char * cvInternalGlobals::getDefineSTRING(const char * szName, const char * szDefault) const
+const char* cvInternalGlobals::getDefineSTRING(const char* szName, const char* szDefault) const
 {
-	const bool success = GC.getDefinesVarSystem()->GetValue(szName, szDefault);
-	FAssertMsg(success, szName);
+	const bool success = m_VarSystem->GetValue(szName, szDefault);
+	//FAssertMsg(success, szName);
 	return szDefault;
 }
 
-void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpdate)
+void cvInternalGlobals::setDefineINT(const char* szName, int iValue, bool bUpdate)
 {
 	if (getDefineINT(szName) != iValue)
 	{
@@ -2457,14 +2457,14 @@ void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpda
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, iValue, -1.0f, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, iValue);
+		else m_VarSystem->SetValue(szName, iValue);
 
 		cacheEnumGlobals();
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool bUpdate)
+void cvInternalGlobals::setDefineFLOAT(const char* szName, float fValue, bool bUpdate)
 {
 	if (getDefineFLOAT(szName) != fValue)
 	{
@@ -2472,13 +2472,13 @@ void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool b
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, fValue, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, fValue);
+		else m_VarSystem->SetValue(szName, fValue);
 
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szValue, bool bUpdate )
+void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue, bool bUpdate)
 {
 	if (getDefineSTRING(szName) != szValue)
 	{
@@ -2486,7 +2486,7 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, -1.0f, szValue);
 		}
-		else GC.getDefinesVarSystem()->SetValue( szName, szValue );
+		else m_VarSystem->SetValue(szName, szValue);
 
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
