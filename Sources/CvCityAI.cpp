@@ -4301,7 +4301,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		}
 
 		// Sort from least turns to most
-		algo::sort(scoredBuildings);
+		std::sort(scoredBuildings.rbegin(), scoredBuildings.rend());
 		return !scoredBuildings.empty();
 	}
 
@@ -4513,7 +4513,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		}
 	}
 	// Sort from highest score to lowest. Need to reverse the order of the sort because default sort is ascending.
-	algo::sort(scoredBuildings);
+	std::sort(scoredBuildings.rbegin(), scoredBuildings.rend());
 
 	return !scoredBuildings.empty();
 }

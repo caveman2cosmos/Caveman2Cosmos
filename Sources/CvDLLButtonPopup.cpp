@@ -1442,7 +1442,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 
 		// Sort the units from strongest to weakest
-		algo::sort(units);
+		std::sort(units.rbegin(), units.rend());
 
 		// Max 5 units shown
 		units.resize(std::min<int>(units.size(), 5));
