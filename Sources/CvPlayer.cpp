@@ -7470,12 +7470,12 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 	int iMultiplier = 0;
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		if (hasTrait((TraitTypes)iI))
+		const TraitTypes eTrait = ((TraitTypes)iI);
+		if (hasTrait(eTrait))
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
 			for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
 			{
-				if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
+				if (GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
 				{
 					iMultiplier += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
 				}
@@ -7485,7 +7485,7 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialBuildingProductionModifiers(); j++)
 				{
-					if ((SpecialBuildingTypes)GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
+					if (GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
 					{
 						iMultiplier += GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).iModifier;
 					}
@@ -18575,11 +18575,15 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 			changeSpecialistExtraCommerce(((CommerceTypes)iI), (kCivic.getSpecialistExtraCommerce(iI) * iChange));
 		}
 
+		foreach_(const BuildingModifier2& modifier, kCivic.getBuildingProductionModifiers())
+		{
+			changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
+		}
+
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			changeExtraBuildingHappiness((BuildingTypes)iI, (kCivic.getBuildingHappinessChanges(iI) * iChange));
 			changeExtraBuildingHealth((BuildingTypes)iI, (kCivic.getBuildingHealthChanges(iI) * iChange));
-			changeBuildingProductionModifier((BuildingTypes)iI, (kCivic.getBuildingProductionModifier(iI) * iChange));
 		}
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)

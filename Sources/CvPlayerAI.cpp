@@ -14071,9 +14071,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingModifier2& modifier, kCivic.getBuildingProductionModifiers())
 	{
-		iTempValue += (kCivic.getBuildingProductionModifier(iI) * 2) / 5;
+		iTempValue += (modifier.second * 2) / 5;
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{

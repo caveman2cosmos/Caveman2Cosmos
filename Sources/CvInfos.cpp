@@ -8642,7 +8642,6 @@ CvCivicInfo::CvCivicInfo()
 	, m_piLandmarkYieldChanges(NULL)
 	, m_piFreeSpecialistCount(NULL)
 	, m_paiUnitCombatProductionModifier(NULL)
-	, m_paiBuildingProductionModifier(NULL)
 	, m_piUnitProductionModifier(NULL)
 	, m_ppiTerrainYieldChanges(NULL)
 	, m_piFlavorValue(NULL)
@@ -8688,7 +8687,6 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_piCivicAttitudeChanges);
 	SAFE_DELETE_ARRAY(m_pszCivicAttitudeReason);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
-	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piLandmarkYieldChanges);
 	SAFE_DELETE_ARRAY(m_piFreeSpecialistCount);
@@ -9327,10 +9325,10 @@ int CvCivicInfo::getUnitProductionModifier(int i) const
 	return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 }
 
-int CvCivicInfo::getBuildingProductionModifier(int i) const
+int CvCivicInfo::getBuildingProductionModifier(BuildingTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
-	return m_paiBuildingProductionModifier ? m_paiBuildingProductionModifier[i] : 0;
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), e);
+	return m_aBuildingProductionModifier.getValue(e);
 }
 
 int CvCivicInfo::getImprovementHappinessChanges(int i) const
@@ -9412,18 +9410,10 @@ int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 {
 	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_OVEREXPANSION_PENALTIES))
 	{
-		int iCityLimit;
-		CvPlayer* pPlayer = &GET_PLAYER(ePlayer);
-		int iAdaptID = GC.getInfoTypeForString("ADAPT_SCALE_CITY_LIMITS");
-
-		iCityLimit = pPlayer->getGameObject()->adaptValueToGame(iAdaptID , m_iCityLimit);
-
-		return iCityLimit;
+		const int iAdaptID = GC.getInfoTypeForString("ADAPT_SCALE_CITY_LIMITS");
+		return GET_PLAYER(ePlayer).getGameObject()->adaptValueToGame(iAdaptID , m_iCityLimit);
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
 
 
@@ -9589,7 +9579,7 @@ void CvCivicInfo::getCheckSum(uint32_t& iSum) const
 
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusMintedPercent);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
+	CheckSumC(iSum, m_aBuildingProductionModifier);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_piCivicAttitudeChanges);
@@ -9899,12 +9889,11 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szWeLoveTheKingKey, L"WeLoveTheKing");
 
 	pXML->SetVariableListTagPair(&m_piBonusMintedPercent, L"BonusMintedPercents", GC.getNumBonusInfos());
-
 	pXML->SetVariableListTagPair(&m_piImprovementHappinessChanges, L"ImprovementHappinessChanges", GC.getNumImprovementInfos());
 	pXML->SetVariableListTagPair(&m_piImprovementHealthPercentChanges, L"ImprovementHealthPercentChanges", GC.getNumImprovementInfos());
-
 	pXML->SetVariableListTagPair(&m_paiUnitCombatProductionModifier, L"UnitCombatProductionModifiers", GC.getNumUnitCombatInfos());
-	pXML->SetVariableListTagPair(&m_paiBuildingProductionModifier, L"BuildingProductionModifiers",  GC.getNumBuildingInfos());
+
+	m_aBuildingProductionModifier.read(pXML, L"BuildingProductionModifiers");
 
 	if (pXML->TryMoveToXmlFirstChild(L"UnitProductionModifiers"))
 	{
@@ -10628,16 +10617,10 @@ void CvCivicInfo::copyNonDefaults(const CvCivicInfo* pClassInfo)
 		}
 	}
 
+	m_aBuildingProductionModifier.copyNonDefaults(pClassInfo->getBuildingProductionModifiers());
+
 	for ( int i = 0; i < GC.getNumBuildingInfos(); i++ )
 	{
-		if ( getBuildingProductionModifier(i) == iDefault && pClassInfo->getBuildingProductionModifier(i) != iDefault)
-		{
-			if ( NULL == m_paiBuildingProductionModifier )
-			{
-				CvXMLLoadUtility::InitList(&m_paiBuildingProductionModifier,GC.getNumBuildingInfos(),iDefault);
-			}
-			m_paiBuildingProductionModifier[i] = pClassInfo->getBuildingProductionModifier(i);
-		}
 		for ( int j = 0; j < NUM_COMMERCE_TYPES; j++ )
 		{
 			if ( getBuildingCommerceChange(i,j) == iDefault && pClassInfo->getBuildingCommerceChange(i,j) != iDefault)
