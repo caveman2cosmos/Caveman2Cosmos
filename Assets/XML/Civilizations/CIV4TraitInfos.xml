@@ -801,7 +801,7 @@
 					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>5</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
@@ -2114,7 +2114,31 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -2128,7 +2152,7 @@
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 					<YieldChanges>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -2136,7 +2160,7 @@
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 					<YieldChanges>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
@@ -3790,6 +3814,50 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_BARBARIAN</Type>
@@ -4578,7 +4646,7 @@
 					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>5</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
@@ -5863,7 +5931,31 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -7565,6 +7657,50 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ANCIENT_WAY_OF_THE_FIST</Type>

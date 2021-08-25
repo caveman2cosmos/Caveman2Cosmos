@@ -50,6 +50,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
 		self.main.addTestCode(screen, self.checkCivicImprovementReplacements, "Civic - check potential improvement replacements", "Checks replacements of improvements in civics")
+		self.main.addTestCode(screen, self.checkTraitImprovementReplacements, "Trait - check potential improvement replacements", "Checks replacements of improvements in traits")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
@@ -2426,6 +2427,7 @@ class TestCode:
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									self.log(CvBonusInfo.getType()+" "+str(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
+	#Civic - check if civic yield bonus for improvement is carried into its upgrade
 	def checkCivicImprovementReplacements(self):
 		for iCivic in xrange(GC.getNumCivicInfos()):
 			CvCivicInfo = GC.getCivicInfo(iCivic)
@@ -2476,6 +2478,56 @@ class TestCode:
 				if len(aImprovementsList) > 0:
 					self.log(CvCivicInfo.getType()+" should have improvement upgrades for ImprovementYieldChanges "+str(aImprovementsList))
 
+	#Trait - check if trait yield bonus for improvement is carried into its upgrade
+	def checkTraitImprovementReplacements(self):
+		for iTrait in xrange(GC.getNumTraitInfos()):
+			CvTraitInfo = GC.getTraitInfo(iTrait)
+
+			aImprovementList = []
+			aImprovementUpgrades = []
+			aImprovementUniqueUpgrades = []
+			aImprovementsList = []
+
+			#Get <ImprovementYieldChange>
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
+				if CvTraitInfo.getImprovementYieldChange(iImprovement, 0) != 0 or CvTraitInfo.getImprovementYieldChange(iImprovement, 1) != 0 or CvTraitInfo.getImprovementYieldChange(iImprovement, 2) != 0:
+					aImprovementList.append(iImprovement)
+					
+			if len(aImprovementList) > 0:
+				#Analyze list of improvements
+				for i in xrange(len(aImprovementList)):
+					CvImprovementInfo = GC.getImprovementInfo(aImprovementList[i])
+					if CvImprovementInfo.getImprovementUpgrade() != -1:
+						iImprovementUpgrade = CvImprovementInfo.getImprovementUpgrade()
+						szUpgradedImprovement = GC.getImprovementInfo(iImprovementUpgrade).getType()
+						aImprovementUpgrades.append(iImprovementUpgrade)
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvTraitInfo.getImprovementYieldChange(aImprovementList[i], iYield) > CvTraitInfo.getImprovementYieldChange(iImprovementUpgrade, iYield):
+								self.log(CvTraitInfo.getType()+" "+CvImprovementInfo.getType()+" -> "+szUpgradedImprovement+" yield degradation")
+					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+						iImprovementUpgrade = CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)
+						szUpgradedImprovement = GC.getImprovementInfo(iImprovementUpgrade).getType()
+						aImprovementUpgrades.append(iImprovementUpgrade)
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvTraitInfo.getImprovementYieldChange(aImprovementList[i], iYield) > CvTraitInfo.getImprovementYieldChange(iImprovementUpgrade, iYield):
+								self.log(CvTraitInfo.getType()+" "+CvImprovementInfo.getType()+" alt -> "+szUpgradedImprovement+" yield degradation")
+
+				#We want nonrepeating list
+				for i in xrange(len(aImprovementUpgrades)):
+					if aImprovementUpgrades[i] not in aImprovementUniqueUpgrades:
+						aImprovementUniqueUpgrades.append(aImprovementUpgrades[i])
+
+				#If improvement is listed, then remove it
+				for i in xrange(len(aImprovementList)):
+					if aImprovementList[i] in aImprovementUniqueUpgrades:
+						aImprovementUniqueUpgrades.remove(aImprovementList[i])
+
+				#Get names
+				for i in xrange(len(aImprovementUniqueUpgrades)):
+					aImprovementsList.append(GC.getImprovementInfo(aImprovementUniqueUpgrades[i]).getType())
+
+				if len(aImprovementsList) > 0:
+					self.log(CvTraitInfo.getType()+" should have improvement upgrades for ImprovementYieldChanges "+str(aImprovementsList))
 
 	#Improvement - yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):
