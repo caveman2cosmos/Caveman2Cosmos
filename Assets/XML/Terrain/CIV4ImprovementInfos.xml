@@ -349,14 +349,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Hunting Camp -> Hunting Preserve Era -->
 		<ImprovementInfo>
@@ -487,14 +479,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HUNTING_PRESERVE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Pasture -> Vertical Farm -->
 		<ImprovementInfo>
@@ -709,14 +693,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_PASTURE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Scavenging Camp -> Nomadic Herd OR Hunting Camp -->
 		<ImprovementInfo>
@@ -895,14 +871,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_HUNTER_GATHERER</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
@@ -10010,14 +9978,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Desert Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10160,14 +10120,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Wetlands Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10268,14 +10220,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Radar Watchtower | End -->

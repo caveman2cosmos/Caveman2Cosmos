@@ -5565,8 +5565,8 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 bool CvTeam::isNoTradeTech(const short iTech) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), iTech)
-	return find(m_vNoTradeTech.begin(), m_vNoTradeTech.end(), iTech) != m_vNoTradeTech.end();
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), iTech);
+	return algo::contains(m_vNoTradeTech, iTech);
 }
 
 

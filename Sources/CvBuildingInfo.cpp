@@ -778,7 +778,7 @@ short CvBuildingInfo::getNumPrereqInCityBuildings() const
 
 bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 {
-	return find(m_aiPrereqInCityBuildings.begin(), m_aiPrereqInCityBuildings.end(), i) != m_aiPrereqInCityBuildings.end();
+	return algo::contains(m_aiPrereqInCityBuildings, i);
 }
 
 
@@ -1378,12 +1378,8 @@ int CvBuildingInfo::getNumUnitCombatRetrainTypes() const
 
 bool CvBuildingInfo::isUnitCombatRetrainType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiUnitCombatRetrainTypes.begin(), m_aiUnitCombatRetrainTypes.end(), i) == m_aiUnitCombatRetrainTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiUnitCombatRetrainTypes, i);
 }
 
 int CvBuildingInfo::getMayDamageAttackingUnitCombatType(int i) const
@@ -1398,12 +1394,8 @@ int CvBuildingInfo::getNumMayDamageAttackingUnitCombatTypes() const
 
 bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMayDamageAttackingUnitCombatTypes.begin(), m_aiMayDamageAttackingUnitCombatTypes.end(), i) == m_aiMayDamageAttackingUnitCombatTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiMayDamageAttackingUnitCombatTypes, i);
 }
 
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
@@ -5008,7 +5000,7 @@ const python::list CvBuildingInfo::cyGetPrereqOrBonuses() const
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {
-	return find(m_vPrereqOrBuilding.begin(), m_vPrereqOrBuilding.end(), i) != m_vPrereqOrBuilding.end();
+	return algo::contains(m_vPrereqOrBuilding, i);
 }
 
 int CvBuildingInfo::getPrereqOrBuilding(const int i) const
@@ -5031,7 +5023,7 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 
 void CvBuildingInfo::setReplacedBuilding(const int i)
 {
-	if (find(m_vReplacedBuilding.begin(), m_vReplacedBuilding.end(), i) == m_vReplacedBuilding.end())
+	if (!algo::contains(m_vReplacedBuilding, i))
 	{
 		m_vReplacedBuilding.push_back(i);
 	}

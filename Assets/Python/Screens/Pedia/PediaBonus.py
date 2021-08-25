@@ -5,8 +5,8 @@ from CvPythonExtensions import *
 class PediaBonus:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
 
 		self.main = parent
 
@@ -93,7 +93,7 @@ class PediaBonus:
 			aGOMBonusReqList = []
 			for i in range(2):
 				aGOMBonusReqList.append([])
-			self.GOMReqs.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
+			self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
 			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
@@ -138,7 +138,7 @@ class PediaBonus:
 			aGOMBonusReqList = []
 			for i in range(2):
 				aGOMBonusReqList.append([])
-			self.GOMReqs.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
+			self.HF.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:
 				aNeededByUnits.append(iUnit)
 				bValid = False

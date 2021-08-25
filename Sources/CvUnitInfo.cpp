@@ -1214,19 +1214,11 @@ int CvUnitInfo::getPrereqAndBuilding(int i) const
 }
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {
-	if (find(m_aiPrereqAndBuildings.begin(), m_aiPrereqAndBuildings.end(), i) == m_aiPrereqAndBuildings.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiPrereqAndBuildings, i);
 }
 bool CvUnitInfo::isPrereqOrBuilding(int i) const
 {
-	if (find(m_aiPrereqOrBuildings.begin(), m_aiPrereqOrBuildings.end(), i) == m_aiPrereqOrBuildings.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiPrereqOrBuildings, i);
 }
 
 //Struct Vector
@@ -1240,11 +1232,7 @@ int CvUnitInfo::getNumTargetUnits() const
 }
 bool CvUnitInfo::isTargetUnit(int i) const
 {
-	if (find(m_aiTargetUnit.begin(), m_aiTargetUnit.end(), i) == m_aiTargetUnit.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiTargetUnit, i);
 }
 
 
@@ -1258,11 +1246,7 @@ int CvUnitInfo::getNumDefendAgainstUnits() const
 }
 bool CvUnitInfo::isDefendAgainstUnit(int i) const
 {
-	if (find(m_aiDefendAgainstUnit.begin(), m_aiDefendAgainstUnit.end(), i) == m_aiDefendAgainstUnit.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiDefendAgainstUnit, i);
 }
 
 
@@ -1276,7 +1260,7 @@ short CvUnitInfo::getNumSupersedingUnits() const
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
-	return find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) != m_aiSupersedingUnits.end();
+	return algo::contains(m_aiSupersedingUnits, i);
 }
 
 
@@ -1290,11 +1274,7 @@ int CvUnitInfo::getNumUnitUpgrades() const
 }
 bool CvUnitInfo::isUnitUpgrade(int i) const
 {
-	if (find(m_aiUnitUpgrades.begin(), m_aiUnitUpgrades.end(), i) == m_aiUnitUpgrades.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiUnitUpgrades, i);
 }
 
 
@@ -1473,7 +1453,7 @@ int CvUnitInfo::getBuildings(int i) const
 bool CvUnitInfo::getHasBuilding(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
-	return std::find(m_pbBuildings.begin(), m_pbBuildings.end(), i) != m_pbBuildings.end();
+	return algo::contains(m_pbBuildings, i);
 }
 
 int CvUnitInfo::getNumBuildings() const
@@ -2642,12 +2622,8 @@ int CvUnitInfo::getNumCureAfflictionTypes() const
 
 bool CvUnitInfo::isCureAfflictionType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumPromotionLineInfos());
-	if (find(m_aiCureAfflictionTypes.begin(), m_aiCureAfflictionTypes.end(), i) == m_aiCureAfflictionTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), i);
+	return algo::contains(m_aiCureAfflictionTypes, i);
 }
 
 int CvUnitInfo::getHealAsType(int i) const
@@ -2662,12 +2638,8 @@ int CvUnitInfo::getNumHealAsTypes() const
 
 bool CvUnitInfo::isHealAsType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
-	if (find(m_aiHealAsTypes.begin(), m_aiHealAsTypes.end(), i) == m_aiHealAsTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiHealAsTypes, i);
 }
 
 void CvUnitInfo::setHealAsTypes()
@@ -2706,12 +2678,8 @@ int CvUnitInfo::getNumTrapSetWithPromotionTypes() const
 
 bool CvUnitInfo::isTrapSetWithPromotionType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumPromotionInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiTrapSetWithPromotionTypes.begin(), m_aiTrapSetWithPromotionTypes.end(), i) == m_aiTrapSetWithPromotionTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
+	return algo::contains(m_aiTrapSetWithPromotionTypes, i);
 }
 
 int CvUnitInfo::getTrapImmunityUnitCombatType(int i) const
@@ -2726,12 +2694,8 @@ int CvUnitInfo::getNumTrapImmunityUnitCombatTypes() const
 
 bool CvUnitInfo::isTrapImmunityUnitCombatType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumUnitCombatInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiTrapImmunityUnitCombatTypes.begin(), m_aiTrapImmunityUnitCombatTypes.end(), i) == m_aiTrapImmunityUnitCombatTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
+	return algo::contains(m_aiTrapImmunityUnitCombatTypes, i);
 }
 //struct vectors
 int CvUnitInfo::getNumAfflictionFortitudeModifiers() const
@@ -6325,12 +6289,8 @@ int CvUnitInfo::getNumQualifiedPromotionTypes() const
 
 bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumPromotionInfos());
-	if (find(m_aiQualifiedPromotionTypes.begin(), m_aiQualifiedPromotionTypes.end(), i) == m_aiQualifiedPromotionTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
+	return algo::contains(m_aiQualifiedPromotionTypes, i);
 }
 
 void CvUnitInfo::setQualifiedPromotionTypes()
