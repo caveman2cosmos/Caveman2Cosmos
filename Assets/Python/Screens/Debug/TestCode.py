@@ -2666,6 +2666,8 @@ class TestCode:
 	#Building - list buildings, that obsolete without replacement
 	def listObsoleteingBuildings(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
+		aObsoleteTechList = [0]*GC.getNumTechInfos()
+		szText = ""
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			aReplacementList = []
@@ -2677,3 +2679,10 @@ class TestCode:
 
 				if len(aReplacementList) == 0:
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
+					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
+
+		szText = " Regular obsoleting buildings without replacements: "
+		for i in xrange(len(aObsoleteTechList)):
+			if aObsoleteTechList[i] > 0:
+				szText += str(aObsoleteTechList[i])+" items at "+GC.getTechInfo(i).getType()+", "
+		self.log(szText)
