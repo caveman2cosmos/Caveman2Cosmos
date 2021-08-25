@@ -49,6 +49,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkUnitRequirementsReplacements, "Unit - check building requirement replacements", "Checks if unit has building requirement, that gets replaced")
 		self.main.addTestCode(screen, self.checkBonusImprovementProductivity, "Bonus - check improvement productivity", "Checks if improvement replacements productivity from bonus, improvement and bonus+improvement is higher compared to base improvement")
 		self.main.addTestCode(screen, self.checkBonusProducerReplacements, "Bonus - check potential bonus producer replacements", "Checks replacements of manufactured bonus producers")
+		self.main.addTestCode(screen, self.checkCivicImprovementReplacements, "Civic - check potential improvement replacements", "Checks replacements of improvements in civics")
 		self.main.addTestCode(screen, self.checkImprovementTechYieldBoostLocation, "Improvement - yield boost tech requirements", "Checks if yield boosts happen within tech unlock and replacement of improvements")
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
@@ -2424,6 +2425,57 @@ class TestCode:
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
 									self.log(CvBonusInfo.getType()+" "+str(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+
+	def checkCivicImprovementReplacements(self):
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
+
+			aImprovementList = []
+			aImprovementUpgrades = []
+			aImprovementUniqueUpgrades = []
+			aImprovementsList = []
+
+			if CvCivicInfo.isAnyImprovementYieldChange():
+				#Get <ImprovementYieldChanges>
+				for iImprovement in xrange(GC.getNumImprovementInfos()):
+					if CvCivicInfo.getImprovementYieldChanges(iImprovement, 0) != 0 or CvCivicInfo.getImprovementYieldChanges(iImprovement, 1) != 0 or CvCivicInfo.getImprovementYieldChanges(iImprovement, 2) != 0:
+						aImprovementList.append(iImprovement)
+
+				#Analyze list of improvements
+				for i in xrange(len(aImprovementList)):
+					CvImprovementInfo = GC.getImprovementInfo(aImprovementList[i])
+					if CvImprovementInfo.getImprovementUpgrade() != -1:
+						iImprovementUpgrade = CvImprovementInfo.getImprovementUpgrade()
+						szUpgradedImprovement = GC.getImprovementInfo(iImprovementUpgrade).getType()
+						aImprovementUpgrades.append(iImprovementUpgrade)
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvCivicInfo.getImprovementYieldChanges(aImprovementList[i], iYield) > CvCivicInfo.getImprovementYieldChanges(iImprovementUpgrade, iYield):
+								self.log(CvCivicInfo.getType()+" "+CvImprovementInfo.getType()+" -> "+szUpgradedImprovement+" yield degradation")
+					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+						iImprovementUpgrade = CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)
+						szUpgradedImprovement = GC.getImprovementInfo(iImprovementUpgrade).getType()
+						aImprovementUpgrades.append(iImprovementUpgrade)
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvCivicInfo.getImprovementYieldChanges(aImprovementList[i], iYield) > CvCivicInfo.getImprovementYieldChanges(iImprovementUpgrade, iYield):
+								self.log(CvCivicInfo.getType()+" "+CvImprovementInfo.getType()+" alt -> "+szUpgradedImprovement+" yield degradation")
+
+				#We want nonrepeating list
+				for i in xrange(len(aImprovementUpgrades)):
+					if aImprovementUpgrades[i] not in aImprovementUniqueUpgrades:
+						aImprovementUniqueUpgrades.append(aImprovementUpgrades[i])
+
+				#If improvement is listed, then remove it
+				for i in xrange(len(aImprovementList)):
+					if aImprovementList[i] in aImprovementUniqueUpgrades:
+						aImprovementUniqueUpgrades.remove(aImprovementList[i])
+
+				#Get names
+				for i in xrange(len(aImprovementUniqueUpgrades)):
+					aImprovementsList.append(GC.getImprovementInfo(aImprovementUniqueUpgrades[i]).getType())
+
+				if len(aImprovementsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have improvement upgrades for ImprovementYieldChanges "+str(aImprovementsList))
+
 
 	#Improvement - yield boosts should be between improvement unlock and upgrade
 	def checkImprovementTechYieldBoostLocation(self):

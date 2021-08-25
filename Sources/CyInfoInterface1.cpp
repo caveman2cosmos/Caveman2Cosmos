@@ -317,6 +317,9 @@ void CyInfoPythonInterface1()
 
 		.def("isBuildingOnlyHealthy", &CvCivicInfo::isBuildingOnlyHealthy, "bool ()")
 		.def("isStateReligion", &CvCivicInfo::isStateReligion, "bool ()")
+		.def("isAnyImprovementYieldChange", &CvCivicInfo::isAnyImprovementYieldChange, "bool ()")
+		.def("isAnyBuildingHappinessChange", &CvCivicInfo::isAnyBuildingHappinessChange, "bool ()")
+		.def("isAnyBuildingHealthChange", &CvCivicInfo::isAnyBuildingHealthChange, "bool ()")
 
 		// Arrays
 
