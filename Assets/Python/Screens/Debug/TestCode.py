@@ -2492,7 +2492,7 @@ class TestCode:
 			for iImprovement in xrange(GC.getNumImprovementInfos()):
 				if CvTraitInfo.getImprovementYieldChange(iImprovement, 0) != 0 or CvTraitInfo.getImprovementYieldChange(iImprovement, 1) != 0 or CvTraitInfo.getImprovementYieldChange(iImprovement, 2) != 0:
 					aImprovementList.append(iImprovement)
-					
+
 			if len(aImprovementList) > 0:
 				#Analyze list of improvements
 				for i in xrange(len(aImprovementList)):

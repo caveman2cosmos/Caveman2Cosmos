@@ -180,7 +180,7 @@ void CyInfoPythonInterface3()
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
 		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
 		.def("getBuildingHappinessModifier", &CvTraitInfo::getBuildingHappinessModifier)
-		
+
 		.def("getImprovementYieldChange", &CvTraitInfo::getImprovementYieldChange, "int (int i, int j)")
 
 		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
