@@ -12211,6 +12211,10 @@
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>

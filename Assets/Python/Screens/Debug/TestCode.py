@@ -29,7 +29,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
-		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics or traits")
+		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics, traits, conversely improvements can upgrade, so they are checked too")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingRequirementTags, "Building - requirement requirements", "Check if additonal requirements don't lock out buildings")
@@ -1291,6 +1291,40 @@ class TestCode:
 						aReplacementBuildingsList.remove(GC.getBuildingInfo(iAffectedBuilding).getType())
 				if len(aReplacementBuildingsList) > 0:
 					self.log(CvBuildingInfo.getType()+" BuildingProductionModifiers "+CvAffectedBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+
+			#<ImprovementFreeSpecialists> - building references improvements, those potentially can upgrade
+			aImprovementUnlistedUpgrades = []
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
+				if CvBuildingInfo.getImprovementFreeSpecialist(iImprovement) != 0:
+					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+					if CvImprovementInfo.getImprovementUpgrade() != -1:
+						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
+					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+						if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
+							aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
+			#If improvement is listed, then remove it
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
+				if CvBuildingInfo.getImprovementFreeSpecialist(iImprovement) != 0 and GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
+					aImprovementUnlistedUpgrades.remove(GC.getImprovementInfo(iImprovement).getType())
+			if len(aImprovementUnlistedUpgrades) > 0:
+				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for ImprovementFreeSpecialists "+str(aImprovementUnlistedUpgrades))
+
+			#<PrereqOrImprovement> - Improvement requirement replacement
+			aImprovementUnlistedUpgrades = []
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
+				if CvBuildingInfo.isPrereqOrImprovement(iImprovement):
+					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+					if CvImprovementInfo.getImprovementUpgrade() != -1:
+						aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getImprovementUpgrade()).getType())
+					for iImprovementReplacement in xrange(CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes()):
+						if GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType() not in aImprovementUnlistedUpgrades:
+							aImprovementUnlistedUpgrades.append(GC.getImprovementInfo(CvImprovementInfo.getAlternativeImprovementUpgradeType(iImprovementReplacement)).getType())
+			#If improvement is listed, then remove it
+			for iImprovement in xrange(GC.getNumImprovementInfos()):
+				if CvBuildingInfo.isPrereqOrImprovement(iImprovement) and GC.getImprovementInfo(iImprovement).getType() in aImprovementUnlistedUpgrades:
+					aImprovementUnlistedUpgrades.remove(GC.getImprovementInfo(iImprovement).getType())
+			if len(aImprovementUnlistedUpgrades) > 0:
+				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for PrereqOrImprovement "+str(aImprovementUnlistedUpgrades))
 
 		#Civics referencing buildings
 		if 0:# There is currently no way to filter out already existing buildings - filtering would be EXTREMELY slow

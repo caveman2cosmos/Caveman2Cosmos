@@ -413,6 +413,14 @@
 					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
 			<PropertyManipulators>
 				<PropertySource>

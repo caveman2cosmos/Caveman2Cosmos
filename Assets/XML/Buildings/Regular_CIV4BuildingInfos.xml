@@ -40310,6 +40310,10 @@
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<bPrereqImprovement>1</bPrereqImprovement>
 				</PrereqImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
 			</PrereqOrImprovement>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -64067,6 +64071,10 @@
 					<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
 					<bPrereqImprovement>1</bPrereqImprovement>
 				</PrereqImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
 			</PrereqOrImprovement>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
@@ -64094,6 +64102,10 @@
 				</ImprovementFreeSpecialist>
 				<ImprovementFreeSpecialist>
 					<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
@@ -115792,6 +115804,10 @@
 				</PrereqImprovement>
 				<PrereqImprovement>
 					<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
+					<bPrereqImprovement>1</bPrereqImprovement>
+				</PrereqImprovement>
+				<PrereqImprovement>
+					<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
 					<bPrereqImprovement>1</bPrereqImprovement>
 				</PrereqImprovement>
 			</PrereqOrImprovement>
