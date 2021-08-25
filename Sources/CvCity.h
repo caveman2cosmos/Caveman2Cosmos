@@ -967,7 +967,8 @@ public:
 
 	int getPlotYield(YieldTypes eIndex) const;
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;
-	int getYieldRate(YieldTypes eIndex) const;
+	int getYieldRate(const YieldTypes eYield) const;
+	int getYieldRate100(const YieldTypes eYield) const;
 	void changePlotYield(YieldTypes eIndex, int iChange);
 
 	int getExtraYield(YieldTypes eIndex) const;

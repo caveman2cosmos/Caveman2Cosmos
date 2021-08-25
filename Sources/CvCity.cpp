@@ -11303,10 +11303,15 @@ int CvCity::getBaseYieldRateModifier(YieldTypes eIndex, int iExtra) const
 	return std::max(0, iModifier);
 }
 
-int CvCity::getYieldRate(YieldTypes eIndex) const
+int CvCity::getYieldRate(const YieldTypes eYield) const
+{
+	return getYieldRate100(eYield) / 100;
+}
+
+int CvCity::getYieldRate100(const YieldTypes eYield) const
 {
 	PROFILE_FUNC();
-	return getExtraYield(eIndex) + getBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex) / 100;
+	return getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield);
 }
 
 int CvCity::getPlotYield(YieldTypes eIndex)	const
@@ -11893,7 +11898,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	}
 
 	//STEP 1 : Slider
-	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate(YIELD_COMMERCE) * 100);
+	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate100(YIELD_COMMERCE));
 
 	//STEP 2 : Commerce Changes from specialists
 	iBaseCommerceRate += 100 * (getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex));
