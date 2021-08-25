@@ -4444,7 +4444,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, c
 		return AI_TechValueCached(eRelativeTo, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 	}
 	// Sort for closest first
-	std::sort(researchCosts.begin(), researchCosts.end());
+	algo::sort(researchCosts);
 	researchCosts.resize(std::min(researchCosts.size(), MAX_SAMPLE_SIZE));
 
 	int iTotal = 0;

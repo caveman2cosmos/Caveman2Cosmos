@@ -14780,7 +14780,7 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 bool CvCity::isFreeBuilding(const short iIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex)
-	return find(m_vFreeBuildings.begin(), m_vFreeBuildings.end(), iIndex) != m_vFreeBuildings.end();
+	return algo::contains(m_vFreeBuildings, iIndex);
 }
 
 void CvCity::checkFreeBuildings()
@@ -17826,7 +17826,7 @@ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& 
 	}
 
 	// sort the visible ones by decreasing priority
-	std::sort(kVisible.begin(), kVisible.end(), VisibleBuildingComparator());
+	algo::sort(kVisible, VisibleBuildingComparator());
 
 	// how big is this city, in terms of buildings?
 	// general rule: no more than fPercentUnique percent of a city can be uniques
@@ -21155,8 +21155,8 @@ void CvCity::setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValu
 
 bool CvCity::isDisabledBuilding(const short iIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex)
-	return find(m_vDisabledBuildings.begin(), m_vDisabledBuildings.end(), iIndex) != m_vDisabledBuildings.end();
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), iIndex);
+	return algo::contains(m_vDisabledBuildings, iIndex);
 }
 
 
