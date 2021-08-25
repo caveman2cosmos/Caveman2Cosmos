@@ -6,6 +6,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
+#include "CvInfos.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvTeamAI.h"
@@ -498,7 +499,7 @@ void CvArea::changeNumTiles(int iChange)
 	if (iChange != 0)
 	{
 		m_iNumTiles += iChange;
-		FAssert(getNumTiles() >= 0);
+		FASSERT_NOT_NEGATIVE(getNumTiles())
 	}
 }
 
@@ -518,8 +519,8 @@ int CvArea::getNumUnownedTiles() const
 void CvArea::changeNumOwnedTiles(int iChange)
 {
 	m_iNumOwnedTiles += iChange;
-	FAssert(getNumOwnedTiles() >= 0);
-	FAssert(getNumUnownedTiles() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumOwnedTiles())
+	FASSERT_NOT_NEGATIVE(getNumUnownedTiles())
 }
 
 
@@ -532,7 +533,7 @@ int CvArea::getNumRiverEdges() const
 void CvArea::changeNumRiverEdges(int iChange)
 {
 	m_iNumRiverEdges += iChange;
-	FAssert(getNumRiverEdges() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumRiverEdges())
 }
 
 
@@ -563,7 +564,7 @@ int CvArea::getNumStartingPlots() const
 void CvArea::changeNumStartingPlots(int iChange)
 {
 	m_iNumStartingPlots += iChange;
-	FAssert(getNumStartingPlots() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumStartingPlots())
 }
 
 
@@ -584,9 +585,9 @@ void CvArea::changeUnitsPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iNumUnits += iChange;
-	FAssert(getNumUnits() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumUnits())
 	m_aiUnitsPerPlayer[eIndex] += iChange;
-	FAssert(getUnitsPerPlayer(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getUnitsPerPlayer(eIndex))
 }
 
 
@@ -601,7 +602,7 @@ void CvArea::changeAnimalsPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiAnimalsPerPlayer[eIndex] += iChange;
-	FAssert(getAnimalsPerPlayer(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getAnimalsPerPlayer(eIndex))
 }
 
 
@@ -616,9 +617,9 @@ void CvArea::changeCitiesPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iNumCities += iChange;
-	FAssert(getNumCities() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumCities())
 	m_aiCitiesPerPlayer[eIndex] += iChange;
-	FAssert(getCitiesPerPlayer(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getCitiesPerPlayer(eIndex))
 }
 
 
@@ -633,9 +634,9 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_iTotalPopulation += iChange;
-	FAssert(getTotalPopulation() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalPopulation())
 	m_aiPopulationPerPlayer[eIndex] += iChange;
-	FAssert(getPopulationPerPlayer(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getPopulationPerPlayer(eIndex))
 	changePower(eIndex, iChange);
 }
 
@@ -654,7 +655,7 @@ void CvArea::changeBuildingGoodHealth(PlayerTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBuildingGoodHealth[eIndex] += iChange;
-		FAssert(getBuildingGoodHealth(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth(eIndex))
 
 		GET_PLAYER(eIndex).AI_makeAssignWorkDirty();
 	}
@@ -675,7 +676,7 @@ void CvArea::changeBuildingBadHealth(PlayerTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBuildingBadHealth[eIndex] += iChange;
-		FAssert(getBuildingBadHealth(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingBadHealth(eIndex))
 
 		GET_PLAYER(eIndex).AI_makeAssignWorkDirty();
 	}
@@ -732,7 +733,7 @@ void CvArea::changePower(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiPower[eIndex] += iChange;
-	FAssert(m_aiPower[eIndex] > -1);
+	FASSERT_NOT_NEGATIVE(m_aiPower[eIndex])
 }
 
 bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
@@ -939,20 +940,14 @@ void CvArea::changeNumRevealedTiles(TeamTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiNumRevealedTiles[eIndex] += iChange;
-	FAssert(getNumRevealedTiles(eIndex) >= 0);
-}
-
-
-int CvArea::getCleanPowerCount(TeamTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
-	return m_aiCleanPowerCount[eIndex];
+	FASSERT_NOT_NEGATIVE(getNumRevealedTiles(eIndex))
 }
 
 
 bool CvArea::isCleanPower(TeamTypes eIndex) const
 {
-	return (getCleanPowerCount(eIndex) > 0);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
+	return m_aiCleanPowerCount[eIndex] > 0;
 }
 
 
@@ -962,15 +957,13 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		const bool bWasCleanPower = isCleanPower(eIndex);
+		const bool bWasCleanPower = m_aiCleanPowerCount[eIndex] > 0;
 
 		m_aiCleanPowerCount[eIndex] += iChange;
 
-		// cppcheck-suppress knownConditionTrueFalse
-		if (bWasCleanPower != isCleanPower(eIndex))
+		if (bWasCleanPower != (m_aiCleanPowerCount[eIndex] > 0))
 		{
 			GET_TEAM(eIndex).updateCommerce();
-			GET_TEAM(eIndex).updatePowerHealth();
 
 			if (eIndex == GC.getGame().getActiveTeam())
 			{
@@ -1086,7 +1079,7 @@ void CvArea::changeNumTrainAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1);
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex2);
 	m_aaiNumTrainAIUnits[eIndex1][eIndex2] += iChange;
-	FAssert(getNumTrainAIUnits(eIndex1, eIndex2) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumTrainAIUnits(eIndex1, eIndex2))
 }
 
 
@@ -1103,7 +1096,7 @@ void CvArea::changeNumAIUnits(PlayerTypes eIndex1, UnitAITypes eIndex2, int iCha
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex1);
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex2);
 	m_aaiNumAIUnits[eIndex1][eIndex2] += iChange;
-	FAssert(getNumAIUnits(eIndex1, eIndex2) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumAIUnits(eIndex1, eIndex2))
 }
 
 
@@ -1130,7 +1123,7 @@ void CvArea::changeNumBonuses(BonusTypes eBonus, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 	m_paiNumBonuses[eBonus] += iChange;
-	FAssert(getNumBonuses(eBonus) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumBonuses(eBonus))
 }
 
 
@@ -1145,14 +1138,13 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eImprovement);
 	m_paiNumImprovements[eImprovement] += iChange;
-	FAssert(getNumImprovements(eImprovement) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumImprovements(eImprovement))
 }
 
 
 // Koshling - record rolling history of the last N turns of our combat losses and what we lost to
 void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType)
 {
-	MEMORY_TRACK_EXEMPT();
 
 	CombatResultRecord record;
 
@@ -1182,9 +1174,9 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
 	{
 		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		foreach_(const CombatResultRecord& record, turnResults)
 		{
-			if ((*itr).eLoser == ePlayer && (eUnit == NO_UNIT || (*itr).eDefeatedUnitType == eUnit))
+			if (record.eLoser == ePlayer && (eUnit == NO_UNIT || record.eDefeatedUnitType == eUnit))
 			{
 				totalDeaths++;
 			}
@@ -1204,10 +1196,10 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAITyp
 	{
 		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		foreach_(const CombatResultRecord& record, turnResults)
 		{
-			if ((*itr).eLoser == ePlayer
-			&& (eUnitAIType == NO_UNITAI || (*itr).eDefeatedUnitType != NO_UNIT && GC.getUnitInfo((*itr).eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType))
+			if (record.eLoser == ePlayer
+			&& (eUnitAIType == NO_UNITAI || record.eDefeatedUnitType != NO_UNIT && GC.getUnitInfo(record.eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType))
 			{
 				totalDeaths++;
 			}

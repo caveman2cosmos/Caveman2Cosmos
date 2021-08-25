@@ -97,29 +97,27 @@ int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 int CvProperties::getValueByProperty(PropertyTypes eProp) const
 {
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
-		return 0;
-	else
-		return getValue(index);
+
+	return index < 0 ? 0 : getValue(index);
 }
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 {
-	for (prop_value_const_iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	foreach_(const PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
-			return it->value;
+		if (it.prop == eProp)
+			return it.value;
 	}
 	return 0;
 }
 
 void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 {
-	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
+		if (it.prop == eProp)
 		{
-			it->value = iVal;
+			it.value = iVal;
 			return;
 		}
 	}
@@ -128,11 +126,11 @@ void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 
 void CvProperties::changeChangeByProperty(PropertyTypes eProp, int iChange)
 {
-	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
+		if (it.prop == eProp)
 		{
-			it->value += iChange;
+			it.value += iChange;
 			return;
 		}
 	}
@@ -171,17 +169,16 @@ void CvProperties::setValueByProperty(PropertyTypes eProp, int iVal)
 	//szBuffer.format("SetValueByProperty, eProp %i, iValue %i.", eProp, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
+	if (index >= 0)
 	{
-		if (iVal != 0)
-		{
-			m_aiProperty.push_back(PropertyValue(eProp,iVal));
-			if (m_pGameObject)
-				m_pGameObject->eventPropertyChanged(eProp, iVal);
-		}
-	}
-	else
 		setValue(index, iVal);
+	}
+	else if (iVal != 0)
+	{
+		m_aiProperty.push_back(PropertyValue(eProp,iVal));
+		if (m_pGameObject)
+			m_pGameObject->eventPropertyChanged(eProp, iVal);
+	}
 }
 
 void CvProperties::changeValue(int index, int iChange)
@@ -224,7 +221,7 @@ void CvProperties::changeValueByProperty(PropertyTypes eProp, int iChange)
 }
 
 // helper function for propagating change
-void callChangeValueByProperty(CvGameObject* pObject, PropertyTypes eProp, int iChange)
+void callChangeValueByProperty(const CvGameObject* pObject, PropertyTypes eProp, int iChange)
 {
 	pObject->getProperties()->changeValueByProperty(eProp, iChange);
 }
@@ -238,7 +235,7 @@ void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 		if (iChangePercent)
 		{
 			const int iPropChange = (iChange * iChangePercent) / 100;
-			m_pGameObject->foreach((GameObjectTypes)iI, bst::bind(callChangeValueByProperty, _1, eProp, iPropChange));
+			m_pGameObject->foreach((GameObjectTypes)iI, bind(callChangeValueByProperty, _1, eProp, iPropChange));
 		}
 	}
 }
@@ -291,7 +288,7 @@ void CvProperties::read(FDataStreamBase *pStream)
 	int num;
 	int eProp;
 	int iVal;
-	
+
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
@@ -434,7 +431,7 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvProperties::copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* pXML)
+void CvProperties::copyNonDefaults(const CvProperties* pProp)
 {
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
@@ -446,7 +443,7 @@ void CvProperties::copyNonDefaults(const CvProperties* pProp, CvXMLLoadUtility* 
 
 bool CvProperties::operator<(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) >= prop.getValue(index))
@@ -457,7 +454,7 @@ bool CvProperties::operator<(const CvProperties& prop) const
 
 bool CvProperties::operator<=(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) > prop.getValue(index))
@@ -468,7 +465,7 @@ bool CvProperties::operator<=(const CvProperties& prop) const
 
 bool CvProperties::operator>(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) <= prop.getValue(index))
@@ -479,7 +476,7 @@ bool CvProperties::operator>(const CvProperties& prop) const
 
 bool CvProperties::operator>=(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) < prop.getValue(index))
@@ -490,7 +487,7 @@ bool CvProperties::operator>=(const CvProperties& prop) const
 
 bool CvProperties::operator==(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) != prop.getValue(index))
@@ -501,7 +498,7 @@ bool CvProperties::operator==(const CvProperties& prop) const
 
 bool CvProperties::operator!=(const CvProperties& prop) const
 {
-	int num = prop.getNumProperties();
+	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if (getValueByProperty(prop.getProperty(index)) == prop.getValue(index))
@@ -512,7 +509,7 @@ bool CvProperties::operator!=(const CvProperties& prop) const
 
 void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if ((pProp == NULL) || (pProp->getValueByProperty(getProperty(index)) < getValue(index)))
@@ -525,7 +522,7 @@ void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
 		if ((pProp == NULL) || (pProp->getValueByProperty(getProperty(index)) > getValue(index)))
@@ -538,7 +535,7 @@ void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszCity) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
 		szBuffer.append(NEWLINE);
@@ -556,7 +553,7 @@ void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszC
 
 void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
 		CvWString szTemp;
@@ -567,7 +564,7 @@ void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 
 void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
 		szBuffer.append(NEWLINE);
@@ -580,7 +577,7 @@ void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 
 void CvProperties::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
-	int num = getNumProperties();
+	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
 		szBuffer.append(NEWLINE);

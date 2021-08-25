@@ -58,7 +58,7 @@ class CvSpaceShipScreen:
 			component = GC.getProjectInfo(i)
 			if (component.isSpaceship()):
 				self.spaceVictory = component.getVictoryPrereq()
-				self.componentProjects.append(i);
+				self.componentProjects.append(i)
 
 		#title text
 		self.finishedLabelX = 10
@@ -66,7 +66,7 @@ class CvSpaceShipScreen:
 		self.finishedLabelX2 = self.finishedLabelX
 		self.finishedLabelY2 = self.finishedLabelY + 30
 		if(self.activeProject >= 0):
-			screen.setLabel("FinishedLabel", "SpaceShipMainPanel", "<color=255,255,0><font=4>" + localText.getText("TXT_KEY_WONDER_SCREEN_TEXT", (GC.getProjectInfo(self.activeProject).getDescription(),)) + "</font></color>", 1<<0, self.finishedLabelX, self.finishedLabelY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabel("FinishedLabel", "SpaceShipMainPanel", "<color=255,255,0><font=4>" + localText.getText("TXT_KEY_WONDER_SCREEN", (GC.getProjectInfo(self.activeProject).getDescription(),)) + "</font></color>", 1<<0, self.finishedLabelX, self.finishedLabelY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			screen.setLabel("FinishedLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=4>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ADD_COMPONENT", ()) + "</font></color>", 1<<0, self.finishedLabelX2, self.finishedLabelY2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		else:
 			#check if landed on alpha centauri
@@ -192,7 +192,7 @@ class CvSpaceShipScreen:
 			if(victoryCountdown > 0):
 				victoryDate = CyGameTextMgr().getTimeStr(GC.getGame().getGameTurn() + victoryCountdown, false)
 				screen.setLabel("ArrivalLabel1", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ": " + victoryDate + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL1, self.Y_ARRIVAL_LABEL1, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				screen.setLabel("ArrivalLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()) + ": " + str(victoryCountdown) + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL2, self.Y_ARRIVAL_LABEL2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setLabel("ArrivalLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_TURNS", ()) + ": " + str(victoryCountdown) + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL2, self.Y_ARRIVAL_LABEL2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			elif(GC.getTeam(GC.getGame().getActiveTeam()).canLaunch(self.spaceVictory)):
 				delay = GC.getTeam(GC.getGame().getActiveTeam()).getVictoryDelay(self.spaceVictory)
 				screen.setLabel("LaunchLabel", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_TRAVEL_TIME_LABEL", (delay,)) + "</font></color>", 1<<0, self.X_LAUNCH_LABEL, self.Y_LAUNCH_LABEL, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -200,7 +200,7 @@ class CvSpaceShipScreen:
 
 
 		#exit button
-		screen.setButtonGFC("ExitButton", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
+		screen.setButtonGFC("ExitButton", localText.getText("TXT_WORD_EXIT", ()), "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 	def removeComponentsPanel(self):
 		screen = CyGInterfaceScreen( "SpaceShipScreen", CvScreenEnums.SPACE_SHIP_SCREEN)

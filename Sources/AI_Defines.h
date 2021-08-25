@@ -20,7 +20,7 @@
 #define AI_STRATEGY_ALERT1				(1 << 3)   // Likely attack from neighbor
 #define AI_STRATEGY_ALERT2				(1 << 4)   // Seemingly immenient attack from enemy
 #define AI_STRATEGY_TURTLE              (1 << 5)   // Defensive shell
-#define AI_STRATEGY_LAST_STAND			(1 << 6) 
+#define AI_STRATEGY_LAST_STAND			(1 << 6)
 #define AI_STRATEGY_FINAL_WAR			(1 << 7)
 // Military strategies based on analysis of trainable units
 #define AI_STRATEGY_GET_BETTER_UNITS	(1 << 8)

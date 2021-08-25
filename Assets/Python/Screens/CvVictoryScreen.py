@@ -66,44 +66,44 @@ class CvVictoryScreen:
 		eFontTitle = FontTypes.TITLE_FONT
 
 		# Build Victory screen.
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.addDDSGFC("VS_Background", CyArtFileMgr().getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, xRes, yRes, eWidGen, 0, 0)
+		screen.addDDSGFC("VS_Background", CyArtFileMgr().getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, xRes, yRes, eWidGen, 1, 2)
 		screen.addPanel("VS_TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("VS_BotPanel", "", "", True, False, 0, yRes - H_EDGE_PANEL, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
-		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_KEY_GAMEOBJECT_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_WORD_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		self.COLOR_GREEN = GC.getInfoTypeForString("COLOR_GREEN")
-		self.COLOR_YELLOW = iCol = GC.getInfoTypeForString("COLOR_YELLOW")
+		self.COLOR_GREEN = GC.getCOLOR_GREEN()
+		self.COLOR_YELLOW = iCol = GC.getCOLOR_YELLOW()
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_VICTORIES", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		dX = xRes / 4
 		x = dX / 2
-		screen.setText("VS_Tab0", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("VS_Col_Tab0", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("VS_Tab0", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setText("VS_Col_Tab0", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
 		screen.hide("VS_Col_Tab0")
 
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_SETTINGS", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		x += dX
-		screen.setText("VS_Tab1", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("VS_Col_Tab1", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("VS_Tab1", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setText("VS_Col_Tab1", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
 		screen.hide("VS_Col_Tab1")
 
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_VOTING_TITLE", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		x += dX
-		screen.setText("VS_Tab2", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("VS_Col_Tab2", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("VS_Tab2", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setText("VS_Col_Tab2", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
 		screen.hide("VS_Col_Tab2")
 
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_MEMBERS_TITLE", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		x += dX
-		screen.setText("VS_Tab3", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("VS_Col_Tab3", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("VS_Tab3", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setText("VS_Col_Tab3", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 1, 2)
 		screen.hide("VS_Col_Tab3")
 
 		if self.iTab == 0:
@@ -165,6 +165,7 @@ class CvVictoryScreen:
 			fPopPercent = 0.0
 			iTotalPop = 1
 
+		bDebugModeDLL = GAME.isDebugMode()
 		iBestPopTeam = -1
 		iBestPop = 0
 		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -172,7 +173,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iPop = CyTeamX.getTotalPopulation()
 					if iPop > iBestPop:
 						iBestPop = iPop
@@ -188,7 +189,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iScore = GAME.getTeamScore(iTeamX)
 					if iScore > iBestScore:
 						iBestScore = iScore
@@ -206,7 +207,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamLand = CyTeamX.getTotalLand()
 					if teamLand > iBestLand:
 						iBestLand = teamLand
@@ -242,7 +243,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamCulture = CyTeamX.countTotalCulture()
 					if teamCulture > iBestCulture:
 						iBestCulture = teamCulture
@@ -263,32 +264,32 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
-							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
+							if iUNTeam == iTeamAct or bDebugModeDLL or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
 							break
 
 					aiVoteBuilding.append((i, iUNTeam, bUnknown))
 
 		# Power History
-		iOurPower = 0;
-		iWorldPower = 0;
-		bestPower = 0;
+		iOurPower = 0
+		iWorldPower = 0
+		bestPower = 0
 
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			CyPlayerX = GC.getPlayer(iPlayerX)
 			if CyPlayerX.isAlive():
 				iTeamX = CyPlayerX.getTeam()
 				for i in xrange(GAME.getGameTurn()):
-					iWorldPower += CyPlayerX.getPowerHistory(i);
+					iWorldPower += CyPlayerX.getPowerHistory(i)
 
 					if iTeamAct == iTeamX:
-						iOurPower += CyPlayerX.getPowerHistory(i);
+						iOurPower += CyPlayerX.getPowerHistory(i)
 					elif iBestTeam == iTeamX:
-						bestPower += CyPlayerX.getPowerHistory(i);
+						bestPower += CyPlayerX.getPowerHistory(i)
 		if iWorldPower < 1:
-			iWorldPower = 1;
+			iWorldPower = 1
 
 		self.deleteAllWidgets()
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -296,8 +297,9 @@ class CvVictoryScreen:
 		screen.addPanel(self.getNextWidgetName(), "", "", False, False, 0, self.Y_TOP_PAGE - 6, xRes, self.H_PAGE + 6, PanelStyles.PANEL_STYLE_BLUE50)
 
 		# civ picker dropdown
-		if GAME.isDebugMode():
-			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 12, 300, eWidGen, 0, 0, FontTypes.GAME_FONT)
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
+			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for j in xrange(GC.getMAX_PLAYERS()):
 				if GC.getPlayer(j).isAlive():
 					screen.addPullDownString("VictoryScreenDropdownWidget", GC.getPlayer(j).getName(), j, j, False)
@@ -336,60 +338,60 @@ class CvVictoryScreen:
 						szVictoryType += ufont2 + "\t\t(" + TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (iMaxTurns - iTurn,)) + ")"
 
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, szVictoryType, "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont3b + CyPlayer.getName(), "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 0, iRow, szVictoryType, "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont3b + CyPlayer.getName(), "", eWidGen, 1, 2, 1<<2)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont3b + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont3b + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont3b + CyTeamBest.getName(), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont3b + CyTeamBest.getName(), "", eWidGen, 1, 2, 1<<0)
 
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CONDITION", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENTAGE", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_POINTS", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 3, iRow, ufont2b + "(" + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_RIVAL_CIV", ()) + ")", "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CONDITION", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENTAGE", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_POINTS", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 3, iRow, ufont2b + "(" + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_RIVAL_CIV", ()) + ")", "", eWidGen, 1, 2, 1<<0)
 
 					screen.appendTableRow(szTable)
 
 					# Population
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_WORLD_POP", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%i%%" % fPopPercent), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2 + (u"%i" % fPopPercent), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_POPULATION", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%i%%" % fPopPercent), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2 + (u"%i" % fPopPercent), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%i%%" % (CyTeamBest.getTotalPopulation() * 100 / iTotalPop)), "", eWidGen, 0, 01, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%i%%" % (CyTeamBest.getTotalPopulation() * 100 / iTotalPop)), "", eWidGen, 1, 21, 1<<0)
 
 					# Land
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_WORLD_LAND", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%i%%" % fLandPercent), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2 + (u"%i" % fLandPercent), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_LAND", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%i%%" % fLandPercent), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2 + (u"%i" % fLandPercent), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%i%%" % (CyTeamBest.getTotalLand() * 100 / iTotalLand)), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%i%%" % (CyTeamBest.getTotalLand() * 100 / iTotalLand)), "", eWidGen, 1, 2, 1<<0)
 
 					# Culture
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_CULTURE", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i%%" %(fCulturePercent), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(fCulturePercent), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_WORD_CULTURE", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i%%" %(fCulturePercent), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(fCulturePercent), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i%%" %(CyTeamBest.countTotalCulture() * 100 / iWorldCulture), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i%%" %(CyTeamBest.countTotalCulture() * 100 / iWorldCulture), "", eWidGen, 1, 2, 1<<0)
 
 					# Power
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_POWER", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i" %(iOurPower), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(iOurPower * 100/iWorldPower), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_POWER", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i" %(iOurPower), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(iOurPower * 100/iWorldPower), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i" %(bestPower), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i" %(bestPower), "", eWidGen, 1, 2, 1<<0)
 
 					# WonderScores
 					iTeamWonderScore = self.getTeamWonderScore(iTeamAct)
@@ -400,18 +402,18 @@ class CvVictoryScreen:
 						iTotalWorldWondersPossible = -1
 
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i  (%i of %i built)" %(iTeamWonderScore, iTotalWorldWondersBuilt, iTotalWorldWondersPossible), "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(iTeamWonderScore * 100 /iTotalWorldWondersPossible), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i  (%i of %i built)" %(iTeamWonderScore, iTotalWorldWondersBuilt, iTotalWorldWondersPossible), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(iTeamWonderScore * 100 /iTotalWorldWondersPossible), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i" %(iRivalWonderScore), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + u"%i" %(iRivalWonderScore), "", eWidGen, 1, 2, 1<<0)
 
 					# Religion
 					iRow = screen.appendTableRow(szTable)
 					iRefRow = iRow
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_RELIGION",()), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_RELIGION",()), "", eWidGen, 1, 2, 1<<0)
 
 					if iOurReligion != -1:
 						for iLoopReligion in xrange(GC.getNumReligionInfos()):
@@ -419,67 +421,67 @@ class CvVictoryScreen:
 								religionPercent = GAME.calculateReligionPercent(iLoopReligion)
 
 								iRow = screen.appendTableRow(szTable)
-								screen.setTableText(szTable, 0, iRow, ufont2 + GC.getReligionInfo(iLoopReligion).getDescription(), "", eWidGen, 0, 0, 1<<1)
-								screen.setTableText(szTable, 1, iRow, ufont2 + (u"%d%%" % religionPercent), "", eWidGen, 0, 0, 1<<0)
+								screen.setTableText(szTable, 0, iRow, ufont2 + GC.getReligionInfo(iLoopReligion).getDescription(), "", eWidGen, 1, 2, 1<<1)
+								screen.setTableText(szTable, 1, iRow, ufont2 + (u"%d%%" % religionPercent), "", eWidGen, 1, 2, 1<<0)
 
 								#Only get points for the TOP religion score.
 								if iLoopReligion == iOurReligion:
-									screen.setTableText(szTable, 2, iRow, ufont2 + (u"%d" % religionPercent), "", eWidGen, 0, 0, 1<<0)
+									screen.setTableText(szTable, 2, iRow, ufont2 + (u"%d" % religionPercent), "", eWidGen, 1, 2, 1<<0)
 
 					else:
 						iRow = screen.appendTableRow(szTable)
-						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 1, 2, 1<<0)
 
-					iReligionFound = 0;
+					iReligionFound = 0
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
 						for iLoopReligion in xrange(GC.getNumReligionInfos()):
 							if (CyTeamBest.hasHolyCity(iLoopReligion)):
-								iReligionFound = 1;
+								iReligionFound = 1
 								religionPercent = GAME.calculateReligionPercent(iLoopReligion)
 
 								iRefRow += 1
 								if iRefRow > iRow:
 									iRow = screen.appendTableRow(szTable)
-								screen.setTableText(szTable, 3, iRefRow, ufont2 + (u"%s: %i%%" %(GC.getReligionInfo(iLoopReligion).getDescription(), religionPercent)), "", eWidGen, 0, 0, 1<<0)
+								screen.setTableText(szTable, 3, iRefRow, ufont2 + (u"%s: %i%%" %(GC.getReligionInfo(iLoopReligion).getDescription(), religionPercent)), "", eWidGen, 1, 2, 1<<0)
 						if not iReligionFound:
 							iRefRow += 1
-							screen.setTableText(szTable, 3, iRefRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 0, 0, 1<<0)
+							screen.setTableText(szTable, 3, iRefRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 1, 2, 1<<0)
 
 
-					# Legendary Cultural Cities
-					iPlayerLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iTeamAct)
-					iBestTeamLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iBestTeam)
+					# Monumental Cultural Cities
+					iPlayerMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iTeamAct)
+					iBestTeamMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iBestTeam)
 
-					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerLegendaryCities + 3)]
-					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamLegendaryCities+3)]
+					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerMonumentalCities + 3)]
+					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamMonumentalCities+3)]
 
 					iRow = screen.appendTableRow(szTable)
 					iRefRow = iRow
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CITIES", ()), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CITIES", ()), "", eWidGen, 1, 2, 1<<0)
 
 					for i in xrange(len(ourBestCities)):
 						iRow = screen.appendTableRow(szTable)
-						screen.setTableText(szTable, 0, iRow, ufont2 + ourBestCities[i][1].getName() + ":", "", eWidGen, 0, 0, 1<<1)
-						screen.setTableText(szTable, 1, iRow, ufont2 + str(ourBestCities[i][0]), "", eWidGen, 0, 0, 1<<0)
-						if iPlayerLegendaryCities >= i + 1:
-							screen.setTableText(szTable, 2, iRow, ufont2 + u"%s" %(30), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 0, iRow, ufont2 + ourBestCities[i][1].getName() + ":", "", eWidGen, 1, 2, 1<<1)
+						screen.setTableText(szTable, 1, iRow, ufont2 + str(ourBestCities[i][0]), "", eWidGen, 1, 2, 1<<0)
+						if iPlayerMonumentalCities >= i + 1:
+							screen.setTableText(szTable, 2, iRow, ufont2 + u"%s" %(30), "", eWidGen, 1, 2, 1<<0)
 
 					if szUnknown:
-						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
 						for i in xrange(len(theirBestCities)):
 							iRefRow += 1
 							if iRefRow > iRow:
 								iRow = screen.appendTableRow(szTable)
-							screen.setTableText(szTable, 3, iRefRow, ufont2 + u"%s: %i" %(theirBestCities[i][1].getName(), theirBestCities[i][0]), "", eWidGen, 0, 0, 1<<0)
+							screen.setTableText(szTable, 3, iRefRow, ufont2 + u"%s: %i" %(theirBestCities[i][1].getName(), theirBestCities[i][0]), "", eWidGen, 1, 2, 1<<0)
 
 					screen.appendTableRow(szTable)
 
 					# Starship Launch Data
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_SPACESHIP", ()), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CONCEPT_SPACESHIP", ()), "", eWidGen, 1, 2, 1<<0)
 
 					if iBestTeam != -1:
 						iRivalLaunched = self.teamLaunchedShip(iBestTeam)
@@ -487,17 +489,17 @@ class CvVictoryScreen:
 					bNeedParts = False
 
 					if self.teamLaunchedShip(iTeamAct) == 1:
-						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_LAUNCHED", ()), "", eWidGen, 0, 0, 1<<0)
-						screen.setTableText(szTable, 2, iRow, ufont2 + str(100), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_LAUNCHED", ()), "", eWidGen, 1, 2, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + str(100), "", eWidGen, 1, 2, 1<<0)
 					else:
-						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED", ()), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED", ()), "", eWidGen, 1, 2, 1<<0)
 						if CyTeam.getProjectCount(GC.getInfoTypeForString("PROJECT_APOLLO_PROGRAM")) > 0:
 							bNeedParts = True
 
 					if iBestTeam != -1 and bMetHuman and iRivalLaunched == 1:
-						screen.setTableText(szTable, 3, iRow, ufont2 + u"%s" %(TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_LAUNCHED", ())), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + u"%s" %(TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_LAUNCHED", ())), "", eWidGen, 1, 2, 1<<0)
 					elif iBestTeam != -1 and bMetHuman:
-						screen.setTableText(szTable, 3, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED", ()), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED", ()), "", eWidGen, 1, 2, 1<<0)
 
 					# View spaceship button
 					iRow = screen.appendTableRow(szTable)
@@ -510,37 +512,37 @@ class CvVictoryScreen:
 								if GC.getProjectInfo(i).getVictoryThreshold(iL) > 0:
 									if GC.getProjectInfo(i).isSpaceship():
 										iRow = screen.appendTableRow(szTable)
-										screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (GC.getProjectInfo(i).getVictoryThreshold(iL), GC.getProjectInfo(i).getTextKey())), "", eWidGen, 0, 0, 1<<1)
+										screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (GC.getProjectInfo(i).getVictoryThreshold(iL), GC.getProjectInfo(i).getTextKey())), "", eWidGen, 1, 2, 1<<1)
 
 										if self.teamLaunchedShip(iTeamAct) != 1:
-											screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getProjectCount(i)), "", eWidGen, 0, 0, 1<<0)
+											screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getProjectCount(i)), "", eWidGen, 1, 2, 1<<0)
 
 					screen.appendTableRow(szTable)
 
 					# Score Totals
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont3b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_TOTALS", ()) + "</font>", "", eWidGen, 0, 0, 1<<0)
-					screen.setTableText(szTable, 2, iRow, ufont3b + "%i" % CyTeam.getTotalVictoryScore(), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont3b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_TOTALS", ()) + "</font>", "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 2, iRow, ufont3b + "%i" % CyTeam.getTotalVictoryScore(), "", eWidGen, 1, 2, 1<<0)
 
 
 					if iBestTeam != -1 and bMetHuman:
-						screen.setTableText(szTable, 3, iRow, ufont3b + "%i" % CyTeamBest.getTotalVictoryScore(), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont3b + "%i" % CyTeamBest.getTotalVictoryScore(), "", eWidGen, 1, 2, 1<<0)
 
 					screen.appendTableRow(szTable)
 					screen.appendTableRow(szTable)
 
 					# The rest of the scores
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont3b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_OTHER_CIV_SCORE",()), "", eWidGen, 0, 0, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont3b + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_OTHER_CIV_SCORE",()), "", eWidGen, 1, 2, 1<<0)
 					iRow = screen.appendTableRow(szTable)
 					for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 						if iTeamX == iTeamAct: continue
 						CyTeamX = GC.getTeam(iTeamX)
 						if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 								iRow = screen.appendTableRow(szTable)
-								screen.setTableText(szTable, 0, iRow, ufont2b + CyTeamX.getName() + ":", "", eWidGen, 0, 0, 1<<0)
-								screen.setTableText(szTable, 1, iRow, ufont2b + str(CyTeamX.getTotalVictoryScore()), "", eWidGen, 0, 0, 1<<0)
+								screen.setTableText(szTable, 0, iRow, ufont2b + CyTeamX.getName() + ":", "", eWidGen, 1, 2, 1<<0)
+								screen.setTableText(szTable, 1, iRow, ufont2b + str(CyTeamX.getTotalVictoryScore()), "", eWidGen, 1, 2, 1<<0)
 
 					return
 
@@ -572,10 +574,10 @@ class CvVictoryScreen:
 		iRow = screen.appendTableRow(szTable)
 		del xRes, dx, a18thX, iTemp1, iTemp2, iTemp3
 
-		szText = CyTeam.getName() + " - " + TRNSLTR.getText("TXT_KEY_GAMEOBJECT_TEAM", ()) + " %i" % iTeamAct
-		screen.setTableText(szTable, 1, iRow, ufont3b + szText, "", eWidGen, 0, 0, 1<<2)
+		szText = CyTeam.getName() + " - " + TRNSLTR.getText("TXT_WORD_TEAM", ()) + " %i" % iTeamAct
+		screen.setTableText(szTable, 1, iRow, ufont3b + szText, "", eWidGen, 1, 2, 1<<2)
 		szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_RIVAL_CIV", ())
-		screen.setTableText(szTable, 2, iRow, ufont3b + szText, "", eWidGen, 0, 0, 1<<2)
+		screen.setTableText(szTable, 2, iRow, ufont3b + szText, "", eWidGen, 1, 2, 1<<2)
 
 		szUnknown = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_UNKNOWN", ())
 		szTeamName = CyTeam.getName()
@@ -592,26 +594,26 @@ class CvVictoryScreen:
 				szText = ufont3b + CvVictoryInfo.getDescription()
 
 				iCategoryRow = iRow
-				screen.setTableText(szTable, 0, iRow, szText, "", eWidGen, 0, 0, 1<<1)
+				screen.setTableText(szTable, 0, iRow, szText, "", eWidGen, 1, 2, 1<<1)
 				bSpaceshipFound = False
 
 				if CvVictoryInfo.isEndScore():
 					if iMaxTurns > iTurn:
 						szText = ufont2 + TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (iMaxTurns - iTurn,))
-						screen.setTableText(szTable, 1, iRow, szText, "", eWidGen, 0, 0, 1<<2)
+						screen.setTableText(szTable, 1, iRow, szText, "", eWidGen, 1, 2, 1<<2)
 
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_HIGHEST_SCORE", (CyGameTextMgr().getTimeStr(GAME.getStartTurn() + iMaxTurns, False), ))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%d" % iOurScore), "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%d" % iOurScore), "", eWidGen, 1, 2, 1<<2)
 
 					if iBestScoreTeam != -1:
-						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestScoreTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%d" % iBestScore), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestScoreTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%d" % iBestScore), "", eWidGen, 1, 2, 1<<0)
 
 				if CvVictoryInfo.isConquest():
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL", ()), "", eWidGen, 0, 0, 1<<1)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL", ()), "", eWidGen, 1, 2, 1<<1)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_RIVALS_LEFT", ()) + " "
 					if nknown:
 						szText += str(nknown)
@@ -619,55 +621,55 @@ class CvVictoryScreen:
 						szText += szUnknown
 					else:
 						szText += TRNSLTR.getText("TXT_KEY_NONE", ())
-					screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 
 					if nVassaled:
 						szText = TRNSLTR.getText("TXT_KEY_BUG_VICTORY_VASSALED", (nVassaled,))
-						screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
 					if nRivals - nknown:
 						szText = TRNSLTR.getText("TXT_KEY_BUG_VICTORY_UNKNOWN", (nRivals - nknown,))
-						screen.setTableText(szTable, 3, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
 
 				if GAME.getAdjustedPopulationPercent(iLoopVC) > 0:
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENT_POP", (GAME.getAdjustedPopulationPercent(iLoopVC), ))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%.2f%%" % fPopPercent), "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%.2f%%" % fPopPercent), "", eWidGen, 1, 2, 1<<2)
 					if iBestPopTeam != -1:
-						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestPopTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%.2f%%" % (iBestPop * 100 / iTotalPop)), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestPopTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%.2f%%" % (iBestPop * 100 / iTotalPop)), "", eWidGen, 1, 2, 1<<0)
 
 				if GAME.getAdjustedLandPercent(iLoopVC) > 0:
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENT_LAND", (GAME.getAdjustedLandPercent(iLoopVC), ))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%.2f%%" % fLandPercent), "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+					screen.setTableText(szTable, 1, iRow, ufont2 + (u"%.2f%%" % fLandPercent), "", eWidGen, 1, 2, 1<<2)
 					if iBestLandTeam != -1:
-						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestLandTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%.2f%%" % (iBestLand * 100 / iTotalLand)), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestLandTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + (u"%.2f%%" % (iBestLand * 100 / iTotalLand)), "", eWidGen, 1, 2, 1<<0)
 
 				if CvVictoryInfo.getReligionPercent() > 0:
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION", (CvVictoryInfo.getReligionPercent(),))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
 					if iOurReligion != -1:
 						szText = GC.getReligionInfo(iOurReligion).getDescription() + u": %d%%" % ourReligionPercent
-						screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
+						screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 					else:
 						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ())
-						screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
+						screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 					if iBestReligion != -1:
 						szText = GC.getReligionInfo(iBestReligion).getDescription() + u": %d%%" % religionPercent
-						screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
 
 				if CvVictoryInfo.getTotalCultureRatio() > 0:
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE", (int((100.0 * iBestCulture) / CvVictoryInfo.getTotalCultureRatio()),))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-					screen.setTableText(szTable, 1, iRow, ufont2 + unicode(iOurCulture), "", eWidGen, 0, 0, 1<<2)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+					screen.setTableText(szTable, 1, iRow, ufont2 + unicode(iOurCulture), "", eWidGen, 1, 2, 1<<2)
 					if iBestLandTeam != -1:
-						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestCultureTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-						screen.setTableText(szTable, 3, iRow, ufont2 + unicode(iBestCulture), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestCultureTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
+						screen.setTableText(szTable, 3, iRow, ufont2 + unicode(iBestCulture), "", eWidGen, 1, 2, 1<<0)
 
 				iBestBuildingTeam = -1
 				bestBuilding = 0
@@ -675,7 +677,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+						if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 							teamBuilding = 0
 							for i in xrange(GC.getNumBuildingInfos()):
 								if GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -689,11 +691,11 @@ class CvVictoryScreen:
 						iRow = screen.appendTableRow(szTable)
 						szNumber = unicode(GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC))
 						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (szNumber, GC.getBuildingInfo(i).getTextKey()))
-						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
-						screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getBuildingCount(i)), "", eWidGen, 0, 0, 1<<2)
+						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+						screen.setTableText(szTable, 1, iRow, ufont2 + str(CyTeam.getBuildingCount(i)), "", eWidGen, 1, 2, 1<<2)
 						if iBestBuildingTeam != -1:
-							screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestBuildingTeam).getName() + ":", "", eWidGen, 0, 0, 1<<0)
-							screen.setTableText(szTable, 3, iRow, ufont2 + str(GC.getTeam(iBestBuildingTeam).getBuildingCount(i)), "", eWidGen, 0, 0, 1<<0)
+							screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestBuildingTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
+							screen.setTableText(szTable, 3, iRow, ufont2 + str(GC.getTeam(iBestBuildingTeam).getBuildingCount(i)), "", eWidGen, 1, 2, 1<<0)
 
 				iBestProjectTeam = -1
 				bestProject = -1
@@ -701,7 +703,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if (CyTeam.isHasMet(iTeamX) or GAME.isDebugMode()) and self.isApolloBuiltbyTeam(CyTeamX):
+						if (CyTeam.isHasMet(iTeamX) or bDebugModeDLL) and self.isApolloBuiltbyTeam(CyTeamX):
 							teamProject = 0
 							for i in xrange(GC.getNumProjectInfos()):
 								if GC.getProjectInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -717,23 +719,23 @@ class CvVictoryScreen:
 					if iVictoryThreshold > 0:
 						if not self.isApolloBuilt():
 							iRow = screen.appendTableRow(szTable)
-							screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_PROJECT_APOLLO_PROGRAM", ()), "", eWidGen, 0, 0, 1<<1)
-							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 0, 0, 1<<2)
+							screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_PROJECT_APOLLO_PROGRAM", ()), "", eWidGen, 1, 2, 1<<1)
+							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 1, 2, 1<<2)
 							break
 						else:
 							bApolloBuiltByActiveTeam = self.isApolloBuiltbyTeam(CyTeam)
 							if not bApolloShown:
 								bApolloShown = True
 								iRow = screen.appendTableRow(szTable)
-								screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_PROJECT_APOLLO_PROGRAM", ()), "", eWidGen, 0, 0, 1<<1)
+								screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_PROJECT_APOLLO_PROGRAM", ()), "", eWidGen, 1, 2, 1<<1)
 
 								if bApolloBuiltByActiveTeam:
-									screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szTeamName, )), "", eWidGen, 0, 0, 1<<2)
+									screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szTeamName, )), "", eWidGen, 1, 2, 1<<2)
 								else:
-									screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 0, 0, 1<<2)
+									screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 1, 2, 1<<2)
 
 								if iBestProjectTeam != -1:
-									screen.setTableText(szTable, 2, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (GC.getTeam(iBestProjectTeam).getName(), )), "", eWidGen, 0, 0, 1<<0)
+									screen.setTableText(szTable, 2, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (GC.getTeam(iBestProjectTeam).getName(), )), "", eWidGen, 1, 2, 1<<0)
 
 							iRow = screen.appendTableRow(szTable)
 							iReqTech = CvProjectInfo.getTechPrereq()
@@ -744,7 +746,7 @@ class CvVictoryScreen:
 								szNumber = unicode(CvProjectInfo.getVictoryMinThreshold(iLoopVC)) + u"-" + unicode(iVictoryThreshold)
 
 							sSSPart = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILDING", (szNumber, CvProjectInfo.getTextKey()))
-							screen.setTableText(szTable, 0, iRow, ufont2 + sSSPart, "", eWidGen, 0, 0, 1<<1)
+							screen.setTableText(szTable, 0, iRow, ufont2 + sSSPart, "", eWidGen, 1, 2, 1<<1)
 
 							if bApolloBuiltByActiveTeam:
 								bOwnProject = CyTeam.getProjectCount(i)
@@ -768,7 +770,7 @@ class CvVictoryScreen:
 								szText = sSSPlayer
 								if bHasTech:
 									szText += " - " + sSSCount
-								screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
+								screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 
 								if CvProjectInfo.isSpaceship():
 									# Add spaceship button
@@ -779,10 +781,10 @@ class CvVictoryScreen:
 									if victoryDelay > 0 and GAME.getGameState() != GameStateTypes.GAMESTATE_EXTENDED:
 										szDate = CyGameTextMgr().getTimeStr(GAME.getGameTurn() + victoryDelay, False)
 										szText = TRNSLTR.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ": " + szDate
-										screen.setTableText(szTable, 1, iCategoryRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
-										szText = TRNSLTR.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()) + ":"
-										screen.setTableText(szTable, 2, iCategoryRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
-										screen.setTableText(szTable, 3, iCategoryRow, ufont2 + str(victoryDelay), "", eWidGen, 0, 0, 1<<0)
+										screen.setTableText(szTable, 1, iCategoryRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
+										szText = TRNSLTR.getText("TXT_KEY_TURNS", ()) + ":"
+										screen.setTableText(szTable, 2, iCategoryRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
+										screen.setTableText(szTable, 3, iCategoryRow, ufont2 + str(victoryDelay), "", eWidGen, 1, 2, 1<<0)
 
 							# add AI space ship info
 							if iBestProjectTeam != -1:
@@ -804,22 +806,22 @@ class CvVictoryScreen:
 									sSSPlayer = TRNSLTR.changeTextColor(sSSPlayer, iSSColor)
 									sSSCount = TRNSLTR.changeTextColor(sSSCount, iSSColor)
 
-								screen.setTableText(szTable, 2, iRow, ufont2 + sSSPlayer, "", eWidGen, 0, 0, 1<<0)
-								screen.setTableText(szTable, 3, iRow, ufont2 + sSSCount, "", eWidGen, 0, 0, 1<<0)
+								screen.setTableText(szTable, 2, iRow, ufont2 + sSSPlayer, "", eWidGen, 1, 2, 1<<0)
+								screen.setTableText(szTable, 3, iRow, ufont2 + sSSCount, "", eWidGen, 1, 2, 1<<0)
 
 				if CvVictoryInfo.isDiploVote() and not GAME.isOption(GameOptionTypes.GAMEOPTION_UNITED_NATIONS):
 					for (iVoteBuilding, iUNTeam, bUnknown) in aiVoteBuilding:
 						iRow = screen.appendTableRow(szTable)
 						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (GC.getBuildingInfo(iVoteBuilding).getTextKey(),))
-						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
+						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
 						if iUNTeam != -1:
 							if bUnknown:
 								szName = TRNSLTR.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
 							else:
 								szName = GC.getTeam(iUNTeam).getName()
-							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName, )), "", eWidGen, 0, 0, 1<<2)
+							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName, )), "", eWidGen, 1, 2, 1<<2)
 						else:
-							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 0, 0, 1<<2)
+							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 1, 2, 1<<2)
 
 				iNumCultureCities = CvVictoryInfo.getNumCultureCities()
 				if CvVictoryInfo.getCityCulture() != CultureLevelTypes.NO_CULTURELEVEL and iNumCultureCities > 0:
@@ -832,7 +834,7 @@ class CvVictoryScreen:
 					for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
 						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and not CyPlayerX.isNPC():
-							if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or GAME.isDebugMode()):
+							if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or bDebugModeDLL):
 								theirBestCities = self.getListCultureCities(iPlayerX, CvVictoryInfo)[0:iNumCultureCities]
 
 								iTotalCulture = 0
@@ -853,7 +855,7 @@ class CvVictoryScreen:
 
 					iRow = screen.appendTableRow(szTable)
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CITY_CULTURE", (iNumCultureCities, GC.getCultureLevelInfo(CvVictoryInfo.getCityCulture()).getTextKey()))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<1)
+					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
 
 					for i in xrange(iNumCultureCities):
 						if len(ourBestCities) > i or len(theirBestCities) > i:
@@ -868,7 +870,7 @@ class CvVictoryScreen:
 									szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (ourBestCities[i][2],))
 								else:
 									szText += GC.getCultureLevelInfo(ourBestCities[i][1].getCultureLevel()).getDescription()
-								screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
+								screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 
 							if len(theirBestCities) > i:
 								szText = theirBestCities[i][1].getName() + ": "
@@ -878,7 +880,7 @@ class CvVictoryScreen:
 									szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (theirBestCities[i][2],))
 								else:
 									szText += GC.getCultureLevelInfo(theirBestCities[i][1].getCultureLevel()).getDescription()
-								screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
+								screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
 						else:
 							break
 
@@ -908,25 +910,25 @@ class CvVictoryScreen:
 		screen.enableSelect(szSettingsTable, False)
 
 		szTxt = ufont3b + TRNSLTR.getColorText("TXT_KEY_MAIN_MENU_SETTINGS", (), iCol) + "\n"
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<2)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<2)
 
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_LEADER_CIV_DESCRIPTION", (CyPlayer.getNameKey(), CyPlayer.getCivilizationShortDescriptionKey()))
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayer.getLeaderType(), CyPlayer.getCivilizationType(), True, False)
 		if szTxt:
 			szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")\n"
-			screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+			screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY", (GC.getHandicapInfo(CyPlayer.getHandicapType()).getTextKey(),))
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_GAME_SPEED", (GC.getGameSpeedInfo(GAME.getGameSpeedType()).getTextKey(),))
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		CyMap = GC.getMap()
 		szTxt = BULLET + ufont2 + CyMap.getMapScriptName()
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		if CyMap.isWrapY():
 			szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_MAP_WRAP_TOROID", ())
@@ -934,20 +936,20 @@ class CvVictoryScreen:
 			szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_MAP_WRAP_CYLINDER", ())
 		else:
 			szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_MAP_WRAP_FLAT", ())
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_SETTINGS_MAP_SIZE", (GC.getWorldInfo(CyMap.getWorldSize()).getTextKey(),))
 		szTxt += u"  (%dx%d)" %(CyMap.getGridWidth(), CyMap.getGridHeight())
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_SETTINGS_CLIMATE", (GC.getClimateInfo(CyMap.getClimate()).getTextKey(),))
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = "\t" + ufont1 + TRNSLTR.getText("TXT_KEY_SETTINGS_SEA_LEVEL", (GC.getSeaLevelInfo(CyMap.getSeaLevel()).getTextKey(),)) + "\n"
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = BULLET + TRNSLTR.getText("TXT_KEY_SETTINGS_STARTING_ERA", (GC.getEraInfo(GAME.getStartEra()).getTextKey(),))
-		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 0, 0, 1<<0)
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		screen.updateListBox(szSettingsTable)
 
@@ -958,7 +960,7 @@ class CvVictoryScreen:
 		screen.enableSelect(szOptionsTable, False)
 
 		szTxt = ufont3b + TRNSLTR.getColorText("TXT_KEY_MAIN_MENU_CUSTOM_SETUP_OPTIONS", (), iCol) + "\n"
-		screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 0, 0, 1<<2)
+		screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<2)
 
 		if GAME.isGameMultiPlayer():
 			for i in xrange(GC.getNumMPOptionInfos()):
@@ -971,19 +973,19 @@ class CvVictoryScreen:
 			if GAME.getMaxCityElimination() > 0:
 				szTxt += ufont1 + u"\t%s %d" % (TRNSLTR.getText("TXT_KEY_CITY_ELIM_TAG", ()), GAME.getMaxCityElimination()) + "n"
 
-			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 0, 0, 1<<0)
+			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
 			szTxt = BULLET + ufont2 + u"%s %d" %(TRNSLTR.getText("TXT_KEY_ADVANCED_START_POINTS", ()), GAME.getNumAdvancedStartPoints()) + "\n"
-			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 0, 0, 1<<0)
+			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		for i in xrange(GC.getNumGameOptionInfos()):
 			if GAME.isOption(i):
-				screen.appendListBoxStringNoUpdate(szOptionsTable, BULLET + ufont2 + GC.getGameOptionInfo(i).getDescription(), eWidGen, 0, 0, 1<<0)
+				screen.appendListBoxStringNoUpdate(szOptionsTable, BULLET + ufont2 + GC.getGameOptionInfo(i).getDescription(), eWidGen, 1, 2, 1<<0)
 
 		if GAME.hasSkippedSaveChecksum():
 			szTxt = ufont2 + TRNSLTR.getText("TXT_KEY_BUFFYWARNING_CHECKSUM_SKIPPED", ())
-			screen.appendListBoxStringNoUpdate(szOptionsTable, BULLET + szTxt, eWidGen, 0, 0, 1<<0)
+			screen.appendListBoxStringNoUpdate(szOptionsTable, BULLET + szTxt, eWidGen, 1, 2, 1<<0)
 
 		screen.updateListBox(szOptionsTable)
 
@@ -994,7 +996,7 @@ class CvVictoryScreen:
 		screen.enableSelect(szCivsTable, False)
 
 		szTxt = ufont3b + TRNSLTR.getColorText("TXT_KEY_RIVALS_MET", (), iCol) + "\n"
-		screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 0, 0, 1<<2)
+		screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 1, 2, 1<<2)
 
 		iTeam = CyPlayer.getTeam()
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
@@ -1005,11 +1007,11 @@ class CvVictoryScreen:
 				continue
 			if GC.getTeam(CyPlayerX.getTeam()).isHasMet(iTeam) or GAME.isDebugMode():
 				szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_LEADER_CIV_DESCRIPTION", (CyPlayerX.getNameKey(), CyPlayerX.getCivilizationShortDescriptionKey()))
-				screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 0, 0, 1<<0)
+				screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 1, 2, 1<<0)
 				szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayerX.getLeaderType(), CyPlayerX.getCivilizationType(), True, False)
 				if szTxt:
 					szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")"
-					screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 0, 0, 1<<0)
+					screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		screen.updateListBox(szCivsTable)
 
@@ -1032,7 +1034,7 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
 							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
@@ -1060,10 +1062,10 @@ class CvVictoryScreen:
 					szName = szUnknown
 				else:
 					szName = GC.getTeam(iUNTeam).getName()
-				screen.setTableText(szTable, 0, iRow, uFont + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName, )), "", eWidGen, 0, 0, 1<<2)
+				screen.setTableText(szTable, 0, iRow, uFont + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName, )), "", eWidGen, 1, 2, 1<<2)
 			else:
-				screen.setTableText(szTable, 0, iRow, szTxt, "", eWidGen, 0, 0, 1<<2)
-			screen.setTableText(szTable, 1, iRow, uFont + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (TEXT_KEY,)), "", eWidGen, 0, 0, 1<<0)
+				screen.setTableText(szTable, 0, iRow, szTxt, "", eWidGen, 1, 2, 1<<2)
+			screen.setTableText(szTable, 1, iRow, uFont + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (TEXT_KEY,)), "", eWidGen, 1, 2, 1<<0)
 
 		iNumVoteInfos = GC.getNumVoteInfos()
 		szPassed = uFont + TRNSLTR.getText("TXT_KEY_POPUP_PASSED", ())
@@ -1073,8 +1075,8 @@ class CvVictoryScreen:
 			iTeamSG = GAME.getSecretaryGeneral(i)
 			if -1 != iTeamSG:
 				iRow = screen.appendTableRow(szTable)
-				screen.setTableText(szTable, 0, iRow, uFont + GC.getTeam(iTeamSG).getName(), "", eWidGen, 0, 0, 1<<2)
-				screen.setTableText(szTable, 1, iRow, uFont + GC.getVoteSourceInfo(i).getSecretaryGeneralText(), "", eWidGen, 0, 0, 1<<0)
+				screen.setTableText(szTable, 0, iRow, uFont + GC.getTeam(iTeamSG).getName(), "", eWidGen, 1, 2, 1<<2)
+				screen.setTableText(szTable, 1, iRow, uFont + GC.getVoteSourceInfo(i).getSecretaryGeneralText(), "", eWidGen, 1, 2, 1<<0)
 
 			for iLoop in xrange(iNumVoteInfos):
 				if GAME.isChooseElection(iLoop):
@@ -1082,12 +1084,12 @@ class CvVictoryScreen:
 					if iCount > 0:
 						iRow = screen.appendTableRow(szTable)
 						if GAME.isVotePassed(iLoop):
-							screen.setTableText(szTable, 0, iRow, szPassed, "", eWidGen, 0, 0, 1<<2)
+							screen.setTableText(szTable, 0, iRow, szPassed, "", eWidGen, 1, 2, 1<<2)
 						else:
 							szTxt = TRNSLTR.getText("TXT_KEY_POPUP_ELECTION_OPTION", ("", GAME.getVoteRequired(iLoop, i), iCount))
-							screen.setTableText(szTable, 0, iRow, uFont + szTxt, "", eWidGen, 0, 0, 1<<2)
+							screen.setTableText(szTable, 0, iRow, uFont + szTxt, "", eWidGen, 1, 2, 1<<2)
 
-						screen.setTableText(szTable, 1, iRow, uFont + GC.getVoteInfo(iLoop).getDescription(), "", eWidGen, 0, 0, 1<<0)
+						screen.setTableText(szTable, 1, iRow, uFont + GC.getVoteInfo(iLoop).getDescription(), "", eWidGen, 1, 2, 1<<0)
 
 
 # BUG Additions Start
@@ -1422,7 +1424,7 @@ class CvVictoryScreen:
 		if not bWinner:
 			return -1
 		if iVoteCand > iVoteReq and bVictoryVote:
-			return GC.getInfoTypeForString("COLOR_RED")
+			return GC.getCOLOR_RED()
 		if iVoteTotal > iVoteReq:
 			return self.COLOR_GREEN
 		return -1
@@ -1467,8 +1469,8 @@ class CvVictoryScreen:
 		return []
 
 
-	def getLegendaryCities(self, iTeam):
-		iLegendaryCities = 0
+	def getMonumentalCities(self, iTeam):
+		iMonumentalCities = 0
 		iTeamCities = 0
 		iThreshold = GC.getCultureLevelInfo(GC.getNumCultureLevelInfos()-1).getSpeedThreshold(GAME.getGameSpeedType())
 
@@ -1482,11 +1484,11 @@ class CvVictoryScreen:
 					bTeam = False
 				for CyCity in CyPlayerX.cities():
 					if CyCity.getCulture(iPlayerX) > iThreshold:
-						iLegendaryCities += 1
+						iMonumentalCities += 1
 						if bTeam:
 							iTeamCities += 1
 
-		return [iTeamCities, iLegendaryCities]
+		return [iTeamCities, iMonumentalCities]
 
 
 	def getTeamWonderScore(self, iTeam):
@@ -1597,7 +1599,7 @@ class CvVictoryScreen:
 				if CvBuildingInfo.getVoteSourceType() == j:
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							return CyPlayerX.getTeam()
 		return -1
 

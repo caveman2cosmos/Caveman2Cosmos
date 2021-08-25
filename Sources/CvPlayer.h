@@ -12,6 +12,7 @@
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 #include "CvUnitList.h"
+#include "CvUnitAI.h"
 
 class CvArea;
 class CvBuildLists;
@@ -50,7 +51,7 @@ typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 typedef std::vector<TechTypes> techPath;
 
-class CvPlayer
+class CvPlayer : bst::noncopyable
 {
 public:
 	CvPlayer();
@@ -61,29 +62,6 @@ public:
 
 protected:
 	CvGameObjectPlayer m_GameObject;
-
-public:
-	// M.A.D. Nukes
-	int getMADDeterrent() const;
-	void setMADDeterrent(int iValue);
-	void changeMADDeterrent(int iValue);
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
-	int getMADOutgoing() const;
-	void setMADOutgoing(int iValue);
-	void changeMADOutgoing(int iValue);
-	bool getMADTrigger(int iValue) const;
-	void setMADTrigger(int iValue, bool bValue);
-	int getMADNukesCount() const;
-	bool isEnabledMAD() const;
-	void changeMADNukesCount(int iChange);
-protected:
-	int m_iMADDeterrent;
-	int m_iMADIncoming;
-	int m_iMADOutgoing;
-	int m_iMADNukesCount;
-	bool m_bMADTrigger[MAX_PLAYERS];
 
 public:
 
@@ -185,6 +163,8 @@ public:
 	void doTurn();
 	void doTurnUnits();
 
+	void recordHistory();
+
 	//	Dump stats to BBAI log
 	void dumpStats() const;
 	void NoteAnimalSubdued();
@@ -199,7 +179,6 @@ public:
 	void updateYield();
 	void updateMaintenance() const;
 	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
-	void updatePowerHealth();
 
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
@@ -210,7 +189,6 @@ public:
 	void updateBuildingCommerce();
 	void updateReligionCommerce();
 	void updateCorporation();
-	void updateCityPlotYield();
 	void updateCitySight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateTradeRoutes();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
@@ -224,7 +202,8 @@ public:
 	DllExport bool hasBusyUnit() const;
 
 	bool isChoosingFreeTech() const;
-	void setChoosingFreeTech(bool bValue);
+	void startChoosingFreeTech();
+	void endChoosingFreeTech();
 	void chooseTech(int iDiscover = 0, CvWString szText = CvWString(), bool bFront = false);
 
 	int calculateScore(bool bFinal = false, bool bVictory = false) const;
@@ -245,6 +224,7 @@ public:
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;
 	int countCityFeatures(FeatureTypes eFeature) const;
 	int countNumBuildings(BuildingTypes eBuilding) const;
+	bool hasBuilding(const BuildingTypes eBuilding) const;
 	int countNumCitiesConnectedToCapital() const;
 	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;
 	int countPotentialForeignTradeCitiesConnected() const;
@@ -284,7 +264,7 @@ public:
 	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
-	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 	bool isProductionMaxedBuilding(BuildingTypes building, bool bAcquireCity = false) const;
 	bool isProductionMaxedUnit(UnitTypes eUnit) const;
 	bool isProductionMaxedProject(ProjectTypes eProject) const;
@@ -294,6 +274,8 @@ public:
 	int getProductionModifier(UnitTypes eUnit) const;
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
+
+	int64_t getBaseUnitCost100(const UnitTypes eUnit) const;
 
 	int getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra = 0) const;
 	void removeBuilding(BuildingTypes building);
@@ -326,6 +308,8 @@ public:
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
 	int64_t getFinalExpense() const;
+	short getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense=0, int iExtraExpenseMod=0) const;
+	short getProfitMargin(int iExtraExpense=0, int iExtraExpenseMod=0) const;
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;
@@ -334,7 +318,6 @@ public:
 	int calculateResearchRate(TechTypes eTech = NO_TECH) const;
 	int calculateTotalCommerce() const;
 
-	bool isResearch() const;
 	bool canEverResearch(TechTypes eTech) const;
 	bool canResearch(TechTypes eTech) const;
 	TechTypes getCurrentResearch() const;
@@ -381,7 +364,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 	CvPlot* getStartingPlot() const;
-	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist);
+	void setStartingPlot(CvPlot* pNewValue, const bool bUpdateStartDist);
 
 	int getTotalPopulation() const;
 	int getAveragePopulation() const;
@@ -623,7 +606,6 @@ public:
 	void changeMaxConscript(int iChange);
 
 	int getOverflowResearch() const;
-	void setOverflowResearch(int iNewValue);
 	void changeOverflowResearch(int iChange);
 
 	int getNoUnhealthyPopulationCount() const;
@@ -1016,7 +998,7 @@ public:
 
 	CivicTypes getCivics(CivicOptionTypes eIndex) const;
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const;
-	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const;
+	int getCivicUpkeep(bool bIgnoreAnarchy = false) const;
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue);
 
 	int64_t getTreasuryUpkeep() const;
@@ -1050,9 +1032,6 @@ public:
 	CvWString getCityName(int iIndex) const;
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
-
-	void addContainersForEachMap();
-	void initContainersForMap(MapTypes mapIndex);
 
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
@@ -1698,7 +1677,7 @@ public:
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
-	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
+	virtual int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
 	virtual int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
 
 	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;
@@ -1723,10 +1702,9 @@ public:
 	virtual void AI_setExtraGoldTarget(int iNewValue) = 0;
 	virtual int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const = 0;
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
-protected:
 
-	int m_iStartingX;
-	int m_iStartingY;
+protected:
+	bst::array<XYCoords, NUM_MAPS> m_startingCoords;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
@@ -1892,7 +1870,7 @@ protected:
 
 	int m_bDoNotBotherStatus;
 
-	bool m_bChoosingFreeTech;
+	int m_iChoosingFreeTech;
 
 	PlayerTypes m_eID;
 	LeaderHeadTypes m_ePersonalityType;
@@ -2025,7 +2003,9 @@ protected:
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
+	int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
+	bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
@@ -2044,7 +2024,6 @@ protected:
 	void getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview resource layer
 	void getReligionLayerColors(ReligionTypes eSelectedReligion, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview religion layer
 	void getCultureLayerColors(std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview culture layer
-	void getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview resource layer
 
 	void processTrait(TraitTypes eTrait, int iChange);
 	void recalculateUnitCounts();
@@ -2114,7 +2093,6 @@ public:
 	void changeNationalGreatPeopleUnitRate(const UnitTypes eIndex, const int iChange);
 
 	int getMaxTradeRoutesAdjustment() const;
-	void setMaxTradeRoutesAdjustment(int iNewValue);
 	void changeMaxTradeRoutesAdjustment(int iChange);
 
 	int getNationalHurryAngerModifier() const;
@@ -2238,7 +2216,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
@@ -2370,18 +2347,7 @@ private:
 
 	std::vector<civcSwitchInstance> m_civicSwitchHistory;
 
-	static CRITICAL_SECTION	c_canConstructCacheSection;
-	static CRITICAL_SECTION	c_allCitiesPropertySection;
-	static CRITICAL_SECTION	c_buildingProcessingSection;
-	static CRITICAL_SECTION	c_GroupCycleSection;
 	static bool m_staticsInitialized;
-
-	bool m_bUpdatesDeferred;
-	bool m_bGoldenAgeStarted; // Used to defer reporting in update-deferred sections
-
-	void reportGoldenAgeStart();
-	void deferUpdates();
-	void resumeUpdates();
 
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;
@@ -2389,11 +2355,13 @@ protected:
 	void clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities = false) const;
 
 public:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	void changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
+#endif
 };
 
 #endif

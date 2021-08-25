@@ -18,10 +18,8 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GC = CyGlobalContext()
 		GAME = GC.getGame()
 		TRNSLTR = CyTranslator()
-		bDebug = GAME.isDebugMode()
-		bCheat = GAME.cheatCodesEnabled()
 
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
@@ -91,14 +89,15 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 
 			#Config
-			if bDebug or bCheat:
+			import DebugUtils
+			bDebug = DebugUtils.isAnyDebugMode()
+			if bDebug:
 				self.addLabel(screen, left, "Revolution__RevConfig", "RevConfig:")
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Misc Settings")
 				self.addCheckbox(screen, col1, "Revolution__ActivePopup")
 
 				screen.attachHSeparator(left, left + "SepRevConfig1")
 				screen.attachHSeparator(right, right + "SepRevConfig2")
-
 
 			#Barbarian Civ
 			#Standard Options
@@ -112,7 +111,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				self.addIntDropdown(screen, col3, col4, "Revolution__NewWorldErasBehind")
 				self.addLabel(screen, left, "Revolution__BarbarianCiv", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BARBCIV_STRENGTH_OPTIONS", ()))
 				col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Strength Settings")
-				self.addFloatDropdown(screen, col1, col2, "Revolution__BarbTechFrac")
+				self.addIntDropdown(screen, col1, col2, "Revolution__BarbTechPercent")
 				self.addFloatDropdown(screen, col3, col4, "Revolution__MilitaryStrength")
 
 				screen.attachHSeparator(left, left + "SepStandardBarbCiv1")
@@ -131,7 +130,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				screen.attachHSeparator(right, right + "SepDebugBarbCiv2")
 
 			#Debug Options
-			if bDebug or bCheat:
+			if bDebug:
 
 				#Revolutions
 				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):

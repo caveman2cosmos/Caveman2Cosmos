@@ -158,5 +158,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
 		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
+
+		.def("rect", &CyPlot::rect)
 	;
 }

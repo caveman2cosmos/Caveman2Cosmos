@@ -208,16 +208,12 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 import BugUtil
 
 from array	import array
 from random import random, randint, seed, shuffle
 import math
-import sys
-import time
-import os
 #import profile
 
 
@@ -855,10 +851,10 @@ def CubicInterpolate(v0, v1, v2, v3, mu):
 
 
 def BicubicInterpolate(v, muX, muY):
-	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX);
-	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX);
-	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX);
-	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX);
+	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX)
+	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX)
+	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX)
+	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX)
 	return CubicInterpolate(a0, a1, a2, a3, muY)
 
 
@@ -871,10 +867,10 @@ def CubicDerivative(v0, v1, v2, v3, mu):
 
 
 def BicubicDerivative(v, muX, muY):
-	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX);
-	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX);
-	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX);
-	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX);
+	a0 = CubicInterpolate(v[1],	 v[2],	v[3],	 v[4],	muX)
+	a1 = CubicInterpolate(v[5],	 v[6],	v[7],	 v[8],	muX)
+	a2 = CubicInterpolate(v[9],	 v[10], v[11], v[12], muX)
+	a3 = CubicInterpolate(v[13], v[14], v[15], v[16], muX)
 	return CubicDerivative(a0, a1, a2, a3, muY)
 
 
@@ -1439,9 +1435,9 @@ class AreaMap:
 				if xRightExtreme >= seg.xRight + landOffset:
 					if debugReport:
 						print "finished with line"
-					break; #past the end of the parent line and this line ends
+					break #past the end of the parent line and this line ends
 			elif lineFound == False and xRightExtreme >= seg.xRight + landOffset:
-				break; #past the end of the parent line and no line found
+				break #past the end of the parent line and no line found
 			else:
 				continue #keep looking for more line segments
 		if lineFound == True: #still a line needing to be put on stack
@@ -1568,7 +1564,7 @@ class ElevationMap(FloatMap):
 								self.data[i] = self.seaLevelThreshold
 
 
-	def GetDifferenceAroundHex(x, y):
+	def GetDifferenceAroundHex(self, x, y):
 		avg = self.GetAverageInHex(x, y, 1)
 		i = self.GetIndex(x, y)
 		return self.data[i] - avg
@@ -3247,7 +3243,7 @@ class RiverMap:
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
-				maxHeight = 0.0;
+				maxHeight = 0.0
 				for yy in range(y, y - 2, -1):
 					for xx in range(x, x + 2):
 						ii = GetIndex(xx, yy)
@@ -3322,7 +3318,7 @@ class RiverMap:
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
-				avg = 0.0;
+				avg = 0.0
 				for yy in range(y, y - 2, -1):
 					for xx in range(x, x + 2):
 						ii = GetIndex(xx, yy)
@@ -3612,9 +3608,9 @@ class BonusPlacer:
 				if (mc.BonusMaxGroupSize == -1):
 					maxAdd = (gc.getMap().getWorldSize() / 2) + 3
 				elif (mc.BonusMaxGroupSize == 0):
-					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive());
+					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive())
 				else:
-					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize);
+					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize)
 				for dx in range(-groupRange, groupRange + 1):
 					for dy in range(-groupRange, groupRange + 1):
 						 #NEW CODE - Fuyu
@@ -3660,8 +3656,8 @@ class BonusPlacer:
 
 	def AssignBonusAreas(self):
 		gc = CyGlobalContext()
-		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
+		self.areas = gameMap.areas()
 		self.bonusList = list()
 
 		#Create and shuffle the bonus list and keep tally on
@@ -3965,7 +3961,7 @@ class StartingPlotFinder:
 			gameMap = CyMap()
 			iPlayers = gc.getGame().countCivPlayersEverAlive()
 			gameMap.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = gameMap.areas()
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
@@ -4083,16 +4079,15 @@ class StartingPlotFinder:
 
 
 	def setupOldWorldAreaList(self):
-		gc = CyGlobalContext()
-		gameMap = CyMap()
+		GC = CyGlobalContext()
+		MAP = GC.getMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = CvMapGeneratorUtil.getAreas()
 		areaOldWorld = list()
-		for i in range(len(areas)):
+		for CyArea in MAP.areas():
 			for pI in range(em.length):
-				plot = gameMap.plotByIndex(pI)
-				if plot.getArea() == areas[i].getID():
+				plot = MAP.plotByIndex(pI)
+				if plot.getArea() == CyArea.getID():
 					if mc.AllowNewWorld and continentMap.areaMap.data[pI] == continentMap.newWorldID:
 						areaOldWorld.append(False)#new world True = old world False
 					else:
@@ -4222,9 +4217,9 @@ class StartingPlotFinder:
 				bProceed = True
 				if featureEnum != FeatureTypes.NO_FEATURE and buildInfo.isFeatureRemove(featureEnum):
 					if buildInfo.getFeatureTech(featureEnum) == TechTypes.NO_TECH or gc.getTechInfo(buildInfo.getFeatureTech(featureEnum)).getEra() <= max(game.getStartEra(), 1):
-						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)		+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE)
-						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)				+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD)
-						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION)
+						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)
+						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)
+						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION)
 					else:
 						bProceed = False
 				if bProceed:
@@ -4715,7 +4710,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 
 	def isRiverSide(self):

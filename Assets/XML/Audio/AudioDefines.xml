@@ -2326,14 +2326,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_SURYAVARAMAN_MIDDLE</SoundID>
-			<Filename>Sounds/Diplomacy/Suryavaraman _Middle</Filename>
+			<Filename>Sounds/Diplomacy/Suryavaraman_Middle</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_SURYAVARAMAN_LATE</SoundID>
-			<Filename>Sounds/Diplomacy/Suryavaraman_ Late</Filename>
+			<Filename>Sounds/Diplomacy/Suryavaraman_Late</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12300,22 +12300,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_ELEPHANT</SoundID>
-			<Filename>Sounds/Units/Elephant</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_HORSE</SoundID>
 			<Filename>Sounds/Units/Horse</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_GORILLA</SoundID>
-			<Filename>Sounds/Units/Gorilla</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -16759,7 +16745,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_MINE_WARFARE2</SoundID>
+			<SoundID>SND_TECH_MINE_WARFARE</SoundID>
 			<Filename>Sounds/Tech/05_Mine_Warfare</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -18056,6 +18042,20 @@
 		<SoundData>
 			<SoundID>SND_TECH_ORATORY</SoundID>
 			<Filename>Sounds/Tech/02_Oratory</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_HELIOCENTRISM</SoundID>
+			<Filename>Sounds/Tech/05_Heliocentrism</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_LEAD_GLASS</SoundID>
+			<Filename>Sounds/Tech/05_Lead_Glass</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

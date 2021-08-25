@@ -5,10 +5,7 @@
 
 # This file sets up the most likely rebel civ types to appear when a revolution occurs in a particular civ.
 
-from CvPythonExtensions import *
-import CvUtil
-
-gc = CyGlobalContext()
+from CvPythonExtensions import CyGlobalContext
 
 # Initialize list to empty.
 RebelTypeList = list()
@@ -18,53 +15,53 @@ RebelTypeList = list()
 # No limit on length of rebel list, can be empty.
 # If none of these are available, defaults to a similar art style civ.
 def setup():
-
 	global RebelTypeList
-
 	RebelTypeList = list()
 
-	for idx in range(0, gc.getNumCivilizationInfos()):
+	GC = CyGlobalContext()
+
+	for idx in range(0, GC.getNumCivilizationInfos()):
 		RebelTypeList.append(list())
 
 	try:
-		iArabia			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ARABIA')
-		iAssyria		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ASSYRIA')
-		iAztec			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_AZTEC')
-		iBabylon		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_BABYLON')
-		iByzantium		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_BYZANTIUM')
-		iCarthage		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_CARTHAGE')
-		iCelt			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_CELT')
-		iChina			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_CHINA')
-		iEgypt			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_EGYPT')
-		iEngland		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ENGLAND')
-		iEthiopia		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ETHIOPIA')
-		iFrance			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_FRANCE')
-		iGermany		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_GERMANY')
-		iGreece			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_GREECE')
-		iHittites		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_HITTITES')
-		iHolyRoman		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_HOLY_ROMAN')
-		iInca			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_INCA')
-		iIndia			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_INDIA')
-		iIroquois		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_IROQUOIS')
-		iJapan			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_JAPAN')
-		iKhmer			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_KHMER')
-		iKorea			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_KOREA')
-		iMali			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_MALI')
-		iMaya			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_MAYA')
-		iMongol			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_MONGOL')
-		iNativeAmerica	= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_NATIVE_AMERICA')
-		iNetherlands	= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_NETHERLANDS')
-		iOttoman		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_OTTOMAN')
-		iPersia			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_PERSIA')
-		iPortugal		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_PORTUGAL')
-		iRome			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ROME')
-		iRussia			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_RUSSIA')
-		iSiam			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_SIAM')
-		iSpain			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_SPAIN')
-		iSumeria		= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_SUMERIA')
-		iUnitedStates	= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_UNITED_STATES')
-		iViking			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_VIKING')
-		iZulu			= CvUtil.findInfoTypeNum(gc.getCivilizationInfo,gc.getNumCivilizationInfos(),'CIVILIZATION_ZULU')
+		iArabia			= GC.getInfoTypeForString('CIVILIZATION_ARABIA')
+		iAssyria		= GC.getInfoTypeForString('CIVILIZATION_ASSYRIA')
+		iAztec			= GC.getInfoTypeForString('CIVILIZATION_AZTEC')
+		iBabylon		= GC.getInfoTypeForString('CIVILIZATION_BABYLON')
+		iByzantium		= GC.getInfoTypeForString('CIVILIZATION_BYZANTIUM')
+		iCarthage		= GC.getInfoTypeForString('CIVILIZATION_CARTHAGE')
+		iCelt			= GC.getInfoTypeForString('CIVILIZATION_CELT')
+		iChina			= GC.getInfoTypeForString('CIVILIZATION_CHINA')
+		iEgypt			= GC.getInfoTypeForString('CIVILIZATION_EGYPT')
+		iEngland		= GC.getInfoTypeForString('CIVILIZATION_ENGLAND')
+		iEthiopia		= GC.getInfoTypeForString('CIVILIZATION_ETHIOPIA')
+		iFrance			= GC.getInfoTypeForString('CIVILIZATION_FRANCE')
+		iGermany		= GC.getInfoTypeForString('CIVILIZATION_GERMANY')
+		iGreece			= GC.getInfoTypeForString('CIVILIZATION_GREECE')
+		iHittites		= GC.getInfoTypeForString('CIVILIZATION_HITTITES')
+		iHolyRoman		= GC.getInfoTypeForString('CIVILIZATION_HOLY_ROMAN')
+		iInca			= GC.getInfoTypeForString('CIVILIZATION_INCA')
+		iIndia			= GC.getInfoTypeForString('CIVILIZATION_INDIA')
+		iIroquois		= GC.getInfoTypeForString('CIVILIZATION_IROQUOIS')
+		iJapan			= GC.getInfoTypeForString('CIVILIZATION_JAPAN')
+		iKhmer			= GC.getInfoTypeForString('CIVILIZATION_KHMER')
+		iKorea			= GC.getInfoTypeForString('CIVILIZATION_KOREA')
+		iMali			= GC.getInfoTypeForString('CIVILIZATION_MALI')
+		iMaya			= GC.getInfoTypeForString('CIVILIZATION_MAYA')
+		iMongol			= GC.getInfoTypeForString('CIVILIZATION_MONGOL')
+		iNativeAmerica	= GC.getInfoTypeForString('CIVILIZATION_NATIVE_AMERICA')
+		iNetherlands	= GC.getInfoTypeForString('CIVILIZATION_NETHERLANDS')
+		iOttoman		= GC.getInfoTypeForString('CIVILIZATION_OTTOMAN')
+		iPersia			= GC.getInfoTypeForString('CIVILIZATION_PERSIA')
+		iPortugal		= GC.getInfoTypeForString('CIVILIZATION_PORTUGAL')
+		iRome			= GC.getInfoTypeForString('CIVILIZATION_ROME')
+		iRussia			= GC.getInfoTypeForString('CIVILIZATION_RUSSIA')
+		iSiam			= GC.getInfoTypeForString('CIVILIZATION_SIAM')
+		iSpain			= GC.getInfoTypeForString('CIVILIZATION_SPAIN')
+		iSumeria		= GC.getInfoTypeForString('CIVILIZATION_SUMERIA')
+		iUnitedStates	= GC.getInfoTypeForString('CIVILIZATION_UNITED_STATES')
+		iViking			= GC.getInfoTypeForString('CIVILIZATION_VIKING')
+		iZulu			= GC.getInfoTypeForString('CIVILIZATION_ZULU')
 	except:
 		print "Error! Civ not found. -RebelTypes.py"
 

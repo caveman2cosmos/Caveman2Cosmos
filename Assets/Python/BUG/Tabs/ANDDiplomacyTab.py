@@ -16,7 +16,7 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "DiplomacySettings", "Diplomacy")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
@@ -89,4 +89,3 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 
 
 
-		

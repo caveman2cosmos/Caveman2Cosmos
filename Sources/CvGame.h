@@ -10,6 +10,7 @@
 #include "CvGameObject.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
+#include "CvAllocator.h"
 
 class CvDeal;
 class CvCity;
@@ -25,7 +26,7 @@ class CvUnit;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame
+class CvGame : bst::noncopyable
 {
 public:
 
@@ -54,7 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
-	void assignStartingPlots();
+	void assignStartingPlots(const bool bScenario = false, const bool bMapScript = false);
 	void normalizeStartingPlots();
 
 	DllExport void update();
@@ -175,8 +176,6 @@ public:
 	void setModem(bool bModem);
 
 	DllExport void reviveActivePlayer();
-	void reviveActivePlayer(PlayerTypes iPlayer);
-
 	DllExport int getNumHumanPlayers();
 
 	DllExport int getGameTurn();
@@ -213,7 +212,6 @@ public:
 
 	DllExport int getTurnSlice() const;
 	int getMinutesPlayed() const;
-	void setTurnSlice(int iNewValue);
 	void changeTurnSlice(int iChange);
 
 	int getCutoffSlice() const;
@@ -289,23 +287,11 @@ public:
 	void setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
 	void changeForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue);
 
-	int getWaterAnimalSpawnChance() const;
-	void setWaterAnimalSpawnChance(int iNewValue);
-	void changeWaterAnimalSpawnChance(int iChange);
-
 	bool getStarshipLaunched(int ID) const;
 	bool getDiplomaticVictoryAchieved(int ID) const;
 
 	int getCurrentVoteID() const;
 	void setCurrentVoteID(int iNewValue);
-
-	int getXResolution() const;
-	void setXResolution(int iNewValue);
-	void changeXResolution(int iChange);
-
-	int getYResolution() const;
-	void setYResolution(int iNewValue);
-	void changeYResolution(int iChange);
 
 	int getCutLosersCounter() const;
 	void changeCutLosersCounter(int iChange);
@@ -372,8 +358,6 @@ public:
 	bool canExitToMainMenu() const;
 
 	void loadPirateShip(CvUnit* pUnit);
-
-	bool isEarlyGame() const;
 
 	bool isAnyoneHasUnitZoneOfControl() const;
 	void toggleAnyoneHasUnitZoneOfControl();
@@ -500,7 +484,7 @@ public:
 
 	int getBuildingCreatedCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
-	void incrementBuildingCreatedCount(BuildingTypes eIndex);
+	void changeNumBuildings(const BuildingTypes eIndex, const short iChange);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;
@@ -523,10 +507,6 @@ public:
 
 	bool isSpecialBuildingValid(SpecialBuildingTypes eIndex) const;
 	void makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounce = false);
-
-	//TB Nukefix (Reversal) Comment out the next two lines
-	//bool isNukesValid() const;
-	//void makeNukesValid(bool bValid = true);
 
 	bool isInAdvancedStart() const;
 
@@ -641,7 +621,7 @@ public:
 
 	bool hasSkippedSaveChecksum() const;
 
-	void logDebugMsg(char* format, ...);
+	void logNetMsgData(char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true);
 	void changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman );
@@ -661,7 +641,7 @@ public:
 
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
-	void removePlotExtraYield(int iX, int iY);
+	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
 	int getPlotExtraCost(int iX, int iY) const;
 	void changePlotExtraCost(int iX, int iY, int iCost);
@@ -766,9 +746,6 @@ protected:
 	int m_iForcedAIAutoPlay[MAX_PLAYERS];
 
 	int m_iCurrentVoteID;
-	int m_iWaterAnimalSpawnChance;
-	int m_iXResolution;
-	int m_iYResolution;
 	int m_iCutLosersCounter;
 	int m_iHighToLowCounter;
 	int m_iIncreasingDifficultyCounter;
@@ -918,7 +895,7 @@ protected:
 
 	// AIAndy: Properties
 	CvProperties m_Properties;
-	CvMainPropertySolver m_PropertySolver;
+	CvPropertySolver m_PropertySolver;
 
 	//	Super forts adaptation to C2C - record whether this game has had its choke
 	//	points evaluated

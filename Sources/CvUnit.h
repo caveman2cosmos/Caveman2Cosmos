@@ -7,6 +7,7 @@
 
 #include "CvDLLEntity.h"
 #include "CvGameObject.h"
+#include "CvUnitComponents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -245,39 +246,46 @@ typedef std::map<PromotionTypes, PromotionKeyedInfo>::iterator PromotionIterator
 class PromotionLineKeyedInfo
 {
 public:
-	PromotionLineKeyedInfo() :	m_iCureAfflictionTypeCount(0),
-								m_iAfflictionTurnTypeCount(0),
-								m_iAfflictionLineCount(0),
-								m_iAfflictionTypeTolerance(0),
-								m_iFortitudeModifierAmount(0),
-								m_iAfflictOnAttackTypeProbability(0),
-								m_iAfflictOnAttackTypeCount(0),
-								m_iAfflictOnAttackTypeImmediateCount(0),
-								m_iAfflictOnAttackTypeAttemptedCount(0),
-								m_iDistanceAttackCommunicability(0),
-								m_bValidBuildUp(false),
-								m_iAfflictOnAttackTypeMeleeCount(0),
-								m_iAfflictOnAttackTypeDistanceCount(0)
+	PromotionLineKeyedInfo() : m_bValidBuildUp(false)
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+							 , m_iCureAfflictionTypeCount(0)
+							 , m_iAfflictionTurnTypeCount(0)
+							 , m_iAfflictionLineCount(0)
+							 , m_iAfflictionTypeTolerance(0)
+							 , m_iFortitudeModifierAmount(0)
+							 , m_iAfflictOnAttackTypeProbability(0)
+							 , m_iAfflictOnAttackTypeCount(0)
+							 , m_iAfflictOnAttackTypeImmediateCount(0)
+							 , m_iAfflictOnAttackTypeAttemptedCount(0)
+							 , m_iDistanceAttackCommunicability(0)
+							 , m_iAfflictOnAttackTypeMeleeCount(0)
+							 , m_iAfflictOnAttackTypeDistanceCount(0)
+#endif
 	{
 	}
 
 	bool Empty() const
 	{
-		return (m_iCureAfflictionTypeCount == 0 &&
-			m_iAfflictionTurnTypeCount == 0 &&
-			m_iAfflictionLineCount == 0 &&
-			m_iAfflictionTypeTolerance == 0 &&
-			m_iFortitudeModifierAmount == 0 &&
-			m_iAfflictOnAttackTypeProbability == 0 &&
-			m_iAfflictOnAttackTypeCount == 0 &&
-			m_iAfflictOnAttackTypeImmediateCount == 0 &&
-			m_iAfflictOnAttackTypeAttemptedCount == 0 &&
-			m_iDistanceAttackCommunicability == 0 &&
-			!m_bValidBuildUp &&
-			m_iAfflictOnAttackTypeMeleeCount == 0 &&
-			m_iAfflictOnAttackTypeDistanceCount == 0);
+		return !m_bValidBuildUp
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+			&& m_iCureAfflictionTypeCount == 0
+			&& m_iAfflictionTurnTypeCount == 0
+			&& m_iAfflictionLineCount == 0
+			&& m_iAfflictionTypeTolerance == 0
+			&& m_iFortitudeModifierAmount == 0
+			&& m_iAfflictOnAttackTypeProbability == 0
+			&& m_iAfflictOnAttackTypeCount == 0
+			&& m_iAfflictOnAttackTypeImmediateCount == 0
+			&& m_iAfflictOnAttackTypeAttemptedCount == 0
+			&& m_iDistanceAttackCommunicability == 0
+			&& m_iAfflictOnAttackTypeMeleeCount == 0
+			&& m_iAfflictOnAttackTypeDistanceCount == 0
+#endif
+		;
 	}
 
+	bool	m_bValidBuildUp;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int		m_iCureAfflictionTypeCount;
 	int		m_iAfflictionTurnTypeCount;
 	int		m_iAfflictionLineCount;
@@ -288,25 +296,22 @@ public:
 	int		m_iAfflictOnAttackTypeImmediateCount;
 	int		m_iAfflictOnAttackTypeAttemptedCount;
 	int		m_iDistanceAttackCommunicability;
-	bool	m_bValidBuildUp;
 	int		m_iAfflictOnAttackTypeMeleeCount;
 	int		m_iAfflictOnAttackTypeDistanceCount;
+#endif
 };
 
 class TerrainKeyedInfo
 {
 public:
-	TerrainKeyedInfo() :	m_iTerrainProtected(0),
-							m_iTerrainDoubleMoveCount(0),
-							m_iExtraTerrainAttackPercent(0),
-							m_iExtraTerrainDefensePercent(0),
-							m_iTerrainWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraTerrainWorkPercent(0),
-							m_iExtraWithdrawOnTerrainType(0)
-	{
-	}
+	TerrainKeyedInfo() :
+		m_iTerrainProtected(0),
+		m_iTerrainDoubleMoveCount(0),
+		m_iExtraTerrainAttackPercent(0),
+		m_iExtraTerrainDefensePercent(0),
+		m_iExtraTerrainWorkPercent(0),
+		m_iExtraWithdrawOnTerrainType(0)
+	{ }
 
 	bool Empty() const
 	{
@@ -314,7 +319,6 @@ public:
 			m_iTerrainDoubleMoveCount == 0 &&
 			m_iExtraTerrainAttackPercent == 0 &&
 			m_iExtraTerrainDefensePercent == 0 &&
-			m_iTerrainWorkPercent == 0 &&
 			m_iExtraTerrainWorkPercent == 0 &&
 			m_iExtraWithdrawOnTerrainType == 0);
 	}
@@ -323,10 +327,6 @@ public:
 	int	m_iTerrainDoubleMoveCount;
 	int	m_iExtraTerrainAttackPercent;
 	int	m_iExtraTerrainDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iTerrainWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraTerrainWorkPercent;
 	int m_iExtraWithdrawOnTerrainType;
 };
@@ -334,23 +334,19 @@ public:
 class FeatureKeyedInfo
 {
 public:
-	FeatureKeyedInfo() :	m_iFeatureDoubleMoveCount(0),
-							m_iExtraFeatureAttackPercent(0),
-							m_iExtraFeatureDefensePercent(0),
-							m_iFeatureWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraFeatureWorkPercent(0),
-							m_iExtraWithdrawOnFeatureType(0)
-	{
-	}
+	FeatureKeyedInfo() :
+		m_iFeatureDoubleMoveCount(0),
+		m_iExtraFeatureAttackPercent(0),
+		m_iExtraFeatureDefensePercent(0),
+		m_iExtraFeatureWorkPercent(0),
+		m_iExtraWithdrawOnFeatureType(0)
+	{ }
 
 	bool Empty() const
 	{
 		return (m_iFeatureDoubleMoveCount == 0 &&
 			m_iExtraFeatureAttackPercent == 0 &&
 			m_iExtraFeatureDefensePercent == 0 &&
-			m_iFeatureWorkPercent == 0 &&
 			m_iExtraFeatureWorkPercent == 0 &&
 			m_iExtraWithdrawOnFeatureType == 0);
 	}
@@ -358,10 +354,6 @@ public:
 	int	m_iFeatureDoubleMoveCount;
 	int	m_iExtraFeatureAttackPercent;
 	int	m_iExtraFeatureDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iFeatureWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraFeatureWorkPercent;
 	int m_iExtraWithdrawOnFeatureType;
 };
@@ -452,47 +444,94 @@ public:
 
 class CvUnit : public CvDLLEntity
 {
-
 public:
-
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
 
+	CvUnit& operator=(const CvUnit& other);
+
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
 	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
 	friend bool operator!=(const CvUnit& lhs, const CvUnit& rhs) { return &lhs != &rhs; }
 
+	DllExport void NotifyEntity(MissionTypes eMission);
+	DllExport PlayerTypes getNationality() const;
+	DllExport DomainTypes getDomainType() const;
+	DllExport bool canMove() const;
+	DllExport bool hasMoved() const;
+	DllExport BuildTypes getBuildType() const;
+	DllExport bool isFighting() const;
+	DllExport bool isAttacking() const;
+	DllExport bool isDefending() const;
+	DllExport int maxHitPoints() const;
+	DllExport bool isDead() const;
+	DllExport float maxCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) const;
+	DllExport float currCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) const;
+	DllExport bool canFight() const;
+	DllExport float airMaxCombatStrFloat(const CvUnit* pOther) const;
+	DllExport float airCurrCombatStrFloat(const CvUnit* pOther) const;
+	DllExport bool canAirAttack() const;
+	DllExport bool isWaiting() const;
+	DllExport bool isRanged() const;
+	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug = false, bool bCheckCargo = true) const;
+	DllExport int getID() const;
+	DllExport IDInfo getIDInfo() const;
+	DllExport CvSelectionGroup* getGroup() const;
+	DllExport int getHotKeyNumber();
+	DllExport int getViewportX() const;
+	DllExport int getViewportY() const;
+	DllExport bool atPlot(const CvPlot* pPlot) const;
+	DllExport CvPlot* plotExternal() const;
+	DllExport int getDamage() const;
+	DllExport int getCombatTimer() const;
+	DllExport DirectionTypes getFacingDirection(bool checkLineOfSightProperty) const;
+	DllExport bool isSuicide() const;
+	DllExport bool isPromotionReady() const;
+	DllExport bool isInfoBarDirty() const;
+	DllExport void setInfoBarDirty(bool bNewValue);
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; }
+	DllExport PlayerTypes getVisualOwner(TeamTypes eForTeam = NO_TEAM) const;
+	DllExport TeamTypes getTeam() const;
+	DllExport const UnitTypes getUnitType() const;
+	DllExport const UnitTypes getLeaderUnitType() const;
+	DllExport CvUnit* getCombatUnit() const;
+	DllExport const CvWString getName(uint uiForm = 0) const;
+	DllExport int getSubUnitsAlive() const;
+	DllExport const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra) const;
+	DllExport const TCHAR* getButton() const;
+	DllExport int getGroupSize() const;
+	DllExport int getGroupDefinitions() const;
+	DllExport int getUnitGroupRequired(int i) const;
+	DllExport bool isRenderAlways() const;
+	DllExport float getAnimationMaxSpeed() const;
+	DllExport float getAnimationPadTime() const;
+	DllExport const char* getFormationType() const;
+	DllExport bool isMechUnit() const;
+	DllExport bool isRenderBelowWater() const;
+	DllExport int getRenderPriority(UnitSubEntityTypes eUnitSubEntity, int iMeshGroupType, int UNIT_MAX_SUB_TYPES) const;
+	DllExport bool shouldShowEnemyGlow(TeamTypes eForTeam) const;
+	DllExport bool shouldShowFoundBorders() const;
+	DllExport void cheat(bool bCtrl, bool bAlt, bool bShift);
+	DllExport float getHealthBarModifier() const;
+	DllExport void getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const;
+	DllExport int getSelectionSoundScript() const;
+
 protected:
 	CvGameObjectUnit m_GameObject;
 
-public:
-	// < M.A.D. Nukes Start >
-	bool isMADEnabled() const;
-	void setMADEnabled(bool bValue);
-	CvPlot* getMADTargetPlot() const;
-	int getMADTargetPlotX() const;
-	int getMADTargetPlotY() const;
-	void setMADTargetPlot(const CvPlot* pPlot);
-	bool setMADTargetPlot(int iX, int iY);
-	bool clearMADTargetPlot();
-	PlayerTypes getMADTargetPlotOwner() const;
-	void setMADTargetPlotOwner(PlayerTypes pPlayer);
-	void doMADNukes(bool bForceRetarget);
-protected:
-	bool m_bMADEnabled;
-	int m_iMADTargetPlotX;
-	int m_iMADTargetPlotY;
-	PlayerTypes m_pMADTargetPlotOwner;
-public:
-	// < M.A.D. Nukes End   >
+	// Toffer - UnitComponents
+	UnitCompCommander*
+		m_commander;
+	UnitCompWorker*
+		m_worker;
 
+public:
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
-	void uninit();
 	void changeIdentity(UnitTypes eUnit);
 	void reset(int iID = 0, UnitTypes eUnit = NO_UNIT, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false, bool bIdentityChange = false);
 	void setupGraphical();
@@ -501,7 +540,6 @@ public:
 	void kill(bool bDelay, PlayerTypes ePlayer = NO_PLAYER, bool bMessaged = false);
 	void killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged = false); // Used internally
 
-	DllExport void NotifyEntity(MissionTypes eMission);
 
 	void doTurn();
 
@@ -577,18 +615,14 @@ public:
 	//SAD
 	int surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefender) const;
 
-	int getCanMovePeaksCount() const;
 	bool isCanMovePeaks() const;
 	void changeCanMovePeaksCount(int iChange);
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	int getCanLeadThroughPeaksCount() const;
 	bool isCanLeadThroughPeaks() const;
 	void changeCanLeadThroughPeaksCount(int iChange);
 
-	DllExport PlayerTypes getNationality() const;
 	void setNationality(PlayerTypes eNewNationality);
-	void combatWon(CvUnit* pLoser, bool bAttacking);
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
@@ -599,22 +633,17 @@ public:
 	//for combat units:
 	CvUnit* getCommander() const;
 	void tryUseCommander(); //assigns m_pUsedCommander by call to getCommander() and consumes command points from used commander.
-	bool isCommander() const; //Exposed to python
-	void setCommander(bool bNewVal); //Exposed to python
+	bool isCommander() const;
+	void setCommander(bool bNewVal);
 	void nullUsedCommander(); //delete m_pUsedCommander
 	void clearCommanderCache() ; //	Should be called prior to each turn
+	//UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
 
-	//for commander units:
-	int controlPointsLeft() const; //Exposed to python
-	int controlPoints() const; //Exposed to python
-	int commandRange() const; //Exposed to python
-	//from promotions:
-	int getExtraControlPoints() const; //control
-	void changeExtraControlPoints(int iChange);
-	int getExtraCommandRange() const; //command
-	void changeExtraCommandRange(int iChange);
+	int controlPointsLeft() const;
+	int controlPoints() const;
+	int commandRange() const;
 
 	int getZoneOfControlCount() const;
 	bool isZoneOfControl() const;
@@ -695,14 +724,14 @@ public:
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
 	bool canNuke(const CvPlot* pPlot) const;
-	bool canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar = true) const;
+	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
 	bool canRecon(const CvPlot* pPlot) const;
 	bool canReconAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool recon(int iX, int iY);
 
-	bool canAirBomb(const CvPlot* pPlot) const;
+	bool canAirBomb() const;
 	bool canAirBombAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb(int iX, int iY);
 
@@ -829,7 +858,6 @@ public:
 	SpecialUnitTypes getSpecialUnitType() const;
 	UnitTypes getCaptureUnitType() const;
 	UnitCombatTypes getUnitCombatType() const;
-	DllExport DomainTypes getDomainType() const;
 	InvisibleTypes getInvisibleType() const;
 	int getNumSeeInvisibleTypes() const;
 	InvisibleTypes getSeeInvisibleType(int i) const;
@@ -846,19 +874,18 @@ public:
 	int baseMoves() const;
 	int maxMoves() const;
 	int movesLeft() const;
-	DllExport bool canMove() const;
-	DllExport bool hasMoved() const;
 
 	int airRange() const;
 	int nukeRange() const;
 
 	bool canBuildRoute() const;
-	DllExport BuildTypes getBuildType() const;
 	ImprovementTypes getBuildTypeImprovement() const;
 
 	bool isAnimal() const;
 	bool isNoBadGoodies() const;
+
 	bool isOnlyDefensive() const;
+	void changeOnlyDefensiveCount(int iChange);
 
 	bool hasRBombardForceAbility() const;
 	int getRBombardForceAbilityCount() const;
@@ -890,16 +917,10 @@ public:
 	// TODO: roll this into the other Coexist functions
 	bool canUnitCoexistWithArrivingUnit(const CvUnit& pUnit) const;
 
-	DllExport bool isFighting() const;
-	DllExport bool isAttacking() const;
-	DllExport bool isDefending() const;
 	bool isCombat() const;
 
-	int withdrawalHP(int maxHitPoints, int iAttackerEarly) const;
-	DllExport int maxHitPoints() const;
-	int currHitPoints() const;
+	int withdrawalHP(int iMaxHitPoints, int iAttackerEarly) const;
 	bool isHurt() const;
-	DllExport bool isDead() const;
 
 	void setBaseCombatStr(int iCombat);
 	int baseCombatStr() const;
@@ -916,10 +937,7 @@ public:
 	/*** Dexy - Surround and Destroy  END  ****/
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
-	DllExport float maxCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) const;
-	DllExport float currCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 
-	DllExport bool canFight() const;
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
@@ -929,11 +947,8 @@ public:
 	float fairBaseCombatStr() const;
 	int airMaxCombatStr(const CvUnit* pOther) const;
 	int airCurrCombatStr(const CvUnit* pOther) const;
-	DllExport float airMaxCombatStrFloat(const CvUnit* pOther) const;
-	DllExport float airCurrCombatStrFloat(const CvUnit* pOther) const;
 	int combatLimit(const CvUnit* pOpponent = NULL) const;
 	int airCombatLimit(const CvUnit* pOpponent = NULL) const;
-	DllExport bool canAirAttack() const;
 	bool canAirDefend(const CvPlot* pPlot = NULL) const;
 	int airCombatDamage(const CvUnit* pDefender) const;
 	int rangeCombatDamage(const CvUnit* pDefender) const;
@@ -941,7 +956,6 @@ public:
 	CvUnit* bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const;
 
 	bool isAutomated() const;
-	DllExport bool isWaiting() const;
 	bool isFortifyable() const;
 	bool isEstablishable() const;
 	bool isEscapable() const;
@@ -953,7 +967,7 @@ public:
 	//TB Combat Mods begin
 	int fortifyRepelModifier() const;
 	//TB Combat Mods End
-	int experienceNeeded() const;
+	int experienceNeeded(int iLvlOffset = 0) const;
 	int attackXPValue() const;
 	int defenseXPValue() const;
 	int maxXPValue(const CvUnit* pVictim, bool bBarb = false) const;
@@ -961,7 +975,6 @@ public:
 	int firstStrikes() const;
 	int chanceFirstStrikes() const;
 	int maxFirstStrikes() const;
-	DllExport bool isRanged() const;
 
 	bool alwaysInvisible() const;
 	bool immuneToFirstStrikes() const;
@@ -976,7 +989,6 @@ public:
 	bool isNeverInvisible() const;
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);
-	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug = false, bool bCheckCargo = true) const;
 	bool isNukeImmune() const;
 /************************************************************************************************/
 /* REVDCM_OC                              02/16/10                                phungus420    */
@@ -1034,7 +1046,9 @@ public:
 	bool hasCombatType(UnitCombatTypes eCombatType) const;
 	bool hasSubCombatType(UnitCombatTypes eCombatType) const;
 	bool hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int fortitudeTotal() const;
+#endif
 	int aidTotal(PropertyTypes eProperty) const;
 	int dodgeTotal() const;
 	int precisionTotal() const;
@@ -1082,24 +1096,18 @@ public:
 	bool canCargoEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const;
 	int getUnitAICargo(UnitAITypes eUnitAI) const;
 
-	DllExport int getID() const;
 	int getIndex() const;
-	DllExport IDInfo getIDInfo() const;
 	void setID(int iID);
 
 	int getGroupID() const;
 	bool isInGroup() const;
 	bool isGroupHead() const;
-	DllExport CvSelectionGroup* getGroup() const;
 	bool canJoinGroup(const CvPlot* pPlot, const CvSelectionGroup* pSelectionGroup) const;
 	void joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected = false, bool bRejoin = true);
 
-	DllExport int getHotKeyNumber();
 	void setHotKeyNumber(int iNewValue);
 
-	DllExport int getViewportX() const;
 	inline int getX() const { return m_iX; }
-	DllExport int getViewportY() const;
 	inline int getY() const { return m_iY; }
 	bool isInViewport() const;
 	void setXY(int iX, int iY, bool bGroup = false, bool bUpdate = true, bool bShow = false, bool bCheckPlotVisible = false, bool bInit = false);
@@ -1107,9 +1115,7 @@ public:
 	bool at(int iX, int iY) const;
 	void addMission(const CvMissionDefinition& mission);
 
-	DllExport bool atPlot(const CvPlot* pPlot) const;
 	CvPlot* plot() const;
-	DllExport CvPlot* plotExternal() const;
 	int getArea() const;
 	CvArea* area() const;
 	bool onMap() const;
@@ -1123,7 +1129,6 @@ public:
 	int getGameTurnCreated() const;
 	void setGameTurnCreated(int iNewValue);
 
-	DllExport int getDamage() const;
 	int getHealAsDamage(UnitCombatTypes eHealAsType) const;
 	void changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, PlayerTypes ePlayer = NO_PLAYER);
 	void setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerTypes ePlayer = NO_PLAYER, bool bNotifyEntity = false);
@@ -1158,7 +1163,6 @@ public:
 	void setAttackPlot(const CvPlot* pNewValue, bool bAirCombat);
 	bool isAirCombat() const;
 
-	DllExport int getCombatTimer() const;
 	void setCombatTimer(int iNewValue);
 	void changeCombatTimer(int iChange);
 
@@ -1200,13 +1204,6 @@ public:
 	int getAlwaysInvisibleCount() const;
 	void changeAlwaysInvisibleCount(int iChange);
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
 	int getDefensiveVictoryMoveCount() const;
 	bool isDefensiveVictoryMove() const;
 	void changeDefensiveVictoryMoveCount(int iChange);
@@ -1219,14 +1216,9 @@ public:
 	bool isOffensiveVictoryMove() const;
 	void changeOffensiveVictoryMoveCount(int iChange);
 
-//Team Project (2)
 	int getOneUpCount() const;
 	bool isOneUp() const;
 	void changeOneUpCount(int iChange);
-
-	int getPillageCultureCount() const;
-	bool isPillageCulture() const;
-	void changePillageCultureCount(int iChange);
 
 	int getPillageEspionageCount() const;
 	bool isPillageEspionage() const;
@@ -1266,7 +1258,6 @@ public:
 	int getExtraDropRange() const;
 	void changeExtraDropRange(int iChange);
 
-//Team Project (2)
 	int getSurvivorChance() const;
 	void changeSurvivorChance(int iChange);
 
@@ -1276,12 +1267,8 @@ public:
 	int getVictoryHeal() const;
 	void changeVictoryHeal(int iChange);
 
-//Team Project (2)
 	int getVictoryStackHeal() const;
 	void changeVictoryStackHeal(int iChange);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 
 	int getExtraVisibilityRange() const;
 	void changeExtraVisibilityRange(int iChange);
@@ -1505,10 +1492,6 @@ public:
 	int getExtraCombatPercent() const;
 	void changeExtraCombatPercent(int iChange);
 
-	//ls612: Work Rate Modifiers
-	int getExtraWorkPercent() const;
-	void changeExtraWorkPercent(int iChange);
-
 	int getExtraCityAttackPercent() const;
 	void changeExtraCityAttackPercent(int iChange);
 
@@ -1521,15 +1504,11 @@ public:
 	int getExtraHillsDefensePercent() const;
 	void changeExtraHillsDefensePercent(int iChange);
 
-	//Team Project (4)
-	//WorkRateMod
-	int getExtraHillsWorkPercent() const;
-	void changeExtraHillsWorkPercent(int iChange);
+	// WorkRateMod
+	int getWorkModifier() const;
 	int hillsWorkModifier() const;
-
-	int getExtraPeaksWorkPercent() const;
-	void changeExtraPeaksWorkPercent(int iChange);
 	int peaksWorkModifier() const;
+	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
 
 	int getCollateralDamageProtection() const;
 	void changeCollateralDamageProtection(int iChange);
@@ -1546,12 +1525,10 @@ public:
 	int getKamikazePercent() const;
 	void changeKamikazePercent(int iChange);
 
-	DllExport DirectionTypes getFacingDirection(bool checkLineOfSightProperty) const;
 	void setFacingDirection(DirectionTypes facingDirection);
 	void rotateFacingDirectionClockwise();
 	void rotateFacingDirectionCounterClockwise();
 
-	DllExport bool isSuicide() const;
 	int getDropRange() const;
 
 	bool isMadeAttack() const;
@@ -1568,7 +1545,6 @@ public:
 	bool isMadeInterception() const;
 	void setMadeInterception(bool bNewValue);
 
-	DllExport bool isPromotionReady() const;
 	void setPromotionReady(bool bNewValue);
 	void testPromotionReady();
 
@@ -1578,17 +1554,11 @@ public:
 
 	bool isCombatFocus() const;
 
-	DllExport bool isInfoBarDirty() const;
-	DllExport void setInfoBarDirty(bool bNewValue);
-
 	bool isBlockading() const;
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
 
-	DllExport inline PlayerTypes getOwner() const { return m_eOwner; }
-	DllExport PlayerTypes getVisualOwner(TeamTypes eForTeam = NO_TEAM) const;
 	PlayerTypes getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) const;
-	DllExport TeamTypes getTeam() const;
 
 	PlayerTypes getCapturingPlayer() const;
 	void setCapturingPlayer(PlayerTypes eNewValue);
@@ -1596,13 +1566,10 @@ public:
 	CvUnit* getCapturingUnit() const;
 	void setCapturingUnit(const CvUnit* pCapturingUnit);
 
-	DllExport const UnitTypes getUnitType() const;
 	const CvUnitInfo& getUnitInfo() const;
 
-	DllExport const UnitTypes getLeaderUnitType() const;
 	void setLeaderUnitType(UnitTypes leaderUnitType);
 
-	DllExport CvUnit* getCombatUnit() const;
 	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bStealthAttack = false, bool bStealthDefense = false);
 	bool showSeigeTower(const CvUnit* pDefender) const; // K-Mod
 
@@ -1613,7 +1580,6 @@ public:
 	int getExtraDomainModifier(DomainTypes eIndex) const;
 	void changeExtraDomainModifier(DomainTypes eIndex, int iChange);
 
-	DllExport const CvWString getName(uint uiForm = 0) const;
 // BUG - Unit Name - start
 	bool isDescInName() const;
 // BUG - Unit Name - end
@@ -1642,19 +1608,10 @@ public:
 	int getExtraFeatureDefensePercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange);
 
-	//ls612: Terrain Work Modifiers
-//Team Project (4)
-//WorkRateMod
-	int getTerrainWorkPercent(TerrainTypes eIndex) const;
-	//void changeTerrainWorkPercent (TerrainTypes eIndex, int iChange);
-	int getFeatureWorkPercent(FeatureTypes eIndex) const;
-	//void changeFeatureWorkPercent(FeatureTypes eIndex, int iChange);
 	int getExtraTerrainWorkPercent(TerrainTypes eIndex) const;
 	void changeExtraTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getExtraFeatureWorkPercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureWorkPercent(FeatureTypes eIndex, int iChange);
-	int getExtraBuildWorkPercent(BuildTypes eIndex) const;
-	void changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange);
 	int terrainWorkPercent(TerrainTypes eIndex) const;
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
@@ -1695,7 +1652,6 @@ public:
 	UnitCombatTypes getBestHealingTypeConst() const;
 
 	int getSubUnitCount() const;
-	DllExport int getSubUnitsAlive() const;
 	int getSubUnitsAlive(int iDamage) const;
 
 	bool isTargetOf(const CvUnit& attacker) const;
@@ -1715,7 +1671,6 @@ public:
 	void setImmobileTimer(int iNewValue);
 	void changeImmobileTimer(int iChange);
 
-//Team Project (2)
 	bool isCanRespawn() const;
 	void setCanRespawn(bool bNewValue);
 
@@ -1729,29 +1684,8 @@ public:
 
 	bool verifyStackValid();
 
-	DllExport const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra) const;
-	DllExport const TCHAR* getButton() const;
-	DllExport int getGroupSize() const;
-	DllExport int getGroupDefinitions() const;
-	DllExport int getUnitGroupRequired(int i) const;
-	DllExport bool isRenderAlways() const;
-	DllExport float getAnimationMaxSpeed() const;
-	DllExport float getAnimationPadTime() const;
-	DllExport const char* getFormationType() const;
-	DllExport bool isMechUnit() const;
-	DllExport bool isRenderBelowWater() const;
-	DllExport int getRenderPriority(UnitSubEntityTypes eUnitSubEntity, int iMeshGroupType, int UNIT_MAX_SUB_TYPES) const;
-
-	DllExport bool shouldShowEnemyGlow(TeamTypes eForTeam) const;
-	DllExport bool shouldShowFoundBorders() const;
-
-	DllExport void cheat(bool bCtrl, bool bAlt, bool bShift);
-	DllExport float getHealthBarModifier() const;
-	DllExport void getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const;
-	DllExport int getSelectionSoundScript() const;
-
 // Dale - AB: Bombing START
-	bool canAirBomb1(const CvPlot* pPlot) const;
+	bool canAirBomb1() const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb1(int iX, int iY);
 	bool canAirBomb2(const CvPlot* pPlot) const;
@@ -1816,18 +1750,19 @@ public:
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
-	virtual bool isWaitingOnUnitAI(int iIndex) = 0;
+	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	PlayerTypes m_eOriginalOwner;
 
+	bool isWorker() const;
+
 protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
 	int m_iHealUnitCombatCount;
-	std::vector<int> m_aiExtraBuildTypes;
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
@@ -1839,11 +1774,6 @@ protected:
 
 	bool m_bHiddenNationality;
 	bool m_bHasHNCapturePromotion;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iCanMovePeaksCount;
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
@@ -1854,7 +1784,6 @@ protected:
 	PlayerTypes m_eNationality;
 	CombatResult m_combatResult;
 	int m_iSleepTimer;
-	bool m_bCommander;
 	int m_iZoneOfControlCount;
 
 	bool m_bAutoPromoting;
@@ -1862,18 +1791,11 @@ protected:
 	IDInfo m_shadowUnit;
 	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
-	int m_iExtraControlPoints;
-	int m_iExtraCommandRange;
-	//auxillary members:
-	int m_iControlPointsLeft;
 	int m_iCommanderID; //id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
 	mutable int m_iCachedCommander;
 #define	NO_COMMANDER_ID	-2	//	Pseudo-id used to signify an assertion that the unit has no commander
 	int m_iPreCombatDamage;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	int m_iID;
 	int m_iGroupID;
@@ -1907,17 +1829,11 @@ protected:
 	int m_iHillsDoubleMoveCount;
 	int m_iImmuneToFirstStrikesCount;
 	int m_iAlwaysInvisibleCount;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	int m_iDefensiveVictoryMoveCount;
 	int m_iFreeDropCount;
 	int m_iOffensiveVictoryMoveCount;
-//Team Project (2)
+
 	int m_iOneUpCount;
 	int m_iPillageCultureCount;
 	int m_iPillageEspionageCount;
@@ -1931,15 +1847,12 @@ protected:
 	int m_iCollateralDamageMaxUnitsChange;
 	int m_iCombatLimitChange;
 	int m_iExtraDropRange;
-//Team Project (2)
+
 	int m_iSurvivorChance;
 	int m_iVictoryAdjacentHeal;
 	int m_iVictoryHeal;
-//Team Project (2)
 	int m_iVictoryStackHeal;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 	int m_iExtraVisibilityRange;
 	int m_iExtraMoves;
 	int m_iExtraMoveDiscount;
@@ -2077,10 +1990,10 @@ protected:
 	int m_iSMCargoVolume;
 	int m_iSMExtraCargoVolume;
 	int m_iSMCargoVolumeModifier;
-//Team Project (3)
+
 	int m_iExtraCaptureProbabilityModifier;
 	int m_iExtraCaptureResistanceModifier;
-	//
+
 	int m_iExtraBreakdownChance;
 	int m_iExtraBreakdownDamage;
 	int m_iExtraTaunt;
@@ -2097,8 +2010,6 @@ protected:
 	int m_iUpkeepMultiplierSM;
 	int m_iUpkeep100;
 
-	int m_iExtraPowerValue;
-	int m_iExtraAssetValue;
 	int m_iSMAssetValue;
 	int m_iSMPowerValue;
 	int m_iSMHPValue;
@@ -2126,17 +2037,11 @@ protected:
 	int m_iSameTileHeal;
 	int m_iAdjacentTileHeal;
 	int m_iExtraCombatPercent;
-	//ls612: Work Rate Modifiers
-	int m_iExtraWorkPercent;
 	int m_iExtraCityAttackPercent;
 	int m_iExtraCityDefensePercent;
 	int m_iExtraHillsAttackPercent;
 	int m_iExtraHillsDefensePercent;
-	//Team Project (4)
-	//WorkRateMod
-	int m_iExtraHillsWorkPercent;
-	int m_iExtraPeaksWorkPercent;
-	//
+
 	int m_iRevoltProtection;
 	int m_iCollateralDamageProtection;
 	int m_iPillageChange;
@@ -2146,19 +2051,9 @@ protected:
 	int m_iBaseCombat;
 	DirectionTypes m_eFacingDirection;
 	int m_iImmobileTimer;
-//Team Project (2)
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 21.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	bool m_bCanRespawn;
 	bool m_bSurvivor;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 
 	bool m_bMadeAttack;
 	//TB Combat Mods (Att&DefCounters)
@@ -2199,10 +2094,6 @@ protected:
 	int* m_aiNegatesInvisibleCount;
 	int* m_aiExtraVisibilityIntensitySameTile;
 
-//Team Project (4)
-	//WorkRateMod
-	std::map<short, short> m_extraBuildWorkPercent;
-
 	CvWString m_szName;
 	CvString m_szScriptData;
 
@@ -2236,9 +2127,9 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
+	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
 		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
-		CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL, bool bSamePlot = false) const;
+		CombatDetails* pTheirDetails = NULL, const CvUnit* pDefender = NULL, bool bSamePlot = false) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
@@ -2251,7 +2142,6 @@ protected:
 	float doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
 
-protected:
 	const PromotionKeyedInfo*	findPromotionKeyedInfo(PromotionTypes ePromotion) const;
 	PromotionKeyedInfo*	findOrCreatePromotionKeyedInfo(PromotionTypes ePromotion, bool bCreate = true);
 	const PromotionLineKeyedInfo*	findPromotionLineKeyedInfo(PromotionLineTypes ePromotionLine) const;
@@ -2281,7 +2171,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const = 0;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints) = 0;
 	virtual bool AI_getHasAttacked() const = 0;
-	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const = 0;
+	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const = 0;
 
 	bool isUsingDummyEntities() const;
 	static bool isDummyEntity(const CvEntity* entity);
@@ -2299,6 +2189,7 @@ private:
 public:
 	bool isArcher() const;
 	bool isPromotionOverriden(PromotionTypes ePromotionType) const;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const;
 	bool CureAffliction(PromotionLineTypes eAfflictionLine);
 	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
@@ -2326,7 +2217,7 @@ public:
 	int getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const;
 	void changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
-
+#endif
 	int getCityRepel() const;
 
 #ifdef STRENGTH_IN_NUMBERS
@@ -2457,9 +2348,10 @@ public:
 	void setCombatRepels(int iNewValue);
 	void changeCombatRepels(int iChange);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	void checkForCritical(int iDamage, CvUnit* pOpponent);
 	void assignCritical(CvUnit* pOpponent);
-
+#endif
 	bool canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree = false, bool bMessageOnFalse = false) const;
 	bool isPromotionFree(PromotionTypes ePromotion) const;
 	int getPromotionFreeCount(PromotionTypes ePromotion) const;
@@ -2562,6 +2454,7 @@ public:
 
 	bool canInflictCritical(PromotionTypes eCritical) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const;
 	bool hasAfflictionLine(PromotionLineTypes ePromotionLineType) const;
 	void changeAfflictionLineCount(PromotionLineTypes ePromotionLineType, int iChange);
@@ -2599,6 +2492,7 @@ public:
 	void setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 
 	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
@@ -2739,23 +2633,16 @@ public:
 	int getExtraMaxHP() const;
 	void changeExtraMaxHP(int iChange);
 	void setExtraMaxHP(int iChange);
-	int maxHPTotal() const;
+	int getMaxHP() const;
+	int getHP() const;
 	int HPValueTotalPreCheck() const;
 	int getSMHPValue() const;
 	void setSMHPValue();
 
-	int getExtraPowerValue() const;
-	void changeExtraPowerValue(int iChange);
 	int getPowerValueTotal() const;
-	int getSMPowerValueTotalBase() const;
-	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 
-	int getExtraAssetValue() const;
-	void changeExtraAssetValue(int iChange);
 	int assetValueTotal() const;
-	int assetValueTotalPreCheck() const;
-	int getSMAssetValue() const;
 	void setSMAssetValue(bool bForLoad = false);
 
 	int getCargoVolumeModifier() const;
@@ -2853,6 +2740,7 @@ public:
 	void changeBombardDirectCount(int iChange);
 
 	static int applySMRank(int value, int rankChange, int rankMultiplier);
+	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;
@@ -2890,33 +2778,24 @@ public:
 	void processLoadedSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 
 	bool hasBuild(BuildTypes eBuild) const;
-	bool isExtraBuild(BuildTypes eBuild) const;
-	int getExtraBuildType(int i) const;
-	int getNumExtraBuildTypes() const;
 	void changeExtraBuildType(bool bChange, BuildTypes eBuild);
 
 	bool isExcile() const;
-	int getExcileCount() const;
 	void changeExcileCount(int iChange);
 
 	bool isPassage() const;
-	int getPassageCount() const;
 	void changePassageCount(int iChange);
 
 	bool isNoNonOwnedCityEntry() const;
-	int getNoNonOwnedCityEntryCount() const;
 	void changeNoNonOwnedCityEntryCount(int iChange);
 
 	bool isBarbCoExist() const;
-	int getBarbCoExistCount() const;
 	void changeBarbCoExistCount(int iChange);
 
 	bool isBlendIntoCity() const;
-	int getBlendIntoCityCount() const;
 	void changeBlendIntoCityCount(int iChange);
 
 	bool isUpgradeAnywhere() const;
-	int getUpgradeAnywhereCount() const;
 	void changeUpgradeAnywhereCount(int iChange);
 
 	bool hasVisibilityType(InvisibleTypes eInvisibleType) const;
@@ -2986,11 +2865,12 @@ public:
 	void changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement, int iChange);
 	int extraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumExtraAidChanges() const;
 	AidStruct& getExtraAidChange(int iIndex);
 	void changeExtraAidChange(PropertyTypes eProperty, int iChange);
 	int extraAidChange(PropertyTypes eProperty) const;
-
+#endif
 	void deleteVisibility();
 	void addVisibility();
 
@@ -3041,9 +2921,6 @@ public:
 
 	void reveal();
 	bool isRevealed() const;
-
-	int getOnlyDefensiveCount() const;
-	void changeOnlyDefensiveCount(int iChange);
 
 	void doSetDefaultStatuses();
 
@@ -3114,10 +2991,11 @@ public:
 
 	void makeWanted(const CvCity* pCity);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const;
 	void changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange);
 	void setDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iValue);
-
+#endif
 	void setCityOfOrigin(CvCity* pCity);
 	void clearCityOfOrigin();
 	CvCity* getCityOfOrigin() const;
@@ -3234,6 +3112,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canRBombard);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isNukeImmune);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);
@@ -3260,7 +3139,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
-		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isMADEnabled);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, cargoSpace);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getFortifyTurns);
@@ -3290,10 +3168,12 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canClaimTerritory, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+#endif
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, aidTotal, PropertyTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, isEnemy, TeamTypes);
 

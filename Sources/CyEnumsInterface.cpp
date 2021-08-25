@@ -176,7 +176,7 @@ void CyEnumsPythonInterface()
 		.value("INTERFACEMODE_RANGE_ATTACK", INTERFACEMODE_RANGE_ATTACK)
 		.value("INTERFACEMODE_AIRSTRIKE", INTERFACEMODE_AIRSTRIKE)
 		.value("INTERFACEMODE_REBASE", INTERFACEMODE_REBASE)
-		.value("INTERFACEMODE_PYTHON_PICK_PLOT", INTERFACEMODE_PYTHON_PICK_PLOT)
+		.value("INTERFACEMODE_DOTMAP", INTERFACEMODE_DOTMAP)
 		.value("INTERFACEMODE_SAVE_PLOT_NIFS", INTERFACEMODE_SAVE_PLOT_NIFS)
 
 		.value("INTERFACEMODE_AIRBOMB1", INTERFACEMODE_AIRBOMB1)
@@ -187,14 +187,9 @@ void CyEnumsPythonInterface()
 		.value("INTERFACEMODE_BOMBARD", INTERFACEMODE_BOMBARD)
 		.value("INTERFACEMODE_FENGAGE", INTERFACEMODE_FENGAGE)
 
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 		.value("INTERFACEMODE_GO_TO_SENTRY", INTERFACEMODE_GO_TO_SENTRY)
 #endif
-// BUG - Sentry Actions - end
-		// < M.A.D. Nukes Start >
-		.value("INTERFACEMODE_PRETARGET_NUKE", INTERFACEMODE_PRETARGET_NUKE)
-		// < M.A.D. Nukes End   >
 		.value("INTERFACEMODE_SHADOW_UNIT", INTERFACEMODE_SHADOW_UNIT)
 
 		.value("NUM_INTERFACEMODE_TYPES", NUM_INTERFACEMODE_TYPES)
@@ -340,7 +335,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_RELIGION_CITY", WIDGET_HELP_RELIGION_CITY)
 		.value("WIDGET_HELP_CORPORATION_CITY", WIDGET_HELP_CORPORATION_CITY)
 		.value("WIDGET_HELP_NATIONALITY", WIDGET_HELP_NATIONALITY)
-		.value("WIDGET_HELP_DEFENSE", WIDGET_HELP_DEFENSE)
+		.value("WIDGET_UNUSED_40", WIDGET_UNUSED_40)
 		.value("WIDGET_HELP_HEALTH", WIDGET_HELP_HEALTH)
 		.value("WIDGET_HELP_HAPPINESS", WIDGET_HELP_HAPPINESS)
 		.value("WIDGET_HELP_POPULATION", WIDGET_HELP_POPULATION)
@@ -391,7 +386,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_FOUND_RELIGION", WIDGET_HELP_FOUND_RELIGION)
 		.value("WIDGET_HELP_FOUND_CORPORATION", WIDGET_HELP_FOUND_CORPORATION)
 		.value("WIDGET_HELP_FINANCE_NUM_UNITS", WIDGET_HELP_FINANCE_NUM_UNITS)
-		.value("WIDGET_UNUSED_50", WIDGET_UNUSED_50)
+		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
 		.value("WIDGET_HELP_FINANCE_AWAY_SUPPLY", WIDGET_HELP_FINANCE_AWAY_SUPPLY)
 		.value("WIDGET_HELP_FINANCE_CITY_MAINT", WIDGET_HELP_FINANCE_CITY_MAINT)
 		.value("WIDGET_HELP_FINANCE_CIVIC_UPKEEP", WIDGET_HELP_FINANCE_CIVIC_UPKEEP)
@@ -423,12 +418,12 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_PEDIA_JUMP_TO_FEATURE", WIDGET_PEDIA_JUMP_TO_FEATURE)
 		.value("WIDGET_TURN_EVENT", WIDGET_TURN_EVENT)
 		.value("WIDGET_FOREIGN_ADVISOR", WIDGET_FOREIGN_ADVISOR)
-		.value("WIDGET_REVOLUTION", WIDGET_REVOLUTION)
+		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 		.value("WIDGET_PEDIA_DESCRIPTION", WIDGET_PEDIA_DESCRIPTION)
 		.value("WIDGET_PEDIA_DESCRIPTION_NO_HELP", WIDGET_PEDIA_DESCRIPTION_NO_HELP)
 		.value("WIDGET_DEAL_KILL", WIDGET_DEAL_KILL)
 		.value("WIDGET_MINIMAP_HIGHLIGHT", WIDGET_MINIMAP_HIGHLIGHT)
-		.value("WIDGET_PRODUCTION_MOD_HELP", WIDGET_PRODUCTION_MOD_HELP)
+		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
 		.value("WIDGET_LEADERHEAD", WIDGET_LEADERHEAD)
 		.value("WIDGET_LEADER_LINE", WIDGET_LEADER_LINE)
 		.value("WIDGET_COMMERCE_MOD_HELP", WIDGET_COMMERCE_MOD_HELP)
@@ -465,9 +460,6 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_TRAIT", WIDGET_HELP_TRAIT)
 		.value("WIDGET_PEDIA_JUMP_TO_TRAIT", WIDGET_PEDIA_JUMP_TO_TRAIT)
 		.value("WIDGET_CITY_GOTO", WIDGET_CITY_GOTO)
-		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
-		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
-		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 
 		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES)
 		;
@@ -673,6 +665,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_CHALLENGE_CUT_LOSERS", GAMEOPTION_CHALLENGE_CUT_LOSERS)
 		.value("GAMEOPTION_CHALLENGE_HIGH_TO_LOW", GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 		.value("GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY", GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
+		.value("GAMEOPTION_ADVANCED_ROUTES", GAMEOPTION_ADVANCED_ROUTES)
 		;
 
 	python::enum_<MultiplayerOptionTypes>("MultiplayerOptionTypes")
@@ -1048,14 +1041,8 @@ void CyEnumsPythonInterface()
 		.value("NO_UNITCOMBAT", NO_UNITCOMBAT)
 		;
 
-	//TB Promotion Line Mod begin
 	python::enum_<PromotionLineTypes>("PromotionLineTypes")
 		.value("NO_PROMOTIONLINE", NO_PROMOTIONLINE)
-		;
-	//TB Promotion Line Mod end
-
-	python::enum_<MapCategoryTypes>("MapCategoryTypes")
-		.value("NO_MAPCATEGORY", NO_MAPCATEGORY)
 		;
 
 	python::enum_<IdeaClassTypes>("IdeaClassTypes")
@@ -1264,8 +1251,6 @@ void CyEnumsPythonInterface()
 		.value("MISSION_SHADOW", MISSION_SHADOW)
 		.value("MISSION_WAIT_FOR_TECH", MISSION_WAIT_FOR_TECH)
 
-		// < M.A.D. Nukes Start >
-		.value("MISSION_PRETARGET_NUKE", MISSION_PRETARGET_NUKE)
 		.value("MISSION_BUTCHER", MISSION_BUTCHER)
 		.value("MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE", MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE)
 		.value("MISSION_DIPLOMAT_PRAISE_IND_PEOPLE", MISSION_DIPLOMAT_PRAISE_IND_PEOPLE)
@@ -1382,12 +1367,10 @@ void CyEnumsPythonInterface()
 		.value("CONTROL_PING", CONTROL_PING)
 		.value("CONTROL_SIGN", CONTROL_SIGN)
 		.value("CONTROL_GRID", CONTROL_GRID)
-		.value("CONTROL_BARE_MAP", CONTROL_BARE_MAP)
 		.value("CONTROL_YIELDS", CONTROL_YIELDS)
 		.value("CONTROL_RESOURCE_ALL", CONTROL_RESOURCE_ALL)
 		.value("CONTROL_UNIT_ICONS", CONTROL_UNIT_ICONS)
 		.value("CONTROL_GLOBELAYER", CONTROL_GLOBELAYER)
-		.value("CONTROL_SCORES", CONTROL_SCORES)
 		.value("CONTROL_LOAD_GAME", CONTROL_LOAD_GAME)
 		.value("CONTROL_OPTIONS_SCREEN", CONTROL_OPTIONS_SCREEN)
 		.value("CONTROL_RETIRE", CONTROL_RETIRE)
@@ -1646,11 +1629,6 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_TECH", CONTACT_TRADE_TECH)
 		.value("CONTACT_TRADE_BONUS", CONTACT_TRADE_BONUS)
 		.value("CONTACT_TRADE_MAP", CONTACT_TRADE_MAP)
-/************************************************************************************************/
-/* Afforess	                  Start		 08/01/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
 		.value("CONTACT_PEACE_PRESSURE", CONTACT_PEACE_PRESSURE)
 		.value("CONTACT_EMBASSY", CONTACT_EMBASSY)
 		.value("CONTACT_TRADE_STOP_TRADING", CONTACT_TRADE_STOP_TRADING)
@@ -1661,9 +1639,7 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_CONTACTS", CONTACT_TRADE_CONTACTS)
 		.value("CONTACT_TRADE_CORPORATION", CONTACT_TRADE_CORPORATION)
 		.value("CONTACT_TRADE_BUY_WAR", CONTACT_TRADE_BUY_WAR)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.value("NUM_CONTACT_TYPES", NUM_CONTACT_TYPES)
 		;
 
@@ -1701,20 +1677,13 @@ void CyEnumsPythonInterface()
 		.value("MEMORY_EVENT_GOOD_TO_US", MEMORY_EVENT_GOOD_TO_US)
 		.value("MEMORY_EVENT_BAD_TO_US", MEMORY_EVENT_BAD_TO_US)
 		.value("MEMORY_LIBERATED_CITIES", MEMORY_LIBERATED_CITIES)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.value("MEMORY_RECALLED_AMBASSADOR", MEMORY_RECALLED_AMBASSADOR)
 		.value("MEMORY_WARMONGER", MEMORY_WARMONGER)
 		.value("MEMORY_MADE_PEACE", MEMORY_MADE_PEACE)
 		.value("MEMORY_INQUISITION", MEMORY_INQUISITION)
 		.value("MEMORY_SACKED_CITY", MEMORY_SACKED_CITY)
 		.value("MEMORY_SACKED_HOLY_CITY", MEMORY_SACKED_HOLY_CITY)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.value("NUM_MEMORY_TYPES", NUM_MEMORY_TYPES)
 		;
 
@@ -2259,17 +2228,11 @@ void CyEnumsPythonInterface()
 		.value("ADVANCEDSTARTACTION_AUTOMATE", ADVANCEDSTARTACTION_AUTOMATE)
 		;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	python::enum_<ModderOptionTypes>("ModderOptionTypes")
 		.value("NO_MODDEROPTION", NO_MODDEROPTION)
 
 		.value("MODDEROPTION_FLEXIBLE_DIFFICULTY", MODDEROPTION_FLEXIBLE_DIFFICULTY)
-		.value("MODDEROPTION_SHOW_COASTAL_BUILDINGS", MODDEROPTION_SHOW_COASTAL_BUILDINGS)
-		.value("MODDEROPTION_HIDE_OBSOLETE_BUILDINGS", MODDEROPTION_HIDE_OBSOLETE_BUILDINGS)
 		.value("MODDEROPTION_HIDE_REPLACED_BUILDINGS", MODDEROPTION_HIDE_REPLACED_BUILDINGS)
 		.value("MODDEROPTION_NO_FRIENDLY_PILLAGING", MODDEROPTION_NO_FRIENDLY_PILLAGING)
 		.value("MODDEROPTION_HIDE_UNAVAILBLE_BUILDS", MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)
@@ -2343,9 +2306,6 @@ void CyEnumsPythonInterface()
 
 		.value("NUM_MODDERGAMEOPTION_TYPES", NUM_MODDERGAMEOPTION_TYPES)
 	;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	//AIAndy: Expose the PathGenerator flags to Python
 	python::enum_<int>("PathingFlags")
@@ -2456,4 +2416,25 @@ void CyEnumsPythonInterface()
 		.value("UNIT_SORT_POWER", UNIT_SORT_POWER)
 		;
 
+	python::enum_<MapTypes>("MapTypes")
+		.value("MAP_EARTH", MAP_EARTH)
+		.value("MAP_SUBTERRAIN", MAP_SUBTERRAIN)
+		.value("MAP_CISLUNAR", MAP_CISLUNAR)
+		.value("MAP_MOON", MAP_MOON)
+		.value("MAP_MARS", MAP_MARS)
+		.value("MAP_VENUS", MAP_VENUS)
+		.value("MAP_INNER_SOLAR_SYSTEM", MAP_INNER_SOLAR_SYSTEM)
+		.value("MAP_OUTER_SOLAR_SYSTEM", MAP_OUTER_SOLAR_SYSTEM)
+		.value("MAP_TITAN", MAP_TITAN)
+		.value("MAP_TRANSNEPTUNIAN", MAP_TRANSNEPTUNIAN)
+		.value("MAP_NEARBY_STARS", MAP_NEARBY_STARS)
+		.value("MAP_ORION_ARM", MAP_ORION_ARM)
+		.value("MAP_MILKY_WAY", MAP_MILKY_WAY)
+		.value("MAP_LOCAL_GROUP", MAP_LOCAL_GROUP)
+		.value("MAP_VIRGO_SUPERCLUSTER", MAP_VIRGO_SUPERCLUSTER)
+		.value("MAP_UNIVERSE", MAP_UNIVERSE)
+		.value("MAP_DISTANT_COSMOS", MAP_DISTANT_COSMOS)
+
+		.value("NUM_MAPS", NUM_MAPS)
+	;
 }

@@ -80,16 +80,16 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/terrain/Improvements/MountMine/MountMine.nif</NIF>
 			<KFM>Art/terrain/Improvements/MountMine/MountMine.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_RADIO_TOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/terrain/Improvements/RadioTower/RadioTower.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WORKSHOP</Type>
@@ -162,6 +162,24 @@
 			<NIF>Art/Structures/Improvements/Camp/Camp.nif</NIF>
 			<KFM>Art/Structures/Improvements/Camp/Camp.kfm</KFM>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_SCAVENGING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Camp/Camp.nif</NIF>
+			<KFM>Art/Structures/Improvements/Camp/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/scavenging_camp.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_NOMADIC_HERD</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Camp/Camp.nif</NIF>
+			<KFM>Art/Structures/Improvements/Camp/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/nomadic_herd.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_HYDROCARBON_WELL</Type>
@@ -251,7 +269,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/hybridforest/ForestPreserve.nif</NIF>
 			<KFM>Art/Structures/Improvements/hybridforest/ForestPreserve.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/Tree_Farm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/tree_farm.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_HYBRID_FOREST</Type>
@@ -260,7 +278,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/hybridforest/ForestPreserve2.nif</NIF>
 			<KFM>Art/Structures/Improvements/hybridforest/ForestPreserve.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/Tree_Farm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/hybrid_forest.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</Type>
@@ -287,7 +305,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Units/FinalFrontier_Starbase/Starbase.nif</NIF>
 			<KFM>Art/Units/FinalFrontier_Starbase/Starbase.kfm</KFM>
-			<Button>Art/Interface/Buttons/Units/sparth/submerged_town_platform.dds</Button>
+			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,5</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_CITY_RUINS_ARCOLOGY</Type>
@@ -329,10 +347,10 @@
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_ARCHEOLOGICAL_SITE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.0</fScale>
-			<fInterfaceScale>0.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM/>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/ForestPreserve/ForestPreserve.nif</NIF>
+			<KFM>Art/Structures/Improvements/ForestPreserve/ForestPreserve.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/Build_acheological_site.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
@@ -361,6 +379,15 @@
 			<NIF>Art/Structures/Improvements/Mine/mine_modern.nif</NIF>
 			<KFM>Art/Structures/Improvements/Mine/Mine.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_SHAFT_MINE</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Mine/Mine.nif</NIF>
+			<KFM>Art/Structures/Improvements/Mine/Mine.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COMMAND_CENTER</Type>
@@ -426,6 +453,15 @@
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,2</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_GROW_FOREST</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Plantation/Plantation.nif</NIF>
+			<KFM>Art/Structures/Improvements/Plantation/Plantation.kfm</KFM>
+			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
@@ -487,7 +523,25 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_PICKING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
@@ -496,7 +550,34 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WOOD_GATHERER</Type>
@@ -524,6 +605,15 @@
 			<NIF>Art/Structures/Improvements/RockGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_TAR_GATHERER</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/RockGatherer/camp_fx.nif</NIF>
+			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/tar_gatherer.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BEACON</Type>
@@ -569,15 +659,6 @@
 			<NIF>Art/Terrain/Features/Savanna/palms15_01.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/TerrainFeatures/button_savanna.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_CRASHED_PROBE</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.75</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Wreckage/Wreckage.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,4,3</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
@@ -721,7 +802,7 @@
 			<fInterfaceScale>0.75</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/HydroPlant/watermill.nif</NIF>
 			<KFM>Art/Structures/Improvements/HydroPlant/watermill.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Buildings/HydroPlant.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,10</Button>
+			<Button>Art/Interface/Buttons/Builds/hydro_plant.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_DESERT_CAMP</Type>
@@ -802,7 +883,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Fort/eu_med_fort.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</Type>
@@ -820,7 +901,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Fort/eu_med_fort.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Type>
@@ -829,7 +910,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Fort/eu_med_fort.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/interface/buttons/builds/fortified_cave_cache.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</Type>
@@ -884,6 +965,24 @@
 			<NIF>Art/Structures/Improvements/Camp/Camp.nif</NIF>
 			<KFM>Art/Structures/Improvements/Camp/Camp.kfm</KFM>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_FOSSIL_DIG_SITE</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/ForestPreserve/ForestPreserve.nif</NIF>
+			<KFM>Art/Structures/Improvements/ForestPreserve/ForestPreserve.kfm</KFM>
+			<Button>Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_MACHU_PICCHU</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
 		</ImprovementArtInfo>
 	</ImprovementArtInfos>
 </Civ4ArtDefines>

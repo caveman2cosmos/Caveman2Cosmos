@@ -3,10 +3,9 @@
 
 CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {
-	const std::vector<CvBonusInfo*>& bonuses = GC.getBonusInfos();
-	for (std::vector<CvBonusInfo*>::const_iterator i = bonuses.begin(); i != bonuses.end(); ++i)
-		if ((*i)->getType() == szType) 
-			return *i;
+	foreach_(CvBonusInfo* info, GC.getBonusInfos())
+		if (info->getType() == szType)
+			return info;
 	return NULL;
 }
 

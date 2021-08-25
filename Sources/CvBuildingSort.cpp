@@ -166,11 +166,8 @@ int BuildingSortProperty::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCit
 	const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
 	int iSum = kInfo.getProperties()->getValueByProperty(m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty);
 
-	const CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
-	const int iNum = pMani->getNumSources();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertySource* pSource, kInfo.getPropertyManipulators()->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == m_eProperty)
 		{
 			iSum += pSource->getSourcePredict(pCity->getGameObject(), pCity->getProperties()->getValueByProperty(m_eProperty));

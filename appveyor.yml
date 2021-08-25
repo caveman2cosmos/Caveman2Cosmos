@@ -1,4 +1,4 @@
-version: 41.0.{build}
+version: 41.2.{build}
 image: Visual Studio 2019
 # skip_tags is important or you will get an infinite build loop when we apply release tags
 skip_tags: true

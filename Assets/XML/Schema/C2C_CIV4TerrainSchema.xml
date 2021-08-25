@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <!-- Replacements added by AIAndy -->
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
+	<!-- Replacements added by AIAndy -->
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
 	<!--TB's Tags Begin -->
 	<ElementType name="bColdDamage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanMoveSeaUnits" content="textOnly" dt:type="boolean"/>
@@ -38,35 +38,35 @@
 	</ElementType>
 	<ElementType name="BonusChange" content="textOnly"/>
 	<!--TB's Tags End -->
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -90,7 +90,6 @@
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -104,7 +103,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -119,7 +117,6 @@
 		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -134,13 +131,11 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="Civilopedia" content="textOnly"/>
 	<ElementType name="Help" content="textOnly"/>
 	<ElementType name="iHealthPercent" content="textOnly" dt:type="int"/>
@@ -153,9 +148,6 @@
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="RiverYieldChange" content="eltOnly">
-		<element type="iYield" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="HillsYieldChange" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bWaterTerrain" content="textOnly" dt:type="boolean"/>
@@ -187,22 +179,24 @@
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNational" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
+	<ElementType name="CreatingBuild"/>
+	<ElementType name="CreatingBuilds" content="eltOnly">
+		<element type="CreatingBuild" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
-		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
@@ -235,8 +229,8 @@
 	<ElementType name="Description" content="textOnly"/>
 	<ElementType name="iHillsChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iPeakChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iRiverChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iPopulationChangeOffset" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChangeDivisor" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iTradeModifier" content="textOnly" dt:type="int"/>
@@ -250,18 +244,18 @@
 	</ElementType>
 	<ElementType name="YieldInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="iHillsChange" minOccurs="0"/>
 		<element type="iPeakChange" minOccurs="0"/>
+		<element type="iRiverChange" minOccurs="0"/>
 		<element type="iCityChange" minOccurs="0"/>
-		<element type="iPopulationChangeOffset" minOccurs="0"/>
 		<element type="iPopulationChangeDivisor" minOccurs="0"/>
 		<element type="iMinCity" minOccurs="0"/>
 		<element type="iTradeModifier" minOccurs="0"/>
@@ -315,20 +309,19 @@
 	<ElementType name="OnUnitChangeTo" content="textOnly"/>
 	<ElementType name="FeatureInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iSeeThrough" minOccurs="0"/>
@@ -376,13 +369,13 @@
 	</ElementType>
 	<ElementType name="BonusClassInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="iUniqueRange" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="BonusClassInfos" content="eltOnly">
@@ -442,16 +435,15 @@
 	<ElementType name="FeatureTerrainBooleans" content="eltOnly">
 		<element type="FeatureTerrainBoolean" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bUseLSystem" content="textOnly" dt:type="boolean"/>
 	<ElementType name="BonusInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -488,7 +480,6 @@
 		<element type="TerrainBooleans" minOccurs="0"/>
 		<element type="FeatureBooleans" minOccurs="0"/>
 		<element type="FeatureTerrainBooleans" minOccurs="0"/>
-		<element type="bUseLSystem" minOccurs="0"/>
 		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
@@ -518,7 +509,7 @@
 	</ElementType>
 	<ElementType name="ArtDefineTag" content="textOnly"/>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<!-- XMLCOPY				02/20/2008			MRGENIE -->
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -529,7 +520,7 @@
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+	<!-- XMLCOPY				END					MRGENIE -->
 	<ElementType name="iWaterHeight" content="textOnly" dt:type="int"/>
 	<ElementType name="bRandomMap" content="textOnly" dt:type="boolean"/>
 	<ElementType name="HeightMap" content="textOnly"/>
@@ -553,13 +544,13 @@
 	<ElementType name="fHillScale" content="textOnly"/>
 	<ElementType name="TerrainTextureInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description"/>
 		<element type="ArtDefineTag"/>
 	</ElementType>
@@ -659,7 +650,6 @@
 	<ElementType name="bOutsideBorders" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartRemoveCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iTilesPerGoody" content="textOnly" dt:type="int"/>
 	<ElementType name="iUpgradeTime" content="textOnly" dt:type="int"/>
 	<ElementType name="bMakesValid" content="textOnly" dt:type="boolean"/>
@@ -677,26 +667,28 @@
 	<ElementType name="FeatureMakesValids" content="eltOnly">
 		<element type="FeatureMakesValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-<!-- Super Forts begin -->
+	<!-- Super Forts begin -->
 	<ElementType name="iCulture" content="textOnly" dt:type="int"/>
 	<ElementType name="iCultureRange" content="textOnly" dt:type="int"/>
 	<ElementType name="iVisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="bBombardable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bUpgradeRequiresFortify" content="textOnly" dt:type="boolean"/>
-<!-- Super Forts end -->
-<!-- Super forts C2C adaptation begin -->
-  <ElementType name="bIsUniversalTradeBonusProvider" content="textOnly" dt:type="boolean"/>
-  <ElementType name="bIsZOCSource" content="textOnly" dt:type="boolean"/>
-  <!-- Super forts C2C adaptation end -->
-  <ElementType name="ImprovementInfo" content="eltOnly">
+	<!-- Super Forts end -->
+	<!-- Super forts C2C adaptation begin -->
+	<ElementType name="bIsUniversalTradeBonusProvider" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bIsZOCSource" content="textOnly" dt:type="boolean"/>
+	<!-- Super forts C2C adaptation end -->
+	<ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="CreatingBuilds" minOccurs="0"/>
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
+
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
@@ -704,7 +696,6 @@
 		<element type="PrereqNatureYields" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverSideYieldChange" minOccurs="0"/>
-		<element type="HillsYieldChange" minOccurs="0"/>
 		<element type="IrrigatedYieldChange" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bActsAsCity" minOccurs="0"/>
@@ -726,9 +717,7 @@
 		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
 		<element type="bPermanent" minOccurs="0"/>
-		<element type="bUseLSystem" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iTilesPerGoody" minOccurs="0"/>
 		<element type="iGoodyRange" minOccurs="0"/>
 		<element type="iFeatureGrowth" minOccurs="0"/>
@@ -749,7 +738,7 @@
 		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
 		<element type="bGraphicalOnly" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
-<!-- Super Forts begin -->
+		<!-- Super Forts begin -->
 		<element type="iCulture" minOccurs="0"/>
 		<element type="iCultureRange" minOccurs="0"/>
 		<element type="iVisibilityChange" minOccurs="0"/>
@@ -757,8 +746,8 @@
 		<element type="iUniqueRange" minOccurs="0"/>
 		<element type="bBombardable" minOccurs="0"/>
 		<element type="bUpgradeRequiresFortify" minOccurs="0"/>
-<!-- Super Forts end -->
-<!-- Super forts C2C adaptation begin -->
+		<!-- Super Forts end -->
+		<!-- Super forts C2C adaptation begin -->
 		<element type="bIsUniversalTradeBonusProvider" minOccurs="0"/>
 		<element type="bIsZOCSource" minOccurs="0"/>
 		<!-- Super forts C2C adaptation end -->
@@ -776,13 +765,13 @@
 	</ElementType>
 	<ElementType name="LandscapeInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
+		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="iWaterHeight" minOccurs="0"/>
 		<element type="bRandomMap" minOccurs="0"/>
 		<element type="HeightMap" minOccurs="0"/>

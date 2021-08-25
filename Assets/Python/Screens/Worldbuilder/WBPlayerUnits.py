@@ -41,7 +41,7 @@ class WBPlayerUnits:
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setDimensions(0,0, screen.getXResolution(), screen.getYResolution())
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-		screen.setText("WBExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("WBExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iX = 20
 		iY = 20
@@ -114,7 +114,7 @@ class WBPlayerUnits:
 		pUnit = pPlayer.getUnit(iUnitID)
 		if iUnitOwner > -1:
 			pUnit = GC.getPlayer(iUnitOwner).getUnit(iUnitID)
-		if pUnit.isNone():
+		if pUnit is None:
 			unitX, i = pPlayer.firstUnit(False)
 			if unitX:
 				pUnit = unitX
@@ -217,7 +217,7 @@ class WBPlayerUnits:
 		for i in lUnits:
 			pPlayerX = GC.getPlayer(i[0])
 			loopUnit = pPlayerX.getUnit(i[1])
-			if loopUnit.isNone(): continue
+			if loopUnit is None: continue
 			iRow = screen.appendTableRow("WBUnitList")
 
 			iStatus = 0
@@ -296,9 +296,9 @@ class WBPlayerUnits:
 		screen.hide("UnitView")
 		screen.hide("UnitDescription")
 		pUnitOwner = GC.getPlayer(iUnitOwner)
-		if not pUnitOwner: return
+		if pUnitOwner is None: return
 		pUnit = pUnitOwner.getUnit(iUnitID)
-		if pUnit.isNone(): return
+		if pUnit is None: return
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + pUnit.getName() + "</color></font>"
 		screen.setText("GoToUnit", "Background", sText, 1<<2, screen.getXResolution()*3/4, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		iXMap = screen.getXResolution() * 3/4 - 20
@@ -379,7 +379,7 @@ class WBPlayerUnits:
 			sText += "\n" + CyTranslator().getText("[COLOR_WARNING_TEXT]", ()) + CyTranslator().getText("INTERFACE_CITY_MAINTENANCE", ()) + " </color>"
 			sText += u"-%d.%02d%c" %(iMaintenance/100, iMaintenance%100, GC.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
 
-		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " ID: " + str(pCity.getID())
+		sText += "\n" + CyTranslator().getText("TXT_WORD_CITY", ()) + " ID: " + str(pCity.getID())
 		sText += "\n" + "X: " + str(pCity.getX()) + ", Y: " + str(pCity.getY())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pCity.plot().getArea())
 
@@ -392,7 +392,7 @@ class WBPlayerUnits:
 		iActivity = pGroup.getActivityType()
 		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
 			sText += "\n" + WorldBuilder.Activities[iActivity]
-		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(pUnit.getID())
+		sText += "\n" + CyTranslator().getText("TXT_WORD_UNIT", ()) + " ID: " + str(pUnit.getID())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 		sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pUnit.plot().getArea())
@@ -413,16 +413,17 @@ class WBPlayerUnits:
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 9, 9, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 10, 10, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 14, 14, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 12, 12, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 13, 13, False)
+				szCity = CyTranslator().getText("TXT_WORD_CITY", ()) + " "
+				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 12, 12, False)
+				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 13, 13, False)
 		pUnitOwner = GC.getPlayer(iUnitOwner)
 		if pUnitOwner:
 			pUnit = pUnitOwner.getUnit(iUnitID)
-			if not pUnit.isNone():
+			if pUnit is not None:
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT_DATA", ()), 5, 5, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ()), 6, 6, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 7, 7, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 8, 8, False)
+				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 7, 7, False)
+				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 8, 8, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_INFO_SCREEN", ()), 11, 11, False)
 
 	def handleInput(self, inputClass):
@@ -554,7 +555,7 @@ class WBPlayerUnits:
 		elif sName == "DeleteCurrentUnit":
 			if pUnitOwner:
 				pUnit = pUnitOwner.getUnit(iUnitID)
-				if not pUnit.isNone():
+				if pUnit is not None:
 					pUnit.kill(False, PlayerTypes.NO_PLAYER)
 					iUnitID = -1
 					self.sortUnits()
@@ -571,7 +572,7 @@ class WBPlayerUnits:
 		elif sName == "EndCurrentUnit":
 			if pUnitOwner:
 				pUnit = pUnitOwner.getUnit(iUnitID)
-				if not pUnit.isNone():
+				if pUnit is not None:
 					pUnit.finishMoves()
 					self.placeCurrentUnit()
 

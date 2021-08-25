@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_ROUTE_TRAIL</Description>
 			<iValue>1</iValue>
 			<iAdvancedStartCost>5</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -20,7 +19,6 @@
 			<Description>TXT_KEY_ROUTE_PATH</Description>
 			<iValue>2</iValue>
 			<iAdvancedStartCost>6</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>80</iMovement>
 			<iFlatMovement>80</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -34,7 +32,6 @@
 			<Description>TXT_KEY_ROUTE_ROAD</Description>
 			<iValue>3</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>60</iMovement>
 			<iFlatMovement>60</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -48,7 +45,6 @@
 			<Description>TXT_KEY_ROUTE_PAVED_ROAD</Description>
 			<iValue>4</iValue>
 			<iAdvancedStartCost>8</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>40</iMovement>
 			<iFlatMovement>40</iFlatMovement>
 			<BonusType>BONUS_STONE</BonusType>
@@ -58,83 +54,62 @@
 			<Button>Art/Interface/Buttons/Builds/BuildPavedRoad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_HIGHWAY</Type>
-			<Description>TXT_KEY_ROUTE_HIGHWAY</Description>
-			<iValue>5</iValue>
-			<iAdvancedStartCost>12</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>30</iMovement>
-			<iFlatMovement>30</iFlatMovement>
-			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
-			<PrereqOrBonuses/>
-			<Yields/>
-			<TechMovementChanges>
-				<TechMovementChange>
-					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
-					<iMovementChange>-6</iMovementChange>
-				</TechMovementChange>
-				<TechMovementChange>
-					<PrereqTech>TECH_SKYROADS</PrereqTech>
-					<iMovementChange>-4</iMovementChange>
-				</TechMovementChange>
-			</TechMovementChanges>
-			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
-		</RouteInfo>
-		<RouteInfo>
 			<Type>ROUTE_RAILROAD</Type>
 			<Description>TXT_KEY_ROUTE_RAILROAD</Description>
-			<iValue>6</iValue>
+			<iValue>5</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>30</iMovement>
-			<iFlatMovement>12</iFlatMovement>
+			<iMovement>40</iMovement>
+			<iFlatMovement>16</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
-				<PrereqOrBonus>
-					<BonusType>BONUS_COAL</BonusType>
-				</PrereqOrBonus>
-				<PrereqOrBonus>
-					<BonusType>BONUS_OIL</BonusType>
-				</PrereqOrBonus>
-				<PrereqOrBonus>
-					<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
-				</PrereqOrBonus>
+				<BonusType>BONUS_COAL</BonusType>
+				<BonusType>BONUS_OIL</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqOrBonuses>
 			<Yields/>
 			<TechMovementChanges/>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</RouteInfo>
+		<!-- Special value case; eRail better than Highway in general UNLESS multi-route same value code gets completed... -->
 		<RouteInfo>
 			<Type>ROUTE_ELECTRIC_RAILROAD</Type>
 			<Description>TXT_KEY_ROUTE_ELECTRIC_RAILROAD</Description>
+			<!-- <iValue>6</iValue> -->
 			<iValue>7</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>30</iMovement>
-			<iFlatMovement>10</iFlatMovement>
+			<iMovement>36</iMovement>
+			<iFlatMovement>12</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
-				<PrereqOrBonus>
-					<BonusType>BONUS_COPPER_WARES</BonusType>
-				</PrereqOrBonus>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
 			</PrereqOrBonuses>
 			<Yields/>
 			<TechMovementChanges/>
 			<Button>Art/Interface/Buttons/Builds/BuildElectricRailroad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
+			<Type>ROUTE_HIGHWAY</Type>
+			<Description>TXT_KEY_ROUTE_HIGHWAY</Description>
+			<iValue>6</iValue>
+			<iAdvancedStartCost>12</iAdvancedStartCost>
+			<iMovement>22</iMovement>
+			<iFlatMovement>22</iFlatMovement>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
+			<PrereqOrBonuses/>
+			<Yields/>
+			<TechMovementChanges/>
+			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
+		</RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_MAGLEV</Type>
 			<Description>TXT_KEY_ROUTE_MAGLEV</Description>
 			<iValue>8</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>20</iMovement>
-			<iFlatMovement>6</iFlatMovement>
+			<iMovement>22</iMovement>
+			<iFlatMovement>11</iFlatMovement>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
-				<PrereqOrBonus>
-					<BonusType>BONUS_PLASTIC</BonusType>
-				</PrereqOrBonus>
+				<BonusType>BONUS_PLASTIC</BonusType>
 			</PrereqOrBonuses>
 			<Yields>
 				<iYield>0</iYield>
@@ -150,16 +125,20 @@
 			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
 			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>18</iMovement>
-			<iFlatMovement>6</iFlatMovement>
+			<iMovement>24</iMovement>
+			<iFlatMovement>8</iFlatMovement>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</Yields>
-			<TechMovementChanges/>
+			<TechMovementChanges>
+				<TechMovementChange>
+					<PrereqTech>TECH_SKYROADS</PrereqTech>
+					<iMovementChange>-8</iMovementChange>
+				</TechMovementChange>
+			</TechMovementChanges>
 			<Button>art/interface/buttons/improvements/hyperloop.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
@@ -167,9 +146,8 @@
 			<Description>TXT_KEY_ROUTE_GRAVITY_TRAIN</Description>
 			<iValue>10</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>16</iMovement>
-			<iFlatMovement>6</iFlatMovement>
+			<iMovement>15</iMovement>
+			<iFlatMovement>5</iFlatMovement>
 			<BonusType>BONUS_LIQUID_METAL</BonusType>
 			<Yields>
 				<iYield>0</iYield>
@@ -184,7 +162,6 @@
 			<Description>TXT_KEY_ROUTE_JUMPLANE</Description>
 			<iValue>11</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
 			<iFlatMovement>3</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -202,9 +179,8 @@
 			<Description>TXT_KEY_ROUTE_TUNNEL</Description>
 			<iValue>1</iValue>
 			<iAdvancedStartCost>20</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>60</iMovement>
-			<iFlatMovement>60</iFlatMovement>
+			<iMovement>55</iMovement>
+			<iFlatMovement>22</iFlatMovement>
 			<bSeaTunnel>1</bSeaTunnel>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses/>

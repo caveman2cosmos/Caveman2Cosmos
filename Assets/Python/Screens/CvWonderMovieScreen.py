@@ -114,7 +114,7 @@ class CvWonderMovieScreen:
 	def infoPanel(self):
 		if not self.iInfoPanel:
 			if not self.iMovieType:
-				szHelp = CyGameTextMgr().getBuildingHelp(self.iWonderId, False, False, False, None, False)
+				szHelp = CyGameTextMgr().getBuildingHelp(self.iWonderId, False, None, False, False, False)
 
 			elif self.iMovieType == 2:
 				szHelp = CyGameTextMgr().getProjectHelp(self.iWonderId, False, None)
@@ -154,7 +154,7 @@ class CvWonderMovieScreen:
 				return 1
 		return 0
 
-	def update(self, fDelta): 
+	def update(self, fDelta):
 		if self.bTimer:
 			self.fTime -= fDelta
 			if self.fTime < 0:
@@ -163,4 +163,3 @@ class CvWonderMovieScreen:
 
 	def onClose(self):
 		del self.screenId, self.iMovieType, self.iWonderId, self.fTime, self.bTimer, self.iInfoPanel
-import HandleInputUtil

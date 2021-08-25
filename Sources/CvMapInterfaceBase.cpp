@@ -11,7 +11,7 @@ CvMapInterfaceBase::~CvMapInterfaceBase()
 	SAFE_DELETE(m_proxy);
 }
 
-CvMapExternal* CvMapInterfaceBase::getProxy()
+CvMapExternal& CvMapInterfaceBase::getProxy() const
 {
-	return m_proxy;
+	return *m_proxy;
 }

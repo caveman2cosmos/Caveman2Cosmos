@@ -11,7 +11,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 
-PropertySourceContext::PropertySourceContext(CvPropertySource *pSource, CvGameObject *pObject) : m_pSource(pSource), m_pObject(pObject), m_iData1(0), m_iData2(0)
+PropertySourceContext::PropertySourceContext(CvPropertySource* pSource, const CvGameObject* pObject) : m_pSource(pSource), m_pObject(pObject), m_iData1(0), m_iData2(0)
 {
 	m_iCurrentAmount = pObject->getPropertiesConst()->getValueByProperty(pSource->getProperty());
 }
@@ -21,7 +21,7 @@ CvPropertySource* PropertySourceContext::getSource() const
 	return m_pSource;
 }
 
-CvGameObject* PropertySourceContext::getObject() const
+const CvGameObject* PropertySourceContext::getObject() const
 {
 	return m_pObject;
 }
@@ -61,7 +61,7 @@ void PropertySourceContext::doCorrect(CvPropertySolver* pSolver)
 }
 
 
-PropertyInteractionContext::PropertyInteractionContext(CvPropertyInteraction *pInteraction, CvGameObject *pObject) : m_pInteraction(pInteraction), m_pObject(pObject)
+PropertyInteractionContext::PropertyInteractionContext(CvPropertyInteraction* pInteraction, const CvGameObject* pObject) : m_pInteraction(pInteraction), m_pObject(pObject)
 {
 	m_iCurrentAmountSource = pObject->getPropertiesConst()->getValueByProperty(pInteraction->getSourceProperty());
 	m_iCurrentAmountTarget = pObject->getPropertiesConst()->getValueByProperty(pInteraction->getTargetProperty());
@@ -72,7 +72,7 @@ CvPropertyInteraction* PropertyInteractionContext::getInteraction() const
 	return m_pInteraction;
 }
 
-CvGameObject* PropertyInteractionContext::getObject() const
+const CvGameObject* PropertyInteractionContext::getObject() const
 {
 	return m_pObject;
 }
@@ -96,14 +96,14 @@ void PropertyInteractionContext::doCorrect(CvPropertySolver* pSolver)
 }
 
 
-PropertyPropagatorContext::PropertyPropagatorContext(CvPropertyPropagator *pPropagator, CvGameObject *pObject) : m_pPropagator(pPropagator), m_pObject(pObject)
+PropertyPropagatorContext::PropertyPropagatorContext(CvPropertyPropagator* pPropagator, const CvGameObject* pObject) : m_pPropagator(pPropagator), m_pObject(pObject)
 {
 	pPropagator->getTargetObjects(pObject, m_apTargetObjects);
 	const PropertyTypes eProperty = pPropagator->getProperty();
 
-	for(int i=0; i<(int)m_apTargetObjects.size(); i++)
+	foreach_(const CvGameObject* object, m_apTargetObjects)
 	{
-		m_aiCurrentAmount.push_back(m_apTargetObjects[i]->getPropertiesConst()->getValueByProperty(eProperty));
+		m_aiCurrentAmount.push_back(object->getPropertiesConst()->getValueByProperty(eProperty));
 	}
 }
 
@@ -112,12 +112,12 @@ CvPropertyPropagator* PropertyPropagatorContext::getPropagator() const
 	return m_pPropagator;
 }
 
-CvGameObject* PropertyPropagatorContext::getObject() const
+const CvGameObject* PropertyPropagatorContext::getObject() const
 {
 	return m_pObject;
 }
 
-std::vector<CvGameObject*>* PropertyPropagatorContext::getTargetObjects()
+std::vector<const CvGameObject*>* PropertyPropagatorContext::getTargetObjects()
 {
 	return &m_apTargetObjects;
 }
@@ -153,12 +153,12 @@ void PropertyPropagatorContext::doCorrect(CvPropertySolver* pSolver)
 }
 
 
-void PropertySolverMap::addChange(CvGameObject *pObject, PropertyTypes eProperty, int iChange)
+void PropertySolverMap::addChange(const CvGameObject* pObject, PropertyTypes eProperty, int iChange)
 {
 	m_mapPropertyChanges[pObject].changeValueByProperty(eProperty, iChange);
 }
 
-int PropertySolverMap::getPredictValue(CvGameObject *pObject, PropertyTypes eProperty)
+int PropertySolverMap::getPredictValue(const CvGameObject* pObject, PropertyTypes eProperty)
 {
 	return m_mapProperties[pObject].getValueByProperty(eProperty);
 }
@@ -167,11 +167,11 @@ void PropertySolverMap::computePredictValues()
 {
 	for (PropertySolverMapType::iterator it = m_mapPropertyChanges.begin(); it != m_mapPropertyChanges.end(); ++it)
 	{
-		CvGameObject* pObject = it->first;
+		const CvGameObject* pObject = it->first;
 		PropertySolverMapType::iterator it2 = m_mapProperties.find(pObject);
 		if (it2 == m_mapProperties.end())
 		{
-			CvProperties* pObjProp = pObject->getProperties();
+			const CvProperties* pObjProp = pObject->getProperties();
 			it2 = m_mapProperties.insert(std::make_pair(pObject, CvProperties())).first;
 			it2->second.addProperties(pObjProp);
 		}
@@ -196,7 +196,7 @@ void PropertySolverMap::applyChanges()
 
 
 
-void CvPropertySolver::instantiateSource(CvGameObject* pObject, CvPropertySource* pSource)
+void CvPropertySolver::instantiateSource(const CvGameObject* pObject, CvPropertySource* pSource)
 {
 	if (pSource->isActive(pObject))
 	{
@@ -204,12 +204,12 @@ void CvPropertySolver::instantiateSource(CvGameObject* pObject, CvPropertySource
 	}
 }
 
-void callInstantiateSource(CvGameObject* pObject, CvPropertySource* pSource, CvPropertySolver* pSolver)
+void callInstantiateSource(const CvGameObject* pObject, CvPropertySource* pSource, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateSource(pObject, pSource);
 }
 
-void CvPropertySolver::instantiateInteraction(CvGameObject* pObject, CvPropertyInteraction* pInteraction)
+void CvPropertySolver::instantiateInteraction(const CvGameObject* pObject, CvPropertyInteraction* pInteraction)
 {
 	if (pInteraction->isActive(pObject))
 	{
@@ -217,12 +217,12 @@ void CvPropertySolver::instantiateInteraction(CvGameObject* pObject, CvPropertyI
 	}
 }
 
-void callInstantiateInteraction(CvGameObject* pObject, CvPropertyInteraction* pInteraction, CvPropertySolver* pSolver)
+void callInstantiateInteraction(const CvGameObject* pObject, CvPropertyInteraction* pInteraction, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateInteraction(pObject, pInteraction);
 }
 
-void CvPropertySolver::instantiatePropagator(CvGameObject* pObject, CvPropertyPropagator* pPropagator)
+void CvPropertySolver::instantiatePropagator(const CvGameObject* pObject, CvPropertyPropagator* pPropagator)
 {
 	if (pPropagator->isActive(pObject))
 	{
@@ -230,17 +230,16 @@ void CvPropertySolver::instantiatePropagator(CvGameObject* pObject, CvPropertyPr
 	}
 }
 
-void callInstantiatePropagator(CvGameObject* pObject, CvPropertyPropagator* pPropagator, CvPropertySolver* pSolver)
+void callInstantiatePropagator(const CvGameObject* pObject, CvPropertyPropagator* pPropagator, CvPropertySolver* pSolver)
 {
 	pSolver->instantiatePropagator(pObject, pPropagator);
 }
 
-void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPropertyManipulators* pMani)
+void CvPropertySolver::instantiateManipulators(const CvGameObject* pObject, const CvPropertyManipulators* pMani)
 {
 	// Sources
-	for (int j=0; j<pMani->getNumSources(); j++)
+	foreach_(CvPropertySource* pSource, pMani->getSources())
 	{
-		CvPropertySource* pSource = pMani->getSource(j);
 		const RelationTypes eRelation = pSource->getRelation();
 		if (eRelation == NO_RELATION)
 		{
@@ -248,13 +247,12 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPr
 		}
 		else
 		{
-			pObject->foreachRelated(pSource->getObjectType(), eRelation, bst::bind(callInstantiateSource, _1, pSource, this), pSource->getRelationData());
+			pObject->foreachRelated(pSource->getObjectType(), eRelation, bind(callInstantiateSource, _1, pSource, this), pSource->getRelationData());
 		}
 	}
 	// Interactions
-	for (int j=0; j<pMani->getNumInteractions(); j++)
+	foreach_(CvPropertyInteraction* pInteraction, pMani->getInteractions())
 	{
-		CvPropertyInteraction* pInteraction = pMani->getInteraction(j);
 		const RelationTypes eRelation = pInteraction->getRelation();
 		if (eRelation == NO_RELATION)
 		{
@@ -262,13 +260,12 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPr
 		}
 		else
 		{
-			pObject->foreachRelated(pInteraction->getObjectType(), eRelation, bst::bind(callInstantiateInteraction, _1, pInteraction, this), pInteraction->getRelationData());
+			pObject->foreachRelated(pInteraction->getObjectType(), eRelation, bind(callInstantiateInteraction, _1, pInteraction, this), pInteraction->getRelationData());
 		}
 	}
 	// Propagators
-	for (int j=0; j<pMani->getNumPropagators(); j++)
+	foreach_(CvPropertyPropagator* pPropagator, pMani->getPropagators())
 	{
-		CvPropertyPropagator* pPropagator = pMani->getPropagator(j);
 		const RelationTypes eRelation = pPropagator->getRelation();
 		if (eRelation == NO_RELATION)
 		{
@@ -276,109 +273,89 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPr
 		}
 		else
 		{
-			pObject->foreachRelated(pPropagator->getObjectType(), eRelation, bst::bind(callInstantiatePropagator, _1, pPropagator, this), pPropagator->getRelationData());
+			pObject->foreachRelated(pPropagator->getObjectType(), eRelation, bind(callInstantiatePropagator, _1, pPropagator, this), pPropagator->getRelationData());
 		}
 	}
 }
 
-void CvPropertySolver::instantiateGlobalManipulators(CvGameObject *pObject)
+void CvPropertySolver::instantiateGlobalManipulators(const CvGameObject *pObject)
 {
-	for (int i=0; i < m_pMainSolver->getNumGlobalManipulators(); i++)
+	foreach_(const CvPropertyManipulators* pMani, m_apGlobalManipulators)
 	{
-		instantiateManipulators(pObject, m_pMainSolver->getGlobalManipulator(i));
+		instantiateManipulators(pObject, pMani);
 	}
 }
 
 // helper functions
-void callInstantiateManipulators(CvGameObject* pObject, const CvPropertyManipulators* pMani, CvPropertySolver* pSolver)
+void callInstantiateManipulators(const CvGameObject* pObject, const CvPropertyManipulators* pMani, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateManipulators(pObject, pMani);
 }
 
-void callInstantiateGlobalManipulators(CvGameObject* pObject, CvPropertySolver* pSolver)
+void callInstantiateGlobalManipulators(const CvGameObject* pObject, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateGlobalManipulators(pObject);
-	pObject->foreachManipulator(bst::bind(callInstantiateManipulators, pObject, _1, pSolver));
+	pObject->foreachManipulator(bind(callInstantiateManipulators, pObject, _1, pSolver));
 }
 
 void CvPropertySolver::gatherActiveManipulators()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
-		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, bst::bind(callInstantiateGlobalManipulators, _1, this));
+		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, bind(callInstantiateGlobalManipulators, _1, this));
 	}
 }
 
 void CvPropertySolver::predictSources()
 {
-	for (int i=0; i<(int)m_aSourceContexts.size(); i++)
+	foreach_(PropertySourceContext& context, m_aSourceContexts)
 	{
-		m_aSourceContexts[i].doPredict(this);
+		context.doPredict(this);
 	}
 }
 
 void CvPropertySolver::correctSources()
 {
-	for (int i=0; i<(int)m_aSourceContexts.size(); i++)
+	foreach_(PropertySourceContext& context, m_aSourceContexts)
 	{
-		m_aSourceContexts[i].doCorrect(this);
+		context.doCorrect(this);
 	}
-}
-
-void CvPropertySolver::clearSources()
-{
-	m_aSourceContexts.clear();
 }
 
 void CvPropertySolver::predictInteractions()
 {
-	for (int i=0; i<(int)m_aInteractionContexts.size(); i++)
+	foreach_(PropertyInteractionContext& context, m_aInteractionContexts)
 	{
-		m_aInteractionContexts[i].doPredict(this);
+		context.doPredict(this);
 	}
 }
 
 void CvPropertySolver::correctInteractions()
 {
-	for (int i=0; i<(int)m_aInteractionContexts.size(); i++)
+	foreach_(PropertyInteractionContext& context, m_aInteractionContexts)
 	{
-		m_aInteractionContexts[i].doCorrect(this);
+		context.doCorrect(this);
 	}
-}
-
-void CvPropertySolver::clearInteractions()
-{
-	m_aInteractionContexts.clear();
 }
 
 void CvPropertySolver::predictPropagators()
 {
-	for (int i=0; i<(int)m_aPropagatorContexts.size(); i++)
+	foreach_(PropertyPropagatorContext& context, m_aPropagatorContexts)
 	{
-		m_aPropagatorContexts[i].doPredict(this);
+		context.doPredict(this);
 	}
 }
 
 void CvPropertySolver::correctPropagators()
 {
-	for (int i=0; i<(int)m_aPropagatorContexts.size(); i++)
+	foreach_(PropertyPropagatorContext& context, m_aPropagatorContexts)
 	{
-		m_aPropagatorContexts[i].doCorrect(this);
+		context.doCorrect(this);
 	}
 }
 
-void CvPropertySolver::clearPropagators()
-{
-	m_aPropagatorContexts.clear();
-}
 
-void CvPropertySolver::setMainSolver(CvMainPropertySolver *pMainSolver)
-{
-	m_pMainSolver = pMainSolver;
-}
-
-
-void callResetPropertyChange(CvGameObject* pObject)
+void callResetPropertyChange(const CvGameObject* pObject)
 {
 	pObject->getProperties()->clearChange();
 }
@@ -393,17 +370,17 @@ std::vector<int>& CvPropertySolver::getCache2()
 	return m_aiCache2;
 }
 
-int CvPropertySolver::getPredictValue(CvGameObject *pObject, PropertyTypes eProperty) const
+int CvPropertySolver::getPredictValue(const CvGameObject *pObject, PropertyTypes eProperty)
 {
-	return m_pMainSolver->getSolverMap()->getPredictValue(pObject, eProperty);
+	return m_mapProperties.getPredictValue(pObject, eProperty);
 }
 
-void CvPropertySolver::addChange(CvGameObject* pObject, PropertyTypes eProperty, int iChange)
+void CvPropertySolver::addChange(const CvGameObject* pObject, PropertyTypes eProperty, int iChange)
 {
-	m_pMainSolver->getSolverMap()->addChange(pObject, eProperty, iChange);
+	m_mapProperties.addChange(pObject, eProperty, iChange);
 }
 
-void CvMainPropertySolver::resetPropertyChanges()
+void CvPropertySolver::resetPropertyChanges()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
@@ -411,78 +388,52 @@ void CvMainPropertySolver::resetPropertyChanges()
 	}
 }
 
-CvMainPropertySolver::CvMainPropertySolver()
-{
-	m_Solver.setMainSolver(this);
-}
-
-PropertySolverMap* CvMainPropertySolver::getSolverMap()
-{
-	return &m_mapProperties;
-}
-
-void CvMainPropertySolver::addGlobalManipulators(const CvPropertyManipulators *pMani)
-{
-	m_apGlobalManipulators.push_back(pMani);
-}
-
-void CvMainPropertySolver::gatherGlobalManipulators()
+void CvPropertySolver::gatherGlobalManipulators()
 {
 	// Global manipulators first
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
-		addGlobalManipulators(GC.getPropertyInfo((PropertyTypes)i).getPropertyManipulators());
+		m_apGlobalManipulators.push_back(GC.getPropertyInfo((PropertyTypes)i).getPropertyManipulators());
 	}
 }
 
-int CvMainPropertySolver::getNumGlobalManipulators() const
+void CvPropertySolver::gatherAndSolve()
 {
-	return m_apGlobalManipulators.size();
-}
-
-const CvPropertyManipulators* CvMainPropertySolver::getGlobalManipulator(int index) const
-{
-	return m_apGlobalManipulators[index];
-}
-
-void CvMainPropertySolver::gatherAndSolve()
-{
-	m_Solver.gatherActiveManipulators();
+	gatherActiveManipulators();
 
 	// Propagators first
-	m_Solver.predictPropagators();
+	predictPropagators();
 	m_mapProperties.computePredictValues();
-	m_Solver.correctPropagators();
+	correctPropagators();
 	m_mapProperties.applyChanges();
-	m_Solver.clearPropagators();
+	m_aPropagatorContexts.clear();
 
 	// Interactions next
-	m_Solver.predictInteractions();
+	predictInteractions();
 	m_mapProperties.computePredictValues();
-	m_Solver.correctInteractions();
+	correctInteractions();
 	m_mapProperties.applyChanges();
-	m_Solver.clearInteractions();
+	m_aInteractionContexts.clear();
 
 	// Sources last
-	m_Solver.predictSources();
+	predictSources();
 	m_mapProperties.computePredictValues();
-	m_Solver.correctSources();
+	correctSources();
 	m_mapProperties.applyChanges();
-	m_Solver.clearSources();
+	m_aSourceContexts.clear();
 }
 
 
-void CvMainPropertySolver::doTurn()
+void CvPropertySolver::doTurn()
 {
-	MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
 	resetPropertyChanges();
-	
+
 	gatherGlobalManipulators();
 
 	gatherAndSolve();
-	
+
 	m_apGlobalManipulators.clear();
 }
-	
+

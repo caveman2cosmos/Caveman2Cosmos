@@ -1,16 +1,42 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Build Infos -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by StrategyOnly -->
+<!-- Build Infos -->
 <Civ4BuildInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
-        <BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_LUNAR_PATH</Type>
+			<Description>TXT_KEY_BUILD_LUNAR_PATH</Description>
+			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
+			<iTime>600</iTime>
+			<iCost>25</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_LUNAR_PATH</RouteType>
+			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/buildlunarpath.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_PLANETARY_MAGLEV</Type>
+			<Description>TXT_KEY_BUILD_PLANETARY_MAGLEV</Description>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>50</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_PLANETARY_MAGLEV</RouteType>
+			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_ORBITAL_TRAJECTORY</Type>
 			<Description>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Description>
-			<PrereqTech>TECH_COILGUN</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>
@@ -20,7 +46,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/cislunar_trajectory.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SOLAR_TRAJECTORY</Type>
 			<Description>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Description>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
@@ -33,7 +59,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/solar_trajectory.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_WORMHOLE</Type>
 			<Description>TXT_KEY_BUILD_WORMHOLE</Description>
 			<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
@@ -46,7 +72,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_COMPACT_WORMHOLE</Type>
 			<Description>TXT_KEY_BUILD_COMPACT_WORMHOLE</Description>
 			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
@@ -59,7 +85,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MEGAWORMHOLE</Type>
 			<Description>TXT_KEY_BUILD_MEGAWORMHOLE</Description>
 			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
@@ -72,7 +98,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/megawormhole_route.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_HYPERLANE</Type>
 			<Description>TXT_KEY_BUILD_HYPERLANE</Description>
 			<PrereqTech>TECH_HYPERLANES</PrereqTech>
@@ -85,7 +111,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/hyperlane.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_ASPATIAL_ROUTE</Type>
 			<Description>TXT_KEY_BUILD_ASPATIAL_ROUTE</Description>
 			<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
@@ -98,7 +124,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/aspatial_route.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SPACE_STATION_LV1</Type>
 			<Description>TXT_KEY_BUILD_SPACE_STATION_LV1</Description>
 			<Help/>
@@ -117,7 +143,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SPACE_STATION_LV2</Type>
 			<Description>TXT_KEY_BUILD_SPACE_STATION_LV2</Description>
 			<Help/>
@@ -136,7 +162,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SPACE_STATION_LV3</Type>
 			<Description>TXT_KEY_BUILD_SPACE_STATION_LV3</Description>
 			<Help/>
@@ -155,7 +181,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/space_station_3.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_LUNAR_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_ARCOLOGY</Description>
 			<Help/>
@@ -174,7 +200,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/lunar_arcology.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_COSMIC_EXPANSION_NODE</Type>
 			<Description>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Description>
 			<Help/>
@@ -193,7 +219,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/cosmic_expansion_node.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TRUE_VACUUM</Type>
 			<Description>TXT_KEY_BUILD_TRUE_VACUUM</Description>
 			<Help/>
@@ -212,7 +238,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/true_vacuum.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_VENUS_SURFACE_MINE</Type>
 			<Description>TXT_KEY_BUILD_VENUS_SURFACE_MINE</Description>
 			<Help/>
@@ -231,7 +257,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/venus_surface_mine.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_VENUS_AERIAL_FARM</Type>
 			<Description>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Description>
 			<Help/>
@@ -250,7 +276,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/venus_aerial_farm.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MARTIAN_MINE</Type>
 			<Description>TXT_KEY_BUILD_MARTIAN_MINE</Description>
 			<Help/>
@@ -269,7 +295,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/mars_mine.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MARTIAN_FARM</Type>
 			<Description>TXT_KEY_BUILD_MARTIAN_FARM</Description>
 			<Help/>
@@ -288,7 +314,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/martian_farm.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_DYSON_SPHERE</Type>
 			<Description>TXT_KEY_BUILD_DYSON_SPHERE</Description>
 			<Help/>
@@ -307,7 +333,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/dyson_sphere.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_CISLUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_CISLUNAR_BASE</Description>
 			<Help/>
@@ -326,7 +352,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/cislunar_military_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SOLAR_SYSTEM_BASE</Type>
 			<Description>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Description>
 			<Help/>
@@ -345,7 +371,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/deep_space_military_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERSTELLAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERSTELLAR_BASE</Description>
 			<Help/>
@@ -364,7 +390,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/interstellar_military_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERGALACTIC_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_BASE</Description>
 			<Help/>
@@ -383,7 +409,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/intergalactic_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_HYPERSPACE_BUNKER</Type>
 			<Description>TXT_KEY_BUILD_HYPERSPACE_BUNKER</Description>
 			<Help/>
@@ -402,7 +428,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/hyperspace_bunker.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_MOON</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
@@ -417,7 +443,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/grassland.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_MARS</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
@@ -432,7 +458,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/grassland.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_NEUTRON_STAR</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
 			<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
@@ -447,7 +473,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/neutron_star.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_HYPERSPACE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
@@ -462,7 +488,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/hyperspace.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_PAST</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
@@ -477,7 +503,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/distant_past.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_FUTURE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
@@ -492,7 +518,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/distant_future.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_BRANESPACE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<PrereqTech>TECH_STRING_MANIPULATION</PrereqTech>
@@ -507,14 +533,14 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_PLACE_ASTEROID</Type>
 			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_PLACE_ASTEROID</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_ASTEROID</ImprovementType>
 			<FeatureChange>FEATURE_ASTEROIDS</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -522,14 +548,14 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,5,4</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_PLACE_GALAXY</Type>
 			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_PLACE_GALAXY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_GALAXY</ImprovementType>
 			<FeatureChange>FEATURE_GALAXY</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -537,7 +563,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/worldbuilder/galaxy.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SPACE_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Description>
 			<Help/>
@@ -556,9 +582,9 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/space_solar_array.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
-			<Type>BUILD_SPACE_SOLAR_CONCENTRATOR</Type>
-			<Description>TXT_KEY_BUILD_SPACE_SOLAR_CONCENTRATOR</Description>
+		<BuildInfo>
+			<Type>BUILD_SOLAR_CONCENTRATOR</Type>
+			<Description>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Description>
 			<Help/>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iTime>2500</iTime>
@@ -575,7 +601,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/space_solar_array.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_DISTANT_PAST_CITY</Type>
 			<Description>TXT_KEY_BUILD_DISTANT_PAST_CITY</Description>
 			<Help/>
@@ -594,7 +620,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/distant_past_city.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_DISTANT_FUTURE_CITY</Type>
 			<Description>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Description>
 			<Help/>
@@ -613,7 +639,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/distant_future_city.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_ASTEROID_MINE</Type>
 			<Description>TXT_KEY_BUILD_ASTEROID_MINE</Description>
 			<Help/>
@@ -632,7 +658,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/asteroid_mine.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_BRANE_FACTORY</Type>
 			<Description>TXT_KEY_BUILD_BRANE_FACTORY</Description>
 			<Help/>
@@ -651,7 +677,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/branespace_factory.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_BRANE_FARM</Type>
 			<Description>TXT_KEY_BUILD_BRANE_FARM</Description>
 			<Help/>
@@ -670,7 +696,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/branespace_farm.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SPIRITUAL_REALM</Type>
 			<Description>TXT_KEY_BUILD_SPIRITUAL_REALM</Description>
 			<Help/>
@@ -689,7 +715,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/spiritual_realm.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERSTELLAR_TRADING_POST</Type>
 			<Description>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Description>
 			<Help/>
@@ -708,7 +734,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/interstellar_trading_post.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SOLAR_TRADING_POST</Type>
 			<Description>TXT_KEY_BUILD_SOLAR_TRADING_POST</Description>
 			<Help/>
@@ -727,7 +753,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/solar_trading_post.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SUN_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_SUN_SCOOP</Description>
 			<Help/>
@@ -746,7 +772,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/sun_scoop.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_JOVIAN_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_SCOOP</Description>
 			<Help/>
@@ -765,7 +791,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/jovian_scoop.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_JOVIAN_FLOATING_CITY</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_FLOATING_CITY</Description>
 			<Help/>
@@ -784,11 +810,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/jovian_floating_city.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_JOVIAN_LUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MEGASTRUCTURES</ObsoleteTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -803,7 +830,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/jovian_lunar_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_JOVIAN_LUNAR_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_LUNAR_ARCOLOGY</Description>
 			<Help/>
@@ -822,7 +849,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/jovian_lunar_arcology.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_PARATERRAFORMED_ASTEROID</Type>
 			<Description>TXT_KEY_BUILD_PARATERRAFORMED_ASTEROID</Description>
 			<Help/>
@@ -841,7 +868,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/paraterraformed_asteroid.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SUPERNOVA_MINE</Type>
 			<Description>TXT_KEY_BUILD_SUPERNOVA_MINE</Description>
 			<Help/>
@@ -860,7 +887,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/supernova_mine_improvement.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORMED_PLANET</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORMED_PLANET</Description>
 			<Help/>
@@ -871,6 +898,22 @@
 			<ImprovementType>IMPROVEMENT_TERRAFORMED_PLANET</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_HOT_JUPITER</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MINI_NEPTUNE</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<bAltDown>0</bAltDown>
@@ -879,7 +922,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/terraformed_planet_improvement.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_ARTIFICIAL_PLANET</Type>
 			<Description>TXT_KEY_BUILD_ARTIFICIAL_PLANET</Description>
 			<Help/>
@@ -898,7 +941,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/artificial_planet.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_STAR_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_STAR_SCOOP</Description>
 			<Help/>
@@ -917,7 +960,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/star_scoop.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_BLUE_SUPERGIANT_COLONY</Type>
 			<Description>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Description>
 			<Help/>
@@ -936,7 +979,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/blue_supergiant_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_BIOTIC_NEUTRON_STAR</Type>
 			<Description>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Description>
 			<Help/>
@@ -955,7 +998,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/biotic_neutron_star.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_NEUTRON_STAR_COLONY</Type>
 			<Description>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Description>
 			<Help/>
@@ -974,7 +1017,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/neutron_star_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_BIOTIC_GALAXY</Type>
 			<Description>TXT_KEY_BUILD_BIOTIC_GALAXY</Description>
 			<Help/>
@@ -993,7 +1036,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/biotic_galaxy.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_HELIOFORMED_BROWN_DWARF</Type>
 			<Description>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Description>
 			<Help/>
@@ -1012,7 +1055,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/helioform.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_CISLUNAR_EXPANSION_MODULE</Type>
 			<Description>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Description>
 			<Help/>
@@ -1031,11 +1074,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/expanded_habitat.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SATELLITE_STATION</Type>
 			<Description>TXT_KEY_BUILD_SATELLITE_STATION</Description>
 			<Help/>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_PLANET_ENGINEERING</ObsoleteTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1050,7 +1094,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/satellite_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_ARCOLOGY_MOON</Type>
 			<Description>TXT_KEY_BUILD_ARCOLOGY_MOON</Description>
 			<Help/>
@@ -1069,7 +1113,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/arcology_moon.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERSTELLAR_COLONY</Type>
 			<Description>TXT_KEY_BUILD_INTERSTELLAR_COLONY</Description>
 			<Help/>
@@ -1088,7 +1132,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/interstellar_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERGALACTIC_COLONY</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Description>
 			<Help/>
@@ -1107,7 +1151,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/intergalactic_colony_improvement.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_SUPERCLUSTER_COLONY</Type>
 			<Description>TXT_KEY_BUILD_SUPERCLUSTER_COLONY</Description>
 			<Help/>
@@ -1126,7 +1170,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/supercluster_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_OBSERVABLE_UNIVERSE_COLONY</Type>
 			<Description>TXT_KEY_BUILD_OBSERVABLE_UNIVERSE_COLONY</Description>
 			<Help/>
@@ -1145,7 +1189,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/observable_universe_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_PARALLEL_UNIVERSE</Type>
 			<Description>TXT_KEY_BUILD_PARALLEL_UNIVERSE</Description>
 			<Help/>
@@ -1164,7 +1208,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/parallel_universe.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TIME_MANIFOLD</Type>
 			<Description>TXT_KEY_BUILD_TIME_MANIFOLD</Description>
 			<Help/>
@@ -1183,7 +1227,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/time_manifold.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MERCURY_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILD_MERCURY_SOLAR_ARRAY</Description>
 			<Help/>
@@ -1202,7 +1246,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/mercury_solar_array.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MERCURY_COLONY</Type>
 			<Description>TXT_KEY_BUILD_MERCURY_COLONY</Description>
 			<Help/>
@@ -1221,7 +1265,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/mercury_colony.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERSTELLAR_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERSTELLAR_RESEARCH_BASE</Description>
 			<Help/>
@@ -1240,7 +1284,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/interstellar_research_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_INTERGALACTIC_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Help/>
@@ -1259,7 +1303,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/intergalactic_research_base.dds</Button>
 		</BuildInfo>
-        <BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_DISTANT_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILD_DISTANT_RESEARCH_BASE</Description>
 			<Help/>
@@ -1283,6 +1327,7 @@
 			<Description>TXT_KEY_BUILD_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
@@ -1301,9 +1346,10 @@
 			<Type>BUILD_LUNAR_OUTPOST</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_OUTPOST</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>5000</iCost>
+			<iCost>2000</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_OUTPOST</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -1320,9 +1366,9 @@
 			<Type>BUILD_LUNAR_HABITATION_COMPLEX</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iTime>-1</iTime>
-			<iCost>2000</iCost>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>5000</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -1359,6 +1405,7 @@
 			<Description>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
@@ -1378,6 +1425,7 @@
 			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>
@@ -1392,6 +1440,7 @@
 			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>1500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1406,6 +1455,7 @@
 			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>
@@ -1484,6 +1534,21 @@
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_LISTENING_NODE</Type>
+			<Description>TXT_KEY_BUILD_LISTENING_NODE</Description>
+			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>300</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_LISTENING_NODE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_F</HotKey>
+			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

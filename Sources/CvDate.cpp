@@ -16,7 +16,7 @@ CvDate::CvDate()
 	m_iTick = 0;
 }
 
-CvDate::CvDate(unsigned int iTick) :
+CvDate::CvDate(uint32_t iTick) :
 m_iTick(iTick)
 {
 }
@@ -31,7 +31,7 @@ int CvDate::getDay() const
 	return ((m_iTick % 360) % 30) + 1;
 }
 
-unsigned int CvDate::GetTick() const
+uint32_t CvDate::GetTick() const
 {
 	return m_iTick;
 }
@@ -83,11 +83,11 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 		calculateEndDates(eActualGameSpeed);
 	}
 
-	for (std::vector<CvDateIncrement>::const_iterator it = aIncrements.begin(); it != aIncrements.end(); ++it)
+	foreach_(const CvDateIncrement& it, aIncrements)
 	{
-		if (*this < it->m_endDate)
+		if (*this < it.m_endDate)
 		{
-			return *it;
+			return it;
 		}
 	}
 	return aIncrements[aIncrements.size()-1];
@@ -102,7 +102,7 @@ void CvDate::increment(GameSpeedTypes eGameSpeed)
 
 void CvDate::increment(int iTurns, GameSpeedTypes eGameSpeed)
 {
-	for (int i=0; i<iTurns; i++)
+	for (int i = 0; i < iTurns; i++)
 	{
 		increment(eGameSpeed);
 	}
@@ -159,7 +159,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 	{
 		calculateEndDates(eActualGameSpeed);
 	}
-	
+
 
 	for (int i=0; i<(int)aIncrements.size(); i++)
 	{

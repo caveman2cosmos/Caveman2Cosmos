@@ -43,7 +43,7 @@ class WBTechScreen:
 		self.aWidgetBucket.append("topBar")
 		self.aWidgetBucket.append("botBar")
 
-		screen.setText("ExitSubScreen0", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontTitle, eWidGen, 0, 1)
+		screen.setText("ExitSubScreen0", "", "<font=4b>" + TRNSLTR.getText("TXT_WORD_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontTitle, eWidGen, 0, 1)
 		self.aWidgetBucket.append("ExitSubScreen0")
 
 		DDB = "CurrentTeam"
@@ -247,7 +247,7 @@ class WBTechScreen:
 
 		if iCode == 4: # Mouse Enter
 			if BASE == "TECH":
-				self.WB.updateTooltip(screen, CyGameTextMgr().getTechHelp(ID, False, True, False, True, -1))
+				self.WB.tooltip.handle(screen, CyGameTextMgr().getTechHelp(ID, False, True, False, True, -1))
 
 		elif not iCode: # click
 

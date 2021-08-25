@@ -27,8 +27,7 @@ void CvXMLLoadUtility::showXMLError(const char* const format, ...)
 
 	_vsnprintf(buf, kBufSize - 1, format, args);
 
-	OutputDebugString(buf);
-	gDLL->logMsg("xml.log", buf);
+	logging::logMsg("xml.log", buf);
 
 	gDLL->MessageBox(buf, "XML Error");
 }
@@ -86,17 +85,17 @@ bool CvXMLLoadUtility::CreateFXml()
 	//		return false;
 	//	}
 	//}
-	//catch (const xercesc::XMLException& toCatch) 
+	//catch (const xercesc::XMLException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.getMessage());
-	//	sprintf(szLog, "XML error: %s(%i) : (%s)\n", 
+	//	sprintf(szLog, "XML error: %s(%i) : (%s)\n",
 	//		toCatch.getSrcFile(), toCatch.getSrcLine(), message);
 	//	logMsg(szLog);
 	//	gDLL->MessageBox(szLog, "Error");
 	//	xercesc::XMLString::release(&message);
 	//	return false;
 	//}
-	//catch (const xercesc::DOMException& toCatch) 
+	//catch (const xercesc::DOMException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.msg);
 	//	sprintf(szLog, "XML model (DOM) error: %s : %s\n", szPath.c_str(), message);
@@ -114,7 +113,7 @@ bool CvXMLLoadUtility::CreateFXml()
 	//	xercesc::XMLString::release(&message);
 	//	return false;
 	//}
-	//catch (const xercesc::SAXException& toCatch) 
+	//catch (const xercesc::SAXException& toCatch)
 	//{
 	//	char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 	//	sprintf(szLog, "XML parsing SAX error: %s : %s\n", szPath.c_str(), message);
@@ -142,7 +141,7 @@ void CvXMLLoadUtility::DestroyFXml()
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvXMLLoadUtility::CvXMLLoadUtility() 
+CvXMLLoadUtility::CvXMLLoadUtility()
 	: m_pCurrentXmlElement(NULL)
 	, m_pParser(NULL)
 	, m_iCurProgressStep(0)
@@ -156,7 +155,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	}
 	catch (const xercesc::XMLException & toCatch)
 	{
-		OutputDebugString("XMLPlatformUtils::Initialize Faild");
+		OutputDebugString("XMLPlatformUtils::Initialize Faild\n");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		logging::logMsg("xml.log", message);
 		gDLL->MessageBox(message, "Error");

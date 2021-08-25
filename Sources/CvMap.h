@@ -14,11 +14,13 @@
 
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
+#include "CvUnitAI.h"
 
 class CvArea;
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
+//class CvUnitAI;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -27,14 +29,13 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 	{
 		if (iCoord < 0 )
 		{
-			return (iRange + (iCoord % iRange));
+			return iRange + (iCoord % iRange);
 		}
-		else if (iCoord >= iRange)
+		if (iCoord >= iRange)
 		{
-			return (iCoord % iRange);
+			return iCoord % iRange;
 		}
 	}
-
 	return iCoord;
 }
 
@@ -47,7 +48,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -56,32 +57,29 @@ public:
 	void setupGraphical();
 	void reset(CvMapInitData* pInitData);
 
-	void uninit();
 protected:
-
+	void uninit();
 	void setup();
 
 public:
-	//int percentUnoccupiedLand(bool bExcludeWater = true, bool bIncludeBarbarian = false, bool bExcludePeaks = true, CvArea* pArea = NULL, int iRange = -1, CvPlot* pRangeFromPlot = NULL);
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes getType() const;
 
 	void beforeSwitch();
 	void afterSwitch();
 
-	//	Viewports are owned by their underlying maps
-	int	getNumViewports() const;
-	CvViewport* getViewport(int iIndex) const;
-	int addViewport(int iXOffset, int iYOffset, bool bIsFullMapContext);	//	Returns new viewport index
-	void deleteViewport(int iIndex);
-	void setCurrentViewport(int iIndex);
+	void updateIncomingUnits();
+	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+
+private:
+	void addViewport(int iXOffset, int iYOffset);
+public:
+	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
+	const std::vector<CvViewport*> getViewports() const;
+
+	const char* getMapScript() const;
+
+	bool plotsInitialized() const;
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
@@ -92,7 +90,6 @@ public:
 
 	void updateFlagSymbolsInternal(bool bForce);
 	void updateFlagSymbols();
-
 	void updateFog();
 	void updateVisibility();
 	void updateSymbolVisibility();
@@ -223,24 +220,15 @@ public:
 	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;
 
 	void recalculateAreas();
-
 	void resetPathDistance();
-	// Super Forts begin *canal* *choke*
+
+	// Super Forts *canal* *choke*
 	int calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, const CvPlot* pInvalidPlot = NULL) const;
 	void calculateCanalAndChokePoints();
-	// Super Forts end
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 	// Plot danger cache
 	void invalidateIsActivePlayerNoDangerCache();
 	void invalidateIsTeamBorderCache(TeamTypes eTeam);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	// Serialization:
 	 virtual void read(FDataStreamBase* pStream);
@@ -251,7 +239,10 @@ public:
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
 
-protected:
+private:
+	void calculateAreas();
+
+	const MapTypes m_eType;
 
 	int m_iGridWidth;
 	int m_iGridHeight;
@@ -260,31 +251,38 @@ protected:
 	int m_iTopLatitude;
 	int m_iBottomLatitude;
 	int m_iNextRiverID;
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	const MapTypes m_eType;
-	std::vector<CvViewport*> m_viewports;
 	int m_iCurrentViewportIndex;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	bool m_bWrapX;
 	bool m_bWrapY;
 
-	int* m_paiNumBonus;
-	int* m_paiNumBonusOnLand;
-
 	bool m_bCitiesDisplayed;
 	bool m_bUnitsDisplayed;
+
+	static bool m_bSwitchInProgress;
+
+	int* m_paiNumBonus;
+	int* m_paiNumBonusOnLand;
 
 	CvPlot* m_pMapPlots;
 
 	FFreeListTrashArray<CvArea> m_areas;
 
-	void calculateAreas();
+	std::vector<CvViewport*> m_viewports;
+
+	struct TravelingUnit
+	{
+		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+			: numTurnsUntilArrival(numTravelTurns)
+		{
+			unit = static_cast<const CvUnitAI&>(travelingUnit);
+		}
+
+		CvUnitAI unit;
+		int numTurnsUntilArrival;
+	};
+
+	std::vector<TravelingUnit*> m_IncomingUnits;
 };
 
 #endif

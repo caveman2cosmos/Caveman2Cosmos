@@ -46,6 +46,7 @@
 	<ElementType name="TargetCondition"/>
 	<ElementType name="AttributeType" content="textOnly"/>
 	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iSpeedPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
@@ -108,7 +109,6 @@
 	<!--Textual References-->
 	<ElementType name="GenericCategory" content="textOnly"/>
 	<!--Integers-->
-	<ElementType name="iTraitGainPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureResistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInsidiousness" content="textOnly" dt:type="int"/>
@@ -162,19 +162,10 @@
 	<ElementType name="iInitialCityMaintenancePercent" content="textOnly" dt:type="int"/>
 	<!-- Parallel Maps XML info classes begin -->
 	<!-- MapInfos -->
-	<ElementType name="Map" content="textOnly"/>
-	<ElementType name="bContactable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapX" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapY" content="textOnly" dt:type="boolean"/>
 	<ElementType name="InitialWBMap" content="textOnly"/>
 	<ElementType name="MapScript" content="textOnly"/>
-	<ElementType name="MapInteraction" content="eltOnly">
-		<element type="Map"/>
-		<element type="bContactable"/>
-		<element type="iDistance"/>
-	</ElementType>
-	<ElementType name="StartingEvent" content="textOnly"/>
-	<ElementType name="SwitchType" content="textOnly"/>
 	<ElementType name="MapInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="Description"/>
@@ -185,32 +176,12 @@
 		<element type="bWrapY"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
-		<element type="MapInteraction" minOccurs="0"/>
-		<element type="StartingEvent"/>
-		<element type="SwitchType" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="MapInfos" content="eltOnly">
 		<element type="MapInfo" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Civ4MapInfos" content="eltOnly">
 		<element type="MapInfos"/>
-	</ElementType>
-	<!-- MapSwitchInfos -->
-	<ElementType name="SwitchEvent" content="textOnly"/>
-	<ElementType name="bManual" content="textOnly" dt:type="boolean"/>
-	<ElementType name="MapSwitchInfo" content="eltOnly">
-		<element type="Type"/>
-		<element type="Description"/>
-		<element type="Help"/>
-		<element type="Map"/>
-		<element type="SwitchEvent"/>
-		<element type="bManual"/>
-	</ElementType>
-	<ElementType name="MapSwitchInfos" content="eltOnly">
-		<element type="MapSwitchInfo" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="Civ4MapSwitchInfos" content="eltOnly">
-		<element type="MapSwitchInfos"/>
 	</ElementType>
 	<!-- Parallel Maps end -->
 	<ElementType name="WorldSize" content="textOnly"/>
@@ -454,6 +425,7 @@
 	<ElementType name="MovieFile" content="textOnly"/>
 	<ElementType name="MovieSound" content="textOnly"/>
 	<ElementType name="Sound" content="textOnly"/>
+
 	<ElementType name="ReligionInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -484,6 +456,7 @@
 	<ElementType name="ReligionInfos" content="eltOnly">
 		<element type="ReligionInfo" maxOccurs="*"/>
 	</ElementType>
+
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">
@@ -513,6 +486,7 @@
 	<ElementType name="iMilitaryProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeXP" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpread" content="textOnly" dt:type="int"/>
+
 	<ElementType name="CorporationInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -552,6 +526,7 @@
 	<ElementType name="CorporationInfos" content="eltOnly">
 		<element type="CorporationInfo" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+
 	<ElementType name="HintInfo" content="eltOnly">
 		<element type="Description"/>
 	</ElementType>
@@ -587,6 +562,7 @@
 	<ElementType name="iMinBarbarians" content="textOnly" dt:type="int"/>
 	<ElementType name="EraType" content="textOnly"/>
 	<ElementType name="NotEraType" content="textOnly"/>
+
 	<ElementType name="GoodyInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -620,22 +596,14 @@
 	<ElementType name="GoodyInfos" content="eltOnly">
 		<element type="GoodyInfo" maxOccurs="*"/>
 	</ElementType>
+
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iFreeWinsVsBarbs" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalAttackProb" content="textOnly" dt:type="int"/>
-	<ElementType name="iStartingLocPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivicUpkeepPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFeatureProductionPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitDiscoverPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitTradePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitGreatWorkPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldenAgePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryConscriptAngerPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
@@ -684,17 +652,6 @@
 		<element type="GoodyType" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
-	<ElementType name="bFreeTech" content="textOnly" dt:type="boolean"/>
-	<ElementType name="FreeTech" content="eltOnly">
-		<element type="TechType"/>
-		<element type="bFreeTech"/>
-	</ElementType>
-	<ElementType name="FreeTechs" content="eltOnly">
-		<element type="FreeTech" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AIFreeTechs" content="eltOnly">
-		<element type="FreeTech" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="HandicapInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -706,7 +663,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="iFreeWinsVsBarbs" minOccurs="0"/>
 		<element type="iAnimalAttackProb" minOccurs="0"/>
-		<element type="iStartingLocPercent" minOccurs="0"/>
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
 		<element type="iUnitUpkeepPercent" minOccurs="0"/>
@@ -763,8 +719,6 @@
 		<element type="iAIAdvancedStartPercent" minOccurs="0"/>
 		<element type="iAIResearchPercent" minOccurs="0"/>
 		<element type="Goodies" minOccurs="0" maxOccurs="*"/>
-		<element type="FreeTechs" minOccurs="0" maxOccurs="*"/>
-		<element type="AIFreeTechs" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="HandicapInfos" content="eltOnly">
 		<element type="HandicapInfo" maxOccurs="*"/>
@@ -1019,7 +973,6 @@
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoCapitalUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTaxRateUnhappiness" content="textOnly" dt:type="int"/>
-	<ElementType name="iRealCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflation" content="textOnly" dt:type="int"/>
 	<ElementType name="bChooseCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
@@ -1030,7 +983,6 @@
 	<ElementType name="iCityOverLimitUnhappy" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignerUnhappyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLandmarkAnger" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bEnablesMADNukes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoForeignTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCorporations" content="textOnly" dt:type="boolean"/>
@@ -1210,6 +1162,7 @@
 	<ElementType name="iAttitudeShareMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iEnslavementChance" content="textOnly" dt:type="int"/>
 	<ElementType name="iFoodConsumptionPerPopulation" content="textOnly" dt:type="int"/>
+
 	<ElementType name="CivicInfo" content="eltOnly">
 		<element type="CivicOptionType" minOccurs="0"/>
 		<element type="Type"/>
@@ -1273,14 +1226,12 @@
 		<element type="bAllowSlaves" minOccurs="0"/>
 		<element type="iFreedomFighterChange" minOccurs="0"/>
 		<element type="bFreedomFighter" minOccurs="0"/>
-		<element type="iRealCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iInflation" minOccurs="0"/>
 		<element type="bChooseCurrency" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iHurryInflationModifier" minOccurs="0"/>
 		<element type="iSharedCivicTradeRouteModifier" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
-		<element type="bEnablesMADNukes" minOccurs="0"/>
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
 		<element type="iTradeRoutes" minOccurs="0"/>
@@ -1343,6 +1294,7 @@
 		<element type="bBansNonStateReligions" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
+
 	<ElementType name="iProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingProductionModifier" content="eltOnly">
 		<element type="BuildingType"/>
@@ -1402,17 +1354,8 @@
 	<ElementType name="CivicInfos" content="eltOnly">
 		<element type="CivicInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
+
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1422,37 +1365,18 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
-		<element type="iGrowthPercent" minOccurs="0"/>
-		<element type="iTrainPercent" minOccurs="0"/>
-		<element type="iConstructPercent" minOccurs="0"/>
-		<element type="iCreatePercent" minOccurs="0"/>
-		<element type="iResearchPercent" minOccurs="0"/>
-		<element type="iBuildPercent" minOccurs="0"/>
-		<element type="iImprovementPercent" minOccurs="0"/>
-		<element type="iGreatPeoplePercent" minOccurs="0"/>
-		<element type="iCulturePercent" minOccurs="0"/>
-		<element type="iAnarchyPercent" minOccurs="0"/>
-		<element type="iBarbPercent" minOccurs="0"/>
-		<element type="iFeatureProductionPercent" minOccurs="0"/>
-		<element type="iUnitDiscoverPercent" minOccurs="0"/>
-		<element type="iUnitHurryPercent" minOccurs="0"/>
-		<element type="iUnitTradePercent" minOccurs="0"/>
-		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
-		<element type="iGoldenAgePercent" minOccurs="0"/>
-		<element type="iHurryPercent" minOccurs="0"/>
-		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
-		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
-		<element type="iVictoryDelayPercent" minOccurs="0"/>
-		<element type="iTraitGainPercent" minOccurs="0"/>
+		<element type="iSpeedPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">
 		<element type="GameSpeedInfo" maxOccurs="*"/>
 	</ElementType>
+
 	<ElementType name="iBaseTime" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iFirstTurnMultiplier" content="textOnly" dt:type="int"/>
+
 	<ElementType name="TurnTimerInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1715,6 +1639,15 @@
 	<ElementType name="AudioUnitVictoryScript" content="textOnly"/>
 	<ElementType name="AudioUnitDefeatScript" content="textOnly"/>
 	<ElementType name="iAdvancedStartPoints" content="textOnly" dt:type="int"/>
+	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
+
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

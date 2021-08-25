@@ -15,6 +15,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
 		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::return_by_value>(), "OrderData* (int iIndex)")  // only use local
 
+		.def("AI_isEmphasizeSpecialist", &CyCity::AI_isEmphasizeSpecialist, "bool (int /*SpecialistTypes*/ eIndex)")
 		.def("AI_isEmphasize", &CyCity::AI_isEmphasize, "bool (int iEmphasizeType)")
 		.def("AI_countBestBuilds", &CyCity::AI_countBestBuilds, "int (CyArea* pArea)")
 		.def("AI_cityValue", &CyCity::AI_cityValue, "int ()")
@@ -33,7 +34,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getLiberationPlayer", &CyCity::getLiberationPlayer, "int ()")
 		//.def("liberate", &CyCity::liberate, "void ()")
-		
+
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		.def("calculateTradeProfitTimes100", &CyCity::calculateTradeProfitTimes100, "int (CyCity) - returns the unrounded trade profit created by CyCity")
@@ -108,8 +109,9 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getEspionageDefenseModifier", &CyCity::getEspionageDefenseModifier, "int ()")
 
 		.def("isWorkingPlot", &CyCity::isWorkingPlot, "bool (iIndex) - true if a worker is working this city's pPlot")
-		.def("getNumRealBuilding", &CyCity::getNumRealBuilding, "int (BuildingID) - get # real building of this type")
 		.def("setNumRealBuilding", &CyCity::setNumRealBuilding, "(BuildingID, iNum) - Sets number of buildings in this city of BuildingID type")
+		.def("getNumRealBuilding", &CyCity::getNumRealBuilding, "int (BuildingID) - get # Actual building count")
+		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "int (BuildingID) - get # Filters out disabled buildings")
 		.def("isHasReligion", &CyCity::isHasReligion, "bool (ReligionID) - does city have ReligionID?")
 		.def("setHasReligion", &CyCity::setHasReligion, "void (ReligionID, bool bNewValue, bool bAnnounce, bool bArrows) - religion begins to spread")
 		.def("isHasCorporation", &CyCity::isHasCorporation, "bool (CorporationID) - does city have CorporationID?")
@@ -188,7 +190,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setWeLoveTheKingDay", &CyCity::setWeLoveTheKingDay, "void (bool bWeLoveTheKingDay)")
 		.def("calculateCorporateTaxes", &CyCity::calculateCorporateTaxes, "int ()")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
-		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange, bool bDirty)")
+		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange)")
 
 		.def("changeEventAnger", &CyCity::changeEventAnger, "void (int iChange)")
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")

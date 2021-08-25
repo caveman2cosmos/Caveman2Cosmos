@@ -4,26 +4,26 @@
 #define CyMap_h
 
 //
-// Python wrapper class for CvMap 
+// Python wrapper class for CvMap
 //
 
 class CyPlot;
 class CvMap;
 class CyArea;
+class CyUnit;
 
 class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap);		// Call from C++
-	//const CvMapInterfaceBase* getMap() const { return m_pMap; }	// Call from C++
-	bool isNone() const { return m_pMap == NULL; }
-	
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
+	explicit CyMap(MapTypes eMap);
+
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
+
 	int getType();
 	CyMap& operator = (CvMap& kMap);
+
+	bool plotsInitialized() const;
 
 	bool viewportsEnabled();
 	int	getViewportWidth();
@@ -33,22 +33,12 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/	
-	
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by barbarian civ                                                                        */
-/************************************************************************************************/
+
 	void verifyUnitValidPlot();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	void erasePlots();
 	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
@@ -61,7 +51,6 @@ public:
 	CyArea* findBiggestArea(bool bWater);
 
 	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
 	bool isPlot(int iX, int iY);
 	int numPlots();
 	int plotNum(int iX, int iY);
@@ -90,15 +79,17 @@ public:
 	int getNumBonuses(int /* BonusTypes */ eIndex);
 	int getNumBonusesOnLand(int /* BonusTypes */ eIndex);
 
+	python::list plots() const;
 	CyPlot* plotByIndex(int iIndex);
 	CyPlot* sPlotByIndex(int iIndex);
 	CyPlot* plot(int iX, int iY);
 	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
-	int getIndexAfterLastArea();
+
 	int getNumAreas();
 	int getNumLandAreas();
 	CyArea* getArea(int iID);
+	python::list areas() const;
 	void recalculateAreas();
 	void resetPathDistance();
 
@@ -114,22 +105,11 @@ public:
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
-	// Super Forts begin *canal* *choke*
-	void calculateCanalAndChokePoints();
-	// Super Forts end
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
-	// PYTHON HELPER FUNCTIONS
-	//int getNumPlayerOwnedPlots(int /*PlayerTypes*/ iPlayer);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	python::tuple firstArea(bool bRev);	// returns tuple of (CyArea, iterOut)
-	python::tuple nextArea(int iterIn, bool bRev);		// returns tuple of (CyArea, iterOut)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	// Super Forts *canal* *choke*
+	void calculateCanalAndChokePoints();
+
 protected:
 	CvMap* m_pMap;
 };

@@ -2,78 +2,6 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BEASTMASTER_ANCIENT</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Beastmaster_Anc/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Beastmaster_Anc/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BEASTMASTER_MEDIEVAL</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_medieval.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Beastmaster_Med/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Beastmaster_Med/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_ANCIENT</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_MEDIEVAL</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AARDVARK</Type>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
 			<fScale>20.0</fScale>
@@ -677,8 +605,6 @@
 			<fBattleDistance>0.45</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_ELEPHANT</SelectionSound>
-			<ActionSound>AS3D_UN_ELEPHANT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_EMU</Type>
@@ -793,8 +719,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_GORILLA</SelectionSound>
-			<ActionSound>AS3D_UN_GORILLA</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GREATWHITE</Type>
@@ -2459,7 +2383,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/Units/mttapir.dds</Button>
 			<fScale>30.0</fScale>
@@ -2507,7 +2431,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/units/sparth/tamed_tapir.dds</Button>
 			<fScale>30.0</fScale>

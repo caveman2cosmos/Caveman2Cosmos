@@ -13,6 +13,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"
 
 // In the following method we set the order of loading properly
@@ -42,7 +43,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 
 	DEBUG_LOG("MLF.log", "\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
 
-	// Initialization of a temp LoadArray 
+	// Initialization of a temp LoadArray
 	std::vector< std::vector<bool> > aabLoaded(GC.getNumModLoadControlInfos()); //allocate the rows
 
 	for (int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
@@ -65,7 +66,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 	bool bContinue = true;
 	while (bContinue)	//we start with iDirDepth at the highest value(set during the MLF loading)
 	{
-		int iDirDepthTemp = 0;		//we don't want to change the global value	
+		int iDirDepthTemp = 0;		//we don't want to change the global value
 		int iInfosLoad = 0;
 		int iLoad = 0;
 
@@ -101,7 +102,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 								iInfosLoad = iiInfos;
 								iLoad = ii;
 
-								//The first valid we find on this level will be the first to load, 
+								//The first valid we find on this level will be the first to load,
 								//so we abord further search inside this class, and Continue the loop to the next level
 								//To see if this new Module itself has another MLF the next level
 								bHitDeepestDepthLoop = true;
@@ -125,7 +126,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		//load the deepest file
 		if (aabLoaded[iInfosLoad][iLoad])
 		{
-			// check for valid xml files			
+			// check for valid xml files
 			if (isValidModule(bModuleExist, (szModDirectory + GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()).c_str(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str(), CvString::format(".xml").c_str())/*(int)aszValidFilesVerification.size() > 0*/)	// does ANY valid xml file exist?
 			{
 				// if valid, module XML file(s) exist
@@ -206,7 +207,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			//break when we just finished checking the top level
 			if (iDirDepthTemp == 0)
 			{
-				FAssert(iDirDepthTemp >= 0); //should never reach negative values!!
+				FASSERT_NOT_NEGATIVE(iDirDepthTemp) //should never reach negative values!!
 				break;
 			}
 		}
@@ -237,7 +238,7 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 	const CvString& refcstrRootDirectory,
 	const CvString& refcstrModularDirectory,
 	const CvString& refcstrExtension,
-	bool							bSearchSubdirectories)
+	bool bSearchSubdirectories)
 {
 	CvString		strFilePath;		// Filepath
 	CvString		strModPath;			// Modules path
@@ -251,12 +252,7 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 
 	strPattern = refcstrRootDirectory + "\\*.*";
 
-#ifdef _DEBUG
-	{
-		szDebugBuffer.Format("=== MLFEnumerateFiles begin in root directory %s ===", refcstrRootDirectory.c_str());
-		gDLL->logMsg("CvXMLLoadUtilitySetMod_MLFEnumerateFiles.log", szDebugBuffer.c_str());
-	}
-#endif
+	DEBUG_LOG("CvXMLLoadUtilitySetMod_MLFEnumerateFiles.log", "=== MLFEnumerateFiles begin in root directory %s ===", refcstrRootDirectory.c_str());
 
 	hFile = ::FindFirstFile(strPattern.c_str(), &FileInformation);
 	if (hFile != INVALID_HANDLE_VALUE)
@@ -273,12 +269,7 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 				{
 					if (bSearchSubdirectories)
 					{
-#ifdef _DEBUG
-						{
-							szDebugBuffer.Format(" * Search subdirectory %s", strFilePath.c_str());
-							gDLL->logMsg("CvXMLLoadUtilitySetMod_MLFEnumerateFiles.log", szDebugBuffer.c_str());
-						}
-#endif
+						DEBUG_LOG("CvXMLLoadUtilitySetMod_MLFEnumerateFiles.log", " * Search subdirectory %s", strFilePath.c_str());
 
 						// Search subdirectory
 						MLFEnumerateFiles(aszFiles, strFilePath, strModPath, refcstrExtension);
@@ -298,19 +289,9 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						strExtension = strExtension.substr(strExtension.rfind("_civ4") + 1);
 					}
-					/*	 - old buggy rules, just left here for history reminder
-										if ( strExtension.rfind("civ4") != std::string::npos )
-										{
-											strExtension = strExtension.substr(strExtension.rfind("civ4") + 4);
-										}
-					*/
 					else if (strExtension.rfind("globaldefines") != std::string::npos)
 					{
 						strExtension = strExtension.substr(strExtension.rfind("globaldefines"));
-					}
-					else if (strExtension.rfind("pythoncallbackdefines") != std::string::npos)
-					{
-						strExtension = strExtension.substr(strExtension.rfind("pythoncallbackdefines"));
 					}
 
 					//force lowercase for comparison
@@ -320,16 +301,11 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						compareCStrExtension[i] = tolower(compareCStrExtension[i]);
 					}
+
 					if (compareCStrExtension.rfind("_civ4") != std::string::npos)
 					{
 						compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("_civ4") + 1);
 					}
-					/*	 - old buggy rules, just left here for history reminder
-										if ( compareCStrExtension.rfind("civ4") != std::string::npos )
-										{
-											compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("civ4") + 4);
-										}
-					*/
 
 					if (!strcmp(strExtension.c_str(), compareCStrExtension.c_str()))
 					{

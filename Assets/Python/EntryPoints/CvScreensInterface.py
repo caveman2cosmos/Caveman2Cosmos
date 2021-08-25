@@ -4,16 +4,9 @@
 from CvPythonExtensions import *
 from CvScreenEnums import *
 import types
-
 import CvMainInterface
-
 import CvOptionsScreen
 import CvReplayScreen
-
-#import CvDiplomacy
-
-import CvEventInterface
-import CvPopupInterface
 import ScreenInput as PyScreenInput
 
 import BugCore
@@ -140,12 +133,13 @@ def showTopCivs():
 
 def showInfoScreen(argsList):
 	if CyGame().getActivePlayer() != -1:
-		iTabID = argsList[0]
-		iEndGame = argsList[1]
-		screenMap[INFO_SCREEN].showScreen(-1, iTabID, iEndGame)
+		screenMap[INFO_SCREEN].interfaceScreen(argsList[0], argsList[1])
 
 def showDebugInfoScreen():
 	screenMap[DEBUG_INFO_SCREEN].interfaceScreen()
+
+def showDebugScreen():
+	screenMap[DEBUG_SCREEN].interfaceScreen()
 
 def configTechSplash(option=None, value=None):
 	if value is None:
@@ -403,7 +397,7 @@ def WorldBuilderNormalPlayerTabModeCB():
 # Called by the exe for WB and AS #
 #---------------------------------#
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
-	iList, iIndex, iTab = argsList;
+	iList, iIndex, iTab = argsList
 	print "WorldBuilderOnAdvancedStartBrushSelected, iList=%d, iIndex=%d, type=%d" %(iList, iIndex, iTab)
 	if iTab == advancedStartScreen.getTechTab():
 		showTechChooser()
@@ -682,9 +676,10 @@ def lateInit():
 	import CvDawnOfMan
 	import CvTopCivs
 	import Forgetful
-	import CvDebugInfoScreen
 	import CvTechChooser
 	import BuildListScreen
+	import CvDebugInfoScreen
+	import DebugScreen
 	screenMap[CORPORATION_SCREEN]	= CvCorporationScreen.CvCorporationScreen()
 	screenMap[ESPIONAGE_ADVISOR]	= CvEspionageAdvisor.CvEspionageAdvisor()
 	screenMap[MILITARY_ADVISOR]		= CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
@@ -699,9 +694,10 @@ def lateInit():
 	screenMap[DAWN_OF_MAN]			= CvDawnOfMan.CvDawnOfMan()
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)
 	screenMap[FORGETFUL_SCREEN]		= Forgetful.Forgetful()
-	screenMap[DEBUG_INFO_SCREEN]	= CvDebugInfoScreen.CvDebugInfoScreen()
 	screenMap[TECH_CHOOSER]			= CvTechChooser.CvTechChooser()
 	screenMap[BUILD_LIST_SCREEN]	= BuildListScreen.BuildListScreen()
+	screenMap[DEBUG_INFO_SCREEN]	= CvDebugInfoScreen.CvDebugInfoScreen()
+	screenMap[DEBUG_SCREEN]			= DebugScreen.DebugScreen(DEBUG_SCREEN)
 
 	import WorldBuilder, CvAdvancedStartScreen
 	global worldBuilderScreen, advancedStartScreen

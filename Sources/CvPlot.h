@@ -155,6 +155,8 @@ public:
 
 	void erase();
 
+	void recalculateBaseYield();
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -280,13 +282,6 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	/*	Koshling - due to the implementation of fort culture inherited from AND we need to
-	// handle fort culture a bit differently in C2C and some of these methods are not needed
-	int getCultureRangeForts(PlayerTypes ePlayer) const;
-	void setCultureRangeForts(PlayerTypes ePlayer, int iNewValue);
-	void changeCultureRangeForts(PlayerTypes ePlayer, int iChange);
-	bool isWithinFortCultureRange(PlayerTypes ePlayer) const;
-	*/
 	void changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture();
 
@@ -577,7 +572,8 @@ public:
 	static rect_iterator endRect() { return rect_iterator(); }
 
 	typedef bst::iterator_range<rect_iterator> rect_range;
-	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	//static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	rect_range rect(int halfWid, int halfHgt) const { return rect_range(beginRect(m_iX, m_iY, halfWid, halfHgt), endRect()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -665,7 +661,7 @@ public:
 	void updateIrrigated();
 
 	bool isPotentialCityWork() const;
-	bool isPotentialCityWorkForArea(CvArea* pArea) const;
+	bool isPotentialCityWorkForArea(const CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
@@ -710,6 +706,8 @@ public:
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
 
+	bool isImprovementDestructible() const;
+
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
@@ -735,15 +733,18 @@ public:
 	int getRiverCrossingCount() const;
 	void changeRiverCrossingCount(int iChange);
 
+	int getBaseYield(const YieldTypes eIndex) const;
+	void changeBaseYield(const short* pYieldChange);
+
 	short* getYield() const;
+	void updateYield();
+	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	DllExport int getYield(YieldTypes eIndex) const;
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
-	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	bool hasYield() const;
-	void updateYield();
 	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
@@ -827,9 +828,10 @@ public:
 	DllExport void setLayoutStateToCurrent();
 	bool updatePlotBuilder();
 
-	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
-	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
-	bool shouldUsePlotBuilder();
+	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) const; // determines how the improvement state is shown in the engine
+	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked) const; // determines how the bonus state is shown in the engine
+
+	bool shouldUsePlotBuilder() const;
 	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
@@ -1014,6 +1016,7 @@ protected:
 	//short* m_aiCultureRangeForts;
 	// Super Forts end
 
+	short* m_baseYields;
 	short* m_aiYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
@@ -1116,16 +1119,11 @@ public:
 	//	Toggle plot in/out of contribution
 	void ToggleInPlotGroupsZobristContributors();
 
-	inline int getZobristContribution() const
-	{
-		return m_zobristContribution;
-	}
+	inline int getZobristContribution() const { return m_zobristContribution; }
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
-	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 
@@ -1135,11 +1133,15 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapCategoryType(MapCategoryTypes eIndex) const;
+	bool isMapCategoryType(MapCategoryTypes eMapCategory) const;
+	const std::vector<MapCategoryTypes>& getMapCategories() const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 	int getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 protected:
 	// AIAndy: Properties

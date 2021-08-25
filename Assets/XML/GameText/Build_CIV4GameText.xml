@@ -1,0 +1,1247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_REQUIRES_BONUS</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]To place with %s1_Build requires %s2_Bonus[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Разместить с %s1_Build (требуется %s2_Bonus)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
+		<Russian>, [LINK=%s1_Build]%s2_Build[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Modifier%% alla velocità dei lavoratori per costruire %s2_Build</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator szybkości Robotnika przy budowie %s2_Build</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости рабочим при возведении [LINK=%s2_Build]%s3_Build[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
+		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]abbattuta[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Çàñåêó[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE</Tag>
+		<English>Build [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Poste aquatique de Défense Anti-Aérienne[\LINK]</French>
+		<German>Errichte einen[LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Wasser-Luftschutz[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Stazione marina di difesa anti-aerea[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Estación acuática de defensa antiaérea[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Nawodną Obronę Przeciw powietrzną[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Ìîðñêàÿ ñòàíöèÿ ÏÂÎ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Tag>
+		<English>[ICON_BULLET]+50% Air Defense</English>
+		<French>[ICON_BULLET]+50% Défense Aérienne</French>
+		<German>[ICON_BULLET]+50% Luftverteidigunge</German>
+		<Italian>[ICON_BULLET]+50% di difesa anti-aerea</Italian>
+		<Spanish>[ICON_BULLET]+50% a la defensa aérea</Spanish>
+		<Polish>[ICON_BULLET]+50%% obrony przeciw powietrznej</Polish>
+		<Russian>[ICON_BULLET]+50%% Çàùèòû îò àâèàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Tag>
+		<English>Build [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Aquatic Forcefield[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Champ de Force Aquatique[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Wasser-Schutzschild\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Campo di forza acquatico[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Campo de fuerza acuático[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Nawodne Pole Siłowe[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Ìîðñêîå óêðåïëåíèå[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Tag>
+		<English>Build [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archaeological Site[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BEACON_CORAL</Tag>
+		<English>Create [LINK=FEATURE_CORAL_REEF_BEACON]Beacon[\LINK] (Coral)</English>
+		<French>Placer une [LINK=FEATURE_CORAL_REEF_BEACON]Balise[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=FEATURE_CORAL_REEF_BEACON]Leuchtfeuer[\LINK] (Coral)</German>
+		<Italian>Costruisci una [LINK=FEATURE_CORAL_REEF_BEACON]Torre di segnalazione[\LINK] (Coral)</Italian>
+		<Spanish>Construir una [LINK=FEATURE_CORAL_REEF_BEACON]Baliza[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=FEATURE_CORAL_REEF_BEACON]Boję[\LINK] (Coral)</Polish>
+		<Russian>Установить [LINK=FEATURE_CORAL_REEF_BEACON]Бакен[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BEACON_REEF</Tag>
+		<English>Create [LINK=FEATURE_REEF_BEACON]Beacon[\LINK] (Reef)</English>
+		<French>Placer une [LINK=FEATURE_REEF_BEACON]Balise[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=FEATURE_REEF_BEACON]Leuchtfeuer[\LINK] (Reef)</German>
+		<Italian>Costruisci una [LINK=FEATURE_REEF_BEACON]Torre di segnalazione[\LINK] (Reef)</Italian>
+		<Spanish>Construir una [LINK=FEATURE_REEF_BEACON]Baliza[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=FEATURE_REEF_BEACON]Boję[\LINK] (Reef)</Polish>
+		<Russian>Установить [LINK=FEATURE_REEF_BEACON]Бакен[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BREAK_ICE</Tag>
+		<English>Remove [LINK=FEATURE_ICE]Ice[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BREAK_ICE_KILL</Tag>
+		<English>Remove [LINK=FEATURE_ICE]Ice[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BURN_VEGETATION</Tag>
+		<English>Remove [LINK=FEATURE_FOREST]Vegetation[\LINK] (No prod boost)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Tag>
+		<English>Remove [LINK=FEATURE_FALLOUT]Fallout[\LINK] (Fast)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Colony Extraction Facility[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Colonie Installation d'extraction[\LINK]</French>
+		<German>Bauen [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Kolonie Extraktionsanlage[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Impianto di estrazione di Colonia[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Plataforma de extracción colonial[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Kopalnię Kolonii[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Êîëîíèþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colony Habitat (Huge)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Habitations Coloniales (Immenses)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Kolonie Lebensraum (Riesig)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonia Habitat (Enorme)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Hábitat colonial enorme[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Siedlisko (Wielkie)[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Æèëóþ êîëîíèþ (Îãðîìíóþ)[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colony Habitat (Large)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Habitations Coloniales (Grandes)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Kolonie Lebensraum (Gross)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonia Habitat (Grande)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Hábitat colonial grande[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Siedlisko (Duże)[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Æèëóþ êîëîíèþ (Áîëüøóþ)[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colony Habitat (Medium)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Habitations Coloniales (Moyennes)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Kolonie Lebensraum (Mittel)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonia Habitat (Medio)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Hábitat colonial mediano[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Siedlisko (Średnie)[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Æèëóþ êîëîíèþ (Ñðåäíþþ)[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colony Habitat (Small)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Habitations Coloniales (Petites)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Kolonie Lebensraum (Klein)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonia Habitat (Piccolo)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Hábitat colonial pequeño[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Siedlisko (Małe)[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Æèëóþ êîëîíèþ (Ìàëóþ)[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_HYDROPONICS</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colony Hydroponics[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonie Hydroponique[\LINK]</French>
+		<German>Bauen [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Kolonie Hydrokultur[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonia idroponica[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hidrocultivo colonial[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hydroponikę Kolonii[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Êîëîíèþ ãèäðîïîíèêè[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_MANUFACTORY</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Colony Manufactory[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Colonie Manufacture[\LINK]</French>
+		<German>Bauen [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Kolonie Manufaktur[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Fabbrica Colonia[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Fábrica colonial[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Manufakturę Kolonii[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_MANUFACTORY]Êîëîíèþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COLONY_SOLAR_ARRAY</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Colony Solar Array[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Colonie Solaire Assemblée[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Kolonie Solar Aufstellung[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Solare Apparato di Colonia[\LINK]</Italian>
+		<Spanish>Construir unos [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Paneles solares coloniales[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Panele Słoneczne Kolonii[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Ñîëíå÷íóþ ïàíåëü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COMMAND_BUNKER</Tag>
+		<English>Build [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COMMAND_BUNKER]Bunker de Commandement[\LINK]</French>
+		<German>Errichte einen [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COMMAND_BUNKER]Refugio de mando[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_BUNKER]Bunkier[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_COMMAND_BUNKER]Áóíêåð[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COMMAND_CENTER</Tag>
+		<English>Build [LINK=IMPROVEMENT_COMMAND_CENTER]Command Center[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COMMAND_CENTER]Centre de Commandement[\LINK]</French>
+		<German>Errichte ein [LINK=IMPROVEMENT_COMMAND_CENTER]Kommandozentrum[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_CENTER]Centro di comando[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COMMAND_CENTER]Centro de mando[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_CENTER]Bunkier Przyszłości[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_COMMAND_CENTER]Êîìàíäíûé öåíòð[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_CORE_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_CORE_MINE]Mine profonde[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_CORE_MINE]Mina profunda[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_CORE_MINE]Kopalnię Głębinową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_CORE_MINE]Øòîëüíþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COTTAGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_COTTAGE]Gehöfts[\LINK][COLOR_REVERT]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTAGE]Villetta[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_COTTAGE]Villa[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COTTAGE]Chatkę[\LINK]</Polish>
+		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_COTTAGE]äîìà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_DESERT_CAMP]Ïóñòûííûé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
+		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_DESERT_CAMP]Пустынный лагерь[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DRAIN_SWAMP</Tag>
+		<English>Remove [LINK=FEATURE_SWAMP]Swamp[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Early Mountain Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de montagne primitive[\LINK]</French>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Ãîðíûå êîïè[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_EARLY_QUARRY</Tag>
+		<English>Build [LINK=IMPROVEMENT_EARLY_QUARRY]Early Quarry[\LINK]</English>
+		<French>Construire une [COLOR_BUILDING_TEXT]carrière antique[COLOR_REVERT]</French>
+		<Polish>Zbuduj Wczesny Kamieniołom</Polish>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_EARLY_QUARRY]Ïðèèñê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Tag>
+		<English>Make [LINK=ROUTE_ELECTRIC_RAILROAD]Electric Railroad[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_ELECTRIC_RAILROAD]Chemin de Fer électrique[\LINK]</French>
+		<German>Baue eine elektrifizierte Eisenbahn</German>
+		<Italian>Costruisci una ferrovia elettrica</Italian>
+		<Spanish>Construir un Ferrocarril eléctrico</Spanish>
+		<Polish>Zbuduj Kolej Elektryczną</Polish>
+		<Russian>Ñòðîèòü [LINK=ROUTE_ELECTRIC_RAILROAD]Ìàãèñòðàëü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_EXTRACTION_FACILITY</Tag>
+		<English>Build [LINK=IMPROVEMENT_EXTRACTION_FACILITY]Extraction Facility[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_EXTRACTION_FACILITY]Installation d'Extraction[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_EXTRACTION_FACILITY]Extraktions-Anlage[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_EXTRACTION_FACILITY]Impianto di estrazione[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_EXTRACTION_FACILITY]Plataforma de extracción[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_EXTRACTION_FACILITY]platformę wydobywczą[\LINK]</Polish>
+		<Russian>Ïîñòðîéêà [COLOR_HIGHLIGHT_TEXT]øàõòû[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FACTORY</Tag>
+		<English>Build [LINK=IMPROVEMENT_FACTORY]Factory[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FACTORY]Usine[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_FACTORY]Fabrik[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FACTORY]Fabbrica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FACTORY]Fábrica[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FACTORY]Fabrykę[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FACTORY]Ôàáðèêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK]</French>
+		<German>Anlegen eines [LINK=IMPROVEMENT_FARM]Getreidefeldes[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FARM]Granja[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FARM]Farmę[\LINK]</Polish>
+		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_FARM]ôåðìû[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_BOATS</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_BOATS]Fishing Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_FISHING_BOATS]bateaux de pêche[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
+		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK]</English>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_FOREST_PRESERVE]Ëåñíîé çàïîâåäíèê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORT</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORT]Fort[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_FORT]Fort[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FORT]Êðåïîñòü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE]Óêðåïëåííóþ ïåùåðó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée (Ouvrier Détruit)[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
+		<Russian>Óêðåïèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ïåùåðó[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Fortified Cave with Cache[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Caverne fortifiée, avec cache[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]grotta fortificata con nascondigli[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Caverna fortificada con escondrijo[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Ufortyfikowaną Jaskinię ze Schowkiem[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Ïåùåðó ñî ñêëàäîì[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Fossil Dig Site[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Fruit Gathering Camp[\LINK] (Consumed)</English>
+		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Camp de Récolte de Fruits[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Früchte sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]campo di raccolta di frutti[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Campo de cultivo de frutas[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Obóz Zbieraczy Owoców[\LINK]</Polish>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Ëàãåðü ñáîðà ôðóêòîâ[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Fruit Picking Camp[\LINK]</English>
+		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]pépinière d'Arbres[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Früchte pflücken[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Vivaio di alberi[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zona de reforestación[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zbieracz owocow[\LINK]</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Сбор фруктов[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GEOGLYPH</Tag>
+		<English>Build [LINK=IMPROVEMENT_GEOGLYPH]Geoglyph Inscriptions[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Tag>
+		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale Géothermique[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermalfabrik[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Impianto geotermico[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Planta geotérmica[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Zakład Geotermalny[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Ãåîòåðìàëüíàÿ ôàáðèêà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK] (Consumed)</English>
+		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de Raisins[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]campo di raccolta di uva[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo de cultivo de uvas[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Szałas Zbieraczy Winogron[\LINK]</Polish>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Ëàãåðü ñáîðà âèíîãðàäà[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Grape Picking Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben lesen[\LINK]</German>
+		<Russian>Строить [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Сбор винограда[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
+		<English>Make [LINK=ROUTE_GRAVITY_TRAIN]Gravity Train[\LINK]</English>
+		<French>Construire [LINK=ROUTE_GRAVITY_TRAIN]Train à Gravité[\LINK]</French>
+		<Russian>Строить [LINK=ROUTE_GRAVITY_TRAIN]грав. туннель[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GROUNDWATER_WELL</Tag>
+		<English>Build [LINK=IMPROVEMENT_GROUNDWATER_WELL]Groundwater Well[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Puits Souterrain[\LINK]</French>
+		<German>Errichte einen [LINK=IMPROVEMENT_GROUNDWATER_WELL]Grundwasserbrunnen[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Pozzo d'irrigazione[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Pozo de agua subterránea[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_GROUNDWATER_WELL]Studnię Głębinową[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_GROUNDWATER_WELL]Ñêâàæèíà ïîäçåìíûõ âîä[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
+		<English>Build [LINK=IMPROVEMENT_GROW_FOREST]Grow Forest[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HAMLET</Tag>
+		<English>Build [LINK=IMPROVEMENT_HAMLET]Hamlet[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HAMLET]Hameau[\LINK]</French>
+		<German>Errichte einen [LINK=IMPROVEMENT_HAMLET]Weiler[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_HAMLET]Casale[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HAMLET]Caserío[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HAMLET]osadę[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_HAMLET]Õóòîð[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HARVEST_KELP</Tag>
+		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK]</German>
+		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK]</Italian>
+		<Spanish>[LINK=IMPROVEMENT_HARVEST_KELP]Recolectar algas[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HARVEST_KELP]Uprawę Wodorostów[\LINK]</Polish>
+		<Russian>[LINK=IMPROVEMENT_HARVEST_KELP]Ñáîð âîäîðîñëåé[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
+		<English>Make [LINK=ROUTE_HIGHWAY]Highway[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_HIGHWAY]Autoroute[\LINK]</French>
+		<German>Schnellstraße bauen</German>
+		<Italian>Costruisci un'autostrada</Italian>
+		<Spanish>Construir una Autopista</Spanish>
+		<Polish>Zbuduj Autostradę</Polish>
+		<Russian>Ïîñòðîèòü [LINK=ROUTE_HIGHWAY]øîññå[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HUNTING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_HUNTING_CAMP]Hunting Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HUNTING_CAMP]Camp de Chasse[\LINK]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_HUNTING_CAMP]Jagdlagers[\LINK][COLOR_REVERT]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_HUNTING_CAMP]Campo di Caccia[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HUNTING_CAMP]Campamento de caza[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HUNTING_CAMP]Obóz Łowców[\LINK]</Polish>
+		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_HUNTING_CAMP]ëàãåðÿ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HUNTING_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_HUNTING_PRESERVE]Hunting Preserve[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_HUNTING_PRESERVE]Chasse gardée[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_HUNTING_PRESERVE]Wildgehege[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_HUNTING_PRESERVE]Riserva di caccia[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HUNTING_PRESERVE]Coto de caza[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HUNTING_PRESERVE]Rezerwat Myśliwski[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_HUNTING_PRESERVE]Çàêàçíèê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HYBRID_FOREST</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYBRID_FOREST]Hybrid Forest[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_HYBRID_FOREST]Forêt Hybride[\LINK]</French>
+		<German>Errichte einen [LINK=IMPROVEMENT_HYBRID_FOREST]Hybriden Wald[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_HYBRID_FOREST]Foresta ibrida[\LINK]</Italian>
+		<Spanish>Crear un [LINK=IMPROVEMENT_HYBRID_FOREST]Bosque híbrido[\LINK]</Spanish>
+		<Polish>Posadź [LINK=IMPROVEMENT_HYBRID_FOREST]Las Hybrydowy[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_HYBRID_FOREST]Ãèáðèäíûé ëåñ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HYDROCARBON_WELL</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYDROCARBON_WELL]Hydrocarbon Well[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Puits à Hydrocarbures[\LINK]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_HYDROCARBON_WELL]Bohrturms[\LINK][COLOR_REVERT]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Idrocarburo Pozzo[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Pozo petrolífero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDROCARBON_WELL]Wieżę Wydobywczą Węglowodorów[\LINK]</Polish>
+		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_HYDROCARBON_WELL]íåôòÿíîé ñêâàæèíû[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYDRO_DAM]Hydro Dam[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HYDRO_DAM]Barrage Hydroélectrique[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_HYDRO_DAM]Wasserkraftwerk[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_HYDRO_DAM]Diga Idroelettrica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_HYDRO_DAM]Presa[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDRO_DAM]Hydroelektrownię[\LINK]</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_HYDRO_DAM]Дамбу[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Tag>
+		<English>Build [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Manufacturing Complex[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe de Fabrication[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Fabrikation Zentrum[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso di produzione[\LINK]</Italian>
+		<Spanish>Construye un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Polígono Fabrication[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Kompleks Produkcyjny[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Ïðîìûøëåííûé Êîìïëåêñ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JUMPLANE</Tag>
+		<English>Make [LINK=ROUTE_JUMPLANE]Jumplane[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_JUMPLANE]Tremplin[\LINK]</French>
+		<German>Jumplane bauen</German>
+		<Italian>Costruisci una Jumplane</Italian>
+		<Spanish>Construir una Vía de impulso</Spanish>
+		<Polish>Zbuduj Punkt Skoku</Polish>
+		<Russian>Ïîñòðîèòü [LINK=ROUTE_JUMPLANE]ãèïåðòóííåëü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_JUNGLE_CAMP]ëàãåðü â äæóíãëÿõ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Détruit)</French>
+		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_JUNGLE_CAMP]Стоянку в джунглях[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
+		<English>Create [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Lighthouse[\LINK] (Coral)</English>
+		<French>Construire un [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
+		<Italian>Costruisci un [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
+		<Spanish>Construir un [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Faro[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Latarnię Morską[\LINK] (Coral)</Polish>
+		<Russian>Строить [LINK=FEATURE_CORAL_REEF_LIGHTHOUSE]Маяк[\LINK] (Кораллы)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
+		<English>Create [LINK=FEATURE_REEF_LIGHTHOUSE]Lighthouse[\LINK] (Reef)</English>
+		<French>Construire un [LINK=FEATURE_REEF_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=FEATURE_REEF_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
+		<Italian>Costruisci un [LINK=FEATURE_REEF_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
+		<Spanish>Construir un [LINK=FEATURE_REEF_LIGHTHOUSE]Faro[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=FEATURE_REEF_LIGHTHOUSE]Latarnię Morską[\LINK] (Reef)</Polish>
+		<Russian>Строить [LINK=FEATURE_REEF_LIGHTHOUSE]Маяк[\LINK] (Риф)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUMBERJACK</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumberjack[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUMBERJACK]Camp de bûcherons[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LUMBERJACK]Holzfällerlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBERJACK]Campo di legname[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBERJACK]Campamento maderero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBERJACK]Obóz Drwali[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LUMBERJACK]Äîì äðîâîñåêà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUMBERMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUMBERMILL]Lumbermill[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LUMBERMILL]Scierie[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LUMBERMILL]Ëåñîïèëêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MAGLEV</Tag>
+		<English>Make [LINK=ROUTE_MAGLEV]Maglev[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_MAGLEV]Maglev[\LINK]</French>
+		<German>Magnetbahn bauen</German>
+		<Italian>Costruisci una linea Maglev</Italian>
+		<Spanish>Construir un Ferrocarril de levitación magnética</Spanish>
+		<Polish>Zbuduj Kolej Magnetyczną</Polish>
+		<Russian>Ïîñòðîèòü [LINK=ROUTE_MAGLEV]ìàãëåâ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MARINE_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MARINE_PRESERVE]Marine Preserve[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MARINE_PRESERVE]Réserve Marine[\LINK]</French>
+		<Spanish>Construir una [LINK=IMPROVEMENT_MARINE_PRESERVE]Reserva marina[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MARINE_PRESERVE]Rezerwat Morski[\LINK]</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MARINE_PRESERVE]Морской заповедник[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MINE]Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MINE]Mine[\LINK]</French>
+		<Russian>Êîïàòü [LINK=IMPROVEMENT_MINE]Øàõòó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MOAI</Tag>
+		<English>Build [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</French>
+		<German>Bauen [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</Italian>
+		<Spanish>Construir unas [LINK=IMPROVEMENT_MOAI]Estatuas moái[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MOAI]Моаи[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MODERN_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MODERN_MINE]Modern Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MODERN_MINE]Mine Moderne[\LINK]</French>
+		<German>Errichte eine[LINK=IMPROVEMENT_MODERN_MINE]Moderne Mine[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_MODERN_MINE]Miniera moderna[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_MODERN_MINE]Mina moderna[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_MINE]Nowoczesną Kopalnię[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_MODERN_MINE]Ñîâðåìåííàÿ øàõòà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK]</French>
+		<German>Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MODERN_WINDMILL]Aerogenerador[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]Współczesny Wiatrak[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MODERN_WINDMILL]Ñîâð. ìåëüíèöó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de montagne[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine des Berges[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Miniera della montagna[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mina de montana[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MOUNTAIN_MINE]Górską Kopalnie[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MOUNTAIN_MINE]Ðóäíèê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER</Tag>
+		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Ñáîð ãðèáîâ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
+		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Сбор грибов[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_NATURE_PRESERVE]Nature Preserve[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_NATURE_PRESERVE]Réserve naturelle[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_NATURE_PRESERVE]Natur bewahren[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_NATURE_PRESERVE]Riserva Naturale[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_NATURE_PRESERVE]Reserva natural[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_NATURE_PRESERVE]Rezerwat[\LINK]</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_NATURE_PRESERVE]Íàöèîíàëüíûé ïàðê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_NOMADIC_HERD]Pastizal nómada[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_NOMADIC_HERD]Koczownicze Stado[\LINK]</Polish>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_NOMADIC_HERD]Êî÷åâîå ñòàäî[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Tag>
+		<English>Build [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Offshore Platform[\LINK]</English>
+		<French>construire une [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plate-forme offshore[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]Bohrinsel[\LINK] errichten</German>
+		<Italian>Creare una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]piattaforma petrolifera[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_OFFSHORE_PLATFORM]plataforma petrolífera[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ORCHARD</Tag>
+		<English>Build [LINK=IMPROVEMENT_ORCHARD]Orchard[\LINK]</English>
+		<French>Planter un [LINK=IMPROVEMENT_ORCHARD]Verger[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_ORCHARD]Obstplantage[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_ORCHARD]Frutteto[\LINK]</Italian>
+		<Spanish>Plantar [LINK=IMPROVEMENT_ORCHARD]Huerta[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ORCHARD]Sad[\LINK]</Polish>
+		<Russian>Ïîñàäèòü [LINK=IMPROVEMENT_ORCHARD]Ôðóêòîâûé ñàä[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PASTURE</Tag>
+		<English>Build [LINK=IMPROVEMENT_PASTURE]Pasture[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_PASTURE]Pâturage[\LINK]</French>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_PASTURE]Ïàñòáèùå[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PATH</Tag>
+		<English>Make [LINK=ROUTE_PATH]Path[\LINK]</English>
+		<French>Dégager un [LINK=ROUTE_PATH]passage[\LINK]</French>
+		<German>Karrenweg anlegen</German>
+		<Italian>Costruisci una strada in fango</Italian>
+		<Spanish>Crear un Camino de tierra</Spanish>
+		<Polish>Zbuduj Szlak</Polish>
+		<Russian>Проложить [LINK=ROUTE_PATH]тропу[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PAVED_ROAD</Tag>
+		<English>Make [LINK=ROUTE_PAVED_ROAD]Paved Road[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_PAVED_ROAD]Route Pavée[\LINK]</French>
+		<German>Gepflasterte Straße bauen</German>
+		<Italian>Costruisci una strada pavimentata</Italian>
+		<Spanish>Construir un Camino pavimentado</Spanish>
+		<Polish>Zbuduj Drogę Brukowaną</Polish>
+		<Russian>Ïîñàäèòü [LINK=ROUTE_PAVED_ROAD]Ìîùåíàÿ äîðîãà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PEAT_CUTTER</Tag>
+		<English>Build [LINK=IMPROVEMENT_PEAT_CUTTER]Peat Cutter[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_PEAT_CUTTER]récolteur de Tourbe[\LINK]</French>
+		<Spanish>Construir un [LINK=IMPROVEMENT_PEAT_CUTTER]Recolector de turba[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_PEAT_CUTTER]Obóz Zbieraczy Torfu[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_PEAT_CUTTER]Äîáû÷ó òîðôà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANTATION</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK]</French>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_PLANTATION]Ïëàíòàöèþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO</Tag>
+		<English>Create [LINK=FEATURE_BAMBOO]Bamboo[\LINK] Forest</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Plant Gathering Camp[\LINK] (Consumed)</English>
+		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Camp de récolte[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]campo di raccolta di piante[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Campo de cultivo de plantas[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Obóz Zbieraczy Roślin[\LINK]</Polish>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Ëàãåðü ñáîðà äèêîðîñîâ[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANT_JUNGLE</Tag>
+		<English>Create [LINK=FEATURE_JUNGLE]Jungle[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Plant Picking Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
+		<Russian>Строить [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Сбор растений[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA</Tag>
+		<English>Create [LINK=FEATURE_SAVANNA]Savanna[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_QUARRY</Tag>
+		<English>Build [LINK=IMPROVEMENT_QUARRY]Quarry[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_QUARRY]Carrière[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_QUARRY]Êàìåíîëîìíþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RADAR_TOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_RADAR_TOWER]Radar Tower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_RADAR_TOWER]Tour Radar[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_RADAR_TOWER]torre radar[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_RADAR_TOWER]Torre de radar[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_RADAR_TOWER]Wieżę Radarową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_RADAR_TOWER]Ðàäàðíóþ âûøêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RADIO_TOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_RADIO_TOWER]Radio Tower[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_RADIO_TOWER]Ðàäèîâûøêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RAILROAD</Tag>
+		<English>Make [LINK=ROUTE_RAILROAD]Railroad[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_RAILROAD]Chemin de fer[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=ROUTE_RAILROAD]Æåëåçíàÿ äîðîãà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RECLAIM_LAND</Tag>
+		<English>Remove [LINK=FEATURE_FOREST]Any Feature[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Tag>
+		<English>Remove [LINK=FEATURE_ROCK_FORM1]Rock Formation[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_REMOVE_VEGETATION</Tag>
+		<English>Remove [LINK=FEATURE_FOREST]Vegetation[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ROAD</Tag>
+		<English>Make [LINK=ROUTE_ROAD]Road[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_ROAD]Route[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=ROUTE_ROAD]Äîðîãà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SALT_GATHERER</Tag>
+		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
+		<English>Remove [LINK=FEATURE_INFECTIOUS_SMOG]Biological Contamination[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SANITIZE_WATER</Tag>
+		<English>Remove [LINK=TERRAIN_INFECTED_WATER]Biological Contamination[\LINK] (Water)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Fleisch sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo degli spazzini[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campamento de recolección[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SCAVENGING_CAMP]Obóz Zbieraczy[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SCAVENGING_CAMP]Ëàãåðü ñâåæåâàíèÿ[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT</Tag>
+		<English>Remove [LINK=FEATURE_FALLOUT]Fallout[\LINK]</English>
+		<French>[LINK=FEATURE_FALLOUT]Décontaminer[\LINK]</French>
+		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
+		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
+		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SEA_MILL]Moulin maritime[\LINK]</French>
+		<German>Bauen a [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SEA_MILL]Molino marino[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SEA_MILL]Młyn Morski[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEA_MILL]Âîäÿíóþ ìåëüíèöó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK]</English>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_SHAFT_MINE]Shaft Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SHAFT_MINE]Puits de mine[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_SHAFT_MINE]Schachtmine[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SHAFT_MINE]Pozzo minerario[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SHAFT_MINE]Pozo minero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SHAFT_MINE]Kopalnię Szybową[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SHAFT_MINE]Ãëóáîêàÿ øàõòà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SILK_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_SILK_FARM]Culture de Soie[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_SILK_FARM]Seidenfarm[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_SILK_FARM]Coltura di bachi da seta[\LINK]</Italian>
+		<Spanish>Plantar un [LINK=IMPROVEMENT_SILK_FARM]Cultivo de seda[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SILK_FARM]Farmę Jedwabiu[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SILK_FARM]Øåëêîâàÿ ôåðìà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_PANELS</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_PANELS]Solar Panels[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_SOLAR_PANELS]Panneaux Solaires[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_SOLAR_PANELS]Sonnenkollektoren[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SOLAR_PANELS]Pannelli solari[\LINK]</Italian>
+		<Spanish>Construir unos [LINK=IMPROVEMENT_SOLAR_PANELS]Paneles solares[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele Słoneczne[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SOLAR_PANELS]Ñîëíå÷íóþ áàòàðåþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_STEEL_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Steel Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Tour d'observation en acier[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_STEEL_WATCHTOWER]torre d'osservazione in acciaio[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Torre de vigilancia de acero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Stalową Wieżę Obserwacyjną[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Áëîêïîñò[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Ìàñòåðñêóþ êàìåíîòåñà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Мастерскую каменных орудий[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_STONE_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_WATCHTOWER]Stone Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_STONE_WATCHTOWER]Tour d'observation en pierres[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_STONE_WATCHTOWER]torre d'osservazione in pietra[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_WATCHTOWER]Puesto de avanzada de piedra[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Kamienną Wieżę Obserwacyjną[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_STONE_WATCHTOWER]Íàáëþäàòåëüíóþ âûøêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUBMERGED_TOWN]Submerged Town[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_SUBMERGED_TOWN]Ville sous-marine[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_SUBMERGED_TOWN]Unterwasserstadt[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SUBMERGED_TOWN]Insediamento sottomarino[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SUBMERGED_TOWN]Asentamiento submarino[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SUBMERGED_TOWN]Ïîäâîäíûé ãîðîä[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_SUBURBS]Banlieue[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_SUBURBS]Vorstadt[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_SUBURBS]Sobborghi[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SUBURBS]Barrio[\LINK]</Spanish>
+		<Polish>Ulepsz miasteczko do [LINK=IMPROVEMENT_SUBURBS]Przedmieście[\LINK]</Polish>
+		<Russian>Óëó÷øèòü ãîðîä äî [LINK=IMPROVEMENT_SUBURBS]Ïðèãîðîä[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TAR_GATHERER</Tag>
+		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK]</French>
+		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</German>
+		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_TAR_GATHERER]Ñáîð ñìîëû[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TAR_GATHERER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Détruit)</French>
+		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
+		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_TAR_GATHERER]Сбор смолы[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
+		<English>Terraform into [LINK=TERRAIN_DESERT]Desert[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_DUNES</Tag>
+		<English>Terraform into [LINK=TERRAIN_DUNES]Dunes[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_GRASS</Tag>
+		<English>Terraform into [LINK=TERRAIN_GRASSLAND]Grassland[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_LUSH</Tag>
+		<English>Terraform into [LINK=TERRAIN_LUSH]Lush[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_MUDDY</Tag>
+		<English>Terraform into [LINK=TERRAIN_MUDDY]Muddy[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Tag>
+		<English>Terraform into [LINK=TERRAIN_PERMAFROST]Permafrost[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_PLAINS</Tag>
+		<English>Terraform into [LINK=TERRAIN_PLAINS]Plains[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_ROCKY</Tag>
+		<English>Terraform into [LINK=TERRAIN_ROCKY]Rocky[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_SCRUB</Tag>
+		<English>Terraform into [LINK=TERRAIN_SCRUB]Scrub[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA</Tag>
+		<English>Terraform into [LINK=TERRAIN_TAIGA]Taiga[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Tag>
+		<English>Terraform into [LINK=TERRAIN_TUNDRA]Tundra[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_THATCH_CUTTER</Tag>
+		<English>Build [LINK=IMPROVEMENT_THATCH_CUTTER]Thatch Cutter[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_THATCH_CUTTER]Récolteur de Chaume[\LINK]</French>
+		<Spanish>Construir un [LINK=IMPROVEMENT_THATCH_CUTTER]Recolector de paja[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_THATCH_CUTTER]Chatę Zbieracza Strzechy[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_THATCH_CUTTER]Ñáîð ñîëîìû[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TIDAL_HARNESS</Tag>
+		<English>Build [LINK=IMPROVEMENT_TIDAL_HARNESS]Tidal Harness[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_TIDAL_HARNESS]Usine marémotrice[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_TIDAL_HARNESS]Gezeitenbaum[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_TIDAL_HARNESS]Impianto energia delle maree[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_TIDAL_HARNESS]Presa de marea[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TIDAL_HARNESS]Wiatraki Wodne[\LINK]</Polish>
+		<Russian>Ñîîðóäèòü [LINK=IMPROVEMENT_TIDAL_HARNESS]Âîëíîðåçû[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TOWN</Tag>
+		<English>Build [LINK=IMPROVEMENT_TOWN]Town[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_TOWN]Ville[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_TOWN]Gemeinde[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_TOWN]Paese[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_TOWN]Pueblo[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TOWN]Miasteczko[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_TOWN]Ãîðîäîê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TRAIL</Tag>
+		<English>Make [LINK=ROUTE_TRAIL]Trail[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_TRAIL]Sentier[\LINK]</French>
+		<German>Trampelpfad anlegen</German>
+		<Italian>Costruisci un sentiero</Italian>
+		<Spanish>Crear un Sendero</Spanish>
+		<Polish>Zbuduj Ścieżkę</Polish>
+		<Russian>Проложить [LINK=ROUTE_TRAIL]просеку[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TREEFARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_TREEFARM]Treefarm[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_TREEFARM]Verger[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_TREEFARM]Baumschule[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_TREEFARM]Coltivazione di alberi[\LINK]</Italian>
+		<Spanish>Plantar un [LINK=IMPROVEMENT_TREEFARM]Vergel[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TREEFARM]Plantację Drzew[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_TREEFARM]Äðåâåñíàÿ ôåðìà[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TUNNEL</Tag>
+		<English>Make [LINK=ROUTE_TUNNEL]Tunnel[\LINK]</English>
+		<French>Construire un [COLOR_BUILDING_TEXT]Tunnel sous-marin[COLOR_REVERT]</French>
+		<German>Tunnel errichten</German>
+		<Italian>Costruisci un Tunnel</Italian>
+		<Spanish>Construir un Túnel submarino</Spanish>
+		<Polish>Zbuduj Tunel</Polish>
+		<Russian>Ñòðîèòü [LINK=ROUTE_TUNNEL]òîííåëü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_VACTRAIN</Tag>
+		<English>Make [LINK=ROUTE_VACTRAIN]Vactrain[\LINK]</English>
+		<French>[LINK=ROUTE_VACTRAIN]Construire Un Train sous vide[\LINK]</French>
+		<Russian>Строить [LINK=ROUTE_VACTRAIN]вак. туннель[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_VERTICAL_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_VERTICAL_FARM]Vertical Farm[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_VERTICAL_FARM]Ferme verticale[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_VERTICAL_FARM]Vertikale Farm[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_VERTICAL_FARM]Fattoria verticale[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_VERTICAL_FARM]Granja vertical[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_VERTICAL_FARM]Farmę Wertykalną[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_VERTICAL_FARM]Âåðòèêàëüíóþ ôåðìó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_VILLAGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</French>
+		<German>Errichte ein [LINK=IMPROVEMENT_VILLAGE]Dorf[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_VILLAGE]Villaggio[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_VILLAGE]Aldea[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_VILLAGE]Wioskę[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_VILLAGE]Äåðåâíÿ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WATERMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WATERMILL]Watermill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WATERMILL]Moulin à eau[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WATERMILL]Âîäÿíóþ ìåëüíèöó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WETLANDS_CAMP]Áîëîòíûé ëàãåðü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Détruit)</French>
+		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK] (Consumed)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WETLANDS_CAMP]Болотный лагерь[\LINK] (Собиратель)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WHALING_BOATS</Tag>
+		<English>Build [LINK=IMPROVEMENT_WHALING_BOATS]Whaling Boats[\LINK]</English>
+		<French>construire des [LINK=IMPROVEMENT_WHALING_BOATS]baleiniers[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WHALING_BOATS]Walfänger[\LINK] bauen</German>
+		<Italian>Creare delle [LINK=IMPROVEMENT_WHALING_BOATS]baleniere[\LINK]</Italian>
+		<Spanish>Crear [LINK=IMPROVEMENT_WHALING_BOATS]barcos balleneros[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WHALING_SHIPS</Tag>
+		<English>Build [LINK=IMPROVEMENT_WHALING_SHIPS]Whaling Ships[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Tag>
+		<English>Build [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Wildlife Sanctuary[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Sanctuaire de la faune[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Naturschutzgebiet[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Santuario della fauna selvatica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Reserva salvaje[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Safari[\LINK]</Polish>
+		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Ñàôàðè[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINDMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WINDMILL]Windmill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WINDMILL]Moulin à vent[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WINDMILL]Âåòðÿíóþ ìåëüíèöó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINERY</Tag>
+		<English>Build [LINK=IMPROVEMENT_WINERY]Winery[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WINERY]Vignoble[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WINERY]Âèíîêóðíþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Cueilleuse)[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Äåðåâÿííóþ ñòîðîæêó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Cueilleuse)</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Ñòîðîæ. âûøêó[\LINK] (Ñîáèðàòåëü)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOOD_GATHERER]Wood Gatherer[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WORKSHOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_WORKSHOP]Workshop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WORKSHOP]Atelier[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WORKSHOP]Ìàñòåðñêóþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_YOUNG_FOREST</Tag>
+		<English>Create [LINK=FEATURE_FOREST_YOUNG]Young Forest[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER</Tag>
+		<English>Shows the Build List Screen.</English>
+		<French>Affiche l'écran des Listes de constructions.</French>
+		<German>Zeigt die Bauliste an.</German>
+		<Italian>Mostra lo schermo delle liste di costruzione.</Italian>
+		<Spanish>Muestra la vista de Listas de construcción.</Spanish>
+		<Polish>Pokaż okno Listy Budowy.</Polish>
+		<Russian>Ïîêàçàòü Ýêðàí ñïèñêà ïîñòðîåê.</Russian>
+	</TEXT>
+</Civ4GameText>

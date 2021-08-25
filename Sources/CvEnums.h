@@ -243,7 +243,7 @@ enum InterfaceModeTypes
 	INTERFACEMODE_RANGE_ATTACK,
 	INTERFACEMODE_AIRSTRIKE,
 	INTERFACEMODE_REBASE,
-	INTERFACEMODE_PYTHON_PICK_PLOT,
+	INTERFACEMODE_DOTMAP,
 	INTERFACEMODE_SAVE_PLOT_NIFS,
 
 	INTERFACEMODE_AIRBOMB1,
@@ -254,15 +254,9 @@ enum InterfaceModeTypes
 	INTERFACEMODE_BOMBARD,
 	INTERFACEMODE_FENGAGE,
 
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	INTERFACEMODE_GO_TO_SENTRY,
 #endif
-// BUG - Sentry Actions - end
-	// < M.A.D. Nukes Start >
-	INTERFACEMODE_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
-
 	INTERFACEMODE_SHADOW_UNIT,
 
 	NUM_INTERFACEMODE_TYPES
@@ -446,7 +440,7 @@ enum WidgetTypes
 	WIDGET_HELP_RELIGION_CITY,
 	WIDGET_HELP_CORPORATION_CITY,
 	WIDGET_HELP_NATIONALITY,
-	WIDGET_HELP_DEFENSE,
+	WIDGET_UNUSED_40, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_HEALTH,
 	WIDGET_HELP_HAPPINESS,
 	WIDGET_HELP_POPULATION,
@@ -497,7 +491,7 @@ enum WidgetTypes
 	WIDGET_HELP_FOUND_RELIGION,
 	WIDGET_HELP_FOUND_CORPORATION,
 	WIDGET_HELP_FINANCE_NUM_UNITS,
-	WIDGET_UNUSED_50, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
+	WIDGET_HELP_IMPROVEMENT_ACTUAL,
 	WIDGET_HELP_FINANCE_AWAY_SUPPLY,
 	WIDGET_HELP_FINANCE_CITY_MAINT,
 	WIDGET_HELP_FINANCE_CIVIC_UPKEEP,
@@ -530,58 +524,40 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_FEATURE,
 	WIDGET_TURN_EVENT,
 	WIDGET_FOREIGN_ADVISOR,
-	WIDGET_REVOLUTION,
+	WIDGET_HELP_BUILDUP,
 	WIDGET_PEDIA_DESCRIPTION,
 	WIDGET_PEDIA_DESCRIPTION_NO_HELP,
 	WIDGET_DEAL_KILL,
 	WIDGET_MINIMAP_HIGHLIGHT,
-	WIDGET_PRODUCTION_MOD_HELP,
+	WIDGET_PEDIA_JUMP_TO_ROUTE,
 	WIDGET_LEADERHEAD,
 	WIDGET_LEADER_LINE,
 	WIDGET_COMMERCE_MOD_HELP,
-	WIDGET_CLOSE_SCREEN,
+	WIDGET_CLOSE_SCREEN, // Toffer - This widget enum seems to be hardcoded in exe, do not mess with this enum value.
 	WIDGET_PEDIA_JUMP_TO_RELIGION,
 	WIDGET_PEDIA_JUMP_TO_CORPORATION,
 	WIDGET_GLOBELAYER,
 	WIDGET_GLOBELAYER_OPTION,
 	WIDGET_GLOBELAYER_TOGGLE,
 
-// BUG - Min/Max Commerce Rate - start
 	WIDGET_SET_PERCENT,
-// BUG - Min/Max Commerce Rate - end
 
-// BUG - Finance Advisor - start
 	WIDGET_HELP_FINANCE_DOMESTIC_TRADE,
 	WIDGET_HELP_FINANCE_FOREIGN_TRADE,
 	WIDGET_HELP_FINANCE_SPECIALISTS,
-// BUG - Finance Advisor - end
 
-// BUG - Trade Denial - start
 	WIDGET_PEDIA_JUMP_TO_BONUS_TRADE,
 	WIDGET_PEDIA_JUMP_TO_TECH_TRADE,
-// BUG - Trade Denial - end
 
-// BUG - Foreign Advisor INFO Trade - start
 	WIDGET_TRADE_ROUTES,
-// BUG - Foreign Advisor INFO Trade - end
 
-// BUG - Food Rate Hover - start
 	WIDGET_FOOD_MOD_HELP,
-// BUG - Food Rate Hover - end
 
-// BUG - Leaderhead Relations - start
 	WIDGET_LEADERHEAD_RELATIONS,
-// BUG - Leaderhead Relations - end
-/************************************************************************************************/
-/* Afforess	                  Start		 01/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	WIDGET_HELP_EMPLOYMENT,
 	WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	WIDGET_BUILDING_FILTER,
 	WIDGET_BUILDING_GROUPING,
 	WIDGET_BUILDING_SORT,
@@ -601,9 +577,6 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_TRAIT,
 	//ls612: Viewport Goto Helper Widget
 	WIDGET_CITY_GOTO,
-	WIDGET_PEDIA_JUMP_TO_ROUTE,
-	WIDGET_HELP_IMPROVEMENT_ACTUAL,
-	WIDGET_HELP_BUILDUP,
 
 	NUM_WIDGET_TYPES
 };
@@ -660,7 +633,6 @@ enum ButtonPopupTypes
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-	BUTTONPOPUP_SAVE_INFO_LOST,		//	Non-fatal warning that some entities could not be instantiated
 
 	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
@@ -706,25 +678,35 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
-	MAP_INITIAL,
-	MAX_MAPS = 10,
+
+	MAP_EARTH,
+	MAP_SUBTERRAIN,
+	MAP_CISLUNAR,
+	MAP_MOON,
+	MAP_MARS,
+	MAP_VENUS,
+	MAP_INNER_SOLAR_SYSTEM,
+	MAP_OUTER_SOLAR_SYSTEM,
+	MAP_TITAN,
+	MAP_TRANSNEPTUNIAN,
+	MAP_NEARBY_STARS,
+	MAP_ORION_ARM,
+	MAP_MILKY_WAY,
+	MAP_LOCAL_GROUP,
+	MAP_VIRGO_SUPERCLUSTER,
+	MAP_UNIVERSE,
+	MAP_DISTANT_COSMOS,
+
+	NUM_MAPS
 };
 
-enum MapSwitchTypes
+enum MapCategoryTypes
 {
-	NO_MAPSWITCH = -1,
+	NO_MAPCATEGORY = -1,
 };
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -896,7 +878,8 @@ enum GameOptionTypes
 	GAMEOPTION_ONE_CITY_CHALLENGE,
 	GAMEOPTION_CHALLENGE_CUT_LOSERS,
 	GAMEOPTION_CHALLENGE_HIGH_TO_LOW,
-	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY
+	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY,
+	GAMEOPTION_ADVANCED_ROUTES
 };
 
 #define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
@@ -1428,15 +1411,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes
@@ -1718,9 +1696,7 @@ enum MissionTypes
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
-	// < M.A.D. Nukes Start >
-	MISSION_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
+
 	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,
@@ -1871,12 +1847,10 @@ enum ControlTypes
 	CONTROL_PING,
 	CONTROL_SIGN,
 	CONTROL_GRID,
-	CONTROL_BARE_MAP,
 	CONTROL_YIELDS,
 	CONTROL_RESOURCE_ALL,
 	CONTROL_UNIT_ICONS,
 	CONTROL_GLOBELAYER,
-	CONTROL_SCORES,
 	CONTROL_LOAD_GAME,
 	CONTROL_OPTIONS_SCREEN,
 	CONTROL_RETIRE,
@@ -3123,7 +3097,6 @@ enum GlobeLayerTypes
 	GLOBE_LAYER_RESOURCE,
 	GLOBE_LAYER_RELIGION,
 	GLOBE_LAYER_CULTURE,
-	GLOBE_LAYER_DEBUG,
 
 	NUM_GLOBE_LAYER_TYPES
 };
@@ -3175,35 +3148,15 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-enum RankingTypes
-{
-	RANKING_POWER,
-	RANKING_POPULATION,
-	RANKING_LAND,
-	RANKING_CULTURE,
-	RANKING_ESPIONAGE,
-	RANKING_WONDERS,
-	RANKING_TECH,
-	NUM_RANKINGS
-};
-
 enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3214,12 +3167,9 @@ enum ModderOptionTypes
 	NO_MODDEROPTION = -1,
 
 	MODDEROPTION_FLEXIBLE_DIFFICULTY,
-	MODDEROPTION_SHOW_COASTAL_BUILDINGS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDINGS,
 	MODDEROPTION_HIDE_REPLACED_BUILDINGS,
 	MODDEROPTION_NO_FRIENDLY_PILLAGING,
 	MODDEROPTION_HIDE_UNAVAILBLE_BUILDS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDS,
 	MODDEROPTION_SHOW_REV_EFFECTS,
 	MODDEROPTION_USE_LANDMARK_NAMES,
 	MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS,
@@ -3291,9 +3241,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes
@@ -3418,6 +3365,119 @@ enum PropertyPropagatorTypes
 	PROPERTYPROPAGATOR_DIFFUSE,
 
 	NUM_PROPERTYPROPAGATORS
+};
+
+enum InfoClassTypes
+{
+	NO_INFO_CLASS = -1,
+
+	BUILDING_INFO,
+	UNIT_INFO,
+	BONUS_INFO,
+	PROJECT_INFO,
+	SPECIALIST_INFO,
+	IMPROVEMENT_INFO,
+	RELIGION_INFO,
+	PROMOTION_INFO,
+	CORPORATION_INFO,
+	TECH_INFO,
+	CIVIC_INFO,
+	VOTE_INFO,
+	VOTE_SOURCE_INFO,
+	SPECIAL_UNIT_INFO,
+	SPECIAL_BUILDING_INFO,
+	UPKEEP_INFO,
+	HURRY_INFO,
+	FEATURE_INFO,
+	CIVIC_OPTION_INFO,
+	BUILD_INFO,
+	TERRAIN_INFO,
+	ROUTE_INFO,
+	VICTORY_INFO,
+	LEADERHEAD_INFO,
+	CIVILIZATION_INFO,
+	GAME_OPTION_INFO,
+	MP_OPTION_INFO,
+	UNIT_AI_INFO,
+	EVENT_INFO,
+	EVENT_TRIGGER_INFO,
+	GAME_SPEED_INFO,
+	PROPERTy_INFO,
+	PROMOTION_LINE_INFO,
+	TRAIT_INFO,
+	INVISIBLE_INFO,
+	MAPCATEGORy_INFO,
+	IDEACLASS_INFO,
+	IDEA_INFO,
+	MISSION_INFO,
+	YIELD_INFO,
+	COMMERCE_INFO,
+	DOMAIN_INFO,
+	MAP_INFO,
+	CONCEPT_INFO,
+	NEW_CONCEPT_INFO,
+	CITY_TAB_INFO,
+	CALENDAR_INFO,
+	SEASON_INFO,
+	MONTH_INFO,
+	DENIAL_INFO,
+	ATTITUDE_INFO,
+	MEMORY_INFO,
+	INTERFACE_MODE_INFO,
+	WORLD_INFO,
+	CLIMATE_INFO,
+	SEA_LEVEL_INFO,
+	COLOR_INFO,
+	PLAYER_COLOR_INFO,
+	ADVISOR_INFO,
+	RIVER_INFO,
+	RIVER_MODEL_INFO,
+	WATER_PLANE_INFO,
+	TERRAIN_PLANE_INFO,
+	CAMERA_OVERLAY_INFO,
+	ANIMATION_PATH_INFO,
+	ANIMATION_CATEGORY_INFO,
+	ENTITY_EVENT_INFO,
+	EFFECT_INFO,
+	ATTACHABLE_INFO,
+	CAMERA_INFO,
+	UNIT_FORMATION_INFO,
+	LANDSCAPE_INFO,
+	BONUS_CLASS_INFO,
+	CURSOR_INFO,
+	THRONE_ROOM_INFO,
+	THRONE_ROOM_STYLE_INFO,
+	THRONE_ROOM_CAMERA_INFO,
+	SLIDE_SHOW_INFO,
+	SLIDE_SHOW_RANDOM_INFO,
+	WORLD_PICKER_INFO,
+	SPACE_SHIP_INFO,
+	SPAWN_INFO,
+	ROUTE_MODEL_INFO,
+	GOODY_INFO,
+	HANDICAP_INFO,
+	TURN_TIMER_INFO,
+	PROCESS_INFO,
+	ACTION_INFO,
+	CONTROL_INFOS,
+	COMMAND_INFO,
+	AUTOMATE_INFO,
+	DIPLOMACY_INFO,
+	ERA_INFO,
+	EMPHASIZE_INFO,
+	CULTURE_LEVEL_INFO,
+	FORCE_CONTROL_INFO,
+	PLAYER_OPTION_INFO,
+	GRAPHIC_OPTION_INFO,
+	ESPIONAGE_MISSION_INFO,
+	UNIT_ART_STYLE_TYPE_INFO,
+	MAIN_MENU_INFO,
+	OUTCOME_INFO,
+	UNIT_COMBAT_INFO,
+	MOD_LOAD_CONTROL_INFO,
+	HINT_INFO,
+
+	NUM_INFO_CLASSES
 };
 
 #endif	// CVENUMS_h
