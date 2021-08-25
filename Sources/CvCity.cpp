@@ -2088,11 +2088,11 @@ int CvCity::findYieldRateRank(YieldTypes eYield) const
 
 	if (!m_abYieldRankValid[eYield])
 	{
-		const int iRate = getYieldRate(eYield);
+		const int iRate = getYieldRate100(eYield);
 
 		const int iRank = 1 + algo::count_if(GET_PLAYER(getOwner()).cities(),
-			CvCity::fn::getYieldRate(eYield) > iRate
-			|| (CvCity::fn::getYieldRate(eYield) == iRate && CvCity::fn::getID() < getID())
+			CvCity::fn::getYieldRate100(eYield) > iRate
+			|| (CvCity::fn::getYieldRate100(eYield) == iRate && CvCity::fn::getID() < getID())
 		);
 		m_abYieldRankValid[eYield] = true;
 		m_aiYieldRank[eYield] = iRank;
@@ -11445,7 +11445,7 @@ void CvCity::changePowerYieldRateModifier(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiPowerYieldRateModifier[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getYieldRate(eIndex))
+		FASSERT_NOT_NEGATIVE(getYieldRate100(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
 
@@ -11478,7 +11478,7 @@ void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBonusYieldRateModifier[eIndex] += iChange;
-		FASSERT_NOT_NEGATIVE(getYieldRate(eIndex))
+		FASSERT_NOT_NEGATIVE(getYieldRate100(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
 
