@@ -36913,6 +36913,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
+			<iFoodKept>25</iFoodKept>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -101570,7 +101571,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>-15</iPopulationgrowthratepercentage>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Properties>
 				<Property>
