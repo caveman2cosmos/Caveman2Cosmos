@@ -2790,7 +2790,7 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 			vInfoMapKeys.push_back(sKey);
 		}
 
-		std::sort(vInfoMapKeys.begin(), vInfoMapKeys.end());
+		algo::sort(vInfoMapKeys);
 
 		foreach_(const std::string& sKey, vInfoMapKeys)
 		{

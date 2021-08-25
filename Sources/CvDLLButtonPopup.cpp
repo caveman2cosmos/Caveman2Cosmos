@@ -1442,7 +1442,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 
 		// Sort the units from strongest to weakest
-		std::sort(units.rbegin(), units.rend());
+		algo::sort(units);
 
 		// Max 5 units shown
 		units.resize(std::min<int>(units.size(), 5));
@@ -1472,7 +1472,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 
 		// Sort the projects by turns to complete
-		std::sort(projects.begin(), projects.end());
+		algo::sort(projects);
 
 		// Lets only keep 5 (probably there will never be this many projects)
 		projects.resize(std::min<int>(5, projects.size()));
