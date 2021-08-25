@@ -391,6 +391,7 @@ public:
 
 	int getNumTraitInfos() const;
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
+	const std::vector<CvTraitInfo*>& getTraitInfos() const { return m_paTraitInfo; }
 
 	int getNumCursorInfos() const;
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;

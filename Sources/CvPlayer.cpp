@@ -6040,7 +6040,7 @@ void CvPlayer::findNewCapital()
 			iValue += pLoopCity->getCorporationCount();
 			iValue += pLoopCity->getNumGreatPeople() * 2;
 
-			iValue *= (pLoopCity->calculateCulturePercent(getID()) + 100);
+			iValue *= 100 + pLoopCity->calculateCulturePercent(getID());
 			iValue /= 100;
 
 			if (iValue > iBestValue)
@@ -7470,12 +7470,12 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 	int iMultiplier = 0;
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		if (hasTrait((TraitTypes)iI))
+		const TraitTypes eTrait = ((TraitTypes)iI);
+		if (hasTrait(eTrait))
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
 			for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
 			{
-				if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
+				if (GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).eBuilding == eBuilding)
 				{
 					iMultiplier += GC.getTraitInfo(eTrait).getBuildingProductionModifier(j).iModifier;
 				}
@@ -7485,7 +7485,7 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialBuildingProductionModifiers(); j++)
 				{
-					if ((SpecialBuildingTypes)GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
+					if (GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).eSpecialBuilding == GC.getBuildingInfo(eBuilding).getSpecialBuilding())
 					{
 						iMultiplier += GC.getTraitInfo(eTrait).getSpecialBuildingProductionModifier(j).iModifier;
 					}
@@ -14971,7 +14971,7 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 	PROFILE_FUNC();
 
 	// AIAndy: Consider using a set for efficient testing
-	if (GET_TEAM(getTeam()).isHasTech(eTech) || std::find(rootPath.begin(), rootPath.end(), eTech) != rootPath.end())
+	if (GET_TEAM(getTeam()).isHasTech(eTech) || algo::contains(rootPath, eTech))
 	{
 		//	We have this tech, no reason to add this to the pre-reqs
 		return;
@@ -18575,11 +18575,15 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 			changeSpecialistExtraCommerce(((CommerceTypes)iI), (kCivic.getSpecialistExtraCommerce(iI) * iChange));
 		}
 
+		foreach_(const BuildingModifier2& modifier, kCivic.getBuildingProductionModifiers())
+		{
+			changeBuildingProductionModifier(modifier.first, modifier.second * iChange);
+		}
+
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			changeExtraBuildingHappiness((BuildingTypes)iI, (kCivic.getBuildingHappinessChanges(iI) * iChange));
 			changeExtraBuildingHealth((BuildingTypes)iI, (kCivic.getBuildingHealthChanges(iI) * iChange));
-			changeBuildingProductionModifier((BuildingTypes)iI, (kCivic.getBuildingProductionModifier(iI) * iChange));
 		}
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -20962,7 +20966,7 @@ const EventTriggeredData* CvPlayer::getEventOccured(EventTypes eEvent, bool bInc
 
 bool CvPlayer::isTriggerFired(EventTriggerTypes eEventTrigger) const
 {
-	return (std::find(m_triggersFired.begin(), m_triggersFired.end(), eEventTrigger) != m_triggersFired.end());
+	return algo::contains(m_triggersFired, eEventTrigger);
 }
 
 void CvPlayer::resetEventOccured(EventTypes eEvent, bool bAnnounce)

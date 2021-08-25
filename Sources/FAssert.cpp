@@ -208,7 +208,7 @@ namespace detail
 				{
 					std::string fileName(entry.lineFileName);
 					std::string fileNameLwr(fileName);
-					std::transform(fileNameLwr.begin(), fileNameLwr.end(), fileNameLwr.begin(), ::tolower);
+					algo::transform(fileNameLwr, fileNameLwr.begin(), ::tolower);
 					size_t offs = fileNameLwr.find("caveman2cosmos");
 					if (offs != std::string::npos)
 					{

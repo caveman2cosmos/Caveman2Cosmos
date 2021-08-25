@@ -317,6 +317,9 @@ void CyInfoPythonInterface1()
 
 		.def("isBuildingOnlyHealthy", &CvCivicInfo::isBuildingOnlyHealthy, "bool ()")
 		.def("isStateReligion", &CvCivicInfo::isStateReligion, "bool ()")
+		.def("isAnyImprovementYieldChange", &CvCivicInfo::isAnyImprovementYieldChange, "bool ()")
+		.def("isAnyBuildingHappinessChange", &CvCivicInfo::isAnyBuildingHappinessChange, "bool ()")
+		.def("isAnyBuildingHealthChange", &CvCivicInfo::isAnyBuildingHealthChange, "bool ()")
 
 		// Arrays
 
@@ -369,6 +372,7 @@ void CyInfoPythonInterface1()
 		.def("getFreeExperience", &CvBuildingInfo::getFreeExperience, "int ()")
 		.def("getGlobalFreeExperience", &CvBuildingInfo::getGlobalFreeExperience, "int ()")
 		.def("getFoodKept", &CvBuildingInfo::getFoodKept, "int ()")
+		.def("getPopulationgrowthratepercentage", &CvBuildingInfo::getPopulationgrowthratepercentage, "int ()")
 		.def("getAirModifier", &CvBuildingInfo::getAirModifier, "int ()")
 		.def("getNukeModifier", &CvBuildingInfo::getNukeModifier, "int ()")
 		.def("getFreeSpecialist", &CvBuildingInfo::getFreeSpecialist, "int ()")
@@ -451,6 +455,7 @@ void CyInfoPythonInterface1()
 		.def("isAnyBonusYieldModifiers", &CvBuildingInfo::isAnyBonusYieldModifiers, "bool ()")
 		.def("isAnyBonusCommercePercentChanges", &CvBuildingInfo::isAnyBonusCommercePercentChanges, "bool ()")
 		.def("isAnyBonusCommerceModifiers", &CvBuildingInfo::isAnyBonusCommerceModifiers, "bool ()")
+		.def("isRequiresActiveCivics", &CvBuildingInfo::isRequiresActiveCivics, "bool ()")
 
 
 		.def("getHotKey", &CvBuildingInfo::getHotKey, "string ()")

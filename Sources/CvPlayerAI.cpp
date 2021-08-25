@@ -4070,16 +4070,18 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 	// Toffer - At low to mid tax levels, and with some profit margin to go on, evaluate treasury rather than profit margin.
 	if (iProfitMargin > 15 && getCommercePercent(COMMERCE_GOLD) < 50)
 	{
-		int64_t iValue = 0;
 		// Toffer - Gamespeed (GS) influence the value of gold, so scale gold treshold to GS, era is exponential factor.
 		//	Prehistoric: 25 gold (ultrafast); 100 gold (normal); 1000 gold (eternity)
 		//	Ancient: 50 gold (ultrafast); 200 gold (normal); 2000 gold (eternity)
 		//	Classical: 125 gold (ultrafast); 500 gold (normal); 5000 gold (eternity)
-		const int iModGS = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-		const int iEra = GC.getGame().getCurrentEra();
-		const int iEraGoldThreshold = (1 + iEra * iEra) * iModGS / 2;
-
-		if (iNetIncome - iNetExpenses >= 0)
+		const int iEraGoldThreshold = AI_goldTarget();
+		int64_t iValue;
+		if (iEraGoldThreshold < 1)
+		{
+			// Return a value based on how many turns we have left before strike happens.
+			iValue = 400 * getGold() / (std::max(1, std::abs(calculateGoldRate())) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent());
+		}
+		else if (iNetIncome - iNetExpenses >= 0)
 		{
 			iValue = 100 * getGold() / iEraGoldThreshold;
 		}
@@ -4089,7 +4091,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 			// X is: 2 (ultrafast); 10 (normal); 100 (eternity). Need more time to react on  slower GS.
 			// Koshling - we're never in financial trouble if we can run at current deficits for more than
 			//	Toffer - X (GS scaled) turns and stay in healthy territory, so claim full or even excess funding in such a case!
-			const int64_t iFutureGoldPrognosis = getGold() + (iNetIncome - iNetExpenses) * iModGS / 10;
+			const int64_t iFutureGoldPrognosis = getGold() + (iNetIncome - iNetExpenses) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 10;
 			iValue = 100 * iFutureGoldPrognosis / iEraGoldThreshold;
 		}
 		if (iValue > 9999)
@@ -4123,72 +4125,58 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 
 int CvPlayerAI::AI_goldTarget() const
 {
-	int iGold = 0;
-
-	if (GC.getGame().getElapsedGameTurns() >= 40 || getNumCities() > 3)
+	if (getNumCities() < 1)
 	{
-		int iMultiplier = 0;
-		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		iMultiplier += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent();
-		iMultiplier += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent();
-		iMultiplier /= 4;
+		return 0;
+	}
+	const int iEra = GC.getGame().getCurrentEra() + 1;
+	const int iModGS = (
+		(
+			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+			+
+			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent()
+			+
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent()
+		)
+	);
+	int iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
 
-		iGold += (getNumCities() * 3 + getTotalPopulation() / 3);
+	iGold *= 100 + calculateInflationRate();
+	iGold /= 100;
 
-		iGold *= iMultiplier;
-		iGold /= 100;
+	const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
+	if (bAnyWar)
+	{
+		iGold *= 3;
+		iGold /= 2;
+	}
 
-		const int eventmult = GC.getGame().isOption(GAMEOPTION_NO_EVENTS) ? 10 : 6;
-		const int speedmult = eventmult * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		const int turnmult = iMultiplier * GC.getGame().getElapsedGameTurns();
+	// Afforess 02/01/10
+	if (!GET_TEAM(getTeam()).isGoldTrading() || !GET_TEAM(getTeam()).isTechTrading() || GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
+	{ // Don't bother saving gold if we can't trade it for anything
+		iGold /= 3;
+	}
+	else if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
+	{ // Gold is less useful without tech brokering
+		iGold *= 3;
+		iGold /= 4;
+	}
+	// ! Afforess
 
-		iGold += (turnmult / speedmult);
+	if (AI_avoidScience())
+	{
+		iGold *= 10;
+	}
+	iGold += AI_goldToUpgradeAllUnits() / (!bAnyWar + 1);
 
-		iGold *= (100 + calculateInflationRate());
-		iGold /= 100;
-
-		const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
-		if (bAnyWar)
+	for (int iI = GC.getNumCorporationInfos() - 1; iI > -1; iI--)
+	{
+		if (getHasCorporationCount((CorporationTypes)iI) > 0)
 		{
-			iGold *= 3;
-			iGold /= 2;
-		}
-
-		// Afforess 02/01/10
-		if (!GET_TEAM(getTeam()).isGoldTrading() || !GET_TEAM(getTeam()).isTechTrading() || GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
-		{ // Don't bother saving gold if we can't trade it for anything
-			iGold /= 3;
-		}
-		else if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-		{ // Gold is less useful without tech brokering
-			iGold *= 3;
-			iGold /= 4;
-		}
-		// ! Afforess
-
-		if (AI_avoidScience())
-		{
-			iGold *= 10;
-		}
-		iGold += (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
-
-		CorporationTypes eActiveCorporation = NO_CORPORATION;
-		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
-		{
-			if (getHasCorporationCount((CorporationTypes)iI) > 0)
-			{
-				eActiveCorporation = (CorporationTypes)iI;
-				break;
-			}
-		}
-		if (eActiveCorporation != NO_CORPORATION)
-		{
-			iGold += std::max(0, GC.getCorporationInfo(eActiveCorporation).getSpreadCost() * (100 + calculateInflationRate())) / 50;
+			iGold += std::max(0, GC.getCorporationInfo((CorporationTypes)iI).getSpreadCost() * (100 + calculateInflationRate())) / 50;
+			break;
 		}
 	}
-	FAssert(iGold + AI_getExtraGoldTarget() <= 2000000000); //If it goes over this amount, then some more reprogramming may be necessary.
-
 	return iGold + AI_getExtraGoldTarget();
 }
 
@@ -4456,7 +4444,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, c
 		return AI_TechValueCached(eRelativeTo, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 	}
 	// Sort for closest first
-	std::sort(researchCosts.begin(), researchCosts.end());
+	algo::sort(researchCosts);
 	researchCosts.resize(std::min(researchCosts.size(), MAX_SAMPLE_SIZE));
 
 	int iTotal = 0;
@@ -14071,9 +14059,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingModifier2& modifier, kCivic.getBuildingProductionModifiers())
 	{
-		iTempValue += (kCivic.getBuildingProductionModifier(iI) * 2) / 5;
+		iTempValue += (modifier.second * 2) / 5;
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
@@ -17451,13 +17439,8 @@ void CvPlayerAI::AI_doCommerce()
 	{
 		return;
 	}
-	const int iIncrement = GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS");
 	int iGoldTarget = AI_goldTarget();
 
-	const int iTargetTurns =
-	(
-		std::max(3, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25)
-	);
 	const bool bFlexResearch	= isCommerceFlexible(COMMERCE_RESEARCH);
 	const bool bFlexCulture		= isCommerceFlexible(COMMERCE_CULTURE);
 	const bool bFlexEspionage	= isCommerceFlexible(COMMERCE_ESPIONAGE);
@@ -17465,13 +17448,14 @@ void CvPlayerAI::AI_doCommerce()
 	const TechTypes eCurrentResearch = getCurrentResearch();
 	if (bFlexResearch && eCurrentResearch != NO_TECH && !AI_avoidScience())
 	{
-		// Gold rate at 100% research
+		// Set research rate to 100%
 		setCommercePercent(COMMERCE_RESEARCH, 100);
-		const int iGoldRate = calculateGoldRate();
 
-		// If we can finish the current research without running out of gold, let us spend 2/3rds of our gold
-		if (iGoldRate < 0 && getGold() >= getResearchTurnsLeft(eCurrentResearch, true) * iGoldRate)
+		// If we can finish the current research without spending a third of our gold, lower gold target by a third.
+		const int iGoldRate = calculateGoldRate();
+		if (iGoldRate < 0 && getGold() / 3 >= getResearchTurnsLeft(eCurrentResearch, true) * iGoldRate)
 		{
+			iGoldTarget *= 2;
 			iGoldTarget /= 3;
 		}
 	}
@@ -17502,7 +17486,7 @@ void CvPlayerAI::AI_doCommerce()
 	{
 		AI_assignWorkingPlots();
 	}
-	const bool bFirstTech = AI_isFirstTech(eCurrentResearch);
+	const int iIncrement = std::max(1, GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS"));
 
 	if (bFlexCulture && getNumCities() > 0)
 	{
@@ -17529,6 +17513,8 @@ void CvPlayerAI::AI_doCommerce()
 		}
 		setCommercePercent(COMMERCE_CULTURE, iIdealPercent);
 	}
+	const bool bFirstTech = AI_isFirstTech(eCurrentResearch);
+	const int iTargetTurns = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10;
 	const TeamTypes eTeam = getTeam();
 	const CvTeamAI& team = GET_TEAM(eTeam);
 
@@ -17538,43 +17524,69 @@ void CvPlayerAI::AI_doCommerce()
 		{
 			setCommercePercent(COMMERCE_RESEARCH, 0);
 		}
-		else
+		else if (!bFirstTech)
 		{
-			while (calculateGoldRate() > 0)
+			if (AI_avoidScience())
 			{
-				changeCommercePercent(COMMERCE_RESEARCH, iIncrement);
-
-				if (getCommercePercent(COMMERCE_RESEARCH) == 100)
-				{
-					break;
-				}
+				changeCommercePercent(COMMERCE_RESEARCH, -10);
 			}
-
-			if (getGold() + iTargetTurns * calculateGoldRate() < iGoldTarget)
+			if (team.getChosenWarCount(true) > 0 || team.getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) > 0)
 			{
-				while (getGold() + iTargetTurns * calculateGoldRate() <= iGoldTarget)
-				{
-					changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
+				changeCommercePercent(COMMERCE_RESEARCH, -5);
+			}
+			const int iOldPercent = getCommercePercent(COMMERCE_RESEARCH);
+			const int iOldGoldRate = getCommerceRate(COMMERCE_GOLD);
+			const int iOldBeakerRate = getCommerceRate(COMMERCE_RESEARCH);
 
-					if (getCommercePercent(COMMERCE_RESEARCH) == 0)
+			int iInc = iIncrement;
+			int iCount = 0;
+			int iGoldRate = calculateGoldRate();
+			while (getGold() + iTargetTurns * iGoldRate < iGoldTarget)
+			{
+				if ((bFirstTech || ++iCount > 3 && getCommercePercent(COMMERCE_RESEARCH) < 50) && iGoldRate > 0)
+				{
+					break; // Don't sacrifice too much science to reach gold target.
+				}
+				const int iPrevGoldRate = getCommerceRate(COMMERCE_GOLD);
+				changeCommercePercent(COMMERCE_RESEARCH, -iInc);
+				if (iPrevGoldRate == getCommerceRate(COMMERCE_GOLD))
+				{
+					changeCommercePercent(COMMERCE_RESEARCH, iInc);
+					if (getCommercePercent(COMMERCE_RESEARCH) == iInc)
 					{
 						break;
 					}
+					iInc += iIncrement;
 				}
+				else if (getCommercePercent(COMMERCE_RESEARCH) == 0)
+				{
+					if (calculateGoldRate() >= 0)
+					{
+						setCommercePercent(COMMERCE_RESEARCH, iIncrement);
+						if (calculateGoldRate() < 1)
+						{
+							setCommercePercent(COMMERCE_RESEARCH, 0);
+						}
+					}
+					break;
+				}
+				iGoldRate = calculateGoldRate();
 			}
-			else if (AI_avoidScience())
+			const int iNewPercent = getCommercePercent(COMMERCE_RESEARCH);
+			if (iNewPercent < iOldPercent)
 			{
-				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
-			}
-
-			if (team.getChosenWarCount(true) > 0 || team.getWarPlanCount(WARPLAN_ATTACKED_RECENT, true) > 0)
-			{
-				changeCommercePercent(COMMERCE_RESEARCH, -iIncrement);
-			}
-
-			if (getCommercePercent(COMMERCE_RESEARCH) == 0 && calculateGoldRate() > 0)
-			{
-				setCommercePercent(COMMERCE_RESEARCH, iIncrement);
+				const int iBeakerLoss = iOldBeakerRate - getCommerceRate(COMMERCE_RESEARCH);
+				const int iGoldGain = getCommerceRate(COMMERCE_GOLD) - iOldGoldRate;
+				if (
+					iBeakerLoss > iGoldGain
+				&&
+					(
+						// 5 % more tax doesn't even give 1 gold (typical early prehistoric)
+						iOldPercent - iNewPercent >= 5 * iGoldGain
+						// or tradeoff is not close to comparably worth it.
+					||	iBeakerLoss > 3 * iGoldGain && !AI_isFinancialTrouble()
+					)
+				) setCommercePercent(COMMERCE_RESEARCH, iOldPercent);
 			}
 		}
 	}
@@ -17700,8 +17712,7 @@ void CvPlayerAI::AI_doCommerce()
 		SAFE_DELETE_ARRAY(piTarget);
 		SAFE_DELETE_ARRAY(piWeight);
 
-		// If economy is weak, neglect espionage spending.
-		// Instead invest hammers into espionage via spies/builds
+		// If economy is weak, neglect espionage spending. Invest hammers into espionage via spies/builds instead.
 		if (AI_isFinancialTrouble() || AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 		{
 			iEspionageTargetRate = 0;

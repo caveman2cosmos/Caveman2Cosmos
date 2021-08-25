@@ -78,8 +78,8 @@ void UnitCompWorker::changeWorkModifier(const int iChange)
 
 bool UnitCompWorker::hasExtraBuild(const BuildTypes eBuild) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
-	return find(m_extraBuilds.begin(), m_extraBuilds.end(), eBuild) != m_extraBuilds.end();
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
+	return algo::contains(m_extraBuilds, eBuild);
 }
 
 void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)

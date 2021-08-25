@@ -15654,7 +15654,7 @@ namespace scoring {
 		}
 
 		// Sort scores
-		std::sort(scores.begin(), scores.end(), ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
+		algo::sort(scores, ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
 
 		// Find the first city we can path to safely
 		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
@@ -16935,7 +16935,7 @@ bool CvUnitAI::AI_explore()
 		}
 	}
 
-	std::sort(plotValues.begin(), plotValues.end(), plotValueSortPredicate);
+	algo::sort(plotValues, plotValueSortPredicate);
 
 	for(int iI = plotValues.size()-1; iI >= 0; iI--)
 	{
@@ -17150,7 +17150,7 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 	//	Sort the plots found on their values
 	while(plotValues.size() > 0)
 	{
-		std::sort(plotValues.begin(), plotValues.end(), plotValueSortPredicate);
+		algo::sort(plotValues, plotValueSortPredicate);
 
 		iValue = plotValues[plotValues.size()-1].value;
 		pLoopPlot = plotValues[plotValues.size()-1].plot;
