@@ -5,8 +5,8 @@ from CvPythonExtensions import *
 class PediaUnit:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
 
 		self.main = parent
 
@@ -208,7 +208,7 @@ class PediaUnit:
 		aGOMBUnitReqList = []
 		for i in range(2):
 			aGOMBUnitReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBUnitReqList)
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBUnitReqList)
 
 		for iType in CvTheUnitInfo.getPrereqOrBonuses():
 			aList0.append(iType)
@@ -301,7 +301,7 @@ class PediaUnit:
 		aGOMBUnitReqList = []
 		for i in range(2):
 			aGOMBUnitReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
 		# GOM AND requirements
 		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
 			aList2.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
