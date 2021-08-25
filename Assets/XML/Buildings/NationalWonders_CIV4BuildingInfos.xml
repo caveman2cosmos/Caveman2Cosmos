@@ -978,7 +978,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<iCost>160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1915,7 +1914,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>486</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -3897,7 +3895,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KINGS_TOURNAMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KINGS_TOURNAMENT</MovieDefineTag>
-			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>

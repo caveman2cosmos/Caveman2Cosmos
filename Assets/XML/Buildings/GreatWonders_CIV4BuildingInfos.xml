@@ -1738,7 +1738,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iCost>1458</iCost>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -2159,7 +2158,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -2406,7 +2404,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BERLIN_WALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BERLIN_WALL</MovieDefineTag>
-			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
@@ -7645,7 +7642,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIELD_GOLD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIELD_GOLD</MovieDefineTag>
-			<ObsoleteTech>TECH_REPRESENTATIVE_DEMOCRACY</ObsoleteTech>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -10619,7 +10615,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HILLTARA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HILLTARA</MovieDefineTag>
-			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -15887,7 +15882,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
