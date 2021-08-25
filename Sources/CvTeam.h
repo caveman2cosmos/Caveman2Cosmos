@@ -108,7 +108,7 @@ public:
 	bool hasBonus(BonusTypes eBonus) const;
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
-	bool isHuman() const;
+	bool isHuman(const bool bCountDisabledHuman = false) const;
 	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;

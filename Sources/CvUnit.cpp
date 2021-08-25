@@ -37977,13 +37977,16 @@ int CvUnit::workRate(bool bMax) const
 	{
 		iWorkMod += peaksWorkModifier();
 	}
-	iRate = getModifiedIntValue(iRate, iWorkMod);
 
-	if (!isHuman() && !isNPC())
+	if (GET_PLAYER(getOwner()).isNormalAI())
 	{
-		iRate = getModifiedIntValue(iRate, GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier());
+		iWorkMod += (
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier()
+			-
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()
+		);
 	}
-	return iRate;
+	return getModifiedIntValue(iRate, iWorkMod);
 }
 
 // The call that plugs into the rest of the code (final value)

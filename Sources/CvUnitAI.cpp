@@ -8223,41 +8223,40 @@ void CvUnitAI::AI_exploreSeaMove()
 		{
 			return;
 		}
-	}
-
-	if (!isHuman() && !isNPC()) //XXX move some of this into a function? maybe useful elsewhere
-	{
-		//Obsolete?
-		int iValue = GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), AI_getUnitAIType(), area());
-		int iBestValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(AI_getUnitAIType(), area());
-
-		if (iValue < iBestValue)
+		if (!isNPC()) //XXX move some of this into a function? maybe useful elsewhere
 		{
-			//Transform
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_WORKER_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_WORKER_SEA);
-				return;
-			}
+			//Obsolete?
+			int iValue = GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), AI_getUnitAIType(), area());
+			int iBestValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(AI_getUnitAIType(), area());
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_PIRATE_SEA, area()) > 0)
+			if (iValue < iBestValue)
 			{
-				AI_setUnitAIType(UNITAI_PIRATE_SEA);
-				return;
-			}
+				//Transform
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_WORKER_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_WORKER_SEA);
+					return;
+				}
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
-				return;
-			}
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_PIRATE_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_PIRATE_SEA);
+					return;
+				}
 
-			if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_RESERVE_SEA, area()) > 0)
-			{
-				AI_setUnitAIType(UNITAI_RESERVE_SEA);
-				return;
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
+					return;
+				}
+
+				if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_RESERVE_SEA, area()) > 0)
+				{
+					AI_setUnitAIType(UNITAI_RESERVE_SEA);
+					return;
+				}
+				scrap();
 			}
-			scrap();
 		}
 	}
 

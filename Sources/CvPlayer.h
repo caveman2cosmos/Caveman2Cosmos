@@ -129,6 +129,7 @@ public:
 
 	void setHumanDisabled(bool newVal);
 	bool isHumanDisabled() const;
+	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;
 	DllExport void updateHuman();
