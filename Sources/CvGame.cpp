@@ -3944,7 +3944,6 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 			if (!GET_PLAYER(iPlayer).isHumanDisabled())
 			{
 				GET_PLAYER(iPlayer).setHumanDisabled(true);
-				GET_PLAYER(iPlayer).doTurn();
 			}
 		}
 		else GET_PLAYER(iPlayer).setHumanDisabled(false);

@@ -11508,7 +11508,7 @@ bool CvUnit::awardSpyExperience(TeamTypes eTargetTeam, int iModifier)
 {
 	if (GC.isSS_ENABLED())
 	{
-		int iDifficulty = (getSpyInterceptPercent(eTargetTeam) * (100 + iModifier))/100;
+		const int iDifficulty = getSpyInterceptPercent(eTargetTeam) * (100 + iModifier) / 100;
 		if (iDifficulty < 1)
 			changeExperience(1);
 		else if (iDifficulty < 10)
@@ -11519,12 +11519,8 @@ bool CvUnit::awardSpyExperience(TeamTypes eTargetTeam, int iModifier)
 			changeExperience(4);
 		else if (iDifficulty < 75)
 			changeExperience(5);
-		else if (iDifficulty >= 75)
+		else
 			changeExperience(6);
-		//	Koshling - testing promotion readiness here is uneccessary since CvUnit::doTurn
-		//	will do it.  It is alo now dangerous to do it here (or indeed anywhere but controlled
-		//	places) becaue it is not thread-safe and needs to run strictly on the main thread
-		//testPromotionReady();
 		return true;
 	}
 	return false;
