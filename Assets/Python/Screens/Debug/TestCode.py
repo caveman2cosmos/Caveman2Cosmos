@@ -1341,58 +1341,127 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for PrereqOrImprovement "+str(aImprovementUnlistedUpgrades))
 
 		#Civics referencing buildings
-		if 0:# There is currently no way to filter out already existing buildings - filtering would be EXTREMELY slow
-			for iCivic in xrange(GC.getNumCivicInfos()):
-				CvCivicInfo = GC.getCivicInfo(iCivic)
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
 
-				#<BuildingHappinessChanges>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingHappinessChanges(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHappinessChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#<BuildingHappinessChanges>
+			aBuildingList = []
+			if CvCivicInfo.isAnyBuildingHappinessChange():
+				for iBuilding in xrange(GC.getNumBuildingInfos()):
+					if CvCivicInfo.getBuildingHappinessChanges(iBuilding) != 0:
+						aBuildingList.append(iBuilding)
 
-				#<BuildingHealthChanges>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingHealthChanges(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHealthChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingHappinessChanges "+str(aBuildingsList))
 
-				#<BuildingProductionModifiers>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingProductionModifier(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingProductionModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#<BuildingHealthChanges>
+			aBuildingList = []
+			if CvCivicInfo.isAnyBuildingHealthChange():
+				for iBuilding in xrange(GC.getNumBuildingInfos()):
+					if CvCivicInfo.getBuildingHealthChanges(iBuilding) != 0:
+						aBuildingList.append(iBuilding)
 
-				#<BuildingCommerceModifiers>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvCivicInfo.getBuildingCommerceModifier(iAffectedBuilding, iCommerce) != 0:
-							aReplacementBuildingsList = []
-							if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-								for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-									if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-										aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-							if len(aReplacementBuildingsList) > 0:
-								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingHealthChanges "+str(aBuildingsList))
+
+			#<BuildingProductionModifiers>
+			aBuildingList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
+					aBuildingList.append(iBuilding)
+
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingProductionModifiers "+str(aBuildingsList))
+
+			#<BuildingCommerceModifiers>
+			aBuildingList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
+						aBuildingList.append(iBuilding)
+
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingCommerceModifiers "+str(aBuildingsList))
 
 		#Traits referencing buildings
 		for iTrait in xrange(GC.getNumTraitInfos()):

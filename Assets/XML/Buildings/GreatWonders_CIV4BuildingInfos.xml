@@ -12503,6 +12503,7 @@
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>876</iCost>
@@ -17765,7 +17766,6 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
