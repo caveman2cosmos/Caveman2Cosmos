@@ -2399,7 +2399,7 @@ class TestCode:
 				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
 				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): # Exclude space based
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding): # Exclude space based and wonders
 						if CvBuildingInfo.getFreeBonus() == iBonus:
 							aNumBonusManufacturers.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
 							aBuildingObsoletions.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
@@ -2409,23 +2409,24 @@ class TestCode:
 								aNumBonusManufacturers.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
 								aBuildingObsoletions.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
 
-				# Check all bonus producers, that don't obsolete
-				if len(aNumBonusManufacturers) > 1 and min(aBuildingObsoletions) == 999:
+				# Check all bonus producers
+				if len(aNumBonusManufacturers) > 0:
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories(): # Exclude space based
+						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding): # Exclude space based and wonders
 							aBuildingReplacements = [] # List building replacements
+							iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 							iObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
 								aBuildingReplacements.append(CvBuildingReplacement.getType())
 
 							if CvBuildingInfo.getFreeBonus() == iBonus:
-								self.log(CvBonusInfo.getType()+" "+str(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+								self.log(CvBonusInfo.getType()+" "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
 							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-									self.log(CvBonusInfo.getType()+" "+str(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+									self.log(CvBonusInfo.getType()+" "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
 
 	#Civic - check if civic yield bonus for improvement is carried into its upgrade
 	def checkCivicImprovementReplacements(self):
