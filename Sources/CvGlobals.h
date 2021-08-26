@@ -714,10 +714,6 @@ public:
 
 	// ***** EXPOSED TO PYTHON *****
 
-	void setGraphicalDetailPagingEnabled(bool bEnabled);
-	bool getGraphicalDetailPagingEnabled() const;
-	int getGraphicalDetailPageInRange() const;
-
 	bool getDefineBOOL(const char* szName, bool bDefault = false) const;
 	int getDefineINT(const char* szName, int iDefault = 0) const;
 	float getDefineFLOAT(const char* szName, float fDefault = 0.0f) const;
