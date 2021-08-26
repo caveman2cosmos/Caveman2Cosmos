@@ -17236,10 +17236,10 @@
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
-				<BuildingType>BUILDING_GRAVEYARD</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_GRAVEYARD</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
