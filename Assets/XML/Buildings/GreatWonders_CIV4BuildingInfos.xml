@@ -1738,7 +1738,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iCost>1458</iCost>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -2159,7 +2158,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -2406,7 +2404,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BERLIN_WALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BERLIN_WALL</MovieDefineTag>
-			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
@@ -4389,12 +4386,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_URBAN_HIGH_SPEED_RAIL</FreeBuilding>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_JAPANESE</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -5567,12 +5558,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_INDIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
@@ -6016,6 +6001,31 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
+			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
+			<iCost>30330</iCost>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>200</iHurryCostModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_DORADO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
@@ -6233,12 +6243,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_ARABIAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7638,7 +7642,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIELD_GOLD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIELD_GOLD</MovieDefineTag>
-			<ObsoleteTech>TECH_REPRESENTATIVE_DEMOCRACY</ObsoleteTech>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -8826,9 +8829,22 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LARGE_ARCH_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SMALL_SUSPENSION_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
@@ -8848,7 +8864,7 @@
 			<iRiverDefensePenalty>45</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<FreeBuilding>BUILDING_LARGE_SUSPENSION_BRIDGE</FreeBuilding>
+			<FreeBuilding>BUILDING_LARGE_ARCH_BRIDGE</FreeBuilding>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10599,7 +10615,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HILLTARA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HILLTARA</MovieDefineTag>
-			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -15249,6 +15264,114 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_NEANDERTHAL_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BONUS</GOMType>
+						<ID>BONUS_STONE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_CAVES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_POLAR_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_DARK_ROCK_FORM4</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_ARCH2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM1</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM2</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM3</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_FEATURE</GOMType>
+						<ID>FEATURE_ROCK_FORM4</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<iCost>60</iCost>
+			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>200</iHurryCostModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_NECROMANTEION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
@@ -15759,7 +15882,6 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<iCost>2460</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -18960,7 +19082,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Bonus>BONUS_SIAMESE</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
@@ -19650,12 +19771,6 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_KOREAN</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21518,9 +21633,6 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROMAN</BonusType>
-			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>

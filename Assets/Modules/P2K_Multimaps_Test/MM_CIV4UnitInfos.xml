@@ -206,7 +206,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>

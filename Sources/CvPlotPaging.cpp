@@ -249,7 +249,7 @@ void CvPlotPaging::UpdatePaging()
 				plots.push_back(PlotDist(map.plotByIndex(i), ToroidalDistanceSq(centerX, centerY, plot->getX(), plot->getY(), map.getGridWidth(), map.getGridHeight())));
 			}
 		}
-		std::sort(plots.begin(), plots.end());
+		algo::sort(plots);
 
 		if (!bPagingEnabled && g_bWasGraphicsPagingEnabled)
 		{

@@ -391,6 +391,7 @@ public:
 
 	int getNumTraitInfos() const;
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
+	const std::vector<CvTraitInfo*>& getTraitInfos() const { return m_paTraitInfo; }
 
 	int getNumCursorInfos() const;
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;
@@ -712,14 +713,15 @@ public:
 	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
-	bool getDefineBOOL(const char * szName) const;
-	int getDefineINT(const char * szName) const;
-	float getDefineFLOAT(const char * szName) const;
-	const char * getDefineSTRING(const char * szName) const;
 
-	void setDefineINT( const char * szName, int iValue, bool bUpdate = true);
-	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true );
-	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true );
+	bool getDefineBOOL(const char* szName, bool bDefault = false) const;
+	int getDefineINT(const char* szName, int iDefault = 0) const;
+	float getDefineFLOAT(const char* szName, float fDefault = 0.0f) const;
+	const char* getDefineSTRING(const char* szName, const char* szDefault = "") const;
+
+	void setDefineINT(const char* szName, int iValue, bool bUpdate = true);
+	void setDefineFLOAT(const char* szName, float fValue, bool bUpdate = true);
+	void setDefineSTRING(const char* szName, const char* szValue, bool bUpdate = true);
 
 	float getPLOT_SIZE() const;
 
@@ -1114,9 +1116,6 @@ protected:
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
-
-public:
-	int getDefineINT( const char * szName, const int iDefault ) const;
 
 // BBAI Options
 public:

@@ -785,7 +785,7 @@ void CvDllPythonEvents::reportCityHurry( CvCity *pCity, HurryTypes eHurry )
 	postEvent(eventData,"cityHurry");
 }
 
-void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
+void CvDllPythonEvents::reportSelectionGroupPushMission(const CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
 {
 	if (NULL == pSelectionGroup)
 	{
@@ -796,7 +796,7 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 
 	//using namespace bst::lambda;
 
-	std::transform(pSelectionGroup->beginUnits(), pSelectionGroup->endUnits(), std::back_inserter(aiUnitIds), bind(&CvUnit::getID, _1));
+	algo::transform(pSelectionGroup->units(), std::back_inserter(aiUnitIds), bind(&CvUnit::getID, _1));
 
 	EventArgs eventData;
 	eventData
