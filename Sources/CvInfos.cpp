@@ -20914,11 +20914,14 @@ int CvTraitInfo::getFreeSpecialist() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iFreeSpecialist > 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iFreeSpecialist > 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iFreeSpecialist < 0)
+		else if (m_iFreeSpecialist < 0)
 		{
 			return 0;
 		}
@@ -20930,11 +20933,14 @@ int CvTraitInfo::getTradeRoutes() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iTradeRoutes > 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iTradeRoutes > 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iTradeRoutes < 0)
+		else if (m_iTradeRoutes < 0)
 		{
 			return 0;
 		}
@@ -20946,11 +20952,14 @@ int CvTraitInfo::getStateReligionHappiness() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iStateReligionHappiness > 0)
+		if (isNegativeTrait())
 		{
-			return 0;
+			if (m_iStateReligionHappiness > 0)
+			{
+				return 0;
+			}
 		}
-		else if (!isNegativeTrait() && m_iStateReligionHappiness < 0)
+		else if (m_iStateReligionHappiness < 0)
 		{
 			return 0;
 		}
