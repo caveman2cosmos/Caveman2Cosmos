@@ -1944,9 +1944,10 @@
 				<iYield>200</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DYSON_SWARM</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
+			</PrereqOrBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>

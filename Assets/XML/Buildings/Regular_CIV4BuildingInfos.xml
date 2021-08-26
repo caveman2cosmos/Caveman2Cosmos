@@ -950,9 +950,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_SHIELDING</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
-			</PrereqInCityBuildings>
 			<iCost>6405</iCost>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -39266,7 +39263,6 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FALCONER</BuildingType>
 				<BuildingType>BUILDING_HAWKING</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>310</iCost>
@@ -60513,9 +60509,6 @@
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOTUBES</Bonus>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-			</PrereqInCityBuildings>
 			<iCost>8755</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -63270,15 +63263,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-			</PrereqInCityBuildings>
 			<iCost>1230</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>17</iHappiness>
@@ -88525,9 +88509,6 @@
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PEST_RATS</BuildingType>
-			</PrereqInCityBuildings>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<iCost>332</iCost>
 			<CommerceChanges>
@@ -91088,6 +91069,7 @@
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bFreshWater>1</bFreshWater>
+			<bRiver>1</bRiver>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROCK_ART</Type>
@@ -93077,9 +93059,6 @@
 				<Bonus>BONUS_CLOTHING</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PEST_CROWS</BuildingType>
-			</PrereqInCityBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCost>118</iCost>
 			<CommerceChanges>

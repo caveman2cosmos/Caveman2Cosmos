@@ -244,11 +244,23 @@ class TestCode:
 					iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(iBuildingReplacement)
 					if iReplacementBuilding not in aBuildingReplacementList:
 						aBuildingReplacementList.append(iReplacementBuilding)
+						
+				#Generate list of buildings, that are replaced by currently checked building
+				aBuildingReplacedList = []
+				for iBuildingReplaced in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+					iReplacedBuilding = CvBuildingInfo.getReplacedBuilding(iBuildingReplaced)
+					if iReplacedBuilding not in aBuildingReplacedList:
+						aBuildingReplacedList.append(iReplacedBuilding)
 
 				#Check if we have requirement, that is replacement of building
 				for i in xrange(len(aBuildingRequirementList)):
 					if aBuildingRequirementList[i] in aBuildingReplacementList:
 						self.log(CvBuildingInfo.getType()+" is replaced by requirement: "+GC.getBuildingInfo(aBuildingRequirementList[i]).getType())
+						
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingRequirementList)):
+					if aBuildingRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" replaces requirement: "+GC.getBuildingInfo(aBuildingRequirementList[i]).getType())
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):

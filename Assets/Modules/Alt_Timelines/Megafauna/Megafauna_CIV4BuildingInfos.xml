@@ -992,9 +992,6 @@
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
