@@ -11204,8 +11204,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
@@ -11245,8 +11243,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
@@ -11294,8 +11290,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
