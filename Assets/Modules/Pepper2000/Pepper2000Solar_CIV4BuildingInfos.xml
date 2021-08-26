@@ -3638,7 +3638,7 @@
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>60</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
@@ -3683,14 +3683,23 @@
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MERCURY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ASTEROID_SURFACE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3718,15 +3727,47 @@
 					<TerrainType>TERRAIN_KUIPER_BELT_OBJECT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_JUPITER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_SATURN</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_URANUS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_NEPTUNE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_EUROPA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MERCURY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ASTEROID_SURFACE</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>

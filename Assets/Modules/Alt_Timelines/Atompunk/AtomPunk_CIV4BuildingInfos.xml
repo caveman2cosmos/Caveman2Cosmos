@@ -36,7 +36,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_URANIUM</Bonus>
@@ -63,9 +63,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>

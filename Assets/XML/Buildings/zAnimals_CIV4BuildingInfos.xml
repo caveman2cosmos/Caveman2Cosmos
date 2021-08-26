@@ -6900,7 +6900,6 @@
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -7304,7 +7303,6 @@
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CRAB_MYTH_EFFECT</BuildingType>
@@ -10598,7 +10596,6 @@
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FISH_MYTH_EFFECT</BuildingType>
