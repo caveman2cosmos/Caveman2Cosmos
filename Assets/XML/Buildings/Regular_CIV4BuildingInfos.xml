@@ -206,7 +206,6 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<iHappiness>0</iHappiness>
 			<iDefense>10</iDefense>
 			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
 			<iTradeRoutes>-1</iTradeRoutes>
@@ -10890,7 +10889,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<iHealth>0</iHealth>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
@@ -11250,7 +11248,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<iHealth>0</iHealth>
 			<FreeBonus>BONUS_BEADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -11336,7 +11333,6 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<iHealth>0</iHealth>
 			<FreeBonus>BONUS_BEADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BonusCommerceModifiers>
@@ -16691,7 +16687,6 @@
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>216</iCost>
-			<iHappiness>0</iHappiness>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -33496,8 +33491,7 @@
 				</BonusHealthChange>
 				<BonusHealthChange>
 					<BonusType>BONUS_OPIUM</BonusType>
-					<iHealthChange>-3
-					</iHealthChange>
+					<iHealthChange>-3</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
 					<BonusType>BONUS_ECSTASY</BonusType>
@@ -38700,7 +38694,6 @@
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iCost>50</iCost>
-
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -63305,7 +63298,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-				<ObsoleteTech>TECH_CROP_ROTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CROP_ROTATION</ObsoleteTech>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
@@ -105123,7 +105116,6 @@
 				<VicinityBonus>BONUS_LEMONS</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<iCost>139</iCost>
-
 			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
