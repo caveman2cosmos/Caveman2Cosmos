@@ -16056,9 +16056,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
