@@ -326,7 +326,7 @@ class TestCode:
 				#Check if we have requirement, that is replaced by building itself
 				for i in xrange(len(aBuildingGOMAndRequirementList)):
 					if aBuildingGOMAndRequirementList[i] in aBuildingReplacedList:
-						self.log(CvBuildingInfo.getType()+" GOM AND replaces requirement: "+GC.getBuildingInfo(aBuildingGOMOrRequirementList[i]).getType())
+						self.log(CvBuildingInfo.getType()+" GOM AND replaces requirement: "+GC.getBuildingInfo(aBuildingGOMAndRequirementList[i]).getType())
 				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
 				for i in xrange(len(aUnlistedRequirementReplacements)):
 					if aUnlistedRequirementReplacements[i] not in aBuildingGOMAndRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
