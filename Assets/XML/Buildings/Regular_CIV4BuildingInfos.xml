@@ -17325,7 +17325,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
 			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
@@ -17355,7 +17355,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
 			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
@@ -17425,7 +17425,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -17454,7 +17454,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
 			<iCost>139</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -17508,7 +17508,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -57029,7 +57029,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -67552,15 +67551,15 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_METAL_MYTH_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_IRON_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
-				<BuildingType>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_GOLD_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_SILVER_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_TIN_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
+				<VicinityBonus>BONUS_PLATINUM_ORE</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -75767,7 +75766,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>10</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -92520,7 +92519,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
-			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<VicinityBonus>BONUS_SALT</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>

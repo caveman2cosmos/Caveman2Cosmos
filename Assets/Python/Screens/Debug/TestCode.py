@@ -185,6 +185,13 @@ class TestCode:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
 						self.log(CvBuildingInfo.getType()+" GOM OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
+						
+			#<PrereqNotInCityBuildings> - Those block building from being built
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
+				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
+				if max(aBaseTechIDList) != max(self.HF.checkBuildingTechRequirements(CvBlockerBuilding)[2]) and CvBlockerBuilding.getType().find("_MYTH_EFFECT", -12) == -1 and CvBlockerBuilding.getType().find("_STORIES_EFFECT", -15) == -1:
+					self.log(CvBuildingInfo.getType()+" doesn't unlock with "+CvBlockerBuilding.getType())
 
 	#Building replacements of requirements
 	def checkBuildingRequirementReplacements(self):
@@ -362,11 +369,11 @@ class TestCode:
 					if aUnlistedRequirementReplacements[i] not in aBuildingGOMOrRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
 						self.log(CvBuildingInfo.getType()+" GOM OR has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 						
-				#Analyze Not In City Building reqs
+				#Analyze Not In City Building blockers
 				aBuildingNotInCityRequirementList = []
 				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
 					aBuildingNotInCityRequirementList.append(CvBuildingInfo.getPrereqNotInCityBuilding(iBuildingRequirement))
-				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				#Generate list of buildings, that replace blockers, ignore bans as their intent is to block stuff
 				aBuildingRequirementReplacementList = []
 				for i in xrange(len(aBuildingNotInCityRequirementList)):
 					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingNotInCityRequirementList[i])
@@ -374,23 +381,23 @@ class TestCode:
 						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
 						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
 							aBuildingRequirementReplacementList.append(iReplacementBuilding)
-				#Generate list of replaced requirements, that aren't listed as requirements
+				#Generate list of replaced blockers, that aren't listed as blockers
 				aUnlistedRequirementReplacements = []
 				for i in xrange(len(aBuildingRequirementReplacementList)):
 					if aBuildingRequirementReplacementList[i] not in aBuildingNotInCityRequirementList:
 						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
-				#Check if we have requirement, that is replacement of building
+				#Check if we have blockers, that is replacement of building
 				for i in xrange(len(aBuildingNotInCityRequirementList)):
 					if aBuildingNotInCityRequirementList[i] in aBuildingReplacementList:
-						self.log(CvBuildingInfo.getType()+" Not In City is replaced by requirement: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
-				#Check if we have requirement, that is replaced by building itself
+						self.log(CvBuildingInfo.getType()+" Not In City is replaced by blockers: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have blockers, that is replaced by building itself
 				for i in xrange(len(aBuildingNotInCityRequirementList)):
 					if aBuildingNotInCityRequirementList[i] in aBuildingReplacedList:
-						self.log(CvBuildingInfo.getType()+" Not In City replaces requirement: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
-				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+						self.log(CvBuildingInfo.getType()+" Not In City replaces blockers: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have blockers, that is replaced by unlisted blockers replacement, ignore blockers replacement, if it replaces currently checked building
 				for i in xrange(len(aUnlistedRequirementReplacements)):
 					if aUnlistedRequirementReplacements[i] not in aBuildingNotInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
-						self.log(CvBuildingInfo.getType()+" Not In City has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
+						self.log(CvBuildingInfo.getType()+" Not In City has unlisted replaced blockers: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
@@ -474,6 +481,13 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" has latest GOM OR requirement obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList)-10 <= BuildingObsoleteTechLoc and max(aBuildingRequirementObsoleteTechLocList) < 999 and BuildingObsoleteTechID not in aBuildingRequirementObsoleteTechIDList:
 				self.log(CvBuildingInfo.getType()+" has latest GOM OR requirement obsolete fairly soon after base building - consider picking its obsoletion tech "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechIDList)+" "+str(BuildingObsoleteTechID))
+				
+			#<PrereqNotInCityBuildings> - Those block building from being built
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
+				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
+				if BuildingObsoleteTechID != self.HF.checkBuildingTechObsoletionLocation(CvBlockerBuilding)[1]:
+					self.log(CvBuildingInfo.getType()+" doesn't obsolete with "+CvBlockerBuilding.getType())
 
 	#Buildings shouldn't obsolete too fast in relation of tech unlock
 	def checkBuildingUnlockObsoletion(self):

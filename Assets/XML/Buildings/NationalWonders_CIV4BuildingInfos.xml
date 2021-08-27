@@ -582,9 +582,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1686,9 +1683,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 			</PrereqBonuses>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3636,9 +3630,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5026,9 +5017,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_BAUXITE_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5084,9 +5072,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5139,9 +5124,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_GOLD_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5194,9 +5176,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_IRON_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_IRON_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5249,9 +5228,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_LEAD_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5304,9 +5280,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_PLATINUM_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5359,9 +5332,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_SILVER_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5414,9 +5384,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TIN_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -5469,9 +5436,6 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TITANIUM_ORE</Bonus>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>

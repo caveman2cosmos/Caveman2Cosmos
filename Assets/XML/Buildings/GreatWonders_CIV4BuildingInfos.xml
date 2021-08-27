@@ -6328,7 +6328,6 @@
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -7747,7 +7746,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -13744,7 +13742,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_DEEP_SEA_EXPLORATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -19413,7 +19410,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
