@@ -186,11 +186,11 @@ class TestCode:
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
 						self.log(CvBuildingInfo.getType()+" GOM OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
-			#<PrereqNotInCityBuildings> - Those block building from being built
-			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
-				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
+			#<PrereqNotInCityBuildings> - Those block building from being built, they should be unlocked at same tech if they are regular building
+			for i in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(i)
 				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
-				if max(aBaseTechIDList) != max(self.HF.checkBuildingTechRequirements(CvBlockerBuilding)[2]) and CvBlockerBuilding.getType().find("_MYTH_EFFECT", -12) == -1 and CvBlockerBuilding.getType().find("_STORIES_EFFECT", -15) == -1:
+				if max(aBaseTechIDList) != max(self.HF.checkBuildingTechRequirements(CvBlockerBuilding)[2]) and not isNationalWonder(iBlockerBuilding) and not isWorldWonder(iBlockerBuilding) and CvBlockerBuilding.getProductionCost() > 0:
 					self.log(CvBuildingInfo.getType()+" doesn't unlock with "+CvBlockerBuilding.getType())
 
 	#Building replacements of requirements

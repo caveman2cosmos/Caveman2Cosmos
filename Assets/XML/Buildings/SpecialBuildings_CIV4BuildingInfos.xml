@@ -12366,6 +12366,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
