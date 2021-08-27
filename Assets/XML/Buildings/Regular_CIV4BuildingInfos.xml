@@ -3859,6 +3859,49 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_ANIMAL_PRESERVE</Type>
+			<Description>TXT_KEY_BUILDING_ANIMAL_PRESERVE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_PRESERVE_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_PRESERVE</ArtDefineTag>
+			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
+			<PrereqInCityBuildings>BUILDING_ZOO</PrereqInCityBuildings>
+			<iCost>4485</iCost>
+			<iHappiness>30</iHappiness>
+			<iHealth>10</iHealth>
+			<YieldChanges>
+				<iYield>35</iYield>
+				<iYield>5</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>40</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>40</iCommerce>
+			</CommerceChanges>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PELTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_OSTRICH_LEATHER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_RACETRACK</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_RACETRACK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_RACETRACK_PEDIA</Civilopedia>
@@ -4426,7 +4469,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
@@ -4436,7 +4479,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ANTELOPE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -11603,7 +11646,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BEAVER</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -11840,7 +11883,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BELUGA</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<YieldChanges>
@@ -13043,14 +13086,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -13693,14 +13736,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_BOAR</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -14851,6 +14894,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -14896,6 +14942,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -14949,6 +14998,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -14991,6 +15043,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -15034,6 +15089,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15091,6 +15149,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15142,6 +15203,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15184,6 +15248,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -15227,6 +15294,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15279,6 +15349,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -15317,6 +15390,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -15324,6 +15398,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15366,6 +15443,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15411,6 +15491,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15456,6 +15539,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15498,6 +15584,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15540,6 +15629,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15593,6 +15685,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15635,6 +15730,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15677,6 +15775,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -15738,6 +15839,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -15792,6 +15896,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15843,6 +15950,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15895,6 +16005,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15940,6 +16053,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -15985,6 +16104,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -16030,6 +16152,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -16079,6 +16204,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -16126,6 +16254,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -16169,6 +16300,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
@@ -16221,6 +16355,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1345</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -16953,6 +17090,7 @@
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -19543,7 +19681,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BEAVERS</VicinityBonus>
@@ -19564,7 +19702,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_CARIBOU</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -22535,7 +22673,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_CHINCHILLA</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -31105,14 +31243,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -37283,7 +37421,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ELEPHANT_SEAL</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<iHealth>1</iHealth>
@@ -37318,14 +37456,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -37716,7 +37854,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -37726,7 +37864,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -41343,7 +41481,7 @@
 				<BuildingType>BUILDING_ARCOLOGY_SHIELDING</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 			</ReplacementBuildings>
-			<iCost>65</iCost>
+			<iCost>68</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -43982,7 +44120,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_FOX</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -47409,7 +47547,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
@@ -47419,7 +47557,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -52393,7 +52531,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -52410,7 +52548,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_HIPPO</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -58825,14 +58963,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_KANGAROO</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -63439,14 +63577,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -69782,7 +69920,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MINK</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -71134,7 +71272,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
@@ -71142,7 +71280,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MOOSE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -71649,14 +71787,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MOUFLON</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -72419,7 +72557,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
@@ -72440,7 +72578,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<iHealth>1</iHealth>
@@ -73385,7 +73523,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -73403,7 +73541,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_NARWHAL</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>132</iCost>
 			<YieldChanges>
@@ -79436,7 +79574,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
@@ -79446,7 +79584,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_OSTRICH</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -79483,6 +79621,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_BREEDING_OSTRICH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
@@ -79535,7 +79674,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_SEA_OTTER</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -87853,7 +87992,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RABBIT</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -87892,7 +88031,7 @@
 			</TechHappinessChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RACCOON</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
@@ -90111,7 +90250,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
@@ -90121,7 +90260,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RHEA</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -90150,7 +90289,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
@@ -90160,7 +90299,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
@@ -94007,7 +94146,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_SEAL</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<iHealth>1</iHealth>
@@ -104373,32 +104512,37 @@
 			<Civilopedia>TXT_KEY_BUILDING_SYNTHETIC_MEAT_BIOREACTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REPLACEMENT_ORGANS</PrereqTech>
 			<iCost>2865</iCost>
-			<CommerceChanges>
-				<iCommerce>110</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>160</iYield>
-				<iYield>80</iYield>
-				<iYield>15</iYield>
-			</YieldChanges>
-			<iHealth>11</iHealth>
-			<iHappiness>5</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iHappiness>5</iHappiness>
+			<iHealth>5</iHealth>
+			<YieldChanges>
+				<iYield>80</iYield>
+				<iYield>60</iYield>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>55</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BISON</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CAMEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -104406,7 +104550,23 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COW</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DEER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DONKEY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_EGGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -104430,7 +104590,15 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HORSE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_KANGAROO</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -104439,6 +104607,14 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_LEATHER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LLAMA</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MAMMOTH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -104454,58 +104630,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PELTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BISON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CAMEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DEER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DONKEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HORSE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KANGAROO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LLAMA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MAMMOTH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_PIG</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -104514,7 +104638,19 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SHEEP</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WOOL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -104568,6 +104704,13 @@
 			</BonusYieldChanges>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
+					<BonusType>BONUS_SALT</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
 					<BonusType>BONUS_FISH</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
@@ -104582,13 +104725,6 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRASS</BonusType>
 					<YieldModifiers>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-				<BonusYieldModifier>
-					<BonusType>BONUS_SALT</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
 						<iYield>5</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
@@ -104654,7 +104790,7 @@
 				<TechCommerceChange>
 					<PrereqTech>TECH_TOURISM</PrereqTech>
 					<TechCommerce>
-						<iCommerce>10</iCommerce>
+						<iCommerce>8</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -113529,7 +113665,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_WALRUS</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
@@ -113537,7 +113673,7 @@
 			<iMinLatitude>40</iMinLatitude>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_WALRUS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>86</iCost>
 			<iHealth>1</iHealth>
@@ -116158,7 +116294,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
@@ -116168,7 +116304,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<YieldChanges>
