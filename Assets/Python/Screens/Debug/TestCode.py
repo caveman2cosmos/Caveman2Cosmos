@@ -361,6 +361,36 @@ class TestCode:
 				for i in xrange(len(aUnlistedRequirementReplacements)):
 					if aUnlistedRequirementReplacements[i] not in aBuildingGOMOrRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
 						self.log(CvBuildingInfo.getType()+" GOM OR has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
+						
+				#Analyze Not In City Building reqs
+				aBuildingNotInCityRequirementList = []
+				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+					aBuildingNotInCityRequirementList.append(CvBuildingInfo.getPrereqNotInCityBuilding(iBuildingRequirement))
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingNotInCityRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingNotInCityRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					if aBuildingNotInCityRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Not In City is replaced by requirement: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					if aBuildingNotInCityRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" Not In City replaces requirement: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingNotInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Not In City has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
