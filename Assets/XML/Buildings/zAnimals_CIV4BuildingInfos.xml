@@ -31137,7 +31137,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>

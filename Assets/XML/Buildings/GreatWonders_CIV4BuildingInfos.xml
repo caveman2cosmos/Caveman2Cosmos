@@ -20640,7 +20640,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<iCost>624</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>
