@@ -10854,7 +10854,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10893,7 +10893,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10930,7 +10930,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10968,7 +10968,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -11005,7 +11005,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -11040,7 +11040,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -11075,7 +11075,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11113,7 +11113,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11155,7 +11155,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11192,7 +11192,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11233,7 +11233,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11279,7 +11279,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -13033,7 +13033,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>

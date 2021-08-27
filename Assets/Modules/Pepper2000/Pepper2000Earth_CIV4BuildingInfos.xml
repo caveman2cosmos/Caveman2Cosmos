@@ -560,8 +560,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
-			<iCost>52530</iCost>
+			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
+			<iCost>60930</iCost>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 				<iCommerce>50</iCommerce>

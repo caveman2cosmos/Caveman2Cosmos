@@ -26,7 +26,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced")
 		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself. For beeliners: If there is requirement obsoletion within 10 columns, then building shall obsolete on same tech as its requirement")
 		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
-		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
+		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics, traits, conversely improvements can upgrade, so they are checked too")
@@ -397,15 +397,13 @@ class TestCode:
 					iImmediateReplacementTechLocID = max(self.HF.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2])
 					iImmediateReplacementTechObs = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[0]
 					iImmediateReplacementTechObsID = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[1]
-					if 0:#aImmediateReplacementList[i] not in aSpecialReplacementsList and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
-						if iTechObsLoc < iImmediateReplacementTechLoc:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
-						if (iTechObsLoc > iImmediateReplacementTechObs or (iTechObsLoc == iImmediateReplacementTechObs and iTechObsID != iImmediateReplacementTechObsID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" obsoletes after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
-						if (iTechLoc > iImmediateReplacementTechLoc or (iTechLoc == iImmediateReplacementTechLoc and iTechID != iImmediateReplacementTechLocID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement unlocks "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
-						if iImmediateReplacementTechObs == 999 and len(aBuildingReplacement2List) > 0 and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" replacement doesn't obsolete, but replacements of replacement exist "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs)+" replacements of replacement "+str(aBuildingReplacement2NameList))
+					if aImmediateReplacementList[i] not in aSpecialReplacementsList and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+						if iTechLoc > iImmediateReplacementTechLoc and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1: #Stories Effects are automatic
+							self.log(CvBuildingInfo.getType()+" unlocks after unlock of "+CvBuildingImmediateReplacementInfo.getType()+" Base unlock/Replacement unlock "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
+						if iTechObsLoc > iImmediateReplacementTechObs:
+							self.log(CvBuildingInfo.getType()+" obsoletes after obsoletion of "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement obsoletion "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
+						if iImmediateReplacementTechLoc - iTechLoc < 2 and CvBuildingImmediateReplacementInfo.getProductionCost() > 0: #Ignore short time for all special replacements
+							self.log(CvBuildingInfo.getType()+" is swiftly replaced by "+CvBuildingImmediateReplacementInfo.getType()+" Base unlock/Replacement unlock "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
 
 			#Get replacements of replacements
 			for i in xrange(len(aImmediateReplacementList)):
@@ -446,6 +444,7 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iBaseTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			iBaseObsLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
 			#Replacements
 			aReplacementBuildingList = []
@@ -455,8 +454,11 @@ class TestCode:
 				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
 				aReplacementBuildingList.append(iReplacementBuilding)
 				iReplacementTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingReplacementInfo)[0]
-				if iBaseTechLoc >= iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
-					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after or concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
+				iReplacementObsLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacementInfo)[0]
+				if iBaseTechLoc == iReplacementTechLoc and CvBuildingReplacementInfo.getProductionCost() > 0: #Concurrent replacement is fine, if it can't be built normally
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
+				if iBaseObsLoc == iReplacementObsLoc and CvBuildingInfo.getProductionCost() > 0 and CvBuildingReplacementInfo.getProductionCost() > 0: #Concurrent obsoletion is fine, if it can't be built normally
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is obsoleted concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseObsLoc)+"/"+str(iReplacementObsLoc))
 
 			#Replacements of replacements
 			aReplacement2BuildingList = []

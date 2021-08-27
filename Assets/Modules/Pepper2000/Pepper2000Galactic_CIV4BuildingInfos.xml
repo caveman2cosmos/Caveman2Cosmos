@@ -62,6 +62,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_NUCLEAR_ENGINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<ObsoleteTech>TECH_SPACE_CREASING</ObsoleteTech>
 			<iCost>1192</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2065,8 +2066,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DYSON_SWARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
-			<iCost>3212</iCost>
+			<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
+			<ObsoleteTech>TECH_ZERO_POINT_ENERGY</ObsoleteTech>
+			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -3753,6 +3755,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_NETWORK_NODE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_HIVEMIND</PrereqTech>
+			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
 			<iCost>6020</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

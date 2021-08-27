@@ -879,6 +879,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CAVES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_NANOSHIELDING</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1206,6 +1207,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_EXPANDED_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_NANOSHIELDING</ObsoleteTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

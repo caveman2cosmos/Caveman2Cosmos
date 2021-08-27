@@ -14018,7 +14018,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -18621,7 +18621,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</ReplacementBuildings>
@@ -18685,7 +18685,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

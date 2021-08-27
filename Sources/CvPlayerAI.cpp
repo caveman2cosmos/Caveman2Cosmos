@@ -9136,7 +9136,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 				pCoastalCity = findBestCoastalCity();
 			}
 			const int iCityCount = getNumCities();
-			const int iCityCountNonZero = std::max(1, iCityCount); 
+			const int iCityCountNonZero = std::max(1, iCityCount);
 
 			if (!bJustNonTradeBuildings)
 			{
@@ -20064,7 +20064,7 @@ void CvPlayerAI::AI_doDiplo()
 													}
 												}
 											}
-											// Yes, this is the first team we can sell contact with... 
+											// Yes, this is the first team we can sell contact with...
 											break; // Not like it really matters
 										}
 									}
