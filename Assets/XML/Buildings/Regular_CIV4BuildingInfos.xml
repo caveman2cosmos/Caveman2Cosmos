@@ -3865,7 +3865,9 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_PRESERVE</ArtDefineTag>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
-			<PrereqInCityBuildings>BUILDING_ZOO</PrereqInCityBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqInCityBuildings>
 			<iCost>4485</iCost>
 			<iHappiness>30</iHappiness>
 			<iHealth>10</iHealth>
