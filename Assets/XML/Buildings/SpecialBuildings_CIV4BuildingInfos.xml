@@ -10687,6 +10687,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10726,6 +10727,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10763,6 +10765,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10801,6 +10804,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -10838,6 +10842,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -10873,6 +10878,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -10908,6 +10914,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10946,6 +10953,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10988,6 +10996,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11025,6 +11034,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -11066,6 +11076,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -11112,6 +11123,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -12792,6 +12804,7 @@
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_BOTANY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LADYBUGX</ObsoletesToBuilding>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>

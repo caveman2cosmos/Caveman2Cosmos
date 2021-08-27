@@ -821,6 +821,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -1176,6 +1177,7 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>

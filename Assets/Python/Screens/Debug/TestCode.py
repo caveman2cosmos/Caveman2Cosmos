@@ -583,6 +583,15 @@ class TestCode:
 						if iTechObsID != iReplacement2TechID and aImmediateReplacement2List[i] not in aSpecialReplacementsList and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
 							self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base Obsoletion should happen on Second Replacement Unlock: "+self.HF.getTechName(iTechObsID)+"/"+self.HF.getTechName(iReplacement2TechID))
 
+				if len(aImmediateReplacementList) == 1 and len(aImmediateReplacement2List) == 1 and CvBuildingInfo.getObsoletesToBuilding() != aImmediateReplacementList[0]:
+					if not GC.getBuildingInfo(aImmediateReplacementList[0]).isAutoBuild() and not GC.getBuildingInfo(aImmediateReplacement2List[0]).isAutoBuild() and aImmediateReplacement2List[0] not in aSpecialReplacementsList:
+						self.log(CvBuildingInfo.getType()+" should obsolete into "+GC.getBuildingInfo(aImmediateReplacementList[0]).getType()+" as its obsoleted on unlock of "+GC.getBuildingInfo(aImmediateReplacement2List[0]).getType())
+				if len(aImmediateReplacementList) == 1 and len(aImmediateReplacement2List) == 0 and CvBuildingInfo.getObsoletesToBuilding() != aImmediateReplacementList[0]:
+					if CvBuildingInfo.getProductionCost() > 0 and GC.getBuildingInfo(aImmediateReplacementList[0]).getProductionCost() > 0:
+						self.log(CvBuildingInfo.getType()+" should obsolete into "+GC.getBuildingInfo(aImmediateReplacementList[0]).getType()+" when it obsoletes")
+				if CvBuildingInfo.getObsoletesToBuilding() != -1 and (len(aImmediateReplacementList) > 1 or len(aImmediateReplacement2List) > 1):
+					self.log("WARNING: "+CvBuildingInfo.getType()+" has multiple first or second level replacements and shouldn't obsolete to building")
+
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):

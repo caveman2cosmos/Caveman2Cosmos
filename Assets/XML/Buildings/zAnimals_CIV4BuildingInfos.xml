@@ -3597,6 +3597,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -4818,6 +4819,7 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -5418,6 +5420,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -7218,6 +7221,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -8041,6 +8045,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -8784,6 +8789,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -9788,6 +9794,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -12678,6 +12685,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -14624,6 +14632,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -17109,6 +17118,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -19599,6 +19609,7 @@
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -23808,6 +23819,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -24262,6 +24274,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -25384,6 +25397,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CARCASS</FreeBonus>
@@ -27424,6 +27438,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -29090,6 +29105,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
