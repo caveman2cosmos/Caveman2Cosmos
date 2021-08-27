@@ -233,7 +233,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAHAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_BAHAI_SHRINE</Description>

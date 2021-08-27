@@ -28712,7 +28712,7 @@
 			<NIF/>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/CrystalGlassware.dds</Button>
-		</BuildingArtInfo>		
+		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BURIAL_TRADITION_CAVE</Type>
 			<LSystem/>

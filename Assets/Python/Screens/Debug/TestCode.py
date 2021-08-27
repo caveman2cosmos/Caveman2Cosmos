@@ -185,7 +185,7 @@ class TestCode:
 				for i in xrange(len(aReqColumnTechIDList)):
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
 						self.log(CvBuildingInfo.getType()+" GOM OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
-						
+
 			#<PrereqNotInCityBuildings> - Those block building from being built
 			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
 				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
@@ -368,7 +368,7 @@ class TestCode:
 				for i in xrange(len(aUnlistedRequirementReplacements)):
 					if aUnlistedRequirementReplacements[i] not in aBuildingGOMOrRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
 						self.log(CvBuildingInfo.getType()+" GOM OR has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
-						
+
 				#Analyze Not In City Building blockers
 				aBuildingNotInCityRequirementList = []
 				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
@@ -481,7 +481,7 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" has latest GOM OR requirement obsolete before itself "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechLocList)+" "+str(BuildingObsoleteTechLoc))
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList)-10 <= BuildingObsoleteTechLoc and max(aBuildingRequirementObsoleteTechLocList) < 999 and BuildingObsoleteTechID not in aBuildingRequirementObsoleteTechIDList:
 				self.log(CvBuildingInfo.getType()+" has latest GOM OR requirement obsolete fairly soon after base building - consider picking its obsoletion tech "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechIDList)+" "+str(BuildingObsoleteTechID))
-				
+
 			#<PrereqNotInCityBuildings> - Those block building from being built
 			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
 				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
