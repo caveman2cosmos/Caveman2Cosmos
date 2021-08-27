@@ -229,14 +229,20 @@ class TestCode:
 					if iPrereqBuilding not in aBuildingRequirementList:
 						aBuildingRequirementList.append(iPrereqBuilding)
 
-				#Generate list of buildings, that replace requirements
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
 				aBuildingRequirementReplacementList = []
 				for i in xrange(len(aBuildingRequirementList)):
 					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingRequirementList[i])
 					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
 						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
-						if iReplacementBuilding not in aBuildingRequirementReplacementList:
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
 							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
 
 				#Generate list of buildings, that replace currently checked building
 				aBuildingReplacementList = []
@@ -261,6 +267,11 @@ class TestCode:
 				for i in xrange(len(aBuildingRequirementList)):
 					if aBuildingRequirementList[i] in aBuildingReplacedList:
 						self.log(CvBuildingInfo.getType()+" replaces requirement: "+GC.getBuildingInfo(aBuildingRequirementList[i]).getType())
+
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
