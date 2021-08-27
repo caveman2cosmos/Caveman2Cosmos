@@ -1817,12 +1817,6 @@
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_FERTILITYFESTIVAL_EFFECT</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<iCost>172</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2250,12 +2244,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 				<BuildingType>BUILDING_PHARMACY</BuildingType>
@@ -2741,12 +2729,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
@@ -3332,12 +3314,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_PUB</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PUB</BuildingType>
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>

@@ -23318,12 +23318,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TOBACCO_PLANTATION</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TOBACCO_PLANTATION</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FARMSCRAPER_I</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
