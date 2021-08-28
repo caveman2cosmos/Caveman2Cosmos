@@ -22345,9 +22345,11 @@
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>495</iCost>
+			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
-				<iCommerce>7</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>15</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -22367,6 +22369,13 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -91295,7 +91304,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_RICE_PADDY</BuildingType>				
+				<BuildingType>BUILDING_RICE_PADDY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>332</iCost>
 			<iHealth>1</iHealth>

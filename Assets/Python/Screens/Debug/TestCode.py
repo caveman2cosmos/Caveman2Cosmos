@@ -2500,6 +2500,7 @@ class TestCode:
 
 	#Unit - check building requirement replacements
 	def checkUnitRequirementsReplacements(self):
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 
@@ -2541,7 +2542,8 @@ class TestCode:
 			for iBuilding in xrange(len(aBuildingUniqueList)):
 				CvBuildingInfo = GC.getBuildingInfo(aBuildingUniqueList[iBuilding])
 				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-					aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
+					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
+						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
 
 			#Get unique replacements
 			aReplacementUniqueList = []
