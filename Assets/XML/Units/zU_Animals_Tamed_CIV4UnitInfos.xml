@@ -260,7 +260,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<ConstructCondition>
+			<TrainCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -275,7 +275,7 @@
 						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
 					</Has>
 				</Or>
-			</ConstructCondition>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
@@ -349,7 +349,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<ConstructCondition>
+			<TrainCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -364,7 +364,7 @@
 						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
 					</Has>
 				</Or>
-			</ConstructCondition>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
@@ -581,7 +581,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<ConstructCondition>
+			<TrainCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -596,7 +596,7 @@
 						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
 					</Has>
 				</Or>
-			</ConstructCondition>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
@@ -674,7 +674,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<ConstructCondition>
+			<TrainCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -689,7 +689,7 @@
 						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
 					</Has>
 				</Or>
-			</ConstructCondition>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
