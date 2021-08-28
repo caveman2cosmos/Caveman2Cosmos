@@ -719,6 +719,7 @@
 			<iCost>1410</iCost>
 			<CommerceChanges>
 				<iCommerce>45</iCommerce>
+				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -752,6 +753,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_FLINT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FOSSILS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -44107,6 +44112,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44130,6 +44140,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44153,6 +44168,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44176,6 +44196,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44199,6 +44224,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44222,6 +44252,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44245,6 +44280,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44268,6 +44308,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44291,6 +44336,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<RawVicinityBonus>BONUS_OIL</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44314,6 +44364,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44337,6 +44392,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44360,6 +44420,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COW</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44383,6 +44448,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CRAB</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -44406,6 +44476,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_HORSE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
