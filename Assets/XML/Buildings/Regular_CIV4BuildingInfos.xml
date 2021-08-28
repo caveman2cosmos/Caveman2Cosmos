@@ -3209,7 +3209,8 @@
 				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
 				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MODERN_EMBALMER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_MODERN_EMBALMER</BuildingType>
@@ -20749,9 +20750,9 @@
 				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FRESCO</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FRESCO</BuildingType>
-				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>45</iCost>
 			<CommerceChanges>
@@ -20759,16 +20760,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_LITERATURE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-						<iCommerce>-2</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25570,6 +25561,16 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>40</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 				<BuildingType>BUILDING_HELIUM_3_IMPORTER</BuildingType>
@@ -40884,6 +40885,8 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAST_BREEDER_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -40893,6 +40896,10 @@
 			</PrereqBonuses>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1845</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>
@@ -47062,8 +47069,18 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>20</iYield>
+				<iYield>50</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>30</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
@@ -71172,10 +71189,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MORTURARY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+			</ReplacementBuildings>
 			<iCost>495</iCost>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -71827,8 +71848,8 @@
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_STELE</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OBELISK</BuildingType>
 				<BuildingType>BUILDING_STELE</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 			</ReplacementBuildings>
@@ -77642,7 +77663,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FAST_BREEDER_REACTOR</ObsoletesToBuilding>
 			<Bonus>BONUS_URANIUM</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_LEAD_WARES</Bonus>
