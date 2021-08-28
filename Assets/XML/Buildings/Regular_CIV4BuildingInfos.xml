@@ -1438,7 +1438,7 @@
 			<iCost>4315</iCost>
 			<YieldChanges>
 				<iYield>50</iYield>
-				<iYield>65</iYield>
+				<iYield>70</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>75</iCommerce>
@@ -39786,12 +39786,6 @@
 						<iYield>-1</iYield>
 					</TechYield>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_FLIGHT</PrereqTech>
-					<TechYield>
-						<iYield>-1</iYield>
-					</TechYield>
-				</TechYieldChange>
 			</TechYieldChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -46178,7 +46172,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<iCost>15</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
@@ -46533,7 +46532,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -63176,7 +63180,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_WOOD</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
