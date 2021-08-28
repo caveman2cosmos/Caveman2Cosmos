@@ -49,6 +49,10 @@
 					</Has>
 				</And>
 			</ConstructCondition>
+			<ObsoletesToBuilding>BUILDING_HI_TECH_NUCLEAR_REACTOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
+			</ReplacementBuildings>
 			<bPower>1</bPower>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -63,9 +67,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-			</ReplacementBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -245,13 +246,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<bFreshWater>1</bFreshWater>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_PLANT</Type>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
-				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
@@ -764,6 +758,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COMPUTER_NETWORK</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

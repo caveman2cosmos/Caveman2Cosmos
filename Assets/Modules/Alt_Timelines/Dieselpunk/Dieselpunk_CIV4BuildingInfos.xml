@@ -11,6 +11,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_HYPERSONIC_FLIGHT</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GRAND_AERODROME</ObsoletesToBuilding>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

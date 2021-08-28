@@ -9469,6 +9469,14 @@
 					<BuildingType>BUILDING_MONTE_CARLO</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
+					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>

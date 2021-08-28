@@ -54,6 +54,7 @@
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_AIRPORT</ObsoletesToBuilding>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>

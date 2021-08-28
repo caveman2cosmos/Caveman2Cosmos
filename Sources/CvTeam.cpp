@@ -2644,21 +2644,27 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
 	iCost /= 100;
 
-	iCost *= 100 + iBeelineStingsTechCostModifier;
-	iCost /= 100;
-
 	iCost *= std::max(0, GC.getTECH_COST_EXTRA_TEAM_MEMBER_MODIFIER() * getNumMembers());
 	iCost /= 100;
 
-	if (!isHuman() && !isNPC())
-	{
-		iCost *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
-		iCost /= 100;
-	}
+	int iMod = iBeelineStingsTechCostModifier;
 
+	if (!isNPC() && !isHuman(true))
+	{
+		iMod =
+		(
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent() - 100
+			+
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getLeaderID()).getCurrentEra()
+		);
+	}
 	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
 	{
-		iCost = getModifiedIntValue64(iCost, GC.getUPSCALED_RESEARCH_COST_MODIFIER());
+		iMod += GC.getUPSCALED_RESEARCH_COST_MODIFIER();
+	}
+	if (iMod != 0)
+	{
+		iCost = getModifiedIntValue64(iCost, iMod);
 	}
 	iCost /= 100;
 
@@ -2724,20 +2730,20 @@ bool CvTeam::isBonusObsolete(BonusTypes eBonus) const
 }
 
 
-bool CvTeam::isHuman() const
+bool CvTeam::isHuman(const bool bCountDisabledHuman) const
 {
 	PROFILE_FUNC();
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()) && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID())
+		&& (GET_PLAYER((PlayerTypes)iI).isHuman() || bCountDisabledHuman && GET_PLAYER((PlayerTypes)iI).isHumanDisabled()))
 		{
 			return true;
 		}
 	}
 	return false;
 }
-
 
 bool CvTeam::isBarbarian() const
 {
@@ -4592,7 +4598,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 			GC.getGame().makeSpecialBuildingValid((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding()));
 		}
 
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
 			CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
 			if (player.isAlive())
@@ -4626,7 +4632,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 				}
 				player.changeWorldHappiness(kProject.getWorldHappiness());
 				player.changeWorldHealth(kProject.getWorldHealth());
-				player.changeWorldTradeRoutes(kProject.getWorldTradeRoutes());
+				player.changeTradeRoutes(kProject.getWorldTradeRoutes());
 			}
 		}
 	}

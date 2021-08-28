@@ -6328,7 +6328,6 @@
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -7022,6 +7021,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>408</iCost>
@@ -7747,7 +7747,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -12501,8 +12500,10 @@
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>876</iCost>
@@ -13743,7 +13744,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_DEEP_SEA_EXPLORATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -17765,7 +17765,6 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -19413,7 +19412,6 @@
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -20640,7 +20638,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<iCost>624</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>

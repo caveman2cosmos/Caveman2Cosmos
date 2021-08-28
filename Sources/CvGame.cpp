@@ -3941,7 +3941,10 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 
 		if (iNewValue > 0)
 		{
-			GET_PLAYER(iPlayer).setHumanDisabled(true);
+			if (!GET_PLAYER(iPlayer).isHumanDisabled())
+			{
+				GET_PLAYER(iPlayer).setHumanDisabled(true);
+			}
 		}
 		else GET_PLAYER(iPlayer).setHumanDisabled(false);
 	}
@@ -4403,7 +4406,7 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 			return false;
 		}
 
-		if (kOtherPlayer.isHuman() && isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+		if (isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 		{
 			return false;
 		}

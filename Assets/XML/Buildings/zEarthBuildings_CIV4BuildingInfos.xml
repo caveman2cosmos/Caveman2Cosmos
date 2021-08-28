@@ -856,8 +856,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
-			<iCost>52530</iCost>
+			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
+			<iCost>60930</iCost>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -2074,7 +2074,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
@@ -2112,7 +2112,7 @@
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
@@ -2929,7 +2929,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>

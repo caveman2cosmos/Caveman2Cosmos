@@ -1060,6 +1060,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAMMA_RAY_BURST_CANNON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_STAR_CANNON</ObsoletesToBuilding>
 			<iCost>3075</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
