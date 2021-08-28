@@ -17545,6 +17545,10 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>

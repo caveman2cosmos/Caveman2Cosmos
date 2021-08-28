@@ -644,6 +644,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<iCost>990</iCost>
 			<CommerceChanges>
 				<iCommerce>7</iCommerce>
@@ -857,6 +862,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<iCost>990</iCost>
 			<CommerceChanges>
 				<iCommerce>7</iCommerce>
@@ -2463,9 +2473,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2494,7 +2501,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -2503,7 +2510,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>950</iCost>
 			<iHealth>-1</iHealth>
@@ -6729,7 +6735,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>300</iCost>
@@ -14905,7 +14911,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRASS_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -14914,7 +14920,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>192</iCost>
 			<iHealth>-1</iHealth>
@@ -17051,7 +17056,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -17063,7 +17068,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>184</iCost>
 			<iHealth>-1</iHealth>
@@ -22358,7 +22362,7 @@
 			<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
 			<iCost>3525</iCost>
 			<CommerceChanges>
-				<iCommerce>40</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -27568,16 +27572,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_COPPERWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_COPPERWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_COPPER_INGOTS</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
@@ -27634,9 +27638,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_COPPERWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_COPPERWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -27677,7 +27682,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -27705,6 +27710,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WIRES</Bonus>
@@ -27726,9 +27735,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -29364,7 +29370,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<Properties>
 				<Property>
@@ -37781,7 +37787,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRASS_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -37790,7 +37796,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>192</iCost>
 			<iHealth>-1</iHealth>
@@ -43834,7 +43839,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_FOUNDRY</ObsoletesToBuilding>
 			<PrereqBonuses>
 				<Bonus>BONUS_CHARCOAL</Bonus>
@@ -43894,7 +43899,7 @@
 			</ConstructCondition>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<iCost>153</iCost>
 			<NewCityFree>
@@ -44554,7 +44559,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<ObsoleteTech>TECH_PICOTECHNOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqBonuses>
 				<Bonus>BONUS_CHARCOAL</Bonus>
 				<Bonus>BONUS_COAL</Bonus>
@@ -44611,10 +44620,6 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<iCost>425</iCost>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -48508,9 +48513,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -48752,7 +48754,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -48761,7 +48763,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
@@ -48848,9 +48849,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -50753,7 +50751,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -57844,16 +57842,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_IRONWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_IRON_INGOTS</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>216</iCost>
 			<iHealth>-1</iHealth>
@@ -57966,6 +57964,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
@@ -57978,9 +57980,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -61769,9 +61768,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_LEAD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -62498,7 +62494,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
 			<iHealth>-3</iHealth>
@@ -64566,7 +64562,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -64628,10 +64624,6 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>30</iYield>
-			</YieldModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 			</PrereqInCityBuildings>
@@ -64728,10 +64720,6 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIRES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TOOLS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -68396,23 +68384,37 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iCost>5905</iCost>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</PrereqInCityBuildings>
 			<CommerceChanges>
-				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>40</iCommerce>
+				<iCommerce>5</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>100</iYield>
 			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CORE_MINE</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>30</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<FreeBonus>BONUS_TOOLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -68425,6 +68427,18 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_BRONZE_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COPPER_WIRES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -68441,6 +68455,14 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GOLD_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IRON_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -68468,6 +68490,14 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -68490,7 +68520,7 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>7</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -68498,10 +68528,19 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>2</iCommerce>
+						<iCommerce>5</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</TechYield>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -81700,9 +81739,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_PAPER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85386,9 +85422,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_PLASTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85417,7 +85450,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -85426,7 +85459,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>216</iCost>
 			<iHealth>-1</iHealth>
@@ -85506,9 +85538,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -93112,9 +93141,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -98506,7 +98532,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -98515,7 +98541,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
@@ -98609,9 +98634,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_SILVER_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -99520,9 +99542,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_COPPERWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_COPPERWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
@@ -99659,9 +99682,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_IRONWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_IRON_ORE</Bonus>
@@ -99848,9 +99872,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRUCIBLE_STEEL</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_IRONWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_IRON_INGOTS</Bonus>
@@ -103239,16 +103264,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRUCIBLE_STEEL</PrereqTech>
-			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_IRONWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_STEEL_INGOTS</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>356</iCost>
 			<iHealth>-1</iHealth>
@@ -103288,6 +103313,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_CANNED_FOOD</Bonus>
@@ -103304,9 +103333,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -105381,7 +105407,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>4145</iCost>
 			<iHealth>-1</iHealth>
@@ -109389,7 +109415,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -109398,7 +109424,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>184</iCost>
 			<iHealth>-1</iHealth>
@@ -109483,9 +109508,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -109644,7 +109666,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -109653,7 +109675,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>990</iCost>
 			<iHealth>-1</iHealth>
@@ -109741,9 +109762,6 @@
 			</PrereqInCityBuildings>
 			<iCost>1475</iCost>
 			<iHealth>-1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -110210,7 +110228,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>356</iCost>
 			<YieldModifiers>
