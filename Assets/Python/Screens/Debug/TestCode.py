@@ -2102,6 +2102,10 @@ class TestCode:
 				if not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces should be swapped with "+CvTargetBuilding.getType())
 
+			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
+			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
+				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
+
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):

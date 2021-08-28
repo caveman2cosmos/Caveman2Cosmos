@@ -49,6 +49,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
+			<ObsoletesToBuilding>BUILDING_HI_TECH_NUCLEAR_REACTOR</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 			</ReplacementBuildings>
@@ -757,6 +758,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COMPUTER_NETWORK</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

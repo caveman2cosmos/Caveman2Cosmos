@@ -324,6 +324,7 @@
 				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_ASTROECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_VERTICAL_FARM</ObsoletesToBuilding>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -893,6 +894,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
 			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_SKYSCRAPER</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1220,6 +1222,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
 			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_SKYSCRAPER</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>

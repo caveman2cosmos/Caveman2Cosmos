@@ -63,6 +63,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<ObsoleteTech>TECH_SPACE_CREASING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FUSION_ENGINE</ObsoletesToBuilding>
 			<iCost>1192</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2068,6 +2069,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 			<ObsoleteTech>TECH_ZERO_POINT_ENERGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_DYSON_SPHERE</ObsoletesToBuilding>
 			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -3750,6 +3752,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_HIVEMIND</PrereqTech>
 			<ObsoleteTech>TECH_OMEGA_POINT</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COSMIC_NODE</ObsoletesToBuilding>
 			<iCost>6020</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
