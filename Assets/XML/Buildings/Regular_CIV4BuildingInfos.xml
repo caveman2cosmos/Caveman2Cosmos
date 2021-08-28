@@ -2652,7 +2652,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -6722,7 +6721,6 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>344</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -8115,7 +8113,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATHLETICS</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iCost>225</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -11068,7 +11065,6 @@
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
 				<BuildingType>BUILDING_HYPOCAUSTS</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>252</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -19358,7 +19354,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>410</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -37957,7 +37952,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
 			<iCost>3245</iCost>
-			<ObsoleteTech>TECH_ORGANIC_CITIES</ObsoleteTech>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -39745,7 +39739,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HAWKING</BuildingType>
 			</PrereqOrBuildings>
@@ -44613,7 +44606,6 @@
 				<BuildingType>BUILDING_ROCK_ART</BuildingType>
 				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>118</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -45356,7 +45348,6 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
@@ -46660,7 +46651,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>15</iCost>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<YieldChanges>
@@ -52288,7 +52278,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iCost>1280</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -53501,7 +53490,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			<PrereqOrBuildings>
@@ -55153,7 +55141,6 @@
 				<Bonus>BONUS_COAL</Bonus>
 				<Bonus>BONUS_CHARCOAL</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>192</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -60990,7 +60977,6 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1540</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -61767,7 +61753,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
@@ -64926,7 +64911,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
-			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
 			<bWater>1</bWater>
 			<PrereqOrImprovement>
 				<PrereqImprovement>
@@ -68508,7 +68492,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METEOROLOGY</PrereqTech>
-			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -71066,7 +71049,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ObsoleteTech>TECH_PLANET_SCANNING</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
@@ -72916,7 +72898,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -73800,7 +73781,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SMART_DUST</PrereqTech>
 			<iCost>5455</iCost>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
@@ -77379,7 +77359,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1080</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -83977,7 +83956,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
@@ -87485,7 +87463,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
@@ -90756,7 +90733,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>1280</iCost>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
@@ -92022,7 +91998,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>68</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -92956,7 +92931,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -93643,7 +93617,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
-			<ObsoleteTech>TECH_LUMINAL_BEINGS</ObsoleteTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -113376,7 +113349,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1410</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>

@@ -14026,7 +14026,6 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -18631,7 +18630,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</ReplacementBuildings>
@@ -18695,7 +18693,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -31153,7 +31150,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>

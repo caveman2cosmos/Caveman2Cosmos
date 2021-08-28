@@ -181,7 +181,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

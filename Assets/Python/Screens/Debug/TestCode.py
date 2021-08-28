@@ -2922,6 +2922,8 @@ class TestCode:
 				if len(aReplacementList) == 0:
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
+					if CvBuildingInfo.getNumReplacedBuilding() != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
 		szText = " Regular obsoleting buildings without replacements: "
 		for i in xrange(len(aObsoleteTechList)):
