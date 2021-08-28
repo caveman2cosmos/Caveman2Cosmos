@@ -27311,7 +27311,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
@@ -39720,12 +39724,6 @@
 						<iYield>-1</iYield>
 					</TechYield>
 				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_FLIGHT</PrereqTech>
-					<TechYield>
-						<iYield>-1</iYield>
-					</TechYield>
-				</TechYieldChange>
 			</TechYieldChanges>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -39755,17 +39753,24 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HAWKING</BuildingType>
+				<BuildingType>BUILDING_HAWK_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>310</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>7</iCommerce>
 			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_TOURISM</PrereqTech>
@@ -54087,7 +54092,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FLAX</VicinityBonus>
@@ -59388,7 +59397,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -63513,7 +63526,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -63586,7 +63603,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
@@ -81539,7 +81560,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
@@ -81765,7 +81790,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<iCost>92</iCost>
 			<CommerceChanges>
@@ -82293,7 +82322,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
@@ -84021,7 +84054,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FALCONRY_SCHOOL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -88573,7 +88610,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COCOA</VicinityBonus>
@@ -105441,9 +105482,9 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>55</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>75</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -109715,7 +109756,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MANGO</VicinityBonus>

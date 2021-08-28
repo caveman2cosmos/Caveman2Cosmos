@@ -46420,6 +46420,10 @@
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -47001,6 +47005,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -48068,6 +48076,10 @@
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -48644,6 +48656,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>

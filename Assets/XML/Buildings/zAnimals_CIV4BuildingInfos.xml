@@ -10373,7 +10373,11 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
