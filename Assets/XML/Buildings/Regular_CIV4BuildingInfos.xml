@@ -22580,11 +22580,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -22611,6 +22612,12 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -25269,6 +25276,7 @@
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
@@ -36011,6 +36019,12 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -48878,6 +48892,12 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -56132,6 +56152,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>5</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iCost>800</iCost>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -76622,8 +76648,17 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<ObsoleteTech>TECH_ANTIBIOTICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
+				<BuildingType>BUILDING_DUCK</BuildingType>
+				<BuildingType>BUILDING_GOOSE_FARM</BuildingType>
+				<BuildingType>BUILDING_SEATURTLE_EGG_GATHERER</BuildingType>
+				<BuildingType>BUILDING_TURKEY_FARM</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>15</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -95104,11 +95139,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
@@ -95120,6 +95156,12 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<FreeBonus>BONUS_EGGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -105650,6 +105692,10 @@
 					<PrereqTech>TECH_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>5</iHealth>
+				</TechHealthChange>
 			</TechHealthChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -111341,6 +111387,12 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_COOKING</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
