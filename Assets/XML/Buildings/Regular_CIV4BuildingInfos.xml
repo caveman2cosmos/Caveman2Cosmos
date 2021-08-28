@@ -40292,7 +40292,7 @@
 				<iCommerce>55</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<iHealth>39</iHealth>
+			<iHealth>40</iHealth>
 			<FreeBonus>BONUS_FRUIT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -91279,7 +91279,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_III</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+			</ReplacementBuildings>
 			<bRiver>1</bRiver>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -91291,8 +91295,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_RICE_PADDY</BuildingType>
-				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+				<BuildingType>BUILDING_RICE_PADDY</BuildingType>				
 			</PrereqOrBuildings>
 			<iCost>332</iCost>
 			<iHealth>1</iHealth>
