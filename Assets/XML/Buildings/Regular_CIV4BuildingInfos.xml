@@ -5025,8 +5025,14 @@
 			</PrereqOrBuildings>
 			<iCost>535</iCost>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SCROLLS</FreeBonus>
@@ -5034,6 +5040,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TABLETS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -5176,7 +5186,160 @@
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SCRAPING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_CHOPPING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_PIERCING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_CARVING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>-1</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>-1</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>-1</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>-1</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
 			</TechCommerceChanges>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_MICROLITH</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_SHARPENING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_FLINT_KNAPPING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+					</TechYield>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -5929,8 +6092,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DNA_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -42863,9 +43024,10 @@
 				<Bonus>BONUS_FLINT</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STONETOOL_MAKER</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>45</iCost>
 			<UnitProductionModifiers>
@@ -103440,7 +103602,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANTIQUE_SHOP</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ANTIQUE_SHOP</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
@@ -103540,6 +103706,14 @@
 					<TechCommerce>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -107584,9 +107758,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<Bonus>BONUS_LEAD_INGOTS</Bonus>
-			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TECTONIC_DAMPERS</Type>
