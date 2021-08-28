@@ -2817,9 +2817,20 @@
 				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
@@ -2900,8 +2911,19 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>
