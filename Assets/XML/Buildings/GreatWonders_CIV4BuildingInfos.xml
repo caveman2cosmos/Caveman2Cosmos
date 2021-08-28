@@ -17046,6 +17046,10 @@
 					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -17053,9 +17057,10 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PETRA</Type>

@@ -1057,6 +1057,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
 				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iCost>90</iCost>

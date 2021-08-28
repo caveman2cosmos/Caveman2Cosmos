@@ -2314,7 +2314,7 @@
 			<Type>BONUS_SMART_MEDICINE</Type>
 			<Description>TXT_KEY_BONUS_SMART_MEDICINE</Description>
 			<Civilopedia>TXT_KEY_BONUS_SMART_MEDICINE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SMART_MEDICINE</ArtDefineTag>
 			<TechReveal>TECH_SMART_DRUGS</TechReveal>
 			<TechCityTrade>TECH_SMART_DRUGS</TechCityTrade>

@@ -242,6 +242,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<ObsoleteTech>TECH_NANOELECTRONICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<FreeBonus>BONUS_THEREMIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1080</iCost>
