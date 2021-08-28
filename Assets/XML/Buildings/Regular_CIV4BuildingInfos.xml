@@ -16553,6 +16553,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -23622,6 +23623,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -32734,6 +32736,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
@@ -32816,6 +32819,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<ObsoleteTech>TECH_PURE_INFORMATION_SOCIETY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GALACTIC_CANTINA</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqOrBuildings>
@@ -36567,6 +36571,7 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
 				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
@@ -63005,6 +63010,7 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
 				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
@@ -68599,6 +68605,7 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
 				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
@@ -87627,6 +87634,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_DIVE_BAR</ObsoletesToBuilding>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -116522,6 +116530,7 @@
 				<Bonus>BONUS_BARRELS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VINEYARD</BuildingType>
 				<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
