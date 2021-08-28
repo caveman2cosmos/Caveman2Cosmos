@@ -66295,10 +66295,6 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_AUTOMOBILES</ID>
 					</Has>
 					<Has>
