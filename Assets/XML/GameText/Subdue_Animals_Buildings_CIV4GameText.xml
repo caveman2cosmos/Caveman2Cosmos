@@ -104,7 +104,7 @@
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_ANTELOPE</Tag>
 		<English>Myth Effect - Antelope</English>
 		<French>Effet - Mythe de l'Antilope</French>
 		<Russian>Ïåñíÿ îá àíòèëîïå</Russian>
@@ -158,7 +158,7 @@
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BELUGA_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_BELUGA</Tag>
 		<English>Myth Effect - Beluga Whale</English>
 		<Russian>Ïåñíÿ î áåëóãå</Russian>
 	</TEXT>
@@ -291,7 +291,7 @@
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_BULL</Tag>
 		<English>Myth Effect - Bull</English>
 		<French>Effet - Mythe du Taureau</French>
 		<Russian>Ïåñíÿ î áûêå</Russian>
@@ -329,7 +329,7 @@
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CAMEL</Tag>
 		<English>Myth Effect - Camel</English>
 		<Russian>Ïåñíÿ î âåðáëþäå</Russian>
 	</TEXT>
@@ -340,25 +340,25 @@
 		<Russian>Ìèô î êàïóöèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CAPUCHIN</Tag>
 		<English>Myth Effect - Capuchin</English>
 		<French>Effet - Mythe du Capucin</French>
 		<Russian>Ïåñíÿ î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_CAPUCHIN</Tag>
 		<English>Stories - Capuchin</English>
 		<French>Histoires du Capucin</French>
 		<Russian>Ñêàçû î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_CAPUCHIN</Tag>
 		<English>Stories Effect - Capuchin</English>
 		<French>Effet - Histoire du Capucin</French>
 		<Russian>Ïðåäàíèÿ î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_CAPUCHIN</Tag>
 		<English>Story - Capuchin</English>
 		<French>Histoire du Capucin</French>
 		<Russian>Ñêàçêà î êàïóöèíå</Russian>
@@ -370,25 +370,25 @@
 		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CAPYBARA</Tag>
 		<English>Myth Effect - Capybara</English>
 		<French>Effet - Mythe du Cabiaï</French>
 		<Russian>Ïåñíÿ î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_CAPYBARA</Tag>
 		<English>Stories - Capybara</English>
 		<French>Histoires de Cabiaï</French>
 		<Russian>Ñêàçû î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_CAPYBARA</Tag>
 		<English>Stories Effect - Capybara</English>
 		<French>Effet - Histoire du Cabiaï</French>
 		<Russian>Ïðåäàíèÿ î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_CAPYBARA</Tag>
 		<English>Story - Capybara</English>
 		<French>Histoire du Cabiaï</French>
 		<Russian>Ñêàçêà î âîäîñâèíêå</Russian>
@@ -449,25 +449,25 @@
 		<Russian>Ìèô î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHEETAH_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CHEETAH</Tag>
 		<English>Myth Effect - Cheetah</English>
 		<French>Effet - Mythe du Cheetah</French>
 		<Russian>Ïåñíÿ î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_CHEETAH</Tag>
 		<English>Stories - Cheetah</English>
 		<French>Histoires du Cheetah</French>
 		<Russian>Ñêàçû î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_CHEETAH</Tag>
 		<English>Stories Effect - Cheetah</English>
 		<French>Effet - Histoire du Cheetah</French>
 		<Russian>Ïðåäàíèÿ î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHEETAH_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_CHEETAH</Tag>
 		<English>Story - Cheetah</English>
 		<French>Histoire du Cheetah</French>
 		<Russian>Ñêàçêà î ãåïàðäå</Russian>
@@ -479,25 +479,25 @@
 		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CHIMPANZEE</Tag>
 		<English>Myth Effect - Chimpanzee</English>
 		<French>Effet - Mythe du Chimpanzé</French>
 		<Russian>Ïåñíÿ î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_CHIMPANZEE</Tag>
 		<English>Stories - Chimpanzee</English>
 		<French>Histoires du Chimpanzé</French>
 		<Russian>Ñêàçû î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_CHIMPANZEE</Tag>
 		<English>Stories Effect - Chimpanzee</English>
 		<French>Effet - Histoires de Chimpanzés</French>
 		<Russian>Ïðåäàíèÿ î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_CHIMPANZEE</Tag>
 		<English>Story - Chimpanzee</English>
 		<French>Histoire du Chimpanzé</French>
 		<Russian>Ñêàçêà î øèìïàíçå</Russian>
@@ -525,25 +525,25 @@
 		<Russian>Ìèô î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COD_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_COD</Tag>
 		<English>Myth Effect - Cod</English>
 		<French>Effet - Mythe de la Morue</French>
 		<Russian>Ïåñíÿ î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COD_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_COD</Tag>
 		<English>Stories - Cod</English>
 		<French>Histoires de la Morue</French>
 		<Russian>Ñêàçû î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COD_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_COD</Tag>
 		<English>Stories Effect - Cod</English>
 		<French>Effet - Histoire de la Morue</French>
 		<Russian>Ïðåäàíèÿ î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COD_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_COD</Tag>
 		<English>Story - Cod</English>
 		<French>Histoire de la Morue</French>
 		<Russian>Ñêàçêà î òðåñêå</Russian>
@@ -581,7 +581,7 @@
 		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_CRAB</Tag>
 		<English>Myth Effect - Crab</English>
 		<French>Effet - Mythe du Crabe</French>
 		<Russian>Ïåñíÿ î êðàáå</Russian>
@@ -603,19 +603,19 @@
 		<Russian>Ñåòè íà êðàáîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CRAB_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_CRAB</Tag>
 		<English>Stories - Crab</English>
 		<French>Histoires de Crabes</French>
 		<Russian>Ñêàçû î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CRAB_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_CRAB</Tag>
 		<English>Stories Effect - Crab</English>
 		<French>Effet - Histoires de Crabes</French>
 		<Russian>Ïðåäàíèÿ î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CRAB_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_CRAB</Tag>
 		<English>Story - Crab</English>
 		<French>Histoire du Crabe</French>
 		<Russian>Ñêàçêà î êðàáå</Russian>
@@ -671,7 +671,7 @@
 		<Russian>Ìèô îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_DEER</Tag>
 		<English>Myth Effect - Deer</English>
 		<French>Effet - Mythe (T) du Cerf</French>
 		<Russian>Ïåñíÿ îá îëåíå</Russian>
@@ -683,25 +683,25 @@
 		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_DESERT_TORTOISE</Tag>
 		<English>Myth Effect - Desert Tortoise</English>
 		<French>Effet - Mythe de la Tortue du désert</French>
 		<Russian>Ïåñíÿ î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_DESERT_TORTOISE</Tag>
 		<English>Stories - Desert Tortoise</English>
 		<French>Histoires de la Tortue du désert</French>
 		<Russian>Ñêàçû î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_DESERT_TORTOISE</Tag>
 		<English>Stories Effect - Desert Tortoise</English>
 		<French>Effet - Histoire de la Tortue du désert</French>
 		<Russian>Ïðåäàíèÿ î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_DESERT_TORTOISE</Tag>
 		<English>Story - Desert Tortoise</English>
 		<French>Histoire de la Tortue du désert</French>
 		<Russian>Ñêàçêà î ãîôåðå</Russian>
@@ -771,7 +771,7 @@
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_DRAGON</Tag>
 		<English>Myth Effect - Dragon</English>
 		<Russian>Ïåñíÿ î äðàêîíå</Russian>
 	</TEXT>
@@ -798,25 +798,25 @@
 		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_EAGLE_BALD</Tag>
 		<English>Myth Effect - Bald Eagle</English>
 		<French>Effet - Mythe du Pygargue à tête blanche</French>
 		<Russian>Ïåñíÿ î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EAGLE_BALD</Tag>
 		<English>Stories - Bald Eagle</English>
 		<French>Histoires du Pygargue à tête blanche</French>
 		<Russian>Ñêàçû î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_EAGLE_BALD</Tag>
 		<English>Stories Effect - Bald Eagle</English>
 		<French>Effet - Histoire du Pygargue à tête blanche</French>
 		<Russian>Ïðåäàíèÿ î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_EAGLE_BALD</Tag>
 		<English>Story - Bald Eagle</English>
 		<French>Histoire du Pygargue à tête blanche</French>
 		<Russian>Ñêàçêà î áåëîã. îðëàíå</Russian>
@@ -838,7 +838,7 @@
 		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_EARTH</Tag>
 		<English>Myth Effect - Earth</English>
 		<French>Effet - Mythe de la Terre</French>
 		<Russian>Ïåñíÿ î Çåìëå</Russian>
@@ -972,7 +972,7 @@
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_GOAT</Tag>
 		<English>Myth Effect - Goat</English>
 		<Russian>Ïåñíÿ î êîçëå</Russian>
 	</TEXT>
@@ -1171,25 +1171,25 @@
 		<Russian>Ìèô î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MACKEREL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_MACKEREL</Tag>
 		<English>Myth Effect - Mackerel</English>
 		<French>Effet - Mythe du Maquereau</French>
 		<Russian>Ïåñíÿ î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_MACKEREL</Tag>
 		<English>Stories - Mackerel</English>
 		<French>Histoires du Maquereau</French>
 		<Russian>Ñêàçû î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_MACKEREL</Tag>
 		<English>Stories Effect - Mackerel</English>
 		<French>Effet - Histoire du Maquereau</French>
 		<Russian>Ïðåäàíèÿ î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MACKEREL_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_MACKEREL</Tag>
 		<English>Story - Mackerel</English>
 		<French>Histoire du Maquereau</French>
 		<Russian>Ñêàçêà î ìàêðåëå</Russian>
@@ -1217,25 +1217,25 @@
 		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARLIN_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_MARLIN</Tag>
 		<English>Myth Effect - Marlin</English>
 		<French>Effet - Mythe du Marlin</French>
 		<Russian>Ïåñíÿ î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_MARLIN</Tag>
 		<English>Stories - Marlin</English>
 		<French>Histoires du Marlin</French>
 		<Russian>Ñêàçû î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_MARLIN</Tag>
 		<English>Stories Effect - Marlin</English>
 		<French>Effet - Histoire du Marlin</French>
 		<Russian>Ïðåäàíèÿ î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARLIN_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_MARLIN</Tag>
 		<English>Story - Marlin</English>
 		<French>Histoire du Marlin</French>
 		<Russian>Ñêàçêà î ìàðëèíå</Russian>
@@ -1273,7 +1273,7 @@
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_MARSUPIAL</Tag>
 		<English>Myth Effect - Marsupial</English>
 		<French>Effet - Mythe (T) - Marsupial</French>
 		<Russian>Ïåñíÿ î ñóì÷àòîì</Russian>
@@ -1327,7 +1327,7 @@
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_MERMAID</Tag>
 		<English>Myth Effect - Mermaid</English>
 		<Russian>Ïåñíÿ î ðóñàëêå</Russian>
 	</TEXT>
@@ -1444,7 +1444,7 @@
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_OLD_MAN</Tag>
 		<English>Myth Effect - Old Man of the Forest</English>
 		<Russian>Ïåñíÿ î ëåøåì</Russian>
 	</TEXT>
@@ -1477,7 +1477,7 @@
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_PALEOLITHIC_CAT</Tag>
 		<English>Myth Effect - Paleolithic Cat</English>
 		<French>Effet - Mythe du Félin Paléolithique</French>
 		<Russian>Ïåñíÿ î äðåâíåé êîøêå</Russian>
@@ -1495,7 +1495,7 @@
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</Tag>
 		<English>Myth Effect - Paleolithic Mammoth</English>
 		<French>Effet - Mythe du Mammouth Paléolithique</French>
 		<Russian>Ïåñíÿ î ìàìîíòå</Russian>
@@ -1507,21 +1507,21 @@
 		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_PALEOLITHIC_MAMMOTH</Tag>
 		<English>Stories - Paleolithic Mammoth</English>
 		<French>Histoires des Mammouths</French>
 		<Polish>Historie - Mamutach</Polish>
 		<Russian>Ñêàçû î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_PALEOLITHIC_MAMMOTH</Tag>
 		<English>Stories Effect - Paleolithic Mammoth</English>
 		<French>Effet - Histoires des Mammouths</French>
 		<Polish>Efekt - Historie Mamutach</Polish>
 		<Russian>Ïðåäàíèÿ î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_PALEOLITHIC_MAMMOTH</Tag>
 		<English>Story - Paleolithic Mammoth</English>
 		<French>Histoire des Mammouths</French>
 		<Polish>Opowieść o Kopalnych Mamutach</Polish>
@@ -1540,7 +1540,7 @@
 		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_PALEOLITHIC_MARSUPIAL</Tag>
 		<English>Myth Effect - Paleolithic Marsupial</English>
 		<French>Effet - Mythe du Marsupial Paléolithique</French>
 		<Russian>Ïåñíÿ î äðåâ. ñóì÷àòîì</Russian>
@@ -1562,7 +1562,7 @@
 		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_PHOENIX</Tag>
 		<English>Myth Effect - Phoenix</English>
 		<Russian>Ïåñíÿ î Ôåíèêñå</Russian>
 	</TEXT>
@@ -1631,19 +1631,19 @@
 		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAYS_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_RAYS</Tag>
 		<English>Stories - Rays</English>
 		<French>Histoires de Raies</French>
 		<Russian>Ñêàçû î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAYS_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_RAYS</Tag>
 		<English>Stories Effect - Rays</English>
 		<French>Effet - Histoires des Raies</French>
 		<Russian>Ïðåäàíèÿ î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAYS_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_RAYS</Tag>
 		<English>Story - Rays</English>
 		<French>Histoire de Raie</French>
 		<Russian>Ñêàçêà î ñêàòå</Russian>
@@ -1655,25 +1655,25 @@
 		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_RAY_EAGLE</Tag>
 		<English>Myth Effect - Eagle Ray</English>
 		<French>Effet - Mythe de l'Aigle de mer</French>
 		<Russian>Ïåñíÿ îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_RAY_EAGLE</Tag>
 		<English>Stories - Eagle Ray</English>
 		<French>Histoires de l'Aigle de mer</French>
 		<Russian>Ñêàçû îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_RAY_EAGLE</Tag>
 		<English>Stories Effect - Eagle Ray</English>
 		<French>Effet - Histoires de l'Aigle de mer</French>
 		<Russian>Ïðåäàíèÿ îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_RAY_EAGLE</Tag>
 		<English>Story - Eagle Ray</English>
 		<French>Histoire de l'Aigle de mer</French>
 		<Russian>Ñêàçêà îá îðë. ñêàòå</Russian>
@@ -1685,25 +1685,25 @@
 		<Russian>Ìèô î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_RAY_MANTA</Tag>
 		<English>Myth Effect - Manta Ray</English>
 		<French>Effet - Mythe de la Raie manta</French>
 		<Russian>Ïåñíÿ î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_RAY_MANTA</Tag>
 		<English>Stories - Manta Ray</English>
 		<French>Histoires de la Raie manta</French>
 		<Russian>Ñêàçû î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_RAY_MANTA</Tag>
 		<English>Stories Effect - Manta Ray</English>
 		<French>Effet - Histoire de la Raie manta</French>
 		<Russian>Ïðåäàíèÿ î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STORY_RAY_MANTA</Tag>
 		<English>Story - Manta Ray</English>
 		<French>Histoire de la Raie manta</French>
 		<Russian>Ñêàçêà î ìàíòå</Russian>
@@ -1837,7 +1837,7 @@
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_SCAVENGER</Tag>
 		<English>Myth Effect - Scavenger</English>
 		<French>
 			<Text>Effet - Mythe (R) du Mendiant</Text>
@@ -1881,7 +1881,7 @@
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_SEATURTLE</Tag>
 		<English>Myth Effect - Sea Turtle</English>
 		<French>Effet - Mythe de la Tortue de mer</French>
 		<Russian>Ïåñíÿ î ìîð. ÷åðåïàõå</Russian>
@@ -1903,7 +1903,7 @@
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_SEA</Tag>
 		<English>Myth Effect - Sea</English>
 		<French>Effet - Mythe de la Mer</French>
 		<Russian>Ïåñíÿ î ìîðå</Russian>
@@ -1951,7 +1951,7 @@
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_SKY</Tag>
 		<English>Myth Effect - Sky</English>
 		<French>Effet - Mythe du Ciel</French>
 		<Polish>Efekt Mitu - Niebo</Polish>
@@ -2018,7 +2018,7 @@
 		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_TIGER</Tag>
 		<English>Myth Effect - Tiger</English>
 		<French>Effet - Mythe du Tigre</French>
 		<Russian>Ïåñíÿ î òèãðå</Russian>
@@ -2116,19 +2116,19 @@
 		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TUNA_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_TUNA</Tag>
 		<English>Myth Effect - Tuna</English>
 		<French>Effet - Mythe du Thon</French>
 		<Russian>Ïåñíÿ î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TUNA_STORIES</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_TUNA</Tag>
 		<English>Stories - Tuna</English>
 		<French>Histoires du Thon</French>
 		<Russian>Ñêàçû î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TUNA_STORIES_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_STORIES_EFFECT_TUNA</Tag>
 		<English>Stories Effect - Tuna</English>
 		<French>Effet - Histoire du Thon</French>
 		<Russian>Ïðåäàíèÿ î òóíöå</Russian>
@@ -2150,7 +2150,7 @@
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_UNICORN</Tag>
 		<English>Myth Effect - Unicorn</English>
 		<Russian>Ïåñíÿ îá åäèíîðîãå</Russian>
 	</TEXT>
@@ -2194,7 +2194,7 @@
 		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_WEASEL</Tag>
 		<English>Myth Effect - Weasel</English>
 		<French>Effet - Mythe de la Belette</French>
 		<Russian>Ïåñíÿ î õîðüêå</Russian>

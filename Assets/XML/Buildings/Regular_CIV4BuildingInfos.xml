@@ -17981,7 +17981,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
@@ -27921,12 +27921,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_STONE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_CORAL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_CORAL</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CORAL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_CORAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -33410,7 +33410,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DONKEY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_DONKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
@@ -39985,7 +39985,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HAWKING</BuildingType>
-				<BuildingType>BUILDING_HAWK_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_HAWK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>310</iCost>
 			<YieldChanges>
@@ -40056,12 +40056,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_EARTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SKY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FALL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_FALL</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_FALL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FALL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -42297,7 +42297,7 @@
 				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_FIRE_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_FIRE</FreeBuilding>
 			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -42325,7 +42325,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FIRE</BuildingType>
 			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -53942,7 +53942,7 @@
 			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_HORSE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -68680,7 +68680,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_METAL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_METAL</FreeBuilding>
 			<iCost>30</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -68708,11 +68708,11 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FIRE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_STONE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_METAL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_METAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
@@ -78381,12 +78381,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_EARTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_OASIS_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_OASIS</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_OASIS_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_OASIS</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -80923,12 +80923,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_EARTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SKY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_OUTCROP_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_OUTCROP</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_OUTCROP_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_OUTCROP</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -90485,12 +90485,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_STONE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_REEF_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_REEF</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_REEF_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_REEF</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>
@@ -101862,7 +101862,7 @@
 				<Bonus>BONUS_FLINT</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>56</iCost>
@@ -104186,7 +104186,7 @@
 				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_STONE_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_STONE</FreeBuilding>
 			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -104214,7 +104214,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_STONE</BuildingType>
 			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -114733,12 +114733,12 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_STONE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_VOLCANO_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_VOLCANO</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_VOLCANO_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_VOLCANO</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>20</iCost>
 			<CommerceChanges>

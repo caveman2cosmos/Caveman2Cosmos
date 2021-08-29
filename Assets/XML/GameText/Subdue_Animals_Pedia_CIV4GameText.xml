@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Tag>
 		<English>The Myth Effect buildings are not real buildings. They are used to allow another building to be unique within a nation without being a national wonder.[NEWLINE]- Myth Effect buildings are given for free by Myth buildings.</English>
 	</TEXT>
 	<TEXT>

@@ -1390,8 +1390,8 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORAL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_CORAL</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_CORAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
@@ -6029,12 +6029,12 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_EARTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_DRAGON_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_DRAGON</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DRAGON_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_DRAGON</BuildingType>
 			</PrereqNotInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -6053,9 +6053,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_EFFECT_DRAGON</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_DRAGON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -6134,9 +6134,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_EARTH</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_EARTH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6186,15 +6186,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_EARTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_EARTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_GPS</Type>
@@ -8617,8 +8617,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FALL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_FALL</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
@@ -8817,16 +8817,16 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_FIRE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_FIRE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Type>
@@ -11967,11 +11967,11 @@
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MERMAID_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_MERMAID</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MERMAID_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_MERMAID</BuildingType>
 			</PrereqNotInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11996,9 +11996,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MERMAID_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_EFFECT_MERMAID</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_MERMAID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -12112,16 +12112,16 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_METAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_METAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_METAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
@@ -12650,8 +12650,8 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OASIS_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_OASIS</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OASIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
@@ -12726,8 +12726,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OUTCROP_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_OUTCROP</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OUTCROP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
@@ -13339,12 +13339,12 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_FIRE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SKY</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_PHOENIX_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_PHOENIX</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_PHOENIX_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PHOENIX</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -13364,9 +13364,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PHOENIX_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_EFFECT_PHOENIX</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_PHOENIX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -14235,8 +14235,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REEF_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_REEF</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
@@ -14618,9 +14618,9 @@
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_SEA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -14670,15 +14670,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_SEA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SEA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHAMAN_SHRINE</Type>
@@ -14893,9 +14893,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SKY</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_SKY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -14945,16 +14945,16 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_SKY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SKY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SKY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
@@ -15896,16 +15896,16 @@
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
+			<Type>BUILDING_MYTH_EFFECT_STONE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_STONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_STONE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
@@ -16842,9 +16842,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_UNICORN_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EFFECT_UNICORN</FreeBuilding>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_UNICORN_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_UNICORN</BuildingType>
 			</PrereqNotInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16869,9 +16869,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNICORN_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_EFFECT_UNICORN</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_UNICORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
@@ -17222,8 +17222,8 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Description>
+			<Type>BUILDING_MYTH_EFFECT_VOLCANO</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_VOLCANO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>

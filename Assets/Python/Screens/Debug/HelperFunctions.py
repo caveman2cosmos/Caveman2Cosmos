@@ -92,8 +92,8 @@ class HelperFunctions:
 		for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 			iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
 			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_MYTH_REQUIRE") or \
-				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_STORY_REQUIRE") or \
-				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_STORIES_REQUIRE"):
+				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_STORY_ANIMAL_REQUIRE") or \
+				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_STORIES_ANIMAL_REQUIRE"):
 				iTechAnimalLoc = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridX()
 				iTechAnimalRow = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridY()
 				aTechList.append(GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getType())

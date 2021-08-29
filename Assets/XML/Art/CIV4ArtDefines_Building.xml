@@ -27264,7 +27264,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_bison.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BULL_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_BULL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27384,7 +27384,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_earth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_EARTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27404,7 +27404,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_fire.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_FIRE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27454,7 +27454,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_metal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAL_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_METAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27484,7 +27484,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SKY_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_SKY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27504,7 +27504,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_stone.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STONE_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_STONE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27564,7 +27564,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_sea.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEA_MYTH_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EFFECT_SEA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27594,7 +27594,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_dolphin.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOLPHIN_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_DOLPHIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27604,7 +27604,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_dolphin.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOLPHIN_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_DOLPHIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27624,7 +27624,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_dugong.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUGONG_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_DUGONG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27634,7 +27634,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_dugong.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUGONG_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_DUGONG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27664,7 +27664,7 @@
 			<Button>Art/Interface/Buttons/Units/kraken.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KRAKEN_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_KRAKEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27674,7 +27674,7 @@
 			<Button>Art/Interface/Buttons/Units/kraken.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KRAKEN_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_KRAKEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27724,7 +27724,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_orca.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORCA_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_ORCA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27734,7 +27734,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_orca.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORCA_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_ORCA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27754,7 +27754,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_seaturtle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEATURTLE_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_SEATURTLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27764,7 +27764,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_seaturtle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEATURTLE_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_SEATURTLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28054,7 +28054,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cage_amphibian.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMPHIBIAN_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_AMPHIBIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28064,7 +28064,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_amphibian.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMPHIBIAN_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_AMPHIBIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31924,7 +31924,7 @@
 			<Button>Art/Interface/Buttons/Units/Donkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DONKEY_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_DONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31934,7 +31934,7 @@
 			<Button>Art/Interface/Buttons/Units/Donkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DONKEY_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_DONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31944,7 +31944,7 @@
 			<Button>Art/Interface/Buttons/Units/Donkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HORSE_STORY</Type>
+			<Type>ART_DEF_BUILDING_STORY_HORSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31954,7 +31954,7 @@
 			<Button>Art/Interface/Buttons/Units/horse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HORSE_STORIES</Type>
+			<Type>ART_DEF_BUILDING_STORIES_HORSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

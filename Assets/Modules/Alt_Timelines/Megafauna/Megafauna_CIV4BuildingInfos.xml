@@ -340,17 +340,17 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_ASIANBEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BROWN_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_CAVE_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_GRIZZLY</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PANDA_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_POLAR_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_REDPANDA</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SLOTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SPECTACLED_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -451,19 +451,19 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
-				<BuildingType>BUILDING_LION_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SPOTTED_CAT_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BENGALTIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_TIGER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SABRETOOTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CAVE_LION_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_LION</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BENGALTIGER</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SIBERIAN_TIGER</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_TIGER</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_CAT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SABRETOOTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_CAVE_LION</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_JAGUAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_LYNX</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PANTHER</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_SNOW_LEOPARD</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_CHEETAH</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -518,8 +518,8 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BULL</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BISON</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
@@ -624,7 +624,7 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
-				<BuildingType>BUILDING_DEER_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_DEER</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_DEER_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
@@ -728,7 +728,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
@@ -896,7 +896,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -1090,12 +1090,12 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
-				<BuildingType>BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_INDIAN_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_JAVA_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_WHITE_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_ELASMOTHERIUM</BuildingType>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -1227,7 +1227,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_MYTH_EFFECT_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
