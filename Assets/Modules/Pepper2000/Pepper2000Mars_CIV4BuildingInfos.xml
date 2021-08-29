@@ -1017,12 +1017,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CYBERNETIC_CHLOROPLAST_FACTORY</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1123,12 +1117,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_DIAMOND_NANOTHREAD_FOUNDRY</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1574,12 +1562,6 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_NOVUS_REFINERY</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_MARS_CITY</BuildingType>

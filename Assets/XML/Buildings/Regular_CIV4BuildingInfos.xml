@@ -1112,6 +1112,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -1122,7 +1127,6 @@
 			</YieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
-				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -4978,6 +4982,8 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
+			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -30849,6 +30855,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<ConstructCondition>
@@ -32250,6 +32261,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<iCost>4655</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -77923,6 +77939,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_NANOELECTRONICS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_SHOCKWAVE_ENGINES</Bonus>
 			<ConstructCondition>
@@ -84224,9 +84245,27 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+					<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>3</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -84276,6 +84315,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
