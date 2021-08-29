@@ -1390,41 +1390,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_CORAL</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_CORAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_1_HQ</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
@@ -6053,17 +6018,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_DRAGON</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_DRAGON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_DRUG_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6184,17 +6138,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_EARTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_EARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_EARTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_GPS</Type>
@@ -8617,41 +8560,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_FALL</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8815,18 +8723,6 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_FIRE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_FIRE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Type>
@@ -11445,58 +11341,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>
-						<Mult>
-							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
-						</Mult>
-					</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>
-						<Mult>
-							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
-						</Mult>
-					</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-		</BuildingInfo>
 		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
@@ -11707,6 +11551,58 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 		</BuildingInfo>
 		-->
+		<BuildingInfo>
+			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASCAUX_EFFECT</Type>
 			<MapCategoryTypes>
@@ -11996,17 +11892,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_MERMAID</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_MERMAID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12110,18 +11995,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_METAL</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_METAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_METAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
@@ -12319,6 +12192,330 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MUD_HUT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_CORAL</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_CORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_MARINE_BIOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_DRAGON</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_DRAGON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_EARTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_EARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_EARTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_FALL</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_LUNAR_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_FIRE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_FIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_FIRE</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_MERMAID</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_MERMAID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_METAL</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_METAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_METAL</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_OASIS</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OASIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_GEOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_OUTCROP</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OUTCROP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_LUNAR_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_PHOENIX</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_PHOENIX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_REEF</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_REEF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_MARINE_BIOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_SEA</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SEA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SEA</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_SKY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SKY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SKY</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_STONE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_STONE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_STONE</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_UNICORN</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_UNICORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MYTH_EFFECT_VOLCANO</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_VOLCANO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_VOLCANOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Type>
@@ -12650,41 +12847,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_OASIS</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OASIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_GEOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_OLD_CITY_WALLS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12724,41 +12886,6 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_OUTCROP</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_OUTCROP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_LUNAR_EXPLORATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_ANTS</Type>
@@ -13362,17 +13489,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_PHOENIX</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_PHOENIX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
@@ -14235,41 +14351,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_REEF</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_REEF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_MARINE_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_RODNOVERY_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_SHRINE_PEDIA</Civilopedia>
@@ -14670,17 +14751,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_SEA</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SEA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SEA</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_SHAMAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_SHRINE_PEDIA</Civilopedia>
@@ -14943,18 +15013,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_SKY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_SKY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_SKY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
@@ -15894,18 +15952,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_HUT</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_STONE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_STONE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EFFECT_STONE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
@@ -16869,17 +16915,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_UNICORN</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_UNICORN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -17220,41 +17255,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_EFFECT_VOLCANO</Type>
-			<Description>TXT_KEY_BUILDING_MYTH_EFFECT_VOLCANO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_VOLCANOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOODOO_SHRINE</Type>
