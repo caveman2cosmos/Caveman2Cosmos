@@ -2,11 +2,6 @@
 <Civ4SpecialBuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
-			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALBUILDING_BOMB_SHELTER</Type>
-			<bValid>0</bValid>
-		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_TEMPLE</Description>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
@@ -76,18 +71,18 @@
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_STORY</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_STORY</Description>
-			<TechPrereq>TECH_WRITING</TechPrereq>
+			<Type>SPECIALBUILDING_MYTHS_EXPLORATION</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_EXPLORATION</Description>
+			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/story_dartfrog.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/myth_dartfrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_STORIES</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_STORIES</Description>
-			<TechPrereq>TECH_LITERATURE</TechPrereq>
+			<Type>SPECIALBUILDING_MYTHS_TAXONOMY</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_TAXONOMY</Description>
+			<TechPrereq>TECH_TAXONOMY</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/stories_dartfrog.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/myth_dartfrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>

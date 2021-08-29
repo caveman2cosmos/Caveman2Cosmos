@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_CORAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -48,6 +49,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_FALL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -81,6 +83,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_FIRE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -98,6 +101,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_METAL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_METAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -126,6 +130,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_OASIS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -151,6 +156,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_OUTCROP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -248,6 +254,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_REEF</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -281,6 +288,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_STONE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_STONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -298,6 +306,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_VOLCANO</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -343,6 +352,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_DRAGON</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -354,6 +364,7 @@
 				<BuildingType>BUILDING_MYTH_EARTH</BuildingType>
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_DRAGON</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_DRAGON</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -361,6 +372,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_EARTH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -370,6 +382,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_EARTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EARTH</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -377,6 +390,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_MERMAID</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -387,6 +401,7 @@
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_MERMAID</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_MERMAID</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -394,6 +409,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_PHOENIX</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -405,14 +421,15 @@
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_PHOENIX</FreeBuilding>
-			<iHappiness>1</iHappiness>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_PHOENIX</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SEA</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -422,6 +439,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_SEA</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SEA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -429,6 +447,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SKY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -438,6 +457,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_SKY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SKY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -445,6 +465,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_UNICORN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -454,6 +475,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>10</iCost>
 			<FreeBuilding>BUILDING_MYTH_UNICORN</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_UNICORN</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -525,6 +547,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_AMPHIBIAN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_AMPHIBIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -557,6 +580,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_ANTELOPE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_ANTELOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -756,6 +780,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_BEAR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -834,6 +859,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_BIRD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_BIRD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -994,6 +1020,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_BUG</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_BUG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1235,6 +1262,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_CROCODILE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1387,6 +1415,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_DONKEY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_DONKEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -1483,6 +1512,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_ELEPHANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1567,6 +1597,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_FISH</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_FISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1599,6 +1630,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_FLIGHTLESS_BIRD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_FLIGHTLESS_BIRD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -1967,6 +1999,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_HIPPOS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2313,7 +2346,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_LOCAL_FISH</ArtDefineTag>
-			<iCost>10</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2682,6 +2714,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_OLD_W_MONKEY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2767,6 +2800,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_OWL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_OWL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -2979,6 +3013,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_PENGUIN</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3161,6 +3196,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_RAPTOR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_RAPTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3329,6 +3365,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_REPTILE</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_REPTILE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3361,6 +3398,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_RHINO_TAXONOMY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3416,6 +3454,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_RODENT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_RODENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3544,6 +3583,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SEA_BIRD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_SEA_BIRD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3657,6 +3697,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SNAKES</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3711,6 +3752,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SPOTTED_CAT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_SPOTTED_CAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -3750,6 +3792,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_TAPIR</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3980,6 +4023,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_WEASEL</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_WEASEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -4049,6 +4093,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_WOLF</Type>
+			<SpecialBuildingType>SPECIALBUILDING_MYTHS_TAXONOMY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MYTH_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
