@@ -2,6 +2,21 @@
 <Civ4SpecialBuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
+			<Type>SPECIALBUILDING_BOMB_SHELTER</Type>
+			<bValid>0</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
+			<Type>SPECIALBUILDING_STORY</Type>
+			<bValid>0</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<!-- @SAVEBREAK Remove this on savebreak -->
+			<Type>SPECIALBUILDING_STORIES</Type>
+			<bValid>0</bValid>
+		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_TEMPLE</Description>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
