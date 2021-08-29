@@ -652,7 +652,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_AMPHIBIAN</Tag>
-		<English>Myth (B) - Amphibians</English>
+		<English>Myth - Amphibians</English>
 		<French>
 			<Text>Mythe - Amphibiens</Text>
 			<Gender>Male</Gender>
@@ -886,7 +886,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_ELEPHANT</Tag>
-		<English>Myth (B) - Elephant</English>
+		<English>Myth - Elephant</English>
 		<French>
 			<Text>Mythe de l'Eléphant</Text>
 			<Gender>Male</Gender>
@@ -1230,7 +1230,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_REPTILE</Tag>
-		<English>Myth (B) - Reptile</English>
+		<English>Myth - Reptile</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
@@ -1326,7 +1326,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_SPOTTED_CAT</Tag>
-		<English>Myth (B) - Spotted Cat</English>
+		<English>Myth - Spotted Cat</English>
 		<French>Mythe du Chat moucheté</French>
 		<Italian>
 			<Text>Mito del felino maculato</Text>

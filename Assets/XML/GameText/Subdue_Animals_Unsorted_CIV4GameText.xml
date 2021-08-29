@@ -112,7 +112,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_BIRD</Tag>
-		<English>Myth (B) - Birds</English>
+		<English>Myth - Birds</English>
 		<French>Mythe des Oiseaux</French>
 		<Polish>Mit - Ptaki</Polish>
 		<Russian>Ìèô î ïòèöå</Russian>
@@ -138,7 +138,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_BUG</Tag>
-		<English>Myth (B) - Bug</English>
+		<English>Myth - Bug</English>
 		<French>Mythe des insectes</French>
 		<Polish>Mit - Ptaki morskie</Polish>
 		<Russian>Ìèô î æóêå</Russian>
@@ -163,7 +163,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_FISH</Tag>
-		<English>Myth (B) - Tales of Fish</English>
+		<English>Myth - Tales of Fish</English>
 		<French>
 			<Text>Mythe des Bancs de Poissons</Text>
 			<Gender>Male</Gender>
@@ -179,7 +179,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_FLIGHTLESS_BIRD</Tag>
-		<English>Myth (B) - Flightless Birds</English>
+		<English>Myth - Flightless Birds</English>
 		<French>Mythe des Oiseaux marcheurs</French>
 		<Polish>Mit - Ptaki-Nieloty</Polish>
 		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
@@ -298,7 +298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_LOCAL_FISH</Tag>
-		<English>Myth (B) - Fish</English>
+		<English>Myth - Fish</English>
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
@@ -339,7 +339,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_OWL</Tag>
-		<English>Myth (B) - Owls</English>
+		<English>Myth - Owls</English>
 		<French>Mythe des Chouettes</French>
 		<Polish>Myth - Sowy</Polish>
 		<Russian>Ìèô î ñîâå</Russian>
@@ -358,7 +358,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_PENGUIN</Tag>
-		<English>Myth (B) - Penguin</English>
+		<English>Myth - Penguin</English>
 		<French>Mythe du Pingouin</French>
 		<Russian>Ìèô î ïèíãâèíå</Russian>
 	</TEXT>
@@ -382,7 +382,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_RAPTOR</Tag>
-		<English>Myth (B) - Raptors</English>
+		<English>Myth - Raptors</English>
 		<French>Mythe des Rapaces</French>
 		<Polish>Mit - Ptaki drapieżne</Polish>
 		<Russian>Ìèô î õèùí. ïòèöå</Russian>
@@ -395,14 +395,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_RODENT</Tag>
-		<English>Myth (B) - Rodent</English>
+		<English>Myth - Rodent</English>
 		<French>Mythe des Rongeurs</French>
 		<Polish>Mit - Gryzonie</Polish>
 		<Russian>Ìèô î ãðûçóíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_SEA_BIRD</Tag>
-		<English>Myth (B) - Sea Birds</English>
+		<English>Myth - Sea Birds</English>
 		<French>Mythe des Oiseaux marins</French>
 		<Polish>Mit - Ptaki morskie</Polish>
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
@@ -440,7 +440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_WOLF</Tag>
-		<English>Myth (B) - Wolf</English>
+		<English>Myth - Wolf</English>
 		<French>
 			<Text>Mythe des Loups</Text>
 			<Gender>Male</Gender>

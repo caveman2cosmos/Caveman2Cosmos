@@ -41,7 +41,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CORAL</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CORAL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -74,7 +74,7 @@
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_FALL</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FALL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -89,7 +89,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -103,7 +103,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_METAL</ArtDefineTag>
 			<FreeBuilding>BUILDING_MYTH_METAL</FreeBuilding>
-			<iCost>30</iCost>
+			<iCost>10</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -144,7 +144,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OASIS</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OASIS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -241,7 +241,7 @@
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OUTCROP</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OUTCROP</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -274,7 +274,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_REEF</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_REEF</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -286,7 +286,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_STONE</ArtDefineTag>
 			<FreeBuilding>BUILDING_MYTH_STONE</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -336,7 +336,7 @@
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_VOLCANO</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_VOLCANO</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -422,7 +422,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<FreeBuilding>BUILDING_MYTH_SEA</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SEA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -530,11 +529,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_AMPHIBIAN</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_AMPHIBIAN</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -841,11 +838,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_BIRD</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_BIRD</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -1003,11 +998,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_BUG</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_BUG</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -1401,7 +1394,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_DONKEY</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -1495,7 +1487,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_ELEPHANT</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1580,11 +1571,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FISH</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_FISH</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -1614,11 +1603,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FLIGHTLESS_BIRD</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_FLIGHTLESS_BIRD</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -2023,7 +2010,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_HORSE</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -2327,17 +2313,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_LOCAL_FISH</ArtDefineTag>
-			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<iCost>45</iCost>
+			<iCost>10</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -2792,11 +2771,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OWL</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_OWL</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -2829,7 +2806,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_BIRD</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -2851,7 +2827,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_CAT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -2926,7 +2901,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_MARSUPIAL</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3009,11 +2983,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_PENGUIN</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_PENGUIN</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3193,11 +3165,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_RAPTOR</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_RAPTOR</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3363,11 +3333,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_REPTILE</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_REPTILE</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3452,11 +3420,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_RODENT</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_RODENT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3582,11 +3548,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SEA_BIRD</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_SEA_BIRD</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -3751,7 +3715,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SPOTTED_CAT</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4090,11 +4053,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_WOLF</ArtDefineTag>
-			<iCost>125</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_WOLF</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>

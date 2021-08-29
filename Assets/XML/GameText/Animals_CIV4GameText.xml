@@ -40,9 +40,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Tag>
-		<English>In game building that is auto built. This is to make the updating of Myths and Story buildings easier when new buildings are added or existing ones modified.</English>
-		<French>Ce bâtiment est construit automatiquement. Il permet de faciliter l'amélioration des bâtiments Mythe et Histoire.</French>
-		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
+		<English>Animal Myth Requirements is a way to declutter tech tree</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_ARCTICFOX</Tag>
