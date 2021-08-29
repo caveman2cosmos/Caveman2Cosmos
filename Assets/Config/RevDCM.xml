@@ -16,7 +16,7 @@
 			</option>
 		</section>
 		<section id="RevDCM_seige">
-			<option id="DCM_RANGE_BOMBARD"  key="DCM_RANGE_BOMBARD" type="boolean" default="True" get="isDCM_RANGE_BOMBARD" set="setDCM_RANGE_BOMBARD">
+			<option id="DCM_RANGE_BOMBARD" key="DCM_RANGE_BOMBARD" type="boolean" default="True" get="isDCM_RANGE_BOMBARD" set="setDCM_RANGE_BOMBARD">
 				<change module="RevDCM" function="changedDCM_RANGE_BOMBARD"/>
 			</option>
 			<option id="DCM_OPP_FIRE" key="DCM_OPP_FIRE" type="boolean" default="False" get="isDCM_OPP_FIRE" set="setDCM_OPP_FIRE">
@@ -35,10 +35,7 @@
 			</option>
 		</section>
 		<section id="RevDCM_battle">
-			<option id="DCM_BATTLE_EFFECTS" key="DCM_BATTLE_EFFECTS" type="boolean" default="False" get="isDCM_BATTLE_EFFECTS" set="setDCM_BATTLE_EFFECTS">
-				<change module="RevDCM" function="changedDCM_BATTLE_EFFECTS"/>
-			</option>
-			<option id="DCM_ATTACK_SUPPORT"  key="DCM_ATTACK_SUPPORT" type="boolean" default="False" get="isDCM_ATTACK_SUPPORT" set="setDCM_ATTACK_SUPPORT">
+			<option id="DCM_ATTACK_SUPPORT" key="DCM_ATTACK_SUPPORT" type="boolean" default="False" get="isDCM_ATTACK_SUPPORT" set="setDCM_ATTACK_SUPPORT">
 				<change module="RevDCM" function="changedDCM_ATTACK_SUPPORT"/>
 			</option>
 		</section>

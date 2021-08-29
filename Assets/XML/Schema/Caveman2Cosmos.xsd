@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
   <xs:element name="Civ4ModularLoadControls">
     <xs:complexType>
@@ -676,51 +676,12 @@
       <xs:sequence>
         <xs:element ref="Type"/>
         <xs:element ref="Description"/>
-        <xs:element ref="Help"/>
         <xs:element ref="iGridWidth"/>
         <xs:element ref="iGridHeight"/>
         <xs:element ref="bWrapX"/>
         <xs:element ref="bWrapY"/>
         <xs:element ref="InitialWBMap"/>
         <xs:element ref="MapScript"/>
-        <xs:element ref="MapInteraction"/>
-        <xs:element ref="StartingEvent"/>
-        <xs:element ref="SwitchType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="MapInteraction">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="Map"/>
-        <xs:element ref="bContactable"/>
-        <xs:element ref="iDistance"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Civ4MapSwitchInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="MapSwitchInfos"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="MapSwitchInfos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="MapSwitchInfo"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="MapSwitchInfo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="Type"/>
-        <xs:element ref="Description"/>
-        <xs:element ref="Help"/>
-        <xs:element ref="Map"/>
-        <xs:element ref="SwitchEvent"/>
-        <xs:element ref="bManual"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -754,52 +715,27 @@
   <xs:element name="EnforcesGameOptionOnTypes">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOnType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EnforcesGameOptionOnType">
-    <xs:complexType>
-      <xs:sequence>
         <xs:element ref="GameOptionType"/>
-        <xs:element ref="bEnforcesGameOptionOn"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EnforcesGameOptionOffTypes">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOffType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EnforcesGameOptionOffType">
-    <xs:complexType>
-      <xs:sequence>
         <xs:element ref="GameOptionType"/>
-        <xs:element ref="bEnforcesGameOptionOff"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="bEnforcesGameOptionOn" type="Civ4Boolean"/>
-  <xs:element name="bEnforcesGameOptionOff" type="Civ4Boolean"/>
   <xs:element name="GameOptionType" type="xs:NCName"/>
   <xs:element name="InitialWBMap" type="xs:string"/>
   <xs:element name="MapScript" type="xs:string"/>
   <xs:element name="bRiverArt" type="Civ4Boolean"/>
   <xs:element name="TileArtType" type="xs:NCName"/>
   <xs:element name="LightType" type="xs:NCName"/>
-  <xs:element name="SwitchEvent" type="xs:NCName"/>
-  <xs:element name="bManual" type="Civ4Boolean"/>
-  <xs:element name="bContactable" type="Civ4Boolean"/>
-  <xs:element name="iDistance" type="Civ4Integer"/>
-  <xs:element name="StartingEvent" type="xs:NCName"/>
-  <xs:element name="SwitchType" type="xs:NCName"/>
   <xs:element name="iGridWidth" type="Civ4Integer"/>
   <xs:element name="iGridHeight" type="Civ4Integer"/>
   <xs:element name="bWrapX" type="Civ4Boolean"/>
   <xs:element name="bWrapY" type="Civ4Boolean"/>
-  <xs:element name="Map" type="xs:NCName"/>
   <xs:element name="Civilopedia" type="xs:NCName"/>
   <xs:element name="AnimationOperatorType" type="xs:NCName"/>
   <xs:element name="FunctionType" type="xs:NCName"/>

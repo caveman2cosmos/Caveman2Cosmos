@@ -9,8 +9,8 @@
 			<list id="MinPopulation" key="MinPopulation" type="int" default="3" values="1,2,3,4,5,6,7,8,9,10" get="getMinPopulation" set="setMinPopulation"/>
 			<list id="NewWorldPolicy" key="NewWorldPolicy" type="int" default="2" values="1,2,3,4" get="getNewWorldPolicy" set="setNewWorldPolicy"/>
 			<list id="NewWorldErasBehind" key="NewWorldErasBehind" type="int" default="2" values="0,1,2,3,4" get="getNewWorldErasBehind" set="setNewWorldErasBehind"/>
-			<list id="BarbTechFrac" key="BarbTechFrac" type="float" default="0.7" listType="float"
-				values="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0" format="%.1f" get="getBarbTechFrac" set="setBarbTechFrac"/>
+			<list id="BarbTechPercent" key="BarbTechPercent" type="int" default="70" listType="int"
+				values="0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100" get="getBarbTechPercent" set="setBarbTechPercent"/>
 			<list id="MilitaryStrength" key="MilitaryStrength" type="float" default="1.0" listType="float"
 				values="0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getMilitaryStrength" set="setMilitaryStrength"/>
 			<list id="BarbCivMaxCivs" key="MaxCivs" type="int" default="25" values="-1,1,2,3,4,5,6,7,8,9,10,15,20,25,30,35,40" get="getBarbCivMaxCivs" set="setBarbCivMaxCivs"/>
@@ -52,15 +52,15 @@
 				get="getHumanIndexOffset" set="setHumanIndexOffset"/>
 
 			<list id="CultureRateModifier" key="CultureRateModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getCultureRateModifier" set="setCultureRateModifier"/>
 
 			<list id="CivSizeModifier" key="CivSizeModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getCivSizeModifier" set="setCivSizeModifier"/>
 
 			<list id="CityLostModifier" key="CityLostModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getCityLostModifier" set="setCityLostModifier"/>
 
 			<list id="CityAcquiredModifier" key="CityAcquiredModifier" type="float" default="1.0" listType="float"
@@ -71,34 +71,34 @@
 				values="0.0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getWarWearinessMod" set="setWarWearinessMod"/>
 
 			<list id="ReligionModifier" key="ReligionModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getReligionModifier" set="setReligionModifier"/>
 
 			<list id="ColonyModifier" key="ColonyModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getColonyModifier" set="setColonyModifier"/>
 
 			<list id="DistanceToCapitalModifier" key="DistanceToCapitalModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getDistanceToCapitalModifier" set="setDistanceToCapitalModifier"/>
 
 			<list id="HappinessModifier" key="HappinessModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getHappinessModifier" set="setHappinessModifier"/>
 
 			<list id="NationalityModifier" key="NationalityModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getNationalityModifier" set="setNationalityModifier"/>
 
 			<list id="GarrisonModifier" key="GarrisonModifier" type="float" default="3.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getGarrisonModifier" set="setGarrisonModifier"/>
 
 			<list id="RevCultureModifier" key="RevCultureModifier" type="float" default="1.0" listType="float"
 				values="0.00,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00" format="%.2f" get="getRevCultureModifier" set="setRevCultureModifier"/>
 
 			<list id="ChanceModifier" key="ChanceModifier" type="float" default="1.00"
-				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getChanceModifier" set="setChanceModifier"/>
 
 			<list id="CivicsOdds" key="CivicsOdds" type="int" default="0"
@@ -155,11 +155,11 @@
 				get="getCloseRadius" set="setCloseRadius"/>
 
 			<list id="StrengthModifier" key="StrengthModifier" type="float" default="1.0"
-				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getStrengthModifier" set="setStrengthModifier"/>
 
 			<list id="ReinforcementModifier" key="ReinforcementModifier" type="float" default="1.0" listType="float"
-				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
 				get="getReinforcementModifier" set="setReinforcementModifier"/>
 		</section>
 		<section id="AIAutoPlay">

@@ -54,6 +54,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <queue>
 
 //
 // Google sparsehash
@@ -66,19 +67,21 @@
 #include <sparsehash/type_traits.h>
 
 
-#define DllExport   __declspec( dllexport ) 
+#define DllExport   __declspec( dllexport )
 
 #include "NiPoint.h"
 
 //
 // Basic types
 //
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
-typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef unsigned int        uint;
+
+typedef long long           int64_t;
+
+typedef unsigned char       uint8_t;
+typedef unsigned short      uint16_t;
+typedef unsigned int        uint32_t;
+typedef unsigned long long  uint64_t;
 
 //
 // Type traits
@@ -116,7 +119,7 @@ typedef wchar_t          wchar;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
+__forceinline float DWtoF( uint n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
@@ -135,9 +138,12 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
+#define OUTBREAKS_AND_AFFLICTIONS
+// #define BATTLEWORN
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
+// #define NOMADIC_START
 
 //
 // Cache feature macros
@@ -145,6 +151,8 @@ DECLARE_FLAGS(ECacheAccess::flags);
 #define PATHFINDING_CACHE
 #define PATHFINDING_VALIDITY_CACHE
 #define DISCOVERY_TECH_CACHE
+#define YIELD_VALUE_CACHING // KOSHLING - Cache yield values where possible
+#define CAN_TRAIN_CACHING  // Enable canTrain results to be cached within a (caller) defined scope
 
 //
 // Profiler
@@ -172,10 +180,18 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-#define	MEMORY_TRACK()
-#define MEMORY_TRACK_EXEMPT()
-#define MEMORY_TRACE_FUNCTION()
-#define MEMORY_TRACK_NAME(x)
+// Toffer
+int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
+
+int intPow(const int x, const int p);
+int64_t intPow64(const int64_t x, const int p);
+
+int getModifiedIntValue(const int iValue, const int iMod);
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
+// ! Toffer
+
+const std::string getModDir();
 
 //
 // Python
@@ -208,9 +224,6 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost155/foreach.hpp>
 #include <boost155/functional.hpp>
 
-
-// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
-
 // Ranges
 #include <boost155/range.hpp>
 #include <boost155/range/adaptor/filtered.hpp>
@@ -241,20 +254,19 @@ using bst::bind;
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
-#include <boost/python/manage_new_object.hpp>
-#include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
 #include <boost/python/enum.hpp>
+#include <boost/python/manage_new_object.hpp>
+#include <boost/python/return_value_policy.hpp>
+#include <boost/python/to_python_converter.hpp>
+#include <boost/python/suite/indexing/container_utils.hpp>
 namespace python = boost::python;
 #endif
 
-//#include <boost155/range/adaptor/filtered.hpp>
-//#include <boost155/range/adaptor/transformed.hpp>
-
 //
-// xercesc for XML loading
-// 
+// Xercesc
+//
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/util/PlatformUtils.hpp>
@@ -270,6 +282,12 @@ namespace python = boost::python;
 
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
+
+//
+// Compiler warnings
+//
+#pragma warning( 3: 4100 ) // unreferenced formal parameter
+//#pragma warning( 3: 4189 ) // local variable is initialized but not referenced
 
 //
 // Json
@@ -289,72 +307,40 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
-#include "CvAllocator.h"
-
 #include "FAssert.h"
-#include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
+#include "CvGameCoreDLLUnDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "CvString.h"
+
 #include "CvEnums.h"
 #include "CvStructs.h"
+
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
-#include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
-#include "CvDLLXMLIFaceBase.h"
 
+#include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvXMLLoadUtility.h"
-#include "CvInitCore.h"
-#include "CvArtFileMgr.h"
-#include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
-#include "CvPopupInfo.h"
-#include "CvEventReporter.h"
-#include "CvMessageControl.h"
-#include "CvDiploParameters.h"
-#include "CvDeal.h"
+#include "CvInfos.h"
 #include "CvInfoWater.h"
-#include "CvMap.h"
 #include "CvViewport.h"
-#include "CvGlobals.h"
-#include "CvGameAI.h"
-#include "CvTeamAI.h"
-#include "CvPlayerAI.h"
-#include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
-#include "CvPlot.h"
-#include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPathGenerator.h"
-#include "CvBugOptions.h"
-#include "CvPython.h"
 
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"
-#include "CyGame.h"
-#include "CyTeam.h"
-#include "CyPlayer.h"
 #include "CyCity.h"
 #include "CyUnit.h"
 #include "CySelectionGroup.h"

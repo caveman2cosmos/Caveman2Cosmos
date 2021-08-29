@@ -1,17 +1,18 @@
 #pragma once
 
-// selectionGroupAI.h
-
 #ifndef CIV4_SELECTION_GROUP_AI_H
 #define CIV4_SELECTION_GROUP_AI_H
 
 #include "CvSelectionGroup.h"
 
+class CvCity;
+class CvPlot;
+class CvSelectionGroup;
+class CvUnit;
+
 class CvSelectionGroupAI : public CvSelectionGroup
 {
-
 public:
-
 	DllExport CvSelectionGroupAI();
 	DllExport virtual ~CvSelectionGroupAI();
 
@@ -45,21 +46,21 @@ public:
 
 	bool AI_isForceSeparate() const;
 	void AI_makeForceSeparate();
-	
+
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity);
 
 	MissionAITypes AI_getMissionAIType() const;
-	void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit);
+	void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit);
 	void AI_noteSizeChange(int iChange, int iVolume);
 	CvUnit* AI_findBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders, bool bConsiderPropertyValues = false) const;
-	CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders);
-	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const;
-	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity);
+	CvUnit* AI_ejectBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders);
+	virtual bool AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const;
+	virtual CvUnit* AI_ejectBestPropertyManipulator(const CvCity* pTargetCity);
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const;
 
 	CvUnit* AI_getMissionAIUnit() const;
-	
+
 	bool AI_isFull() const;
 
 	void read(FDataStreamBase* pStream);

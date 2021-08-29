@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_SCHOOL_OF_SCRIBES</Type>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_MESSENGER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_EARLY</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_INDUST</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_MODERN</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

@@ -1,8 +1,3 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by tomw (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Camera overlays are textures that draw right in front of the camera in the order below. -JW -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4CameraOverlayInfos xmlns="x-schema:../Schema/C2C_CIV4MiscSchema.xml"/>
 <!-- The point of this is to remove a large texture from both being loaded at game launch and constantly taking up VRAM when playing; you won't even notice it is missing.-->

@@ -22,26 +22,20 @@ void CyHallOfFameInterface()
 		.def("getLeaderName", &CyReplayInfo::getLeaderName, "wstring ()")
 		.def("getCivDescription", &CyReplayInfo::getCivDescription, "wstring ()")
 		.def("getShortCivDescription", &CyReplayInfo::getShortCivDescription, "wstring ()")
-		.def("getCivAdjective", &CyReplayInfo::getCivAdjective, "wstring ()")
 		.def("getMapScriptName", &CyReplayInfo::getMapScriptName, "wstring ()")
 		.def("getWorldSize", &CyReplayInfo::getWorldSize, "int ()")
 		.def("getClimate", &CyReplayInfo::getClimate, "int ()")
 		.def("getSeaLevel", &CyReplayInfo::getSeaLevel, "int ()")
 		.def("getEra", &CyReplayInfo::getEra, "int ()")
 		.def("getGameSpeed", &CyReplayInfo::getGameSpeed, "int ()")
-		.def("isGameOption", &CyReplayInfo::isGameOption, "bool (int iOption)")
-		.def("isVictoryCondition", &CyReplayInfo::isVictoryCondition, "bool (int iVictory)")
 		.def("getVictoryType", &CyReplayInfo::getVictoryType, "int ()")
 		.def("isMultiplayer", &CyReplayInfo::isMultiplayer, "bool ()")
 
 		.def("getNumPlayers", &CyReplayInfo::getNumPlayers, "int ()")
 		.def("getPlayerScore", &CyReplayInfo::getPlayerScore, "int (int iPlayer, int iTurn)")
-		.def("getPlayerEconomy", &CyReplayInfo::getPlayerEconomy, "int (int iPlayer, int iTurn)")
-		.def("getPlayerIndustry", &CyReplayInfo::getPlayerIndustry, "int (int iPlayer, int iTurn)")
-		.def("getPlayerAgriculture", &CyReplayInfo::getPlayerAgriculture, "int (int iPlayer, int iTurn)")
-		
+
 		.def("getNormalizedScore", &CyReplayInfo::getNormalizedScore, "int ()")
-		
+
 		.def("getReplayMessageTurn", &CyReplayInfo::getReplayMessageTurn, "int (int i)")
 		.def("getReplayMessageType", &CyReplayInfo::getReplayMessageType, "int (int i)")
 		.def("getReplayMessagePlotX", &CyReplayInfo::getReplayMessagePlotX, "int (int i)")
@@ -58,16 +52,13 @@ void CyHallOfFameInterface()
 		.def("getCalendar", &CyReplayInfo::getCalendar, "int ()")
 
 		.def("getFinalScore", &CyReplayInfo::getFinalScore, "int ()")
-		.def("getFinalEconomy", &CyReplayInfo::getFinalEconomy, "int ()")
-		.def("getFinalIndustry", &CyReplayInfo::getFinalIndustry, "int ()")
-		.def("getFinalAgriculture", &CyReplayInfo::getFinalAgriculture, "int ()")
 
 		.def("getMapWidth", &CyReplayInfo::getMapWidth, "int ()")
 		.def("getMapHeight", &CyReplayInfo::getMapHeight, "int ()")
 
 		.def("getModName", &CyReplayInfo::getModName, "std::wstring ()")
 		;
-		
+
 	python::class_<CyHallOfFameInfo>("CyHallOfFameInfo")
 		.def("loadReplays", &CyHallOfFameInfo::loadReplays, "void ()")
 		.def("getNumGames", &CyHallOfFameInfo::getNumGames, "int ()")

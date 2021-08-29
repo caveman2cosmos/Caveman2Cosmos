@@ -18,10 +18,8 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GC = CyGlobalContext()
 		GAME = GC.getGame()
 		TRNSLTR = CyTranslator()
-		bDebug = GAME.isDebugMode()
-		bCheat = GAME.cheatCodesEnabled()
 
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
@@ -41,7 +39,6 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			self.addCheckbox(screen, col2, "RevDCM__DCM_OPP_FIRE")
 			self.addLabel(screen, left, "RevDCM__RevDCM_general", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BATTLE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Events")
-			self.addCheckbox(screen, col1, "RevDCM__DCM_BATTLE_EFFECTS")
 			self.addCheckbox(screen, col2, "RevDCM__DCM_ATTACK_SUPPORT")
 			self.addLabel(screen, left, "RevDCM__RevDCM_air", TRNSLTR.getText("TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS", ()))
 			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "DCM_Air_Events")
@@ -67,15 +64,14 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			screen.attachHSeparator(right, right + "SepIDW2")
 
 			#Super Spies options
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-				self.addLabel(screen, left, "RevDCM__RevDCMSS", TRNSLTR.getText("TXT_KEY_REVDCMTAB_SPY_OPTIONS", ()))
-				col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "SS_Events1")
-				self.addCheckbox(screen, col1, "RevDCM__SS_ENABLED")
-				self.addCheckbox(screen, col2, "RevDCM__SS_BRIBE")
-				self.addCheckbox(screen, col3, "RevDCM__SS_ASSASSINATE")
+			self.addLabel(screen, left, "RevDCM__RevDCMSS", TRNSLTR.getText("TXT_KEY_REVDCMTAB_SPY_OPTIONS", ()))
+			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "SS_Events1")
+			self.addCheckbox(screen, col1, "RevDCM__SS_ENABLED")
+			self.addCheckbox(screen, col2, "RevDCM__SS_BRIBE")
+			self.addCheckbox(screen, col3, "RevDCM__SS_ASSASSINATE")
 
-				screen.attachHSeparator(left, left + "SepInq1")
-				screen.attachHSeparator(right, right + "SepInq2")
+			screen.attachHSeparator(left, left + "SepInq1")
+			screen.attachHSeparator(right, right + "SepInq2")
 
 			#Religion options
 			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS)
@@ -93,14 +89,15 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 
 			#Config
-			if bDebug or bCheat:
+			import DebugUtils
+			bDebug = DebugUtils.isAnyDebugMode()
+			if bDebug:
 				self.addLabel(screen, left, "Revolution__RevConfig", "RevConfig:")
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Misc Settings")
 				self.addCheckbox(screen, col1, "Revolution__ActivePopup")
 
 				screen.attachHSeparator(left, left + "SepRevConfig1")
 				screen.attachHSeparator(right, right + "SepRevConfig2")
-
 
 			#Barbarian Civ
 			#Standard Options
@@ -114,7 +111,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				self.addIntDropdown(screen, col3, col4, "Revolution__NewWorldErasBehind")
 				self.addLabel(screen, left, "Revolution__BarbarianCiv", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BARBCIV_STRENGTH_OPTIONS", ()))
 				col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Strength Settings")
-				self.addFloatDropdown(screen, col1, col2, "Revolution__BarbTechFrac")
+				self.addIntDropdown(screen, col1, col2, "Revolution__BarbTechPercent")
 				self.addFloatDropdown(screen, col3, col4, "Revolution__MilitaryStrength")
 
 				screen.attachHSeparator(left, left + "SepStandardBarbCiv1")
@@ -133,7 +130,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				screen.attachHSeparator(right, right + "SepDebugBarbCiv2")
 
 			#Debug Options
-			if bDebug or bCheat:
+			if bDebug:
 
 				#Revolutions
 				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):

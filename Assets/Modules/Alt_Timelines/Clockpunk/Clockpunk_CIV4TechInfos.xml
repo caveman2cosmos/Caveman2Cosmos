@@ -5,7 +5,6 @@
 			<Type>TECH_CLOCKPUNK</Type>
 			<Description>TXT_KEY_TECH_CLOCKPUNK</Description>
 			<Civilopedia>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>1960</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>

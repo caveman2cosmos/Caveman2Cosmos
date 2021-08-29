@@ -64,9 +64,9 @@ class FVariable
 		{
 			bool		m_bValue;		//!< Boolean data
 			char		m_cValue;		//!< One byte integer (signed) data.
-			byte		m_ucValue;		//!< One byte integer (unsigned) data.
+			uint8_t		m_ucValue;		//!< One byte integer (unsigned) data.
 			short		m_wValue;		//!< Two byte integer (signed) data.
-			word		m_uwValue;		//!< Two byte integer (unsigned) data.
+			uint16_t		m_uwValue;		//!< Two byte integer (unsigned) data.
 			int			m_iValue;		//!< Four byte integer (signed) data.
 			uint		m_uiValue;		//!< Four byte integer (unsigned) data.
 			float		m_fValue;		//!< Four byte floating point data.
@@ -104,29 +104,29 @@ class FVariableSystem
 		// Variable accessors
 		bool GetValue( const char * szVariable, bool & bValue ) const;
 		bool GetValue( const char * szVariable, char & cValue ) const;
-		bool GetValue( const char * szVariable, byte & ucValue ) const;
+		bool GetValue( const char * szVariable, uint8_t& ucValue ) const;
 		bool GetValue( const char * szVariable, short & wValue ) const;
-		bool GetValue( const char * szVariable, word & uwValue ) const;
+		bool GetValue( const char * szVariable, uint16_t& uwValue ) const;
 		bool GetValue( const char * szVariable, int & iValue ) const;
 		bool GetValue( const char * szVariable, uint & uiValue ) const;
 		bool GetValue( const char * szVariable, float & fValue ) const;
 		bool GetValue( const char * szVariable, double & dValue ) const;
 		bool GetValue( const char * szVariable, const char * & pszValue ) const;
-		bool GetValue( const char * szVariable, const wchar * & pszValue ) const;
+		bool GetValue( const char * szVariable, const wchar_t * & pszValue ) const;
 		const FVariable * GetVariable( const char * szVariable ) const;
 
 		// Variable additions/modifiers. If a variable does not exist, it will be added.
 		void SetValue( const char * szVariable, bool bValue );
 		void SetValue( const char * szVariable, char cValue );
-		void SetValue( const char * szVariable, byte ucValue );
+		void SetValue( const char * szVariable, uint8_t ucValue );
 		void SetValue( const char * szVariable, short wValue );
-		void SetValue( const char * szVariable, word uwValue );
+		void SetValue( const char * szVariable, uint16_t uwValue );
 		void SetValue( const char * szVariable, int iValue );
 		void SetValue( const char * szVariable, uint uiValue );
 		void SetValue( const char * szVariable, float fValue );
 		void SetValue( const char * szVariable, double dValue );
 		void SetValue( const char * szVariable, const char * szValue );
-		void SetValue( const char * szVariable, const wchar * wszValue );
+		void SetValue( const char * szVariable, const wchar_t * wszValue );
 
 		// Variable removal
 		bool RemValue( const char * szVariable );

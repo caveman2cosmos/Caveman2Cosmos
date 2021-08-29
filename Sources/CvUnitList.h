@@ -11,11 +11,13 @@
 
 #ifndef CV_UNIT_LIST_H
 #define CV_UNIT_LIST_H
+
 #include "CvUnitFilters.h"
 #include "CvUnitGrouping.h"
 #include "CvUnitSort.h"
 
-void CyEnumsUnitListPythonInterface();
+class CvCity;
+class CvPlayer;
 
 class CvUnitList
 {
@@ -24,18 +26,18 @@ public:
 	void init();
 	void setPlayerToOwner();
 	void setInvalid();
-	bool getFilterActive(UnitFilterTypes eFilter);
+	bool getFilterActive(UnitFilterTypes eFilter) const;
 	void setFilterActive(UnitFilterTypes eFilter, bool bActive);
-	UnitGroupingTypes getGroupingActive();
+	UnitGroupingTypes getGroupingActive() const;
 	void setGroupingActive(UnitGroupingTypes eGrouping);
-	UnitSortTypes getSortingActive();
+	UnitSortTypes getSortingActive() const;
 	void setSortingActive(UnitSortTypes eSorting);
 	int getGroupNum();
 	int getNumInGroup(int iGroup);
 	UnitTypes getUnitType(int iGroup, int iPos);
 	int getSelectionRow();
 	void setSelectedUnit(UnitTypes eSelectedUnit);
-	UnitTypes getSelectedUnit();
+	UnitTypes getSelectedUnit() const;
 
 protected:
 	void doFilter();

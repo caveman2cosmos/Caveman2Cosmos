@@ -3,7 +3,6 @@
 #ifndef CvDLLUtilityIFaceBase_h
 #define CvDLLUtilityIFaceBase_h
 
-//#include "CvEnums.h"
 #include "LinkedList.h"
 
 //
@@ -62,15 +61,15 @@ public:
 
 	virtual void delMem(void *p, const char* pcFile, int iLine) = 0;
 	virtual void* newMem(size_t size, const char* pcFile, int iLine) = 0;
- 
+
 	virtual void delMemArray(void *p, const char* pcFile, int iLine) = 0;
 	virtual void* newMemArray(size_t size, const char* pcFile, int iLine) = 0;
 
-	virtual void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine) = 0; 
+	virtual void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine) = 0;
 	virtual unsigned int memSize(void* a) = 0;
 
 	virtual void clearVector(std::vector<int>& vec) = 0;
-	virtual void clearVector(std::vector<byte>& vec) = 0;
+	virtual void clearVector(std::vector<uint8_t>& vec) = 0;
 	virtual void clearVector(std::vector<float>& vec) = 0;
 
 	virtual int getAssignedNetworkID(int iPlayerID) = 0;
@@ -143,8 +142,8 @@ public:
 
 	virtual void callUpdater() = 0;
 
-	virtual bool Uncompress(byte** bufIn, unsigned long* bufLenIn, unsigned long maxBufLenOut, int offset=0) = 0;
-	virtual bool Compress(byte** bufIn, unsigned long* bufLenIn, int offset=0) = 0;
+	virtual bool Uncompress(uint8_t** bufIn, unsigned long* bufLenIn, unsigned long maxBufLenOut, int offset=0) = 0;
+	virtual bool Compress(uint8_t** bufIn, unsigned long* bufLenIn, int offset=0) = 0;
 
 	virtual void NiTextOut(const TCHAR* szText) = 0;
 	virtual void MessageBox(const TCHAR* szText, const TCHAR* szCaption) = 0;
@@ -203,7 +202,7 @@ public:
 
 	virtual CvWString getText(CvWString szIDTag, ...) = 0;
 	virtual CvWString getObjectText(CvWString szIDTag, uint uiForm, bool bNoSubs = false) = 0;
-	virtual void addText(const TCHAR* szIDTag, const wchar* szString, const wchar* szGender = L"N", const wchar* szPlural = L"false") = 0;		
+	virtual void addText(const TCHAR* szIDTag, const wchar_t* szString, const wchar_t* szGender = L"N", const wchar_t* szPlural = L"false") = 0;
 	virtual uint getNumForms(CvWString szIDTag) = 0;
 
 	virtual WorldSizeTypes getWorldSize() = 0;
@@ -236,7 +235,7 @@ public:
 	virtual bool getGraphicOption(GraphicOptionTypes eGraphicOption) = 0;
 	virtual bool getPlayerOption(PlayerOptionTypes ePlayerOption) = 0;
 	virtual int getMainMenu() = 0;
-	
+
 	virtual bool isFMPMgrHost() = 0;
 	virtual bool isFMPMgrPublic() = 0;
 	virtual void handleRetirement(PlayerTypes ePlayer) = 0;

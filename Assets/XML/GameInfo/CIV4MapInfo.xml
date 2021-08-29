@@ -1,51 +1,215 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Map Infos. This file contains the maps included in the game -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4MapInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MapInfos>
 		<MapInfo>
-			<Type>MAP_EXAMPLE</Type>
-			<Description>TXT_KEY_MAP_EXAMPLE</Description>
-			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
+			<!-- Earth map -->
+			<!-- This is starting map -->
+			<Type>MAP_EARTH</Type>
+			<Description>TXT_KEY_MAP_EARTH</Description>
 			<!-- default grid size and wrapping is the same as the original map -->
-			<iGridWidth>100</iGridWidth>
-			<iGridHeight>100</iGridHeight>
-			<bWrapX>1</bWrapX>
+			<!-- You must enter grid size and wrap of InitialWBMap, if you aren't using mapscript -->
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
 			<bWrapY>0</bWrapY>
 			<!-- WB map path should look like the one below, i.e. beginning with \ -->
-			<!--<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
-			<MapScript>Continents.py</MapScript> -->
-			<InitialWBMap />
-			<MapScript />
-			<MapInteraction>
-				<Map>MAP_EXAMPLE2</Map>
-				<bContactable>1</bContactable>
-				<iDistance>5</iDistance>
-			</MapInteraction>
-			<StartingEvent>GameStart</StartingEvent>
-			<!-- Leaving SwitchType blank will enable at-will switching -->
-			<SwitchType>MAPSWITCH_EXAMPLE</SwitchType>
+			<!-- <InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\Test.Civ4BeyondSwordWBSave</InitialWBMap> -->
+			<!-- Alternatively if using generated space zone -->
+			<!-- <MapScript>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\Test.py</MapScript> -->
+			<InitialWBMap/>
+			<MapScript/>
 		</MapInfo>
 		<MapInfo>
-			<Type>MAP_EXAMPLE2</Type>
-			<Description>TXT_KEY_MAP_EXAMPLE</Description>
-			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
-			<iGridWidth>100</iGridWidth>
-			<iGridHeight>100</iGridHeight>
+			<!-- Subterrain map -->
+			<!-- This is underground part of starting map -->
+			<Type>MAP_SUBTERRAIN</Type>
+			<Description>TXT_KEY_MAP_SUBTERRAIN</Description>
+			<iGridWidth>0</iGridWidth>
+			<iGridHeight>0</iGridHeight>
+			<bWrapX>0</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap/>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Cislunar map -->
+			<!-- Colonizable in Nanotech and later -->
+			<Type>MAP_CISLUNAR</Type>
+			<Description>TXT_KEY_MAP_CISLUNAR</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
 			<bWrapY>0</bWrapY>
-			<InitialWBMap />
-			<MapScript />
-			<MapInteraction>
-				<Map>MAP_EXAMPLE</Map>
-				<bContactable>1</bContactable>
-				<iDistance>5</iDistance>
-			</MapInteraction>
-			<StartingEvent>GameStart</StartingEvent>
-			<SwitchType>MAPSWITCH_EXAMPLE2</SwitchType>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of the Moon -->
+			<!-- Colonizable in Nanotech and later -->
+			<Type>MAP_MOON</Type>
+			<Description>TXT_KEY_MAP_MOON</Description>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_02_MOON.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of the Mars -->
+			<!-- Colonizable in Nanotech and later -->
+			<Type>MAP_MARS</Type>
+			<Description>TXT_KEY_MAP_MARS</Description>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_03_MARS.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of the Venus -->
+			<!-- Colonizable in Nanotech and later -->
+			<Type>MAP_VENUS</Type>
+			<Description>TXT_KEY_MAP_VENUS</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_04_VENUS.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Inner Solar System -->
+			<!-- Colonizable in Transhuman and later -->
+			<Type>MAP_INNER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>96</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_05_INNNER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Outer Solar System -->
+			<!-- Colonizable in Transhuman and later -->
+			<Type>MAP_OUTER_SOLAR_SYSTEM</Type>
+			<Description>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>96</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_06_OUTER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Saturn moon, Titan -->
+			<!-- Colonizable in Transhuman and later -->
+			<Type>MAP_TITAN</Type>
+			<Description>TXT_KEY_MAP_TITAN</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_07_TITAN.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Kuiper Belt -->
+			<!-- Colonizable in Transhuman and later -->
+			<Type>MAP_TRANSNEPTUNIAN</Type>
+			<Description>TXT_KEY_MAP_TRANSNEPTUNIAN</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_08_KUIPER.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Nearby Stars -->
+			<!-- Colonizable in Galactic and later -->
+			<Type>MAP_NEARBY_STARS</Type>
+			<Description>TXT_KEY_MAP_NEARBY_STARS</Description>
+			<iGridWidth>72</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_09_NEARBY_STARS.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Orion Arm -->
+			<!-- Colonizable in Galactic and later -->
+			<Type>MAP_ORION_ARM</Type>
+			<Description>TXT_KEY_MAP_ORION_ARM</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_10_ORION_ARM.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Milky Way -->
+			<!-- Colonizable in Galactic and later -->
+			<Type>MAP_MILKY_WAY</Type>
+			<Description>TXT_KEY_MAP_MILKY_WAY</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>48</iGridHeight>
+			<bWrapX>0</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_11_MILKY_WAY.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Local Group -->
+			<!-- Colonizable in Cosmic and later -->
+			<Type>MAP_LOCAL_GROUP</Type>
+			<Description>TXT_KEY_MAP_LOCAL_GROUP</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_12_LOCAL_GROUP.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Virgo Supercluster -->
+			<!-- Colonizable in Cosmic and later -->
+			<Type>MAP_VIRGO_SUPERCLUSTER</Type>
+			<Description>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_13_VIRGO_SUPERCLUSTER.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Universe -->
+			<!-- Colonizable in Cosmic and later -->
+			<Type>MAP_UNIVERSE</Type>
+			<Description>TXT_KEY_MAP_UNIVERSE</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_14_UNIVERSE.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
+		</MapInfo>
+		<MapInfo>
+			<!-- Map of Distant Cosmos -->
+			<!-- Colonizable in Transcendent and later -->
+			<Type>MAP_DISTANT_COSMOS</Type>
+			<Description>TXT_KEY_MAP_DISTANT_COSMOS</Description>
+			<iGridWidth>48</iGridWidth>
+			<iGridHeight>32</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_15_DISTANT_COSMOS.CivBeyondSwordWBSave</InitialWBMap>
+			<MapScript/>
 		</MapInfo>
 	</MapInfos>
 </Civ4MapInfos>

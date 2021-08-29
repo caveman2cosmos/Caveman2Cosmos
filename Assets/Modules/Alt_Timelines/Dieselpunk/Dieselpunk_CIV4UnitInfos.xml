@@ -29,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GOLIATH_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_GOLIATH_AIRSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GOLIATH_AIRSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -57,6 +56,7 @@
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1030</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -123,7 +123,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRACHE_HELICOPTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRACHE_HELICOPTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -156,6 +155,7 @@
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
@@ -188,7 +188,6 @@
 					<iDomainMod>-50</iDomainMod>
 				</DomainMod>
 			</DomainMods>
-			<iExtraCost>1</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>196</iPower>
 			<UnitMeshGroups>
@@ -235,7 +234,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAILROAD_ARTILLERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAILROAD_ARTILLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -263,14 +261,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
 			<iCombatLimit>85</iCombatLimit>
@@ -352,7 +348,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BIG_BERTHA</Description>
 			<Civilopedia>TXT_KEY_UNIT_BIG_BERTHA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BIG_BERTHA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -380,14 +375,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iCombatLimit>85</iCombatLimit>
@@ -460,7 +453,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TZAR_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TZAR_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -492,6 +484,7 @@
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>35</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -528,7 +521,6 @@
 					<iUnitCombatMod>-50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>161</iPower>
 			<UnitMeshGroups>
@@ -570,7 +562,6 @@
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DOUBLE_BIPLANE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOUBLE_BIPLANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOUBLE_BIPLANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -578,8 +569,8 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_P51_MUSTANG</UnitType>
-				<UnitType>UNIT_FIGHTER_BOMBER</UnitType>
+				<UnitType>UNIT_EARLYJET</UnitType>
+				<UnitType>UNIT_A10_BOMBER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -593,6 +584,7 @@
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>970</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>6</iAirRange>
 			<iAirUnitCap>1</iAirUnitCap>
@@ -623,7 +615,7 @@
 			<bDCMAirBomb5>0</bDCMAirBomb5>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
- 		<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
@@ -651,7 +643,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VERY_HEAVY_ARMOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -697,6 +688,7 @@
 				</And>
 			</TrainCondition>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>55</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -724,7 +716,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>2</iExtraCost>
 			<iAsset>6</iAsset>
 			<iPower>260</iPower>
 			<UnitMeshGroups>
@@ -776,7 +767,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHROMIUM_GUNMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHROMIUM_GUNMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -826,6 +816,7 @@
 				</And>
 			</TrainCondition>
 			<iCost>1080</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

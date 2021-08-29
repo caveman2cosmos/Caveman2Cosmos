@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!--
-MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following:
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following:
 	1. Clean up the references to the ERA's in CIV4BuildingInfos
 	2. Clean up the references to the ERA's in CIV4TechInfos
 	3. Clean up the references to the ERA's in CIV4LeaderHeadInfos
@@ -25,7 +24,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>100</iBeelineStingsTechCostModifier>
 			<iBuildPercent>140</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>400</iGreatPeoplePercent>
+			<iGreatPeoplePercent>230</iGreatPeoplePercent>
 			<iAnarchyPercent>40</iAnarchyPercent>
 			<iEventChancePerTurn>7</iEventChancePerTurn>
 			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
@@ -77,14 +76,14 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>90</iBeelineStingsTechCostModifier>
 			<iBuildPercent>130</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>300</iGreatPeoplePercent>
+			<iGreatPeoplePercent>220</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>7</iEventChancePerTurn>
 			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_AMBIENTWINDS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_MID_EAST</EraInfoSoundtrack>
- 				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_EARLY_PEACE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_EARLY_PEACE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_EARLY_WAR</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_LATE_PEACE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_LATE_WAR</EraInfoSoundtrack>
@@ -146,7 +145,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>80</iBeelineStingsTechCostModifier>
 			<iBuildPercent>120</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>225</iGreatPeoplePercent>
+			<iGreatPeoplePercent>210</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>8</iEventChancePerTurn>
 			<iSoundtrackSpace>400</iSoundtrackSpace>
@@ -206,7 +205,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>70</iBeelineStingsTechCostModifier>
 			<iBuildPercent>110</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>150</iGreatPeoplePercent>
+			<iGreatPeoplePercent>200</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>8</iEventChancePerTurn>
 			<iSoundtrackSpace>200</iSoundtrackSpace>
@@ -283,7 +282,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>60</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>190</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>9</iEventChancePerTurn>
 			<iSoundtrackSpace>160</iSoundtrackSpace>
@@ -346,7 +345,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>50</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>180</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>9</iEventChancePerTurn>
 			<iSoundtrackSpace>120</iSoundtrackSpace>
@@ -407,7 +406,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>40</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>170</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>80</iSoundtrackSpace>
@@ -466,7 +465,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>30</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>160</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>80</iSoundtrackSpace>
@@ -505,7 +504,7 @@ Good luck! -->
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Information.dds</Button>
 		</EraInfo>
-        <EraInfo>
+		<EraInfo>
 			<Type>C2C_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_ERA_NANOTECH</Description>
 			<Strategy>TXT_KEY_ERA_NANOTECH_STRATEGY</Strategy>
@@ -525,7 +524,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>25</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>150</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>40</iSoundtrackSpace>
@@ -577,7 +576,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>20</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>140</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>40</iSoundtrackSpace>
@@ -629,7 +628,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>15</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>130</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>40</iSoundtrackSpace>
@@ -677,7 +676,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>10</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>120</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>40</iSoundtrackSpace>
@@ -726,7 +725,7 @@ Good luck! -->
 			<iBeelineStingsTechCostModifier>5</iBeelineStingsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
-			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iGreatPeoplePercent>110</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
 			<iSoundtrackSpace>40</iSoundtrackSpace>

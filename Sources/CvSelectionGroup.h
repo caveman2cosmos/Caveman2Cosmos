@@ -6,13 +6,18 @@
 #include "LinkedList.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
-#include "CvCity.h"
-#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
-class CvPlot;
 class CvArea;
+class CvCity;
+class CvPlot;
+class CvPath;
+//class CvPathGenerator;
+class CvUnit;
+class CvUnitSelectionCriteria;
+#ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
+#endif
 
 struct CachedEdgeCosts
 {
@@ -46,7 +51,7 @@ struct StackCompare
 };
 DECLARE_FLAGS(StackCompare::flags);
 
-class CvSelectionGroup
+class CvSelectionGroup : bst::noncopyable
 {
 
 public:
@@ -55,7 +60,7 @@ public:
 	virtual ~CvSelectionGroup();
 
 	DllExport void init(int iID, PlayerTypes eOwner);
-	DllExport void uninit();			
+	DllExport void uninit();
 	DllExport void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
 	void kill();
@@ -71,58 +76,58 @@ public:
 
 	void playActionSound();
 
-	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, CvPlot* pMissionAIPlot = NULL, CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
-	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, CvPlot* pMissionAIPlot = NULL, CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
-	void popMission();																																										// Exposed to Python
+	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);
+	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);
+	void popMission();
 	void autoMission();
 	void updateMission();
 
 	DllExport CvPlot* _lastMissionPlot();
-	CvPlot* lastMissionPlot() const; // Exposed to Python
+	CvPlot* lastMissionPlot() const;
 
-	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;		// Exposed to Python
+	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;
 	bool startMission();
 	bool continueMission(int iSteps = 0);
 	bool checkMoveSafety(int iX, int iY, int iFlags);
 
-	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);													// Exposed to Python
-	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);				// Exposed to Python
+	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);
+	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);
 
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false);		// Exposed to Python
-	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache);
+	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false) const;
+	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const;
 	void setupActionCache();
 
-	bool isHuman() const; // Exposed to Python
+	bool isHuman() const;
 
 	DllExport bool _isBusy();
 	bool isBusy() const;
 
 	bool isCargoBusy() const;
-	int baseMoves() const;																																										// Exposed to Python 
-	bool isWaiting() const;																																							// Exposed to Python
-	bool isFull() const;																																											// Exposed to Python
-	bool hasCargo() const;																																										// Exposed to Python
+	int baseMoves() const;
+	bool isWaiting() const;
+	bool isFull() const;
+	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
 	DllExport bool _canAllMove();
-	bool canAllMove() const; // Exposed to Python
-	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */; // Exposed to Python
-	bool hasMoved() const;																																										// Exposed to Python
-	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const; // Exposed to Python
-	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
+	bool canAllMove() const;
+	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;
+	bool hasMoved() const;
+	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;
+	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
 
 	DllExport bool _canMoveInto(CvPlot* pPlot, bool bAttack = false);
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const; // Exposed to Python
-	
+	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
+
 	DllExport bool _canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const; // Exposed to Python
+	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
 
 	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false) const;
 
-	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																																	// Exposed to Python
-	bool canFight() const;																																										// Exposed to Python 
-	bool canDefend() const;																																										// Exposed to Python
+	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canFight() const;
+	bool canDefend() const;
 	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;
 	bool hasCollateralDamage() const;
@@ -133,18 +138,20 @@ public:
 	int getRBombardDamageMaxUnits() const;
 
 	int getBombardTurns(const CvCity* pCity ) const;
-	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
-	bool isHasPathToAreaEnemyCity(int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
+	// Not const - Can generate a move-to mission if bGo is true
+	bool isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, const int iFlags=0, const bool bGo=false);
+	bool isHasPathToAreaEnemyCity(const int iFlags=0, const bool bGo=false);
+	// ! Not const
 	bool isStranded();
 	void invalidateIsStrandedCache();
 	bool calculateIsStranded();
 	bool canMoveAllTerrain() const;
 
 	void unloadAll();
-	bool alwaysInvisible() const;																																							// Exposed to Python
-	bool isInvisible(TeamTypes eTeam) const;																								// Exposed to Python
-	int countNumUnitAIType(UnitAITypes eUnitAI) const;																												// Exposed to Python
-	bool hasWorker() const;																																										// Exposed to Python
+	bool alwaysInvisible() const;
+	bool isInvisible(TeamTypes eTeam) const;
+	int countNumUnitAIType(UnitAITypes eUnitAI) const;
+	bool hasWorker() const;
 	bool IsSelected() const;
 	DllExport void NotifyEntity(MissionTypes eMission);
 	void airCircle(bool bStart);
@@ -152,15 +159,15 @@ public:
 
 	int getX() const;
 	int getY() const;
-	bool at(int iX, int iY) const;																																								// Exposed to Python
-	bool atPlot(const CvPlot* pPlot) const;																																				// Exposed to Python
-	CvPlot* plot() const;																																								// Exposed to Python
-	DllExport CvPlot* plotExternal() const;																																								// Exposed to Python
+	bool at(int iX, int iY) const;
+	bool atPlot(const CvPlot* pPlot) const;
+	CvPlot* plot() const;
+	DllExport CvPlot* plotExternal() const;
 	int getArea() const;
-	CvArea* area() const;																																													// Exposed to Python
+	CvArea* area() const;
 	DomainTypes getDomainType() const;
 
-	RouteTypes getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;	// Exposed to Python
+	RouteTypes getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;
 
 	bool canIgnoreZoneofControl() const;
 
@@ -181,15 +188,15 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	bool isAmphibPlot(const CvPlot* pPlot) const;																																		// Exposed to Python
+	bool isAmphibPlot(const CvPlot* pPlot) const;
 	bool groupAmphibMove(CvPlot* pPlot, int iFlags);
 
-	DllExport bool readyToSelect(bool bAny = false) /* not const - calls readyToMove */;																										// Exposed to Python
-	bool readyToMove(bool bAny = false, bool bValidate = false) /* not const - calls canAnyMove */;																																// Exposed to Python
-	bool readyToAuto() const;																																									// Exposed to Python 
+	DllExport bool readyToSelect(bool bAny = false) /* not const - calls readyToMove */;
+	bool readyToMove(bool bAny = false, bool bValidate = false) /* not const - calls canAnyMove */;
+	bool readyToAuto() const;
 
-	int getID() const;																																												// Exposed to Python
-	void setID(int iID);																			
+	int getID() const;
+	void setID(int iID);
 
 	int getMissionTimer() const;
 	void setMissionTimer(int iNewValue);
@@ -203,35 +210,35 @@ public:
 
 	bool isChoosingNewLeader() const { return m_bIsChoosingNewLeader; }
 
-	inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
+	inline PlayerTypes getOwner() const { return m_eOwner; }
 
-	TeamTypes getTeam() const;																																					// Exposed to Python
+	TeamTypes getTeam() const;
 
-	ActivityTypes getActivityType() const;																															// Exposed to Python
-	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);																											// Exposed to Python
+	ActivityTypes getActivityType() const;
+	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);
 
-	AutomateTypes getAutomateType() const;																																		// Exposed to Python
-	bool isAutomated() const;																																									// Exposed to Python
-	void setAutomateType(AutomateTypes eNewValue);																											// Exposed to Python
+	AutomateTypes getAutomateType() const;
+	bool isAutomated() const;
+	void setAutomateType(AutomateTypes eNewValue);
 
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* getPathLastNode() const;
 #endif
-	CvPlot* getPathFirstPlot() const;																																		// Exposed to Python
-	CvPlot* getPathEndTurnPlot() const;																														// Exposed to Python
-	CvPath&	getPath() const;
+	CvPlot* getPathFirstPlot() const;
+	CvPlot* getPathEndTurnPlot() const;
+	const CvPath& getPath() const;
 	static CvPathGenerator* getPathGenerator();
 	//TB OOS Fix
-	bool generatePath( const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;	// Exposed to Python
-	void resetPath();	
-	
-	bool canPathDirectlyToInternal(CvPlot* pFromPlot, CvPlot* pToPlot, int movesRemaining);
-	bool canPathDirectlyTo(CvPlot* pFromPlot, CvPlot* pToPlot);
+	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;
+	void resetPath();
 
-	int movesRemainingAfterMovingTo(int iStartMoves, CvPlot* pFromPlot, CvPlot* pToPlot) const;
+	bool canPathDirectlyToInternal(const CvPlot* pFromPlot, const CvPlot* pToPlot, int movesRemaining) const;
+	bool canPathDirectlyTo(const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
+
+	int movesRemainingAfterMovingTo(int iStartMoves, const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
 	int movesLeft() const;
 
-	// Exposed to Python
+
 
 	DllExport void clearUnits();
 	DllExport bool addUnit(CvUnit* pUnit, bool bMinimalChange);
@@ -267,9 +274,9 @@ public:
 	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
 	void clearMissionQueue();
-	void setMissionPaneDirty();																																	// Exposed to Python
-	int getLengthMissionQueue() const;																											// Exposed to Python
-	MissionData* getMissionFromQueue(int iIndex) const;																							// Exposed to Python
+	void setMissionPaneDirty();
+	int getLengthMissionQueue() const;
+	MissionData* getMissionFromQueue(int iIndex) const;
 	bool insertAtEndMissionQueue(MissionData mission, bool bStart = true);
 	CLLNode<MissionData>* deleteMissionQueueNode(CLLNode<MissionData>* pNode);
 	DllExport CLLNode<MissionData>* nextMissionQueueNode(CLLNode<MissionData>* pNode) const;
@@ -277,9 +284,9 @@ public:
 	DllExport CLLNode<MissionData>* headMissionQueueNodeExternal() const;
 	CLLNode<MissionData>* headMissionQueueNode() const;
 	CLLNode<MissionData>* tailMissionQueueNode() const;
-	int getMissionType(int iNode) const;																														// Exposed to Python
-	int getMissionData1(int iNode) const;																														// Exposed to Python
-	int getMissionData2(int iNode) const;																														// Exposed to Python
+	int getMissionType(int iNode) const;
+	int getMissionData1(int iNode) const;
+	int getMissionData2(int iNode) const;
 
 // BUG - All Units Actions - start
 	bool allMatch(UnitTypes eUnit) const;
@@ -310,37 +317,22 @@ public:
 	virtual bool AI_isForceSeparate() const = 0;
 	virtual void AI_makeForceSeparate() = 0;
 	virtual MissionAITypes AI_getMissionAIType() const = 0;
-	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit) = 0;
+	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
 	virtual CvUnit* AI_getMissionAIUnit() const = 0;
-	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
-	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const = 0;
-	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity) = 0;
+	virtual CvUnit* AI_ejectBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
+	virtual bool AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const = 0;
+	virtual CvUnit* AI_ejectBestPropertyManipulator(const CvCity* pTargetCity) = 0;
 	virtual void AI_separateNonAI(UnitAITypes eUnitAI) = 0;
 	virtual void AI_separateAI(UnitAITypes eUnitAI) = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	virtual void AI_separateImpassable() = 0;
 	virtual void AI_separateEmptyTransports() = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	virtual bool AI_isFull() const = 0;
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const = 0;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - SA: Stack Attack START
+
 	bool groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
-	// Dale - SA: Stack Attack END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;
@@ -399,7 +391,7 @@ protected:
 
 	bool activateHeadMission();
 	void deactivateHeadMission();
-	
+
 	bool sentryAlert() const;
 
 
@@ -417,8 +409,8 @@ private:
 
 		void clear();
 
-		bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
-		void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
+		bool HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
+		void CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
 
 		CvPathGenerator* get() { return &m_pathGenerator; }
 		const CvPathGenerator* get() const { return &m_pathGenerator; }
@@ -442,8 +434,8 @@ private:
 public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);
 
-	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
-	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
+	bool HaveCachedPathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
+	void CachePathEdgeCosts(const CvPlot* pFromPlot, const CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
 
 public:
 	//
@@ -455,13 +447,21 @@ public:
 	// fn::find_if(groups(), CvSelectionGroup::fn::getHeadUnitAI() != UNITAI_SETTLER)
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, readyToAuto);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, isAutomated);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, CvUnit*, getHeadUnit);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, autoMission);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, resetHealing);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, doDelayedDeath);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, void, updateTimers);
+
+		DECLARE_MAP_FUNCTOR_2(CvSelectionGroup, bool, readyToMove, bool, bool);
+
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, isBusy);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, readyToAuto);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, bool, isAutomated);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, const CvUnit*, getHeadUnit);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, PlayerTypes, getHeadOwner);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, TeamTypes, getHeadTeam);
+		DECLARE_MAP_FUNCTOR_CONST(CvSelectionGroup, AutomateTypes, getAutomateType);
 	};
 };
 

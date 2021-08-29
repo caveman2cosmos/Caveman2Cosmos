@@ -1,34 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- -->
-<!-- Spawn Infos -->
 <Civ4SpawnInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
 		<SpawnInfo>
-			<Type>SPAWN_LOCUST_SMALL_NATIVE</Type>
-			<UnitType>UNIT_LOCUST_SMALL_SWARM</UnitType>
-			<PlayerType>45</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>500</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
 			<Type>SPAWN_LOCUST_NATIVE</Type>
 			<UnitType>UNIT_LOCUST</UnitType>
-			<PlayerType>45</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -43,10 +24,12 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -61,10 +44,12 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>

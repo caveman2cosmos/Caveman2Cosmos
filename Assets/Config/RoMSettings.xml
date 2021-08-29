@@ -9,19 +9,6 @@
 
 	<options id="RoMSettings" file="RoMSettings.ini">
 		<section id="ROMResources">
-			<option id="RoMResourceBar" key="RoMResourceBar" type="boolean" default="False" get="isShowResourceBar" dirtyBit="GameData"/>
-
-			<list id="RoMResourceBar_Types" key="Resource Display Types" type="int" default="0" listType="string"
-				values="All|Rush|Strategic|Manufactured|Food|Luxury" get="getRoMResourceBarTypes" dirtyBit="GameData">
-
-				<choice id="All" get="isResourceBarTypesAll"/>
-				<choice id="Rush" get="isResourceBarTypesRush"/>
-				<choice id="Strategic" get="isResourceBarTypesStrategic"/>
-				<choice id="Manufactured" get="isResourceBarTypesManufactured"/>
-				<choice id="Food" get="isResourceBarTypesFood"/>
-				<choice id="Luxury" get="isResourceBarTypesLuxury"/>
-			</list>
-			<option id="TechTreeEraColors" key="Show Tech tree era colors" type="boolean" default="True" get="isRoMTechTreeColors"/>
 
 			<option id="RoMReset" key="RoMReset" type="boolean" default="False" get="isRoMReset" set="setRoMReset">
 				<change module="ANewDawnSettings" function="changedRoMReset"/>
@@ -34,12 +21,6 @@
 			</option>
 			<option id="ShowCivTraits" key="ShowCivTraits" type="boolean" default="True" get="isShowCivTraits" set="setShowCivTraits">
 				<change module="ANewDawnSettings" function="changedShowCivTraits"/>
-			</option>
-			<option id="ShowCoastalBuildings" key="ShowCoastalBuildings" type="boolean" default="False" get="isShowCoastalBuildings" set="setShowCoastalBuildings">
-				<change module="ANewDawnSettings" function="changedShowCoastalBuildings"/>
-			</option>
-			<option id="HideObsoleteBuildings" key="HideObsoleteBuildings" type="boolean" default="False" get="isHideObsoleteBuildings" set="setHideObsoleteBuildings">
-				<change module="ANewDawnSettings" function="changedHideObsoleteBuildings"/>
 			</option>
 			<option id="DepletionMod" key="DepletionMod" type="boolean" default="False" get="isDepletionMod" set="setDepletionMod">
 				<change module="ANewDawnSettings" function="changedDepletionMod"/>
@@ -77,9 +58,6 @@
 			<option id="HideReplacedBuildings" key="HideReplacedBuildings" type="boolean" default="False" get="isHideReplacedBuildings" set="setHideReplacedBuildings">
 				<change module="ANewDawnSettings" function="changedHideReplacedBuildings"/>
 			</option>
-			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
-
-			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 
 			<option id="PlayWaitingAlertSound" key="PlayWaitingAlertSound" type="boolean" default="False" get="isPlayWaitingAlertSound" set="setPlayWaitingAlertSound"/>
 
@@ -166,6 +144,8 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="MultipleReligionSpread" key="MultipleReligionSpread" type="boolean" default="True" get="isMultipleReligionSpread" set="setMultipleReligionSpread">
 				<change module="ANewDawnSettings" function="changedMultipleReligionSpread"/>
 			</option>
+			<option id="TelepathicReligion" key="TelepathicReligion" type="boolean" default="False" get="isTelepathicReligion" set="setTelepathicReligion"/>
+
 			<option id="TerrainDamage" key="TerrainDamage" type="boolean" default="False" get="isTerrainDamage" set="setTerrainDamage">
 				<change module="ANewDawnSettings" function="changedTerrainDamage"/>
 			</option>

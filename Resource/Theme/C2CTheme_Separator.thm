@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Separator.thm
 Content		:	Civ4 - GSeparator control theme
@@ -10,16 +10,16 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 Licensees may use this file in accordance with the valid Scaleform
 GFC Commercial License Agreement provided with the software.
 
-This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING 
+This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING
 THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR ANY PURPOSE.
 
 For information regarding GFC Commercial License Agreements go to:
 	online - http://www.scaleform.com/licensing.html or
-	email  - sales@scaleform.com 
+	email  - sales@scaleform.com
 
 **********************************************************************/
 
-// *** Main Separator control namespace 
+// *** Main Separator control namespace
 
 with GFC_Control_Separator
 {
@@ -27,10 +27,10 @@ with GFC_Control_Separator
 	GFC_Control_DefaultSeparator_Style
 	{
 		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_Separator_Renderer_Control;
-		
+
 		with GFC_Control_Flag
 		{
-			// Base control flags				
+			// Base control flags
 			.Transparent						=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
 			.SolidInner							=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
 			.SolidBackground					=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
@@ -41,17 +41,17 @@ with GFC_Control_Separator
 			.TopLayer							=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
 			.TopLayerBitmap						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
 			.BottomLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
-												
-			// Control flag change masks		
+
+			// Control flag change masks
 			.Mask_InvalidateControl				=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
 		}
 
 		with .Flag
 		{
 			// Separator flags
-			.NoInnerFill						=	GFlags(GSeparatorCtrl, GFC_CF_SEPARATOR_NOINNERFILL); 
+			.NoInnerFill						=	GFlags(GSeparatorCtrl, GFC_CF_SEPARATOR_NOINNERFILL);
 
-			// Separator flag change masks		
+			// Separator flag change masks
 			//.SeparatorMask_InvalidateControl	=	GFlags(GSeparatorCtrl);
 		}
 
@@ -63,15 +63,15 @@ with GFC_Control_Separator
 			.VThickness							=	2;
 		}
 
-		with .Color								
-		{									
+		with .Color
+		{
 			.Bar_Default						=	GFC_Control_Color_3DLook_VeryLight;
 			.Bar_Disable						=	GFC_Control_Color_3DLook_VeryLight;
 			.BarShadow_Default					=	GFC_Control_Color_3DLook_Dark;
 			.BarShadow_Disable					=	GFC_Control_Color_3DLook_Dark;
-		}									
-		with .Combine							
-		{									
+		}
+		with .Combine
+		{
 			.Bar_Default						=	GFC_Control_Combine_Surface;
 			.Bar_Disable						=	GFC_Control_Combine_Surface;
 			.BarShadow_Default					=	GFC_Control_Combine_Surface;
@@ -79,7 +79,7 @@ with GFC_Control_Separator
 		}
 
 		// ******* Initialize all the Bitmap theme Separator properties to avoid inheritance problems
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Separator_Skin
 		{
 			.HBar_Default						=	0;
@@ -114,7 +114,7 @@ with GFC_Control_Separator
 			}
 			.Disable				= .Default;
 		}
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Separator_Skin_VBar
 		{
 			.Default
@@ -134,15 +134,15 @@ with GFC_Control_Separator
 		map GFC_CtrlTheme_Bitmap_Control_Separator	=	GFC_Control_DefaultSeparator_Style;
 		map GFC_Control								=	GFC_Control_DefaultSeparator_Style;
 	}
-	
+
 	// In style
 	GFC_Control_InSeparator_Style
 	{
-		
+
 		map GFC_CtrlTheme_Bitmap_Control_Separator				=	GFC_Control_StandardSeparator_Style;
 		map GFC_Control											=	GFC_Control_StandardSeparator_Style;
 	}
-	
+
 	// Out style
 	GFC_Control_OutSeparator_Style
 	{
@@ -162,7 +162,7 @@ with GFC_Control_Separator
 	// Empty style
 	GFC_Control_EmptySeparator_Style
 	{
-		
+
 		with GFC_CtrlTheme_Bitmap_Control_Separator_Skin
 		{
 			.HBar_Default						=	SF_CtrlTheme_Civ4_Control_Skin_Blank;

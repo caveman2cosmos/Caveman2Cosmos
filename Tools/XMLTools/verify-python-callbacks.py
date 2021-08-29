@@ -2,18 +2,16 @@ import ast
 import glob
 import re
 from lxml import etree
+import os
+import fnmatch
 
 def find_all_functions(py_file):
-    try:
-        code = open(py_file).read()
+    with open(py_file) as f:
+        code = f.read()
         a = ast.parse(code, py_file)
         #return [n.name for n in ast.walk(a) if type(n) == ast.FunctionDef]
         return [n.name for n in ast.iter_child_nodes(a) if type(n) == ast.FunctionDef]
-    except SyntaxError as e:
-        print str(e)
-    except Exception as e:
-        print str(e)
-    return []
+
 
 def namespace(element):
     m = re.match(r'\{(.*)\}', element.tag)
@@ -55,12 +53,10 @@ def verify_callbacks(xml_files, py_files):
             etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
 
 def get_files(root, file_pattern):
-    import os
-    import fnmatch
     matches = []
-    for root, _, filenames in os.walk(root):
+    for directory_path, _, filenames in os.walk(root):
         for filename in fnmatch.filter(filenames, file_pattern):
-            matches.append(os.path.join(root, filename))
+            matches.append(os.path.join(directory_path, filename))
     return matches
 
 CIV4_ASSETS = r'C:\Program Files (x86)\Civilization IV Complete\Civ4\Assets\Python'

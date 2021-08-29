@@ -1,0 +1,3255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ARCOLOGY_MOON</Tag>
+		<English>Build [LINK=IMPROVEMENT_ARCOLOGY_MOON]Arcology Moon[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_ARCOLOGY_MOON]Arcologie de Lune[\LINK]</French>
+		<Russian>Ñîçäàòü Àðêîëîãèþ Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ARTIFICIAL_PLANET</Tag>
+		<English>Build [LINK=IMPROVEMENT_ARTIFICIAL_PLANET]Artificial Planet[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_ARTIFICIAL_PLANET]Planète Artificielle[\LINK]</French>
+		<Russian>Ñòðîèòü èñê. ïëàíåòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ASPATIAL_ROUTE</Tag>
+		<English>Make [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_ASPATIAL_ROUTE]Route Aspatiale[\LINK]</French>
+		<Russian>Îòêðûòü àñòð. âðàòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ASTEROID_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_ASTEROID_MINE]Asteroid Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_ASTEROID_MINE]Mine d'Astéroide[\LINK]</French>
+		<Russian>Ñòðîèòü àñòåð. øàõòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_GALAXY]Biotic Galaxy[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
+		<English>Build [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Biotic Neutron Star[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY]Blue Supergiant Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY]Colonie de Supergéante bleue[\LINK]</French>
+		<Russian>Строить колонию (Голуб. сверхгигант)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BRANE_FACTORY</Tag>
+		<English>Build [LINK=IMPROVEMENT_BRANE_FACTORY]Brane Factory[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_BRANE_FACTORY]Usine de Brane[\LINK]</French>
+		<Russian>Ñòðîèòü ôàáðèêó áðàíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BRANE_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_BRANE_FARM]Brane Farm[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_BRANE_FARM]Ferme de Brane[\LINK]</French>
+		<Russian>Ñòðîèòü ôåðìó áðàíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_CISLUNAR_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_CISLUNAR_BASE]Cislunar Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_CISLUNAR_BASE]Base Cislunaire[\LINK]</French>
+		<Russian>Ñòðîèòü îêîëîëóííóþ áàçó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Tag>
+		<English>Build [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Cislunar Expansion Module[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Module d'Expansion Cislunaire[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Îêîëîëóííûé ìîäóëü[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
+		<English>Make [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_COMPACT_WORMHOLE]Compact Trou de Ver[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=ROUTE_COMPACT_WORMHOLE]Ìàëóþ ÷åðâîòî÷èíó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Cosmic Expansion Node[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nœud d'expansion cosmique[\LINK]</French>
+		<Russian>Ñòðîèòü ÓÏÐ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Tag>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_FUTURE_CITY]Distant Future City[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_DISTANT_FUTURE_CITY]Ville du Futur lointain[\LINK]</French>
+		<Russian>Ñòðîèòü ãîðîä äàë. áóäóùåãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DISTANT_PAST_CITY</Tag>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_PAST_CITY]Distant Past City[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_DISTANT_PAST_CITY]Ville du passé lointain[\LINK]</French>
+		<Russian>Ñòðîèòü ãîðîä äàë. ïðîøëîãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DISTANT_RESEARCH_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE]Distant Research Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE]Base de Recherche Distante[\LINK]</French>
+		<Russian>Ñòðîèòü äàëüí. èññëåä. áàçó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_DYSON_SPHERE</Tag>
+		<English>Build [LINK=IMPROVEMENT_DYSON_SPHERE]Dyson Sphere[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_DYSON_SPHERE]Sphère de Dyson[\LINK]</French>
+		<Russian>Ñòðîèòü Ñôåðó Äàéñîíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Tag>
+		<English>Build [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Helioformed Brown Dwarf[\LINK]</English>
+		<French>Hélioformer une [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Naine Brune[\LINK]</French>
+		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Êîðè÷íåâûé êàðëèê[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>
+		<English>Make [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_HYPERLANE]Hyperligne[\LINK]</French>
+		<Russian>Ïðîëîæèòü ãèïåðëàéí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_HYPERSPACE_BUNKER</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYPERSPACE_BUNKER]Hyperspace Bunker[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HYPERSPACE_BUNKER]Bunker de l'Hyperespace[\LINK]</French>
+		<Russian>Ñòðîèòü ãèïåðêîñì. áóíêåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERGALACTIC_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_BASE]Intergalactic Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_BASE]Base Intergalactique[\LINK]</French>
+		<Russian>Ñòðîèòü ìåæãàëàêò. áàçó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_COLONY]Intergalactic Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_COLONY]Colonie Intergalactique[\LINK]</French>
+		<Russian>Ñòðîèòü ìåæãàë. êîëîíèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE]Intergalactic Research Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE]Base de Recherche Intergalactique[\LINK]</French>
+		<Russian>Ñòðîèòü ìåæãëàêò. áàçó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Interstellar Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Base Interstellaire[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Ìåæçâåçäíóþ áàçó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_COLONY]Interstellar Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_COLONY]Colonie Interstellaire[\LINK]</French>
+		<Russian>Ñòðîèòü ìåæçâ. êîëîíèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_RESEARCH_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE]Interstellar Research Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE]Base de Recherche Interstellaire[\LINK]</French>
+		<Russian>Ñòðîèòü ìåæçâåçä. èññëåä. áàçó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Tag>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Interstellar Trading Post[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Station commerciale Interstellaire[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Ìåæçâ. òîðãîâûé ïîñò[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JOVIAN_FLOATING_CITY</Tag>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY]Jovian Floating City[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY]Ville flottante Jovienne[\LINK]</French>
+		<Russian>Строить Облачной город</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_ARCOLOGY</Tag>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY]Jovian Lunar Arcology[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY]Jovian Arcologie Lunaire[\LINK]</French>
+		<Russian>Ñòðîèòü Àðêîïîëèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE]Jovian Lunar Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE]Base Lunaire Jovienne[\LINK]</French>
+		<Russian>Ñòðîèòü ÁÂÑ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_JOVIAN_SCOOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_SCOOP]Jovian Scoop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_SCOOP]Scoop Jovienne[\LINK]</French>
+		<Russian>Ñòðîèòü ãàçîêîìïðåññîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_ARCOLOGY</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Lunar Arcology[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Arcologie Lunaire[\LINK]</French>
+		<Russian>Ñòðîèòü ëóííûé àðêîïîëèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_BASE]Lunar Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_BASE]Base Lunaire[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LUNAR_BASE]Ëóííóþ áàçó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Complexe d'Habitation Lunaire[\LINK]</French>
+		<Russian>Ëóííûé æèëîé êîìïëåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_MINE]Lunar Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_MINE]Mine Lunaire[\LINK]</French>
+		<Russian>Ëóííàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST]Lunar Mining Outpost[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST]Avant-poste Minier lunaire[\LINK]</French>
+		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_OUTPOST</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Outpost[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_LUNAR_OUTPOST]Avant-Poste Lunaire[\LINK]</French>
+		<Russian>Ëóííûé àâàíïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
+		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MARTIAN_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_MARTIAN_FARM]Martian Farm[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MARTIAN_FARM]Ferme Martienne[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MARTIAN_FARM]Ìàðñ. ôåðìó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MARTIAN_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MARTIAN_MINE]Martian Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MARTIAN_MINE]Mine Martienne[\LINK]</French>
+		<Russian>Êîïàòü [LINK=IMPROVEMENT_MARTIAN_MINE]Ìàðñ. øàõòó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE</Tag>
+		<English>Make [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_MEGAWORMHOLE]Méga-Trou de Ver[\LINK]</French>
+		<Russian>Ñîçäàòü [LINK=ROUTE_MEGAWORMHOLE]Áîë. ÷åðâîòî÷èíó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MERCURY_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_MERCURY_COLONY]Mercury Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MERCURY_COLONY]Colonie de Mercure[\LINK]</French>
+		<Russian>Ñòðîèòü ìåðê. êîëîíèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MERCURY_SOLAR_ARRAY</Tag>
+		<English>Build [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Mercury Solar Array[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Panneau Solaire sur Mercure[\LINK]</French>
+		<Russian>Ñòðîèòü ìåðê. ñîëí. áàò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Neutron Star Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonie d'Etoile à Neutron[\LINK]</French>
+		<Russian>Ñòðîèòü ÊÍÇ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_OBSERVABLE_UNIVERSE_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY]Observable Universe Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY]Colonie dans l'Univers Observable[\LINK]</French>
+		<Russian>Ñòðîèòü âñåëåíñê. êîëîíèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Tag>
+		<English>Make [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_ORBITAL_TRAJECTORY]Trajectoire Orbitale[\LINK]</French>
+		<Russian>Ïðîëîæèòü îðáèò. òðàåêòîðèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PARALLEL_UNIVERSE</Tag>
+		<English>Build [LINK=IMPROVEMENT_PARALLEL_UNIVERSE]Parallel Universe[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_PARALLEL_UNIVERSE]Univers Parallèle[\LINK]</French>
+		<Russian>Ñîçäàòü ïàðàëë. âñåëåííóþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PARATERRAFORMED_ASTEROID</Tag>
+		<English>Build [LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID]Paraterraformed Asteroid[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID]Astéroïde Paraterraformé[\LINK]</French>
+		<Russian>Ïàðàòåððàôîðì. àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLACE_ASTEROID</Tag>
+		<English>Create [LINK=FEATURE_ASTEROIDS]Asteroid[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLACE_GALAXY</Tag>
+		<English>Create [LINK=FEATURE_GALAXY]Galaxy[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
+		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
+		<English>Build [LINK=IMPROVEMENT_SATELLITE_STATION]Satellite Station[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SATELLITE_STATION]Station Satellite[\LINK]</French>
+		<Russian>Ñòðîèòü îðá. ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
+		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Solar System Base[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Base du Système Solaire[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Ìåæïëàíåò. ñòàíöèþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_TRADING_POST</Tag>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_TRADING_POST]Solar Trading Post[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SOLAR_TRADING_POST]Station de commerce Solaire[\LINK]</French>
+		<Russian>Ñòðîèòü ñîëí. òîðãîâûé ïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Tag>
+		<English>Make [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Tag>
+		<English>Build [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Space Solar Array[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Réseau solaire spatial[\LINK]</French>
+		<Russian>Ñòðîèòü ñîëí. áàòàðåþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV1</Tag>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV1]Space Station[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SPACE_STATION_LV1]Station spatiale[\LINK]</French>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SPACE_STATION_LV1]Êîñìè÷. ñòàíöèþ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV2</Tag>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station Lv. 2[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV3</Tag>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station Lv. 3[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SPIRITUAL_REALM</Tag>
+		<English>Build [LINK=IMPROVEMENT_SPIRITUAL_REALM]Spiritual Realm[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SPIRITUAL_REALM]Royaume Spirituel[\LINK]</French>
+		<Russian>Ñîòâîðèòü Äóõîâíîå öàðñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_STAR_SCOOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_STAR_SCOOP]Star Scoop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_STAR_SCOOP]Scoop d'Etoile[\LINK]</French>
+		<Russian>Строить плазмокомпрессор</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUN_SCOOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUN_SCOOP]Sun Scoop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SUN_SCOOP]Scoop du Soleil[\LINK]</French>
+		<Russian>Ñòðîèòü ïëàçìîêîìïðåññîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUPERCLUSTER_COLONY</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUPERCLUSTER_COLONY]Supercluster Colony[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SUPERCLUSTER_COLONY]Colonie de Supercluster[\LINK]</French>
+		<Russian>Ñòðîèòü ìåòàãàëàêò. êîëîíèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUPERNOVA_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUPERNOVA_MINE]Supernova Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SUPERNOVA_MINE]Mine de Supernova[\LINK]</French>
+		<Russian>Ñòðîèòü Çâåçäíûé êàðüåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
+		<English>Build [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Terraformed Planet[\LINK]</English>
+		<French>Terraformer la [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planète[\LINK]</French>
+		<Russian>Òåððàôîðì. ïëàíåòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Tag>
+		<English>Terraform towards [LINK=TERRAIN_BRANESPACE]Branespace[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_FUTURE</Tag>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_FUTURE]Distant Future[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Tag>
+		<English>Terraform towards [LINK=TERRAIN_HYPERSPACE]Hyperspace[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_MARS</Tag>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MARS]Green Mars[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_MOON</Tag>
+		<English>Terraform towards [LINK=TERRAIN_GREEN_MOON]Green Moon[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Tag>
+		<English>Terraform towards [LINK=TERRAIN_NEUTRON_STAR]Neutron Star[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_PAST</Tag>
+		<English>Terraform towards [LINK=TERRAIN_DISTANT_PAST]Distant Past[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TIME_MANIFOLD</Tag>
+		<English>Build [LINK=IMPROVEMENT_TIME_MANIFOLD]Time Manifold[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_TIME_MANIFOLD]Manifold du Temps[\LINK]</French>
+		<Russian>Ïðîëîæèòü âðåìåí. êîëîäåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TRUE_VACUUM</Tag>
+		<English>Build [LINK=IMPROVEMENT_TRUE_VACUUM]True Vacuum[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_VENUS_AERIAL_FARM]Venus Aerial Farm[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_VENUS_AERIAL_FARM]Ferme aérienne de Vénus[\LINK]</French>
+		<Russian>Ñòðîèòü àýðîôåðìó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_VENUS_SURFACE_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_VENUS_SURFACE_MINE]Venus Surface Mine[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_VENUS_SURFACE_MINE]Mine de Surface de Vénus[\LINK]</French>
+		<Russian>Ñòðîèòü âåíåð. øàõòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WORMHOLE</Tag>
+		<English>Make [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_WORMHOLE]Trou de Ver[\LINK]</French>
+		<Russian>Ïðîëîæèòü ÷åðâîòî÷èíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON</Tag>
+		<English>Arcology Moon</English>
+		<French>Arcologie de Lune</French>
+		<Russian>Àðêîëîãèÿ Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON_PEDIA</Tag>
+		<English>This is a Moon-sized arcology that is large enough to generate a substantial amount of gravity.</English>
+		<French>Il s'agit d'une arcologie de la taille de la Lune qui est suffisamment grande pour générer une quantité substantielle de gravité.</French>
+		<Russian>Ýòî àðêîëîãèÿ ðàçìåðîì ñ Ëóíó, äîñòàòî÷íî áîëüøàÿ, ÷òîáû ãåíåðèðîâàòü çíà÷èòåëüíîå êîëè÷åñòâî ãðàâèòàöèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Tag>
+		<English>Artificial Planet</English>
+		<French>Planète Artificielle</French>
+		<Russian>Èñêóñòâåííàÿ ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET_PEDIA</Tag>
+		<English>A completely artificial planet, assembled from stray material in the stellar neighborhood.</English>
+		<French>Une planète complètement artificielle, assemblée à partir de matériaux parasites dans le quartier stellaire.</French>
+		<Russian>Ïîëíîñòüþ èñêóññòâåííàÿ ïëàíåòà, ñîáðàííàÿ èç ÷óæåðîäíûõ ìàòåðèàëîâ â çâåçäíîé îêðåñòíîñòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Tag>
+		<English>Asteroid Mine</English>
+		<French>Mine d'Astéroide</French>
+		<Russian>Àñòåðîèäíàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_ASTEROID_MINE_PEDIA</Tag>
+		<English>Asteroid Mine</English>
+		<French>Mine d'Astéroide</French>
+		<Russian>Àñòåðîèäíàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY</Tag>
+		<English>Biotic Galaxy</English>
+		<French>Galaxie Biotique</French>
+		<Russian>Áèîãàëàêòèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY_PEDIA</Tag>
+		<English>Life has been spread throughout this galaxy.</English>
+		<French>La vie s'est répandue dans cette galaxie.</French>
+		<Russian>Æèçíü ðàñïðîñòðàíèëàñü ïî âñåé ýòîé ãàëàêòèêå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Tag>
+		<English>Biotic Neutron Star</English>
+		<French>Etoile à Neutron Biotique</French>
+		<Russian>Áèîíåéòðîííàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR_PEDIA</Tag>
+		<English>Using some unknown exotic lifeforms, this neutron star has been made into a functioning ecosystem.</English>
+		<French>À l'aide de formes de vie exotiques inconnues, cette étoile à neutrons a été transformée en écosystème fonctionnel.</French>
+		<Russian>Èñïîëüçóÿ íåêîòîðûå íåèçâåñòíûå ýêçîòè÷åñêèå ôîðìû æèçíè, ýòà íåéòðîííàÿ çâåçäà áûëà ïðåâðàùåíà â ôóíêöèîíèðóþùóþ ýêîñèñòåìó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Tag>
+		<English>Blue Supergiant Colony</English>
+		<French>Colonie de Supergéante bleue</French>
+		<Russian>Колония голубого сверхгиганта</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY_PEDIA</Tag>
+		<English>It is hard to colonize a blue supergiant due to its intense heat, X-ray radiation, and unstable characteristics. But here you go.</English>
+		<French>Il est difficile de coloniser une supergéante bleue en raison de sa chaleur intense, de son rayonnement X et de ses caractéristiques instables. Mais voilà.</French>
+		<Russian>Трудно колонизировать систему голубого сверхгиганта из-за его высокой температуры, мощного рентгеновского излучения и высокой переменности светимости звезды. Но когда это останавливало человеческую жадность и любопытство?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Tag>
+		<English>Brane Factory</English>
+		<French>Usine de Brane</French>
+		<Russian>Ôàáðèêà Áðàíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FACTORY_PEDIA</Tag>
+		<English>A factory that lives in branespace.</English>
+		<French>Une usine qui vit dans l'espace de Brane.</French>
+		<Russian>Ñ ïîìîùüþ ýòîé ôàáðèêè âû ìîæåòå ñòðóêòóðèðîâàòü îáû÷íîå ïðîñòðàíñòâî äî òðåòüåãî êâàíòîâîãî ñîñòîÿíèÿ: îò òî÷êè äî ñòðóí, îò ñòðóíû äî ìåìáðàíû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FARM</Tag>
+		<English>Brane Farm</English>
+		<French>Ferme de Brane</French>
+		<Russian>Ôåðìà áðàíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FARM_PEDIA</Tag>
+		<English>What do your digital, dematerialized post-post-transhumanoids eat anyway? This late in the game there is still a food mechanism, so they must eat something.</English>
+		<French>Que mangent de toute façon vos post-post-transhumanoïdes numériques et dématérialisés? À la fin du jeu, il y a toujours un mécanisme alimentaire, ils doivent donc manger quelque chose.</French>
+		<Russian>×òî âîîáùå åäÿò âàøè öèôðîâûå äåìàòåðèàëèçîâàííûå ïîñò-ïîñòòðàíãóìàíîèäû? Â ýòîì êîíöå èãðû âñå åùå åñòü ìåõàíèçì ïèòàíèÿ, ïîýòîìó îíè äîëæíû ÷òî-òî åñòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Tag>
+		<English>Cislunar Base</English>
+		<French>Base Cislunaire</French>
+		<Russian>Îêîëîëóííàÿ áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Tag>
+		<English>A military base in cislunar space.</English>
+		<Russian>Âîåííàÿ áàçà íà ëóííîé îðáèòå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Tag>
+		<English>Cislunar Expansion Module</English>
+		<French>Module d'Expansion Cislunaire</French>
+		<Russian>Îêîëîëóííûé ìîäóëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Tag>
+		<English>An expanded module for a cislunar colony.</English>
+		<Russian>Ðàñøèðåííûé ìîäóëü äëÿ îêîëîëóííîé êîëîíèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Tag>
+		<English>Cosmic Expansion Node</English>
+		<French>Noeud d'Expansion cosmique</French>
+		<Russian>Óçåë ïðîñòð. ðàñøèðåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE_PEDIA</Tag>
+		<English>This mysterious facility harvests dark energy.</English>
+		<French>Cette installation mystérieuse récolte l'énergie sombre.</French>
+		<Russian>Ýòîò òàèíñòâåííûé îáúåêò ñîáèðàåò òåìíóþ ýíåðãèþ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Tag>
+		<English>Distant Future City</English>
+		<French>Ville du Futur lointain</French>
+		<Russian>Ãîðîä äàë. áóäóùåãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY_PEDIA</Tag>
+		<English>A city that exists in the distant future.</English>
+		<French>Une ville qui existe dans un futur lointain.</French>
+		<Russian>Ãîðîä, êîòîðûé ñóùåñòâóåò â äàëåêîì áóäóùåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Tag>
+		<English>Distant Past City</English>
+		<French>Ville du passé lointain</French>
+		<Russian>Ãîðîä äàë. ïðîøëîãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY_PEDIA</Tag>
+		<English>A city that exists in the distant past.</English>
+		<French>Une ville qui existe dans un passé lointain.</French>
+		<Russian>Ãîðîä, êîòîðûé ñóùåñòâóåò â äàëåêîì ïðîøëîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE</Tag>
+		<English>Distant Research Base</English>
+		<French>Base de Recherche Distante</French>
+		<Russian>Äàëüíÿÿ èññëåä. áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE_PEDIA</Tag>
+		<English>A research base that studies biology, geology, and other sciences beyond the cosmic horizon.</English>
+		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences au-delà de l'horizon cosmique.</French>
+		<Russian>Íàó÷íî-èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè çà ïðåäåëàìè êîñìè÷åñêîãî ãîðèçîíòà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Tag>
+		<English>Dyson Sphere</English>
+		<French>Sphère de Dyson</French>
+		<Russian>Ñôåðà Äàéñîíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_DYSON_SPHERE_PEDIA</Tag>
+		<English>A Dyson Sphere is a solar collector that encompasses an entire star.</English>
+		<French>A Sphère de Dyson is a solar collector that encompasses an entire star.</French>
+		<Russian>Ñôåðà Äàéñîíà - ýòî ñîëíå÷íûé êîëëåêòîð, îõâàòûâàþùèé öåëóþ çâåçäó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Tag>
+		<English>Helioformed Brown Dwarf</English>
+		<French>Naine brune Hélioformée</French>
+		<Russian>Ãåëèîôîðì. êîðè÷. êàðëèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Tag>
+		<English>A brown dwarf that has been ignited into a red dwarf</English>
+		<French>Une naine brune qui s'est enflammée en une naine rouge</French>
+		<Russian>Êîðè÷íåâûé êàðëèê, êîòîðûé ïåðåðîäèëñÿ â êðàñíîãî êàðëèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Tag>
+		<English>Hyperspace Bunker</English>
+		<French>Bunker de l'Hyperespace</French>
+		<Russian>Ãèïåðêîñìè÷. áóíêåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER_PEDIA</Tag>
+		<English>A military base in hyperspace.</English>
+		<French>A military base in hyperespace.</French>
+		<Russian>Âîåííàÿ áàçà â ãèïåðïðîñòðàíñòâå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Tag>
+		<English>Intergalactic Base</English>
+		<French>Base Intergalactique</French>
+		<Russian>Ìåæãàëàêòè÷. áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Tag>
+		<English>A military base in intergalactic space.</English>
+		<French>Une base militaire dans l'espace intergalactique.</French>
+		<Russian>Âîåííàÿ áàçà â ìåæãàëàêòè÷åñêîì ïðîñòðàíñòâå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY</Tag>
+		<English>Intergalactic Colony</English>
+		<French>Colonie Intergalactique</French>
+		<Russian>Ìåæãàëàêò. êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Tag>
+		<English>A developed drawf galaxy</English>
+		<French>Une galaxie drawf développée</French>
+		<Russian>Ðàçâèòàÿ êàðëèêîâàÿ ãàëàêòèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Tag>
+		<English>Intergalactic Research Base</English>
+		<French>Base de Recherche Intergalactique</French>
+		<Russian>Ìåæãàëàêò. èññëåä. áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE_PEDIA</Tag>
+		<English>A research base that studies biology, geology, and other sciences on distant galaxies.</English>
+		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences sur les galaxies lointaines.</French>
+		<Russian>Èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè î äàëåêèõ ãàëàêòèêàõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Tag>
+		<English>Interstellar Base</English>
+		<French>Base Interstellaire</French>
+		<Russian>Ìåæçâåçäíàÿ áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Tag>
+		<English>A military base in interstellar space.</English>
+		<Russian>Âîåííàÿ áàçà â ìåæçâåçäíîì ïðîñòðàíñòâå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Tag>
+		<English>Interstellar Colony</English>
+		<French>Colonie Interstellaire</French>
+		<Russian>Ìåæçâåçä. êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Tag>
+		<English>A colony of the regional interstellar power.</English>
+		<Russian>Êîëîíèÿ ðåãèîíàëüíîé ìåæçâåçäíîé äåðæàâû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Tag>
+		<English>Interstellar Research Base</English>
+		<French>Base de Recherche Interstellaire</French>
+		<Russian>Ìåæçâåçä. èññëåä. áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE_PEDIA</Tag>
+		<English>A research base that studies biology, geology, and other sciences on distant planets.</English>
+		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences sur des planètes lointaines.</French>
+		<Russian>Íàó÷íî-èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè íà äàëåêèõ ïëàíåòàõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Tag>
+		<English>Interstellar Trading Post</English>
+		<French>Station commerciale Interstellaire</French>
+		<Russian>Ìåæçâåçä. òîðãîâûé ïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Tag>
+		<English>A trading post on a rogue planet</English>
+		<French>Un poste de traite sur une planète voyou</French>
+		<Russian>Òîðãîâûé ïîñò íà áëóæäàþùåé ïëàíåòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Tag>
+		<English>Jovian Floating City</English>
+		<French>Ville flottante Jovienne</French>
+		<Russian>Îáëà÷íîé ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Tag>
+		<English>This massive city floats effortlessly over the clouds of a gas giant.</English>
+		<French>Cette ville massive flotte sans effort sur les nuages d'une géante gazeuse.</French>
+		<Russian>Ýòîò ìàññèâíûé ãîðîä áåç îñîáûõ óñèëèé ïëàâàåò íàä îáëàêàìè ãàçîâîãî ãèãàíòà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Tag>
+		<English>Jovian Lunar Arcology</English>
+		<French>Jovian Arcologie Lunaire</French>
+		<Russian>Àðêîïîëèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY_PEDIA</Tag>
+		<English>A megastructure on some outer lunar moon.</English>
+		<French>Une mégastructure sur une lune lunaire extérieure.</French>
+		<Russian>Ìåãàñòðóêòóðû íà îäíîé èç ëóí âíåøíèõ ïëàíåò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Tag>
+		<English>Jovian Lunar Base</English>
+		<French>Base Lunaire Jovienne</French>
+		<Russian>Áàçà âíåøíèõ ñïóòíèêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE_PEDIA</Tag>
+		<English>This base is a town on an outer Solar System moon.</English>
+		<French>Cette base est une ville sur une lune extérieure du système solaire.</French>
+		<Russian>Ýòà áàçà - ãîðîä íà îäíîé ëóí âíåøíèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Tag>
+		<English>Jovian Scoop</English>
+		<French>Scoop Jovienne</French>
+		<Russian>Ãàçîêîìïðåññîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP_PEDIA</Tag>
+		<English>This device extracts material from the outer atmosphere of a gas giant.</English>
+		<French>Cet appareil extrait du matériau de l'atmosphère extérieure d'une géante gazeuse.</French>
+		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò öåííûå ðåñóðñû èç âíåøíåé àòìîñôåðû ãàçîâîãî ãèãàíòà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
+		<English>Listening Node</English>
+		<French>Station d'écoute</French>
+		<Italian>Nodo d'ascolto</Italian>
+		<Spanish>
+			<Text>Nodo de escucha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Boja Nasłuchowa</Polish>
+		<Russian>Óçåë ñâÿçè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Tag>
+		<English>Lunar Arcology</English>
+		<French>Arcologie Lunaire</French>
+		<Russian>Ëóííûé àðêîïîëèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY_PEDIA</Tag>
+		<English>A megastructure on the Moon.</English>
+		<French>Une mégastructure sur la Lune.</French>
+		<Russian>Ëóííàÿ ìåãàñòðóêòóðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE</Tag>
+		<English>Lunar Base</English>
+		<French>Base Lunaire</French>
+		<Russian>Ëóííàÿ áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE_PEDIA</Tag>
+		<English>Lunar Base</English>
+		<French>Base Lunaire</French>
+		<Russian>Ëóííàÿ áàçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Tag>
+		<English>Lunar Habitation Complex</English>
+		<French>Complexe d'Habitation Lunaire</French>
+		<Russian>Ëóííûé æèëîé êîìïëåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
+		<English>Lunar Mine</English>
+		<French>Mine Lunaire</French>
+		<Russian>Ëóííàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE_PEDIA</Tag>
+		<English>Lunar Mine</English>
+		<French>Mine Lunaire</French>
+		<Russian>Ëóííàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST</Tag>
+		<English>Lunar Mining Outpost</English>
+		<French>Avant-poste Minier lunaire</French>
+		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST_PEDIA</Tag>
+		<English>Lunar Mining Outpost</English>
+		<French>Avant-poste Minier lunaire</French>
+		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST</Tag>
+		<English>Lunar Outpost</English>
+		<French>Avant-Poste Lunaire</French>
+		<Russian>Ëóííûé àâàíïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Tag>
+		<English>Lunar Outpost is place, where Lunar Settlers can create cities.</English>
+		<French>Avant-Poste Lunaire</French>
+		<Russian>Ëóííûé àâàíïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Tag>
+		<English>Martian Farm</English>
+		<French>Ferme Martienne</French>
+		<Russian>Ìàðñèàíñêàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Tag>
+		<English>A farm on Mars.</English>
+		<French>Une ferme sur Mars.</French>
+		<Russian>Çàùèùåííàÿ è âûñîêîòåõíîëîãè÷íàÿ ôåðìà íà ìàðñèàíñêîé ïîâåðõíîñòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_MINE</Tag>
+		<English>Martian Mine</English>
+		<French>Mine Martienne</French>
+		<Russian>Ìàðñèàíñêàÿ øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_MINE_PEDIA</Tag>
+		<English>A mine on Mars.</English>
+		<French>Une mine sur Mars.</French>
+		<Russian>Ãîðíàÿ ðàçðàáîòêà è ðóäíèêè íà Ìàðñå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Tag>
+		<English>Mercury Colony</English>
+		<French>Colonie de Mercure</French>
+		<Russian>Ìåðêóðèàí. êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_COLONY_PEDIA</Tag>
+		<English>This small town on the surface of Mercury is a rough place to live.</English>
+		<French>Cette petite ville à la surface de Mercure est un endroit difficile à vivre.</French>
+		<Russian>Ýòîò ìàëåíüêèé ãîðîäîê íà ïîâåðõíîñòè Ìåðêóðèÿ - òðóäíîå è îïàñíîå ìåñòî äëÿ æèçíè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Tag>
+		<English>Mercury Solar Array</English>
+		<French>Panneau Solaire sur Mercure</French>
+		<Russian>Ìåðêóð. ñîëí. áàòàðåÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY_PEDIA</Tag>
+		<English>An array of solar panels on Mercury. Due to the heat, they require special engineering, but they collect a lot of power.</English>
+		<French>Un tableau de panneaux solaires sur Mercure. En raison de la chaleur, ils nécessitent une ingénierie spéciale, mais ils collectent beaucoup d'énergie.</French>
+		<Russian>Ìàññèâ ñîëíå÷íûõ ïàíåëåé íà Ìåðêóðèè. Èç-çà æàðû èì òðåáóåòñÿ ñïåöèàëüíàÿ èíæåíåðèÿ, íî îíè ñîáèðàþò ìíîãî ýíåðãèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Tag>
+		<English>Neutron Star Colony</English>
+		<French>Colonie d'Etoile à Neutron</French>
+		<Russian>Êîëîíèÿ íåéòðîí. çâåçäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY_PEDIA</Tag>
+		<English>A city on a neutron star? It can be done with Neutronium.</English>
+		<French>Une ville sur une étoile à neutrons? Cela peut être fait avec du neutronium.</French>
+		<Russian>Ãîðîä íà íåéòðîííîé çâåçäå? Ýòî ìîæíî ñäåëàòü ñ ïîìîùüþ íåéòðîíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Tag>
+		<English>Observable Universe Colony</English>
+		<French>Colonie dans l'Univers Observable</French>
+		<Russian>Êîëîíèÿ íàáëþäàåìîé Âñåëåííîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY_PEDIA</Tag>
+		<English>This colony spans at least to the cosmic horizon of a central point. You think that's enough?</English>
+		<French>Cette colonie s'étend au moins jusqu'à l'horizon cosmique d'un point central. Tu crois que ça suffit?</French>
+		<Russian>Ýòà êîëîíèÿ ïðîñòèðàåòñÿ êàê ìèíèìóì äî êîñìè÷åñêîãî ãîðèçîíòà öåíòðàëüíîé òî÷êè. Âû äóìàåòå, ýòîãî äîñòàòî÷íî?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE</Tag>
+		<English>Parallel Universe</English>
+		<French>Univers Parallèle</French>
+		<Russian>Ïàðàëëåëüíàÿ âñåëåííàÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE_PEDIA</Tag>
+		<English>A parallel universe has been colonized or created as a colony</English>
+		<French>Un univers parallèle a été colonisé ou créé en tant que colonie</French>
+		<Russian>Ïàðàëëåëüíàÿ âñåëåííàÿ áûëà êîëîíèçèðîâàíà èëè ñîçäàíà êàê êîëîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Tag>
+		<English>Paraterraformed Asteroid</English>
+		<French>Astéroïde Paraterraformé</French>
+		<Russian>Ïàðàòåððàôîðì. àñòåðîèä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID_PEDIA</Tag>
+		<English>This asteroid or other such object has been terraformed.</English>
+		<French>Cet astéroïde ou autre objet similaire a été terraformé.</French>
+		<Russian>Ýòîò àñòåðîèä èëè äðóãîé ïîäîáíûé îáúåêò áûë òåððàôîðìèðîâàí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SATELLITE_STATION</Tag>
+		<English>Satellite Station</English>
+		<French>Station Satellite</French>
+		<Russian>Îðáèòàëüíàÿ ñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SATELLITE_STATION_PEDIA</Tag>
+		<English>A satellite station to an O'Neill cylinder.</English>
+		<French>Une station satellite à un cylindre O'Neill.</French>
+		<Russian>Ñïóòíèêîâàÿ ñòàíöèÿ ê öèëèíäðó Î'Íèëà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Tag>
+		<English>Solar Concentrator</English>
+		<French>Concentrateur Solaire</French>
+		<Russian>Ñîëíå÷. êîíöåíòðàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Tag>
+		<English>Solar System Base</English>
+		<French>Base du Système Solaire</French>
+		<Russian>Ìåæïëàíåòíàÿ ñòàíöèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Tag>
+		<English>A large military base in solar orbit.</English>
+		<French>Une grande base militaire en orbite solaire.</French>
+		<Russian>Êðóïíàÿ âîåííàÿ áàçà íà ñîëíå÷íîé îðáèòå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Tag>
+		<English>Solar Trading Post</English>
+		<French>Station de commerce Solaire</French>
+		<Russian>Ñîëí. òîðãîâûé ïîñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST_PEDIA</Tag>
+		<English>A trading post in orbit around the Sun</English>
+		<French>Un poste de traite en orbite autour du Soleil</French>
+		<Russian>Òîðãîâûé ïîñò íà îðáèòå âîêðóã Ñîëíöà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Tag>
+		<English>Space Solar Array</English>
+		<French>Réseau solaire spatial</French>
+		<Russian>Êîñì. ñîëíå÷. áàòàðåÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Tag>
+		<English>Space Station Lv. 1</English>
+		<French>Station spatiale Niv. 1</French>
+		<Russian>Êîñìè÷. ñòàíöèÿ (óð.1)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Tag>
+		<English>An early space station.</English>
+		<French>Une première station spatiale.</French>
+		<Russian>Ðàííÿÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Tag>
+		<English>Space Station Lv. 2</English>
+		<French>Station spatiale Niv. 2</French>
+		<Russian>Êîñìè÷. ñòàíöèÿ (óð.2)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Tag>
+		<English>An intermediate space station.</English>
+		<French>Une station spatiale intermédiaire.</French>
+		<Russian>Ñðåäíÿÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Tag>
+		<English>Space Station Lv. 3</English>
+		<French>Station spatiale Niv. 3</French>
+		<Russian>Êîñìè÷. ñòàíöèÿ (óð.3)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Tag>
+		<English>An advanced space station.</English>
+		<French>Une station spatiale avancée.</French>
+		<Russian>Ïðîäâèíóòàÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Tag>
+		<English>Spiritual Realm</English>
+		<French>Royaume Spirituel</French>
+		<Russian>Äóõîâíîå öàðñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM_PEDIA</Tag>
+		<English>This is a mysterious spirit realm.</English>
+		<French>Ceci est un royaume spirituel mystérieux.</French>
+		<Russian>Ýòî òàèíñòâåííîå äóõîâíîå öàðñòâî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Tag>
+		<English>Star Scoop</English>
+		<French>Scoop d'Etoile</French>
+		<Russian>Звезд. плазмокомпрессор</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_STAR_SCOOP_PEDIA</Tag>
+		<English>Harvest material directly from a star.</English>
+		<French>Récoltez le matériel directement d'une étoile.</French>
+		<Russian>Собирайте плазму прямо со звезды.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Tag>
+		<English>Sun Scoop</English>
+		<French>Scoop du Soleil</French>
+		<Russian>Ïëàçìîêîìïðåññîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUN_SCOOP_PEDIA</Tag>
+		<English>This device extracts material and energy directly from the Sun.</English>
+		<French>Cet appareil extrait la matière et l'énergie directement du soleil.</French>
+		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò ìàòåðèàë è ýíåðãèþ íåïîñðåäñòâåííî èç Ñîëíöà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY</Tag>
+		<English>Supercluster Colony</English>
+		<French>Colonie de Supercluster</French>
+		<Russian>Êîëîíèÿ â ñâåðõñêîïëåíèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY_PEDIA</Tag>
+		<English>A colony spanning an entire supercluster.</English>
+		<French>Une colonie couvrant tout un superamas.</French>
+		<Russian>Êîëîíèÿ, îõâàòûâàþùàÿ âñå ñâåðõñêîïëåíèå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE</Tag>
+		<English>Supernova Mine</English>
+		<French>Mine de Supernova</French>
+		<Russian>Çâåçäíûé êàðüåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Tag>
+		<English>Harnessing the resources released from an induced supernova</English>
+		<French>Exploiter les ressources libérées d'une supernova induite</French>
+		<Russian>Èñïîëüçîâàíèå ðåñóðñîâ, îñâîáîæäåííûõ îò âçîðâàâøåéñÿ ñâåðõíîâîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET</Tag>
+		<English>Terraformed Planet</English>
+		<French>Planète Terraformée</French>
+		<Russian>Òåððàôîðì. ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET_PEDIA</Tag>
+		<English>A terraformed planet in the galactic vicinity</English>
+		<French>Une planète terraformée au voisinage galactique</French>
+		<Russian>Òåððàôîðìèðîâàííàÿ ïëàíåòà íà ïðîñòîðàõ ãàëàêòèêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD</Tag>
+		<English>Time Manifold</English>
+		<French>Manifold du Temps</French>
+		<Russian>Âðåìåííîé êîëîäåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD_PEDIA</Tag>
+		<English>This indescribable time manifold is home to a vast civilization.</English>
+		<French>Cette variété de temps indescriptible abrite une vaste civilisation.</French>
+		<Russian>Ýòî íåîïèñóåìîå âðåìåííîå ìíîãîîáðàçèå ÿâëÿåòñÿ äîìîì äëÿ îãðîìíîé öèâèëèçàöèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Tag>
+		<English>True Vacuum</English>
+		<French>Vrai Vide</French>
+		<Russian>Èñòèííûé âàêóóì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TRUE_VACUUM_PEDIA</Tag>
+		<English>The true vacuum at a lower energy level than the false metastable vacuum.</English>
+		<French>Le vrai vide à un niveau d'énergie inférieur au faux vide métastable.</French>
+		<Russian>Èñòèííûé âàêóóì íà áîëåå íèçêîì óðîâíå ýíåðãèè, ÷åì ëîæíûé ìåòàñòàáèëüíûé âàêóóì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Tag>
+		<English>Venus Aerial Farm</English>
+		<French>Ferme aérienne de Vénus</French>
+		<Russian>Âåíåðèàí. àýðîôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Tag>
+		<English>A high-tech farm that floats on the clouds of Venus.</English>
+		<Russian>Âûñîêîòåõíîëîãè÷íàÿ ôåðìà, êîòîðàÿ ïàðèò ñðåäè îáëàêîâ Âåíåðû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Tag>
+		<English>Venus Surface Mine</English>
+		<French>Mine de surface de Vénus</French>
+		<Russian>Âåíåðèàí. øàõòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Tag>
+		<English>A mine on the surface of Venus. It is very challenging to build due to the intense heat, pressure, and corrosive atmosphere at the surface.</English>
+		<Russian>Øàõòà íà ïîâåðõíîñòè Âåíåðû. Ýòî êðàéíå ñëîæíî ïîñòðîèòü èç-çà âûñîêîé òåìïåðàòóðû, ýêñòðåìàëüíîãî äàâëåíèÿ è àãðåññèâíîé àòìîñôåðû ó ïîâåðõíîñòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CAPTURE_ASTEROID</Tag>
+		<English>Capture an asteroid</English>
+		<French>Capturer un astéroïde</French>
+		<Russian>Çàõâàò àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CAPTURE_ASTEROID_HELP</Tag>
+		<English>Capture an asteroid</English>
+		<French>Capturer un astéroïde</French>
+		<Russian>Çàõâàò àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
+		<English>Become Bulldozer</English>
+		<French>Convertir en Bulldozer</French>
+		<Russian>Ñáîðêà Êîìáàéíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
+		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
+		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
+		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
+		<English>Explore an Ancient Civilization</English>
+		<French>Explorer une civilization antique</French>
+		<Russian>Èçó÷àòü äðåâí. öèâèë.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION_HELP</Tag>
+		<English>Explore an ancient civilization</English>
+		<French>Explorer une civilization antique</French>
+		<Russian>Èçó÷åíèå äðåâí. öèâèëèçàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_ASTEROID</Tag>
+		<English>Explore an asteroid</English>
+		<French>Explorer un astéroïde</French>
+		<Russian>Èññëåä. àñòåðîèä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_ASTEROID_HELP</Tag>
+		<English>Explore an asteroid</English>
+		<French>Explorer un astéroïde</French>
+		<Russian>Исследовать астероид</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT</Tag>
+		<English>Explore Distant Cosmos</English>
+		<French>Explorer le cosmos lointain</French>
+		<Russian>Èññëåä. äàë. êîñìîñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS</Tag>
+		<English>Explore Distant Cosmos</English>
+		<French>Explorer le Cosmos lointain</French>
+		<Russian>Èññëåä. äàë. êîñìîñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS_HELP</Tag>
+		<English>Explore the distant cosmos</English>
+		<French>Explorer le cosmos distant</French>
+		<Russian>Èññëåäîâàíèå äàë. êîñìîñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_HELP</Tag>
+		<English>Explore the distant cosmos</English>
+		<French>Explorer le cosmos distant</French>
+		<Russian>Èññëåäîâàíèå äàëüíåãî êîñìîñà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_EUROPA</Tag>
+		<English>Explore Europa</English>
+		<French>Explorer la Lune Europe</French>
+		<Russian>Èññëåä. Åâðîïó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_EUROPA_HELP</Tag>
+		<English>Explore Europa</English>
+		<French>Explorer la Lune Europe</French>
+		<Russian>Èññëåäîâàíèå Åâðîïû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET</Tag>
+		<English>Explore an Exoplanet</English>
+		<French>Explore une exoplanète</French>
+		<Russian>Èññëåä. ýêçîïëàíåòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET_HELP</Tag>
+		<English>Explore an Exoplanet</English>
+		<French>Explore une exoplanète</French>
+		<Russian>Èññëåäîâàíèå Ýêçîïëàíåòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC</Tag>
+		<English>Explore Galactic Space</English>
+		<French>Explore l'espace galactique</French>
+		<Russian>Èññëåä. âíóòðèãàë. ïðîñòð.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE</Tag>
+		<English>Explore the Galactic Core</English>
+		<French>Explorer le cœur de la galaxie</French>
+		<Russian>Èññëåä. ãàëàêò. ÿäðî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE_HELP</Tag>
+		<English>Explore the galactic core.</English>
+		<French>Explorer le cœur de la galaxie</French>
+		<Russian>Èññëåäîâàíèå ãàëàêò. ÿäðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_HELP</Tag>
+		<English>Explore the far reaches of the galaxy</English>
+		<French>Explorer les confins de la galaxie</French>
+		<Russian>Èññëåäîâàíèå äàëüíèõ óãîëêîâ ãàëàêòèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE</Tag>
+		<English>Explore Hyperspace</English>
+		<French>Explorer l'hyperespace</French>
+		<Russian>Èññëåä. ãèïåðïð.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE_HELP</Tag>
+		<English>Explore hyperspace</English>
+		<French>Explorer l'hyperespace</French>
+		<Russian>Èññëåäîâàíèå ãèïåðïðîñòðàíñòâà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM</Tag>
+		<English>Explore Inner Solar System</English>
+		<French>Explorez le système solaire intérieur</French>
+		<Russian>Èññëåä. áëèæ. ïëàíåòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM_HELP</Tag>
+		<English>Explore the Inner Solar System</English>
+		<French>Explorer le système solaire intérieur</French>
+		<Russian>Èññëåäîâàíèå âíóòðåííèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC</Tag>
+		<English>Explore Intergalactic Space</English>
+		<French>Explorer l'espace intergalactique</French>
+		<Russian>Èññëåä. ìåæãàë. ïðîñòð.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC_HELP</Tag>
+		<English>Explore a 'nearby' galaxy</English>
+		<French>Explorer une galaxie proche</French>
+		<Russian>Èññëåäîâàíèå áëèçëåæàùåé ãàëàêòèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR</Tag>
+		<English>Explore Interstellar Space</English>
+		<French>Explorer l'espace interstellaire</French>
+		<Russian>Èññëåä. ìåæçâ. ïðîñò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_HELP</Tag>
+		<English>Explore the interstellar space near the Sun</English>
+		<Russian>Èññëåäîâàíèå ìåæçâåçäíîãî ïðîñòðàíñòâà âáëèçè Ñîëíå÷íîé ñèñòåìû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE</Tag>
+		<English>Search for Extrasolar Life</English>
+		<French>Rechercher de la Vie Extrasolaire</French>
+		<Russian>Ïîèñê âíåñîëí. æèçíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE_HELP</Tag>
+		<English>Search for life beyond the Solar System</English>
+		<French>Rechercher de la vie au-delà du Système solaire</French>
+		<Russian>Ïîèñê ìåæçâåçä. æèçíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_JUPITER</Tag>
+		<English>Explore Jupiter</English>
+		<French>Explorer Jupiter</French>
+		<Russian>Èññëåä. Þïèòåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_JUPITER_HELP</Tag>
+		<English>Explore Jupiter</English>
+		<French>Explorer Jupiter</French>
+		<Russian>Èññëåäîâàíèå Þïèòåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_KBO</Tag>
+		<English>Explore a Kuiper Belt Object</English>
+		<French>Explorer un objet de la Ceinture de Kuiper</French>
+		<Russian>Èññëåä. ÎÏÊ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_KBO_HELP</Tag>
+		<English>Explore a Kuiper Belt Object</English>
+		<French>Explorer un objet de la Ceinture de Kuiper</French>
+		<Russian>Èññëåäîâàíèå Îá. ïîÿñà Êîéïåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MARS</Tag>
+		<English>Explore Mars</English>
+		<French>Explorer Mars</French>
+		<Russian>Èññëåä. Ìàðñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MARS_HELP</Tag>
+		<English>Explore Mars</English>
+		<French>Explorer Mars</French>
+		<Russian>Èññëåäîâàíèå Ìàðñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MERCURY</Tag>
+		<English>Explore Mercury</English>
+		<French>Explorer Mercure</French>
+		<Russian>Èññëåä. Ìåðêóðèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MERCURY_HELP</Tag>
+		<English>Explore Mercury</English>
+		<French>Explorer Mercure</French>
+		<Russian>Èññëåäîâàíèå Ìåðêóðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON</Tag>
+		<English>Explore Moon</English>
+		<French>Explorer la Lune</French>
+		<Russian>Èññëåä. Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_HELP</Tag>
+		<English>Launch rover to the Moon</English>
+		<French>Lancer un rover sur la Lune</French>
+		<Russian>Çàïóñê ëóíîõîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Tag>
+		<English>Explore Moon Surface</English>
+		<French>Explorer la surface de la Lune</French>
+		<Russian>Èññëåä. ëóí. ïîâåðõíîñòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE_HELP</Tag>
+		<English>Explore the surface of the Moon</English>
+		<French>Explorer la surface de la Lune</French>
+		<Russian>Èññëåäîâàíèå ëóííîé ïîâåðõíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE</Tag>
+		<English>Explore Multiverse</English>
+		<French>Explorer le multiverse</French>
+		<Russian>Èññëåä. ìóëüòèâñåëåí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE_HELP</Tag>
+		<English>Explore the multiverse</English>
+		<French>Explorer le multivers</French>
+		<Russian>Èññëåäîâàíèå ìóëüòèâñåëåííîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_NEPTUNE</Tag>
+		<English>Explore Neptune</English>
+		<French>Explorer Neptune</French>
+		<Russian>Èññëåä. Íåïòóí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_NEPTUNE_HELP</Tag>
+		<English>Explore Neptune</English>
+		<French>Explorer Neptune</French>
+		<Russian>Èññëåäîâàíèå Íåïòóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD</Tag>
+		<English>Explore an Oort Cloud Object</English>
+		<French>Explorer un objet du Nuage d'Oort</French>
+		<Russian>Èññëåä. Îáë. Îîðòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD_HELP</Tag>
+		<English>Explore an Oort Cloud object</English>
+		<French>Explorer un objet du Nuage d'Oort</French>
+		<Russian>Èññëåäîâàíèå Îáëàêà Îîðòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Explore Outer Solar System</English>
+		<French>Explorez après le Système solaire</French>
+		<Russian>Èññëåä. âíåø. ïëàíåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM_HELP</Tag>
+		<English>Explore the Outer Solar System</English>
+		<French>Explorer l'extérieur du Système Solaire</French>
+		<Russian>Èññëåäîâàíèå âíåøíèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SATURN</Tag>
+		<English>Explore Saturn</English>
+		<French>Explorer Saturne</French>
+		<Russian>Èññëåä. Ñàòóðí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SATURN_HELP</Tag>
+		<English>Explore Saturn</English>
+		<French>Explorer Saturne</French>
+		<Russian>Èññëåäîâàíèå Ñàòóðíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SEDNOID</Tag>
+		<English>Explore a Sednoid Object</English>
+		<French>Explorer un Objet Sednoïde</French>
+		<Russian>Èññëåä. Ñåäíîèä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SEDNOID_HELP</Tag>
+		<English>Explore a Sednoid Object</English>
+		<French>Explorer un Objet Sednoïde</French>
+		<Russian>Èññëåäîâàíèå Ñåäíîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE</Tag>
+		<English>Search for Extraterrestrial Life</English>
+		<French>Rechercher de la vie extraterrestre</French>
+		<Russian>Ïîèñê âíåçåì. æèçíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE_HELP</Tag>
+		<English>Search for microbial life</English>
+		<French>Rechercher de la vie microbienne</French>
+		<Russian>Ïîèñê âíåçåì. ìèêðîáîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS1</Tag>
+		<English>Space Station Resupply (Lv. 1)</English>
+		<French>Station spatiale Resupply (Niv. 1)</French>
+		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 1)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS1_HELP</Tag>
+		<English>Resupply the Space Station</English>
+		<French>Resupply the Station spatiale</French>
+		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS2</Tag>
+		<English>Space Station Resupply (Lv. 2)</English>
+		<French>Station spatiale Resupply (Niv. 2)</French>
+		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 2)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS2_HELP</Tag>
+		<English>Resupply the Space Station</English>
+		<French>Resupply the Station spatiale</French>
+		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS3</Tag>
+		<English>Space Station Resupply (Lv. 3)</English>
+		<French>Station spatiale Resupply (Niv. 3)</French>
+		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 3)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_SS3_HELP</Tag>
+		<English>Resupply the Space Station</English>
+		<French>Resupply the Station spatiale</French>
+		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_TITAN</Tag>
+		<English>Explore Titan</English>
+		<French>Explorer Titan</French>
+		<Russian>Èññëåä. Òèòàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_TITAN_HELP</Tag>
+		<English>Explore Titan</English>
+		<French>Explorer Titan</French>
+		<Russian>Èññëåäîâàíèå Òèòàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN</Tag>
+		<English>Explore Transneptunian Space</English>
+		<French>Explorez l'espace transneptunien</French>
+		<Russian>Èññëåä. òðàíñíåï. êîñìîñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN_HELP</Tag>
+		<English>Explore the space in the Solar System beyond Neptune</English>
+		<French>Explorer l'espace dans le système solaire au-delà de Neptune</French>
+		<Russian>Èññëåäîâàíèå ïðîñòðàíñòâà Ñîëíå÷íîé ñèñòåìû çà ïðåäåëàìè îðáèòû Íåïòóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_URANUS</Tag>
+		<English>Explore Uranus</English>
+		<French>Explorer Uranus</French>
+		<Russian>Èññëåä. Óðàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_URANUS_HELP</Tag>
+		<English>Explore Uranus</English>
+		<French>Explorer Uranus</French>
+		<Russian>Èññëåäîâàíèå Óðàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_VENUS</Tag>
+		<English>Explore Venus</English>
+		<French>Explorer Vénus</French>
+		<Russian>Èññëåä. Âåíåðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_EXPLORE_VENUS_HELP</Tag>
+		<English>Explore Venus</English>
+		<French>Explorer Vénus</French>
+		<Russian>Èññëåäîâàíèå Âåíåðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE</Tag>
+		<English>Launch Satellite to Low-Earth Orbit</English>
+		<French>Lancement d'un satellite en orbite terrestre basse</French>
+		<Russian>Çàïóñê ñïóòíèêà (Îêîëîçåì. îðáèòà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR</Tag>
+		<English>Launch Satellite to Geosynchronous Orbit</English>
+		<French>Lancer un satellite en orbite géosynchrone</French>
+		<Russian>Çàïóñê ñïóòíèêà íà ãåîñèíõðîííóþ îðáèòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR_HELP</Tag>
+		<English>Launch a satellite into geosynchronous orbit or beyond</English>
+		<French>Lancer un satellite en orbite géosynchrone ou au-delà</French>
+		<Russian>Çàïóñòèòü ñïóòíèê íà ãåîñèíõðîííóþ îðáèòó èëè äàëüøå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_HELP</Tag>
+		<English>Launch a satellite into orbit</English>
+		<French>Lancer un satellite en orbite</French>
+		<Russian>Âûâåñòè ñïóòíèê íà îðáèòó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLANET_LAND</Tag>
+		<English>Land</English>
+		<French>Terre</French>
+		<Russian>Ñîâåðøèòü ïîñàäêó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLANET_LAND_HELP</Tag>
+		<English>Build a city</English>
+		<French>Construire une ville</French>
+		<Russian>Ñòðîèòü ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SAMPLE_STUDY</Tag>
+		<English>Analyze Mission Data</English>
+		<French>Analyser les Données de Mission</French>
+		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SAMPLE_STUDY_HELP</Tag>
+		<English>Analyze Mission Data</English>
+		<French>Analyser les Données de Mission</French>
+		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Tag>
+		<English>Upgrade to Cislunar Settler</English>
+		<French>Colon Upgrade to Cislunar</French>
+		<Russian>Óëó÷. äî ëóí. ïîñåëåíöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER_HELP</Tag>
+		<English>Upgrade to a Cislunar Settler</English>
+		<French>Colon Upgrade to a Cislunar</French>
+		<Russian>Óëó÷øèòü äî ëóííîãî ïîñåëåíöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER</Tag>
+		<English>Upgrade to Lunar Settler</English>
+		<French>Colon Upgrade to Lunar</French>
+		<Russian>Óëó÷. äî ëóí. êîëîíèñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER_HELP</Tag>
+		<English>Upgrade to a Lunar Settler</English>
+		<French>Colon Upgrade to a Lunar</French>
+		<Russian>Óëó÷øèòü äî ëóííîãî êîëîíèñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER</Tag>
+		<English>Upgrade to Planetary Settler</English>
+		<French>Colon Upgrade to Planetary</French>
+		<Russian>Óëó÷. äî ïëàíåò. êîëîíèñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER_HELP</Tag>
+		<English>Upgrade to a Planetary Settler</English>
+		<French>Colon Upgrade to a Planetary</French>
+		<Russian>Óëó÷øåíèå äî ïëàíåòàðíîãî êîëîíèñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_SS2</Tag>
+		<English>Upgrade Space Station to Level 2</English>
+		<French>Upgrade Station spatiale to Level 2</French>
+		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.2)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_SS2_HELP</Tag>
+		<English>Upgrade the Space Station</English>
+		<French>Upgrade the Station spatiale</French>
+		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_SS3</Tag>
+		<English>Upgrade Space Station to Level 3</English>
+		<French>Upgrade Station spatiale to Level 3</French>
+		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.3)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_UPGRADE_SS3_HELP</Tag>
+		<English>Upgrade the Space Station</English>
+		<French>Upgrade the Station spatiale</French>
+		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Èññëåäîâ. ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID_MESSAGE</Tag>
+		<English>Captured an Asteroid!</English>
+		<French>Asteroïde Capturé !</French>
+		<Russian>Àñòåðîèä çàõâà÷åí!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_ASTEROID</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_ASTEROID_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Do Research Mission</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_JMOON</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_JMOON_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON</Tag>
+		<English>Explore Moon</English>
+		<French>Explorer la Lune</French>
+		<Russian>Èññëåä. Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_MESSAGE</Tag>
+		<English>Rover launched!</English>
+		<French>Rover lancé !</French>
+		<Russian>Ëóíîõîä ïîåõàë!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE</Tag>
+		<English>Explore Moon</English>
+		<French>Explorer la Lune</French>
+		<Russian>Èññëåä. Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE_MESSAGE</Tag>
+		<English>One small step for man</English>
+		<French>Un petit pas pour l'homme</French>
+		<Russian>Îäèí ìàëåíüêèé øàã äëÿ ÷åëîâåêà...</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_PLANET</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_PLANET_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SEDNOID</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SEDNOID_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS1</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS1_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS2</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS2_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS3</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS3_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Íà÷àòü ìèññèþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE</Tag>
+		<English>Launch Satellite</English>
+		<French>Lancer un Satellite</French>
+		<Russian>Çàïóñê ñïóòíèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Tag>
+		<English>Launch Satellite</English>
+		<French>Lancer un Satellite</French>
+		<Russian>Çàïóñê ñïóòíèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR_MESSAGE</Tag>
+		<English>Liftoff!</English>
+		<French>Décollage !</French>
+		<Russian>Êëþ÷ íà ñòàðò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_MESSAGE</Tag>
+		<English>Liftoff!</English>
+		<French>Décollage !</French>
+		<Russian>Êëþ÷ íà ñòàðò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SAMPLE_STUDY</Tag>
+		<English>Do Research Mission</English>
+		<French>Faire une Mission de Recherche</French>
+		<Russian>Do Research Mission</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SAMPLE_STUDY_MESSAGE</Tag>
+		<English>Analysis Successful!</English>
+		<French>Analyse Réussie !</French>
+		<Russian>Àíàëèç çàâåðøåí!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER</Tag>
+		<English>Found a City</English>
+		<French>Fonder une Ville</French>
+		<Russian>Ñòðîèòü ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER_MESSAGE</Tag>
+		<English>Ready to Colonize!</English>
+		<French>Prêt à Coloniser !</French>
+		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER</Tag>
+		<English>Found a City</English>
+		<French>Fonder une Ville</French>
+		<Russian>Ñòðîèòü ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER_MESSAGE</Tag>
+		<English>Ready to Colonize!</English>
+		<French>Prêt à Coloniser !</French>
+		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER</Tag>
+		<English>Found a City</English>
+		<French>Fonder une Ville</French>
+		<Russian>Ñòðîèòü ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER_MESSAGE</Tag>
+		<English>Ready to Colonize!</English>
+		<French>Prêt à Coloniser !</French>
+		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2</Tag>
+		<English>Upgrade Space Station</English>
+		<French>Upgrade Station spatiale</French>
+		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3</Tag>
+		<English>Upgrade Space Station</English>
+		<French>Upgrade Station spatiale</French>
+		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Tag>
+		<English>Mission Successful!</English>
+		<French>Mission Réussie !</French>
+		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
+		<English>Will transform the Construction Ship into a Bulldozer.</English>
+		<French>Va Transformer le Vaisseau Spatial en Bulldozer.</French>
+		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Tag>
+		<English>Your Construction Ship was transformed into a Bulldozer.</English>
+		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
+		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Tag>
+		<English>Found a City</English>
+		<French>Fonder une Ville</French>
+		<Russian>Ñòðîèòü ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER_MESSAGE</Tag>
+		<English>City founded!</English>
+		<French>Ville fondée !</French>
+		<Russian>Ãîðîä áûë îñíîâàí!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_ASPATIAL_ROUTE</Tag>
+		<English>Aspatial Route</English>
+		<French>Route Aspatiale</French>
+		<Russian>Âíåïðîñòð. ìàðøðóò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Tag>
+		<English>Compact Wormhole</English>
+		<French>Compact Trou de Ver</French>
+		<Russian>Ìàëàÿ ÷åðâîòî÷èíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_HYPERLANE</Tag>
+		<English>Hyperlane</English>
+		<French>Hyperligne</French>
+		<Russian>Ãèïåðëàéí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
+		<English>Lunar Path</English>
+		<Russian>Лунная дорога</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE</Tag>
+		<English>Megawormhole</English>
+		<French>Méga-Trou de Ver</French>
+		<Russian>Áîëüøàÿ ÷åðâîòî÷èíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_ORBITAL_TRAJECTORY</Tag>
+		<English>Orbital Trajectory</English>
+		<French>Trajectoire Orbitale</French>
+		<Russian>Îðáèò. òðàåêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
+		<English>Planetary Maglev</English>
+		<Russian>Планетарный маглев</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Tag>
+		<English>Solar Trajectory</English>
+		<French>Trajectoire Solaire</French>
+		<Russian>Ñîëí. òðàåêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_WORMHOLE</Tag>
+		<English>Wormhole</English>
+		<French>Trou de Ver</French>
+		<Russian>×åðâîòî÷èíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD</Tag>
+		<English>Mission Reward (Ancient Civilization)</English>
+		<French>Retour de Mission (Ancient Civilization)</French>
+		<Russian>Ýôôåêò (Äðåâí. öèâèë.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD</Tag>
+		<English>Mission Reward (Asteroid)</English>
+		<French>Retour de Mission (Asteroid)</French>
+		<Russian>Ýôôåêò (Àñòåðîèä)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ATTACKSHIP</Tag>
+		<English>Attack Ship</English>
+		<French>Vaisseau d'Attaque</French>
+		<Russian>Ìåæïëàíåòíûé êîðâåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ATTACKSHIP_PEDIA</Tag>
+		<English>An attack ship for the solar system. Meant for invading O'Neill colonies.</English>
+		<French>Un Vaisseau d'attaque pour le système solaire. Destiné à envahir les colonies O'Neill.</French>
+		<Russian>Áîåâîé êîðàáëü äëÿ ñîëíå÷íîé ñèñòåìû. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèþ Î'Íèëà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM</Tag>
+		<English>Bacteria Swarm</English>
+		<French>Essain de bactéries</French>
+		<Russian>Áàêòåðèàëüíûé ðîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Tag>
+		<English>A swarm of bacteria that can cross interstellar voids.</English>
+		<Russian>Ðîé áàêòåðèé, êîòîðûå ìîãóò ïåðåñåêàòü ìåæçâåçäíûå ïóñòîòû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE</Tag>
+		<English>Bracewell Probe</English>
+		<French>Sonde Bracewell</French>
+		<Russian>Çîíä Áðåéñâåëëà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE_PEDIA</Tag>
+		<English>A Bracewell probe to explore the galaxy. This is a self-replicating, artificially intelligent device.</English>
+		<French>Une sonde Bracewell pour explorer la galaxie. Il s'agit d'un appareil à réplication automatique et artificiellement intelligent.</French>
+		<Russian>Çîíä äëÿ èññëåäîâàíèÿ ãàëàêòèêè. Ýòî ñàìîâîñïðîèçâîäÿùååñÿ, èñêóññòâåííî èíòåëëåêòóàëüíîå óñòðîéñòâî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID</Tag>
+		<English>Captured Asteroid</English>
+		<French>Astéroide capturé</French>
+		<Russian>Çàõâà÷åííûé àñòåðîèä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID_PEDIA</Tag>
+		<English>An asteroid captured for economic use.</English>
+		<French>Un astéroïde capturé à des fins économiques.</French>
+		<Russian>Àñòåðîèä, çàõâà÷åííûé äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAPTURED_COMET</Tag>
+		<English>Captured Comet</English>
+		<French>Comète capturée</French>
+		<Russian>Çàõâà÷åííàÿ êîìåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAPTURED_COMET_PEDIA</Tag>
+		<English>An comet captured for economic use.</English>
+		<French>Une comète capturée à des fins économiques.</French>
+		<Russian>Êîìåòà, çàõâà÷åííàÿ äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP</Tag>
+		<English>Chronoforming Ship</English>
+		<French>Vaisseau Chronomorphe</French>
+		<Russian>Õðîíîôîðìåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP_PEDIA</Tag>
+		<English>The Chronoformimg Ship is capable of manipulating space and time, creating portals outside of ordinary spacetime.</English>
+		<French>Le Vaisseau Chronomorphe est capable de manipuler l'espace et le temps, créant des portails en dehors de l'espace-temps ordinaire.</French>
+		<Russian>Êîðàáëü-õðîíîôîðìåð ñïîñîáåí ìàíèïóëèðîâàòü ïðîñòðàíñòâîì è âðåìåíåì, ñîçäàâàÿ ïîðòàëû âíå îáû÷íîãî ïðîñòðàíñòâà-âðåìåíè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER</Tag>
+		<English>Cislunar Settler</English>
+		<French>Colon Cislunaire</French>
+		<Russian>Ëóííûé ïîñåëåíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in Cislunar Space</English>
+		<French>[ICON_BULLET]Peut construire les Villes de l'espace cislunaire</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà è êîëîíèè â îêîëîëóííîì ïðîñòðàíñòâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Tag>
+		<English>Cislunar Infantry</English>
+		<French>Infanterie Cislunaire</French>
+		<Russian>Ëóííàÿ îõðàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY_PEDIA</Tag>
+		<English>Basic defender for cislunar colonies.</English>
+		<French>Défenseur de base des colonies cislunaires.</French>
+		<Russian>Îñíîâíîé çàùèòíèê ëóííûõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER</Tag>
+		<English>Cislunar Invasion Force</English>
+		<French>Force d'invasion Cislunaire</French>
+		<Russian>Ëóííûé øòóðìîâèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER_PEDIA</Tag>
+		<English>An attack ship for cislunar space. Meant for invading space stations.</English>
+		<French>Un Vaisseau d'attaque pour l'espace cislunaire. Destiné à envahir les stations spatiales.</French>
+		<Russian>Øòóðìîâîé êîðàáëü äëÿ îêîëîëóííîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ íà êîñìè÷åñêèå ñòàíöèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD</Tag>
+		<English>Mission Reward (Cislunar)</English>
+		<French>Retour de Mission (Cislunar)</French>
+		<Russian>Ýôôåêò (Îêîëîëóí.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD_PEDIA</Tag>
+		<English>A reward from exploring cislunar space</English>
+		<French>Une récompense de l'exploration de l'espace cislunaire space</French>
+		<Russian>Íàãðàäà îò èçó÷åíèÿ îêîëîëóííîãî ïðîñòðàíñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CISLUNAR_WORKER</Tag>
+		<English>Cislunar Workship</English>
+		<French>Vaisseau-atelier Cislunaire</French>
+		<Russian>Ëóííûé ðàáî÷èé äðîí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Tag>
+		<English>Construction Ship</English>
+		<French>Vaisseau de construction
+		</French>
+		<Russian>Ñòðîèòåëüíûé ìîäóëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
+		<English>Cosmic Worker</English>
+		<French>Ouvrier Cosmique</French>
+		<Russian>Àñòðîèíæåíåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COSMIC_WORKER_PEDIA</Tag>
+		<English>This highly advanced worker can freely move about all terrains and build almost anything in space.</English>
+		<French>Cet Ouvrier très avancé peut se déplacer librement sur tous les terrains et construire presque n'importe quoi dans l'espace.</French>
+		<Russian>Ýòîò âûñîêîïðîôåññèîíàëüíûé ðàáîòíèê ìîæåò ñâîáîäíî ïåðåäâèãàòüñÿ ïî ëþáîé ìåñòíîñòè è ñòðîèòü ïðàêòè÷åñêè âñå â êîñìîñå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW</Tag>
+		<English>Cosmic Work Crew</English>
+		<French>Equipage d'ouvriers Cosmic</French>
+		<Russian>Áðèãàäà àñòðîðàáîòíèêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Tag>
+		<English>Cybernetic Work Crew</English>
+		<French>Equipage d'ouvriers Cybernetic</French>
+		<Russian>Áðèãàäà êèáåððàáî÷èõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Tag>
+		<English>Deep Space Infantry</English>
+		<French>Infanterie de l'Espace lointain</French>
+		<Russian>Ïëàíåòàðíûé îõðàííèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_PEDIA</Tag>
+		<English>Basic defender for solar system colonies.</English>
+		<French>Défenseur de base pour les colonies du système solaire.</French>
+		<Russian>Îñíîâíîé çàùèòíèê êîëîíèé Ñîëíå÷íîé ñèñòåìû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Tag>
+		<English>Mission Reward (Distant Cosmos)</English>
+		<French>Retour de Mission (Distant Cosmos)</French>
+		<Russian>Ýôôåêò (Äàëüíèé êîñìîñ)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY</Tag>
+		<English>Energy Swarm</English>
+		<French>Essaim d'énergie</French>
+		<Russian>Ñãóñòîê ýíåðãèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY_PEDIA</Tag>
+		<English>A swarm of energy that can cross interdimensional voids.</English>
+		<French>Un essaim d'énergie qui peut traverser des vides interdimensionnels.</French>
+		<Russian>Ýíåðãåòè÷åñêèé ñãóñòîê, êîòîðûé ìîæåò ïåðåñåêàòü ìåæïðîñòðàíñòâåííûå ïóñòîòû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EUROPA_REWARD</Tag>
+		<English>Mission Reward (Europa)</English>
+		<French>Retour de Mission (Europa)</French>
+		<Russian>Ýôôåêò (Åâðîïà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EUROPA_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïîÿñà àñòåðîèäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD</Tag>
+		<English>Mission Reward (Exoplanet)</English>
+		<French>Retour de Mission (Exoplanet)</French>
+		<Russian>Ýôôåêò (Ýêçîïëàíåòà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Tag>
+		<English>Mission Reward (Galactic Core)</English>
+		<French>Retour de Mission (Galactic Core)</French>
+		<Russian>Ýôôåêò (ßäðî ãàëàêò.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ëóí ãàçîâûõ ãèãàíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD</Tag>
+		<English>Mission Reward (Galactic)</English>
+		<French>Retour de Mission (Galactic)</French>
+		<Russian>Ýôôåêò (Ãàëàêòè÷.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD_PEDIA</Tag>
+		<English>A reward from exploring galactic space</English>
+		<French>Une récompense de l'exploration de l'espace galactic space</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ðóêàâîâ Ìëå÷íîãî ïóòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET</Tag>
+		<English>Heavy Rocket</English>
+		<French>Fusée Lourde</French>
+		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
+		<English>Hyperintelligent Work Crew</English>
+		<French>Equipage d'ouvriers Hyperintelligent</French>
+		<Russian>Áðèãàäà íîîñàïèåíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSHIP</Tag>
+		<English>Hyperseedship</English>
+		<French>HyperVaisseau-Colonisateur</French>
+		<Russian>Ãèïåðêîðàáëü-ìàòêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSHIP_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans l'espace extragalactique, le Cosmos lointain et l'Hyperespace. Lors de la colonisation, le terrain se transforme en hyperespace</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà âî âíåãàëàêòè÷åñêîì êîñìîñå, äàëüíåì êîñìîñå è ãèïåðïðîñòðàíñòâå[NEWLINE][ICON_BULLET]Ïîñëå çàñåëåíèÿ ïðåâðàùàåò ìåñòíîñòü â ãèïåðïðîñòðàíñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Tag>
+		<English>Hyperspace Defender</English>
+		<French>Défenseur de l'Hyperespace</French>
+		<Russian>Çâåçäíûé ïîãðàíè÷íèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_PEDIA</Tag>
+		<English>Basic defensive unit for hyperspace colonies.</English>
+		<French>Unité basique défensive pour les colonies d'hyperespace.</French>
+		<Russian>Çàùèòíûé îòðÿä äëÿ êîëîíèé â ãèïåðêîñìîñå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD</Tag>
+		<English>Mission Reward (Hyperspace)</English>
+		<French>Retour de Mission (Hyperespace)</French>
+		<Russian>Ýôôåêò (Ãèïåðêîñìîñ)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Tag>
+		<English>Neutronium Battlecruiser</English>
+		<French>Croiseur de Bataille à Neutronium</French>
+		<Russian>Íåéòðîííûé òÿæ. êðåéñåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Tag>
+		<English>The ultimate offensive unit. Can traverse any territory.</English>
+		<French>L'unité offensive ultime. Peut traverser n'importe quel territoire.</French>
+		<Russian>Ñàìàÿ ïðîäâèíóòàÿ íàñòóïàòåëüíàÿ åäèíèöà. Ìîæåò ïåðåñå÷ü ëþáóþ òåððèòîðèþ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Tag>
+		<English>Mission Reward (Inner Solar System)</English>
+		<French>Retour de Mission (Inner Solar System)</French>
+		<Russian>Ýôôåêò (Âíóòð. ïëàíåòû)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_PEDIA</Tag>
+		<English>A reward from exploring the inner Solar System</English>
+		<French>Une récompense de l'exploration de l'intérieur du Système solaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Tag>
+		<English>Interdimensional Probe</English>
+		<French>Sonde Interdimensional</French>
+		<Russian>Ìåæïðîñòðàíñòâåííûé çîíä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Tag>
+		<English>The Interdimensional Probe can explore hyperspace and other exotic locations.</English>
+		<Russian>Ìåæïðîñòðàíñòâåííûé çîíä ìîæåò èññëåäîâàòü ãèïåðïðîñòðàíñòâî è äðóãèå ýêçîòè÷åñêèå ëîêàöèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Tag>
+		<English>Mission Reward (Intergalactic)</English>
+		<French>Retour de Mission (Intergalactic)</French>
+		<Russian>Ýôôåêò (Ìåæãàëàêò.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD_PEDIA</Tag>
+		<English>A reward from exploring intergalactic space</English>
+		<French>Une récompense de l'exploration de l'espace intergalactic space</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæãàëàêòè÷åñêîãî ïðîñòðàíñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Tag>
+		<English>Mission Reward (Interstellar Life)</English>
+		<French>Retour de Mission (Interstellar Life)</French>
+		<Russian>Ýôôåêò (Ìåæçâåçäí.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Òèòàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Tag>
+		<English>Interstellar Probe</English>
+		<French>Sonde Interstellar</French>
+		<Russian>Ìåæçâåçäíûé çîíä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Tag>
+		<English>An interstellar probe to explore nearby stars</English>
+		<Russian>Ìåæçâåçäíûé çîíä äëÿ èññëåäîâàíèÿ áëèæàéøèõ çâåçä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Tag>
+		<English>Mission Reward (Interstellar)</English>
+		<French>Retour de Mission (Interstellar)</French>
+		<Russian>Ýôôåêò (Ìåæçâåçä.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD_PEDIA</Tag>
+		<English>A reward from exploring interstellar space</English>
+		<French>Une récompense de l'exploration de l'espace interstellaire space</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Tag>
+		<English>Interstellar Workcraft</English>
+		<French>Vaisseau-ouvrier Interstellaire</French>
+		<Russian>Ìåæçâåçäíûé èíæåíåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Tag>
+		<English>Worker in interstellar space</English>
+		<French>in interstellaire space Ouvrier</French>
+		<Russian>Ðàáî÷èé ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER</Tag>
+		<English>Interstellar Battlecruiser</English>
+		<French>Croiseur Interstellaire</French>
+		<Russian>Çâåçäíûé êðåéñåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER_PEDIA</Tag>
+		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
+		<French>Un navire d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
+		<Russian>Øòóðìîâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INT_INVADER</Tag>
+		<English>Interstellar Invader</English>
+		<French>Envahisseur Interstellaire</French>
+		<Russian>Ìåæçâåçäíûé øòóðìîâèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INT_INVADER_PEDIA</Tag>
+		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
+		<French>Un vaisseau d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
+		<Russian>Îñíîâíîé áîåâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JUPITER_REWARD</Tag>
+		<English>Mission Reward (Jupiter)</English>
+		<French>Retour de Mission (Jupiter)</French>
+		<Russian>Ýôôåêò (Þïèòåð)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JUPITER_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KBO_REWARD</Tag>
+		<English>Mission Reward (KBO)</English>
+		<French>Retour de Mission (KBO)</French>
+		<Russian>Ýôôåêò (Ìàëûå ëóíû)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KBO_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIFE_SWARM</Tag>
+		<English>Life Swarm</English>
+		<French>Essaim vivant</French>
+		<Russian>Ñåìÿ Æèçíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIFE_SWARM_PEDIA</Tag>
+		<English>A swarm of advanced life that can cross intergalactic voids.</English>
+		<French>Un essaim de vie avancée qui peut traverser des vides intergalactiques.</French>
+		<Russian>Ðîé ïðîäâèíóòûõ ôîðì æèçíè, êîòîðûé ìîæåò ïåðåñåêàòü ìåæãàëàêòè÷åñêèå ïóñòîòû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LOE_REWARD</Tag>
+		<English>Mission Reward (Low Earth Orbit)</English>
+		<French>Retour de Mission (Orbite terrestre basse)</French>
+		<Russian>Äîáû÷à (íèçê. çåìí. îðáèòà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LOE_REWARD_PEDIA</Tag>
+		<English>A reward for completing orbital exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration orbitale</French>
+		<Russian>Íàãðàäà çà çàâåðøåíèå èññëåäîâàíèÿ îðáèòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNARSETTLER</Tag>
+		<English>Lunar Settler</English>
+		<French>Colon Lunaire</French>
+		<Russian>Ëóííûé êîëîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
+		<English>Lunar Bulldozer</English>
+		<French>Bulldozer lunaire</French>
+		<Russian>Ëóííûé êîìáàéí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Tag>
+		<English>Early lunar worker dedicated to resource extraction.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
+		<English>Lunar Infantry</English>
+		<French>Infanterie lunaire</French>
+		<Russian>Ëóííàÿ ïåõîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY_PEDIA</Tag>
+		<English>Basic unit for lunar colonies.</English>
+		<French>Unité de base pour les colonies lunaires.</French>
+		<Russian>Îñíîâíîé ïåõîòíûé îòðÿä ëóííûõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_REWARD</Tag>
+		<English>Mission Reward (Lunar)</English>
+		<French>Retour de Mission (Lunar)</French>
+		<Russian>Ýôôåêò (Ëóíà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_REWARD_PEDIA</Tag>
+		<English>A reward from exploring the Moon</English>
+		<French>Une récompense de l'exploration de la Lune</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ëóíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
+		<English>Lunar Rover</English>
+		<French>Véhicule Lunaire</French>
+		<Italian>Rover lunare</Italian>
+		<Polish>Łazik Księżycowy</Polish>
+		<Russian>Ëóíîõîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
+		<English>Lunar Exploration Unit.</English>
+		<Italian>Unità da esplorazione lunare.</Italian>
+		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_WORKER</Tag>
+		<English>Lunar Worker</English>
+		<French>Ouvrier Lunaire</French>
+		<Russian>Ëóííûé ðàáî÷èé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER</Tag>
+		<English>Magsail Worker</English>
+		<French>Ouvrier Magsail</French>
+		<Russian>Ìàãíèòíûé ïàðóñíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER_PEDIA</Tag>
+		<English>Better space worker.</English>
+		<French>Ouvrier spatial amélioré.</French>
+		<Russian>Áîëåå ïðîäâèíóòûé òèï êîñìè÷åñêîãî ðàáîòíèêà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARSSETTLER</Tag>
+		<English>Martian Settler</English>
+		<French>Colon Martien</French>
+		<Russian>Ìàðñèàíñêèé êîëîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARS_REWARD</Tag>
+		<English>Mission Reward (Mars)</English>
+		<French>Retour de Mission (Mars)</French>
+		<Russian>Ýôôåêò (Ìàðñ)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARS_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ïëàíåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY</Tag>
+		<English>Martian Infantry</English>
+		<French>Infanterie Martienne</French>
+		<Russian>Ìàðñèàíñêàÿ ïåõîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY_PEDIA</Tag>
+		<English>Basic unit for Martian colonies.</English>
+		<French>Unité de base pour les colonies martiennes.</French>
+		<Russian>Îñíîâíàÿ ïåõîòà äëÿ ìàðñèàíñêèõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARTIAN_WORKER</Tag>
+		<English>Martian Worker</English>
+		<French>Ouvrier Martien</French>
+		<Russian>Ìàðñèàíñêèé ðàáî÷èé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MERCURY_REWARD</Tag>
+		<English>Mission Reward (Mercury)</English>
+		<French>Retour de Mission (Mercury)</French>
+		<Russian>Ýôôåêò (Ìåðêóðèé)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MERCURY_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ïîÿñà Êîéïåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD</Tag>
+		<English>Mission Reward (Multiverse)</English>
+		<French>Retour de Mission (Multiverse)</French>
+		<Russian>Ýôôåêò (Âñåëåííàÿ)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ýêçîïëàíåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NANOWORKER</Tag>
+		<English>Nanoworker</English>
+		<French>Nano-ouvrier</French>
+		<Russian>Íàíîáîò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NANOWORKER_PEDIA</Tag>
+		<English>Advanced worker. A swarm of solar-powered nanobots that can move freely throughout the Solar System.</English>
+		<French>Ouvrier avancé. Un essaim de nanobots à énergie solaire qui peuvent se déplacer librement dans tout le système solaire.</French>
+		<Russian>Ïðîäâèíóòûé ðàáîòíèê. Ðîé íàíîáîòîâ íà ñîëíå÷íîé ýíåðãèè, êîòîðûå ìîãóò ñâîáîäíî ïåðåìåùàòüñÿ ïî âñåé Ñîëíå÷íîé ñèñòåìå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD</Tag>
+		<English>Mission Reward (Neptune)</English>
+		<French>Retour de Mission (Neptune)</French>
+		<Russian>Ýôôåêò (Íåïòóí)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ Îáëàêà Îîðòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ONEILLSETTLER</Tag>
+		<English>Deep Space Settler</English>
+		<French>Colon Espace lointain</French>
+		<Russian>Êîñìè÷åñêèé êîëîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ONEILLSETTLER_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in the solar system</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le système solaire</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä â ïðåäåëàõ Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Tag>
+		<English>Mission Reward (Oort Cloud)</English>
+		<French>Retour de Mission (Oort Cloud)</French>
+		<Russian>Ýôôåêò (Îáëàêî Îîðòà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Tag>
+		<English>Mission Reward (Outer Solar System)</English>
+		<French>Retour de Mission (Outer Solar System)</French>
+		<Russian>Ýôôåêò (Âíåø. ïëàíåòû)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_PEDIA</Tag>
+		<English>A reward from exploring the outer Solar System</English>
+		<French>Une récompense de l'exploration deouter Solar System</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îêðàèí Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER</Tag>
+		<English>Planetary Settler</English>
+		<French>Colon Planétaire</French>
+		<Russian>Ïëàíåòàðíûé êîëîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities on Mars and Venus</English>
+		<French>[ICON_BULLET]Peut construire les Villes sur Mars et Vénus</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä íà ìàðñèàíñêîé èëè âåíåðèàíñêîé ïîâåðõíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY</Tag>
+		<English>Planetary Infantry</English>
+		<French>Infanterie planétaire</French>
+		<Russian>Êîñìîäåñàíòíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY_PEDIA</Tag>
+		<English>Basic unit for planetary colonies.</English>
+		<French>Unité de base pour les colonies planétaires.</French>
+		<Russian>Ñòàíäàðòíûé îòðÿä äëÿ äàëüíèõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANET_PROBE</Tag>
+		<English>Interplanetary Probe</English>
+		<French>Sonde Interplanétaire</French>
+		<Russian>Ìåæïëàíåòíûé çîíä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLANET_PROBE_PEDIA</Tag>
+		<English>An interplanetary probe to explore the Solar System</English>
+		<French>Une sonde interplanétaire pour explorer le système solaire</French>
+		<Russian>Ìåæïëàíåòíûé çîíä äëÿ èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Tag>
+		<English>Posthuman Work Crew</English>
+		<French>Equipage d'ouvriers Posthuman</French>
+		<Russian>Áðèãàäà ïîñòëþäåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE</Tag>
+		<English>Quantum Probe</English>
+		<French>Sonde Quantum</French>
+		<Russian>Êâàíòîâûé çîíä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Tag>
+		<English>The Quantum Probe uses quantum ramjet technology to break the boundaries of the observable universe.</English>
+		<Russian>Êâàíòîâûé çîíä èñïîëüçóåò òåõíîëîãèþ êâàíòîâîãî ÏÂÐÄ, ÷òîáû ïðåîäîëåòü ãðàíèöû íàáëþäàåìîé âñåëåííîé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SATELLITE</Tag>
+		<English>Satellite</English>
+		<French>Satellite</French>
+		<Russian>Ñïóòíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SATELLITE_PEDIA</Tag>
+		<English>This is a satellite, your first unit that can go into space.</English>
+		<French>Il s'agit d'un satellite, votre première unité qui peut aller dans l'espace.</French>
+		<Russian>Ñïóòíèê ÿâÿëåòñÿ âàøèì ñàìûì ïåðâûì þíèòîì â áëèæíåì êîñìîñå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SATURN_REWARD</Tag>
+		<English>Mission Reward (Saturn)</English>
+		<French>Retour de Mission (Saturn)</French>
+		<Russian>Ýôôåêò (Ñàòóðí)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SATURN_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ â ãèïåðêîñìîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD</Tag>
+		<English>Mission Reward (Sednoid)</English>
+		<French>Retour de Mission (Sednoid)</French>
+		<Russian>Ýôôåêò (Ñåäíîèä)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ìóëüòèâñåëåííîé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Tag>
+		<English>Shapeshifting Work Crew</English>
+		<French>Equipage d'ouvriers Shapeshifting</French>
+		<Russian>Áðèãàäà ïîëèìîðôîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER</Tag>
+		<English>Solar Sail Worker</English>
+		<French>Ouvrier Solar Sail</French>
+		<Russian>Ñîëíå÷íûé ïàðóñíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER_PEDIA</Tag>
+		<English>Earliest space worker.</English>
+		<French>Les premiers ouvriers spatiaux.</French>
+		<Russian>Ñàìûé ðàííèé ðàáîòíèê áëèæíåãî êîñìîñà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Tag>
+		<English>Mission Reward (Solar System Life)</English>
+		<French>Retour de Mission (Solar System Life)</French>
+		<Russian>Ýôôåêò (Ñîëí. ñèñòåìà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ àðòåôàêòîâ ïîãèáøèõ êñåíîöèâèëèçàöèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_WORKER</Tag>
+		<English>Solar Workship</English>
+		<French>Vaisseau-atelier Solaire</French>
+		<Russian>Ñîëíå÷íûé äðîí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
+		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE][COLOR_YELLOW]You need to play on custom scenario (Space Map - ...) to use space units![COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE</Tag>
+		<English>Space Shuttle</English>
+		<French>Navette Spatiale</French>
+		<Russian>Êîñìè÷åñêèé ÷åëíîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE_PEDIA</Tag>
+		<English>This is a space shuttle. Its primary job is construction and resupply of your space stations.</English>
+		<French>Ceci est une navette spatiale. Son travail principal est la construction et le réapprovisionnement de vos stations spatiales.</French>
+		<Russian>Ýòî êîñìè÷åñêèé ÷åëíîê. Åãî îñíîâíàÿ ðàáîòà - ñòðîèòåëüñòâî è ñíàáæåíèå âàøèõ êîñìè÷åñêèõ ñòàíöèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW</Tag>
+		<English>Space Work Crew</English>
+		<French>Equipage d'ouvriers de l'espace</French>
+		<Russian>Áðèãàäà êîñìîðàáî÷èõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS1_REWARD</Tag>
+		<English>Mission Reward (Space Station Lv. 1)</English>
+		<French>Retour de Mission (Station spatiale Niv. 1)</French>
+		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 1)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS1_REWARD_PEDIA</Tag>
+		<English>A reward from your Low Earth Orbit space station</English>
+		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
+		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS2_REWARD</Tag>
+		<English>Mission Reward (Space Station Lv. 2)</English>
+		<French>Retour de Mission (Station spatiale Niv. 2)</French>
+		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 2)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS2_REWARD_PEDIA</Tag>
+		<English>A reward from your Low Earth Orbit space station</English>
+		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
+		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS3_REWARD</Tag>
+		<English>Mission Reward (Space Station Lv. 3)</English>
+		<French>Retour de Mission (Station spatiale Niv. 3)</French>
+		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 3)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SS3_REWARD_PEDIA</Tag>
+		<English>A reward from your Low Earth Orbit space station</English>
+		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
+		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
+		<English>Mission Reward (Titan)</English>
+		<French>Retour de Mission (Titan)</French>
+		<Russian>Ýôôåêò (Òèòàí)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TITAN_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ìèðîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Tag>
+		<English>Transhuman Work Crew</English>
+		<French>Equipage d'ouvriers Transhuman</French>
+		<Russian>Áðèãàäà òðàíñëþäåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_PEDIA</Tag>
+		<English>These brave workers go out into space.</English>
+		<French>Ces braves ouvriers sortent dans l'espace.</French>
+		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Tag>
+		<English>Mission Reward (Transneptunian)</English>
+		<French>Retour de Mission (Transneptunian)</French>
+		<Russian>Ýôôåêò (Òðàíñíåïòóí.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Tag>
+		<English>A reward from exploring Transneptunian space</English>
+		<French>Une récompense de l'exploration de l'espace Transneptunian space</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ çà îðáèòîé Íåïòóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_URANUS_REWARD</Tag>
+		<English>Mission Reward (Uranus)</English>
+		<French>Retour de Mission (Uranus)</French>
+		<Russian>Ýôôåêò (Óðàí)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_URANUS_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY</Tag>
+		<English>Venus Infantry</English>
+		<French>Infanterie de Vénus</French>
+		<Russian>Âåíåðèàíñêàÿ ïåõîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY_PEDIA</Tag>
+		<English>Basic unit for Venus colonies.</English>
+		<French>Unité de base pour les colonies de Vénus.</French>
+		<Russian>Áàçîâûé îòðÿä äëÿ âåíåðèàíñêèõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_REWARD</Tag>
+		<English>Mission Reward (Venus)</English>
+		<French>Retour de Mission (Vénus)</French>
+		<Russian>Ýôôåêò (Âåíåðà)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_REWARD_PEDIA</Tag>
+		<English>A reward for completing planetary exploration</English>
+		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
+		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_SETTLER</Tag>
+		<English>Venus Settler</English>
+		<French>Colon Vénus</French>
+		<Russian>Âåíåðèàíñêèé êîëîíèñò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VENUS_WORKER</Tag>
+		<English>Venus Worker</English>
+		<French>Ouvrier Vénus</French>
+		<Russian>Âåíåðèàíñêèé ðàáî÷èé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Tag>
+		<English>Von Neumann Probe</English>
+		<French>Sonde Von Neumann</French>
+		<Russian>Çîíä Íåéìàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VON_NEUMANN_PROBE_PEDIA</Tag>
+		<English>The Von Neumann probe is more advanced than the Bracewell probe. It can seed life and travel to nearby galaxies.</English>
+		<French>La sonde Von Neumann est plus avancée que la sonde Bracewell. Il peut semer la vie et voyager dans les galaxies voisines.</French>
+		<Russian>Çîíä ôîí Íåéìàíà áîëåå ïðîäâèíóò, ÷åì çîíä Áðåéñâåëëà. Îí ìîæåò ñåÿòü æèçíü è ïóòåøåñòâîâàòü â áëèçëåæàùèå ãàëàêòèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVI</Tag>
+		<English>Warlord General</English>
+		<French>Général de l'espace</French>
+		<Russian>Ïîëêîâîäåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVII</Tag>
+		<English>Warlord Marshal</English>
+		<French>Marschal spatial</French>
+		<Russian>Ìàðøàë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVIII</Tag>
+		<English>Warlord Overlord</English>
+		<French>Suzerain Spatial</French>
+		<Russian>Ýêçàðõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVIIIS</Tag>
+		<English>Captured Overlord</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVIIS</Tag>
+		<English>Captured Marshal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WARLORDVIS</Tag>
+		<English>Captured General</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP</Tag>
+		<English>Worldship</English>
+		<French>Vaisseau-monde</French>
+		<Russian>Ïåðåñåëåí÷. çâåçäîëåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP2</Tag>
+		<English>Genetic Seedship</English>
+		<French>Vaisseau-Colonisateur Génétique</French>
+		<Russian>Êîðàáëü Ïîêîëåíèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP2_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in the Orion Arm and Milky Way</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le bras d'Orion et la Voie lactée</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â ðóêàâå Îðèîíà â ãàëàêòèêå Ìëå÷íûé Ïóòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP3</Tag>
+		<English>Alcubierre Seedship</English>
+		<French>Vaisseau-Colonisateur Alcubierre</French>
+		<Russian>Çâåçäîëåò Àëüêóáüåððå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP3_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in the Milky Way and Universe</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â îñòàëüíîé ÷àñòè Ìëå÷íîãî Ïóòè è ïðî÷èõ ãàëàêòèêàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP4</Tag>
+		<English>Quantum Seedship</English>
+		<French>Vaisseau-Colonisateur Quantique</French>
+		<Russian>Êâàíòîâûé êîðàáëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP4_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in the Universe and beyond</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans l'Univers, et plus loin</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæíî ñòðîèòü ãîðîäà â ëþáîì ñåêòîðå Âñåëåííîé è çà åå ïðåäåëàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Tag>
+		<English>Worldship Defender</English>
+		<French>Vaisseau-monde de Défense</French>
+		<Russian>Çâåçäíûé ïàòðóëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_PEDIA</Tag>
+		<English>Basic defender for worldship colonies.</English>
+		<French>Défenseur de base pour les colonies du Vaisseau-Monde.</French>
+		<Russian>Îñíîâíîé çàùèòíûé îòðÿä äàëüíèõ êîëîíèé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains.[NEWLINE]Interstellar and Stellar colonies are completely different.</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
+		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
+	</TEXT>
+</Civ4GameText>

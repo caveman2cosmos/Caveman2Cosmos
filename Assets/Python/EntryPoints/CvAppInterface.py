@@ -12,7 +12,6 @@
 # DONT ADD ANY MORE IMPORTS HERE - Moose
 from CvPythonExtensions import *
 
-#Afforess
 def AddSign(argsList):
 	import EventSigns
 	EventSigns.addSign(argsList[0], argsList[1], argsList[2])
@@ -21,10 +20,8 @@ def RemoveSign(argsList):
 	import EventSigns
 	CyEngine().removeSign(argsList[0], argsList[1])
 	EventSigns.gSavedSigns.removeSign(argsList[0], argsList[1])
-#Afforess End
 
-# Should be changed to initBUG() with no arguments needed.
-def forceBUGModuleInit(argsList):
+def initBUG():
 	import BugInit
 	BugInit.init()
 
@@ -43,6 +40,8 @@ def onSave():
 	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
+	import CvScreensInterface
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	import CvEventInterface
 	loadDataStr = argsList[0]
 	if loadDataStr:
@@ -50,16 +49,15 @@ def onLoad(argsList):
 		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
 
 def preGameStart():
-	import CvEventInterface
-	CvEventInterface.getEventManager().fireEvent("PreGameStart")
+	#import CvEventInterface
+	#CvEventInterface.getEventManager().fireEvent("PreGameStart")
 	import CvScreensInterface
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	CvScreensInterface.showMainInterface()
 
 def recalculateModifiers():
-	import BugGameUtils
-	BugGameUtils.getDispatcher().getBaseUtils().reset()
-	#import CvEventInterface
-	#CvEventInterface.getEventManager().reset()
+	import CvRandomEventInterface
+	CvRandomEventInterface.recalculateModifiers()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO
@@ -173,18 +171,9 @@ def getOptionINT(argsList):
 	except:
 		return default
 
-def gameStartSave():
-	autoSave("[Start]")
-
-def gameEndSave():
-	autoSave("[End]")
-
 def gameExitSave():
-	autoSave("[Exit]")
-
-def autoSave(prefix):
 	import AutoSave
-	AutoSave.autoSave(prefix)
+	AutoSave.autoSave("[Exit]")
 
 # Referenced by the BtS exe.
 def getConsoleMacro(argsList): return ""

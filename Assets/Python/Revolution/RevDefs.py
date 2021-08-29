@@ -31,9 +31,6 @@ sXMLSpiritual = 'TRAIT_SPIRITUAL'
 # Goodies
 sXMLGoodyMap = 'GOODY_MAP'
 
-# Improvements
-sXMLFort = 'IMPROVEMENT_FORT'
-
 # Terrain
 sXMLOcean = "TERRAIN_OCEAN"
 sXMLCoast = "TERRAIN_COAST"
@@ -63,7 +60,7 @@ def initRevIdxHistory( ) :
 	global revIdxHistKeyList
 
 	revIdxHist = dict()
-	for key in revIdxHistKeyList :
+	for key in revIdxHistKeyList:
 		revIdxHist[key] = [0]
 
 	return revIdxHist
@@ -151,7 +148,9 @@ class RevoltData:
 
 ## ---------- Revolution constants ---------- ##
 # Changing these values is not recommended
-revReadyFrac = .6
+revReadyDividend = 3
+revReadyDivisor = 5
+revReadyFrac = 0.6 # result of the two above, used by game text only, no OOS danger.
 revInstigatorThreshold = 1000
 alwaysViolentThreshold = 1700
 badLocalThreshold = 10
@@ -177,11 +176,6 @@ pickHumanPopup = 7052
 changeCivPopup = 7060
 changeHumanPopup = 7061
 updateGraphicsPopup = 7062
-
-## ---------- Misc defines ---------- ##
-
-# Popup ids
-EventKeyDown=6
 
 #RevolutionDCM
 ## ---------- RevWatch defines ---------- ##

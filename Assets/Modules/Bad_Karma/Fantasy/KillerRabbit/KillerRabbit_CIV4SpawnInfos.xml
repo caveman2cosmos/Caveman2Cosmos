@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- -->
-<!-- Spawn Infos -->
 <Civ4SpawnInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
 		<SpawnInfo>
 			<Type>SPAWN_KILLERRABBIT_BASE</Type>
 			<UnitType>UNIT_KILLERRABBIT</UnitType>
-			<PlayerType>49</PlayerType>
-			<iTurns>15</iTurns>
+			<PlayerType>41</PlayerType>
+			<iTurns>100</iTurns>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>KILLERRABBIT_SPAWN_MODIFIER</rateOverrideDefineName>

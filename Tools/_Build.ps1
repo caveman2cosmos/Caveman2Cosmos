@@ -1,6 +1,4 @@
 $TARGET = $args[0] + "-build"
-$FBUILD_ARGS = ("-summary", "-wait", "-wrapper")
-# $FBUILD_ARGS = ("-summary", "-wait", "-wrapper", "-cache", "-showcmds", "-verbose", "-showdeps")
 $CWD = Get-Location
 $BUILD_DIR = Join-Path -Path $CWD -ChildPath "..\Build" -Resolve
 $TARGET_DIR = Join-Path -Path $BUILD_DIR -ChildPath $args[0]
@@ -8,6 +6,9 @@ $DLL_PATH = Join-Path -Path $TARGET_DIR -ChildPath "CvGameCoreDLL.dll"
 $PDB_PATH = Join-Path -Path $TARGET_DIR -ChildPath "CvGameCoreDLL.pdb"
 $DEPLOY_DIR = Join-Path -Path $CWD -ChildPath "..\Assets" -Resolve
 $FBUILD = Join-Path -Path $CWD -ChildPath "..\Tools\FBuild.exe" -Resolve
+$FDB_PATH = Join-Path -Path $TARGET_DIR -ChildPath "CvGameCoreDLL.fdb"
+$FBUILD_ARGS = ("-summary", "-wait", "-wrapper", "-graphdb", "$FDB_PATH", "-continueafterdbmove")
+# $FBUILD_ARGS = ("-summary", "-wait", "-wrapper", "-cache", "-showcmds", "-verbose", "-showdeps")
 
 # "Target = $TARGET"
 # "FBUILD_ARGS = $FBUILD_ARGS"

@@ -6,9 +6,8 @@
 ##
 ## Author: Zappara
 
-from CvPythonExtensions import *
+from CvPythonExtensions import CyGlobalContext, GameOptionTypes
 import BugOptionsTab
-gc = CyGlobalContext()
 
 class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
@@ -16,145 +15,91 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "RoMSettings", "Caveman2Cosmos")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
-		control = None
-		bCanAdjustSettings = not gc.getGame().isGameMultiPlayer() or gc.getGame().getActivePlayer() == 0
+		GC = CyGlobalContext()
+		GAME = GC.getGame()
+		bCanAdjustSettings = not GAME.isGameMultiPlayer() or GAME.getActivePlayer() == 0
 
-		self.createResourceDisplayPanel(screen, left)
-		self.addSpacer(screen, left, "General1")
+		#Flexible Difficulty
+		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
 
-			#Flexible Difficulty
-		control = self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, left, "RoMSettings__EnableFlexibleDifficulty")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMinimumDiff", False, "LAYOUT_LEFT")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMaximumDiff", False, "LAYOUT_LEFT")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyTurnIncrements", False, "LAYOUT_LEFT")
+		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__EnableFlexibleDifficulty"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyTurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__FlexibleDifficultyAI"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
-		control = self.addCheckbox(screen, left, "RoMSettings__FlexibleDifficultyAI")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		#control = self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMinRank", False, "LAYOUT_LEFT")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		#control = self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMaxRank", False, "LAYOUT_LEFT")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT")
+		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
 
-		control = self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT")
+		#Reset Settings
+		self.addSpacer(screen, left, "")
+		self.addCheckbox(screen, left, "RoMSettings__RoMReset")
 
 		#City Management
 		self.addLabel(screen, center, "RoMSettings__CityManagement")
-		control = self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__ShowCoastalBuildings")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__HideObsoleteBuildings")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
-		#screen.setEnabled(control, bCanAdjustSettings)
 
-		self.addCheckbox(screen, center, "RoMSettings__HideUnconstructableBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUntrainableUnits")
+		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+
+		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
 
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")
 
-		control = self.addCheckbox(screen, center, "RoMSettings__CanNotClaimOcean")
-		screen.setEnabled(control, bCanAdjustSettings)
+		self.addCheckbox(screen, center, "RoMSettings__ShowCivTraits")
 
-		control = self.addCheckbox(screen, center, "RoMSettings__ShowCivTraits")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__NoFriendlyPillaging")
-		#screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__HideUnavailableBuilds")
-		#screen.setEnabled(control, bCanAdjustSettings)
+		self.addCheckbox(screen, center, "RoMSettings__HideUnavailableBuilds")
 
-		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
-			control = self.addCheckbox(screen, center, "RoMSettings__ShowRevCivics")
-			#screen.setEnabled(control, bCanAdjustSettings)
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+			self.addCheckbox(screen, center, "RoMSettings__ShowRevCivics")
 
-		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_PERSONALIZED_MAP):
-			control = self.addCheckbox(screen, center, "RoMSettings__UseLandmarkNames")
-			#screen.setEnabled(control, bCanAdjustSettings)
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_PERSONALIZED_MAP):
+			self.addCheckbox(screen, center, "RoMSettings__UseLandmarkNames")
 
-		control = self.addCheckbox(screen, center, "RoMSettings__EventImages")
-		control = self.addCheckbox(screen, center, "RoMSettings__StrategicEvents")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, center, "RoMSettings__IgnoreDisabledBuildingAlerts")
-		control = self.addCheckbox(screen, center, "RoMSettings__NoProductionPopup")
+		self.addCheckbox(screen, center, "RoMSettings__EventImages")
 
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__StrategicEvents"), bCanAdjustSettings)
+
+		self.addCheckbox(screen, center, "RoMSettings__IgnoreDisabledBuildingAlerts")
+		self.addCheckbox(screen, center, "RoMSettings__NoProductionPopup")
+
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__InfrastructureIgnoresImprovements"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__CanNotClaimOcean"), bCanAdjustSettings)
+
+		self.addCheckbox(screen, center, "RoMSettings__NoFriendlyPillaging")
 
 		#Game Settings
 		self.addLabel(screen, right, "RoMSettings__GameSettings")
-		control = self.addCheckbox(screen, right, "RoMSettings__DefenderWithdraw")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__DepletionMod")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__BetterAirInterception")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__BattlefieldPromotions")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__ImprovedXP")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__WarPrizes")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__InfrastructureIgnoresImprovements")
-		screen.setEnabled(control, bCanAdjustSettings)
 
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__DefenderWithdraw"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__DepletionMod"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BetterAirInterception"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BattlefieldPromotions"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ImprovedXP"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__WarPrizes"), bCanAdjustSettings)
 
-		if (gc.getInfoTypeForStringWithHiddenAssert("VICTORY_TOTAL") > 0 and gc.getGame().isVictoryValid(gc.getInfoTypeForString("VICTORY_TOTAL"))):
-			control = self.addCheckbox(screen, right, "RoMSettings__MercyRule")
-			screen.setEnabled(control, bCanAdjustSettings)
+		if GC.getInfoTypeForStringWithHiddenAssert("VICTORY_TOTAL") > 0 and GAME.isVictoryValid(GC.getInfoTypeForString("VICTORY_TOTAL")):
+			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
 
-		control = self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__NoStorms")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addIntDropdown(screen, right, right, "RoMSettings__MaxRebaseRange")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addIntDropdown(screen, right, right, "RoMSettings__MaxUnitsPerTile")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__TerrainDamage")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__AllowTerraforming")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__Reforestation")
-		screen.setEnabled(control, bCanAdjustSettings)
-		control = self.addCheckbox(screen, right, "RoMSettings__SeaTunnels")
-		screen.setEnabled(control, bCanAdjustSettings)
-		if (gc.getGame().isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS)):
-			control = self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding")
-			screen.setEnabled(control, bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoStorms"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 
-		#self.addTextDropdown(screen, right, right, "RoMSettings__AliveCivilization", False, "LAYOUT_LEFT")
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxRebaseRange"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxUnitsPerTile"), bCanAdjustSettings)
 
-		if (gc.getGame().isGameMultiPlayer()):
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TerrainDamage"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AllowTerraforming"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__Reforestation"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__SeaTunnels"), bCanAdjustSettings)
+
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS):
+			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)
+
+		if GAME.isGameMultiPlayer():
 			self.addCheckbox(screen, right, "RoMSettings__PlayWaitingAlertSound")
 			self.addIntDropdown(screen, right, right, "RoMSettings__PlayWaitingAlertSoundTimer")
-
-
-		#Reset Settings
-		self.addSpacer(screen, left, "General2")
-		self.addCheckbox(screen, left, "RoMSettings__RoMReset")
-
-	def createResourceDisplayPanel(self, screen, panel):
-		self.addLabel(screen, panel, "RiseOfMankindOptions", "Rise of Mankind options:")
-		self.addCheckboxTextDropdown(screen, panel, panel, "RoMSettings__RoMResourceBar", "RoMSettings__RoMResourceBar_Types")
-		self.addCheckbox(screen, panel, "RoMSettings__TechTreeEraColors")
-
-
-		#col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "RoM_Resource_options")
-		#self.addLabel(screen, left, "RoMSettings__Resource_amounts", ResourceOptionsTitle)
-		#self.addCheckbox(screen, col1, "RoMSettings__RoMResourceBar")
-
-		#screen.attachHSeparator(left, left + "SepInterface1")
-		#screen.attachHSeparator(right, right + "SepInterface2")
-
-		

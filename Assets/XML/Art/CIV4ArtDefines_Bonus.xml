@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!-- These entries should be ordered alphabetically. -->
-<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unmique font icon -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unique font icon -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BonusArtInfos>
 		<BonusArtInfo>
@@ -1000,11 +999,20 @@
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ANCIENT_RELICS</Type>
-			<fScale>0.08</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/LostCiv1/oldtemple.nif</NIF>
 			<KFM></KFM>
 			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,2,2</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MACHU_PICCHU_PLANS</Type>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
 			<FontButtonIndex>90</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

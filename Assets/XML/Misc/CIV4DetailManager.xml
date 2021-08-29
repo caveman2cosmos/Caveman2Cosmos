@@ -1,9 +1,5 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Detail Manager -->
-<!-- Deines level-o-detail controllers or Cbiv4 graphical elements -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Defines level-of-detail controllers or Cbiv4 graphical elements -->
 <!-- Useful hint: values in this file can be changed on the fly (i.e. effects will be noticeable w/o restarting the game) -->
 <DetailManagerInfos xmlns="x-schema:CIV4DetailManagerSchema.xml">
 	<Fader>
@@ -202,10 +198,10 @@
 		<Key>10000, 3</Key>
 	</Fader>
 	<!-- PlotBuilder node priority is computed in one of two ways:
-		   1) By the distance of the node from the center of the plot
-		   2) By the minimum distnace of one of the node's corners to the plot cente
-		 At F_PLOTBUILDER_PBLEND=0.0, the first metric will dominate node priority and at
-		 F_PLOTBUILDER_PBLEND=1.0, the second will dominate. -->
+		1) By the distance of the node from the center of the plot
+		2) By the minimum distnace of one of the node's corners to the plot cente
+		At F_PLOTBUILDER_PBLEND=0.0, the first metric will dominate node priority and at
+		F_PLOTBUILDER_PBLEND=1.0, the second will dominate. -->
 	<Fader>
 		<Name>F_PLOTBUILDER_PBLEND</Name>
 		<Value>.5</Value>
@@ -229,12 +225,12 @@
 		<Value>0</Value>
 	</Fader>
 	<!-- the following three parameters control how the Civ4 globe is lit.
-	     Since the size and position of the globe varies from map to map, it is necessary
-	     for these values to vary somewhat from map-to-map. This is accomplished with a fader whose
-	     X values are the "world size" and the Y values are the resulting value for that world size.
-	     Generally speaking, common values for world sizes are 7000 in the case of small maps to 15000 for large maps.
-	     The general rule, however, is hand-tuning: just tweak these numbers for different keyings to get the effect you want
-	     -->
+		Since the size and position of the globe varies from map to map, it is necessary
+		for these values to vary somewhat from map-to-map. This is accomplished with a fader whose
+		X values are the "world size" and the Y values are the resulting value for that world size.
+		Generally speaking, common values for world sizes are 7000 in the case of small maps to 15000 for large maps.
+		The general rule, however, is hand-tuning: just tweak these numbers for different keyings to get the effect you want
+	-->
 	<Fader>
 		<!-- maps from current globe radius to lighting angle -->
 		<Name>GLOBE_SPOTLIGHT_ANGLE</Name>

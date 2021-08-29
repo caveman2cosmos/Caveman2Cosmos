@@ -108,7 +108,6 @@ Each file can have multiple sections.
 from CvPythonExtensions import *
 import BugConfig
 import BugInit
-import BugPath
 import SystemPaths as SP
 import BugUtil
 import ColorUtil
@@ -170,7 +169,7 @@ class IniFile(object):
 		self.config.addInitialComment("")
 		self.config.addInitialComment(BugUtil.getPlainText("TXT_KEY_BUG_CREATED_BY_HEADER"))
 		self.config.addInitialComment()
-		defaultHeader = BugUtil.getPlainText("TXT_KEY_BUG_DEFAULT") + ": "
+		defaultHeader = BugUtil.getPlainText("TXT_WORD_DEFAULT") + ": "
 		for option in self.options:
 			if not option.isParameterized():
 				section = self.getSection(option.getSection())
@@ -305,7 +304,7 @@ class Options(object):
 			if mainini.fileExists():
 				mainini.read()
 				testValue = mainini.getInt("Main", "Unit Icon Size", default=None)
-				# if the test value doesn't exist at all then we need to clear the user settings so they will get 
+				# if the test value doesn't exist at all then we need to clear the user settings so they will get
 				# recreated from scratch (legacy settings upgrade)
 				if not testValue:
 					print "Options.initUserSettings - test value not found in BUG Main Interface.ini, resetting UserSettings directory"
@@ -357,7 +356,7 @@ class Options(object):
 		file = open(self.versionFilePath, 'w')
 		file.write(str(Options.VERSION))
 		file.close()
-		
+
 	def write(self):
 		"""Writes each IniFile that is dirty."""
 		if self.isLoaded():

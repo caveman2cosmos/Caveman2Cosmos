@@ -1,84 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Unit art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BEASTMASTER_ANCIENT</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Beastmaster_Anc/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Beastmaster_Anc/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BEASTMASTER_MEDIEVAL</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_medieval.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Beastmaster_Med/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Beastmaster_Med/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_ANCIENT</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Anc/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_FEMALE_BEASTMASTER_MEDIEVAL</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/beastmaster_female.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</NIF>
-			<KFM>Art/Units/Warlord_Ancient/Warlord_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Female_Beastmaster_Med/Warlord_Ancient_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Bip01 Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
-		</UnitArtInfo>
-
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AARDVARK</Type>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
@@ -154,7 +76,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BEAR</Type>
-        		<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
+			<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Bear/Bear.nif</NIF>
@@ -222,7 +144,7 @@
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<NIF>Art/Units/Animals/Bison/Bison.nif</NIF>
 			<KFM>Art/Units/Animals/Bison/Bison.kfm</KFM>
-			<SHADERNIF></SHADERNIF>
+			<SHADERNIF/>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
 				<ShadowAttachNode>Spine</ShadowAttachNode>
@@ -274,7 +196,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BUFFALO</Type>
+			<Type>ART_DEF_UNIT_BUFFALO_CAPE</Type>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
 			<fScale>25.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
@@ -683,8 +605,6 @@
 			<fBattleDistance>0.45</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_ELEPHANT</SelectionSound>
-			<ActionSound>AS3D_UN_ELEPHANT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_EMU</Type>
@@ -799,8 +719,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_GORILLA</SelectionSound>
-			<ActionSound>AS3D_UN_GORILLA</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GREATWHITE</Type>
@@ -2296,7 +2214,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAIMAN</Type>
+			<Type>ART_DEF_UNIT_CAIMAN_BLACK</Type>
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
 			<fScale>9.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
@@ -2465,7 +2383,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/Units/mttapir.dds</Button>
 			<fScale>30.0</fScale>
@@ -2513,7 +2431,7 @@
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
- 		<UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_MOUNTAIN_TAPIR</Type>
 			<Button>Art/Interface/Buttons/units/sparth/tamed_tapir.dds</Button>
 			<fScale>30.0</fScale>
@@ -3023,8 +2941,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_HORSE</SelectionSound>
 			<ActionSound>AS3D_UN_HORSE</ActionSound>

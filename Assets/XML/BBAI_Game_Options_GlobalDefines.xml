@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Game options for new features in Better BTS AI -->
 <!-- by jdog5000 -->
-<!-- -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<!-- Better BTS AI: Use new air combat mechanics -->
@@ -15,22 +13,22 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Conquest victory strategy logic if conquest victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Conquest victory strategy logic if conquest victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_CONQUEST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Domination victory strategy logic if domination victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Domination victory strategy logic if domination victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_DOMINATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Culture victory strategy logic if culture victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Culture victory strategy logic if culture victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Better BTS AI: Allow AI to use Diplomacy victory strategy logic if diplomacy victory is enabled  -->
+		<!-- Better BTS AI: Allow AI to use Diplomacy victory strategy logic if diplomacy victory is enabled -->
 		<DefineName>BBAI_VICTORY_STRATEGY_DIPLOMACY</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -38,32 +36,5 @@
 		<!-- Better BTS AI: Vassals of human player build some extra military units (recommended for multiplayer only) -->
 		<DefineName>BBAI_HUMAN_VASSAL_WAR_BUILD</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Better BTS AI: Changes behavior of defensive pacts (Def: 0) :
-			0 : Default BETTER BTS: If a member of a pact DOWS, only they loose their pact(s) and only they are at war.
-					Other pacts agreements between non-aggressive members remain intact. If however an external aggressor attacks a pact,
-					the directly involved members of the pact retaliate with war but their pact is cancelled and must renegotiated.
-					Note that all other uninvolved pacts that were in place between the retaliating parties, are cancelled at that time as well.
-			1 : Defensive pacts are multi-party capable pacts that do not cancel when a pact member is DOWED on and all members DOW on the aggressor.  However if a particular aggressor in the pact DOWs, he looses his defense pact and only that member is at war. All other aggreements in the defense party remain intact.
-			2 : Offensive pacts: Defensive pacts do not cancel when a pact member is DOWED on, and do not cancel if any pact member DOWS either (multi-party offensive and defensive pacts)
-		 -->
-		<DefineName>BBAI_DEFENSIVE_PACT_BEHAVIOR</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Better BTS AI: Allows human player to offer themselves as vassal to an AI.  The AI has been taught to value this appropriately.  (Def: 0) -->
-		<DefineName>BBAI_HUMAN_AS_VASSAL_OPTION</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Fuyu: Changes behavior of unit capturing for AI players (Def: 1) :
-			0 : Default BTS: Workers are mostly destroyed if an AI player captures them.
-			1 : Workers are only destroyed if an AI player captures them from a human player,
-				only rare worker destruction in AI vs AI wars.
-			2 : AI always captures workers, never kills them.
-		 -->
-		<DefineName>BBAI_UNIT_CAPTURE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>

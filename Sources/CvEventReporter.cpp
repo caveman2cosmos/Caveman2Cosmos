@@ -1,4 +1,15 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvEventReporter.h"
+#include "CvGlobals.h"
+#include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
+#include "CvPathGenerator.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 #include "FInputDevice.h"
 
 //
@@ -122,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()
@@ -156,7 +167,7 @@ void CvEventReporter::init()
 
 void CvEventReporter::update(float fDeltaTime)
 {
-	m_kPythonEventMgr.reportUpdate(fDeltaTime);
+	// Toffer - Called by exe every frame, might be useful.
 }
 
 void CvEventReporter::unInit()
@@ -169,9 +180,14 @@ void CvEventReporter::gameStart()
 	m_kPythonEventMgr.reportGameStart();
 }
 
-void CvEventReporter::gameEnd()
+void CvEventReporter::gameEnd(int iGameTurn)
 {
-	m_kPythonEventMgr.reportGameEnd();
+	m_kPythonEventMgr.reportGameEnd(iGameTurn);
+}
+
+void CvEventReporter::mapRegen()
+{
+	m_kPythonEventMgr.reportMapRegen();
 }
 
 void CvEventReporter::beginGameTurn(int iGameTurn)
@@ -365,11 +381,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
 	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
-void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
 }
 
 void CvEventReporter::unitCreated(CvUnit *pUnit)
@@ -653,16 +664,9 @@ void CvEventReporter::writeStatistics(FDataStreamBase* pStream)
 {
 	m_kStatistics.write(pStream);
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
-void CvEventReporter::addTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded)
+
+void CvEventReporter::changeTeam(TeamTypes eOld, TeamTypes eNew)
 {
-	m_kPythonEventMgr.reportAddTeam(eIndex0, eIndex1, bAdded);
+	m_kPythonEventMgr.reportChangeTeam(eOld, eNew);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/

@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvPopupInfo.h"
 
 CvPopupInfo::CvPopupInfo(ButtonPopupTypes eButtonPopupType, int iData1, int iData2, int iData3, int iFlags, bool bOption1, bool bOption2) :
 	m_iData1(iData1),
@@ -142,7 +143,7 @@ void CvPopupInfo::setButtonPopupType(ButtonPopupTypes eValue)
 	m_eButtonPopupType = eValue;
 }
 
-void CvPopupInfo::setText(const wchar* pszText)
+void CvPopupInfo::setText(const wchar_t* pszText)
 {
 	m_szText = pszText;
 }
@@ -173,7 +174,7 @@ void CvPopupInfo::setPythonModule(const char* pszModule)
 	m_szPythonModule = pszModule;
 }
 
-void CvPopupInfo::addPythonButton(const wchar* szText, const char* szArt)
+void CvPopupInfo::addPythonButton(const wchar_t* szText, const char* szArt)
 {
 	CvPopupButtonPython button;
 	button.szText = szText;

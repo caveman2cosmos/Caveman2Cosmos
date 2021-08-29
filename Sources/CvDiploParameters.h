@@ -4,7 +4,8 @@
 
 #include "LinkedList.h"
 //#include "CvStructs.h"
-#include "FVariableSystem.h"
+
+class FVariable;
 
 class CvDiploParameters
 {
@@ -45,9 +46,9 @@ public:
 	DllExport bool getOurOffering() const;
 	DllExport void setTheirOffering(bool bValue);
 	DllExport bool getTheirOffering() const;
-	DllExport void setChatText(const wchar* szText);
-	DllExport const wchar* getChatText() const;
-	const std::vector<FVariable>& getDiploCommentArgs() const { return m_diploCommentArgs; }
+	DllExport void setChatText(const wchar_t* szText);
+	DllExport const wchar_t* getChatText() const;
+	//const std::vector<FVariable>& getDiploCommentArgs() const { return m_diploCommentArgs; }
 
 	DllExport void read(FDataStreamBase& stream);
 	DllExport void write(FDataStreamBase& stream) const;

@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Composite texts: Those TXT keys are procedurally concatenated by DLL and or Python. Those place signs on map. -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_BAY_0</Tag>
+		<English>Bay of %s1</English>
+		<French>Baie de %s1</French>
+		<German>%s1-Bucht</German>
+		<Italian>Baia di %s1</Italian>
+		<Spanish>Bahía de %s1</Spanish>
+		<Polish>Zatoki %s1</Polish>
+		<Russian>Áóõòà %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_BAY_1</Tag>
+		<English>Gulf of %s1</English>
+		<French>Golfe de %s1</French>
+		<German>Golf von %s1</German>
+		<Italian>Golfo di %s1</Italian>
+		<Spanish>Golfo de %s1</Spanish>
+		<Polish>Zatoka %s1</Polish>
+		<Russian>Çàëèâ %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_BAY_2</Tag>
+		<English>Sea of %s1</English>
+		<French>Mer de %s1</French>
+		<German>%s1-Meer</German>
+		<Italian>Mare di %s1</Italian>
+		<Spanish>Mar de %s1</Spanish>
+		<Polish>Morze %s1</Polish>
+		<Russian>Ìîðå %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_DESERT_0</Tag>
+		<English>%s1 Desert</English>
+		<French>Désert %s1</French>
+		<German>Wüste %s1</German>
+		<Italian>Deserto %s1</Italian>
+		<Spanish>Desierto %s1</Spanish>
+		<Polish>Pustynia %s1</Polish>
+		<Russian>%s1 Ïóñòûíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_FOREST_0</Tag>
+		<English>Forest of %s1</English>
+		<French>Forêt de %s1</French>
+		<German>%s1-Wald</German>
+		<Italian>Foresta di %s1</Italian>
+		<Spanish>Bosque de %s1</Spanish>
+		<Polish>Las %s1</Polish>
+		<Russian>Ëåñ %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_FOREST_1</Tag>
+		<English>%s1 Forest</English>
+		<French>Forêt %s1</French>
+		<German>%s1-Forst</German>
+		<Italian>Foresta %s1</Italian>
+		<Spanish>Bosque %s1</Spanish>
+		<Polish>Las %s1</Polish>
+		<Russian>%s1 ëåñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_JUNGLE_0</Tag>
+		<English>Jungle of %s1</English>
+		<French>Jungle de %s1</French>
+		<German>Dschungel von %s1</German>
+		<Italian>Giungla di %s1</Italian>
+		<Spanish>Jungla de %s1</Spanish>
+		<Polish>Dżungla %s1</Polish>
+		<Russian>Äæóíãëè %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_JUNGLE_1</Tag>
+		<English>%s1 Jungle</English>
+		<French>Jungle %s1</French>
+		<German>%s1-Dschungel</German>
+		<Italian>Giungla %s1</Italian>
+		<Spanish>Jungla %s1</Spanish>
+		<Polish>Dżungla %s1</Polish>
+		<Russian>%s1 äæóíãëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_JUNGLE_2</Tag>
+		<English>Rainforest of %s1</English>
+		<French>Forêt pluviale de %s1</French>
+		<German>%s1-Urwald</German>
+		<Italian>Foresta pluviale di %s1</Italian>
+		<Spanish>Selva de %s1</Spanish>
+		<Polish>Lasy Deszczowe %s1</Polish>
+		<Russian>Òðîïè÷åñêèé ëåñ %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_JUNGLE_3</Tag>
+		<English>%s1 Rainforest</English>
+		<French>Forêt pluviale %s1</French>
+		<German>%s1-Regenwald</German>
+		<Italian>Foresta pluviale %s1</Italian>
+		<Spanish>Selva %s1</Spanish>
+		<Polish>Lasy Deszczowe %s1</Polish>
+		<Russian>%s1 òðîïè÷åñêèé ëåñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_LAKE_0</Tag>
+		<English>%s1 Lake</English>
+		<French>Lac %s1</French>
+		<German>%s1-See</German>
+		<Italian>Lago %s1</Italian>
+		<Spanish>Lago %s1</Spanish>
+		<Polish>Jezioro %s1</Polish>
+		<Russian>%s1 îçåðî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_LAKE_1</Tag>
+		<English>Lake %s1</English>
+		<French>Lac %s1</French>
+		<German>%s1-Teich</German>
+		<Italian>Lago di %s1</Italian>
+		<Spanish>Lago %s1</Spanish>
+		<Polish>Jezioro %s1</Polish>
+		<Russian>Îçåðî %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_MOUNTAINS_0</Tag>
+		<English>%s1 Mountains</English>
+		<French>Montagnes %s1</French>
+		<German>%s1-Gebirge</German>
+		<Italian>Montagne %s1</Italian>
+		<Spanish>Sierra %s1</Spanish>
+		<Polish>Góry %s1</Polish>
+		<Russian>%s1 ãîðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_MOUNTAINS_1</Tag>
+		<English>%s1 Mountain Range</English>
+		<French>Chaîne de Montagne %s1</French>
+		<German>%s1-Bergland</German>
+		<Italian>Catena montuosa %s1</Italian>
+		<Spanish>Cordillera %s1</Spanish>
+		<Polish>Pasmo Górskie %s1</Polish>
+		<Russian>%s1 ãîðíàÿ öåïü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_PEAK_0</Tag>
+		<English>Mt. %s1</English>
+		<French>Pic %s1</French>
+		<German>Großer %s1</German>
+		<Spanish>Monte %s1</Spanish>
+		<Polish>Góra %s1</Polish>
+		<Russian>ãîð. %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK_PEAK_1</Tag>
+		<English>%s1 Mountain</English>
+		<French>Montagne %s1</French>
+		<German>%s1-Berg</German>
+		<Italian>Montagna %s1</Italian>
+		<Spanish>Montaña %s1</Spanish>
+		<Polish>Góra %s1</Polish>
+		<Russian>%s1 ãîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_APPLESEED_1</Tag>
+		<English>apple trees</English>
+		<French>pommiers</French>
+		<German>Apfelbäume</German>
+		<Italian>Meli</Italian>
+		<Spanish>manzanos</Spanish>
+		<Polish>jabłonie</Polish>
+		<Russian>ÿáëî÷íûå äåðåâüÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_BANANA_BLIGHT_1</Tag>
+		<English>banana blight</English>
+		<French>plaie à la banane</French>
+		<German>Bananen-F#228;ule</German>
+		<Italian>Virus della banana</Italian>
+		<Spanish>plaga de plátanos</Spanish>
+		<Polish>bananowa zaraza</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_BLACK_PEARLS_1</Tag>
+		<English>black pearls</English>
+		<French>perles noires</French>
+		<German>schwarze Perlen</German>
+		<Italian>Perle nere</Italian>
+		<Spanish>perlas negras</Spanish>
+		<Polish>czarne perły</Polish>
+		<Russian>÷åðíûé æåì÷óã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_CLUNKER_COAL_1</Tag>
+		<English>impurities</English>
+		<French>impuretés</French>
+		<German>Verunreinigungen</German>
+		<Italian>impurità</Italian>
+		<Spanish>impurezas</Spanish>
+		<Polish>zanieczyszczenia</Polish>
+		<Russian>ïðèìåñè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_COTTON_IRRIGATION_1</Tag>
+		<English>cotton irrigation</English>
+		<French>irrigation cotonnière</French>
+		<German>Baumwollbew#228;sserung</German>
+		<Italian>Irrigazione del cotone</Italian>
+		<Spanish>irrigación del algodón</Spanish>
+		<Polish>irygacja bawełny</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_FORTY_THIEVES_1</Tag>
+		<English>local legend</English>
+		<French>légende locale</French>
+		<German>örtliche Legende</German>
+		<Italian>Leggenda locale</Italian>
+		<Spanish>leyenda local</Spanish>
+		<Polish>lokalna legenda</Polish>
+		<Russian>ìåñòíàÿ ëåãåíäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_GREAT_BEAST_1</Tag>
+		<English>great beast</English>
+		<French>Enorme animal</French>
+		<German>riesiges Tier</German>
+		<Italian>Grande animale</Italian>
+		<Spanish>gran bestia</Spanish>
+		<Polish>wielka bestia</Polish>
+		<Russian>îãðîìíûé çâåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_HARDY_CROPS_1</Tag>
+		<English>hardy crops</English>
+		<French>récoltes robustes</French>
+		<German>z#228;hes Getreide</German>
+		<Italian>Colture robuste</Italian>
+		<Spanish>cosechas robustas</Spanish>
+		<Polish>wytrzymałe uprawy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_1</Tag>
+		<English>medicine</English>
+		<French>médicament</French>
+		<German>Medizin</German>
+		<Italian>Medicine</Italian>
+		<Spanish>medicina</Spanish>
+		<Polish>medycyna</Polish>
+		<Russian>ëåêàðñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_2</Tag>
+		<English>medicine</English>
+		<French>médicament</French>
+		<German>Medizin</German>
+		<Italian>Medicine</Italian>
+		<Spanish>medicina</Spanish>
+		<Polish>medycyna</Polish>
+		<Russian>ëåêàðñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_JADE_1</Tag>
+		<English>jade</English>
+		<German>Jade</German>
+		<Italian>Giada</Italian>
+		<Polish>nefryt</Polish>
+		<Russian>íåôðèò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_LOCAL_MILLS_1</Tag>
+		<English>local mills</English>
+		<French>moulins locaux</French>
+		<German>lokale Mühlen</German>
+		<Italian>Mulini locali</Italian>
+		<Spanish>molinos locales</Spanish>
+		<Polish>lokalne młyny</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_OVERFISHING_1</Tag>
+		<English>over fishing</English>
+		<French>surpêche</French>
+		<German>über die Fischerei</German>
+		<Italian>Sovrasfruttamento delle risorse ittiche</Italian>
+		<Spanish>sobre pesca</Spanish>
+		<Polish>przełowienia</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_PARROTS_1</Tag>
+		<English>parrots</English>
+		<French>perroquets</French>
+		<German>Papageien</German>
+		<Italian>Pappagalli</Italian>
+		<Spanish>loros</Spanish>
+		<Polish>papugi</Polish>
+		<Russian>ïîïóãàè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_PRAIRIE_DOGS_1</Tag>
+		<English>prairie dogs</English>
+		<French>chiens de prairie</French>
+		<German>Präriehunde</German>
+		<Italian>Cani della prateria</Italian>
+		<Spanish>perros de las praderas</Spanish>
+		<Polish>pieski preriowe</Polish>
+		<Russian>ëóãîâûå ñîáà÷êè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_PRIME_TIMBER_1</Tag>
+		<English>prime timber</English>
+		<French>bois primitif</French>
+		<German>erstklassiges Bauholz</German>
+		<Italian>Legno pregiato</Italian>
+		<Spanish>madera de calidad</Spanish>
+		<Polish>pierwszorzędne drewno</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_RESORT_TOWN_1</Tag>
+		<English>resort town</English>
+		<French>ville de tourisme</French>
+		<German>Ferienort-Stadt</German>
+		<Italian>Paese turistico</Italian>
+		<Spanish>zona turística</Spanish>
+		<Polish>miejscowość wypoczynkowa</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_SALTPETER_1</Tag>
+		<English>saltpeter</English>
+		<French>salpêtre</French>
+		<German>Salpeter</German>
+		<Italian>Salnitro</Italian>
+		<Spanish>salitre</Spanish>
+		<Polish>saletra</Polish>
+		<Russian>ñåëèòðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_SALT_MINE_1</Tag>
+		<English>salt mine</English>
+		<French>mine de sel</French>
+		<German>Salzmine</German>
+		<Italian>Miniera di sale</Italian>
+		<Spanish>mina de sal</Spanish>
+		<Polish>kopalnia soli</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_SEA_TURTLES</Tag>
+		<English>sea turtles</English>
+		<French>tortues de mer</French>
+		<German>Meeresschildkröten</German>
+		<Italian>Testuggini</Italian>
+		<Spanish>tortugas marinas</Spanish>
+		<Polish>żółwie morskie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_SOUR_CRUDE_1</Tag>
+		<English>impurities</English>
+		<French>impuretés</French>
+		<German>Verunreinigungen</German>
+		<Italian>Impurezze</Italian>
+		<Spanish>impurezas</Spanish>
+		<Polish>zanieczyszczenia</Polish>
+		<Russian>ïðèìåñè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_TIN_1</Tag>
+		<English>Tin</English>
+		<French>étain</French>
+		<German>Zinn</German>
+		<Italian>Stagno</Italian>
+		<Spanish>estaño</Spanish>
+		<Polish>Cyna</Polish>
+		<Russian>îëîâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_TRUFFLES_1</Tag>
+		<English>truffles</English>
+		<French>truffes</French>
+		<German>Trüffel</German>
+		<Italian>Tartufi</Italian>
+		<Spanish>trufas</Spanish>
+		<Polish>trufle</Polish>
+		<Russian>òðþôåëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_WATERS_OF_LIFE_1</Tag>
+		<English>Waters of Life</English>
+		<French>Eaux de Vie</French>
+		<German>Wasser des Lebens</German>
+		<Italian>Acque della vita</Italian>
+		<Spanish>Aguas de la Vida</Spanish>
+		<Polish>Woda Życia</Polish>
+		<Russian>æèâàÿ âîäà</Russian>
+	</TEXT>
+</Civ4GameText>

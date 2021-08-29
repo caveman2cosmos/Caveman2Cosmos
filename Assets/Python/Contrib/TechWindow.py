@@ -1,6 +1,6 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugefügt
+## Originally by SirRethcir: Techanzeige hinzugefÃ¼gt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
@@ -76,7 +76,7 @@ class CvTechSplashScreen:
 #		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = 135
 
-#---Geändert START - siehe original Datei -----------------
+#---GeÃ¤ndert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -103,7 +103,7 @@ class CvTechSplashScreen:
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
 		self.Y_ALLOWS_PANEL4 = self.Y_SPECIAL_PANEL + 3 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---Geändert ENDE ------------------------------------------
+#---GeÃ¤ndert ENDE ------------------------------------------
 
 		# Contents
 
@@ -215,18 +215,15 @@ class CvTechSplashScreen:
 
 		for j in range(GC.getNumTechInfos()):
 
-			for k in range(GC.getDefineINT("NUM_OR_TECH_PREREQS")):
-				if self.iTech == GC.getTechInfo(j).getPrereqOrTechs(k):
+			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
+				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				if self.iTech == GC.getTechInfo(j).getPrereqAndTechs(k):
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
+				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-#---Eingefügt ENDE ------------------------------------------------
-		# Allows
-		# szAllowsTitleDesc = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_ALLOWS", ()) + ":"
-		# screen.setText("AllowsTitle", "", szAllowsTitleDesc, 1<<0, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#---EingefÃ¼gt ENDE ------------------------------------------------
 
 		# Units Enabled
 		szUnitsTitleDesc = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":"
@@ -258,11 +255,11 @@ class CvTechSplashScreen:
 			if GC.getPromotionInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getPromotionInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, j, 1, False)
 
-#---Eingefügt START - kann komplett gelöscht werden --------------
+#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden --------------
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
-			bTechFound = 0;
+			bTechFound = 0
 			if GC.getBuildInfo(j).getTechPrereq() == -1:
 				for k in range(GC.getNumFeatureInfos()):
 					if GC.getBuildInfo(j).getFeatureTech(k) == self.iTech:

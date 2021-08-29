@@ -11,11 +11,8 @@
 #ifndef CV_PROPERTY_PROPAGATOR_H
 #define CV_PROPERTY_PROPAGATOR_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-#include <vector>
-
 class CvGameObject;
+class CvXMLLoadUtility;
 
 // Base class of which the actual property propagator classes are derived
 class CvPropertyPropagator
@@ -24,35 +21,29 @@ public:
 	CvPropertyPropagator();
 	CvPropertyPropagator(PropertyTypes eProperty);
 	virtual ~CvPropertyPropagator();
+
 	PropertyTypes getProperty() const;
-	void setProperty(PropertyTypes eProperty);
 	GameObjectTypes getObjectType() const;
-	void setObjectType(GameObjectTypes eObjectType);
 	RelationTypes getRelation() const;
-	void setRelation(RelationTypes eRelation);
 	int getRelationData() const;
-	void setRelationData(int iRelationData);
 	RelationTypes getTargetRelation() const;
-	void setTargetRelation(RelationTypes eTargetRelation);
 	int getTargetRelationData() const;
-	void setTargetRelationData(int iRelationData);
 	GameObjectTypes getTargetObjectType() const;
-	void setTargetObjectType(GameObjectTypes eObjectType);
 
-	bool isActive(CvGameObject* pObject);
-	void getTargetObjects(CvGameObject* pObject, std::vector<CvGameObject*>& apGameObjects);
+	bool isActive(const CvGameObject* pObject) const;
+	void getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects) const;
 
-	virtual PropertyPropagatorTypes getType() = 0;
+	virtual PropertyPropagatorTypes getType() const = 0;
 
-	virtual void getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) = 0;
-	virtual void getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) = 0;
+	virtual void getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const = 0;
+	virtual void getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyPropagator* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(uint32_t& iSum) const;
 protected:
 	PropertyTypes m_eProperty;
 	GameObjectTypes m_eObjectType;
@@ -61,8 +52,8 @@ protected:
 	RelationTypes m_eTargetRelation;
 	int m_iTargetRelationData;
 	GameObjectTypes m_eTargetObjectType;
-	BoolExpr* m_pExprActive;
-	BoolExpr* m_pExprTargetCondition;
+	const BoolExpr* m_pExprActive;
+	const BoolExpr* m_pExprTargetCondition;
 };
 
 
@@ -73,21 +64,21 @@ public:
 	explicit CvPropertyPropagatorSpread(PropertyTypes eProperty);
 	CvPropertyPropagatorSpread(PropertyTypes eProperty, int iPercent);
 
-	virtual PropertyPropagatorTypes getType();
+	virtual PropertyPropagatorTypes getType() const;
 
-	int getPercent();
+	int getPercent() const;
 
 	//virtual bool isActive(CvGameObject* pObject);
 
-	virtual void getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict);
-	virtual void getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect);
+	virtual void getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const;
+	virtual void getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyPropagator* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iPercent;
@@ -100,19 +91,19 @@ public:
 	explicit CvPropertyPropagatorGather(PropertyTypes eProperty);
 	CvPropertyPropagatorGather(PropertyTypes eProperty, int iAmountPerTurn);
 
-	virtual PropertyPropagatorTypes getType();
+	virtual PropertyPropagatorTypes getType() const;
 
-	int getAmountPerTurn();
+	int getAmountPerTurn() const;
 
-	virtual void getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict);
-	virtual void getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect);
+	virtual void getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const;
+	virtual void getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyPropagator* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iAmountPerTurn;
@@ -125,21 +116,21 @@ public:
 	explicit CvPropertyPropagatorDiffuse(PropertyTypes eProperty);
 	CvPropertyPropagatorDiffuse(PropertyTypes eProperty, int iPercent);
 
-	virtual PropertyPropagatorTypes getType();
+	virtual PropertyPropagatorTypes getType() const;
 
-	int getPercent();
+	int getPercent() const;
 
 	//virtual bool isActive(CvGameObject* pObject);
 
-	virtual void getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict);
-	virtual void getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect);
+	virtual void getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const;
+	virtual void getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyPropagator* pProp);
 
-	virtual void getCheckSum(unsigned int& iSum);
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iPercent;

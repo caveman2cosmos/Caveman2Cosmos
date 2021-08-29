@@ -53,7 +53,7 @@ inline void FVariable::CopyFrom(const FVariable& varSrc)
 	if (varSrc.m_eType == FVARTYPE_WSTRING && varSrc.m_wszValue)
 	{
 		// copy string to new allocation
-		m_wszValue = new wchar[wcslen(varSrc.m_wszValue)+1];
+		m_wszValue = new wchar_t[wcslen(varSrc.m_wszValue)+1];
 		wcscpy(m_wszValue, varSrc.m_wszValue);
 	}
 	else
@@ -77,7 +77,7 @@ inline void FVariable::Read(FDataStreamBase *pStream)
 	if (m_eType==FVARTYPE_WSTRING)
 		m_wszValue = pStream->ReadWideString();
 	else
-		pStream->Read(8, (byte*)&m_dValue);		// read the maximum size of the union
+		pStream->Read(8, (uint8_t*)&m_dValue);		// read the maximum size of the union
 }
 
 inline void FVariable::Write(FDataStreamBase *pStream) const
@@ -89,7 +89,7 @@ inline void FVariable::Write(FDataStreamBase *pStream) const
 	if (m_eType==FVARTYPE_WSTRING)
 		pStream->WriteString(m_wszValue);
 	else
-		pStream->Write(8, (byte*)&m_dValue);		// write the maximum size of the union
+		pStream->Write(8, (uint8_t*)&m_dValue);		// write the maximum size of the union
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -197,7 +197,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, bool & bValue ) 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_BOOL );
+	FAssert(pkVariable->m_eType == FVARTYPE_BOOL);
 	bValue = pkVariable->m_bValue;
 	return true;
 }
@@ -218,7 +218,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_CHAR );
+	FAssert(pkVariable->m_eType == FVARTYPE_CHAR);
 	cValue = pkVariable->m_cValue;
 	return true;
 }
@@ -231,7 +231,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) 
 //! \param ucValue Contains the value of the variable if the function succeeds
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, byte & ucValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, uint8_t& ucValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -239,7 +239,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, byte & ucValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_UCHAR );
+	FAssert(pkVariable->m_eType == FVARTYPE_UCHAR);
 	ucValue = pkVariable->m_ucValue;
 	return true;
 }
@@ -260,7 +260,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_SHORT );
+	FAssert(pkVariable->m_eType == FVARTYPE_SHORT);
 	wValue = pkVariable->m_wValue;
 	return true;
 }
@@ -273,7 +273,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue )
 //! \param uwValue Contains the value of the variable if the function succeeds
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, word & uwValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, uint16_t& uwValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -281,7 +281,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, word & uwValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_USHORT );
+	FAssert(pkVariable->m_eType == FVARTYPE_USHORT);
 	uwValue = pkVariable->m_uwValue;
 	return true;
 }
@@ -302,7 +302,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, int & iValue ) c
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_INT );
+	FAssert(pkVariable->m_eType == FVARTYPE_INT);
 	iValue = pkVariable->m_iValue;
 	return true;
 }
@@ -323,7 +323,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, uint & uiValue )
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_UINT );
+	FAssert(pkVariable->m_eType == FVARTYPE_UINT);
 	uiValue = pkVariable->m_uiValue;
 	return true;
 }
@@ -365,7 +365,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 		break;
 	case FVARTYPE_WSTRING:
 		{
-			const wchar* szValue;
+			const wchar_t* szValue;
 			if (!GetValue(szVariable, szValue))
 			{
 				return false;
@@ -374,7 +374,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 		}
 		break;
 	default:
-		assert(false);
+		FAssert(false);
 		break;
 	}
 
@@ -418,7 +418,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 		break;
 	case FVARTYPE_WSTRING:
 		{
-			const wchar* szValue;
+			const wchar_t* szValue;
 			if (!GetValue(szVariable, szValue))
 			{
 				return false;
@@ -427,7 +427,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 		}
 		break;
 	default:
-		assert(false);
+		FAssert(false);
 		break;
 	}
 
@@ -450,7 +450,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const char * & p
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_STRING );
+	FAssert(pkVariable->m_eType == FVARTYPE_STRING);
 	pszValue = pkVariable->m_szValue;
 	return true;
 }
@@ -463,7 +463,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const char * & p
 //! \param pwszValue Contains the value of the variable if the function succeeds (do not modify the return value).
 //! \retval true if the variable value was retrieved, false otherwise (value will be unchanged from input).
 //---------------------------------------------------------------------------------------
-inline bool FVariableSystem::GetValue( const char * szVariable, const wchar * & pwszValue ) const
+inline bool FVariableSystem::GetValue( const char * szVariable, const wchar_t * & pwszValue ) const
 {
 	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
@@ -471,7 +471,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const wchar * & 
 		return false;
 	}
 	FVariable* pkVariable = iIterator->second;
-	assert( pkVariable->m_eType == FVARTYPE_WSTRING );
+	FAssert(pkVariable->m_eType == FVARTYPE_WSTRING);
 	pwszValue = pkVariable->m_wszValue;
 	return true;
 }
@@ -539,7 +539,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, char cValue )
 //! \param szVariable The name of the variable to create
 //! \param ucValue The value that the variable should take on
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, byte ucValue )
+inline void FVariableSystem::SetValue( const char * szVariable, uint8_t ucValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
@@ -581,7 +581,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, short wValue )
 //! \param szVariable The name of the variable to create
 //! \param uwValue The value that the variable should take on
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, word uwValue )
+inline void FVariableSystem::SetValue( const char * szVariable, uint16_t uwValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
@@ -707,7 +707,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, const char * szV
 //! \param szVariable The name of the variable to create
 //! \param wszValue The value that the variable should take on (string is copied).
 //---------------------------------------------------------------------------------------
-inline void FVariableSystem::SetValue( const char * szVariable, const wchar * wszValue )
+inline void FVariableSystem::SetValue( const char * szVariable, const wchar_t * wszValue )
 {
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
@@ -716,7 +716,7 @@ inline void FVariableSystem::SetValue( const char * szVariable, const wchar * ws
 	}
 	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_WSTRING;
-	pkVariable->m_wszValue = wcscpy( new wchar[wcslen( wszValue ) + 1], wszValue ); 
+	pkVariable->m_wszValue = wcscpy( new wchar_t[wcslen( wszValue ) + 1], wszValue ); 
 	m_mapVariableMap[szVariable] = pkVariable;
 	m_iVariableIterator = m_mapVariableMap.begin();
 }

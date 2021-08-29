@@ -14,8 +14,8 @@ import CvUtil
 import SdToolKit
 import ScreenResolution as SR
 
-STORE_EVENT_ID = CvUtil.getNewEventID("Reminder.Store")
-RECALL_EVENT_ID = CvUtil.getNewEventID("Reminder.Recall")
+STORE_EVENT_ID = CvUtil.getNewEventID()
+RECALL_EVENT_ID = CvUtil.getNewEventID()
 
 GC = CyGlobalContext()
 GAME = GC.getGame()

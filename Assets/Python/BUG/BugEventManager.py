@@ -174,7 +174,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 		self.addEvent("combatLogFlanking")
 		self.addEvent("playerRevolution")
 		#AND Events
-		self.addEvent("addTeam")
+		self.addEvent("changeTeam")
 
 	def hasEvent(self, eventType):
 		"""Returns True if the given event type is defined."""
@@ -453,7 +453,7 @@ def onPlayerRevolution(self, argsList):
 	ePlayer, iAnarchyTurns, leOldCivics, leNewCivics = argsList
 
 #A New Dawn Event
-def onAddTeam(self, argsList):
+def onChangeTeam(self, argsList):
 	"""Fired when two teams join or seperate"""
-	eTeam1, eTeam2, bAdded = argsList
+	iOldTeam, iNewTeam = argsList
 '''

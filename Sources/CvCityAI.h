@@ -5,7 +5,13 @@
 #ifndef CIV4_CITY_AI_H
 #define CIV4_CITY_AI_H
 
+#include <vector>
+#include <vector>
+#include <vector>
+#include <vector>
+
 #include "CvCity.h"
+#include "CvPlayerAI.h"
 
 //	Possible focus flags to use when evaluating buildings
 #define BUILDINGFOCUS_FOOD					(1 << 1)
@@ -30,14 +36,14 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-class	BuildingValueCache;
+class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
+class CvArea;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING
 struct yieldValueCacheEntry
 {
-	yieldValueCacheEntry() 
+	yieldValueCacheEntry()
 		: aiYields()
 		, aiCommerceYields()
 		, bAvoidGrowth(false)
@@ -92,6 +98,7 @@ public:
 	void AI_init();
 	void AI_uninit();
 	void AI_reset();
+	void SendLog(CvWString function, CvWString message) const;
 
 	void AI_doTurn();
 
@@ -101,7 +108,7 @@ public:
 
 	bool AI_avoidGrowth();
 	bool AI_ignoreGrowth();
-	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove);
+	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const;
 
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared
@@ -112,15 +119,8 @@ public:
 
 	void AI_chooseProduction();
 
-	UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, CvUnitSelectionCriteria* criteria = NULL);
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
-	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL);
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
+	UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL);
+	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL);
 
 	BuildingTypes AI_bestBuildingThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
 	std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
@@ -134,151 +134,110 @@ public:
 	int AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanConstruct = false);
 	int AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
 	int AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
-	int getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate);
-	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield);
+	int getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate) const;
 
-	ProjectTypes AI_bestProject();
-	int AI_projectValue(ProjectTypes eProject);
+	ProjectTypes AI_bestProject() const;
+	int AI_projectValue(ProjectTypes eProject) const;
 
-	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL);
-	int AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL);
+	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
+	int64_t AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
 	bool AI_finalProcessSelection();
 
-	int AI_neededSeaWorkers();
+	int AI_neededSeaWorkers() const;
 
 	bool AI_isDefended(int iExtra = 0, bool bAllowAnyDefenders = true);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD							9/19/08		jdog5000		    */
-/* 																			    */
-/* 	Air AI																	    */
-/********************************************************************************/
-/* original BTS code
-	bool AI_isAirDefended(int iExtra = 0);
-*/
 	bool AI_isAirDefended(bool bCountLand = false, int iExtra = 0);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								    */
-/********************************************************************************/
 	bool AI_isDanger() const;
 	int evaluateDanger();
 
-	bool AI_isAdequateHappinessMilitary(int iExtra);
-	int AI_neededHappinessDefenders();
+	bool AI_isAdequateHappinessMilitary(int iExtra) const;
+	int AI_neededHappinessDefenders() const;
 	int AI_neededDefenders();
-	int AI_neededAirDefenders();
-	int AI_minDefenders();
+	int AI_neededAirDefenders() const;
+	int AI_minDefenders() const;
 	int AI_neededFloatingDefenders();
 	void AI_updateNeededFloatingDefenders();
 
 	int getGarrisonStrength(bool bAllowAnyDefenders = true) const;
 	int AI_neededDefenseStrength();
-	int AI_minDefenseStrength();
+	int AI_minDefenseStrength() const;
 
-	int AI_getEmphasizeAvoidGrowthCount();
-	bool AI_isEmphasizeAvoidGrowth();
+	int AI_getEmphasizeAvoidGrowthCount() const;
+	bool AI_isEmphasizeAvoidGrowth() const;
 
-	int AI_getEmphasizeGreatPeopleCount();
-	bool AI_isEmphasizeGreatPeople();
+	int AI_getEmphasizeGreatPeopleCount() const;
+	bool AI_isEmphasizeGreatPeople() const;
 
-	bool AI_isAssignWorkDirty();
+	bool AI_isAssignWorkDirty() const;
 	void AI_setAssignWorkDirty(bool bNewValue);
 
-	bool AI_isChooseProductionDirty();
+	bool AI_isChooseProductionDirty() const;
 	void AI_setChooseProductionDirty(bool bNewValue);
 
 	CvCity* AI_getRouteToCity() const;
 	void AI_updateRouteToCity() const;
 
-	int AI_getEmphasizeYieldCount(YieldTypes eIndex);
-	bool AI_isEmphasizeYield(YieldTypes eIndex);
+	bool AI_isEmphasizeYield(const YieldTypes eIndex) const;
+	bool AI_isEmphasizeCommerce(const CommerceTypes eIndex) const;
+	bool AI_isAnyCommerceOrYieldEmphasis() const;
 
-	int AI_getEmphasizeCommerceCount(CommerceTypes eIndex);
-	bool AI_isEmphasizeCommerce(CommerceTypes eIndex);
-
-	bool AI_isEmphasize(EmphasizeTypes eIndex);
+	bool AI_isEmphasize(EmphasizeTypes eIndex) const;
 	void AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue);
-	bool AI_isEmphasizeSpecialist(SpecialistTypes eIndex);
+	bool AI_isEmphasizeSpecialist(SpecialistTypes eIndex) const;
 	void AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue);
 	void AI_forceEmphasizeCulture(bool bNewValue);
 
 	void AI_markBestBuildValuesStale();
-	int AI_getBestBuildValue(int iIndex);
-	int AI_totalBestBuildValue(CvArea* pArea);
+	void AI_updateBestBuildForPlots();
+	int AI_getBestBuildValue(int iIndex) const;
+	int AI_totalBestBuildValue(const CvArea* pArea) const;
 
-	int AI_clearFeatureValue(int iIndex);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-	int AI_getGoodTileCount();
-	int AI_countWorkedPoorTiles();
-	int AI_getTargetSize();
-	void AI_getYieldMultipliers();
-	int AI_getImprovementValue();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-	BuildTypes AI_getBestBuild(int iIndex);
-	int AI_countBestBuilds(CvArea* pArea);
+	int AI_clearFeatureValue(int iIndex) const;
+
+	int AI_getGoodTileCount() const;
+	int AI_countWorkedPoorTiles() const;
+	int AI_getTargetSize() const;
+
+	BuildTypes AI_getBestBuild(int iIndex) const;
+	int AI_countBestBuilds(const CvArea* pArea) const;
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
-	
-	int AI_calculateWaterWorldPercent();
-	
-	int AI_getCityImportance(bool bEconomy, bool bMilitary);
-	
-	int AI_yieldMultiplier(YieldTypes eYield);
+
+	int AI_calculateWaterWorldPercent() const;
+
+	int AI_getCityImportance(bool bEconomy, bool bMilitary) const;
+
+	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
+	int AI_yieldMultiplier(YieldTypes eYield) const;
 	void AI_updateSpecialYieldMultiplier();
-	int AI_specialYieldMultiplier(YieldTypes eYield);
-	
-	int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-	int AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExtraTech = NO_TECH, bool bLand = true, bool bWater = false );
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	int AI_specialYieldMultiplier(YieldTypes eYield) const;
+
+	int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true) const;
+	int AI_countNumImprovableBonuses(bool bIncludeNeutral, TechTypes eExtraTech = NO_TECH, bool bLand = true, bool bWater = false) const;
 
 	int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance);
 	int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL);
-	
-	int AI_getWorkersHave();
-	int AI_getWorkersNeeded();
+
+	int AI_getWorkersHave() const;
+	int AI_getWorkersNeeded() const;
 	void AI_changeWorkersHave(int iChange);
-/********************************************************************************/
-/* 	Worker Counting						03.08.2010				Fuyu			*/
-/********************************************************************************/
+
+	// Fuyu - Worker Counting 03.08.2010
 	int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const;
-/********************************************************************************/
-/* 	Worker Counting 											END 			*/
-/********************************************************************************/
+	// ! Fuyu
+
 	BuildingTypes AI_bestAdvancedStartBuilding(int iPass);
-	
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
-/************************************************************************************************/
-/* Afforess	                  Start		 01/26/10                                               */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 	bool AI_trainInquisitor();
-/************************************************************************************************/
-/* Inquisitions	                 END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 10/31/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int AI_getEmphasizeAvoidAngryCitizensCount();
-	bool AI_isEmphasizeAvoidAngryCitizens();
-	int AI_getEmphasizeAvoidUnhealthyCitizensCount();
-	bool AI_isEmphasizeAvoidUnhealthyCitizens();
+
+	int AI_getEmphasizeAvoidAngryCitizensCount() const;
+	bool AI_isEmphasizeAvoidAngryCitizens() const;
+	int AI_getEmphasizeAvoidUnhealthyCitizensCount() const;
+	bool AI_isEmphasizeAvoidUnhealthyCitizens() const;
 	bool AI_buildCaravan();
 	int AI_getPromotionValue(PromotionTypes ePromotion) const;
 	int AI_calculateActualImprovementHealth(ImprovementTypes eImprovement) const;
@@ -288,24 +247,14 @@ public:
 	int AI_getNavalMilitaryProductionRateRank() const;
 	bool AI_isNavalMilitaryProductionCity() const;
 	void AI_setNavalMilitaryProductionCity(bool bNewVal);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	int AI_getBuildPriority() const;
 
 protected:
-/************************************************************************************************/
-/* Afforess	                  Start		 10/31/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int m_iEmphasizeAvoidAngryCitizensCount;
 	int m_iEmphasizeAvoidUnhealthyCitizensCount;
 	bool m_bMilitaryProductionCity;
 	bool m_bNavalMilitaryProductionCity;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	int m_iEmphasizeAvoidGrowthCount;
 	int m_iEmphasizeGreatPeopleCount;
@@ -329,19 +278,19 @@ protected:
 
 	bool* m_pbEmphasize;
 	bool* m_pbEmphasizeSpecialist;
-	
+
 	int* m_aiSpecialYieldMultiplier;
-	
+
 	int m_iCachePlayerClosenessTurn;
 	int m_iCachePlayerClosenessDistance;
 	int* m_aiPlayerCloseness;
-	
+
 	int m_iNeededFloatingDefenders;
 	int m_iNeededFloatingDefendersCacheTurn;
-	
+
 	int m_iWorkersNeeded;
 	int m_iWorkersHave;
-	
+
 	int	m_iBuildPriority;
 	int	m_iTempBuildPriority;
 	bool m_bRequestedUnit;
@@ -350,89 +299,74 @@ protected:
 	void AI_doDraft(bool bForce = false);
 	void AI_doHurry(bool bForce = false);
 	void AI_doEmphasize();
-	int AI_getHappyFromHurry(HurryTypes eHurry);
-	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew);
-	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew);
-	int AI_getHappyFromHurry(int iHurryPopulation);
+	int AI_getHappyFromHurry(HurryTypes eHurry) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, UnitTypes eUnit) const;
+	int AI_getHappyFromHurry(HurryTypes eHurry, BuildingTypes eBuilding) const;
+	int AI_getHappyFromHurry(int iHurryPopulation) const;
 	bool AI_doPanic();
-	int AI_calculateCulturePressure(bool bGreatWork = false);
+	int AI_calculateCulturePressure(bool bGreatWork = false) const;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/09/10                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
-	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, CvUnitSelectionCriteria* criteria = NULL);
-	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
+	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, const CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, const CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
 	bool AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI);
 	bool AI_chooseDefender(const char* reason);
 	bool AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds = -1);
 	bool AI_chooseBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, int iOdds = -1, bool bMaximizePerTurnValue = false, PropertyTypes eProperty = NO_PROPERTY);
+	bool AI_chooseExperienceBuilding(const UnitAITypes eUnitAI, const int iUnitProductionLossesFactor);
 	bool AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY);
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();
-	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL);
+
 	int	getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) const;
 
-	bool AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue);
+	bool AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue) const;
 	bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL);
 	bool AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist = NO_SPECIALIST);
 	void AI_juggleCitizens();
 
-	bool AI_potentialPlot(short* piYields);
-	bool AI_foodAvailable(int iExtra = 0);
+	bool AI_potentialPlot(short* piYields) const;
+	bool AI_foodAvailable(int iExtra = 0) const;
 
-public:
-	int AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-protected:
+	int AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, const CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield) const;
+
+	void AI_getCurrentPlotValue(int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& currentYieldList) const;
+	void AI_getBestPlotValue(const std::vector<int>& ratios, int iPlotCounter, const CvPlot* plot, std::vector<plotInfo>& optimalYieldList, int iDesiredFoodChange) const;
+	void AI_newbestPlotBuild(const CvPlot* pPlot, plotInfo* plotInfo, int iFoodPriority, int iProductionPriority, int iCommercePriority) const;
+	const std::vector<int> AI_calculateOutputRatio(int food, int production, int commerce) const;
+	BuildTypes GetShortestBuildTimeOnPlot(const CvPlot* plot) const;
+
 #ifdef YIELD_VALUE_CACHING
 	virtual void AI_NoteWorkerChange();
 	virtual void AI_NoteSpecialistChange();
-
-	int AI_yieldValueWithCache(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization, bool bSpecialist);
 #endif
-	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
+	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false) const;
+	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) const;
 
-	int AI_experienceWeight();
-	int AI_buildUnitProb();
+	int AI_experienceWeight() const;
+	int AI_buildUnitProb() const;
+	bool AI_checkIrrigationSpread(const CvPlot* pPlot) const;
 
-	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-	int AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal = false );
-	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-	int tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
+	void AI_bestPlotBuild(CvPlot* pPlot, int& piBestValue, BuildTypes& peBestBuild, int iFoodPriority, int iProductionPriority, int
+	                      iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
 
+	int AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const;
+	void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const;
+
+	int tradeRouteValue(const CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
 
 	void AI_buildGovernorChooseProduction();
-	
-	int AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy);
-	int AI_getPlotMagicValue(CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false);
-	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false);
-	int AI_countGoodSpecialists(bool bHealthy);
-	int AI_calculateTargetCulturePerTurn();
-	
+
+	int AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy) const;
+	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
+	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
+	int AI_countGoodSpecialists(bool bHealthy) const;
+	//int AI_calculateTargetCulturePerTurn() const;
+
 	void AI_stealPlots();
-	
-	int AI_buildingSpecialYieldChangeValue(BuildingTypes kBuilding, YieldTypes eYield);
-	
+
+	int AI_buildingSpecialYieldChangeValue(BuildingTypes kBuilding, YieldTypes eYield) const;
+
 	void AI_cachePlayerCloseness(int iMaxDistance);
 	void AI_updateWorkersNeededHere();
 
@@ -445,32 +379,32 @@ public:
 	int getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) const;
 	int getPropertyDecay(PropertyTypes eProperty) const;
 	int getPropertyNonBuildingSource(PropertyTypes eProperty) const;
+
 private:
 	int	GetBuildingValue(BuildingTypes eType, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue, bool bIgnoreCanConstruct = false);
-	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags);
+	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);
-	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel);
-	int healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHealthLevel, int iBaseFoodDifference);
-	int worstWorkedPlotValue();
+	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const;
+	int healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHealthLevel, int iBaseFoodDifference) const;
+	int worstWorkedPlotValue() const;
 	//	Evaluate a building we are considering building here in terms of its
 	//	effect on properties
-	int buildingPropertiesValue(CvBuildingInfo& kBuilding) const;
+	int buildingPropertiesValue(const CvBuildingInfo& kBuilding) const;
 
 	bool AI_establishSeeInvisibleCoverage();
 	bool AI_establishInvestigatorCoverage();
-	bool AI_isNegativePropertyUnit(UnitTypes eUnit);
-	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_isNegativePropertyUnit(UnitTypes eUnit) const;
+	bool AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelectionCriteria* criteria = NULL);
 
 	//	The cache itself
 	BuildingValueCache* cachedBuildingValues;
 
 #ifdef YIELD_VALUE_CACHING
-private:
 	virtual void ClearYieldValueCache();
 	void ClearYieldValueCacheImpl();
 	virtual void CheckYieldValueCache(char* label);
 
-	yieldCache yieldValueCache;
+	mutable yieldCache yieldValueCache;
 	static int yieldValueCacheHits;
 	static int yieldValueCacheReads;
 #endif

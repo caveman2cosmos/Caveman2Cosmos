@@ -19,9 +19,9 @@ public:
 	void add(uint ui) { add((int)ui); }
 	DllExport void add(float f);
 	DllExport void add(const char* s);					// null-terminated string
-	DllExport void add(const wchar* s);					// null-terminated widestring
+	DllExport void add(const wchar_t* s);				// null-terminated widestring
 	DllExport void add(const char* s, int iLength);		// makes a data string
-	void add(const byte* s, int iLength);		// makes a list
+	void add(const uint8_t* s, int iLength);		// makes a list
 	void add(const int* s, int iLength);		// makes a list
 	void add(const float* s, int iLength);		// makes a list
 

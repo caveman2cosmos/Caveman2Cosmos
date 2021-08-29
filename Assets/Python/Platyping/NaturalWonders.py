@@ -24,8 +24,7 @@ class NaturalWonders:
 			if GAME.getSorenRandNum(100, "Random Plot") >= self.iPlaceChance: continue
 
 			WonderPlot = []
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.getBonusType(-1) > -1: continue
 
 				## Nearby Plot Check ##
@@ -105,18 +104,6 @@ class NaturalWonders:
 				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_FOOD, GAME.getSorenRandNum(self.iMaxYield, "Adds Food"))
 				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_PRODUCTION, GAME.getSorenRandNum(self.iMaxYield, "Adds Production"))
 				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_COMMERCE, GAME.getSorenRandNum(self.iMaxYield, "Adds Commerce"))
-
-				sNature = sType[sType.find("_PLATY_") + 7:]
-				sBuildingType = "BUILDING_" + sNature
-				iBuilding = GC.getInfoTypeForString(sBuildingType)
-				if iBuilding == -1: continue
-				lNaturalCity = []
-				lNaturalCity = self.addSuitableCity(pPlot, -1, lNaturalCity)
-				if sType in self.lBigWonder:
-					lNaturalCity = self.addSuitableCity(pAdjacentPlot, -1, lNaturalCity)
-				if len(lNaturalCity) > 0:
-					pLuckyCity = lNaturalCity[GAME.getSorenRandNum(len(lNaturalCity), "New Natural City")]
-					pLuckyCity.setNumRealBuilding(iBuilding, 1)
 		return
 
 	# def checkAllRevealTech(self):
@@ -170,7 +157,7 @@ class NaturalWonders:
 					break
 		else: bFirst = True
 		if bFirst:
-			iGold = self.iFirstGold * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getUnitTradePercent() /100
+			iGold = self.iFirstGold * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() /100
 
 		import CvUtil
 		TRNSLTR = CyTranslator()

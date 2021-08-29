@@ -1,25 +1,22 @@
 #pragma once
 
-// CyDeal.h
-// Python wrapper class for CvDeal 
-
 #ifndef CY_DEAL_H
 #define CY_DEAL_H
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
+//
+// Python wrapper class for CvDeal
+//
 
 class CvDeal;
 
 class CyDeal
 {
-
 public:
 	CyDeal(CvDeal* pDeal = NULL);
 	virtual ~CyDeal();
-	CvDeal* getDeal() const { return m_pDeal; }
 
-	bool isNone();
+	CvDeal* getDeal() const { return m_pDeal; }
+	bool isNone() const { return m_pDeal == NULL;  }
 
 	int getID() const;
 	int getInitialGameTurn() const;
@@ -32,11 +29,9 @@ public:
 
 	void kill();
 
-// BUG - Expose Deal Cancelability - start
 	bool isCancelable(int /*PlayerTypes*/ eByPlayer, bool bIgnoreWaitingPeriod = false) const;
 	std::wstring getCannotCancelReason(int /*PlayerTypes*/ eByPlayer) const;
 	int turnsToCancel(int /*PlayerTypes*/ eByPlayer) const;
-// BUG - Expose Deal Cancelability - end
 
 protected:
 	CvDeal* m_pDeal;

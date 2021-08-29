@@ -4,7 +4,7 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-lPopulation = [	
+lPopulation = [
 	[2000000000, FeatTypes.FEAT_POPULATION_2_BILLION, "TXT_KEY_FEAT_2_BILLION"],
 	[1000000000, FeatTypes.FEAT_POPULATION_1_BILLION, "TXT_KEY_FEAT_1_BILLION"],
 	[500000000, FeatTypes.FEAT_POPULATION_500_MILLION, "TXT_KEY_FEAT_500_MILLION"],
@@ -31,11 +31,7 @@ def resetNoLiberateCities():
 		eCorporation = CvBuildingInfo.getFoundsCorporation()
 		if eCorporation > -1 and not GAME.isCorporationFounded(eCorporation):
 
-			bonuses = []
-			for iPrereq in xrange(GC.getDefineINT("NUM_CORPORATION_PREREQ_BONUSES")):
-				eBonus = GC.getCorporationInfo(eCorporation).getPrereqBonus(iPrereq)
-				if eBonus > -1:
-					bonuses.append(eBonus)
+			bonuses = GC.getCorporationInfo(eCorporation).getPrereqBonuses()
 			if not bonuses:
 				continue
 
@@ -48,10 +44,8 @@ def resetNoLiberateCities():
 			iTech = CvBuildingInfo.getPrereqAndTech()
 			if iTech > -1:
 				techs.append(iTech)
-			for iPrereq in xrange(GC.getDefineINT("NUM_BUILDING_AND_TECH_PREREQS")):
-				iTech = CvBuildingInfo.getPrereqAndTechs(iPrereq)
-				if iTech > -1:
-					techs.append(iTech)
+			for iTech in CvBuildingInfo.getPrereqAndTechs():
+				techs.append(iTech)
 
 			lCorporations.append([eCorporation, techs, iUnit, bonuses])
 
@@ -78,48 +72,30 @@ def resetNoLiberateCities():
 	if lFood:
 		lBonus.append([FeatTypes.FEAT_FOOD_CONNECTED, lFood, "TXT_KEY_FEAT_FOOD_CONNECTED"])
 
-	global lUnitCombat
-	lUnitCombat = {}
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_ARCHER")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_ARCHER, "TXT_KEY_FEAT_UNITCOMBAT_ARCHER"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_MOUNTED")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_MOUNTED, "TXT_KEY_FEAT_UNITCOMBAT_MOUNTED"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_MELEE")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_MELEE, "TXT_KEY_FEAT_UNITCOMBAT_MELEE"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_SIEGE")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_SIEGE, "TXT_KEY_FEAT_UNITCOMBAT_SIEGE"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_GUN")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_GUN, "TXT_KEY_FEAT_UNITCOMBAT_GUN"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_ARMOR")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_ARMOR, "TXT_KEY_FEAT_UNITCOMBAT_ARMOR"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_HELICOPTER")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_HELICOPTER, "TXT_KEY_FEAT_UNITCOMBAT_HELICOPTER"]
-	iCombat = GC.getInfoTypeForString("UNITCOMBAT_NAVAL")
-	if iCombat > -1:
-		lUnitCombat[iCombat] = [FeatTypes.FEAT_UNITCOMBAT_NAVAL, "TXT_KEY_FEAT_UNITCOMBAT_NAVAL"]
+	global unitCombatFeats
+	unitCombatFeats = []
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_ARCHER"), FeatTypes.FEAT_UNITCOMBAT_ARCHER, "TXT_KEY_FEAT_UNITCOMBAT_ARCHER"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_MOUNTED"), FeatTypes.FEAT_UNITCOMBAT_MOUNTED, "TXT_KEY_FEAT_UNITCOMBAT_MOUNTED"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_MELEE"), FeatTypes.FEAT_UNITCOMBAT_MELEE, "TXT_KEY_FEAT_UNITCOMBAT_MELEE"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_SIEGE"), FeatTypes.FEAT_UNITCOMBAT_SIEGE, "TXT_KEY_FEAT_UNITCOMBAT_SIEGE"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_GUN"), FeatTypes.FEAT_UNITCOMBAT_GUN, "TXT_KEY_FEAT_UNITCOMBAT_GUN"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_HELICOPTER"), FeatTypes.FEAT_UNITCOMBAT_HELICOPTER, "TXT_KEY_FEAT_UNITCOMBAT_HELICOPTER"))
+	unitCombatFeats.append((GC.getInfoTypeForString("UNITCOMBAT_MOTILITY_NAVAL"), FeatTypes.FEAT_UNITCOMBAT_NAVAL, "TXT_KEY_FEAT_UNITCOMBAT_NAVAL"))
 
 
 def unitBuiltFeats(CyCity, CyUnit):
-	iCombat = CyUnit.getUnitCombatType()
 	iPlayer = CyCity.getOwner()
 	CyPlayer = GC.getPlayer(iPlayer)
-	if iCombat in lUnitCombat:
-		eFeat = lUnitCombat[iCombat][0]
-		if not CyPlayer.isFeatAccomplished(eFeat):
+
+	for iCombat, eFeat, szTxt in unitCombatFeats:
+		if not CyPlayer.isFeatAccomplished(eFeat) and CyUnit.isHasUnitCombat(iCombat):
 			CyPlayer.setFeatAccomplished(eFeat, True)
 			if not GAME.isNetworkMultiPlayer() and GAME.getElapsedGameTurns() != 0 and iPlayer == GAME.getActivePlayer() and CyPlayer.isOption(PlayerOptionTypes.PLAYEROPTION_ADVISOR_POPUPS):
 				popupInfo = CyPopupInfo()
 				popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
 				popupInfo.setData1(eFeat)
 				popupInfo.setData2(CyCity.getID())
-				popupInfo.setText(TRNSLTR.getText(lUnitCombat[iCombat][1], (CyUnit.getNameKey(), CyCity.getNameKey(),)))
+				popupInfo.setText(TRNSLTR.getText(szTxt, (CyUnit.getNameKey(), CyCity.getNameKey(),)))
 				popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
 				popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
 				popupInfo.addPythonButton(TRNSLTR.getText("TXT_KEY_FEAT_ACCOMPLISHED_OK", ()), "")
@@ -163,7 +139,7 @@ def endTurnFeats(iPlayer):
 
 	CyPlayer = GC.getPlayer(iPlayer)
 	CyCity0 = CyPlayer.getCapitalCity()
-	if CyCity0.isNone(): return
+	if CyCity0 is None: return
 
 	# Population feat
 	lRealPopulation = CyPlayer.getRealPopulation()
@@ -183,8 +159,7 @@ def endTurnFeats(iPlayer):
 				popupInfo.addPopup(iPlayer)
 	# Trade Route
 	if not CyPlayer.isFeatAccomplished(FeatTypes.FEAT_TRADE_ROUTE):
-		CyCityX, i = CyPlayer.firstCity(False)
-		while CyCityX:
+		for CyCityX in CyPlayer.cities():
 			if not CyCityX.isCapital():
 				if CyCityX.isConnectedToCapital(iPlayer):
 					CyPlayer.setFeatAccomplished(FeatTypes.FEAT_TRADE_ROUTE, True)
@@ -200,7 +175,6 @@ def endTurnFeats(iPlayer):
 						popupInfo.addPythonButton(TRNSLTR.getText("TXT_KEY_FEAT_ACCOMPLISHED_MORE", ()), "")
 						popupInfo.addPopup(iPlayer)
 					break
-			CyCityX, i = CyPlayer.nextCity(i, False)
 	# First Bonuses Obtained
 	for item in lBonus:
 		if CyPlayer.isFeatAccomplished(item[0]): continue
@@ -621,7 +595,7 @@ def cityAdvise(CyCity, iPlayer):
 							popupInfo.addPopup(iPlayer)
 							g_iAdvisorNags += 1
 
-				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) == 0 and not CyCity.isOccupation():
+				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) < 10 and not CyCity.isOccupation():
 
 					if (iTurn + 21) % 40 == iTurnFounded % 40:
 
@@ -635,7 +609,7 @@ def cityAdvise(CyCity, iPlayer):
 
 							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
-							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
+							iValue = CvBuildingInfoX.getCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
 
 							if CyCity.canConstruct(iBuildingX, False, False, False):

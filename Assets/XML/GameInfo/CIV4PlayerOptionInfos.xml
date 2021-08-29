@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Player Option -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4PlayerOptionInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<PlayerOptionInfos>
 		<PlayerOptionInfo>
@@ -122,14 +117,14 @@
 		</PlayerOptionInfo>
 		<PlayerOptionInfo>
 			<Type>PLAYEROPTION_MODDER_1</Type>
-			<Description>TXT_KEY_PLAYER_OPTION_MODDER_1AFF</Description>
-			<Help>TXT_KEY_PLAYER_OPTION_MODDER_1_HELPAFF</Help>
+			<Description>TXT_KEY_PLAYER_OPTION_MODDER_1</Description>
+			<Help>TXT_KEY_PLAYER_OPTION_MODDER_1_HELP</Help>
 			<bDefault>0</bDefault>
 		</PlayerOptionInfo>
 		<PlayerOptionInfo>
 			<Type>PLAYEROPTION_MODDER_2</Type>
-			<Description>TXT_KEY_PLAYER_OPTION_MODDER_2AFF</Description>
-			<Help>TXT_KEY_PLAYER_OPTION_MODDER_2_HELPAFF</Help>
+			<Description>TXT_KEY_PLAYER_OPTION_MODDER_2</Description>
+			<Help>TXT_KEY_PLAYER_OPTION_MODDER_2_HELP</Help>
 			<bDefault>0</bDefault>
 		</PlayerOptionInfo>
 		<PlayerOptionInfo>

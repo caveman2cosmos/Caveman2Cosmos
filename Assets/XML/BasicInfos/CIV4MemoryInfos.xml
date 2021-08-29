@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Memory Infos -->
-<!-- -->
-<!-- MODDERS WARNING!	Memories are hard coded enumerated in the SDK -->
-<!-- MODDERS WARNING!	Memories are hard coded enumerated in the SDK -->
-<!-- MODDERS WARNING!	Memories are hard coded enumerated in the SDK -->
-<!-- MODDERS WARNING!	Memories are hard coded enumerated in the SDK -->
-<!-- MODDERS WARNING!	Memories are hard coded enumerated in the SDK -->
+<!-- MODDERS WARNING! Memories are hard coded enumerated in the SDK -->
 <Civ4MemoryInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MemoryInfos>
 		<MemoryInfo>

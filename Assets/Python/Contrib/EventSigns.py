@@ -8,11 +8,8 @@
 ##
 
 from CvPythonExtensions import *
-from operator import itemgetter
-
 import BugUtil
 import CvUtil
-import PlayerUtil
 import CvRandomEventInterface
 import SdToolKit
 
@@ -63,22 +60,8 @@ def enabledOptionChanged (pIniObject, bNewValue):
 		gSavedSigns.processSigns(g_bShowSigns)
 	return True
 
-# def addSign (pPlot, ePlayer, szCaption):
-	# """ Wrapper for CyEngine.addSign() which stores sign data.
-	# If -1 is passed for ePlayer, the sign is assumed to be a landmark that everyone can see.
-	# """
-	# if not pPlot or pPlot.isNone():
-		# BugUtil.warn("EventSigns.addSign() was passed an invalid plot: %s" % (str(pPlot)))
-		# return False
-	# if gSavedSigns == None:
-		# BugUtil.warn("EventSigns.addSign() gSavedSigns is not initialized!")
-		# return False
-	# gSavedSigns.storeSign(pPlot, ePlayer, szCaption)
-	# gSavedSigns.displaySign(pPlot, ePlayer)
-	# SdToolKit.sdSetGlobal(SD_MOD_ID, SD_VAR_ID, gSavedSigns)
-	# return True
 
-def addSign (pPlot, ePlayer, szCaption):
+def addSign(pPlot, ePlayer, szCaption):
 	""" Wrapper for CyEngine.addSign() which stores sign data.
 	If -1 is passed for ePlayer, the sign is assumed to be a landmark that everyone can see.
 
@@ -102,7 +85,9 @@ def addSign (pPlot, ePlayer, szCaption):
 	gSavedSigns.displaySign(pPlot, ePlayer)
 	SdToolKit.sdSetGlobal(SD_MOD_ID, SD_VAR_ID, gSavedSigns)
 	return True
-def updateCurrentSigns ():
+
+
+def updateCurrentSigns():
 	""" Updates gCurrentSigns global with all current signs on map. Remember to clear when done."""
 	global gCurrentSigns
 	gCurrentSigns = MapSigns()
@@ -169,24 +154,26 @@ def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 	# Note the extra spaces added for separation after each yield adjustment; you can remove them
 	# if you want a more condensed sign; the reason they are here instead of in the XML formats
 	# is because I couldn't come up with a simple way to make them appear only if the yield changes.
-	if (iFood != 0):
-		sCaptionFood = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_FOOD", (iFood, )) + u" "
-	if (iProd != 0):
-		sCaptionProd = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_PROD", (iProd, )) + u" "
-	if (iComm != 0):
-		sCaptionComm = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_COMM", (iComm, )) + u" "
+	if iFood != 0:
+		sCaptionFood = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_FOOD", (iFood,)) + " "
+	if iProd != 0:
+		sCaptionProd = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_PROD", (iProd,)) + " "
+	if iComm != 0:
+		sCaptionComm = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_COMM", (iComm,)) + " "
 
 	sCaption = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_OVERVIEW", (sCaptionFood, sCaptionProd, sCaptionComm, sCaptionDesc))
 
-	if (bIsSign):
-		if (iSignOwner == -1):
-			# add signs for all valid human players who are still alive.
-			for pPlayer in PlayerUtil.players(human=True, alive=True):
-				addSign(pPlot, pPlayer.getID(), sCaption)
-		else:
-			addSign(pPlot, iSignOwner, sCaption)
-	else:
+	if not bIsSign:
 		engine.addLandmark(pPlot, sCaption)
+
+	elif iSignOwner == -1:
+		# add signs for all valid human players who are still alive.
+		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			player = GC.getPlayer(iPlayer)
+			if player.isAlive() and player.isHuman():
+				addSign(pPlot, iPlayer, sCaption)
+
+	else: addSign(pPlot, iSignOwner, sCaption)
 
 	return True
 
@@ -200,7 +187,7 @@ def applyLandmarkFromEvent(argsList):
 	iProd = event.getPlotExtraYield(YieldTypes.YIELD_PRODUCTION)
 	iComm = event.getPlotExtraYield(YieldTypes.YIELD_COMMERCE)
 
-	if ( (iFood != 0) or (iProd != 0) or (iComm != 0) ):
+	if iFood != 0 or iProd != 0 or iComm != 0:
 		pPlot = MAP.plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 		placeLandmark(pPlot, event.getType(), iFood, iProd, iComm, True, -1)
 
@@ -280,7 +267,7 @@ class MapSigns:
 		if not thisKey:
 			BugUtil.warn("MapSigns.storeSign() could not determine valid keyname for Plot %s." % (str(pPlot)))
 			return False
-		if not thisKey in self.plotDict:
+		if thisKey not in self.plotDict:
 			self.plotDict[thisKey] = PlotSigns(pPlot)
 		self.plotDict[thisKey].setSign(ePlayer, szCaption)
 
@@ -309,7 +296,7 @@ class MapSigns:
 				engine.addLandmark(pPlot.cloneToViewport(), szCaption.encode('latin_1'))
 		else:
 			pPlayer = GC.getPlayer(ePlayer)
-			if not pPlayer or pPlayer.isNone():
+			if not pPlayer:
 				BugUtil.warn("MapSigns.displaySign() was passed an invalid player id: %s" % (str(ePlayer)))
 				return False
 			eTeam = pPlayer.getTeam()
@@ -456,14 +443,6 @@ class PlotSigns:
 		return "PlotSigns { iX = %d, iY = %d, signDict = %s }" % (self.iX, self.iY, str(self.signDict))
 
 
-class PlotCaptions:
-	""" Fake class needed to load games made with first development version. """
-	def __init__ (self):
-		self.iX = None
-		self.iY = None
-		self.teamDict = None
-
-
 class EventSignsEventHandler:
 	""" Event Handler for this module. """
 
@@ -544,11 +523,10 @@ def applySaltpeter(argsList):
 	# Add landmark for initial plot, if there is still a yield change
 	placeLandmark(CyPlot, sEventType, iFood, iProd, iComm, True, -1)
 
-	iForest = GC.getInfoTypeForString('FEATURE_FOREST')
+	iForest = GC.getFEATURE_FOREST()
 
 	listPlots = []
-	for i in range(MAP.numPlots()):
-		CyPlot = MAP.plotByIndex(i)
+	for CyPlot in MAP.plots():
 		if (CyPlot.getOwner() == iPlayer and CyPlot.getFeatureType() == iForest and CyPlot.isHills()):
 			iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, CyPlot.getX(), CyPlot.getY())
 			if iDistance > 0:
@@ -566,7 +544,7 @@ def applySaltpeter(argsList):
 		iY = plot[1].getY()
 		GAME.setPlotExtraYield(iX, iY, YieldTypes.YIELD_COMMERCE, 1)
 		szTxt = TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED",())
-		CvUtil.sendMessage(msg, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
+		CvUtil.sendMessage(szTxt, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
 		# Add landmark for other plots too.
 		placeLandmark(plot[1], sEventType, iFood, iProd, iComm, True, -1)
 

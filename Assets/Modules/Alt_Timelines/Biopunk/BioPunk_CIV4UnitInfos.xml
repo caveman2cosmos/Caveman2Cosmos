@@ -33,7 +33,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ORGANIC_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ORGANIC_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ORGANIC_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -70,6 +69,7 @@
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<BonusType>BONUS_ORGANIC_COMPUTERS</BonusType>
 			<iCost>3665</iCost>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>225</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -83,7 +83,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iExtraCost>3</iExtraCost>
 			<iAsset>5</iAsset>
 			<iPower>111</iPower>
 			<UnitMeshGroups>

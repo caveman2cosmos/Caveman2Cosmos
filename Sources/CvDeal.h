@@ -6,13 +6,11 @@
 #define CIV4_DEAL_H
 
 #include "LinkedList.h"
-#include "CvStructs.h"
+//#include "CvStructs.h"
 
-class CvDeal
+class CvDeal : bst::noncopyable
 {
-
 public:
-
 	CvDeal();
 	virtual ~CvDeal();
 
@@ -92,7 +90,7 @@ protected:
 	void endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToPlayer, bool bTeam);
 
 	void startTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam, bool bDual);
-	
+
 	void endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam);
 
 	static bool isVassalTrade(const CLinkList<TradeData>* pFirstList);

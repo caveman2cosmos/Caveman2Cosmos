@@ -154,15 +154,11 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed, shuffle
 import math
-import sys
-import time
-import os
 
 class MapConstants :
 		def __init__(self):
@@ -3354,11 +3350,11 @@ class Areamap :
 								if xRightExtreme >= seg.xRight + landOffset:
 										if debugReport:
 												print "finished with line"
-										break; #past the end of the parent line and this line ends
+										break #past the end of the parent line and this line ends
 						elif lineFound == False and xRightExtreme >= seg.xRight + landOffset:
 								if debugReport:
 										print "no additional lines found"
-								break; #past the end of the parent line and no line found
+								break #past the end of the parent line and no line found
 						else:
 								continue #keep looking for more line segments
 				if lineFound == True: #still a line needing to be put on stack
@@ -3472,7 +3468,7 @@ class RiverMap :
 				for y in range(mc.height):
 						for x in range(mc.width):
 								i = GetIndex(x,y)
-								maxHeight = 0.0;
+								maxHeight = 0.0
 								for yy in range(y,y-2,-1):
 										for xx in range(x,x+2):
 												ii = GetIndex(xx,yy)
@@ -3545,7 +3541,7 @@ class RiverMap :
 				for y in range(mc.height):
 						for x in range(mc.width):
 								i = GetIndex(x,y)
-								avg = 0.0;
+								avg = 0.0
 								for yy in range(y,y-2,-1):
 										for xx in range(x,x+2):
 												ii = GetIndex(xx,yy)
@@ -3931,9 +3927,9 @@ class BonusPlacer:
 				if (mc.BonusMaxGroupSize == -1):
 					maxAdd = (gc.getMap().getWorldSize() / 2) + 3
 				elif (mc.BonusMaxGroupSize == 0):
-					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive());
+					maxAdd = PRand.randint(1, gc.getGame().countCivPlayersEverAlive())
 				else:
-					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize);
+					maxAdd = PRand.randint(1, mc.BonusMaxGroupSize)
 				for dx in range(-groupRange, groupRange + 1):
 					for dy in range(-groupRange, groupRange + 1):
 						 #NEW CODE - Fuyu
@@ -3979,8 +3975,8 @@ class BonusPlacer:
 
 	def AssignBonusAreas(self):
 		gc = CyGlobalContext()
-		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
+		self.areas = gameMap.areas()
 		self.bonusList = list()
 
 		#Create and shuffle the bonus list and keep tally on
@@ -4227,7 +4223,6 @@ class BonusPlacer:
 
 
 	def CalculateAreaSuitability(self, area, eBonus):
-		gc = CyGlobalContext()
 		gameMap = CyMap()
 		areaID = area.getID()
 		uniqueTypesInArea		 = self.GetUniqueBonusTypeCountInArea(area)
@@ -4282,9 +4277,8 @@ class StartingPlotFinder:
 		#try:
 			gc = CyGlobalContext()
 			gameMap = CyMap()
-			iPlayers = gc.getGame().countCivPlayersEverAlive()
 			gameMap.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = gameMap.areas()
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
@@ -4402,11 +4396,10 @@ class StartingPlotFinder:
 
 
 	def setupOldWorldAreaList(self):
-		gc = CyGlobalContext()
 		gameMap = CyMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = gameMap.areas()
 		areaOldWorld = list()
 		for i in range(len(areas)):
 			for pI in range(mc.width*mc.height):
@@ -4541,9 +4534,9 @@ class StartingPlotFinder:
 				bProceed = True
 				if featureEnum != FeatureTypes.NO_FEATURE and buildInfo.isFeatureRemove(featureEnum):
 					if buildInfo.getFeatureTech(featureEnum) == TechTypes.NO_TECH or gc.getTechInfo(buildInfo.getFeatureTech(featureEnum)).getEra() <= max(game.getStartEra(), 1):
-						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)		+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE)
-						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)				+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD)
-						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION)
+						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)
+						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)
+						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION)
 					else:
 						bProceed = False
 				if bProceed:
@@ -4585,7 +4578,6 @@ class StartingPlotFinder:
 
 
 	def boostCityPlotValue(self, x, y, bonuses, isCoastalCity):
-		mapGen = CyMapGenerator()
 		food,value = self.getCityPotentialValue(x, y)
 		gc = CyGlobalContext()
 		gameMap = CyMap()
@@ -4850,7 +4842,6 @@ class StartingArea :
 				self.idealNumberOfPlayers = 0
 				return
 		def CalculatePlotList(self):
-				gc = CyGlobalContext()
 				gameMap = CyMap()
 
 				for y in range(mc.height):
@@ -4990,7 +4981,7 @@ class StartingArea :
 								sPlot = gameMap.plot(self.plotList[m].x,self.plotList[m].y)
 								if sPlot.isWater() == True:
 										raise ValueError, "Start plot is water!"
-								sPlot.setImprovementType(gc.getInfoTypeForString("NO_IMPROVEMENT"))
+								sPlot.setImprovementType(-1)
 								playerID = self.playerList[n]
 								player = gc.getPlayer(playerID)
 								sPlot.setStartingPlot(True)
@@ -5000,7 +4991,6 @@ class StartingArea :
 
 				return
 		def CalculateStartingPlotValues(self):
-				gameMap = CyMap()
 				numPlots = len(self.plotList)
 
 				for n in range(numPlots):
@@ -5100,49 +5090,45 @@ class StartingArea :
 						print lineString
 				return
 
-class StartPlot :
-		def __init__(self,x,y,localValue):
-				self.x = x
-				self.y = y
-				self.localValue = localValue
-				self.totalValue = 0
-				self.numberOfOwnedCities = 0
-				self.distanceToOwner = -1
-				self.nearestStart = -1
-				self.vacant = True
-				self.owner = None
-				self.avgDistance = 0
-				return
-		def isCoast(self):
-				gameMap = CyMap()
-				plot = gameMap.plot(self.x,self.y)
-				waterArea = plot.waterArea()
-				if waterArea.isNone() == True or waterArea.isLake() == True:
-						return False
-				return True
+class StartPlot:
+	def __init__(self,x,y,localValue):
+		self.x = x
+		self.y = y
+		self.localValue = localValue
+		self.totalValue = 0
+		self.numberOfOwnedCities = 0
+		self.distanceToOwner = -1
+		self.nearestStart = -1
+		self.vacant = True
+		self.owner = None
+		self.avgDistance = 0
+		return
 
-		def isRiverSide(self):
-				gameMap = CyMap()
-				plot = gameMap.plot(self.x,self.y)
-				return plot.isRiverSide()
+	def isCoast(self):
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return waterArea is not None and not waterArea.isLake()
 
-		def plot(self):
-				gameMap = CyMap()
-				return gameMap.plot(self.x,self.y)
-		def copy(self):
-				cp = StartPlot(self.x,self.y,self.localValue)
-				cp.totalValue = self.totalValue
-				cp.numberOfOwnedCities = self.numberOfOwnedCities
-				cp.distanceToOwner = self.distanceToOwner
-				cp.nearestStart = self.nearestStart
-				cp.vacant = self.vacant
-				cp.owner = self.owner
-				cp.avgDistance = self.avgDistance
-				return cp
-		def __str__(self):
-				linestring = "x=%(x)3d,y=%(y)3d,localValue=%(lv)6d,totalValue =%(tv)6d, nearestStart=%(ad)6d, coastalCity=%(cc)d" % \
-				{"x":self.x,"y":self.y,"lv":self.localValue,"tv":self.totalValue,"ad":self.nearestStart,"cc":self.isCoast()}
-				return linestring
+	def isRiverSide(self):
+		return CyMap().plot(self.x,self.y).isRiverSide()
+
+	def plot(self):
+		return CyMap().plot(self.x,self.y)
+
+	def copy(self):
+		cp = StartPlot(self.x,self.y,self.localValue)
+		cp.totalValue = self.totalValue
+		cp.numberOfOwnedCities = self.numberOfOwnedCities
+		cp.distanceToOwner = self.distanceToOwner
+		cp.nearestStart = self.nearestStart
+		cp.vacant = self.vacant
+		cp.owner = self.owner
+		cp.avgDistance = self.avgDistance
+		return cp
+
+	def __str__(self):
+		linestring = "x=%(x)3d,y=%(y)3d,localValue=%(lv)6d,totalValue =%(tv)6d, nearestStart=%(ad)6d, coastalCity=%(cc)d" % \
+		{"x":self.x,"y":self.y,"lv":self.localValue,"tv":self.totalValue,"ad":self.nearestStart,"cc":self.isCoast()}
+		return linestring
 
 hm = HeightMap()
 cm = ClimateMap()
@@ -5801,7 +5787,6 @@ def addLakes():
 		print "Adding Lakes"
 		gc = CyGlobalContext()
 		mmap = gc.getMap()
-		terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
 #		 PrintFlowMap()
 		oceanMap = Areamap(mc.width,mc.height,True,True)
 		oceanMap.defineAreas(isSmallWaterMatch)
@@ -5839,17 +5824,11 @@ def addFeatures():
 		print "Adding Features"
 		gc = CyGlobalContext()
 		mmap = gc.getMap()
-		featureIce = gc.getInfoTypeForString("FEATURE_ICE")
 		featureJungle = gc.getInfoTypeForString("FEATURE_JUNGLE")
 		featureForest = gc.getInfoTypeForString("FEATURE_FOREST")
 		featureOasis = gc.getInfoTypeForString("FEATURE_OASIS")
 		featureFloodPlains = gc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 		## C2C start ##
-		terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
-		#~ terrainSea = gc.getInfoTypeForString("TERRAIN_SEA")
-		terrainOcean = gc.getInfoTypeForString("TERRAIN_OCEAN")
-		featureReef = gc.getInfoTypeForString("FEATURE_REEF")
-		featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 		featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
 		featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 		featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
@@ -5922,9 +5901,9 @@ def addFeatures():
 
 						if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 							for iI in range(gc.getNumFeatureInfos()):
-					#			print self.gc.getFeatureInfo(iI).getDescription()
+					#			print gc.getFeatureInfo(iI).getDescription()
 								if plot.canHaveFeature(iI):
-					#				print "Can have feature with probability: %d" % self.gc.getFeatureInfo(iI).getAppearanceProbability()
+					#				print "Can have feature with probability: %d" % gc.getFeatureInfo(iI).getAppearanceProbability()
 									if PRand.random() * 10000 < gc.getFeatureInfo(iI).getAppearanceProbability():
 					#					print "Setting feature"
 										plot.setFeatureType(iI, -1)
@@ -5983,11 +5962,10 @@ def createIce():
 def addBonuses():
 		bp.AddBonuses()
 		return
+
 def assignStartingPlots():
-		gc = CyGlobalContext()
-		gameMap = CyMap()
-		iPlayers = gc.getGame().countCivPlayersEverAlive()
 		spf.SetStartingPlots()
+
 def beforeInit():
 		print "Initializing Custom Map Options"
 		mc.initialize()

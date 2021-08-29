@@ -28,8 +28,8 @@ TERRA NOTES
 Terra turns out to be our largest size map. This is the only map script
 in the original release of Civ4 where the grids are this large!
 
-This script is also the one that got me started in to map scripting. I had 
-this idea early in the development cycle and just kept pestering until Soren 
+This script is also the one that got me started in to map scripting. I had
+this idea early in the development cycle and just kept pestering until Soren
 turned me loose on it, finally. Once I got going, I just kept on going!
 
 - Bob Thomas   September 20, 2005
@@ -117,7 +117,7 @@ def addBonusType(argsList):
 	if (CyMap().getCustomMapOption(1) == 1):
 		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def getGridSize(argsList):
@@ -164,12 +164,12 @@ class TerraMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		# The following grain matrix is specific to Terra.py
 		sizekey = self.map.getWorldSize()
 		sizevalues = {
-			WorldSizeTypes.WORLDSIZE_DUEL:      (3,2,1,2),
-			WorldSizeTypes.WORLDSIZE_TINY:      (3,2,1,2),
-			WorldSizeTypes.WORLDSIZE_SMALL:     (4,2,1,2),
+			WorldSizeTypes.WORLDSIZE_DUEL:	  (3,2,1,2),
+			WorldSizeTypes.WORLDSIZE_TINY:	  (3,2,1,2),
+			WorldSizeTypes.WORLDSIZE_SMALL:	 (4,2,1,2),
 			WorldSizeTypes.WORLDSIZE_STANDARD:  (4,2,1,2),
-			WorldSizeTypes.WORLDSIZE_LARGE:     (4,2,1,2),
-			WorldSizeTypes.WORLDSIZE_HUGE:      (5,2,1,2),
+			WorldSizeTypes.WORLDSIZE_LARGE:	 (4,2,1,2),
+			WorldSizeTypes.WORLDSIZE_HUGE:	  (5,2,1,2),
 			6:									(5,2,1,2),
 			7:									(6,2,1,2)
 			}
@@ -179,7 +179,7 @@ class TerraMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			(archGrain, contGrain, gaeaGrain, eurasiaGrain) = sizevalues[sizekey]
 
 		# Sea Level adjustment (from user input), limited to value of 5%.
-		sea = self.gc.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+		sea = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
 		sea = min(sea, 5)
 		sea = max(sea, -5)
 

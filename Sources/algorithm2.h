@@ -49,7 +49,7 @@ namespace detail {
 	};
 
 	template <class O, class R, class D>
-	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true> 
+	struct is_algo_functor< algo_functor<O, R, D> > : bst::integral_constant<bool, true>
 	{
 		static const bool value = true;
 	};
@@ -143,12 +143,12 @@ namespace detail {
 //     ...
 //     struct algo
 //     {
-//         DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
+//         DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getID);
 //     };
 //     ...
 // };
-// 
-// Results in usage like: 
+//
+// Results in usage like:
 //   CvUnit::fn::getID()
 //
 // The functors generated can be combined using comparison and boolean operators
@@ -156,7 +156,7 @@ namespace detail {
 //   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
 // or
 //   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
-// 
+//
 namespace map_fun_details {
 
 	template < class Ty_, class Enable_ = void >
@@ -182,12 +182,49 @@ namespace map_fun_details {
 }
 
 #define DECLARE_MAP_FUNCTOR(obj_type_, result_type_, mem_fn_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(); \
+		} \
+	};
+#define DECLARE_MAP_FUNCTOR_1(obj_type_, result_type_, mem_fn_, val_type_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value) : val(val) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val); \
+		} \
+		val_type_ val; \
+	};
+#define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
+	struct mem_fn_ : detail::algo_functor<obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val), val2(other.val2) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val, val2); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+	};
+#define DECLARE_MAP_FUNCTOR_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
+	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(mem_fn_& other) : val(other.val), val2(other.val2), val3(other.val3) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value, val_type3_ val3 = map_fun_details::default_value<val_type3_>::value) : val(val), val2(val2), val3(val3) {} \
+		result_type_ operator()(obj_type_* obj) { \
+			return obj->mem_fn_(val, val2, val3); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+		val_type3_ val3; \
+	};
+
+#define DECLARE_MAP_FUNCTOR_CONST(obj_type_, result_type_, mem_fn_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		result_type_ operator()(const obj_type_* obj) const { \
 			return obj->mem_fn_(); \
 		} \
 	};
-#define DECLARE_MAP_FUNCTOR_1(obj_type_, result_type_, mem_fn_, val_type_) \
+#define DECLARE_MAP_FUNCTOR_CONST_1(obj_type_, result_type_, mem_fn_, val_type_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value) : val(val) {} \
@@ -196,7 +233,7 @@ namespace map_fun_details {
 		} \
 		val_type_ val; \
 	};
-#define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
+#define DECLARE_MAP_FUNCTOR_CONST_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
@@ -206,7 +243,7 @@ namespace map_fun_details {
 		val_type_ val; \
 		val_type2_ val2; \
 	};
-#define DECLARE_MAP_FUNCTOR_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
+#define DECLARE_MAP_FUNCTOR_CONST_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2), val3(other.val3) {} \
 		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value, val_type3_ val3 = map_fun_details::default_value<val_type3_>::value) : val(val), val2(val2), val3(val3) {} \
@@ -300,14 +337,9 @@ namespace algo {
 	// test if an element exists in a range
 	template< class _Range, class Item_ >
 	bool contains(const _Range& rng, const Item_& item) {
-		typedef typename bst::range_iterator<_Range>::type itr;
-		itr _First = bst::begin(rng),
-			_Last = bst::end(rng);
-		for (; _First != _Last; ++_First) {
-			if (*_First == item) {
+		foreach_(const Item_& element, rng)
+			if (element == item)
 				return true;
-			}
-		}
 		return false;
 	}
 
@@ -405,7 +437,7 @@ namespace algo {
 			bst::random_access_traversal_tag
 		>,
 		size_t
-	>::type 
+	>::type
 	count_all(const _Range& rng) {
 		typedef typename bst::range_iterator<_Range>::type itr;
 		itr _First = bst::begin(rng), _Last = bst::end(rng);
@@ -415,7 +447,7 @@ namespace algo {
 	}
 }
 
-//namespace std {
+namespace std {
 //	// FUNCTION TEMPLATE all_of
 //	template <class _InIt, class _Pr>
 //	bool all_of(_InIt _First, _InIt _Last, _Pr _Pred) { // test if all elements satisfy _Pred
@@ -431,7 +463,7 @@ namespace algo {
 //	// FUNCTION TEMPLATE any_of
 //	template <class _InIt, class _Pr>
 //	bool any_of(_InIt _First, const _InIt _Last, _Pr _Pred) { // test if any element satisfies _Pred
-//		
+//
 //		for (; _First != _Last; ++_First) {
 //			if (_Pred(*_First)) {
 //				return true;
@@ -463,6 +495,6 @@ namespace algo {
 //		}
 //		return _Dest;
 //	}
-//};
+}
 
 #endif // algorithm2_h__

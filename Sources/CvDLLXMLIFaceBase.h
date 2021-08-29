@@ -68,7 +68,7 @@ public:
 	virtual bool GetLastNodeValue(FXml* xml, std::wstring& pszText) = 0;
 	// get the value from the last located node, returns true if successful and false otherwise
 	virtual bool GetLastNodeValue(FXml* xml, char* pszText) = 0;
-	virtual bool GetLastNodeValue(FXml* xml, wchar* pszText) = 0;
+	virtual bool GetLastNodeValue(FXml* xml, wchar_t* pszText) = 0;
 	// get the boolean value from the last located node, returns true if successful and false otherwise
 	virtual bool GetLastNodeValue(FXml* xml, bool* pbVal) = 0;
 	// get the integer value from the last located node, returns true if successful and false otherwise
