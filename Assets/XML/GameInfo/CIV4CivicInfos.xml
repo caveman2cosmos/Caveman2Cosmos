@@ -9469,6 +9469,14 @@
 					<BuildingType>BUILDING_MONTE_CARLO</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
+					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -9476,8 +9484,8 @@
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-					<iHealthChange>-1</iHealthChange>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -10538,7 +10546,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>

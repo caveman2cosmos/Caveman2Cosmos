@@ -526,6 +526,8 @@
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -627,6 +629,8 @@
 				<BuildingType>BUILDING_DEER_HERD</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -727,6 +731,7 @@
 				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -815,6 +820,12 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
@@ -887,6 +898,8 @@
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -984,9 +997,6 @@
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -1087,6 +1097,7 @@
 				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -1165,6 +1176,12 @@
 			</MapCategoryTypes>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -1212,6 +1229,8 @@
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>

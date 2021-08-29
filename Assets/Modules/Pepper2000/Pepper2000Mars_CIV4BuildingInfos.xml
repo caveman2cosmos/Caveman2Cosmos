@@ -324,6 +324,7 @@
 				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_ASTROECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_VERTICAL_FARM</ObsoletesToBuilding>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -879,6 +880,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CAVES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_NANOSHIELDING</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -892,6 +894,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
 			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_SKYSCRAPER</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1206,6 +1209,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_EXPANDED_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_NANOSHIELDING</ObsoleteTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1218,6 +1222,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
 			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_SKYSCRAPER</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 			</PrereqInCityBuildings>
@@ -1418,6 +1423,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+			<ObsoletesToBuilding>BUILDING_MARS_HYDROPONICS</ObsoletesToBuilding>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

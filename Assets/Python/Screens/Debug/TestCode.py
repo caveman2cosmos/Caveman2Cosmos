@@ -25,8 +25,8 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirements, "Building requirements of buildings", "Checks if building requirements aren't unlocked after building itself")
 		self.main.addTestCode(screen, self.checkBuildingRequirementReplacements, "Building requirement replacements", "Checks if building requirements are replaced")
 		self.main.addTestCode(screen, self.checkBuildingRequirementObsoletion, "Building obsoletion of requirements", "Checks when requirements obsolete in relation to building itself. Building requirements of building shouldn't obsolete before building itself. For beeliners: If there is requirement obsoletion within 10 columns, then building shall obsolete on same tech as its requirement")
-		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 10 columns of building unlock")
-		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 10 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
+		self.main.addTestCode(screen, self.checkBuildingUnlockObsoletion, "Buildings unlock/obsoletion", "Checks if building obsoletion doesn't happen within 5 columns of building unlock")
+		self.main.addTestCode(screen, self.checkBuildingReplacementObsoletion, "Building obsoletion of replacements", "Checks when replacements are unlocked and obsoleted. Base -> Upgrade: Base tech obsoletion/Upgrade tech unlock, beelining might cause base building to go obsolete before replacement is available, difference of more than 5 columns is assumed safe. Replacing building shouldn't obsolete before replaced one")
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics, traits, conversely improvements can upgrade, so they are checked too")
@@ -186,30 +186,122 @@ class TestCode:
 					if aReqColumnTechIDList[i] not in aBaseTechIDList:
 						self.log(CvBuildingInfo.getType()+" GOM OR requirement unlocked by different tech in column: "+str(iBaseTechLoc)+" requirement/base "+str(aReqColumnTechList[i])+" / "+str(aBaseTechList))
 
+			#<PrereqNotInCityBuildings> - Those block building from being built, they should be unlocked at same tech if they are regular building
+			for i in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(i)
+				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
+				if max(aBaseTechIDList) != max(self.HF.checkBuildingTechRequirements(CvBlockerBuilding)[2]) and not isNationalWonder(iBlockerBuilding) and not isWorldWonder(iBlockerBuilding) and CvBlockerBuilding.getProductionCost() > 0:
+					self.log(CvBuildingInfo.getType()+" doesn't unlock with "+CvBlockerBuilding.getType())
+
 	#Building replacements of requirements
 	def checkBuildingRequirementReplacements(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN", "BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			if CvBuildingInfo.getType().find("_STORIES", -8) == -1: #Ignore stories
-				aBuildingRequirementNamesList = []
+
+				#Generate list of buildings, that replace currently checked building
+				aBuildingReplacementList = []
+				for iBuildingReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+					iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(iBuildingReplacement)
+					if iReplacementBuilding not in aBuildingReplacementList:
+						aBuildingReplacementList.append(iReplacementBuilding)
+				#Generate list of buildings, that are replaced by currently checked building
+				aBuildingReplacedList = []
+				for iBuildingReplaced in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+					iReplacedBuilding = CvBuildingInfo.getReplacedBuilding(iBuildingReplaced)
+					if iReplacedBuilding not in aBuildingReplacedList:
+						aBuildingReplacedList.append(iReplacedBuilding)
 
 				#<PrereqInCityBuildings> - require all buildings in list
+				aBuildingInCityRequirementList = []
 				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
-					iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-					aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
+					aBuildingInCityRequirementList.append(CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement))
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingInCityRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingInCityRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingInCityRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingInCityRequirementList)):
+					if aBuildingInCityRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" AND is replaced by requirement: "+GC.getBuildingInfo(aBuildingInCityRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingInCityRequirementList)):
+					if aBuildingInCityRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" AND replaces requirement: "+GC.getBuildingInfo(aBuildingInCityRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" AND as unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 				#<PrereqOrBuildings> - require one building in list
+				aBuildingOrRequirementList = []
 				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqOrBuilding()):
-					iPrereqBuilding = CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement)
-					if iPrereqBuilding not in aBuildingRequirementNamesList:
-						aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
+					aBuildingOrRequirementList.append(CvBuildingInfo.getPrereqOrBuilding(iBuildingRequirement))
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingOrRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingOrRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingOrRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingOrRequirementList)):
+					if aBuildingOrRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" OR is replaced by requirement: "+GC.getBuildingInfo(aBuildingOrRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingOrRequirementList)):
+					if aBuildingOrRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" OR replaces requirement: "+GC.getBuildingInfo(aBuildingOrRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingOrRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" OR has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 				#<PrereqAmountBuildings> - require all buildings in empire in list
+				aBuildingEmpireAndRequirementList = []
 				for pair in CvBuildingInfo.getPrereqNumOfBuildings():
-					iPrereqBuilding = pair.id
-					if iPrereqBuilding not in aBuildingRequirementNamesList:
-						aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
+					aBuildingEmpireAndRequirementList.append(pair.id)
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingEmpireAndRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingEmpireAndRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingEmpireAndRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingEmpireAndRequirementList)):
+					if aBuildingEmpireAndRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Empire AND is replaced by requirement: "+GC.getBuildingInfo(aBuildingEmpireAndRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingEmpireAndRequirementList)):
+					if aBuildingEmpireAndRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" Empire AND replaces requirement: "+GC.getBuildingInfo(aBuildingEmpireAndRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingEmpireAndRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Empire AND has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 				#<ConstructCondition>
 				aBuildingGOMReqList = []
@@ -218,47 +310,94 @@ class TestCode:
 				self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
 
 				#Analyze GOM AND Building reqs
+				aBuildingGOMAndRequirementList = []
 				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement]
-					if iPrereqBuilding not in aBuildingRequirementNamesList:
-						aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
-
-				#Analyze GOM OR Building reqs
-				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-					iPrereqBuilding = aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement]
-					if iPrereqBuilding not in aBuildingRequirementNamesList:
-						aBuildingRequirementNamesList.append(GC.getBuildingInfo(iPrereqBuilding).getType())
-
-				#Generate list of buildings, that replace requirements
+					aBuildingGOMAndRequirementList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuildingRequirement])
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
 				aBuildingRequirementReplacementList = []
-				for i in xrange(len(aBuildingRequirementNamesList)):
-					CvBuildingRequirementInfo = GC.getBuildingInfo(GC.getInfoTypeForString(aBuildingRequirementNamesList[i]))
+				for i in xrange(len(aBuildingGOMAndRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingGOMAndRequirementList[i])
 					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
 						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
-						if iReplacementBuilding not in aBuildingRequirementReplacementList:
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
 							aBuildingRequirementReplacementList.append(iReplacementBuilding)
-
-				#Remove buildings from requirement replacement list, if they already exist in requirement list
-				aBuildingRequirementReplacementUniqueNameList = []
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
 				for i in xrange(len(aBuildingRequirementReplacementList)):
-					if aBuildingRequirementReplacementList[i] not in aBuildingRequirementNamesList:
-						aBuildingRequirementReplacementUniqueNameList.append(GC.getBuildingInfo(aBuildingRequirementReplacementList[i]).getType())
+					if aBuildingRequirementReplacementList[i] not in aBuildingGOMAndRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingGOMAndRequirementList)):
+					if aBuildingGOMAndRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" GOM AND is replaced by requirement: "+GC.getBuildingInfo(aBuildingGOMAndRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingGOMAndRequirementList)):
+					if aBuildingGOMAndRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" GOM AND replaces requirement: "+GC.getBuildingInfo(aBuildingGOMAndRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingGOMAndRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" GOM AND has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
-				#Remove buildings from unlisted list, if they are already present
-				for i in xrange(len(aBuildingRequirementNamesList)):
-					if aBuildingRequirementNamesList[i] in aBuildingRequirementReplacementUniqueNameList:
-						aBuildingRequirementReplacementUniqueNameList.remove(aBuildingRequirementNamesList[i])
+				#Analyze GOM OR Building reqs
+				aBuildingGOMOrRequirementList = []
+				for iBuildingRequirement in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+					aBuildingGOMOrRequirementList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuildingRequirement])
+				#Generate list of buildings, that replace requirements, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingGOMOrRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingGOMOrRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced requirements, that aren't listed as requirements
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingGOMOrRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have requirement, that is replacement of building
+				for i in xrange(len(aBuildingGOMOrRequirementList)):
+					if aBuildingGOMOrRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" GOM OR is replaced by requirement: "+GC.getBuildingInfo(aBuildingGOMOrRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by building itself
+				for i in xrange(len(aBuildingGOMOrRequirementList)):
+					if aBuildingGOMOrRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" GOM OR replaces requirement: "+GC.getBuildingInfo(aBuildingGOMOrRequirementList[i]).getType())
+				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingGOMOrRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" GOM OR has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
-				#Remove unwanted replacements of requirements like bans and pollution, or tested building itself.HF.
-				for i in xrange(len(aSpecialReplacementsList)):
-					if aSpecialReplacementsList[i] in aBuildingRequirementReplacementUniqueNameList:
-						aBuildingRequirementReplacementUniqueNameList.remove(aSpecialReplacementsList[i])
-				if CvBuildingInfo.getType() in aBuildingRequirementReplacementUniqueNameList:
-					aBuildingRequirementReplacementUniqueNameList.remove(CvBuildingInfo.getType())
-
-				#If we have unlisted replacements
-				if len(aBuildingRequirementReplacementUniqueNameList) > 0:
-					self.log(CvBuildingInfo.getType()+" requirements "+str(aBuildingRequirementNamesList)+" have unlisted replacements "+str(aBuildingRequirementReplacementUniqueNameList))
+				#Analyze Not In City Building blockers
+				aBuildingNotInCityRequirementList = []
+				for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+					aBuildingNotInCityRequirementList.append(CvBuildingInfo.getPrereqNotInCityBuilding(iBuildingRequirement))
+				#Generate list of buildings, that replace blockers, ignore bans as their intent is to block stuff
+				aBuildingRequirementReplacementList = []
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					CvBuildingRequirementInfo = GC.getBuildingInfo(aBuildingNotInCityRequirementList[i])
+					for iBuildingReplacement in xrange(CvBuildingRequirementInfo.getNumReplacementBuilding()):
+						iReplacementBuilding = CvBuildingRequirementInfo.getReplacementBuilding(iBuildingReplacement)
+						if iReplacementBuilding not in aBuildingRequirementReplacementList and GC.getBuildingInfo(iReplacementBuilding).getType() not in aSpecialReplacementsList:
+							aBuildingRequirementReplacementList.append(iReplacementBuilding)
+				#Generate list of replaced blockers, that aren't listed as blockers
+				aUnlistedRequirementReplacements = []
+				for i in xrange(len(aBuildingRequirementReplacementList)):
+					if aBuildingRequirementReplacementList[i] not in aBuildingNotInCityRequirementList:
+						aUnlistedRequirementReplacements.append(aBuildingRequirementReplacementList[i])
+				#Check if we have blockers, that is replacement of building
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					if aBuildingNotInCityRequirementList[i] in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Not In City is replaced by blockers: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have blockers, that is replaced by building itself
+				for i in xrange(len(aBuildingNotInCityRequirementList)):
+					if aBuildingNotInCityRequirementList[i] in aBuildingReplacedList:
+						self.log(CvBuildingInfo.getType()+" Not In City replaces blockers: "+GC.getBuildingInfo(aBuildingNotInCityRequirementList[i]).getType())
+				#Check if we have blockers, that is replaced by unlisted blockers replacement, ignore blockers replacement, if it replaces currently checked building
+				for i in xrange(len(aUnlistedRequirementReplacements)):
+					if aUnlistedRequirementReplacements[i] not in aBuildingNotInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
+						self.log(CvBuildingInfo.getType()+" Not In City has unlisted replaced blockers: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 	#Building obsoletion of requirements - requirements shouldn't obsolete before building itself
 	def checkBuildingRequirementObsoletion(self):
@@ -343,6 +482,13 @@ class TestCode:
 			if len(aBuildingRequirementObsoleteTechLocList) > 0 and max(aBuildingRequirementObsoleteTechLocList)-10 <= BuildingObsoleteTechLoc and max(aBuildingRequirementObsoleteTechLocList) < 999 and BuildingObsoleteTechID not in aBuildingRequirementObsoleteTechIDList:
 				self.log(CvBuildingInfo.getType()+" has latest GOM OR requirement obsolete fairly soon after base building - consider picking its obsoletion tech "+str(aBuildingRequirementNameList)+str(aBuildingRequirementObsoleteTechIDList)+" "+str(BuildingObsoleteTechID))
 
+			#<PrereqNotInCityBuildings> - Those block building from being built
+			for iBuilding in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(iBuilding)
+				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
+				if BuildingObsoleteTechID != self.HF.checkBuildingTechObsoletionLocation(CvBlockerBuilding)[1]:
+					self.log(CvBuildingInfo.getType()+" doesn't obsolete with "+CvBlockerBuilding.getType())
+
 	#Buildings shouldn't obsolete too fast in relation of tech unlock
 	def checkBuildingUnlockObsoletion(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -350,7 +496,7 @@ class TestCode:
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 			if CvBuildingInfo.getObsoleteTech() != -1:
 				iObsoleteTechLoc = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX()
-				if iObsoleteTechLoc - iTechLoc <= 10:
+				if iObsoleteTechLoc - iTechLoc <= 5:
 					self.log(CvBuildingInfo.getType()+" Unlock: "+str(iTechLoc)+" Obsoletion: "+str(iObsoleteTechLoc)+" Difference: "+str(iObsoleteTechLoc - iTechLoc))
 
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners, replacements also shouldn't obsolete at earlier point compared to base
@@ -367,7 +513,8 @@ class TestCode:
 			aBuildingReplacementList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iBuildingReplacement = CvBuildingInfo.getReplacementBuilding(iReplacement)
-				aBuildingReplacementList.append(iBuildingReplacement)
+				if iBuildingReplacement not in aSpecialReplacementsList:
+					aBuildingReplacementList.append(iBuildingReplacement)
 
 			#All replacements of replacements
 			aBuildingReplacement2List = []
@@ -376,7 +523,7 @@ class TestCode:
 				CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
 				for iReplacement2 in xrange(CvBuildingReplacementInfo.getNumReplacementBuilding()):
 					iBuildingReplacement2 = CvBuildingReplacementInfo.getReplacementBuilding(iReplacement2)
-					if iBuildingReplacement2 not in aBuildingReplacement2List:
+					if iBuildingReplacement2 not in aBuildingReplacement2List and iBuildingReplacement2 not in aSpecialReplacementsList:
 						aBuildingReplacement2List.append(iBuildingReplacement2)
 						aBuildingReplacement2NameList.append(GC.getBuildingInfo(iBuildingReplacement2).getType())
 
@@ -395,15 +542,11 @@ class TestCode:
 					iImmediateReplacementTechLocID = max(self.HF.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2])
 					iImmediateReplacementTechObs = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[0]
 					iImmediateReplacementTechObsID = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[1]
-					if aImmediateReplacementList[i] not in aSpecialReplacementsList and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
-						if iTechObsLoc < iImmediateReplacementTechLoc:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement unlock "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechLoc))
-						if (iTechObsLoc > iImmediateReplacementTechObs or (iTechObsLoc == iImmediateReplacementTechObs and iTechObsID != iImmediateReplacementTechObsID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" obsoletes after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
-						if (iTechLoc > iImmediateReplacementTechLoc or (iTechLoc == iImmediateReplacementTechLoc and iTechID != iImmediateReplacementTechLocID)) and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement unlocks "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
-						if iImmediateReplacementTechObs == 999 and len(aBuildingReplacement2List) > 0 and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							self.log(CvBuildingInfo.getType()+" replacement doesn't obsolete, but replacements of replacement exist "+CvBuildingImmediateReplacementInfo.getType()+" Base/Replacement obsoletions "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs)+" replacements of replacement "+str(aBuildingReplacement2NameList))
+					if iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+						if iTechLoc > iImmediateReplacementTechLoc and CvBuildingImmediateReplacementInfo.getType().find("_STORIES_EFFECT", -15) == -1: #Stories Effects are automatic
+							self.log(CvBuildingInfo.getType()+" unlocks after unlock of "+CvBuildingImmediateReplacementInfo.getType()+" Base unlock/Replacement unlock "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
+						if iTechObsLoc > iImmediateReplacementTechObs:
+							self.log(CvBuildingInfo.getType()+" obsoletes after obsoletion of "+CvBuildingImmediateReplacementInfo.getType()+" Base obsoletion/Replacement obsoletion "+str(iTechObsLoc)+"/"+str(iImmediateReplacementTechObs))
 
 			#Get replacements of replacements
 			for i in xrange(len(aImmediateReplacementList)):
@@ -414,7 +557,8 @@ class TestCode:
 				a2BuildingReplacementList = []
 				for iReplacement in xrange(Cv2BuildingInfo.getNumReplacementBuilding()):
 					iBuildingReplacement = Cv2BuildingInfo.getReplacementBuilding(iReplacement)
-					a2BuildingReplacementList.append(iBuildingReplacement)
+					if iBuildingReplacement not in aSpecialReplacementsList:
+						a2BuildingReplacementList.append(iBuildingReplacement)
 
 				#All third level replacements
 				a2BuildingReplacement2List = []
@@ -422,7 +566,7 @@ class TestCode:
 					Cv2BuildingReplacementInfo = GC.getBuildingInfo(a2BuildingReplacementList[i])
 					for iReplacement2 in xrange(Cv2BuildingReplacementInfo.getNumReplacementBuilding()):
 						iBuildingReplacement2 = Cv2BuildingReplacementInfo.getReplacementBuilding(iReplacement2)
-						if iBuildingReplacement2 not in a2BuildingReplacement2List:
+						if iBuildingReplacement2 not in a2BuildingReplacement2List and iBuildingReplacement2 not in aSpecialReplacementsList:
 							a2BuildingReplacement2List.append(iBuildingReplacement2)
 
 				#Get replacements, that don't appear as third level replacements
@@ -435,16 +579,25 @@ class TestCode:
 				if len(aImmediateReplacement2List) > 0:
 					for i in xrange(len(aImmediateReplacement2List)):
 						Cv2BuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacement2List[i])
-						iReplacement2TechLoc = self.HF.checkBuildingTechRequirements(Cv2BuildingImmediateReplacementInfo)[0]
-						if iTechObsLoc > iReplacement2TechLoc and aImmediateReplacement2List[i] not in aSpecialReplacementsList:
-							if iTechObsLoc - iReplacementTechLoc <= 10 and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
-								self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base obsoletion/Second lvl replacement unlock - consider picking more advanced tech "+str(iTechObsLoc)+"/"+str(iReplacement2TechLoc))
+						iReplacement2TechID = max(self.HF.checkBuildingTechRequirements(Cv2BuildingImmediateReplacementInfo)[2])
+						if iTechObsID != iReplacement2TechID and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+							self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base Obsoletion should happen on Second Replacement Unlock: "+self.HF.getTechName(iTechObsID)+"/"+self.HF.getTechName(iReplacement2TechID))
+
+				if len(aImmediateReplacementList) == 1 and len(aImmediateReplacement2List) == 1 and CvBuildingInfo.getObsoletesToBuilding() != aImmediateReplacementList[0]:
+					if not GC.getBuildingInfo(aImmediateReplacementList[0]).isAutoBuild() and not GC.getBuildingInfo(aImmediateReplacement2List[0]).isAutoBuild():
+						self.log(CvBuildingInfo.getType()+" should obsolete into "+GC.getBuildingInfo(aImmediateReplacementList[0]).getType()+" as its obsoleted on unlock of "+GC.getBuildingInfo(aImmediateReplacement2List[0]).getType())
+				if len(aImmediateReplacementList) == 1 and len(aImmediateReplacement2List) == 0 and CvBuildingInfo.getObsoletesToBuilding() != aImmediateReplacementList[0]:
+					if CvBuildingInfo.getProductionCost() > 0 and GC.getBuildingInfo(aImmediateReplacementList[0]).getProductionCost() > 0:
+						self.log(CvBuildingInfo.getType()+" should obsolete into "+GC.getBuildingInfo(aImmediateReplacementList[0]).getType()+" when it obsoletes")
+				if CvBuildingInfo.getObsoletesToBuilding() != -1 and (len(aImmediateReplacementList) > 1 or len(aImmediateReplacement2List) > 1):
+					self.log("WARNING: "+CvBuildingInfo.getType()+" has multiple first or second level replacements and shouldn't obsolete to building")
 
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iBaseTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			iBaseObsLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
 
 			#Replacements
 			aReplacementBuildingList = []
@@ -454,8 +607,11 @@ class TestCode:
 				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
 				aReplacementBuildingList.append(iReplacementBuilding)
 				iReplacementTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingReplacementInfo)[0]
-				if iBaseTechLoc >= iReplacementTechLoc and iBaseTechLoc > 0 and iReplacementTechLoc > 0:
-					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked after or concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
+				iReplacementObsLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacementInfo)[0]
+				if iBaseTechLoc == iReplacementTechLoc and CvBuildingReplacementInfo.getProductionCost() > 0: #Concurrent replacement is fine, if it can't be built normally
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is unlocked concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseTechLoc)+"/"+str(iReplacementTechLoc))
+				if iBaseObsLoc == iReplacementObsLoc and CvBuildingInfo.getProductionCost() > 0 and CvBuildingReplacementInfo.getProductionCost() > 0: #Concurrent obsoletion is fine, if it can't be built normally
+					self.log("WARNING: "+CvBuildingInfo.getType()+" is obsoleted concurrently with "+CvBuildingReplacementInfo.getType()+" "+str(iBaseObsLoc)+"/"+str(iReplacementObsLoc))
 
 			#Replacements of replacements
 			aReplacement2BuildingList = []
@@ -865,27 +1021,37 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aImprovementFreeSpecialists[FINAL][iImprovement])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<BonusHappinessChanges>, <BonusHealthChanges> - base
+				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> - base
 				aBonusHappinessChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aBonusHealthChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				aExtraFreeBonuses = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				for pair in CvBuildingInfo.getBonusHappiness():
 					aBonusHappinessChanges[BASE][pair.id] += pair.value
 				for pair in CvBuildingInfo.getBonusHealth():
 					aBonusHealthChanges[BASE][pair.id] += pair.value
+				if CvBuildingInfo.getFreeBonus() != -1:
+					aExtraFreeBonuses[BASE][CvBuildingInfo.getFreeBonus()] += CvBuildingInfo.getNumFreeBonuses()
+				for iBonus in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+					aExtraFreeBonuses[BASE][CvBuildingInfo.getExtraFreeBonus(iBonus)] += CvBuildingInfo.getExtraFreeBonusNum(iBonus)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<BonusHappinessChanges>, <BonusHealthChanges>
+					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>
 					for pair in CvReplacedBuildingInfo.getBonusHappiness():
 						aBonusHappinessChanges[REPLACED][pair.id] += pair.value
 					for pair in CvReplacedBuildingInfo.getBonusHealth():
 						aBonusHealthChanges[REPLACED][pair.id] += pair.value
+					if CvReplacedBuildingInfo.getFreeBonus() != -1:
+						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getFreeBonus()] += CvReplacedBuildingInfo.getNumFreeBonuses()
+					for iBonus in xrange(CvReplacedBuildingInfo.getNumExtraFreeBonuses()):
+						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getExtraFreeBonus(iBonus)] += CvReplacedBuildingInfo.getExtraFreeBonusNum(iBonus)
 
-				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges> in base
+				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> in base
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					aBonusHappinessChanges[FINAL][iBonus] = aBonusHappinessChanges[BASE][iBonus] + aBonusHappinessChanges[REPLACED][iBonus]
 					aBonusHealthChanges[FINAL][iBonus] = aBonusHealthChanges[BASE][iBonus] + aBonusHealthChanges[REPLACED][iBonus]
+					#aExtraFreeBonuses[FINAL][iBonus] = aExtraFreeBonuses[BASE][iBonus] + aExtraFreeBonuses[REPLACED][iBonus] Maybe when we have volumetric resources...
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -893,6 +1059,8 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus happiness Changes "+str(aBonusHappinessChanges[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 					if aBonusHealthChanges[BASE][iBonus] < aBonusHealthChanges[REPLACED][iBonus]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus health Changes "+str(aBonusHealthChanges[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+					if aExtraFreeBonuses[BASE][iBonus] == 0 and aExtraFreeBonuses[REPLACED][iBonus] > 0: #No volumetric bonues - just check presence of it
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should give "+GC.getBonusInfo(iBonus).getType()+" Bonus - replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
 				#<TechHappinessChanges>, <TechHealthChanges> - base
@@ -1329,58 +1497,127 @@ class TestCode:
 				self.log(CvBuildingInfo.getType()+" should have improvement upgrades for PrereqOrImprovement "+str(aImprovementUnlistedUpgrades))
 
 		#Civics referencing buildings
-		if 0:# There is currently no way to filter out already existing buildings - filtering would be EXTREMELY slow
-			for iCivic in xrange(GC.getNumCivicInfos()):
-				CvCivicInfo = GC.getCivicInfo(iCivic)
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
 
-				#<BuildingHappinessChanges>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingHappinessChanges(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHappinessChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#<BuildingHappinessChanges>
+			aBuildingList = []
+			if CvCivicInfo.isAnyBuildingHappinessChange():
+				for iBuilding in xrange(GC.getNumBuildingInfos()):
+					if CvCivicInfo.getBuildingHappinessChanges(iBuilding) != 0:
+						aBuildingList.append(iBuilding)
 
-				#<BuildingHealthChanges>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingHealthChanges(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingHealthChanges "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingHappinessChanges "+str(aBuildingsList))
 
-				#<BuildingProductionModifiers>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					if CvCivicInfo.getBuildingProductionModifier(iAffectedBuilding) != 0:
-						aReplacementBuildingsList = []
-						if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-							for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-									aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-						if len(aReplacementBuildingsList) > 0:
-							self.log(CvCivicInfo.getType()+" BuildingProductionModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			#<BuildingHealthChanges>
+			aBuildingList = []
+			if CvCivicInfo.isAnyBuildingHealthChange():
+				for iBuilding in xrange(GC.getNumBuildingInfos()):
+					if CvCivicInfo.getBuildingHealthChanges(iBuilding) != 0:
+						aBuildingList.append(iBuilding)
 
-				#<BuildingCommerceModifiers>
-				for iAffectedBuilding in xrange(GC.getNumBuildingInfos()):
-					CvBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvCivicInfo.getBuildingCommerceModifier(iAffectedBuilding, iCommerce) != 0:
-							aReplacementBuildingsList = []
-							if iAffectedBuilding not in aSpecialBuildingsList and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-								for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-									if CvBuildingInfo.getReplacementBuilding(i) not in aSpecialBuildingsList: #Get Replacement buildings
-										aReplacementBuildingsList.append(GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType())
-							if len(aReplacementBuildingsList) > 0:
-								self.log(CvCivicInfo.getType()+" BuildingCommerceModifiers "+CvBuildingInfo.getType()+" -> "+str(aReplacementBuildingsList))
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingHealthChanges "+str(aBuildingsList))
+
+			#<BuildingProductionModifiers>
+			aBuildingList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
+					aBuildingList.append(iBuilding)
+
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingProductionModifiers "+str(aBuildingsList))
+
+			#<BuildingCommerceModifiers>
+			aBuildingList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+					if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
+						aBuildingList.append(iBuilding)
+
+			if len(aBuildingList) > 0:
+				#Analyze list of Buildings
+				aBuildingUpgrades = []
+				for i in xrange(len(aBuildingList)):
+					CvBuildingInfo = GC.getBuildingInfo(aBuildingList[i])
+					for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+						aBuildingUpgrades.append(CvBuildingInfo.getReplacementBuilding(i))
+				#We want nonrepeating list
+				aBuildingUniqueUpgrades = []
+				for i in xrange(len(aBuildingUpgrades)):
+					if aBuildingUpgrades[i] not in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.append(aBuildingUpgrades[i])
+				#If Building is listed, then remove it
+				for i in xrange(len(aBuildingList)):
+					if aBuildingList[i] in aBuildingUniqueUpgrades:
+						aBuildingUniqueUpgrades.remove(aBuildingList[i])
+				#Get names
+				aBuildingsList = []
+				for i in xrange(len(aBuildingUniqueUpgrades)):
+					aBuildingsList.append(GC.getBuildingInfo(aBuildingUniqueUpgrades[i]).getType())
+				if len(aBuildingsList) > 0:
+					self.log(CvCivicInfo.getType()+" should have Building upgrades for BuildingCommerceModifiers "+str(aBuildingsList))
 
 		#Traits referencing buildings
 		for iTrait in xrange(GC.getNumTraitInfos()):
@@ -1865,6 +2102,10 @@ class TestCode:
 				if not (isWorldWonder(iBuilding) or isNationalWonder(iBuilding) or CvBuildingInfo.getHolyCity() != -1):
 					self.log(CvBuildingInfo.getType()+" GlobalBuildingExtraCommerces should be swapped with "+CvTargetBuilding.getType())
 
+			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
+			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
+				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
+
 	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
 	def checkBuildingFreeReward(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -2259,6 +2500,7 @@ class TestCode:
 
 	#Unit - check building requirement replacements
 	def checkUnitRequirementsReplacements(self):
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 
@@ -2300,7 +2542,8 @@ class TestCode:
 			for iBuilding in xrange(len(aBuildingUniqueList)):
 				CvBuildingInfo = GC.getBuildingInfo(aBuildingUniqueList[iBuilding])
 				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-					aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
+					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
+						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
 
 			#Get unique replacements
 			aReplacementUniqueList = []
@@ -2681,6 +2924,8 @@ class TestCode:
 				if len(aReplacementList) == 0:
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
+					if CvBuildingInfo.getNumReplacedBuilding() != 0:
+						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
 		szText = " Regular obsoleting buildings without replacements: "
 		for i in xrange(len(aObsoleteTechList)):
