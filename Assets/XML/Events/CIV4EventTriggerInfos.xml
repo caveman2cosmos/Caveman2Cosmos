@@ -3689,7 +3689,7 @@
 				<Building>BUILDING_VOODOO_TEMPLE</Building>
 				<Building>BUILDING_HELLENIC_TEMPLE</Building>
 				<Building>BUILDING_ZOROASTRIAN_TEMPLE</Building>
-				<Building>BUILDING_MYTH_EGYPT_TEMPLE</Building>
+				<Building>BUILDING_EGYPT_MYTH_TEMPLE</Building>
 				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
 				<Building>BUILDING_JAIN_TEMPLE</Building>
 				<Building>BUILDING_CAODAI_TEMPLE</Building>
@@ -4757,7 +4757,7 @@
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
 				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
-				<Building>BUILDING_MYTH_EGYPT_MONASTERY</Building>
+				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
 				<Building>BUILDING_VOODOO_MONASTERY</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>

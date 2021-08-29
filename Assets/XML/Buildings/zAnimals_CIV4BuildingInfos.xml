@@ -54,6 +54,18 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_ANIMAL_MYTH_REQUIRE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LANGUAGE</PrereqTech>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_DART_FROG</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2213,7 +2225,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_AARDVARK</FreeBuilding>
 			<CommerceChanges>
@@ -2250,7 +2262,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_AFRICANELEPHANT</FreeBuilding>
 			<CommerceChanges>
@@ -2287,7 +2299,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_AFRICANGREY</FreeBuilding>
 			<CommerceChanges>
@@ -2324,7 +2336,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_AFRICAN_PENGUIN</FreeBuilding>
 			<CommerceChanges>
@@ -2389,20 +2401,8 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_MYTH_ANIMAL_REQUIRE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MYTH_ANIMAL_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_REQUIRE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_LANGUAGE</PrereqTech>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_DART_FROG</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_ANTEATER</Type>
@@ -2413,7 +2413,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ANTEATER</FreeBuilding>
 			<CommerceChanges>
@@ -2458,7 +2458,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_GAZELLE</BuildingType>
@@ -2494,7 +2494,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ARCTICFOX</FreeBuilding>
 			<CommerceChanges>
@@ -2531,7 +2531,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ARMADILLO</FreeBuilding>
 			<CommerceChanges>
@@ -2568,7 +2568,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ASIANBEAR</FreeBuilding>
 			<CommerceChanges>
@@ -2605,7 +2605,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ASIANELEPHANT</FreeBuilding>
 			<CommerceChanges>
@@ -2642,7 +2642,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BABIRUSA</FreeBuilding>
 			<CommerceChanges>
@@ -2679,7 +2679,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BADGER</FreeBuilding>
 			<CommerceChanges>
@@ -2716,7 +2716,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BAIRDS_TAPIR</FreeBuilding>
 			<CommerceChanges>
@@ -2753,7 +2753,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BALLPYTHON</FreeBuilding>
 			<CommerceChanges>
@@ -2790,7 +2790,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BARBARYAPE</FreeBuilding>
 			<CommerceChanges>
@@ -2827,7 +2827,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BARNOWL</FreeBuilding>
 			<CommerceChanges>
@@ -2864,7 +2864,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BARREDOWL</FreeBuilding>
 			<CommerceChanges>
@@ -2902,7 +2902,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_ASIANBEAR</BuildingType>
@@ -2962,7 +2962,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BEAVER</FreeBuilding>
 			<CommerceChanges>
@@ -3001,7 +3001,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BELUGA</FreeBuilding>
@@ -3038,7 +3038,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BENGALTIGER</FreeBuilding>
 			<CommerceChanges>
@@ -3125,7 +3125,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3137,7 +3137,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BISON</FreeBuilding>
 			<CommerceChanges>
@@ -3174,7 +3174,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BLACK_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -3211,7 +3211,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BLACK_RHINO</FreeBuilding>
 			<CommerceChanges>
@@ -3248,7 +3248,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BOAR</FreeBuilding>
 			<CommerceChanges>
@@ -3319,7 +3319,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BONGO</FreeBuilding>
 			<CommerceChanges>
@@ -3356,7 +3356,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BOOBY</FreeBuilding>
 			<CommerceChanges>
@@ -3393,7 +3393,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BRAZILIAN_TAPIR</FreeBuilding>
 			<CommerceChanges>
@@ -3430,7 +3430,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BROWN_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -3467,7 +3467,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BUFFALO</FreeBuilding>
 			<CommerceChanges>
@@ -3532,7 +3532,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_TARANTULA</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -3555,7 +3555,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -3608,7 +3608,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAIMAN</FreeBuilding>
 			<CommerceChanges>
@@ -3654,7 +3654,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAMEL</FreeBuilding>
 			<Flavors>
@@ -3682,7 +3682,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAPUCHIN</FreeBuilding>
 			<CommerceChanges>
@@ -3719,7 +3719,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAPYBARA</FreeBuilding>
 			<CommerceChanges>
@@ -3756,7 +3756,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CARIBOU</FreeBuilding>
 			<CommerceChanges>
@@ -3793,7 +3793,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CASSOWARY</FreeBuilding>
 			<CommerceChanges>
@@ -3830,7 +3830,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAVE_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -3867,7 +3867,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CAVE_LION</FreeBuilding>
 			<CommerceChanges>
@@ -3904,7 +3904,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CHEETAH</FreeBuilding>
 			<CommerceChanges>
@@ -3941,7 +3941,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CHIMPANZEE</FreeBuilding>
 			<CommerceChanges>
@@ -3978,7 +3978,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_COBRA</FreeBuilding>
 			<CommerceChanges>
@@ -4015,7 +4015,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_COD</FreeBuilding>
 			<CommerceChanges>
@@ -4053,7 +4053,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CRAB</FreeBuilding>
 			<CommerceChanges>
@@ -4091,7 +4091,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_GATOR_ASIAN</BuildingType>
@@ -4142,7 +4142,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CROW</FreeBuilding>
 			<CommerceChanges>
@@ -4179,7 +4179,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CUSCUS</FreeBuilding>
 			<CommerceChanges>
@@ -4216,7 +4216,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DART_FROG</FreeBuilding>
 			<CommerceChanges>
@@ -4261,7 +4261,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -4308,7 +4308,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DESERT_TORTOISE</FreeBuilding>
 			<CommerceChanges>
@@ -4345,7 +4345,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DHOLE</FreeBuilding>
 			<CommerceChanges>
@@ -4382,7 +4382,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DINGO</FreeBuilding>
 			<CommerceChanges>
@@ -4420,7 +4420,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DOLPHIN</FreeBuilding>
 			<CommerceChanges>
@@ -4483,7 +4483,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4495,7 +4495,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DUCK</FreeBuilding>
 			<CommerceChanges>
@@ -4533,7 +4533,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_DUGONG</FreeBuilding>
 			<CommerceChanges>
@@ -4570,7 +4570,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_EAGLE</FreeBuilding>
 			<CommerceChanges>
@@ -4607,7 +4607,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_EAGLE_BALD</FreeBuilding>
 			<CommerceChanges>
@@ -4644,7 +4644,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ELASMOTHERIUM</FreeBuilding>
 			<CommerceChanges>
@@ -4690,7 +4690,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_AFRICANELEPHANT</BuildingType>
@@ -4733,7 +4733,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_EMPEROR_PENGUIN</FreeBuilding>
 			<CommerceChanges>
@@ -4770,7 +4770,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_EMU</FreeBuilding>
 			<CommerceChanges>
@@ -4807,7 +4807,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_EWOLF</FreeBuilding>
 			<CommerceChanges>
@@ -4844,7 +4844,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_FENNECFOX</FreeBuilding>
 			<CommerceChanges>
@@ -4909,7 +4909,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4921,7 +4921,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_FLAMINGO</FreeBuilding>
 			<CommerceChanges>
@@ -4986,7 +4986,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4998,7 +4998,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GALAPAGOS_PENGUIN</FreeBuilding>
 			<CommerceChanges>
@@ -5035,7 +5035,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GALAPAGOS_TORTOISE</FreeBuilding>
 			<CommerceChanges>
@@ -5072,7 +5072,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GATOR</FreeBuilding>
 			<CommerceChanges>
@@ -5109,7 +5109,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GATOR_ASIAN</FreeBuilding>
 			<CommerceChanges>
@@ -5146,7 +5146,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GAZELLE</FreeBuilding>
 			<CommerceChanges>
@@ -5183,7 +5183,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GELADA</FreeBuilding>
 			<CommerceChanges>
@@ -5220,7 +5220,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GEMSBOK</FreeBuilding>
 			<CommerceChanges>
@@ -5257,7 +5257,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GERENUK</FreeBuilding>
 			<CommerceChanges>
@@ -5294,7 +5294,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GHARIAL</FreeBuilding>
 			<CommerceChanges>
@@ -5331,7 +5331,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GIRAFFE</FreeBuilding>
 			<CommerceChanges>
@@ -5369,7 +5369,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GLYPTO</FreeBuilding>
 			<CommerceChanges>
@@ -5422,7 +5422,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GOAT</FreeBuilding>
 			<Flavors>
@@ -5450,7 +5450,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GORILLA</FreeBuilding>
 			<CommerceChanges>
@@ -5489,7 +5489,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GREATWHITE_SHARK</FreeBuilding>
 			<CommerceChanges>
@@ -5526,7 +5526,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GREY_WOLF</FreeBuilding>
 			<CommerceChanges>
@@ -5563,7 +5563,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GRIZZLY</FreeBuilding>
 			<CommerceChanges>
@@ -5600,7 +5600,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_GULL</FreeBuilding>
 			<CommerceChanges>
@@ -5637,7 +5637,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HAAST_EAGLE</FreeBuilding>
 			<CommerceChanges>
@@ -5676,7 +5676,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HAMMERHEAD_SHARK</FreeBuilding>
 			<CommerceChanges>
@@ -5713,7 +5713,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HARPYEAGLE</FreeBuilding>
 			<CommerceChanges>
@@ -5750,7 +5750,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HAWK</FreeBuilding>
 			<CommerceChanges>
@@ -5787,7 +5787,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HIPPOPOTAMUS</FreeBuilding>
 			<CommerceChanges>
@@ -5825,7 +5825,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_HIPPOPOTAMUS</BuildingType>
@@ -5866,7 +5866,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HORNED_OWL</FreeBuilding>
 			<CommerceChanges>
@@ -5946,7 +5946,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5959,7 +5959,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HUMPBACK</FreeBuilding>
@@ -5997,7 +5997,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_HYENA</FreeBuilding>
 			<CommerceChanges>
@@ -6034,7 +6034,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_IBEX</FreeBuilding>
 			<CommerceChanges>
@@ -6071,7 +6071,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_IGUANA</FreeBuilding>
 			<CommerceChanges>
@@ -6108,7 +6108,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_IMPALA</FreeBuilding>
 			<CommerceChanges>
@@ -6145,7 +6145,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_INDIAN_RHINO</FreeBuilding>
 			<CommerceChanges>
@@ -6182,7 +6182,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_JAGUAR</FreeBuilding>
 			<CommerceChanges>
@@ -6219,7 +6219,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_JAVA_RHINO</FreeBuilding>
 			<CommerceChanges>
@@ -6256,7 +6256,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KANGAROO_GREY</FreeBuilding>
 			<CommerceChanges>
@@ -6293,7 +6293,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KANGAROO_RED</FreeBuilding>
 			<CommerceChanges>
@@ -6330,7 +6330,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KOALA</FreeBuilding>
 			<CommerceChanges>
@@ -6367,7 +6367,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KOMODO_DRAGON</FreeBuilding>
 			<CommerceChanges>
@@ -6404,7 +6404,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KOOKABURRA</FreeBuilding>
 			<CommerceChanges>
@@ -6442,7 +6442,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_KRAKEN</FreeBuilding>
 			<CommerceChanges>
@@ -6481,7 +6481,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LEVIATHAN</FreeBuilding>
@@ -6518,7 +6518,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LION</FreeBuilding>
 			<CommerceChanges>
@@ -6555,7 +6555,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LIZARD</FreeBuilding>
 			<CommerceChanges>
@@ -6592,7 +6592,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LLAMA</FreeBuilding>
 			<CommerceChanges>
@@ -6647,7 +6647,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LOCAL_FISH</FreeBuilding>
 			<Flavors>
@@ -6675,7 +6675,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LOON</FreeBuilding>
 			<CommerceChanges>
@@ -6712,7 +6712,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_LYNX</FreeBuilding>
 			<CommerceChanges>
@@ -6749,7 +6749,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MACAW</FreeBuilding>
 			<CommerceChanges>
@@ -6786,7 +6786,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MACKEREL</FreeBuilding>
 			<CommerceChanges>
@@ -6823,7 +6823,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MALAYAN_TAPIR</FreeBuilding>
 			<CommerceChanges>
@@ -6860,7 +6860,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MANDRILL</FreeBuilding>
 			<CommerceChanges>
@@ -6897,7 +6897,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MANEDWOLF</FreeBuilding>
 			<CommerceChanges>
@@ -6934,7 +6934,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MARLIN</FreeBuilding>
 			<CommerceChanges>
@@ -6974,7 +6974,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MARSUPIAL</FreeBuilding>
 			<CommerceChanges>
@@ -7009,7 +7009,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MINKIE_WHALE</FreeBuilding>
@@ -7047,7 +7047,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MOA</FreeBuilding>
 			<CommerceChanges>
@@ -7085,7 +7085,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_PLATYPUS</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MONOTREMES</FreeBuilding>
@@ -7124,7 +7124,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeBuilding>BUILDING_MYTH_MOOSE</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7160,7 +7160,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MOUNTAIN_TAPIR</FreeBuilding>
 			<CommerceChanges>
@@ -7197,7 +7197,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_MUSKOX</FreeBuilding>
 			<CommerceChanges>
@@ -7236,7 +7236,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_NARWHAL</FreeBuilding>
@@ -7274,7 +7274,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_CAPUCHIN</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_NEW_W_MONKEY</FreeBuilding>
@@ -7312,7 +7312,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_NILECROC</FreeBuilding>
 			<CommerceChanges>
@@ -7349,7 +7349,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_NILE_MONITOR</FreeBuilding>
 			<CommerceChanges>
@@ -7386,7 +7386,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_NUMBAT</FreeBuilding>
 			<CommerceChanges>
@@ -7423,7 +7423,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OKAPI</FreeBuilding>
 			<CommerceChanges>
@@ -7469,7 +7469,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OLD_MAN</FreeBuilding>
 			<Flavors>
@@ -7498,7 +7498,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_GELADA</BuildingType>
@@ -7539,7 +7539,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OPOSSUM</FreeBuilding>
 			<CommerceChanges>
@@ -7576,7 +7576,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ORANGUTAN</FreeBuilding>
 			<CommerceChanges>
@@ -7614,7 +7614,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ORCA</FreeBuilding>
@@ -7652,7 +7652,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OSTRICH</FreeBuilding>
 			<CommerceChanges>
@@ -7717,7 +7717,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7729,7 +7729,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OXPECKER</FreeBuilding>
 			<CommerceChanges>
@@ -7800,7 +7800,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
@@ -7851,7 +7851,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
@@ -7868,7 +7868,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_DOG</FreeBuilding>
 			<CommerceChanges>
@@ -7906,7 +7906,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_GROUNDSLOTH</FreeBuilding>
 			<CommerceChanges>
@@ -7951,7 +7951,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
@@ -8035,7 +8035,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
@@ -8052,7 +8052,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PANDA_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -8089,7 +8089,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PANTHER</FreeBuilding>
 			<CommerceChanges>
@@ -8126,7 +8126,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PARROT</FreeBuilding>
 			<CommerceChanges>
@@ -8163,7 +8163,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PEACOCK</FreeBuilding>
 			<CommerceChanges>
@@ -8228,7 +8228,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_AFRICAN_PENGUIN</BuildingType>
@@ -8246,7 +8246,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PHEASANT</FreeBuilding>
 			<CommerceChanges>
@@ -8283,7 +8283,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PIGEON</FreeBuilding>
 			<CommerceChanges>
@@ -8320,7 +8320,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PLATYPUS</FreeBuilding>
 			<CommerceChanges>
@@ -8357,7 +8357,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_POLAR_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -8394,7 +8394,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_POSSUM</FreeBuilding>
 			<CommerceChanges>
@@ -8431,7 +8431,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PROCOPTODON</FreeBuilding>
 			<CommerceChanges>
@@ -8468,7 +8468,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PUFFADDER</FreeBuilding>
 			<CommerceChanges>
@@ -8505,7 +8505,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_PYGMYHIPPO</FreeBuilding>
 			<CommerceChanges>
@@ -8542,7 +8542,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_QUOLL</FreeBuilding>
 			<CommerceChanges>
@@ -8579,7 +8579,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RACCOON</FreeBuilding>
 			<CommerceChanges>
@@ -8644,7 +8644,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_EAGLE</BuildingType>
@@ -8664,7 +8664,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RATEL</FreeBuilding>
 			<CommerceChanges>
@@ -8701,7 +8701,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RAVEN</FreeBuilding>
 			<CommerceChanges>
@@ -8740,7 +8740,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RAY</FreeBuilding>
 			<CommerceChanges>
@@ -8777,7 +8777,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RAY_EAGLE</FreeBuilding>
 			<CommerceChanges>
@@ -8814,7 +8814,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RAY_MANTA</FreeBuilding>
 			<CommerceChanges>
@@ -8851,7 +8851,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RAZORBILL</FreeBuilding>
 			<CommerceChanges>
@@ -8888,7 +8888,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_REDFOX</FreeBuilding>
 			<CommerceChanges>
@@ -8925,7 +8925,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_REDPANDA</FreeBuilding>
 			<CommerceChanges>
@@ -8964,7 +8964,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_REEF_SHARK</FreeBuilding>
 			<CommerceChanges>
@@ -9029,7 +9029,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9041,7 +9041,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RHEA</FreeBuilding>
 			<CommerceChanges>
@@ -9079,7 +9079,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_BLACK_RHINO</BuildingType>
@@ -9123,7 +9123,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_RIVER_CROC</FreeBuilding>
 			<CommerceChanges>
@@ -9160,7 +9160,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ROCKHOPPER_PENGUIN</FreeBuilding>
 			<CommerceChanges>
@@ -9225,7 +9225,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9237,7 +9237,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SABRETOOTH</FreeBuilding>
 			<CommerceChanges>
@@ -9274,7 +9274,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SAIGA</FreeBuilding>
 			<CommerceChanges>
@@ -9311,7 +9311,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SALTWATER_CROC</FreeBuilding>
 			<CommerceChanges>
@@ -9351,7 +9351,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SCAVENGER</FreeBuilding>
 			<CommerceChanges>
@@ -9385,7 +9385,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SEAEAGLE</FreeBuilding>
 			<CommerceChanges>
@@ -9422,7 +9422,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SEALION</FreeBuilding>
 			<CommerceChanges>
@@ -9460,7 +9460,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SEATURTLE</FreeBuilding>
 			<CommerceChanges>
@@ -9525,7 +9525,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9537,7 +9537,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SEA_OTTER</FreeBuilding>
 			<CommerceChanges>
@@ -9574,7 +9574,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SECRETARYBIRD</FreeBuilding>
 			<CommerceChanges>
@@ -9614,7 +9614,7 @@
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SHARK</FreeBuilding>
 			<CommerceChanges>
@@ -9651,7 +9651,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SIBERIAN_TIGER</FreeBuilding>
 			<CommerceChanges>
@@ -9688,7 +9688,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SKUNK</FreeBuilding>
 			<CommerceChanges>
@@ -9725,7 +9725,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SLOTH_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -9763,7 +9763,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_BALLPYTHON</BuildingType>
@@ -9806,7 +9806,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SNOW_LEOPARD</FreeBuilding>
 			<CommerceChanges>
@@ -9843,7 +9843,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SPECTACLED_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -9891,7 +9891,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_JAGUAR</BuildingType>
@@ -9917,11 +9917,11 @@
 			</TechCommerceChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MYTH_EGYPT_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9943,7 +9943,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_SUN_BEAR</FreeBuilding>
 			<CommerceChanges>
@@ -9981,7 +9981,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_MALAYAN_TAPIR</BuildingType>
@@ -10024,7 +10024,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_TARANTULA</FreeBuilding>
 			<CommerceChanges>
@@ -10062,7 +10062,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeBuilding>BUILDING_MYTH_TERN</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10098,7 +10098,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_THYLACINE</FreeBuilding>
 			<CommerceChanges>
@@ -10145,7 +10145,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -10172,7 +10172,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_TOUCAN</FreeBuilding>
 			<CommerceChanges>
@@ -10209,7 +10209,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_TREESLOTH</FreeBuilding>
 			<CommerceChanges>
@@ -10246,7 +10246,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_TUNA</FreeBuilding>
 			<CommerceChanges>
@@ -10283,7 +10283,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_TURKEY</FreeBuilding>
 			<CommerceChanges>
@@ -10320,7 +10320,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_VIPER</FreeBuilding>
 			<CommerceChanges>
@@ -10357,7 +10357,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_VULTURE</FreeBuilding>
 			<CommerceChanges>
@@ -10394,7 +10394,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WALLAROO</FreeBuilding>
 			<CommerceChanges>
@@ -10431,7 +10431,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WALRUS</FreeBuilding>
 			<CommerceChanges>
@@ -10468,7 +10468,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WARTHOG</FreeBuilding>
 			<CommerceChanges>
@@ -10513,7 +10513,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_SEA_OTTER</BuildingType>
@@ -10549,7 +10549,7 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WHALESHARK</FreeBuilding>
 			<CommerceChanges>
@@ -10586,7 +10586,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WHITE_RHINO</FreeBuilding>
 			<CommerceChanges>
@@ -10623,7 +10623,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WILDEBEEST</FreeBuilding>
 			<CommerceChanges>
@@ -10688,7 +10688,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MYTH_ARCTICFOX</BuildingType>
@@ -10712,7 +10712,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WOLVERINE</FreeBuilding>
 			<CommerceChanges>
@@ -10749,7 +10749,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_WOMBAT</FreeBuilding>
 			<CommerceChanges>
@@ -10786,7 +10786,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_ZEBRA</FreeBuilding>
 			<CommerceChanges>

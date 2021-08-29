@@ -180,7 +180,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MYTH_EGYPT_MONASTERY</Type>
+			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

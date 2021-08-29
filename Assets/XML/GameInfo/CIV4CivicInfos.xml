@@ -976,7 +976,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MYTH_EGYPT_SHRINE</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7881,7 +7881,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MYTH_EGYPT_SHRINE</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -13129,7 +13129,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -17663,7 +17663,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -10763,7 +10763,7 @@
 			<Button>art/Crops/Art/cranberryfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CREATION</Type>
+			<Type>ART_DEF_BUILDING_CREATION_MYTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15054,7 +15054,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/Egypt_Temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EGYPT_SHRINE</Type>
+			<Type>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -1687,6 +1687,9 @@ class TestCode:
 				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc and CvFreeAreaBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeAreaBuildingTechLoc:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
+			if CvBuildingInfo.getType().find("BUILDING_MYTH_") != -1 and iBuilding != iFreeBuilding:
+				self.log(CvBuildingInfo.getType()+" if its animal/landscape myth, then it should give itself")
+
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
