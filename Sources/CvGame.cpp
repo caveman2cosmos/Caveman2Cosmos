@@ -5768,7 +5768,10 @@ void CvGame::doTurn()
 		}
 	}
 
-	GC.getMap().doTurn();
+	reverse_foreach_(CvMap* map, GC.getMaps())
+	{
+		map->doTurn();
+	}
 
 	createBarbarianCities(false);
 	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
@@ -5898,6 +5901,14 @@ void CvGame::doTurn()
 	gDLL->getEngineIFace()->DoTurn();
 
 	PROFILE_END();
+
+	foreach_(CvMap* map, GC.getMaps())
+	{
+		if (!map->plotsInitialized())
+		{
+			map->updateIncomingUnits();
+		}
+	}
 
 	stopProfilingDLL(true);
 	gDLL->getEngineIFace()->AutoSave();
