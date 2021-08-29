@@ -360,7 +360,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>

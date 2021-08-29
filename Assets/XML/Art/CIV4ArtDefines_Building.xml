@@ -1631,7 +1631,7 @@
 			<KFM/>
 			<Button>Art/interface/buttons/buildings/animal_suffering_prevention.dds</Button>
 		</BuildingArtInfo>
-	<BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ANIMAL_RACETRACK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>

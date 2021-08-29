@@ -681,7 +681,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_CAVE_BEAR</BuildingType>
+					<BuildingType>BUILDING_MYTH_CAVE_BEAR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -743,7 +743,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_CAVE_LION</BuildingType>
+					<BuildingType>BUILDING_MYTH_CAVE_LION</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -973,7 +973,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CRAB</BuildingType>
+				<BuildingType>BUILDING_MYTH_CRAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -1222,7 +1222,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_ELASMOTHERIUM</BuildingType>
+					<BuildingType>BUILDING_MYTH_ELASMOTHERIUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1418,7 +1418,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_FISH</BuildingType>
+				<BuildingType>BUILDING_MYTH_FISH</BuildingType>
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -1483,7 +1483,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_GLYPTO</BuildingType>
+					<BuildingType>BUILDING_MYTH_GLYPTO</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1659,7 +1659,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_HAAST_EAGLE</BuildingType>
+					<BuildingType>BUILDING_MYTH_HAAST_EAGLE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2089,7 +2089,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_MOA</BuildingType>
+					<BuildingType>BUILDING_MYTH_MOA</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2215,10 +2215,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AARDVARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_AARDVARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_AARDVARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2255,10 +2252,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AFRICANELEPHANT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_AFRICANELEPHANT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_AFRICANELEPHANT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2295,10 +2289,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AFRICANGREY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_AFRICANGREY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_AFRICANGREY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2335,10 +2326,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AFRICAN_PENGUIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_AFRICAN_PENGUIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_AFRICAN_PENGUIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2377,7 +2365,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_AMPHIBIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_AMPHIBIAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2403,9 +2391,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AMPHIBIAN</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_ANIMAL_REQUIRE</Type>
@@ -2430,10 +2415,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ANTEATER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ANTEATER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ANTEATER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2470,7 +2452,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ANTELOPE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ANTELOPE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2479,15 +2461,12 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GAZELLE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GEMSBOK</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_IMPALA</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SAIGA</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_WILDEBEEST</BuildingType>
+				<BuildingType>BUILDING_MYTH_GAZELLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_GEMSBOK</BuildingType>
+				<BuildingType>BUILDING_MYTH_IMPALA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SAIGA</BuildingType>
+				<BuildingType>BUILDING_MYTH_WILDEBEEST</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ANTELOPE</BuildingType>
-			</PrereqNotInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -2517,10 +2496,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ARCTICFOX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ARCTICFOX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ARCTICFOX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2557,10 +2533,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ARMADILLO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ARMADILLO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ARMADILLO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2597,10 +2570,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ASIANBEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ASIANBEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ASIANBEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2637,10 +2607,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ASIANELEPHANT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ASIANELEPHANT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ASIANELEPHANT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2677,10 +2644,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BABIRUSA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BABIRUSA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BABIRUSA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2717,10 +2681,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BADGER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BADGER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BADGER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2757,10 +2718,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BAIRDS_TAPIR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BAIRDS_TAPIR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BAIRDS_TAPIR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2797,10 +2755,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BALLPYTHON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BALLPYTHON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BALLPYTHON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2837,10 +2792,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BARBARYAPE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BARBARYAPE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BARBARYAPE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2877,10 +2829,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BARNOWL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BARNOWL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BARNOWL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2917,10 +2866,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BARREDOWL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BARREDOWL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BARREDOWL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2959,22 +2905,19 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ASIANBEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_BROWN_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAVE_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GRIZZLY</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PANDA_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_POLAR_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_REDPANDA</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SLOTH_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SPECTACLED_BEAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SUN_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_ASIANBEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BLACK_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BROWN_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_CAVE_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_GRIZZLY</BuildingType>
+				<BuildingType>BUILDING_MYTH_PANDA_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_POLAR_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_REDPANDA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SLOTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_SPECTACLED_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3021,10 +2964,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BEAVER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BEAVER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BEAVER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3062,12 +3002,9 @@
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BELUGA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BELUGA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BELUGA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3103,10 +3040,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BENGALTIGER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BENGALTIGER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BENGALTIGER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3145,7 +3079,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BIRD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BIRD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3193,9 +3127,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BIRD</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_BISON</Type>
@@ -3208,10 +3139,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BISON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BISON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BISON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3248,10 +3176,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BLACK_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BLACK_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3288,10 +3213,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_RHINO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BLACK_RHINO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BLACK_RHINO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3328,10 +3250,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BOAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BOAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BOAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3402,10 +3321,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BONGO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BONGO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BONGO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3442,10 +3358,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BOOBY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BOOBY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BOOBY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3482,10 +3395,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BRAZILIAN_TAPIR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BRAZILIAN_TAPIR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BRAZILIAN_TAPIR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3522,10 +3432,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BROWN_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BROWN_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BROWN_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3562,10 +3469,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BUFFALO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BUFFALO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BUFFALO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3604,7 +3508,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BUG</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BUG</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3629,11 +3533,8 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_TARANTULA</BuildingType>
+				<BuildingType>BUILDING_MYTH_TARANTULA</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BUG</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_BULL</Type>
@@ -3642,7 +3543,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_BULL</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_BULL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_BULL</FreeBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3656,9 +3557,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BULL</BuildingType>
-			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3712,10 +3610,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAIMAN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAIMAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CAIMAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3761,10 +3656,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAMEL</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAMEL</BuildingType>
-			</PrereqNotInCityBuildings>
+			<FreeBuilding>BUILDING_MYTH_CAMEL</FreeBuilding>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3792,10 +3684,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAPUCHIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAPUCHIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CAPUCHIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3832,10 +3721,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAPYBARA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAPYBARA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CAPYBARA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3872,10 +3758,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CARIBOU</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CARIBOU</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CARIBOU</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3912,10 +3795,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CASSOWARY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CASSOWARY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CASSOWARY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3952,10 +3832,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAVE_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAVE_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CAVE_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -3992,10 +3869,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAVE_LION</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CAVE_LION</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CAVE_LION</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4032,10 +3906,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CHEETAH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CHEETAH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CHEETAH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4072,10 +3943,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CHIMPANZEE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CHIMPANZEE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CHIMPANZEE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4112,10 +3980,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_COBRA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_COBRA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_COBRA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4152,10 +4017,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_COD</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_COD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_COD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4193,10 +4055,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CRAB</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CRAB</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CRAB</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4235,17 +4094,14 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GATOR_ASIAN</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GATOR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GHARIAL</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_NILECROC</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_RIVER_CROC</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SALTWATER_CROC</BuildingType>
+				<BuildingType>BUILDING_MYTH_GATOR_ASIAN</BuildingType>
+				<BuildingType>BUILDING_MYTH_GATOR</BuildingType>
+				<BuildingType>BUILDING_MYTH_GHARIAL</BuildingType>
+				<BuildingType>BUILDING_MYTH_NILECROC</BuildingType>
+				<BuildingType>BUILDING_MYTH_RIVER_CROC</BuildingType>
+				<BuildingType>BUILDING_MYTH_SALTWATER_CROC</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CROCODILE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CROCODILE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CROCODILE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4288,10 +4144,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CROW</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CROW</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CROW</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4328,10 +4181,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_CUSCUS</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_CUSCUS</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_CUSCUS</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4368,10 +4218,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DART_FROG</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DART_FROG</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DART_FROG</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4408,7 +4255,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DEER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DEER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4416,9 +4263,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DEER</BuildingType>
-			</PrereqNotInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -4466,10 +4310,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DESERT_TORTOISE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DESERT_TORTOISE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DESERT_TORTOISE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4506,10 +4347,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DHOLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DHOLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DHOLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4546,10 +4384,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DINGO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DINGO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DINGO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4587,10 +4422,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DOLPHIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DOLPHIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DOLPHIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4627,7 +4459,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DONKEY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DONKEY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4653,9 +4485,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DONKEY</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_DUCK</Type>
@@ -4668,10 +4497,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DUCK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DUCK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DUCK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4709,10 +4535,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_DUGONG</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_DUGONG</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_DUGONG</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4749,10 +4572,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EAGLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_EAGLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EAGLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4789,10 +4609,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EAGLE_BALD</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_EAGLE_BALD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EAGLE_BALD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4829,10 +4646,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ELASMOTHERIUM</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ELASMOTHERIUM</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ELASMOTHERIUM</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4870,7 +4684,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ELEPHANT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ELEPHANT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4879,12 +4693,9 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AFRICANELEPHANT</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_ASIANELEPHANT</BuildingType>
+				<BuildingType>BUILDING_MYTH_AFRICANELEPHANT</BuildingType>
+				<BuildingType>BUILDING_MYTH_ASIANELEPHANT</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ELEPHANT</BuildingType>
-			</PrereqNotInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -4924,10 +4735,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EMPEROR_PENGUIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_EMPEROR_PENGUIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EMPEROR_PENGUIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4964,10 +4772,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EMU</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_EMU</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EMU</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5004,10 +4809,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EWOLF</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_EWOLF</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_EWOLF</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5044,10 +4846,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_FENNECFOX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_FENNECFOX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_FENNECFOX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5086,7 +4885,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_FISH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_FISH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5112,9 +4911,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_FISH</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_FLAMINGO</Type>
@@ -5127,10 +4923,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_FLAMINGO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_FLAMINGO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_FLAMINGO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5169,7 +4962,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_FLIGHTLESS_BIRD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_FLIGHTLESS_BIRD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5195,9 +4988,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_FLIGHTLESS_BIRD</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_GALAPAGOS_PENGUIN</Type>
@@ -5210,10 +5000,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GALAPAGOS_PENGUIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GALAPAGOS_PENGUIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GALAPAGOS_PENGUIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5250,10 +5037,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GALAPAGOS_TORTOISE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GALAPAGOS_TORTOISE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GALAPAGOS_TORTOISE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5290,10 +5074,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GATOR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GATOR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GATOR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5330,10 +5111,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GATOR_ASIAN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GATOR_ASIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GATOR_ASIAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5370,10 +5148,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GAZELLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GAZELLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GAZELLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5410,10 +5185,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GELADA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GELADA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GELADA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5450,10 +5222,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GEMSBOK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GEMSBOK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GEMSBOK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5490,10 +5259,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GERENUK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GERENUK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GERENUK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5530,10 +5296,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GHARIAL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GHARIAL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GHARIAL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5570,10 +5333,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GIRAFFE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GIRAFFE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GIRAFFE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5611,10 +5371,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GLYPTO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GLYPTO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GLYPTO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5667,10 +5424,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GOAT</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GOAT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<FreeBuilding>BUILDING_MYTH_GOAT</FreeBuilding>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5698,10 +5452,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GORILLA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GORILLA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GORILLA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5740,10 +5491,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GREATWHITE_SHARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GREATWHITE_SHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GREATWHITE_SHARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5780,10 +5528,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GREY_WOLF</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GREY_WOLF</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GREY_WOLF</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5820,10 +5565,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GRIZZLY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GRIZZLY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GRIZZLY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5860,10 +5602,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GULL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_GULL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_GULL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5900,10 +5639,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HAAST_EAGLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HAAST_EAGLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HAAST_EAGLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5942,10 +5678,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HAMMERHEAD_SHARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HAMMERHEAD_SHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HAMMERHEAD_SHARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -5982,10 +5715,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HARPYEAGLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HARPYEAGLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HARPYEAGLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6022,10 +5752,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HAWK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HAWK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HAWK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6062,10 +5789,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HIPPOPOTAMUS</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HIPPOPOTAMUS</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HIPPOPOTAMUS</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6104,13 +5828,10 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HIPPOPOTAMUS</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PYGMYHIPPO</BuildingType>
+				<BuildingType>BUILDING_MYTH_HIPPOPOTAMUS</BuildingType>
+				<BuildingType>BUILDING_MYTH_PYGMYHIPPO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HIPPOS</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HIPPOS</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HIPPOS</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6147,10 +5868,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HORNED_OWL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HORNED_OWL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HORNED_OWL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6187,7 +5905,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HORSE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HORSE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6230,9 +5948,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HORSE</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_HUMPBACK</Type>
@@ -6245,12 +5960,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_LEVIATHAN</BuildingType>
+				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HUMPBACK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HUMPBACK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HUMPBACK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6287,10 +5999,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_HYENA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_HYENA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_HYENA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6327,10 +6036,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_IBEX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_IBEX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_IBEX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6367,10 +6073,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_IGUANA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_IGUANA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_IGUANA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6407,10 +6110,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_IMPALA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_IMPALA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_IMPALA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6447,10 +6147,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_INDIAN_RHINO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_INDIAN_RHINO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_INDIAN_RHINO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6487,10 +6184,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_JAGUAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_JAGUAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_JAGUAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6527,10 +6221,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_JAVA_RHINO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_JAVA_RHINO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_JAVA_RHINO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6567,10 +6258,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KANGAROO_GREY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KANGAROO_GREY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KANGAROO_GREY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6607,10 +6295,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KANGAROO_RED</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KANGAROO_RED</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KANGAROO_RED</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6647,10 +6332,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KOALA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KOALA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KOALA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6687,10 +6369,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KOMODO_DRAGON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KOMODO_DRAGON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KOMODO_DRAGON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6727,10 +6406,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KOOKABURRA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KOOKABURRA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KOOKABURRA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6768,10 +6444,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_KRAKEN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_KRAKEN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_KRAKEN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6809,12 +6482,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LEVIATHAN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LEVIATHAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LEVIATHAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6850,10 +6520,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LION</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LION</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LION</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6890,10 +6557,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LIZARD</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LIZARD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LIZARD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6930,10 +6594,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LLAMA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LLAMA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LLAMA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6988,10 +6649,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LOCAL_FISH</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LOCAL_FISH</BuildingType>
-			</PrereqNotInCityBuildings>
+			<FreeBuilding>BUILDING_MYTH_LOCAL_FISH</FreeBuilding>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7019,10 +6677,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LOON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LOON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LOON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7059,10 +6714,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_LYNX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_LYNX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_LYNX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7099,10 +6751,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MACAW</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MACAW</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MACAW</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7139,10 +6788,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MACKEREL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MACKEREL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MACKEREL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7179,10 +6825,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MALAYAN_TAPIR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MALAYAN_TAPIR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MALAYAN_TAPIR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7219,10 +6862,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MANDRILL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MANDRILL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MANDRILL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7259,10 +6899,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MANEDWOLF</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MANEDWOLF</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MANEDWOLF</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7299,10 +6936,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MARLIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MARLIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MARLIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7342,7 +6976,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MARSUPIAL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MARSUPIAL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7355,9 +6989,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MARSUPIAL</BuildingType>
-			</PrereqNotInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -7379,12 +7010,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_LEVIATHAN</BuildingType>
+				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MINKIE_WHALE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MINKIE_WHALE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MINKIE_WHALE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7421,10 +7049,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MOA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MOA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MOA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7459,14 +7084,11 @@
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MONOTREMES</BuildingType>
-			</PrereqNotInCityBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PLATYPUS</BuildingType>
+				<BuildingType>BUILDING_MYTH_PLATYPUS</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MONOTREMES</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MONOTREMES</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7500,10 +7122,7 @@
 			<Description>TXT_KEY_BUILDING_MYTH_MOOSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MOOSE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MOOSE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MOOSE</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -7543,10 +7162,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MOUNTAIN_TAPIR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MOUNTAIN_TAPIR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MOUNTAIN_TAPIR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7583,10 +7199,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MUSKOX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_MUSKOX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_MUSKOX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7624,12 +7237,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_LEVIATHAN</BuildingType>
+				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_NARWHAL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_NARWHAL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_NARWHAL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7665,12 +7275,9 @@
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_CAPUCHIN</BuildingType>
+				<BuildingType>BUILDING_MYTH_CAPUCHIN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_NEW_W_MONKEY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_NEW_W_MONKEY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_NEW_W_MONKEY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7707,10 +7314,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_NILECROC</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_NILECROC</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_NILECROC</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7747,10 +7351,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_NILE_MONITOR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_NILE_MONITOR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_NILE_MONITOR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7787,10 +7388,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_NUMBAT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_NUMBAT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_NUMBAT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7827,10 +7425,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OKAPI</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OKAPI</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OKAPI</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7876,10 +7471,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OLD_MAN</FreeBuilding>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OLD_MAN</BuildingType>
-			</PrereqNotInCityBuildings>
+			<FreeBuilding>BUILDING_MYTH_OLD_MAN</FreeBuilding>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7909,13 +7501,10 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_GELADA</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_MANDRILL</BuildingType>
+				<BuildingType>BUILDING_MYTH_GELADA</BuildingType>
+				<BuildingType>BUILDING_MYTH_MANDRILL</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OLD_W_MONKEY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OLD_W_MONKEY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OLD_W_MONKEY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7952,10 +7541,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OPOSSUM</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OPOSSUM</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OPOSSUM</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -7992,10 +7578,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ORANGUTAN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ORANGUTAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ORANGUTAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8032,12 +7615,9 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_LEVIATHAN</BuildingType>
+				<BuildingType>BUILDING_MYTH_LEVIATHAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ORCA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ORCA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ORCA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8074,10 +7654,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OSTRICH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OSTRICH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OSTRICH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8116,7 +7693,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OWL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OWL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8142,9 +7719,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OWL</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_OXPECKER</Type>
@@ -8157,10 +7731,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_OXPECKER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_OXPECKER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_OXPECKER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8198,7 +7769,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_BIRD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_BIRD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8236,9 +7807,6 @@
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_BIRD</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_PALEOLITHIC_CAT</Type>
@@ -8252,7 +7820,7 @@
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_CAT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_CAT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8290,9 +7858,6 @@
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_CAT</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_PALEOLITHIC_DOG</Type>
@@ -8305,10 +7870,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_DOG</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_DOG</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_DOG</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8346,10 +7908,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_GROUNDSLOTH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_GROUNDSLOTH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_GROUNDSLOTH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8399,10 +7958,7 @@
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_MAMMOTH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8448,7 +8004,7 @@
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PALEOLITHIC_MARSUPIAL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PALEOLITHIC_MARSUPIAL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8486,9 +8042,6 @@
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MARSUPIAL</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_PANDA_BEAR</Type>
@@ -8501,10 +8054,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PANDA_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PANDA_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PANDA_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8541,10 +8091,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PANTHER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PANTHER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PANTHER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8581,10 +8128,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PARROT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PARROT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PARROT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8621,10 +8165,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PEACOCK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PEACOCK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PEACOCK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8663,7 +8204,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PENGUIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PENGUIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8689,14 +8230,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PENGUIN</BuildingType>
-			</PrereqNotInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_AFRICAN_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_EMPEROR_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GALAPAGOS_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_ROCKHOPPER_PENGUIN</BuildingType>
+				<BuildingType>BUILDING_MYTH_AFRICAN_PENGUIN</BuildingType>
+				<BuildingType>BUILDING_MYTH_EMPEROR_PENGUIN</BuildingType>
+				<BuildingType>BUILDING_MYTH_GALAPAGOS_PENGUIN</BuildingType>
+				<BuildingType>BUILDING_MYTH_ROCKHOPPER_PENGUIN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8710,10 +8248,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PHEASANT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PHEASANT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PHEASANT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8750,10 +8285,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PIGEON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PIGEON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PIGEON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8790,10 +8322,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PLATYPUS</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PLATYPUS</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PLATYPUS</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8830,10 +8359,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_POLAR_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_POLAR_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_POLAR_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8870,10 +8396,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_POSSUM</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_POSSUM</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_POSSUM</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8910,10 +8433,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PROCOPTODON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PROCOPTODON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PROCOPTODON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8950,10 +8470,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PUFFADDER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PUFFADDER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PUFFADDER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -8990,10 +8507,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_PYGMYHIPPO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_PYGMYHIPPO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_PYGMYHIPPO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9030,10 +8544,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_QUOLL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_QUOLL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_QUOLL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9070,10 +8581,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RACCOON</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RACCOON</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RACCOON</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9112,7 +8620,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAPTOR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAPTOR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9139,16 +8647,13 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_EAGLE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_EAGLE_BALD</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_HAWK</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEAEAGLE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_HARPYEAGLE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_HAAST_EAGLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EAGLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EAGLE_BALD</BuildingType>
+				<BuildingType>BUILDING_MYTH_HAWK</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEAEAGLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_HARPYEAGLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_HAAST_EAGLE</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAPTOR</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_RATEL</Type>
@@ -9161,10 +8666,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RATEL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RATEL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RATEL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9201,10 +8703,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAVEN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAVEN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAVEN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9243,10 +8742,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9283,10 +8779,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAY_EAGLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAY_EAGLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAY_EAGLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9323,10 +8816,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAY_MANTA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAY_MANTA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAY_MANTA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9363,10 +8853,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RAZORBILL</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RAZORBILL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RAZORBILL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9403,10 +8890,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_REDFOX</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_REDFOX</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_REDFOX</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9443,10 +8927,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_REDPANDA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_REDPANDA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_REDPANDA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9485,10 +8966,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_REEF_SHARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_REEF_SHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_REEF_SHARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9527,7 +9005,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_REPTILE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_REPTILE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9553,9 +9031,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_REPTILE</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_RHEA</Type>
@@ -9568,10 +9043,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RHEA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RHEA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RHEA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9610,16 +9082,13 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BLACK_RHINO</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_INDIAN_RHINO</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_JAVA_RHINO</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_WHITE_RHINO</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_ELASMOTHERIUM</BuildingType>
+				<BuildingType>BUILDING_MYTH_BLACK_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_INDIAN_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_JAVA_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_WHITE_RHINO</BuildingType>
+				<BuildingType>BUILDING_MYTH_ELASMOTHERIUM</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RHINO_TAXONOMY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RHINO_TAXONOMY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RHINO_TAXONOMY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9656,10 +9125,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RIVER_CROC</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RIVER_CROC</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RIVER_CROC</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9696,10 +9162,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ROCKHOPPER_PENGUIN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ROCKHOPPER_PENGUIN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ROCKHOPPER_PENGUIN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9738,7 +9201,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_RODENT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_RODENT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9764,9 +9227,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_RODENT</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SABRETOOTH</Type>
@@ -9779,10 +9239,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SABRETOOTH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SABRETOOTH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SABRETOOTH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9819,10 +9276,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SAIGA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SAIGA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SAIGA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9859,10 +9313,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SALTWATER_CROC</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SALTWATER_CROC</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SALTWATER_CROC</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9902,7 +9353,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SCAVENGER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SCAVENGER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9915,9 +9366,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SCAVENGER</BuildingType>
-			</PrereqNotInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -9939,10 +9387,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEAEAGLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SEAEAGLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SEAEAGLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -9979,10 +9424,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEALION</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SEALION</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SEALION</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10020,10 +9462,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEATURTLE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SEATURTLE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SEATURTLE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10062,7 +9501,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SEA_BIRD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SEA_BIRD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10088,9 +9527,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA_BIRD</BuildingType>
-			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MYTH_SEA_OTTER</Type>
@@ -10103,10 +9539,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA_OTTER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SEA_OTTER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SEA_OTTER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10143,10 +9576,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SECRETARYBIRD</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SECRETARYBIRD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SECRETARYBIRD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10183,13 +9613,10 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SHARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SHARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10226,10 +9653,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SIBERIAN_TIGER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SIBERIAN_TIGER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SIBERIAN_TIGER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10266,10 +9690,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SKUNK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SKUNK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SKUNK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10306,10 +9727,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SLOTH_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SLOTH_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SLOTH_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10348,15 +9766,12 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_BALLPYTHON</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_COBRA</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PUFFADDER</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_VIPER</BuildingType>
+				<BuildingType>BUILDING_MYTH_BALLPYTHON</BuildingType>
+				<BuildingType>BUILDING_MYTH_COBRA</BuildingType>
+				<BuildingType>BUILDING_MYTH_PUFFADDER</BuildingType>
+				<BuildingType>BUILDING_MYTH_VIPER</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SNAKES</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SNAKES</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SNAKES</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10393,10 +9808,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SNOW_LEOPARD</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SNOW_LEOPARD</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SNOW_LEOPARD</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10433,10 +9845,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SPECTACLED_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SPECTACLED_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SPECTACLED_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10474,7 +9883,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SPOTTED_CAT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SPOTTED_CAT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10485,15 +9894,12 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_JAGUAR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_CHEETAH</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_LYNX</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PANTHER</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SNOW_LEOPARD</BuildingType>
+				<BuildingType>BUILDING_MYTH_JAGUAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_CHEETAH</BuildingType>
+				<BuildingType>BUILDING_MYTH_LYNX</BuildingType>
+				<BuildingType>BUILDING_MYTH_PANTHER</BuildingType>
+				<BuildingType>BUILDING_MYTH_SNOW_LEOPARD</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SPOTTED_CAT</BuildingType>
-			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10539,10 +9945,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SUN_BEAR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_SUN_BEAR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_SUN_BEAR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10581,15 +9984,12 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_MALAYAN_TAPIR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_MOUNTAIN_TAPIR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_BRAZILIAN_TAPIR</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_BAIRDS_TAPIR</BuildingType>
+				<BuildingType>BUILDING_MYTH_MALAYAN_TAPIR</BuildingType>
+				<BuildingType>BUILDING_MYTH_MOUNTAIN_TAPIR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BRAZILIAN_TAPIR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TAPIR</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TAPIR</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TAPIR</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10626,10 +10026,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TARANTULA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TARANTULA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TARANTULA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10663,10 +10060,7 @@
 			<Description>TXT_KEY_BUILDING_MYTH_TERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TERN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TERN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TERN</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -10706,10 +10100,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_THYLACINE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_THYLACINE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_THYLACINE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10746,14 +10137,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TIGER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TIGER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TIGER</BuildingType>
-			</PrereqNotInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
@@ -10786,10 +10174,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TOUCAN</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TOUCAN</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TOUCAN</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10826,10 +10211,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TREESLOTH</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TREESLOTH</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TREESLOTH</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10866,10 +10248,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TUNA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TUNA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TUNA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10906,10 +10285,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_TURKEY</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_TURKEY</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_TURKEY</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10946,10 +10322,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_VIPER</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_VIPER</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_VIPER</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -10986,10 +10359,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_VULTURE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_VULTURE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_VULTURE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11026,10 +10396,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WALLAROO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WALLAROO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WALLAROO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11066,10 +10433,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WALRUS</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WALRUS</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WALRUS</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11106,10 +10470,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WARTHOG</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WARTHOG</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WARTHOG</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11146,7 +10507,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WEASEL</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WEASEL</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11155,13 +10516,10 @@
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA_OTTER</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_SKUNK</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_WOLVERINE</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEA_OTTER</BuildingType>
+				<BuildingType>BUILDING_MYTH_SKUNK</BuildingType>
+				<BuildingType>BUILDING_MYTH_WOLVERINE</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WEASEL</BuildingType>
-			</PrereqNotInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -11193,10 +10551,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WHALESHARK</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WHALESHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WHALESHARK</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11233,10 +10588,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WHITE_RHINO</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WHITE_RHINO</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WHITE_RHINO</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11273,10 +10625,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WILDEBEEST</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WILDEBEEST</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WILDEBEEST</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11315,7 +10664,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WOLF</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WOLF</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11341,20 +10690,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WOLF</BuildingType>
-			</PrereqNotInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ARCTICFOX</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_GREY_WOLF</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_DOG</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_DHOLE</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_DINGO</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_EWOLF</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_FENNECFOX</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_MANEDWOLF</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_REDFOX</BuildingType>
-				<BuildingType>BUILDING_MYTH_EFFECT_THYLACINE</BuildingType>
+				<BuildingType>BUILDING_MYTH_ARCTICFOX</BuildingType>
+				<BuildingType>BUILDING_MYTH_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_MYTH_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_MYTH_DHOLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_DINGO</BuildingType>
+				<BuildingType>BUILDING_MYTH_EWOLF</BuildingType>
+				<BuildingType>BUILDING_MYTH_FENNECFOX</BuildingType>
+				<BuildingType>BUILDING_MYTH_MANEDWOLF</BuildingType>
+				<BuildingType>BUILDING_MYTH_REDFOX</BuildingType>
+				<BuildingType>BUILDING_MYTH_THYLACINE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11368,10 +10714,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WOLVERINE</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WOLVERINE</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WOLVERINE</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11408,10 +10751,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_WOMBAT</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_WOMBAT</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_WOMBAT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11448,10 +10788,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MYTH_ANIMAL_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_ZEBRA</BuildingType>
-			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_MYTH_EFFECT_ZEBRA</FreeBuilding>
+			<FreeBuilding>BUILDING_MYTH_ZEBRA</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11477,7 +10814,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_ZEBRA</ArtDefineTag>
 		</BuildingInfo>
-	<BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_NAVAL_TOTEM</Type>
 			<Description>TXT_KEY_BUILDING_NAVAL_TOTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Civilopedia>
@@ -11544,7 +10881,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_DOG</BuildingType>
+					<BuildingType>BUILDING_MYTH_PALEOLITHIC_DOG</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -11606,7 +10943,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+					<BuildingType>BUILDING_MYTH_PALEOLITHIC_GROUNDSLOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -11668,7 +11005,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_PALEOLITHIC_MAMMOTH</BuildingType>
+					<BuildingType>BUILDING_MYTH_PALEOLITHIC_MAMMOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -11883,7 +11220,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_PROCOPTODON</BuildingType>
+					<BuildingType>BUILDING_MYTH_PROCOPTODON</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -12100,7 +11437,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_SABRETOOTH</BuildingType>
+					<BuildingType>BUILDING_MYTH_SABRETOOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -12361,7 +11698,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_EFFECT_THYLACINE</BuildingType>
+					<BuildingType>BUILDING_MYTH_THYLACINE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -12704,7 +12041,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EFFECT_SEA</BuildingType>
+				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
