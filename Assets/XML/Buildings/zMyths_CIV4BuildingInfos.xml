@@ -782,16 +782,6 @@
 				<BuildingType>BUILDING_MYTH_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_MYTH_BEAR</FreeBuilding>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_BEAR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -857,28 +847,6 @@
 			</MapCategoryTypes>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_BIRD</FreeBuilding>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OBATALA</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OGGUN</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLOFIN</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLOKUN</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OSHOSI</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -945,40 +913,6 @@
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_BOAR</FreeBuilding>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NAITERUKOB</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAI</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAINANYOKE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAINAROK</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_BOAR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1095,32 +1029,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NAITERUKOB</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAI</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAINANYOKE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NGAINAROK</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
@@ -1352,12 +1260,6 @@
 				<BuildingType>BUILDING_MYTH_SALTWATER_CROC</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_MYTH_CROCODILE</FreeBuilding>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CROCODILE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1423,24 +1325,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
@@ -1623,16 +1507,6 @@
 				<BuildingType>BUILDING_MYTH_AFRICANELEPHANT</BuildingType>
 				<BuildingType>BUILDING_MYTH_ASIANELEPHANT</BuildingType>
 			</PrereqOrBuildings>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
@@ -2151,24 +2025,6 @@
 			</MapCategoryTypes>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MYTH_HORSE</FreeBuilding>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EJE_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3910,24 +3766,6 @@
 				<BuildingType>BUILDING_MYTH_PANTHER</BuildingType>
 				<BuildingType>BUILDING_MYTH_SNOW_LEOPARD</BuildingType>
 			</PrereqOrBuildings>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
