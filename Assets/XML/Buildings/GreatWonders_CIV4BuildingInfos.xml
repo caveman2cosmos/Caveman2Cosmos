@@ -5852,7 +5852,7 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_MYTH_EGYPT_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

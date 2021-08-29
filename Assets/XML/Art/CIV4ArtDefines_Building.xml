@@ -1232,7 +1232,7 @@
 			<Button>Art/interface/buttons/buildings/amnesty_international.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMPHIBIAN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_AMPHIBIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1772,7 +1772,7 @@
 			<Button>art/Hunting/Art/antelopecamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANTELOPE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_ANTELOPE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4253,7 +4253,7 @@
 			<Button>art/Hunting/Art/belugacamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BELUGA_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_BELUGA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5033,7 +5033,7 @@
 			<Button>art/Hunting/art/boarcamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BOAR_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_BOAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6003,7 +6003,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/bull_leaping.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BULL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_BULL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6483,7 +6483,7 @@
 			<Button>Art/Interface/Buttons/Buildings/camelFarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAMEL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_CAMEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10043,7 +10043,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/coral_castle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CORAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_CORAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10713,7 +10713,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Hindu/cowshrine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CRAB_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_CRAB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10763,7 +10763,7 @@
 			<Button>art/Crops/Art/cranberryfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CREATION_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_CREATION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12673,7 +12673,7 @@
 			<Button>Art/Interface/Buttons/Buildings/deerpark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEER_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_DEER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13713,7 +13713,7 @@
 			<Button>art/Embassy/art/dolphinembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOLPHIN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_DOLPHIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13763,7 +13763,7 @@
 			<Button>art/Craft/art/donkeymill.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DONKEY_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_DONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13834,7 +13834,7 @@
 			<Button>Art/Interface/Buttons/Buildings/dragonflyx.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRAGON_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_DRAGON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14584,7 +14584,7 @@
 			<Button>art/Pets/Art/duckfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUGONG_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_DUGONG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14814,7 +14814,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/grand_earth_festival.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EARTH_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EARTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14994,7 +14994,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Egypt.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_CATHEDRAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15004,7 +15004,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/Egypt_Cathedral.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_ISIS</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_ISIS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15014,7 +15014,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_isis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_MONASTERY</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_MONASTERY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15024,7 +15024,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/Egypt_Monastery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_OSIRIS</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_OSIRIS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15034,7 +15034,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_osiris.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_SET</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_SET</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15044,7 +15044,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_set.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_MYTH_TEMPLE</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPTIAN_TEMPLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15054,7 +15054,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/Egypt_Temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</Type>
+			<Type>ART_DEF_BUILDING_MYTH_EGYPT_SHRINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15314,7 +15314,7 @@
 			<Button>Art/Interface/Buttons/Buildings/elephantherd.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ELEPHANT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_ELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16184,7 +16184,7 @@
 			<Button>Art/Interface/Buttons/Buildings/falconryschool.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FALL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_FALL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16744,7 +16744,7 @@
 			<Button>art/Water/art/firehydrants.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIRE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_FIRE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19154,7 +19154,7 @@
 			<Button>Art/Interface/Buttons/Buildings/herd_ibex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOAT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_GOAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21474,7 +21474,7 @@
 			<Button>Art/Interface/Buttons/Buildings/horseherd.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HORSE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_HORSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24964,7 +24964,7 @@
 			<Button>Art/Interface/Buttons/buildings/Religions/Buddhist/kotoku.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KRAKEN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_KRAKEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25614,7 +25614,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LEVIATHAN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_LEVIATHAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25844,7 +25844,7 @@
 			<Button>Art/Interface/Buttons/Buildings/herd_llama.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LLAMA_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_LLAMA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27274,7 +27274,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cage_marsupial.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARSUPIAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_MARSUPIAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28804,7 +28804,7 @@
 			<Button>art/Embassy/art/merinaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MERMAID_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_MERMAID</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28894,7 +28894,7 @@
 			<Button>Art/interface/buttons/buildings/metal_megacomplex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_METAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32114,7 +32114,7 @@
 			<Button>art/Craft/Art/nylonfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OASIS_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_OASIS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32354,7 +32354,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Buildings_Atlas.dds,8,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OLD_MAN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_OLD_MAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32834,7 +32834,7 @@
 			<Button>Art/interface/buttons/buildings/orbital_vr.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORCA_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_ORCA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33064,7 +33064,7 @@
 			<Button>Art/Interface/Buttons/Buildings/outbackhotel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OUTCROP_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_OUTCROP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33244,7 +33244,7 @@
 			<Button>art/Palace/Art/palacewalls.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_BIRD_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33254,7 +33254,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicBirdMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_CAT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_CAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33264,7 +33264,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicCatMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_MARSUPIAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34414,7 +34414,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PhoenixBreeder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHOENIX_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_PHOENIX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36785,7 +36785,7 @@
 			<Button>art/ratcatcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RAY_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_RAY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36975,7 +36975,7 @@
 			<Button>Art/Interface/Buttons/Buildings/reeducation_camp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_REEF_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_REEF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38425,7 +38425,7 @@
 			<Button>Art/Buttons/Buildings/ScavengersDaughterBulding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SCAVENGER_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SCAVENGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38755,7 +38755,7 @@
 			<Button>art/Seafood/Art/seaturtleegggatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEATURTLE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SEATURTLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38795,7 +38795,7 @@
 			<Button>Art/interface/buttons/buildings/sea_god.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEA_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SEA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39375,7 +39375,7 @@
 			<Button>Art/interface/buttons/buildings/shapeshifting_buildings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHARK_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40105,7 +40105,7 @@
 			<Button>Art/interface/buttons/buildings/sky_god.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SKY_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SKY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41435,7 +41435,7 @@
 			<Button>art/Sports/Buttons/sportsshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_SPOTTED_CAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41975,7 +41975,7 @@
 			<Button>art/Housing/Art/stonehut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STONE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_STONE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42003,7 +42003,7 @@
 			<NIF/>
 			<KFM/>
 			<Button>art/Craft/art/storagepit.dds</Button>
-		</BuildingArtInfo>		
+		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STORYTELLERS_HUT</Type>
 			<LSystem/>
@@ -42013,7 +42013,7 @@
 			<NIF/>
 			<KFM/>
 			<Button>art/Entertainment/Art/storytellershut.dds</Button>
-		</BuildingArtInfo>	
+		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STRANGE_STAR_CITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
@@ -43865,7 +43865,7 @@
 			<Button>art/Craft/art/tidepools.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIGER_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_TIGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45305,7 +45305,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Button_Burialmound.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUNA_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_TUNA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45575,7 +45575,7 @@
 			<Button>art/Vacation/Art/UNESCO.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UNICORN_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_UNICORN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46795,7 +46795,7 @@
 			<Button>art/Science/Art/volcanologylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VOLCANO_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_VOLCANO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47265,7 +47265,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ammofactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WEASEL_MYTH</Type>
+			<Type>ART_DEF_BUILDING_MYTH_WEASEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

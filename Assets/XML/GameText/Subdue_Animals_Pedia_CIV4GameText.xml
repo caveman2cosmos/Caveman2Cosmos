@@ -1,13 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Tag>
-		<English>Animal Myth buildings are there to simulate the explosion of research and knowledge in the neolithic era.</English>
-		<Italian>I miti degli animali simulano l'esplosione di ricerca e conoscenza avvenuta durante l'era neolitica.</Italian>
-		<Polish>Mity o zwierzętach to "budynki", które symulują wzrost zainteresowania naturą, wiedzą i rozwojem w erze neolitycznej człowieka.</Polish>
-		<Russian>Çäàíèÿ «Ìèô î æèâîòíîì» ïðåäíàçíà÷åíû äëÿ èìèòàöèè áóðíîãî ðàçâèòèÿ èññëåäîâàíèé è çíàíèé â ýïîõó íåîëèòà.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Tag>
 		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
 		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
@@ -198,6 +191,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
 		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Tag>
+		<English>Animal Myth buildings are there to simulate the explosion of research and knowledge in the neolithic era.</English>
+		<Italian>I miti degli animali simulano l'esplosione di ricerca e conoscenza avvenuta durante l'era neolitica.</Italian>
+		<Polish>Mity o zwierzętach to "budynki", które symulują wzrost zainteresowania naturą, wiedzą i rozwojem w erze neolitycznej człowieka.</Polish>
+		<Russian>Çäàíèÿ «Ìèô î æèâîòíîì» ïðåäíàçíà÷åíû äëÿ èìèòàöèè áóðíîãî ðàçâèòèÿ èññëåäîâàíèé è çíàíèé â ýïîõó íåîëèòà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>

@@ -27885,12 +27885,12 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORAL_MYTH</Type>
+			<Type>BUILDING_MYTH_CORAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CORAL_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_CORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -27964,7 +27964,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CORAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORE_MINE</Type>
@@ -29946,11 +29946,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CREATION_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_CREATION_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CREATION_MYTH_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_CREATION</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_CREATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_CREATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CREATION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -36916,12 +36916,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_CATHEDRAL</Type>
+			<Type>BUILDING_MYTH_EGYPT_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PANTHEON</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_CATHEDRAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_CATHEDRAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_EGYPT_CATHEDRAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EGYPT_CATHEDRAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_CATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_CATHEDRAL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -36930,7 +36930,7 @@
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EGYPT_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
@@ -36983,12 +36983,12 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
+			<Type>BUILDING_MYTH_EGYPT_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_MONASTERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_MONASTERY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_EGYPT_MONASTERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EGYPT_MONASTERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_MONASTERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_MONASTERY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -37037,12 +37037,12 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_TEMPLE</Type>
+			<Type>BUILDING_MYTH_EGYPT_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_TEMPLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_EGYPT_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_EGYPT_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_TEMPLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_TEMPLE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -40032,12 +40032,12 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FALL_MYTH</Type>
+			<Type>BUILDING_MYTH_FALL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FALL_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_FALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -40099,7 +40099,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FALL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FAMILY_FARM</Type>
@@ -42287,11 +42287,11 @@
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIRE_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_FIRE</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_FIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FIRE</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
@@ -68673,11 +68673,11 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_METAL_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_METAL</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_METAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_METAL</ArtDefineTag>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_MYTH_EFFECT_METAL</FreeBuilding>
@@ -76490,7 +76490,7 @@
 			</TechCommerceChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CREATION_MYTH</BuildingType>
+					<BuildingType>BUILDING_MYTH_CREATION</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -78365,12 +78365,12 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OASIS_MYTH</Type>
+			<Type>BUILDING_MYTH_OASIS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_OASIS_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_OASIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -78410,7 +78410,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OASIS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OAT_FARM</Type>
@@ -80835,12 +80835,12 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OUTCROP_MYTH</Type>
+			<Type>BUILDING_MYTH_OUTCROP</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_OUTCROP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -80966,7 +80966,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OUTCROP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OUTHOUSE</Type>
@@ -90461,12 +90461,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REEF_MYTH</Type>
+			<Type>BUILDING_MYTH_REEF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_REEF_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_REEF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -90528,7 +90528,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_REEF</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REFIGERATOR_FACTORY</Type>
@@ -104176,11 +104176,11 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STONE_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Type>BUILDING_MYTH_STONE</Type>
+			<Description>TXT_KEY_BUILDING_MYTH_STONE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_ELEMENTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_STONE</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
@@ -114697,12 +114697,12 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOLCANO_MYTH</Type>
+			<Type>BUILDING_MYTH_VOLCANO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MYTH_VOLCANO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MYTH_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
@@ -114776,7 +114776,7 @@
 				</Flavor>
 			</Flavors>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MYTH_VOLCANO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOLLEYBALL_COURT</Type>

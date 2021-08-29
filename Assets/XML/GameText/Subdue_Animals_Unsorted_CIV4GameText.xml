@@ -6,48 +6,6 @@
 		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTEATER_MYTH</Tag>
-		<English>Myth - Anteater</English>
-		<French>Mythe du Fourmilier</French>
-		<Polish>Mit - Mrówkojad</Polish>
-		<Russian>Ìèô î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BADGER_MYTH</Tag>
-		<English>Myth - Badger</English>
-		<French>Mythe du Blaireau</French>
-		<Polish>Mit - Borsuk</Polish>
-		<Russian>Ìèô î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BALLPYTHON_MYTH</Tag>
-		<English>Myth - Ballpython</English>
-		<French>Mythe du Python royal</French>
-		<Polish>Mit - Pyton Królewski</Polish>
-		<Russian>Ìèô î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BARBARYAPE_MYTH</Tag>
-		<English>Myth - Barbary Ape</English>
-		<French>Mythe du Macaque berbère</French>
-		<Polish>Mit - Magot</Polish>
-		<Russian>Ìèô î ìàãîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAVER_MYTH</Tag>
-		<English>Myth - Beaver</English>
-		<French>Mythe du Castor</French>
-		<Polish>Mit - Bóbr</Polish>
-		<Russian>Ìèô î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BENGALTIGER_MYTH</Tag>
-		<English>Myth - Bengal Tiger</English>
-		<French>Mythe du Tigre du Bengale</French>
-		<Polish>Mit - Tygrys Bengalski</Polish>
-		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
 		<French>Danse des Oiseaux</French>
@@ -60,61 +18,10 @@
 		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_MYTH</Tag>
-		<English>Myth (B) - Birds</English>
-		<French>Mythe des Oiseaux</French>
-		<Polish>Mit - Ptaki</Polish>
-		<Russian>Ìèô î ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_MYTH</Tag>
-		<English>Myth - Bison</English>
-		<French>Mythe du Bison</French>
-		<Polish>Mit - Bizon</Polish>
-		<Russian>Ìèô î áèçîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BONGO_MYTH</Tag>
-		<English>Myth - Bongo</English>
-		<French>Mythe du Bongo</French>
-		<Russian>Ìèô î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
-		<English>Myth - Buffalo</English>
-		<French>Mythe du Buffle</French>
-		<Russian>Ìèô î áóéâîëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUG_MYTH</Tag>
-		<English>Myth (B) - Bug</English>
-		<French>Mythe des insectes</French>
-		<Polish>Mit - Ptaki morskie</Polish>
-		<Russian>Ìèô î æóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COBRA_MYTH</Tag>
-		<English>Myth - Cobra</English>
-		<French>Mythe du Cobra</French>
-		<Russian>Ìèô î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROW_MYTH</Tag>
-		<English>Myth - Crow</English>
-		<French>Mythe du Corbeau</French>
-		<Russian>Ìèô î âîðîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
 		<English>Donkey Breeder</English>
 		<French>Éleveur d'ânes</French>
 		<Russian>Îñëèíûé ïèòîìíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DONKEY_MYTH</Tag>
-		<English>Myth - Donkey</English>
-		<French>Mythe de l'Ane</French>
-		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
@@ -132,29 +39,6 @@
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FISH_MYTH</Tag>
-		<English>Myth (B) - Tales of Fish</English>
-		<French>
-			<Text>Mythe des Bancs de Poissons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito - Storie di pesce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit - Ryby</Polish>
-		<Russian>Ìèô î ðûáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Tag>
-		<English>Myth (B) - Flightless Birds</English>
-		<French>Mythe des Oiseaux marcheurs</French>
-		<Polish>Mit - Ptaki-Nieloty</Polish>
-		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
@@ -165,48 +49,6 @@
 		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
 		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
 		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH</Tag>
-		<English>Myth - Galapagos Tortoise</English>
-		<French>Mythe de la Tortue des Galapagos</French>
-		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH</Tag>
-		<English>Myth - Gazelle</English>
-		<French>Mythe de la Gazelle</French>
-		<Russian>Ìèô î ãàçåëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GELADA_MYTH</Tag>
-		<English>Myth - Gelada Baboon</English>
-		<French>Mythe du Babouin Gelada</French>
-		<Russian>Ìèô î ãåëàäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH</Tag>
-		<English>Myth - Gemsbok</English>
-		<French>Mythe de l'Oryx gazelle</French>
-		<Russian>Ìèô î ñåðíîáûêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH</Tag>
-		<English>Myth - Gerenuk</English>
-		<French>Mythe de la Gazelle de Waller</French>
-		<Russian>Ìèô î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH</Tag>
-		<English>Myth - Gorilla</English>
-		<French>Mythe du Gorille</French>
-		<Russian>Ìèô î ãîðèëëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GULL_MYTH</Tag>
-		<English>Myth - Gull</English>
-		<French>Mythe du Goéland</French>
-		<Russian>Ìèô î ÷àéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
@@ -227,7 +69,165 @@
 		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_ANTEATER</Tag>
+		<English>Myth - Anteater</English>
+		<French>Mythe du Fourmilier</French>
+		<Polish>Mit - Mrówkojad</Polish>
+		<Russian>Ìèô î ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BADGER</Tag>
+		<English>Myth - Badger</English>
+		<French>Mythe du Blaireau</French>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BALLPYTHON</Tag>
+		<English>Myth - Ballpython</English>
+		<French>Mythe du Python royal</French>
+		<Polish>Mit - Pyton Królewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BARBARYAPE</Tag>
+		<English>Myth - Barbary Ape</English>
+		<French>Mythe du Macaque berbère</French>
+		<Polish>Mit - Magot</Polish>
+		<Russian>Ìèô î ìàãîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BEAVER</Tag>
+		<English>Myth - Beaver</English>
+		<French>Mythe du Castor</French>
+		<Polish>Mit - Bóbr</Polish>
+		<Russian>Ìèô î áîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BENGALTIGER</Tag>
+		<English>Myth - Bengal Tiger</English>
+		<French>Mythe du Tigre du Bengale</French>
+		<Polish>Mit - Tygrys Bengalski</Polish>
+		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BIRD</Tag>
+		<English>Myth (B) - Birds</English>
+		<French>Mythe des Oiseaux</French>
+		<Polish>Mit - Ptaki</Polish>
+		<Russian>Ìèô î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BISON</Tag>
+		<English>Myth - Bison</English>
+		<French>Mythe du Bison</French>
+		<Polish>Mit - Bizon</Polish>
+		<Russian>Ìèô î áèçîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BONGO</Tag>
+		<English>Myth - Bongo</English>
+		<French>Mythe du Bongo</French>
+		<Russian>Ìèô î áîíãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BUFFALO</Tag>
+		<English>Myth - Buffalo</English>
+		<French>Mythe du Buffle</French>
+		<Russian>Ìèô î áóéâîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_BUG</Tag>
+		<English>Myth (B) - Bug</English>
+		<French>Mythe des insectes</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_COBRA</Tag>
+		<English>Myth - Cobra</English>
+		<French>Mythe du Cobra</French>
+		<Russian>Ìèô î êîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_CROW</Tag>
+		<English>Myth - Crow</English>
+		<French>Mythe du Corbeau</French>
+		<Russian>Ìèô î âîðîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_DONKEY</Tag>
+		<English>Myth - Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<Russian>Ìèô îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_FISH</Tag>
+		<English>Myth (B) - Tales of Fish</English>
+		<French>
+			<Text>Mythe des Bancs de Poissons</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito - Storie di pesce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_FLIGHTLESS_BIRD</Tag>
+		<English>Myth (B) - Flightless Birds</English>
+		<French>Mythe des Oiseaux marcheurs</French>
+		<Polish>Mit - Ptaki-Nieloty</Polish>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GALAPAGOS_TORTOISE</Tag>
+		<English>Myth - Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GAZELLE</Tag>
+		<English>Myth - Gazelle</English>
+		<French>Mythe de la Gazelle</French>
+		<Russian>Ìèô î ãàçåëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GELADA</Tag>
+		<English>Myth - Gelada Baboon</English>
+		<French>Mythe du Babouin Gelada</French>
+		<Russian>Ìèô î ãåëàäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GEMSBOK</Tag>
+		<English>Myth - Gemsbok</English>
+		<French>Mythe de l'Oryx gazelle</French>
+		<Russian>Ìèô î ñåðíîáûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GERENUK</Tag>
+		<English>Myth - Gerenuk</English>
+		<French>Mythe de la Gazelle de Waller</French>
+		<Russian>Ìèô î ãåðåíóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GORILLA</Tag>
+		<English>Myth - Gorilla</English>
+		<French>Mythe du Gorille</French>
+		<Russian>Ìèô î ãîðèëëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_GULL</Tag>
+		<English>Myth - Gull</English>
+		<French>Mythe du Goéland</French>
+		<Russian>Ìèô î ÷àéêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_HORSE</Tag>
 		<English>Myth - Horse</English>
 		<French>
 			<Text>Mythe du Cheval</Text>
@@ -243,112 +243,216 @@
 		<Russian>Ìèô î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_HYENA</Tag>
 		<English>Myth - Hyena</English>
 		<French>Mythe de la Hyène</French>
 		<Russian>Ìèô î ãèåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IGUANA_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_IGUANA</Tag>
 		<English>Myth - Iguana</English>
 		<French>Mythe de l'Iguane</French>
 		<Russian>Ìèô î èãóàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_IMPALA</Tag>
 		<English>Myth - Impala</English>
 		<French>Mythe de l'Impala</French>
 		<Russian>Ìèô îá èìïàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_JAGUAR</Tag>
 		<English>Myth - Jaguar</English>
 		<French>Mythe du Jaguar</French>
 		<Russian>Ìèô îá ÿãóàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_KANGAROO_GREY</Tag>
 		<English>Myth - Grey Kangaroo</English>
 		<French>Mythe du Kangourou gris</French>
 		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_KANGAROO_RED</Tag>
 		<English>Myth - Red Kangaroo</English>
 		<French>Mythe du Kangourou roux</French>
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOALA_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_KOALA</Tag>
 		<English>Myth - Koala</English>
 		<French>Mythe du Koala</French>
 		<Russian>Ìèô î êîàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_KOMODO_DRAGON</Tag>
 		<English>Myth - Komodo Dragon</English>
 		<French>Mythe du Dragon de Komodo</French>
 		<Russian>Ìèô î êîì. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_KOOKABURRA</Tag>
 		<English>Myth - Kookaburra</English>
 		<French>Mythe du Kookaboura</French>
 		<Russian>Ìèô î êóêàáàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_LOCAL_FISH</Tag>
 		<English>Myth (B) - Fish</English>
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_MANDRILL</Tag>
 		<English>Myth - Mandrill</English>
 		<French>Mythe du Mandrill</French>
 		<Russian>Ìèô î ìàíäðèëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_NEW_W_MONKEY</Tag>
 		<English>Myth - New World Monkeys</English>
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NILE_MONITOR_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_NILE_MONITOR</Tag>
 		<English>Myth - Nile Monitor</English>
 		<French>Mythe du Varan du Nil</French>
 		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_OKAPI</Tag>
 		<English>Myth - Okapi</English>
 		<French>Mythe de l'Okapi</French>
 		<Russian>Ìèô îá îêàïè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_OLD_W_MONKEY</Tag>
 		<English>Myth - Old World Monkeys</English>
 		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_ORANGUTAN</Tag>
 		<English>Myth - Orangutan</English>
 		<French>Mythe de l'Orang-outan</French>
 		<Russian>Ìèô îá îðàíãóòàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OWL_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_OWL</Tag>
 		<English>Myth (B) - Owls</English>
 		<French>Mythe des Chouettes</French>
 		<Polish>Myth - Sowy</Polish>
 		<Russian>Ìèô î ñîâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
+		<Tag>TXT_KEY_BUILDING_MYTH_OXPECKER</Tag>
 		<English>Myth - Oxpecker</English>
 		<French>Mythe du Pique-bœufs</French>
 		<Russian>Ìèô î âîëîêëþå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_PEACOCK</Tag>
+		<English>Myth - Peacock</English>
+		<French>Mythe du Paon</French>
+		<Russian>Ìèô î ïàâëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_PENGUIN</Tag>
+		<English>Myth (B) - Penguin</English>
+		<French>Mythe du Pingouin</French>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_PROCOPTODON</Tag>
+		<English>Myth - Procoptodon</English>
+		<French>Mythe du Procoptodon</French>
+		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_PUFFADDER</Tag>
+		<English>Myth - Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_QUOLL</Tag>
+		<English>Myth - Quoll</English>
+		<French>Mythe du Chat marsupial</French>
+		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_RAPTOR</Tag>
+		<English>Myth (B) - Raptors</English>
+		<French>Mythe des Rapaces</French>
+		<Polish>Mit - Ptaki drapieżne</Polish>
+		<Russian>Ìèô î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_RATEL</Tag>
+		<English>Myth - Ratel</English>
+		<French>Mythe du Ratel</French>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_RODENT</Tag>
+		<English>Myth (B) - Rodent</English>
+		<French>Mythe des Rongeurs</French>
+		<Polish>Mit - Gryzonie</Polish>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_SEA_BIRD</Tag>
+		<English>Myth (B) - Sea Birds</English>
+		<French>Mythe des Oiseaux marins</French>
+		<Polish>Mit - Ptaki morskie</Polish>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_SNAKES</Tag>
+		<English>Myth - Snakes</English>
+		<French>Mythe des Serpents</French>
+		<Russian>Ìèô î çìåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_VIPER</Tag>
+		<English>Myth - Viper</English>
+		<French>Mythe de la Vipère</French>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_WALLAROO</Tag>
+		<English>Myth - Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
+		<Russian>Ìèô î êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_WARTHOG</Tag>
+		<English>Myth - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_WILDEBEEST</Tag>
+		<English>Myth - Wildebeest</English>
+		<French>Mythe du Gnou</French>
+		<Russian>Ìèô î ãíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYTH_WOLF</Tag>
+		<English>Myth (B) - Wolf</English>
+		<French>
+			<Text>Mythe des Loups</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del lupo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit - Wilk</Polish>
+		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
@@ -366,73 +470,10 @@
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
-		<English>Myth - Peacock</English>
-		<French>Mythe du Paon</French>
-		<Russian>Ìèô î ïàâëèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PENGUIN_MYTH</Tag>
-		<English>Myth (B) - Penguin</English>
-		<French>Mythe du Pingouin</French>
-		<Russian>Ìèô î ïèíãâèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
-		<English>Myth - Procoptodon</English>
-		<French>Mythe du Procoptodon</French>
-		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
 		<English>Remains - Procoptodon</English>
 		<French>Remains - Procoptodon</French>
 		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PUFFADDER_MYTH</Tag>
-		<English>Myth - Puff Adder</English>
-		<French>Mythe de la Vipère heurtante</French>
-		<Russian>Ìèô î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH</Tag>
-		<English>Myth - Quoll</English>
-		<French>Mythe du Chat marsupial</French>
-		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAPTOR_MYTH</Tag>
-		<English>Myth (B) - Raptors</English>
-		<French>Mythe des Rapaces</French>
-		<Polish>Mit - Ptaki drapieżne</Polish>
-		<Russian>Ìèô î õèùí. ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATEL_MYTH</Tag>
-		<English>Myth - Ratel</English>
-		<French>Mythe du Ratel</French>
-		<Russian>Ìèô î ìåäîåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODENT_MYTH</Tag>
-		<English>Myth (B) - Rodent</English>
-		<French>Mythe des Rongeurs</French>
-		<Polish>Mit - Gryzonie</Polish>
-		<Russian>Ìèô î ãðûçóíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Tag>
-		<English>Myth (B) - Sea Birds</English>
-		<French>Mythe des Oiseaux marins</French>
-		<Polish>Mit - Ptaki morskie</Polish>
-		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SNAKES_MYTH</Tag>
-		<English>Myth - Snakes</English>
-		<French>Mythe des Serpents</French>
-		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
@@ -448,47 +489,6 @@
 		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
 		<English>Your nation has flocks of Turkey.</English>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VIPER_MYTH</Tag>
-		<English>Myth - Viper</English>
-		<French>Mythe de la Vipère</French>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH</Tag>
-		<English>Myth - Wallaroo</English>
-		<French>Mythe du Wallaroo</French>
-		<Russian>Ìèô î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WARTHOG_MYTH</Tag>
-		<English>Myth - Warthog</English>
-		<French>Mythe du Phacochère</French>
-		<Polish>Mit - Guziec</Polish>
-		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Tag>
-		<English>Myth - Wildebeest</English>
-		<French>Mythe du Gnou</French>
-		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOLF_MYTH</Tag>
-		<English>Myth (B) - Wolf</English>
-		<French>
-			<Text>Mythe des Loups</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del lupo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit - Wilk</Polish>
-		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>

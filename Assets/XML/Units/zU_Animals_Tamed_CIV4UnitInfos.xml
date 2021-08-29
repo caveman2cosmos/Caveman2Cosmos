@@ -1117,8 +1117,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_ASIANBEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_ASIANBEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1193,8 +1193,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BROWN_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BROWN_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -1264,8 +1264,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_BLACK_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_BLACK_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1338,8 +1338,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_CAVE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -1410,8 +1410,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_GRIZZLY_MYTH</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_GRIZZLY</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1481,8 +1481,8 @@
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_PANDA_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_PANDA_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -1553,8 +1553,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_POLAR_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_POLAR_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -1619,10 +1619,10 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_EARTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_REDPANDA_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_REDPANDA</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1695,8 +1695,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SLOTH_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_SLOTH_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1768,8 +1768,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_SPECTACLED_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1843,8 +1843,8 @@
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_BEAR_MYTH</BuildingType>
-				<BuildingType>BUILDING_SUN_BEAR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BEAR</BuildingType>
+				<BuildingType>BUILDING_MYTH_SUN_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1991,7 +1991,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2215,7 +2215,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BLACK_RHINO_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BLACK_RHINO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2286,7 +2286,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_INDIAN_RHINO_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_INDIAN_RHINO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2357,7 +2357,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_JAVA_RHINO_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_JAVA_RHINO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2428,7 +2428,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_WHITE_RHINO_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_WHITE_RHINO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2498,7 +2498,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BAIRDS_TAPIR</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2567,7 +2567,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_BRAZILIAN_TAPIR</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2636,7 +2636,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_MALAYAN_TAPIR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_MALAYAN_TAPIR</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2705,7 +2705,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH</BuildingType>
+				<BuildingType>BUILDING_MYTH_MOUNTAIN_TAPIR</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>

@@ -3896,7 +3896,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -4924,7 +4924,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
@@ -5036,7 +5036,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_MYTH_EGYPT_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -35896,7 +35896,7 @@
 				<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
 				<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
 				<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MYTH_EGYPT_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>

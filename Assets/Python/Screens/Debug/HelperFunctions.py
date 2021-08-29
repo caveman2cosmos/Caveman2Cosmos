@@ -91,7 +91,7 @@ class HelperFunctions:
 		iTechAnimalRow = 0
 		for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 			iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_MYTH_REQUIRE"):
+			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_MYTH_ANIMAL_REQUIRE"):
 				iTechAnimalLoc = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridX()
 				iTechAnimalRow = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridY()
 				aTechList.append(GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getType())
