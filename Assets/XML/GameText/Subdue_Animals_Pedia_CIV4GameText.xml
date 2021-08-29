@@ -200,10 +200,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_EFFECT_ANIMAL_PEDIA</Tag>
-		<English>The Myth Effect buildings are not real buildings. They are used to allow another building to be unique within a nation without being a national wonder.[NEWLINE]- Myth Effect buildings are given for free by Myth buildings.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
 		<English>The mascot of a ship.</English>
 		<Italian>La mascotte di una nave.</Italian>
