@@ -30,15 +30,15 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingImplicitReplacements, "Building - check implicit replacements", "Check if we have implicit replacements - All replacements must be explicitly defined even if building got obsoleted long ago")
 		self.main.addTestCode(screen, self.checkBuildingReplacingQuality, "Building - check replacement quality", "Check if building, that replaces earlier buildings is better in various metrics")
 		self.main.addTestCode(screen, self.checkBuildingReplacingAvailability, "Building - check replacement availability", "Check if replaced buildings are affected by other buildings, civics, traits, conversely improvements can upgrade, so they are checked too")
+		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingBonusRequirements, "Building bonus requirements", "Checks various bonus prereqs to check if they aren't unlocked after building")
 		self.main.addTestCode(screen, self.checkBuildingBonusManufacturerTech, "Building earliest manufacturer on resource tech reveal", "Checks when earliest resource producer is unlocked")
 		self.main.addTestCode(screen, self.checkBuildingRequirementTags, "Building - requirement requirements", "Check if additonal requirements don't lock out buildings")
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements and obsoletions", "Checks if various civics aren't unlocked after building. Civic buildings shouldn't obsolete, as effectively it represents unique conditions under that civic")
 		self.main.addTestCode(screen, self.checkBuildingCivicInfluences, "Building - check civic tags", "Check if building is available when civic is active")
-		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building religion requirement test", "Checks if tags requiring religion share same religion")
+		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
 		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
-		self.main.addTestCode(screen, self.checkBuildingFreeReward, "Building obsoletion of free buildings", "Checks if free buildings - normally unbuildable - obsolete together with building, that gives it for free. Buildable free building shouldn't obsolete before building, that gives it for free")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion - those bonus tags affect buildings in various ways")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
@@ -1668,6 +1668,26 @@ class TestCode:
 			if len(aUniqueReplacementBuildingsList) > 0:
 				self.log(CvTraitInfo.getType()+" BuildingHappinessModifierTypes "+str(aUniqueReplacementBuildingsList))
 
+	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
+	def checkBuildingFreeReward(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+
+			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
+			if iFreeBuilding != -1:
+				CvFreeBuilding = GC.getBuildingInfo(iFreeBuilding)
+				iObsoleteFreeBuildingTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvFreeBuilding)[0]
+				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc and CvFreeBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeBuildingTechLoc:
+					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free building "+CvFreeBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeBuildingTechLoc))
+
+			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
+			if iFreeAreaBuilding != -1:
+				CvFreeAreaBuilding = GC.getBuildingInfo(iFreeAreaBuilding)
+				iObsoleteFreeAreaBuildingTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvFreeAreaBuilding)[0]
+				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc and CvFreeAreaBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeAreaBuildingTechLoc:
+					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
+
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -2105,26 +2125,6 @@ class TestCode:
 			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
-
-	#Buildings - free rewards. Their obsoletion should be correlated with obsoletion of building.
-	def checkBuildingFreeReward(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-
-			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
-			if iFreeBuilding != -1:
-				CvFreeBuilding = GC.getBuildingInfo(iFreeBuilding)
-				iObsoleteFreeBuildingTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvFreeBuilding)[0]
-				if iObsoleteTechLoc != iObsoleteFreeBuildingTechLoc and CvFreeBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeBuildingTechLoc:
-					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free building "+CvFreeBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeBuildingTechLoc))
-
-			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
-			if iFreeAreaBuilding != -1:
-				CvFreeAreaBuilding = GC.getBuildingInfo(iFreeAreaBuilding)
-				iObsoleteFreeAreaBuildingTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvFreeAreaBuilding)[0]
-				if iObsoleteTechLoc != iObsoleteFreeAreaBuildingTechLoc and CvFreeAreaBuilding.getProductionCost() == -1 or iObsoleteTechLoc < iObsoleteFreeAreaBuildingTechLoc:
-					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
 	#Building tech changes and modifiers
 	def checkBuildingTechMods(self):
@@ -2628,48 +2628,27 @@ class TestCode:
 
 	#Bonus - check potential bonus producer replacements
 	def checkBonusProducerReplacements(self):
-		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
-		BONUSCLASS_GENMODS = GC.getInfoTypeForString("BONUSCLASS_GENMODS")
-		BONUSCLASS_WONDER = GC.getInfoTypeForString("BONUSCLASS_WONDER")
-
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 
-			#Check replacements of bonus producers
-			if CvBonusInfo.getConstAppearance() == 0 and not (( BONUSCLASS_CULTURE > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_CULTURE) or (BONUSCLASS_GENMODS > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_GENMODS) or (BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER)):
-			# Check Manufactured bonuses, that aren't Culture or Techno-culture or Unique types.
-				aNumBonusManufacturers = [] # Count manufacturers and add their locations
-				aBuildingObsoletions = [] # List xgrid of manufacturer tech obsoletions
-				for iBuilding in xrange(GC.getNumBuildingInfos()): # Collect statistics about buildings - location of producer and its obsoletion
+			#We care about manufactured class of resources - others are map ones or produced by wonder.
+			if CvBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED"):
+				for iBuilding in xrange(GC.getNumBuildingInfos()):
 					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding): # Exclude space based and wonders
+
+					#Earth bonus producers should always have replacements, if its regular manufactured one, ignore wonders in this case
+					if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding):
+						bIsBonusPoducer = False
 						if CvBuildingInfo.getFreeBonus() == iBonus:
-							aNumBonusManufacturers.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
-							aBuildingObsoletions.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
+							bIsBonusPoducer = True
+						else:
+							for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
+								if CvBuildingInfo.getExtraFreeBonus(i) == iBonus:
+									bIsBonusPoducer = True
+									break
 
-						for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-							if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-								aNumBonusManufacturers.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
-								aBuildingObsoletions.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
-
-				# Check all bonus producers
-				if len(aNumBonusManufacturers) > 0:
-					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-						if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding): # Exclude space based and wonders
-							aBuildingReplacements = [] # List building replacements
-							iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-							iObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-							for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
-								CvBuildingReplacement = GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(iReplacement))
-								aBuildingReplacements.append(CvBuildingReplacement.getType())
-
-							if CvBuildingInfo.getFreeBonus() == iBonus:
-								self.log(CvBonusInfo.getType()+" "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
-
-							for iBonuses in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-								if CvBuildingInfo.getExtraFreeBonus(iBonuses) == iBonus:
-									self.log(CvBonusInfo.getType()+" "+str(iTechLoc)+"/"+str(iObsoleteTechLoc)+" Type: "+CvBuildingInfo.getType()+" Replacement: "+str(aBuildingReplacements))
+						if bIsBonusPoducer and CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0:
+							self.log(CvBonusInfo.getType()+" producer "+CvBuildingInfo.getType()+" is standalone")
 
 	#Civic - check if civic yield bonus for improvement is carried into its upgrade
 	def checkCivicImprovementReplacements(self):

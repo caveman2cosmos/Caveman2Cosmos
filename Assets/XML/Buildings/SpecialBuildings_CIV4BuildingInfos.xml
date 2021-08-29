@@ -3243,8 +3243,6 @@
 			<CommerceModifiers>
 				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_DRUGS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iInsidiousness>15</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -5083,8 +5081,6 @@
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
-			<FreeBonus>BONUS_FIREARMS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iInsidiousness>10</iInsidiousness>
 			<iRevIdxLocal>50</iRevIdxLocal>

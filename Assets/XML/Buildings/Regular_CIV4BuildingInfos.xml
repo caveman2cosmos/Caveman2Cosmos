@@ -4973,6 +4973,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8405</iCost>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -5007,20 +5012,9 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>100</iYield>
+				<iYield>150</iYield>
 			</YieldChanges>
-			<BonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_ANTIMATTER</BonusType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>50</iYield>
-					</YieldChanges>
-				</BonusYieldChange>
-			</BonusYieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANTIMATTER_HARVESTER</BuildingType>
-			</PrereqInCityBuildings>
+			<Bonus>BONUS_ANTIMATTER</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -26815,6 +26809,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>12155</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -41273,6 +41272,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>14655</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -49669,6 +49673,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -65809,11 +65818,17 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATERIALIZATION</PrereqTech>
 			<iCost>22755</iCost>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>80</iYield>
+			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>70</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>5</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
 			<PowerYieldModifiers>
@@ -65864,6 +65879,42 @@
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GRAVITY_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SOYLENT_GREEN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MEGASTRONG_ALLOYS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PERSONAL_SPACECRAFT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEMTOBOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_VIBRANIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CHAOS_WANDS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -67163,6 +67214,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>12155</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -83438,6 +83494,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>9105</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -101368,6 +101429,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -102012,6 +102078,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>19755</iCost>
 			<iHealth>-15</iHealth>
 			<CommerceChanges>
@@ -113767,6 +113838,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>17055</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
