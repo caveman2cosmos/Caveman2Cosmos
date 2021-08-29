@@ -190,7 +190,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_FIRE</Tag>
-		<English>Myth (L) - Fire</English>
+		<English>Myth (E) - Fire</English>
 		<French>Mythe du Feu</French>
 		<Polish>Mit - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
@@ -339,7 +339,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_METAL</Tag>
-		<English>Myth (L) - Metal</English>
+		<English>Myth (E) - Metal</English>
 		<French>Mythe du Métal</French>
 		<Polish>Mit - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
@@ -539,7 +539,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_STONE</Tag>
-		<English>Myth (L) - Stone</English>
+		<English>Myth (E) - Stone</English>
 		<French>Mythe de la Pierre</French>
 		<Polish>Mit - Kamień</Polish>
 		<Russian>Ìèô î êàìíå</Russian>

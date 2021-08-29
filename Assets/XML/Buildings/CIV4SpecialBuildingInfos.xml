@@ -90,14 +90,14 @@
 			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_EXPLORATION</Description>
 			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/myth_dartfrog.dds</Button>
+			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_MYTHS_TAXONOMY</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_TAXONOMY</Description>
 			<TechPrereq>TECH_TAXONOMY</TechPrereq>
 			<bValid>1</bValid>
-			<Button>Art/Interface/Buttons/Buildings/myth_dartfrog.dds</Button>
+			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CORPORATION_HQ</Type>

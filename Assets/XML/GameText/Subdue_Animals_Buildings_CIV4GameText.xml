@@ -832,7 +832,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_DRAGON</Tag>
-		<English>Myth - Dragon</English>
+		<English>Myth (E) - Dragon</English>
 		<French>
 			<Text>Mythe du Dragon</Text>
 			<Gender>Male</Gender>
@@ -870,7 +870,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_EARTH</Tag>
-		<English>Myth (L) - Earth</English>
+		<English>Myth (E) - Earth</English>
 		<French>
 			<Text>Mythe de la Terre</Text>
 			<Gender>Male</Gender>
@@ -1054,7 +1054,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_MERMAID</Tag>
-		<English>Myth - Mermaid</English>
+		<English>Myth (E) - Mermaid</English>
 		<French>
 			<Text>Mythe des Sirènes</Text>
 			<Gender>Male</Gender>
@@ -1170,7 +1170,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_PHOENIX</Tag>
-		<English>Myth - Phoenix</English>
+		<English>Myth (E) - Phoenix</English>
 		<French>
 			<Text>Mythe du Phoenix</Text>
 			<Gender>Male</Gender>
@@ -1262,7 +1262,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_SEA</Tag>
-		<English>Myth (L) - Sea</English>
+		<English>Myth (E) - Sea</English>
 		<French>
 			<Text>Mythe de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1310,7 +1310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_SKY</Tag>
-		<English>Myth (L) - Sky</English>
+		<English>Myth (E) - Sky</English>
 		<French>
 			<Text>Mythe du Ciel</Text>
 			<Gender>Male</Gender>
@@ -1370,7 +1370,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTH_UNICORN</Tag>
-		<English>Myth - Unicorn</English>
+		<English>Myth (E) - Unicorn</English>
 		<French>
 			<Text>Mythe de la Licorne</Text>
 			<Gender>Male</Gender>

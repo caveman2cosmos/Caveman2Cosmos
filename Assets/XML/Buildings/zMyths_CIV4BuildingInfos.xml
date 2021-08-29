@@ -42,7 +42,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_CORAL</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CORAL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -76,7 +76,7 @@
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_FALL</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_FALL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -92,7 +92,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -107,7 +107,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_METAL</ArtDefineTag>
 			<FreeBuilding>BUILDING_MYTH_METAL</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -149,7 +149,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OASIS</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OASIS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -247,7 +247,7 @@
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_OUTCROP</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_OUTCROP</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -281,7 +281,7 @@
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_REEF</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_REEF</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -294,7 +294,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_STONE</ArtDefineTag>
 			<FreeBuilding>BUILDING_MYTH_STONE</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -345,7 +345,7 @@
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_MYTH_VOLCANO</FreeBuilding>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_VOLCANO</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -364,7 +364,7 @@
 				<BuildingType>BUILDING_MYTH_EARTH</BuildingType>
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_DRAGON</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_DRAGON</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -382,7 +382,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_EARTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EARTH</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -401,7 +401,7 @@
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_MERMAID</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_MERMAID</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -421,7 +421,7 @@
 				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
 				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_PHOENIX</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_PHOENIX</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -439,7 +439,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_SEA</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SEA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -457,7 +457,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_SKY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SKY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -475,7 +475,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>10</iCost>
+			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_MYTH_UNICORN</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_MYTH_UNICORN</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
