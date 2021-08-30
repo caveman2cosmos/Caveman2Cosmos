@@ -33,12 +33,8 @@ struct IDValueMap
 				{
 					if (pXML->TryMoveToXmlFirstChild())
 					{
-						CvString szTextVal;
-						pXML->GetXmlVal(szTextVal);
-						const ID_ type = (ID_)GC.getOrCreateInfoTypeForString(szTextVal);
-						Value_ value = defaultValue;
-						pXML->GetNextXmlVal(&value);
-						m_map.push_back(std::make_pair(type, value));
+						m_map.push_back(pair_t());
+						readChildPair(pXML, m_map[m_map.size() -1]);
 						pXML->MoveToXmlParent();
 					}
 				} while (pXML->TryMoveToXmlNextSibling());
@@ -82,6 +78,25 @@ struct IDValueMap
 			}
 			pXML->MoveToXmlParent();
 		}
+	}
+
+	template <class T>
+	void readChildPair(CvXMLLoadUtility* pXML, T& pair)
+	{
+		CvString szTextVal;
+		pXML->GetXmlVal(szTextVal);
+		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
+		//pair.second = defaultValue;
+		pXML->GetNextXmlVal(&pair.second);
+	}
+
+	template <>
+	void readChildPair<std::pair<ID_, int*> >(CvXMLLoadUtility* pXML, std::pair<ID_, int*>& pair)
+	{
+		CvString szTextVal;
+		pXML->GetXmlVal(szTextVal);
+		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
+		pXML->SetCommerce(&pair.second);
 	}
 
 	void copyNonDefaults(const IDValueMap<ID_, Value_, defaultValue>& other)

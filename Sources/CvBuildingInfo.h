@@ -344,6 +344,8 @@ public:
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 	//int getUnitProductionModifier(int i) const;
 
+	const IDValueMap<TechTypes, int*>& getTechCommercePercent() const { return m_aTechCommercePercent; }
+
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
@@ -851,6 +853,8 @@ private:
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatFreeExperience;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
+
+	IDValueMap<TechTypes, int*> m_aTechCommercePercent;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
