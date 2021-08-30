@@ -86,15 +86,15 @@
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_MYTHS_EXPLORATION</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_EXPLORATION</Description>
+			<Type>SPECIALBUILDING_FOLKLORE_EXPLORATION</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_FOLKLORE_EXPLORATION</Description>
 			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_MYTHS_TAXONOMY</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_MYTHS_TAXONOMY</Description>
+			<Type>SPECIALBUILDING_FOLKLORE_TAXONOMY</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_FOLKLORE_TAXONOMY</Description>
 			<TechPrereq>TECH_TAXONOMY</TechPrereq>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>

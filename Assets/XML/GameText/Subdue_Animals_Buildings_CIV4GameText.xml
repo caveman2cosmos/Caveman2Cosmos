@@ -651,8 +651,8 @@
 		<Russian>Ñòàäî îâöåáûêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_AMPHIBIAN</Tag>
-		<English>Myth - Amphibians</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
+		<English>Folklore - Amphibians</English>
 		<French>
 			<Text>Mythe - Amphibiens</Text>
 			<Gender>Male</Gender>
@@ -667,8 +667,8 @@
 		<Russian>Ìèô îá àìôèáèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_ANTELOPE</Tag>
-		<English>Myth - Antelope</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
+		<English>Folklore - Antelope</English>
 		<French>
 			<Text>Mythe (T) de l'Antilope</Text>
 			<Gender>Male</Gender>
@@ -683,8 +683,8 @@
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_BELUGA</Tag>
-		<English>Myth - Beluga Whale</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
+		<English>Folklore - Beluga Whale</English>
 		<French>
 			<Text>Mythe de la Baleine Beluga</Text>
 			<Gender>Male</Gender>
@@ -699,8 +699,8 @@
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_BOAR</Tag>
-		<English>Myth - Boar</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
+		<English>Folklore - Boar</English>
 		<French>
 			<Text>Mythe du Sanglier</Text>
 			<Gender>Male</Gender>
@@ -715,8 +715,8 @@
 		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_BULL</Tag>
-		<English>Myth - Bull</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
+		<English>Folklore - Bull</English>
 		<French>
 			<Text>Mythe du Taureau</Text>
 			<Gender>Male</Gender>
@@ -731,8 +731,8 @@
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CAMEL</Tag>
-		<English>Myth - Camel</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
+		<English>Folklore - Camel</English>
 		<French>
 			<Text>Mythe du Chameau</Text>
 			<Gender>Male</Gender>
@@ -747,38 +747,38 @@
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CAPUCHIN</Tag>
-		<English>Myth - Capuchin</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
+		<English>Folklore - Capuchin</English>
 		<French>Mythe du Capucin</French>
 		<Russian>Ìèô î êàïóöèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CAPYBARA</Tag>
-		<English>Myth - Capybara</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPYBARA</Tag>
+		<English>Folklore - Capybara</English>
 		<French>Mythe du Cabiaï</French>
 		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CHEETAH</Tag>
-		<English>Myth - Cheetah</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHEETAH</Tag>
+		<English>Folklore - Cheetah</English>
 		<French>Mythe du Cheetah</French>
 		<Russian>Ìèô î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CHIMPANZEE</Tag>
-		<English>Myth - Chimpanzee</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHIMPANZEE</Tag>
+		<English>Folklore - Chimpanzee</English>
 		<French>Mythe du Chimpanzé</French>
 		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_COD</Tag>
-		<English>Myth - Cod</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
+		<English>Folklore - Cod</English>
 		<French>Mythe de la Morue</French>
 		<Russian>Ìèô î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_CRAB</Tag>
-		<English>Myth - Crabs</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CRAB</Tag>
+		<English>Folklore - Crabs</English>
 		<French>
 			<Text>Mythe- crabe</Text>
 			<Gender>Male</Gender>
@@ -793,8 +793,8 @@
 		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_DEER</Tag>
-		<English>Myth - Deer</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
+		<English>Folklore - Deer</English>
 		<French>
 			<Text>Mythe (T) du Cerf</Text>
 			<Gender>Male</Gender>
@@ -809,14 +809,14 @@
 		<Russian>Ìèô îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_DESERT_TORTOISE</Tag>
-		<English>Myth - Desert Tortoise</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
+		<English>Folklore - Desert Tortoise</English>
 		<French>Mythe de la Tortue du désert</French>
 		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_DOLPHIN</Tag>
-		<English>Myth - Dolphin</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
+		<English>Folklore - Dolphin</English>
 		<French>
 			<Text>Mythe du Dauphin</Text>
 			<Gender>Male</Gender>
@@ -831,8 +831,8 @@
 		<Russian>Ìèô î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_DRAGON</Tag>
-		<English>Myth (E) - Dragon</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
+		<English>Folklore (E) - Dragon</English>
 		<French>
 			<Text>Mythe du Dragon</Text>
 			<Gender>Male</Gender>
@@ -847,8 +847,8 @@
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_DUGONG</Tag>
-		<English>Myth - Dugong</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUGONG</Tag>
+		<English>Folklore - Dugong</English>
 		<French>
 			<Text>Mythe du Dugong</Text>
 			<Gender>Male</Gender>
@@ -863,14 +863,14 @@
 		<Russian>Ìèô î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_EAGLE_BALD</Tag>
-		<English>Myth - Bald Eagle</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Tag>
+		<English>Folklore - Bald Eagle</English>
 		<French>Mythe du Pygargue à tête blanche</French>
 		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_EARTH</Tag>
-		<English>Myth (E) - Earth</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EARTH</Tag>
+		<English>Folklore (E) - Earth</English>
 		<French>
 			<Text>Mythe de la Terre</Text>
 			<Gender>Male</Gender>
@@ -885,8 +885,8 @@
 		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_ELEPHANT</Tag>
-		<English>Myth - Elephant</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
+		<English>Folklore - Elephant</English>
 		<French>
 			<Text>Mythe de l'Eléphant</Text>
 			<Gender>Male</Gender>
@@ -901,8 +901,8 @@
 		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_GOAT</Tag>
-		<English>Myth - Goat</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GOAT</Tag>
+		<English>Folklore - Goat</English>
 		<French>
 			<Text>Mythe de la Chèvre</Text>
 			<Gender>Male</Gender>
@@ -917,8 +917,8 @@
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_GREATWHITE_SHARK</Tag>
-		<English>Myth - Great White Shark</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
+		<English>Folklore - Great White Shark</English>
 		<French>
 			<Text>Mythe - Grand Requin Blanc</Text>
 			<Gender>Male</Gender>
@@ -933,8 +933,8 @@
 		<Russian>Ìèô î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_HAMMERHEAD_SHARK</Tag>
-		<English>Myth - Hammerhead Shark</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
+		<English>Folklore - Hammerhead Shark</English>
 		<French>
 			<Text>Mythe - Requin marteau</Text>
 			<Gender>Male</Gender>
@@ -949,8 +949,8 @@
 		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_HUMPBACK</Tag>
-		<English>Myth - Humpback Whale</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
+		<English>Folklore - Humpback Whale</English>
 		<French>
 			<Text>Mythe de la Baleine à Bosses</Text>
 			<Gender>Male</Gender>
@@ -965,8 +965,8 @@
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_KRAKEN</Tag>
-		<English>Myth - Kraken</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
+		<English>Folklore - Kraken</English>
 		<French>
 			<Text>Mythe du Kraken</Text>
 			<Gender>Male</Gender>
@@ -981,8 +981,8 @@
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_LEVIATHAN</Tag>
-		<English>Myth - Leviathan</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
+		<English>Folklore - Leviathan</English>
 		<French>
 			<Text>Mythe du Léviathan</Text>
 			<Gender>Male</Gender>
@@ -997,8 +997,8 @@
 		<Russian>Ìèô î Ëåâèàôàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_LION</Tag>
-		<English>Myth - Lion</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
+		<English>Folklore - Lion</English>
 		<French>
 			<Text>Mythe du Lion</Text>
 			<Gender>Male</Gender>
@@ -1013,8 +1013,8 @@
 		<Russian>Ìèô î ëüâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_LLAMA</Tag>
-		<English>Myth - Llama</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
+		<English>Folklore - Llama</English>
 		<French>Mythe du Lama</French>
 		<Italian>
 			<Text>Mito del lama</Text>
@@ -1025,20 +1025,20 @@
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_MACKEREL</Tag>
-		<English>Myth - Mackerel</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
+		<English>Folklore - Mackerel</English>
 		<French>Mythe du Maquereau</French>
 		<Russian>Ìèô î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_MARLIN</Tag>
-		<English>Myth - Marlin</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARLIN</Tag>
+		<English>Folklore - Marlin</English>
 		<French>Mythe du Marlin</French>
 		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_MARSUPIAL</Tag>
-		<English>Myth - Marsupial</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
+		<English>Folklore - Marsupial</English>
 		<French>
 			<Text>Mythe (T) du Marsupial</Text>
 			<Gender>Male</Gender>
@@ -1053,8 +1053,8 @@
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_MERMAID</Tag>
-		<English>Myth (E) - Mermaid</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MERMAID</Tag>
+		<English>Folklore (E) - Mermaid</English>
 		<French>
 			<Text>Mythe des Sirènes</Text>
 			<Gender>Male</Gender>
@@ -1069,8 +1069,8 @@
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_MINKIE_WHALE</Tag>
-		<English>Myth - Minke Whale</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
+		<English>Folklore - Minke Whale</English>
 		<French>
 			<Text>Mythe du Rorqual</Text>
 			<Gender>Male</Gender>
@@ -1085,8 +1085,8 @@
 		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_NARWHAL</Tag>
-		<English>Myth - Narwhal</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
+		<English>Folklore - Narwhal</English>
 		<French>
 			<Text>Mythe du Narval</Text>
 			<Gender>Male</Gender>
@@ -1101,8 +1101,8 @@
 		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_OLD_MAN</Tag>
-		<English>Myth - Old Man of the Forest</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
+		<English>Folklore - Old Man of the Forest</English>
 		<French>
 			<Text>Mythe de l'Ancien de la Forêt</Text>
 			<Gender>Male</Gender>
@@ -1117,8 +1117,8 @@
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_ORCA</Tag>
-		<English>Myth - Orca</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
+		<English>Folklore - Orca</English>
 		<French>
 			<Text>Mythe de l'Orque</Text>
 			<Gender>Male</Gender>
@@ -1133,8 +1133,8 @@
 		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_PALEOLITHIC_CAT</Tag>
-		<English>Myth - Paleolithic Cat</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Tag>
+		<English>Folklore - Paleolithic Cat</English>
 		<French>Mythe du Félin Paléolithique</French>
 		<Italian>
 			<Text>Mito del felino paleolitico</Text>
@@ -1145,8 +1145,8 @@
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_PALEOLITHIC_MAMMOTH</Tag>
-		<English>Myth - Paleolithic Mammoth</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
+		<English>Folklore - Paleolithic Mammoth</English>
 		<French>Mythe du Mammouth Paléolithique</French>
 		<Italian>
 			<Text>Mito del mammut paleolitico</Text>
@@ -1157,8 +1157,8 @@
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_PALEOLITHIC_MARSUPIAL</Tag>
-		<English>Myth - Paleolithic Marsupial</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
+		<English>Folklore - Paleolithic Marsupial</English>
 		<French>Mythe du Marsupial Paléolithique</French>
 		<Italian>
 			<Text>Mito del marsupiale paleolitico</Text>
@@ -1169,8 +1169,8 @@
 		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_PHOENIX</Tag>
-		<English>Myth (E) - Phoenix</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHOENIX</Tag>
+		<English>Folklore (E) - Phoenix</English>
 		<French>
 			<Text>Mythe du Phoenix</Text>
 			<Gender>Male</Gender>
@@ -1185,8 +1185,8 @@
 		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_RAY</Tag>
-		<English>Myth - Ray</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
+		<English>Folklore - Ray</English>
 		<French>
 			<Text>Mythe - la Raie</Text>
 			<Gender>Male</Gender>
@@ -1201,20 +1201,20 @@
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_RAY_EAGLE</Tag>
-		<English>Myth - Eagle Ray</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_EAGLE</Tag>
+		<English>Folklore - Eagle Ray</English>
 		<French>Mythe de l'Aigle de mer</French>
 		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_RAY_MANTA</Tag>
-		<English>Myth - Manta Ray</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_MANTA</Tag>
+		<English>Folklore - Manta Ray</English>
 		<French>Mythe de la Raie manta</French>
 		<Russian>Ìèô î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_REEF_SHARK</Tag>
-		<English>Myth - Reef Shark</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REEF_SHARK</Tag>
+		<English>Folklore - Reef Shark</English>
 		<French>
 			<Text>Mythe - Requin des récifs</Text>
 			<Gender>Male</Gender>
@@ -1229,8 +1229,8 @@
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_REPTILE</Tag>
-		<English>Myth - Reptile</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REPTILE</Tag>
+		<English>Folklore - Reptile</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
@@ -1245,8 +1245,8 @@
 		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SCAVENGER</Tag>
-		<English>Myth - Scavenger</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
+		<English>Folklore - Scavenger</English>
 		<French>
 			<Text>Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
@@ -1261,8 +1261,8 @@
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SEA</Tag>
-		<English>Myth (E) - Sea</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA</Tag>
+		<English>Folklore (E) - Sea</English>
 		<French>
 			<Text>Mythe de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1277,8 +1277,8 @@
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SEATURTLE</Tag>
-		<English>Myth - Sea Turtle</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEATURTLE</Tag>
+		<English>Folklore - Sea Turtle</English>
 		<French>
 			<Text>Mythe de la Tortue de mer</Text>
 			<Gender>Male</Gender>
@@ -1293,8 +1293,8 @@
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SHARK</Tag>
-		<English>Myth - Sharks</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
+		<English>Folklore - Sharks</English>
 		<French>
 			<Text>Histoires de Requins</Text>
 			<Gender>Female</Gender>
@@ -1309,8 +1309,8 @@
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SKY</Tag>
-		<English>Myth (E) - Sky</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKY</Tag>
+		<English>Folklore (E) - Sky</English>
 		<French>
 			<Text>Mythe du Ciel</Text>
 			<Gender>Male</Gender>
@@ -1325,8 +1325,8 @@
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_SPOTTED_CAT</Tag>
-		<English>Myth - Spotted Cat</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
+		<English>Folklore - Spotted Cat</English>
 		<French>Mythe du Chat moucheté</French>
 		<Italian>
 			<Text>Mito del felino maculato</Text>
@@ -1337,8 +1337,8 @@
 		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_TIGER</Tag>
-		<English>Myth - Tiger</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
+		<English>Folklore - Tiger</English>
 		<French>
 			<Text>Mythe du Tigre</Text>
 			<Gender>Male</Gender>
@@ -1353,8 +1353,8 @@
 		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_TUNA</Tag>
-		<English>Myth - Tuna</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TUNA</Tag>
+		<English>Folklore - Tuna</English>
 		<French>
 			<Text>Mythe - Thon</Text>
 			<Gender>Male</Gender>
@@ -1369,8 +1369,8 @@
 		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_UNICORN</Tag>
-		<English>Myth (E) - Unicorn</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_UNICORN</Tag>
+		<English>Folklore (E) - Unicorn</English>
 		<French>
 			<Text>Mythe de la Licorne</Text>
 			<Gender>Male</Gender>
@@ -1385,8 +1385,8 @@
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_WALRUS</Tag>
-		<English>Myth - Walrus</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
+		<English>Folklore - Walrus</English>
 		<French>
 			<Text>Mythe du Morse</Text>
 			<Gender>Male</Gender>
@@ -1401,8 +1401,8 @@
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_WEASEL</Tag>
-		<English>Myth - Weasel</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
+		<English>Folklore - Weasel</English>
 		<French>
 			<Text>Mythe (T) de la belette</Text>
 			<Gender>Male</Gender>
@@ -1417,8 +1417,8 @@
 		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_WHALESHARK</Tag>
-		<English>Myth - Whale Shark</English>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALESHARK</Tag>
+		<English>Folklore - Whale Shark</English>
 		<French>
 			<Text>Mythe - Requin-baleine</Text>
 			<Gender>Male</Gender>

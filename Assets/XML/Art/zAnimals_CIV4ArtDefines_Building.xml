@@ -2,7 +2,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_AARDVARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AARDVARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13,7 +13,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Aardvark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_AFRICANELEPHANT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICANELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24,7 +24,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Africanelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_AFRICANGREY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICANGREY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35,7 +35,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_africangrey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_AFRICAN_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICAN_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -56,7 +56,7 @@
 			<Button>Art/Interface/Buttons/Units/sparth/beastmaster.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ANTEATER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ANTEATER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -67,7 +67,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Anteater.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ARCTICFOX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ARCTICFOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -77,7 +77,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_ethowolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ARMADILLO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ARMADILLO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -88,7 +88,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Armadillo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ASIANBEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ASIANBEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -99,7 +99,7 @@
 			<!-- Art/Interface/Buttons/Buildings/story_asianbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ASIANELEPHANT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ASIANELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -110,7 +110,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_asianelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BABIRUSA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BABIRUSA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -121,7 +121,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Babirusa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BADGER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BADGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -132,7 +132,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Badger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BAIRDS_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BAIRDS_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -142,7 +142,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_bairds_tapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BALLPYTHON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BALLPYTHON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -153,7 +153,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Ballpython.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BARBARYAPE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BARBARYAPE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -164,7 +164,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Barbaryape.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BARNOWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BARNOWL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -175,7 +175,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Barnowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BARREDOWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BARREDOWL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -186,7 +186,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Barredowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -196,7 +196,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_bear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BEAVER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BEAVER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -207,7 +207,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Beaver.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BENGALTIGER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BENGALTIGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -218,7 +218,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_BengalTiger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -229,7 +229,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BISON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BISON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -240,7 +240,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_bison.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BLACK_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BLACK_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -251,7 +251,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_blackBear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BLACK_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BLACK_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -262,7 +262,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Blackrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BONGO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BONGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -273,7 +273,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Bongo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BOOBY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BOOBY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -284,7 +284,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_booby.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BRAZILIAN_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -294,7 +294,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_Brazilian_tapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BROWN_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BROWN_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -305,7 +305,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_BrownBear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BUFFALO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BUFFALO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -316,7 +316,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Buffalo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_BUG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BUG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -327,7 +327,7 @@
 			<!-- Art/Interface/Buttons/Buildings/totem_Bug.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CAIMAN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAIMAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -338,7 +338,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Caiman.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CAPUCHIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAPUCHIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -349,7 +349,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CAPYBARA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAPYBARA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -360,7 +360,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Capybara.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CARIBOU</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CARIBOU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -370,7 +370,7 @@
 			<Button>Art/Interface/Buttons/Units/Caribou.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CASSOWARY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CASSOWARY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -381,7 +381,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CAVE_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAVE_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -402,7 +402,7 @@
 			<!-- Art/Interface/Buttons/Buildings/remains_cavebear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CAVE_LION</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -412,7 +412,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_cavelion.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CHEETAH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CHEETAH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -423,7 +423,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Cheetah.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CHIMPANZEE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CHIMPANZEE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -434,7 +434,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Chimpanzee.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_COBRA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_COBRA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -445,7 +445,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Cobra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_COD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_COD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -456,7 +456,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_COD.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CROCODILE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CROCODILE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -466,7 +466,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_Crocodile.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CROW</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CROW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -477,7 +477,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Crow.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_CUSCUS</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CUSCUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -488,7 +488,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Cuscus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_DART_FROG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DART_FROG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -499,7 +499,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_DartFrog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_DESERT_TORTOISE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DESERT_TORTOISE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -510,7 +510,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_DHOLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DHOLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -521,7 +521,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Dhole.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_DINGO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DINGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -532,7 +532,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Dingo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_DUCK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DUCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -542,7 +542,7 @@
 			<Button>Art/Interface/Buttons/Units/Duck.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EAGLE_BALD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_EAGLE_BALD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -553,7 +553,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -563,7 +563,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ELASMOTHERIUM</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ELASMOTHERIUM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -585,7 +585,7 @@
 			<!-- Art/Interface/Buttons/Buildings/remains_Elasmotherium.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EMPEROR_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -596,7 +596,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EMU</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_EMU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -607,7 +607,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Emu.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_EWOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_EWOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -617,7 +617,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_ethowolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_FENNECFOX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_FENNECFOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -628,7 +628,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Fennecfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_FISH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_FISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -639,7 +639,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_FLAMINGO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_FLAMINGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -649,7 +649,7 @@
 			<Button>Art/Interface/Buttons/Units/Flamingo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_FLIGHTLESS_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -660,7 +660,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GALAPAGOS_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -671,7 +671,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Galapagospenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GALAPAGOS_TORTOISE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -682,7 +682,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GATOR_ASIAN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GATOR_ASIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -693,7 +693,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GATOR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GATOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -704,7 +704,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GAZELLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GAZELLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -715,7 +715,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gazelle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GELADA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GELADA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -726,7 +726,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gelada.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GEMSBOK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GEMSBOK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -737,7 +737,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gemsbok.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GERENUK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GERENUK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -748,7 +748,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gerenuk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GHARIAL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GHARIAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -759,7 +759,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_GHARIAL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GIRAFFE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GIRAFFE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -769,7 +769,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_Giraffe.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GLYPTO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GLYPTO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -780,7 +780,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_glypto.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GORILLA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GORILLA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -791,7 +791,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gorilla.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GREATWHITE_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GREATWHITE_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -802,7 +802,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Greatwhite.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GREY_WOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GREY_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -812,7 +812,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_wolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GRIZZLY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GRIZZLY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -823,7 +823,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_grizzly.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_GULL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GULL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -834,7 +834,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Gull.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HAAST_EAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HAAST_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -855,7 +855,7 @@
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HAMMERHEAD_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -866,7 +866,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Hammerhead.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HARPYEAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HARPYEAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -877,7 +877,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_harpyeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HAWK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HAWK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -887,7 +887,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HIPPOPOTAMUS</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HIPPOPOTAMUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -897,7 +897,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_hippo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HIPPOS</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HIPPOS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -907,7 +907,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_hippo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HORNED_OWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HORNED_OWL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -917,7 +917,7 @@
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HUMPBACK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HUMPBACK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -927,7 +927,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_HYENA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HYENA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -938,7 +938,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Hyena.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_IBEX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_IBEX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -948,7 +948,7 @@
 			<Button>Art/Interface/Buttons/Units/Ibex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_IGUANA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_IGUANA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -958,7 +958,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_reptile.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_IMPALA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_IMPALA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -969,7 +969,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Impala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_INDIAN_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_INDIAN_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -980,7 +980,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Indianrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_JAGUAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_JAGUAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -991,7 +991,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Jaguar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_JAVA_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_JAVA_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1002,7 +1002,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_javarhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_KANGAROO_GREY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_KANGAROO_GREY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1013,7 +1013,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_kangaroo_grey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_KANGAROO_RED</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_KANGAROO_RED</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1024,7 +1024,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_kangaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_KOALA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_KOALA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1035,7 +1035,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Koala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_KOMODO_DRAGON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_KOMODO_DRAGON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1045,7 +1045,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_monitorlizard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_KOOKABURRA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_KOOKABURRA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1056,7 +1056,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Kookaburra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_LION</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1067,7 +1067,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Lion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_LIZARD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LIZARD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1078,7 +1078,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Lizard.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_LOCAL_FISH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LOCAL_FISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1089,7 +1089,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_LOON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LOON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1099,7 +1099,7 @@
 			<Button>Art/Interface/Buttons/Units/Loon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_LYNX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LYNX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1109,7 +1109,7 @@
 			<Button>Art/Interface/Buttons/Units/Lynx.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MACAW</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MACAW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1120,7 +1120,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Macaw.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MACKEREL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MACKEREL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1131,7 +1131,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_MACKEREL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MALAYAN_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MALAYAN_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1141,7 +1141,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_mtapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MANDRILL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MANDRILL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1152,7 +1152,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MANEDWOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MANEDWOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1163,7 +1163,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Manedwolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MARLIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MARLIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1174,7 +1174,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_MARLIN.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MINKIE_WHALE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MINKIE_WHALE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1185,7 +1185,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Minkie.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MOA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MOA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1206,7 +1206,7 @@
 			<Button>Art/Interface/Buttons/Units/Moa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MONOTREMES</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MONOTREMES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1217,7 +1217,7 @@
 			<!-- Art/Interface/Buttons/Buildings/totem_Monotremes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MOOSE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MOOSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1227,7 +1227,7 @@
 			<Button>Art/Interface/Buttons/Units/Moose.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MOUNTAIN_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1237,7 +1237,7 @@
 			<Button>Art/Interface/Buttons/Buildings/story_mttapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_MUSKOX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MUSKOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1247,7 +1247,7 @@
 			<Button>Art/Interface/Buttons/Units/Muskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_NEW_W_MONKEY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_NEW_W_MONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1258,7 +1258,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_NILECROC</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_NILECROC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1269,7 +1269,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_NileCroc.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_NILE_MONITOR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_NILE_MONITOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1279,7 +1279,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_monitorlizard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_NUMBAT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_NUMBAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1290,7 +1290,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Numbat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OKAPI</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OKAPI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1301,7 +1301,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Okapi.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OLD_W_MONKEY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OLD_W_MONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1312,7 +1312,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OPOSSUM</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OPOSSUM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1323,7 +1323,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Opossum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ORANGUTAN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ORANGUTAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1334,7 +1334,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Orangutan.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OSTRICH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OSTRICH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1345,7 +1345,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Ostrich.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OWL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1356,7 +1356,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_OXPECKER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_OXPECKER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1367,7 +1367,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Oxpecker.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_DOG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_DOG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1387,7 +1387,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicDogMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_GROUNDSLOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1408,7 +1408,7 @@
 			<!-- Art/Interface/Buttons/Buildings/story_Groundsloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PALEOLITHIC_MAMMOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1428,7 +1428,7 @@
 			<Button>Art/Interface/Buttons/Buildings/herd_mammoth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PANDA_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PANDA_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1438,7 +1438,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_panda.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PANTHER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PANTHER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1448,7 +1448,7 @@
 			<Button>Art/Interface/Buttons/Units/Panther.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PARROT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PARROT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1459,7 +1459,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Parrot.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PEACOCK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PEACOCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1470,7 +1470,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Peacock.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1481,7 +1481,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PHEASANT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PHEASANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1491,7 +1491,7 @@
 			<Button>Art/Interface/Buttons/Units/Pheasant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PIGEON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PIGEON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1501,7 +1501,7 @@
 			<Button>Art/Interface/Buttons/Units/Pigeon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PLATYPUS</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PLATYPUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1512,7 +1512,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Platypus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_POLAR_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_POLAR_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1522,7 +1522,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_polarbear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_POSSUM</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_POSSUM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1533,7 +1533,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Possum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PROCOPTODON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PROCOPTODON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1555,7 +1555,7 @@
 			<!-- Art/Interface/Buttons/Buildings/Remains_Procoptodon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PUFFADDER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PUFFADDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1566,7 +1566,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_puffadder.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_PYGMYHIPPO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_PYGMYHIPPO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1576,7 +1576,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_hippo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_QUOLL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_QUOLL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1587,7 +1587,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Quoll.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RACCOON</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RACCOON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1597,7 +1597,7 @@
 			<Button>Art/Interface/Buttons/Units/Raccoon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RAPTOR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RAPTOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1607,7 +1607,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RATEL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RATEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1618,7 +1618,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Ratel.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RAVEN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RAVEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1629,7 +1629,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Raven.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RAY_EAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RAY_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1640,7 +1640,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_RAY_EAGLE.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RAY_MANTA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RAY_MANTA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1651,7 +1651,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_RAY_MANTA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RAZORBILL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RAZORBILL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1662,7 +1662,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Razorbill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_REDFOX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_REDFOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1672,7 +1672,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_ethowolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_REDPANDA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_REDPANDA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1683,7 +1683,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_redpanda.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_REEF_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_REEF_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1694,7 +1694,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Shark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_REPTILE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_REPTILE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1705,7 +1705,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_komododragon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RHEA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RHEA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1716,7 +1716,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Rhea.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RHINO_TAXONOMY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RHINO_TAXONOMY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1726,7 +1726,7 @@
 			<Button>Art/Interface/Buttons/Units/button_rhino.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RIVER_CROC</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RIVER_CROC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1736,7 +1736,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_crocodile.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ROCKHOPPER_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1747,7 +1747,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Rockhopper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_RODENT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RODENT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1758,7 +1758,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_chipmonk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SABRETOOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SABRETOOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1769,7 +1769,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_sabretooth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SAIGA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SAIGA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1779,7 +1779,7 @@
 			<Button>Art/Interface/Buttons/Units/Saiga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SALTWATER_CROC</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1789,7 +1789,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_crocodile.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SEAEAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEAEAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1800,7 +1800,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_seaeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SEALION</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEALION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1811,7 +1811,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_sealion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SEA_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1822,7 +1822,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SEA_OTTER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_OTTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1833,7 +1833,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SECRETARYBIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SECRETARYBIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1844,7 +1844,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Secretarybird.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SIBERIAN_TIGER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SIBERIAN_TIGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1854,7 +1854,7 @@
 			<Button>Art/Interface/Buttons/Units/SiberianTiger.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SKUNK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SKUNK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1864,7 +1864,7 @@
 			<Button>Art/Interface/Buttons/Units/Skunk.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SLOTH_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SLOTH_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1875,7 +1875,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_slothbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SNAKES</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SNAKES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1886,7 +1886,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Snakes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SNOW_LEOPARD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SNOW_LEOPARD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1896,7 +1896,7 @@
 			<Button>Art/Interface/Buttons/Units/SnowLeopard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SPECTACLED_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SPECTACLED_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1907,7 +1907,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_spectacledbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_SUN_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SUN_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1918,7 +1918,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_sunbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1928,7 +1928,7 @@
 			<Button>Art/Interface/Buttons/Buildings/myth_tapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TARANTULA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TARANTULA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1939,7 +1939,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Tarantula.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TERN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TERN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1949,7 +1949,7 @@
 			<Button>Art/Interface/Buttons/Units/Tern.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_THYLACINE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_THYLACINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1959,7 +1959,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_thylacine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TOUCAN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TOUCAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1969,7 +1969,7 @@
 			<Button>Art/Interface/Buttons/Units/Toucan.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TREESLOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TREESLOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1980,7 +1980,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Treesloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_TURKEY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TURKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1990,7 +1990,7 @@
 			<Button>Art/Interface/Buttons/Units/Turkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_VIPER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_VIPER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2001,7 +2001,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Viper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_VULTURE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_VULTURE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2011,7 +2011,7 @@
 			<Button>Art/Interface/Buttons/Units/Vulture.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WALLAROO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WALLAROO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2022,7 +2022,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Wallaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WALRUS</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WALRUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2032,7 +2032,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_walrus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WARTHOG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WARTHOG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2043,7 +2043,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_warthog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WHALESHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WHALESHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2054,7 +2054,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Whaleshark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WHITE_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WHITE_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2065,7 +2065,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Whiterhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WILDEBEEST</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WILDEBEEST</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2076,7 +2076,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Wildebeest.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2086,7 +2086,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_wolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WOLVERINE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WOLVERINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2096,7 +2096,7 @@
 			<Button>Art/Interface/Buttons/Units/Wolverine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_WOMBAT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WOMBAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2107,7 +2107,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Wombat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYTH_ZEBRA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ZEBRA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -193,11 +193,8 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Tag>
-		<English>Animal Myth buildings are there to simulate the explosion of research and knowledge in the neolithic era.</English>
-		<Italian>I miti degli animali simulano l'esplosione di ricerca e conoscenza avvenuta durante l'era neolitica.</Italian>
-		<Polish>Mity o zwierzętach to "budynki", które symulują wzrost zainteresowania naturą, wiedzą i rozwojem w erze neolitycznej człowieka.</Polish>
-		<Russian>Çäàíèÿ «Ìèô î æèâîòíîì» ïðåäíàçíà÷åíû äëÿ èìèòàöèè áóðíîãî ðàçâèòèÿ èññëåäîâàíèé è çíàíèé â ýïîõó íåîëèòà.</Russian>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
+		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>

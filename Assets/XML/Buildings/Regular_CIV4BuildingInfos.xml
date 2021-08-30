@@ -17981,7 +17981,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
@@ -33328,7 +33328,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_DONKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DONKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
@@ -36839,7 +36839,7 @@
 			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_CATHEDRAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_CATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_CATHEDRAL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -36906,7 +36906,7 @@
 			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_MONASTERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_MONASTERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_MONASTERY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -36960,7 +36960,7 @@
 			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_TEMPLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_TEMPLE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -39903,7 +39903,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HAWKING</BuildingType>
-				<BuildingType>BUILDING_MYTH_HAWK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>310</iCost>
 			<YieldChanges>
@@ -53724,7 +53724,7 @@
 			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_MYTH_HORSE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HORSE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -101316,7 +101316,7 @@
 				<Bonus>BONUS_FLINT</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_PALEOLITHIC_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>56</iCost>

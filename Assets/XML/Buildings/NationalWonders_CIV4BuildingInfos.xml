@@ -493,7 +493,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
@@ -7049,7 +7049,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_ISIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_ISIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_ISIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7126,7 +7126,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_OSIRIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_OSIRIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_OSIRIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7197,7 +7197,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_EGYPTIAN_SET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_SET</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_SET</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

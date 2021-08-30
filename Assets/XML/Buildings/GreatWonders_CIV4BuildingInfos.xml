@@ -6316,7 +6316,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_EARTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
@@ -7735,7 +7735,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_FIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
@@ -12497,7 +12497,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MYTH_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
@@ -13730,7 +13730,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
@@ -15247,8 +15247,8 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
-				<BuildingType>BUILDING_MYTH_EARTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -19403,7 +19403,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>

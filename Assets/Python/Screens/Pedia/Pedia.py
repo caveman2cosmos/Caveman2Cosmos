@@ -967,7 +967,7 @@ class Pedia:
 				return 4
 			if GC.getSpecialBuildingInfo(iSpecialBuilding).getType().find("_GROUP_") != -1:
 				return 2
-		if szStrat.find("Myth -", 0, 6) + szStrat.find("Myth (E) -", 0, 10) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -4:
+		if szStrat.find("Folklore -", 0, 10) + szStrat.find("Folklore (E) -", 0, 14) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -4:
 			return 6
 		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
 			return 5

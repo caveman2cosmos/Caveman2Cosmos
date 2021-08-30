@@ -54,16 +54,16 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_MYTH_REQUIRE</Type>
+			<Type>BUILDING_ANIMAL_FOLKLORE_REQUIRE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_DART_FROG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DART_FROG</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
@@ -689,11 +689,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAVE_BEAR_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_CAVE_BEAR</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -751,11 +751,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_CAVE_LION</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -805,7 +805,7 @@
 			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_CAVE_LION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CEPHALOPOD_INSTITUTE</Type>
@@ -985,7 +985,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_CRAB</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -1230,11 +1230,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_ELASMOTHERIUM</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1430,7 +1430,7 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_FISH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -1491,11 +1491,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GLYPTO_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_GLYPTO</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1545,7 +1545,7 @@
 			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_GLYPTO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOAT_HERD</Type>
@@ -1667,11 +1667,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HAAST_EAGLE_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_HAAST_EAGLE</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2097,11 +2097,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MOA_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_MOA</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_MOA</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2279,11 +2279,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_PALEOLITHIC_DOG</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2341,11 +2341,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2403,11 +2403,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_PALEOLITHIC_MAMMOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2618,11 +2618,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_PROCOPTODON</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PROCOPTODON</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2835,11 +2835,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_SABRETOOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2889,7 +2889,7 @@
 			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_SABRETOOTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SABRETOOTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SALACHIMORPHA_INSTITUTE</Type>
@@ -3096,11 +3096,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_THYLACINE_REMAINS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MYTH_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MYTH_THYLACINE</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_THYLACINE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -3150,7 +3150,7 @@
 			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MYTH_THYLACINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_THYLACINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TORTOISE_SHELL_WORKER</Type>
@@ -3443,7 +3443,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MYTH_SEA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
