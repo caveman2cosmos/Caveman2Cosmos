@@ -2383,6 +2383,22 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<TechCommercePercentChanges>
+                <TechCommercePercentChange>
+                    <TechType>TECH_NOMADISM</TechType>
+                    <CommercePercents>
+                        <iCommercePercent>50</iCommercePercent>
+                    </CommercePercents>
+                </TechCommercePercentChange>
+            </TechCommercePercentChanges>
+			<BonusCommercePercentChanges>
+                <BonusCommercePercentChange>
+                    <BonusType>BONUS_APPLE</BonusType>
+                    <CommercePercents>
+                        <iCommercePercent>50</iCommercePercent>
+                    </CommercePercents>
+                </BonusCommercePercentChange>
+            </BonusCommercePercentChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>

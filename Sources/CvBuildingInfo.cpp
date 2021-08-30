@@ -3589,7 +3589,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingProductionModifier.readWithDelayedResolution(pXML, L"GlobalBuildingProductionModifiers");
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
-	m_aTechCommercePercent.read(pXML, L"TechCommercePercentModifiers");
+	m_aTechCommercePercent.read(pXML, L"TechCommercePercentChanges");
 
 	return true;
 }
