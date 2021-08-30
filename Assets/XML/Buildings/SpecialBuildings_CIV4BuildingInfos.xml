@@ -159,7 +159,6 @@
 			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LEANTO</BuildingType>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -3244,8 +3243,6 @@
 			<CommerceModifiers>
 				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_DRUGS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iInsidiousness>15</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -5084,8 +5081,6 @@
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
-			<FreeBonus>BONUS_FIREARMS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iInsidiousness>10</iInsidiousness>
 			<iRevIdxLocal>50</iRevIdxLocal>
@@ -12880,6 +12875,7 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
@@ -13168,6 +13164,7 @@
 			<iMaxLatitude>80</iMaxLatitude>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
@@ -16822,7 +16819,6 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_LEANTO</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
@@ -17544,6 +17540,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
+					<iProductionModifier>-50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

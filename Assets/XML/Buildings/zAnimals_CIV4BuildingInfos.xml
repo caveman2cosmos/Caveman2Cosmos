@@ -624,6 +624,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -10373,7 +10379,11 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -14026,7 +14036,6 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -18631,7 +18640,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</ReplacementBuildings>
@@ -18695,7 +18703,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -26558,6 +26565,11 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_LIFE</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_RE_PET_SHOP</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -29737,7 +29749,12 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -31153,7 +31170,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>

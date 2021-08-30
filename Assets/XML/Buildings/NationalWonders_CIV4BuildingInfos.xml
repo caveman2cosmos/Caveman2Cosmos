@@ -2392,7 +2392,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2425,7 +2425,7 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>

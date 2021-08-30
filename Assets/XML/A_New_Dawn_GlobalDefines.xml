@@ -196,9 +196,17 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Base number of turns between decay, higher means lower decay rate -->
+		<!--
+			Base number of turns (10 equals 1 turn) between decay on normal gamespeed.
+			Higher value means slower decay rate.
+			Min value: 1 (means: decay 10 times per turn on Normal gamsepeed, decay every turn on eternity gamespeed)
+			Note: Decay can only happens 1 time per turn,
+				so a value of 10 means decay happens every turn on normal or faster gamespeeds,
+				which means no scaling occurs between normal and faster gamespeeds.
+			Default value: 20 (Decay every 2 turns on normal gamespeed, every 20 turns on eternity)
+		-->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>

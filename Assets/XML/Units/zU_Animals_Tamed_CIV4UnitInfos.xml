@@ -260,9 +260,24 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_LLAMA_FARM</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_LLAMA_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -334,9 +349,24 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_DONKEY_FARM</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -551,10 +581,25 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_BISON_HERD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -629,10 +674,25 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_BUFFALO_HERD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -712,6 +772,7 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -783,8 +844,12 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -920,6 +985,7 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PIG_FARM</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -987,8 +1053,12 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>
@@ -2748,9 +2818,20 @@
 				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
 			</Buildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
@@ -2831,8 +2912,19 @@
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqOrBuildings>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_REPTILE_CAGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RE_PET_SHOP</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>

@@ -797,7 +797,7 @@
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</Type>
+			<Type>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Type>
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
@@ -828,7 +828,7 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
-				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -846,7 +846,7 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
-				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
@@ -865,7 +865,7 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
-				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
+				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</OutcomeType>
 			</ReplaceOutcomes>

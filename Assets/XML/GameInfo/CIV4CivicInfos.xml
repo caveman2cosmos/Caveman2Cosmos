@@ -9484,8 +9484,8 @@
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
-					<iHealthChange>-1</iHealthChange>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -10546,7 +10546,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>

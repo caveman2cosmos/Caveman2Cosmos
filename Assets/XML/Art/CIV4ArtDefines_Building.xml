@@ -48657,7 +48657,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Craft/Art/slaughterhouse.dds</Button>
+			<Button>art/Craft/Art/industrialfarms.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ANIMAL_PRESERVE</Type>
