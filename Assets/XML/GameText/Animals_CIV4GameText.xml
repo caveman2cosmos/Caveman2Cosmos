@@ -36,8 +36,40 @@
 		<English>Autobuild - Folklore Requirement</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
+		<English>Autobuild - Presence of Coral</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
+		<English>Autobuild - Presence of Crater</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
+		<English>Autobuild - Presence of Metal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
+		<English>Autobuild - Presence of Oasis</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
+		<English>Autobuild - Presence of Landform</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
+		<English>Autobuild - Presence of Reef</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
+		<English>Autobuild - Presence of Volcano</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
 		<English>Folklore Requirements autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
+		<English>Folklore Presence autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>

@@ -10,37 +10,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_CORAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_STONE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_CORAL</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_CORAL</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CORAL</ArtDefineTag>
@@ -84,25 +65,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_FALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CRATER</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_FALL</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_FALL</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_FALL</ArtDefineTag>
@@ -200,15 +174,13 @@
 				<BuildingType>BUILDING_FOLKLORE_FIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_STONE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_GOLD_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_SILVER_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_TIN_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
-				<VicinityBonus>BONUS_PLATINUM_ORE</VicinityBonus>
-			</PrereqRawVicinityBonuses>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_METAL</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -250,17 +222,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_OASIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_OASIS</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_OASIS</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_OASIS</ArtDefineTag>
@@ -304,89 +277,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_OUTCROP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_DEVILS_TABLE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_OUTCROP</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_OUTCROP</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_OUTCROP</ArtDefineTag>
@@ -430,25 +332,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_REEF</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_STONE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_REEF</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_REEF</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_REEF</ArtDefineTag>
@@ -538,37 +433,18 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_VOLCANO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_STONE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_VOLCANO</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_VOLCANO</FreeBuilding>
 			<iCost>20</iCost>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_VOLCANO</ArtDefineTag>
