@@ -1688,7 +1688,7 @@ class TestCode:
 					self.log(CvBuildingInfo.getType()+" obsoletes at: "+str(iObsoleteTechLoc)+", free area building "+CvFreeAreaBuilding.getType()+" obsoletes at: "+str(iObsoleteFreeAreaBuildingTechLoc))
 
 			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_") != -1 and iBuilding != iFreeBuilding:
-				self.log(CvBuildingInfo.getType()+" if its animal/landscape myth, then it should give itself")
+				self.log(CvBuildingInfo.getType()+" if its animal/landscape folklore, then it should give itself")
 
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):

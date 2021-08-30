@@ -179,7 +179,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_METAL</ArtDefineTag>
 			<FreeBuilding>BUILDING_FOLKLORE_METAL</FreeBuilding>
-			<iCost>20</iCost>
+			<iCost>30</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -197,6 +197,7 @@
 				<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
 				<VicinityBonus>BONUS_PLATINUM_ORE</VicinityBonus>
 			</PrereqRawVicinityBonuses>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<PropertyManipulators>
@@ -1509,6 +1510,7 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
@@ -4217,6 +4219,7 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
@@ -5302,11 +5305,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<PropertyManipulators>
@@ -5336,11 +5334,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<PropertyManipulators>
@@ -5426,11 +5419,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -5462,11 +5450,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<PropertyManipulators>
@@ -6773,6 +6756,7 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_SHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
