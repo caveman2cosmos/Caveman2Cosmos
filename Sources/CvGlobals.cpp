@@ -420,6 +420,7 @@ void cvInternalGlobals::init()
 
 	CvPlayerAI::initStatics();
 	CvTeamAI::initStatics();
+	CyGlobalContext::initStatics();
 
 	COPY(m_aiPlotDirectionX, aiPlotDirectionX, int);
 	COPY(m_aiPlotDirectionY, aiPlotDirectionY, int);
@@ -2420,47 +2421,35 @@ void cvInternalGlobals::cacheGlobals()
 }
 
 
-bool cvInternalGlobals::getDefineBOOL(const char * szName) const
+bool cvInternalGlobals::getDefineBOOL(const char* szName, bool bDefault) const
 {
-	bool bReturn = false;
-	bool success = GC.getDefinesVarSystem()->GetValue( szName, bReturn );
-	//FAssertMsg( success, szName );
-	return bReturn;
+	const bool success = m_VarSystem->GetValue(szName, bDefault);
+	//FAssertMsg(success, szName);
+	return bDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName, const int iDefault) const
+int cvInternalGlobals::getDefineINT(const char* szName, int iDefault) const
 {
-	int iReturn = 0;
-
-	if (GC.getDefinesVarSystem()->GetValue(szName, iReturn))
-	{
-		return iReturn;
-	}
+	const bool success = m_VarSystem->GetValue(szName, iDefault);
+	//FAssertMsg(success, szName);
 	return iDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName) const
+float cvInternalGlobals::getDefineFLOAT(const char* szName, float fDefault) const
 {
-	int iReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, iReturn);
-	return iReturn;
+	const bool success = m_VarSystem->GetValue(szName, fDefault);
+	//FAssertMsg(success, szName);
+	return fDefault;
 }
 
-float cvInternalGlobals::getDefineFLOAT(const char * szName) const
+const char* cvInternalGlobals::getDefineSTRING(const char* szName, const char* szDefault) const
 {
-	float fReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, fReturn);
-	return fReturn;
+	const bool success = m_VarSystem->GetValue(szName, szDefault);
+	//FAssertMsg(success, szName);
+	return szDefault;
 }
 
-const char * cvInternalGlobals::getDefineSTRING(const char * szName) const
-{
-	const char * szReturn = NULL;
-	GC.getDefinesVarSystem()->GetValue(szName, szReturn);
-	return szReturn;
-}
-
-void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpdate)
+void cvInternalGlobals::setDefineINT(const char* szName, int iValue, bool bUpdate)
 {
 	if (getDefineINT(szName) != iValue)
 	{
@@ -2468,14 +2457,14 @@ void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpda
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, iValue, -1.0f, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, iValue);
+		else m_VarSystem->SetValue(szName, iValue);
 
 		cacheEnumGlobals();
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool bUpdate)
+void cvInternalGlobals::setDefineFLOAT(const char* szName, float fValue, bool bUpdate)
 {
 	if (getDefineFLOAT(szName) != fValue)
 	{
@@ -2483,13 +2472,13 @@ void cvInternalGlobals::setDefineFLOAT(const char * szName, float fValue, bool b
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, fValue, "");
 		}
-		else GC.getDefinesVarSystem()->SetValue(szName, fValue);
+		else m_VarSystem->SetValue(szName, fValue);
 
 		cacheGlobals();
 	}
 }
 
-void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szValue, bool bUpdate )
+void cvInternalGlobals::setDefineSTRING(const char* szName, const char* szValue, bool bUpdate)
 {
 	if (getDefineSTRING(szName) != szValue)
 	{
@@ -2497,7 +2486,7 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 		{
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, -1.0f, szValue);
 		}
-		else GC.getDefinesVarSystem()->SetValue( szName, szValue );
+		else m_VarSystem->SetValue(szName, szValue);
 
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
@@ -2789,7 +2778,7 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 			vInfoMapKeys.push_back(sKey);
 		}
 
-		std::sort(vInfoMapKeys.begin(), vInfoMapKeys.end());
+		algo::sort(vInfoMapKeys);
 
 		foreach_(const std::string& sKey, vInfoMapKeys)
 		{
@@ -3116,4 +3105,12 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 		}
 	}
 	return iSum;
+}
+
+void cvInternalGlobals::doPostLoadCaching()
+{
+	for (int i = 0, num = getNumBuildingInfos(); i < num; i++)
+	{
+		m_paBuildingInfo[i]->doPostLoadCaching(static_cast<BuildingTypes>(i));
+	}
 }

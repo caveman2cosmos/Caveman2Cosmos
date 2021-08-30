@@ -36,12 +36,6 @@ void CyStructsPythonInterface1()
 		.def_readwrite("y", &POINT::y)
 		;
 
-	python::class_<XYCoords>("XYCoords")
-		.def(python::init<int, int>())	// ctor which takes 2 ints
-		.def_readwrite("iX", &XYCoords::iX)
-		.def_readwrite("iY", &XYCoords::iY)
-		;
-
 	python::class_<IDInfo>("IDInfo")
 		.def_readwrite("eOwner", &IDInfo::eOwner)
 		.def_readwrite("iID", &IDInfo::iID)
@@ -99,11 +93,6 @@ void CyStructsPythonInterface1()
 	python::class_<EventMessage>("EventMessage")
 		.def_readwrite("iExpirationTurn", &EventMessage::iExpirationTurn)
 		.def("getDescription", &EventMessage::getDescription)
-		;
-
-	python::class_<FOWVis>("FOWVis")
-		.def_readwrite("uiCount", &FOWVis::uiCount)
-		.def("getOffsets", &FOWVis::getOffsets)  // array of "Offset" points
 		;
 
 	python::class_<PBGameSetupData>("PBGameSetupData")
@@ -189,13 +178,18 @@ void CyStructsPythonInterface1()
 		;
 
 	python::class_<std::pair<int, int> >("CyPair", python::no_init)
-		.def_readwrite("id", &std::pair<int, int>::first)
-		.def_readwrite("value", &std::pair<int, int>::second)
+		.def_readonly("id", &std::pair<int, int>::first)
+		.def_readonly("value", &std::pair<int, int>::second)
 	;
 
-	python::class_<BuildingCommerceChange>("CyBuildingCommerceChange", python::no_init)
-		.def_readwrite("eBuilding", &BuildingCommerceChange::eBuilding)
-		.def_readwrite("eCommerce", &BuildingCommerceChange::eCommerce)
-		.def_readwrite("iChange", &BuildingCommerceChange::iChange)
+	python::class_<BuildingCommerceChange>("BuildingCommerceChange", python::no_init)
+		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readonly("eCommerce", &BuildingCommerceChange::eCommerce)
+		.def_readonly("iChange", &BuildingCommerceChange::iChange)
+	;
+
+	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
+		.def_readonly("id", &BuildingModifier::eBuilding)
+		.def_readonly("value", &BuildingModifier::iModifier)
 	;
 }

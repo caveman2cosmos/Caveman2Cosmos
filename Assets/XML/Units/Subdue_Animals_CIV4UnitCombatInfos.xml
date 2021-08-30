@@ -71,6 +71,26 @@
 							</Commerces>
 						</Outcome>
 						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
@@ -163,6 +183,46 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>

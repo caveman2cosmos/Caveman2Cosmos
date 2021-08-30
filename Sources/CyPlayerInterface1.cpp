@@ -70,6 +70,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings")
 		.def("hasBuilding", &CyPlayer::hasBuilding, "bool (int /*BuildingTypes*/ eBuilding)")
 
+		.def("getBuildingPrereqBuilding", &CyPlayer::getBuildingPrereqBuilding, "int (int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra)")
+
 		.def("canContact", &CyPlayer::canContact, "bool (int ePlayer)")
 		.def("contact", &CyPlayer::contact, "void (int ePlayer)")
 		.def("canTradeWith", &CyPlayer::canTradeWith, "bool (int ePlayer)")

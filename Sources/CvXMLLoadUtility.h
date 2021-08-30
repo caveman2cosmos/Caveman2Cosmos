@@ -686,13 +686,13 @@ public:
 	{
 		foreach_(const T& it, source)
 		{
-			if (it > -1 && !algo::contains(target, it))
+			if (/*it > -1 &&*/ !algo::contains(target, it))
 			{
 				target.push_back(it);
 			}
 		}
 
-		std::sort(target.begin(), target.end());
+		algo::sort(target);
 	}
 
 	template<class T>
@@ -720,7 +720,7 @@ public:
 						}
 					}
 
-					std::sort(aInfos->begin(), aInfos->end());
+					algo::sort(*aInfos);
 
 					MoveToXmlParent();
 				}

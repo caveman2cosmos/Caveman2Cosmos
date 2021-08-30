@@ -99,7 +99,6 @@ class UnitNameEventManager:
 		eventManager.addEventHandler("unitBuilt", self.onUnitBuilt)
 
 	def onUnitBuilt(self, argsList):
-		print "WWWWWWWWWWWWWWWWWWWWW"
 		pUnit = argsList[1]
 		if pUnit is None: return
 

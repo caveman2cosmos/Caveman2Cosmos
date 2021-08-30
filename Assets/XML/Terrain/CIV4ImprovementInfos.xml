@@ -349,14 +349,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Hunting Camp -> Hunting Preserve Era -->
 		<ImprovementInfo>
@@ -487,14 +479,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HUNTING_PRESERVE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Pasture -> Vertical Farm -->
 		<ImprovementInfo>
@@ -709,14 +693,6 @@
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_SCAVENGING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_PASTURE</ImprovementUpgrade>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Scavenging Camp -> Nomadic Herd OR Hunting Camp -->
 		<ImprovementInfo>
@@ -895,14 +871,6 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_HUNTER_GATHERER</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
@@ -9812,100 +9780,6 @@
 			</TechYieldChanges>
 			<iUniqueRange>2</iUniqueRange>
 		</ImprovementInfo>
-		<!-- Moai Statues | Independent -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_MOAI</Type>
-			<CreatingBuilds>
-				<CreatingBuild>BUILD_MOAI_STATUES</CreatingBuild>
-			</CreatingBuilds>
-			<Description>TXT_KEY_IMPROVEMENT_MOAI</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MOAI</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
-			<bNoFreshWater>1</bNoFreshWater>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iPillageGold>25</iPillageGold>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_MASONRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_SCULPTURE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_AESTHETICS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ANCESTOR_WORSHIP</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ARCHEOLOGY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TOURISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<iUniqueRange>2</iUniqueRange>
-		</ImprovementInfo>
 		<!-- Machu Picchu  | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MACHU_PICCHU</Type>
@@ -10104,14 +9978,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Desert Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10254,14 +10120,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- Wetlands Camp | End - Information Lifestyle -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10362,14 +10220,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<TraitYieldChanges>
-				<TraitYieldChange>
-					<TraitType>TRAIT_NOMAD</TraitType>
-					<TraitYields>
-						<iYield>1</iYield>
-					</TraitYields>
-				</TraitYieldChange>
-			</TraitYieldChanges>
 		</ImprovementInfo>
 		<!-- DEFENSIVE IMPROVEMENTS (LAND) -->
 		<!-- Radar Watchtower | End -->

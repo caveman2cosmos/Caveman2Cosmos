@@ -52,8 +52,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>3</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_AIRPORT</ObsoletesToBuilding>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -108,7 +109,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

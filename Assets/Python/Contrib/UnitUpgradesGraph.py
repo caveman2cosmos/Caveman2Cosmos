@@ -574,6 +574,7 @@ class BuildingsGraph(UnitUpgradesGraph):
 	def getGraphEdges(self, graph):
 		import copy
 
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
 		for buildingA in graph.iterkeys():
 			info = GC.getBuildingInfo(buildingA)
 			if not info:
@@ -582,7 +583,9 @@ class BuildingsGraph(UnitUpgradesGraph):
 			buildingReplacesAList = []
 			#Create a list of buildings that replace buildingA
 			for i in xrange(info.getNumReplacementBuilding()):
-				buildingReplacesA.append(info.getReplacementBuilding(i))
+				CvReplacementBuilding = GC.getBuildingInfo(info.getReplacementBuilding(i))
+				if CvReplacementBuilding.getType().find("_STORIES_EFFECT", -15) == -1 and CvReplacementBuilding.getType() not in aSpecialReplacementsList: #Ignore stories and bans
+					buildingReplacesA.append(info.getReplacementBuilding(i))
 
 			#Create a list of buildings that replace the list buildingReplacesA
 			for numB in buildingReplacesA:
