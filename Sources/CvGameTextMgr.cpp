@@ -32888,12 +32888,12 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 	//STEP 5 : Building Commerce Changes
 	{
-		const int iBuildingCommerce = city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
+		const int iBuildingCommerce = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
 		if (0 != iBuildingCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingCommerce, info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingCommerce / 100, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iBuildingCommerce;
+			iBaseCommerceRate += iBuildingCommerce;
 			bNeedSubtotal = true;
 		}
 	}
