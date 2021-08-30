@@ -12284,10 +12284,9 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 	{
 		if (hasBonus((BonusTypes)iI))
 		{
-			iExtraRateTimes100 += (kBuilding.getBonusCommercePercentChanges(iI, eIndex));
+			iExtraRateTimes100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
 		}
 	}
-
 	return iExtraRateTimes100;
 }
 

@@ -294,10 +294,6 @@
 					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_URANIUM_MINE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
