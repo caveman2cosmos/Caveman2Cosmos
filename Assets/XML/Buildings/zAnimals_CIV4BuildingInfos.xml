@@ -29705,7 +29705,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>

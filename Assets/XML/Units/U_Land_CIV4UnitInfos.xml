@@ -28182,6 +28182,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_THEFT</PrereqTech>
+			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
@@ -28716,7 +28717,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
@@ -29980,7 +29981,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<ForceObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_LEVITATION</ForceObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -46329,7 +46330,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>

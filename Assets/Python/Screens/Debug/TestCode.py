@@ -2439,6 +2439,7 @@ class TestCode:
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			iTechLoc = self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[0]
+			iTechObs = self.HF.checkUnitTechObsoletionLocation(CvUnitInfo)[0]
 
 			#<PrereqAndBuildings> - require all buildings in list
 			aBuildingNameList = []
@@ -2450,8 +2451,8 @@ class TestCode:
 				aBuildingTechObsList.append(self.HF.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(CvUnitInfo.getPrereqAndBuilding(iBuilding)))[0])
 			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
 				self.log(CvUnitInfo.getType()+" is unlocked before its AND building requirements "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-			if len(aBuildingTechObsList) > 0 and min(aBuildingTechObsList) < 999:
-				self.log(CvUnitInfo.getType()+" has obsoleteing AND requirements "+str(aBuildingTechObsList)+" "+str(aBuildingNameList))
+			if len(aBuildingTechObsList) > 0 and min(aBuildingTechObsList) < iTechObs:
+				self.log(CvUnitInfo.getType()+" is obsoleted after its AND building requirements "+str(aBuildingTechObsList)+" "+str(iTechObs))
 
 			#<PrereqOrBuildings> - require one building in list
 			aBuildingNameList = []
@@ -2462,9 +2463,9 @@ class TestCode:
 				aBuildingTechLocList.append(self.HF.checkBuildingTechRequirements(GC.getBuildingInfo(CvUnitInfo.getPrereqOrBuilding(iBuilding)))[0])
 				aBuildingTechObsList.append(self.HF.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(CvUnitInfo.getPrereqOrBuilding(iBuilding)))[0])
 			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvUnitInfo.getType()+" is unlocked before its earliest OR building requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-			if len(aBuildingTechObsList) > 0 and max(aBuildingTechObsList) < 999:
-				self.log(CvUnitInfo.getType()+" has obsoleteing OR requirements "+str(aBuildingTechObsList)+" "+str(aBuildingNameList))
+				self.log(CvUnitInfo.getType()+" is unlocked before its OR building requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+			if len(aBuildingTechObsList) > 0 and max(aBuildingTechObsList) < iTechObs:
+				self.log(CvUnitInfo.getType()+" is obsoleted after its OR building requirement "+str(aBuildingTechObsList)+" "+str(iTechObs))
 
 			#<TrainCondition>
 			aBuildingGOMReqList = []
@@ -2481,9 +2482,9 @@ class TestCode:
 				aBuildingTechLocList.append(self.HF.checkBuildingTechRequirements(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
 				aBuildingTechObsList.append(self.HF.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding]))[0])
 			if len(aBuildingTechLocList) > 0 and max(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvUnitInfo.getType()+" - GOM AND building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-			if len(aBuildingTechObsList) > 0 and min(aBuildingTechObsList) < 999:
-				self.log(CvUnitInfo.getType()+" has obsoleteing GOM AND requirements "+str(aBuildingTechObsList)+" "+str(aBuildingNameList))
+				self.log(CvUnitInfo.getType()+" is unlocked before its GOM AND building requirements "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+			if len(aBuildingTechObsList) > 0 and min(aBuildingTechObsList) < iTechObs:
+				self.log(CvUnitInfo.getType()+" is obsoleted after its GOM AND building requirements "+str(aBuildingTechObsList)+" "+str(iTechObs))
 
 			#Analyze GOM OR Building reqs
 			aBuildingNameList = []
@@ -2494,9 +2495,9 @@ class TestCode:
 				aBuildingTechLocList.append(self.HF.checkBuildingTechRequirements(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
 				aBuildingTechObsList.append(self.HF.checkBuildingTechObsoletionLocation(GC.getBuildingInfo(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding]))[0])
 			if len(aBuildingTechLocList) > 0 and min(aBuildingTechLocList) > iTechLoc and iTechLoc > 0:
-				self.log(CvUnitInfo.getType()+" - GOM OR building requirements are late! "+str(aBuildingTechLocList)+" "+str(iTechLoc))
-			if len(aBuildingTechObsList) > 0 and max(aBuildingTechObsList) < 999:
-				self.log(CvUnitInfo.getType()+" has obsoleteing GOM OR requirements "+str(aBuildingTechObsList)+" "+str(aBuildingNameList))
+				self.log(CvUnitInfo.getType()+" is unlocked before its GOM OR building requirement "+str(aBuildingTechLocList)+" "+str(iTechLoc))
+			if len(aBuildingTechObsList) > 0 and max(aBuildingTechObsList) < iTechObs:
+				self.log(CvUnitInfo.getType()+" is obsoleted after its GOM OR building requirements "+str(aBuildingTechObsList)+" "+str(iTechObs))
 
 	#Unit - check building requirement replacements
 	def checkUnitRequirementsReplacements(self):

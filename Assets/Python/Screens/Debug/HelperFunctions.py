@@ -443,8 +443,8 @@ class HelperFunctions:
 	#Unit tech obsoletion location
 	def checkUnitTechObsoletionLocation(self, CvUnitInfo):
 		iTechObsLoc = 999 #Never obsoletes
-		iTechObsRow = 99 #Never obsoletes		
-	
+		iTechObsRow = 99 #Never obsoletes
+
 		if CvUnitInfo.getForceObsoleteTech() != -1:
 			iTechObsLoc = GC.getTechInfo(CvUnitInfo.getForceObsoleteTech()).getGridX()
 			iTechObsRow = GC.getTechInfo(CvUnitInfo.getForceObsoleteTech()).getGridY()
@@ -457,5 +457,5 @@ class HelperFunctions:
 		sTechDesc = self.getTechName(iTechObsXY)
 
 		return iTechObsLoc, iTechObsXY, sTechDesc
-		
+
 	#^^^^ OBSOLETION TECH LOCATION FINDER FUNCTIONS ^^^^#

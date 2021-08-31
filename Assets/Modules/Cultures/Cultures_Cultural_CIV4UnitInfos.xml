@@ -30323,6 +30323,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
+			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
 			</UnitUpgrades>
@@ -31872,6 +31873,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CONSPIRATORS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
+			<ForceObsoleteTech>TECH_FASCISM</ForceObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUNFIGHTER</UnitType>
 				<UnitType>UNIT_OUTLAW</UnitType>
@@ -47356,6 +47358,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
+			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_SCOUNDREL</UnitType>
 				<UnitType>UNIT_PARTISAN</UnitType>
@@ -47511,7 +47514,6 @@
 					<iAmountPerTurn>25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ALVARADO_CAVALRY</Type>

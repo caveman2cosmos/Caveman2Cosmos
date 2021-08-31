@@ -1404,6 +1404,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
+			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
 			</UnitUpgrades>
