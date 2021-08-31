@@ -15937,7 +15937,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -26578,7 +26578,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<BonusType>BONUS_OMANI</BonusType>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
@@ -37312,7 +37312,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<BonusType>BONUS_BANDANESE</BonusType>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
@@ -37789,7 +37789,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
@@ -47358,7 +47358,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
-			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_SCOUNDREL</UnitType>
 				<UnitType>UNIT_PARTISAN</UnitType>

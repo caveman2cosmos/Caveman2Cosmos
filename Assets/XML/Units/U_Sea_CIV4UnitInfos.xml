@@ -4052,7 +4052,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -5750,7 +5750,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_URANIUM</BonusType>
@@ -8285,7 +8285,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>

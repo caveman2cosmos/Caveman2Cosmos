@@ -22539,7 +22539,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BonusType>BONUS_MECHS</BonusType>
 			<iCost>5200</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -28717,7 +28717,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
@@ -29981,7 +29981,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<ObsoleteTech>TECH_LEVITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -46331,6 +46331,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<BonusType>BONUS_DOG</BonusType>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
 			</PrereqAndBuildings>
