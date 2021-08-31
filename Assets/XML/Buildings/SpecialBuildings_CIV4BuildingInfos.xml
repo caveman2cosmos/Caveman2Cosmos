@@ -3966,7 +3966,6 @@
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
-				<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 				<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
 				<BuildingType>BUILDING_ALCATRAZ</BuildingType>

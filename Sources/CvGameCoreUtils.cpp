@@ -4687,7 +4687,7 @@ void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumb
 				szValue.Format(L"-0.%02d", abs(iValue) % 100);
 			}
 			else szValue.Format(L"%d.%02d", iValue / 100, abs(iValue) % 100);
-		} 
+		}
 		else szValue.Format(L"%d.%02d", iValue / 100, iValue % 100);
 	}
 }
