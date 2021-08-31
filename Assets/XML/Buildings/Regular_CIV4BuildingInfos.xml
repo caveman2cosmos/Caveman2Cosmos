@@ -1007,7 +1007,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AD_AGENCY</ArtDefineTag>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>950</iCost>
@@ -10153,7 +10152,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FAIR_GROUNDS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -13878,10 +13876,9 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ANARCHISM</CivicOption>
@@ -32320,7 +32317,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -51081,9 +51077,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAMALES</BuildingType>
-				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BROTHEL</ObsoletesToBuilding>
@@ -51093,7 +51091,7 @@
 				<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 			</ReplacementBuildings>
-			<iCost>5</iCost>
+			<iCost>30</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -82959,18 +82957,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THOUGHT_SCANNING</PrereqTech>
 			<iCost>3245</iCost>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-1</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
-				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -87693,7 +87687,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NEUROTRANSMITTER_MANIPULATION_LAB</BuildingType>
-				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5905</iCost>
 			<iHealth>2</iHealth>
@@ -110505,7 +110498,6 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-				<BuildingType>BUILDING_MYSTIC_HUT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>125</iCost>
