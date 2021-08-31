@@ -588,6 +588,7 @@
 				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>

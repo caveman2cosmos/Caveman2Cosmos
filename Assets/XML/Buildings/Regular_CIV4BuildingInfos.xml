@@ -8033,6 +8033,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -10446,6 +10447,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEFT</PrereqTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BANDITRY</CivicOption>
@@ -27365,6 +27367,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -36293,11 +36296,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
+			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
 			<CommerceAttacks>
@@ -52038,7 +52041,6 @@
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>320</iCost>
 			<iHealth>1</iHealth>
@@ -71180,6 +71182,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -72492,6 +72495,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>

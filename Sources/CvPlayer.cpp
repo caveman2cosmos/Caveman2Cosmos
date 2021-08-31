@@ -6692,7 +6692,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getForceObsoleteTech()))
+	if (kUnit.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getObsoleteTech()))
 	{
 		return false;
 	}

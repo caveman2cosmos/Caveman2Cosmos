@@ -444,7 +444,7 @@
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -2506,7 +2506,7 @@
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>

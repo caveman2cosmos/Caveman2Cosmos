@@ -205,7 +205,7 @@ void CyInfoPythonInterface1()
 		.def("getDefaultUnitAIType", &CvUnitInfo::getDefaultUnitAIType, "int ()")
 		.def("getAdvisorType", &CvUnitInfo::getAdvisorType, "int ()")
 
-		.def("getForceObsoleteTech", &CvUnitInfo::getForceObsoleteTech, "int ()")
+		.def("getObsoleteTech", &CvUnitInfo::getObsoleteTech, "int ()")
 		.def("isStateReligion", &CvUnitInfo::isStateReligion, "bool ()")
 
 		.def("getHolyCity", &CvUnitInfo::getHolyCity, "int ()")
