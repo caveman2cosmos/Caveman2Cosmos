@@ -440,4 +440,22 @@ class HelperFunctions:
 
 		return iTechObsLoc, iTechObsXY, sTechDesc
 
+	#Unit tech obsoletion location
+	def checkUnitTechObsoletionLocation(self, CvUnitInfo):
+		iTechObsLoc = 999 #Never obsoletes
+		iTechObsRow = 99 #Never obsoletes		
+	
+		if CvUnitInfo.getForceObsoleteTech() != -1:
+			iTechObsLoc = GC.getTechInfo(CvUnitInfo.getForceObsoleteTech()).getGridX()
+			iTechObsRow = GC.getTechInfo(CvUnitInfo.getForceObsoleteTech()).getGridY()
+
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech obsoletion, then infotype X/Y grid is 999 / 99
+		#Otherwise infotype gets highest Xgrid tech obsoletion and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechObsXY = 100*iTechObsLoc + iTechObsRow
+		sTechDesc = self.getTechName(iTechObsXY)
+
+		return iTechObsLoc, iTechObsXY, sTechDesc
+		
 	#^^^^ OBSOLETION TECH LOCATION FINDER FUNCTIONS ^^^^#

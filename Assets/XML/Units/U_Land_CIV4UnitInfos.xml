@@ -25888,7 +25888,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -26020,7 +26019,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
@@ -26172,7 +26170,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
-			<ObsoleteTech>TECH_WARRANTS_AND_DECREES</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
@@ -26299,7 +26296,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -26462,7 +26458,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_WARRANTS_AND_DECREES</PrereqTech>
-			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -26609,7 +26604,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<ObsoleteTech>TECH_CRIMINOLOGY</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
@@ -26746,7 +26740,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
-			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
@@ -26894,7 +26887,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_FORENSICS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
@@ -27031,7 +27023,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
@@ -27199,7 +27190,6 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
-			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
@@ -27342,7 +27332,6 @@
 			<bNoCapture>1</bNoCapture>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
-			<ObsoleteTech>TECH_TERRA_COMPUTER</ObsoleteTech>
 			<TrainCondition>
 				<And>
 					<Has>
