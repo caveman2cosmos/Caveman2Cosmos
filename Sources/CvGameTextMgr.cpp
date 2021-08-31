@@ -32897,7 +32897,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 					szValue.Format(L"-0.%02d", abs(iBuildingCommerce100) % 100);
 				}
 				else szValue.Format(L"%d.%02d", iBuildingCommerce100 / 100, abs(iBuildingCommerce100) % 100);
-			} 
+			}
 			else szValue.Format(L"%d.%02d", iBuildingCommerce100 / 100, iBuildingCommerce100 % 100);
 
 			szBuffer.append(NEWLINE);
@@ -32959,7 +32959,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 				szValue.Format(L"-0.%02d", abs(iCommerce100) % 100);
 			}
 			else szValue.Format(L"%d.%02d", iCommerce100 / 100, abs(iCommerce100) % 100);
-		} 
+		}
 		else szValue.Format(L"%d.%02d", iCommerce100 / 100, iCommerce100 % 100);
 
 		szBuffer.append(SEPARATOR);
@@ -33124,7 +33124,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 				szValue.Format(L"-0.%02d", abs(iFinalValue100) % 100);
 			}
 			else szValue.Format(L"%d.%02d", iFinalValue100 / 100, abs(iFinalValue100) % 100);
-		} 
+		}
 		else szValue.Format(L"%d.%02d", iFinalValue100 / 100, iFinalValue100 % 100);
 
 		szBuffer.append(DOUBLE_SEPARATOR);

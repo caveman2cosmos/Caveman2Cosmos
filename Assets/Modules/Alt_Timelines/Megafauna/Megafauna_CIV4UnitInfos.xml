@@ -1044,6 +1044,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>

@@ -2010,6 +2010,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_BABYLONIAN</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2097,6 +2098,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>270</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -6254,6 +6256,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<BonusType>BONUS_NAVAJO</BonusType>
 			<TrainCondition>
 				<And>
@@ -6945,6 +6948,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_TUPI</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -7032,6 +7036,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_SEMINOLE</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -7138,6 +7143,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_CARIB</BonusType>
 			<iCost>46</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -7728,6 +7734,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_ABORIGINE</BonusType>
 			<iCost>43</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -8994,6 +9001,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<BonusType>BONUS_HERERO</BonusType>
 			<TrainCondition>
 				<And>
@@ -10700,6 +10708,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>29</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -12409,6 +12418,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_NUBIAN</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -13386,6 +13396,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_AINU</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -16135,6 +16146,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<BonusType>BONUS_IRISH</BonusType>
 			<TrainCondition>
 				<And>
@@ -16308,6 +16320,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>165</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -17027,6 +17040,7 @@
 				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 			<BonusType>BONUS_CALIFORNIAN</BonusType>
 			<iCost>665</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -17573,6 +17587,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_HUASTEC</BonusType>
 			<iCost>105</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -17869,6 +17884,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<BonusType>BONUS_JIVARO</BonusType>
 			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -19130,6 +19146,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<BonusType>BONUS_SIBERIAN</BonusType>
 			<iCost>295</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -21507,6 +21524,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<BonusType>BONUS_LIBYAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
@@ -23190,6 +23208,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<BonusType>BONUS_MASSAGETAE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
@@ -24440,6 +24459,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
@@ -24624,6 +24644,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
@@ -31855,6 +31876,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -31873,7 +31895,6 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CONSPIRATORS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
-			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUNFIGHTER</UnitType>
 				<UnitType>UNIT_OUTLAW</UnitType>
@@ -32436,6 +32457,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
@@ -32748,6 +32770,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_LASER</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
@@ -33285,6 +33308,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<BonusType>BONUS_SURINAMESE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -45619,6 +45643,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
 				<BuildingType>BUILDING_AUTOMATED_FIRING_RANGE</BuildingType>
@@ -48571,6 +48596,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_LASER</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 				<BuildingType>BUILDING_FIRING_RANGE</BuildingType>
@@ -48732,6 +48758,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_HUASTEC</BonusType>
 			<iCost>200</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

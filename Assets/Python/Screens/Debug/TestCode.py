@@ -2381,12 +2381,14 @@ class TestCode:
 					CvUnitUpgradeInfo = GC.getUnitInfo(CvUnitInfo.getUnitUpgrade(iUnitUpgrade))
 					iTechUpgradeLoc = self.HF.checkUnitTechRequirementLocation(CvUnitUpgradeInfo)[0]
 					iTechUpgradeObs = self.HF.checkUnitTechObsoletionLocation(CvUnitUpgradeInfo)[0]
-					
+
 					#Ignore neanderthal and post apocalyptic units
 					if iTechLoc >= iTechUpgradeLoc and CvUnitInfo.getType().find("UNIT_NEANDERTHAL_",0,17) == -1 and CvUnitUpgradeInfo.getType().find("UNIT_NEANDERTHAL",0,16) == -1 and CvUnitInfo.getDescription().find("Post-apocalyptic ",0,17) == -1:
 						self.log(CvUnitInfo.getType()+" is unlocked concurrently or after its upgrade "+CvUnitUpgradeInfo.getType()+" "+str(iTechLoc)+"/"+str(iTechUpgradeLoc))
 					if iTechObs < iTechUpgradeLoc and CvUnitInfo.getType().find("UNIT_NEANDERTHAL_",0,17) == -1 and CvUnitUpgradeInfo.getType().find("UNIT_NEANDERTHAL",0,16) == -1:
 						self.log(CvUnitInfo.getType()+" is obsoleted before its upgrade being available "+CvUnitUpgradeInfo.getType()+" "+str(iTechObs)+"/"+str(iTechUpgradeLoc))
+					if iTechObs > iTechUpgradeObs and CvUnitInfo.getProductionCost() > 0 and CvUnitInfo.getType().find("UNIT_NEANDERTHAL_",0,17) == -1 and CvUnitUpgradeInfo.getType().find("UNIT_NEANDERTHAL",0,16) == -1:
+						self.log(CvUnitInfo.getType()+" is obsoleted after its upgrade obsoletion "+CvUnitUpgradeInfo.getType()+" "+str(iTechObs)+"/"+str(iTechUpgradeObs))
 
 	#Unit - check unit bonus requirements
 	def checkUnitBonusRequirements(self):
@@ -2502,13 +2504,78 @@ class TestCode:
 			#<PrereqAndBuildings> - require all buildings in list
 			aBuildingList = []
 			for iBuilding in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
-				if CvUnitInfo.getPrereqAndBuilding(iBuilding) not in aBuildingList:
-					aBuildingList.append(CvUnitInfo.getPrereqAndBuilding(iBuilding))
+				aBuildingList.append(CvUnitInfo.getPrereqAndBuilding(iBuilding))
+			#Get unique buildings - distinct requirements
+			aBuildingUniqueList = []
+			for iBuilding in xrange(len(aBuildingList)):
+				if aBuildingList[iBuilding] not in aBuildingUniqueList:
+					aBuildingUniqueList.append(aBuildingList[iBuilding])
+			#Get building replacements - all replacements are explicitly defined
+			aBuildingReplacementList = []
+			for iBuilding in xrange(len(aBuildingUniqueList)):
+				CvBuildingInfo = GC.getBuildingInfo(aBuildingUniqueList[iBuilding])
+				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
+						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
+			#Get unique replacements
+			aReplacementUniqueList = []
+			for iBuilding in xrange(len(aBuildingReplacementList)):
+				if aBuildingReplacementList[iBuilding] not in aReplacementUniqueList:
+					aReplacementUniqueList.append(aBuildingReplacementList[iBuilding])
+			#Get replacements of requirements, that aren't listed as requirements
+			aReplacedRequirements = []
+			for iBuilding in xrange(len(aReplacementUniqueList)):
+				if aReplacementUniqueList[iBuilding] not in aBuildingUniqueList:
+					aReplacedRequirements.append(aReplacementUniqueList[iBuilding])
+			#Get unique requirement replacements
+			aReplacedUniqueRequirements = []
+			for iBuilding in xrange(len(aReplacedRequirements)):
+				if aReplacedRequirements[iBuilding] not in aReplacedUniqueRequirements:
+					aReplacedUniqueRequirements.append(aReplacedRequirements[iBuilding])
+			#Convert to Types
+			aBuildingTypeList = []
+			for iBuilding in xrange(len(aReplacedUniqueRequirements)):
+				aBuildingTypeList.append(GC.getBuildingInfo(aReplacedUniqueRequirements[iBuilding]).getType())
+			if len(aBuildingTypeList) > 0:
+				self.log(CvUnitInfo.getType()+" requires (AND) "+str(aBuildingTypeList))
 
 			#<PrereqOrBuildings> - require one building in list
+			aBuildingList = []
 			for iBuilding in xrange(CvUnitInfo.getPrereqOrBuildingsNum()):
-				if CvUnitInfo.getPrereqOrBuilding(iBuilding) not in aBuildingList:
-					aBuildingList.append(CvUnitInfo.getPrereqOrBuilding(iBuilding))
+				aBuildingList.append(CvUnitInfo.getPrereqOrBuilding(iBuilding))
+			#Get unique buildings - distinct requirements
+			aBuildingUniqueList = []
+			for iBuilding in xrange(len(aBuildingList)):
+				if aBuildingList[iBuilding] not in aBuildingUniqueList:
+					aBuildingUniqueList.append(aBuildingList[iBuilding])
+			#Get building replacements - all replacements are explicitly defined
+			aBuildingReplacementList = []
+			for iBuilding in xrange(len(aBuildingUniqueList)):
+				CvBuildingInfo = GC.getBuildingInfo(aBuildingUniqueList[iBuilding])
+				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
+						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
+			#Get unique replacements
+			aReplacementUniqueList = []
+			for iBuilding in xrange(len(aBuildingReplacementList)):
+				if aBuildingReplacementList[iBuilding] not in aReplacementUniqueList:
+					aReplacementUniqueList.append(aBuildingReplacementList[iBuilding])
+			#Get replacements of requirements, that aren't listed as requirements
+			aReplacedRequirements = []
+			for iBuilding in xrange(len(aReplacementUniqueList)):
+				if aReplacementUniqueList[iBuilding] not in aBuildingUniqueList:
+					aReplacedRequirements.append(aReplacementUniqueList[iBuilding])
+			#Get unique requirement replacements
+			aReplacedUniqueRequirements = []
+			for iBuilding in xrange(len(aReplacedRequirements)):
+				if aReplacedRequirements[iBuilding] not in aReplacedUniqueRequirements:
+					aReplacedUniqueRequirements.append(aReplacedRequirements[iBuilding])
+			#Convert to Types
+			aBuildingTypeList = []
+			for iBuilding in xrange(len(aReplacedUniqueRequirements)):
+				aBuildingTypeList.append(GC.getBuildingInfo(aReplacedUniqueRequirements[iBuilding]).getType())
+			if len(aBuildingTypeList) > 0:
+				self.log(CvUnitInfo.getType()+" requires (OR) "+str(aBuildingTypeList))
 
 			#<TrainCondition>
 			aBuildingGOMReqList = []
@@ -2517,21 +2584,14 @@ class TestCode:
 			self.HF.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aBuildingGOMReqList)
 
 			#Analyze GOM AND Building reqs
+			aBuildingList = []
 			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND])):
-				if aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding] not in aBuildingList:
-					aBuildingList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding])
-
-			#Analyze GOM OR Building reqs
-			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
-				if aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding] not in aBuildingList:
-					aBuildingList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding])
-
+				aBuildingList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_AND][iBuilding])
 			#Get unique buildings - distinct requirements
 			aBuildingUniqueList = []
 			for iBuilding in xrange(len(aBuildingList)):
 				if aBuildingList[iBuilding] not in aBuildingUniqueList:
 					aBuildingUniqueList.append(aBuildingList[iBuilding])
-
 			#Get building replacements - all replacements are explicitly defined
 			aBuildingReplacementList = []
 			for iBuilding in xrange(len(aBuildingUniqueList)):
@@ -2539,32 +2599,65 @@ class TestCode:
 				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
 						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
-
 			#Get unique replacements
 			aReplacementUniqueList = []
 			for iBuilding in xrange(len(aBuildingReplacementList)):
 				if aBuildingReplacementList[iBuilding] not in aReplacementUniqueList:
 					aReplacementUniqueList.append(aBuildingReplacementList[iBuilding])
-
 			#Get replacements of requirements, that aren't listed as requirements
 			aReplacedRequirements = []
 			for iBuilding in xrange(len(aReplacementUniqueList)):
 				if aReplacementUniqueList[iBuilding] not in aBuildingUniqueList:
 					aReplacedRequirements.append(aReplacementUniqueList[iBuilding])
-
 			#Get unique requirement replacements
 			aReplacedUniqueRequirements = []
 			for iBuilding in xrange(len(aReplacedRequirements)):
 				if aReplacedRequirements[iBuilding] not in aReplacedUniqueRequirements:
 					aReplacedUniqueRequirements.append(aReplacedRequirements[iBuilding])
-
 			#Convert to Types
 			aBuildingTypeList = []
 			for iBuilding in xrange(len(aReplacedUniqueRequirements)):
 				aBuildingTypeList.append(GC.getBuildingInfo(aReplacedUniqueRequirements[iBuilding]).getType())
-
 			if len(aBuildingTypeList) > 0:
-				self.log(CvUnitInfo.getType()+" requires "+str(aBuildingTypeList))
+				self.log(CvUnitInfo.getType()+" requires (GOM AND) "+str(aBuildingTypeList))
+
+			#Analyze GOM OR Building reqs
+			aBuildingList = []
+			for iBuilding in xrange(len(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR])):
+				aBuildingList.append(aBuildingGOMReqList[BoolExprTypes.BOOLEXPR_OR][iBuilding])
+			#Get unique buildings - distinct requirements
+			aBuildingUniqueList = []
+			for iBuilding in xrange(len(aBuildingList)):
+				if aBuildingList[iBuilding] not in aBuildingUniqueList:
+					aBuildingUniqueList.append(aBuildingList[iBuilding])
+			#Get building replacements - all replacements are explicitly defined
+			aBuildingReplacementList = []
+			for iBuilding in xrange(len(aBuildingUniqueList)):
+				CvBuildingInfo = GC.getBuildingInfo(aBuildingUniqueList[iBuilding])
+				for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
+					if CvBuildingInfo.getReplacementBuilding(iReplacement) not in aSpecialBuildingsList:
+						aBuildingReplacementList.append(CvBuildingInfo.getReplacementBuilding(iReplacement))
+			#Get unique replacements
+			aReplacementUniqueList = []
+			for iBuilding in xrange(len(aBuildingReplacementList)):
+				if aBuildingReplacementList[iBuilding] not in aReplacementUniqueList:
+					aReplacementUniqueList.append(aBuildingReplacementList[iBuilding])
+			#Get replacements of requirements, that aren't listed as requirements
+			aReplacedRequirements = []
+			for iBuilding in xrange(len(aReplacementUniqueList)):
+				if aReplacementUniqueList[iBuilding] not in aBuildingUniqueList:
+					aReplacedRequirements.append(aReplacementUniqueList[iBuilding])
+			#Get unique requirement replacements
+			aReplacedUniqueRequirements = []
+			for iBuilding in xrange(len(aReplacedRequirements)):
+				if aReplacedRequirements[iBuilding] not in aReplacedUniqueRequirements:
+					aReplacedUniqueRequirements.append(aReplacedRequirements[iBuilding])
+			#Convert to Types
+			aBuildingTypeList = []
+			for iBuilding in xrange(len(aReplacedUniqueRequirements)):
+				aBuildingTypeList.append(GC.getBuildingInfo(aReplacedUniqueRequirements[iBuilding]).getType())
+			if len(aBuildingTypeList) > 0:
+				self.log(CvUnitInfo.getType()+" requires (GOM OR) "+str(aBuildingTypeList))
 
 	#Bonus - check improvement productivity
 	def checkBonusImprovementProductivity(self):
