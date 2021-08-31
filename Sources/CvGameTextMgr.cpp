@@ -32828,6 +32828,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	{
 		return;
 	}
+	CvWString szValue;
 
 	//define commerce info.
 	const CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
@@ -32884,22 +32885,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iBuildingCommerce100 = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
 		if (0 != iBuildingCommerce100)
 		{
-			// Toffer - If a number with decimals can be negative, it needs to be handled something like this to get the minus sign correctly.
-			CvWString szValue;
-			if (iBuildingCommerce100 % 100 == 0)
-			{
-				szValue.Format(L"%d", iBuildingCommerce100 / 100);
-			}
-			else if (iBuildingCommerce100 < 0)
-			{
-				if (iBuildingCommerce100 / 100 == 0)
-				{
-					szValue.Format(L"-0.%02d", abs(iBuildingCommerce100) % 100);
-				}
-				else szValue.Format(L"%d.%02d", iBuildingCommerce100 / 100, abs(iBuildingCommerce100) % 100);
-			}
-			else szValue.Format(L"%d.%02d", iBuildingCommerce100 / 100, iBuildingCommerce100 % 100);
-
+			makeValueString(szValue, iBuildingCommerce100, true);
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", szValue.GetCString(), info.getChar()));
 			iCommerce100 += iBuildingCommerce100;
@@ -32950,18 +32936,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 
 	if (iCommerce100 != 0 && iCommerce100 != iSliderRate100)
 	{
-		// Toffer - If a number with decimals can be negative, it needs to be handled something like this to get the minus sign correctly.
-		CvWString szValue;
-		if (iCommerce100 < 0)
-		{
-			if (iCommerce100 / 100 == 0)
-			{
-				szValue.Format(L"-0.%02d", abs(iCommerce100) % 100);
-			}
-			else szValue.Format(L"%d.%02d", iCommerce100 / 100, abs(iCommerce100) % 100);
-		}
-		else szValue.Format(L"%d.%02d", iCommerce100 / 100, iCommerce100 % 100);
-
+		makeValueString(szValue, iCommerce100);
 		szBuffer.append(SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BASE_S1_IS_S2_F3", info.getTextKeyWide(), szValue.GetCString(), info.getChar()));
@@ -33114,22 +33089,11 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		}
 	}
 	FAssertMsg(iFinalValue100 == city.getCommerceRateTimes100(eCommerceType), "Commerce yield does not match actual value");
-	{
-		// Toffer - If a number with decimals can be negative, it needs to be handled something like this to get the minus sign correctly.
-		CvWString szValue;
-		if (iFinalValue100 < 0)
-		{
-			if (iFinalValue100 / 100 == 0)
-			{
-				szValue.Format(L"-0.%02d", abs(iFinalValue100) % 100);
-			}
-			else szValue.Format(L"%d.%02d", iFinalValue100 / 100, abs(iFinalValue100) % 100);
-		}
-		else szValue.Format(L"%d.%02d", iFinalValue100 / 100, iFinalValue100 % 100);
 
-		szBuffer.append(DOUBLE_SEPARATOR);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szValue.GetCString(), info.getChar()));
-	}
+	makeValueString(szValue, iFinalValue100);
+	szBuffer.append(DOUBLE_SEPARATOR);
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szValue.GetCString(), info.getChar()));
+
 	if (city.getOwner() == GC.getGame().getActivePlayer()
 	&& getBugOptionBOOL("MiscHover__BuildingAdditionalCommerce", true, "BUG_BUILDING_ADDITIONAL_COMMERCE_HOVER"))
 	{

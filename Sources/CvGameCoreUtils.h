@@ -430,4 +430,7 @@ protected:
 	DWORD sum;
 };
 
+// Toffer
+void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals = false, int iNumDecimals = 2);
+// ! Toffer
 #endif
