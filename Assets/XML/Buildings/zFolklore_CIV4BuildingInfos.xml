@@ -122,6 +122,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_FIRE</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -539,6 +546,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_EARTH</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_EARTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_EARTH</ArtDefineTag>

@@ -68,6 +68,14 @@
 		<English>Autobuild - Presence of Sea</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
+		<English>Autobuild - Presence of Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
+		<English>Autobuild - Presence of Fire</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
 		<English>Folklore Requirements autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
 	</TEXT>
