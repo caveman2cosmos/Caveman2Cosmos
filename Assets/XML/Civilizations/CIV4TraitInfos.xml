@@ -737,6 +737,10 @@
 					<BuildingType>BUILDING_FOUNDRY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -2326,6 +2330,10 @@
 					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -2594,6 +2602,14 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -4594,6 +4610,10 @@
 					<BuildingType>BUILDING_FOUNDRY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -6157,6 +6177,10 @@
 					<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -6428,6 +6452,14 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iBuildingProductionModifier>20</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
