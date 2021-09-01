@@ -40,12 +40,6 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_AEROGEL</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_SUPPLY_BASE</BuildingType>

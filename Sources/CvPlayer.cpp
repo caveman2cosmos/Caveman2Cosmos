@@ -6692,7 +6692,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getForceObsoleteTech()))
+	if (kUnit.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getObsoleteTech()))
 	{
 		return false;
 	}
@@ -28042,10 +28042,10 @@ void CvPlayer::doAdvancedEconomy()
 
 	if (getHurriedCount() > 0)
 	{
-		int iTurnIncrement100 = GC.getHURRY_INFLATION_DECAY_RATE() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		iTurnIncrement100 = getModifiedIntValue(iTurnIncrement100, getHurryInflationModifier());
+		int iTurnIncrement1000 = GC.getHURRY_INFLATION_DECAY_RATE() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+		iTurnIncrement1000 = getModifiedIntValue(iTurnIncrement1000, getHurryInflationModifier());
 
-		if (GC.getGame().getElapsedGameTurns() % std::max(1, iTurnIncrement100 / 100) == 0)
+		if (GC.getGame().getElapsedGameTurns() % std::max(1, iTurnIncrement1000 / 1000) == 0)
 		{
 			changeHurriedCount(-1);
 		}

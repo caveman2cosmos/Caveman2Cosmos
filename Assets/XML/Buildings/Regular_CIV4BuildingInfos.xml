@@ -1007,7 +1007,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AD_AGENCY</ArtDefineTag>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>950</iCost>
@@ -1112,6 +1111,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -1122,7 +1126,6 @@
 			</YieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
-				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -2614,7 +2617,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -4969,6 +4972,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8405</iCost>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -4978,6 +4986,8 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
+			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -5001,20 +5011,9 @@
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>100</iYield>
+				<iYield>150</iYield>
 			</YieldChanges>
-			<BonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_ANTIMATTER</BonusType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>50</iYield>
-					</YieldChanges>
-				</BonusYieldChange>
-			</BonusYieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANTIMATTER_HARVESTER</BuildingType>
-			</PrereqInCityBuildings>
+			<Bonus>BONUS_ANTIMATTER</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -6070,7 +6069,7 @@
 					<iHappiness>1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
-			<iHealth>9</iHealth>
+			<iHealth>10</iHealth>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
@@ -8033,6 +8032,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -10152,7 +10152,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FAIR_GROUNDS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -10446,6 +10445,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEFT</PrereqTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BANDITRY</CivicOption>
@@ -11379,7 +11379,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_BAUXITE_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -11778,7 +11782,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
@@ -13590,7 +13598,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
@@ -13864,10 +13876,9 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ANARCHISM</CivicOption>
@@ -14176,7 +14187,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -14813,9 +14828,10 @@
 				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
 			</TechTypes>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CASTE_SYSTEM</CivicOption>
@@ -18284,7 +18300,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<iCost>132</iCost>
 			<YieldChanges>
@@ -18647,9 +18667,10 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<iCost>243</iCost>
 			<CommerceChanges>
@@ -20828,7 +20849,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COTTON</VicinityBonus>
@@ -21805,7 +21830,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -25119,7 +25148,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COAL_MINING</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -25406,7 +25439,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -26809,6 +26846,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>12155</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -27324,6 +27366,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27711,7 +27754,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -27865,7 +27912,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FLAX</VicinityBonus>
@@ -27974,7 +28025,7 @@
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iCost>5905</iCost>
 			<CommerceChanges>
-				<iCommerce>100</iCommerce>
+				<iCommerce>110</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -28165,7 +28216,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
@@ -29950,9 +30005,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ORAL_TRADITION</CivicOption>
@@ -30849,6 +30906,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<ConstructCondition>
@@ -31542,7 +31604,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -31564,12 +31631,6 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<iCost>132</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -32250,6 +32311,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<iCost>4655</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -32337,7 +32403,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -36313,11 +36378,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
+			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
 			<CommerceAttacks>
@@ -36390,7 +36455,9 @@
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 				<BuildingType>BUILDING_INDIGO_FARM</BuildingType>
 				<BuildingType>BUILDING_MUREX_DIVER</BuildingType>
 				<BuildingType>BUILDING_HENNA_PLANTATION</BuildingType>
@@ -36453,7 +36520,9 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 				<BuildingType>BUILDING_GATHERER_INDIGO</BuildingType>
 				<BuildingType>BUILDING_GATHERER_HENNA</BuildingType>
@@ -38951,7 +39020,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
@@ -40297,13 +40370,13 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iCost>3975</iCost>
-			<iHealth>13</iHealth>
+			<iHealth>20</iHealth>
 			<YieldChanges>
-				<iYield>50</iYield>
-				<iYield>1</iYield>
+				<iYield>55</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>75</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -41257,6 +41330,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>14655</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -46370,7 +46448,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_CAMEL</VicinityBonus>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
@@ -46393,9 +46471,10 @@
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<iCost>15</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>
@@ -49653,6 +49732,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -51215,9 +51299,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAMALES</BuildingType>
-				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BROTHEL</ObsoletesToBuilding>
@@ -51227,7 +51313,7 @@
 				<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 			</ReplacementBuildings>
-			<iCost>5</iCost>
+			<iCost>30</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -51698,7 +51784,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
@@ -52171,7 +52261,6 @@
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>320</iCost>
 			<iHealth>1</iHealth>
@@ -56340,6 +56429,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CAMEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -57974,6 +58067,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -62239,6 +62337,7 @@
 				</And>
 			</ConstructCondition>
 			<iCost>225</iCost>
+			<iHappiness>1</iHappiness>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -62246,7 +62345,7 @@
 				</Has>
 			</NewCityFree>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -62266,6 +62365,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -65793,11 +65898,17 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATERIALIZATION</PrereqTech>
 			<iCost>22755</iCost>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>80</iYield>
+			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>70</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>5</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
 			<PowerYieldModifiers>
@@ -65848,6 +65959,42 @@
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GRAVITY_GENERATORS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SOYLENT_GREEN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MEGASTRONG_ALLOYS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PERSONAL_SPACECRAFT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEMTOBOTS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_VIBRANIUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CHAOS_WANDS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -67147,6 +67294,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>12155</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -71333,6 +71485,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -72343,7 +72496,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -72641,6 +72798,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -77923,6 +78081,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_NANOELECTRONICS</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_ELECTROWEAK_MATTER</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PICOTECH_COMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_PICOTECH_COMPLEX</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_SHOCKWAVE_ENGINES</Bonus>
 			<ConstructCondition>
@@ -81113,7 +81276,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
@@ -81205,7 +81372,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -83273,18 +83444,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THOUGHT_SCANNING</PrereqTech>
 			<iCost>3245</iCost>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-1</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
-				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83417,6 +83584,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>9105</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -84224,9 +84396,27 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+					<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>3</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -84276,6 +84466,10 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -84664,7 +84858,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
@@ -86695,7 +86893,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -87972,7 +88174,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NEUROTRANSMITTER_MANIPULATION_LAB</BuildingType>
-				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5905</iCost>
 			<iHealth>2</iHealth>
@@ -89815,6 +90016,7 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
@@ -94427,6 +94629,7 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>70</iMaxLatitude>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTHING</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>
@@ -94621,14 +94824,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LIBRARY</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
 			<iCost>176</iCost>
+			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -95598,7 +95807,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ObsoleteTech>TECH_AQUACULTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_AQUAFARM</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_KELP</FeatureType>
@@ -96231,7 +96444,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -97484,7 +97701,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
@@ -97509,7 +97730,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -100427,7 +100652,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -101325,6 +101554,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -101373,7 +101607,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -101969,6 +102207,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>19755</iCost>
 			<iHealth>-15</iHealth>
 			<CommerceChanges>
@@ -104200,6 +104443,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCHOOL_OF_SCRIBES</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -104208,6 +104453,10 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -104879,7 +105128,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -110880,7 +111133,6 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-				<BuildingType>BUILDING_MYSTIC_HUT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>125</iCost>
@@ -112961,6 +113213,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_PHYSICS</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_URANIUM</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -113724,6 +113981,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_REALITY_REPROGRAMMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MATERIALIZER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+			</ReplacementBuildings>
 			<iCost>17055</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -116614,7 +116876,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>

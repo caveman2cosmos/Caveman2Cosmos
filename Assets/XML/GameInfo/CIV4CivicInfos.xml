@@ -17293,6 +17293,14 @@
 					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>

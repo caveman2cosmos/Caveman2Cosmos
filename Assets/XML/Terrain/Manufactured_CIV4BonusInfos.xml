@@ -99,8 +99,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ANTIMATTER</ArtDefineTag>
-			<TechReveal>TECH_ACNP_PROPULSION</TechReveal>
-			<TechCityTrade>TECH_ACNP_PROPULSION</TechCityTrade>
+			<TechReveal>TECH_ANTIMATTER_PRODUCTION</TechReveal>
+			<TechCityTrade>TECH_ANTIMATTER_PRODUCTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Automobiles -->

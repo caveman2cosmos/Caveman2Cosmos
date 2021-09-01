@@ -235,6 +235,7 @@ const std::string getModDir();
 
 // Make boost foreach look nice enough to actually use
 #define foreach_ BOOST_155_FOREACH
+#define reverse_foreach_ BOOST_155_REVERSE_FOREACH
 
 // Alias our latest boost version
 namespace bst = boost155;

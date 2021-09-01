@@ -71,7 +71,7 @@
 							</Commerces>
 						</Outcome>
 						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
@@ -222,7 +222,7 @@
 							</Commerces>
 						</Outcome>
 						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_FRESCO</OutcomeType>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>

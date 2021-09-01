@@ -23,8 +23,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_GATE</Type>

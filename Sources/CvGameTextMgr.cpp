@@ -32828,6 +32828,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	{
 		return;
 	}
+	CvWString szValue;
 
 	//define commerce info.
 	const CvCommerceInfo& info = GC.getCommerceInfo(eCommerceType);
@@ -32840,28 +32841,23 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	//initiate with an exposition on the base commerce yield income total for the city before we start a breakdown
 	//Note: should generate a total value as it shows the base and then modifier but not a total - that would be a helpful addition
 	setYieldHelp(szBuffer, city, YIELD_COMMERCE);
-	szBuffer.append(SEPARATOR);
-	szBuffer.append(NEWLINE);
+	szBuffer.append(DOUBLE_SEPARATOR);
 
 	//STEP 1 : Slider
 	//displays as: slider% of totalCommerce = total base unmodified commerce
-	int iBaseCommerceRate = city.getCommerceFromPercent(eCommerceType, city.getYieldRate100(YIELD_COMMERCE));
-	CvWString szRate = CvWString::format(L"%d.%02d", iBaseCommerceRate/100, iBaseCommerceRate%100);
+	const int iSliderRate100 = city.getCommerceFromPercent(eCommerceType, city.getYieldRate100(YIELD_COMMERCE));
+	int iCommerce100 = iSliderRate100;
+	CvWString szRate = CvWString::format(L"%d.%02d", iCommerce100 / 100, iCommerce100 % 100);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT", owner.getCommercePercent(eCommerceType), city.getYieldRate(YIELD_COMMERCE), szRate.GetCString(), info.getChar()));
-	szBuffer.append(NEWLINE);
-
-	//define for a final (and optional) subtotal display that adds up the following value changes
-	bool bNeedSubtotal = false;
 
 	//STEP 2 : Commerce Changes from specialists
 	{
 		const int iSpecialistCommerce = city.getSpecialistCommerce(eCommerceType) + city.getExtraSpecialistCommerceTotal(eCommerceType);
 		if (0 != iSpecialistCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iSpecialistCommerce;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE", iSpecialistCommerce, info.getChar(), L"TXT_KEY_CONCEPT_SPECIALISTS"));
+			iCommerce100 += 100 * iSpecialistCommerce;
 		}
 	}
 	//STEP 3 : Religion Commerce
@@ -32869,10 +32865,9 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iReligionCommerce = city.getReligionCommerce(eCommerceType);
 		if (0 != iReligionCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_RELIGION_COMMERCE", iReligionCommerce, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iReligionCommerce;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_RELIGION_COMMERCE", iReligionCommerce, info.getChar()));
+			iCommerce100 += 100 * iReligionCommerce;
 		}
 	}
 	//STEP 4 : Corporation Commerce
@@ -32880,21 +32875,20 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iCorporationCommerce = city.getCorporationCommerce(eCommerceType);
 		if (0 != iCorporationCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationCommerce, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iCorporationCommerce;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_CORPORATION_COMMERCE", iCorporationCommerce, info.getChar()));
+			iCommerce100 += 100 * iCorporationCommerce;
 		}
 	}
 	//STEP 5 : Building Commerce Changes
 	{
-		const int iBuildingCommerce = city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
-		if (0 != iBuildingCommerce)
+		const int iBuildingCommerce100 = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
+		if (0 != iBuildingCommerce100)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iBuildingCommerce, info.getChar()));
+			makeValueString(szValue, iBuildingCommerce100, true);
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iBuildingCommerce;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", szValue.GetCString(), info.getChar()));
+			iCommerce100 += iBuildingCommerce100;
 		}
 	}
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
@@ -32902,10 +32896,9 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iFreeCityCommerce = owner.getFreeCityCommerce(eCommerceType);
 		if (0 != iFreeCityCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE", iFreeCityCommerce, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iFreeCityCommerce;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE", iFreeCityCommerce, info.getChar()));
+			iCommerce100 += 100 * iFreeCityCommerce;
 		}
 	}
 	//STEP 7 : Commerce Attacks
@@ -32913,10 +32906,9 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iCommerceAttacks = city.getCommerceAttacks(eCommerceType);
 		if (0 != iCommerceAttacks)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseCommerceRate += 100 * iCommerceAttacks;
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERE_ATTACKS", iCommerceAttacks, info.getChar()));
+			iCommerce100 += 100 * iCommerceAttacks;
 		}
 	}
 	//STEP 8 : Minted Commerce
@@ -32925,13 +32917,9 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iMintedCommerce100 = city.getMintedCommerceTimes100();
 		if (0 != iMintedCommerce100)
 		{
-			if (0 != iMintedCommerce100 / 100)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_MINTED_COMMERCE", iMintedCommerce100 / 100, info.getChar()));
-				szBuffer.append(NEWLINE);
-				bNeedSubtotal = true;
-			}
-			iBaseCommerceRate += iMintedCommerce100;
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_MINTED_COMMERCE", CvWString::format(L"%d.%02d", iMintedCommerce100 / 100, iMintedCommerce100 % 100).GetCString(), info.getChar()));
+			iCommerce100 += iMintedCommerce100;
 		}
 	}
 	//STEP 9 : Golden Age Base Commerce Changes (usually trait driven though it might be interesting to enable this on civics.)
@@ -32940,22 +32928,22 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		const int iGoldenAgeCommerce = owner.getGoldenAgeCommerce(eCommerceType);
 		if (0 != iGoldenAgeCommerce)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE", iGoldenAgeCommerce, info.getChar()));
 			szBuffer.append(NEWLINE);
-			bNeedSubtotal = true;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE", iGoldenAgeCommerce, info.getChar()));
+			iCommerce100 += 100 * iGoldenAgeCommerce;
 		}
-		iBaseCommerceRate += 100 * iGoldenAgeCommerce;
 	}
 
-	if (bNeedSubtotal && city.getTotalCommerceRateModifier(eCommerceType) != 0 && getBugOptionBOOL("MiscHover__BaseCommerce", true, "BUG_CITY_SCREEN_BASE_COMMERCE_HOVER"))
+	if (iCommerce100 != 0 && iCommerce100 != iSliderRate100)
 	{
-		CvWString szYield = CvWString::format(L"%d.%02d", iBaseCommerceRate/100, iBaseCommerceRate%100);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_SUBTOTAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
+		makeValueString(szValue, iCommerce100);
+		szBuffer.append(SEPARATOR);
 		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BASE_S1_IS_S2_F3", info.getTextKeyWide(), szValue.GetCString(), info.getChar()));
 	}
 
 	//Debug check to make sure Base in display matches base in programming
-	FAssertMsg(city.getBaseCommerceRateTimes100(eCommerceType) == iBaseCommerceRate, "Base Commerce rate does not agree with actual value");
+	FAssertMsg(city.getBaseCommerceRateTimes100(eCommerceType) == iCommerce100, "Base Commerce rate does not agree with actual value");
 
 	//% MODIFIER TALLY
 	//In the city coding the final modifier value appears to be processed in and out and stored on m_totalCommerceRateModifier[eIndex]
@@ -32965,9 +32953,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	int iBonusCommerce = city.calculateBonusCommerceRateModifier(eCommerceType);
 	if (0 != iBonusCommerce)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
 		szBuffer.append(NEWLINE);
-
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
 		iModifier += iBonusCommerce;
 	}
 
@@ -32978,8 +32965,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	// return to buildings
 	if (0 != iBuildingMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
 		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
 		iModifier += iBuildingMod;
 	}
 
@@ -32988,9 +32975,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	int iProjectMod = owner.getCommerceRateModifierfromBuildings(eCommerceType);
 	if (iProjectMod != 0)
 	{
-		//iBuildingMod -= iProjectMod; Don't think this actually tallies into calculateBuildingCommerceModifier(eIndex);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_PROJECTS", iProjectMod, info.getChar()));
 		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_PROJECTS", iProjectMod, info.getChar()));
 		iModifier += iProjectMod;
 	}
 
@@ -32999,9 +32985,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	iEventsModifier += owner.getCommerceRateModifierfromEvents(eCommerceType);
 	if (0 != iEventsModifier)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_EVENTS", iEventsModifier, info.getChar()));
 		szBuffer.append(NEWLINE);
-
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_EVENTS", iEventsModifier, info.getChar()));
 		iModifier += iEventsModifier;
 	}
 
@@ -33022,8 +33007,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			const int iTraitMod = trait.getCommerceModifier(eCommerceType);
 			if (0 != iTraitMod)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TRAIT", iTraitMod, info.getChar(), trait.getTextKeyWide()));
 				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TRAIT", iTraitMod, info.getChar(), trait.getTextKeyWide()));
 				iPlayerLevelCompare += iTraitMod;
 			}
 		}
@@ -33041,8 +33026,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 	if (0 != iCivicMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iCivicMod, info.getChar()));
 		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iCivicMod, info.getChar()));
 		iPlayerLevelCompare += iCivicMod;
 	}
 
@@ -33055,8 +33040,8 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			const int iTechMod = tech.getCommerceModifier(eCommerceType);
 			if (0 != iTechMod)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TECH", iTechMod, info.getChar(), tech.getTextKeyWide()));
 				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TECH", iTechMod, info.getChar(), tech.getTextKeyWide()));
 				iPlayerLevelCompare += iTechMod;
 			}
 		}
@@ -33070,45 +33055,44 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	int iCapitalMod = city.isCapital() ? owner.getCapitalCommerceRateModifier(eCommerceType) : 0;
 	if (iCapitalMod != 0)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iCapitalMod, info.getChar()));
 		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iCapitalMod, info.getChar()));
 		iModifier += iCapitalMod;
 	}
 
 	iModifier = std::max(1, iModifier);
 
-	int iModYield;
-	//	Modifiers apply inversely against a negative base to avoid counter-intuitive
+	int iFinalValue100;
+	// Modifiers apply inversely against a negative base to avoid counter-intuitive
 	//	situations like intelligence agencies making negative espionag worse
-	if ( iBaseCommerceRate > 0 )
+	if (iCommerce100 > 0)
 	{
-		iModYield = (iModifier * iBaseCommerceRate) / 100;
+		iFinalValue100 = iCommerce100 * iModifier / 100;
 	}
-	else
+	else iFinalValue100 = iCommerce100 * 100 / iModifier;
 	{
-		iModYield = (100 * iBaseCommerceRate) / iModifier;
-	}
-
-	const int iProductionToCommerce = city.getProductionToCommerceModifier(eCommerceType) * city.getYieldRate(YIELD_PRODUCTION);
-	if (0 != iProductionToCommerce)
-	{
-		if (iProductionToCommerce%100 == 0)
+		const int iProducedCommerce100 = city.getProductionToCommerceModifier(eCommerceType) * city.getYieldRate(YIELD_PRODUCTION);
+		if (0 != iProducedCommerce100)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE", iProductionToCommerce/100, info.getChar()));
-			szBuffer.append(NEWLINE);
+			if (iProducedCommerce100 % 100 == 0)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE", iProducedCommerce100 / 100, info.getChar()));
+			}
+			else
+			{
+				szRate = CvWString::format(L"+%d.%02d", iProducedCommerce100 / 100, iProducedCommerce100 % 100);
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE_FLOAT", szRate.GetCString(), info.getChar()));
+			}
+			iFinalValue100 += iProducedCommerce100;
 		}
-		else
-		{
-			szRate = CvWString::format(L"+%d.%02d", iProductionToCommerce/100, iProductionToCommerce%100);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PRODUCTION_TO_COMMERCE_FLOAT", szRate.GetCString(), info.getChar()));
-			szBuffer.append(NEWLINE);
-		}
-		iModYield += iProductionToCommerce;
 	}
-	FAssertMsg(iModYield == city.getCommerceRateTimes100(eCommerceType), "Commerce yield does not match actual value");
+	FAssertMsg(iFinalValue100 == city.getCommerceRateTimes100(eCommerceType), "Commerce yield does not match actual value");
 
-	CvWString szYield = CvWString::format(L"%d.%02d", iModYield/100, std::abs(iModYield%100));
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
+	makeValueString(szValue, iFinalValue100);
+	szBuffer.append(DOUBLE_SEPARATOR);
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szValue.GetCString(), info.getChar()));
 
 	if (city.getOwner() == GC.getGame().getActivePlayer()
 	&& getBugOptionBOOL("MiscHover__BuildingAdditionalCommerce", true, "BUG_BUILDING_ADDITIONAL_COMMERCE_HOVER"))

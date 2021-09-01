@@ -64,8 +64,6 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCHAILECT</Type>
