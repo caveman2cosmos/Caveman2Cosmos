@@ -21680,6 +21680,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
@@ -21844,6 +21845,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
@@ -22397,6 +22399,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
@@ -22645,6 +22648,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
