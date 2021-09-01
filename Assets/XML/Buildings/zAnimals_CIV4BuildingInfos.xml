@@ -61,6 +61,12 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>			
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DART_FROG</ArtDefineTag>
