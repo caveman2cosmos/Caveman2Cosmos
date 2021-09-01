@@ -680,6 +680,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ANIMAL_FOLKLORE_SEA</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_SEA</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SEA</ArtDefineTag>

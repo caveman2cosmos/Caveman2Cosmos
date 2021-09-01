@@ -3773,5 +3773,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ANIMAL_FOLKLORE_SEA</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<bWater>1</bWater>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
