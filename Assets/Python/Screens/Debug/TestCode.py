@@ -37,11 +37,11 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingRequirementCivics, "Building - requirement civic requirements", "Check if building requirements require civics")
 		self.main.addTestCode(screen, self.checkBuildingCivicRequirements, "Building - civic requirements and obsoletions", "Checks if various civics aren't unlocked after building. Civic buildings shouldn't obsolete, as effectively it represents unique conditions under that civic")
 		self.main.addTestCode(screen, self.checkBuildingCivicInfluences, "Building - check civic tags", "Check if building is available when civic is active")
-		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
-		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingTechMods, "Building tech changes and modifiers", "Checks if tech modifiers and changes occur within building lifetime")
 		self.main.addTestCode(screen, self.checkBuildingBonusTags, "Building - check bonus tags", "Check if bonus tech reveal is after building obsoletion - those bonus tags affect buildings in various ways")
 		self.main.addTestCode(screen, self.checkBuildingAffectingBuildings, "Building - check building tags", "Check if building affecting other building is within lifetime of each other")
+		self.main.addTestCode(screen, self.checkBuildingReligionRequirement, "Building - check consistency of religion tags", "Checks if tags requiring religion share same religion")
+		self.main.addTestCode(screen, self.checkBuildingTags, "Building Tags", "Checks if commerce double time exists on wonders, that have relevant flat commerce change, if Commerce Change has relevant flat commerce changes, if hurry modifiers exist on unbuildable buildings, if GP unit references are paired with GP changes, or if freebonus amount is paired with bonus")
 		self.main.addTestCode(screen, self.checkBuildingCosts, "Building - check costs", "Check if buildings have correct costs")
 		self.main.addTestCode(screen, self.checkUnitUpgrades, "Unit - check unit upgrades", "Checks unit upgrades")
 		self.main.addTestCode(screen, self.checkUnitBonusRequirements, "Unit - check bonus requirements", "Checks bonus requirements of units")
@@ -2091,27 +2091,242 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			iBuildingObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-			for iCivic in xrange(GC.getNumCivicInfos()):
-				CvCivicInfo = GC.getCivicInfo(iCivic)
-				iCivicTechUnlock = self.HF.checkCivicTechRequirementLocation(CvCivicInfo)[0]
-				if iBuildingObsoleteTechLoc < iCivicTechUnlock:
+			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant civic tags are carried over from replaced buildings
+				for iCivic in xrange(GC.getNumCivicInfos()):
+					CvCivicInfo = GC.getCivicInfo(iCivic)
+					iCivicTechUnlock = self.HF.checkCivicTechRequirementLocation(CvCivicInfo)[0]
+					if iBuildingObsoleteTechLoc < iCivicTechUnlock:
 
-					#<BuildingHappinessChanges>
-					if CvCivicInfo.getBuildingHappinessChanges(iBuilding) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHappinessChanges")
+						#<BuildingHappinessChanges>
+						if CvCivicInfo.getBuildingHappinessChanges(iBuilding) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHappinessChanges")
 
-					#<BuildingHealthChanges>
-					if CvCivicInfo.getBuildingHealthChanges(iBuilding) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHealthChanges")
+						#<BuildingHealthChanges>
+						if CvCivicInfo.getBuildingHealthChanges(iBuilding) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingHealthChanges")
 
-					#<BuildingProductionModifiers>
-					if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingProductionModifiers")
+						#<BuildingProductionModifiers>
+						if CvCivicInfo.getBuildingProductionModifier(iBuilding) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingProductionModifiers")
 
-					#<BuildingCommerceModifiers>
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
-							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingCommerceModifiers")
+						#<BuildingCommerceModifiers>
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							if CvCivicInfo.getBuildingCommerceModifier(iBuilding, iCommerce) != 0:
+								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvCivicInfo.getType()+" unlock - BuildingCommerceModifiers")
+
+	#Building tech changes and modifiers
+	def checkBuildingTechMods(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant tech tags are carried over from replaced buildings
+				#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
+				for pair in CvBuildingInfo.getTechHappinessChanges():
+					iTech = pair.id
+					iTechTLoc = GC.getTechInfo(iTech).getGridX()
+					if iTechTLoc <= iTechLoc:
+						self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
+					elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+						self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
+				for pair in CvBuildingInfo.getTechHealthChanges():
+					iTech = pair.id
+					iTechTLoc = GC.getTechInfo(iTech).getGridX()
+					if iTechTLoc <= iTechLoc:
+						self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
+					elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+						self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Yield Changes techs don't appear before building can be unlocked or after is obsoleted
+				if CvBuildingInfo.isAnyTechYieldChanges():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvBuildingInfo.getTechYieldChange(iTech, iYield):
+								iTechMLoc = GC.getTechInfo(iTech).getGridX()
+								if iTechMLoc <= iTechLoc:
+									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Yield Modifiers techs don't appear before building can be unlocked or after is obsoleted
+				if CvBuildingInfo.isAnyTechYieldModifiers():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							if CvBuildingInfo.getTechYieldModifier(iTech, iYield):
+								iTechMLoc = GC.getTechInfo(iTech).getGridX()
+								if iTechMLoc <= iTechLoc:
+									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Commerce Changes techs don't appear before building can be unlocked or after is obsoleted
+				if CvBuildingInfo.isAnyTechCommerceChanges():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							if CvBuildingInfo.getTechCommerceChange(iTech, iCommerce):
+								iTechMLoc = GC.getTechInfo(iTech).getGridX()
+								if iTechMLoc <= iTechLoc:
+									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Commerce Modifiers techs don't appear before building can be unlocked or after is obsoleted
+				if CvBuildingInfo.isAnyTechCommerceModifiers():
+					for iTech in xrange(GC.getNumTechInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							if CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce):
+								iTechMLoc = GC.getTechInfo(iTech).getGridX()
+								if iTechMLoc <= iTechLoc:
+									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+
+				#Check if Specialist Changes techs don't appear before building can be unlocked or after is obsoleted
+				if CvBuildingInfo.isAnyTechSpecialistChanges():
+					for iTech in xrange(GC.getNumSpecialistInfos()):
+						for iSpecialist in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							if CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist):
+								iTechMLoc = GC.getTechInfo(iTech).getGridX()
+								if iTechMLoc <= iTechLoc:
+									self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Specialist Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+								elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
+									self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
+
+	#Building - bonus must be unlocked before building obsoletion so it can affect building at first place
+	def checkBuildingBonusTags(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iBuildingObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
+			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant bonus tags are carried over from replaced buildings
+				if CvBuildingInfo.isAnyBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						CvBonusInfo = GC.getBonusInfo(iBonus)
+						iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+						if iBuildingObsoleteTechLoc < iBonusTechEnable:
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								#<BonusYieldChanges>
+								if CvBuildingInfo.getBonusYieldChanges(iBonus, iYield) != 0:
+									self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldChanges")
+
+				if CvBuildingInfo.isAnyBonusYieldModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						CvBonusInfo = GC.getBonusInfo(iBonus)
+						iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+						if iBuildingObsoleteTechLoc < iBonusTechEnable:
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								#<BonusYieldModifiers>
+								if CvBuildingInfo.getBonusYieldModifier(iBonus, iYield) != 0:
+									self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldModifiers")
+
+				if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						CvBonusInfo = GC.getBonusInfo(iBonus)
+						iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+						if iBuildingObsoleteTechLoc < iBonusTechEnable:
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								#<VicinityBonusYieldChanges>
+								if CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield) != 0:
+									self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - VicinityBonusYieldChanges")
+
+				if CvBuildingInfo.isAnyBonusCommerceModifiers():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						CvBonusInfo = GC.getBonusInfo(iBonus)
+						iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+						if iBuildingObsoleteTechLoc < iBonusTechEnable:
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								#<BonusCommerceModifiers>
+								if CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce) != 0:
+									self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusCommerceModifiers")
+
+				if CvBuildingInfo.isAnyBonusCommercePercentChanges():
+					for iBonus in xrange(GC.getNumBonusInfos()):
+						CvBonusInfo = GC.getBonusInfo(iBonus)
+						iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+						if iBuildingObsoleteTechLoc < iBonusTechEnable:
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								#<BonusCommercePercentChanges>
+								if CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce) != 0:
+									self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - getBonusCommercePercentChanges")
+
+				for iBonus in xrange(GC.getNumBonusInfos()):
+					CvBonusInfo = GC.getBonusInfo(iBonus)
+					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
+					if iBuildingObsoleteTechLoc < iBonusTechEnable:
+						#<BonusHappinessChanges>
+						if CvBuildingInfo.getBonusHappinessChanges(iBonus) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHappinessChanges")
+
+						#<BonusHealthChanges>
+						if CvBuildingInfo.getBonusHealthChanges(iBonus) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHealthChanges")
+
+						#<BonusProductionModifiers>
+						if CvBuildingInfo.getBonusProductionModifier(iBonus) != 0:
+							self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusProductionModifiers")
+
+	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
+	def checkBuildingAffectingBuildings(self):
+		aAffectedBuildingTechUnlockList = []
+		aAffectedBuildingTechObsoletionList = []
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			if CvBuildingInfo.getNumReplacedBuilding() == 0 and CvBuildingInfo.getNumReplacementBuilding() == 0: #Redundant building tags are carried over from replaced buildings
+				aAffectedBuildingTechUnlockList.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
+				aAffectedBuildingTechObsoletionList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
+			else:
+				aAffectedBuildingTechUnlockList.append(0)
+				aAffectedBuildingTechObsoletionList.append(999)
+
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iAffectingBuildingUnlockTechLoc = self.HF.checkBuildingTechRequirements(CvAffectingBuildingInfo)[0]
+			iAffectingBuildingObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvAffectingBuildingInfo)[0]
+
+			#<GlobalBuildingExtraCommerces>
+			for pBuildingCommerceChange in CvAffectingBuildingInfo.getGlobalBuildingCommerceChanges():
+				i = pBuildingCommerceChange.eBuilding
+				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[i] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[i]:
+					CvAffectedBuildingInfo = GC.getBuildingInfo(i)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
+
+			#<GlobalBuildingCostModifiers>
+			for pair in CvAffectingBuildingInfo.getGlobalBuildingCostModifiers():
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
+
+			#<GlobalBuildingProductionModifiers>
+			for pair in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
+
+			#<BuildingHappinessChanges>
+			for pair in CvAffectingBuildingInfo.getBuildingHappinessChanges():
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingHappinessChanges")
+
+			#<BuildingProductionModifiers>
+			for pair in CvAffectingBuildingInfo.getBuildingProductionModifiers():
+				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
+					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingProductionModifiers")
+
+			#<PrereqNotInCityBuildings>
+			for i in xrange(CvAffectingBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iAffectedBuilding = CvAffectingBuildingInfo.getPrereqNotInCityBuilding(i)
+				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - PrereqNotInCityBuildings")
+
+			#<ExtendsBuilding>
+			iAffectedBuilding = CvAffectingBuildingInfo.getExtendsBuilding()
+			if iAffectedBuilding != -1:
+				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
+					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
+					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
 	#Building - ensure that building religious tags always reference same religion
 	def checkBuildingReligionRequirement(self):
@@ -2174,215 +2389,6 @@ class TestCode:
 			#ObsoletesToBuilding shouldn't be used, if building doesn't obsolete at first place
 			if CvBuildingInfo.getObsoletesToBuilding() != -1 and CvBuildingInfo.getObsoleteTech() == -1:
 				self.log(CvBuildingInfo.getType()+" has obsoletion to building defined, but not obsoleteing tech")
-
-	#Building tech changes and modifiers
-	def checkBuildingTechMods(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-			#Check if Happiness Changes techs don't appear before building can be unlocked or after is obsoleted
-			for pair in CvBuildingInfo.getTechHappinessChanges():
-				iTech = pair.id
-				iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				if iTechTLoc <= iTechLoc:
-					self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Happiness Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
-				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-					self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Happiness Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Health Changes techs don't appear before building can be unlocked or after is obsoleted
-			for pair in CvBuildingInfo.getTechHealthChanges():
-				iTech = pair.id
-				iTechTLoc = GC.getTechInfo(iTech).getGridX()
-				if iTechTLoc <= iTechLoc:
-					self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Health Changes early tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
-				elif CvBuildingInfo.getObsoleteTech() != -1 and iTechTLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-					self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Health Changes late tech: "+str(iTechTLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Yield Changes techs don't appear before building can be unlocked or after is obsoleted
-			if CvBuildingInfo.isAnyTechYieldChanges():
-				for iTech in xrange(GC.getNumTechInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						if CvBuildingInfo.getTechYieldChange(iTech, iYield):
-							iTechMLoc = GC.getTechInfo(iTech).getGridX()
-							if iTechMLoc <= iTechLoc:
-								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Yield Modifiers techs don't appear before building can be unlocked or after is obsoleted
-			if CvBuildingInfo.isAnyTechYieldModifiers():
-				for iTech in xrange(GC.getNumTechInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						if CvBuildingInfo.getTechYieldModifier(iTech, iYield):
-							iTechMLoc = GC.getTechInfo(iTech).getGridX()
-							if iTechMLoc <= iTechLoc:
-								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Yield Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Yield Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Commerce Changes techs don't appear before building can be unlocked or after is obsoleted
-			if CvBuildingInfo.isAnyTechCommerceChanges():
-				for iTech in xrange(GC.getNumTechInfos()):
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvBuildingInfo.getTechCommerceChange(iTech, iCommerce):
-							iTechMLoc = GC.getTechInfo(iTech).getGridX()
-							if iTechMLoc <= iTechLoc:
-								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Commerce Modifiers techs don't appear before building can be unlocked or after is obsoleted
-			if CvBuildingInfo.isAnyTechCommerceModifiers():
-				for iTech in xrange(GC.getNumTechInfos()):
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvBuildingInfo.getTechCommerceModifier(iTech, iCommerce):
-							iTechMLoc = GC.getTechInfo(iTech).getGridX()
-							if iTechMLoc <= iTechLoc:
-								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Commerce Modifiers early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Commerce Modifiers late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-			#Check if Specialist Changes techs don't appear before building can be unlocked or after is obsoleted
-			if CvBuildingInfo.isAnyTechSpecialistChanges():
-				for iTech in xrange(GC.getNumSpecialistInfos()):
-					for iSpecialist in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						if CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist):
-							iTechMLoc = GC.getTechInfo(iTech).getGridX()
-							if iTechMLoc <= iTechLoc:
-								self.log(CvBuildingInfo.getType()+" Tech unlock: "+str(iTechLoc)+" Specialist Changes early tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-							elif CvBuildingInfo.getObsoleteTech() != -1 and iTechMLoc >= GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX():
-								self.log(CvBuildingInfo.getType()+" Tech obsolete: "+str(GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridX())+" Specialist Changes late tech: "+str(iTechMLoc)+" "+GC.getTechInfo(iTech).getType())
-
-	#Building - bonus must be unlocked before building obsoletion so it can affect building at first place
-	def checkBuildingBonusTags(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iBuildingObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0]
-
-			if CvBuildingInfo.isAnyBonusYieldChanges():
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					CvBonusInfo = GC.getBonusInfo(iBonus)
-					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-					if iBuildingObsoleteTechLoc < iBonusTechEnable:
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							#<BonusYieldChanges>
-							if CvBuildingInfo.getBonusYieldChanges(iBonus, iYield) != 0:
-								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldChanges")
-
-			if CvBuildingInfo.isAnyBonusYieldModifiers():
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					CvBonusInfo = GC.getBonusInfo(iBonus)
-					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-					if iBuildingObsoleteTechLoc < iBonusTechEnable:
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							#<BonusYieldModifiers>
-							if CvBuildingInfo.getBonusYieldModifier(iBonus, iYield) != 0:
-								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusYieldModifiers")
-
-			if CvBuildingInfo.isAnyVicinityBonusYieldChanges():
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					CvBonusInfo = GC.getBonusInfo(iBonus)
-					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-					if iBuildingObsoleteTechLoc < iBonusTechEnable:
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							#<VicinityBonusYieldChanges>
-							if CvBuildingInfo.getVicinityBonusYieldChanges(iBonus, iYield) != 0:
-								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - VicinityBonusYieldChanges")
-
-			if CvBuildingInfo.isAnyBonusCommerceModifiers():
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					CvBonusInfo = GC.getBonusInfo(iBonus)
-					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-					if iBuildingObsoleteTechLoc < iBonusTechEnable:
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							#<BonusCommerceModifiers>
-							if CvBuildingInfo.getBonusCommerceModifier(iBonus, iCommerce) != 0:
-								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusCommerceModifiers")
-
-			if CvBuildingInfo.isAnyBonusCommercePercentChanges():
-				for iBonus in xrange(GC.getNumBonusInfos()):
-					CvBonusInfo = GC.getBonusInfo(iBonus)
-					iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-					if iBuildingObsoleteTechLoc < iBonusTechEnable:
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							#<BonusCommercePercentChanges>
-							if CvBuildingInfo.getBonusCommercePercentChanges(iBonus, iCommerce) != 0:
-								self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - getBonusCommercePercentChanges")
-
-			for iBonus in xrange(GC.getNumBonusInfos()):
-				CvBonusInfo = GC.getBonusInfo(iBonus)
-				iBonusTechEnable = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2]
-				if iBuildingObsoleteTechLoc < iBonusTechEnable:
-					#<BonusHappinessChanges>
-					if CvBuildingInfo.getBonusHappinessChanges(iBonus) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHappinessChanges")
-
-					#<BonusHealthChanges>
-					if CvBuildingInfo.getBonusHealthChanges(iBonus) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusHealthChanges")
-
-					#<BonusProductionModifiers>
-					if CvBuildingInfo.getBonusProductionModifier(iBonus) != 0:
-						self.log(CvBuildingInfo.getType()+" obsoletes before "+CvBonusInfo.getType()+" Tech enable - BonusProductionModifiers")
-
-	#Buildings X -> Y: X shouldn't be obsolete before Y is available, and X should be unlocked before Y is obsolete
-	def checkBuildingAffectingBuildings(self):
-		aAffectedBuildingTechUnlockList = []
-		aAffectedBuildingTechObsoletionList = []
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			aAffectedBuildingTechUnlockList.append(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])
-			aAffectedBuildingTechObsoletionList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingInfo)[0])
-
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvAffectingBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iAffectingBuildingUnlockTechLoc = self.HF.checkBuildingTechRequirements(CvAffectingBuildingInfo)[0]
-			iAffectingBuildingObsoleteTechLoc = self.HF.checkBuildingTechObsoletionLocation(CvAffectingBuildingInfo)[0]
-
-			#<GlobalBuildingExtraCommerces>
-			for pBuildingCommerceChange in CvAffectingBuildingInfo.getGlobalBuildingCommerceChanges():
-				i = pBuildingCommerceChange.eBuilding
-				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[i] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[i]:
-					CvAffectedBuildingInfo = GC.getBuildingInfo(i)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingExtraCommerces")
-
-			#<GlobalBuildingCostModifiers>
-			for pair in CvAffectingBuildingInfo.getGlobalBuildingCostModifiers():
-				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
-					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
-
-			#<GlobalBuildingProductionModifiers>
-			for pair in CvAffectingBuildingInfo.getGlobalBuildingProductionModifiers():
-				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
-					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - GlobalBuildingProductionModifiers")
-
-			#<BuildingHappinessChanges>
-			for pair in CvAffectingBuildingInfo.getBuildingHappinessChanges():
-				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
-					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingHappinessChanges")
-
-			#<BuildingProductionModifiers>
-			for pair in CvAffectingBuildingInfo.getBuildingProductionModifiers():
-				if pair.value != 0 and (iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[pair.id] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[pair.id]):
-					CvAffectedBuildingInfo = GC.getBuildingInfo(pair.id)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - BuildingProductionModifiers")
-
-			#<PrereqNotInCityBuildings>
-			for i in xrange(CvAffectingBuildingInfo.getNumPrereqNotInCityBuildings()):
-				iAffectedBuilding = CvAffectingBuildingInfo.getPrereqNotInCityBuilding(i)
-				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
-					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - PrereqNotInCityBuildings")
-
-			#<ExtendsBuilding>
-			iAffectedBuilding = CvAffectingBuildingInfo.getExtendsBuilding()
-			if iAffectedBuilding != -1:
-				if iAffectingBuildingObsoleteTechLoc < aAffectedBuildingTechUnlockList[iAffectedBuilding] or iAffectingBuildingUnlockTechLoc > aAffectedBuildingTechObsoletionList[iAffectedBuilding]:
-					CvAffectedBuildingInfo = GC.getBuildingInfo(iAffectedBuilding)
-					self.log(CvAffectingBuildingInfo.getType()+" can't affect "+CvAffectedBuildingInfo.getType()+" as buildings have disjointed tech ranges - ExtendsBuilding")
 
 	#Building - Check if buildings have proper costs
 	def checkBuildingCosts(self):
