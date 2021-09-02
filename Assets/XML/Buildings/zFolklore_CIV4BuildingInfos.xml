@@ -10527,7 +10527,7 @@
 						<iCommercePercent>-20</iCommercePercent>
 						<iCommercePercent>20</iCommercePercent>
 						</CommercePercents>
-				</BonusCommercePercentChange>				
+				</BonusCommercePercentChange>
 			</BonusCommercePercentChanges>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10613,7 +10613,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<BonusCommercePercentChanges>			
+			<BonusCommercePercentChanges>
 				<BonusCommercePercentChange>
 					<BonusType>BONUS_CLASSICAL</BonusType>
 					<CommercePercents>
