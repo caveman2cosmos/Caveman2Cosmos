@@ -22587,24 +22587,24 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (kBuilding.isAnyBonusCommercePercentChanges())
 		{
+			// Toffer - ToDo
+			//	switch these two loops around and bundle all the commerce types per bonus into one line.
+			//	e.g. "With Apple: +0.2 [beakerIcon], -0.2 [cultureIcon]".
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 				{
-					if (kBuilding.getBonusCommercePercentChanges(iI, iJ) != 0)
+					const int iValue = kBuilding.getBonusCommercePercentChanges(iI, iJ);
+					if (iValue != 0)
 					{
 						CvWString szTempBuffer;
-						makeValueString(szTempBuffer, kBuilding.getBonusCommercePercentChanges(iI, iJ), true);
-						szTempBuffer.Format(L"\n%c%s%c%s", gDLL->getSymbolID(BULLET_CHAR), szTempBuffer.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(), gDLL->getText("TXT_KEY_WITH").GetCString());
-						szTempBuffer += CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription());
-
-						for (int iK = 0; iK < GC.getNumBonusInfos(); ++iK)
-						{
-							if (iK != iI && kBuilding.getBonusCommercePercentChanges(iI, iJ) == kBuilding.getBonusCommercePercentChanges(iK, iJ))
-							{
-								szTempBuffer += CvWString::format(L", <link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)iK).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iK).getDescription());
-							}
-						}
+						makeValueString(szTempBuffer,iValue, true);
+						szTempBuffer.Format(
+							L"\n%c%s%c%s<link=%s>%s</link>",
+							gDLL->getSymbolID(BULLET_CHAR), szTempBuffer.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(),
+							gDLL->getText("TXT_KEY_WITH").GetCString(),
+							CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription()
+						);
 						szBuffer.append(szTempBuffer);
 					}
 				}
