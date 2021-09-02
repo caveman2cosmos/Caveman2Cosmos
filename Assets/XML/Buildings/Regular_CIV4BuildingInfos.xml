@@ -10446,13 +10446,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_BANDITRY</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -101563,16 +101556,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_MIND_CONTROL</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>5255</iCost>
-			<iHealth>-4</iHealth>
-			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
 			</YieldModifiers>
