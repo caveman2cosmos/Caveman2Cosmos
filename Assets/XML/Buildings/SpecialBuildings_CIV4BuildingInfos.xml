@@ -49,6 +49,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AESOP_CRIME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AESOP_CRIME_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -92,6 +93,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -299,6 +301,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_KARMA_PEDIA</Civilopedia>
+			<PrereqTech>TECH_KARMA</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -323,6 +326,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_REINCARNATION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -348,6 +352,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_RESURRECTION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -713,6 +718,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -1219,6 +1225,7 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEANAIR_ACT</ArtDefineTag>
@@ -1251,6 +1258,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -5172,6 +5180,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6013,6 +6022,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6069,6 +6079,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUG_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -6388,6 +6399,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -6407,6 +6419,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ENHANCED_SPECIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENHANCED_SPECIES_PEDIA</Civilopedia>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<BonusYieldChanges>
 				<BonusYieldChange>
 					<BonusType>BONUS_BARLEY</BonusType>
@@ -6953,6 +6966,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8657,7 +8671,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
-			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -9380,6 +9394,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAMBLING_BAN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -9394,6 +9409,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9415,6 +9431,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 			</ReplacementBuildings>
+			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<iHappiness>2</iHappiness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9434,6 +9451,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_FUSION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_FUSION</PrereqTech>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1000</iYield>
@@ -9450,6 +9468,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_GORGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_GORGE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iHealth>10</iHealth>
 			<iHappiness>10</iHappiness>
 			<YieldChanges>
@@ -9468,6 +9487,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9492,6 +9512,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9510,6 +9531,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9569,7 +9591,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
+			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
@@ -11156,6 +11178,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ReplacementBuildings>
@@ -11867,6 +11890,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
 			<PropertyManipulators>
@@ -11897,6 +11921,7 @@
 					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE_GOOD</ArtDefineTag>
@@ -14149,6 +14174,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROSTITUTION_BAN_PEDIA</Civilopedia>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -14370,6 +14396,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14395,6 +14422,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14809,6 +14837,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -14969,6 +14998,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
@@ -15634,6 +15664,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMOKING_PROHIBITION_PEDIA</Civilopedia>
+			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -16081,6 +16112,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -16127,6 +16159,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16638,6 +16671,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -16696,6 +16730,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
+			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
