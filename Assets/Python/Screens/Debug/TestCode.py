@@ -1687,6 +1687,12 @@ class TestCode:
 			if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_") != -1 and iBuilding != iFreeBuilding:
 				self.log(CvBuildingInfo.getType()+" if its animal/landscape folklore, then it should give itself")
 
+			for i in xrange(CvBuildingInfo.getNumPrereqNotInCityBuildings()):
+				iBlockerBuilding = CvBuildingInfo.getPrereqNotInCityBuilding(i)
+				CvBlockerBuilding = GC.getBuildingInfo(iBlockerBuilding)
+				if iBlockerBuilding == CvBuildingInfo.getFreeBuilding() or iBlockerBuilding == CvBuildingInfo.getFreeAreaBuilding():
+					self.log(CvBuildingInfo.getType()+" gives free building, that is blocker "+CvBlockerBuilding.getType())
+
 	#Building bonus requirements
 	def checkBuildingBonusRequirements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):

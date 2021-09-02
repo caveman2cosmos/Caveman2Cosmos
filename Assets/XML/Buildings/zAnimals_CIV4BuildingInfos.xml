@@ -66,7 +66,7 @@
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>			
+			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DART_FROG</ArtDefineTag>
@@ -1199,7 +1199,11 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDING_DUCK_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DUCK_FLOCKS</FreeBuilding>
+			<bNeverCapture>1</bNeverCapture>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1218,24 +1222,6 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DUCK_FLOCKS_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DUCK_FLOCKS_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELASMOTHERIUM_REMAINS</Type>
@@ -2507,7 +2493,11 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDING_PEACOCK_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_PEACOCK_FLOCKS</FreeBuilding>
+			<bNeverCapture>1</bNeverCapture>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2526,24 +2516,6 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_PEACOCK_FLOCKS_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_PEACOCK_FLOCKS_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIG_HERD</Type>
@@ -3347,7 +3319,11 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDING_TURKEY_FLOCKS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_TURKEY_FLOCKS</FreeBuilding>
+			<bNeverCapture>1</bNeverCapture>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3366,24 +3342,6 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_TURKEY_FLOCKS_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_TURKEY_FLOCKS_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALRUS_CAGE</Type>
