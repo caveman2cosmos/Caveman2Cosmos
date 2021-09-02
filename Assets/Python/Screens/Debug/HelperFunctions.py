@@ -163,7 +163,7 @@ class HelperFunctions:
 		#Pick all techs in most advanced column
 		aMostAdvancedColumnRequirementsNames = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechList[i] not in aMostAdvancedColumnRequirementsNames:
 				aMostAdvancedColumnRequirementsNames.append(aTechList[i])
 
 		#aMostAdvancedColumnRequirementsXY is a Tech location ID array - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
@@ -172,7 +172,7 @@ class HelperFunctions:
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		aMostAdvancedColumnRequirementsXY = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechXY[i] not in aMostAdvancedColumnRequirementsXY:
 				aMostAdvancedColumnRequirementsXY.append(aTechXY[i])
 
 		if len(aMostAdvancedColumnRequirementsXY) == 0:
