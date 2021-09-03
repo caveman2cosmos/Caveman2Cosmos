@@ -38,6 +38,15 @@ CvPropertySource* CvPropertyManipulators::getSource(int index) const
 	return m_apSources[index];
 }
 */
+
+const python::list CvPropertyManipulators::cyGetSources() const
+{
+	python::list l = python::list();
+	foreach_(const CvPropertySource* pSource, m_apSources)
+		l += *pSource;
+	return l;
+}
+
 int CvPropertyManipulators::addSource(PropertySourceTypes eType)
 {
 	switch (eType)

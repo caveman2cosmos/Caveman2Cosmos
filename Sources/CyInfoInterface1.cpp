@@ -536,6 +536,7 @@ void CyInfoPythonInterface1()
 		.def("getMapCategories", &CvBuildingInfo::cyGetMapCategories)
 
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
+		.def("getPropertyManipulators", &CvBuildingInfo::getPropertyManipulators, python::return_value_policy<python::reference_existing_object>())
 
 		.def("getConstructCondition", &CvBuildingInfo::getConstructCondition, python::return_value_policy<python::reference_existing_object>())
 		;
