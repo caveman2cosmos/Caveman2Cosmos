@@ -362,7 +362,7 @@ class PediaUnit:
 			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
 			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
-		iType = CvTheUnitInfo.getForceObsoleteTech()
+		iType = CvTheUnitInfo.getObsoleteTech()
 		if aReqList or aUpgList or iType != -1:
 			W_BOT_ROW = W_PEDIA_PAGE
 			x = (H_BOT_ROW - S_BOT_ROW) / 2

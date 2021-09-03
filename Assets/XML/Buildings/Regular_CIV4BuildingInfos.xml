@@ -1007,7 +1007,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AD_AGENCY</ArtDefineTag>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>950</iCost>
@@ -8049,6 +8048,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -10168,7 +10168,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FAIR_GROUNDS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -10462,13 +10461,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEFT</PrereqTech>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_BANDITRY</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -13892,10 +13885,9 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ANARCHISM</CivicOption>
@@ -14845,9 +14837,10 @@
 				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
 			</TechTypes>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CASTE_SYSTEM</CivicOption>
@@ -18683,9 +18676,10 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<iCost>243</iCost>
 			<CommerceChanges>
@@ -27381,6 +27375,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -30019,9 +30014,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ORAL_TRADITION</CivicOption>
@@ -32415,7 +32412,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -36391,11 +36387,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
+			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
 			<CommerceAttacks>
@@ -51312,9 +51308,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAMALES</BuildingType>
-				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BROTHEL</ObsoletesToBuilding>
@@ -51324,7 +51322,7 @@
 				<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 			</ReplacementBuildings>
-			<iCost>5</iCost>
+			<iCost>30</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -52272,7 +52270,6 @@
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>320</iCost>
 			<iHealth>1</iHealth>
@@ -62349,6 +62346,7 @@
 				</And>
 			</ConstructCondition>
 			<iCost>225</iCost>
+			<iHappiness>1</iHappiness>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -62356,7 +62354,7 @@
 				</Has>
 			</NewCityFree>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -62376,6 +62374,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -71490,6 +71494,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -72802,6 +72807,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -83447,18 +83453,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THOUGHT_SCANNING</PrereqTech>
 			<iCost>3245</iCost>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-1</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
-				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -88181,7 +88183,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NEUROTRANSMITTER_MANIPULATION_LAB</BuildingType>
-				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5905</iCost>
 			<iHealth>2</iHealth>
@@ -94832,14 +94833,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LIBRARY</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
 			<iCost>176</iCost>
+			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -101565,16 +101572,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_MIND_CONTROL</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>5255</iCost>
-			<iHealth>-4</iHealth>
-			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
 			</YieldModifiers>
@@ -104445,6 +104443,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCHOOL_OF_SCRIBES</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -104453,6 +104453,10 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -111129,7 +111133,6 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-				<BuildingType>BUILDING_MYSTIC_HUT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>125</iCost>

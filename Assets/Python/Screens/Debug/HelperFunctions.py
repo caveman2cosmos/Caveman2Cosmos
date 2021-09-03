@@ -165,7 +165,7 @@ class HelperFunctions:
 		#Pick all techs in most advanced column
 		aMostAdvancedColumnRequirementsNames = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechList[i] not in aMostAdvancedColumnRequirementsNames:
 				aMostAdvancedColumnRequirementsNames.append(aTechList[i])
 
 		#aMostAdvancedColumnRequirementsXY is a Tech location ID array - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
@@ -174,7 +174,7 @@ class HelperFunctions:
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		aMostAdvancedColumnRequirementsXY = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechXY[i] not in aMostAdvancedColumnRequirementsXY:
 				aMostAdvancedColumnRequirementsXY.append(aTechXY[i])
 
 		if len(aMostAdvancedColumnRequirementsXY) == 0:
@@ -430,6 +430,24 @@ class HelperFunctions:
 		iTechObsRow = 99 #Never obsoletes
 		if CvBuildingInfo.getObsoleteTech() != -1:
 			iTechObsRow = GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getGridY()
+
+		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
+		#If infotype doesn't have tech obsoletion, then infotype X/Y grid is 999 / 99
+		#Otherwise infotype gets highest Xgrid tech obsoletion and related Ygrid position
+		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
+		iTechObsXY = 100*iTechObsLoc + iTechObsRow
+		sTechDesc = self.getTechName(iTechObsXY)
+
+		return iTechObsLoc, iTechObsXY, sTechDesc
+
+	#Unit tech obsoletion location
+	def checkUnitTechObsoletionLocation(self, CvUnitInfo):
+		iTechObsLoc = 999 #Never obsoletes
+		iTechObsRow = 99 #Never obsoletes
+
+		if CvUnitInfo.getObsoleteTech() != -1:
+			iTechObsLoc = GC.getTechInfo(CvUnitInfo.getObsoleteTech()).getGridX()
+			iTechObsRow = GC.getTechInfo(CvUnitInfo.getObsoleteTech()).getGridY()
 
 		#This is a Tech location ID - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
 		#If infotype doesn't have tech obsoletion, then infotype X/Y grid is 999 / 99

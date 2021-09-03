@@ -17263,15 +17263,10 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<iCost>1296</iCost>
 			<CommerceChanges>

@@ -104,7 +104,7 @@ m_iDefaultUnitAIType(NO_UNITAI),
 m_iInvisibleType(NO_INVISIBLE),
 m_iAdvisorType(NO_ADVISOR),
 m_iMaxStartEra(NO_ERA),
-m_iForceObsoleteTech(NO_TECH),
+m_iObsoleteTech(NO_TECH),
 m_bStateReligion(false),
 m_iPrereqGameOption(NO_GAMEOPTION),
 m_iNotGameOption(NO_GAMEOPTION),
@@ -843,9 +843,9 @@ int CvUnitInfo::getMaxStartEra() const
 	return m_iMaxStartEra;
 }
 
-int CvUnitInfo::getForceObsoleteTech() const
+int CvUnitInfo::getObsoleteTech() const
 {
-	return m_iForceObsoleteTech;
+	return m_iObsoleteTech;
 }
 
 bool CvUnitInfo::isStateReligion() const
@@ -3685,7 +3685,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iAdvisorType);
 
 	CheckSum(iSum, m_iMaxStartEra);
-	CheckSum(iSum, m_iForceObsoleteTech);
+	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_bStateReligion);
 	CheckSum(iSum, m_iPrereqGameOption);
 	CheckSum(iSum, m_iNotGameOption);
@@ -4225,8 +4225,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ForceObsoleteTech");
-	m_iForceObsoleteTech = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
+	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_bStateReligion, L"bStateReligion");
 
@@ -5372,7 +5372,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bDCMFighterEngage == bDefault ) m_bDCMFighterEngage = pClassInfo->getDCMFighterEngage();
 
 	if ( m_iMaxStartEra == iTextDefault) m_iMaxStartEra = pClassInfo->getMaxStartEra();
-	if ( m_iForceObsoleteTech == iTextDefault ) m_iForceObsoleteTech = pClassInfo->getForceObsoleteTech();
+	if ( m_iObsoleteTech == iTextDefault ) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if ( m_bStateReligion == bDefault )	m_bStateReligion = pClassInfo->isStateReligion();
 	if ( m_iPrereqGameOption == iTextDefault ) m_iPrereqGameOption = pClassInfo->getPrereqGameOption();
 	if ( m_iNotGameOption == iTextDefault ) m_iNotGameOption = pClassInfo->getNotGameOption();
