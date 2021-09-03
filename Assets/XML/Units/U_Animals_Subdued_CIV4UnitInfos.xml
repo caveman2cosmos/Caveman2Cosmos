@@ -19,7 +19,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_AARDVARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -69,7 +69,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ANTEATER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANTEATER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_AARDVARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -119,7 +119,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Description>
 			<Civilopedia>TXT_KEY_UNIT_AFRICANGREY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_AFRICANGREY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -172,7 +172,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_AFRICAN_PENGUIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -230,7 +230,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ARCTICFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARCTICFOX_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -284,7 +284,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARMADILLO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -333,7 +333,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASIANBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ASIANBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -422,7 +422,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BABIRUSA</Description>
 			<Civilopedia>TXT_KEY_UNIT_BABIRUSA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -511,7 +511,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BADGER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BADGER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -579,7 +579,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BALLPYTHON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BALLPYTHON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SNAKE2_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -632,7 +632,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BARBARYAPE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARBARYAPE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -683,7 +683,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BARNOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARNOWL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BARNOWL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -737,7 +737,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARREDOWL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BARREDOWL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -791,7 +791,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -879,7 +879,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BEAVER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BEAVER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -932,7 +932,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BELUGA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BELUGA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -987,7 +987,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BENGALTIGER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BENGALTIGER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1074,7 +1074,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BISON</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BISON_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1164,7 +1164,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BLACKBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1252,7 +1252,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BOAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BOAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1341,7 +1341,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BONGO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BONGO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1430,7 +1430,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BOOBY</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOOBY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BOOBY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1484,7 +1484,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1535,7 +1535,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1626,7 +1626,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAIMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1716,7 +1716,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAMEL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAMEL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1804,7 +1804,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAPUCHIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPUCHIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1856,7 +1856,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAPYBARA</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPYBARA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAPYBARA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1907,7 +1907,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CARIBOU</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DEER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -1999,7 +1999,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CASSOWARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CASSOWARY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2089,7 +2089,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_PREHISTORIC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2179,7 +2179,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAVE_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2268,7 +2268,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CHEETAH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_SPOTTED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2355,7 +2355,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CHIMPANZEE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2443,7 +2443,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_COBRA</Description>
 			<Civilopedia>TXT_KEY_UNIT_COBRA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_COBRA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2497,7 +2497,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_COD</Description>
 			<Civilopedia>TXT_KEY_UNIT_COD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_COD_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2550,7 +2550,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_COW</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_COW_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2666,7 +2666,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CRAB</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRAB_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CRAB_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2715,7 +2715,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CROW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROW_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2767,7 +2767,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CUSCUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_CUSCUS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2817,7 +2817,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DARTFROG</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARTFROG_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2869,7 +2869,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2920,7 +2920,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DHOLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DHOLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -2978,7 +2978,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DINGO</Description>
 			<Civilopedia>TXT_KEY_UNIT_DINGO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3031,7 +3031,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DIREWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_DIREWOLF_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DIREWOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3128,7 +3128,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DOLPHIN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DOLPHIN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3182,7 +3182,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DONKEY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3271,7 +3271,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DUCK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DUCK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3326,7 +3326,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DUGONG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DUGONG_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3374,7 +3374,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_EAGLE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_EAGLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3431,7 +3431,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EAGLE_BALD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3489,7 +3489,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3580,7 +3580,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ELEPHANT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3671,7 +3671,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_EMU</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_EMU_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3763,7 +3763,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_EWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_EWOLF_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3858,7 +3858,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_FENNECFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_FENNECFOX_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -3910,7 +3910,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_FLAMINGO</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLAMINGO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_FLAMINGO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4000,7 +4000,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_PENGUIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4058,7 +4058,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_TORTOISE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4110,7 +4110,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GATOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATOR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4202,7 +4202,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4293,7 +4293,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GAZELLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GAZELLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GAZELLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4344,7 +4344,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GEMSBOK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GEMSBOK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4433,7 +4433,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GERENUK</Description>
 			<Civilopedia>TXT_KEY_UNIT_GERENUK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GERENUK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4522,7 +4522,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GELADA</Description>
 			<Civilopedia>TXT_KEY_UNIT_GELADA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4575,7 +4575,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GHARIAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GHARIAL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4666,7 +4666,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GIANT_SQUID</Description>
 			<Civilopedia>TXT_KEY_UNIT_GIANT_SQUID_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GIANT_SQUID_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4720,7 +4720,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GIRAFFE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4796,7 +4796,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GLYPTO</Description>
 			<Civilopedia>TXT_KEY_UNIT_GLYPTO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GLYPTO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4848,7 +4848,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GORILLA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GORILLA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4937,7 +4937,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GREATWHITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GREATWHITE_SHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GREATWHITE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4992,7 +4992,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIZZLY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GRIZZLY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5081,7 +5081,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_GROUNDSLOTH_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5132,7 +5132,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_GULL</Description>
 			<Civilopedia>TXT_KEY_UNIT_GULL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GULL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5183,7 +5183,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAAST_EAGLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5243,7 +5243,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HAMMERHEAD</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAMMERHEAD_SHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HAMMERHEAD_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5298,7 +5298,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HARPYEAGLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5353,7 +5353,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HAWK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HAWK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5409,7 +5409,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HIPPO</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HIPPO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5498,7 +5498,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANDA_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5586,7 +5586,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PIG_NEW</Description>
 			<Civilopedia>TXT_KEY_UNIT_PIG_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BOAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5638,7 +5638,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_POLAR_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_POLAR_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5727,7 +5727,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO</Description>
 			<Civilopedia>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5816,7 +5816,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HORNEDOWL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORNEDOWL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HORNEDOWL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5870,7 +5870,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HORSE</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORSE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HORSE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -5987,7 +5987,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HUMPBACK_WHALE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HUMPBACK_WHALE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6043,7 +6043,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_HYENA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_HYENA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6129,7 +6129,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_IBEX</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_IBEX_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6245,7 +6245,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_IGUANA</Description>
 			<Civilopedia>TXT_KEY_UNIT_IGUANA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_IGUANA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6296,7 +6296,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_IMPALA</Description>
 			<Civilopedia>TXT_KEY_UNIT_IMPALA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_IMPALA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6385,7 +6385,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_JAGUAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_SPOTTED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6472,7 +6472,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KANGAROO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6562,7 +6562,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED</Description>
 			<Civilopedia>TXT_KEY_UNIT_KANGAROO_RED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6653,7 +6653,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_KOALA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOALA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KOALA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6705,7 +6705,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOMODO_DRAGON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6756,7 +6756,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_KOOKABURRA</Description>
 			<Civilopedia>TXT_KEY_UNIT_KOOKABURRA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KOOKABURRA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6808,7 +6808,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LEMUR</Description>
 			<Civilopedia>TXT_KEY_UNIT_LEMUR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_LEMUR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6858,7 +6858,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LIZARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIZARD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6908,7 +6908,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_LLAMA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_LLAMA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -6959,7 +6959,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_LION_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7045,7 +7045,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BIRD_SMALL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7097,7 +7097,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_LYNX</Description>
 			<Civilopedia>TXT_KEY_UNIT_LYNX_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_SPOTTED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7184,7 +7184,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MACAW</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACAW_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BIRD_SMALL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7237,7 +7237,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MACKEREL</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACKEREL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7291,7 +7291,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7338,7 +7338,7 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MAMMOTH_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7434,7 +7434,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MANEDWOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANEDWOLF_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7529,7 +7529,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MANDRILL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7618,7 +7618,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RAY_MANTA</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_MANTA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RAY_MANTA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7670,7 +7670,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MARLIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARLIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7722,7 +7722,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MINKIE_WHALE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MINKIE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7777,7 +7777,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MOA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MOA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7871,7 +7871,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MOOSE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DEER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -7963,7 +7963,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MONITOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_NILE_MONITOR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8014,7 +8014,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MOUFLON</Description>
 			<Civilopedia>TXT_KEY_UNIT_MOUFLON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MOUFLON_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8097,7 +8097,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8148,7 +8148,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_MUSKOX</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_MUSKOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8239,7 +8239,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_NARWHAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_NARWHAL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8297,7 +8297,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_NILECROC</Description>
 			<Civilopedia>TXT_KEY_UNIT_NILECROC_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_NILECROC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8388,7 +8388,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_NUMBAT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_NUMBAT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8438,7 +8438,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_OKAPI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8527,7 +8527,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_OPOSSUM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_OPOSSUM_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8577,7 +8577,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ORCA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ORCA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8632,7 +8632,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8719,7 +8719,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_OSTRICH</Description>
 			<Civilopedia>TXT_KEY_UNIT_OSTRICH_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_OSTRICH_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8811,7 +8811,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_OXPECKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_OXPECKER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8863,7 +8863,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PANTHER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_SPOTTED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -8950,7 +8950,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PARROT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PARROT_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PARROT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9003,7 +9003,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PEACOCK</Description>
 			<Civilopedia>TXT_KEY_UNIT_PEACOCK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9057,7 +9057,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PENGUIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_EMPEROR_PENGUIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_EMPEROR_PENGUIN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9114,7 +9114,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PHEASANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PHEASANT_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PHEASANT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9184,7 +9184,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PLATYPUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLATYPUS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9237,7 +9237,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PIGEON</Description>
 			<Civilopedia>TXT_KEY_UNIT_PIGEON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PIGEON_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9290,7 +9290,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_POSSUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_POSSUM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_POSSUM_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9340,7 +9340,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PROCOPTODON</Description>
 			<Civilopedia>TXT_KEY_UNIT_PROCOPTODON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_KANGAROO2_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9432,7 +9432,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_PUFFADDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PUFFADDER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9486,7 +9486,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_QUOLL</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUOLL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9536,7 +9536,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RACCOON</Description>
 			<Civilopedia>TXT_KEY_UNIT_RACCOON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RACCOON_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9588,7 +9588,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RATEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_RATEL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9667,7 +9667,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RAVEN</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAVEN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RAVEN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9720,7 +9720,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9772,7 +9772,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAZORBILL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RAZORBILL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9825,7 +9825,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_REDFOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDFOX_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9879,7 +9879,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_REDPANDA</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDPANDA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REDPANDA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -9968,7 +9968,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WARTHOG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BOAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10058,7 +10058,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOLF_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10153,7 +10153,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_REEF_SHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_REEF_SHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10208,7 +10208,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RHEA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RHEA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10280,7 +10280,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELASMOTHERIUM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10334,7 +10334,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACK_RHINO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10387,7 +10387,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_INDIAN_RHINO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10440,7 +10440,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_JAVA_RHINO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10493,7 +10493,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHITE_RHINO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10547,7 +10547,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_LARGE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10639,7 +10639,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_SMALL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10729,7 +10729,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ROCKHOPPER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10786,7 +10786,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SABRETOOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_PREHISTORIC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10875,7 +10875,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SAIGA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SAIGA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -10964,7 +10964,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11057,7 +11057,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11149,7 +11149,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SEAEAGLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11205,7 +11205,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11257,7 +11257,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11310,7 +11310,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SEAOTTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAOTTER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SEAOTTER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11363,7 +11363,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SEATURTLE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SEATURTLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11416,7 +11416,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SECRETARYBIRD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11469,7 +11469,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11556,7 +11556,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SKUNK</Description>
 			<Civilopedia>TXT_KEY_UNIT_SKUNK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SKUNK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11607,7 +11607,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOTHBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11696,7 +11696,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SNOWLEOPARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SNOWLEOPARD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAT_SPOTTED_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11783,7 +11783,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPECTACLEDBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SPECTACLED_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11871,7 +11871,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_STAG_DEER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_DEER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -11961,7 +11961,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUNBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SUN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12050,7 +12050,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAPIR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12101,7 +12101,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_JUNGLE_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12151,7 +12151,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12201,7 +12201,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TASMANIANDEVIL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TASMANIANDEVIL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TASMANIANDEVIL_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12268,7 +12268,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TERN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TERN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12321,7 +12321,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_THYLACINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_THYLACINE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12373,7 +12373,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TOUCAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOUCAN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TOUCAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12426,7 +12426,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TREESLOTH_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12475,7 +12475,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TUNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUNA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TUNA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12528,7 +12528,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_TURKEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURKEY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_TURKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12599,7 +12599,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_VIPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_VIPER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12653,7 +12653,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_VULTURE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_VULTURE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12706,7 +12706,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WALLABY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLABY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WALLABY_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12758,7 +12758,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WALLAROO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLAROO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12811,7 +12811,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WALRUS</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALRUS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WALRUS_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12864,7 +12864,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WHALESHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHALESHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -12920,7 +12920,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WILDEBEEST</Description>
 			<Civilopedia>TXT_KEY_UNIT_WILDEBEEST_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -13010,7 +13010,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WOLVERINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOLVERINE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WOLVERINE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -13097,7 +13097,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_WOMBAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOMBAT_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WOMBAT_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -13145,7 +13145,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_BELUGA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
@@ -13184,7 +13184,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_COD</Description>
 			<Civilopedia>TXT_KEY_UNIT_COD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13222,7 +13222,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_CRAB</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRAB_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13260,7 +13260,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_DOLPHIN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13298,7 +13298,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_DUGONG</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_MERMAID</BuildingType>
@@ -13334,7 +13334,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_GIANT_SQUID</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13372,7 +13372,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_GREATWHITE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13411,7 +13411,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_HAMMERHEAD</Description>
 			<Civilopedia>TXT_KEY_UNIT_HAMMERHEAD_SHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13450,7 +13450,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_HUMPBACK_WHALE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13490,7 +13490,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_MACKEREL</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACKEREL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13527,7 +13527,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_RAY_MANTA</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_MANTA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13565,7 +13565,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_MARLIN</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARLIN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13603,7 +13603,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_MINKIE_WHALE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13641,7 +13641,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_NARWHAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13681,7 +13681,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_ORCA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13720,7 +13720,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_RAY_EAGLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13759,7 +13759,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_REEF_SHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_REEF_SHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13798,7 +13798,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
@@ -13835,7 +13835,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
@@ -13872,7 +13872,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_SEATURTLE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13910,7 +13910,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_SEALION</BuildingType>
@@ -13946,7 +13946,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_TUNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TUNA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -13984,7 +13984,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TALESOF_WHALESHARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_WHALESHARK_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
@@ -14023,7 +14023,7 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

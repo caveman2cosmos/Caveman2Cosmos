@@ -107,7 +107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
-		<English>Folklore - Birds</English>
+		<English>Folklore (T) - Birds</English>
 		<French>Mythe des Oiseaux</French>
 		<Polish>Mit - Ptaki</Polish>
 		<Russian>Ìèô î ïòèöå</Russian>
@@ -133,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUG</Tag>
-		<English>Folklore - Bug</English>
+		<English>Folklore (T) - Bug</English>
 		<French>Mythe des insectes</French>
 		<Polish>Mit - Ptaki morskie</Polish>
 		<Russian>Ìèô î æóêå</Russian>
@@ -152,13 +152,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
-		<English>Folklore - Donkey</English>
+		<English>Folklore (T) - Donkey</English>
 		<French>Mythe de l'Ane</French>
 		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
-		<English>Folklore - Tales of Fish</English>
+		<English>Folklore (T) - Tales of Fish</English>
 		<French>
 			<Text>Mythe des Bancs de Poissons</Text>
 			<Gender>Male</Gender>
@@ -174,7 +174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
-		<English>Folklore - Flightless Birds</English>
+		<English>Folklore (T) - Flightless Birds</English>
 		<French>Mythe des Oiseaux marcheurs</French>
 		<Polish>Mit - Ptaki-Nieloty</Polish>
 		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
@@ -306,7 +306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NEW_W_MONKEY</Tag>
-		<English>Folklore - New World Monkeys</English>
+		<English>Folklore (T) - New World Monkeys</English>
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
@@ -323,7 +323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_W_MONKEY</Tag>
-		<English>Folklore - Old World Monkeys</English>
+		<English>Folklore (T) - Old World Monkeys</English>
 		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
@@ -334,7 +334,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OWL</Tag>
-		<English>Folklore - Owls</English>
+		<English>Folklore (T) - Owls</English>
 		<French>Mythe des Chouettes</French>
 		<Polish>Folklore - Sowy</Polish>
 		<Russian>Ìèô î ñîâå</Russian>
@@ -353,7 +353,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PENGUIN</Tag>
-		<English>Folklore - Penguin</English>
+		<English>Folklore (T) - Penguin</English>
 		<French>Mythe du Pingouin</French>
 		<Russian>Ìèô î ïèíãâèíå</Russian>
 	</TEXT>
@@ -377,7 +377,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAPTOR</Tag>
-		<English>Folklore - Raptors</English>
+		<English>Folklore (T) - Raptors</English>
 		<French>Mythe des Rapaces</French>
 		<Polish>Mit - Ptaki drapieżne</Polish>
 		<Russian>Ìèô î õèùí. ïòèöå</Russian>
@@ -390,21 +390,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RODENT</Tag>
-		<English>Folklore - Rodent</English>
+		<English>Folklore (T) - Rodent</English>
 		<French>Mythe des Rongeurs</French>
 		<Polish>Mit - Gryzonie</Polish>
 		<Russian>Ìèô î ãðûçóíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_BIRD</Tag>
-		<English>Folklore - Sea Birds</English>
+		<English>Folklore (T) - Sea Birds</English>
 		<French>Mythe des Oiseaux marins</French>
 		<Polish>Mit - Ptaki morskie</Polish>
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNAKES</Tag>
-		<English>Folklore - Snakes</English>
+		<English>Folklore (T) - Snakes</English>
 		<French>Mythe des Serpents</French>
 		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
@@ -435,7 +435,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
-		<English>Folklore - Wolf</English>
+		<English>Folklore (T) - Wolf</English>
 		<French>
 			<Text>Mythe des Loups</Text>
 			<Gender>Male</Gender>
@@ -538,90 +538,10 @@
 		<German>Die giftige [COLOR_UNIT_TEXT]Puffotter[COLOR_REVERT] (Bitis arietans) aus der Familie der Vipern ist in fast ganz Afrika (die innere Sahara und die Regenwaldgebiete ausgenommen) sowie im Südwesten der Arabischen Halbinsel zu Hause.[NEWLINE]Die kräftige Schlange kann verschiedene Färbungen aufweisen mit bräunlichen Querbinden entlang des ganzen Körpers. Markant ist der breite und flache Kopf, der deutlich vom Hals abgesetzt ist. Die Giftzähne sind sehr lang. Je nach Lebensraum wird die Puffotter 80 bis 180 cm lang, wobei die Männchen länger sind als die Weibchen. Sie bevorzugt Savannen und Steppen, fühlt sich aber auch in Wäldern, Oasen und nahe von menschlichen Siedlungen wohl und ist bis in 3000 Meter Höhe anzutreffen, auch Kälte macht ihr nichts aus. Die eigentlich nachtaktiven Tiere sieht man in der Regenzeit auch tagsüber in der Sonne liegen. In Nord- und Südafrika halten sie Winterruhe. Ihre Nahrung besteht u.a. aus kleinen Säugern, Vögeln und Echsen, aber auch Fischen und Heuschrecken. Als Lauerjäger warten sie, bis die Beute in Reichweite kommt. Da die Puffotter ovovivipar ist, bringt sie ca. 30 bis 80 lebende Jungtiere zur Welt, die nur von einer dünnen Embryonalhülle umgeben sind, welche kurz nach der Geburt durchbrochen wird. Unter den Männchen kommt es zu Paarungskämpfen, die jedoch ohne Verletzungen ausgehen.[NEWLINE]Die meisten Giftschlangenbisse in Afrika werden von Puffottern verursacht. Ihr Giftvorrat reicht aus, um vier bis fünf Menschen zu töten. Es wirkt gewebezerstörend und hämotoxisch, verursacht Gewebeblutungen und Nekrosen. Die Puffotter greift nicht von selbst an, wehrt sich jedoch, wenn man ihr zu nahe kommt oder unbeabsichtigt auf sie tritt.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cobra, Myths of Earth and Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe et Histoires des Cobras[NEWLINE][ICON_BULLET]Mythe de la Terre et des serpents[NEWLINE][ICON_BULLET]Cage et enclos pour Reptiles[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
 		<English>Subdued Donkey</English>
 		<French>Ane (App.)</French>
 		<Russian>Îñåë (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Donkey and Equine, Horse Herd, Carnival, Exotic Herbivore Cage and Enclosure. May place resource on map</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Donkey and Equine[NEWLINE][ICON_BULLET]Horse Herd and Carnival[NEWLINE][ICON_BULLET]Exoctic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]May place resource on map</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HORSE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Horse and Equine, Horse Herd, Carnival, Exotic Herbivore Cage and Enclosure. May place resource on map</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire [COLOR_REVERT] Mythe et Histoires des Chevaux et équidés[NEWLINE][ICON_BULLET]Troupeau de chevaux et Carnaval[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores[NEWLINE][ICON_BULLET]Peut ajouter la ressource sur la carte</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsupial, Marsupial Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Nile Monitor, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, et Histoires du Varan du Nil[NEWLINE][ICON_BULLET]Mythes des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Okapi and Folklore - Giraffe, Carnival and Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Okapi et Mythe des Girafes, Carnaval et Cage et Enclos pour Herbivores exotiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Orangutan and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Orangutan et Ancient de la Forêt, Cage et Enclos pour primates</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Pique-bœufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Puff adder, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Vipère heurtante[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à serpents et Charmeur</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Quoll and Marsupials, Marsupial Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Chat marsupial et autres Marsupiaux, Cage et Enclos pour Marsupiaux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ratel and weasel, Nocturnal and Bad Boy Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Ratel et de la Belette, Cage et Enclos pour nocturnes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saiga and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Saiga et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Viper, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires des Vipères[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wallaroo and Marsupial, Kangaroo Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsupial, Kangaroo Herd, Cage et Enclosure</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wildebeest and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>

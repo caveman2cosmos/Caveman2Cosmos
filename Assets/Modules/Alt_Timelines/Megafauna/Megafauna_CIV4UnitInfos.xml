@@ -346,7 +346,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_MAMMOTH_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>

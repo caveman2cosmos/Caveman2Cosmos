@@ -35,7 +35,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANTHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LION_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -106,7 +106,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_LION</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LION_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -172,7 +172,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_CAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_CAMEL_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -248,7 +248,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_LLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LLAMA_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -338,7 +338,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_DONKEY_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
@@ -457,7 +457,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HORSE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -567,7 +567,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BISON</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BISON_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -660,7 +660,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BUFFALO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -752,7 +752,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_CATTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_CATTLE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -827,7 +827,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MUSKOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_MUSKOX_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -897,7 +897,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_AARDVARK_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -966,7 +966,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BOAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BOAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -1040,7 +1040,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARTFROG_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1110,7 +1110,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_ASIANBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASIANBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_ASIANBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -1180,7 +1180,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -1252,7 +1252,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BLACKBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_BLACKBEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1323,7 +1323,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAVE_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1394,7 +1394,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_GRIZZLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIZZLY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_GRIZZLY_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1461,7 +1461,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANDA_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1532,7 +1532,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_POLARBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_POLAR_BEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_POLAR_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1598,7 +1598,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_REDPANDA</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDPANDA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_REDPANDA_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1670,7 +1670,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOTHBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1741,7 +1741,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPECTACLEDBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SPECTACLED_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1814,7 +1814,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SUNBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUNBEAR_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SUBDUED_SUN_BEAR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1886,7 +1886,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_ELEPHANT_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -1959,7 +1959,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2032,7 +2032,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HIPPO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HIPPO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2102,7 +2102,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
@@ -2182,7 +2182,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2252,7 +2252,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2322,7 +2322,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2392,7 +2392,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_RHINO_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2461,7 +2461,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2529,7 +2529,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2597,7 +2597,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2665,7 +2665,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_TAPIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2732,7 +2732,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_LIZARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIZARD_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_LIZARD_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2816,7 +2816,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SNAKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_SNAKE_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -2898,7 +2898,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -2994,7 +2994,7 @@
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
@@ -3097,7 +3097,7 @@
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_TAMED_WOLF_HELP</Help>
+			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>

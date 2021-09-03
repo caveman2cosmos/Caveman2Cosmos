@@ -652,7 +652,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
-		<English>Folklore - Amphibians</English>
+		<English>Folklore (T) - Amphibians</English>
 		<French>
 			<Text>Mythe - Amphibiens</Text>
 			<Gender>Male</Gender>
@@ -668,7 +668,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
-		<English>Folklore - Antelope</English>
+		<English>Folklore (T) - Antelope</English>
 		<French>
 			<Text>Mythe (T) de l'Antilope</Text>
 			<Gender>Male</Gender>
@@ -886,7 +886,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
-		<English>Folklore - Elephant</English>
+		<English>Folklore (T) - Elephant</English>
 		<French>
 			<Text>Mythe de l'Eléphant</Text>
 			<Gender>Male</Gender>
@@ -950,7 +950,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
-		<English>Folklore - Humpback Whale</English>
+		<English>Folklore (T) - Humpback Whale</English>
 		<French>
 			<Text>Mythe de la Baleine à Bosses</Text>
 			<Gender>Male</Gender>
@@ -1070,7 +1070,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
-		<English>Folklore - Minke Whale</English>
+		<English>Folklore (T) - Minke Whale</English>
 		<French>
 			<Text>Mythe du Rorqual</Text>
 			<Gender>Male</Gender>
@@ -1086,7 +1086,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
-		<English>Folklore - Narwhal</English>
+		<English>Folklore (T) - Narwhal</English>
 		<French>
 			<Text>Mythe du Narval</Text>
 			<Gender>Male</Gender>
@@ -1118,7 +1118,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
-		<English>Folklore - Orca</English>
+		<English>Folklore (T) - Orca</English>
 		<French>
 			<Text>Mythe de l'Orque</Text>
 			<Gender>Male</Gender>
@@ -1230,7 +1230,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REPTILE</Tag>
-		<English>Folklore - Reptile</English>
+		<English>Folklore (T) - Reptile</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
@@ -1326,7 +1326,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
-		<English>Folklore - Spotted Cat</English>
+		<English>Folklore (T) - Spotted Cat</English>
 		<French>Mythe du Chat moucheté</French>
 		<Italian>
 			<Text>Mito del felino maculato</Text>
@@ -1402,7 +1402,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
-		<English>Folklore - Weasel</English>
+		<English>Folklore (T) - Weasel</English>
 		<French>
 			<Text>Mythe (T) de la belette</Text>
 			<Gender>Male</Gender>
@@ -1788,42 +1788,6 @@
 		<Tag>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Tag>
 		<English>The eagle rays are a group of cartilaginous fishes in the family Myliobatidae, consisting mostly of large species living in the open ocean rather than on the sea bottom.[PARAGRAPH:2]Eagle rays feed on mollusks and crustaceans, crushing their shells with their flattened teeth. Devil and manta rays filter plankton from the water. They are excellent swimmers and are able to breach the water up to several metres above the surface. Compared with other rays, they have long tails, and well-defined rhomboidal bodies. They are ovoviviparous, giving birth to up to six young at a time. They range from 0.48 to 9.1 m (1.6 to 29.9 ft) in length.</English>
 		<German>Als [COLOR_UNIT_TEXT]Adlerrochen[COLOR_REVERT] bezeichnet man mehrere Arten aus der Gattung Aetobatus und der Familie Myliobatidae. Bis 2016 gehörten alle derselben Familie an. Man findet sie vorwiegend in tropischen und subtropischen Gewässern. Der Gewöhnliche Adlerrochen als häufigste Art ist bereits ab und an in den Sommermonaten als Irrgast in der Nordsee gesichtet worden.[NEWLINE]Adlerrochen sind sehr groß und können bis zu drei Meter breit werden. Der rhombische Rumpf ist kräftig und der Kopf steht deutlich hervor. Die Augen sitzen seitlich. Die Spritzlöcher sind bei Myliobatidae von oben nicht sichtbar. Das breite Maul befindet sich auf der Unterseite, wobei sich bei Aeobatus nur je eine Zahnreihe an Ober- und Unterkiefer befindet, bei Myliobatidae sind es mehrere Reihen. Der Schwanz ist lang und peitschenartig. Ihre Nahrung besteht hauptsächlich aus Mollusken und Krustentieren.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_COD_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Cod
-[SPACE][SPACE] * Sea and Fish Myth
-[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-[SPACE][SPACE] * Marine Institute</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Mackerel
-[SPACE][SPACE] * Sea and Fish Myth
-[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-[SPACE][SPACE] * Marine Institute</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Marlin
-[SPACE][SPACE] * Sea and Fish Myth
-[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-[SPACE][SPACE] * Marine Institute</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
-[SPACE][SPACE] * Sea and Fish Myth
-[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-[SPACE][SPACE] * Marine Institute</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>
