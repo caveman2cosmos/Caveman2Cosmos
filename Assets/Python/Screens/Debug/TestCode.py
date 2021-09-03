@@ -3066,9 +3066,11 @@ class TestCode:
 
 	#Building - List buildings, that doesn't require techs
 	def listNoTechBuildings(self):
-		iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-		if iTechLoc == 0 and CvBuildingInfo.getProductionCost() == -1 and CvBuildingInfo.getType().find("_MYTH_EFFECT", -12) == -1 and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-			self.log(CvBuildingInfo.getType()+" doesn't require any techs")
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
+			if iTechLoc == 0 and CvBuildingInfo.getProductionCost() == -1 and CvBuildingInfo.getType().find("_MYTH_EFFECT", -12) == -1 and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
+				self.log(CvBuildingInfo.getType()+" doesn't require any techs")
 
 	#Building - List buildings, that doesn't have cost
 	def listNoCostBuildings(self):
