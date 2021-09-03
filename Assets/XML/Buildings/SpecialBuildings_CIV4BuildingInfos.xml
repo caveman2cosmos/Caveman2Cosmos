@@ -9657,7 +9657,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HEALTH_SPA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<iHealth>3</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -16582,7 +16582,7 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
@@ -16618,7 +16618,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
