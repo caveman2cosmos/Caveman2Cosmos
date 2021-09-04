@@ -25139,7 +25139,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -54883,7 +54882,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -58773,8 +58771,6 @@
 			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -78173,7 +78169,6 @@
 			<iHealth>-1</iHealth>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<Flavors>
 				<Flavor>
@@ -79147,7 +79142,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>

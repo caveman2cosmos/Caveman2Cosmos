@@ -459,7 +459,8 @@ void CyInfoPythonInterface1()
 		.def("isAnyBonusCommercePercentChanges", &CvBuildingInfo::isAnyBonusCommercePercentChanges, "bool ()")
 		.def("isAnyBonusCommerceModifiers", &CvBuildingInfo::isAnyBonusCommerceModifiers, "bool ()")
 		.def("isRequiresActiveCivics", &CvBuildingInfo::isRequiresActiveCivics, "bool ()")
-
+		.def("isPower", &CvBuildingInfo::isPower, "int ()")
+		.def("isProvidesFreshWater", &CvBuildingInfo::isProvidesFreshWater, "bool ()")
 
 		.def("getHotKey", &CvBuildingInfo::getHotKey, "string ()")
 		.def("getArtDefineTag", &CvBuildingInfo::getArtDefineTag, "string ()")
