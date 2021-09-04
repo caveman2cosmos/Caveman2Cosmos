@@ -58,6 +58,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
 		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
 		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
+		self.main.addTestCode(screen, self.HF.checkPropertyAmmountPerTurn, "Building - check Properties", "Checks properties")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):

@@ -418,6 +418,29 @@ class HelperFunctions:
 				GOMReqList[eParentExpr].append(CyBoolExpr.getID())
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
+	
+	##### PROPERTY READER FUNCTIONS #####
+	
+	def checkPropertyAmmountPerTurn(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iAmmount = self.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
+			if iAmmount > 0:
+				self.log(CvBuildingInfo.getType() + ": " + str(iAmmount))
+
+	def getPropertyAmmountPerTurn(self, pPropertyManipulators):
+		i = 0
+		if pPropertyManipulators is not None:
+			#for pSource in pPropertyManipulators.getSources():
+			for iSource in xrange(pPropertyManipulators.getNumSources()):
+				pSource = pPropertyManipulators.getSource(iSource)
+				if isinstance(pSource, CvPropertySourceConstant):
+					pIntExpr = pSource.getAmountPerTurnExpr()
+					if isinstance(pIntExpr, IntExprConstant):
+						i += pIntExpr.iValue
+		return i
+
+	#^^^^ PROPERTY READER FUNCTIONS ^^^^#
 
 	##### OBSOLETION TECH LOCATION FINDER FUNCTIONS #####
 
