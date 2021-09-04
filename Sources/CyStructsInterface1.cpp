@@ -192,4 +192,9 @@ void CyStructsPythonInterface1()
 		.def_readonly("id", &BuildingModifier::eBuilding)
 		.def_readonly("value", &BuildingModifier::iModifier)
 	;
+
+	python::class_<HealUnitCombat>("HealUnitCombat", python::no_init)
+		.def_readonly("eUnitCombat", &HealUnitCombat::eUnitCombat)
+		.def_readonly("iHeal", &HealUnitCombat::iHeal)
+	;
 }

@@ -1729,7 +1729,6 @@
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iCost>1310</iCost>
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
-			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1922,7 +1921,6 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
 					<iAmountPerTurn>
 						<Mult>
@@ -1975,7 +1973,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<FreeAreaBuilding>BUILDING_GOOD_FUSION</FreeAreaBuilding>
 			<Flavors>
 				<Flavor>

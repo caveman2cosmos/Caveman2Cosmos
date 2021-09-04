@@ -42,7 +42,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>7</iPrereqPopulation>

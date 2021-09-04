@@ -37,12 +37,32 @@ enum IntExprTypes
 class IntExpr
 {
 public:
-	virtual ~IntExpr() = 0;
-	virtual int evaluate(const CvGameObject* pObject) const = 0;
+	virtual ~IntExpr();
+
+	virtual int evaluate(const CvGameObject* pObject) const
+	{
+		FErrorMsg("Overide required");
+		return 0;
+	}
+
 	static const IntExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(uint32_t& iSum) const = 0;
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
-	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
+
+	virtual void getCheckSum(uint32_t& iSum) const
+	{
+		FErrorMsg("Overide required");
+	}
+
+	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const
+	{
+		FErrorMsg("Overide required");
+	}
+
+	virtual int getBindingStrength() const // How strong the operator binds in language so brackets can be placed appropriately
+	{
+		FErrorMsg("Overide required");
+		return 0;
+	}
+
 	virtual bool isConstantZero() const;
 };
 
@@ -56,7 +76,8 @@ public:
 	virtual int getBindingStrength() const;
 	virtual bool isConstantZero() const;
 protected:
-	int m_iValue;
+	friend void CyIntExprPythonInterface();
+	const int m_iValue;
 };
 
 class IntExprAttribute : public IntExpr
