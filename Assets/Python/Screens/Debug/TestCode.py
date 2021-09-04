@@ -1153,26 +1153,37 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getDomainInfo(iDomain).getType()+" Domain Free Experience "+str(aDomainFreeExperiences[FINAL][iDomain])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<UnitCombatFreeExperiences> - base
+				#<UnitCombatFreeExperiences>, <HealUnitCombatTypes> - base
 				aUnitCombatFreeExperiences = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				aHealUnitCombatTypes = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				for pair in CvBuildingInfo.getUnitCombatFreeExperience():
 					aUnitCombatFreeExperiences[BASE][pair.id] += pair.value
+				for i in xrange(CvBuildingInfo.getNumHealUnitCombatTypes()):
+					iUnitCombat = CvBuildingInfo.getHealUnitCombatType(i).eUnitCombat
+					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).iHeal
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<UnitCombatFreeExperiences>
+					#<UnitCombatFreeExperiences>, <HealUnitCombatTypes>
 					for pair in CvReplacedBuildingInfo.getUnitCombatFreeExperience():
 						aUnitCombatFreeExperiences[REPLACED][pair.id] += pair.value
+					for j in xrange(CvReplacedBuildingInfo.getNumHealUnitCombatTypes()):
+						iUnitCombat = CvReplacedBuildingInfo.getHealUnitCombatType(j).eUnitCombat
+						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).iHeal
 
-				#Keep already existing <UnitCombatFreeExperiences> in base
+				#Keep already existing <UnitCombatFreeExperiences>, <HealUnitCombatTypes> in base
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					aUnitCombatFreeExperiences[FINAL][iUnitCombat] = aUnitCombatFreeExperiences[BASE][iUnitCombat] + aUnitCombatFreeExperiences[REPLACED][iUnitCombat]
+					aHealUnitCombatTypes[FINAL][iUnitCombat] = aHealUnitCombatTypes[BASE][iUnitCombat] + aHealUnitCombatTypes[REPLACED][iUnitCombat]
 
 				#Building shouldn't be worse than replaced one!
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					if aUnitCombatFreeExperiences[BASE][iUnitCombat] < aUnitCombatFreeExperiences[REPLACED][iUnitCombat]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat free Experience "+str(aUnitCombatFreeExperiences[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+					if aHealUnitCombatTypes[BASE][iUnitCombat] < aHealUnitCombatTypes[REPLACED][iUnitCombat]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Heal Unit Combat "+str(aHealUnitCombatTypes[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+
 
 				#=================================================================================================
 				#<PropertyManipulators> - base

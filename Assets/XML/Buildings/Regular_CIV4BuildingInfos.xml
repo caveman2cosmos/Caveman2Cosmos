@@ -9411,6 +9411,12 @@
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>4</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iPower>10</iPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
@@ -20260,6 +20266,12 @@
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>3</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -33255,6 +33267,10 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
 				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>3</iHeal>
+				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<SpecialistCounts>
@@ -37599,6 +37615,12 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iFoodKept>25</iFoodKept>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_TECH</UnitCombatType>
+					<iHeal>10</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -55373,6 +55395,12 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>8</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -68617,6 +68645,12 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -69746,6 +69780,12 @@
 					<iPropertyValue>15</iPropertyValue>
 				</Property>
 			</Properties>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -74403,6 +74443,20 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_NAVAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -95826,6 +95880,12 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -105710,6 +105770,10 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>6</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>4</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
