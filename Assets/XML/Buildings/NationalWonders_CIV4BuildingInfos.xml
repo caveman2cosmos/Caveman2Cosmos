@@ -1729,7 +1729,6 @@
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iCost>1310</iCost>
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
-			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>

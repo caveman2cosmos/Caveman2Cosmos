@@ -65,7 +65,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -801,18 +801,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>15</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1566,7 +1554,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3013,6 +3001,13 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3569,13 +3564,6 @@
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3938,6 +3926,18 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_RACETRACK</Type>
@@ -5357,6 +5357,13 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTI_GRAVITY_FIELD_GENERATOR_FACTORY</Type>
@@ -6075,8 +6082,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -7900,13 +7907,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9413,13 +9413,6 @@
 			</UnitProductionModifiers>
 			<iPower>10</iPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10834,13 +10827,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11114,13 +11100,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11756,13 +11735,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14437,13 +14409,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14581,13 +14546,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -16858,13 +16818,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19197,13 +19150,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20204,13 +20150,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21293,13 +21232,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21454,13 +21386,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21933,13 +21858,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHARIOT_WORKSHOP</Type>
@@ -22097,13 +22015,6 @@
 					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22393,6 +22304,16 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -22632,7 +22553,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -24429,6 +24350,11 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -24951,13 +24877,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25676,13 +25595,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26760,11 +26672,6 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
@@ -27107,13 +27014,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27450,13 +27350,6 @@
 				</Flavor>
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -31064,6 +30957,11 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -31555,6 +31453,11 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -33125,7 +33028,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -36490,7 +36393,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -37800,6 +37708,18 @@
 			<Bonus>BONUS_ELECTROACTIVE_POLYMERS</Bonus>
 			<FreeBonus>BONUS_PAPER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -40394,7 +40314,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -40547,7 +40467,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -40602,7 +40522,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-55</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -41427,12 +41347,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -42161,11 +42081,6 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
@@ -42459,13 +42374,6 @@
 					<iPropertyValue>1</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -43803,14 +43711,14 @@
 					<iSpecialistCount>5</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<iAIWeight>1</iAIWeight>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>15</iAmountPerTurn>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -44768,7 +44676,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -44985,6 +44893,13 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>50</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -45254,7 +45169,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-25</iAmountPerTurn>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -45385,13 +45300,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -45620,7 +45528,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -46189,7 +46097,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -47741,13 +47649,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -48180,13 +48083,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -48585,13 +48481,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -49781,7 +49670,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -50246,7 +50135,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -51356,6 +51245,13 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAT_FACTORY</Type>
@@ -51417,13 +51313,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -52785,13 +52674,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -55495,6 +55377,13 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -56035,13 +55924,6 @@
 					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -60974,13 +60856,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -62028,8 +61903,13 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -63841,7 +63721,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -64441,6 +64321,13 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -65155,6 +65042,11 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -66426,13 +66318,6 @@
 				</BonusHealthChange>
 			</BonusHealthChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71103,6 +70988,13 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71603,6 +71495,13 @@
 			</SpecialistCounts>
 			<FreePromotion>PROMOTION_MOBILITY</FreePromotion>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71687,13 +71586,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71731,6 +71623,13 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71848,13 +71747,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -73308,7 +73200,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -73616,13 +73508,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -74305,7 +74190,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -74522,6 +74407,13 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>15</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -77012,13 +76904,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -77957,8 +77842,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -78969,6 +78854,18 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -78997,7 +78894,19 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>70</iConquestProb>'
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -81884,8 +81793,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -82488,7 +82397,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -82544,13 +82453,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -82685,13 +82587,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83341,7 +83236,7 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
@@ -86449,7 +86344,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-30</iAmountPerTurn>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -86717,13 +86612,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PORCELAIN_WORKSHOP</Type>
@@ -87293,13 +87181,6 @@
 					<iPropertyValue>2</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -88261,7 +88142,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -92217,13 +92098,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -93073,13 +92947,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROPE_WEAVER</Type>
@@ -93748,13 +93615,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -94450,13 +94310,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -95502,13 +95355,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -97679,7 +97525,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-15</iAmountPerTurn>
+					<iAmountPerTurn>-35</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -98204,13 +98050,6 @@
 					<iPropertyValue>2</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -98313,7 +98152,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -99266,13 +99105,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -100726,11 +100558,6 @@
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -102171,13 +101998,6 @@
 					<iFlavor>6</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -103437,12 +103257,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -103525,13 +103345,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -106353,13 +106166,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -106995,7 +106801,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -107786,13 +107592,6 @@
 			<FreePromotion>PROMOTION_TATTOO</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -108319,13 +108118,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -108694,7 +108486,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -109078,7 +108870,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -109132,13 +108924,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -110828,8 +110613,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -113721,7 +113506,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -115396,13 +115181,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -115435,13 +115215,6 @@
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>

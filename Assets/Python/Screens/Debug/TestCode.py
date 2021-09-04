@@ -58,7 +58,6 @@ class TestCode:
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
 		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
 		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
-		self.main.addTestCode(screen, self.checkPropertyAmmountPerTurn, "Building - check Properties", "Checks properties")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -1174,6 +1173,34 @@ class TestCode:
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					if aUnitCombatFreeExperiences[BASE][iUnitCombat] < aUnitCombatFreeExperiences[REPLACED][iUnitCombat]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat free Experience "+str(aUnitCombatFreeExperiences[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#=================================================================================================
+				#<PropertyManipulators> - base
+				aGoodProperties = [GC.getInfoTypeForString("PROPERTY_EDUCATION"), GC.getInfoTypeForString("PROPERTY_TOURISM")]
+				aPropertyManipulators = [[0 for x in xrange(GC.getNumPropertyInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+
+				aProperties = self.HF.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
+				for iProperty in xrange(GC.getNumPropertyInfos()):
+					aPropertyManipulators[BASE][iProperty] += aProperties[iProperty]
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<PropertyManipulators>
+					aProperties = self.HF.getPropertyAmmountPerTurn(CvReplacedBuildingInfo.getPropertyManipulators())
+					for iProperty in xrange(GC.getNumPropertyInfos()):
+						aPropertyManipulators[REPLACED][iProperty] += aProperties[iProperty]
+
+				#Keep already existing <PropertyManipulators> in base
+				for iProperty in xrange(GC.getNumPropertyInfos()):
+					aPropertyManipulators[FINAL][iProperty] = aPropertyManipulators[BASE][iProperty] + aPropertyManipulators[REPLACED][iProperty]
+
+				#Building shouldn't be worse than replaced one!
+				for iProperty in xrange(GC.getNumPropertyInfos()):
+					if iProperty in aGoodProperties and aPropertyManipulators[BASE][iProperty] < aPropertyManipulators[REPLACED][iProperty]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getPropertyInfo(iProperty).getType()+" PropertyManipulators "+str(aPropertyManipulators[FINAL][iProperty])+" replaced: "+str(aImmediateReplacedNameList))
+					if iProperty not in aGoodProperties and aPropertyManipulators[BASE][iProperty] > aPropertyManipulators[REPLACED][iProperty]: #Bad properties - lower on replacements
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getPropertyInfo(iProperty).getType()+" PropertyManipulators "+str(aPropertyManipulators[FINAL][iProperty])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 2D ENTRIES - coupling between two infotypes, like yield changing in presence of bonus =====#
 				#<BonusYieldChanges>, <VicinityBonusYieldChanges>, <BonusYieldModifiers>, <BonusCommercePercentChanges>, <BonusCommerceModifiers> - base
@@ -3103,9 +3130,3 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			if CvBuildingInfo.getProductionCost() == -1 and iBuilding not in aGivenByUnitList and iBuilding not in aFreeBuildingList and iBuilding not in aAutoBuildList:
 				self.log(CvBuildingInfo.getType()+" might be unobtainable")
-				
-	def checkPropertyAmmountPerTurn(self):
-		for i in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(i)
-			aAmmount = self.HF.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
-			self.log(CvBuildingInfo.getType() + ": " + str(aAmmount))
