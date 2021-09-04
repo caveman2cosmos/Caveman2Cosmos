@@ -429,6 +429,8 @@ void CyInfoPythonInterface1()
 		.def("getHurryCostModifier", &CvBuildingInfo::getHurryCostModifier, "int ()")
 		.def("getHurryAngerModifier", &CvBuildingInfo::getHurryAngerModifier, "int ()")
 		.def("getObsoletesToBuilding", &CvBuildingInfo::getObsoletesToBuilding, "int ()")
+		.def("getAdjacentDamagePercent", &CvBuildingInfo::getAdjacentDamagePercent, "int ()")
+		.def("getLineOfSight", &CvBuildingInfo::getLineOfSight, "int ()")
 
 		.def("isAutoBuild", &CvBuildingInfo::isAutoBuild, "bool ()")
 		.def("isWater", &CvBuildingInfo::isWater, "bool ()")

@@ -4934,7 +4934,7 @@
 			<iBombardDefense>40</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>60</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>95</iLocalDynamicDefense>
 			<iAirModifier>-40</iAirModifier>
 			<iAsset>8</iAsset>
@@ -7215,7 +7215,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>35</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>50</iLocalDynamicDefense>
 			<iAsset>8</iAsset>
 			<iPower>8</iPower>
@@ -8899,7 +8899,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>60</iLocalDynamicDefense>
 			<iAirModifier>-10</iAirModifier>
 			<iAsset>8</iAsset>
@@ -61345,7 +61345,7 @@
 			<iBombardDefense>30</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>50</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>90</iLocalDynamicDefense>
 			<iAirModifier>-30</iAirModifier>
 			<iAsset>8</iAsset>
@@ -71115,7 +71115,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>70</iLocalDynamicDefense>
 			<iAirModifier>-20</iAirModifier>
 			<iAsset>8</iAsset>
@@ -89495,7 +89495,7 @@
 			<iBombardDefense>25</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>45</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>80</iLocalDynamicDefense>
 			<iAirModifier>-25</iAirModifier>
 			<iAsset>8</iAsset>

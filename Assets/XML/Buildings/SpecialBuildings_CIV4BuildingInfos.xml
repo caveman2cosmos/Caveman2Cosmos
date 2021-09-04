@@ -16752,8 +16752,6 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iAdjacentDamagePercent>5</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
