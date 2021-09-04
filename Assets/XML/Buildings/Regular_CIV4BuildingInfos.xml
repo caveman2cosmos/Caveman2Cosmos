@@ -13214,11 +13214,19 @@
 			<iEspionageDefense>3</iEspionageDefense>
 			<iLocalRepel>50</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>35</iDamageAttackerChance>
 			<iDamageToAttacker>35</iDamageToAttacker>
@@ -14466,19 +14474,19 @@
 			<iEspionageDefense>2</iEspionageDefense>
 			<iLocalRepel>40</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>30</iDamageToAttacker>
@@ -38368,19 +38376,7 @@
 			<iDefense>40</iDefense>
 			<iEspionageDefense>5</iEspionageDefense>
 			<iLocalRepel>55</iLocalRepel>
-			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_BALLOON</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ANTIGRAV_CRAFT</UnitCombatType>
-			</MayDamageAttackingUnitCombatTypes>
+			<bDamageAllAttackers>1</bDamageAllAttackers>
 			<iDamageAttackerChance>40</iDamageAttackerChance>
 			<iDamageToAttacker>40</iDamageToAttacker>
 			<iPower>7</iPower>
@@ -61187,18 +61183,18 @@
 			<iDefense>20</iDefense>
 			<iLocalRepel>30</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>25</iDamageToAttacker>
@@ -66411,13 +66407,13 @@
 			<iDefense>15</iDefense>
 			<iLocalRepel>20</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>25</iDamageAttackerChance>
 			<iDamageToAttacker>15</iDamageToAttacker>
@@ -85017,13 +85013,13 @@
 			<iDefense>5</iDefense>
 			<iLocalRepel>10</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>20</iDamageAttackerChance>
 			<iDamageToAttacker>5</iDamageToAttacker>
@@ -102191,13 +102187,13 @@
 			<iDefense>10</iDefense>
 			<iLocalRepel>15</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>20</iDamageAttackerChance>
 			<iDamageToAttacker>10</iDamageToAttacker>
