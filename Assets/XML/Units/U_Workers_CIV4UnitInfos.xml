@@ -42,7 +42,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -183,7 +183,7 @@
 				<BuildType>BUILD_GEOGLYPH</BuildType>
 				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
-			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
+			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iCost>90</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -358,7 +358,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<iCost>120</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
@@ -522,7 +522,7 @@
 				<BuildingType>BUILDING_BUFFALO_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -695,7 +695,7 @@
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
@@ -869,7 +869,7 @@
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1032,7 +1032,7 @@
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1205,7 +1205,7 @@
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1375,7 +1375,7 @@
 				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
-			<ForceObsoleteTech>TECH_MAINSTREAM_CLONING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>600</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1468,7 +1468,7 @@
 				<BuildType>BUILD_SANITIZE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ForceObsoleteTech>TECH_MAINSTREAM_CLONING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
@@ -1633,7 +1633,7 @@
 				<BuildType>BUILD_VERTICAL_FARM</BuildType>
 			</Builds>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
-			<ForceObsoleteTech>TECH_PERSONAL_ROBOTS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 			<iCost>650</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1763,7 +1763,7 @@
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
-			<ForceObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ObsoleteTech>
 			<iCost>2800</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
@@ -2838,6 +2838,7 @@
 				<BuildType>BUILD_RADIO_TOWER</BuildType>
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
