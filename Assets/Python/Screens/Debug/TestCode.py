@@ -58,6 +58,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
 		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
 		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
+		self.main.addTestCode(screen, self.checkPropertyAmmountPerTurn, "Building - check Properties", "Checks properties")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3102,3 +3103,9 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			if CvBuildingInfo.getProductionCost() == -1 and iBuilding not in aGivenByUnitList and iBuilding not in aFreeBuildingList and iBuilding not in aAutoBuildList:
 				self.log(CvBuildingInfo.getType()+" might be unobtainable")
+				
+	def checkPropertyAmmountPerTurn(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			aAmmount = self.HF.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
+			self.log(CvBuildingInfo.getType() + ": " + str(aAmmount))
