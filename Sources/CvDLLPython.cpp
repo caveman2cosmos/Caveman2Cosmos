@@ -40,6 +40,7 @@ void CyGameCoreUtilsPythonInterface();
 void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
+void CyIntExprPythonInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -109,6 +110,7 @@ DllExport void DLLPublishToPython()
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
+	CyIntExprPythonInterface();
 
 	SCyDebug::installInPython();
 

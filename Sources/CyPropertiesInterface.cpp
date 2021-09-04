@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "BoolExpr.h"
+#include "IntExpr.h"
 
 //
 // Python interface for CvProperties class
@@ -38,7 +40,7 @@ void CyPropertiesPythonInterface()
 
 	python::class_<CvPropertySourceConstant, python::bases<CvPropertySource> >("CvPropertySourceConstant", python::no_init)
 		.def("getType", &CvPropertySourceConstant::getType)
-		//.def("getAmountPerTurnExpr", &CvPropertySourceConstant::getAmountPerTurnExpr, python::return_value_policy<python::reference_existing_object>())
+		.def("getAmountPerTurnExpr", &CvPropertySourceConstant::getAmountPerTurnExpr, python::return_value_policy<python::reference_existing_object>())
 	;
 
 	python::class_<CvPropertySourceConstantLimited, python::bases<CvPropertySource> >("CvPropertySourceConstantLimited", python::no_init)
