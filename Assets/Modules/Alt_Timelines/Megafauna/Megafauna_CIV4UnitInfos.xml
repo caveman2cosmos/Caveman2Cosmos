@@ -98,7 +98,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_ARMORED_CAVALRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BEARKNIGHT</Type>
@@ -472,7 +472,7 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>190</iCost>
 			<iMoves>1</iMoves>
@@ -1044,6 +1044,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -1128,7 +1129,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SPEAR_MAKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SPEAR_MAKING</ObsoleteTech>
 			<iCost>100</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1214,7 +1215,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>110</iCost>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1300,7 +1301,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>140</iCost>
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1391,7 +1392,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_PIKE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<iCost>275</iCost>
 			<iBaseUpkeep>18</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1478,7 +1479,7 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<iCost>480</iCost>
 			<iBaseUpkeep>25</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1606,7 +1607,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_ARMORED_CAVALRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_RHINO</Type>
@@ -1679,7 +1680,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_ARCHER</Type>

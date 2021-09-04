@@ -78,7 +78,7 @@ public:
 	void reportCityRename(CvCity *pCity);
 	void reportCityHurry(CvCity *pCity, HurryTypes eHurry);
 
-	void reportSelectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
+	void reportSelectionGroupPushMission(const CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
 
 	void reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);
 	void reportUnitCreated(CvUnit *pUnit);

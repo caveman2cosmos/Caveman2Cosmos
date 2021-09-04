@@ -163,6 +163,8 @@ void CyInfoPythonInterface3()
 		.def("getLevelExperienceModifier", &CvTraitInfo::getLevelExperienceModifier, "int ()")
 		.def("getGreatPeopleRateModifier", &CvTraitInfo::getGreatPeopleRateModifier, "int ()")
 		.def("getGreatGeneralRateModifier", &CvTraitInfo::getGreatGeneralRateModifier, "int ()")
+		.def("getNumBuildingProductionModifiers", &CvTraitInfo::getNumBuildingProductionModifiers, "int ()")
+		.def("getNumBuildingHappinessModifiers", &CvTraitInfo::getNumBuildingHappinessModifiers, "int ()")
 
 		.def("getRevIdxLocal", &CvTraitInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvTraitInfo::getRevIdxNational, "int ()")
@@ -176,6 +178,10 @@ void CyInfoPythonInterface3()
 		.def("getShortDescription", &CvTraitInfo::getShortDescription, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
+		.def("getBuildingProductionModifier", &CvTraitInfo::getBuildingProductionModifier)
+		.def("getBuildingHappinessModifier", &CvTraitInfo::getBuildingHappinessModifier)
+
+		.def("getImprovementYieldChange", &CvTraitInfo::getImprovementYieldChange, "int (int i, int j)")
 
 		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
 	;
@@ -346,7 +352,7 @@ void CyInfoPythonInterface3()
 	;
 
 
-	python::class_<CvGameText, python::bases<CvInfoBase> >("CvGameText", python::no_init)
+	python::class_<CvGameText, python::bases<CvInfoBase> >("CvGameText")
 
 		.def("getText", &CvGameText::pyGetText, "wstring ()")
 		.def("setText", &CvGameText::setText, "void (wstring)")

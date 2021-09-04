@@ -5,8 +5,8 @@ from CvPythonExtensions import *
 class PediaUnit:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
 
 		self.main = parent
 
@@ -158,6 +158,8 @@ class PediaUnit:
 		#Combat types
 		aList0 = []
 		aList1 = []
+		aList2 = []
+		aList3 = []
 		for k in xrange(GC.getNumUnitCombatInfos()):
 			if CvTheUnitInfo.isSubCombatType(k):
 				CvUnitCombatInfo = GC.getUnitCombatInfo(k)
@@ -185,7 +187,7 @@ class PediaUnit:
 		OR = ["TXT", "<font=4b>||", 1<<2, 6, 10]
 		braL = ["TXT", "<font=4b> {", 1<<0, 0, 14]
 		braR = ["TXT", "<font=4b>} ", 1<<0, 0, 14]
-		# Tech Req
+		# Tech Req, TODO: Add GOM AND/OR requirements, when units will have GOM tech requirements.
 		aReqList = []
 		n = 0
 		szChild = PF + "TECH"
@@ -197,38 +199,38 @@ class PediaUnit:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
 
-		# GOM tech requirements
-		aGOMTechReqList = []
-		for i in range(2):
-			aGOMTechReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
-		# GOM AND requirements are treated as regular AND requirements
-		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
-			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-			n += 1
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
-			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-			n += 1
-		# TODO: Change it, so those are treated as separate requirement groups
-
 		# Bonus Req
-		# TODO: Rework it, so it supports GOM AND/OR requirements
 		szChild = PF + "BONUS"
 		nOr = 0
+		nGOMOr = 0
+
+		# GOM bonus requirements
+		aGOMBUnitReqList = []
+		for i in range(2):
+			aGOMBUnitReqList.append([])
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBUnitReqList)
+
 		for iType in CvTheUnitInfo.getPrereqOrBonuses():
 			aList0.append(iType)
 			n += 1
 			nOr += 1
+		for iType in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList2.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][iType])
+			n += 1
+			nGOMOr += 1
 		iType = CvTheUnitInfo.getPrereqAndBonus()
-		if iType != -1 or aList0:
+		if iType != -1 or aList0 or aList2:
 			if aReqList:
 				aReqList.append(AND)
 			if iType != -1:
 				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
 				n += 1
+			if aReqList and len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND]) > 0:
+				aReqList.append(AND)
+			for iType in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
+				aReqList.append([szChild + str(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][iType]) + "|" + str(n), GC.getBonusInfo(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][iType]).getButton()])
+				n += 1
+
 			if aList0:
 				if nOr > 1:
 					aReqList.append(braL)
@@ -243,6 +245,21 @@ class PediaUnit:
 					aReqList.append(braR)
 				aList0 = []
 				nOr = 0
+			if aList2:
+				if nGOMOr > 1:
+					aReqList.append(braL)
+				iType = aList2.pop(0)
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
+				n += 1
+				for iType in aList2:
+					aReqList.append(OR)
+					aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
+					n += 1
+				if nGOMOr > 1:
+					aReqList.append(braR)
+				aList2 = []
+				nGOMOr = 0
+
 		# Civic Req
 		szChild = PF + "CIVIC"
 		for iType in xrange(GC.getNumCivicInfos()):
@@ -284,22 +301,30 @@ class PediaUnit:
 		aGOMBUnitReqList = []
 		for i in range(2):
 			aGOMBUnitReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
-		# GOM AND requirements are treated as regular AND requirements
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
+		# GOM AND requirements
 		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
-			aList0.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
-			aList1.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
-			nOr += 1
-		# TODO: Change it, so those are treated as separate requirement groups
+			aList2.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
 
-		if aList0 or aList1:
+		# GOM OR requirements
+		nGOMOr = 0
+		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList3.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+			nGOMOr += 1
+
+		if aList0 or aList1 or aList2 or aList3:
 			if aReqList:
 				aReqList.append(AND)
 			for iType in aList0:
 				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
 				n += 1
+
+			if aReqList and len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND]) > 0:
+				aReqList.append(AND)
+			for iType in aList2:
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				n += 1
+
 			if aList1:
 				if nOr > 1:
 					aReqList.append(braL)
@@ -315,6 +340,21 @@ class PediaUnit:
 				aList1 = []
 				nOr = 0
 
+			if aList3:
+				if nGOMOr > 1:
+					aReqList.append(braL)
+				iType = aList3.pop(0)
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				n += 1
+				for iType in aList3:
+					aReqList.append(OR)
+					aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+					n += 1
+				if nGOMOr > 1:
+					aReqList.append(braR)
+				aList3 = []
+				nGOMOr = 0
+
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
@@ -322,7 +362,7 @@ class PediaUnit:
 			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
 			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
-		iType = CvTheUnitInfo.getForceObsoleteTech()
+		iType = CvTheUnitInfo.getObsoleteTech()
 		if aReqList or aUpgList or iType != -1:
 			W_BOT_ROW = W_PEDIA_PAGE
 			x = (H_BOT_ROW - S_BOT_ROW) / 2

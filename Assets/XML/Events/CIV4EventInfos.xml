@@ -4075,23 +4075,6 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_TOXCATL_1</Type>
-			<Description>TXT_KEY_EVENT_TOXCATL_1</Description>
-			<bPickCity>1</bPickCity>
-			<iHurryAnger>2</iHurryAnger>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_TOXCATL_2</Type>
-			<Description>TXT_KEY_EVENT_TOXCATL_2</Description>
-			<bPickCity>1</bPickCity>
-			<iGold>-65</iGold>
-			<iUnitImmobileTurns>3</iUnitImmobileTurns>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
 			<Type>EVENT_DISSIDENT_PRIEST_1</Type>
 			<Description>TXT_KEY_EVENT_DISSIDENT_PRIEST_1</Description>
 			<bPickCity>1</bPickCity>

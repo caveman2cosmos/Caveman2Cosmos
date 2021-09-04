@@ -469,6 +469,7 @@
 				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ECOSYSTEM</Type>
