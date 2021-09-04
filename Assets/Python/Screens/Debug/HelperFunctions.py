@@ -420,16 +420,9 @@ class HelperFunctions:
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
 	
 	##### PROPERTY READER FUNCTIONS #####
-	
-	def checkPropertyAmmountPerTurn(self):
-		for i in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(i)
-			iAmmount = self.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
-			if iAmmount > 0:
-				self.log(CvBuildingInfo.getType() + ": " + str(iAmmount))
 
 	def getPropertyAmmountPerTurn(self, pPropertyManipulators):
-		i = 0
+		a = [0]*GC.getNumPropertyInfos()
 		if pPropertyManipulators is not None:
 			#for pSource in pPropertyManipulators.getSources():
 			for iSource in xrange(pPropertyManipulators.getNumSources()):
@@ -437,8 +430,8 @@ class HelperFunctions:
 				if isinstance(pSource, CvPropertySourceConstant):
 					pIntExpr = pSource.getAmountPerTurnExpr()
 					if isinstance(pIntExpr, IntExprConstant):
-						i += pIntExpr.iValue
-		return i
+						a[pSource.getProperty()] += pIntExpr.iValue
+		return a
 
 	#^^^^ PROPERTY READER FUNCTIONS ^^^^#
 
