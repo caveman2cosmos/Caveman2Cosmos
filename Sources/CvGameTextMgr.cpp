@@ -22585,59 +22585,36 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		iLast = 0;
-
 		if (kBuilding.isAnyBonusCommercePercentChanges())
 		{
-			bool* pabProcessed = new bool[GC.getNumBonusInfos()];
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				pabProcessed[iI] = false;
-			}
-			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-			{
-				CvWString szTempBuffer;
-				CvWString szTempBuffer2;
+				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 				{
-					if (kBuilding.getBonusCommercePercentChanges(iI, iJ) != 0 && !pabProcessed[iI])
+					const int iValue = kBuilding.getBonusCommercePercentChanges(iI, iJ);
+					if (iValue != 0)
 					{
-						float fValue = (float)kBuilding.getBonusCommercePercentChanges(iI, iJ);
-						if (fmod(fValue,100) == 0)
+						if (bFirst)
 						{
-							if (fValue > 0)
-							{
-								szTempBuffer2.Format(L"+%.0f", fValue/100);
-							}
-							else szTempBuffer2.Format(L"%.0f", fValue/100);
-							}
-						else if (fValue > 0)
-						{
-							szTempBuffer2.Format(L"+%.2f", fValue/100);
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(),
+									GC.getBonusInfo((BonusTypes)iI).getDescription()
+								)
+							);
+							bFirst = false;
 						}
-						else
-						{
-							szTempBuffer2.Format(L"%.2f", fValue/100);
-						}
+						else szBuffer.append(L", ");
 
-						szTempBuffer.Format(L"\n%c%s%c%s", gDLL->getSymbolID(BULLET_CHAR), szTempBuffer2.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(), gDLL->getText("TXT_KEY_WITH").GetCString());
-						szTempBuffer += CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription());
-
-						for (int iK = 0; iK < GC.getNumBonusInfos(); ++iK)
-						{
-							if (iK != iI && kBuilding.getBonusCommercePercentChanges(iI, iJ) == kBuilding.getBonusCommercePercentChanges(iK, iJ))
-							{
-								szTempBuffer += CvWString::format(L", <link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)iK).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iK).getDescription());
-								pabProcessed[iK] = true;
-							}
-						}
-						pabProcessed[iI] = true;
-						iLast = kBuilding.getBonusCommercePercentChanges(iI, iJ);
-						szBuffer.append(szTempBuffer);
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 					}
 				}
 			}
-			SAFE_DELETE_ARRAY(pabProcessed);
 		}
 
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -27683,7 +27660,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 
 			if (nOtherAndTechs > 0)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+				szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 				szBuffer.append(szOtherAndTechs);
 			}
 
@@ -27697,7 +27674,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 					}
 					else
 					{
-						szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+						szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 					}
 					szBuffer.append(szOtherOrTechs);
 				}

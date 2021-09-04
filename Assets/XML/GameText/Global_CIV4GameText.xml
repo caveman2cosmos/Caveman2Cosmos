@@ -8169,7 +8169,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-		<Russian>,</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
@@ -34569,14 +34568,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]con[SPACE]</Spanish>
 		<Polish>[SPACE]z[SPACE]</Polish>
 		<Russian>[SPACE]ñ[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WITH_SPACE</Tag>
-		<English>[SPACE]with[SPACE]</English>
-		<French>[SPACE]avec[SPACE]</French>
-		<German>[SPACE]mit[SPACE]</German>
-		<Italian>[SPACE]con[SPACE]</Italian>
-		<Spanish>[SPACE]con[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WONDERDISCOVERED_YOU</Tag>

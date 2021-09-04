@@ -9009,6 +9009,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -18702,7 +18703,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASTER_HUNTER</ArtDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18768,6 +18769,13 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18782,6 +18790,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
@@ -19836,6 +19845,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<UnitCombatFreeExperiences>
@@ -23229,6 +23239,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -31591,6 +31602,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>

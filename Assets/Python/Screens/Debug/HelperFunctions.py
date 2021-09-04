@@ -165,7 +165,7 @@ class HelperFunctions:
 		#Pick all techs in most advanced column
 		aMostAdvancedColumnRequirementsNames = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechList[i] not in aMostAdvancedColumnRequirementsNames:
 				aMostAdvancedColumnRequirementsNames.append(aTechList[i])
 
 		#aMostAdvancedColumnRequirementsXY is a Tech location ID array - X grid varies from 0 to 160, and Ygrid varies from 0 to 20
@@ -174,7 +174,7 @@ class HelperFunctions:
 		#Xgrid is multiplied by 100, and then its value is increased by Ygrid
 		aMostAdvancedColumnRequirementsXY = []
 		for i in xrange(len(aTechGridXList)):
-			if aTechGridXList[i] == max(aTechGridXList):
+			if aTechGridXList[i] == max(aTechGridXList) and aTechXY[i] not in aMostAdvancedColumnRequirementsXY:
 				aMostAdvancedColumnRequirementsXY.append(aTechXY[i])
 
 		if len(aMostAdvancedColumnRequirementsXY) == 0:
@@ -418,6 +418,21 @@ class HelperFunctions:
 				GOMReqList[eParentExpr].append(CyBoolExpr.getID())
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
+
+	##### PROPERTY READER FUNCTIONS #####
+
+	def getPropertyAmmountPerTurn(self, pPropertyManipulators):
+		a = [0]*GC.getNumPropertyInfos()
+		if pPropertyManipulators is not None:
+			for iSource in xrange(pPropertyManipulators.getNumSources()):
+				pSource = pPropertyManipulators.getSource(iSource)
+				if isinstance(pSource, CvPropertySourceConstant):
+					pIntExpr = pSource.getAmountPerTurnExpr()
+					if isinstance(pIntExpr, IntExprConstant):
+						a[pSource.getProperty()] += pIntExpr.iValue
+		return a
+
+	#^^^^ PROPERTY READER FUNCTIONS ^^^^#
 
 	##### OBSOLETION TECH LOCATION FINDER FUNCTIONS #####
 
