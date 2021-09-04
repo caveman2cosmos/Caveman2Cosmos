@@ -679,7 +679,7 @@ class TestCode:
 				MAIN_ARRAY_SIZE = 3
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight> - base
+				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight><iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
 				aPower = [CvBuildingInfo.isPower(), 0, 0]
 				aProvidesFreshWater = [CvBuildingInfo.isProvidesFreshWater(), 0, 0]
 				aTradeRoutes = [CvBuildingInfo.getTradeRoutes(), 0, 0]
@@ -717,11 +717,44 @@ class TestCode:
 				aPopulationgrowthratepercentage = [CvBuildingInfo.getPopulationgrowthratepercentage(), 0, 0]
 				aAdjacentDamagePercent = [CvBuildingInfo.getAdjacentDamagePercent(), 0, 0]
 				aLineOfSight = [CvBuildingInfo.getLineOfSight(), 0, 0]
+				aAirModifier = [CvBuildingInfo.getAirModifier(), 0, 0]
+				aAirUnitCapacity = [CvBuildingInfo.getAirUnitCapacity(), 0, 0]
+				aAirlift = [CvBuildingInfo.getAirlift(), 0, 0]
+				aAnarchyModifier = [CvBuildingInfo.getAnarchyModifier(), 0, 0]
+				aAreaHappiness = [CvBuildingInfo.getAreaHappiness(), 0, 0]
+				aAreaHealth = [CvBuildingInfo.getAreaHealth(), 0, 0]
+				aDamageAttackerChance = [CvBuildingInfo.getDamageAttackerChance(), 0, 0]
+				aDamageToAttacker = [CvBuildingInfo.getDamageToAttacker(), 0, 0]
+				aDistanceMaintenanceModifier = [CvBuildingInfo.getDistanceMaintenanceModifier(), 0, 0]
+				aDomesticGreatGeneralRateModifier = [CvBuildingInfo.getDomesticGreatGeneralRateModifier(), 0, 0]
+				aGlobalGreatPeopleRateModifier = [CvBuildingInfo.getGlobalGreatPeopleRateModifier(), 0, 0]
+				aGlobalHappiness = [CvBuildingInfo.getGlobalHappiness(), 0, 0]
+				aGlobalHealth = [CvBuildingInfo.getGlobalHealth(), 0, 0]
+				aGlobalMaintenanceModifier = [CvBuildingInfo.getGlobalMaintenanceModifier(), 0, 0]
+				aGlobalSpaceProductionModifier = [CvBuildingInfo.getGlobalSpaceProductionModifier(), 0, 0]
+				aGoldenAgeModifier = [CvBuildingInfo.getGoldenAgeModifier(), 0, 0]
+				aGreatGeneralRateModifier = [CvBuildingInfo.getGreatGeneralRateModifier(), 0, 0]
+				aHealRateChange = [CvBuildingInfo.getHealRateChange(), 0, 0]
+				aInsidiousness = [CvBuildingInfo.getInsidiousness(), 0, 0]
+				aInvasionChance = [CvBuildingInfo.getInvasionChance(), 0, 0]
+				aInvestigation = [CvBuildingInfo.getInvestigation(), 0, 0]
+				aLocalRepel = [CvBuildingInfo.getLocalRepel(), 0, 0]
+				aMilitaryProductionModifier = [CvBuildingInfo.getMilitaryProductionModifier(), 0, 0]
+				aNationalCaptureProbabilityModifier = [CvBuildingInfo.getNationalCaptureProbabilityModifier(), 0, 0]
+				aNationalCaptureResistanceModifier = [CvBuildingInfo.getNationalCaptureResistanceModifier(), 0, 0]
+				aNukeModifier = [CvBuildingInfo.getNukeModifier(), 0, 0]
+				aNumUnitFullHeal = [CvBuildingInfo.getNumUnitFullHeal(), 0, 0]
+				aRevIdxLocal = [CvBuildingInfo.getRevIdxLocal(), 0, 0]
+				aRevIdxNational = [CvBuildingInfo.getRevIdxNational(), 0, 0]
+				aSpaceProductionModifier = [CvBuildingInfo.getSpaceProductionModifier(), 0, 0]
+				aStateReligionHappiness = [CvBuildingInfo.getStateReligionHappiness(), 0, 0]
+				aUnitUpgradePriceModifier = [CvBuildingInfo.getUnitUpgradePriceModifier(), 0, 0]
+				aWorkerSpeedModifier = [CvBuildingInfo.getWorkerSpeedModifier(), 0, 0]
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>
+					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight><iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
 					aPower[REPLACED] += CvReplacedBuildingInfo.isPower()
 					aProvidesFreshWater[REPLACED] += CvReplacedBuildingInfo.isProvidesFreshWater()
 					aTradeRoutes[REPLACED] += CvReplacedBuildingInfo.getTradeRoutes()
@@ -764,8 +797,41 @@ class TestCode:
 					aPopulationgrowthratepercentage[REPLACED] += CvReplacedBuildingInfo.getPopulationgrowthratepercentage()
 					aAdjacentDamagePercent[REPLACED] += CvReplacedBuildingInfo.getAdjacentDamagePercent()
 					aLineOfSight[REPLACED] += CvReplacedBuildingInfo.getLineOfSight()
+					aAirModifier[REPLACED] += CvReplacedBuildingInfo.getAirModifier()
+					aAirUnitCapacity[REPLACED] += CvReplacedBuildingInfo.getAirUnitCapacity()
+					aAirlift[REPLACED] += CvReplacedBuildingInfo.getAirlift()
+					aAnarchyModifier[REPLACED] += CvReplacedBuildingInfo.getAnarchyModifier()
+					aAreaHappiness[REPLACED] += CvReplacedBuildingInfo.getAreaHappiness()
+					aAreaHealth[REPLACED] += CvReplacedBuildingInfo.getAreaHealth()
+					aDamageAttackerChance[REPLACED] += CvReplacedBuildingInfo.getDamageAttackerChance()
+					aDamageToAttacker[REPLACED] += CvReplacedBuildingInfo.getDamageToAttacker()
+					aDistanceMaintenanceModifier[REPLACED] += CvReplacedBuildingInfo.getDistanceMaintenanceModifier()
+					aDomesticGreatGeneralRateModifier[REPLACED] += CvReplacedBuildingInfo.getDomesticGreatGeneralRateModifier()
+					aGlobalGreatPeopleRateModifier[REPLACED] += CvReplacedBuildingInfo.getGlobalGreatPeopleRateModifier()
+					aGlobalHappiness[REPLACED] += CvReplacedBuildingInfo.getGlobalHappiness()
+					aGlobalHealth[REPLACED] += CvReplacedBuildingInfo.getGlobalHealth()
+					aGlobalMaintenanceModifier[REPLACED] += CvReplacedBuildingInfo.getGlobalMaintenanceModifier()
+					aGlobalSpaceProductionModifier[REPLACED] += CvReplacedBuildingInfo.getGlobalSpaceProductionModifier()
+					aGoldenAgeModifier[REPLACED] += CvReplacedBuildingInfo.getGoldenAgeModifier()
+					aGreatGeneralRateModifier[REPLACED] += CvReplacedBuildingInfo.getGreatGeneralRateModifier()
+					aHealRateChange[REPLACED] += CvReplacedBuildingInfo.getHealRateChange()
+					aInsidiousness[REPLACED] += CvReplacedBuildingInfo.getInsidiousness()
+					aInvasionChance[REPLACED] += CvReplacedBuildingInfo.getInvasionChance()
+					aInvestigation[REPLACED] += CvReplacedBuildingInfo.getInvestigation()
+					aLocalRepel[REPLACED] += CvReplacedBuildingInfo.getLocalRepel()
+					aMilitaryProductionModifier[REPLACED] += CvReplacedBuildingInfo.getMilitaryProductionModifier()
+					aNationalCaptureProbabilityModifier[REPLACED] += CvReplacedBuildingInfo.getNationalCaptureProbabilityModifier()
+					aNationalCaptureResistanceModifier[REPLACED] += CvReplacedBuildingInfo.getNationalCaptureResistanceModifier()
+					aNukeModifier[REPLACED] += CvReplacedBuildingInfo.getNukeModifier()
+					aNumUnitFullHeal[REPLACED] += CvReplacedBuildingInfo.getNumUnitFullHeal()
+					aRevIdxLocal[REPLACED] += CvReplacedBuildingInfo.getRevIdxLocal()
+					aRevIdxNational[REPLACED] += CvReplacedBuildingInfo.getRevIdxNational()
+					aSpaceProductionModifier[REPLACED] += CvReplacedBuildingInfo.getSpaceProductionModifier()
+					aStateReligionHappiness[REPLACED] += CvReplacedBuildingInfo.getStateReligionHappiness()
+					aUnitUpgradePriceModifier[REPLACED] += CvReplacedBuildingInfo.getUnitUpgradePriceModifier()
+					aWorkerSpeedModifier[REPLACED] += CvReplacedBuildingInfo.getWorkerSpeedModifier()
 
-				#Keep already existing <bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight> in base
+				#Keep already existing <bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> in base
 				aTradeRoutes[FINAL] = aTradeRoutes[BASE] + aTradeRoutes[REPLACED]
 				aCoastalTradeRoutes[FINAL] = aCoastalTradeRoutes[BASE] + aCoastalTradeRoutes[REPLACED]
 				aGlobalTradeRoutes[FINAL] = aGlobalTradeRoutes[BASE] + aGlobalTradeRoutes[REPLACED]
@@ -800,6 +866,39 @@ class TestCode:
 				aPopulationgrowthratepercentage[FINAL] = aPopulationgrowthratepercentage[BASE] + aPopulationgrowthratepercentage[REPLACED]
 				aAdjacentDamagePercent[FINAL] = aAdjacentDamagePercent[BASE] + aAdjacentDamagePercent[REPLACED]
 				aLineOfSight[FINAL] = aLineOfSight[BASE] + aLineOfSight[REPLACED]
+				aAirModifier[FINAL] = aAirModifier[BASE] + aAirModifier[REPLACED]
+				aAirUnitCapacity[FINAL] = aAirUnitCapacity[BASE] + aAirUnitCapacity[REPLACED]
+				aAirlift[FINAL] = aAirlift[BASE] + aAirlift[REPLACED]
+				aAnarchyModifier[FINAL] = aAnarchyModifier[BASE] + aAnarchyModifier[REPLACED]
+				aAreaHappiness[FINAL] = aAreaHappiness[BASE] + aAreaHappiness[REPLACED]
+				aAreaHealth[FINAL] = aAreaHealth[BASE] + aAreaHealth[REPLACED]
+				aDamageAttackerChance[FINAL] = aDamageAttackerChance[BASE] + aDamageAttackerChance[REPLACED]
+				aDamageToAttacker[FINAL] = aDamageToAttacker[BASE] + aDamageToAttacker[REPLACED]
+				aDistanceMaintenanceModifier[FINAL] = aDistanceMaintenanceModifier[BASE] + aDistanceMaintenanceModifier[REPLACED]
+				aDomesticGreatGeneralRateModifier[FINAL] = aDomesticGreatGeneralRateModifier[BASE] + aDomesticGreatGeneralRateModifier[REPLACED]
+				aGlobalGreatPeopleRateModifier[FINAL] = aGlobalGreatPeopleRateModifier[BASE] + aGlobalGreatPeopleRateModifier[REPLACED]
+				aGlobalHappiness[FINAL] = aGlobalHappiness[BASE] + aGlobalHappiness[REPLACED]
+				aGlobalHealth[FINAL] = aGlobalHealth[BASE] + aGlobalHealth[REPLACED]
+				aGlobalMaintenanceModifier[FINAL] = aGlobalMaintenanceModifier[BASE] + aGlobalMaintenanceModifier[REPLACED]
+				aGlobalSpaceProductionModifier[FINAL] = aGlobalSpaceProductionModifier[BASE] + aGlobalSpaceProductionModifier[REPLACED]
+				aGoldenAgeModifier[FINAL] = aGoldenAgeModifier[BASE] + aGoldenAgeModifier[REPLACED]
+				aGreatGeneralRateModifier[FINAL] = aGreatGeneralRateModifier[BASE] + aGreatGeneralRateModifier[REPLACED]
+				aHealRateChange[FINAL] = aHealRateChange[BASE] + aHealRateChange[REPLACED]
+				aInsidiousness[FINAL] = aInsidiousness[BASE] + aInsidiousness[REPLACED]
+				aInvasionChance[FINAL] = aInvasionChance[BASE] + aInvasionChance[REPLACED]
+				aInvestigation[FINAL] = aInvestigation[BASE] + aInvestigation[REPLACED]
+				aLocalRepel[FINAL] = aLocalRepel[BASE] + aLocalRepel[REPLACED]
+				aMilitaryProductionModifier[FINAL] = aMilitaryProductionModifier[BASE] + aMilitaryProductionModifier[REPLACED]
+				aNationalCaptureProbabilityModifier[FINAL] = aNationalCaptureProbabilityModifier[BASE] + aNationalCaptureProbabilityModifier[REPLACED]
+				aNationalCaptureResistanceModifier[FINAL] = aNationalCaptureResistanceModifier[BASE] + aNationalCaptureResistanceModifier[REPLACED]
+				aNukeModifier[FINAL] = aNukeModifier[BASE] + aNukeModifier[REPLACED]
+				aNumUnitFullHeal[FINAL] = aNumUnitFullHeal[BASE] + aNumUnitFullHeal[REPLACED]
+				aRevIdxLocal[FINAL] = aRevIdxLocal[BASE] + aRevIdxLocal[REPLACED]
+				aRevIdxNational[FINAL] = aRevIdxNational[BASE] + aRevIdxNational[REPLACED]
+				aSpaceProductionModifier[FINAL] = aSpaceProductionModifier[BASE] + aSpaceProductionModifier[REPLACED]
+				aStateReligionHappiness[FINAL] = aStateReligionHappiness[BASE] + aStateReligionHappiness[REPLACED]
+				aUnitUpgradePriceModifier[FINAL] = aUnitUpgradePriceModifier[BASE] + aUnitUpgradePriceModifier[REPLACED]
+				aWorkerSpeedModifier[FINAL] = aWorkerSpeedModifier[BASE] + aWorkerSpeedModifier[REPLACED]
 
 				#Building shouldn't be worse than replaced one!
 				if aPower[BASE] == 0 and aPower[REPLACED] != 0:
@@ -874,6 +973,72 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Adjacent Damage Percent "+str(aAdjacentDamagePercent[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 				if aLineOfSight[BASE] < aLineOfSight[REPLACED]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Line of Sight "+str(aLineOfSight[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAirModifier[BASE] > aAirModifier[REPLACED]: #Lower iAirModifier is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Air Modifier "+str(aAirModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAirUnitCapacity[BASE] < aAirUnitCapacity[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Air Unit Capacity "+str(aAirUnitCapacity[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAirlift[BASE] < aAirlift[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Airlift "+str(aAirlift[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAnarchyModifier[BASE] < aAnarchyModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Anarchy Modifier "+str(aAnarchyModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAreaHappiness[BASE] < aAreaHappiness[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Area Happiness "+str(aAreaHappiness[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aAreaHealth[BASE] < aAreaHealth[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Area Health "+str(aAreaHealth[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aDamageAttackerChance[BASE] < aDamageAttackerChance[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Damage Attacker Chance "+str(aDamageAttackerChance[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aDamageToAttacker[BASE] < aDamageToAttacker[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Damage To Attacker "+str(aDamageToAttacker[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aDistanceMaintenanceModifier[BASE] < aDistanceMaintenanceModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Distance Maintenance Modifier "+str(aDistanceMaintenanceModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aDomesticGreatGeneralRateModifier[BASE] < aDomesticGreatGeneralRateModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Domestic Great General Rate Modifier "+str(aDomesticGreatGeneralRateModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGlobalGreatPeopleRateModifier[BASE] < aGlobalGreatPeopleRateModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Great People Rate Modifier "+str(aGlobalGreatPeopleRateModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGlobalHappiness[BASE] < aGlobalHappiness[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Happiness "+str(aGlobalHappiness[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGlobalHealth[BASE] < aGlobalHealth[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Health "+str(aGlobalHealth[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGlobalMaintenanceModifier[BASE] < aGlobalMaintenanceModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Maintenance Modifier "+str(aGlobalMaintenanceModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGlobalSpaceProductionModifier[BASE] < aGlobalSpaceProductionModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Global Space Production Modifier "+str(aGlobalSpaceProductionModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGoldenAgeModifier[BASE] < aGoldenAgeModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Golden Age Modifier "+str(aGoldenAgeModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aGreatGeneralRateModifier[BASE] < aGreatGeneralRateModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Great General Rate Modifier "+str(aGreatGeneralRateModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aHealRateChange[BASE] < aHealRateChange[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Heal Rate Change "+str(aHealRateChange[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aInsidiousness[BASE] > aInsidiousness[REPLACED]: #Lower iInsidiousness is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Insidiousness "+str(aInsidiousness[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aInvasionChance[BASE] > aInvasionChance[REPLACED]: #Lower iInvasionChance is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Invasion Chance "+str(aInvasionChance[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aInvestigation[BASE] < aInvestigation[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Investigation "+str(aInvestigation[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aLocalRepel[BASE] < aLocalRepel[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Local Repel "+str(aLocalRepel[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aMilitaryProductionModifier[BASE] < aMilitaryProductionModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Military Production Modifier "+str(aMilitaryProductionModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aNationalCaptureProbabilityModifier[BASE] < aNationalCaptureProbabilityModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have National Capture Probability Modifier "+str(aNationalCaptureProbabilityModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aNationalCaptureResistanceModifier[BASE] < aNationalCaptureResistanceModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have National Capture Resistance Modifier "+str(aNationalCaptureResistanceModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aNukeModifier[BASE] > aNukeModifier[REPLACED]: #Lower iNukeModifier is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Nuke Modifier "+str(aNukeModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aNumUnitFullHeal[BASE] < aNumUnitFullHeal[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Num Unit Full Heal "+str(aNumUnitFullHeal[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aRevIdxLocal[BASE] > aRevIdxLocal[REPLACED]: #Lower iRevIdxLocal is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have RevIdx Local "+str(aRevIdxLocal[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aRevIdxNational[BASE] > aRevIdxNational[REPLACED]: #Lower iRevIdxNational is better
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have RevIdx National "+str(aRevIdxNational[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aSpaceProductionModifier[BASE] < aSpaceProductionModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Space Production Modifier "+str(aSpaceProductionModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aStateReligionHappiness[BASE] < aStateReligionHappiness[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have State Religion Happiness "+str(aStateReligionHappiness[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aUnitUpgradePriceModifier[BASE] < aUnitUpgradePriceModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Unit Upgrade Price Modifier "+str(aUnitUpgradePriceModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+				if aWorkerSpeedModifier[BASE] < aWorkerSpeedModifier[REPLACED]:
+					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Worker Speed Modifier "+str(aWorkerSpeedModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
 				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base

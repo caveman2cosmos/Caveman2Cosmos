@@ -27355,7 +27355,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-15</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -52628,7 +52628,7 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-40</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
@@ -56400,6 +56400,7 @@
 			</ExtraFreeBonuses>
 			<iHappiness>3</iHappiness>
 			<iHealth>3</iHealth>
+			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
 				<iYield>55</iYield>
 				<iYield>50</iYield>
@@ -57471,7 +57472,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -69662,6 +69663,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
+			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_METAL_FOAM</BonusType>
@@ -71567,7 +71569,7 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -71869,7 +71871,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMilitaryProductionModifier>-25</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -86366,7 +86368,7 @@
 					<iSpecialistCount>4</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iInvestigation>35</iInvestigation>
+			<iInvestigation>40</iInvestigation>
 			<iDefense>20</iDefense>
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -95949,7 +95951,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -97553,7 +97555,7 @@
 					<iSpecialistCount>4</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iInvestigation>25</iInvestigation>
+			<iInvestigation>35</iInvestigation>
 			<iDefense>20</iDefense>
 			<iEspionageDefense>7</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -103344,7 +103346,7 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -105944,6 +105946,7 @@
 			</PrereqInCityBuildings>
 			<iHappiness>5</iHappiness>
 			<iHealth>5</iHealth>
+			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
 				<iYield>80</iYield>
 				<iYield>60</iYield>
@@ -107646,7 +107649,6 @@
 			<FreePromotion>PROMOTION_TATTOO</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iRevIdxLocal>5</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -111250,7 +111252,7 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-15</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -118017,6 +118019,7 @@
 					<iHeal>4</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
