@@ -2060,6 +2060,13 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
