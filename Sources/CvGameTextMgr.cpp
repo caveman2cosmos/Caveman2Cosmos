@@ -22587,25 +22587,31 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		if (kBuilding.isAnyBonusCommercePercentChanges())
 		{
-			// Toffer - ToDo
-			//	switch these two loops around and bundle all the commerce types per bonus into one line.
-			//	e.g. "With Apple: +0.2 [beakerIcon], -0.2 [cultureIcon]".
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
+				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 				{
 					const int iValue = kBuilding.getBonusCommercePercentChanges(iI, iJ);
 					if (iValue != 0)
 					{
-						CvWString szTempBuffer;
-						makeValueString(szTempBuffer,iValue, true);
-						szTempBuffer.Format(
-							L"\n%c%s%c%s<link=%s>%s</link>",
-							gDLL->getSymbolID(BULLET_CHAR), szTempBuffer.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(),
-							gDLL->getText("TXT_KEY_WITH").GetCString(),
-							CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes)iI).getDescription()
-						);
-						szBuffer.append(szTempBuffer);
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getBonusInfo((BonusTypes)iI).getType()).GetCString(),
+									GC.getBonusInfo((BonusTypes)iI).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 					}
 				}
 			}
@@ -27654,7 +27660,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 
 			if (nOtherAndTechs > 0)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+				szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 				szBuffer.append(szOtherAndTechs);
 			}
 
@@ -27668,7 +27674,7 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 					}
 					else
 					{
-						szBuffer.append(gDLL->getText("TXT_KEY_WITH_SPACE"));
+						szBuffer.append(gDLL->getText("TXT_KEY_WITH"));
 					}
 					szBuffer.append(szOtherOrTechs);
 				}
