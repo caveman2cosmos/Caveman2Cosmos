@@ -26,6 +26,8 @@ void CyPropertiesPythonInterface()
 		;
 
 	python::class_<CvPropertyManipulators>("CvPropertyManipulators", python::no_init)
+		.def("getNumSources", &CvPropertyManipulators::getNumSources)
+		.def("getSource", &CvPropertyManipulators::getSource, python::return_value_policy<python::reference_existing_object>())
 		.def("getSources", &CvPropertyManipulators::cyGetSources)
 	;
 

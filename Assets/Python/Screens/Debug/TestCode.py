@@ -50,6 +50,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkImprovementYieldValues, "Improvement - all techs boosts compared to upgrade", "Checks if improvement with all tech boosts isn't better than its upgrade")
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
+		self.main.addTestCode(screen, self.checkPropertyAmmountPerTurn, "new", "new")
 
 	##### HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  #####
 
@@ -436,6 +437,27 @@ class TestCode:
 			return ""
 
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
+
+	#####  #####
+
+	def checkPropertyAmmountPerTurn(self):
+		for i in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(i)
+			iAmmount = self.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
+			if iAmmount > 0:
+				self.log(CvBuildingInfo.getType() + ": " + str(iAmmount))
+
+	def getPropertyAmmountPerTurn(self, pPropertyManipulators):
+		i = 0
+		if pPropertyManipulators is not None:
+			#for pSource in pPropertyManipulators.getSources():
+			for iSource in xrange(pPropertyManipulators.getNumSources()):
+				pSource = pPropertyManipulators.getSource(iSource)
+				if isinstance(pSource, CvPropertySourceConstant):
+					pIntExpr = pSource.getAmountPerTurnExpr()
+					if isinstance(pIntExpr, IntExprConstant):
+						i += pIntExpr.iValue
+		return i
 
 	##### GOM REQUIREMENT READER FUNCTIONS #####
 

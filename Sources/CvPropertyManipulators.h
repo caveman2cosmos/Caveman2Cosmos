@@ -21,7 +21,7 @@ public:
 	~CvPropertyManipulators();
 
 	int getNumSources() const;
-	//CvPropertySource* getSource(int index) const;
+	CvPropertySource* getSource(int index) const;
 	const std::vector<CvPropertySource*>& getSources() const { return m_apSources; }
 	const python::list cyGetSources() const;
 	int addSource(PropertySourceTypes eType);
