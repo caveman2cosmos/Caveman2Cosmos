@@ -1148,18 +1148,7 @@ int CvBuildingInfo::getImprovementYieldChanges(int i, int j) const
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 	return (m_ppiImprovementYieldChanges && m_ppiImprovementYieldChanges[i]) ? m_ppiImprovementYieldChanges[i][j] : 0;
 }
-/*
-int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
-{
-	FASSERT_BOUNDS(NO_UNITCOMBAT, GC.getNumUnitCombatInfos(), i)
 
-	if (i == NO_UNITCOMBAT)
-	{
-		return m_piUnitCombatExtraStrength ? 1 : 0;
-	}
-	return m_piUnitCombatExtraStrength ? m_piUnitCombatExtraStrength[i] : 0;
-}
-*/
 //TB Combat Mods (Buildings) begin
 
 UnitTypes CvBuildingInfo::getPropertySpawnUnit() const

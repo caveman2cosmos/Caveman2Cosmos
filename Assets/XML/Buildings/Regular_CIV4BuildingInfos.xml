@@ -8358,6 +8358,16 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MODERN_PARATROOPER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PARATROOPER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9395,6 +9405,10 @@
 			</SpecialistCounts>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
@@ -9408,6 +9422,10 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_HUMVEE</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
@@ -20261,6 +20279,10 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
@@ -61915,6 +61937,12 @@
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>DOMAIN_LAND</DomainType>
+					<iProductionModifier>15</iProductionModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -95882,6 +95910,32 @@
 					<iHeal>5</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FREIGHT</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOTORCYCLE</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JEEP</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HUMVEE</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -106223,6 +106277,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>DOMAIN_LAND</DomainType>
+					<iProductionModifier>15</iProductionModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>

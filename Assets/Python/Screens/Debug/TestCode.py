@@ -1041,7 +1041,7 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Worker Speed Modifier "+str(aWorkerSpeedModifier[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#===== 1D ENTRIES - ARRAYS, index of array is an infotype ENUM =================================================================#
-				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> - base
+				#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges> - base
 				aYieldChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aYieldPerPopChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aSeaPlotYieldChangesList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
@@ -1050,6 +1050,7 @@ class TestCode:
 				aPowerYieldModifiersList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aAreaYieldModifiersList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aGlobalYieldModifiersList = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
+				aGlobalSeaPlotYieldChanges = [[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aYieldChangesList[BASE][iYield] += CvBuildingInfo.getYieldChange(iYield)
 					aYieldPerPopChangesList[BASE][iYield] += CvBuildingInfo.getYieldPerPopChange(iYield)
@@ -1059,11 +1060,12 @@ class TestCode:
 					aPowerYieldModifiersList[BASE][iYield] += CvBuildingInfo.getPowerYieldModifier(iYield)
 					aAreaYieldModifiersList[BASE][iYield] += CvBuildingInfo.getAreaYieldModifier(iYield)
 					aGlobalYieldModifiersList[BASE][iYield] += CvBuildingInfo.getGlobalYieldModifier(iYield)
+					aGlobalSeaPlotYieldChanges[BASE][iYield] += CvBuildingInfo.getGlobalSeaPlotYieldChange(iYield)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>
+					#<YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges>
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aYieldChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getYieldChange(iYield)
 						aYieldPerPopChangesList[REPLACED][iYield] += CvReplacedBuildingInfo.getYieldPerPopChange(iYield)
@@ -1073,8 +1075,9 @@ class TestCode:
 						aPowerYieldModifiersList[REPLACED][iYield] += CvReplacedBuildingInfo.getPowerYieldModifier(iYield)
 						aAreaYieldModifiersList[REPLACED][iYield] += CvReplacedBuildingInfo.getAreaYieldModifier(iYield)
 						aGlobalYieldModifiersList[REPLACED][iYield] += CvReplacedBuildingInfo.getGlobalYieldModifier(iYield)
+						aGlobalSeaPlotYieldChanges[REPLACED][iYield] += CvReplacedBuildingInfo.getGlobalSeaPlotYieldChange(iYield)
 
-				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers> in base
+				#Keep already existing <YieldChanges>, <YieldPerPopChanges>, <SeaPlotYieldChanges>, <RiverPlotYieldChanges>, <YieldModifiers>, <PowerYieldModifiers>, <AreaYieldModifiers>, <GlobalYieldModifiers>, <GlobalSeaPlotYieldChanges> in base
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 					aYieldChangesList[FINAL][iYield] = aYieldChangesList[BASE][iYield] + aYieldChangesList[REPLACED][iYield]
 					aYieldPerPopChangesList[FINAL][iYield] = aYieldPerPopChangesList[BASE][iYield] + aYieldPerPopChangesList[REPLACED][iYield]
@@ -1084,6 +1087,7 @@ class TestCode:
 					aPowerYieldModifiersList[FINAL][iYield] = aPowerYieldModifiersList[BASE][iYield] + aPowerYieldModifiersList[REPLACED][iYield]
 					aAreaYieldModifiersList[FINAL][iYield] = aAreaYieldModifiersList[BASE][iYield] + aAreaYieldModifiersList[REPLACED][iYield]
 					aGlobalYieldModifiersList[FINAL][iYield] = aGlobalYieldModifiersList[BASE][iYield] + aGlobalYieldModifiersList[REPLACED][iYield]
+					aGlobalSeaPlotYieldChanges[FINAL][iYield] = aGlobalSeaPlotYieldChanges[BASE][iYield] + aGlobalSeaPlotYieldChanges[REPLACED][iYield]
 
 				#Building shouldn't be worse than replaced one!
 				for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1103,35 +1107,49 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Area Modifiers "+str(aAreaYieldModifiersList[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 					if aGlobalYieldModifiersList[BASE][iYield] < aGlobalYieldModifiersList[REPLACED][iYield]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global Modifiers "+str(aGlobalYieldModifiersList[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+					if aGlobalSeaPlotYieldChanges[BASE][iYield] < aGlobalSeaPlotYieldChanges[REPLACED][iYield]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have F/P/C Global sea plot Yield Changes "+str(aGlobalSeaPlotYieldChanges[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers> - base
+				#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces> - base
 				aCommerceChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aCommercePerPopChanges = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				aGlobalCommerceModifiers = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
+				aCommerceAttacks = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
+				aCommerceHappinesses = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
+				aSpecialistExtraCommerces = [[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					aCommerceChanges[BASE][iCommerce] += CvBuildingInfo.getCommerceChange(iCommerce)
 					aCommercePerPopChanges[BASE][iCommerce] += CvBuildingInfo.getCommercePerPopChange(iCommerce)
 					aCommerceModifiers[BASE][iCommerce] += CvBuildingInfo.getCommerceModifier(iCommerce)
 					aGlobalCommerceModifiers[BASE][iCommerce] += CvBuildingInfo.getGlobalCommerceModifier(iCommerce)
+					aCommerceAttacks[BASE][iCommerce] += CvBuildingInfo.getCommerceAttacks(iCommerce)
+					aCommerceHappinesses[BASE][iCommerce] += CvBuildingInfo.getCommerceHappiness(iCommerce)
+					aSpecialistExtraCommerces[BASE][iCommerce] += CvBuildingInfo.getSpecialistExtraCommerce(iCommerce)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>
+					#<CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces>
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						aCommerceChanges[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceChange(iCommerce)
 						aCommercePerPopChanges[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommercePerPopChange(iCommerce)
 						aCommerceModifiers[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceModifier(iCommerce)
 						aGlobalCommerceModifiers[REPLACED][iCommerce] += CvReplacedBuildingInfo.getGlobalCommerceModifier(iCommerce)
+						aCommerceAttacks[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceAttacks(iCommerce)
+						aCommerceHappinesses[REPLACED][iCommerce] += CvReplacedBuildingInfo.getCommerceHappiness(iCommerce)
+						aSpecialistExtraCommerces[REPLACED][iCommerce] += CvReplacedBuildingInfo.getSpecialistExtraCommerce(iCommerce)
 
-				#Keep already existing <CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers> in base
+				#Keep already existing <CommerceChanges>, <CommercePerPopChanges>, <CommerceModifiers>, <GlobalCommerceModifiers>, <CommerceAttacks>, <CommerceHappinesses>, <SpecialistExtraCommerces> in base
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					aCommerceChanges[FINAL][iCommerce] = aCommerceChanges[BASE][iCommerce] + aCommerceChanges[REPLACED][iCommerce]
 					aCommercePerPopChanges[FINAL][iCommerce] = aCommercePerPopChanges[BASE][iCommerce] + aCommercePerPopChanges[REPLACED][iCommerce]
 					aCommerceModifiers[FINAL][iCommerce] = aCommerceModifiers[BASE][iCommerce] + aCommerceModifiers[REPLACED][iCommerce]
 					aGlobalCommerceModifiers[FINAL][iCommerce] = aGlobalCommerceModifiers[BASE][iCommerce] + aGlobalCommerceModifiers[REPLACED][iCommerce]
+					aCommerceAttacks[FINAL][iCommerce] = aCommerceAttacks[BASE][iCommerce] + aCommerceAttacks[REPLACED][iCommerce]
+					aCommerceHappinesses[FINAL][iCommerce] = aCommerceHappinesses[BASE][iCommerce] + aCommerceHappinesses[REPLACED][iCommerce]
+					aSpecialistExtraCommerces[FINAL][iCommerce] = aSpecialistExtraCommerces[BASE][iCommerce] + aSpecialistExtraCommerces[REPLACED][iCommerce]
 
 				#Building shouldn't be worse than replaced one!
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1143,6 +1161,12 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Modifiers "+str(aCommerceModifiers[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 					if aGlobalCommerceModifiers[BASE][iCommerce] < aGlobalCommerceModifiers[REPLACED][iCommerce]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Global Modifiers "+str(aGlobalCommerceModifiers[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+					if aCommerceAttacks[BASE][iCommerce] < aCommerceAttacks[REPLACED][iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Commerce Attacks "+str(aCommerceAttacks[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+					if aCommerceHappinesses[BASE][iCommerce] < aCommerceHappinesses[REPLACED][iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Commerce Happinesses "+str(aCommerceHappinesses[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
+					if aSpecialistExtraCommerces[BASE][iCommerce] < aSpecialistExtraCommerces[REPLACED][iCommerce]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have G/R/C/E Commerce Specialist extra Commerces "+str(aSpecialistExtraCommerces[FINAL])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
 				#<SpecialistCounts>, <FreeSpecialistCounts> - base
@@ -1196,10 +1220,11 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aImprovementFreeSpecialists[FINAL][iImprovement])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> - base
+				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers> - base
 				aBonusHappinessChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aBonusHealthChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aExtraFreeBonuses = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				aBonusProductionModifiers = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				for pair in CvBuildingInfo.getBonusHappiness():
 					aBonusHappinessChanges[BASE][pair.id] += pair.value
 				for pair in CvBuildingInfo.getBonusHealth():
@@ -1208,11 +1233,12 @@ class TestCode:
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getFreeBonus()] += CvBuildingInfo.getNumFreeBonuses()
 				for iBonus in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getExtraFreeBonus(iBonus)] += CvBuildingInfo.getExtraFreeBonusNum(iBonus)
+					aBonusProductionModifiers[BASE][iBonus] += CvBuildingInfo.getBonusProductionModifier(iBonus)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>
+					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers>
 					for pair in CvReplacedBuildingInfo.getBonusHappiness():
 						aBonusHappinessChanges[REPLACED][pair.id] += pair.value
 					for pair in CvReplacedBuildingInfo.getBonusHealth():
@@ -1221,12 +1247,14 @@ class TestCode:
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getFreeBonus()] += CvReplacedBuildingInfo.getNumFreeBonuses()
 					for iBonus in xrange(CvReplacedBuildingInfo.getNumExtraFreeBonuses()):
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getExtraFreeBonus(iBonus)] += CvReplacedBuildingInfo.getExtraFreeBonusNum(iBonus)
+						aBonusProductionModifiers[REPLACED][iBonus] += CvReplacedBuildingInfo.getBonusProductionModifier(iBonus)
 
-				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> in base
+				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers> in base
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					aBonusHappinessChanges[FINAL][iBonus] = aBonusHappinessChanges[BASE][iBonus] + aBonusHappinessChanges[REPLACED][iBonus]
 					aBonusHealthChanges[FINAL][iBonus] = aBonusHealthChanges[BASE][iBonus] + aBonusHealthChanges[REPLACED][iBonus]
 					#aExtraFreeBonuses[FINAL][iBonus] = aExtraFreeBonuses[BASE][iBonus] + aExtraFreeBonuses[REPLACED][iBonus] Maybe when we have volumetric resources...
+					aBonusProductionModifiers[FINAL][iBonus] = aBonusProductionModifiers[BASE][iBonus] + aBonusProductionModifiers[REPLACED][iBonus]
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1236,6 +1264,8 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus health Changes "+str(aBonusHealthChanges[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 					if aExtraFreeBonuses[BASE][iBonus] == 0 and aExtraFreeBonuses[REPLACED][iBonus] > 0: #No volumetric bonues - just check presence of it
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should give "+GC.getBonusInfo(iBonus).getType()+" Bonus - replaced: "+str(aImmediateReplacedNameList))
+					if aBonusProductionModifiers[BASE][iBonus] < aBonusProductionModifiers[REPLACED][iBonus]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus production Modifiers "+str(aBonusProductionModifiers[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
 				#<TechHappinessChanges>, <TechHealthChanges> - base
@@ -1314,51 +1344,69 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBuildingInfo(iAffectedBuildings).getType()+" Building production Modifiers "+str(aBuildingProductionModifiers[FINAL][iAffectedBuildings])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<DomainFreeExperiences> - base
+				#<DomainFreeExperiences>, <DomainProductionModifiers> - base
 				aDomainFreeExperiences = [[0 for x in xrange(DomainTypes.NUM_DOMAIN_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
+				aDomainProductionModifiers = [[0 for x in xrange(DomainTypes.NUM_DOMAIN_TYPES)] for y in xrange(MAIN_ARRAY_SIZE)]
 				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
 					aDomainFreeExperiences[BASE][iDomain] += CvBuildingInfo.getDomainFreeExperience(iDomain)
+					aDomainProductionModifiers[BASE][iDomain] += CvBuildingInfo.getDomainProductionModifier(iDomain)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<DomainFreeExperiences>
+					#<DomainFreeExperiences>, <DomainProductionModifiers>
 					for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
 						aDomainFreeExperiences[REPLACED][iDomain] += CvReplacedBuildingInfo.getDomainFreeExperience(iDomain)
+						aDomainProductionModifiers[REPLACED][iDomain] += CvReplacedBuildingInfo.getDomainProductionModifier(iDomain)
 
-				#Keep already existing <DomainFreeExperiences> in base
+				#Keep already existing <DomainFreeExperiences>, <DomainProductionModifiers> in base
 				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
 					aDomainFreeExperiences[FINAL][iDomain] = aDomainFreeExperiences[BASE][iDomain] + aDomainFreeExperiences[REPLACED][iDomain]
+					aDomainProductionModifiers[FINAL][iDomain] = aDomainProductionModifiers[BASE][iDomain] + aDomainProductionModifiers[REPLACED][iDomain]
 
 				#Building shouldn't be worse than replaced one!
 				for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
 					if aDomainFreeExperiences[BASE][iDomain] < aDomainFreeExperiences[REPLACED][iDomain]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getDomainInfo(iDomain).getType()+" Domain Free Experience "+str(aDomainFreeExperiences[FINAL][iDomain])+" replaced: "+str(aImmediateReplacedNameList))
+					if aDomainProductionModifiers[BASE][iDomain] < aDomainProductionModifiers[REPLACED][iDomain]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getDomainInfo(iDomain).getType()+" Domain production Modifiers "+str(aDomainProductionModifiers[FINAL][iDomain])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<UnitCombatFreeExperiences>, <HealUnitCombatTypes> - base
+				#<UnitCombatFreeExperiences>, <HealUnitCombatTypes>, <UnitCombatExtraStrengths>, <UnitCombatProdModifiers> - base
 				aUnitCombatFreeExperiences = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aHealUnitCombatTypes = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				aUnitCombatExtraStrengths = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				aUnitCombatProdModifiers = [[0 for x in xrange(GC.getNumUnitCombatInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				for pair in CvBuildingInfo.getUnitCombatFreeExperience():
 					aUnitCombatFreeExperiences[BASE][pair.id] += pair.value
+				for pair in CvBuildingInfo.getUnitCombatExtraStrength():
+					aUnitCombatExtraStrengths[BASE][pair.id] += pair.value
 				for i in xrange(CvBuildingInfo.getNumHealUnitCombatTypes()):
 					iUnitCombat = CvBuildingInfo.getHealUnitCombatType(i).eUnitCombat
 					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).iHeal
+				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+					aUnitCombatProdModifiers[BASE][iUnitCombat] += CvBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<UnitCombatFreeExperiences>, <HealUnitCombatTypes>
+					#<UnitCombatFreeExperiences>, <HealUnitCombatTypes>, <UnitCombatExtraStrengths>, <UnitCombatProdModifiers>
 					for pair in CvReplacedBuildingInfo.getUnitCombatFreeExperience():
 						aUnitCombatFreeExperiences[REPLACED][pair.id] += pair.value
+					for pair in CvReplacedBuildingInfo.getUnitCombatExtraStrength():
+						aUnitCombatExtraStrengths[REPLACED][pair.id] += pair.value
 					for j in xrange(CvReplacedBuildingInfo.getNumHealUnitCombatTypes()):
 						iUnitCombat = CvReplacedBuildingInfo.getHealUnitCombatType(j).eUnitCombat
 						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).iHeal
+					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
+						aUnitCombatProdModifiers[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
-				#Keep already existing <UnitCombatFreeExperiences>, <HealUnitCombatTypes> in base
+				#Keep already existing <UnitCombatFreeExperiences>, <HealUnitCombatTypes>, <UnitCombatExtraStrengths>, <UnitCombatProdModifiers> in base
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					aUnitCombatFreeExperiences[FINAL][iUnitCombat] = aUnitCombatFreeExperiences[BASE][iUnitCombat] + aUnitCombatFreeExperiences[REPLACED][iUnitCombat]
 					aHealUnitCombatTypes[FINAL][iUnitCombat] = aHealUnitCombatTypes[BASE][iUnitCombat] + aHealUnitCombatTypes[REPLACED][iUnitCombat]
+					aUnitCombatExtraStrengths[FINAL][iUnitCombat] = aUnitCombatExtraStrengths[BASE][iUnitCombat] + aUnitCombatExtraStrengths[REPLACED][iUnitCombat]
+					aUnitCombatProdModifiers[FINAL][iUnitCombat] = aUnitCombatProdModifiers[BASE][iUnitCombat] + aUnitCombatProdModifiers[REPLACED][iUnitCombat]
 
 				#Building shouldn't be worse than replaced one!
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
@@ -1366,13 +1414,37 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat free Experience "+str(aUnitCombatFreeExperiences[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
 					if aHealUnitCombatTypes[BASE][iUnitCombat] < aHealUnitCombatTypes[REPLACED][iUnitCombat]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Heal Unit Combat "+str(aHealUnitCombatTypes[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+					if aUnitCombatExtraStrengths[BASE][iUnitCombat] < aUnitCombatExtraStrengths[REPLACED][iUnitCombat]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat extra strengths "+str(aUnitCombatExtraStrengths[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
+					if aUnitCombatProdModifiers[BASE][iUnitCombat] < aUnitCombatProdModifiers[REPLACED][iUnitCombat]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitCombatInfo(iUnitCombat).getType()+" Unit Combat prod Modifiers "+str(aUnitCombatProdModifiers[FINAL][iUnitCombat])+" replaced: "+str(aImmediateReplacedNameList))
 
+				#=================================================================================================
+				#<UnitProductionModifiers> - base
+				aUnitProductionModifiers = [[0 for x in xrange(GC.getNumUnitInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
+				for pair in CvBuildingInfo.getUnitProductionModifiers():
+					aUnitProductionModifiers[BASE][pair.id] += pair.value
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<UnitProductionModifiers>
+					for pair in CvReplacedBuildingInfo.getUnitProductionModifiers():
+						aUnitProductionModifiers[REPLACED][pair.id] += pair.value
+
+				#Keep already existing <UnitProductionModifiers> in base
+				for iUnit in xrange(GC.getNumUnitInfos()):
+					aUnitProductionModifiers[FINAL][iUnit] = aUnitProductionModifiers[BASE][iUnit] + aUnitProductionModifiers[REPLACED][iUnit]
+
+				#Building shouldn't be worse than replaced one!
+				for iUnit in xrange(GC.getNumUnitInfos()):
+					if aUnitProductionModifiers[BASE][iUnit] < aUnitProductionModifiers[REPLACED][iUnit]:
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getUnitInfo(iUnit).getType()+" Unit production Modifiers "+str(aUnitProductionModifiers[FINAL][iUnit])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
 				#<PropertyManipulators> - base
 				aGoodProperties = [GC.getInfoTypeForString("PROPERTY_EDUCATION"), GC.getInfoTypeForString("PROPERTY_TOURISM")]
 				aPropertyManipulators = [[0 for x in xrange(GC.getNumPropertyInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
-
 				aProperties = self.HF.getPropertyAmmountPerTurn(CvBuildingInfo.getPropertyManipulators())
 				for iProperty in xrange(GC.getNumPropertyInfos()):
 					aPropertyManipulators[BASE][iProperty] += aProperties[iProperty]
@@ -1403,7 +1475,6 @@ class TestCode:
 				aBonusYieldModifiers = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aBonusCommercePercentChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aBonusCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumBonusInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-
 				if CvBuildingInfo.isAnyBonusYieldChanges():
 					for iBonus in xrange(GC.getNumBonusInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1476,13 +1547,12 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce Modifiers "+str(aBonusCommerceModifiers[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#======================================================================================================================================
-				#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
+				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
 				aTechYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechYieldModifiers = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechSpecialistChanges = [[[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-
 				if CvBuildingInfo.isAnyTechYieldChanges():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1507,7 +1577,7 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
+					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
 					if CvReplacedBuildingInfo.isAnyTechYieldChanges():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1529,7 +1599,7 @@ class TestCode:
 							for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 								aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
-				#Keep already existing <TechCommerceChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
+				#Keep already existing <TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
 				for iTech in xrange(GC.getNumTechInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aTechYieldChanges[FINAL][iTech][iYield] = aTechYieldChanges[BASE][iTech][iYield] + aTechYieldChanges[REPLACED][iTech][iYield]
@@ -1555,6 +1625,48 @@ class TestCode:
 					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 						if aTechSpecialistChanges[BASE][iTech][iSpecialist] < aTechSpecialistChanges[REPLACED][iTech][iSpecialist]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Specialist Changes "+GC.getSpecialistInfo(iSpecialist).getType()+" replaced: "+str(aFinalTechSpecialistChanges))
+
+				#======================================================================================================================================
+				#<SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges> - base
+				aSpecialistYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				aLocalSpecialistCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				aSpecialistCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aSpecialistYieldChanges[BASE][iSpecialist][iYield] += CvBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
+						aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges>
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aSpecialistYieldChanges[REPLACED][iSpecialist][iYield] += CvReplacedBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
+							aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+
+				#Keep already existing <SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges> in base
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aSpecialistYieldChanges[FINAL][iSpecialist][iYield] = aSpecialistYieldChanges[BASE][iSpecialist][iYield] + aSpecialistYieldChanges[REPLACED][iSpecialist][iYield]
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						aLocalSpecialistCommerceChanges[FINAL][iSpecialist][iCommerce] = aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] + aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]
+						aSpecialistCommerceChanges[FINAL][iSpecialist][iCommerce] = aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] + aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]
+
+				#Building shouldn't be worse than replaced one!
+				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aSpecialistYieldChanges[BASE][iSpecialist][iYield] < aSpecialistYieldChanges[REPLACED][iSpecialist][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Yield Changes "+str(aSpecialistYieldChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+						if aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+						if aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base
