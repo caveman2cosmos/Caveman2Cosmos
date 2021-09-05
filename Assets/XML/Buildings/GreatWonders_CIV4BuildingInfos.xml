@@ -5104,7 +5104,6 @@
 			<Description>TXT_KEY_BUILDING_CRUSADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRUSADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Help>TXT_KEY_BUILDING_CRUSADE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CRUSADE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -11990,7 +11989,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqInCityBuildings>
-			<Help>TXT_KEY_BUILDING_KENTUCKY_DERBY_HELP</Help>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
@@ -11998,6 +11996,16 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TAMED_HORSE</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TAMED_HORSE_PAIR</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
