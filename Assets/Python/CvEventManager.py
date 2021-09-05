@@ -244,6 +244,7 @@ class CvEventManager:
 					"ARCOLOGY_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ARCOLOGY_SHIELDING"),
 					"ADVANCED_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ADVANCED_SHIELDING"),
 					"GREAT_ZIMBABWE"		: GC.getInfoTypeForString("BUILDING_GREAT_ZIMBABWE"),
+					"CRUSADE"				: GC.getInfoTypeForString("CRUSADE"),
 					"ALAMO"					: GC.getInfoTypeForString("BUILDING_ALAMO"),
 					"WORLD_BANK"			: GC.getInfoTypeForString("BUILDING_WORLD_BANK"),
 					"CYRUS_CYLINDER"		: GC.getInfoTypeForString("BUILDING_CYRUS_CYLINDER"),
@@ -573,9 +574,9 @@ class CvEventManager:
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
-			"GREAT_ZIMBABWE",	"HELSINKI",				"ALAMO",				"TSUKIJI",
+			"CRUSADE",			"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
 			"LASCAUX",			"WORLD_BANK",			"TAIPEI_101",			"CYRUS_CYLINDER",
-			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",
+			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
 			"BIODOME",			"NAZCA_LINES",			"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
 			"TOPKAPI_PALACE",
 		] # KEY
@@ -623,8 +624,8 @@ class CvEventManager:
 		self.aWonderTuple = [aList0, aList1, aList2, aList3, aList4]
 		# [0][X] = KEY		[1][X] = iBuilding		[2][X] = iTech (Obsolete)		[3][X] = iCityID		[4][X] = iOwner
 		''' X:
-		[0]  Great Zimbabwe		[1]  Helsinki				[2]  Alamo
-		[3]  Lascaux			[4]  World Bank				[5]  Taipei 101				[6]  Cyrus Cylinder		etc.
+		[0]  Crusade			[1]  Great Zimbabwe			[2]  Helsinki				[3]  Alamo
+		[4]  Lascaux			[5]  World Bank				[6]  Taipei 101				[7]  Cyrus Cylinder		etc.
 		'''
 
 	def onGameStart(self, argsList):
@@ -1327,7 +1328,12 @@ class CvEventManager:
 			KEY = aWonderTuple[0][i]
 			aWonderTuple[3][i] = CyCity.getID()
 			aWonderTuple[4][i] = iPlayer
-			if KEY == "TAIPEI_101":
+			if KEY == "CRUSADE":
+				iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
+				if iUnit > -1:
+					CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
+					CyCity.addProductionExperience(CyUnit, False)
+			elif KEY == "TAIPEI_101":
 				iTeam = CyPlayer.getTeam()
 				for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 					if iPlayer == iPlayerX:
@@ -2681,7 +2687,15 @@ class CvEventManager:
 				if iPlayer != aWonderTuple[4][i]: continue # Obsolete
 				KEY = aWonderTuple[0][i]
 
-				if KEY == "GREAT_ZIMBABWE":
+				if KEY == "CRUSADE":
+					iBuilding = aWonderTuple[1][i]
+					if CyCity.getBuildingOriginalOwner(iBuilding) == iPlayer and not (GAME.getGameTurn() % (1 + 4 * self.iTrainPrcntGS / 100)):
+						CyPlayer = GC.getPlayer(iPlayer)
+						iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
+						CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
+						CyCity.addProductionExperience(CyUnit, False)
+
+				elif KEY == "GREAT_ZIMBABWE":
 					if CyCity.isFoodProduction():
 						CyCity.changeFood(CyCity.getYieldRate(0) - CyCity.foodConsumption(False, 0))
 						if CyCity.getFood() >= CyCity.growthThreshold():

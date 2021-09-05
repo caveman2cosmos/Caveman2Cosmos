@@ -6607,7 +6607,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CRUSADER</Type>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6679,7 +6678,7 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<iCost>300</iCost>
+			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>

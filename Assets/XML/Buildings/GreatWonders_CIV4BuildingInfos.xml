@@ -5104,10 +5104,12 @@
 			<Description>TXT_KEY_BUILDING_CRUSADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRUSADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
+			<Help>TXT_KEY_BUILDING_CRUSADE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CRUSADE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
