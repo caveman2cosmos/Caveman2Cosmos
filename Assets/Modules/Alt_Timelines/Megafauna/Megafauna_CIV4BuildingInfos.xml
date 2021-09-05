@@ -739,7 +739,6 @@
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1110,7 +1109,6 @@
 				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
