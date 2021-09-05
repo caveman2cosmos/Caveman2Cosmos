@@ -7025,7 +7025,6 @@
 				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>408</iCost>
 			<CommerceChanges>
