@@ -2607,8 +2607,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ARMEDCOMMUNITIES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<Bonus>BONUS_FIREARMS</Bonus>
-			<iHealth>2</iHealth>
-			<iHappiness>2</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-2</iHappiness>
 			<iInvestigation>20</iInvestigation>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -2621,7 +2621,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5041,7 +5041,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHappiness>2</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5066,7 +5066,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
