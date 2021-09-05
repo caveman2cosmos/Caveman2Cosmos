@@ -21,8 +21,9 @@ class CvOutcomeList
 public:
 	CvOutcomeList() : m_bIsReference(false) {}
 	virtual ~CvOutcomeList();
-	CvOutcome* getOutcome(int index) const;
-	int getNumOutcomes() const;
+	//CvOutcome* getOutcome(int index) const;
+	//int getNumOutcomes() const;
+	const std::vector<CvOutcome*>& getOutcomes() const;
 
 	bool isPossible(const CvUnit& kUnit) const;
 	bool isPossibleSomewhere(const CvUnit& kUnit) const;

@@ -27907,13 +27907,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		(eUnitAI == UNITAI_HUNTER_ESCORT) ||
 		(eUnitAI == UNITAI_GREAT_HUNTER))
 	{
-		for( iI = 0; iI < GC.getNumOutcomeInfos(); iI++ )
+		foreach_(const CvOutcomeInfo* outcomeInfo, GC.getOutcomeInfos())
 		{
-			for ( int iJ = 0; iJ < GC.getOutcomeInfo((OutcomeTypes)iI).getNumExtraChancePromotions(); iJ++ )
+			for (int iJ = 0; iJ < outcomeInfo->getNumExtraChancePromotions(); iJ++)
 			{
-				if ( GC.getOutcomeInfo((OutcomeTypes)iI).getExtraChancePromotion(iJ) == ePromotion )
+				if (outcomeInfo->getExtraChancePromotion(iJ) == ePromotion)
 				{
-					iValue += 2*GC.getOutcomeInfo((OutcomeTypes)iI).getExtraChancePromotionChance(iJ);
+					iValue += 2*outcomeInfo->getExtraChancePromotionChance(iJ);
 					break;
 				}
 			}

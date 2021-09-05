@@ -437,6 +437,7 @@ public:
 
 	int getNumOutcomeInfos() const;
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
+	const std::vector<CvOutcomeInfo*>& getOutcomeInfos() const { return m_paOutcomeInfo; }
 
 	int iStuckUnitID;
 	int iStuckUnitCount;

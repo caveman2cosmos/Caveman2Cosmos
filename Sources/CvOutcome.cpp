@@ -479,6 +479,11 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		}
 	}*/
 
+	if (m_eUnitType != NO_UNIT && GET_PLAYER(kUnit.getOwner()).isUnitMaxedOut(m_eUnitType))
+	{
+		return false;
+	}
+
 	if (m_eBonusType != NO_BONUS)
 	{
 		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
@@ -652,6 +657,11 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 		}
 	}*/
 
+	if (m_eUnitType != NO_UNIT && GET_PLAYER(kUnit.getOwner()).isUnitMaxedOut(m_eUnitType))
+	{
+		return false;
+	}
+
 	if (m_eBonusType != NO_BONUS)
 	{
 		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
@@ -811,6 +821,11 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		}
 	}*/
 
+	if (m_eUnitType != NO_UNIT && GET_PLAYER(kUnit.getOwner()).isUnitMaxedOut(m_eUnitType))
+	{
+		return false;
+	}
+
 	if (m_eBonusType != NO_BONUS)
 	{
 		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
@@ -967,6 +982,11 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 			}
 		}
 	}*/
+
+	if (m_eUnitType != NO_UNIT && kPlayer.isUnitMaxedOut(m_eUnitType))
+	{
+		return false;
+	}
 
 	if (m_eBonusType != NO_BONUS)
 	{

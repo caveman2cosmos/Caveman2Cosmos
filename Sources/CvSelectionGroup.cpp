@@ -1239,7 +1239,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FAssert(false);
-			CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
+			const CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
 			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 			{
 				return true;
@@ -1249,7 +1249,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			{
 				if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
 				{
-					CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
+					const CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
 					if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
 					{
 						return true;

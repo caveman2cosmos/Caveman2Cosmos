@@ -21,26 +21,27 @@ CvOutcomeList::~CvOutcomeList()
 	clear();
 }
 
-CvOutcome* CvOutcomeList::getOutcome(int index) const
-{
-	FASSERT_BOUNDS(0, getNumOutcomes(), index)
-	return m_aOutcome[index];
-}
+//CvOutcome* CvOutcomeList::getOutcome(int index) const
+//{
+//	FASSERT_BOUNDS(0, getNumOutcomes(), index);
+//	return m_aOutcome[index];
+//}
 
-int CvOutcomeList::getNumOutcomes() const
+//int CvOutcomeList::getNumOutcomes() const
+//{
+//	return m_aOutcome.size();
+//}
+
+const std::vector<CvOutcome*>& CvOutcomeList::getOutcomes() const
 {
-	return m_aOutcome.size();
+	return m_aOutcome;
 }
 
 bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 {
-	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
-
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvOutcome* pOutcome, m_aOutcome)
 	{
-		if (m_aOutcome[i]->isPossible(kUnit))
+		if (pOutcome->isPossible(kUnit))
 		{
 			return true;
 		}
@@ -51,13 +52,9 @@ bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 {
-	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
-
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvOutcome* pOutcome, m_aOutcome)
 	{
-		if (m_aOutcome[i]->isPossibleSomewhere(kUnit))
+		if (pOutcome->isPossibleSomewhere(kUnit))
 		{
 			return true;
 		}
@@ -68,13 +65,9 @@ bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleInPlot(const CvUnit &kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
-
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvOutcome* pOutcome, m_aOutcome)
 	{
-		if (m_aOutcome[i]->isPossibleInPlot(kUnit, kPlot, bForTrade))
+		if (pOutcome->isPossibleInPlot(kUnit, kPlot, bForTrade))
 		{
 			return true;
 		}
@@ -92,9 +85,9 @@ void CvOutcomeList::clear()
 {
 	if (!m_bIsReference)
 	{
-		for (int i=0; i<(int)m_aOutcome.size(); i++)
+		foreach_(const CvOutcome* pOutcome, m_aOutcome)
 		{
-			SAFE_DELETE(m_aOutcome[i]);
+			SAFE_DELETE(pOutcome);
 		}
 	}
 	m_aOutcome.clear();
@@ -119,9 +112,8 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 	std::vector<std::pair<CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
-	for (int i=0; i<getNumOutcomes(); i++)
+	foreach_(CvOutcome* pOutcome, m_aOutcome)
 	{
-		CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossible(kUnit))
 		{
 			const int iChance = pOutcome->getChance(kUnit);
@@ -174,9 +166,8 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 	std::vector<std::pair<CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
-	for (int i=0; i<getNumOutcomes(); i++)
+	foreach_(CvOutcome* pOutcome, m_aOutcome)
 	{
-		CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossibleInPlot(kUnit, kPlot, bForTrade))
 		{
 			const int iChance = pOutcome->getChance(kUnit);
@@ -243,10 +234,9 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 {
 	if (isEmpty())
 	{
-		const int num = pOutcomeList->getNumOutcomes();
-		for (int index = 0; index < num; index++)
+		foreach_(CvOutcome* pOutcome, pOutcomeList->getOutcomes())
 		{
-			m_aOutcome.push_back(pOutcomeList->getOutcome(index));
+			m_aOutcome.push_back(pOutcome);
 		}
 		pOutcomeList->m_aOutcome.clear();
 	}
@@ -254,10 +244,9 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 
 void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 {
-	const int num = getNumOutcomes();
-	for (int index = 0; index < num; index++)
+	foreach_(const CvOutcome* pOutcome, m_aOutcome)
 	{
-		m_aOutcome[index]->getCheckSum(iSum);
+		pOutcome->getCheckSum(iSum);
 	}
 }
 
@@ -267,9 +256,8 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
 
-	for (int i=0; i<getNumOutcomes(); i++)
+	foreach_(const CvOutcome* pOutcome, m_aOutcome)
 	{
-		const CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossible(kUnit))
 		{
 			const int iChance = pOutcome->getChance(kUnit);
@@ -320,9 +308,8 @@ void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 	if (isEmpty())
 	{
 		// just copy all outcomes and store the outcome types in the set
-		for (int i=0; i < pList->getNumOutcomes(); i++)
+		foreach_(CvOutcome* pOutcome, pList->getOutcomes())
 		{
-			CvOutcome* pOutcome = pList->getOutcome(i);
 			m_aOutcome.push_back(pOutcome);
 			m_setTypes.insert(pOutcome->getType());
 		}
@@ -330,9 +317,8 @@ void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 	else
 	{
 		// add all outcomes of the other list which use outcome types that we have not seen yet
-		for (int i=0; i < pList->getNumOutcomes(); i++)
+		foreach_(CvOutcome* pOutcome, pList->getOutcomes())
 		{
-			CvOutcome* pOutcome = pList->getOutcome(i);
 			if (m_setTypes.count(pOutcome->getType()) == 0)
 			{
 				m_aOutcome.push_back(pOutcome);
