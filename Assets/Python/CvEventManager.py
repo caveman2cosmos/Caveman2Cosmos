@@ -2689,7 +2689,7 @@ class CvEventManager:
 
 				if KEY == "CRUSADE":
 					iBuilding = aWonderTuple[1][i]
-					if CyCity.getBuildingOriginalOwner(iBuilding) == iPlayer and not (GAME.getGameTurn() % (1 + 4 * self.iTrainPrcntGS / 100)):
+					if CyCity.getBuildingOriginalOwner(iBuilding) == iPlayer and not (GAME.getGameTurn() % (1 + 2 * self.iTrainPrcntGS / 100)):
 						CyPlayer = GC.getPlayer(iPlayer)
 						iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
 						CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
