@@ -5109,7 +5109,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
