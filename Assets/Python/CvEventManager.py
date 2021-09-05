@@ -244,7 +244,7 @@ class CvEventManager:
 					"ARCOLOGY_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ARCOLOGY_SHIELDING"),
 					"ADVANCED_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ADVANCED_SHIELDING"),
 					"GREAT_ZIMBABWE"		: GC.getInfoTypeForString("BUILDING_GREAT_ZIMBABWE"),
-					"CRUSADE"				: GC.getInfoTypeForString("CRUSADE"),
+					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_CRUSADE"),
 					"ALAMO"					: GC.getInfoTypeForString("BUILDING_ALAMO"),
 					"WORLD_BANK"			: GC.getInfoTypeForString("BUILDING_WORLD_BANK"),
 					"CYRUS_CYLINDER"		: GC.getInfoTypeForString("BUILDING_CYRUS_CYLINDER"),
