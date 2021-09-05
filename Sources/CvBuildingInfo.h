@@ -342,7 +342,7 @@ public:
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
-	//int getUnitProductionModifier(int i) const;
+	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
 	const IDValueMap<TechTypes, int*>& getTechCommercePercent() const { return m_aTechCommercePercent; }
 
@@ -419,6 +419,7 @@ public:
 	int* getTechYieldModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
+	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
 
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;

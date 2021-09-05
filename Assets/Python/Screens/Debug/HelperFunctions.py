@@ -419,6 +419,21 @@ class HelperFunctions:
 
 	#^^^^ GOM REQUIREMENT READER FUNCTIONS ^^^^#
 
+	##### PROPERTY READER FUNCTIONS #####
+
+	def getPropertyAmmountPerTurn(self, pPropertyManipulators):
+		a = [0]*GC.getNumPropertyInfos()
+		if pPropertyManipulators is not None:
+			for iSource in xrange(pPropertyManipulators.getNumSources()):
+				pSource = pPropertyManipulators.getSource(iSource)
+				if isinstance(pSource, CvPropertySourceConstant):
+					pIntExpr = pSource.getAmountPerTurnExpr()
+					if isinstance(pIntExpr, IntExprConstant):
+						a[pSource.getProperty()] += pIntExpr.iValue
+		return a
+
+	#^^^^ PROPERTY READER FUNCTIONS ^^^^#
+
 	##### OBSOLETION TECH LOCATION FINDER FUNCTIONS #####
 
 	#Building tech obsoletion location
