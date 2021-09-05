@@ -22621,45 +22621,31 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		//if (!kBuilding.getTechCommercePercent().empty())
 		{
-			CvWString szTempBuffer;
-			CvWString szTempBuffer2;
-
-			std::vector<bool> pabProcessed(GC.getNumBonusInfos(), false);
-
 			foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercent())
 			{
+				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 				{
-					if (modifier.second[iJ] != 0 && !pabProcessed[modifier.first])
+					const int iValue = modifier.second[iJ];
+					if (iValue != 0)
 					{
-						const float fValue = (float)modifier.second[iJ];
-						if (fmod(fValue, 100) == 0)
+						if (bFirst)
 						{
-							szTempBuffer2.Format(fValue > 0 ? L"+%.0f" : L"%.0f", fValue/100);
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(modifier.first).getType()).GetCString(),
+									GC.getTechInfo(modifier.first).getDescription()
+								)
+							);
+							bFirst = false;
 						}
-						else if (fValue > 0)
-						{
-							szTempBuffer2.Format(L"+%.2f", fValue/100);
-						}
-						else
-						{
-							szTempBuffer2.Format(L"%.2f", fValue/100);
-						}
+						else szBuffer.append(L", ");
 
-						szTempBuffer.Format(L"\n%c%s%c%s", gDLL->getSymbolID(BULLET_CHAR), szTempBuffer2.c_str(), GC.getCommerceInfo((CommerceTypes)iJ).getChar(), gDLL->getText("TXT_KEY_WITH").c_str());
-						szTempBuffer += CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo(modifier.first).getType()).c_str(), GC.getTechInfo(modifier.first).getDescription());
-
-						foreach_(const TechCommerceModifiers& modifier2, kBuilding.getTechCommercePercent())
-						{
-							if (modifier2.first != modifier.first && modifier.second[iJ] == modifier2.second[iJ])
-							{
-								szTempBuffer += CvWString::format(L", <link=%s>%s</link>", CvWString(GC.getTechInfo(modifier2.first).getType()).c_str(), GC.getTechInfo(modifier2.first).getDescription());
-								pabProcessed[modifier2.first] = true;
-							}
-						}
-						pabProcessed[modifier.first] = true;
-						iLast = modifier.second[iJ];
-						szBuffer.append(szTempBuffer);
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
 					}
 				}
 			}
