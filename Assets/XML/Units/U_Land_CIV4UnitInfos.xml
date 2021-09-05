@@ -6673,7 +6673,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CRUSADE</BuildingType>
 			</PrereqAndBuildings>
+			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
+			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
+			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
