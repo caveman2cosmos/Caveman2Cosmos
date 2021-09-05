@@ -348,6 +348,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 			</Buildings>
 			<TrainCondition>
 				<Or>
@@ -469,6 +470,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2111,7 +2113,6 @@
 				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2917,6 +2918,10 @@
 			</PrereqOrBuildings>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_DONKEY</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<iCost>60</iCost>
 			<iMoves>2</iMoves>
 			<iWithdrawalProb>40</iWithdrawalProb>
@@ -3015,6 +3020,10 @@
 				<BuildingType>BUILDING_HORSE_NATIONAL</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_HORSE</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>60</iCost>
 			<iMoves>3</iMoves>
@@ -3125,6 +3134,10 @@
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_TAMED_WOLF</UnitType>
+			</UnitUpgrades>
+			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<iCost>60</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
