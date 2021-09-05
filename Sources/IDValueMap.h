@@ -22,6 +22,39 @@ struct IDValueMap
 {
 	typedef std::pair<ID_, Value_> pair_t;
 
+	void readPairedArray(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
+	{
+		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
+		{
+			const int iNumChildren = pXML->GetXmlChildrenNumber();
+
+			if (pXML->TryMoveToXmlFirstChild(L"TechCommercePercentChange"))
+			{
+				for (int j = 0; j < iNumChildren; ++j)
+				{
+					CvString szTextVal;
+					pXML->GetChildXmlValByName(szTextVal, L"TechType");
+					const int k = pXML->GetInfoClass(szTextVal);
+					if (k > -1)
+					{
+						pair_t pair = pair_t();
+						pair.first = static_cast<ID_>(k);
+						if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
+						{
+							pXML->SetCommerce(&pair.second);
+							pXML->MoveToXmlParent();
+							m_map.push_back(pair);
+						}
+					}
+					if (!pXML->TryMoveToXmlNextSibling())
+						break;
+				}
+				pXML->MoveToXmlParent();
+			}
+			pXML->MoveToXmlParent();
+		}
+	}
+
 	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
@@ -33,8 +66,9 @@ struct IDValueMap
 				{
 					if (pXML->TryMoveToXmlFirstChild())
 					{
-						m_map.push_back(pair_t());
-						readChildPair(pXML, m_map[m_map.size() -1]);
+						pair_t pair = pair_t();
+						if (readChildPair(pXML, pair))
+							m_map.push_back(pair);
 						pXML->MoveToXmlParent();
 					}
 				} while (pXML->TryMoveToXmlNextSibling());
@@ -81,22 +115,35 @@ struct IDValueMap
 	}
 
 	template <class T>
-	void readChildPair(CvXMLLoadUtility* pXML, T& pair)
+	bool readChildPair(CvXMLLoadUtility* pXML, T& pair)
 	{
 		CvString szTextVal;
 		pXML->GetXmlVal(szTextVal);
 		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
 		//pair.second = defaultValue;
 		pXML->GetNextXmlVal(&pair.second);
+		return true;
 	}
 
 	template <>
-	void readChildPair<std::pair<ID_, int*> >(CvXMLLoadUtility* pXML, std::pair<ID_, int*>& pair)
+	bool readChildPair<std::pair<ID_, int*> >(CvXMLLoadUtility* pXML, std::pair<ID_, int*>& pair)
 	{
 		CvString szTextVal;
-		pXML->GetXmlVal(szTextVal);
+		pXML->GetChildXmlValByName(szTextVal, L"TechType");
+		//pXML->GetXmlVal(szTextVal);
+		//GC.addDelayedResolution((int*)&pair.first, szTextVal);
 		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
-		pXML->SetCommerce(&pair.second);
+		FASSERT_NOT_NEGATIVE(pair.first);
+
+		pair.second = NULL;
+		if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
+		{
+			FErrorMsg("set commerce");
+			pXML->SetCommerce(&pair.second);
+			pXML->MoveToXmlParent();
+			return true;
+		}
+		return false;
 	}
 
 	void copyNonDefaults(const IDValueMap<ID_, Value_, defaultValue>& other)
