@@ -2561,7 +2561,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ANIMALABUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ARMEDCOMMUNITIES</Type>
@@ -2572,8 +2572,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ARMEDCOMMUNITIES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<Bonus>BONUS_FIREARMS</Bonus>
-			<iHealth>2</iHealth>
-			<iHappiness>2</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-2</iHappiness>
 			<iInvestigation>20</iInvestigation>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -2586,7 +2586,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2596,7 +2596,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ARMEDCOMMUNITIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ARSON</Type>
@@ -2634,7 +2634,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ARSON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ASIMOV</Type>
@@ -2660,7 +2660,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ASIMOV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BANKROBBERY</Type>
@@ -2690,7 +2690,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BANKROBBERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BLACKMAIL</Type>
@@ -2720,7 +2720,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMAIL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BLACKMARKETS</Type>
@@ -2762,7 +2762,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMARKETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BRAINWASHING</Type>
@@ -2804,7 +2804,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRAINWASHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BRIBERY</Type>
@@ -2839,7 +2839,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRIBERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_BURGLARY</Type>
@@ -2968,7 +2968,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BURGLARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CARBOMBING</Type>
@@ -3007,7 +3007,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CARBOMBING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CARTHEIFT</Type>
@@ -3038,7 +3038,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CARTHEIFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CHILDLABOR</Type>
@@ -3070,7 +3070,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CHILDLABOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CORRUPTION</Type>
@@ -3108,7 +3108,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CORRUPTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_COUNTERFEITING</Type>
@@ -3134,7 +3134,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_COUNTERFEITING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CYBERBULLYING</Type>
@@ -3149,7 +3149,7 @@
 			<iInsidiousness>1</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERBULLYING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_CYBERWARFARE</Type>
@@ -3179,7 +3179,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERWARFARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DOMESTICVIOLENCE</Type>
@@ -3201,7 +3201,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DOMESTICVIOLENCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUGCARTELS</Type>
@@ -3239,7 +3239,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGCARTELS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUGS</Type>
@@ -3275,7 +3275,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_DRUNKDRIVING</Type>
@@ -3298,7 +3298,7 @@
 			<iInsidiousness>6</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUNKDRIVING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ELDERABUSE</Type>
@@ -3321,7 +3321,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ELDERABUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EMBEZZLEMENT</Type>
@@ -3347,7 +3347,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EMBEZZLEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EPIRACY</Type>
@@ -3376,7 +3376,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EPIRACY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_EXTORTION</Type>
@@ -3406,7 +3406,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EXTORTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FALSEACCUSATIONS</Type>
@@ -3427,7 +3427,7 @@
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FALSEACCUSATIONS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FIGHTING</Type>
@@ -3456,7 +3456,7 @@
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FIGHTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_FORGERY</Type>
@@ -3479,7 +3479,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FORGERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GANGS</Type>
@@ -3518,7 +3518,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GANGWARFARE</Type>
@@ -3557,7 +3557,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGWARFARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GENEFORGERY</Type>
@@ -3581,7 +3581,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GENEFORGERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GRAFFITI</Type>
@@ -3623,7 +3623,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GRAFFITI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_GUNRAMPAGE</Type>
@@ -3655,7 +3655,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GUNRAMPAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HACKING</Type>
@@ -3683,7 +3683,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HACKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HATECRIME</Type>
@@ -3717,7 +3717,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HATECRIME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_HUMANTRAFFICKING</Type>
@@ -3754,7 +3754,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HUMANTRAFFICKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_IDENTITYTHEFT</Type>
@@ -3781,7 +3781,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_IDENTITYTHEFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ILLEGALIMMIGRATION</Type>
@@ -3828,7 +3828,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ILLEGALIMMIGRATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSIDERTRADING</Type>
@@ -3859,7 +3859,7 @@
 			</CommerceModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSIDERTRADING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSUBORDINATION</Type>
@@ -3875,7 +3875,7 @@
 			<iRevIdxLocal>25</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSUBORDINATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INSURANCEFRAUD</Type>
@@ -3901,7 +3901,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSURANCEFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_INTERNETFRAUD</Type>
@@ -3927,7 +3927,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INTERNETFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_JAILBREAK</Type>
@@ -3965,7 +3965,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_JAILBREAK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_KIDNAPPING</Type>
@@ -3994,7 +3994,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_KIDNAPPING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LITERING</Type>
@@ -4024,7 +4024,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LITERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LOOTING</Type>
@@ -4071,7 +4071,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LOOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_LYING</Type>
@@ -4092,7 +4092,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LYING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MALWARE</Type>
@@ -4122,7 +4122,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MALWARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MEDICALFRAUD</Type>
@@ -4157,7 +4157,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MEDICALFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MILITARYDESERTION</Type>
@@ -4186,7 +4186,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MILITARYDESERTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MOB</Type>
@@ -4229,7 +4229,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MOB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MONEYLAUNDERING</Type>
@@ -4256,7 +4256,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MONEYLAUNDERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MUGGING</Type>
@@ -4291,7 +4291,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MUGGING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_MURDER</Type>
@@ -4324,7 +4324,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MURDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_ORGANTRADE</Type>
@@ -4353,7 +4353,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ORGANTRADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PICKPOCKET</Type>
@@ -4386,7 +4386,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PICKPOCKET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PLANEHIJACKING</Type>
@@ -4423,7 +4423,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PLANEHIJACKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_POACHING</Type>
@@ -4461,7 +4461,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_POACHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_PUBLICINTOXICATION</Type>
@@ -4488,7 +4488,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PUBLICINTOXICATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RACKETEERTING</Type>
@@ -4524,7 +4524,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RACKETEERTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RAPE</Type>
@@ -4557,7 +4557,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RAPE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_RIOTING</Type>
@@ -4599,7 +4599,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RIOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SCHOOLSHOOTING</Type>
@@ -4623,7 +4623,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SCHOOLSHOOTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SECTARIANVIOLENCE</Type>
@@ -4663,7 +4663,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SECTARIANVIOLENCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SEXUALHARASSMENT</Type>
@@ -4684,7 +4684,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SEXUALHARASSMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SHOPLIFTING</Type>
@@ -4793,7 +4793,7 @@
 			</TechCommerceChanges>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SHOPLIFTING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SOLICITING</Type>
@@ -4808,7 +4808,7 @@
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SOLICITING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_SPORTSRIOTS</Type>
@@ -4834,7 +4834,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SPORTSRIOTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TAXEVASION</Type>
@@ -4854,7 +4854,7 @@
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TAXEVASION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TIMELINETAMPERING</Type>
@@ -4891,7 +4891,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TIMELINETAMPERING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TOXICDUMPING</Type>
@@ -4928,7 +4928,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TOXICDUMPING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TRESSPASSING</Type>
@@ -4949,7 +4949,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRESSPASSING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_TRUANCY</Type>
@@ -4973,7 +4973,7 @@
 			</UnitCombatFreeExperiences>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRUANCY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_UNLICENSEDCLONING</Type>
@@ -4996,7 +4996,7 @@
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_UNLICENSEDCLONING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_VIGILANTISM</Type>
@@ -5006,7 +5006,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHappiness>2</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5031,7 +5031,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5041,7 +5041,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_VIGILANTISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_WEAPONSTRAFFICKING</Type>
@@ -5076,7 +5076,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WEAPONSTRAFFICKING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRIME_WELFAREFRAUD</Type>
@@ -5110,7 +5110,7 @@
 			</CommerceModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WELFAREFRAUD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
@@ -5505,7 +5505,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_ANTHRAX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_BIRDFLU</Type>
@@ -5536,7 +5536,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_BIRDFLU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_CHOLERA</Type>
@@ -5573,7 +5573,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_CHOLERA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_COMMONCOLD</Type>
@@ -5591,7 +5591,7 @@
 			</YieldModifiers>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_COMMONCOLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_DIPHTHERIA</Type>
@@ -5628,7 +5628,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DIPHTHERIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_DYSENTERY</Type>
@@ -5665,33 +5665,8 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DYSENTERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
-		<!-- Should be given by python when butchering units.
-		<BuildingInfo>
-			<Type>BUILDING_DISEASE_KURU</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<iHealth>-4</iHealth>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>-5</iYield>
-			</YieldModifiers>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
-		</BuildingInfo>
-		-->
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_HIV</Type>
 			<MapCategoryTypes>
@@ -5717,8 +5692,33 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_HIV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
+		<!-- Should be given by python when butchering units.
+		<BuildingInfo>
+			<Type>BUILDING_DISEASE_KURU</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<iHealth>-4</iHealth>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-5</iYield>
+			</YieldModifiers>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
+		</BuildingInfo>
+		-->
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_LEPROSY</Type>
 			<MapCategoryTypes>
@@ -5744,7 +5744,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_LEPROSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_MALARIA</Type>
@@ -5775,7 +5775,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MALARIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_MEASLES</Type>
@@ -5802,7 +5802,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MEASLES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_PLAGUE</Type>
@@ -5833,7 +5833,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_PLAGUE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SCARLETFEAVER</Type>
@@ -5860,7 +5860,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCARLETFEAVER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SCURVY</Type>
@@ -5886,7 +5886,7 @@
 			</BonusHealthChanges>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCURVY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SMALLPOX</Type>
@@ -5913,7 +5913,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SMALLPOX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_SWINEFLU</Type>
@@ -5941,7 +5941,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SWINEFLU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_TYPHOIDFEAVER</Type>
@@ -5978,7 +5978,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_TYPHOIDFEAVER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
@@ -6899,7 +6899,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS10</Type>
@@ -6948,7 +6948,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS11</Type>
@@ -6995,7 +6995,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS12</Type>
@@ -7044,7 +7044,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS13</Type>
@@ -7091,7 +7091,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS2</Type>
@@ -7140,7 +7140,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS3</Type>
@@ -7187,7 +7187,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS4</Type>
@@ -7236,7 +7236,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS5</Type>
@@ -7283,7 +7283,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS6</Type>
@@ -7332,7 +7332,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS7</Type>
@@ -7379,7 +7379,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS8</Type>
@@ -7428,7 +7428,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS9</Type>
@@ -7475,7 +7475,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS1</Type>
@@ -7490,7 +7490,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS10</Type>
@@ -7505,7 +7505,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS11</Type>
@@ -7520,7 +7520,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS12</Type>
@@ -7535,7 +7535,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS13</Type>
@@ -7550,7 +7550,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS2</Type>
@@ -7565,7 +7565,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS3</Type>
@@ -7580,7 +7580,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS4</Type>
@@ -7595,7 +7595,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS5</Type>
@@ -7610,7 +7610,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS6</Type>
@@ -7625,7 +7625,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS7</Type>
@@ -7640,7 +7640,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS8</Type>
@@ -7655,7 +7655,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS9</Type>
@@ -7670,7 +7670,7 @@
 			<iAnarchyModifier>-5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS1</Type>
@@ -7685,7 +7685,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS10</Type>
@@ -7701,7 +7701,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS11</Type>
@@ -7717,7 +7717,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS12</Type>
@@ -7733,7 +7733,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS13</Type>
@@ -7749,7 +7749,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS2</Type>
@@ -7765,7 +7765,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS3</Type>
@@ -7781,7 +7781,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS4</Type>
@@ -7797,7 +7797,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS5</Type>
@@ -7813,7 +7813,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS6</Type>
@@ -7829,7 +7829,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS7</Type>
@@ -7845,7 +7845,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS8</Type>
@@ -7861,7 +7861,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS9</Type>
@@ -7877,7 +7877,7 @@
 			<iAnarchyModifier>5</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS1</Type>
@@ -7923,7 +7923,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS10</Type>
@@ -7972,7 +7972,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS11</Type>
@@ -8019,7 +8019,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS12</Type>
@@ -8068,7 +8068,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS13</Type>
@@ -8115,7 +8115,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS2</Type>
@@ -8164,7 +8164,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS3</Type>
@@ -8211,7 +8211,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS4</Type>
@@ -8260,7 +8260,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS5</Type>
@@ -8307,7 +8307,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS6</Type>
@@ -8356,7 +8356,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS7</Type>
@@ -8403,7 +8403,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS8</Type>
@@ -8452,7 +8452,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS9</Type>
@@ -8499,7 +8499,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
@@ -11225,7 +11225,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
@@ -11251,7 +11251,59 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
+			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<!--
 		<BuildingInfo>
@@ -11278,7 +11330,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
@@ -11304,7 +11356,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
@@ -11330,7 +11382,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
@@ -11356,7 +11408,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
@@ -11382,7 +11434,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
@@ -11408,7 +11460,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
@@ -11434,7 +11486,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
@@ -11460,61 +11512,9 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
-		-->
-		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>
-						<Mult>
-							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
-						</Mult>
-					</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
-			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>
-						<Mult>
-							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
-						</Mult>
-					</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bAutoBuild>1</bAutoBuild>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-		</BuildingInfo>
+		-->		
 		<BuildingInfo>
 			<Type>BUILDING_LASCAUX_EFFECT</Type>
 			<MapCategoryTypes>
@@ -13025,7 +13025,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_ACIDRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_BLACKENEDSKIES</Type>
@@ -13059,7 +13059,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_BLACKENEDSKIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST1</Type>
@@ -13090,7 +13090,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST2</Type>
@@ -13121,7 +13121,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_COAST3</Type>
@@ -13152,7 +13152,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_COAST3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING1</Type>
@@ -13180,7 +13180,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING2</Type>
@@ -13208,7 +13208,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING3</Type>
@@ -13237,7 +13237,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GLOBALWARMING3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER1</Type>
@@ -13267,7 +13267,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER2</Type>
@@ -13297,7 +13297,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_GROUNDWATER3</Type>
@@ -13328,7 +13328,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_GROUNDWATER3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE1</Type>
@@ -13361,7 +13361,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE2</Type>
@@ -13394,7 +13394,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_OZONE3</Type>
@@ -13427,7 +13427,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_OZONE3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_REDTIDE</Type>
@@ -13458,7 +13458,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_REDTIDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_REEFBLEACHING</Type>
@@ -13481,7 +13481,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_REEFBLEACHING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER1</Type>
@@ -13512,7 +13512,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER2</Type>
@@ -13543,7 +13543,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_RIVER3</Type>
@@ -13574,7 +13574,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_RIVER3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG1</Type>
@@ -13604,7 +13604,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG2</Type>
@@ -13634,7 +13634,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_SMOG3</Type>
@@ -13665,7 +13665,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_SMOG3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_TOXICATMOSPHERE</Type>
@@ -13699,7 +13699,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_TOXICATMOSPHERE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLLUTION_TOXICHYDROSPHERE</Type>
@@ -13733,7 +13733,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_POLLUTION_TOXICHYDROSPHERE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROSTITUTION_BAN</Type>
@@ -15578,7 +15578,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS10</Type>
@@ -15620,7 +15620,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS2</Type>
@@ -15660,7 +15660,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS3</Type>
@@ -15700,7 +15700,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS4</Type>
@@ -15740,7 +15740,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS5</Type>
@@ -15780,7 +15780,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS6</Type>
@@ -15820,7 +15820,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS7</Type>
@@ -15860,7 +15860,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS8</Type>
@@ -15900,7 +15900,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS9</Type>
@@ -15940,7 +15940,7 @@
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYTOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_ARCHERY</Type>
