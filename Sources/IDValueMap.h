@@ -203,20 +203,16 @@ struct IDValueMap
 	{
 		python::list l = python::list();
 		foreach_(const pair_t& pair, m_map)
-			toPython(l, pair);
+			l.append(std::make_pair((int)pair.first, pair.second));
 		return l;
 	}
 
-	template <class T>
-	static void toPython(python::list l, T& pair)
+	const python::list makeArrayList() const
 	{
-		l += std::make_pair((int)pair.first, pair.second);
-	}
-
-	template <>
-	static void toPython<std::pair<ID_, int*> >(python::list l, std::pair<ID_, int*>& pair)
-	{
-		l += python::tuple((int)pair.first, pair.second[0], pair.second[1], pair.second[2]);
+		python::list l = python::list();
+		foreach_(const pair_t& pair, m_map)
+			l.append(python::tuple((int)pair.first, pair.second[0], pair.second[1], pair.second[2]));
+		return l;
 	}
 
 	typedef typename std::vector<pair_t>::iterator        iterator;
