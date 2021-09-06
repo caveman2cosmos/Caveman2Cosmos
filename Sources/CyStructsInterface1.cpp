@@ -197,4 +197,10 @@ void CyStructsPythonInterface1()
 		.def_readonly("eUnitCombat", &HealUnitCombat::eUnitCombat)
 		.def_readonly("iHeal", &HealUnitCombat::iHeal)
 	;
+	
+	python::class_<TechCommerceChange>("TechCommerceChange", python::no_init)
+		.def_readonly("eTech", &TechCommerceChange::eTech)
+		.def_readonly("eCommerce", &TechCommerceChange::eCommerce)
+		.def_readonly("iChange", &TechCommerceChange::iChange)
+	;
 }

@@ -894,6 +894,14 @@ const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 	return pyList;
 }
 
+const python::list CvBuildingInfo::cyGetTechCommercePercent() const
+{
+	python::list pyList = python::list();
+	foreach_(const TechCommerceChange& pChange, m_aTechCommercePercent)
+		pyList.append(pChange);
+	return pyList;
+}
+
 const TCHAR* CvBuildingInfo::getButton() const
 {
 	const CvString cDefault = CvString::format("").GetCString();
