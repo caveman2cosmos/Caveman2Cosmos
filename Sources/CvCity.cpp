@@ -12287,6 +12287,13 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 			iExtraRateTimes100 += kBuilding.getBonusCommercePercentChanges(iI, eIndex);
 		}
 	}
+	foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
+		{
+			iExtraRateTimes100 += modifier.second[eIndex];
+		}
+	}
 	return iExtraRateTimes100;
 }
 
