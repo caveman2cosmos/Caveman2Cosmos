@@ -201,22 +201,10 @@ struct IDValueMap
 
 	const python::list makeList() const
 	{
-		python::list l = python::list();
+		python::list list = python::list();
 		foreach_(const pair_t& pair, m_map)
-			toPython(l, pair);
-		return l;
-	}
-
-	template <class T>
-	static void toPython(python::list l, T& pair)
-	{
-		l += std::make_pair((int)pair.first, pair.second);
-	}
-
-	template <>
-	static void toPython<std::pair<ID_, int*> >(python::list l, std::pair<ID_, int*>& pair)
-	{
-		l += python::tuple((int)pair.first, pair.second[0], pair.second[1], pair.second[2]);
+			list.append(std::make_pair((int)pair.first, (int)pair.second));
+		return list;
 	}
 
 	typedef typename std::vector<pair_t>::iterator        iterator;
