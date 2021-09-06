@@ -3463,6 +3463,9 @@ class TestCode:
 	def test(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			self.log(CvBuildingInfo.getType()+" "+str(CvBuildingInfo.getTechCommercePercentChanges()))
+			"""
 			for pair in CvBuildingInfo.getTechCommercePercentChanges():
 				for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 					self.log(CvBuildingInfo.getType()+" "+GC.getTechInfo(pair.id).getType()+" "+str(pair.value[iCommerce]))
+			"""

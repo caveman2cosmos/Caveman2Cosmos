@@ -207,14 +207,6 @@ struct IDValueMap
 		return l;
 	}
 
-	const python::list makeArrayList() const
-	{
-		python::list l = python::list();
-		foreach_(const pair_t& pair, m_map)
-			l.append(python::tuple((int)pair.first, pair.second[0], pair.second[1], pair.second[2]));
-		return l;
-	}
-
 	typedef typename std::vector<pair_t>::iterator        iterator;
 	typedef typename std::vector<pair_t>::const_iterator  const_iterator;
 
