@@ -894,7 +894,7 @@ const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 	return pyList;
 }
 
-const python::list CvBuildingInfo::cyGetTechCommercePercent() const
+const python::list CvBuildingInfo::cyGetTechCommercePercentChanges() const
 {
 	python::list pyList = python::list();
 
@@ -4923,7 +4923,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aGlobalBuildingProductionModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingProductionModifiers());
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
-	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercent());
+	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

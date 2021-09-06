@@ -22619,9 +22619,9 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 		iLast = 0;
 
-		//if (!kBuilding.getTechCommercePercent().empty())
+		//if (!kBuilding.getTechCommercePercentChanges().empty())
 		{
-			foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercent())
+			foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
 			{
 				bFirst = true;
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)

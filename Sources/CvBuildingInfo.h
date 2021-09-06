@@ -344,8 +344,8 @@ public:
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
-	const IDValueMap<TechTypes, int*>& getTechCommercePercent() const { return m_aTechCommercePercent; }
-	const python::list cyGetTechCommercePercent() const;
+	const IDValueMap<TechTypes, int*>& getTechCommercePercentChanges() const { return m_aTechCommercePercent; }
+	const python::list cyGetTechCommercePercentChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
