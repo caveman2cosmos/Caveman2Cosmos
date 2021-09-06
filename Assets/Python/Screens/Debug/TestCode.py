@@ -58,7 +58,6 @@ class TestCode:
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
 		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
 		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
-		self.main.addTestCode(screen, self.test, "test code", "tech commerce percents test")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -1384,7 +1383,7 @@ class TestCode:
 					aUnitCombatExtraStrengths[BASE][pair.id] += pair.value
 				for i in xrange(CvBuildingInfo.getNumHealUnitCombatTypes()):
 					iUnitCombat = CvBuildingInfo.getHealUnitCombatType(i).eUnitCombat
-					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).iHeal
+					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).value
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					aUnitCombatProdModifiers[BASE][iUnitCombat] += CvBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
@@ -1398,7 +1397,7 @@ class TestCode:
 						aUnitCombatExtraStrengths[REPLACED][pair.id] += pair.value
 					for j in xrange(CvReplacedBuildingInfo.getNumHealUnitCombatTypes()):
 						iUnitCombat = CvReplacedBuildingInfo.getHealUnitCombatType(j).eUnitCombat
-						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).iHeal
+						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).value
 					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 						aUnitCombatProdModifiers[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
@@ -1567,9 +1566,10 @@ class TestCode:
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 							aTechCommerceChanges[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-				for pair in CvBuildingInfo.getTechCommercePercentChanges():
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						aTechCommercePercentChanges[BASE][pair.id] += pair.value[iCommerce]
+				for pTechCommerceChange in CvBuildingInfo.getTechCommercePercentChanges():
+					iTech = pTechCommerceChange.eTech
+					iCommerce = pTechCommerceChange.eCommerce
+					aTechCommerceChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1595,9 +1595,10 @@ class TestCode:
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 								aTechCommerceChanges[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
-					for pair in CvReplacedBuildingInfo.getTechCommercePercentChanges():
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							aTechCommercePercentChanges[REPLACED][pair.id] += pair.value[iCommerce]
+					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommercePercentChanges():
+						iTech = pTechCommerceChange.eTech
+						iCommerce = pTechCommerceChange.eCommerce
+						aTechCommerceChanges[BASE][REPLACED][iCommerce] += pTechCommerceChange.value
 					if CvReplacedBuildingInfo.isAnyTechCommerceModifiers():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -3459,11 +3460,3 @@ class TestCode:
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			if CvBuildingInfo.getProductionCost() == -1 and iBuilding not in aGivenByUnitList and iBuilding not in aFreeBuildingList and iBuilding not in aAutoBuildList:
 				self.log(CvBuildingInfo.getType()+" might be unobtainable")
-
-	def test(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			for pTechCommerceChange in CvBuildingInfo.getTechCommercePercentChanges():
-				iTech = pTechCommerceChange.eTech
-				iCommerce = pTechCommerceChange.eCommerce
-				self.log(CvBuildingInfo.getType()+" "+GC.getTechInfo(iTech).getType()+" "+str(GC.getCommerceInfo(iCommerce).getType())+" "+str(pTechCommerceChange.iChange))
