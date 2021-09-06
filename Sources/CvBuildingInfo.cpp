@@ -897,8 +897,16 @@ const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 const python::list CvBuildingInfo::cyGetTechCommercePercent() const
 {
 	python::list pyList = python::list();
-	foreach_(const TechCommerceChange& pChange, m_aTechCommercePercent)
-		pyList.append(pChange);
+
+	foreach_(const TechCommerceModifiers& pChange, m_aTechCommercePercent)
+	{
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+		{
+			const int iValue = pChange.second[i];
+			if (iValue != 0)
+				pyList.append(TechCommerceChange(pChange.first, (CommerceTypes)i, pChange.second[i]));
+		}
+	}
 	return pyList;
 }
 

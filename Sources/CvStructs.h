@@ -791,20 +791,17 @@ struct BuildingCommerceModifier
 	void write(FDataStreamBase* pStream);
 };
 
-struct TechCommerceChange
+const struct TechCommerceChange
 {
-	TechTypes eTech;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	TechCommerceChange()
-		: eTech(NO_TECH)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
+		: eTech(eTech)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const CommerceTypes eCommerce;
+	const int iChange;
 };
 
 struct DllExport PBGameSetupData
