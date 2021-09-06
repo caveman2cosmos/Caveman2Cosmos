@@ -11514,7 +11514,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
-		-->		
+		-->
 		<BuildingInfo>
 			<Type>BUILDING_LASCAUX_EFFECT</Type>
 			<MapCategoryTypes>

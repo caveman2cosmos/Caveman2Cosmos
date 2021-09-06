@@ -9906,32 +9906,4 @@
 		<English>Zuñi</English>
 		<Russian>Çóíè</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TEMP_PEDIA</Tag>
-		<English>Temporary bonuses to simulate tech commerce percentages</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANCIENT</Tag>
-		<English>Fake Sedentary Lifestyle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLASSICAL</Tag>
-		<English>Fake Classical Lifestyle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEDIEVAL</Tag>
-		<English>Fake Medieval Lifestyle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_RENAISSANCE</Tag>
-		<English>Fake Renaissance Lifestyle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_INDUSTRIAL</Tag>
-		<English>Fake Industrial Lifestyle</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ATOMIC</Tag>
-		<English>Fake Atomic Lifestyle</English>
-	</TEXT>
 </Civ4GameText>
