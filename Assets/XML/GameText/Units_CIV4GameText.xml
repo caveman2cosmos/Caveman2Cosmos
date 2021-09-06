@@ -6976,6 +6976,10 @@
 		<Russian>Êðåñòîíîñåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_CRUSADER_HELP</Tag>
+		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_PEDIA</Tag>
 		<English>The original crusaders were known by various terms, including fideles Sancti Petri (the faithful of Saint Peter) or milites Christi (knights of Christ). They saw themselves as undertaking a journey, or a pilgrimage, though pilgrims were usually forbidden from carrying arms. Like pilgrims, each crusader swore a vow, to be fulfilled on successfully reaching Jerusalem, and they were granted a cloth cross (crux) to be sewn into their clothes. This "taking of the cross", the crux, eventually became associated with the entire journey; the word "crusade" (coming into English from the French croisade, the Italian crociata, the Portuguese cruzada, or the German Kreuzzug) developed from this.</English>
 		<Polish>Krucjaty (łac. crux, krzyż) określenie religijnie sankcjonowanych wypraw zbrojnych w średniowieczu, podejmowanych przez państwa i rycerstwo głównie katolickiej Europy. Wojny te były prowadzone przede wszystkim przeciw muzułmanom, ale także przeciw poganom, chrześcijańskim heretykom, a czasami nawet przeciw samym katolikom. Choć powody tych wojen były w dużym stopniu religijne, to mieszały się one również z czynnikami politycznymi i ekonomicznymi. Krucjaty ogłaszane były głównie przez papieży, jednak czasami również przez innych władców, wspieranych przez papiestwo.</Polish>

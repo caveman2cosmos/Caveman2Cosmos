@@ -22617,6 +22617,40 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
+		iLast = 0;
+
+		//if (!kBuilding.getTechCommercePercentChanges().empty())
+		{
+			foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+			{
+				bFirst = true;
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+				{
+					const int iValue = modifier.second[iJ];
+					if (iValue != 0)
+					{
+						if (bFirst)
+						{
+							szBuffer.append(
+								CvWString::format(
+									L"\n%c%s <link=%s>%s</link>: ",
+									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+									CvWString(GC.getTechInfo(modifier.first).getType()).GetCString(),
+									GC.getTechInfo(modifier.first).getDescription()
+								)
+							);
+							bFirst = false;
+						}
+						else szBuffer.append(L", ");
+
+						CvWString szValue;
+						makeValueString(szValue, iValue, true);
+						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+					}
+				}
+			}
+		}
+
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			if (kBuilding.getCommerceAttacks(iI) > 0)
