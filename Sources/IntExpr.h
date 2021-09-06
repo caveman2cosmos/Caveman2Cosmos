@@ -38,11 +38,10 @@ class IntExpr
 {
 public:
 	virtual ~IntExpr();
-
-	virtual int evaluate(const CvGameObject* pObject) const = 0;
+	virtual int evaluate(const CvGameObject*) const = 0;
 	static const IntExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(uint32_t& iSum) const = 0;
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
+	virtual void getCheckSum(uint32_t&) const = 0;
+	virtual void buildDisplayString(CvWStringBuffer&) const = 0;
 	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
 	virtual bool isConstantZero() const;
 };

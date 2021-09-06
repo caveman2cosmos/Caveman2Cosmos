@@ -33,8 +33,8 @@ public:
 
 	virtual PropertySourceTypes getType() const = 0;
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const = 0;
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const = 0;
+	virtual int getSourcePredict(const CvGameObject*, int, PropertySourceContext* = NULL) const = 0;
+	virtual int getSourceCorrect(const CvGameObject*, int, int, const PropertySourceContext* = NULL) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
