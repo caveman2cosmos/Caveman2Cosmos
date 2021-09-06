@@ -3752,10 +3752,18 @@
 					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<iHappinessChange>-5</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
+					<iHealthChange>-4</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>

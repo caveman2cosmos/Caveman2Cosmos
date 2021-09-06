@@ -679,7 +679,7 @@ class TestCode:
 				MAIN_ARRAY_SIZE = 3
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight><iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
+				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
 				aPower = [CvBuildingInfo.isPower(), 0, 0]
 				aProvidesFreshWater = [CvBuildingInfo.isProvidesFreshWater(), 0, 0]
 				aTradeRoutes = [CvBuildingInfo.getTradeRoutes(), 0, 0]
@@ -754,7 +754,7 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight><iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
+					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <FreePromotion/2/3>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
 					aPower[REPLACED] += CvReplacedBuildingInfo.isPower()
 					aProvidesFreshWater[REPLACED] += CvReplacedBuildingInfo.isProvidesFreshWater()
 					aTradeRoutes[REPLACED] += CvReplacedBuildingInfo.getTradeRoutes()
@@ -1383,7 +1383,7 @@ class TestCode:
 					aUnitCombatExtraStrengths[BASE][pair.id] += pair.value
 				for i in xrange(CvBuildingInfo.getNumHealUnitCombatTypes()):
 					iUnitCombat = CvBuildingInfo.getHealUnitCombatType(i).eUnitCombat
-					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).iHeal
+					aHealUnitCombatTypes[BASE][iUnitCombat] += CvBuildingInfo.getHealUnitCombatType(i).value
 				for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 					aUnitCombatProdModifiers[BASE][iUnitCombat] += CvBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
@@ -1397,7 +1397,7 @@ class TestCode:
 						aUnitCombatExtraStrengths[REPLACED][pair.id] += pair.value
 					for j in xrange(CvReplacedBuildingInfo.getNumHealUnitCombatTypes()):
 						iUnitCombat = CvReplacedBuildingInfo.getHealUnitCombatType(j).eUnitCombat
-						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).iHeal
+						aHealUnitCombatTypes[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getHealUnitCombatType(j).value
 					for iUnitCombat in xrange(GC.getNumUnitCombatInfos()):
 						aUnitCombatProdModifiers[REPLACED][iUnitCombat] += CvReplacedBuildingInfo.getUnitCombatProdModifier(iUnitCombat)
 
@@ -1547,10 +1547,11 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus Commerce Modifiers "+str(aBonusCommerceModifiers[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#======================================================================================================================================
-				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
+				#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> - base
 				aTechYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechYieldModifiers = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				aTechCommercePercentChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechCommerceModifiers = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aTechSpecialistChanges = [[[0 for x in xrange(GC.getNumSpecialistInfos())] for y in xrange(GC.getNumTechInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				if CvBuildingInfo.isAnyTechYieldChanges():
@@ -1565,6 +1566,10 @@ class TestCode:
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 							aTechCommerceChanges[BASE][iTech][iCommerce] += CvBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+				for pTechCommerceChange in CvBuildingInfo.getTechCommercePercentChanges():
+					iTech = pTechCommerceChange.eTech
+					iCommerce = pTechCommerceChange.eCommerce
+					aTechCommerceChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1577,7 +1582,7 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
+					#<TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges>
 					if CvReplacedBuildingInfo.isAnyTechYieldChanges():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -1590,6 +1595,10 @@ class TestCode:
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 								aTechCommerceChanges[REPLACED][iTech][iCommerce] += CvReplacedBuildingInfo.getTechCommerceChange(iTech, iCommerce)
+					for pTechCommerceChange in CvReplacedBuildingInfo.getTechCommercePercentChanges():
+						iTech = pTechCommerceChange.eTech
+						iCommerce = pTechCommerceChange.eCommerce
+						aTechCommerceChanges[BASE][REPLACED][iCommerce] += pTechCommerceChange.value
 					if CvReplacedBuildingInfo.isAnyTechCommerceModifiers():
 						for iTech in xrange(GC.getNumTechInfos()):
 							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1599,13 +1608,14 @@ class TestCode:
 							for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 								aTechSpecialistChanges[REPLACED][iTech][iSpecialist] += CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
-				#Keep already existing <TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
+				#Keep already existing <TechYieldChanges>, <TechYieldModifiers>, <TechCommerceChanges>, <TechCommercePercentChanges>, <TechCommerceModifiers>, <TechSpecialistChanges> in base
 				for iTech in xrange(GC.getNumTechInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						aTechYieldChanges[FINAL][iTech][iYield] = aTechYieldChanges[BASE][iTech][iYield] + aTechYieldChanges[REPLACED][iTech][iYield]
 						aTechYieldModifiers[FINAL][iTech][iYield] = aTechYieldModifiers[BASE][iTech][iYield] + aTechYieldModifiers[REPLACED][iTech][iYield]
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						aTechCommerceChanges[FINAL][iTech][iCommerce] = aTechCommerceChanges[BASE][iTech][iCommerce] + aTechCommerceChanges[REPLACED][iTech][iCommerce]
+						aTechCommercePercentChanges[FINAL][iTech][iCommerce] = aTechCommercePercentChanges[BASE][iTech][iCommerce] + aTechCommercePercentChanges[REPLACED][iTech][iCommerce]
 						aTechCommerceModifiers[FINAL][iTech][iCommerce] = aTechCommerceModifiers[BASE][iTech][iCommerce] + aTechCommerceModifiers[REPLACED][iTech][iCommerce]
 					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
 						aTechSpecialistChanges[FINAL][iTech][iSpecialist] = aTechSpecialistChanges[BASE][iTech][iSpecialist] + aTechSpecialistChanges[REPLACED][iTech][iSpecialist]
@@ -1620,6 +1630,8 @@ class TestCode:
 					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 						if aTechCommerceChanges[BASE][iTech][iCommerce] < aTechCommerceChanges[REPLACED][iTech][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Changes "+str(aTechCommerceChanges[FINAL][iTech])+" replaced: "+str(aImmediateReplacedNameList))
+						if aTechCommercePercentChanges[BASE][iTech][iCommerce] < aTechCommercePercentChanges[REPLACED][iTech][iCommerce]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce percent Changes "+str(aTechCommercePercentChanges[FINAL][iTech])+" replaced: "+str(aImmediateReplacedNameList))
 						if aTechCommerceModifiers[BASE][iTech][iCommerce] < aTechCommerceModifiers[REPLACED][iTech][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTechInfo(iTech).getType()+" Tech Commerce Modifiers "+str(aTechCommerceModifiers[FINAL][iTech])+" replaced: "+str(aImmediateReplacedNameList))
 					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
@@ -1631,23 +1643,35 @@ class TestCode:
 				aSpecialistYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aLocalSpecialistCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
 				aSpecialistCommerceChanges = [[[0 for x in xrange(CommerceTypes.NUM_COMMERCE_TYPES)] for y in xrange(GC.getNumSpecialistInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
-				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-						aSpecialistYieldChanges[BASE][iSpecialist][iYield] += CvBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
-					for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-						aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
-						aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+				if CvBuildingInfo.isAnySpecialistYieldChanges():
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+							aSpecialistYieldChanges[BASE][iSpecialist][iYield] += CvBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
+				if CvBuildingInfo.isAnySpecialistCommerceChanges():
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+				if CvBuildingInfo.isAnyLocalSpecialistCommerceChanges():
+					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+							aLocalSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] += CvBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
 					#<SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges>
-					for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-						for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
-							aSpecialistYieldChanges[REPLACED][iSpecialist][iYield] += CvReplacedBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
-						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-							aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
-							aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+					if CvBuildingInfo.isAnySpecialistYieldChanges():
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+								aSpecialistYieldChanges[REPLACED][iSpecialist][iYield] += CvReplacedBuildingInfo.getSpecialistYieldChange(iSpecialist, iYield)
+					if CvBuildingInfo.isAnySpecialistCommerceChanges():
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getSpecialistCommerceChange(iSpecialist, iCommerce)
+					if CvBuildingInfo.isAnyLocalSpecialistCommerceChanges():
+						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
+							for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
+								aLocalSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce] += CvReplacedBuildingInfo.getLocalSpecialistCommerceChange(iSpecialist, iCommerce)
 
 				#Keep already existing <SpecialistYieldChanges>, <LocalSpecialistCommerceChanges>, <SpecialistCommerceChanges> in base
 				for iSpecialist in xrange(GC.getNumSpecialistInfos()):

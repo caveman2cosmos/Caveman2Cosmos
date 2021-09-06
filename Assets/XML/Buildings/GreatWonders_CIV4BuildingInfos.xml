@@ -5105,16 +5105,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRUSADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Help>TXT_KEY_BUILDING_CRUSADE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_CRUSADE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
 			<iCost>1860</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>25</iYield>
@@ -5140,8 +5140,16 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
+			<iAIWeight>10</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -5152,17 +5160,11 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_CRUSADE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTALPUNK_EMBASSY</Type>
@@ -7024,7 +7026,6 @@
 				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>408</iCost>
 			<CommerceChanges>
@@ -11990,7 +11991,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqInCityBuildings>
-			<Help>TXT_KEY_BUILDING_KENTUCKY_DERBY_HELP</Help>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
@@ -11998,6 +11998,16 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TAMED_HORSE</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TAMED_HORSE_PAIR</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

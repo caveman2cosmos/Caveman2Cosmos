@@ -2370,6 +2370,28 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<TechCommercePercentChanges>
+				<TechCommercePercentChange>
+					<TechType>TECH_NOMADISM</TechType>
+					<CommercePercents>
+						<iCommercePercent>50</iCommercePercent>
+						<iCommercePercent>-20</iCommercePercent>
+						<iCommercePercent>110</iCommercePercent>
+						<iCommercePercent>-120</iCommercePercent>
+					</CommercePercents>
+				</TechCommercePercentChange>
+			</TechCommercePercentChanges>
+			<BonusCommercePercentChanges>
+				<BonusCommercePercentChange>
+					<BonusType>BONUS_APPLE</BonusType>
+					<CommercePercents>
+						<iCommercePercent>50</iCommercePercent>
+						<iCommercePercent>-20</iCommercePercent>
+						<iCommercePercent>110</iCommercePercent>
+						<iCommercePercent>-120</iCommercePercent>
+					</CommercePercents>
+				</BonusCommercePercentChange>
+			</BonusCommercePercentChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -20529,7 +20551,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -45628,10 +45650,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_GAMBLING_HALL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAMBLING_HALL</BuildingType>
+				<BuildingType>BUILDING_CASINO</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
@@ -45663,11 +45686,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
+			<ObsoleteTech>TECH_ONLINE_COMMUNITY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CASINO</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_CASINO</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>332</iCost>

@@ -929,6 +929,7 @@
 		<element type="iHealthPercentPerPopulation" minOccurs="0"/>
 		<element type="iHappinessPercentPerPopulation" minOccurs="0"/>
 		<element type="BonusCommercePercentChanges" minOccurs="0"/>
+		<element type="TechCommercePercentChanges" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="fVisibilityPriority" minOccurs="0"/>
 		<element type="SeaPlotYieldChanges" minOccurs="0"/>
@@ -1246,6 +1247,13 @@
 	</ElementType>
 	<ElementType name="BonusCommercePercentChanges" content="eltOnly">
 		<element type="BonusCommercePercentChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="TechCommercePercentChange" content="eltOnly">
+		<element type="TechType"/>
+		<element type="CommercePercents"/>
+	</ElementType>
+	<ElementType name="TechCommercePercentChanges" content="eltOnly">
+		<element type="TechCommercePercentChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="BonusYieldChange" content="eltOnly">
 		<element type="BonusType"/>
