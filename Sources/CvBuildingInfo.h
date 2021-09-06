@@ -345,6 +345,7 @@ public:
 	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
 
 	const IDValueMap<TechTypes, int*>& getTechCommercePercent() const { return m_aTechCommercePercent; }
+	const python::list cyGetTechCommercePercent() const { return m_aTechCommercePercent.makeList(); }
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
