@@ -22,10 +22,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -8173,7 +8169,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-		<Russian>,</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
@@ -18858,12 +18853,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BUILDING_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 from Buildings</English>
-		<French>[ICON_BULLET]%D1%F2 en raison des bâtiments</French>
-		<German>[ICON_BULLET]%D1%F2 durch Gebäude und Effekte</German>
-		<Italian>[ICON_BULLET]%D1%F2 dagli edifici</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 por edificios</Spanish>
-		<Russian>[ICON_BULLET]%D1%F2 от зданий</Russian>
+		<English>[ICON_BULLET]%s1%F2 from Buildings</English>
+		<French>[ICON_BULLET]%s1%F2 en raison des bâtiments</French>
+		<German>[ICON_BULLET]%s1%F2 durch Gebäude und Effekte</German>
+		<Italian>[ICON_BULLET]%s1%F2 dagli edifici</Italian>
+		<Spanish>[ICON_BULLET]%s1 %F2 por edificios</Spanish>
+		<Russian>[ICON_BULLET]%s1%F2 от зданий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_EVENTS</Tag>
@@ -18875,22 +18870,22 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT</Tag>
-		<English>-----------------------[NEWLINE]Total %s1_commerce_type: %s2%F3</English>
-		<German>-----------------------[NEWLINE]Summe %s1_commerce_type: %s2 %F3</German>
-		<Italian>-----------------------[NEWLINE]%s1_commerce_type totale: %s2%F3</Italian>
-		<Spanish>-----------------------[NEWLINE]Total de %s1_commerce_type: %s2%F3</Spanish>
-		<Polish>-----------------------[NEWLINE]Razem %s1_commerce_type: %s2%F3</Polish>
-		<Russian>-----------------------[NEWLINE]Âñåãî %s1_commerce_type: %s2%F3</Russian>
+		<English>[NEWLINE]Total %s1_commerce_type: %s2%F3</English>
+		<German>[NEWLINE]Summe %s1_commerce_type: %s2 %F3</German>
+		<Italian>[NEWLINE]%s1_commerce_type totale: %s2%F3</Italian>
+		<Spanish>[NEWLINE]Total de %s1_commerce_type: %s2%F3</Spanish>
+		<Polish>[NEWLINE]Razem %s1_commerce_type: %s2%F3</Polish>
+		<Russian>[NEWLINE]Âñåãî %s1_commerce_type: %s2%F3</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_COMMERCE_SUBTOTAL_YIELD_FLOAT</Tag>
-		<English>-----------------------[NEWLINE]Base %s1_commerce_type: %s2%F3</English>
-		<French>-----------------------[NEWLINE]Total partiel %s1_commerce_type: %s2%F3</French>
-		<German>-----------------------[NEWLINE]Grundertrag %s1_commerce_type: %s2%F3</German>
-		<Italian>-----------------------[NEWLINE]%s1_commerce_type totale parziale: %s2%F3</Italian>
-		<Spanish>-----------------------[NEWLINE]Subtotal de %s1_commerce_type: %s2%F3</Spanish>
-		<Polish>-----------------------[NEWLINE]Bazowo %s1_commerce_type: %s2%F3</Polish>
-		<Russian>-----------------------[NEWLINE]Áàçà %s1_commerce_type: %s2%F3</Russian>
+		<Tag>TXT_KEY_BASE_S1_IS_S2_F3</Tag>
+		<English>Base %s1: %s2%F3</English>
+		<French>Total partiel %s1: %s2%F3</French>
+		<German>Grundertrag %s1: %s2%F3</German>
+		<Italian>%s1 totale parziale: %s2%F3</Italian>
+		<Spanish>Subtotal de %s1: %s2%F3</Spanish>
+		<Polish>Bazowo %s1: %s2%F3</Polish>
+		<Russian>Áàçà %s1: %s2%F3</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TRAIT</Tag>
@@ -18927,6 +18922,10 @@
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] por población</Spanish>
 		<Polish>[ICON_BULLET]%D1[ICON_EATENFOOD] z Populacji</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] äëÿ íàñåëåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 from golden age</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_BASE_RATE</Tag>
@@ -18979,7 +18978,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_MINTED_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 from Minted Coins</English>
+		<English>[ICON_BULLET]%s1%F2 from Minted Coins</English>
 		<French>[ICON_BULLET]%D1%F2 de Monnaie frappée</French>
 		<German>[ICON_BULLET]%D1%F2 durch geprägte Münzen</German>
 		<Italian>[ICON_BULLET]%D1%F2 da Monete coniate</Italian>
@@ -19077,13 +19076,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT</Tag>
-		<English>-----------------------[NEWLINE]%d1%% of %d2[ICON_COMMERCE] = %s3%F4</English>
-		<French>-----------------------[NEWLINE]%d1%% sur %d2[ICON_COMMERCE] = %s3%F4</French>
-		<German>-----------------------[NEWLINE]%d1%% von %d2[ICON_COMMERCE] = %s3%F4</German>
-		<Italian>-----------------------[NEWLINE]%d1%% di %d2[ICON_COMMERCE] = %s3%F4</Italian>
-		<Spanish>-----------------------[NEWLINE]%d1%% de %d2 [ICON_COMMERCE] = %s3%F4</Spanish>
-		<Polish>-----------------------[NEWLINE]%d1%% z %d2[ICON_COMMERCE] = %s3%F4</Polish>
-		<Russian>-----------------------[NEWLINE]%d1%% îò %d2 [ICON_COMMERCE] = %s3%F4</Russian>
+		<English>[NEWLINE]%d1%% of %d2[ICON_COMMERCE] = %s3%F4</English>
+		<French>[NEWLINE]%d1%% sur %d2[ICON_COMMERCE] = %s3%F4</French>
+		<German>[NEWLINE]%d1%% von %d2[ICON_COMMERCE] = %s3%F4</German>
+		<Italian>[NEWLINE]%d1%% di %d2[ICON_COMMERCE] = %s3%F4</Italian>
+		<Spanish>[NEWLINE]%d1%% de %d2 [ICON_COMMERCE] = %s3%F4</Spanish>
+		<Polish>[NEWLINE]%d1%% z %d2[ICON_COMMERCE] = %s3%F4</Polish>
+		<Russian>[NEWLINE]%d1%% îò %d2 [ICON_COMMERCE] = %s3%F4</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SPOILED_FOOD</Tag>
@@ -34569,14 +34568,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[SPACE]con[SPACE]</Spanish>
 		<Polish>[SPACE]z[SPACE]</Polish>
 		<Russian>[SPACE]ñ[SPACE]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WITH_SPACE</Tag>
-		<English>[SPACE]with[SPACE]</English>
-		<French>[SPACE]avec[SPACE]</French>
-		<German>[SPACE]mit[SPACE]</German>
-		<Italian>[SPACE]con[SPACE]</Italian>
-		<Spanish>[SPACE]con[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WONDERDISCOVERED_YOU</Tag>

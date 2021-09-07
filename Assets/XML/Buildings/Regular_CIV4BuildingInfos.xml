@@ -65,7 +65,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -801,18 +801,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>15</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1007,7 +995,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AD_AGENCY</ArtDefineTag>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>950</iCost>
@@ -1567,7 +1554,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2618,7 +2605,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -3014,6 +3001,13 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3570,13 +3564,6 @@
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3939,6 +3926,18 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_RACETRACK</Type>
@@ -4935,7 +4934,7 @@
 			<iBombardDefense>40</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>60</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>95</iLocalDynamicDefense>
 			<iAirModifier>-40</iAirModifier>
 			<iAsset>8</iAsset>
@@ -5358,6 +5357,13 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTI_GRAVITY_FIELD_GENERATOR_FACTORY</Type>
@@ -6070,14 +6076,14 @@
 					<iHappiness>1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
-			<iHealth>9</iHealth>
+			<iHealth>10</iHealth>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -7209,7 +7215,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>35</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>50</iLocalDynamicDefense>
 			<iAsset>8</iAsset>
 			<iPower>8</iPower>
@@ -7901,13 +7907,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8033,6 +8032,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -8358,6 +8358,16 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MODERN_PARATROOPER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PARATROOPER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8899,7 +8909,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>60</iLocalDynamicDefense>
 			<iAirModifier>-10</iAirModifier>
 			<iAsset>8</iAsset>
@@ -9395,6 +9405,10 @@
 			</SpecialistCounts>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
 					<UnitType>UNIT_FREIGHT</UnitType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
@@ -9410,16 +9424,19 @@
 					<UnitType>UNIT_HUMVEE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
 			</UnitProductionModifiers>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>4</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iPower>10</iPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10152,7 +10169,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FAIR_GROUNDS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -10446,13 +10462,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEFT</PrereqTech>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_BANDITRY</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>50</iCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -10841,13 +10851,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11121,13 +11124,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11379,7 +11375,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_BAUXITE_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -11759,13 +11759,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11778,7 +11771,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRRIGATION</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CORN</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
@@ -13241,11 +13238,19 @@
 			<iEspionageDefense>3</iEspionageDefense>
 			<iLocalRepel>50</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>35</iDamageAttackerChance>
 			<iDamageToAttacker>35</iDamageToAttacker>
@@ -13590,7 +13595,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
@@ -13864,10 +13873,9 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ANARCHISM</CivicOption>
@@ -14176,7 +14184,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_APPLE</VicinityBonus>
@@ -14429,13 +14441,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14493,19 +14498,19 @@
 			<iEspionageDefense>2</iEspionageDefense>
 			<iLocalRepel>40</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>30</iDamageToAttacker>
@@ -14573,13 +14578,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -14813,9 +14813,10 @@
 				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
 			</TechTypes>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CASTE_SYSTEM</CivicOption>
@@ -16849,13 +16850,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18284,7 +18278,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<iCost>132</iCost>
 			<YieldChanges>
@@ -18647,9 +18645,10 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<iCost>243</iCost>
 			<CommerceChanges>
@@ -19183,13 +19182,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20190,13 +20182,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20295,10 +20280,20 @@
 			</CommerceChanges>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
 					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>3</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -20534,7 +20529,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -20828,7 +20823,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COTTON</VicinityBonus>
@@ -21275,13 +21274,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21436,13 +21428,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21805,7 +21790,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LEMONS</VicinityBonus>
@@ -21911,13 +21900,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHARIOT_WORKSHOP</Type>
@@ -22075,13 +22057,6 @@
 					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22371,6 +22346,16 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -22610,7 +22595,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -24407,6 +24392,11 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -24929,13 +24919,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25119,7 +25102,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COAL_MINING</PrereqTech>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -25174,7 +25161,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -25406,7 +25392,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
@@ -25646,13 +25636,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26730,11 +26713,6 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
@@ -27077,13 +27055,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27329,6 +27300,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
 			<iCost>425</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27405,7 +27377,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-15</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -27419,13 +27391,6 @@
 				</Flavor>
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -27716,7 +27681,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -27870,7 +27839,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FLAX</VicinityBonus>
@@ -27979,7 +27952,7 @@
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iCost>5905</iCost>
 			<CommerceChanges>
-				<iCommerce>100</iCommerce>
+				<iCommerce>110</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -28170,7 +28143,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
@@ -29955,9 +29932,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ORAL_TRADITION</CivicOption>
@@ -31019,6 +30998,11 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
@@ -31511,6 +31495,11 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -31552,7 +31541,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -31574,12 +31568,6 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<iCost>132</iCost>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -32352,7 +32340,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -33082,7 +33069,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -33300,6 +33287,10 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>3</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -36328,11 +36319,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
+			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
 			<CommerceAttacks>
@@ -36405,7 +36396,9 @@
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 				<BuildingType>BUILDING_INDIGO_FARM</BuildingType>
 				<BuildingType>BUILDING_MUREX_DIVER</BuildingType>
 				<BuildingType>BUILDING_HENNA_PLANTATION</BuildingType>
@@ -36445,7 +36438,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -36468,7 +36466,9 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
 				<BuildingType>BUILDING_GREENHOUSE</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 				<BuildingType>BUILDING_GATHERER_INDIGO</BuildingType>
 				<BuildingType>BUILDING_GATHERER_HENNA</BuildingType>
@@ -37636,6 +37636,12 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iFoodKept>25</iFoodKept>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_TECH</UnitCombatType>
+					<iHeal>10</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -37753,6 +37759,18 @@
 			<Bonus>BONUS_ELECTROACTIVE_POLYMERS</Bonus>
 			<FreeBonus>BONUS_PAPER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -38401,19 +38419,7 @@
 			<iDefense>40</iDefense>
 			<iEspionageDefense>5</iEspionageDefense>
 			<iLocalRepel>55</iLocalRepel>
-			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HOVERCRAFT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_BALLOON</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ANTIGRAV_CRAFT</UnitCombatType>
-			</MayDamageAttackingUnitCombatTypes>
+			<bDamageAllAttackers>1</bDamageAllAttackers>
 			<iDamageAttackerChance>40</iDamageAttackerChance>
 			<iDamageToAttacker>40</iDamageToAttacker>
 			<iPower>7</iPower>
@@ -38966,7 +38972,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
@@ -40312,13 +40322,13 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iCost>3975</iCost>
-			<iHealth>13</iHealth>
+			<iHealth>20</iHealth>
 			<YieldChanges>
-				<iYield>50</iYield>
-				<iYield>1</iYield>
+				<iYield>55</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>75</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -40343,7 +40353,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -40496,7 +40506,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -40551,7 +40561,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
+					<iAmountPerTurn>-55</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -41376,12 +41386,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -42110,11 +42120,6 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
@@ -42408,13 +42413,6 @@
 					<iPropertyValue>1</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -43752,14 +43750,14 @@
 					<iSpecialistCount>5</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<iAIWeight>1</iAIWeight>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>15</iAmountPerTurn>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -44717,7 +44715,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -44934,6 +44932,13 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>50</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -45203,7 +45208,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-25</iAmountPerTurn>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -45334,13 +45339,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -45569,7 +45567,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -45630,10 +45628,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_GAMBLING_HALL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAMBLING_HALL</BuildingType>
+				<BuildingType>BUILDING_CASINO</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
@@ -45665,11 +45664,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
+			<ObsoleteTech>TECH_ONLINE_COMMUNITY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CASINO</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_CASINO</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>332</iCost>
@@ -46138,7 +46140,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -46390,7 +46392,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<ObsoleteTech>TECH_SPECIES_UPLIFTING</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_CAMEL</VicinityBonus>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
@@ -46413,9 +46415,10 @@
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<iCost>15</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>
@@ -47689,13 +47692,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -48128,13 +48126,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -48533,13 +48524,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -49729,7 +49713,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -50194,7 +50178,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -51240,9 +51224,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ALPHAMALES</BuildingType>
-				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_LEGALIZED_GAMBLING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BROTHEL</ObsoletesToBuilding>
@@ -51252,7 +51238,7 @@
 				<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 			</ReplacementBuildings>
-			<iCost>5</iCost>
+			<iCost>30</iCost>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -51302,6 +51288,13 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAT_FACTORY</Type>
@@ -51363,13 +51356,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -51723,7 +51709,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
@@ -52196,7 +52186,6 @@
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>320</iCost>
 			<iHealth>1</iHealth>
@@ -52665,7 +52654,7 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-40</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
@@ -52728,13 +52717,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -54926,7 +54908,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -55438,6 +55419,19 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>8</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -55978,13 +55972,6 @@
 					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -56365,6 +56352,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BONE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CAMEL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -56435,6 +56426,7 @@
 			</ExtraFreeBonuses>
 			<iHappiness>3</iHappiness>
 			<iHealth>3</iHealth>
+			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
 				<iYield>55</iYield>
 				<iYield>50</iYield>
@@ -57506,7 +57498,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -57999,6 +57991,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_CLOSED_ECONOMIES</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -58801,8 +58798,6 @@
 			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -60908,13 +60903,6 @@
 					<iPropertyValue>10</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -61246,18 +61234,18 @@
 			<iDefense>20</iDefense>
 			<iLocalRepel>30</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>30</iDamageAttackerChance>
 			<iDamageToAttacker>25</iDamageToAttacker>
@@ -61380,7 +61368,7 @@
 			<iBombardDefense>30</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>50</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>90</iLocalDynamicDefense>
 			<iAirModifier>-30</iAirModifier>
 			<iAsset>8</iAsset>
@@ -61953,6 +61941,12 @@
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>DOMAIN_LAND</DomainType>
+					<iProductionModifier>15</iProductionModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -61962,8 +61956,13 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -62264,6 +62263,7 @@
 				</And>
 			</ConstructCondition>
 			<iCost>225</iCost>
+			<iHappiness>1</iHappiness>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -62271,7 +62271,7 @@
 				</Has>
 			</NewCityFree>
 			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -62291,6 +62291,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -63768,7 +63774,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -64368,6 +64374,13 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -65082,6 +65095,11 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -66353,13 +66371,6 @@
 				</BonusHealthChange>
 			</BonusHealthChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -66453,13 +66464,13 @@
 			<iDefense>15</iDefense>
 			<iLocalRepel>20</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>25</iDamageAttackerChance>
 			<iDamageToAttacker>15</iDamageToAttacker>
@@ -68663,6 +68674,12 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -69678,6 +69695,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
+			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_METAL_FOAM</BonusType>
@@ -69792,6 +69810,12 @@
 					<iPropertyValue>15</iPropertyValue>
 				</Property>
 			</Properties>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -71030,6 +71054,13 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71114,7 +71145,7 @@
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>40</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>2</iLineOfSight>
 			<iLocalDynamicDefense>70</iLocalDynamicDefense>
 			<iAirModifier>-20</iAirModifier>
 			<iAsset>8</iAsset>
@@ -71405,6 +71436,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -71529,6 +71561,13 @@
 			</SpecialistCounts>
 			<FreePromotion>PROMOTION_MOBILITY</FreePromotion>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71562,7 +71601,7 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -71613,13 +71652,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71657,6 +71689,13 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71774,13 +71813,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -71871,7 +71903,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<iMilitaryProductionModifier>-25</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -72415,7 +72447,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
@@ -72713,6 +72749,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -73229,7 +73266,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -73537,13 +73574,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -74226,7 +74256,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -74443,6 +74473,27 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_NAVAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>15</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -76933,13 +76984,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -77878,8 +77922,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -78159,7 +78203,6 @@
 			<iHealth>-1</iHealth>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<Flavors>
 				<Flavor>
@@ -78890,6 +78933,18 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -78919,6 +78974,18 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -79109,7 +79176,6 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
-			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -81190,7 +81256,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
@@ -81282,7 +81352,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -81797,8 +81871,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -82401,7 +82475,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -82457,13 +82531,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -82598,13 +82665,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83254,7 +83314,7 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
@@ -83350,18 +83410,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THOUGHT_SCANNING</PrereqTech>
 			<iCost>3245</iCost>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-1</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
-				<BuildingType>BUILDING_MEGACORPORATE_HEADQUARTERS</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -84768,7 +84824,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
@@ -85035,13 +85095,13 @@
 			<iDefense>5</iDefense>
 			<iLocalRepel>10</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>20</iDamageAttackerChance>
 			<iDamageToAttacker>5</iDamageToAttacker>
@@ -86340,7 +86400,7 @@
 					<iSpecialistCount>4</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iInvestigation>35</iInvestigation>
+			<iInvestigation>40</iInvestigation>
 			<iDefense>20</iDefense>
 			<iEspionageDefense>8</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -86362,7 +86422,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-30</iAmountPerTurn>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -86630,13 +86690,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PORCELAIN_WORKSHOP</Type>
@@ -86799,7 +86852,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAPES</VicinityBonus>
@@ -87202,13 +87259,6 @@
 					<iPropertyValue>2</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -88076,7 +88126,6 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NEUROTRANSMITTER_MANIPULATION_LAB</BuildingType>
-				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5905</iCost>
 			<iHealth>2</iHealth>
@@ -88171,7 +88220,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -89474,7 +89523,7 @@
 			<iBombardDefense>25</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iAdjacentDamagePercent>45</iAdjacentDamagePercent>
-			<iLineOfSight>1</iLineOfSight>
+			<iLineOfSight>3</iLineOfSight>
 			<iLocalDynamicDefense>80</iLocalDynamicDefense>
 			<iAirModifier>-25</iAirModifier>
 			<iAsset>8</iAsset>
@@ -89919,6 +89968,7 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
@@ -92126,13 +92176,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -92982,13 +93025,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROPE_WEAVER</Type>
@@ -93657,13 +93693,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -94359,13 +94388,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -94531,6 +94553,7 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>70</iMaxLatitude>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTHING</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>
@@ -94725,14 +94748,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_LIBRARY</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_TABLETS</Bonus>
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
 			<iCost>176</iCost>
+			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -95404,13 +95433,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -95702,7 +95724,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ObsoleteTech>TECH_AQUACULTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AQUAFARM</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_AQUAFARM</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_KELP</FeatureType>
@@ -95882,6 +95908,38 @@
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FREIGHT</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOTORCYCLE</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JEEP</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HUMVEE</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
+					<iProductionModifier>25</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -95951,7 +96009,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<iMilitaryProductionModifier>-30</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -96335,7 +96393,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SQUASH</VicinityBonus>
@@ -97551,7 +97613,7 @@
 					<iSpecialistCount>4</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<iInvestigation>25</iInvestigation>
+			<iInvestigation>35</iInvestigation>
 			<iDefense>20</iDefense>
 			<iEspionageDefense>7</iEspionageDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -97573,7 +97635,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-15</iAmountPerTurn>
+					<iAmountPerTurn>-35</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -97588,7 +97650,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
@@ -97613,7 +97679,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -98090,13 +98160,6 @@
 					<iPropertyValue>2</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -98199,7 +98262,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -99152,13 +99215,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -100531,7 +100587,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BANANA</VicinityBonus>
@@ -100607,11 +100667,6 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
 					<iAmountPerTurn>-5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -101438,16 +101493,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_MIND_CONTROL</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>5255</iCost>
-			<iHealth>-4</iHealth>
-			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
 			</YieldModifiers>
@@ -101482,7 +101528,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -102058,13 +102108,6 @@
 					<iFlavor>6</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -102258,13 +102301,13 @@
 			<iDefense>10</iDefense>
 			<iLocalRepel>15</iLocalRepel>
 			<MayDamageAttackingUnitCombatTypes>
-				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 				<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+				<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
 			</MayDamageAttackingUnitCombatTypes>
 			<iDamageAttackerChance>20</iDamageAttackerChance>
 			<iDamageToAttacker>10</iDamageToAttacker>
@@ -103324,12 +103367,12 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -103361,7 +103404,7 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -103412,13 +103455,6 @@
 			</Flavors>
 			<iConquestProb>70</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -104314,6 +104350,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCHOOL_OF_SCRIBES</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -104322,6 +104360,10 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</ReplacementBuildings>
 			<iCost>20</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -104993,7 +105035,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -105779,6 +105825,10 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>6</iHeal>
 				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>4</iHeal>
+				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<SpecialistCounts>
@@ -105954,6 +106004,7 @@
 			</PrereqInCityBuildings>
 			<iHappiness>5</iHappiness>
 			<iHealth>5</iHealth>
+			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
 				<iYield>80</iYield>
 				<iYield>60</iYield>
@@ -106230,13 +106281,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>DOMAIN_LAND</DomainType>
+					<iProductionModifier>15</iProductionModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -106872,7 +106922,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -107663,14 +107713,6 @@
 			<FreePromotion>PROMOTION_TATTOO</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iRevIdxLocal>5</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -108196,13 +108238,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -108571,7 +108606,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -108955,7 +108990,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -109009,13 +109044,6 @@
 					<iPropertyValue>5</iPropertyValue>
 				</Property>
 			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -110705,8 +110733,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -110994,7 +111022,6 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-				<BuildingType>BUILDING_MYSTIC_HUT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>125</iCost>
@@ -111289,7 +111316,7 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldModifiers>
-			<iMilitaryProductionModifier>-15</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -113075,6 +113102,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_PHYSICS</PrereqTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CORE_MINE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CORE_MINE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_URANIUM</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -113594,7 +113626,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -115269,13 +115301,8 @@
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -115308,13 +115335,6 @@
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -116733,7 +116753,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
@@ -118059,6 +118083,7 @@
 					<iHeal>4</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<Flavors>

@@ -3747,8 +3747,26 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
-			<BuildingHealthChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
+					<iHappinessChange>-5</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<iHappinessChange>-5</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
+			<BuildingHealthChanges>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
+					<iHealthChange>-4</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<iHealthChange>-4</iHealthChange>
+				</BuildingHealthChange>
+			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
 			<!-- Revolution Mod Start -->
@@ -3775,12 +3793,7 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
-			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
-					<iProductionModifier>0</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
+			<BuildingProductionModifiers/>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
@@ -17291,6 +17304,14 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

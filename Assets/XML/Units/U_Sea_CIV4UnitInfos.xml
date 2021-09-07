@@ -59,7 +59,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
 			</SupersedingUnits>
@@ -173,7 +173,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</SupersedingUnits>
@@ -1201,7 +1201,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</SupersedingUnits>
@@ -3939,7 +3939,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
 			</SupersedingUnits>
@@ -4052,7 +4052,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -5750,7 +5750,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_URANIUM</BonusType>
@@ -8285,7 +8285,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
@@ -8413,7 +8413,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CHEMISTRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8503,7 +8503,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SUBMARINE_WARFARE</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8589,7 +8589,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CONGLOMERATES</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>

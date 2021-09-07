@@ -342,7 +342,10 @@ public:
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
-	//int getUnitProductionModifier(int i) const;
+	const python::list cyGetUnitProductionModifiers() const { return m_aUnitProductionModifier.makeList(); }
+
+	const IDValueMap<TechTypes, int*>& getTechCommercePercentChanges() const { return m_aTechCommercePercent; }
+	const python::list cyGetTechCommercePercentChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
@@ -417,6 +420,7 @@ public:
 	int* getTechYieldModifierArray(int i) const;
 
 	const IDValueMap<UnitCombatTypes, int>& getUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength; }
+	const python::list cyGetUnitCombatExtraStrength() const { return m_aUnitCombatExtraStrength.makeList(); }
 
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
@@ -851,6 +855,8 @@ private:
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatFreeExperience;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
+
+	IDValueMap<TechTypes, int*> m_aTechCommercePercent;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

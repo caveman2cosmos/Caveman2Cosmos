@@ -355,6 +355,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAR_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -362,6 +363,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -468,6 +470,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_CAT_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -533,6 +536,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -540,6 +544,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -636,6 +641,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Help>
@@ -644,6 +650,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<bNeverCapture>1</bNeverCapture>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -732,11 +739,11 @@
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
@@ -745,6 +752,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -796,6 +804,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_HERD</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -905,6 +914,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -919,6 +929,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -1098,11 +1109,11 @@
 				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RHINO_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Help>
@@ -1111,6 +1122,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -1236,6 +1248,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_TRAINER_EFFECT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Help>
@@ -1244,6 +1257,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

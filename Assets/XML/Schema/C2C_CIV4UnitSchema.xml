@@ -1394,7 +1394,6 @@
 	</ElementType>
 	<!-- RevDCM canTrain -->
 	<ElementType name="MaxStartEra" content="textOnly"/>
-	<ElementType name="ForceObsoleteTech" content="textOnly"/>
 	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bUpgradeAnywhere" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqGameOption" content="textOnly"/>
@@ -1898,7 +1897,7 @@
 		<element type="Buildings" minOccurs="0"/>
 		<!-- RevDCM canTrain -->
 		<element type="MaxStartEra" minOccurs="0"/>
-		<element type="ForceObsoleteTech" minOccurs="0"/>
+		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="bStateReligion" minOccurs="0"/>
 		<element type="bUpgradeAnywhere" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>

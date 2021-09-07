@@ -22,6 +22,39 @@ struct IDValueMap
 {
 	typedef std::pair<ID_, Value_> pair_t;
 
+	void readPairedArray(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
+	{
+		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
+		{
+			const int iNumChildren = pXML->GetXmlChildrenNumber();
+
+			if (pXML->TryMoveToXmlFirstChild(L"TechCommercePercentChange"))
+			{
+				for (int j = 0; j < iNumChildren; ++j)
+				{
+					CvString szTextVal;
+					pXML->GetChildXmlValByName(szTextVal, L"TechType");
+					const int k = pXML->GetInfoClass(szTextVal);
+					if (k > -1)
+					{
+						pair_t pair = pair_t();
+						pair.first = static_cast<ID_>(k);
+						if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
+						{
+							pXML->SetCommerce(&pair.second);
+							pXML->MoveToXmlParent();
+							m_map.push_back(pair);
+						}
+					}
+					if (!pXML->TryMoveToXmlNextSibling())
+						break;
+				}
+				pXML->MoveToXmlParent();
+			}
+			pXML->MoveToXmlParent();
+		}
+	}
+
 	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
@@ -33,12 +66,9 @@ struct IDValueMap
 				{
 					if (pXML->TryMoveToXmlFirstChild())
 					{
-						CvString szTextVal;
-						pXML->GetXmlVal(szTextVal);
-						const ID_ type = (ID_)GC.getOrCreateInfoTypeForString(szTextVal);
-						Value_ value = defaultValue;
-						pXML->GetNextXmlVal(&value);
-						m_map.push_back(std::make_pair(type, value));
+						pair_t pair = pair_t();
+						if (readChildPair(pXML, pair))
+							m_map.push_back(pair);
 						pXML->MoveToXmlParent();
 					}
 				} while (pXML->TryMoveToXmlNextSibling());
@@ -82,6 +112,38 @@ struct IDValueMap
 			}
 			pXML->MoveToXmlParent();
 		}
+	}
+
+	template <class T>
+	bool readChildPair(CvXMLLoadUtility* pXML, T& pair)
+	{
+		CvString szTextVal;
+		pXML->GetXmlVal(szTextVal);
+		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
+		//pair.second = defaultValue;
+		pXML->GetNextXmlVal(&pair.second);
+		return true;
+	}
+
+	template <>
+	bool readChildPair<std::pair<ID_, int*> >(CvXMLLoadUtility* pXML, std::pair<ID_, int*>& pair)
+	{
+		CvString szTextVal;
+		pXML->GetChildXmlValByName(szTextVal, L"TechType");
+		//pXML->GetXmlVal(szTextVal);
+		//GC.addDelayedResolution((int*)&pair.first, szTextVal);
+		pair.first = static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal));
+		FASSERT_NOT_NEGATIVE(pair.first);
+
+		pair.second = NULL;
+		if (pXML->TryMoveToXmlFirstChild(L"CommercePercents"))
+		{
+			FErrorMsg("set commerce");
+			pXML->SetCommerce(&pair.second);
+			pXML->MoveToXmlParent();
+			return true;
+		}
+		return false;
 	}
 
 	void copyNonDefaults(const IDValueMap<ID_, Value_, defaultValue>& other)
@@ -139,10 +201,10 @@ struct IDValueMap
 
 	const python::list makeList() const
 	{
-		python::list list = python::list();
+		python::list l = python::list();
 		foreach_(const pair_t& pair, m_map)
-			list.append(std::make_pair((int)pair.first, (int)pair.second));
-		return list;
+			l.append(std::make_pair((int)pair.first, pair.second));
+		return l;
 	}
 
 	typedef typename std::vector<pair_t>::iterator        iterator;
@@ -163,6 +225,8 @@ typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
+
+typedef std::pair<TechTypes, int*> TechCommerceModifiers;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;
 typedef IDValueMap<int, int, 0> IDValueMapModifier;

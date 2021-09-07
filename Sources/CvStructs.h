@@ -746,11 +746,6 @@ struct BuildingCommerceChange
 	void write(FDataStreamBase* pStream);
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
@@ -796,10 +791,18 @@ struct BuildingCommerceModifier
 	void write(FDataStreamBase* pStream);
 };
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+const struct TechCommerceChange
+{
+	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
+		: eTech(eTech)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
+	{}
 
+	const TechTypes eTech;
+	const CommerceTypes eCommerce;
+	const int iChange;
+};
 
 struct DllExport PBGameSetupData
 {
