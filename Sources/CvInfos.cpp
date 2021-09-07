@@ -32422,6 +32422,7 @@ CvOutcomeInfo::CvOutcomeInfo() :
 
 CvOutcomeInfo::~CvOutcomeInfo()
 {
+	GC.removeDelayedResolutionVector(m_aeReplaceOutcomes);
 }
 
 bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
@@ -32455,7 +32456,6 @@ bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 	{
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraChancePromotion"))
 			{
 				do
@@ -32472,52 +32472,8 @@ bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if(pXML->TryMoveToXmlFirstChild(L"PrereqBuildings"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildingType"))
-			{
-				do
-				{
-					pXML->GetXmlVal(szTextVal);
-					BuildingTypes eBuilding = (BuildingTypes) pXML->GetInfoClass(szTextVal);
-					m_aePrereqBuildings.push_back(eBuilding);
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	return true;
-}
-
-bool CvOutcomeInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"ReplaceOutcomes"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"OutcomeType"))
-			{
-				do
-				{
-					pXML->GetXmlVal(szTextVal);
-					m_aeReplaceOutcomes.push_back((OutcomeTypes)pXML->GetInfoClass(szTextVal));
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
+	pXML->SetOptionalVector(&m_aePrereqBuildings, L"PrereqBuildings");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aeReplaceOutcomes, L"ReplaceOutcomes");
 
 	return true;
 }
@@ -32540,17 +32496,11 @@ void CvOutcomeInfo::copyNonDefaults(const CvOutcomeInfo* pClassInfo)
 	if (!getCity()) m_bCity = pClassInfo->getCity();
 	if (!getNotCity()) m_bNotCity = pClassInfo->getNotCity();
 	if (!isCapture()) m_bCapture = pClassInfo->isCapture();
-	if (getNumPrereqBuildings() == 0) m_aePrereqBuildings = pClassInfo->m_aePrereqBuildings;
+	if (m_aePrereqBuildings.empty()) m_aePrereqBuildings = pClassInfo->m_aePrereqBuildings;
 	if (getNumExtraChancePromotions() == 0) m_aeiExtraChancePromotions = pClassInfo->m_aeiExtraChancePromotions;
 	if (getPrereqCivic() == NO_CIVIC) m_ePrereqCivic = pClassInfo->getPrereqCivic();
-}
 
-void CvOutcomeInfo::copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	for ( int i = 0; i < pClassInfo->getNumReplaceOutcomes(); i++ )
-	{
-		m_aeReplaceOutcomes.push_back(pClassInfo->getReplaceOutcome(i));
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_aeReplaceOutcomes, pClassInfo->getReplaceOutcomes());
 }
 
 void CvOutcomeInfo::getCheckSum(uint32_t& iSum) const
@@ -32626,17 +32576,6 @@ CivicTypes CvOutcomeInfo::getPrereqCivic() const
 	return m_ePrereqCivic;
 }
 
-int CvOutcomeInfo::getNumPrereqBuildings() const
-{
-	return m_aePrereqBuildings.size();
-}
-
-BuildingTypes CvOutcomeInfo::getPrereqBuilding(int i) const
-{
-	FASSERT_BOUNDS(0, getNumPrereqBuildings(), i)
-	return m_aePrereqBuildings[i];
-}
-
 int CvOutcomeInfo::getNumExtraChancePromotions() const
 {
 	return m_aeiExtraChancePromotions.size();
@@ -32652,17 +32591,6 @@ int CvOutcomeInfo::getExtraChancePromotionChance(int i) const
 {
 	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i)
 	return m_aeiExtraChancePromotions[i].second;
-}
-
-int CvOutcomeInfo::getNumReplaceOutcomes() const
-{
-	return m_aeReplaceOutcomes.size();
-}
-
-OutcomeTypes CvOutcomeInfo::getReplaceOutcome(int i) const
-{
-	FASSERT_BOUNDS(0, getNumReplaceOutcomes(), i)
-	return m_aeReplaceOutcomes[i];
 }
 
 //TB Promotion Line Info
