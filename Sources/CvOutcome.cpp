@@ -444,8 +444,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		}
 	}
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	if (!kInfo.getPrereqBuildings().empty())
 	{
 		const CvCity* pCity = kUnit.plot()->getPlotCity();
 		if (!pCity)
@@ -453,9 +452,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 
-		for (int i=0; i < iPrereqBuildings; i++)
+		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
 			{
 				return false;
 			}
@@ -623,15 +622,11 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	//TeamTypes eOwnerTeam = GET_PLAYER(kUnit.getOwner()).getTeam();
 	//CvTeam& kOwnerTeam = GET_TEAM(eOwnerTeam);
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 	{
-		for (int i=0; i<iPrereqBuildings; i++)
+		if (GET_PLAYER(kUnit.getOwner()).getBuildingCount(ePrereq) <= 0)
 		{
-			if (GET_PLAYER(kUnit.getOwner()).getBuildingCount(kInfo.getPrereqBuilding(i)) <= 0)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -776,8 +771,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		}
 	}
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	if (!kInfo.getPrereqBuildings().empty())
 	{
 		const CvCity* pCity = kPlot.getPlotCity();
 		if (!pCity)
@@ -785,9 +779,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 
-		for (int i = 0; i < iPrereqBuildings; i++)
+		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
 			{
 				return false;
 			}
