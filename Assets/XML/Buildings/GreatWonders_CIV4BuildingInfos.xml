@@ -2363,9 +2363,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SEXTANT</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>3210</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -3017,6 +3018,10 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ADVANCED_FLOODWALL</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -6945,6 +6950,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -9325,9 +9331,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CORPORATION</ObsoleteTech>
 			<iCost>1152</iCost>
 			<CommerceChanges>
@@ -16140,6 +16147,7 @@
 			<FreeBuilding>BUILDING_INTERNATIONAL_PORT</FreeBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>

@@ -3224,6 +3224,10 @@
 					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
 					<iProductionModifier>35</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<Flavors>

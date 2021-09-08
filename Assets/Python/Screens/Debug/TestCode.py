@@ -56,8 +56,6 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
-		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
-		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -233,7 +231,7 @@ class TestCode:
 				#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
 				for i in xrange(len(aUnlistedRequirementReplacements)):
 					if aUnlistedRequirementReplacements[i] not in aBuildingInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
-						self.log(CvBuildingInfo.getType()+" AND as unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
+						self.log(CvBuildingInfo.getType()+" AND has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 				#<PrereqOrBuildings> - require one building in list
 				aBuildingOrRequirementList = []
@@ -3415,48 +3413,3 @@ class TestCode:
 					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
-
-		szText = " Regular obsoleting buildings without replacements: "
-		for i in xrange(len(aObsoleteTechList)):
-			if aObsoleteTechList[i] > 0:
-				szText += str(aObsoleteTechList[i])+" items at "+GC.getTechInfo(i).getType()+", "
-		self.log(szText)
-
-	#Building - List buildings, that doesn't require techs
-	def listNoTechBuildings(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-			if iTechLoc == 0 and CvBuildingInfo.getProductionCost() == -1 and CvBuildingInfo.getType().find("_MYTH_EFFECT", -12) == -1 and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-				self.log(CvBuildingInfo.getType()+" doesn't require any techs")
-
-	#Building - List buildings, that doesn't have cost
-	def listNoCostBuildings(self):
-		aGivenByUnitList = []
-		for iUnit in xrange(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-
-			for i in xrange(CvUnitInfo.getNumBuildings()):
-				if CvUnitInfo.getBuildings(i) not in aGivenByUnitList:
-					aGivenByUnitList.append(CvUnitInfo.getBuildings(i))
-
-		aFreeBuildingList = []
-		aAutoBuildList = []
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-
-			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
-			if iFreeBuilding != -1 and CvBuildingInfo.getFreeBuilding() not in aFreeBuildingList:
-				aFreeBuildingList.append(iFreeBuilding)
-
-			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
-			if iFreeAreaBuilding != -1 and CvBuildingInfo.getFreeAreaBuilding() not in aFreeBuildingList:
-				aFreeBuildingList.append(iFreeAreaBuilding)
-
-			if CvBuildingInfo.isAutoBuild():
-				aAutoBuildList.append(iBuilding)
-
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			if CvBuildingInfo.getProductionCost() == -1 and iBuilding not in aGivenByUnitList and iBuilding not in aFreeBuildingList and iBuilding not in aAutoBuildList:
-				self.log(CvBuildingInfo.getType()+" might be unobtainable")

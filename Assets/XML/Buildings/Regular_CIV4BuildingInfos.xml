@@ -814,6 +814,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OCEAN_ADMINISTRATION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>3975</iCost>
 			<bWater>1</bWater>
 			<SeaPlotYieldChanges>
@@ -9186,6 +9191,7 @@
 			</YieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -26133,7 +26139,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<ObsoleteTech>TECH_WEIGHTLESS_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INTERNATIONAL_PORT</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<PrereqBonuses>
@@ -26142,6 +26148,7 @@
 			</PrereqBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>380</iCost>
 			<BonusProductionModifiers>
@@ -30350,9 +30357,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<bWater>1</bWater>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1280</iCost>
 			<iHealth>-1</iHealth>
@@ -31721,6 +31729,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OCEAN_ADMINISTRATION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>2005</iCost>
 			<bWater>1</bWater>
 			<CommerceChanges>
@@ -44877,6 +44890,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -45812,6 +45826,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -51123,6 +51138,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>192</iCost>
 			<BonusProductionModifiers>
@@ -51191,6 +51207,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>192</iCost>
 			<CommerceChanges>
@@ -57051,6 +57068,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OCEAN_ADMINISTRATION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
@@ -62380,6 +62402,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_SAILING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OCEAN_ADMINISTRATION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -76946,10 +76973,13 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<bWater>1</bWater>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+			<PrereqInCityBuildings>				
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1180</iCost>
 			<iHealth>-1</iHealth>
 			<DomainFreeExperiences>
@@ -78741,6 +78771,111 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OCEAN_ADMINISTRATION</Type>
+			<Description>TXT_KEY_BUILDING_OCEAN_ADMINISTRATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OCEAN_ADMINISTRATION_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OCEAN_ADMINISTRATION</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OCEAN_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>5905</iCost>			
+			<bWater>1</bWater>
+			<iTradeRoutes>4</iTradeRoutes>
+			<iTradeRouteModifier>60</iTradeRouteModifier>
+			<iForeignTradeRouteModifier>60</iForeignTradeRouteModifier>
+			<iHealth>2</iHealth>
+			<iDefense>5</iDefense>
+			<SeaPlotYieldChanges>
+				<iYield>3</iYield>
+				<iYield>5</iYield>
+				<iYield>3</iYield>
+			</SeaPlotYieldChanges>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>5</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_NAVAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_SILK</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_ALCOHOL</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_AUTOMOBILES</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_COMPUTERS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_DRUGS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_FIREARMS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_FUR</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_IVORY</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_WHALE_OIL</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_CARBYNE</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+			</BonusCommerceModifiers>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_ARCOLOGY</Type>
@@ -83060,7 +83195,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
-			<ObsoleteTech>TECH_MARINE_ARCHITECTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_LAUNCH_ARCOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OCEAN_ADMINISTRATION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
@@ -86767,6 +86906,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>234</iCost>
 			<BonusProductionModifiers>
@@ -90925,6 +91065,7 @@
 				<BuildingType>BUILDING_PORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2005</iCost>
 			<CommerceChanges>
@@ -95696,10 +95837,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<ObsoleteTech>TECH_ADVANCED_WARMACHINES</ObsoleteTech>
+			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ADVANCED_FLOODWALL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ADVANCED_FLOODWALL</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
@@ -102235,6 +102377,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
 				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
