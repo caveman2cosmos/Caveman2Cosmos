@@ -6785,7 +6785,7 @@
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>				
+				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>

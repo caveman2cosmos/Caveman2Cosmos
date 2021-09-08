@@ -22429,6 +22429,10 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SALT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -32076,6 +32080,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -76973,7 +76982,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<bWater>1</bWater>
-			<PrereqInCityBuildings>				
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -78785,7 +78794,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OCEAN_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>5905</iCost>			
+			<iCost>5905</iCost>
 			<bWater>1</bWater>
 			<iTradeRoutes>4</iTradeRoutes>
 			<iTradeRouteModifier>60</iTradeRouteModifier>
@@ -94013,6 +94022,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<iMaxLatitude>35</iMaxLatitude>
 			<PrereqInCityBuildings>
@@ -94045,6 +94059,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -94082,6 +94101,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
@@ -94118,6 +94142,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
+			<ObsoleteTech>TECH_ANIMAMATERIALS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SALT</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
