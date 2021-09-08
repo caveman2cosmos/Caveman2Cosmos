@@ -2094,8 +2094,6 @@ m_piFeatureWorkPercent(NULL),
 
 m_bCanMovePeaks(false)
 ,m_bCanLeadThroughPeaks(false)
-,m_iNumPromotionOverwrites(0)
-,m_piPromotionOverwrites(NULL)
 ,m_iObsoleteTech(NO_TECH)
 ,m_iControlPoints(0)
 ,m_iCommandRange(0)
@@ -2272,28 +2270,13 @@ CvPromotionInfo::~CvPromotionInfo()
 	SAFE_DELETE_ARRAY(m_pbTerrainDoubleMove);
 	SAFE_DELETE_ARRAY(m_pbFeatureDoubleMove);
 	SAFE_DELETE_ARRAY(m_pbUnitCombat);
-	//ls612: Terrain Work Modifiers
 	SAFE_DELETE_ARRAY(m_piTerrainWorkPercent);
 	SAFE_DELETE_ARRAY(m_piFeatureWorkPercent);
-	//TB Combat Mods begin
-	//Delayed Resolution vectors
 
-	for (int i=0; i<(int)m_aiAddsBuildTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiAddsBuildTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aiPrereqLocalBuildingTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiPrereqLocalBuildingTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aiTrapSetWithPromotionTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiTrapSetWithPromotionTypes[i]));
-	}
-
-	//TB Combat Mod end
+	//GC.removeDelayedResolutionVector(m_vPromotionOverwrites);
+	GC.removeDelayedResolutionVector(m_aiAddsBuildTypes);
+	GC.removeDelayedResolutionVector(m_aiPrereqLocalBuildingTypes);
+	GC.removeDelayedResolutionVector(m_aiTrapSetWithPromotionTypes);
 }
 
 int CvPromotionInfo::getLayerAnimationPath() const
@@ -2786,16 +2769,6 @@ bool CvPromotionInfo::isCanMovePeaks() const
 bool CvPromotionInfo::isCanLeadThroughPeaks() const
 {
 	return m_bCanLeadThroughPeaks;
-}
-
-PromotionTypes CvPromotionInfo::getPromotionOverwrites(int iI) const
-{
-	return (getNumPromotionOverwrites() > iI)	? (PromotionTypes)m_piPromotionOverwrites[iI]	: NO_PROMOTION;
-}
-
-int CvPromotionInfo::getNumPromotionOverwrites() const
-{
-	return m_iNumPromotionOverwrites;
 }
 
 TechTypes CvPromotionInfo::getObsoleteTech() const
@@ -5496,6 +5469,8 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 		//TB Combat Mod End
+	//pXML->SetOptionalVectorWithDelayedResolution(PromotionOverwrites, L"PromotionOverwrites");
+
 	return true;
 }
 
@@ -5513,9 +5488,6 @@ bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
 	m_iPrereqOrPromotion1 = GC.getInfoTypeForString(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionPrereqOr2");
 	m_iPrereqOrPromotion2 = GC.getInfoTypeForString(szTextVal);
-
-	if (pXML->TryMoveToXmlFirstChild(L"PromotionOverwrites"))
-		pXML->SetIntWithChildList(&m_iNumPromotionOverwrites, &m_piPromotionOverwrites);
 
 	return true;
 }
@@ -6254,7 +6226,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAfflictOnAttackChangeTypes, pClassInfo->m_aAfflictOnAttackChangeTypes);
 	}
-#endif
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	if (getNumHealUnitCombatChangeTypes() == 0)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatChangeTypes, pClassInfo->m_aHealUnitCombatChangeTypes);
@@ -6321,47 +6293,13 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	//	mountains, and ability to lead a stack through mountains
 	if (isCanLeadThroughPeaks() == bDefault) m_bCanLeadThroughPeaks = pClassInfo->isCanLeadThroughPeaks();
 
-	if(pClassInfo->getNumPromotionOverwrites() > 0)
-	{
-		int* tempArray = new int[getNumPromotionOverwrites() + pClassInfo->getNumPromotionOverwrites()];
-		for(int i = 0; i< getNumPromotionOverwrites(); ++i)
-		{
-			tempArray[i] = getPromotionOverwrites(i);
-		}
-		int iNewItems = 0;
-		for(int i = 0; i < pClassInfo->getNumPromotionOverwrites(); ++i)
-		{
-			bool bLoad = true;
-			for(int j=0;j<getNumPromotionOverwrites();++j)
-			{
-				if(pClassInfo->getPromotionOverwrites(i) == getPromotionOverwrites(j))
-				{
-					bLoad = false;
-					break;
-				}
-			}
-			if(bLoad)
-			{
-				tempArray[iNewItems+getNumPromotionOverwrites()] = pClassInfo->getPromotionOverwrites(i);
-				iNewItems++;
-			}
-		}
-		SAFE_DELETE_ARRAY(m_piPromotionOverwrites);
-		const int iGoalSize = getNumPromotionOverwrites() + iNewItems;
-		m_piPromotionOverwrites = new int[iGoalSize];
-		for(int i = 0; i < iGoalSize; ++i)
-		{
-			m_piPromotionOverwrites[i] = tempArray[i];
-			FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), m_piPromotionOverwrites[i])
-		}
-		m_iNumPromotionOverwrites = iGoalSize;
-		SAFE_DELETE_ARRAY(tempArray);
-	}
 	if (getObsoleteTech() == NO_TECH) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getControlPoints() == iDefault) m_iControlPoints = pClassInfo->getControlPoints();
 	if (getCommandRange() == iDefault) m_iCommandRange = pClassInfo->getCommandRange();
 	if (isZoneOfControl() == bDefault) m_bZoneOfControl = pClassInfo->isZoneOfControl();
 	if (getIgnoreTerrainDamage() == NO_TERRAIN) m_iIgnoreTerrainDamage = pClassInfo->getIgnoreTerrainDamage();
+
+	//GC.copyNonDefaultDelayedResolutionVector(m_vPromotionOverwrites, pClassInfo->getPromotionOverwrites());
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
@@ -6373,30 +6311,6 @@ void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXM
 	if (bOver || getPrereqPromotion() == iTextDefault) m_iPrereqPromotion = pClassInfo->getPrereqPromotion();
 	if (bOver || getPrereqOrPromotion1() == iTextDefault) m_iPrereqOrPromotion1 = pClassInfo->getPrereqOrPromotion1();
 	if (bOver || getPrereqOrPromotion2() == iTextDefault) m_iPrereqOrPromotion2 = pClassInfo->getPrereqOrPromotion2();
-
-	if(pClassInfo->getNumPromotionOverwrites() > 0)
-	{
-		int iGoalSize = bOver ? pClassInfo->getNumPromotionOverwrites() : getNumPromotionOverwrites() + pClassInfo->getNumPromotionOverwrites();
-		int* tempArray = new int[iGoalSize];
-		for(int i = 0; i < pClassInfo->getNumPromotionOverwrites(); ++i)
-		{
-			tempArray[i] = pClassInfo->getPromotionOverwrites(i);
-		}
-		const int iOffset = pClassInfo->getNumPromotionOverwrites();
-		for(int i = 0; i< getNumPromotionOverwrites(); ++i)
-		{
-			tempArray[i+iOffset] = getPromotionOverwrites(i);
-		}
-		SAFE_DELETE_ARRAY(m_piPromotionOverwrites);
-		m_piPromotionOverwrites = new int[iGoalSize];
-		for(int i = 0; i < iGoalSize; ++i)
-		{
-			m_piPromotionOverwrites[i] = tempArray[i];
-			FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), m_piPromotionOverwrites[i])
-		}
-		m_iNumPromotionOverwrites = iGoalSize;
-		SAFE_DELETE_ARRAY(tempArray);
-	}
 }
 
 void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
@@ -6464,22 +6378,17 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_pbTerrainDoubleMove, GC.getNumTerrainInfos());
 	CheckSum(iSum, m_pbFeatureDoubleMove, GC.getNumFeatureInfos());
 	CheckSum(iSum, m_pbUnitCombat, GC.getNumUnitCombatInfos());
-	//ls612: Terrain Work Modifiers
 	CheckSum(iSum, m_piTerrainWorkPercent, GC.getNumTerrainInfos());
 	CheckSum(iSum, m_piFeatureWorkPercent, GC.getNumFeatureInfos());
-
 	CheckSum(iSum, m_bCanMovePeaks);
 	CheckSum(iSum, m_bCanLeadThroughPeaks);
-	//CheckSum(iSum, m_iNumPromotionOverwrites);
-	CheckSum(iSum, m_piPromotionOverwrites, m_iNumPromotionOverwrites);
-
+	//CheckSumC(iSum, m_vPromotionOverwrites);
 	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iControlPoints);
 	CheckSum(iSum, m_iCommandRange);
 	CheckSum(iSum, m_iIgnoreTerrainDamage);
 	CheckSum(iSum, m_bZoneOfControl);
 	m_PropertyManipulators.getCheckSum(iSum);
-
 	CheckSum(iSum, m_bDefensiveVictoryMove);
 	CheckSum(iSum, m_bFreeDrop);
 	CheckSum(iSum, m_bOffensiveVictoryMove);
@@ -6896,7 +6805,6 @@ EntityEventTypes CvMissionInfo::getEntityEvent() const
 
 bool CvMissionInfo::read(CvXMLLoadUtility* pXML)
 {
-
 	CvString szTmp;
 	if (!CvHotkeyInfo::read(pXML))
 	{
@@ -32514,6 +32422,7 @@ CvOutcomeInfo::CvOutcomeInfo() :
 
 CvOutcomeInfo::~CvOutcomeInfo()
 {
+	GC.removeDelayedResolutionVector(m_aeReplaceOutcomes);
 }
 
 bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
@@ -32547,7 +32456,6 @@ bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 	{
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraChancePromotion"))
 			{
 				do
@@ -32564,52 +32472,8 @@ bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if(pXML->TryMoveToXmlFirstChild(L"PrereqBuildings"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildingType"))
-			{
-				do
-				{
-					pXML->GetXmlVal(szTextVal);
-					BuildingTypes eBuilding = (BuildingTypes) pXML->GetInfoClass(szTextVal);
-					m_aePrereqBuildings.push_back(eBuilding);
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	return true;
-}
-
-bool CvOutcomeInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"ReplaceOutcomes"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"OutcomeType"))
-			{
-				do
-				{
-					pXML->GetXmlVal(szTextVal);
-					m_aeReplaceOutcomes.push_back((OutcomeTypes)pXML->GetInfoClass(szTextVal));
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
+	pXML->SetOptionalVector(&m_aePrereqBuildings, L"PrereqBuildings");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aeReplaceOutcomes, L"ReplaceOutcomes");
 
 	return true;
 }
@@ -32632,17 +32496,11 @@ void CvOutcomeInfo::copyNonDefaults(const CvOutcomeInfo* pClassInfo)
 	if (!getCity()) m_bCity = pClassInfo->getCity();
 	if (!getNotCity()) m_bNotCity = pClassInfo->getNotCity();
 	if (!isCapture()) m_bCapture = pClassInfo->isCapture();
-	if (getNumPrereqBuildings() == 0) m_aePrereqBuildings = pClassInfo->m_aePrereqBuildings;
+	if (m_aePrereqBuildings.empty()) m_aePrereqBuildings = pClassInfo->m_aePrereqBuildings;
 	if (getNumExtraChancePromotions() == 0) m_aeiExtraChancePromotions = pClassInfo->m_aeiExtraChancePromotions;
 	if (getPrereqCivic() == NO_CIVIC) m_ePrereqCivic = pClassInfo->getPrereqCivic();
-}
 
-void CvOutcomeInfo::copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	for ( int i = 0; i < pClassInfo->getNumReplaceOutcomes(); i++ )
-	{
-		m_aeReplaceOutcomes.push_back(pClassInfo->getReplaceOutcome(i));
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_aeReplaceOutcomes, pClassInfo->getReplaceOutcomes());
 }
 
 void CvOutcomeInfo::getCheckSum(uint32_t& iSum) const
@@ -32718,17 +32576,6 @@ CivicTypes CvOutcomeInfo::getPrereqCivic() const
 	return m_ePrereqCivic;
 }
 
-int CvOutcomeInfo::getNumPrereqBuildings() const
-{
-	return m_aePrereqBuildings.size();
-}
-
-BuildingTypes CvOutcomeInfo::getPrereqBuilding(int i) const
-{
-	FASSERT_BOUNDS(0, getNumPrereqBuildings(), i)
-	return m_aePrereqBuildings[i];
-}
-
 int CvOutcomeInfo::getNumExtraChancePromotions() const
 {
 	return m_aeiExtraChancePromotions.size();
@@ -32744,17 +32591,6 @@ int CvOutcomeInfo::getExtraChancePromotionChance(int i) const
 {
 	FASSERT_BOUNDS(0, getNumExtraChancePromotions(), i)
 	return m_aeiExtraChancePromotions[i].second;
-}
-
-int CvOutcomeInfo::getNumReplaceOutcomes() const
-{
-	return m_aeReplaceOutcomes.size();
-}
-
-OutcomeTypes CvOutcomeInfo::getReplaceOutcome(int i) const
-{
-	FASSERT_BOUNDS(0, getNumReplaceOutcomes(), i)
-	return m_aeReplaceOutcomes[i];
 }
 
 //TB Promotion Line Info

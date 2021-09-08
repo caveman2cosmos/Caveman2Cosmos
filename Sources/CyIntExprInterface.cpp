@@ -3,7 +3,7 @@
 
 void CyIntExprPythonInterface()
 {
-	python::class_<IntExpr>("IntExpr", python::no_init)
+	python::class_<IntExpr, boost::noncopyable>("IntExpr", python::no_init)
 	;
 
 	python::class_<IntExprConstant, python::bases<IntExpr> >("IntExprConstant", python::no_init)

@@ -2188,7 +2188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
-		<English>Breeding Pair - Donkey</English>
+		<English>Tamed Donkey (Breeding Pair)</English>
 		<French>Couple reproducteur - Ânes</French>
 		<Russian>Çàâîä÷èê îñëîâ</Russian>
 	</TEXT>
@@ -2198,7 +2198,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
-		<English>Breeding Pair - Horse</English>
+		<English>Tamed Horse (Breeding Pair)</English>
 		<French>Couple reproducteur - Chevaux</French>
 		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
 	</TEXT>
@@ -2235,7 +2235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Tag>
-		<English>Breeding Pair - Wolf</English>
+		<English>Tamed Wolf (Breeding Pair)</English>
 		<French>Couple reproducteur - Loup</French>
 		<Russian>Çàâîä÷èê âîëêîâ</Russian>
 	</TEXT>

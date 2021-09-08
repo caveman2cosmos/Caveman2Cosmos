@@ -30,25 +30,11 @@ public:
 	int getRelationData() const;
 
 	virtual bool isActive(const CvGameObject* pObject) const;
-	const BoolExpr* getIsActiveExpr() const { return m_pExprActive; }
 
-	virtual PropertySourceTypes getType() const
-	{
-		FErrorMsg("Overide required");
-		return (PropertySourceTypes)-1;
-	}
+	virtual PropertySourceTypes getType() const = 0;
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const
-	{
-		FErrorMsg("Overide required");
-		return 0;
-	}
-
-	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const
-	{
-		FErrorMsg("Overide required");
-		return 0;
-	}
+	virtual int getSourcePredict(const CvGameObject*, int, PropertySourceContext* = NULL) const = 0;
+	virtual int getSourceCorrect(const CvGameObject*, int, int, const PropertySourceContext* = NULL) const = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 

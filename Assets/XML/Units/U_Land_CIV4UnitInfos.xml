@@ -6631,6 +6631,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CRUSADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRUSADER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_CRUSADER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -6670,10 +6671,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CRUSADE</BuildingType>
-			</PrereqAndBuildings>
+			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
+			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
+			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
+			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
