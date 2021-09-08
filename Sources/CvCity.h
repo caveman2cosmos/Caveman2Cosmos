@@ -1486,6 +1486,11 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
 
+	void changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange);
+	int getBuildingCommerceTechChange(CommerceTypes eIndex) const;
+	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
+	int getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const;
+
 	bool isAutomatedCanBuild(BuildTypes eBuild) const;
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);
 
@@ -1770,6 +1775,8 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
+	int* m_aiBuildingCommerceTechChange;
+
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;

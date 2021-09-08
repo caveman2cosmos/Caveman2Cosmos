@@ -96,8 +96,10 @@ CvCity::CvCity()
 
 	m_aiBonusCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiBonusCommercePercentChanges = new int[NUM_COMMERCE_TYPES];
+	m_aiBuildingCommerceTechChange = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceAttacks = new int[NUM_COMMERCE_TYPES];
 	m_aiMaxCommerceAttacks = new int[NUM_COMMERCE_TYPES];
+
 	m_cachedPropertyNeeds = NULL;
 	m_pabHadVicinityBonus = NULL;
 	m_pabHasVicinityBonus = NULL;
@@ -210,6 +212,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_abEspionageVisibility);
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
+	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
 	SAFE_DELETE_ARRAY(m_aiCommerceAttacks);
 	SAFE_DELETE_ARRAY(m_aiMaxCommerceAttacks);
 }
@@ -695,6 +698,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiCommerceHappinessPer[iI] = 0;
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
+		m_aiBuildingCommerceTechChange[iI] = 0;
 		m_aiCommerceAttacks[iI] = 0;
 		m_aiMaxCommerceAttacks[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
@@ -5376,6 +5380,16 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			{
 				changeBonusCommerceRateModifier((CommerceTypes)iJ, kBuilding.getBonusCommerceModifier(iI, iJ) * iChange);
 				changeBonusCommercePercentChanges((CommerceTypes)iJ, kBuilding.getBonusCommercePercentChanges(iI, iJ) * iChange);
+			}
+		}
+	}
+	foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
+		{
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			{
+				changeBuildingCommerceTechChange((CommerceTypes)iI, iChange * modifier.second[(CommerceTypes)iI]);
 			}
 		}
 	}
@@ -11910,7 +11924,7 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	iBaseCommerceRate += 100 * getCorporationCommerce(eIndex);
 
 	//STEP 5 : Building Commerce
-	iBaseCommerceRate += 100 * getBuildingCommerce(eIndex) + getBonusCommercePercentChanges(eIndex);
+	iBaseCommerceRate += 100 * getBuildingCommerce(eIndex) + getBonusCommercePercentChanges(eIndex) + getBuildingCommerceTechChange(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	iBaseCommerceRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
@@ -17334,6 +17348,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_bPropertyControlBuildingQueued);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBuildingCommerceTechChange);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -17754,6 +17769,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_bPropertyControlBuildingQueued);
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBuildingCommerceTechChange);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -19873,11 +19889,6 @@ int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus
 	return iModifier;
 }
 
-int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
-	return m_aiBonusCommercePercentChanges[eIndex];
-}
 
 void CvCity::changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange)
 {
@@ -19897,6 +19908,12 @@ void CvCity::changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange
 			setInfoDirty(true);
 		}
 	}
+}
+
+int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	return m_aiBonusCommercePercentChanges[eIndex];
 }
 
 int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex, BonusTypes eBonus) const
@@ -19930,6 +19947,67 @@ int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes e
 	return iPercentCommerce;
 }
 
+
+void CvCity::changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange)
+{
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+
+	if (iChange != 0)
+	{
+		m_aiBuildingCommerceTechChange[eIndex] += iChange;
+
+		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
+
+		AI_setAssignWorkDirty(true);
+
+		if (getTeam() == GC.getGame().getActiveTeam())
+		{
+			setInfoDirty(true);
+		}
+	}
+}
+
+int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex) const
+{
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
+	return m_aiBuildingCommerceTechChange[eIndex];
+}
+
+int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const
+{
+	int iPercentCommerce = 0;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		{
+			foreach_(const TechCommerceModifiers& modifier, GC.getBuildingInfo((BuildingTypes)iI).getTechCommercePercentChanges())
+			{
+				if (eTech == modifier.first)
+				{
+					iPercentCommerce += modifier.second[eIndex];
+				}
+			}
+		}
+	}
+	return iPercentCommerce;
+}
+
+int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, BuildingTypes eBuilding) const
+{
+	if (!hasFullyActiveBuilding(eBuilding))
+	{
+		return 0;
+	}
+	int iPercentCommerce = 0;
+	foreach_(const TechCommerceModifiers& modifier, GC.getBuildingInfo(eBuilding).getTechCommercePercentChanges())
+	{
+		if (GET_TEAM(getTeam()).isHasTech(modifier.first))
+		{
+			iPercentCommerce += modifier.second[eIndex];
+		}
+	}
+	return iPercentCommerce;
+}
 
 
 int CvCity::getCommerceAttacks(CommerceTypes eIndex) const
@@ -22270,6 +22348,7 @@ void CvCity::clearModifierTotals()
 		m_aiCommerceHappinessPer[iI] = 0;
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		m_aiBonusCommercePercentChanges[iI] = 0;
+		m_aiBuildingCommerceTechChange[iI] = 0;
 		m_aiCommerceAttacks[iI] = 0;
 		m_aiMaxCommerceAttacks[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
