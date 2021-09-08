@@ -3420,6 +3420,6 @@ class TestCode:
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
-			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getNumReplacementBuilding() == 0 and CvBuildingInfo.getNumReplacedBuilding() == 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
-				if CvBuildingInfo.getFoodKept() != 0 or CvBuildingInfo.getPopulationgrowthratepercentage() != 0:
-					self.log(CvBuildingInfo.getType()+" can be connected to granaries")
+			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getNumReplacementBuilding() == 0 and CvBuildingInfo.getNumReplacedBuilding() == 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
+				if CvBuildingInfo.isPower():
+					self.log(CvBuildingInfo.getType()+" Bigger power prowider")

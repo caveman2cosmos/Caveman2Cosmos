@@ -12131,9 +12131,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -16362,9 +16363,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>2</iHappiness>

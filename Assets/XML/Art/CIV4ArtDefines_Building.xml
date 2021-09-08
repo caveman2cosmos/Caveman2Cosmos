@@ -47276,23 +47276,33 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OCEAN_ADMINISTRATION</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
+			<NIF/>
 			<KFM/>
 			<Button>art/Transportation/Art/peir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NANOMORPHIC_REPLICATOR</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
+			<NIF/>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/uterinereplicator.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MODERN_WATERWORKS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>art/Water/art/reservoir.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

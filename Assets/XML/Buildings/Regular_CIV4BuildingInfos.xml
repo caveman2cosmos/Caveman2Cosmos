@@ -6248,6 +6248,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MODERN_WATERWORKS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -6899,6 +6904,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
+			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MODERN_WATERWORKS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -11236,9 +11246,12 @@
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
 				<BuildingType>BUILDING_HYPOCAUSTS</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>252</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -24007,10 +24020,11 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_NEW_URBANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RESERVOIR</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RESERVOIR</BuildingType>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>270</iCost>
 			<BonusProductionModifiers>
@@ -42100,9 +42114,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_RESERVOIR</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_RESERVOIR</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_MODERN_WATERWORKS</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
@@ -48921,9 +48944,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>252</iCost>
 			<YieldChanges>
@@ -71636,6 +71660,50 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_MODERN_WATERWORKS</Type>
+			<Description>TXT_KEY_BUILDING_MODERN_WATERWORKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MODERN_WATERWORKS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MODERN_WATERWORKS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
+			<iCost>1540</iCost>
+			<bProvidesFreshWater>1</bProvidesFreshWater>
+			<iHealth>5</iHealth>
+			<YieldChanges>
+				<iYield>6</iYield>
+			</YieldChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_RICE</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_SANITATION</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_MODULAR_CONSTRUCTION_FIRM</Type>
 			<Description>TXT_KEY_BUILDING_MODULAR_CONSTRUCTION_FIRM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MODULAR_CONSTRUCTION_FIRM_PEDIA</Civilopedia>
@@ -77855,12 +77923,13 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
+				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_IRRIGATION_CANALS</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RIVER_ADMINISTRATION</BuildingType>
 			</ReplacementBuildings>
@@ -88103,9 +88172,10 @@
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ATHLETIC_MEGACOMPLEX</ObsoletesToBuilding>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>270</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -90867,6 +90937,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
+			<ObsoleteTech>TECH_MEGACITIES</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MODERN_WATERWORKS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -110314,10 +110389,11 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_NEW_URBANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ARTESIAN_WELL</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ARTESIAN_WELL</BuildingType>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<CommerceChanges>
@@ -115340,9 +115416,10 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<iCost>280</iCost>
 			<YieldModifiers>
