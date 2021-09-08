@@ -20997,7 +20997,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_MODERN_GRANARY</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -31539,9 +31543,12 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -41276,6 +41283,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENETIC_BIOCHEMISTRY</PrereqTech>
+			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_NANOMORPHIC_REPLICATOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -45552,9 +45564,12 @@
 			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_UTERINE_REPLICATOR</BuildingType>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_UTERINE_REPLICATOR</BuildingType>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>5055</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -47762,6 +47777,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_RECUPERATION</PrereqTech>
+			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_NANOMORPHIC_REPLICATOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -49101,15 +49121,15 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_MODERN_GRANARY</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_POTTERY</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-			</ReplacementBuildings>
 			<iCost>125</iCost>
 			<NewCityFree>
 				<Has>
@@ -71479,8 +71499,22 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
+			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_ALCOHOL</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_CHEESE</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+			</BonusCommerceModifiers>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iFoodKept>15</iFoodKept>
+			<iFoodKept>20</iFoodKept>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -73933,6 +73967,82 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NANOMORPHIC_REPLICATOR</Type>
+			<Description>TXT_KEY_BUILDING_NANOMORPHIC_REPLICATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHIC_REPLICATOR_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHIC_REPLICATOR</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_NANOTROIDS</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MEDICAL_MEGACOMPLEX</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>7805</iCost>
+			<iHealth>1</iHealth>
+			<iPopulationgrowthratepercentage>-80</iPopulationgrowthratepercentage>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>4</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
+					<iHeal>6</iHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>6</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_AUTOMATONS</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BLEEDER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CYBORG</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FERAL</UnitType>
+					<iProductionModifier>200</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CLONES</UnitType>
+					<iProductionModifier>100</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_ANDROID</UnitType>
+					<iProductionModifier>300</iProductionModifier>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BLEEDER</UnitType>
+					<iProductionModifier>50</iProductionModifier>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83675,9 +83785,12 @@
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
-				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
 				<BuildingType>BUILDING_TISSUE_ENGINEERING_LAB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>2865</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -90854,6 +90967,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_NANOMORPHIC_REPLICATOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<PrereqInCityBuildings>
@@ -111784,8 +111902,11 @@
 			</BonusCommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
-				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -112924,6 +113045,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+			<ObsoleteTech>TECH_ASTROANTHROPOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_NANOMORPHIC_REPLICATOR</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<PrereqInCityBuildings>

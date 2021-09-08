@@ -2170,12 +2170,6 @@ class TestCode:
 				if iPrereqBuilding not in aBuildingRequirementORList:
 					aBuildingRequirementORList.append(iPrereqBuilding)
 
-			#<PrereqAmountBuildings> - require all buildings in empire in list
-			for pair in CvBuildingInfo.getPrereqNumOfBuildings():
-				iPrereqBuilding = pair.id
-				if iPrereqBuilding not in aBuildingRequirementList:
-					aBuildingRequirementList.append(iPrereqBuilding)
-
 			#<ConstructCondition>
 			aBuildingGOMReqList = []
 			for i in range(2):
@@ -3408,19 +3402,24 @@ class TestCode:
 	#Building - list buildings, that obsolete without replacement
 	def listObsoleteingBuildings(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
-		aObsoleteTechList = [0]*GC.getNumTechInfos()
-		szText = ""
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			aReplacementList = []
+			aBuildingCivicList = []
+			for iCivic in xrange(GC.getNumCivicInfos()):
+				if iCivic not in aBuildingCivicList and (CvBuildingInfo.isPrereqAndCivics(iCivic) or CvBuildingInfo.isPrereqOrCivics(iCivic)):
+					aBuildingCivicList.append(iCivic)
 
+			aReplacementList = []
 			if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getObsoleteTech() != -1:
 				for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 					if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
 						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
 
-				if len(aReplacementList) == 0:
+				if 0:#len(aReplacementList) == 0:
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
-					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
+
+			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getNumReplacementBuilding() == 0 and CvBuildingInfo.getNumReplacedBuilding() == 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
+				if CvBuildingInfo.getFoodKept() != 0 or CvBuildingInfo.getPopulationgrowthratepercentage() != 0:
+					self.log(CvBuildingInfo.getType()+" can be connected to granaries")
