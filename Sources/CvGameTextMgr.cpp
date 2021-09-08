@@ -21064,7 +21064,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 				else if (pCity->getNumActiveBuilding(eBuilding) > 0)
 				{
-					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding) + (pCity->getBonusCommercePercentChanges((CommerceTypes)iI, eBuilding) / 100);
+					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding) + (pCity->getBonusCommercePercentChanges((CommerceTypes)iI, eBuilding) + pCity->getBuildingCommerceTechChange((CommerceTypes)iI, eBuilding)) / 100;
 				}
 				else
 				{
@@ -32893,7 +32893,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 	//STEP 5 : Building Commerce Changes
 	{
-		const int iBuildingCommerce100 = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType);
+		const int iBuildingCommerce100 = 100 * city.getBuildingCommerce(eCommerceType) + city.getBonusCommercePercentChanges(eCommerceType) + city.getBuildingCommerceTechChange(eCommerceType);
 		if (0 != iBuildingCommerce100)
 		{
 			makeValueString(szValue, iBuildingCommerce100, true);

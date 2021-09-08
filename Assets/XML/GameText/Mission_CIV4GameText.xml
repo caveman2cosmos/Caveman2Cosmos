@@ -500,6 +500,74 @@
 		<Russian>Выберите город, куда вы намерены отправить этот отряд. Города не должны быть внутри текущего видового экрана.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Travel to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Travel to Distant Cosmos</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Tag>
+		<English>Travel to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Travel to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MARS</Tag>
+		<English>Travel to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Travel to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MOON</Tag>
+		<English>Travel to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Travel to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Travel to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Travel to Earth Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Tag>
+		<English>Travel to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Travel to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Travel to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Tag>
+		<English>Travel to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Travel to Virgo Superscluster</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER</Tag>
 		<English>Field Commander</English>
 		<French>Commandant de Terrain</French>
@@ -1114,112 +1182,36 @@
 		<Russian>Позволяет выбрать желательную технологию для обнаружения. Юнит будет спать, пока эта технология не становится доступной, чтобы исследовать, и затем будет потреблять ее исследование.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Tag>
-		<English>Travel to Earth</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
-		<English>Travel to Earth Underground</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
-		<English>Travel to Cislunar Space</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MOON</Tag>
-		<English>Travel to Moon</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MARS</Tag>
-		<English>Travel to Mars</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Tag>
-		<English>Travel to Venus</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
-		<English>Travel to Inner Solar System</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
-		<English>Travel to Outer Solar System</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Tag>
-		<English>Travel to Titan</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
-		<English>Travel to Kuiper Belt</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Tag>
-		<English>Travel to Nearby Stars</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
-		<English>Travel to Orion Arm</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
-		<English>Travel to Milky Way</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Tag>
-		<English>Travel to Local Group</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
-		<English>Travel to Virgo Superscluster</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Tag>
-		<English>Travel to Universe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
-		<English>Travel to Distant Cosmos</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
-		<English>Transfer unit to Earth</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
-		<English>Transfer unit to Earth Underground</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
 		<English>Transfer unit to Cislunar Space</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
-		<English>Transfer unit to Moon</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Transfer unit to Distant Cosmos</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
-		<English>Transfer unit to Mars</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
-		<English>Transfer unit to Venus</English>
+<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
+		<English>Transfer unit to Earth</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Transfer unit to Inner Solar System</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
-		<English>Transfer unit to Outer Solar System</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Transfer unit to Local Group</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
-		<English>Transfer unit to Titan</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
+		<English>Transfer unit to Mars</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
-		<English>Transfer unit to Kuiper Belt</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Transfer unit to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
+		<English>Transfer unit to Moon</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
@@ -1230,23 +1222,31 @@
 		<English>Transfer unit to Orion Arm</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
-		<English>Transfer unit to Milky Way</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Outer Solar System</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
-		<English>Transfer unit to Local Group</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Transfer unit to Earth Underground</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
-		<English>Transfer unit to Virgo Superscluster</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
+		<English>Transfer unit to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Transfer unit to Kuiper Belt</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>
 		<English>Transfer unit to Universe</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
-		<English>Transfer unit to Distant Cosmos</English>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
+		<English>Transfer unit to Venus</English>
 	</TEXT>
-</Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Transfer unit to Virgo Superscluster</English>
+	</TEXT>
+	</Civ4GameText>

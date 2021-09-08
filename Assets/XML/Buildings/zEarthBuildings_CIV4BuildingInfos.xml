@@ -1156,9 +1156,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
