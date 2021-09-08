@@ -198,11 +198,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_ORBITAL_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_PSEUDO_NATIONAL_WONDERS</Type>
-			<Description>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_POLLUTION</Type>
 			<Description>TXT_KEY_CONCEPT_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_POLLUTION_PEDIA</Civilopedia>
