@@ -68659,11 +68659,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
+					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
+					<iNumFreeBonuses>2</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
+					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -69731,7 +69731,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_METAL_FOAM</BonusType>
@@ -73292,6 +73292,7 @@
 			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -116336,11 +116337,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-			<ObsoleteTech>TECH_CLOAKING</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MUNITIONS_FACTORY</ObsoletesToBuilding>
 			<Bonus>BONUS_SULPHUR</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_IRON_WARES</Bonus>
