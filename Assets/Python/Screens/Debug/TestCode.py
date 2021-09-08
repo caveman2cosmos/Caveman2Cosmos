@@ -56,8 +56,6 @@ class TestCode:
 		self.main.addTestCode(screen, self.checkBuildingWonderMovies, "Building movie wonder list", "Checks movies of noncultural wonders, religious shrines and projects movie location")
 		self.main.addTestCode(screen, self.checkTechTypes, "Building and unit - Tech Types check", "Checks if buildings and units main tech is more advanced or equal to Tech Type")
 		self.main.addTestCode(screen, self.listObsoleteingBuildings, "Building - list obsoletions without replacement", "Checks if buildings are obsoleteing without replacements. Regular buildings should obsolete only if its replaced")
-		self.main.addTestCode(screen, self.listNoTechBuildings, "Building - list buildings without tech requirement", "Lists buildings without tech requirement")
-		self.main.addTestCode(screen, self.listNoCostBuildings, "Building - list buildings without cost", "Lists buildings without cost")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -638,6 +636,13 @@ class TestCode:
 	#Building - check if replacing building has better yields, commerces, and other stats
 	def checkBuildingReplacingQuality(self):
 		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		aCorporateBonusList = []
+		for iCorporation in xrange(GC.getNumCorporationInfos()):
+			CvCorporationInfo = GC.getCorporationInfo(iCorporation)
+			for iBonus in CvCorporationInfo.getPrereqBonuses():
+				if iBonus not in aCorporateBonusList:
+					aCorporateBonusList.append(iBonus)
+
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Tech location would be good way to sort replacements, as later ones tend to replace more
@@ -1219,11 +1224,10 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getImprovementInfo(iImprovement).getType()+" Improvement free Specialist "+str(aImprovementFreeSpecialists[FINAL][iImprovement])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
-				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers> - base
+				#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses> - base
 				aBonusHappinessChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aBonusHealthChanges = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				aExtraFreeBonuses = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
-				aBonusProductionModifiers = [[0 for x in xrange(GC.getNumBonusInfos())] for y in xrange(MAIN_ARRAY_SIZE)]
 				for pair in CvBuildingInfo.getBonusHappiness():
 					aBonusHappinessChanges[BASE][pair.id] += pair.value
 				for pair in CvBuildingInfo.getBonusHealth():
@@ -1232,12 +1236,11 @@ class TestCode:
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getFreeBonus()] += CvBuildingInfo.getNumFreeBonuses()
 				for iBonus in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
 					aExtraFreeBonuses[BASE][CvBuildingInfo.getExtraFreeBonus(iBonus)] += CvBuildingInfo.getExtraFreeBonusNum(iBonus)
-					aBonusProductionModifiers[BASE][iBonus] += CvBuildingInfo.getBonusProductionModifier(iBonus)
 
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers>
+					#<BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>
 					for pair in CvReplacedBuildingInfo.getBonusHappiness():
 						aBonusHappinessChanges[REPLACED][pair.id] += pair.value
 					for pair in CvReplacedBuildingInfo.getBonusHealth():
@@ -1246,14 +1249,12 @@ class TestCode:
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getFreeBonus()] += CvReplacedBuildingInfo.getNumFreeBonuses()
 					for iBonus in xrange(CvReplacedBuildingInfo.getNumExtraFreeBonuses()):
 						aExtraFreeBonuses[REPLACED][CvReplacedBuildingInfo.getExtraFreeBonus(iBonus)] += CvReplacedBuildingInfo.getExtraFreeBonusNum(iBonus)
-						aBonusProductionModifiers[REPLACED][iBonus] += CvReplacedBuildingInfo.getBonusProductionModifier(iBonus)
 
 				#Keep already existing <BonusHappinessChanges>, <BonusHealthChanges>, <FreeBonus>+<ExtraFreeBonuses>, <BonusProductionModifiers> in base
 				for iBonus in xrange(GC.getNumBonusInfos()):
 					aBonusHappinessChanges[FINAL][iBonus] = aBonusHappinessChanges[BASE][iBonus] + aBonusHappinessChanges[REPLACED][iBonus]
 					aBonusHealthChanges[FINAL][iBonus] = aBonusHealthChanges[BASE][iBonus] + aBonusHealthChanges[REPLACED][iBonus]
-					#aExtraFreeBonuses[FINAL][iBonus] = aExtraFreeBonuses[BASE][iBonus] + aExtraFreeBonuses[REPLACED][iBonus] Maybe when we have volumetric resources...
-					aBonusProductionModifiers[FINAL][iBonus] = aBonusProductionModifiers[BASE][iBonus] + aBonusProductionModifiers[REPLACED][iBonus]
+					aExtraFreeBonuses[FINAL][iBonus] = aExtraFreeBonuses[BASE][iBonus] + aExtraFreeBonuses[REPLACED][iBonus] #Corporations scale up with number of resources
 
 				#Building shouldn't be worse than replaced one!
 				for iBonus in xrange(GC.getNumBonusInfos()):
@@ -1261,10 +1262,10 @@ class TestCode:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus happiness Changes "+str(aBonusHappinessChanges[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 					if aBonusHealthChanges[BASE][iBonus] < aBonusHealthChanges[REPLACED][iBonus]:
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus health Changes "+str(aBonusHealthChanges[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
-					if aExtraFreeBonuses[BASE][iBonus] == 0 and aExtraFreeBonuses[REPLACED][iBonus] > 0: #No volumetric bonues - just check presence of it
+					if iBonus not in aCorporateBonusList and aExtraFreeBonuses[BASE][iBonus] == 0 and aExtraFreeBonuses[REPLACED][iBonus] > 0: #No corporation using it - check presence only
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should give "+GC.getBonusInfo(iBonus).getType()+" Bonus - replaced: "+str(aImmediateReplacedNameList))
-					if aBonusProductionModifiers[BASE][iBonus] < aBonusProductionModifiers[REPLACED][iBonus]:
-						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getBonusInfo(iBonus).getType()+" Bonus production Modifiers "+str(aBonusProductionModifiers[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
+					if iBonus in aCorporateBonusList and aExtraFreeBonuses[BASE][iBonus] < aExtraFreeBonuses[REPLACED][iBonus]: #Bonus used by corporations, so add up them
+						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should give "+GC.getBonusInfo(iBonus).getType()+" Bonus (for use by corporations) "+str(aExtraFreeBonuses[FINAL][iBonus])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#=================================================================================================
 				#<TechHappinessChanges>, <TechHealthChanges> - base
@@ -3423,48 +3424,3 @@ class TestCode:
 					aObsoleteTechList[CvBuildingInfo.getObsoleteTech()] += 1
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
-
-		szText = " Regular obsoleting buildings without replacements: "
-		for i in xrange(len(aObsoleteTechList)):
-			if aObsoleteTechList[i] > 0:
-				szText += str(aObsoleteTechList[i])+" items at "+GC.getTechInfo(i).getType()+", "
-		self.log(szText)
-
-	#Building - List buildings, that doesn't require techs
-	def listNoTechBuildings(self):
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
-			if iTechLoc == 0 and CvBuildingInfo.getProductionCost() == -1 and CvBuildingInfo.getType().find("_MYTH_EFFECT", -12) == -1 and CvBuildingInfo.getType().find("_STORIES_EFFECT", -15) == -1:
-				self.log(CvBuildingInfo.getType()+" doesn't require any techs")
-
-	#Building - List buildings, that doesn't have cost
-	def listNoCostBuildings(self):
-		aGivenByUnitList = []
-		for iUnit in xrange(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-
-			for i in xrange(CvUnitInfo.getNumBuildings()):
-				if CvUnitInfo.getBuildings(i) not in aGivenByUnitList:
-					aGivenByUnitList.append(CvUnitInfo.getBuildings(i))
-
-		aFreeBuildingList = []
-		aAutoBuildList = []
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-
-			iFreeBuilding = CvBuildingInfo.getFreeBuilding()
-			if iFreeBuilding != -1 and CvBuildingInfo.getFreeBuilding() not in aFreeBuildingList:
-				aFreeBuildingList.append(iFreeBuilding)
-
-			iFreeAreaBuilding = CvBuildingInfo.getFreeAreaBuilding()
-			if iFreeAreaBuilding != -1 and CvBuildingInfo.getFreeAreaBuilding() not in aFreeBuildingList:
-				aFreeBuildingList.append(iFreeAreaBuilding)
-
-			if CvBuildingInfo.isAutoBuild():
-				aAutoBuildList.append(iBuilding)
-
-		for iBuilding in xrange(GC.getNumBuildingInfos()):
-			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			if CvBuildingInfo.getProductionCost() == -1 and iBuilding not in aGivenByUnitList and iBuilding not in aFreeBuildingList and iBuilding not in aAutoBuildList:
-				self.log(CvBuildingInfo.getType()+" might be unobtainable")

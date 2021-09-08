@@ -6675,7 +6675,7 @@
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

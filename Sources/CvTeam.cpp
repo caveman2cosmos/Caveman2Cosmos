@@ -6063,12 +6063,23 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
-		{
-			GET_PLAYER((PlayerTypes)iI).updateCorporation();
+		CvPlayer& player = GET_PLAYER((PlayerTypes) iI);
 
-			// A new tech can effect best plot build decisions so mark stale in all cities
-			algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::AI_markBestBuildValuesStale());
+		if (player.isAliveAndTeam(getID()))
+		{
+			player.updateCorporation();
+
+			foreach_(CvCity* cityX, player.cities())
+			{
+				// A new tech can effect best plot build decisions so mark stale in all cities
+				cityX->AI_markBestBuildValuesStale();
+
+				// Buildings may change commerce output with tech
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				{
+					cityX->changeBuildingCommerceTechChange((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechChange((CommerceTypes)iJ, eTech));
+				}
+			}
 		}
 	}
 
