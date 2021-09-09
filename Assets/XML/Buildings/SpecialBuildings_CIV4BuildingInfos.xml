@@ -9263,23 +9263,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_FUSION</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_FUSION_PEDIA</Civilopedia>
-			<PrereqTech>TECH_FUSION</PrereqTech>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1000</iYield>
-			</YieldChanges>
-			<bPower>1</bPower>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FUSION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_GOOD_GORGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

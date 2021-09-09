@@ -5010,14 +5010,29 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
+			<ObsoleteTech>TECH_SENTIENT_ENERGY_FIELDS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_QUANTUM_VACUUM</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8405</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>150</iYield>
+				<iYield>350</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<Bonus>BONUS_ANTIMATTER</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
@@ -5395,7 +5410,6 @@
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>5655</iCost>
 			<iHealth>-1</iHealth>
@@ -12473,7 +12487,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_ECOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_BIOFUEL</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -12483,7 +12501,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>4</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -12901,7 +12919,12 @@
 			<TechTypes>
 				<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_FERTILIZERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -25177,6 +25200,11 @@
 			<ObsoletesToBuilding>BUILDING_HIGHTECHCOAL_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>770</iCost>
 			<iHealth>-4</iHealth>
@@ -25775,22 +25803,28 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
+			<ObsoleteTech>TECH_ZERO_POINT_ENERGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_ANTIMATTER_INITIATED_FUSION</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>6155</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>100</iYield>
+				<iYield>300</iYield>
 			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>45</iYield>
 			</YieldModifiers>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
+					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
 			<PrereqInCityBuildings>
@@ -33525,7 +33559,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<bPrereqPower>1</bPrereqPower>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -38759,6 +38797,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -41024,7 +41067,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAST_BREEDER_REACTOR</ArtDefineTag>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -41037,7 +41080,11 @@
 			<bPower>1</bPower>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1845</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -43097,6 +43144,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEIGHTLESS_FLIGHT</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<iCost>5455</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -45298,6 +45350,62 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_FUSION_PLANT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_FUSION_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FUSION_PLANT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FUSION_PLANT</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_FUSION</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
+			<iPrereqPopulation>3</iPrereqPopulation>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>3245</iCost>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>200</iYield>
+			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>35</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
+			<iDCMAirbombMission>3</iDCMAirbombMission>
+			<bPower>1</bPower>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_FUSTIC_GROVE</Type>
 			<Description>TXT_KEY_BUILDING_FUSTIC_GROVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSTIC_GROVE_PEDIA</Civilopedia>
@@ -47229,15 +47337,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_GRAVITY_CONTROL</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLD_FUSION_POWER_PLANT</ObsoletesToBuilding>
+			<ObsoleteTech>TECH_ELECTROMAGNETIC_VOLTAGE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FUSION_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>50</iYield>
+				<iYield>80</iYield>
 			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -47659,10 +47774,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ENHANCED_GEOTHERMAL_SYSTEM</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ENHANCED_GEOTHERMAL_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_GEOTHERMAL_ENERGY</VicinityBonus>
@@ -49515,7 +49631,6 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>10955</iCost>
@@ -52446,6 +52561,15 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
+			<ObsoleteTech>TECH_ELECTROMAGNETIC_VOLTAGE</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FUSION_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_COAL</Bonus>
@@ -52458,7 +52582,7 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>6</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -54738,7 +54862,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -57419,19 +57547,31 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELECTROMAGNETIC_VOLTAGE</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ANTIMATTER_INITIATED_FUSION</ObsoletesToBuilding>
+			<ObsoleteTech>TECH_ANTIMATTER_PRODUCTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLD_FUSION_POWER_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>4485</iCost>
 			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>50</iYield>
+				<iYield>250</iYield>
 			</YieldChanges>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-			</ReplacementBuildings>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>40</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -58767,7 +58907,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
@@ -65989,7 +66133,7 @@
 			</PrereqInCityBuildings>
 			<iCost>9805</iCost>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<bPower>1</bPower>
+			<bPrereqPower>1</bPrereqPower>
 			<iHealthPercentPerPopulation>25</iHealthPercentPerPopulation>
 			<iAsset>15</iAsset>
 			<Flavors>
@@ -67773,6 +67917,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_QUANTUM_DOTS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
@@ -67884,6 +68033,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
@@ -68819,7 +68973,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_ANTIMATTER_PRODUCTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_COLD_FUSION_POWER_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_METHANE_ICE</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -68829,10 +68989,10 @@
 			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>20</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -69240,7 +69400,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MICROWAVE_WEAPONRY</PrereqTech>
-			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
@@ -71689,6 +71853,12 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-50</iPropertyValue>
+				</Property>
+			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -74744,7 +74914,14 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_METHANE_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METHANE_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>770</iCost>
 			<iHealth>-2</iHealth>
 			<YieldChanges>
@@ -74752,7 +74929,7 @@
 				<iYield>7</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -78113,9 +78290,13 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_FAST_BREEDER_REACTOR</BuildingType>
+				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<YieldChanges>
@@ -78810,6 +78991,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WAVE_FARM</BuildingType>
 				<BuildingType>BUILDING_OCEAN_THERMAL_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -78868,6 +79050,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqOrTerrain>
@@ -79147,14 +79334,21 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_METHANE_PLANT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_METHANE_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</ReplacementBuildings>
 			<iCost>770</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-15</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iDCMAirbombMission>3</iDCMAirbombMission>
 			<bPower>1</bPower>
@@ -80707,6 +80901,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_NANOTUBES</Bonus>
@@ -81987,7 +82185,6 @@
 				<Bonus>BONUS_TAR</Bonus>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>830</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -88841,12 +89038,22 @@
 			<PrereqTech>TECH_ZERO_POINT_ENERGY</PrereqTech>
 			<iCost>17055</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>300</iYield>
+				<iYield>400</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>60</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
@@ -90842,6 +91049,39 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_RENEWABLE_MEGACOMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_RENEWABLE_MEGACOMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RENEWABLE_MEGACOMPLEX_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_RENEWABLE_MEGACOMPLEX_PLANT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
+			<iCost>6905</iCost>
+			<bPower>1</bPower>
+			<iHappiness>2</iHappiness>
+			<iHealth>5</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>150</iYield>
+			</YieldChanges>
+			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_FULLERENE</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_QUANTUM_DOTS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>2</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+			</BonusCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REPAIR_DOCK</Type>
@@ -95442,6 +95682,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WAVE_FARM</BuildingType>
 				<BuildingType>BUILDING_OCEAN_THERMAL_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -100931,7 +101172,10 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1345</iCost>
@@ -100961,7 +101205,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_QUANTUM_DOTS</BonusType>
@@ -100978,7 +101221,10 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1345</iCost>
@@ -101013,7 +101259,10 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<BonusCommerceModifiers>
@@ -101058,8 +101307,10 @@
 				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1345</iCost>
@@ -101091,8 +101342,10 @@
 				<BuildingType>BUILDING_PARKING_LOT</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1345</iCost>
@@ -105064,10 +105317,13 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
 				<BuildingType>BUILDING_ENHANCED_GEOTHERMAL_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
+				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -109186,7 +109442,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			<PrereqBonuses>
@@ -109349,9 +109609,11 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -115768,6 +116030,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			<PrereqBonuses>
@@ -116678,6 +116945,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -116714,7 +116986,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTIFICIAL_STARS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RENEWABLE_MEGACOMPLEX</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
