@@ -12,6 +12,7 @@ BeginMap
 	world size=WORLDSIZE_STANDARD
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
+	Randomize Resources=0
 EndMap
 BeginPlot
 	x=0,y=0
@@ -88092,7 +88093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=37
-	BonusType=BONUS_PEYOTE					   
+	BonusType=BONUS_PEYOTE
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2

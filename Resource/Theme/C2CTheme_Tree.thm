@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Tree.thm
 Content		:	Civ4 - Tree control theme
@@ -10,16 +10,16 @@ Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
 Licensees may use this file in accordance with the valid Scaleform
 GFC Commercial License Agreement provided with the software.
 
-This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING 
+This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING
 THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR ANY PURPOSE.
 
 For information regarding GFC Commercial License Agreements go to:
 	online - http://www.scaleform.com/licensing.html or
-	email  - sales@scaleform.com 
+	email  - sales@scaleform.com
 
 **********************************************************************/
 
-// ***** Tree control Bitmap Skin 
+// ***** Tree control Bitmap Skin
 
 
 with GFC_Control_Tree
@@ -214,7 +214,7 @@ with GFC_Control_Tree
 			.Indent_OpenBoxDown_Select				=	0;
 			.Indent_OpenBoxUpDown_Default			=	0;
 			.Indent_OpenBoxUpDown_Select			=	0;
-			
+
 			.Indent_OpenBox_Disable					=	0;
 			.Indent_OpenBox_DisableSelect			=	0;
 			.Indent_OpenBoxUp_Disable				=	0;

@@ -1,12 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-
 #include <psapi.h>
 
-static CRITICAL_SECTION g_cPythonSection;
-#ifdef USE_INTERNAL_PROFILER
-static CRITICAL_SECTION cSampleSection;
-#endif
+std::string modDir;
 
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
@@ -36,8 +32,8 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 
 // BUG - EXE/DLL Paths - end
 
-BOOL APIENTRY DllMain(HANDLE hModule, 
-					  DWORD  ul_reason_for_call, 
+BOOL APIENTRY DllMain(HANDLE hModule,
+					  DWORD  ul_reason_for_call,
 					  LPVOID lpReserved)
 {
 	switch( ul_reason_for_call ) {
@@ -45,14 +41,8 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		{
 		dllModule = hModule;
 
-		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up 
+		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up
 		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
-
-		InitializeCriticalSection(&g_cPythonSection);
-
-#ifdef USE_INTERNAL_PROFILER
-		InitializeCriticalSectionAndSpinCount(&cSampleSection,2000);
-#endif
 
 		// set timer precision
 		MMRESULT iTimeSet = timeBeginPeriod(1);		// set timeGetTime and sleep resolution to 1 ms, otherwise it's 10-16ms
@@ -63,6 +53,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		GetModuleFileNameA((HMODULE)dllModule, pathBuffer, sizeof(pathBuffer));
 		std::string dllPath = pathBuffer;
 		std::string dllDir = dllPath.substr(0, dllPath.length() - strlen("CvGameCoreDLL.dll"));
+		modDir = dllDir;
 		std::string tokenFile = dllDir + "\\..\\git_directory.txt";
 		std::ifstream stream(tokenFile.c_str());
 		// If we loaded the directory token file we are in a dev environment and should run FPKLive, and check for DLL changes
@@ -70,6 +61,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		{
 			std::string git_dir;
 			std::getline(stream, git_dir);
+			modDir = git_dir;
 
 			if(!runProcess(git_dir + "\\Tools\\FPKLive.exe", git_dir + "\\Tools"))
 			{
@@ -87,6 +79,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
+		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -160,7 +153,7 @@ void IFPProfileThread()
 	if ( iThreadSlot == -1 && (g_bTraceBackgroundThreads || bIsMainThread) )
 	{
 		EnterCriticalSection(&cSampleSection);
-		
+
 		for(int iI = 0; iI < MAX_PROFILED_THREADS; iI++)
 		{
 			if ( !bThreadSlotOccupied[iI] )
@@ -183,7 +176,7 @@ void IFPBeginSample(ProfileLinkageInfo* linkageInfo, bool bAsConditional)
 	{
 		bMainThreadSeen = true;
 		bIsMainThread = true;
-		
+
 		for(int iI = 0; iI < MAX_PROFILED_THREADS; iI++)
 		{
 			bThreadSlotOccupied[iI] = false;
@@ -325,7 +318,7 @@ void IFPEndSample(ProfileLinkageInfo* linkageInfo, bool bAsConditional)
 				MessageBox(NULL,"Too many end-samples","CvGameCore",MB_OK);
 			}
 		}
-		else 
+		else
 	#endif
 		{
 			if ( !bAsConditional )
@@ -393,7 +386,7 @@ void IFPEndSample(ProfileLinkageInfo* linkageInfo, bool bAsConditional)
 				else
 				{
 					EnterCriticalSection(&cSampleSection);
-					
+
 					for(int iI = 0; iI < numSamples; iI++)
 					{
 						ProfileSample* thisSample = sampleList[iI];
@@ -605,7 +598,7 @@ void stopProfilingDLL(bool longLived)
 #endif
 }
 
-// Toffer - Square root with integer math, OOS safe.
+// Toffer - Square root with integer math.
 int intSqrt(unsigned int iValue, const bool bTreatNegAsPos)
 {
 	unsigned int iRem = 0;
@@ -681,4 +674,34 @@ int intPow(const int x, const int p)
 	}
 	return static_cast<int>(iResult);
 }
+
+int getModifiedIntValue(const int iValue, const int iMod)
+{
+	if (iMod > 0)
+	{
+		return iValue * (100 + iMod) / 100;
+	}
+	if (iMod < 0)
+	{
+		return iValue * 100 / (100 - iMod);
+	}
+	return iValue;
+}
+int64_t getModifiedIntValue64(const int64_t iValue, const int iMod)
+{
+	if (iMod > 0)
+	{
+		return iValue * (100 + iMod) / 100;
+	}
+	if (iMod < 0)
+	{
+		return iValue * 100 / (100 - iMod);
+	}
+	return iValue;
+}
 // ! Toffer
+
+const std::string getModDir()
+{
+	return modDir;
+}

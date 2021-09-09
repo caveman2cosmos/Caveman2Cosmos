@@ -74,7 +74,6 @@ void CvDeal::kill(bool bKillTeam)
 
 		if (GET_TEAM(GET_PLAYER(getFirstPlayer()).getTeam()).isHasMet(GET_PLAYER(getSecondPlayer()).getTeam()))
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			szDealString.clear();
 			GAMETEXT.getDealString(szDealString, *this, getFirstPlayer());
@@ -84,7 +83,6 @@ void CvDeal::kill(bool bKillTeam)
 
 		if (GET_TEAM(GET_PLAYER(getSecondPlayer()).getTeam()).isHasMet(GET_PLAYER(getFirstPlayer()).getTeam()))
 		{
-			MEMORY_TRACK_EXEMPT();
 
 			szDealString.clear();
 			GAMETEXT.getDealString(szDealString, *this, getSecondPlayer());
@@ -966,7 +964,6 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					}
 					if (eTeamX == eVictimTeam)
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(
@@ -1105,7 +1102,6 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					if (toTeam.isHasMet(GET_PLAYER((PlayerTypes)i).getTeam())
 					|| fromTeam.isHasMet(GET_PLAYER((PlayerTypes)i).getTeam()))
 					{
-						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							(PlayerTypes)i, true, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText(

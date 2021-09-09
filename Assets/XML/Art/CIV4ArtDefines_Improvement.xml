@@ -80,7 +80,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/terrain/Improvements/MountMine/MountMine.nif</NIF>
 			<KFM>Art/terrain/Improvements/MountMine/MountMine.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_RADIO_TOWER</Type>
@@ -89,7 +89,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/terrain/Improvements/RadioTower/RadioTower.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WORKSHOP</Type>
@@ -661,15 +661,6 @@
 			<Button>Art/Interface/Buttons/TerrainFeatures/button_savanna.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_CRASHED_PROBE</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.75</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Wreckage/Wreckage.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,4,3</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.35</fScale>
@@ -982,7 +973,16 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/ForestPreserve/ForestPreserve.nif</NIF>
 			<KFM>Art/Structures/Improvements/ForestPreserve/ForestPreserve.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_MACHU_PICCHU</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>0.30</fScale>
+			<fInterfaceScale>0.30</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/MachuPicchu/MachuPicchu.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/Buttons/improvements/Machu.dds</Button>
 		</ImprovementArtInfo>
 	</ImprovementArtInfos>
 </Civ4ArtDefines>

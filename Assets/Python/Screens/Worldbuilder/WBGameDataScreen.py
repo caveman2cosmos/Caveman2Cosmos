@@ -61,7 +61,7 @@ class WBGameDataScreen:
 		self.aWidgetBucket.append("topBar")
 		self.aWidgetBucket.append(botBar)
 
-		screen.setText("ExitSubScreen", "", font4b + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontGame, eWidGen, 1, 2)
+		screen.setText("ExitSubScreen", "", font4b + TRNSLTR.getText("TXT_WORD_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontGame, eWidGen, 1, 2)
 		self.aWidgetBucket.append("ExitSubScreen")
 
 		wDDB = 256
@@ -587,7 +587,7 @@ class WBGameDataScreen:
 		if iCode == 4: # Mouse Enter
 
 			if NAME == "GameOption":
-				self.WB.updateTooltip(screen, self.GC.getGameOptionInfo(ID).getHelp())
+				self.WB.tooltip.handle(screen, self.GC.getGameOptionInfo(ID).getHelp())
 
 		elif not iCode: # click
 

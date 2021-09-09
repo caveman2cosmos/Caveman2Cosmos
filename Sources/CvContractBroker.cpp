@@ -83,8 +83,7 @@ void	CvContractBroker::lookingForWork(const CvUnit* pUnit, int iMinPriority)
 	unitDetails.iMatchedToRequestSeqAnyPlot = -1;
 
 	{
-		MEMORY_TRACK_EXEMPT();
-	
+
 		m_advertisingUnits.push_back(unitDetails);
 	}
 }
@@ -136,8 +135,8 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 				if( gUnitLogLevel >= 3 ) logBBAI("      Unit %S (%d) at (%d,%d) already responding to contract at (%d,%d)",
 												 pLoopSelectionGroup->getHeadUnit()->getDescription().GetCString(),
 												 pLoopSelectionGroup->getHeadUnit()->getID(),
-												 pLoopSelectionGroup->getX(), 
-												 pLoopSelectionGroup->getY(), 
+												 pLoopSelectionGroup->getX(),
+												 pLoopSelectionGroup->getY(),
 												 iAtX, iAtY);
 
 				if ( iUnitStrengthTimes100 == -1 )
@@ -200,7 +199,6 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 	}
 
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		m_workRequests.insert(insertAt, newRequest);
 	}
@@ -213,14 +211,13 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 	PROFILE_FUNC();
 
 	if( gCityLogLevel >= 3 ) logBBAI("      City %S tenders for unit builds at priority %d", pCity->getName().GetCString(), iMinPriority);
-	
+
 	cityTender	newTender;
 
 	newTender.iMinPriority		= iMinPriority;
 	newTender.iCityId			= pCity->getID();
 
 	{
-		MEMORY_TRACK_EXEMPT();
 
 		m_advertisingTenders.push_back(newTender);
 	}
@@ -264,8 +261,6 @@ void CvContractBroker::finalizeTenderContracts()
 	PROFILE_FUNC();
 
 	std::map<int,int>	tenderAllocations;
-
-	CvPathGenerator::EnableMaxPerformance(true);
 
 	//	No need to lock here - this is always run in a single threaded context
 
@@ -343,7 +338,7 @@ void CvContractBroker::finalizeTenderContracts()
 								tenderAllocations[iTenderAllocationKey] = 0;
 							}
 
-							FAssert(iTendersAlreadyInProcess >= 0);
+							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess)
 
 							if ( iTendersAlreadyInProcess <= 0 )
 							{
@@ -397,7 +392,7 @@ void CvContractBroker::finalizeTenderContracts()
 									//	Adjust value for production time and distance
 									int iTurns;
 									int iBaseValue = iValue;
-									
+
 									if ( (pCity->isProduction() && pCity->getOrderData(0).eOrderType == ORDER_TRAIN) )
 									{
 										iTurns = pCity->getTotalProductionQueueTurnsLeft() + pCity->getProductionTurnsLeft(eUnit, 1);
@@ -408,7 +403,7 @@ void CvContractBroker::finalizeTenderContracts()
 									}
 
 									//	Decrease the value 10% per (standard speed) turn
-									iValue *= 100 - 10*std::min((iTurns*100)/GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(),10);
+									iValue *= 100 - 10 * std::min(iTurns * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent(), 10);
 									iValue /= 100;
 
 									if ( iValue > 0 )
@@ -428,7 +423,7 @@ void CvContractBroker::finalizeTenderContracts()
 											int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
 											iValue *= 100 - 5*std::min(20, iDistance);
 											iValue /= 100;
-											
+
 											if( gCityLogLevel >= 3 )
 											{
 												logBBAI("      City %S could supply unit %S with base value %d, depreciated value (after %d turn production at distance %d) to %d",
@@ -467,7 +462,7 @@ void CvContractBroker::finalizeTenderContracts()
 								eBestUnit = NO_UNIT;
 
 								tenderAllocations[iTenderAllocationKey] = tenderAllocations[iTenderAllocationKey] + 1;
-								
+
 								if( gCityLogLevel >= 3 )
 								{
 									logBBAI("      City %S is already building a unit",
@@ -511,7 +506,7 @@ void CvContractBroker::finalizeTenderContracts()
 					}
 
 				}
-				
+
 				m_workRequests[iI].bFulfilled = true;
 				tenderAllocations[iBestCityTenderKey] = tenderAllocations[iBestCityTenderKey] + 1;
 
@@ -532,8 +527,6 @@ void CvContractBroker::finalizeTenderContracts()
 			}
 		}
 	}
-
-	CvPathGenerator::EnableMaxPerformance(false);
 
 	if( gUnitLogLevel >= 3 )
 	{
@@ -568,7 +561,7 @@ void CvContractBroker::finalizeTenderContracts()
 
 //	Make a contract
 //	This will attempt to make the best contracts between currently
-//	advertising units and work, then search the resulting set for the work 
+//	advertising units and work, then search the resulting set for the work
 //	of the requested unit
 //	returns true if a contract is made along with the details of what to do
 bool	CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly)

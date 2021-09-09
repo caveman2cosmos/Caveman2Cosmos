@@ -53,7 +53,7 @@ public:
 	virtual float GetPointXYSpacing() = 0;
 	virtual float GetPointXSpacing() = 0;
 	virtual float GetPointYSpacing() = 0;
-	virtual float GetHeightmapZ(const NiPoint3 &pt3, bool bClampAboveWater = true) = 0;						
+	virtual float GetHeightmapZ(const NiPoint3 &pt3, bool bClampAboveWater = true) = 0;
 	virtual void LightenVisibility(uint) = 0;
 	virtual void DarkenVisibility(uint) = 0;
 	virtual void BlackenVisibility(uint) = 0;
@@ -62,7 +62,7 @@ public:
 	virtual void RebuildRiverPlotTile(int plotX, int plotY, bool bRebuildHeights, bool bRebuildTextures) = 0;
 	virtual void RebuildTileArt(int plotX, int plotY) = 0;
 	virtual void ForceTreeOffsets(int plotX, int plotY) = 0;
-	
+
 	virtual bool GetGridMode() = 0;
 	virtual void SetGridMode(bool bVal) = 0;
 
@@ -71,7 +71,7 @@ public:
 	virtual void fillAreaBorderPlot(int plotX, int plotY, const NiColorA &color, AreaBorderLayers layer) = 0;
 	virtual void clearAreaBorderPlots(AreaBorderLayers layer) = 0;
 	virtual void updateFoundingBorder() = 0;
-	virtual void addLandmark(CvPlot *plot, const wchar_t* caption) = 0; 
+	virtual void addLandmark(CvPlot *plot, const wchar_t* caption) = 0;
 
 	virtual void TriggerEffect(int iEffect, NiPoint3 pt3Point, float rotation = 0.0f) = 0;
 	virtual void printProfileText() = 0;

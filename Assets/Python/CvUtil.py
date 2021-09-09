@@ -114,11 +114,6 @@ def myExceptHook(type, value, tb):
 def pyPrint(stuff):
 	sys.stdout.write('PY:' + stuff + "\n")
 
-def pyAssert(cond, msg):
-	if not cond:
-		sys.stderr.write(msg)
-	assert(cond, msg)
-
 def getOppositeCardinalDirection(dir):
 	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
 
@@ -131,13 +126,6 @@ def shuffle(num, rand):
 def spawnUnit(iUnit, pPlot, pPlayer):
 	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 	return 1
-
-def findInfoTypeNum(infoGetter, numInfos, typeStr):
-	if typeStr == 'NONE':
-		return -1
-	idx = GC.getInfoTypeForString(typeStr)
-	pyAssert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
-	return idx
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 	if cdUnit.iExtraCombatPercent:
@@ -217,7 +205,7 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iDomainDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_DOMAIN_DEFENSE",(cdUnit.iDomainDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCityBarbarianDefenseModifier:

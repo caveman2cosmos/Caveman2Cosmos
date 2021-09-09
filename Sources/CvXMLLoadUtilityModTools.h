@@ -29,16 +29,8 @@ public:
 							CvString **ppszListOld, int iNumOldListElements,
 							CvString szDefaultListVal = CvString()) const;
 
-	bool isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const;
-	bool isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const;
-	
-	void setLocationName( CvString *pszTextVal, const char* szDirName);
-	bool isExcludedFile(const char* szLocationName);
-	bool isCommaFile(CvString *pszTextVal, const char* szDirName);
 	bool isModularArt(const char* szLocationName);
 	CvString deleteFileName(const char* szDirName, const char szLocateChar);
-
-	void writeThm(const char* szTextVal);
 };
 
 #endif	// XML_LOAD_UTILITY_H

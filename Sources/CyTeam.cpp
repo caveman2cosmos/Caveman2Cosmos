@@ -5,7 +5,7 @@
 #include "CyTeam.h"
 
 //
-// Python wrapper class for CvTeam 
+// Python wrapper class for CvTeam
 //
 
 CyTeam::CyTeam() : m_pTeam(NULL) {}
@@ -202,7 +202,7 @@ void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 #endif
 			}
 		}
-		
+
 	}
 	m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
 }
@@ -507,7 +507,7 @@ int CyTeam::getWarWeariness(int /*TeamTypes*/ eIndex) const
 	return m_pTeam->getWarWeariness((TeamTypes)eIndex);
 }
 
-void CyTeam::changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange)	 
+void CyTeam::changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange)
 {
 	m_pTeam->changeWarWeariness((TeamTypes)eIndex, iChange);
 }
@@ -582,12 +582,12 @@ bool CyTeam::isVassal(int /*TeamTypes*/ eIndex) const
 	return m_pTeam->isVassal((TeamTypes)eIndex);
 }
 
-void CyTeam::assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender)				 
+void CyTeam::assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender)
 {
 	m_pTeam->assignVassal((TeamTypes)eIndex, bSurrender);
 }
 
-void CyTeam::freeVassal(int /*TeamTypes*/ eIndex)				 
+void CyTeam::freeVassal(int /*TeamTypes*/ eIndex)
 {
 	m_pTeam->freeVassal((TeamTypes)eIndex);
 }

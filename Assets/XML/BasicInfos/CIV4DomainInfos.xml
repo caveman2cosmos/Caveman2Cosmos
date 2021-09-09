@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Basic Infos -->
+<Civ4DomainInfos xmlns="x-schema:../Schema/C2C_CIV4BasicInfoSchema.xml">
+	<DomainInfos>
+		<DomainInfo>
+			<Type>DOMAIN_SEA</Type>
+			<Description>TXT_KEY_DOMAIN_SEA</Description>
+		</DomainInfo>
+		<DomainInfo>
+			<Type>DOMAIN_AIR</Type>
+			<Description>TXT_KEY_DOMAIN_AIR</Description>
+		</DomainInfo>
+		<DomainInfo>
+			<Type>DOMAIN_LAND</Type>
+			<Description>TXT_KEY_DOMAIN_LAND</Description>
+		</DomainInfo>
+		<DomainInfo>
+			<Type>DOMAIN_IMMOBILE</Type>
+			<Description>TXT_KEY_DOMAIN_IMMOBILE</Description>
+		</DomainInfo>
+	</DomainInfos>
+</Civ4DomainInfos>

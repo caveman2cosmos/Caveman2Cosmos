@@ -20,7 +20,7 @@ typedef struct
 } plotGroupCheckInfo;
 
 class CvPlot;
-class CvPlotGroup
+class CvPlotGroup : bst::noncopyable
 {
 friend class CvPlot;
 
@@ -36,7 +36,7 @@ public:
 
 	void addPlot(CvPlot* pPlot, bool bRecalculateBonuses);
 	void removePlot(CvPlot* pPlot, bool bRecalculateBonuses = true);
-	void recalculatePlots();														
+	void recalculatePlots();
 
 	int getID() const;
 	void setID(int iID);
@@ -44,7 +44,7 @@ public:
 	inline PlayerTypes getOwner() const { return m_eOwner; }
 
 	int getNumBonuses(const BonusTypes eBonus) const;
-	bool hasBonus(const BonusTypes eBonus) const;										
+	bool hasBonus(const BonusTypes eBonus) const;
 	void changeNumBonuses(const BonusTypes eBonus, const int iChange);
 
 	int getNumCities();
@@ -86,7 +86,7 @@ protected:
 
 	plotGroupHashInfo m_zobristHashes;
 						//	XOR of the zobrist contributions from all
-						//	constituent plots 
+						//	constituent plots
 public:
 	int m_numPlots;
 	mutable int m_numCities;

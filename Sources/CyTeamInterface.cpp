@@ -9,7 +9,7 @@ void CyTeamPythonInterface()
 {
 	OutputDebugString("Python Extension Module - CyTeamPythonInterface\n");
 
-	python::class_<CyTeam>("CyTeam")
+	python::class_<CyTeam>("CyTeam", python::no_init)
 		.def("isRebelAgainst", &CyTeam::isRebelAgainst, "bool ( int iTeam )" )
 		.def("setRebelAgainst", &CyTeam::setRebelAgainst, "void ( int iTeam, bool bNewValue )" )
 		.def("countRebelAgainst", &CyTeam::countRebelAgainst, "int ( )" )

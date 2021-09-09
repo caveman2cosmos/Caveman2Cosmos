@@ -325,13 +325,17 @@
 				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
-				<!--Building>BUILDING_CANAANISM_CATHEDRAL</Building-->
-				<!--Building>BUILDING_JAIN_CATHEDRAL</Building-->
 				<Building>BUILDING_MORMON_CATHEDRAL</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
 				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
 				<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
+				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+				<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+				<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>10</iNumBuildingsGlobal>
@@ -1554,7 +1558,6 @@
 				<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
-				<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			</ImprovementsRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>
@@ -2841,8 +2844,15 @@
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
 				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
-				<!--Building>BUILDING_JAIN_MONASTERY</Building-->
 				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_SHINTO_MONASTERY</Building>
+				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
+				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<Building>BUILDING_CANAANISM_MONASTERY</Building>
+				<Building>BUILDING_BAHAI_MONASTERY</Building>
+				<Building>BUILDING_ASATRU_MONASTERY</Building>
+				<Building>BUILDING_ANDEAN_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -3672,8 +3682,6 @@
 				<Building>BUILDING_TAOIST_TEMPLE</Building>
 				<Building>BUILDING_CHRISTIAN_TEMPLE</Building>
 				<Building>BUILDING_ISLAMIC_TEMPLE</Building>
-				<!--Building>BUILDING_CANAANISM_TEMPLE</Building-->
-				<!--Building>BUILDING_JAIN_TEMPLE</Building-->
 				<Building>BUILDING_MORMON_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_TEMPLE</Building>
 				<Building>BUILDING_SHINTO_TEMPLE</Building>
@@ -3683,6 +3691,12 @@
 				<Building>BUILDING_ZOROASTRIAN_TEMPLE</Building>
 				<Building>BUILDING_EGYPT_MYTH_TEMPLE</Building>
 				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
+				<Building>BUILDING_JAIN_TEMPLE</Building>
+				<Building>BUILDING_CAODAI_TEMPLE</Building>
+				<Building>BUILDING_CANAANISM_TEMPLE</Building>
+				<Building>BUILDING_BAHAI_TEMPLE</Building>
+				<Building>BUILDING_ASATRU_TEMPLE</Building>
+				<Building>BUILDING_ANDEAN_TEMPLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -3813,12 +3827,16 @@
 				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
 				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
-				<!--Building>BUILDING_CANAANISM_CATHEDRAL</Building-->
-				<!--Building>BUILDING_JAIN_CATHEDRAL</Building-->
 				<Building>BUILDING_MORMON_CATHEDRAL</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
 				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
+				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+				<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
+				<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
@@ -4740,8 +4758,16 @@
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
 				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
 				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
-				<!--Building>BUILDING_JAIN_MONASTERY</Building-->
 				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_SHINTO_MONASTERY</Building>
+				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
+				<Building>BUILDING_DRUID_MONASTERY</Building>
+				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<Building>BUILDING_CANAANISM_MONASTERY</Building>
+				<Building>BUILDING_BAHAI_MONASTERY</Building>
+				<Building>BUILDING_ASATRU_MONASTERY</Building>
+				<Building>BUILDING_ANDEAN_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -5988,37 +6014,9 @@
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
 		</EventTriggerInfo>
+		<!-- @SAVEBREAK delete EVENTTRIGGER_TOXCATL once we can remove event triggers - cultures are modularized -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_TOXCATL</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_TOXCATL</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TOXCATL</Text>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/Toxcatl.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<iNumUnits>1</iNumUnits>
-			<BuildingsRequired>
-				<Building>BUILDING_COURTHOUSE</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<BonusesRequired>
-				<BonusType>BONUS_AZTEC</BonusType>
-			</BonusesRequired>
-			<Events>
-				<Event>EVENT_TOXCATL_1</Event>
-				<Event>EVENT_TOXCATL_2</Event>
-			</Events>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>
@@ -10263,35 +10261,35 @@
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
 			<EventArt>Art/Event_Images/musicofgods.dds</EventArt>
-	</EventTriggerInfo>
-	<EventTriggerInfo>
-		<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
-		<TriggerTexts>
-			<TriggerText>
-				<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
-			</TriggerText>
-		</TriggerTexts>
-		<iPercentGamesActive>100</iPercentGamesActive>
-		<iWeight>20</iWeight>
-		<iMaxOurLandmass>-1</iMaxOurLandmass>
-		<iNumPlotsRequired>1</iNumPlotsRequired>
-		<TerrainsRequired>
-			<TerrainType>TERRAIN_ROCKY</TerrainType>
-			<TerrainType>TERRAIN_BADLAND</TerrainType>
-			<TerrainType>TERRAIN_JAGGED</TerrainType>
-		</TerrainsRequired>
-		<BonusesRequired>
-			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<BonusType>BONUS_SULPHUR</BonusType>
-		</BonusesRequired>
-		<Events>
-			<Event>EVENT_VOLCANO_ERUPTION_1</Event>
-		</Events>
-		<bRecurring>1</bRecurring>
-		<PythonCanDo>canDoNewVolcano</PythonCanDo>
-		<PythonCallback>doVolcanoNewEruption</PythonCallback>
-	</EventTriggerInfo>
-	<EventTriggerInfo>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>20</iWeight>
+			<iMaxOurLandmass>-1</iMaxOurLandmass>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<TerrainsRequired>
+				<TerrainType>TERRAIN_ROCKY</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
+			</TerrainsRequired>
+			<BonusesRequired>
+				<BonusType>BONUS_OBSIDIAN</BonusType>
+				<BonusType>BONUS_SULPHUR</BonusType>
+			</BonusesRequired>
+			<Events>
+				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+			</Events>
+			<bRecurring>1</bRecurring>
+			<PythonCanDo>canDoNewVolcano</PythonCanDo>
+			<PythonCallback>doVolcanoNewEruption</PythonCallback>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
 			<TriggerTexts>
 				<TriggerText>

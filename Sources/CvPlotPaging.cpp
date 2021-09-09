@@ -249,7 +249,7 @@ void CvPlotPaging::UpdatePaging()
 				plots.push_back(PlotDist(map.plotByIndex(i), ToroidalDistanceSq(centerX, centerY, plot->getX(), plot->getY(), map.getGridWidth(), map.getGridHeight())));
 			}
 		}
-		std::sort(plots.begin(), plots.end());
+		algo::sort(plots);
 
 		if (!bPagingEnabled && g_bWasGraphicsPagingEnabled)
 		{
@@ -259,8 +259,8 @@ void CvPlotPaging::UpdatePaging()
 			win32::Stopwatch pageTimer;
 			pageTimer.Start();
 
-			const CvMap& map = GC.getMap();
-			
+			//const CvMap& map = GC.getMap();
+
 			bool timedout = false;
 			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
 			{

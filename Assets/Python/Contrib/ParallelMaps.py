@@ -1,35 +1,31 @@
-from CvPythonExtensions import *
-import CvUtil
+from CvPythonExtensions import CyGlobalContext, CyInterface, MapTypes
+import BugEventManager
+import DebugUtils
 
 GC = CyGlobalContext()
-bIsSwitchingMap = False
 
 
 class ParallelMaps:
 
 	def __init__(self, pEventManager):
-		self.pEventManager = pEventManager
-		self.pEventManager.addEventHandler("kbdEvent", self.enableMultiMaps)
+		pEventManager.addEventHandler("kbdEvent", self.handleInput)
 
-	def enableMultiMaps(self, argsList):
-		self.pEventManager.removeEventHandler("kbdEvent", self.enableMultiMaps)
-		if GC.enableMultiMaps():
-			GC.updateMaps()
-			self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
-			CvUtil.sendImmediateMessage("Multi-Maps enabled.")
+	def handleInput(self, argsList):
 
-	def filterInput(self, argsList):
-		eventType = argsList[0]
-		if self.pEventManager.bAlt and eventType == EventType.EVT_KEYDOWN:
-			i = argsList[1] -2
-			if i < GC.getNumMapInfos() and i != CyGame().getCurrentMap():
-				global bIsSwitchingMap
-				bIsSwitchingMap = True
-				if not GC.mapInitialized(i):
-					GC.initializeMap(i)
-				GC.switchMap(i)
-				bIsSwitchingMap = False
-				if i == 0:
-					CvUtil.sendImmediateMessage("Initial map")
+		def _tryMapSwitch(eMap):
+			if eMap > -1 and eMap < MapTypes.NUM_MAPS and eMap != GC.getGame().getCurrentMap() \
+			and (GC.isDebugBuild() or DebugUtils.bDebugMode or GC.getMapByIndex(eMap).plotsInitialized()):
+				if not GC.getMapByIndex(eMap).plotsInitialized():
+					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				else:
-					CvUtil.sendImmediateMessage("Map %d" %i)
+					CyInterface().addImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
+				GC.switchMap(eMap)
+				return 1
+
+		eKey = argsList[1]
+
+		if BugEventManager.g_eventManager.bAlt and not BugEventManager.g_eventManager.bCtrl:
+			return _tryMapSwitch(eKey -2) # enum of key -2 gives the correct value for the number keys (0-9). I know enums should not be used this way.
+
+		elif BugEventManager.g_eventManager.bCtrl and not BugEventManager.g_eventManager.bAlt:
+			return _tryMapSwitch(eKey +7) # Maps 10 - 16 (ctrl+1 -> ctrl+6)

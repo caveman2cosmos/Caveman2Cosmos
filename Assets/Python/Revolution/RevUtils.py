@@ -4,18 +4,18 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-
-import RevData
 from RevCivicsUtils import *
 from RevTraitsUtils import *
 from RevBuildingsUtils import *
-
+import RevData
 import BugCore
+import DynamicCivNames
 
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
 RevOpt = BugCore.game.Revolution
+RevDCMOpt = BugCore.game.RevDCM
 
 gameSpeedMod = None
 
@@ -40,10 +40,8 @@ def getGameSpeedMod():
 	global gameSpeedMod
 	if gameSpeedMod == None:
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		gameSpeedMod = CvGameSpeedInfo.getGrowthPercent()
-		gameSpeedMod += CvGameSpeedInfo.getTrainPercent()
-		gameSpeedMod += CvGameSpeedInfo.getConstructPercent()
-		gameSpeedMod = 300.0 / gameSpeedMod
+		gameSpeedMod = CvGameSpeedInfo.getSpeedPercent() + CvGameSpeedInfo.getHammerCostPercent()
+		gameSpeedMod = 200.0 / gameSpeedMod
 	return gameSpeedMod
 
 
@@ -254,7 +252,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 			pUnit.setXY(iMoveToX, iMoveToY, False, False, False)
 
 	for pUnit in toKillList :
-		if not pUnit.isNone() and not pUnit.plot().isNone():
+		if pUnit is not None:
 			pUnit.kill(False,iEnemyOfPlayer)
 
 
@@ -358,7 +356,7 @@ def getHandoverUnitTypes(CyCity):
 	if iCounter == UnitTypes.NO_UNIT: iCounter = iBestDefender
 	if iAttack == UnitTypes.NO_UNIT: iAttack = iCounter
 
-	return [GC.getInfoTypeForString("UNIT_WORKER"), iBestDefender, iCounter, iAttack]
+	return [GC.getUNIT_WORKER(), iBestDefender, iCounter, iAttack]
 
 def getUprisingUnitTypes(CyCity):
 	# Returns list of units that can be given to violent rebel uprisings, odds of giving are set by the relative number of times a unit type appears in list
@@ -588,7 +586,7 @@ def computeBribeCosts(CyCity):
 	fBaseCost = (iRevIdx + 16*localRevIdx + 3*CyCity.getNumRevolts(iPlayer)) * (iPop**1.1)/8.0
 
 	fMod = (1 + CyPlayer.getCurrentEra() - 9 / (8.1 + iPop**1.3)) / 3
-	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent() / 100.0
+	fMod *= GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() / 100.0
 
 	if not CyPlayer.isHuman():
 		fMod /= 2
@@ -704,9 +702,12 @@ def changeCiv(playerIdx, newCivType = -1, newLeaderType = -1, teamIdx = -1):
 	player = GC.getPlayer(playerIdx)
 	oldCivType = player.getCivilizationType()
 	oldLeaderType = player.getLeaderType()
-	if newCivType >= 0 and not newCivType == oldCivType:
+	if newCivType >= 0 and newCivType != oldCivType:
 		player.changeCiv(newCivType)
-	if newLeaderType >= 0 and not newLeaderType == oldLeaderType:
+		if RevDCMOpt.isDYNAMIC_CIV_NAMES():
+			DynamicCivNames.resetName(playerIdx)
+			DynamicCivNames.setNewNameByCivics(playerIdx)
+	if newLeaderType >= 0 and newLeaderType != oldLeaderType:
 		player.setName("")
 		player.changeLeader(newLeaderType)
 

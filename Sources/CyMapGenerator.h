@@ -6,7 +6,7 @@
 //
 //	FILE:	 CyMapGenerator.h
 //	AUTHOR:  Mustafa Thamer
-//	PURPOSE: 
+//	PURPOSE:
 //			Python wrapper class for CvMapGenerator
 //
 //-----------------------------------------------------------------------------
@@ -18,11 +18,10 @@ class CvMapGenerator;
 class CyPlot;
 
 class CyMapGenerator
-{	
+{
 public:
 	CyMapGenerator();
-	explicit CyMapGenerator(CvMapGenerator* pMapGenerator);		// Call from C++
-	bool isNone() const { return m_pMapGenerator == NULL; }
+	//explicit CyMapGenerator(CvMapGenerator* pMapGenerator);		// Call from C++
 
 	void doRiver(CyPlot* pStartPlot, CardinalDirectionTypes eCardinalDirection);
 	void addFeatures();
@@ -31,7 +30,7 @@ public:
 	void generatePlotTypes();
 	void generateTerrain();
 
-	void setPlotTypes(python::list& listPlotTypes);
+	void setPlotTypes(const python::list& lPlotTypes);
 
 protected:
 	CvMapGenerator* m_pMapGenerator;

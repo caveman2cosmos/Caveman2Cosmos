@@ -2,7 +2,6 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
-<!-- -->
 <!-- Command Infos -->
 <Civ4CommandInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<!--Changes must be reflected in CvEnums.h-->

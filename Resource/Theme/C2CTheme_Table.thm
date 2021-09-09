@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_Table.thm
 Content		:	Civ4 - GTable control theme
@@ -263,7 +263,7 @@ with GFC_Control_Table
 			.Image_Multiselect_Dest					=	GFC_Control_Combine_Image_Select_Dest;
 			.Image_Multiselect_Factor				=	GFC_Control_Combine_Image_Select_Factor;
 			.Image_Disable_Dest						=	GFC_Control_Combine_Image_Disable_Dest;
-			.Image_Disable_Factor					=	GFC_Control_Combine_Image_Disable_Factor;	
+			.Image_Disable_Factor					=	GFC_Control_Combine_Image_Disable_Factor;
 			.Image_DisableSelect_Dest				=	GFC_Control_Combine_Image_DisableSelect_Dest;
 			.Image_DisableSelect_Factor				=	GFC_Control_Combine_Image_DisableSelect_Factor;
 			.Image_DisableOffselect_Dest			=	GFC_Control_Combine_Image_DisableSelect_Dest;
@@ -765,7 +765,7 @@ style SF_CtrlTheme_Civ4_Control_Header_Table_HSortAscendButton_Style
 // Up - button style
 style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_UpButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 
 	GFC_Control_Button_Size_Default = GSize(16,19);
 
@@ -971,7 +971,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_DownButton_Style
 // Left - button style
 style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_LeftButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 
 	GFC_Control_Button_Size_Default = GSize(19,16);
 
@@ -1074,7 +1074,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_LeftButton_Style
 // Right - button style
 style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_RightButton_Style
 {
-	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
 
 	GFC_Control_Button_Size_Default = GSize(19,16);
 
@@ -1466,7 +1466,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_Style
 		.Winoff				= .Default;
 		.WinoffPress		= .Press;
 		.WinoffRollover		= .Rollover;
-		.WinoffDisable		= .Disable;	
+		.WinoffDisable		= .Disable;
 	}
 	with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_VShaft
 	{
@@ -1477,7 +1477,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_Style
 		.Winoff				= .Default;
 		.WinoffPress		= .Press;
 		.WinoffRollover		= .Rollover;
-		.WinoffDisable		= .Disable;	
+		.WinoffDisable		= .Disable;
 	}
 	GFC_Control_Scroll_StyleId_UpButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_UpButton_Style);
 	GFC_Control_Scroll_StyleId_DownButton			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Table_Standard_Scroll_DownButton_Style);
@@ -1551,7 +1551,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_LTCornerPanel_Style
 style SF_CtrlTheme_Civ4_Control_Table_Standard_RTCornerPanel_Style
 {
 	GFC_Control_Flag_Transparent			=	0;
-	
+
 	GFC_Control_Panel_Flag_NoInnerFill		=	0;
 	GFC_Control_Panel_Flag_NoBorder			=	GFlags(GPanelCtrl, GFC_CF_PANEL_NOBORDER);
 
@@ -1598,7 +1598,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_RTCornerPanel_Style
 		.Winoff				=	.Default;
 		.WinoffDisable		=	.Disable;
 	}
-	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;	
+	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;
 	map GFC_Control							=	GFC_Control_StandardPanel_Style;
 }
 
@@ -1651,7 +1651,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_LBCornerPanel_Style
 		.Winoff				=	.Default;
 		.WinoffDisable		=	.Disable;
 	}
-	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;	
+	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;
 	map GFC_Control							=	GFC_Control_StandardPanel_Style;
 }
 
@@ -1692,7 +1692,7 @@ style SF_CtrlTheme_Civ4_Control_Table_Standard_RBCornerPanel_Style
 		.Winoff				=	.Default;
 		.WinoffDisable		=	.Disable;
 	}
-	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;	
+	map GFC_CtrlTheme_Bitmap_Control_Panel	=	GFC_Control_StandardPanel_Style;
 	map GFC_Control							=	GFC_Control_StandardPanel_Style;
 }
 

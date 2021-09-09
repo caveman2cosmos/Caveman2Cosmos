@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BonusArtInfos>
-	<!-- Aircraft -->
+		<!-- Aircraft -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AIRCRAFT</Type>
 			<fScale>1.0</fScale>
@@ -11,7 +11,7 @@
 			<Button>art/Goods/goodaircraft.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Alcohol -->
+		<!-- Alcohol -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ALCOHOL</Type>
 			<fScale>1.0</fScale>
@@ -21,7 +21,7 @@
 			<Button>art/Goods/goodalcohol.dds</Button>
 			<FontButtonIndex>100</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Algae -->
+		<!-- Algae -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ALGAE</Type>
 			<fScale>1.0</fScale>
@@ -31,7 +31,7 @@
 			<Button>art/Goods/goodalgae.dds</Button>
 			<FontButtonIndex>188</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Aluminum Ingots -->
+		<!-- Aluminum Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ALUMINUM_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -41,7 +41,7 @@
 			<Button>art/Goods/goodingotaluminum.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ammunition -->
+		<!-- Ammunition -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AMMUNITION</Type>
 			<fScale>1.0</fScale>
@@ -51,7 +51,7 @@
 			<Button>art/Goods/goodammunition.dds</Button>
 			<FontButtonIndex>92</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Androids -->
+		<!-- Androids -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ANDROIDS</Type>
 			<fScale>1.0</fScale>
@@ -61,7 +61,7 @@
 			<Button>art/Goods/goodandroids.dds</Button>
 			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Antigrav Generators -->
+		<!-- Antigrav Generators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEVITATION_GENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -71,7 +71,7 @@
 			<Button>art/Goods/goodantigravgenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Anti Gravity Field Generators -->
+		<!-- Anti Gravity Field Generators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -81,7 +81,7 @@
 			<Button>art/Goods/goodantigravityfieldgenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Antimatter -->
+		<!-- Antimatter -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ANTIMATTER</Type>
 			<fScale>1.0</fScale>
@@ -91,7 +91,7 @@
 			<Button>art/Goods/goodantimatter.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Automobiles -->
+		<!-- Automobiles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AUTOMOBILES</Type>
 			<fScale>1.0</fScale>
@@ -101,7 +101,7 @@
 			<Button>art/Goods/goodautomobile.dds</Button>
 			<FontButtonIndex>80</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bamboo -->
+		<!-- Bamboo -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BAMBOO</Type>
 			<fScale>1.0</fScale>
@@ -111,7 +111,7 @@
 			<Button>art/Goods/goodbamboo.dds</Button>
 			<FontButtonIndex>112</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bark -->
+		<!-- Bark -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BARK</Type>
 			<fScale>1.0</fScale>
@@ -121,7 +121,7 @@
 			<Button>art/Goods/goodbark.dds</Button>
 			<FontButtonIndex>63</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Barrels -->
+		<!-- Barrels -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BARRELS</Type>
 			<fScale>1.0</fScale>
@@ -131,7 +131,7 @@
 			<Button>art/Goods/goodbarrels.dds</Button>
 			<FontButtonIndex>205</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Baskets -->
+		<!-- Baskets -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BASKETS</Type>
 			<fScale>1.0</fScale>
@@ -141,7 +141,7 @@
 			<Button>art/Goods/goodbaskets.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Beads -->
+		<!-- Beads -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BEADS</Type>
 			<fScale>1.0</fScale>
@@ -151,7 +151,7 @@
 			<Button>art/Goods/goodbeads.dds</Button>
 			<FontButtonIndex>114</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Berlinite -->
+		<!-- Berlinite -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BERLINITE</Type>
 			<fScale>1.0</fScale>
@@ -161,7 +161,7 @@
 			<Button>art/Goods/goodberlinite.dds</Button>
 			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Berries -->
+		<!-- Berries -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BERRIES</Type>
 			<fScale>1.0</fScale>
@@ -171,7 +171,7 @@
 			<Button>art/Goods/goodberries.dds</Button>
 			<FontButtonIndex>114</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bicycles -->
+		<!-- Bicycles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BICYCLES</Type>
 			<fScale>1.0</fScale>
@@ -181,7 +181,7 @@
 			<Button>art/Goods/goodbicycles.dds</Button>
 			<FontButtonIndex>116</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Biofuel -->
+		<!-- Biofuel -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BIOFUEL</Type>
 			<fScale>1.0</fScale>
@@ -191,7 +191,7 @@
 			<Button>art/Goods/goodbiofuel.dds</Button>
 			<FontButtonIndex>77</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bionic Suits -->
+		<!-- Bionic Suits -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BIONIC_SUITS</Type>
 			<fScale>1.0</fScale>
@@ -201,7 +201,7 @@
 			<Button>art/Goods/goodbionicsuits.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Biopolymers -->
+		<!-- Biopolymers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BIOPOLYMERS</Type>
 			<fScale>1.0</fScale>
@@ -211,7 +211,7 @@
 			<Button>art/Goods/goodbiopolymers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Blender -->
+		<!-- Blender -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BLENDER</Type>
 			<fScale>1.0</fScale>
@@ -221,7 +221,7 @@
 			<Button>art/Goods/goodblender.dds</Button>
 			<FontButtonIndex>54</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bone -->
+		<!-- Bone -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BONE</Type>
 			<fScale>1.0</fScale>
@@ -231,7 +231,7 @@
 			<Button>art/Goods/goodbone.dds</Button>
 			<FontButtonIndex>117</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Books -->
+		<!-- Books -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BOOKS</Type>
 			<fScale>1.0</fScale>
@@ -241,7 +241,7 @@
 			<Button>art/Goods/goodbooks.dds</Button>
 			<FontButtonIndex>118</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Borax -->
+		<!-- Borax -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BORAX</Type>
 			<fScale>1.0</fScale>
@@ -251,7 +251,7 @@
 			<Button>art/Goods/goodborax.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Brass Instruments -->
+		<!-- Brass Instruments -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BRASS_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
@@ -261,7 +261,7 @@
 			<Button>art/Goods/goodbrass.dds</Button>
 			<FontButtonIndex>66</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bread -->
+		<!-- Bread -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BREAD</Type>
 			<fScale>1.0</fScale>
@@ -271,7 +271,7 @@
 			<Button>art/Goods/goodbread.dds</Button>
 			<FontButtonIndex>119</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bricks -->
+		<!-- Bricks -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BRICKS</Type>
 			<fScale>1.0</fScale>
@@ -281,7 +281,7 @@
 			<Button>art/Goods/goodbricks.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bugs -->
+		<!-- Bugs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BUGS</Type>
 			<fScale>1.0</fScale>
@@ -291,7 +291,7 @@
 			<Button>art/Goods/goodbugs.dds</Button>
 			<FontButtonIndex>212</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Caesium Ore -->
+		<!-- Caesium Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CAESIUM_ORE</Type>
 			<fScale>1.0</fScale>
@@ -301,7 +301,7 @@
 			<Button>art/Goods/goodcaesium.dds</Button>
 			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Calculators -->
+		<!-- Calculators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CALCULATORS</Type>
 			<fScale>1.0</fScale>
@@ -311,7 +311,7 @@
 			<Button>art/Goods/goodcalculators.dds</Button>
 			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Candles -->
+		<!-- Candles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CANDLES</Type>
 			<fScale>1.0</fScale>
@@ -321,7 +321,7 @@
 			<Button>art/Goods/goodcandles.dds</Button>
 			<FontButtonIndex>69</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Candy -->
+		<!-- Candy -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CANDY</Type>
 			<fScale>1.0</fScale>
@@ -331,7 +331,7 @@
 			<Button>art/Goods/goodcandy.dds</Button>
 			<FontButtonIndex>88</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Canned Food -->
+		<!-- Canned Food -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CANNED_FOOD</Type>
 			<fScale>1.0</fScale>
@@ -341,7 +341,7 @@
 			<Button>art/Goods/goodcannedfood.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Carcass -->
+		<!-- Carcass -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CARCASS</Type>
 			<fScale>1.0</fScale>
@@ -351,7 +351,7 @@
 			<Button>art/Goods/goodcarcass.dds</Button>
 			<FontButtonIndex>122</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Carpets -->
+		<!-- Carpets -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CARPETS</Type>
 			<fScale>1.0</fScale>
@@ -361,7 +361,7 @@
 			<Button>art/Goods/goodcarpets.dds</Button>
 			<FontButtonIndex>86</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cat -->
+		<!-- Cat -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CAT</Type>
 			<fScale>1.0</fScale>
@@ -371,7 +371,7 @@
 			<Button>art/Goods/goodcat.dds</Button>
 			<FontButtonIndex>83</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cellphones -->
+		<!-- Cellphones -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CELLPHONES</Type>
 			<fScale>1.0</fScale>
@@ -381,7 +381,7 @@
 			<Button>art/Goods/goodcellphones.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cellulase Capsules -->
+		<!-- Cellulase Capsules -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CELLULASE_CAPSULES</Type>
 			<fScale>1.0</fScale>
@@ -391,7 +391,7 @@
 			<Button>art/Goods/goodcellulasecapsules.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cement -->
+		<!-- Cement -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CEMENT</Type>
 			<fScale>0.7</fScale>
@@ -401,7 +401,7 @@
 			<Button>art/Goods/goodcement.dds</Button>
 			<FontButtonIndex>102</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Chalk -->
+		<!-- Chalk -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHALK</Type>
 			<fScale>1.0</fScale>
@@ -411,7 +411,7 @@
 			<Button>art/Goods/goodchalk.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Charcoal -->
+		<!-- Charcoal -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHARCOAL</Type>
 			<fScale>1.0</fScale>
@@ -421,7 +421,7 @@
 			<Button>art/Goods/goodcharcoal.dds</Button>
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cheese -->
+		<!-- Cheese -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHEESE</Type>
 			<fScale>1.0</fScale>
@@ -431,7 +431,7 @@
 			<Button>art/Goods/goodcheese.dds</Button>
 			<FontButtonIndex>155</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Chemicals -->
+		<!-- Chemicals -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHEMICALS</Type>
 			<fScale>1.0</fScale>
@@ -441,7 +441,7 @@
 			<Button>art/Goods/goodchemicals.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Chocolate -->
+		<!-- Chocolate -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHOCOLATE</Type>
 			<fScale>1.0</fScale>
@@ -451,7 +451,7 @@
 			<Button>art/Goods/goodchocolate.dds</Button>
 			<FontButtonIndex>190</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Chromite Ore -->
+		<!-- Chromite Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CHROMITE_ORE</Type>
 			<fScale>1.0</fScale>
@@ -461,7 +461,7 @@
 			<Button>art/Goods/goodchromite.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cinnabar Ore -->
+		<!-- Cinnabar Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CINNABAR_ORE</Type>
 			<fScale>1.0</fScale>
@@ -471,7 +471,7 @@
 			<Button>art/Goods/goodcinnabar.dds</Button>
 			<FontButtonIndex>127</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Common Clay -->
+		<!-- Common Clay -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CLAY</Type>
 			<fScale>1.0</fScale>
@@ -481,7 +481,7 @@
 			<Button>art/Goods/goodclay.dds</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cloth -->
+		<!-- Cloth -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CLOTH</Type>
 			<fScale>2.0</fScale>
@@ -492,7 +492,7 @@
 			<Button>art/Goods/goodcloth.dds</Button>
 			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Clothing -->
+		<!-- Clothing -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CLOTHING</Type>
 			<fScale>1.0</fScale>
@@ -502,7 +502,7 @@
 			<Button>art/Goods/goodclothing.dds</Button>
 			<FontButtonIndex>87</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cobalt Ore -->
+		<!-- Cobalt Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COBALT_ORE</Type>
 			<fScale>1.0</fScale>
@@ -512,7 +512,7 @@
 			<Button>art/Goods/goodcobalt.dds</Button>
 			<FontButtonIndex>95</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Computers -->
+		<!-- Computers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COMPUTERS</Type>
 			<fScale>1.0</fScale>
@@ -522,7 +522,7 @@
 			<Button>art/Goods/goodcomputers.dds</Button>
 			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Copper Wires -->
+		<!-- Copper Wires -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COPPER_WIRES</Type>
 			<fScale>1.0</fScale>
@@ -532,7 +532,7 @@
 			<Button>art/Goods/goodcopperwiring.dds</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cotton Fibers -->
+		<!-- Cotton Fibers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COTTON_FIBERS</Type>
 			<fScale>1.0</fScale>
@@ -542,7 +542,7 @@
 			<Button>art/Goods/goodcottonfibers.dds</Button>
 			<FontButtonIndex>101</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Cybernetic Chloroplasts -->
+		<!-- Cybernetic Chloroplasts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CYBERNETIC_CHLOROPLASTS</Type>
 			<fScale>1.0</fScale>
@@ -552,7 +552,7 @@
 			<Button>art/Goods/goodcyberneticchloroplasts.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Oil Products -->
+		<!-- Oil Products -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PETROLEUM_PRODUCTS</Type>
 			<fScale>1.0</fScale>
@@ -562,7 +562,7 @@
 			<Button>art/Goods/goodoilproducts.dds</Button>
 			<FontButtonIndex>77</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Digitized Membranes -->
+		<!-- Digitized Membranes -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DIGITIZED_MEMBRANES</Type>
 			<fScale>1.0</fScale>
@@ -572,7 +572,7 @@
 			<Button>art/Goods/gooddigitizedmembranes.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dishwashers -->
+		<!-- Dishwashers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DISHWASHERS</Type>
 			<fScale>1.0</fScale>
@@ -582,7 +582,7 @@
 			<Button>art/Goods/gooddishwashers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Diskettes -->
+		<!-- Diskettes -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DISKETTES</Type>
 			<fScale>1.0</fScale>
@@ -592,7 +592,7 @@
 			<Button>art/Goods/gooddiskettes.dds</Button>
 			<FontButtonIndex>206</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dog -->
+		<!-- Dog -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DOG</Type>
 			<fScale>1.0</fScale>
@@ -602,7 +602,7 @@
 			<Button>art/Goods/gooddog.dds</Button>
 			<FontButtonIndex>89</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dried Fish -->
+		<!-- Dried Fish -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DRIED_FISH</Type>
 			<fScale>1.0</fScale>
@@ -612,7 +612,7 @@
 			<Button>art/Goods/gooddriedfish.dds</Button>
 			<FontButtonIndex>220</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dried Fruit -->
+		<!-- Dried Fruit -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DRIED_FRUIT</Type>
 			<fScale>1.0</fScale>
@@ -622,7 +622,7 @@
 			<Button>art/Goods/gooddriedfruit.dds</Button>
 			<FontButtonIndex>158</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dried Meat -->
+		<!-- Dried Meat -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DRIED_MEAT</Type>
 			<fScale>1.0</fScale>
@@ -632,7 +632,7 @@
 			<Button>art/Goods/gooddriedmeat.dds</Button>
 			<FontButtonIndex>62</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Drugs -->
+		<!-- Drugs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DRUGS</Type>
 			<fScale>1.0</fScale>
@@ -642,7 +642,7 @@
 			<Button>art/Goods/gooddrugs.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Dye -->
+		<!-- Dye -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DYE</Type>
 			<fScale>1.0</fScale>
@@ -652,7 +652,7 @@
 			<Button>art/Goods/gooddye.dds</Button>
 			<FontButtonIndex>20</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ecstasy -->
+		<!-- Ecstasy -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ECSTASY</Type>
 			<fScale>1.0</fScale>
@@ -662,7 +662,7 @@
 			<Button>art/Goods/goodecstasy.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Eggs -->
+		<!-- Eggs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_EGGS</Type>
 			<fScale>1.0</fScale>
@@ -672,7 +672,7 @@
 			<Button>art/Goods/goodeggs.dds</Button>
 			<FontButtonIndex>178</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Electroactive Polymers -->
+		<!-- Electroactive Polymers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ELECTROACTIVE_POLYMERS</Type>
 			<fScale>1.0</fScale>
@@ -682,7 +682,7 @@
 			<Button>art/Goods/goodelectroactivepolymers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Electrolyte Cells -->
+		<!-- Electrolyte Cells -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ELECTROLYTIC_CELLS</Type>
 			<fScale>1.0</fScale>
@@ -692,7 +692,7 @@
 			<Button>art/Goods/goodelectrolyticcells.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Energy Drink -->
+		<!-- Energy Drink -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ENERGY_DRINK</Type>
 			<fScale>1.0</fScale>
@@ -702,7 +702,7 @@
 			<Button>art/Goods/goodenergydrink.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Enzymes -->
+		<!-- Enzymes -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ENZYMES</Type>
 			<fScale>1.0</fScale>
@@ -712,7 +712,7 @@
 			<Button>art/Goods/goodenzymes.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Exoskeletons -->
+		<!-- Exoskeletons -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_EXOSKELETONS</Type>
 			<fScale>1.0</fScale>
@@ -722,7 +722,7 @@
 			<Button>art/Goods/goodexoskeletons.dds</Button>
 			<FontButtonIndex>139</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Feathers -->
+		<!-- Feathers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FEATHERS</Type>
 			<fScale>1.0</fScale>
@@ -732,7 +732,7 @@
 			<Button>art/Goods/goodfeathers.dds</Button>
 			<FontButtonIndex>134</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fertilizers -->
+		<!-- Fertilizers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FERTILIZERS</Type>
 			<fScale>1.0</fScale>
@@ -742,7 +742,7 @@
 			<Button>art/Goods/goodfertilizer.dds</Button>
 			<FontButtonIndex>102</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fiberglass -->
+		<!-- Fiberglass -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIBERGLASS</Type>
 			<fScale>1.0</fScale>
@@ -752,7 +752,7 @@
 			<Button>art/Goods/goodfiberglass.dds</Button>
 			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fiber Optic Cables -->
+		<!-- Fiber Optic Cables -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIBER_OPTIC_CABLES</Type>
 			<fScale>1.0</fScale>
@@ -762,7 +762,7 @@
 			<Button>art/Goods/goodfiberoptics.dds</Button>
 			<FontButtonIndex>125</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Firearms -->
+		<!-- Firearms -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIREARMS</Type>
 			<fScale>1.0</fScale>
@@ -772,7 +772,7 @@
 			<Button>art/Goods/goodfirearms.dds</Button>
 			<FontButtonIndex>75</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Firecrackers -->
+		<!-- Firecrackers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIRECRACKERS</Type>
 			<fScale>1.0</fScale>
@@ -782,7 +782,7 @@
 			<Button>art/Goods/goodfirecrackers.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fish Oil -->
+		<!-- Fish Oil -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FISH_OIL</Type>
 			<fScale>1.0</fScale>
@@ -792,7 +792,7 @@
 			<Button>art/Goods/goodfishoil.dds</Button>
 			<FontButtonIndex>70</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Flash Memory Devices -->
+		<!-- Flash Memory Devices -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FLASH_MEMORY_DEVICES</Type>
 			<fScale>1.0</fScale>
@@ -802,7 +802,7 @@
 			<Button>art/Goods/goodflashmemorydevices.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Flax Fibers -->
+		<!-- Flax Fibers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FLAX_FIBERS</Type>
 			<fScale>1.0</fScale>
@@ -812,7 +812,7 @@
 			<Button>art/Goods/goodflaxfibers.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Flint -->
+		<!-- Flint -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FLINT</Type>
 			<fScale>1.0</fScale>
@@ -822,7 +822,7 @@
 			<Button>art/Goods/goodflint.dds</Button>
 			<FontButtonIndex>57</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Flour -->
+		<!-- Flour -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FLOUR</Type>
 			<fScale>1.0</fScale>
@@ -832,7 +832,7 @@
 			<Button>art/Goods/goodflour.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Flowers -->
+		<!-- Flowers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FLOWERS</Type>
 			<fScale>1.0</fScale>
@@ -842,7 +842,7 @@
 			<Button>art/Goods/goodflowers.dds</Button>
 			<FontButtonIndex>50</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fossils -->
+		<!-- Fossils -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FOSSILS</Type>
 			<fScale>1.0</fScale>
@@ -852,7 +852,7 @@
 			<Button>art/Goods/goodfossils.dds</Button>
 			<FontButtonIndex>189</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Fruit -->
+		<!-- Fruit -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FRUIT</Type>
 			<fScale>1.0</fScale>
@@ -862,7 +862,7 @@
 			<Button>art/Goods/goodfruit.dds</Button>
 			<FontButtonIndex>144</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Furniture -->
+		<!-- Furniture -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FURNITURE</Type>
 			<fScale>1.0</fScale>
@@ -872,7 +872,7 @@
 			<Button>art/Goods/goodfurniture.dds</Button>
 			<FontButtonIndex>84</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Furs -->
+		<!-- Furs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FUR</Type>
 			<fScale>1.0</fScale>
@@ -882,7 +882,7 @@
 			<Button>art/Goods/goodfur.dds</Button>
 			<FontButtonIndex>21</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Gems -->
+		<!-- Gems -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GEMSTONE</Type>
 			<fScale>1.0</fScale>
@@ -892,7 +892,7 @@
 			<Button>art/Goods/goodcutgems.dds</Button>
 			<FontButtonIndex>22</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ghee Oil -->
+		<!-- Ghee Oil -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GHEE_OIL</Type>
 			<fScale>1.0</fScale>
@@ -902,7 +902,7 @@
 			<Button>art/Goods/goodgheeoil.dds</Button>
 			<FontButtonIndex>169</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Glassware -->
+		<!-- Glassware -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GLASSWARE</Type>
 			<fScale>1.0</fScale>
@@ -912,7 +912,7 @@
 			<Button>art/Goods/goodglass.dds</Button>
 			<FontButtonIndex>71</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Grain -->
+		<!-- Grain -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRAINS</Type>
 			<fScale>1.0</fScale>
@@ -922,7 +922,7 @@
 			<Button>art/Goods/goodgrain.dds</Button>
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Graphene -->
+		<!-- Graphene -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRAPHENE</Type>
 			<fScale>1.0</fScale>
@@ -932,7 +932,7 @@
 			<Button>art/Goods/goodgraphene.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Graphite -->
+		<!-- Graphite -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRAPHITE</Type>
 			<fScale>1.0</fScale>
@@ -942,7 +942,7 @@
 			<Button>art/Goods/goodgraphite.dds</Button>
 			<FontButtonIndex>150</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Grass -->
+		<!-- Grass -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRASS</Type>
 			<fScale>1.0</fScale>
@@ -952,7 +952,7 @@
 			<Button>art/Goods/goodgrass.dds</Button>
 			<FontButtonIndex>188</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Gravity Generators -->
+		<!-- Gravity Generators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRAVITY_GENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -962,7 +962,7 @@
 			<Button>art/Goods/goodgravitygenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hats -->
+		<!-- Hats -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HATS</Type>
 			<fScale>1.0</fScale>
@@ -972,7 +972,7 @@
 			<Button>art/Goods/goodhats.dds</Button>
 			<FontButtonIndex>217</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Heavy Water -->
+		<!-- Heavy Water -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HEAVY_WATER</Type>
 			<fScale>1.0</fScale>
@@ -982,7 +982,7 @@
 			<Button>art/Goods/goodheavywater.dds</Button>
 			<FontButtonIndex>8</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Helicopters -->
+		<!-- Helicopters -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HELICOPTERS</Type>
 			<fScale>1.0</fScale>
@@ -992,7 +992,7 @@
 			<Button>art/Goods/goodhelicopters.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hematite Ore -->
+		<!-- Hematite Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HAEMATITE_ORE</Type>
 			<fScale>1.0</fScale>
@@ -1002,7 +1002,7 @@
 			<Button>art/Goods/goodhematite.dds</Button>
 			<FontButtonIndex>95</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hemp Fibers -->
+		<!-- Hemp Fibers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HEMP_FIBERS</Type>
 			<fScale>1.0</fScale>
@@ -1012,7 +1012,7 @@
 			<Button>art/Goods/goodhempfibers.dds</Button>
 			<FontButtonIndex>176</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hide -->
+		<!-- Hide -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HIDE</Type>
 			<fScale>1.0</fScale>
@@ -1022,7 +1022,7 @@
 			<Button>art/Goods/goodhide.dds</Button>
 			<FontButtonIndex>129</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Holographic Projectors -->
+		<!-- Holographic Projectors -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HOLOGRAPHIC_PROJECTORS</Type>
 			<fScale>1.0</fScale>
@@ -1032,7 +1032,7 @@
 			<Button>art/Goods/goodholoprojector.dds</Button>
 			<FontButtonIndex>175</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Honey -->
+		<!-- Honey -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HONEY</Type>
 			<fScale>1.0</fScale>
@@ -1042,7 +1042,7 @@
 			<Button>art/Goods/goodhoney.dds</Button>
 			<FontButtonIndex>174</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hovercrafts -->
+		<!-- Hovercrafts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HOVERCRAFTS</Type>
 			<fScale>1.0</fScale>
@@ -1052,7 +1052,7 @@
 			<Button>art/Goods/goodhovercrafts.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hydrogen -->
+		<!-- Hydrogen -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HYDROGEN</Type>
 			<fScale>1.0</fScale>
@@ -1062,7 +1062,7 @@
 			<Button>art/Goods/goodhydrogen.dds</Button>
 			<FontButtonIndex>181</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Hyposprays -->
+		<!-- Hyposprays -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HYPOSPRAYS</Type>
 			<fScale>1.0</fScale>
@@ -1072,7 +1072,7 @@
 			<Button>art/Goods/goodhyposprays.dds</Button>
 			<FontButtonIndex>30</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ice Cream -->
+		<!-- Ice Cream -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ICE_CREAM</Type>
 			<fScale>1.0</fScale>
@@ -1082,7 +1082,7 @@
 			<Button>art/Goods/goodIcecream.dds</Button>
 			<FontButtonIndex>177</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Immunity Drugs -->
+		<!-- Immunity Drugs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_IMMUNITY_DRUGS</Type>
 			<fScale>1.0</fScale>
@@ -1092,7 +1092,7 @@
 			<Button>art/Goods/goodimmunitydrugs.dds</Button>
 			<FontButtonIndex>179</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Brass Ingots -->
+		<!-- Brass Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BRASS_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1102,7 +1102,7 @@
 			<Button>art/Goods/goodingotbrass.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Copper Ingots -->
+		<!-- Copper Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COPPER_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1112,7 +1112,7 @@
 			<Button>art/Goods/goodingotcopper.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Electrum Ingots -->
+		<!-- Electrum Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ELECTRUM_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1122,7 +1122,7 @@
 			<Button>art/Goods/goodingotelectrum.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Gold Ingots -->
+		<!-- Gold Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GOLD_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1132,7 +1132,7 @@
 			<Button>art/Goods/goodingotgold.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Iron Ingots -->
+		<!-- Iron Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_IRON_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1142,7 +1142,7 @@
 			<Button>art/Goods/goodingotiron.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lead Ingots -->
+		<!-- Lead Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEAD_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1152,7 +1152,7 @@
 			<Button>art/Goods/goodingotlead.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Platinum Ingots -->
+		<!-- Platinum Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PLATINUM_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1162,7 +1162,7 @@
 			<Button>art/Goods/goodingotplatinum.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Silver Ingots -->
+		<!-- Silver Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SILVER_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1172,7 +1172,7 @@
 			<Button>art/Goods/goodingotsilver.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tin Ingots -->
+		<!-- Tin Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TIN_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1182,7 +1182,7 @@
 			<Button>art/Goods/goodingottin.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Titanium Ingots -->
+		<!-- Titanium Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TITANIUM_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -1192,7 +1192,7 @@
 			<Button>art/Goods/goodingottitanium.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ivory -->
+		<!-- Ivory -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_IVORY</Type>
 			<fScale>1.0</fScale>
@@ -1202,7 +1202,7 @@
 			<Button>art/Goods/goodivory.dds</Button>
 			<FontButtonIndex>25</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Jet Engines -->
+		<!-- Jet Engines -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_JET_ENGINES</Type>
 			<fScale>1.0</fScale>
@@ -1212,7 +1212,7 @@
 			<Button>art/Goods/goodjetengines.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Jewelry -->
+		<!-- Jewelry -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_JEWELRY</Type>
 			<fScale>1.0</fScale>
@@ -1222,7 +1222,7 @@
 			<Button>art/Goods/goodjewelry.dds</Button>
 			<FontButtonIndex>167</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Kerosene -->
+		<!-- Kerosene -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_KEROSENE</Type>
 			<fScale>1.0</fScale>
@@ -1232,7 +1232,7 @@
 			<Button>art/Goods/goodkerosense.dds</Button>
 			<FontButtonIndex>197</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Kevlar -->
+		<!-- Kevlar -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_KEVLAR</Type>
 			<fScale>1.0</fScale>
@@ -1242,7 +1242,7 @@
 			<Button>art/Goods/goodkevlar.dds</Button>
 			<FontButtonIndex>214</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lacquerware -->
+		<!-- Lacquerware -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LACQUERWARE</Type>
 			<fScale>1.0</fScale>
@@ -1252,7 +1252,7 @@
 			<Button>art/Goods/goodlacquerware.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lard -->
+		<!-- Lard -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LARD</Type>
 			<fScale>1.0</fScale>
@@ -1262,7 +1262,7 @@
 			<Button>art/Goods/goodlard.dds</Button>
 			<FontButtonIndex>216</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lazulite Ore -->
+		<!-- Lazulite Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LAZULITE_ORE</Type>
 			<fScale>1.0</fScale>
@@ -1272,7 +1272,7 @@
 			<Button>art/Goods/goodlazulite.dds</Button>
 			<FontButtonIndex>60</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Leather -->
+		<!-- Leather -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEATHER</Type>
 			<fScale>1.0</fScale>
@@ -1282,7 +1282,7 @@
 			<Button>art/Goods/goodleather.dds</Button>
 			<FontButtonIndex>129</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lithium -->
+		<!-- Lithium -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LITHIUM</Type>
 			<fScale>1.0</fScale>
@@ -1292,7 +1292,7 @@
 			<Button>art/Goods/goodlithium.dds</Button>
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lizards -->
+		<!-- Lizards -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LIZARDS</Type>
 			<fScale>1.0</fScale>
@@ -1302,7 +1302,7 @@
 			<Button>art/Goods/goodlizards.dds</Button>
 			<FontButtonIndex>67</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- LSD -->
+		<!-- LSD -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LSD</Type>
 			<fScale>1.0</fScale>
@@ -1312,7 +1312,7 @@
 			<Button>art/Goods/goodlsd.dds</Button>
 			<FontButtonIndex>149</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lye -->
+		<!-- Lye -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LYE</Type>
 			<fScale>1.0</fScale>
@@ -1322,7 +1322,7 @@
 			<Button>art/Goods/goodlye.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Magnesium Ore -->
+		<!-- Magnesium Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MAGNESIUM_ORE</Type>
 			<fScale>1.0</fScale>
@@ -1332,7 +1332,7 @@
 			<Button>art/Goods/goodmagnesium.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Mars Rocks -->
+		<!-- Mars Rocks -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MARTIAN_ROCKS</Type>
 			<fScale>1.0</fScale>
@@ -1342,7 +1342,7 @@
 			<Button>art/Goods/goodmarsrocks.dds</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Marzipan -->
+		<!-- Marzipan -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MARZIPAN</Type>
 			<fScale>1.0</fScale>
@@ -1352,7 +1352,7 @@
 			<Button>art/Goods/goodmarzipan.dds</Button>
 			<FontButtonIndex>190</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Mascagnite -->
+		<!-- Mascagnite -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MASCAGNITE</Type>
 			<fScale>1.0</fScale>
@@ -1362,7 +1362,7 @@
 			<Button>art/Goods/goodmascagnite.dds</Button>
 			<FontButtonIndex>7</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Masks -->
+		<!-- Masks -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MASKS</Type>
 			<fScale>1.0</fScale>
@@ -1372,7 +1372,7 @@
 			<Button>art/Goods/goodmasks.dds</Button>
 			<FontButtonIndex>68</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Mechs -->
+		<!-- Mechs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MECHS</Type>
 			<fScale>1.0</fScale>
@@ -1382,7 +1382,7 @@
 			<Button>art/Goods/goodmechs.dds</Button>
 			<FontButtonIndex>139</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Medical Tricoders -->
+		<!-- Medical Tricoders -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MEDICAL_TRICORDERS</Type>
 			<fScale>1.0</fScale>
@@ -1392,7 +1392,7 @@
 			<Button>art/Goods/goodmedicaltricoders.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Meth -->
+		<!-- Meth -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_METHAMPHETAMINE</Type>
 			<fScale>1.0</fScale>
@@ -1402,7 +1402,7 @@
 			<Button>art/Goods/goodmeth.dds</Button>
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Microgenerators -->
+		<!-- Microgenerators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MICROGENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -1412,7 +1412,7 @@
 			<Button>art/Goods/goodmicrogenerators.dds</Button>
 			<FontButtonIndex>175</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Microwave Ovens -->
+		<!-- Microwave Ovens -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MICROWAVE_OVENS</Type>
 			<fScale>1.0</fScale>
@@ -1422,7 +1422,7 @@
 			<Button>art/Goods/goodmicrowaves.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Milk -->
+		<!-- Milk -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MILK</Type>
 			<fScale>1.0</fScale>
@@ -1432,7 +1432,7 @@
 			<Button>art/Goods/goodmilk.dds</Button>
 			<FontButtonIndex>191</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Moon Rocks -->
+		<!-- Moon Rocks -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MOON_ROCKS</Type>
 			<fScale>1.0</fScale>
@@ -1442,7 +1442,7 @@
 			<Button>art/Goods/goodmoonrocks.dds</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nanoactuators -->
+		<!-- Nanoactuators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NANOACTUATORS</Type>
 			<fScale>1.0</fScale>
@@ -1452,7 +1452,7 @@
 			<Button>art/Goods/goodnanoactuators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nanobots -->
+		<!-- Nanobots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NANOBOTS</Type>
 			<fScale>1.0</fScale>
@@ -1462,7 +1462,7 @@
 			<Button>art/Goods/goodnanobots.dds</Button>
 			<FontButtonIndex>103</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nanogenerators -->
+		<!-- Nanogenerators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NANOGENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -1472,7 +1472,7 @@
 			<Button>art/Goods/goodnanogenerators.dds</Button>
 			<FontButtonIndex>54</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nanotubes -->
+		<!-- Nanotubes -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NANOTUBES</Type>
 			<fScale>1.0</fScale>
@@ -1482,7 +1482,7 @@
 			<Button>art/Goods/goodnanotubes.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nets -->
+		<!-- Nets -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NETS</Type>
 			<fScale>1.0</fScale>
@@ -1492,7 +1492,7 @@
 			<Button>art/Goods/goodnets.dds</Button>
 			<FontButtonIndex>219</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Neuroimplants -->
+		<!-- Neuroimplants -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NEUROIMPLANTS</Type>
 			<fScale>1.0</fScale>
@@ -1502,7 +1502,7 @@
 			<Button>art/Goods/goodneuroimplants.dds</Button>
 			<FontButtonIndex>182</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Newspapers -->
+		<!-- Newspapers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NEWSPAPERS</Type>
 			<fScale>1.0</fScale>
@@ -1512,7 +1512,7 @@
 			<Button>art/Goods/goodnewspapers.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nickel Ore -->
+		<!-- Nickel Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NICKEL_ORE</Type>
 			<fScale>1.0</fScale>
@@ -1522,7 +1522,7 @@
 			<Button>art/Goods/goodnickel.dds</Button>
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Novus Chemicals -->
+		<!-- Novus Chemicals -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NOVUS_CHEMICALS</Type>
 			<fScale>1.0</fScale>
@@ -1532,7 +1532,7 @@
 			<Button>art/Goods/goodnovuschemicals.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nutella -->
+		<!-- Nutella -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NUTELLA</Type>
 			<fScale>1.0</fScale>
@@ -1542,7 +1542,7 @@
 			<Button>art/Goods/goodnutella.dds</Button>
 			<FontButtonIndex>194</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nuts -->
+		<!-- Nuts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NUTS</Type>
 			<fScale>1.0</fScale>
@@ -1552,7 +1552,7 @@
 			<Button>art/Goods/goodnuts.dds</Button>
 			<FontButtonIndex>185</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nylon -->
+		<!-- Nylon -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NYLON</Type>
 			<fScale>1.0</fScale>
@@ -1562,7 +1562,7 @@
 			<Button>art/Goods/goodnylon.dds</Button>
 			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Olive Oil -->
+		<!-- Olive Oil -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OLIVE_OIL</Type>
 			<fScale>1.0</fScale>
@@ -1572,7 +1572,7 @@
 			<Button>art/Goods/goodoliveoil.dds</Button>
 			<FontButtonIndex>180</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Omega Acids -->
+		<!-- Omega Acids -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OMEGA_FATTY_ACID</Type>
 			<fScale>1.0</fScale>
@@ -1582,7 +1582,7 @@
 			<Button>art/Goods/goodomegaacids.dds</Button>
 			<FontButtonIndex>180</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Organic Computers -->
+		<!-- Organic Computers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ORGANIC_COMPUTERS</Type>
 			<fScale>1.0</fScale>
@@ -1592,7 +1592,7 @@
 			<Button>art/Goods/goodorganiccomputers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Organic Photonic Cells -->
+		<!-- Organic Photonic Cells -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ORGANIC_PHOTONIC_CELLS</Type>
 			<fScale>1.0</fScale>
@@ -1602,7 +1602,7 @@
 			<Button>art/Goods/goodorganicphotoniccells.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Paper -->
+		<!-- Paper -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PAPER</Type>
 			<fScale>1.0</fScale>
@@ -1612,7 +1612,7 @@
 			<Button>art/Goods/goodpaper.dds</Button>
 			<FontButtonIndex>149</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Parts -->
+		<!-- Parts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PARTS</Type>
 			<fScale>1.0</fScale>
@@ -1622,7 +1622,7 @@
 			<Button>art/Goods/goodparts.dds</Button>
 			<FontButtonIndex>222</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pasta -->
+		<!-- Pasta -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PASTA</Type>
 			<fScale>1.0</fScale>
@@ -1632,7 +1632,7 @@
 			<Button>art/Goods/goodpasta.dds</Button>
 			<FontButtonIndex>153</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Peat -->
+		<!-- Peat -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PEAT</Type>
 			<fScale>1.0</fScale>
@@ -1642,7 +1642,7 @@
 			<Button>art/Goods/goodpeat.dds</Button>
 			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pelts -->
+		<!-- Pelts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PELTS</Type>
 			<fScale>1.0</fScale>
@@ -1652,7 +1652,7 @@
 			<Button>art/Goods/goodpelt.dds</Button>
 			<FontButtonIndex>148</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pencils -->
+		<!-- Pencils -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PENCILS</Type>
 			<fScale>1.0</fScale>
@@ -1662,7 +1662,7 @@
 			<Button>art/Goods/goodpencils.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Percussion Instruments -->
+		<!-- Percussion Instruments -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PERCUSSION_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
@@ -1672,7 +1672,7 @@
 			<Button>art/Goods/goodpercussion.dds</Button>
 			<FontButtonIndex>162</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Perfume -->
+		<!-- Perfume -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PERFUME</Type>
 			<fScale>1.0</fScale>
@@ -1682,7 +1682,7 @@
 			<Button>art/Goods/goodperfume.dds</Button>
 			<FontButtonIndex>164</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Personal Electronics -->
+		<!-- Personal Electronics -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PERSONAL_ELECTRONICS</Type>
 			<fScale>1.0</fScale>
@@ -1692,7 +1692,7 @@
 			<Button>art/Goods/goodpersonalelectronics.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Replicators -->
+		<!-- Replicators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_REPLICATORS</Type>
 			<fScale>1.0</fScale>
@@ -1702,7 +1702,7 @@
 			<Button>art/Goods/goodreplicators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pharmaceuticals -->
+		<!-- Pharmaceuticals -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PHARMACEUTICALS</Type>
 			<fScale>1.0</fScale>
@@ -1712,7 +1712,7 @@
 			<Button>art/Goods/goodpharmaceuticals.dds</Button>
 			<FontButtonIndex>179</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Phonographs -->
+		<!-- Phonographs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PHONOGRAPHS</Type>
 			<fScale>1.0</fScale>
@@ -1722,7 +1722,7 @@
 			<Button>art/Goods/goodphonograph.dds</Button>
 			<FontButtonIndex>161</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Plasma Generators -->
+		<!-- Plasma Generators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PLASMA_GENERATORS</Type>
 			<fScale>1.0</fScale>
@@ -1732,7 +1732,7 @@
 			<Button>art/Goods/goodplasmagenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Plastic -->
+		<!-- Plastic -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PLASTIC</Type>
 			<fScale>1.0</fScale>
@@ -1742,7 +1742,7 @@
 			<Button>art/Goods/goodplastic.dds</Button>
 			<FontButtonIndex>160</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Poison -->
+		<!-- Poison -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POISON</Type>
 			<fScale>1.0</fScale>
@@ -1752,7 +1752,7 @@
 			<Button>art/Goods/goodpoison.dds</Button>
 			<FontButtonIndex>52</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Potash -->
+		<!-- Potash -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POTASH</Type>
 			<fScale>1.0</fScale>
@@ -1762,7 +1762,7 @@
 			<Button>art/Goods/goodpotash.dds</Button>
 			<FontButtonIndex>195</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Potato Chips -->
+		<!-- Potato Chips -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POTATO_CHIPS</Type>
 			<fScale>1.0</fScale>
@@ -1772,7 +1772,7 @@
 			<Button>art/Goods/goodpotatochips.dds</Button>
 			<FontButtonIndex>158</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pottery -->
+		<!-- Pottery -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POTTERY</Type>
 			<fScale>1.0</fScale>
@@ -1782,7 +1782,7 @@
 			<Button>art/Goods/goodpottery.dds</Button>
 			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Power Tools -->
+		<!-- Power Tools -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POWER_TOOLS</Type>
 			<fScale>1.0</fScale>
@@ -1792,7 +1792,7 @@
 			<Button>art/Goods/goodpowertools.dds</Button>
 			<FontButtonIndex>121</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pumice Stone -->
+		<!-- Pumice Stone -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PUMICE_STONE</Type>
 			<fScale>1.0</fScale>
@@ -1802,7 +1802,7 @@
 			<Button>art/Goods/goodpumicestone.dds</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pyrite -->
+		<!-- Pyrite -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PYRITE</Type>
 			<fScale>1.0</fScale>
@@ -1812,7 +1812,7 @@
 			<Button>art/Goods/goodpyrite.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Radios -->
+		<!-- Radios -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RADIOS</Type>
 			<fScale>1.0</fScale>
@@ -1822,7 +1822,7 @@
 			<Button>art/Goods/goodradios.dds</Button>
 			<FontButtonIndex>163</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Raw Fish -->
+		<!-- Raw Fish -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RAW_FISH</Type>
 			<fScale>1.0</fScale>
@@ -1832,7 +1832,7 @@
 			<Button>art/Goods/goodfish.dds</Button>
 			<FontButtonIndex>15</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Raw Meat -->
+		<!-- Raw Meat -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RAW_MEAT</Type>
 			<fScale>1.0</fScale>
@@ -1842,7 +1842,7 @@
 			<Button>art/Goods/goodrawmeat.dds</Button>
 			<FontButtonIndex>127</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Reeds -->
+		<!-- Reeds -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_REEDS</Type>
 			<fScale>1.0</fScale>
@@ -1852,7 +1852,7 @@
 			<Button>art/Goods/goodreeds.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Refrigerators -->
+		<!-- Refrigerators -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_REFRIGERATORS</Type>
 			<fScale>1.0</fScale>
@@ -1862,7 +1862,7 @@
 			<Button>art/Goods/goodrefrigerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Replacement Organs -->
+		<!-- Replacement Organs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_REPLACEMENT_ORGANS</Type>
 			<fScale>1.0</fScale>
@@ -1872,7 +1872,7 @@
 			<Button>art/Goods/goodreplacementorgans.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Roasted Coffee -->
+		<!-- Roasted Coffee -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ROASTED_COFFEE</Type>
 			<fScale>1.0</fScale>
@@ -1882,7 +1882,7 @@
 			<Button>art/Goods/goodroastedcoffee.dds</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Rocket Fuel -->
+		<!-- Rocket Fuel -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ROCKET_FUEL</Type>
 			<fScale>1.0</fScale>
@@ -1892,7 +1892,7 @@
 			<Button>art/Goods/goodrocketfuel.dds</Button>
 			<FontButtonIndex>79</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Rope -->
+		<!-- Rope -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ROPE</Type>
 			<fScale>1.0</fScale>
@@ -1902,7 +1902,7 @@
 			<Button>art/Goods/goodrope.dds</Button>
 			<FontButtonIndex>186</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Saddles -->
+		<!-- Saddles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SADDLES</Type>
 			<fScale>1.0</fScale>
@@ -1912,7 +1912,7 @@
 			<Button>art/Goods/goodsaddles.dds</Button>
 			<FontButtonIndex>207</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Sails -->
+		<!-- Sails -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SAILS</Type>
 			<fScale>1.0</fScale>
@@ -1922,7 +1922,7 @@
 			<Button>art/Goods/goodsails.dds</Button>
 			<FontButtonIndex>165</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Sand -->
+		<!-- Sand -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SAND</Type>
 			<fScale>1.0</fScale>
@@ -1932,7 +1932,7 @@
 			<Button>art/Goods/goodsand.dds</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Sausage -->
+		<!-- Sausage -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SAUSAGE</Type>
 			<fScale>1.0</fScale>
@@ -1942,7 +1942,7 @@
 			<Button>art/Goods/goodsausage.dds</Button>
 			<FontButtonIndex>202</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Scrolls -->
+		<!-- Scrolls -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SCROLLS</Type>
 			<fScale>1.0</fScale>
@@ -1952,7 +1952,7 @@
 			<Button>art/Goods/goodscrolls.dds</Button>
 			<FontButtonIndex>208</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Nok Sculptures -->
+		<!-- Nok Sculptures -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_NOK_SCULPTURES</Type>
 			<fScale>1.0</fScale>
@@ -1962,7 +1962,7 @@
 			<Button>art/Goods/goodsculpturenok.dds</Button>
 			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Sculptures -->
+		<!-- Sculptures -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SCULPTURES</Type>
 			<fScale>1.0</fScale>
@@ -1972,7 +1972,7 @@
 			<Button>art/Goods/goodsculptures.dds</Button>
 			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Seasoning -->
+		<!-- Seasoning -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SEASONING</Type>
 			<fScale>1.0</fScale>
@@ -1982,7 +1982,7 @@
 			<Button>art/Goods/goodspices.dds</Button>
 			<FontButtonIndex>28</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Microchips -->
+		<!-- Microchips -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MICROCHIPS</Type>
 			<fScale>1.0</fScale>
@@ -1992,7 +1992,7 @@
 			<Button>art/Goods/goodmicrochips.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Service Bots -->
+		<!-- Service Bots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SERVICE_BOTS</Type>
 			<fScale>1.0</fScale>
@@ -2002,7 +2002,7 @@
 			<Button>art/Goods/goodservicebots.dds</Button>
 			<FontButtonIndex>65</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Shellfish -->
+		<!-- Shellfish -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SHELLFISH</Type>
 			<fScale>1.0</fScale>
@@ -2012,7 +2012,7 @@
 			<Button>art/Goods/goodshellfish.dds</Button>
 			<FontButtonIndex>10</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Shockwave Engines -->
+		<!-- Shockwave Engines -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SHOCKWAVE_ENGINES</Type>
 			<fScale>1.0</fScale>
@@ -2022,7 +2022,7 @@
 			<Button>art/Goods/goodshockwaveengines.dds</Button>
 			<FontButtonIndex>182</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Shoes -->
+		<!-- Shoes -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SHOES</Type>
 			<fScale>1.0</fScale>
@@ -2032,7 +2032,7 @@
 			<Button>art/Goods/goodshoes.dds</Button>
 			<FontButtonIndex>183</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Silk Fibers -->
+		<!-- Silk Fibers -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SILK_FIBERS</Type>
 			<fScale>1.0</fScale>
@@ -2042,7 +2042,7 @@
 			<Button>art/Goods/goodsilkfibers.dds</Button>
 			<FontButtonIndex>26</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Skis -->
+		<!-- Skis -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SKIS</Type>
 			<fScale>1.0</fScale>
@@ -2052,7 +2052,7 @@
 			<Button>art/Goods/goodskis.dds</Button>
 			<FontButtonIndex>76</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Smart Medicine -->
+		<!-- Smart Medicine -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SMART_MEDICINE</Type>
 			<fScale>1.0</fScale>
@@ -2062,7 +2062,7 @@
 			<Button>art/Goods/goodsmartmedicine.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Soap -->
+		<!-- Soap -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SOAP</Type>
 			<fScale>1.0</fScale>
@@ -2072,7 +2072,7 @@
 			<Button>art/Goods/goodsoap.dds</Button>
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Soda Pop -->
+		<!-- Soda Pop -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SODA_POP</Type>
 			<fScale>1.0</fScale>
@@ -2082,7 +2082,7 @@
 			<Button>art/Goods/goodsodapop.dds</Button>
 			<FontButtonIndex>159</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Soylent Green -->
+		<!-- Soylent Green -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SOYLENT_GREEN</Type>
 			<fScale>1.0</fScale>
@@ -2092,7 +2092,7 @@
 			<Button>art/Goods/goodsoylentgreen.dds</Button>
 			<FontButtonIndex>154</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Sponges -->
+		<!-- Sponges -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SPONGES</Type>
 			<fScale>1.0</fScale>
@@ -2102,7 +2102,7 @@
 			<Button>art/Goods/goodsponges.dds</Button>
 			<FontButtonIndex>152</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Steel Ingots -->
+		<!-- Steel Ingots -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STEEL_INGOTS</Type>
 			<fScale>1.0</fScale>
@@ -2112,7 +2112,7 @@
 			<Button>art/Goods/goodingotsteel.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Stim Packs -->
+		<!-- Stim Packs -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STIM_PACKS</Type>
 			<fScale>1.0</fScale>
@@ -2122,7 +2122,7 @@
 			<Button>art/Goods/goodstimpacks.dds</Button>
 			<FontButtonIndex>210</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Stone Tools -->
+		<!-- Stone Tools -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STONE_TOOLS</Type>
 			<fScale>1.0</fScale>
@@ -2132,7 +2132,7 @@
 			<Button>art/Goods/goodstonetools.dds</Button>
 			<FontButtonIndex>91</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Straw -->
+		<!-- Straw -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STRAW</Type>
 			<fScale>1.0</fScale>
@@ -2142,7 +2142,7 @@
 			<Button>art/Goods/goodstraw.dds</Button>
 			<FontButtonIndex>11</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- String Instruments -->
+		<!-- String Instruments -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STRING_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
@@ -2152,7 +2152,7 @@
 			<Button>art/Goods/goodstrings.dds</Button>
 			<FontButtonIndex>172</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Synthetic Rubber -->
+		<!-- Synthetic Rubber -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SYNTHETIC_RUBBER</Type>
 			<fScale>1.0</fScale>
@@ -2163,7 +2163,7 @@
 			<Button>art/Goods/goodsyntheticrubber.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tablets -->
+		<!-- Tablets -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TABLETS</Type>
 			<fScale>1.0</fScale>
@@ -2173,7 +2173,7 @@
 			<Button>art/Goods/goodtablets.dds</Button>
 			<FontButtonIndex>198</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tanks -->
+		<!-- Tanks -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TANKS</Type>
 			<fScale>1.0</fScale>
@@ -2183,7 +2183,7 @@
 			<Button>art/Goods/goodtanks.dds</Button>
 			<FontButtonIndex>154</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tannin -->
+		<!-- Tannin -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TANNIN</Type>
 			<fScale>1.0</fScale>
@@ -2193,7 +2193,7 @@
 			<Button>art/Goods/goodstannin.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tapestries -->
+		<!-- Tapestries -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TAPESTRIES</Type>
 			<fScale>1.0</fScale>
@@ -2203,7 +2203,7 @@
 			<Button>art/Goods/goodtapestries.dds</Button>
 			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tar -->
+		<!-- Tar -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TAR</Type>
 			<fScale>1.0</fScale>
@@ -2213,7 +2213,7 @@
 			<Button>art/Goods/goodtar.dds</Button>
 			<FontButtonIndex>203</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Televisions -->
+		<!-- Televisions -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TELEVISIONS</Type>
 			<fScale>1.0</fScale>
@@ -2223,7 +2223,7 @@
 			<Button>art/Goods/goodtelevisions.dds</Button>
 			<FontButtonIndex>146</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Theremin -->
+		<!-- Theremin -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_THEREMIN</Type>
 			<fScale>1.0</fScale>
@@ -2233,7 +2233,7 @@
 			<Button>art/Goods/goodtheremin.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tires -->
+		<!-- Tires -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TIRES</Type>
 			<fScale>1.0</fScale>
@@ -2243,7 +2243,7 @@
 			<Button>art/Goods/goodtires.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tools -->
+		<!-- Tools -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TOOLS</Type>
 			<fScale>1.0</fScale>
@@ -2253,7 +2253,7 @@
 			<Button>art/Goods/goodstonetools.dds</Button>
 			<FontButtonIndex>91</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Toys -->
+		<!-- Toys -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TOYS</Type>
 			<fScale>1.0</fScale>
@@ -2263,7 +2263,7 @@
 			<Button>art/Goods/goodtoys.dds</Button>
 			<FontButtonIndex>215</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Transistors -->
+		<!-- Transistors -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TRANSISTORS</Type>
 			<fScale>1.0</fScale>
@@ -2273,7 +2273,7 @@
 			<Button>art/Goods/goodtransistors.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tungsten Ore -->
+		<!-- Tungsten Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TUNGSTEN</Type>
 			<fScale>1.0</fScale>
@@ -2283,7 +2283,7 @@
 			<Button>art/Goods/goodtungsten.dds</Button>
 			<FontButtonIndex>55</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Typewriters -->
+		<!-- Typewriters -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TYPEWRITERS</Type>
 			<fScale>1.0</fScale>
@@ -2293,7 +2293,7 @@
 			<Button>art/Goods/goodtypewriter.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Unmanned Aircrafts -->
+		<!-- Unmanned Aircrafts -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_UNMANNED_AIRCRAFTS</Type>
 			<fScale>1.0</fScale>
@@ -2303,7 +2303,7 @@
 			<Button>art/Goods/goodunmannedaircrafts.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vacuum cleaners -->
+		<!-- Vacuum cleaners -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VACUUM_CLEANERS</Type>
 			<fScale>1.0</fScale>
@@ -2313,7 +2313,7 @@
 			<Button>art/Goods/goodvacuum.dds</Button>
 			<FontButtonIndex>209</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vegetables -->
+		<!-- Vegetables -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VEGETABLES</Type>
 			<fScale>1.0</fScale>
@@ -2323,7 +2323,7 @@
 			<Button>art/Goods/goodvegetables.dds</Button>
 			<FontButtonIndex>128</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Video Games -->
+		<!-- Video Games -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VIDEO_GAMES</Type>
 			<fScale>1.0</fScale>
@@ -2333,7 +2333,7 @@
 			<Button>art/Goods/goodvideogames.dds</Button>
 			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vines -->
+		<!-- Vines -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VINES</Type>
 			<fScale>1.0</fScale>
@@ -2343,7 +2343,7 @@
 			<Button>art/Goods/goodvines.dds</Button>
 			<FontButtonIndex>35</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vulcanized Rubber -->
+		<!-- Vulcanized Rubber -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VULCANIZED_RUBBER</Type>
 			<fScale>1.0</fScale>
@@ -2354,7 +2354,7 @@
 			<Button>art/Goods/goodvulcanizedrubber.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Aluminum Wares -->
+		<!-- Aluminum Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ALUMINUM_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2364,7 +2364,7 @@
 			<Button>art/Goods/goodwarealuminum.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Brass Wares -->
+		<!-- Brass Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BRASS_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2374,7 +2374,7 @@
 			<Button>art/Goods/goodwarebrass.dds</Button>
 			<FontButtonIndex>66</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Bronze Wares -->
+		<!-- Bronze Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BRONZE_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2384,7 +2384,7 @@
 			<Button>art/Goods/goodwarebronze.dds</Button>
 			<FontButtonIndex>73</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Copper Wares -->
+		<!-- Copper Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COPPER_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2394,7 +2394,7 @@
 			<Button>art/Goods/goodwarecopper.dds</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Electrum Wares -->
+		<!-- Electrum Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ELECTRUM_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2404,7 +2404,7 @@
 			<Button>art/Goods/goodwareelectrum.dds</Button>
 			<FontButtonIndex>167</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Gold Wares -->
+		<!-- Gold Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GOLD_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2414,7 +2414,7 @@
 			<Button>art/Goods/goodwaregold.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Iron Wares -->
+		<!-- Iron Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_IRON_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2424,7 +2424,7 @@
 			<Button>art/Goods/goodwareiron.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Lead Wares -->
+		<!-- Lead Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEAD_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2434,7 +2434,7 @@
 			<Button>art/Goods/goodwarelead.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Platinum Wares -->
+		<!-- Platinum Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PLATINUM_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2444,7 +2444,7 @@
 			<Button>art/Goods/goodwareplatinum.dds</Button>
 			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Silver Wares -->
+		<!-- Silver Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SILVER_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2454,7 +2454,7 @@
 			<Button>art/Goods/goodwaresilver.dds</Button>
 			<FontButtonIndex>160</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Steel Wares -->
+		<!-- Steel Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STEEL_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2464,7 +2464,7 @@
 			<Button>art/Goods/goodwaresteel.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Tin Wares -->
+		<!-- Tin Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TIN_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2474,7 +2474,7 @@
 			<Button>art/Goods/goodwaretin.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Titanium Wares -->
+		<!-- Titanium Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TITANIUM_WARES</Type>
 			<fScale>1.0</fScale>
@@ -2484,7 +2484,7 @@
 			<Button>art/Goods/goodwaretitanium.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Liquid Metal Wares -->
+		<!-- Liquid Metal Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LIQUID_METAL</Type>
 			<fScale>1.0</fScale>
@@ -2494,7 +2494,7 @@
 			<Button>art/Goods/goodliquidmetalwares.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Megastrong Alloy Wares -->
+		<!-- Megastrong Alloy Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MEGASTRONG_ALLOYS</Type>
 			<fScale>1.0</fScale>
@@ -2504,7 +2504,7 @@
 			<Button>art/Goods/goodwaresmegastrongalloy.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Metamaterial Wares -->
+		<!-- Metamaterial Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_METAMATERIALS</Type>
 			<fScale>1.0</fScale>
@@ -2514,7 +2514,7 @@
 			<Button>art/Goods/goodmetamaterials.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Porcelain Wares -->
+		<!-- Porcelain Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PORCELAIN</Type>
 			<fScale>1.0</fScale>
@@ -2524,7 +2524,7 @@
 			<Button>art/Goods/goodporcelain.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Superstrong Alloy Wares -->
+		<!-- Superstrong Alloy Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SUPERSTRONG_ALLOYS</Type>
 			<fScale>1.0</fScale>
@@ -2534,7 +2534,7 @@
 			<Button>art/Goods/goodsuperstrongalloywares.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Terracotta Wares -->
+		<!-- Terracotta Wares -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TERRACOTTA</Type>
 			<fScale>1.0</fScale>
@@ -2554,7 +2554,7 @@
 			<Button>art/Goods/goodultrafuel.dds</Button>
 			<FontButtonIndex>173</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Washer Dryer -->
+		<!-- Washer Dryer -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WASHER_DRYER</Type>
 			<fScale>1.0</fScale>
@@ -2564,7 +2564,7 @@
 			<Button>art/Goods/goodwasherdryer.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Water Bottles -->
+		<!-- Water Bottles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WATER_BOTTLES</Type>
 			<fScale>1.0</fScale>
@@ -2574,7 +2574,7 @@
 			<Button>art/Goods/goodwaterbottle.dds</Button>
 			<FontButtonIndex>218</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Wax -->
+		<!-- Wax -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WAX</Type>
 			<fScale>1.0</fScale>
@@ -2584,7 +2584,7 @@
 			<Button>art/Goods/goodwax.dds</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Whale Oil -->
+		<!-- Whale Oil -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WHALE_OIL</Type>
 			<fScale>1.0</fScale>
@@ -2594,7 +2594,7 @@
 			<Button>art/Goods/goodwhaleoil.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Wood -->
+		<!-- Wood -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WOOD</Type>
 			<fScale>1.0</fScale>
@@ -2604,7 +2604,7 @@
 			<Button>art/Goods/goodwood.dds</Button>
 			<FontButtonIndex>72</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Woodwind Instruments -->
+		<!-- Woodwind Instruments -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WOODWIND_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
@@ -2614,7 +2614,7 @@
 			<Button>art/Goods/goodwoodwinds.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Wool -->
+		<!-- Wool -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_WOOL</Type>
 			<fScale>1.0</fScale>
@@ -2625,7 +2625,7 @@
 			<Button>art/Goods/goodwool.dds</Button>
 			<FontButtonIndex>101</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Zinc Ore -->
+		<!-- Zinc Ore -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ZINC_ORE</Type>
 			<fScale>1.0</fScale>
@@ -2635,8 +2635,8 @@
 			<Button>art/Goods/goodzinc.dds</Button>
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Unsorted -->
-	<!-- Hieracosphinx -->
+		<!-- Unsorted -->
+		<!-- Hieracosphinx -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HIERACOSPHINX</Type>
 			<fScale>1.0</fScale>
@@ -2646,7 +2646,7 @@
 			<Button>art/Interface/Buttons/Bonus/Hieracosphinx.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Qilin -->
+		<!-- Qilin -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_QILIN</Type>
 			<fScale>1.0</fScale>
@@ -2656,7 +2656,7 @@
 			<Button>art/Interface/Buttons/Bonus/Qilin.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Pegasus -->
+		<!-- Pegasus -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PEGASUS</Type>
 			<fScale>1.0</fScale>
@@ -2666,7 +2666,7 @@
 			<Button>art/Interface/Buttons/Bonus/Pegasus.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Phoenix -->
+		<!-- Phoenix -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PHOENIX</Type>
 			<fScale>1.0</fScale>
@@ -2676,7 +2676,7 @@
 			<Button>art/Interface/Buttons/Bonus/Phoenix.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Jackalope -->
+		<!-- Jackalope -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_JACKALOPE</Type>
 			<fScale>1.0</fScale>
@@ -2686,7 +2686,7 @@
 			<Button>art/Interface/Buttons/Bonus/Jackalope.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Quetzalcoatl -->
+		<!-- Quetzalcoatl -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_QUETZALCOATL</Type>
 			<fScale>1.0</fScale>
@@ -2696,7 +2696,7 @@
 			<Button>art/Interface/Buttons/Bonus/Quetzalcoatl.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Rainbow Serpent -->
+		<!-- Rainbow Serpent -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RAINBOW_SERPENT</Type>
 			<fScale>1.0</fScale>

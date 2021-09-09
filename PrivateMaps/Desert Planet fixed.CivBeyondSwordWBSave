@@ -11,6 +11,7 @@ BeginMap
 	world size=WORLDSIZE_TINY
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
+	Randomize Resources=1
 EndMap
 BeginPlayer
 	LeaderType=LEADER_SITTING_BULL

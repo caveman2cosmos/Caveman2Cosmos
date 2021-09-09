@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Progtern (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Bonus Class -->
+<Civ4BonusClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
+	<BonusClassInfos>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_EXTINCTION</Type>
+			<iUniqueRange>1</iUniqueRange>
+		</BonusClassInfo>
+	</BonusClassInfos>
+</Civ4BonusClassInfos>

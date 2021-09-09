@@ -53,15 +53,15 @@
 			<Type>MAPCATEGORY_GALACTIC</Type>
 			<Description>TXT_KEY_MAPCATEGORY_GALACTIC</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_MILKY_WAY</Type>
 			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_UNIVERSAL</Type>
 			<Description>TXT_KEY_MAPCATEGORY_UNIVERSAL</Description>
 		</MapCategoryInfo>
-        <MapCategoryInfo>
+		<MapCategoryInfo>
 			<Type>MAPCATEGORY_DISTANT</Type>
 			<Description>TXT_KEY_MAPCATEGORY_DISTANT</Description>
 		</MapCategoryInfo>

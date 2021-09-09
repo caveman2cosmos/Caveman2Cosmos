@@ -6,7 +6,7 @@
 //  FILE:    CvInfosWater.h
 //
 //  AUTHOR:	tomw
-//					
+//
 //
 //  PURPOSE: All Civ4 info classes and the base class for them
 //
@@ -25,7 +25,7 @@ class CvXMLLoadUtility;
 //
 //  class : CvWaterPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvWaterPlaneInfo : public CvInfoBase
@@ -48,15 +48,7 @@ public:
 	DllExport const TCHAR *getTransitionTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo);
 
 protected:
 
@@ -78,7 +70,7 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvTerrainPlaneInfo : public CvInfoBase
@@ -102,15 +94,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo);
 
 protected:
 
@@ -134,7 +118,7 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvCameraOverlayInfo : public CvInfoBase
@@ -149,15 +133,7 @@ public:
 	DllExport const TCHAR * getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo);
 
 protected:
 

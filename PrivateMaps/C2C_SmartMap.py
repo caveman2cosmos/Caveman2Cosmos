@@ -33,6 +33,7 @@ from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
 import pickle
 from math import pi
+import os, _winreg
 
 ##########################################################################
 #stuff the user may want to configure
@@ -3537,7 +3538,7 @@ def getCustomMapOptionDefault(argsList):
 	index = argsList[0]
 	#this chooses the last option in every case, which i've picked out to be a good option
 	result = len(selection_names_and_values[index]) - 1
-	fileName = civFilePath() + "Sid Meier's Civilization 4smartmap90.cfg"
+	fileName = os.path.join(civFilePath(),"smartmap90.cfg")
 	try:
 		settings = open(fileName, 'r')
 		optionsWithDefault = pickle.load(settings)
@@ -3611,18 +3612,12 @@ def beforeGeneration():
 		if selection_names_and_values[i][0] != "Wrap:":
 			cachedMenuChoices[i] = 0
 
-def afterGeneration():
-	OutputMessage("Python: SmartMap: Step 6B afterGeneration Post generation cleanup")
-	checkForBadPlots()
-
 #this helper wraps the NiTextOut and also prints to the hapdebugger
 def OutputMessage(message):
 	NiTextOut(message)
 	print message
 
-import os
 import os.path
-import _winreg
 
 def regRead(registry, path, field):
 	pathKey = _winreg.OpenKey(registry, path)
@@ -3636,10 +3631,9 @@ def regRead(registry, path, field):
 
 def civFilePath():
 	try:
-		userFolder = regRead(_winreg.HKEY_CURRENT_USER,"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders","Personal")
-		civFolder = os.path.basename(regRead(_winreg.HKEY_LOCAL_MACHINE,"Software\\Firaxis Games\\Sid Meier's Civilization 4","INSTALLDIR"))
-		finalFolder =  os.path.join(os.path.join(userFolder, "My Games"), civFolder)
-		return finalFolder
+		folder = os.path.dirname(os.path.realpath(__file__))
+		folder = os.path.join(folder[:-6], "Mods\Caveman2Cosmos\UserSettings")
+		return folder
 	except:
 		return ""
 
@@ -3654,7 +3648,7 @@ def beforeStepOne():
 
 	#save users settings
 	cymap = CyMap()
-	fileName = civFilePath() + "smartmap90.cfg"
+	fileName = os.path.join(civFilePath(),"smartmap90.cfg")
 	try:
 		settings = open(fileName, 'w')
 		smoptions = []
@@ -5574,6 +5568,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 				pPlot.setFeatureType(self.featureForest, 0)
 
 def afterGeneration():
+	checkForBadPlots()
 	CvMapGeneratorUtil.placeC2CBonuses()
 
 # 9.0

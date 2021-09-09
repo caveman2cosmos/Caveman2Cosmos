@@ -1163,7 +1163,7 @@ class ClimateGenerator:
 		self.Lush = 11
 		self.Muddy = 12
 		self.Marsh = 13
-		
+
 		self.terrains[self.Desert] = gc.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrains[self.SaltFlats] = gc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 		self.terrains[self.Dunes] = gc.getInfoTypeForString("TERRAIN_DUNES")
@@ -1287,14 +1287,14 @@ class ClimateGenerator:
 		self.getTemperateTerrain(climate, latitude, moisture)
 		self.getTropicalTerrain(climate, latitude, moisture)
 		self.getEquatorialTerrain(climate, latitude, moisture)
-		
+
 		maxC = 0
 		maxCId = 0
 		for i in range(14):
 			if climate[i] > maxC:
 				maxC = climate[i]
 				maxCId = i
-		
+
 		if maxCId == self.Plains:
 			#print "Plains moisture: %f" % moisture
 			if moisture < 0.5:
@@ -1321,8 +1321,8 @@ class ClimateGenerator:
 					maxCId = self.Dunes
 				elif roll > 5:
 					maxCId = self.Scrub
-				
-				
+
+
 		return self.terrains[maxCId]
 
 	def blowWinds(self):
@@ -2067,7 +2067,7 @@ def findStartingPlot(argsList):
 	allOnBest = userInputLandmass == 7 # "Terra"
 	isolatedStarts = userInputLandmass == 4 # "Islands"
 
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = MAP.areas()
 	areaValue = {}
 	for area in areas:
 		if area.isWater(): continue

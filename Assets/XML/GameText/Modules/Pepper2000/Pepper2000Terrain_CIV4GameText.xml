@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BLUE_DWARF</Tag>
+		<English>Blue Dwarf</English>
+		<French>Naine Bleue</French>
+		<Russian>Ãîëóáîé êàðëèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BLUE_DWARF_PEDIA</Tag>
+		<English>A blue dwarf star</English>
+		<French>Une étoile naine bleue</French>
+		<Russian>Êàðëèêîâàÿ ãîëóáàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BLUE_SUPERGIANT</Tag>
+		<English>Blue Supergiant</English>
+		<French>Supergéante Bleue</French>
+		<Russian>Ãîëóáîé ñâåðõãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BLUE_SUPERGIANT_PEDIA</Tag>
+		<English>A blue supergiant star.</English>
+		<French>Une étoile supergéante bleue.</French>
+		<Russian>Ìàññèâíàÿ ãîëóáàÿ çâåçäà-ñâåðõãèãàíò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BROWN_DWARF</Tag>
+		<English>Brown Dwarf</English>
+		<French>Naine Brune</French>
+		<Russian>Êîðè÷íåâûé êàðëèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_BROWN_DWARF_PEDIA</Tag>
+		<English>A brown dwarf</English>
+		<French>Une naine brune</French>
+		<Russian>Êàðëèêîâàÿ ïðîòîçâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_CARBON_PLANET</Tag>
+		<English>Carbon Planet</English>
+		<French>Planète Carbone</French>
+		<Russian>Óãëåðîäíàÿ ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_CARBON_PLANET_PEDIA</Tag>
+		<English>A planet with very high carbon content.</English>
+		<French>Une planète à très forte teneur en carbone.</French>
+		<Russian>Ïëàíåòà ñ î÷åíü âûñîêèì ñîäåðæàíèåì óãëåðîäà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET</Tag>
+		<English>Chthonian Planet</English>
+		<French>Planète Chthonien</French>
+		<Russian>Õòîíè÷åñêàÿ ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET_PEDIA</Tag>
+		<English>A chthonian planet</English>
+		<French>Une planète chthonienne</French>
+		<Russian>Êîðîòêîïåðèîäè÷åñêàÿ ïëàíåòà-ãèãàíò. Èç-çà ýêñòðåìàëüíî âûñîêèõ òåìïåðàòóð îíà íåïðåðûâíî òåðÿåò àòìîñôåðó, ïîñòåïåííî ïðåâðàùàÿñü îáû÷íóþ êàìåíèñòóþ ïëàíåòó.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DESERT_PLANET</Tag>
+		<English>Desert Planet</English>
+		<French>Planète Désert</French>
+		<Russian>Ïóñòûííàÿ ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DESERT_PLANET_PEDIA</Tag>
+		<English>A rocky planet almost entirely devoid of water.</English>
+		<French>Une planète rocheuse presque entièrement dépourvue d'eau.</French>
+		<Russian>Êàìåíèñòàÿ ïëàíåòà ïî÷òè ïîëíîñòüþ ëèøåííàÿ âîäû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY</Tag>
+		<English>Dwarf Galaxy</English>
+		<French>Galaxie Naine</French>
+		<Russian>Êàðëèêîâàÿ ãàëàêòèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY_PEDIA</Tag>
+		<English>A dwarf galaxy</English>
+		<French>Une galaxie naine</French>
+		<Russian>Êàðëèêîâàÿ ãàëàêòèêà. ×àñòî ÿâëÿåòñÿ ñïóòíèêîì áîëåå êðóïíûõ ãàëàêòèê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_GALAXY</Tag>
+		<English>Galaxy</English>
+		<French>Galaxie</French>
+		<Russian>Ãàëàêòèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_GALAXY_PEDIA</Tag>
+		<English>A galaxy outside of the Milky Way.</English>
+		<French>Une galaxie en dehors de la Voie Lactée.</French>
+		<Russian>Ãàëàêòèêà çà ïðåäåëàìè Ìëå÷íîãî ïóòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_HOT_JUPITER</Tag>
+		<English>Hot Jupiter</English>
+		<French>Jupiter Chaude</French>
+		<Russian>Ãîðÿ÷èé Þïèòåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_HOT_JUPITER_PEDIA</Tag>
+		<English>A Hot Jupiter.</English>
+		<French>Une Jupiter Chaude.</French>
+		<Russian>Ãàçîâûé ãèãàíò ñ âûñîêèìè òåìïåðàòóðàìè â âåðõíèõ ñëîÿõ àòìîñôåðû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_MINI_NEPTUNE</Tag>
+		<English>Mini Neptune</English>
+		<French>Mini Neptune</French>
+		<Russian>Ìèíè-Íåïòóí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_MINI_NEPTUNE_PEDIA</Tag>
+		<English>A mini-Neptune.</English>
+		<French>Une mini-Neptune.</French>
+		<Russian>Ìèíè-Íåïòóí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET</Tag>
+		<English>Ocean Planet</English>
+		<French>Planète Océan</French>
+		<Russian>Ïëàíåòà-Îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Tag>
+		<English>A rocky planet whose surface is covered entirely by ocean.</English>
+		<French>Une planète rocheuse dont la surface est entièrement recouverte par l'océan.</French>
+		<Russian>Ñêàëèñòàÿ ïëàíåòà, ïîâåðõíîñòü êîòîðîé ïîëíîñòüþ ïîêðûòà îêåàíîì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_OORT_CLOUD</Tag>
+		<English>Oort Cloud</English>
+		<French>Nuage d'Oort</French>
+		<Russian>Îáëàêî Îîðòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_OORT_CLOUD_PEDIA</Tag>
+		<English>The Oort Cloud, which is a collection of very distant satellites from the Sun.</English>
+		<French>Le Nuage d'Oort, qui est une collection de satellites très éloignés du Soleil.</French>
+		<Russian>Îáëàêî Îîðòà, êîòîðîå ïðåäñòàâëÿåò ñîáîé ñêîïëåíèå, ïîÿñ î÷åíü äàëåêèõ ñïóòíèêîâ îò Ñîëíöà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_PLANETARY_RING</Tag>
+		<English>Planetary Ring</English>
+		<French>Anneau Planétaire</French>
+		<Russian>Ïëàíåòàðíîå êîëüöî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_PLANETARY_RING_PEDIA</Tag>
+		<English>Planetary Rings, such as those of Saturn.</English>
+		<French>Anneau Planétaire, comme ceux de Saturne.</French>
+		<Russian>Êîëüöî ëåäÿíûõ è êàìåííûõ îáëîìêîâ íà îðáèòå ïëàíåòû, êàê ó Ñàòóðíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_QUASAR</Tag>
+		<English>Quasar</English>
+		<French>Quasar</French>
+		<Russian>Êâàçàð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_QUASAR_PEDIA</Tag>
+		<English>A quasar</English>
+		<French>Un quasar</French>
+		<Russian>Êâàçàðû ïðåäñòàâëÿþò ñîáîé àêòèâíûå ÿäðà ãàëàêòèê íà íà÷àëüíîì ýòàïå ðàçâèòèÿ, â êîòîðûõ ñâåðõìàññèâíàÿ ÷¸ðíàÿ äûðà ïîãëîùàåò îêðóæàþùåå âåùåñòâî, ôîðìèðóÿ âîêðóã ñåáÿ àêêðåöèîííûé äèñê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ROGUE_PLANET</Tag>
+		<English>Rogue Planet</English>
+		<French>Objet libre de masse planétaire</French>
+		<Russian>Áëóæäàþùàÿ ïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ROGUE_PLANET_PEDIA</Tag>
+		<English>A planet that is not in orbit around a star</English>
+		<French>Une planète qui n'est pas en orbite autour d'une étoile</French>
+		<Russian>Ïëàíåòà, êîòîðàÿ íå íàõîäèòñÿ íà îðáèòå âîêðóã êàêîé-ëèáî çâåçäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SEDNOID</Tag>
+		<English>Sednoid</English>
+		<French>Sednoïde</French>
+		<Russian>Ñåäíîèä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SEDNOID_PEDIA</Tag>
+		<English>Sednoid object, such as 90377 Sedna.</English>
+		<French>Objet Sednoïde, tel que 90377 Sedna.</French>
+		<Russian>Ñåäíîèäíûé îáúåêò, íàïîäîáèå 90377 Ñåäíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SMALL_MOON</Tag>
+		<English>Small Moon</English>
+		<French>Petite Lune</French>
+		<Russian>Ìàëàÿ ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SMALL_MOON_PEDIA</Tag>
+		<English>That's no space station. It's a moon! Specifically, it is a small moon, such as the smaller moons of Jupiter or Saturn.</English>
+		<French>Ce n'est pas une station spatiale. C'est une lune ! Plus précisément, c'est une petite lune, comme les petites lunes de Jupiter ou de Saturne.</French>
+		<Russian>Ýòî íå êîñìè÷åñêàÿ ñòàíöèÿ. Ýòî ëóíà! Â ÷àñòíîñòè, ýòî ìàëàÿ ëóíà, íàïîäîáèå íåáîëüøèõ åñòåñòåííûõ ñïóòíèêîâ Þïèòåðà èëè Ñàòóðíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE</Tag>
+		<English>Supermassive Black Hole</English>
+		<French>Trou Noir Supermassif</French>
+		<Russian>Ñâåðõìàññèâíàÿ ÷åðíàÿ äûðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE_PEDIA</Tag>
+		<English>A supermassive black hole, such as at the core of the Milky Way.</English>
+		<French>Un trou noir supermassif, comme au cœur de la Voie Lactée.</French>
+		<Russian>Ñâåðõìàññèâíàÿ ÷åðíàÿ äûðà, òàêàÿ êàê ÿäðî Ìëå÷íîãî Ïóòè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SUPER_EARTH</Tag>
+		<English>Super Earth</English>
+		<French>Super Terre</French>
+		<Russian>Ñóïåðçåìëÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_SUPER_EARTH_PEDIA</Tag>
+		<English>A rocky planet larger than Earth.</English>
+		<French>Une planète rocheuse plus grande que la Terre.</French>
+		<Russian>Êàìåíèñòàÿ ïëàíåòà, áîëåå êðóïíàÿ è ìàññèâíàÿ ïî ñðàâíåíèþ ñ Çåìëåé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_WHITE_DWARF</Tag>
+		<English>White Dwarf</English>
+		<French>Naine Blanche</French>
+		<Russian>Áåëûé êàðëèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_WHITE_DWARF_PEDIA</Tag>
+		<English>A white dwarf.</English>
+		<French>Une naine blanche.</French>
+		<Russian>Áåëûé êàðëèê, îñòûâàþùèé îñòàòîê îò ïîãèáøåé çâåçäû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ASTEROID_SURFACE</Tag>
+		<English>Asteroid Surface</English>
+		<French>Surface d'Astéroïde</French>
+		<Russian>Ïîâåðõíîñòü àñòåðîèäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ASTEROID_SURFACE_PEDIA</Tag>
+		<English>The surface of an asteroid</English>
+		<French>La surface d'asteroïde</French>
+		<Russian>Âíåøíÿÿ ãðàíèöà àñòåðîèäà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_BRANESPACE</Tag>
+		<English>Branespace</English>
+		<French>Espace de Brane</French>
+		<Russian>Áðàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_BRANESPACE_PEDIA</Tag>
+		<English>Transcend space and time completely and move to branespace.</English>
+		<French>Transcendez complètement l'espace et le temps et passez à l'espace de Brane.</French>
+		<Russian>Åñëè ïðåîäîëåòü ïðîñòðàíñòâî è âðåìÿ, òî ìîæíî ïîëíîñòüþ ïåðåéòè íà áîëåå âåðõíèå óðîâíè ïðîñòðàíñòâåííûõ èçìåðåíèé, òàêèõ êàê Áðàíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_CALLISTO</Tag>
+		<English>Callisto</English>
+		<French>Callisto</French>
+		<Russian>Çàñíåæ. ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_CALLISTO_PEDIA</Tag>
+		<English>A moon consisting of rock and ice, such as Callisto</English>
+		<French>Une lune composée de roches et de glace, comme Callisto</French>
+		<Russian>Êàìåíèñòûé ñïóòíèê ñ ïîâåðõíîñòíûìè ëåäíèêàìè, ïîäîáííûé Êàëëèñòî.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_CISLUNAR_SPACE</Tag>
+		<English>Cislunar Space</English>
+		<French>Espace Cislunaire</French>
+		<Russian>Îêîëîëóííîå ïðîñòðàíñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_CISLUNAR_SPACE_PEDIA</Tag>
+		<English>Outer space, or simply just space, is the void that exists between celestial bodies, including the Earth. It is not completely empty, but consists of a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium as well as electromagnetic radiation, magnetic fields, neutrinos, dust and cosmic rays. The baseline temperature, as set by the background radiation from the Big Bang, is 2.7 kelvin.</English>
+		<German>Als Weltraum wird der Bereich zwischen verschiedenen Himmelskörpern bezeichnet. Hier herrscht ein fast vollständiges Vakuum, das nur Gase, Staub und Elementarteilchen enthält. Da die Atmosphären von Sternen und Planeten keine feste Grenze haben, ist der Übergang zum Weltraum fließend. Viele Raumfahrtbehörden haben den Beginn des Weltraums per Definition auf 100 km Höhe über dem Meeresspiegel festgelegt.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_COSMOS</Tag>
+		<English>Distant Cosmos</English>
+		<French>Cosmos Lointain</French>
+		<Russian>Äàëüíèé êîñìîñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_COSMOS_PEDIA</Tag>
+		<English>The distant cosmos beyond the observable universe.</English>
+		<French>Le cosmos lointain au-delà de l'univers observable.</French>
+		<Russian>Äàëåêèé êîñìîñ çà ïðåäåëàìè íàáëþäàåìîé âñåëåííîé.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_FUTURE</Tag>
+		<English>Distant Future</English>
+		<French>Futur Distant</French>
+		<Russian>Äàëåêîå áóäóùåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_FUTURE_PEDIA</Tag>
+		<English>By opening a massive timehole, this plot is the universe as it will exist in the distant future.</English>
+		<French>En ouvrant un trou temporel massif, cette intrigue est l'univers tel qu'il existera dans un avenir lointain.</French>
+		<Russian>Ïðè îòêðûòèè îãðîìíîé âðåìåííîé äûðû, ïîÿâëÿåòñÿ âîçìîæíîñòü âèäåòü âñåëåííóþ, ñóùåñòâóþùóþ â äàëåêîì áóäóùåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_PAST</Tag>
+		<English>Distant Past</English>
+		<French>Passé Distant</French>
+		<Russian>Äàëåêîå ïðîøëîå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DISTANT_PAST_PEDIA</Tag>
+		<English>By opening a massive timehole, this plot is the universe as it existed hundreds of millions of years ago.</English>
+		<French>En ouvrant un énorme trou dans le temps, cette intrigue est l'univers tel qu'il existait il y a des centaines de millions d'années.</French>
+		<Russian>Ïðè îòêðûòèè îãðîìíîé âðåìåííîé äûðû, ïîÿâëÿåòñÿ âîçìîæíîñòü âèäåòü âñåëåííóþ, ñóùåñòâîâàâøóþ ñîòíè ìèëëèîíîâ ëåò íàçàä.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ENCELADUS</Tag>
+		<English>Enceladus</English>
+		<French>Encelade</French>
+		<Russian>Ãåéçåðí. ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ENCELADUS_PEDIA</Tag>
+		<English>A moon that shoots geysers, such as Enceladus</English>
+		<French>Une lune qui tire des geysers, comme Encelade</French>
+		<Russian>Ñïóòíèê ïëàíåòû ñ íåáîëüøèìè ãåéçåðàìè íà ïîâåðõíîñòè, íàïîäîáèå Ýíöåëàäà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_EUROPA</Tag>
+		<English>Europa</English>
+		<French>Europe</French>
+		<Russian>Îêåàí. ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_EUROPA_PEDIA</Tag>
+		<English>A moon with a large subsurface ocean, such as Europa</English>
+		<French>Une lune avec un grand océan souterrain, comme l'Europe</French>
+		<Russian>Ëåäÿíîé ñïóòíèê ïëàíåòû ñ ìîùíûì ñëîåì ïîäïîâåðõíîñòíîãî îêåàíà, ïîäîáíûé Åâðîïå èç ñèñòåìû Þïèòåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GALACTIC_CORE</Tag>
+		<English>Galactic Core</English>
+		<French>Coeur de la Galaxie</French>
+		<Russian>Ãàëàêòè÷åñêîå ßäðî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GALACTIC_CORE_PEDIA</Tag>
+		<English>The core of the Milky Way galaxy.</English>
+		<French>Le cœur de la galaxie Voie Lactée.</French>
+		<Russian>ßäðî ãàëàêòèêè Ìëå÷íûé ïóòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GANYMEDE</Tag>
+		<English>Ganymede</English>
+		<French>Ganymède</French>
+		<Russian>Êðóïíàÿ ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GANYMEDE_PEDIA</Tag>
+		<English>A large moon, such as Ganymede</English>
+		<French>Une grande lune, comme Ganymède</French>
+		<Russian>Êðóïíûé êàìåíèñòûé ñïóòíèê ïëàíåòû, ïîäîáíûé Ãàíèìåäó èç ñèñòåìû Þïèòåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GREEN_MARS</Tag>
+		<English>Green Mars</English>
+		<French>Mars Verte</French>
+		<Russian>Çåëåíûé Ìàðñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GREEN_MARS_PEDIA</Tag>
+		<English>A terraformed Martian panel</English>
+		<French>Un panneau martien terraformé</French>
+		<Russian>Òåððàôîðìèðîâàííàÿ ïîâåõðíîñòü Ìàðñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GREEN_MOON</Tag>
+		<English>Green Moon</English>
+		<French>Lune Verte</French>
+		<Russian>Çåëåíàÿ ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GREEN_MOON_PEDIA</Tag>
+		<English>A terraformed lunar panel</English>
+		<French>Un panneau lunaire terraformé</French>
+		<Russian>Òåððàôîðìèðîâàííàÿ ëóííàÿ ïîâåðõíîñòü </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_HYPERSPACE</Tag>
+		<English>Hyperspace</English>
+		<French>Hyperespace</French>
+		<Russian>Ãèïåðêîñìîñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_HYPERSPACE_PEDIA</Tag>
+		<English>A high dimensional manifold</English>
+		<French>Un collecteur de grande dimension</French>
+		<Russian>Ìíîãîðàçìåðíîå ìíîãîîáðàçèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INNER_SOLAR_SYSTEM</Tag>
+		<English>Inner Solar System</English>
+		<French>Intérieur du Système Solaire</French>
+		<Russian>Ïëàíåòû çåìíîé ãðóïïû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INNER_SOLAR_SYSTEM_PEDIA</Tag>
+		<English>The Inner Solar System, from the Sun to the Asteroid Belt.</English>
+		<French>L'Intérieur du Système Solaire, du Soleil à la ceinture d'astéroïdes.</French>
+		<Russian>Âíóòðåííèå ïëàíåòû Ñîëíå÷íîé ñèñòåìû, îðáèòû êîòîðûõ ðàñïîëîæåíû ìåæäó Ñîëíöåì è ïîÿñîì àñòåðîèäîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INTERGALACTIC_VOID</Tag>
+		<English>Intergalactic Void</English>
+		<French>Vide Intergalactique</French>
+		<Russian>Ìåæãàëàêòè÷åñêàÿ Ïóñòîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INTERGALACTIC_VOID_PEDIA</Tag>
+		<English>A massive void between galactic superclusters.</English>
+		<French>Un vide énorme entre les superamas galactiques.</French>
+		<Russian>Îáøèðíàÿ ïóñòîòà ìåæäó ãàëàêòè÷åñêèìè ñâåðõñêîïëåíèÿìè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_IO</Tag>
+		<English>Io</English>
+		<French>Io</French>
+		<Russian>Âóëêàíè÷. ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_IO_PEDIA</Tag>
+		<English>A volcanic moon, such as Io.</English>
+		<French>Une lune volcanique, comme Io.</French>
+		<Russian>Êàìåííûé ñïóòíèê ïëàíåòû ñ âóëêàíè÷åñêîé àêòèâíîñòüþ, ïîäîáíûé Èî èç ñèñòåìû Þïèòåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_JUPITER</Tag>
+		<English>Jupiter</English>
+		<French>Jupiter</French>
+		<Russian>Ãàçîâûé ãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_JUPITER_PEDIA</Tag>
+		<English>A gas supergiant, such as Jupiter</English>
+		<French>Une supergéante gazeuse, comme Jupiter</French>
+		<Russian>Ïëàíåòà-ãèãàíò, ïîäîáíàÿ Þïèòåðó â Ñîëíå÷íîé ñèñòåìå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_KUIPER_BELT_OBJECT</Tag>
+		<English>Kuiper Belt Object</English>
+		<French>Objet de la Ceinture de Kuiper</French>
+		<Russian>Îáúåêò ïîÿñà Êîéïåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_KUIPER_BELT_OBJECT_PEDIA</Tag>
+		<English>The surface of a Kuiper Belt Object, such as Pluto</English>
+		<French>La surface d'un Objet de la Ceinture de Kuiper, comme Pluton</French>
+		<Russian>Ïîâåðõíîñòü îáúåêòà ïîÿñà Êîéïåðà, ìàëîé ïëàíåòû èëè êîìåòû, íàïîäîáèå Ïëóòîíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LAVA_OCEAN</Tag>
+		<English>Lava Ocean</English>
+		<French>Océan de Lave</French>
+		<Russian>Îêåàí ëàâû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LAVA_OCEAN_PEDIA</Tag>
+		<English>Ocean of lava</English>
+		<French>Océan de lave</French>
+		<Russian>Ëàâîâûé îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LOCAL_GROUP</Tag>
+		<English>Local Group</English>
+		<French>Groupe Local</French>
+		<Russian>Ìåñòíàÿ ãðóïïà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LOCAL_GROUP_PEDIA</Tag>
+		<English>The Local Group of galaxies</English>
+		<French>Le Groupe Local des galaxies</French>
+		<Russian>Ìåñòíàÿ ãðóïïà ãàëàêòèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MERCURY</Tag>
+		<English>Mercury</English>
+		<French>Mercure</French>
+		<Russian>Ãîðÿ÷àÿ ýêçîïëàíåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MERCURY_PEDIA</Tag>
+		<English>A hot rocky planet, such as Mercury</English>
+		<French>Une planète rocheuse chaude, comme Mercure</French>
+		<Russian>Æàðêàÿ êàìåííàÿ ïëàíåòà, ïîäîáíàÿ Ìåðêóðèþ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_METHANE_OCEAN</Tag>
+		<English>Methane Ocean</English>
+		<French>Océan de Méthane</French>
+		<Russian>Îêåàí ìåòàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_METHANE_OCEAN_PEDIA</Tag>
+		<English>Ocean of Methane</English>
+		<French>Océan de Méthane</French>
+		<Russian>Ìåòàíîâûé îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MILKY_WAY</Tag>
+		<English>Milky Way</English>
+		<French>Voie Lactée</French>
+		<Russian>Ìëå÷íûé ïóòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MILKY_WAY_PEDIA</Tag>
+		<English>The Milky Way Galaxy</English>
+		<French>La Galaxie de la Voie Lactée</French>
+		<Russian>Ãàëàêòèêà Ìëå÷íûé ïóòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEBULA</Tag>
+		<English>Nebula</English>
+		<French>Nébuleuse</French>
+		<Russian>Òóìàííîñòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEBULA_PEDIA</Tag>
+		<English>Science fiction often portrays a nebula as a thick cloud, but it's not really like that. It's more... nebulous.</English>
+		<French>La science-fiction dépeint souvent une nébuleuse comme un nuage épais, mais ce n'est pas vraiment comme ça. C'est plus ... nébuleux.</French>
+		<Russian>Science fiction often portrays a nebula as a thick cloud, but it's not really like that. It's more... nebulous.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEPTUNE</Tag>
+		<English>Neptune</English>
+		<French>Neptune</French>
+		<Russian>Õîëîäíûé ãàç. ãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEPTUNE_PEDIA</Tag>
+		<English>A very cold ice giant planet, such as Neptune</English>
+		<French>Une planète géante de glace très froide, comme Neptune</French>
+		<Russian>Ëåäÿíîé ãàçîâûé ãèãàíò, ïîäîáíûé ïëàíåòå Íåïòóí â Ñîëíå÷íîé ñèñòåìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEUTRON_STAR</Tag>
+		<English>Neutron Star</English>
+		<French>Etoile à Neutron</French>
+		<Russian>Íåéòðîííàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NEUTRON_STAR_PEDIA</Tag>
+		<English>A neutron star</English>
+		<French>une étoile à neutron</French>
+		<Russian>Íåéòðîííàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE</Tag>
+		<English>Observable Universe</English>
+		<French>Univers Observable</French>
+		<Russian>Âèäèìàÿ Âñåëåííàÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE_PEDIA</Tag>
+		<English>The observable universe outside of Virgo Supercluster, hundreds of millions of light years away.</English>
+		<French>L'univers observable en dehors de Superamas de la Vierge, à des centaines de millions d'années-lumière.</French>
+		<Russian>Íàáëþäàåìàÿ âñåëåííàÿ çà ïðåäåëàìè Ñâåðõñêîïëåíèÿ Äåâû, íà ðàññòîÿíèè ñîòåí ìèëëèîíîâ ñâåòîâûõ ëåò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ORION_ARM</Tag>
+		<English>Orion Arm</English>
+		<French>Bras d'Orion</French>
+		<Russian>Ðóêàâ Îðèîíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ORION_ARM_PEDIA</Tag>
+		<English>The Orion Arm of the Milky Way galaxy.</English>
+		<French>Le Bras d'Orion de la galaxie Voie Lactée.</French>
+		<Russian>Îäèí èç ñïèðàëüíûõ ðóêàâîâ ãàëàêòèêè Ìëå÷íûé ïóòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Outer Solar System</English>
+		<French>Extérieur du Système Solaire</French>
+		<Russian>Âíåøíèå ïëàíåòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OUTER_SOLAR_SYSTEM_PEDIA</Tag>
+		<English>The Outer Solar System, from the Asteroid Belt to the inner Kuiper Belt Objects such as Pluto.</English>
+		<French>L'extérieur du Système Solaire, de la ceinture d'astéroïdes à l'objet intérieur de la ceinture de Kuipers comme Pluton.</French>
+		<Russian>Âíåøíèå ïëàíåòû Ñîëíå÷íîé ñèñòåìû, ðàñïîëîæåííûå ìåæäó ïîÿñîì àñòåðîèäîâ è ïîÿñîì Êîéïåðà, äî îðáèòû Ïëóòîíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_RED_DWARF</Tag>
+		<English>Red Dwarf</English>
+		<French>Naine Rouge</French>
+		<Russian>Êðàñíûé êàðëèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_RED_DWARF_PEDIA</Tag>
+		<English>Red Dwarfs are the smallest, coolest, and most common type of star in the Solar neighborhood.</English>
+		<French>Naine Rouge est le type d'étoile le plus petit, le plus cool et le plus commun dans le quartier solaire.</French>
+		<Russian>Êðàñíûå êàðëèêè - íàèìåíüøèé, ñàìûé õîëîäíûé è ñàìûé ðàñïðîñòðàíåííûé òèï çâåçä â îêðåñòíîñòÿõ Ñîëíöà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_RED_GIANT</Tag>
+		<English>Red Giant</English>
+		<French>Géante Rouge</French>
+		<Russian>Êðàñíûé ãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_RED_GIANT_PEDIA</Tag>
+		<English>A massive red giant star</English>
+		<French>Une énorme étoile géante rouge</French>
+		<Russian>Ìàññèâíàÿ è êðóïíàÿ êðàñíàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SATURN</Tag>
+		<English>Saturn</English>
+		<French>Saturn</French>
+		<Russian>Êîëüö. ãàçîâûé ãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SATURN_PEDIA</Tag>
+		<English>A ringed gas giant, such as Saturn</English>
+		<French>Une géante gazeuse annelée, comme Saturne</French>
+		<Russian>Ïîõîæèé íà Ñàòóðí ãàçîâûé ãèãàíò ñ ñèñòåìîé êîëåö íà ñîáñòâåííîé îðáèòå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_STAR_CLUSTER</Tag>
+		<English>Star Cluster</English>
+		<French>Amas d'étoiles</French>
+		<Russian>Çâåçäíîå ñêîïëåíèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_STAR_CLUSTER_PEDIA</Tag>
+		<English>A cluster of dozens to thousands of stars</English>
+		<French>Un groupe de dizaines à des milliers d'étoiles</French>
+		<Russian>Ñêîïëåíèå îò äåñÿòêîâ äî òûñÿ÷ çâåçä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN</Tag>
+		<English>Subsurface Ocean</English>
+		<French>Océan Sous-terrain</French>
+		<Russian>Ïîäëåäíûé îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN_PEDIA</Tag>
+		<English>Water ocean beneath the surface of a moon or planet</English>
+		<French>Océan d'eau sous la surface d'une lune ou d'une planète</French>
+		<Russian>Âîäíûé îêåàí, ñêðûòûé ïîä òîëùåé ïîâåðõíîñòíîãî ëåäíèêà ëóíû èëè ïëàíåòû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUN</Tag>
+		<English>Sun</English>
+		<French>Soleil</French>
+		<Russian>Ñîëíöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR</Tag>
+		<English>Sun-Like Star</English>
+		<French>Etoile de type Soleil</French>
+		<Russian>Ñîëíöåïîäîáíàÿ çâåçäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR_PEDIA</Tag>
+		<English>A G-type main-sequence star, similar to the sun.</English>
+		<French>Une étoile de séquence principale de type G, semblable au soleil.</French>
+		<Russian>Çâåçäà ñïåêòðàëüíîãî êëàññà G èç ãëàâíîé ïîñëåäîâàòåëüíîñòè, ïîõîæàÿ íà Ñîëíöå. Îòíîñèòñÿ ê êëàññó äîëãîæèâóùèõ æåëòûõ êàðëèêîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SUN_PEDIA</Tag>
+		<English>This is the Sun. It's big and it burns. It is the leading cause of skin cancer and the indirect source of energy of hurricanes and tornadoes. The Sun has some uses as well.</English>
+		<French>Voici le Soleil. C'est gros et ça brûle. C'est la principale cause de cancer de la peau et la source indirecte d'énergie des ouragans et des tornades. Le Soleil a aussi quelques utilisations.</French>
+		<Russian>Ýòî Ñîëíöå. Êðóïíîå è æàðêîå. Îñíîâíàÿ ïðè÷èíà ðàêà êîæè è êîñâåííûé èñòî÷íèê ýíåðãèè óðàãàíîâ è òîðíàäî. Ñîëíöå òàêæå èìååò è äðóãèå, áîëåå ïîëåçíûå ñâîéñòâà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TITAN</Tag>
+		<English>Titan</English>
+		<French>Titan</French>
+		<Russian>Ìåòàíîâàÿ ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TITAN_PEDIA</Tag>
+		<English>A moon with large amounts of methane, such as Titan</English>
+		<French>Une lune avec de grandes quantités de méthane, comme Titan</French>
+		<Russian>Êàìåíèñòûé ñïóòíèê ñ ïëîòíîé õîëîäíîé àòìîñôåðîé, ïîäîáíûé Òèòàíó èç ñèñòåìû Ñàòóðíà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE</Tag>
+		<English>Transneptunian Space</English>
+		<French>Espace Transneptunien</French>
+		<Russian>Òðàíñíåïòóí. êîñìîñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE_PEDIA</Tag>
+		<English>The Solar System, beyond the orbit of Neptune.</English>
+		<French>Le système solaire, au-delà de l'orbite de Neptune.</French>
+		<Russian>Îáëàñòü Ñîëíå÷íîé ñèñòåìû, ðàñïîëîæåííàÿ ìåæäó îðáèòîé Íåïòóíà è ïîÿñîì Êîéïåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE</Tag>
+		<English>Transtellar Space</English>
+		<French>Espace Transtellaire</French>
+		<Russian>Ìåæçâåçäíîå ïðîñòðàíñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE_PEDIA</Tag>
+		<English>The space between stars, up to about 100 light years from the Sun. This tile doesn't contain stars, but there are rogue planets and brown dwarfs.</English>
+		<French>L'espace entre les étoiles, jusqu'à environ 100 années-lumière du Soleil. Cette tuile ne contient pas d'étoiles, mais il y a des planètes solitaires et des naines brunes.</French>
+		<Russian>Ìåæçâåçäíîå ïðîñòðàíñòâî äî 100 ñâåòîâûõ ëåò, ñ÷èòàÿ îò Ñîëíöà. Ýòè êëåòêè íå ñîäåðæèò çâåçä, íî â íèõ âñòðå÷àþòñÿ áëóæäàþùèå ïëàíåòû è êîðè÷íåâûå êàðëèêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRITON</Tag>
+		<English>Triton</English>
+		<French>Triton</French>
+		<Russian>Ãèïîïñèõðîëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRITON_PEDIA</Tag>
+		<English>A very cold moon, such as the moons of Neptune</English>
+		<French>Une lune très froide, comme les lunes de Neptune</French>
+		<Russian>Ýêñòðåìàëüíî õîëîäíàÿ ëóíà, ñèëüíî óäàëåííàÿ îò ìàòåðèíñêîé çâåçäû, êàê ñïóòíèêè ïëàíåòû Íåïòóí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_UMBRIEL</Tag>
+		<English>Umbriel</English>
+		<French>Umbriel</French>
+		<Russian>Ëåäÿíàÿ ëóíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_UMBRIEL_PEDIA</Tag>
+		<English>A cold moon, such as the moons of Uranus</English>
+		<French>Une lune froide, comme les lunes d'Uranus</French>
+		<Russian>Îáëåäåíåâøèé ñïóòíèê, ïîõîæèé íà ëóíû èç ñèñòåìû Óðàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_URANUS</Tag>
+		<English>Uranus</English>
+		<French>Uranus</French>
+		<Russian>Ëåäÿíîé ãèãàíò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_URANUS_PEDIA</Tag>
+		<English>An ice giant, such as Uranus. No lame astronomy joke here.</English>
+		<French>Un géant de glace, comme Uranus. Pas de blague d'astronomie boiteuse ici.</French>
+		<Russian>Ëåäÿíîé ãèãàíò, íàïîäîáèå ïëàíåòû Óðàí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VENUS</Tag>
+		<English>Venus</English>
+		<French>Vénus</French>
+		<Russian>Âåíåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VENUS_HIGHLANDS</Tag>
+		<English>Venus Highlands</English>
+		<French>Hautes terres de Vénus</French>
+		<Russian>Ãîðû Âåíåðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VENUS_LOWLANDS</Tag>
+		<English>Venus Lowlands</English>
+		<French>Basses terres de Vénus</French>
+		<Russian>Ðàâíèíû Âåíåðû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VENUS_PEDIA</Tag>
+		<English>Planet Venus</English>
+		<French>Planète Vénus</French>
+		<Russian>Ïëàíåòà Âåíåðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VIRGO_SUPERCLUSTER</Tag>
+		<English>Virgo Supercluster</English>
+		<French>Superamas de la Vierge</French>
+		<Russian>Ñâåðõñêîïëåíèå Äåâû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_VIRGO_SUPERCLUSTER_PEDIA</Tag>
+		<English>The Virgo Supercluster. Now it's getting ridiculous.</English>
+		<French>Les Superamas de la Vierge. Maintenant ça devient ridicule.</French>
+		<Russian>Ìåòàãàëàêòè÷åñêîå ñâåðõñêîïëåíèå Äåâû</Russian>
+	</TEXT>
+</Civ4GameText>

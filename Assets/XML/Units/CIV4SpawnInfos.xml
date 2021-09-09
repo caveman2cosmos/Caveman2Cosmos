@@ -13,17 +13,16 @@ Valid NPC players for spawns:
 	48 = NPC0_PLAYER
 	49 = NEANDERTHAL_PLAYER
 	50 = BARBARIAN_PLAYER
-
  <iMaxLocalDensity> Number of same unit allowed within a fat cross area
 	Area of 49 plots, 3 plots out in all directions from the spawn plot.
 	Plots that are not of the same area as the spawn plot is not counted.
-
- <iMaxAreaTotalDensity> Number of plots per unit allowed to spawn by this player within a map area.
+ <iMinAreaPlotsPerPlayerUnit> Minimum number of area plots per unit owned by spawning player within the area before spawn is disabled.
 	A value of 20 means that the player must have less than 1 unit per 20 plots in that map area to spawn this unit there.
-
- <iMaxAreaUnitDensity> Number of plots per this unit type, regardless of owner, allowed to spawn within a map area.
+	If it's value is bigger than the total maount of plots in an area, then 1 unit will always be allowed to spawn.
+	This value is ignored for areas with less than 50 plots in total.
+ <iMinAreaPlotsPerUnitType> Minimum number of area plots per unit type within the area before spawn is disabled.
+	The unit type is counted regardless of which player owns it.
 	A value of 20 means that there must be less than 1 of this unit type per 20 plots in that map area to spawn this unit there.
-
  <iTurns> Bigger value means less spawn.
 	Sets a spawn frequency per valid plot that does not adjust based on how many valid plots exist, so more valid plots means more spawns on the map.
  <iGlobalTurns> Bigger value means less spawn.
@@ -31,9 +30,9 @@ Valid NPC players for spawns:
 	Translated to <iTurns>: iTurns = (iGlobalTurns / 100) * iValidPlots
 	iValidPlots = Number of Valid spawn plots on entire map
 Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
-  The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
-  The biggest can only increase that spawn frequency above the minimum set by the smallest one.
-  The bigger the other is the less it will increase the frequency set by the smallest one.
+ The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
+ The biggest can only increase that spawn frequency above the minimum set by the smallest one.
+ The bigger the other is the less it will increase the frequency set by the smallest one.
 -->
 <Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
@@ -42,8 +41,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_ANIMAL_JAGUAR</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -62,8 +61,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BISON</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -79,8 +78,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BENGALTIGER</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>25</iMaxLatitude>
@@ -95,8 +94,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BEAR</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -118,8 +117,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -137,8 +136,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -155,8 +154,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CAVEBEAR</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -175,8 +174,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CAVE_LION</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>250</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -198,8 +197,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CHEETAH</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -219,8 +218,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_COW</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -234,8 +233,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -252,8 +251,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -267,8 +266,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -282,8 +281,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -300,8 +299,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -319,8 +318,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_GORILLA</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -345,8 +344,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_GRIZZLY</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -365,8 +364,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -379,8 +378,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_HYENA</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -402,8 +401,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_LION</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -425,8 +424,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -451,8 +450,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -479,8 +478,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_PANTHER</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>70</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>60</iMinLongitude>
@@ -496,8 +495,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_PANTHER</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>70</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>60</iMinLongitude>
@@ -514,8 +513,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -531,8 +530,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_POLARBEAR</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -548,8 +547,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_PUFFADDER</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -571,8 +570,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -591,8 +590,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -610,8 +609,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SIBERIANTIGER</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -631,8 +630,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -650,8 +649,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -675,8 +674,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -693,8 +692,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -711,8 +710,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -729,8 +728,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -752,8 +751,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>80</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -770,8 +769,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>160</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -788,8 +787,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -809,8 +808,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -827,8 +826,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -850,8 +849,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_COBRA</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -868,8 +867,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -884,8 +883,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -899,8 +898,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -915,8 +914,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -934,8 +933,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -954,8 +953,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -975,8 +974,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_HAAST_EAGLE</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -994,8 +993,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1012,8 +1011,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_HIPPO</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1033,8 +1032,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1053,8 +1052,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -1073,8 +1072,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -1091,8 +1090,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1111,8 +1110,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1126,8 +1125,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1147,8 +1146,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1165,8 +1164,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1184,8 +1183,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_KOMODO_DRAGON</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1201,8 +1200,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1220,8 +1219,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>70</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1240,8 +1239,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1264,8 +1263,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1286,8 +1285,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1307,8 +1306,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1325,8 +1324,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>10</iMaxLatitude>
@@ -1345,8 +1344,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>-60</iMinLongitude>
@@ -1365,8 +1364,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1383,8 +1382,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1406,8 +1405,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>550</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1426,8 +1425,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SLOTHBEAR</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>360</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1446,8 +1445,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1464,8 +1463,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SUNBEAR</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1483,8 +1482,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1503,8 +1502,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -1520,8 +1519,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -1539,8 +1538,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1557,8 +1556,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_VIPER</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLatitude>0</iMinLatitude>
@@ -1577,8 +1576,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_VIPER_CHAIN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>800</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLatitude>-30</iMinLatitude>
@@ -1601,8 +1600,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>9</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1624,8 +1623,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1644,8 +1643,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1663,8 +1662,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1686,8 +1685,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1705,8 +1704,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1728,8 +1727,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1748,8 +1747,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1771,8 +1770,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1791,8 +1790,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1811,8 +1810,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1830,8 +1829,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>450</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>9</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1851,8 +1850,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1874,8 +1873,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1895,8 +1894,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1914,8 +1913,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1931,8 +1930,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1951,8 +1950,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1971,8 +1970,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1988,8 +1987,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2008,8 +2007,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2027,8 +2026,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BISON</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2049,8 +2048,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2064,8 +2063,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-5000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2079,8 +2078,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
@@ -2093,76 +2092,15 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
-<!-- Removed from game because "unfun". Available in two forms in the Bad_Karma modules.
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_NATIVE</Type>
-			<UnitType>UNIT_LOCUST</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
-			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>800</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
-			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>1200</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-			<iMinLongitude>-40</iMinLongitude>
-			<iMaxLongitude>40</iMaxLongitude>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
--->
+		<!-- Bigger variants are removed from game because "unfun". Available in three forms in the Bad_Karma modules -->
 		<SpawnInfo>
 			<Type>SPAWN_ANTEATER_NATIVE</Type>
 			<UnitType>UNIT_ANTEATER</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2185,8 +2123,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2205,8 +2143,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2225,8 +2163,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2248,8 +2186,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2266,8 +2204,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2286,8 +2224,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2305,8 +2243,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2325,8 +2263,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2345,8 +2283,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_ASIANBEAR</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2362,8 +2300,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CHIMPANZEE</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2389,8 +2327,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2408,8 +2346,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>35</iMaxLatitude>
@@ -2425,8 +2363,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2444,8 +2382,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2459,8 +2397,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2477,8 +2415,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2501,8 +2439,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2525,8 +2463,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2548,8 +2486,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2568,8 +2506,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2595,8 +2533,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2621,8 +2559,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2640,8 +2578,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2659,8 +2597,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2683,8 +2621,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-10000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2704,8 +2642,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_DIREWOLF</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2726,8 +2664,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2748,8 +2686,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2771,8 +2709,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2790,8 +2728,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2814,8 +2752,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1000</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2836,8 +2774,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_WOLF</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>140</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2857,8 +2795,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_WOLF</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>4000</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2883,8 +2821,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2908,8 +2846,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2929,8 +2867,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2954,8 +2892,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2975,8 +2913,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2994,8 +2932,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3010,8 +2948,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3028,8 +2966,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3052,8 +2990,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3069,8 +3007,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_GATOR</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3086,8 +3024,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_GATOR_ASIAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3103,8 +3041,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_NILECROC</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3124,8 +3062,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>23</iMaxLatitude>
@@ -3141,8 +3079,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3159,8 +3097,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3178,8 +3116,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3197,8 +3135,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>380</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3215,8 +3153,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3234,8 +3172,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3254,8 +3192,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3271,8 +3209,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3290,8 +3228,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3310,8 +3248,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3330,8 +3268,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3356,8 +3294,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3376,8 +3314,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3402,8 +3340,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3422,8 +3360,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3439,8 +3377,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3458,8 +3396,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3477,8 +3415,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3496,8 +3434,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3519,8 +3457,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3543,8 +3481,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3562,8 +3500,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3581,8 +3519,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3595,8 +3533,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3605,8 +3546,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3624,8 +3565,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3638,8 +3579,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3648,8 +3592,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3664,8 +3608,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3681,8 +3625,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3700,8 +3644,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3719,8 +3663,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3738,8 +3682,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3757,8 +3701,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3772,8 +3716,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3782,8 +3729,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3794,8 +3741,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3804,8 +3754,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>20</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3823,8 +3773,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SABRETOOTH</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3844,8 +3794,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_BLACK_RHINO</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3870,8 +3820,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_INDIAN_RHINO</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3896,8 +3846,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_JAVA_RHINO</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3923,8 +3873,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3949,8 +3899,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_ELASMOTHERIUM</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>60</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -3974,8 +3924,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>50</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>40</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3994,8 +3944,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4009,8 +3959,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iGlobalTurns>2400</iGlobalTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
@@ -4025,8 +3975,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4040,8 +3990,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iGlobalTurns>5000</iGlobalTurns>
-			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
@@ -4061,8 +4011,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4078,8 +4028,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4095,8 +4045,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>3000</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4104,11 +4054,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>40</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4117,8 +4073,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4132,15 +4088,18 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1000</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4149,8 +4108,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>50</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4164,8 +4123,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4174,7 +4133,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4183,8 +4144,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>400</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4197,8 +4158,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_GREATWHITE</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>200</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4211,9 +4172,13 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4222,8 +4187,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4234,8 +4199,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4244,8 +4212,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>80</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4260,8 +4228,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4278,8 +4246,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4289,23 +4257,29 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_MARLIN_NATIVE</Type>
+			<Type>SPAWN_MARLIN_NATIVE2</Type>
 			<UnitType>UNIT_MARLIN</UnitType>
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>3000</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4314,8 +4288,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4331,8 +4305,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>200</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4347,8 +4321,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4358,7 +4332,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4367,8 +4343,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4378,11 +4354,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4391,16 +4373,18 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+				<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4408,8 +4392,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SALTWATER_CROC_LARGE</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4419,6 +4403,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4426,8 +4411,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<UnitType>UNIT_SALTWATER_CROC_SMALL</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4437,6 +4422,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4445,8 +4431,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4460,8 +4446,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4474,8 +4460,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4484,8 +4473,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4495,8 +4484,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4505,8 +4497,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4521,8 +4513,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4537,8 +4529,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>40</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>100</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -4548,9 +4540,13 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<!-- Neanderthals -->
@@ -4560,8 +4556,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<ObsoleteTech>TECH_SHARPENING</ObsoleteTech>
@@ -4580,8 +4576,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>100</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
@@ -4601,8 +4597,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>200</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BINDING</PrereqTech>
@@ -4623,8 +4619,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>200</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
@@ -4644,8 +4640,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
@@ -4677,8 +4673,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>80</iGlobalTurns>
-			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>30</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>50</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
@@ -4699,8 +4695,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_RAFT_BUILDING</PrereqTech>
@@ -4709,7 +4705,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4718,8 +4716,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
@@ -4728,7 +4726,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4737,8 +4737,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
@@ -4747,7 +4747,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4756,8 +4758,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
@@ -4774,8 +4776,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -4799,8 +4801,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -4824,8 +4826,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
@@ -4850,8 +4852,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
@@ -4876,8 +4878,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
@@ -4899,8 +4901,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -4924,8 +4926,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -4949,8 +4951,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
@@ -4975,8 +4977,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
@@ -4997,8 +4999,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
@@ -5020,8 +5022,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>49</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
@@ -5044,8 +5046,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
@@ -5075,8 +5077,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
@@ -5106,8 +5108,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
@@ -5137,8 +5139,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
@@ -5168,8 +5170,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -5199,8 +5201,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
@@ -5230,8 +5232,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
@@ -5261,8 +5263,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
@@ -5292,8 +5294,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<ObsoleteTech>TECH_HARD_HAMMER_PERCUSSION</ObsoleteTech>
@@ -5322,8 +5324,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
@@ -5353,8 +5355,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>400</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
@@ -5384,8 +5386,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
@@ -5415,8 +5417,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -5432,8 +5434,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -5463,8 +5465,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
@@ -5494,8 +5496,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -5511,8 +5513,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
@@ -5542,8 +5544,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
@@ -5573,8 +5575,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
@@ -5604,8 +5606,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
@@ -5635,8 +5637,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -5652,8 +5654,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -5683,8 +5685,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
@@ -5714,8 +5716,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
@@ -5745,8 +5747,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
@@ -5776,8 +5778,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -5793,8 +5795,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
@@ -5824,8 +5826,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
@@ -5855,8 +5857,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
@@ -5886,8 +5888,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
@@ -5917,8 +5919,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
@@ -5948,8 +5950,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
@@ -5979,8 +5981,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
@@ -6010,8 +6012,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
@@ -6041,8 +6043,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>900</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
@@ -6072,8 +6074,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>1000</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
@@ -6103,8 +6105,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
@@ -6133,8 +6135,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BINDING</PrereqTech>
@@ -6164,8 +6166,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
@@ -6195,8 +6197,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -6226,8 +6228,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<PlayerType>50</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>
+			<iMinAreaPlotsPerPlayerUnit>1</iMinAreaPlotsPerPlayerUnit>
+			<iMinAreaPlotsPerUnitType>8</iMinAreaPlotsPerUnitType>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>

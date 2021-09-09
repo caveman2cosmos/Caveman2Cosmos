@@ -8,18 +8,15 @@
 //	AUTHOR:  Steve Draper
 //	PURPOSE: Viewport presented as a map to the game engine
 
+#include "CvGlobals.h"
 #include "CvMap.h"
 
-class CvArea;
 class CvCity;
-class CvInternalGlobals;
 class CvPlot;
-class CvSelectionGroup;
 class CvUnit;
 
 enum ViewportMode
 {
-	VIEWPORT_MODE_FULL_MAP,
 	VIEWPORT_MODE_UNINITIALIZED,
 	VIEWPORT_MODE_INITIALIZED
 };
@@ -71,7 +68,7 @@ enum ViewportGraphicalSpoofingState
 class CvViewport : public CvMapInterfaceBase
 {
 public:
-	CvViewport(CvMap* map, bool bIsFullMapContext);
+	CvViewport(CvMap* map);
 	virtual ~CvViewport();
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const { return m_pMap; }
@@ -79,14 +76,6 @@ public:
 	virtual void init(CvMapInitData* pInitData=NULL);
 	virtual void setupGraphical();
 	virtual void reset(CvMapInitData* pInitData);
-
-public:
-	virtual MapTypes getType() const;
-
-	virtual void beforeSwitch();
-	virtual void afterSwitch();
-
-	bool isMidSwitch() const;
 
 	void getMapOffset(int& iX, int& iY) const;
 	void setMapOffset(int iX, int iY);
@@ -102,93 +91,50 @@ public:
 	inline ViewportMode getState() const { return m_mode; }
 
 	virtual void erasePlots();
-	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);
-	virtual void setAllPlotTypes(PlotTypes ePlotType);
-
-	virtual void doTurn();
 
 	virtual void updateFlagSymbols();
-
 	virtual void updateFog();
-	virtual void updateVisibility();
 	virtual void updateSymbolVisibility();
-	virtual void updateSymbols();
 	virtual void updateMinimapColor();
-	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
-	virtual void updateIrrigated();
 	virtual void updateCenterUnit();
-	virtual void updateWorkingCity();
-	virtual void updateMinOriginalStartDist(const CvArea* pArea);
-	virtual void updateYield();
-
-	virtual void verifyUnitValidPlot();
-
-	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);
 
 	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;
-	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;
-
-	virtual CvArea* findBiggestArea(bool bWater) const;
-
-	virtual int getMapFractalFlags() const;
-	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;
 
 	virtual bool isPlot(int iX, int iY) const;
 	virtual int numPlots() const;
 
-	virtual int plotNum(int iX, int iY) const;
-	virtual int plotX(int iIndex) const;
-	virtual int plotY(int iIndex) const;
+	int plotNum(int iX, int iY) const;
+	//int plotX(int iIndex) const;
+	//int plotY(int iIndex) const;
 
-	virtual int pointXToPlotX(float fX) const;
+	int pointXToPlotX(float fX) const;
 	virtual float plotXToPointX(int iX) const;
 
-	virtual int pointYToPlotY(float fY) const;
+	int pointYToPlotY(float fY) const;
 	virtual float plotYToPointY(int iY) const;
 
-	virtual float getWidthCoords() const;
-	virtual float getHeightCoords() const;
-
-	virtual int maxPlotDistance() const;
-	virtual int maxStepDistance() const;
+	//float getWidthCoords() const;
+	//float getHeightCoords() const;
 
 	virtual int getGridWidth() const;
 	virtual int getGridHeight() const;
-	virtual int getLandPlots() const;
-
-	virtual int getOwnedPlots() const;
-
-	virtual int getTopLatitude() const;
-	virtual int getBottomLatitude() const;
 
 	virtual bool isWrapX() const;
 	virtual bool isWrapY() const;
 	virtual bool isWrap() const;
-	virtual WorldSizeTypes getWorldSize() const;
-	virtual ClimateTypes getClimate() const;
-	virtual SeaLevelTypes getSeaLevel() const;
-
-	virtual int getNumCustomMapOptions() const;
-	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const;
 
 	virtual CvPlot* plotByIndex(int iIndex) const;
 	virtual CvPlot* plot(int iX, int iY) const;
 	virtual CvPlot* pointToPlot(float fX, float fY) const;
-	inline CvPlot* plotSorenINLINE(int iX, int iY) const
-	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
-		{
-			return NULL;
-		}
-		return plot(iX, iY);
-	}
 
-	virtual int getNumAreas() const;
-	virtual int getNumLandAreas() const;
-
-	// Serialization:
-	virtual void read(FDataStreamBase* pStream);
-	virtual void write(FDataStreamBase* pStream);
+	//inline CvPlot* plotSorenINLINE(int iX, int iY) const
+	//{
+	//	if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
+	//	{
+	//		return NULL;
+	//	}
+	//	return plot(iX, iY);
+	//}
 
 	// Public methods used in coordinate transformation
 	inline int	getViewportXFromMapX(int iMapX) const
@@ -423,6 +369,9 @@ public:
 
 
 private:
+	void beforeSwitch();
+	void afterSwitch();
+
 	CvMap*	m_pMap;
 	int		m_iXOffset;
 	int		m_iYOffset;
@@ -439,7 +388,6 @@ private:
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
 	int								m_countdown;
-	bool							m_bSwitchInProgress;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

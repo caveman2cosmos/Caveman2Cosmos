@@ -10,7 +10,7 @@
 class CvArea;
 class CvProperties;
 
-class CvTeam
+class CvTeam : bst::noncopyable
 {
 public:
 	CvTeam();
@@ -35,7 +35,6 @@ public:
 	void doTurn();
 
 	void updateYield();
-	void updatePowerHealth();
 	void updateCommerce();
 
 	bool canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal = false) const;
@@ -109,7 +108,7 @@ public:
 	bool hasBonus(BonusTypes eBonus) const;
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
-	bool isHuman() const;
+	bool isHuman(const bool bCountDisabledHuman = false) const;
 	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
@@ -136,7 +135,6 @@ public:
 	int isAlive() const;
 	void changeAliveCount(int iChange);
 
-	int getEverAliveCount() const;
 	int isEverAlive() const;
 	void changeEverAliveCount(int iChange);
 
@@ -324,7 +322,6 @@ public:
 	void changeWarWeariness(TeamTypes eIndex, int iChange);
 	void changeWarWearinessTimes100(TeamTypes eIndex, int iChange);
 
-	int getTechShareCount(int iIndex) const;
 	bool isTechShare(int iIndex) const;
 	void changeTechShareCount(int iIndex, int iChange);
 

@@ -1,0 +1,1252 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB</Tag>
+		<English>Air Bomb</English>
+		<French>Bombardement aérien</French>
+		<German>Luftbombardierung</German>
+		<Italian>Bombardamento aereo</Italian>
+		<Spanish>Bombardeo aéreo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB1</Tag>
+		<English>Airbomb Defenses</English>
+		<French>Bombardement des Défenses</French>
+		<German>Luftbombardierung Verteidigungen</German>
+		<Italian>Bombarda difese</Italian>
+		<Spanish>Bombardear defensas</Spanish>
+		<Polish>Obrona przed bombardowaniem</Polish>
+		<Russian>Укрепления</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB1_HELP</Tag>
+		<English>Select an air unit that can airbomb, select the airbomb defense mission, then click on the target city to reduce defense, or target improvement to destroy it.</English>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement de défenses. Cliquez ensuite sur la cible pour réduire son pourcentage de défense ou ciblez une amélioration de terrain pour la détruire.</French>
+		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Verteidigungen" und klicken Sie dann auf die Zielstadt, um deren Verteidigung zu schwächen, oder auf eine Modernisierung, um diese zu zerstören.</German>
+		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda difese" e poi clicca sulla città bersaglio per ridurne le difese, oppure sul miglioramento bersaglio per distruggerlo.</Italian>
+		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear defensas" y haz clic en la ciudad objetivo (para reducir su defensa) o en la mejora objetivo (para destruirla).</Spanish>
+		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania umocnień, a następnie kliknij na mieście aby zredukować jego obronę lub na udoskonaleniu aby je zniszczyć.</Polish>
+		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку укреплений, а затем щелкните либо город, чтобы уменьшить его показатель защиты, либо объект, чтобы уничтожить его.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB2</Tag>
+		<English>Airbomb Buildings</English>
+		<French>Bombardement des Bâtiments</French>
+		<German>Luftbombardierung Gebäude</German>
+		<Italian>Bombarda edifici</Italian>
+		<Spanish>Bombardear edificios</Spanish>
+		<Polish>Bombardowanie budynków</Polish>
+		<Russian>Здания</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB2_HELP</Tag>
+		<English>Select an air unit that can airbomb, select the airbomb building mission, then click on the target city to attempt to destroy one civil building.</English>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement de bâtiments civils. Cliquez ensuite sur la cible pour tenter de détruire un bâtiment civil.</French>
+		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, wählen Sie die Mission "Luftbombardierung Gebäude" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein ziviles Gebäude zu zerstören.</German>
+		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda edifici", poi clicca sulla città bersaglio per cercare di distruggere un edificio civile.</Italian>
+		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear edificios" y haz clic en la ciudad objetivo para intentar destruir un edificio civil.</Spanish>
+		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania budynku, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek cywilny.</Polish>
+		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку зданий, а затем щелкните город, в котором нужно уничтожить здание мирного назначения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB3</Tag>
+		<English>Airbomb Factories</English>
+		<French>Bombardement d'usines</French>
+		<German>Luftbombardierung Fabriken</German>
+		<Italian>Bombarda fabbriche</Italian>
+		<Spanish>Bombardear fábricas</Spanish>
+		<Polish>Bombardowanie fabryk</Polish>
+		<Russian>Заводы</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB3_HELP</Tag>
+		<English>Select an air unit that can airbomb, select the airbomb production mission, then click on the target city to attempt to destroy one factory.</English>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement d'infrastructure de production. Cliquez ensuite sur la cible pour tenter de détruire une usine.</French>
+		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Produktion" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort eine Fabrik zu zerstören.</German>
+		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda produzione", poi clicca sulla città bersaglio per cercare di distruggere una fabbrica.</Italian>
+		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear fábricas" y haz clic en la ciudad objetivo para intentar destruir una fábrica.</Spanish>
+		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania fabryki, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek produkcyjny.</Polish>
+		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку заводов, а затем щелкните город, в котором нужно уничтожить производственную структуру.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB4</Tag>
+		<English>Port Airbomb</English>
+		<French>Bombardement du Port</French>
+		<German>Luftbombardierung Häfen</German>
+		<Italian>Bombarda porto</Italian>
+		<Spanish>Bombardear puerto</Spanish>
+		<Polish>Bombardowanie portu</Polish>
+		<Russian>Порты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB4_HELP</Tag>
+		<English>Select an air unit that can airbomb, select the port airbomb mission, then click on the target city to damage and attempt to sink a ship.</English>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement du port. Cliquez ensuite sur la ville ciblée et essayer de couler un navire.</French>
+		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Häfen" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein Schiff zu beschädigen oder zu versenken.</German>
+		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda porto", poi clicca sulla città bersaglio per cercare di danneggiare o affondare una nave.</Italian>
+		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear puerto" y haz clic en la ciudad objetivo para intentar dañar o hundir un navío.</Spanish>
+		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania portu, a następnie kliknij na mieście aby uszkodzić lub zatopić znajdujący się w nim statek.</Polish>
+		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку портов, а затем щелкните город, в порту которого стоит корабль.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB5</Tag>
+		<English>Strategic Airbomb</English>
+		<French>Bombardement Stratégique</French>
+		<German>Strategische Luftbombardierung</German>
+		<Italian>Bombardamento strategico</Italian>
+		<Spanish>Bombardeo estratégico</Spanish>
+		<Polish>Bombardowanie strategiczne</Polish>
+		<Russian>Стратегические цели</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB5_HELP</Tag>
+		<English>Select an air unit that can airbomb, select the strategic airbomb mission, then click on the target city to damage the current production project.</English>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement stratégique. Cliquez ensuite sur la ville ciblée pour tenter de détruire son projet de construction actuel.</French>
+		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Strategische Luftbombardierung" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort die aktuelle Produktion zu zerstören.</German>
+		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombardamento strategico", poi clicca sulla città bersaglio per danneggiare la produzione in corso.</Italian>
+		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardeo estratégico" y haz clic en la ciudad objetivo para dañar la producción en curso.</Spanish>
+		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania strategicznego, a następnie kliknij na mieście aby uszkodzić jego aktualną produkcję.</Polish>
+		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку стратегических целей и щелкните город, в котором создается важный объект.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRBOMB_HELP</Tag>
+		<English>Destroys city fortifications and tile improvements.</English>
+		<French>Détruire les fortifications de la ville et les aménagements des cases.</French>
+		<German>Zerstören Sie Befestigungen und Modernisierungen.</German>
+		<Italian>Distrugge le fortificazioni delle città e i miglioramenti delle caselle.</Italian>
+		<Spanish>Destruye fortificaciones de ciudades y mejoras de casillas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRLIFT</Tag>
+		<English>Airlift</English>
+		<French>Transport aérien</French>
+		<German>Lufttransport</German>
+		<Italian>Trasporto aereo</Italian>
+		<Spanish>Aerotransportar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AIRLIFT_HELP</Tag>
+		<English>Airlifts the unit to another city.</English>
+		<French>Transport aérien de l'unité vers une autre ville.</French>
+		<German>Fliegen Sie die Einheit in eine andere Stadt.</German>
+		<Italian>L'unità viene trasportata in aereo verso un'altra città.</Italian>
+		<Spanish>Para aerotransportar a la unidad a otra ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AMBUSH</Tag>
+		<English>Ambush enemy Units on the same tile!</English>
+		<French>Tendre une Embuscade aux ennemis sur la même case!</French>
+		<Russian>Устройте засаду вражеским отрядам на этой клетке!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AMBUSH_HELP</Tag>
+		<English>Attacks best defender of enemy target(s) on same plot. WARNING:You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
+		<French>Attaque le meilleur défenseur ennemi sur la même case. ATTENTION: Action à exécuter avec une seule unité sélectionnée. Sinon le combat sera lancé avec la première unité dans la liste!</French>
+		<Russian>Атакует лучшего защитника среди вражеской цели(ей) на той же клетке. ВНИМАНИЕ: для этого нужно выбирать лишь один отряд за раз, иначе он всегда будет выбирать первый доступный отряд для атаки и покажет точную оценку шансов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ASSASSIN</Tag>
+		<English>Assassinate Unit</English>
+		<French>Assassiner Unité</French>
+		<German>Einheit ermorden</German>
+		<Italian>Assassinio</Italian>
+		<Spanish>Asesinar unidad</Spanish>
+		<Polish>Skrytobójstwo</Polish>
+		<Russian>Отравить отряд</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
+		<English>Assassinate enemy Units on the same tile!</English>
+		<French>Assassiner une unité ennemie de la même case!</French>
+		<Russian>Убейте вражеские юниты на этой клетке!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
+		<English>Attacks best defender of enemy target(s)(among unit types that this unit will target first in a stack) on same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
+		<French>Attaque le meilleur défenseur de la cible ennemie présente sur la même case. Utilisable dans une ville. ATTENTION: ne sélectionner qu'une seule unité pour cette action.</French>
+		<Russian>Атакует лучшего защитника среди вражеской цели(ей) (из числа однородных с ним отрядов в стеке) на той же клетке. Работает внутри города. ВНИМАНИЕ: для этого действия у вас должен быть выбран лишь один отряд.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP</Tag>
+		<English>Automate Build Ups</English>
+		<French>Automatise les retranchements</French>
+		<German>Training (automatisiert)</German>
+		<Russian>Автоматизировать сбор</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP_HELP</Tag>
+		<English>Automate build up selections for all units selected.</English>
+		<French>Automatise les retranchements pour toutes les unités sélectionnées.</French>
+		<German>Automatisches Training der ausgewählten Einheiten.</German>
+		<Russian>Автоматизировать выбор для всех указанных отрядов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BOMBARD</Tag>
+		<English>Bombard</English>
+		<French>Bombardement</French>
+		<German>Bombardierung</German>
+		<Italian>Bombarda</Italian>
+		<Spanish>Cañonear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BOMBARD_HELP</Tag>
+		<English>Destroys fortifications and reduces the cities defensive bonus.</English>
+		<French>Détruire les fortifications de la ville et réduire ses bonus de défense.</French>
+		<German>Zerstören Sie die Befestigungen einer Stadt und senken Sie deren Defensivbonus.</German>
+		<Italian>Distrugge le fortificazioni e riduce i bonus difensivi delle città.</Italian>
+		<Spanish>Destruye las fortificaciones y reduce la bonificación defensiva de las ciudades.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BRIBE</Tag>
+		<English>Bribe Unit</English>
+		<French>Corrompre Unité</French>
+		<German>Einheit bestechen</German>
+		<Italian>Corruzione</Italian>
+		<Spanish>Sobornar unidad</Spanish>
+		<Polish>Przekup jednostkę</Polish>
+		<Russian>Подкупить отряд</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILDUP</Tag>
+		<English>Build Up</English>
+		<French>Retranchement</French>
+		<German>Training</German>
+		<Polish>Koncentracja</Polish>
+		<Russian>Концентрация</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILDUP_HELP</Tag>
+		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability. Unit loses all Build Up promotions when it next moves. (An alternative form of Fortification.)</English>
+		<French>Permet de cumuler le retranchement tout en choisissant une Spécialisation permettant de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative à 'Se retrancher F'.)</French>
+		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
+		<Polish>Wybierz Linię Promocji i otrzymaj dodatkową auto-promocję z następnego poziomu tej linii promocji za każda turę Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentrację kiedy się poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
+		<Russian>Выберите линейку Квалификации и получите возможность для доп. автоматического продвижения на следующий уровень в этой строке на каждый ход (до 5), т.е. прокачать навык для отряда. Юнит игнорирует все альт. линии прокачки, весь следующий ход. (Альтер. форма фортификации.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_CITY</Tag>
+		<English>Build City</English>
+		<French>Fonder une ville</French>
+		<German>Stadt gründen</German>
+		<Italian>Costruisci città</Italian>
+		<Spanish>Construir ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_CITY_HELP</Tag>
+		<English>This order causes the [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] to build a city in its current location. The [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] is consumed in the process.</English>
+		<French>Ordonne au [COLOR_UNIT_TEXT]colon[COLOR_REVERT] de s'installer et de fonder une ville. Le [COLOR_UNIT_TEXT]colon[COLOR_REVERT] s'autodétruit dans l'opération.</French>
+		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Siedler[COLOR_REVERT], damit dieser an seinem aktuellen Standort eine Stadt gründet.</German>
+		<Italian>Con questo comando, si ordina al [COLOR_UNIT_TEXT]colono[COLOR_REVERT] di costruire una città nel punto in cui si trova. Il [COLOR_UNIT_TEXT]colono[COLOR_REVERT] viene sacrificato durante il procedimento.</Italian>
+		<Spanish>Esta orden hace que el [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] construya una ciudad en el lugar en que se encuentre. El [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] se consumirá en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Tag>
+		<English>Build Improvement</English>
+		<French>Construire aménagement</French>
+		<German>Modernisierung errichten</German>
+		<Italian>Costruire miglioramento</Italian>
+		<Spanish>Construir mejora</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUTCHER</Tag>
+		<English>Butcher Animal</English>
+		<French>Abattre l'Animal</French>
+		<Italian>Macella l'animale</Italian>
+		<Spanish>Descuartizar animal</Spanish>
+		<Polish>Zabij zwierzę</Polish>
+		<Russian>Разделка животного</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUTCHER_HELP</Tag>
+		<English>Butchers a subdued animal, gives more resources in friendly territory and even more in city.</English>
+		<French>Abattre un animal apprivoisé donne davantage de ressources en territoire ami, et encore plus dans la ville.</French>
+		<Italian>macella un animale addomesticato: da più risorse se in territorio amico, e ancora di più nelle città.</Italian>
+		<Spanish>Descuartiza un animal domado; dará más recursos en el territorio propio, y aún más en una ciudad.</Spanish>
+		<Polish>Zabijanie oswojonych zwierząt, daje więcej surowców na swoim terytorium i jeszcze więcej w mieście.</Polish>
+		<Russian>Забивает прирученное животное и дает больше средств на дружественной территории и еще больше в городе.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY</Tag>
+		<English>Claim territory</English>
+		<French>Revendiquer le Territoire</French>
+		<German>Territorium beanspruchen</German>
+		<Italian>Rivendica territorio</Italian>
+		<Spanish>Reclamar territorio</Spanish>
+		<Polish>Przejmij terytorium</Polish>
+		<Russian>Спорная территория</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS</Tag>
+		<English>%s1_civ_adjective units occupied a part of your territory!</English>
+		<French>Des unités %s1_civ_adjective occupent une partie de votre Territoire!</French>
+		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums!</German>
+		<Italian>Unità %s1_civ_adjective hanno occupato parte del tuo territorio!</Italian>
+		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio.</Spanish>
+		<Polish>Jednostki z %s1_civ_adjective okupują część Twojego terytorium!</Polish>
+		<Russian>Отряды %s1_civ_adjective заняли часть вашей территории!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS_NEAR</Tag>
+		<English>%s1_civ_adjective units occupied a part of your territory near %s2_city</English>
+		<French>Des Unités %s1_civ_adjective occupent une partie de votre territoire près de %s2_city</French>
+		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums in der Nähe von %s2_city</German>
+		<Italian>Unità %s1_civ_adjective hanno occupato parte del tuo territorio vicino a %s2_city</Italian>
+		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio cercano a %s2_city.</Spanish>
+		<Polish>Jednostki z %s1_civ_adjective okupują część Twojego terytorium blisko miasta %s2_city</Polish>
+		<Russian>Отряды %s1_civ_adjective заняли часть вашей территории около города %s2_city</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY_HELP</Tag>
+		<English>The unit will occupy the tile it is on and adjoin it to your empire. Effects will be visible next turn.</English>
+		<French>L'unité va occuper la case sur laquelle elle se trouve et la revendiquer pour qu'elle rejoigne votre Empire. Les effets seront visibles au tour suivant.</French>
+		<German>Die Einheit wird das Geländefeld besetzen und es Deinem Imperium hinzufügen. Die Effekte werden in der nächsten Runde sichtbar sein.</German>
+		<Italian>L'unità occuperà la casella e la annetterà al tuo impero; gli effetti saranno visibili dal prossimo turno.</Italian>
+		<Spanish>La unidad ocupará la casilla en la que está y la anexionará a tu imperio. Los efectos serán apreciables el próximo turno.</Spanish>
+		<Polish>Jednostka będzie okupywać pole na którym stoi i przyłączy go do Twego imperium. Efekty będą widoczne w następnej turze.</Polish>
+		<Russian>Отряд займет клетку, на которой он находится, и присоединит ее к вашей державе. Эффекты будут видны на следующем ходу.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION</Tag>
+		<English>Conduct Trade Mission</English>
+		<French>Mission commerciale</French>
+		<German>Handelsmission ausführen</German>
+		<Italian>Esegui una missione commerciale</Italian>
+		<Spanish>Realizar misión comercial</Spanish>
+		<Russian>Провести торговую миссию</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
+		<English>Conduct a trade mission in this city. The amount of gold created is relative to the size of the city and distance to the city the unit was trained or born in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the gold, lose their movement for the turn and become 'Wanted'.</English>
+		<Russian>Проведите торговую миссию в этом городе. Количество полученного золота зависит от размера города, в котором отряд был обучен, а также размера и расстояния до города в пункте назначения, и от того, является ли город иностранным. При этом тратится Великий человек, но отправляет в столицу обычных торговцев и преступников. Преступники, пытающиеся продать свою контрабанду, могут не пройти проверку правоохранителей в этой миссии и, таким образом, не получить золото, потерять очки движения на ход и оказаться в розыске.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCT</Tag>
+		<English>Construct</English>
+		<French>Construire</French>
+		<German>Bauen</German>
+		<Italian>Costruire</Italian>
+		<Spanish>Erigir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CONSTRUCT_HELP</Tag>
+		<English>This will have the Great Person create their special building. It consumes the Great Person.</English>
+		<French>Ordonner au personnage illustre de construire son édifice spécial. Le personnage illustre est alors détruit.</French>
+		<German>Opfern Sie die Große Persönlichkeit, damit diese ihr Spezialgebäude errichtet.</German>
+		<Italian>Con questo comando, ordini a un Grande Personaggio di creare un edificio speciale. L'unità viene sacrificata nel procedimento.</Italian>
+		<Spanish>Hace que el gran personaje cree su edificio especial, consumiéndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CREATE_GREAT_WORK</Tag>
+		<English>Create Great Work</English>
+		<French>Créer un chef d'oeuvre</French>
+		<German>Großes Bauwerk errichten</German>
+		<Italian>Crea una Grande Opera</Italian>
+		<Spanish>Crear gran obra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CREATE_GREAT_WORK_HELP</Tag>
+		<English>This order will have the Great Artist create a Great Work in the city they are currently in. It consumes the Great Person.</English>
+		<French>Ordonner à l'artiste illustre de créer un chef d'oeuvre dans la ville où il se trouve. Ceci détruit le personnage illustre.</French>
+		<German>Opfern Sie die Große Persönlichkeit, damit ein Großer Künstler in der aktuellen Stadt ein großes Kunstwerk erschafft.</German>
+		<Italian>Ordina a un Grande Artista di creare una Grande Opera nella città in cui si trova. L'unità viene sacrificata nel procedimento.</Italian>
+		<Spanish>Esta orden hace que el gran artista cree una gran obra en la ciudad en la que se encuentre, consumiéndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CURE</Tag>
+		<English>Cure Next Unit in Stack of a Curable Affliction</English>
+		<French>Guérir la prochaine unité dans la pile d'une affection curable</French>
+		<Italian>Cura la prossima unità presente nel gruppo di un'Afflizione curabile</Italian>
+		<Polish>Leczy następną jednostkę w grupie</Polish>
+		<Russian>Вылечить указанный отряд в стеке от повреждений</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_CURE_HELP</Tag>
+		<English>This order will cause the healer to improve the condition of one Affliction from the first of your units sharing the same plot that is beset by an Affliction that the healer can cure.</English>
+		<French>Cet ordre amènera le guérisseur à améliorer l'état d'affliction de la première de vos unités partageant le même groupe, si elle est victime d'une Affliction que le guérisseur peut guérir.</French>
+		<Italian>Quest'ordine farà in modo che il guaritore migliori la condizione di un Afflizione della prima unità presente nella stessa casella che è affetta da un'Afflizione che un guaritore può curare.</Italian>
+		<Polish>Ten rozkaz spowoduje, że Lekarz wyleczy jedną dolegliwość, którą potrafi wyleczyć, pierwszej jednostce z grupy na tym samym polu.</Polish>
+		<Russian>Эта команда заставит медика исцелить от ранений один из ваших отрядов, расположенных на одном с лекарем участке, или от болезни, от которой медик может вылечить.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DESTROY</Tag>
+		<English>Destroy Production</English>
+		<French>Saboter la production</French>
+		<German>Produktion zerstören</German>
+		<Italian>Distruggi produzione</Italian>
+		<Spanish>Destruir producción</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DESTROY_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to destroy the city's current production.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tentera de saboter la production en cours de la ville.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, die aktuelle Produktion der Stadt zu zerstören.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenterà di distruggere la produzione attuale della città.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Espía[COLOR_REVERT] intentará destruir la producción que haya en ese momento en la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DISCOVER_TECH</Tag>
+		<English>Discover Technology</English>
+		<French>Découvrir une technologie</French>
+		<German>Technologie entdecken</German>
+		<Italian>Scopri tecnologia</Italian>
+		<Spanish>Descubrir tecnología</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_DISCOVER_TECH_HELP</Tag>
+		<English>This will have the Great Person help research a technology. It consumes the Great Person.</English>
+		<French>Ordonner au personnage illustre de découvrir automatiquement une nouvelle technologie. Le personnage illustre est alors détruit.</French>
+		<German>Opfern Sie die Große Persönlichkeit, damit diese automatisch eine Technologie entdeckt.</German>
+		<Italian>Con questo comando, un Grande Personaggio scopre automaticamente una tecnologia. L'unità viene sacrificata nel procedimento.</Italian>
+		<Spanish>Hace que el gran personaje descubra automáticamente una tecnología, consumiéndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESCAPE</Tag>
+		<English>Plan Escape Routes</English>
+		<French>Prévoir des échapatoires</French>
+		<Polish>Plan dróg ucieczek</Polish>
+		<Russian>Составить схему эвакуации</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESCAPE_HELP</Tag>
+		<English>The unit maps out its surroundings and forms plans for escape in case it comes under attack. A unit gets a 4%% bonus to its Withdrawal Probability for each turn it is Planning Escape Routes, to a maximum bonus of 20%%.</English>
+		<French>L'unité cartographie ses environs et prépare des plans d'évasion en cas d'attaque. Une unité obtient un bonus de 4%% au chances de retraite pour chaque tour dépensé, avec un bonus maximum de 20%%.</French>
+		<Polish>Jednostka sprawdza okoliczny teren i opracowuje plany alternatywnej ucieczki. Jednostka otrzymuje bonus 4% do szansy na Ucieczkę z pola bitwy (max 20%)</Polish>
+		<Russian>Подразделение составляет карту окрестностей и планы отступления в случае нападения. Отряд получает бонус 4%% к вероятности отступить за каждый ход, а с планированием путей эвакуации обретается максимальный бонус в 20%%.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESPIONAGE_SLEEP</Tag>
+		<English>Gather Intel</English>
+		<French>Récolte d'Infos</French>
+		<German>Sammle Informationen</German>
+		<Italian>Raccogli informazioni</Italian>
+		<Spanish>Recopilar información</Spanish>
+		<Polish>Zgromadź Dane</Polish>
+		<Russian>Собирать разведданные</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESPIONAGE_SLEEP_HELP</Tag>
+		<English>This unit will gather intelligence and not awaken until it reaches the maximum espionage bonus</English>
+		<French>Cette Unité va récolter des Informations et devenir à nouveau active lorsqu'elle aura atteint son bonus maximum d'espionnage.</French>
+		<German>Diese Einheit wird Informationen sammeln und nicht aufwachen bis sie ihr Maximum an Spionagepunkten erreicht hat</German>
+		<Italian>Quest'unità raccoglierà informazioni e non si riattiverà finché non avrà raggiunto il massimo bonus di spionaggio.</Italian>
+		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
+		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
+		<Russian>Этот юнит соберет сведения и не проснется, пока не достигает максимального бонуса шпионажа</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESTABLISH</Tag>
+		<English>Establish Base of Operations</English>
+		<French>Établir une Base d'Opérations</French>
+		<Polish>Utwórz Bazę Operacji</Polish>
+		<Russian>Создать базу операций</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ESTABLISH_HELP</Tag>
+		<English>The unit establishes a base of operations for healing and repair support. A unit that heals gets a 2%% bonus to any type of healing support abilities it already has for each turn it is Establishing Operations, to a maximum bonus of 10%%.</English>
+		<Polish>Jednostka utworzyła bazę operacyjna dla wsparcia medycznego i naprawczego. Za każdą turę przebywania w bazie, jednostka dostaje bonus 2% do leczenia/naprawy (max 10%).</Polish>
+		<French>L'unité établit une base d'opérations pour le soutien de guérison et de réparation. Une unité qui soigne obtient un bonus de 2%% pour tout type de capacités de soutien de guérison qu'elle a déjà pour chaque tour où elle établit des opérations, jusqu'à un bonus maximum de 10%%.</French>
+		<Russian>Подразделение создает базу для операций по лечению и восстановлению. Исцеляющий отряд получает бонус 2%% на каждый ход к любому типу навыков исцеления, уже изученным им, а также операции по установлению, с максимальным бонусом в 10%%.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_FENGAGE</Tag>
+		<English>Fighter Engagement</English>
+		<French>Engagement Aérien</French>
+		<German>Jägereinsatz</German>
+		<Italian>Ingaggio</Italian>
+		<Spanish>Combate</Spanish>
+		<Polish>Angażowanie myśliwców</Polish>
+		<Russian>Бой истребителей</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_FENGAGE_HELP</Tag>
+		<English>Select a fighter unit, select the fighter engagement mission and then select the enemy unit to attack.</English>
+		<French>Sélectionner un avion de chasse, puis l'action 'Engagement Aérien', et enfin la cible à attaquer.</French>
+		<German>Wählen Sie eine Jägereinheit, wählen Sie die Jägereinsatzmission und anschließend die feindliche Einheit, die angegriffen werden soll.</German>
+		<Italian>Seleziona una unità da caccia, seleziona la missione "Ingaggio" e infine selezione l'unità nemica da attaccare.</Italian>
+		<Spanish>Selecciona un caza, selecciona la misión "Combate" y haz clic en la unidad enemiga para atacarla.</Spanish>
+		<Polish>Wybierz jednostkę myśliwca, wybierz misję angażowania myśliwców i wybierz jednostkę wroga do zaatakowania.</Polish>
+		<Russian>Выберите истребитель, отдайте ему приказ вступить в бой истребителей и укажите цель.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_FORTIFY</Tag>
+		<English>Fortify</English>
+		<French>Se retrancher</French>
+		<German>Verschanzen</German>
+		<Italian>Fortifica</Italian>
+		<Spanish>Fortificar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_FORTIFY_HELP</Tag>
+		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5%% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
+		<French>L'unité s'installe et profite du terrain pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de retranchement) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
+		<German>Einheit in Befestigungsmodus versetzen zur besseren Verteidigung im Falle eines Angriffs. Pro befestigter Runde erhält die Einheit einen zusätzlichen Verteidigungsbonus von 5%%, bis zu einem Maximum von 25%%. Befestigte Einheiten verlieren im "Versteckspiel" jegliche Unsichtbarkeit.</German>
+		<Russian>Отряд «окапывается» для лучшего противодействия вражеской атаке. Он получает накопительный 5%-ный защитный бонус (плюс способность «Окапывание») за каждый ход, пока отряд стоит на месте в течении 5 ходов. Обратите внимание, что в игровом режиме «Прятки» укрепленные отряды автоматически теряют всякую скрытность и маскировку.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GOTO</Tag>
+		<English>Go To City</English>
+		<French>Aller à la Ville</French>
+		<German>Zielstadt</German>
+		<Spanish>Ir a ciudad</Spanish>
+		<Polish>Idź do Miasta</Polish>
+		<Russian>Идти к городу</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GOTO_HELP</Tag>
+		<English>Select a city to send this unit to. The city does not need to be inside the current Viewport.</English>
+		<French>Sélectionner une ville où envoyer l'unité (n'a pas besoin d'être dans la fenêtre de vue).</French>
+		<German>Ausgewählte Einheit zu einer beliebigen Zielstadt (auch außerhalb des aktuellen Sichtfelds) beordern.</German>
+		<Spanish>Selecciona una ciudad a la que enviar la unidad. No es necesario que dicha ciudad se encuentre dentro de la Vista parcial actual.</Spanish>
+		<Polish>Wybierz miasto do którego się ma udać jednostka. Miasto nie musi znajdować się na bieżącym Viewporcie.</Polish>
+		<Russian>Выберите город, куда вы намерены отправить этот отряд. Города не должны быть внутри текущего видового экрана.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Travel to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Travel to Distant Cosmos</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Tag>
+		<English>Travel to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Travel to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MARS</Tag>
+		<English>Travel to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Travel to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MOON</Tag>
+		<English>Travel to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Travel to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Travel to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Travel to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Travel to Earth Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Tag>
+		<English>Travel to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Travel to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Travel to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Tag>
+		<English>Travel to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Travel to Virgo Superscluster</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER</Tag>
+		<English>Field Commander</English>
+		<French>Commandant de Terrain</French>
+		<German>Feldkommandeur</German>
+		<Italian>Comandante sul campo</Italian>
+		<Spanish>Comandante de tierra</Spanish>
+		<Polish>Dowódca Polowy</Polish>
+		<Russian>Полевой командир</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
+		<English>Turns the Great General into a Field Commander: it loses its abilities to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
+		<French>Converti le Général Illustre en Commandant de Terrain, qui perd la possibilité de s'associer aux Villes et Unités, mais peut acquérir de l'expérience et des promotions, et mener les Unités sur le terrain.</French>
+		<German>Verwandelt den Großen General in einen Feldkommandeur, wodurch er seine normalen Fertigkeiten verliert. Dafür kann er nun Erfahrungspunkte und Beförderungen aus Schlachten erhalten, an denen er teilnimmt, und damit die Einheiten in seinem näheren Umfeld unterstützen.</German>
+		<Italian>Trasforma il grande generale in un comandante sul campo: perderà l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma ti permetterà di guadagnare esperienza, ottenere promozioni e condurre unità sul campo.</Italian>
+		<Spanish>Convierte al Gran general en un Comandante de tierra, que pierde sus habilidades para unirse a las ciudades y unidades, o construir maravillas, pero le otorga la capacidad de adquirir experiencia y ascensos, y liderar a las unidades en el campo de batalla.</Spanish>
+		<Polish>Zmień Wielkiego Generała w Dowódce Polowego, traci wówczas możliwość by dołączyć do miast, jednostek czy budować cuda, ale daje możliwość zdobywania doświadczenia, promocji oraz prowadzić jednostki na polu bitwy.</Polish>
+		<Russian>Превращает Великого Генерала в Полевого командира, который теряет возможность присоединяются к городам, отрядам или чудесам, но дает ему способность заработать опыт, повышения и лидерство в поле.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HEAL</Tag>
+		<English>Fortify Until Healed</English>
+		<French>Se retrancher jusqu'à guérison</French>
+		<German>Bis zur vollständigen Heilung verschanzen</German>
+		<Italian>Fortifica finché non raggiunge il massimo della salute</Italian>
+		<Spanish>Fortificar hasta curarse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP</Tag>
+		<English>Automate Build Up Selections for Healing</English>
+		<French>Retranchement avec Spécialisation de Soin.</French>
+		<German>Training (automatisiert) - Heilung</German>
+		<Russian>Автоматизировать лечение</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP_HELP</Tag>
+		<English>Automate build up selections (with emphasis on healing) for all units selected until fully healed. Turns to heal is maximum - with this mission, units may take less time to heal (but may also be weaker while doing so.)</English>
+		<French>Automatise la sélection du retranchement (spécialisation soins) pour toutes les unités sélectionnées, jusqu'à qu'elles soient complètement guéries. Le nombre de tours indiqué est un maximum - Car le bonus de soin est incrémental - l'unité met moins de temps pour se soigner, mais est plus vulnérable.</French>
+		<German>Automatische Steigerung der Regeneration der ausgewählten Einheiten bis zur kompletten Wiederherstellung. Einheiten sind auf diesem Weg schneller wieder einsatzbereit, dafür sind sie in der Rekonvaleszenzzeit aber schwächer und ungeschützter.</German>
+		<Russian>Автоматизировать действия (с акцентом на исцеление) для всех отобранных юнитов до полного излечения. С этой командой отрядам может потребоваться меньше времени для исцеления (но снижая его эффективность).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HEAL_HELP</Tag>
+		<English>The unit remains inactive until it reaches full strength.</English>
+		<French>L'unité reste inactive tant que son niveau de santé n'est pas au maximum.</French>
+		<German>Einheit ruhen und heilen lassen, bis diese wieder volle Stärke besitzt.</German>
+		<Italian>L'unità rimane inattiva finché non ritorna al massimo delle forze.</Italian>
+		<Spanish>La unidad permanecerá inactiva hasta que recobre el total de su fuerza.</Spanish>
+		<Russian>Отряд остается неактивным, пока полностью не восстановит силы.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_FOOD</Tag>
+		<English>Hurry Food</English>
+		<French>Surplus de Nourriture</French>
+		<German>Nahrungsproduktion beschleunigen</German>
+		<Italian>Surplus di cibo</Italian>
+		<Spanish>Envío alimentario</Spanish>
+		<Polish>Przyśpiesz żywność</Polish>
+		<Russian>Быстрая еда</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_FOOD_HELP</Tag>
+		<English>This order will increase the cities food supply. It consumes the unit.</English>
+		<French>Cet Ordre va accroitre la réserve de nourriture des Villes. L'unité est détruite.</French>
+		<German>Dieser Befehl wird die Nahrungsmittelvorräte in der Stadt erhöhen. Die Einheit wird dabei verbraucht.</German>
+		<Italian>Quest'ordine incrementa le riserve di cibo della città. Consuma l'unità.</Italian>
+		<Spanish>Esta orden incrementará la comida almacenada en las ciudades. Consumirá a la unidad.</Spanish>
+		<Polish>Ten rozkaz zwiększy zaopatrzenie miasta w żywność. Jest to zużywane przez jednostki.</Polish>
+		<Russian>Этот приказ увеличит городскую поставку продовольствия. Это потребляет отряд.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION</Tag>
+		<English>Hurry Production</English>
+		<French>Accélérer la production</French>
+		<German>Produktion beschleunigen</German>
+		<Italian>Produzione accelerata</Italian>
+		<Spanish>Acelerar la producción</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION_HELP</Tag>
+		<English>This order will hurry production on the city's current effort. It consumes the unit.</English>
+		<French>Accélérer la production en cours de la ville, ce qui détruit le personnage illustre.</French>
+		<German>Opfern Sie die Große Persönlichkeit, um die aktuelle Produktion der Stadt zu beschleunigen.</German>
+		<Italian>Con questo ordine, la produzione attuale di una città viene accelerata. L'unità viene sacrificata nel procedimento.</Italian>
+		<Spanish>El gran personaje acelera la producción que la ciudad esté llevando a cabo, consumiéndose en el proceso.</Spanish>
+		<Russian>Этот приказ ускорит текущее строительство в городе. Он потребляет отряд.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INFILTRATE</Tag>
+		<English>Infiltrate Player's City</English>
+		<French>Infiltrer la ville d'un joueur</French>
+		<German>Spielerstadt infiltrieren</German>
+		<Italian>Infiltrati nella città</Italian>
+		<Spanish>Infiltrar en ciudad de jugador</Spanish>
+		<Russian>Внедрение в чужой город</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INFILTRATE_HELP</Tag>
+		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed. Criminals must pass an investigation check to be successful. If they are, they are sent back to the capital. Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
+		<Russian>Прикажет шпиону или преступнику проникнуть в чужой город, чтобы раздобыть в нем ценную информацию (очки шпионажа) о сопернике. Шпионы используют и тратят очки шпионажа. Преступники должны пройти проверку от местных правоохранителей, чтобы добиться успеха. В случае успеха миссии, их возвращают обратно в столицу. В противном случае их объявляют в розыск и они потеряют оставшиеся очки движения за этот ход..</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INQUISITION</Tag>
+		<English>Perform Inquisition</English>
+		<French>Réaliser une Inquisition</French>
+		<German>Inquisition durchführen</German>
+		<Italian>Realizza un'Inquisizione</Italian>
+		<Spanish>Convocar un Tribunal de la Fé</Spanish>
+		<Polish>Dokonaj Inkwizycji</Polish>
+		<Russian>Провести инквизиционный процесс</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INQUISITION_HELP</Tag>
+		<English>Allows the unit to remove all non-state religions.</English>
+		<French>Permet à l'unité de purger la ville de toutes les religions non officielles.</French>
+		<German>Ermöglicht der Einheit alle nichtstaatlichen Religionen zu entfernen.</German>
+		<Italian>Permette alle unità di rimuovere tutte le religioni non di stato.</Italian>
+		<Spanish>Permite a la unidad eliminar todas las religiones no oficiales.</Spanish>
+		<Polish>Pozwala jednostce, usunąć wszystkie niepaństwowe religie.</Polish>
+		<Russian>Позволяет подразделению удалить все негосударственные религии из города</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INTERCEPT</Tag>
+		<English>Intercept</English>
+		<French>Intercepter</French>
+		<German>Abfangen</German>
+		<Italian>Intercetta</Italian>
+		<Spanish>Interceptar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_INTERCEPT_HELP</Tag>
+		<English>This air unit order will tell the craft to attempt interception with any incoming air attacks.</English>
+		<French>Ordonner à l'unité de tenter d'intercepter toutes les raids aériens ennemis.</French>
+		<German>Befehlen Sie einer Lufteinheit, alle Luftangriffe abzufangen.</German>
+		<Italian>Questo ordine serve per dire al velivolo di intercettare qualsiasi tentativo di attacco aereo.</Italian>
+		<Spanish>Esta orden es para unidades aéreas y les dice que intenten interceptar todos los ataques aéreos que lleguen.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY</Tag>
+		<English>Join City</English>
+		<French>Rejoindre la ville</French>
+		<German>Sich einer Stadt anschließen</German>
+		<Italian>Unisci alla città</Italian>
+		<Spanish>Unirse a ciudad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_HELP</Tag>
+		<English>This order will make the Great Person join the city as a super specialist. It will consume the Great Person.</English>
+		<French>Ordonner à ce personnage illustre de rejoindre la ville en tant que super-spécialiste. Il est alors détruit.</French>
+		<German>Opfern Sie eine Große Persönlichkeit und befehlen Sie ihr, sich als Super-Spezialist in der Stadt anzusiedeln.</German>
+		<Italian>Con questo ordine, i Grandi Personaggi possono unirsi alla città in veste di super specialisti, venendo sacrificati nel procedimento.</Italian>
+		<Spanish>Esta orden hace que el gran personaje se quede en la ciudad como un superespecialista, consumiéndose en el proceso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_KILL_SPY</Tag>
+		<English>Kill Nearby Spy</English>
+		<French>Tuer espion proche</French>
+		<German>Spion in der Nähe töten</German>
+		<Italian>Uccidi la spia vicina</Italian>
+		<Spanish>Matar al espía cercano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_KILL_SPY_HELP</Tag>
+		<English>Kill adjacent Spy</English>
+		<French>Tuer espion adjacent</French>
+		<German>Spion in der Nähe eliminieren</German>
+		<Italian>Uccidi la spia adiacente</Italian>
+		<Spanish>Matar al espía adyacente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Denuncia[COLOR_REVERT][NEWLINE]Prendi azioni legali e rimuovi tutte le corporazioni dalla città.</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Denunciar[COLOR_REVERT][NEWLINE]Tomar acciones legales para expulsar a todas las corporaciones de la ciudad.</Spanish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Судебный процесс[COLOR_REVERT][NEWLINE]Предъявите судебный иск от имени государства и изгоните все корпорации из города.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Denuncia[COLOR_REVERT][NEWLINE]Prendi azioni legali e rimuovi tutte le corporazioni dalla città.</Italian>
+		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Судебный процесс[COLOR_REVERT][NEWLINE]Предъявите судебный иск от имени государства и изгоните все корпорации из города.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO</Tag>
+		<English>Move To</English>
+		<French>Aller vers</French>
+		<German>Fortbewegen nach</German>
+		<Italian>Vai</Italian>
+		<Spanish>Mover a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_HELP</Tag>
+		<English>Set your unit to move to a specific plot</English>
+		<French>Ordonner à l'unité de rejoindre une position sur la carte.</French>
+		<German>Schicken Sie Ihre Einheit auf ein bestimmtes Geländefeld.</German>
+		<Italian>Ordina alla tua unità di muoversi in una casella specifica.</Italian>
+		<Spanish>Para decirle a la unidad que vaya a una casilla concreta.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_SENTRY</Tag>
+		<English>Move and Sentry</English>
+		<French>Déplacement et Surveillance</French>
+		<German>Wache bei Fortbewegung</German>
+		<Italian>Muoviti e fai la sentinella</Italian>
+		<Spanish>Moverse y vigilar</Spanish>
+		<Polish>Ruch i Warta</Polish>
+		<Russian>Двигаться и сторожить</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_SENTRY_HELP</Tag>
+		<English>The unit moves until an enemy unit of the same type enters its visibility range.</English>
+		<French>L'unité se déplace automatiquement tant qu'une unité ennemie ne pénètre pas dans son champ de vision.</French>
+		<German>Lässt eine sich bewegende Einheit aktiv werden, bis sie sich einer feindlichen Einheit desselben Einheitentyps nähert</German>
+		<Italian>L'unitàsi muove finché un'unità nemica non diventa visibile.</Italian>
+		<Spanish>La unidad se mueve hasta que una unidad enemiga del mismo tipo se sitúe en su campo de visión.</Spanish>
+		<Polish>Jednostka będzie poruszać się tak długo aż nie spotka wrogiej jednostki</Polish>
+		<Russian>Подразделение будет двигаться, пока вражеские войска подобного типа не окажутся в зоне видимости.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT</Tag>
+		<English>Move To Unit</English>
+		<French>Aller vers l'unité</French>
+		<German>Einheit fortbewegen nach</German>
+		<Italian>Vai all'unità</Italian>
+		<Spanish>Llevar hasta la unidad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT_HELP</Tag>
+		<English>Set your unit to move to a unit</English>
+		<French>Ordonner à l'unité de rejoindre une autre unité.</French>
+		<German>Schicken Sie Ihre Einheit zu einer anderen Einheit.</German>
+		<Italian>Ordina alla tua unità di muoversi verso un'altra unità.</Italian>
+		<Spanish>Para decirle a la unidad que vaya hasta otra unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NUKE</Tag>
+		<English>Plant Nuclear Device</English>
+		<French>Placer une arme nucléaire</French>
+		<German>Nuklearen Sprengkörper einschleusen</German>
+		<Italian>Piazza un ordigno nucleare</Italian>
+		<Spanish>Colocar una bomba nuclear</Spanish>
+		<Polish>Podłóż Ładunek Nuklearny</Polish>
+		<Russian>Ядерный удар</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NUKE_HELP</Tag>
+		<English>Drops a nuclear device onto the selected space.</English>
+		<French>Larguer une arme nucléaire sur la case sélectionnée.</French>
+		<German>Werfen Sie im Zielgebiet eine Atombombe ab.</German>
+		<Italian>Lancia una bomba nucleare nella casella selezionata.</Italian>
+		<Spanish>Deja caer una bomba nuclear en la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PARADROP</Tag>
+		<English>Paradrop</English>
+		<French>Parachuter</French>
+		<German>Fallschirmsprung</German>
+		<Italian>Lancio col paracadute</Italian>
+		<Spanish>Desembarco aéreo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PARADROP_HELP</Tag>
+		<English>Paradrops to a specified location. The mission is subject to interception.</English>
+		<French>Parachuter des troupes à un endroit précis. La mission peut être interceptée.</French>
+		<German>Fallschirmsprung an eine ausgewählte Stelle. Die Mission kann abgefangen werden.</German>
+		<Italian>Si lancia col paracadute nella posizione specificata. La missione può essere intercettata.</Italian>
+		<Spanish>Se lanza en paracaídas en el lugar especificado. La misión es susceptible de ser interceptada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PERFORM_ESPIONAGE</Tag>
+		<English>Perform Espionage Mission</English>
+		<French>Exécuter mission d'espionnage</French>
+		<German>Spionagemission ausführen</German>
+		<Italian>Effettua missione di spionaggio</Italian>
+		<Spanish>Realizar misión de espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PILLAGE</Tag>
+		<English>Pillage</English>
+		<French>Pillage</French>
+		<German>Plünderung</German>
+		<Italian>Saccheggia</Italian>
+		<Spanish>Saquear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PILLAGE_HELP</Tag>
+		<English>The unit destroys an improvement in the tile it occupies.</English>
+		<French>L'unité détruit un aménagement de terrain dans la case qu'elle occupe.</French>
+		<German>Die Einheit plündert und zerstört Landschaftsverbesserungen auf ihrem Geländefeld.</German>
+		<Italian>L'unità distrugge un miglioramento sulla casella che occupa.</Italian>
+		<Spanish>La unidad destruye una mejora en la casilla en que se encuentra.</Spanish>
+		<Polish>Jednostka zniszczyła udoskonalenie na okupowanym polu.</Polish>
+		<Russian>Отряд уничтожает улучшения клетки, на которой находится.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLUNDER</Tag>
+		<English>Blockade</English>
+		<French>Blocus</French>
+		<German>Blockade</German>
+		<Italian>Embargo</Italian>
+		<Spanish>Bloqueo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_PLUNDER_HELP</Tag>
+		<English>The unit disrupts the trade route so that no intercontinental trade can pass through the blockaded tile</English>
+		<French>L'unité effectue le blocus de la case pour empêcher tout commerce intercontinental par cette route commerciale.</French>
+		<German>Die Einheit unterbricht den Handelsweg, daher kann kein interkontinentaler Handel auf dem blockierten Geländefeld stattfinden</German>
+		<Italian>L'unità interrompe la rotta commerciale in modo che nessuna rotta commerciale intercontinentale possa passare dalla casella bloccata.</Italian>
+		<Spanish>La unidad corta la ruta comercial para que ninguna operación de comercio intercontinental pueda atravesar la casilla bloqueada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_POWER</Tag>
+		<English>Disable Power Grid</English>
+		<French>Désactiver la production d'électricité</French>
+		<German>Energieversorgung lahmlegen</German>
+		<Italian>Disattiva centrali elettriche</Italian>
+		<Spanish>Desactivar producción eléctrica</Spanish>
+		<Polish>Wyłącz Prąd</Polish>
+		<Russian>Повредите энергосистему</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RANGE_ATTACK</Tag>
+		<English>Range Attack</English>
+		<French>Attaque à Distance</French>
+		<Russian>Дальняя атака</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RBOMBARD</Tag>
+		<English>Ranged Assault</English>
+		<French>Assaut à distance</French>
+		<Polish>Atak dystansowy</Polish>
+		<Russian>Дальняя бомбардировка</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RBOMBARD_HELP</Tag>
+		<English>Select a ranged unit, select the bombard mission, then click on the plot to bombard.</English>
+		<French>Sélectionnez une unité d'artillerie puis une mission de bombardement. Cliquez ensuite sur la case à bombarder.</French>
+		<German>Wählen Sie eine Artillerieeinheit, aktivieren Sie die Mission "Bombardierung" und klicken Sie dann auf das Geländefeld, das bombardiert werden soll.</German>
+		<Italian>Seleziona un'unità di artiglieria, seleziona "Bombardamento ad Area", quindi clicca sulla casella da bombardare.</Italian>
+		<Spanish>Selecciona una unidad de ataque a distancia, selecciona la misión "Cañoneo de alcance" y haz clic en la casilla a bombardear.</Spanish>
+		<Polish>Wybierz jednostkę artyleryjską, wybierz misję ataku dystansowego a następnie kliknij na polu, które chcesz zbombardować.</Polish>
+		<Russian>Выбрав артиллерийский юнит, нажмите кнопку бомбардировки, а затем щелкните клетку для обстрела.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECON</Tag>
+		<English>Recon</English>
+		<French>Reconnaissance</French>
+		<German>Aufklärung</German>
+		<Italian>Ricognizione</Italian>
+		<Spanish>Reconocer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RECON_HELP</Tag>
+		<English>Clears the fog of war from around the selected space for one turn.</English>
+		<French>Lever le brouillard de guerre autour de la case sélectionnée pendant un tour.</French>
+		<German>Der Nebel des Krieges lichtet sich im Zielgebiet eine Runde lang.</German>
+		<Italian>Elimina la nebbia di guerra dallo spazio selezionato per un turno.</Italian>
+		<Spanish>Despeja durante un turno la niebla de la guerra que haya alrededor de la casilla seleccionada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_REVOLT</Tag>
+		<English>Aid Rebel Factions</English>
+		<French>Aider les Factions Rebelles</French>
+		<German>Rebellengruppierungen unterstützen</German>
+		<Italian>Aiuta fazioni ribelli</Italian>
+		<Spanish>Ayudar a organizaciones rebeldes</Spanish>
+		<Polish>Zaoferuj Pomoc Rebelii</Polish>
+		<Russian>Помочь повстанцам</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ROUTE_TO</Tag>
+		<English>Route To</English>
+		<French>Route vers</French>
+		<German>Straße nach</German>
+		<Italian>Intinerario</Italian>
+		<Spanish>Ir en ruta a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_ROUTE_TO_HELP</Tag>
+		<English>This order causes the worker to build a road (or railroad) to the location selected. The worker will follow the shortest path to the location. The worker wakes when it has completed the assignment.</English>
+		<French>Ordonner à l'ouvrier de construire une route (ou une voie ferrée) vers l'endroit indiqué. Il suivra le chemin le plus court et sera à nouveau disponible lorsqu'il aura terminé sa mission.</French>
+		<German>Befehlen Sie einem Bautrupp, eine Straße (oder Eisenbahnstrecke) zur gewählten Position zu bauen. Ihr Bautrupp wählt nun den kürzesten Weg und wartet nach dem Bau der Straße/Eisenbahnstrecke auf weitere Befehle.</German>
+		<Italian>Con questo ordine, si obbliga un lavoratore a costruire una strada (o una ferrovia) nel luogo prescelto. Il lavoratore farà il percorso più breve per raggiungere il punto e si sveglierà quando avrà completato il proprio incarico.</Italian>
+		<Spanish>Con esta orden hacéis que un trabajador construya una carretera (o ferrocarril) al lugar seleccionado. El trabajador seguirá el camino más corto hasta dicho lugar. Se despertará cuando haya cumplido su cometido.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SABOTAGE</Tag>
+		<English>Sabotage</English>
+		<French>Sabotage</French>
+		<German>Sabotage</German>
+		<Italian>Sabota</Italian>
+		<Spanish>Sabotear</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SABOTAGE_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to sabotage the tile's improvement.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tente de saboter un aménagement sur cette case.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, alle Modernisierungen eines Geländefelds zu sabotieren.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenterà di sabotare il miglioramento della casella.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Espía[COLOR_REVERT] intentará sabotear la mejora que haya en la casilla.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SEAPATROL</Tag>
+		<English>Sea Patrol</English>
+		<French>Patrouille des mers</French>
+		<German>Seepatrouille</German>
+		<Italian>Pattuglia marina</Italian>
+		<Spanish>Patrulla marítima</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SEAPATROL_HELP</Tag>
+		<English>This order will tell the unit to attack enemy ships attempting to pillage adjacent tiles</English>
+		<French>Ordonner à l'unité d'attaquer les navires ennemis se livrant au pillage de cases adjacentes</French>
+		<German>Die Einheit wird feindliche Schiffe angreifen, um angrenzende Geländefelder zu plündern</German>
+		<Italian>Questo ordine farà in modo che l'unità attacchi le navi nemiche che cercano di saccheggiare le caselle circostanti</Italian>
+		<Spanish>Esta orden le dirá a la unidad que ataque a los barcos enemigos que intenten saquear las casillas adyacentes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY</Tag>
+		<English>Sentry</English>
+		<French>Sentinelle</French>
+		<German>Wache</German>
+		<Italian>Sentinella</Italian>
+		<Spanish>Vigilar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_HELP</Tag>
+		<English>The unit remains inactive until an enemy unit enters any adjacent square.</English>
+		<French>L'unité reste inactive tant qu'une autre unité ne pénètre pas dans une case adjacente.</French>
+		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Einheit ein Nachbarfeld betritt.</German>
+		<Italian>L'unità rimane inattiva finché un'unità nemica non passa in una delle caselle adiacenti.</Italian>
+		<Spanish>La unidad permanecerá inactiva hasta que una unidad enemiga entre en cualquier casilla adyacente.</Spanish>
+		<Russian>Отряд остается неактивным, пока вражеский юнит не войдет в любую соседнюю клетку.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_LAND_UNITS</Tag>
+		<English>Sentry (Land Units)</English>
+		<French>Surveillance (Unités terrestres)</French>
+		<German>Wache (Landeinheiten)</German>
+		<Italian>Sentinella (Unità Terrestri)</Italian>
+		<Spanish>Vigilar (unidades terrestres)</Spanish>
+		<Polish>Warta (Jednostki lądowe)</Polish>
+		<Russian>Сторожить (Наземные войска)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_LAND_UNITS_HELP</Tag>
+		<English>The unit remains inactive until an enemy land unit enters its visibility range.</English>
+		<French>L'unité reste inactive tant qu'aucune unité terrestre ennemie ne pénètre pas dans son champ de vision.</French>
+		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Landeinheit ihr Sichtfeld betritt.</German>
+		<Italian>L'unità rimane inattiva finché un'unità nemica non diventa visibile.</Italian>
+		<Spanish>La unidad permanecerá inactiva hasta que una unidad terrestre enemiga se sitúe en su campo de visión.</Spanish>
+		<Polish>Jednostka pozostaje bezczynna, dopóki wroga jednostka lądowa nie zbliży się do zasięgu.</Polish>
+		<Russian>Подразделение будет неактивно, пока вражеские наземные подразделения не появятся в зоне видимости.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS</Tag>
+		<English>Sentry (Naval Units)</English>
+		<French>Surveillance (Unités Navales)</French>
+		<German>Wache (Marineeinheiten)</German>
+		<Italian>Sentinella (Unità Navali)</Italian>
+		<Spanish>Vigilar (unidades navales)</Spanish>
+		<Polish>Wartownik (Jednostki morskie)</Polish>
+		<Russian>Сторожить (Корабли)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS_HELP</Tag>
+		<English>The unit remains inactive until an enemy naval unit enters its visibility range.</English>
+		<French>L'unité reste inactive tant qu'aucune unité navale ennemie ne pénètre pas dans son champ de vision.</French>
+		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Marineeinheit ihr Sichtfeld betritt.</German>
+		<Italian>L'unità rimane inattiva finché un'unità nemica non diventa visibile.</Italian>
+		<Spanish>La unidad permanecerá inactiva hasta que una unidad naval enemiga se sitúe en su campo de visión.</Spanish>
+		<Polish>Jednostka pozostaje bezczynna, dopóki wroga jednostka morska nie zbliży się do zasięgu.</Polish>
+		<Russian>Подразделение будет неактивно, пока вражеские корабли не появятся в зоне видимости.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_WHILE_HEAL</Tag>
+		<English>Sentry Until Healed</English>
+		<French>Surveillance pendant la Guérison</French>
+		<German>Wache bis geheilt</German>
+		<Italian>Fai la sentinella fino alla guarigione</Italian>
+		<Spanish>Vigilar hasta curarse</Spanish>
+		<Polish>Ulecz</Polish>
+		<Russian>Сторожить до исцеления</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SENTRY_WHILE_HEAL_HELP</Tag>
+		<English>The unit remains inactive until it reaches full strength or an enemy unit enters its visibility range.</English>
+		<French>L'unité reste inactive jusqu'à ce qu'elle soit guérie, et tant qu'aucune unité ennemie ne pénètre pas dans son champ de vision.</French>
+		<German>Lässt eine Einheit inaktiv bleiben, bis sie vollständig geheilt ist oder sich eine feindliche Einheit nähert</German>
+		<Italian>L'unità rimane inattiva finché non ritorna a piena forza o un'unità nemica non diventa visibile.</Italian>
+		<Spanish>La unidad permanecerá inactiva hasta que recobre el total de su fuerza o una unidad enemiga se sitúe en su campo de visión.</Spanish>
+		<Polish>Jednostka pozostaje bezczynna, dopóki nie osiąga pełnej siły lub jednostka wroga nie zbliży się do zasięgu.</Polish>
+		<Russian>Подразделение будет неактивно до тех пор, пока не достигнет полной силы или вражеский отряд не появится в зоне видимости.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SKIP</Tag>
+		<English>Skip Turn</English>
+		<French>Passer le tour</French>
+		<German>Runde überspringen</German>
+		<Italian>Salta turno</Italian>
+		<Spanish>Saltar turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SKIP_HELP</Tag>
+		<English>Do nothing. The unit will awake and ask again for orders the next turn.</English>
+		<French>Ne rien faire. L'unité attend le tour suivant pour demander de nouveaux ordres.</French>
+		<German>Tun Sie gar nichts, wartet die Einheit in der nächsten Runde auf weitere Befehle.</German>
+		<Italian>Nessun ordine. L'unità si sveglierà e attenderà altri ordini al turno successivo.</Italian>
+		<Spanish>La unidad no hará nada, despertará y volverá a solicitar órdenes al turno siguiente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLEEP</Tag>
+		<English>Sleep</English>
+		<French>Dormir</French>
+		<German>Ausruhen</German>
+		<Italian>Dormi</Italian>
+		<Spanish>Dormir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLEEP_HELP</Tag>
+		<English>Order the unit to sleep until activated by the player</English>
+		<French>Ordonner à l'unité de se mettre en sommeil tant qu'elle n'est pas réactivée par le joueur.</French>
+		<German>Versetzen Sie die Einheit in den Ausruhmodus, bis Sie sie wieder aktivieren.</German>
+		<Italian>Ordina all'unità di riposare finché non viene attivata dal giocatore</Italian>
+		<Spanish>Para ordenarle a la unidad que duerma hasta que la activéis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD</Tag>
+		<English>Spread Religion</English>
+		<French>Propager la religion</French>
+		<German>Religion verbreiten</German>
+		<Italian>Diffondi religione</Italian>
+		<Spanish>Propagar religión</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_CORPORATION</Tag>
+		<English>Expand Corporation</English>
+		<French>Développer une société commerciale</French>
+		<German>Kapitalgesellschaft expandieren</German>
+		<Italian>Espandi corporazione</Italian>
+		<Spanish>Expandir corporación</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_CORPORATION_HELP</Tag>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Executive[COLOR_REVERT] unit but expand their corporation into the city.</English>
+		<French>Cet ordre détruira le [COLOR_UNIT_TEXT]Directeur[COLOR_REVERT] mais développera sa société commerciale dans la ville.</French>
+		<German>Der [COLOR_UNIT_TEXT]Vorstand[COLOR_REVERT] wird geopfert, damit die Kapitalgesellschaft in die Stadt expandieren kann.</German>
+		<Italian>Con questo ordine, si sacrifica un [COLOR_UNIT_TEXT]Funzionario[COLOR_REVERT], ma la corporazione si espande nella città.</Italian>
+		<Spanish>Esta orden consumirá a la unidad de [COLOR_UNIT_TEXT]Ejecutivo[COLOR_REVERT] pero expandirá su corporación en la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SPREAD_HELP</Tag>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Missionary[COLOR_REVERT] unit but spread their religion to the city.</English>
+		<French>Cet ordre détruit le [COLOR_UNIT_TEXT]missionnaire[COLOR_REVERT], mais sa religion sera propagée à la ville.</French>
+		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Missionar[COLOR_REVERT], damit dieser seine Religion in der Welt verbreitet.</German>
+		<Italian>Con questo ordine, si sacrifica un [COLOR_UNIT_TEXT]missionario[COLOR_REVERT], ma viene diffusa la religione nella città.</Italian>
+		<Spanish>Esta orden hará que se consuma la unidad de [COLOR_UNIT_TEXT]Misionero[COLOR_REVERT], pero propagará la religión por la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_START_GOLDENAGE</Tag>
+		<English>Start a Golden Age</English>
+		<French>Déclencher un âge d'or</French>
+		<German>Goldenes Zeitalter beginnen</German>
+		<Italian>Avvia un'Età dell'Oro</Italian>
+		<Spanish>Iniciar una edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
+		<English>This order will consume one or more Great People (of different types) and initiate a Golden Age (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], no Anarchy).</English>
+		<French>Cette ordre consommera plusieurs personnages illustres (de types différents) et déclenchera un âge d'or ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] supplémentaires, pas d'anarchie).</French>
+		<German>Opfern Sie eine oder mehrere Große Persönlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zusätzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begründen.</German>
+		<Italian>Con questo ordine si consumano uno o più Grandi Personaggi (di tipi differenti) e si avvia un'Età dell'Oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], nessuna anarchia).</Italian>
+		<Spanish>Esta orden consume uno o más grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], sin Anarquía).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_STEAL_PLANS</Tag>
+		<English>Steal Plans</English>
+		<French>Voler des plans</French>
+		<German>Pläne stehlen</German>
+		<Italian>Ruba i piani</Italian>
+		<Spanish>Robar planos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_STEAL_PLANS_HELP</Tag>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to steal plans, which will reveal all of the target civilization's units.</English>
+		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tentera de voler des plans, qui révèlent toutes les unités de la civilisation visée.</French>
+		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, Pläne zu stehlen, die alle Einheiten der gewünschten Zivilisation enthüllen.</German>
+		<Italian>La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenterà di rubare dei documenti per rivelare tutte le unità della civiltà bersaglio.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Espía[COLOR_REVERT] intentará robar los planos, que revelarán todas las unidades de la civilización objetivo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH</Tag>
+		<English>Choose Desired Discovery Tech</English>
+		<French>Choisir la Technologie désirée</French>
+		<Italian>Scegli la tecnologia che vuoi ricercare</Italian>
+		<Spanish>Seleccionar el descubrimiento deseado</Spanish>
+		<Polish>Wybierz pożądaną Technologie</Polish>
+		<Russian>Выберите желательную технологию для обнаружения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH_HELP</Tag>
+		<English>Allows selection of a desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
+		<French>Permet à la sélection d'unité d'aider à la découvert d'une technologie. L'unité sera en veille jusqu'à ce que la technologie soit disponible pour la recherche, puis sera enlevée.</French>
+		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità non si riattiverà finché quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
+		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
+		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
+		<Russian>Позволяет выбрать желательную технологию для обнаружения. Юнит будет спать, пока эта технология не становится доступной, чтобы исследовать, и затем будет потреблять ее исследование.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
+		<English>Transfer unit to Cislunar Space</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
+		<English>Transfer unit to Distant Cosmos</English>
+	</TEXT>
+<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
+		<English>Transfer unit to Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Inner Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
+		<English>Transfer unit to Local Group</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
+		<English>Transfer unit to Mars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
+		<English>Transfer unit to Milky Way</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
+		<English>Transfer unit to Moon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
+		<English>Transfer unit to Nearby Stars</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Tag>
+		<English>Transfer unit to Orion Arm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
+		<English>Transfer unit to Outer Solar System</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
+		<English>Transfer unit to Earth Underground</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
+		<English>Transfer unit to Titan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
+		<English>Transfer unit to Kuiper Belt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>
+		<English>Transfer unit to Universe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
+		<English>Transfer unit to Venus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
+		<English>Transfer unit to Virgo Superscluster</English>
+	</TEXT>
+	</Civ4GameText>

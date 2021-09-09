@@ -34,7 +34,7 @@ int CvOutcomeList::getNumOutcomes() const
 
 bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -51,7 +51,7 @@ bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -68,7 +68,7 @@ bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleInPlot(const CvUnit &kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	int iNum = getNumOutcomes();
+	const int iNum = getNumOutcomes();
 	if (iNum <= 0)
 		return false;
 
@@ -102,11 +102,8 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
-	const int iNumReplaced = kInfo.getNumReplaceOutcomes();
-	for (int j=0; j<iNumReplaced; j++)
+	foreach_(const OutcomeTypes eReplOutcome, GC.getOutcomeInfo(eOutcome).getReplaceOutcomes())
 	{
-		const OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
 		aeReplacedOutcomes.insert(eReplOutcome);
 		insertReplaceOutcomesRecursive(aeReplacedOutcomes, eReplOutcome);
 	}
@@ -130,7 +127,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
@@ -185,7 +182,7 @@ int64_t CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlo
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
@@ -239,7 +236,7 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML)
+void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 {
 	if (isEmpty())
 	{
@@ -252,9 +249,9 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtilit
 	}
 }
 
-void CvOutcomeList::getCheckSum(unsigned int& iSum) const
+void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 {
-	int num = getNumOutcomes();
+	const int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)
 	{
 		m_aOutcome[index]->getCheckSum(iSum);
@@ -278,7 +275,7 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
-	
+
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
 		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())

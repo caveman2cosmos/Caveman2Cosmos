@@ -9,7 +9,7 @@
 #include "CyUnit.h"
 
 //
-// Python wrapper class for CvPlot 
+// Python wrapper class for CvPlot
 //
 
 CyPlot::CyPlot(CvPlot* pPlot, bool bInViewportSpace) : m_pPlot(pPlot), m_bIsInViewportSpace(bInViewportSpace) {}
@@ -262,7 +262,8 @@ CyArea* CyPlot::area() const
 
 CyArea* CyPlot::waterArea() const
 {
-	return m_pPlot ? new CyArea(m_pPlot->waterArea()) : NULL;
+	CvArea* area = m_pPlot ? m_pPlot->waterArea() : NULL;
+	return area ? new CyArea(area) : NULL;
 }
 
 int CyPlot::getArea() const
@@ -580,11 +581,12 @@ void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invis
 python::list CyPlot::units() const
 {
 	python::list list = python::list();
+
 	if (m_pPlot)
 	{
 		foreach_(CvUnit* unit, m_pPlot->units())
 		{
-			list.append(new CyUnit(unit));
+			list.append(CyUnit(unit));
 		}
 	}
 	return list;
@@ -623,4 +625,18 @@ bool CyPlot::isInViewport() const
 CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
+}
+
+python::list CyPlot::rect(int halfWid, int halfHgt) const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->rect(halfWid, halfHgt))
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
 }

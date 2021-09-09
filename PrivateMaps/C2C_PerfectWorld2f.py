@@ -154,15 +154,11 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed, shuffle
 import math
-import sys
-import time
-import os
 
 class MapConstants :
 		def __init__(self):
@@ -3979,8 +3975,8 @@ class BonusPlacer:
 
 	def AssignBonusAreas(self):
 		gc = CyGlobalContext()
-		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
+		self.areas = gameMap.areas()
 		self.bonusList = list()
 
 		#Create and shuffle the bonus list and keep tally on
@@ -4227,7 +4223,6 @@ class BonusPlacer:
 
 
 	def CalculateAreaSuitability(self, area, eBonus):
-		gc = CyGlobalContext()
 		gameMap = CyMap()
 		areaID = area.getID()
 		uniqueTypesInArea		 = self.GetUniqueBonusTypeCountInArea(area)
@@ -4282,9 +4277,8 @@ class StartingPlotFinder:
 		#try:
 			gc = CyGlobalContext()
 			gameMap = CyMap()
-			iPlayers = gc.getGame().countCivPlayersEverAlive()
 			gameMap.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = gameMap.areas()
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
@@ -4402,11 +4396,10 @@ class StartingPlotFinder:
 
 
 	def setupOldWorldAreaList(self):
-		gc = CyGlobalContext()
 		gameMap = CyMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = gameMap.areas()
 		areaOldWorld = list()
 		for i in range(len(areas)):
 			for pI in range(mc.width*mc.height):
@@ -4541,9 +4534,9 @@ class StartingPlotFinder:
 				bProceed = True
 				if featureEnum != FeatureTypes.NO_FEATURE and buildInfo.isFeatureRemove(featureEnum):
 					if buildInfo.getFeatureTech(featureEnum) == TechTypes.NO_TECH or gc.getTechInfo(buildInfo.getFeatureTech(featureEnum)).getEra() <= max(game.getStartEra(), 1):
-						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)		+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE)
-						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)				+ featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD)
-						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION)
+						impCommerce		-= featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)	 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE)
+						impFood				-= featureInfo.getYieldChange(YieldTypes.YIELD_FOOD)			 + featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD)
+						impProduction -= featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION)
 					else:
 						bProceed = False
 				if bProceed:
@@ -4585,7 +4578,6 @@ class StartingPlotFinder:
 
 
 	def boostCityPlotValue(self, x, y, bonuses, isCoastalCity):
-		mapGen = CyMapGenerator()
 		food,value = self.getCityPotentialValue(x, y)
 		gc = CyGlobalContext()
 		gameMap = CyMap()
@@ -4850,7 +4842,6 @@ class StartingArea :
 				self.idealNumberOfPlayers = 0
 				return
 		def CalculatePlotList(self):
-				gc = CyGlobalContext()
 				gameMap = CyMap()
 
 				for y in range(mc.height):
@@ -5000,7 +4991,6 @@ class StartingArea :
 
 				return
 		def CalculateStartingPlotValues(self):
-				gameMap = CyMap()
 				numPlots = len(self.plotList)
 
 				for n in range(numPlots):
@@ -5116,7 +5106,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x,self.y).isRiverSide()
@@ -5797,7 +5787,6 @@ def addLakes():
 		print "Adding Lakes"
 		gc = CyGlobalContext()
 		mmap = gc.getMap()
-		terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
 #		 PrintFlowMap()
 		oceanMap = Areamap(mc.width,mc.height,True,True)
 		oceanMap.defineAreas(isSmallWaterMatch)
@@ -5835,17 +5824,11 @@ def addFeatures():
 		print "Adding Features"
 		gc = CyGlobalContext()
 		mmap = gc.getMap()
-		featureIce = gc.getInfoTypeForString("FEATURE_ICE")
 		featureJungle = gc.getInfoTypeForString("FEATURE_JUNGLE")
 		featureForest = gc.getInfoTypeForString("FEATURE_FOREST")
 		featureOasis = gc.getInfoTypeForString("FEATURE_OASIS")
 		featureFloodPlains = gc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 		## C2C start ##
-		terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
-		#~ terrainSea = gc.getInfoTypeForString("TERRAIN_SEA")
-		terrainOcean = gc.getInfoTypeForString("TERRAIN_OCEAN")
-		featureReef = gc.getInfoTypeForString("FEATURE_REEF")
-		featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 		featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
 		featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 		featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
@@ -5979,11 +5962,10 @@ def createIce():
 def addBonuses():
 		bp.AddBonuses()
 		return
+
 def assignStartingPlots():
-		gc = CyGlobalContext()
-		gameMap = CyMap()
-		iPlayers = gc.getGame().countCivPlayersEverAlive()
 		spf.SetStartingPlots()
+
 def beforeInit():
 		print "Initializing Custom Map Options"
 		mc.initialize()

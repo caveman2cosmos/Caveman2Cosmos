@@ -1,0 +1,941 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_BECOMES_IMP</Tag>
+		<English>[ICON_BULLET]Becomes a [LINK=%s1_ImpType]%s2_ImpName[\LINK] in %d3_Num [NUM2:Turn:Turns]</English>
+		<French>[ICON_BULLET]Transformation en : [LINK=%s1_ImpType]%s2_ImpName[\LINK] dans %d3_Num [NUM2:tour:tours]</French>
+		<German>[ICON_BULLET]Wird in %d3_Num [NUM2:Runde:Runden] zur Modernisierung [LINK=%s1_ImpType]%s2_ImpName[\LINK]</German>
+		<Italian>[ICON_BULLET]Diventa [NUM1:un:una] [LINK=%s1_ImpType]%s2_ImpName[\LINK] in %d3_Num [NUM2:Turno:Turni]</Italian>
+		<Spanish>[ICON_BULLET]Se convierte en [LINK=%s1_ImpType]%s2_ImpName[\LINK] en %d3_Num [NUM2:turno:turnos]</Spanish>
+		<Russian>[ICON_BULLET]Улучшится до [LINK=%s1_ImpType]%s2_ImpName[\LINK] через %d3_Num [NUM2:ход:ходов]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
+		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BUILDS_FASTER_WITH</Tag>
+		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
+		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
+		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DISABLES</Tag>
+		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
+		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
+		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
+		<Italian>[ICON_BULLET]Elimina l'accesso a [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) dalla città.</Italian>
+		<Spanish>[ICON_BULLET]Elimina el acceso [NUM1:al:a la:a los:a las] [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ciudad.</Spanish>
+		<Russian>[ICON_BULLET]Делает невозможным доступ к [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) в этом городе.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DOUBLE_SPEED_WITH</Tag>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
+		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
+		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
+		<Spanish>Dobla la velocidad de producción con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
+		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_IN_CITY</Tag>
+		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] in Every City</English>
+		<French>[ICON_BULLET]1 [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] dans chaque ville</French>
+		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
+		<Italian>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] [NUM1:gratuito:gratuita:gratuiti:gratuite] in ogni città</Italian>
+		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
+		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALIST</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
+		<German>[ICON_BULLET]%D1_Change freien Spezialisten [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratis</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratis</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change бесплатного [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FROM_IN_ALL_CITIES</Tag>
+		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
+		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
+		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
+		<Italian>[SPACE]per [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian>
+		<Spanish>[SPACE]por [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] en todas las ciudades</Spanish>
+		<Russian>[SPACE]от [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] во всех городах</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
+		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_LIKELY_TO_GENERATE</Tag>
+		<English>[ICON_BULLET]City more likely to generate [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]La ville a plus de chance de générer : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Erhöhte Wahrscheinlichkeit der Erzeugung von [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT] in der Stadt</German>
+		<Italian>[ICON_BULLET]La città ha maggiori probabilità di generare un [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Es más probable que la ciudad genere a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Город с большей вероятностью генерирует [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NUKE_EXPLOSION_CHANCE</Tag>
+		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
+		<Russian>[ICON_BULLET]Вероятность ядерного взрыва: .%d1_chance%% на каждый раунд</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH</Tag>
+		<English>[COLOR_WARNING_TEXT]Obsolete with [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Obsolète avec : [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet durch die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Diventa obsoleto con [NUM1:il:la:i:le] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Caerá en desuso con [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Устаревает из-за [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
+		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES</Tag>
+		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
+		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>
+		<German>[ICON_BULLET]stellt das Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon) zur Verfügung (%d1_Num Einheit)</German>
+		<Italian>[ICON_BULLET]Fornisce %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Italian>
+		<Spanish>[ICON_BULLET]Da %d1_Num de [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Spanish>
+		<Russian>[ICON_BULLET]Дает %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_POWER_WITH</Tag>
+		<English>[ICON_BULLET]Provides Power with [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Fournit de l'électricité avec [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Liefert Energie mit dem Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Fornisce energia insieme a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Proporciona energía con [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Обеспечивает энергией, если есть [COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_RELIGION_DECLARED</Tag>
+		<English>[ICON_BULLET]Some features only function if %F1_RelIcon is your State [ICON_RELIGION].</English>
+		<French>[ICON_BULLET]Certaines fonctionnalités ne sont disponibles que si %F1_RelIcon est votre [ICON_RELIGION] d'Etat.</French>
+		<Russian>[ICON_BULLET]Некоторые функции работают только если %F1_RelIcon является вашей государственной [ICON_RELIGION].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
+		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
+		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
+		<Russian>[ICON_BULLET]Эта постройка требует наличия %F1_RelIcon в качестве государственной [ICON_RELIGION].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO</Tag>
+		<English>[ICON_BULLET]Can turn %d1_Num Citizens into [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Peut transformer %d1_Num citoyens en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Kann %d1_Num Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] verwandeln</German>
+		<Italian>[ICON_BULLET]Può trasformare %d1_Num cittadini in [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3:2_SpclstName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Puede convertir a %d1_Num ciudadanos en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3:2_SpclstName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Может сделать %d1_Num горожан [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZEN_INTO</Tag>
+		<English>[ICON_BULLET]Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
+		<Italian>[ICON_BULLET]Può trasformare un cittadino in [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Puede convertir a ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Может сделать 1 горожанина [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WITH_BONUS</Tag>
+		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
+		<German>[SPACE]mit [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
+		<Italian>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
+		<Spanish>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
+		<Russian>[SPACE]с [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_BUILDING_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVICHELP_REQUIRES</Tag>
+		<English>[COLOR_RED]Requires [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_RED]Req. [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
+		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_RED]Richiede [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_RED]Requiere [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_RED]Требует [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_FOUNDED_FIRST</Tag>
+		<English>[ICON_BULLET]Incorporated by First to Discover [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Fondée par le premier à découvrir la technologie [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Gegründet durch ersten Entdecker der Technologie [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Fondata dal primo a scoprire [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Se incorporará al primero en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Внедряется первооткрывателем [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOUNDS_CORPORATION</Tag>
+		<English>[ICON_BULLET]Incorporates [LINK=%s1_corporationType]%s2_corporation[\LINK]</English>
+		<French>[ICON_BULLET]Fonde [LINK=%s1_corporationType]%s2_corporation[\LINK]</French>
+		<German>[ICON_BULLET]Gründet die Kapitalgesellschaft [LINK=%s1_corporationType]%s2_corporation[\LINK]</German>
+		<Italian>[ICON_BULLET]Fonda la [LINK=%s1_corporationType]%s2_corporation[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Incorpora [LINK=%s1_corporationType]%s2_corporation[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]Внедрение в [LINK=%s1_corporationType]%s2_corporation[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_ARCHER</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its archers along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_ARQUEBUSIER</Tag>
+		<English>[SPACE]The village has agreed to send one of its arquebusiers along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
+		<Russian>[SPACE]Жители деревни согласились отпустить вместе с вами одного из своих аркебузиров!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих секироносцев!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
+		<English>The villagers are hostile!</English>
+		<French>Les villageois sont hostiles !</French>
+		<German>Die Bewohner sind Euch feindlich gesonnen!</German>
+		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
+		<Spanish>Los aldeanos son hostiles.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its bowmen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers long pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
+		<English>[SPACE]Your explorers have found a wanted criminal hiding out among these people!</English>
+		<French>[SPACE]Vos explorateurs ont trouvé un criminel recherché, se cachant parmi la population!</French>
+		<German>Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
+		<Russian>[SPACE]Ваши исследователи натолкнулись на беглого преступника, скрывающегося среди этих людей!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
+		<English>The villagers have provided your unit with experience!</English>
+		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
+		<German>Die Bewohner haben Eure Einheit mit Erfahrung ausgestattet!</German>
+		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unità!</Italian>
+		<Spanish>Los aldeanos le han dado experiencia a la unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_GOLD</Tag>
+		<English>The villagers give you gold!</English>
+		<French>Les villageois vous donnent de l'or !</French>
+		<German>Die Bewohner geben Euch Gold!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato dell'oro!</Italian>
+		<Spanish>Los aldeanos os han dado oro.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_HEALER</Tag>
+		<English>[SPACE]A local Healer has decided to join your cause!</English>
+		<French>[SPACE]Un guérisseur local a décidé de rejoindre votre cause!</French>
+		<Russian>[SPACE]Местный целитель решил присоединиться к вашему делу!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_HEALING</Tag>
+		<English>The villagers have healed your unit!</English>
+		<French>Les villageois ont soigné votre unité !</French>
+		<German>Die Bewohner haben Eure Einheit geheilt!</German>
+		<Italian>Gli abitanti del villaggio hanno curato la tua unità!</Italian>
+		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_INFANTRY</Tag>
+		<English>[SPACE]The community has agreed to send one of its infantry along with you!</English>
+		<French>[SPACE]La communauté a accepté de vous confier un de leurs infanteries pour partager vos aventures!</French>
+		<Russian>[SPACE]Здешняя община согласилась отпустить с вами одного из добровольцев, желающего вступить в ряды вашей армии!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_MACEMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its flailmen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec fléau pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих булавоносцев!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_MAP</Tag>
+		<English>The villagers have provided you with a map!</English>
+		<French>Les villageois vous ont donné une carte !</French>
+		<German>Die Bewohner haben Euch eine Karte überlassen!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato una mappa!</Italian>
+		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_PIKEMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its pikemen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs piquiers pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копейщиков!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
+		<English>[SPACE]The villagers share information that leads your researchers to a major breakthrough!</English>
+		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
+		<German>Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
+		<Russian>[SPACE]Жители деревни делятся информацией, которая ведет ваших исследователей к большому прорыву!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
+		<English>The villagers have provided you with a Scout!</English>
+		<French>Les villageois vous fournissent un éclaireur !</French>
+		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
+		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
+		<English>The villagers have provided you with a Settler!</English>
+		<French>Les villageois vous fournissent un colon !</French>
+		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
+		<Spanish>Los aldeanos os han dado un colono.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its spearmen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec lance pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копьеносцев!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_STONE_AXEMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its strong axeman along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих воинов с топорами!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_SWORDSMAN</Tag>
+		<English>[SPACE]The tribe has agreed to send one of its swordsmen along with you!</English>
+		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs épéistes pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих мечников!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_TECH</Tag>
+		<English>The villagers have given you the secrets of a new Technology!</English>
+		<French>Les villageois vous ont enseigné une nouvelle technologie !</French>
+		<German>Die Bewohner haben Euch in die Geheimnisse einer neuen Technologie eingeweiht!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato il segreto di una nuova tecnologia!</Italian>
+		<Spanish>Lo aldeanos os han dado los secretos de una nueva tecnología.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
+		<English>The villagers have provided you with a Warrior!</English>
+		<French>Les villageois vous fournissent un guerrier !</French>
+		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
+		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
+		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
+		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
+		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
+		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_WORKER</Tag>
+		<English>The villagers have provided you with a Worker!</English>
+		<French>Les villageois vous fournissent un ouvrier !</French>
+		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
+		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
+		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
+		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
+		<French>[ICON_BULLET]Ne peut exister que sur une %s1_MapCat.</French>
+		<Russian>[ICON_BULLET]Расположение: только %s1_MapCat.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_CATEGORY_TERRAIN</Tag>
+		<English>This is a %s1_MapCat.</English>
+		<German>Das ist ein %s1_MapCat.</German>
+		<French>%s1_MapCat</French>
+		<Russian>%s1_MapCat</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAN_CONSTRUCT_BUILDING_ANYONE</Tag>
+		<English>[ICON_BULLET]Any player can Construct [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Tout joueur peut construire [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Jeder Spieler kann das Gebäude [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT] errichten</German>
+		<Italian>[ICON_BULLET]Qualsiasi giocatore può costruire [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Cualquier jugador puede construir [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Все игроки могут строить [COLOR_BUILDING_TEXT][LINK=%s1_BldgType]%s2_BldgName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
+		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
+		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
+		<Russian>Угроза восстания: %s1_Chance%% (%s2_CityStrength%% из-за культурных различий. %s3_Garrison%% к общей защите от восстаний для отрядов).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
+		<English>The %s1_CivAdj %s2_UnitName responsible was foiled in his efforts and spotted in the process!</English>
+		<French>Le responsable %s2_UnitName %s1_CivAdj a été repéré et son action déjouée!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_BASE_YIELD</Tag>
+		<English>Base %s1: %d2 %F3</English>
+		<French>%s1 de base : %d2 %F3</French>
+		<German>Grundwert %s1: %d2 %F3</German>
+		<Italian>%s1 base: %d2 %F3</Italian>
+		<Spanish>%s1 base: %d2 %F3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
+		<English>Total: %d1 %F2</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
+		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
+		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
+		<Italian>[ICON_BULLET]%D1%F2 commercio libero</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
+		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_SPECIALIST_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from %s3</English>
+		<French>[ICON_BULLET]%D1 %F2 en raison de %s3</French>
+		<German>[ICON_BULLET]%D1 %F2 durch %s3</German>
+		<Italian>[ICON_BULLET]%D1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 por %s3</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
+		<English>Sum: %d1%% = %s2%F3</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
+		<English>[ICON_BULLET]%D1 %F2 from other</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED</Tag>
+		<English>Your %s1_unit is on the run from the local law in %s2_city!</English>
+		<French>Votre %s1_unit est en fuite des autorités locales de %s2_city!</French>
+		<Russian>Ваш %s1_unit скрывается в бегах от местного правосудия в городе %s2_city!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT</Tag>
+		<English>Investigative efforts in the city of %s1_city have resulted in the identification of a wanted suspect in connection with heinous criminal acts!</English>
+		<French>Les efforts d'enquête dans la ville de %s1_city ont abouti à l'identification d'un suspect recherché en lien avec des actes criminels odieux!</French>
+		<Russian>Оперативно-розыскные мероприятия в городе %s1_city позволили установить личность подозреваемого в отвратительных преступных действиях!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PILLAGED_CITY_CAPTURED</Tag>
+		<English>You have pillaged %d1_Num [ICON_GOLD] from the capture of %s2_CityName!!!</English>
+		<French>Vous avez pillé %d1_Num [ICON_GOLD] en capturant %s2_CityName !</French>
+		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista di %s2_CityName!!!</Italian>
+		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName.</Spanish>
+		<Russian>Вы получили %d1_Num [ICON_GOLD] после захвата %s2_CityName!!!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PILLAGED_CITY_RAZED</Tag>
+		<English>You have pillaged %d1_Num [ICON_GOLD] from the destruction of %s2_CityName!!!</English>
+		<French>Vous avez pillé %d1_Num [ICON_GOLD] pendant la destruction de %s2_CityName !</French>
+		<German>Ihr habt durch die Plünderung und Zerstörung der Stadt %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla distruzione di %s2_CityName!</Italian>
+		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la destrucción de %s2_CityName.</Spanish>
+		<Russian>Вы получили %d1_Num [ICON_GOLD] от уничтожения %s2_CityName!!!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
+		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
+		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
+		<Russian>Наконец, нам удалось обнаружить плоды этой земли! Вы успешно разместили или обнаружили новый источник %s1_BonusName.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
+		<English>The land refuses to give up its secrets! You have failed to place or discover a resource.</English>
+		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
+		<Russian>Земля отказывается раскрыть свои тайны! Вам не удалось разместить или обнаружить ресурс.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC</Tag>
+		<English>%s1_PlyrName has adopted the %s2_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</English>
+		<French>%s1_PlyrName a adopté la doctrine (%s2_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] !</French>
+		<German>%s1_PlyrName hat angenommen: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</German>
+		<Italian>%s1_PlyrName ha adottato: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Italian>
+		<Spanish>%s1_PlyrName ha adoptado: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Spanish>
+		<Russian>%s1_PlyrName принял парадигму %s2_CvcOptionName [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLAYER_CONVERT_RELIGION</Tag>
+		<English>%s1_PlyrName has converted to [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</English>
+		<French>%s1_PlyrName se convertit à la religion : [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT] !</French>
+		<German>%s1_PlyrName konvertiert zur Religion [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</German>
+		<Italian>%s1_PlyrName si converte alla religione [COLOR_HIGHLIGHT_TEXT]%s2:2_RelName[COLOR_REVERT]!</Italian>
+		<Spanish>%s1_PlyrName se ha convertido al [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</Spanish>
+		<Russian>%s1_PlyrName и его подданные приняли [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_RECEIVED_RESEARCH</Tag>
+		<English>[SPACE]You have received %d1_Num research towards %s2_TECH!</English>
+		<French>[SPACE]Vous avez reçu %d1_Num de science pour %s2_TECH!</French>
+		<German>[SPACE]Ihr habt %d1_Num [ICON_RESEARCH] für die Erforschung [NUM2:des:der:des:der:der:der] %s2:2_TECH hinzugewonnen.</German>
+		<Russian>[SPACE]Вы получили %d1_Num очков исследования для %s2_TECH!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED</Tag>
+		<English>%s1_PlyrName has completed %s2_WndrName!</English>
+		<French>%s1_PlyrName a construit la merveille : [COLOR_HIGHLIGHT_TEXT]%s2_WndrName[COLOR_REVERT] !</French>
+		<German>%s1_PlyrName hat das Wunder %s2_WndrName fertig gestellt!</German>
+		<Italian>%s1_PlyrName ha completato [NUM2:il:la] %s2_WndrName!</Italian>
+		<Spanish>%s1_PlyrName ha terminado %s2_WndrName.</Spanish>
+		<Russian>%s1_PlyrName закончил строительство %s2_WndrName!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN</Tag>
+		<English>%s1_WndrName has been built in a far away land!</English>
+		<French>[COLOR_GREY]Cette merveille ([COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s1_WndrName[COLOR_REVERT])[COLOR_GREY] a été construite dans un pays lointain ![COLOR_REVERT]</French>
+		<German>Das Wunder %s1_WndrName wurde in einem fernen Land errichtet!</German>
+		<Italian>[NUM1:Il:La] %s1_WndrName è [NUM1:stato costruito:stata costruita] in una terra lontana!</Italian>
+		<Spanish>Han construido %s1_WndrName en una tierra muy lejana.</Spanish>
+		<Russian>%s1_WndrName было воздвигнуто в далекой стране!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
+		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
+		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PER_POP</Tag>
+		<English>(Per Population)</English>
+		<French>(par Population)</French>
+		<Russian>(за население)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_BUILDS_FASTER_WITH</Tag>
+		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
+		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
+		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_DOUBLE_SPEED_WITH</Tag>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
+		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
+		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
+		<Spanish>Dobla la velocidad de producción con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
+		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_ANYONE</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires someone to create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Quelqu'un est requis pour créer [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Jemand muss Folgendes erstellen: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede qualcuno per creare [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Se requiere que alguien cree: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_NO_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_BOMBARD</Tag>
+		<English>[ICON_BULLET]%D1_DmgChange%% City Bombard Damage</English>
+		<French>[ICON_BULLET]Dégâts bombardement %D1_DmgChange%%</French>
+		<German>[ICON_BULLET]%D1_DmgChange%% Stadtbombardierungsschaden</German>
+		<Italian>[ICON_BULLET]%D1_DmgChange%% di danno da bombardamento sulla città</Italian>
+		<Spanish>[ICON_BULLET]%D1_DmgChange%% al daño al cañonear ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_DmgChange%% ê óùåðáó îò áîìáàðäèðîâêè ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_COLLATERAL_DAMAGE</Tag>
+		<English>[ICON_BULLET]%D1_DmgChange%% Collateral Damage</English>
+		<French>[ICON_BULLET]Dommages collatéraux %D1_DmgChange%%</French>
+		<German>[ICON_BULLET]%D1_DmgChange%% Kollateralschaden</German>
+		<Italian>[ICON_BULLET]%D1_DmgChange%% di danno collaterale</Italian>
+		<Spanish>[ICON_BULLET]%D1_DmgChange%% a los daños colaterales</Spanish>
+		<Russian>[ICON_BULLET]%D1_DmgChange%% ê ñîïóòñòâóþùåìó óùåðáó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_ENEMY_LANDS</Tag>
+		<English>Damage/Turn in Enemy Lands</English>
+		<French>Dégâts/tour en territoire ennemi</French>
+		<German>pro Runde in feindlichem Gebiet</German>
+		<Italian>Danno/turno in territorio nemico</Italian>
+		<Spanish>Daño/turno en tierra enemiga</Spanish>
+		<Russian>(% óùåðáà çà õîä íà âðàæåñêîé òåððèòîðèè)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE</Tag>
+		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
+		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
+		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
+		<Italian>[ICON_BULLET]%d1_Num 'Attacco improvviso' [NUM1:supplementare:supplementari]</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
+		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES</Tag>
+		<English>[ICON_BULLET]%D1_Change First Strikes</English>
+		<French>[ICON_BULLET]%D1_Change premières attaques</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:Erstschlag:Erstschläge]</German>
+		<Italian>[ICON_BULLET]%D1_Change [NUM1:'Attacco improvviso supplementare':'Attacchi improvvisi supplementari']</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change Ïåðâûõ óäàðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKES_CHANCE</Tag>
+		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
+		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
+		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
+		<Italian>[ICON_BULLET]%D1_Change possibilità di 'Attacco improvviso'</Italian>
+		<Spanish>[ICON_BULLET]Probabilidad de %D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
+		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FIRST_STRIKE_CHANCE</Tag>
+		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
+		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
+		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
+		<Italian>[ICON_BULLET]%d1_Num possibilità di [NUM1:'Attacco improvviso supplementare':'Attacchi improvvisi supplementari']</Italian>
+		<Spanish>[ICON_BULLET]Probabilidad de %d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
+		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS</Tag>
+		<English>Damage/Turn in Friendly Lands</English>
+		<French>Dégâts/tour en territoire allié</French>
+		<German>pro Runde auf befreundetem Gebiet</German>
+		<Italian>Danno/turno in territorio amico</Italian>
+		<Spanish>Daño/turno en tierra amiga</Spanish>
+		<Russian>(% óùåðáà çà õîä íà äðóæåñòâåííîé òåððèòîðèè)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_SAME</Tag>
+		<English>[ICON_BULLET]Heals Units in Same Tile Extra %d1_Amount%%[SPACE]</English>
+		<French>[ICON_BULLET]Soigne les unités dans la même case de + %d1_Amount%%[SPACE]</French>
+		<German>[ICON_BULLET]Extra-Heilung von Einheiten auf demselben Geländefeld um %d1_Amount%%[SPACE]</German>
+		<Italian>[ICON_BULLET]Cura le unità nella stessa casella del %d1_Amount%%[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Cura a las unidades en la misma casilla un %d1_Amount%% más de[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Ëå÷èò þíèòîâ íà îäíîé äîï. êëåòêå %d1_Amount%%[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE</Tag>
+		<English>[ICON_BULLET]%D1_Change Movement Range</English>
+		<French>[ICON_BULLET]Rayon d'action %D1_Change</French>
+		<German>[ICON_BULLET]%D1_Change Bewegungsrate</German>
+		<Italian>[ICON_BULLET]%D1_Change raggio di movimento</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change al alcance del movimiento</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà äâèæåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
+		<English>[ICON_BULLET]%D1_Discount Terrain Movement Cost</English>
+		<French>[ICON_BULLET]Coût de mouvement réduit de %D1_Discount</French>
+		<German>[ICON_BULLET]%D1_Discount Bewegungskosten</German>
+		<Italian>[ICON_BULLET]%D1_Discount costo di movimento sul terreno</Italian>
+		<Spanish>[ICON_BULLET]%D1_Discount al coste del movimiento por terreno</Spanish>
+		<Russian>[ICON_BULLET]%D1_Discount ê øòðàôó ïåðåìåùåíèÿ ïî ïåðåñå÷åííîé ìåñòíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_NEUTRAL_LANDS</Tag>
+		<English>Damage/Turn in Neutral Lands</English>
+		<French>Dégâts/tour en territoire neutre</French>
+		<German>pro Runde auf neutralem Gebiet</German>
+		<Italian>Danno/turno in territorio neutrale</Italian>
+		<Spanish>Daño/turno en tierra neutral</Spanish>
+		<Russian>(% óùåðáà çà õîä íà íåéòðàëüíîé òåððèòîðèè)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_VERSUS</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% vs. [LINK=%s2_AgainstType]%s3_Against[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Mod%% contre [LINK=%s2_AgainstType]%s3_Against[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Mod%% gegen [LINK=%s2_AgainstType]%s3_Against[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% contro [LINK=%s2_AgainstType]%s3_Against[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% contra [LINK=%s2_AgainstType]%s3_Against[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% против [LINK=%s2_AgainstType]%s3_Against[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_VISIBILITY</Tag>
+		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
+		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
+		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
+		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change al alcance de la visibilidad</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà âèäèìîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_WITHDRAWAL</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Withdrawal Chance</English>
+		<French>[ICON_BULLET]Chances de repli de %D1_Change%%</French>
+		<German>[ICON_BULLET]%D1_Change%% Rückzugsmöglichkeit</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di ritirata</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% a la probabilidad de retirarse</Spanish>
+		<Russian>[ICON_BULLET]Âåðîÿòíîñòü óäà÷íîãî îòñòóïëåíèÿ: %D1_Change%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_PREREQUISITE_RELIGION</Tag>
+		<English>[ICON_BULLET]This building requires %F1_RelIcon in the city.</English>
+		<French>[ICON_BULLET]Ce Bâtiment requiert %F1_RelIcon dans la Ville.</French>
+		<Russian>[ICON_BULLET]Эта постройка требует наличия %F1_RelIcon в этом городе.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_STATE_RELIGION</Tag>
+		<English>[COLOR_WARNING_TEXT]You must have a State [ICON_RELIGION] and it must be in the city[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Vous devez avoir une [ICON_RELIGION] d'Etat, et celle-ci doit être présente dans la Ville[COLOR_REVERT]</French>
+		<Russian>[COLOR_WARNING_TEXT]У вас должна быть [ICON_RELIGION] государственной религией и иметь последователей в этом городе[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
+		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (any player)[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Nécessite [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (n'importe quel joueur)[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert die Technologie [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (alle Spieler)[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (qualsiasi giocatore)[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (de cualquier jugador)[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (для любого игрока)[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
+		<English>Civ leader</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
+		<English>Player name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
+		<English>Turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_FIRST_RECEIVES</Tag>
+		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Spanish>
+		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET]Ïåðâîîòêðûâàòåëþ äîñòàåòñÿ [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_OBSOLETES</Tag>
+		<English>[COLOR_WARNING_TEXT]Obsoletes [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Rend la technologie "[LINK=%s1_TechType]%s2_TechName[\LINK]" obsolète[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK] [NUM1:diventa obsoleto:diventa obsoleta:diventano obsolete:diventano obsolete][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Przestarzały: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_UNTIL_TECH</Tag>
+		<English>[LINK=%s1_terrainType]%s2_terrain[\LINK] (until %s3_technology)</English>
+		<French>[LINK=%s1_terrainType]%s2_terrain[\LINK] (jusqu'à %s3_technology)</French>
+		<German>[LINK=%s1_terrainType]%s2_terrain[\LINK] (bis zur Technologie %s3_technology)</German>
+		<Italian>[LINK=%s1_terrainType]%s2_terrain[\LINK] (fino a %s3_technology)</Italian>
+		<Spanish>[LINK=%s1_terrainType]%s2_terrain[\LINK] (hasta %s3_technology)</Spanish>
+		<Russian>[LINK=%s1_terrainType]%s2_terrain[\LINK] (до %s3_technology)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ADOPT_CIVIC</Tag>
+		<English>Would adopt the %s1_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</English>
+		<French>Adoptera la doctrine (%s1_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
+		<German>Würde annehmen %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</German>
+		<Italian>Adotterà %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Italian>
+		<Spanish>Adoptará %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Spanish>
+		<Russian>Примет парадигму %s1_CvcOptionName [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_CONVERT_RELIGION</Tag>
+		<English>Would convert to [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</English>
+		<French>Se convertira à la religion : [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</French>
+		<German>Wird zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] konvertieren.</German>
+		<Italian>Si convertirà alla religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Italian>
+		<Spanish>Se convertirá al [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Spanish>
+		<Russian>Примет [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% di attacco contro [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% al ataque contra [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%% в бою с [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE</Tag>
+		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn)</English>
+		<French>[ICON_BULLET]Peut bombarder les défenses d'une ville (-%d1_Mod%%/tour)</French>
+		<German>[ICON_BULLET]kann Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
+		<Italian>[ICON_BULLET]Può bombardare le difese cittadine (-%d1_Mod%%/turno)</Italian>
+		<Spanish>[ICON_BULLET]Puede cañonear las defensas de las ciudades (-%d1_Mod%%/turno)</Spanish>
+		<Russian>[ICON_BULLET]Ìîæåò áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BOMB_RATE</Tag>
+		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn)</English>
+		<French>[ICON_BULLET]Peut détruire les aménagements et bombarder les défenses des villes (-%d1_Mod%%/tour)</French>
+		<German>[ICON_BULLET]kann Landschaftsverbesserungen zerstören und Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
+		<Italian>[ICON_BULLET]Può distruggere i miglioramenti delle caselle e bombardare le difese cittadine (-%d1_Mod%%/turno)</Italian>
+		<Spanish>[ICON_BULLET]Puede destruir las mejoras de las casillas y bombardear las defensas de las ciudades (-%d1_Mod%%/turno)</Spanish>
+		<Russian>[ICON_BULLET]Ìîæåò óíè÷òîæàòü îáúåêòû è áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BUILDS_FASTER</Tag>
+		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
+		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
+		<Italian>Costruisce il %d1_Change%% più rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
+		<Russian>Строит %d1_Change%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_COLLATERAL_IMMUNE</Tag>
+		<English>[ICON_BULLET]Immune to collateral damage from [LINK=%s1_unitsType]%s2_units[\LINK]</English>
+		<French>Immunité contre les dégâts collatéraux des [LINK=%s1_unitsType]%s2_units[\LINK]</French>
+		<German>[ICON_BULLET]Immun gegen Kollateralschaden durch die Einheit [LINK=%s1_unitsType]%s2_units[\LINK]</German>
+		<Italian>[ICON_BULLET]Immune al danno collaterale da [LINK=%s1_unitsType]%s2_units[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Inmune a daños colaterales de [LINK=%s1_unitsType]%s2:2_units[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]Невосприимчив к побочному ущербу от [LINK=%s1_unitsType]%s2_units[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Defense vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% en défense contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Verteidigung gegen [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% quando difende contro [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% al defender contra [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%% к защите против [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_DOUBLE_SPEED</Tag>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus</English>
+		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
+		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%2_Bonus[\LINK]</German>
+		<Italian>Il bonus [LINK=%s1_BonusType]%s2_Bonus[\LINK] raddoppia la velocità di produzione</Italian>
+		<Spanish>Dobla la velocidad de producción con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
+		<Russian>Удвоенная скорость производства, если есть [LINK=%s1_BonusType]%s2_Bonus</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_EVADE_INTERCEPTION</Tag>
+		<English>[ICON_BULLET]Can Evade Interception (%d1_Amount%% Chance)</English>
+		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
+		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
+		<Italian>[ICON_BULLET]Può evitare l'intercettazione (%d1_Amount%% di probabilità)</Italian>
+		<Spanish>[ICON_BULLET]Puede eludir la interceptación (probabilidad del %d1_Amount%%)</Spanish>
+		<Russian>[ICON_BULLET]Ìîæåò óêëîíÿòüñÿ îò ïåðåõâàòà (âåðîÿòíîñòü %d1_Amount%%)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT</Tag>
+		<English>[ICON_BULLET]Can Intercept Aircraft (%d1_Amount%% Chance)</English>
+		<French>[ICON_BULLET]Peut intercepter des avions (%d1_Amount%% de chance)</French>
+		<German>[ICON_BULLET]kann Lufteinheiten abfangen (Erfolgsaussicht: %d1_Amount%%)</German>
+		<Italian>[ICON_BULLET]Può intercettare gli aerei (%d1_Amount%% di probabilità)</Italian>
+		<Spanish>[ICON_BULLET]Puede interceptar aeronaves (probabilidad del %d1_Amount%%)</Spanish>
+		<Russian>[ICON_BULLET]Ìîæåò ïåðåõâàòèòü ýñêàäðèëüþ (øàíñ %d1_Amount%%)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE</Tag>
+		<English>[ICON_BULLET]%D1_Change%% vs. [LINK=%s2_AgainstType]%s3_Type[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% contre : [LINK=%s2_AgainstType]%s3_Type[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% gegen [LINK=%s2_AgainstType]%s3_Type[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% contro [LINK=%s2_AgainstType]%s3:2_Type[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% contra [LINK=%s2_AgainstType]%s3:2_Type[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%% против [LINK=%s2_AgainstType]%s3_Type[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_MOD_VS_TYPE_NO_LINK</Tag>
+		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
+		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
+		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
+		<Italian>[ICON_BULLET]%D1_Change%% contro %s2:2_Type</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>
+		<English>[ICON_BULLET]Can Withdraw from Combat (%d1_Amount%% Chance)</English>
+		<French>[ICON_BULLET]Peut rompre le combat (%d1_Amount%% de chance)</French>
+		<German>[ICON_BULLET]Rückzugsmöglichkeit aus Gefechten (Erfolgsaussicht: %d1_Amount%%)</German>
+		<Italian>[ICON_BULLET]Può ritirarsi dal combattimento (%d1_Amount%% di probabilità)</Italian>
+		<Spanish>[ICON_BULLET]Puede retirarse del combate (probabilidad del %d1_Amount%%)</Spanish>
+		<Russian>[ICON_BULLET]Ìîæåò ïîêèäàòü ïîëå áîÿ (âåðîÿòíîñòü %d1_Amount%%)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY_SHORT</Tag>
+		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
+		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
+		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>
+		<Spanish>[ICON_BULLET]Probabilidad de retirarse: %d1_Amount%%</Spanish>
+		<Russian>[ICON_BULLET]Âåðîÿòíîñòü óäà÷íîãî îòñòóïëåíèÿ: %d1_Amount%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADES</Tag>
+		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
+		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
+		<Russian>[ICON_BULLET]Улучшение:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
+		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
+		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
+		<English>Yield changes:</English>
+		<Russian>Измен. дохода:</Russian>
+	</TEXT>
+</Civ4GameText>

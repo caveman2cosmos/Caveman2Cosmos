@@ -13,7 +13,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
-CvPropertyPropagator::CvPropertyPropagator() : 
+CvPropertyPropagator::CvPropertyPropagator() :
 									m_eProperty(NO_PROPERTY),
 									m_eObjectType(NO_GAMEOBJECT),
 									m_eRelation(NO_RELATION),
@@ -50,19 +50,9 @@ PropertyTypes CvPropertyPropagator::getProperty() const
 	return m_eProperty;
 }
 
-void CvPropertyPropagator::setProperty(PropertyTypes eProperty)
-{
-	m_eProperty = eProperty;
-}
-
 GameObjectTypes CvPropertyPropagator::getObjectType() const
 {
 	return m_eObjectType;
-}
-
-void CvPropertyPropagator::setObjectType(GameObjectTypes eObjectType)
-{
-	m_eObjectType = eObjectType;
 }
 
 RelationTypes CvPropertyPropagator::getRelation() const
@@ -70,19 +60,9 @@ RelationTypes CvPropertyPropagator::getRelation() const
 	return m_eRelation;
 }
 
-void CvPropertyPropagator::setRelation(RelationTypes eRelation)
-{
-	m_eRelation = eRelation;
-}
-
 int CvPropertyPropagator::getRelationData() const
 {
 	return m_iRelationData;
-}
-
-void CvPropertyPropagator::setRelationData(int iRelationData)
-{
-	m_iRelationData = iRelationData;
 }
 
 RelationTypes CvPropertyPropagator::getTargetRelation() const
@@ -90,19 +70,9 @@ RelationTypes CvPropertyPropagator::getTargetRelation() const
 	return m_eTargetRelation;
 }
 
-void CvPropertyPropagator::setTargetRelation(RelationTypes eTargetRelation)
-{
-	m_eTargetRelation = eTargetRelation;
-}
-
 int CvPropertyPropagator::getTargetRelationData() const
 {
 	return m_iTargetRelationData;
-}
-
-void CvPropertyPropagator::setTargetRelationData(int iRelationData)
-{
-	m_iTargetRelationData = iRelationData;
 }
 
 GameObjectTypes CvPropertyPropagator::getTargetObjectType() const
@@ -110,12 +80,7 @@ GameObjectTypes CvPropertyPropagator::getTargetObjectType() const
 	return m_eTargetObjectType;
 }
 
-void CvPropertyPropagator::setTargetObjectType(GameObjectTypes eObjectType)
-{
-	m_eTargetObjectType = eObjectType;
-}
-
-bool CvPropertyPropagator::isActive(CvGameObject *pObject) const
+bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -131,7 +96,7 @@ bool CvPropertyPropagator::isActive(CvGameObject *pObject) const
 	return false;
 }
 
-void CvPropertyPropagator::getTargetObjects(CvGameObject* pObject, std::vector<CvGameObject*>& apGameObjects)
+void CvPropertyPropagator::getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects) const
 {
 	apGameObjects.push_back(pObject);
 	if (m_eTargetObjectType != NO_GAMEOBJECT)
@@ -179,7 +144,7 @@ bool CvPropertyPropagator::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator* pProp)
 {
 //	if (m_eProperty == NO_PROPERTY)
 //		m_eProperty = pProp->getProperty();
@@ -228,7 +193,7 @@ void CvPropertyPropagator::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyPropagator::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagator::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eProperty);
 }
@@ -326,15 +291,15 @@ bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorSpread* pOther = static_cast<const CvPropertyPropagatorSpread*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorSpread::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorSpread::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
@@ -427,15 +392,15 @@ bool CvPropertyPropagatorGather::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorGather* pOther = static_cast<const CvPropertyPropagatorGather*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyPropagatorGather::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorGather::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -516,13 +481,13 @@ void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAm
 				//use half of extra to base diffusion on
 				iDiff -= iExtra / 2;
 			}
-			
+
 			iChange = std::max(0, (iDiff * m_iPercent) / 100);
 			aiCorrect[iI] = iChange;
 			aiCorrect[0] -= iChange;
 		}
 	}
-	
+
 	if (iPredictedTotalSelf < iPredictedSelf)
 	{
 		const int iSelfChangeByOthers = iPredictedTotalSelf - iPredictedSelf;
@@ -548,7 +513,7 @@ void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAm
 					//use half of extra to base diffusion on
 					iDiff -= iExtra / 2;
 				}
-				
+
 				iChange = std::max(0, (iDiff * m_iPercent) / 100);
 				aiCorrect[iI] = iChange;
 				aiCorrect[0] -= iChange;
@@ -572,15 +537,15 @@ bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorDiffuse* pOther = static_cast<const CvPropertyPropagatorDiffuse*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorDiffuse::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);

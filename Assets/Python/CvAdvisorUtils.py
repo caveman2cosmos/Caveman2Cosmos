@@ -4,7 +4,7 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-lPopulation = [	
+lPopulation = [
 	[2000000000, FeatTypes.FEAT_POPULATION_2_BILLION, "TXT_KEY_FEAT_2_BILLION"],
 	[1000000000, FeatTypes.FEAT_POPULATION_1_BILLION, "TXT_KEY_FEAT_1_BILLION"],
 	[500000000, FeatTypes.FEAT_POPULATION_500_MILLION, "TXT_KEY_FEAT_500_MILLION"],
@@ -31,11 +31,7 @@ def resetNoLiberateCities():
 		eCorporation = CvBuildingInfo.getFoundsCorporation()
 		if eCorporation > -1 and not GAME.isCorporationFounded(eCorporation):
 
-			bonuses = []
-			for iPrereq in xrange(GC.getDefineINT("NUM_CORPORATION_PREREQ_BONUSES")):
-				eBonus = GC.getCorporationInfo(eCorporation).getPrereqBonus(iPrereq)
-				if eBonus > -1:
-					bonuses.append(eBonus)
+			bonuses = GC.getCorporationInfo(eCorporation).getPrereqBonuses()
 			if not bonuses:
 				continue
 
@@ -48,10 +44,8 @@ def resetNoLiberateCities():
 			iTech = CvBuildingInfo.getPrereqAndTech()
 			if iTech > -1:
 				techs.append(iTech)
-			for iPrereq in xrange(GC.getDefineINT("NUM_BUILDING_AND_TECH_PREREQS")):
-				iTech = CvBuildingInfo.getPrereqAndTechs(iPrereq)
-				if iTech > -1:
-					techs.append(iTech)
+			for iTech in CvBuildingInfo.getPrereqAndTechs():
+				techs.append(iTech)
 
 			lCorporations.append([eCorporation, techs, iUnit, bonuses])
 
@@ -601,7 +595,7 @@ def cityAdvise(CyCity, iPlayer):
 							popupInfo.addPopup(iPlayer)
 							g_iAdvisorNags += 1
 
-				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) == 0 and not CyCity.isOccupation():
+				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) < 10 and not CyCity.isOccupation():
 
 					if (iTurn + 21) % 40 == iTurnFounded % 40:
 
@@ -615,7 +609,7 @@ def cityAdvise(CyCity, iPlayer):
 
 							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
-							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
+							iValue = CvBuildingInfoX.getCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
 
 							if CyCity.canConstruct(iBuildingX, False, False, False):
