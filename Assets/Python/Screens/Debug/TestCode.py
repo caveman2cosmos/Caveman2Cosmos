@@ -581,6 +581,41 @@ class TestCode:
 				if CvBuildingInfo.getObsoletesToBuilding() != -1 and (len(aImmediateReplacementList) > 1 or len(aImmediateReplacement2List) > 1):
 					self.log("WARNING: "+CvBuildingInfo.getType()+" has multiple first or second level replacements and shouldn't obsolete to building")
 
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			#Ignore Pollution, and Bans
+			if iBuilding not in aSpecialReplacementsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
+				#Get list of replaced buildings
+				aReplacedBuildings = []
+				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+					aReplacedBuildings.append(CvBuildingInfo.getReplacedBuilding(i))
+
+				#All replaced buildings of replaced ones
+				aBuildingReplaced2List = []
+				for i in xrange(len(aReplacedBuildings)):
+					CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+					for iReplaced2 in xrange(CvBuildingReplacedInfo.getNumReplacedBuilding()):
+						iBuildingReplacd2 = CvBuildingReplacedInfo.getReplacedBuilding(iReplaced2)
+						if iBuildingReplacd2 not in aBuildingReplaced2List:
+							aBuildingReplaced2List.append(iBuildingReplacd2)
+
+				#Get replacements, that don't appear as replaced of replaced.
+				aImmediateReplacedList = []
+				aImmediateReplacedObsoletionList = []
+				aImmediateReplacedNameList = []
+				for i in xrange(len(aReplacedBuildings)):
+					if aReplacedBuildings[i] not in aBuildingReplaced2List:
+						CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+						aImmediateReplacedList.append(aReplacedBuildings[i])
+						aImmediateReplacedObsoletionList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacedInfo)[1])
+						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
+
+				if CvBuildingInfo.getNumReplacementBuilding() == 0 and len(aImmediateReplacedList) > 1: #Checked building is last in line, and replaces multiple buildings
+					for i in xrange(len(aImmediateReplacedList)):
+						if aImmediateReplacedObsoletionList[i] > min(aImmediateReplacedObsoletionList):
+							self.log(CvBuildingInfo.getType()+" replaced building "+aImmediateReplacedNameList[i]+" should obsolete at "+self.HF.getTechName(min(aImmediateReplacedObsoletionList)))
+
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -3415,11 +3450,9 @@ class TestCode:
 					if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
 						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
 
-				if 0:#len(aReplacementList) == 0:
+				if len(aReplacementList) == 0:
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
-			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
-				if CvBuildingInfo.isPower():
-					self.log(CvBuildingInfo.getType()+" power producer "+str(self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0])+" "+str(aReplacementList))
+			#if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics

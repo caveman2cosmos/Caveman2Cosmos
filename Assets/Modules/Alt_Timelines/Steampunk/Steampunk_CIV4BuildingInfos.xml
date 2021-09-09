@@ -289,7 +289,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_DYNAMO</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
@@ -419,7 +419,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
-			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
+			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>

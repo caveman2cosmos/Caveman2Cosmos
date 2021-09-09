@@ -14758,7 +14758,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
