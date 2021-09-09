@@ -86,14 +86,12 @@ class HelperFunctions:
 			iTechReligionLoc = 0
 			iTechReligionRow = 0
 
-		#Myth/Story/Stories handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
+		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
 		iTechAnimalLoc = 0
 		iTechAnimalRow = 0
 		for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 			iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_MYTH_REQUIRE") or \
-				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_STORY_REQUIRE") or \
-				iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_STORIES_REQUIRE"):
+			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_FOLKLORE_REQUIRE"):
 				iTechAnimalLoc = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridX()
 				iTechAnimalRow = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridY()
 				aTechList.append(GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getType())

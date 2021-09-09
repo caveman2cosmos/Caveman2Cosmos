@@ -493,7 +493,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
@@ -1946,43 +1946,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FOUNDLING_HOSPITAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FOUNDLING_HOSPITAL</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FUSION_PLANT</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FUSION_PLANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FUSION_PLANT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FUSION_PLANT</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
-			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_FUSION</PrereqTech>
-			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LABORATORY</BuildingType>
-				<BuildingType>BUILDING_POWER_LINES</BuildingType>
-			</PrereqInCityBuildings>
-			<iCost>6490</iCost>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
-			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<bPower>1</bPower>
-			<FreeAreaBuilding>BUILDING_GOOD_FUSION</FreeAreaBuilding>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GARDEN_CITY</Type>

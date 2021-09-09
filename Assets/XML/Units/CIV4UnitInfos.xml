@@ -604,9 +604,13 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<iCost>4200</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
@@ -665,9 +669,13 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iCost>7700</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
