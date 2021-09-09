@@ -3437,8 +3437,10 @@ class TestCode:
 	#Building - list buildings, that obsolete without replacement
 	def listObsoleteingBuildings(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
+		aObsoletedBuildingOnTechCountList = [[0 for x in xrange(GC.getNumBuildingInfos())] for y in xrange(GC.getNumTechInfos())]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
 			aBuildingCivicList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
 				if iCivic not in aBuildingCivicList and (CvBuildingInfo.isPrereqAndCivics(iCivic) or CvBuildingInfo.isPrereqOrCivics(iCivic)):
@@ -3451,8 +3453,15 @@ class TestCode:
 						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
 
 				if len(aReplacementList) == 0:
+					aObsoletedBuildingOnTechCountList[CvBuildingInfo.getObsoleteTech()][iBuilding] = 1
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
-			#if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
+		for iTech in xrange(GC.getNumTechInfos()):
+			aBuildingsList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				if aObsoletedBuildingOnTechCountList[iTech][iBuilding]:
+					aBuildingsList.append(GC.getBuildingInfo(iBuilding).getType())
+			if len(aBuildingsList) >= 5:
+				self.log(GC.getTechInfo(iTech).getType()+" obsoletes "+str(len(aBuildingsList))+" regular buildings without replacement: "+str(aBuildingsList))

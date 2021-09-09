@@ -1760,7 +1760,11 @@
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<iCost>950</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>25</iForeignTradeRouteModifier>
@@ -32502,9 +32506,10 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ONLINE_WAREHOUSE</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -72306,7 +72311,6 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1925</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -77017,7 +77021,11 @@
 				<BuildingType>BUILDING_WAREHOUSE2</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<iCost>234</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>25</iForeignTradeRouteModifier>
@@ -79898,7 +79906,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
-			<ObsoleteTech>TECH_SPACETIME_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -79911,7 +79923,6 @@
 				<BuildingType>BUILDING_TRUCK_WAREHOUSE</BuildingType>
 				<BuildingType>BUILDING_AIR_WAREHOUSE</BuildingType>
 				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2005</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
@@ -89674,7 +89685,11 @@
 				<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
 				<BuildingType>BUILDING_MONORAIL_STATION</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<iCost>655</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>25</iForeignTradeRouteModifier>
@@ -99255,11 +99270,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKYROADS</PrereqTech>
 			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
-			<bPrereqPower>1</bPrereqPower>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
+			<bPrereqPower>1</bPrereqPower>
 			<iCost>4315</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -101848,6 +101863,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
@@ -111623,7 +111643,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_WAREHOUSE</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>25</iForeignTradeRouteModifier>

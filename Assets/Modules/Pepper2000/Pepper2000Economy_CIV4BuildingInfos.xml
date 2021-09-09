@@ -52,10 +52,6 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
-				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>

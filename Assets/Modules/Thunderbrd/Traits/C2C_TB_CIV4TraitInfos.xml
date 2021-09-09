@@ -17431,6 +17431,10 @@
 					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -18552,6 +18556,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>

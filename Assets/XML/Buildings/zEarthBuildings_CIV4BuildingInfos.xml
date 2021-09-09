@@ -438,10 +438,6 @@
 					<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<ConstructCondition>
 				<And>

@@ -16291,8 +16291,11 @@
 			</FreeSpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AERIAL_CITY</BuildingType>
-				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+			</PrereqOrBuildings>
 			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
