@@ -218,13 +218,9 @@ public:
 
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
-//<<<<<<< HEAD
-//	int64_t AI_goldPerTurnTradeVal(int64_t iGoldPerTurn) const;
-//=======
 
-	int AI_getGoldValue(const int iGold) const;
-	int AI_getGoldFromValue(const int iValue) const;
-//>>>>>>> master
+	int64_t AI_getGoldValue(const int64_t iGold) const;
+	int64_t AI_getGoldFromValue(const int64_t iValue) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;

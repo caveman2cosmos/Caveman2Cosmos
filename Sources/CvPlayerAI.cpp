@@ -8216,7 +8216,6 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 	{
 		return false;
 	}
-	CLLNode<TradeData>* pNode;
 
 	if (iChange > -1)
 	{
@@ -8358,7 +8357,6 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 	{
 		pabBonusDeal[iI] = false;
 	}
-	CLLNode<TradeData>* pNode;
 	CLLNode<TradeData>* pGoldPerTurnNode = NULL;
 	CLLNode<TradeData>* pGoldNode = NULL;
 
@@ -8378,7 +8376,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			break;
 		}
 	}
-	for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
+	for (CLLNode<TradeData>* pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 	{
 		if (pNode->m_data.m_eItemType == TRADE_CITIES)
 		{
@@ -8460,10 +8458,10 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 		if (pGoldNode)
 		{
-			const int iValueDiff = iAIDealWeight - iHumanDealWeight;
+			const int64_t iValueDiff = iAIDealWeight - iHumanDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				int64_t iGoldData = AI_getGoldFromValue(iValueDiff);
 
 				// Account for rounding errors
 				while (AI_getGoldValue(iGoldData) < iValueDiff)
@@ -8473,7 +8471,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				// If we can wrap this up with gold outright then do so.
 				if (iGoldData > 0 && GET_PLAYER(ePlayer).AI_maxGoldTrade(getID()) >= iGoldData)
 				{
-					const int iValue = AI_getGoldValue(iGoldData);
+					const int64_t iValue = AI_getGoldValue(iGoldData);
 					if (iValue > 0)
 					{
 						iHumanDealWeight += iValue;
@@ -8503,7 +8501,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 				if (GET_PLAYER(ePlayer).getTradeDenial(getID(), pNode->m_data) == NO_DENIAL)
 				{
-					int iWeight = 0;
+					int64_t iWeight = 0;
 
 					switch (pNode->m_data.m_eItemType)
 					{
@@ -8580,7 +8578,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					CvUnit* pUnit = getUnit(pNode->m_data.m_iData);
 					if (pUnit != NULL)
 					{
-						const int iWeight = std::max(GET_PLAYER(ePlayer).AI_militaryUnitTradeVal(pUnit), GET_PLAYER(ePlayer).AI_workerTradeVal(pUnit));
+						const int iWeight = std::max<int64_t>(GET_PLAYER(ePlayer).AI_militaryUnitTradeVal(pUnit), GET_PLAYER(ePlayer).AI_workerTradeVal(pUnit));
 						if (iWeight > 0)
 						{
 							iHumanDealWeight += iWeight;
@@ -8593,10 +8591,10 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 		if (pGoldNode)
 		{
-			const int iValueDiff = iAIDealWeight - iHumanDealWeight;
+			const int64_t iValueDiff = iAIDealWeight - iHumanDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				int64_t iGoldData = AI_getGoldFromValue(iValueDiff);
 
 				// Account for rounding errors
 				while (AI_getGoldValue(iGoldData) < iValueDiff)
@@ -8607,7 +8605,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 				if (iGoldData > 0)
 				{
-					const int iValue = AI_getGoldValue(iGoldData);
+					const int64_t iValue = AI_getGoldValue(iGoldData);
 					if (iValue > 0)
 					{
 						iHumanDealWeight += iValue;
@@ -8621,11 +8619,11 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 		if (!bOfferingCity && pGoldPerTurnNode)
 		{
-			const int iValueDiff = iAIDealWeight - iHumanDealWeight;
+			const int64_t iValueDiff = iAIDealWeight - iHumanDealWeight;
 			if (iValueDiff > 0)
 			{
 				const int iTurns = getTreatyLength();
-				int iGoldData = AI_getGoldFromValue(iValueDiff) / iTurns;
+				int64_t iGoldData = AI_getGoldFromValue(iValueDiff) / iTurns;
 
 				// Account for rounding errors
 				while (AI_getGoldValue(iGoldData * iTurns) < iValueDiff)
@@ -8636,7 +8634,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 				if (iGoldData > 0)
 				{
-					const int iValue = AI_getGoldValue(iGoldData * iTurns);
+					const int64_t iValue = AI_getGoldValue(iGoldData * iTurns);
 					if (iValue > 0)
 					{
 						iHumanDealWeight += iValue;
@@ -9035,7 +9033,7 @@ int64_t CvPlayerAI::AI_getGoldValue(const int64_t iGold) const
 {
 	return iGold * AI_goldTradeValuePercent() / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
-int CvPlayerAI::AI_getGoldFromValue(const int iValue) const
+int64_t CvPlayerAI::AI_getGoldFromValue(const int64_t iValue) const
 {
 	return iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / AI_goldTradeValuePercent();
 }
@@ -20584,8 +20582,8 @@ void CvPlayerAI::AI_doDiplo()
 									}
 									else if (iOurValue > iTheirValue)
 									{
-										const int iValueDiff = iOurValue - iTheirValue;
-										int iGold = AI_getGoldFromValue(iValueDiff);
+										const int64_t iValueDiff = iOurValue - iTheirValue;
+										int64_t iGold = AI_getGoldFromValue(iValueDiff);
 										// Account for rounding errors
 										while (AI_getGoldValue(iGold) < iValueDiff)
 										{
