@@ -20116,7 +20116,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 #ifdef BREAK_SAVES
 		WRAPPER_WRITE(wrapper, "CvPlayer", (const char*)m_iOverflowResearch);
 #else
-		m_iOverflowResearch = std::min<int>(m_iOverflowResearch, MAX_INT);
+		m_iOverflowResearch = std::min<int64_t>(m_iOverflowResearch, MAX_INT);
 		WRAPPER_WRITE(wrapper, "CvPlayer", (int)m_iOverflowResearch);
 #endif
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);

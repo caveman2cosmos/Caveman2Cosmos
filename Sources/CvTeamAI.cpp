@@ -1448,7 +1448,7 @@ int64_t CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 	}
 	iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
 
-	iValue = getModifiedIntValue(iValue, GC.getTechInfo(eTech).getAITradeModifier());
+	iValue = getModifiedIntValue64(iValue, GC.getTechInfo(eTech).getAITradeModifier());
 
 	m_tradeTechValueCache[iCacheIndex] = iValue;
 

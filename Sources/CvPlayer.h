@@ -606,7 +606,7 @@ public:
 	int getMaxConscript() const;
 	void changeMaxConscript(int iChange);
 
-	uint64_t getOverflowResearch() const;
+	int64_t getOverflowResearch() const;
 	void changeOverflowResearch(int64_t iChange);
 
 	int getNoUnhealthyPopulationCount() const;
