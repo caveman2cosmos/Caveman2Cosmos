@@ -10705,12 +10705,12 @@ void CvPlayer::changeConscriptCount(int iChange)
 }
 
 
-uint64_t CvPlayer::getOverflowResearch() const
+int64_t CvPlayer::getOverflowResearch() const
 {
 	return m_iOverflowResearch;
 }
 
-void CvPlayer::changeOverflowResearch(uint64_t iChange)
+void CvPlayer::changeOverflowResearch(int64_t iChange)
 {
 	m_iOverflowResearch += iChange;
 	FASSERT_NOT_NEGATIVE(m_iOverflowResearch)
@@ -18785,9 +18785,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iConscriptCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxConscript);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHighestUnitLevel);
-		// @SAVEBREAK
-		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_iOverflowResearch);
+#ifdef BREAK_SAVES
 		WRAPPER_READ(wrapper, "CvPlayer", (char*)&m_iOverflowResearch);
+#else
+		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_iOverflowResearch);
+#endif
 		// @SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNoUnhealthyPopulationCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExpInBorderModifier);
@@ -20111,9 +20113,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iConscriptCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxConscript);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHighestUnitLevel);
-		// @SAVEBREAK
+#ifdef BREAK_SAVES
 		WRAPPER_WRITE(wrapper, "CvPlayer", (const char*)m_iOverflowResearch);
-		// @SAVEBREAK
+#else
+		m_iOverflowResearch = std::min<int>(m_iOverflowResearch, MAX_INT);
+		WRAPPER_WRITE(wrapper, "CvPlayer", (int)m_iOverflowResearch);
+#endif
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExpInBorderModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingOnlyHealthyCount);

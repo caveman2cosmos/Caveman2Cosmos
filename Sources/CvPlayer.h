@@ -607,8 +607,7 @@ public:
 	void changeMaxConscript(int iChange);
 
 	uint64_t getOverflowResearch() const;
-	//void setOverflowResearch(uint64_t iNewValue);
-	void changeOverflowResearch(uint64_t iChange);
+	void changeOverflowResearch(int64_t iChange);
 
 	int getNoUnhealthyPopulationCount() const;
 	bool isNoUnhealthyPopulation() const;
@@ -1771,7 +1770,7 @@ protected:
 	int m_iConscriptCount;
 	int m_iMaxConscript;
 	int m_iHighestUnitLevel;
-	uint64_t m_iOverflowResearch;
+	int64_t m_iOverflowResearch;
 	int m_iNoUnhealthyPopulationCount;
 	int m_iExpInBorderModifier;
 	int m_iBuildingOnlyHealthyCount;

@@ -1427,10 +1427,10 @@ int64_t CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 	const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);
 	const float sigma = 1.0f / (1.0f + exp(-boost));
 
-	int64_t iCost = std::max<uint64_t>(1, getResearchCost(eTech) - getResearchProgress(eTech));
+	uint64_t iCost = std::max<uint64_t>(1, getResearchCost(eTech) - getResearchProgress(eTech));
 	iCost = (int64_t)(iCost * (sigma * sigma * 3 + 0.25f));
 
-	int iValue = iCost * 3/2;
+	uint64_t iValue = iCost * 3/2;
 
 	int iKnownCount = 0;
 	int iPossibleKnownCount = 0;
