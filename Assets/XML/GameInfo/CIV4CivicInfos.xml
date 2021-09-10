@@ -12420,6 +12420,10 @@
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges>
 				<FeatureHappinessChange>

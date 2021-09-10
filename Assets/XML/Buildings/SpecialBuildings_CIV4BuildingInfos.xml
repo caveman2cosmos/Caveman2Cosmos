@@ -706,7 +706,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -723,7 +727,11 @@
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -6255,13 +6263,16 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6276,7 +6287,11 @@
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14267,7 +14282,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -14284,7 +14303,11 @@
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
