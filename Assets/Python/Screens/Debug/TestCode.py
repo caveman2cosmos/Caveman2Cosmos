@@ -3463,5 +3463,5 @@ class TestCode:
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if aObsoletedBuildingOnTechCountList[iTech][iBuilding]:
 					aBuildingsList.append(GC.getBuildingInfo(iBuilding).getType())
-			if len(aBuildingsList) >= 5:
+			if len(aBuildingsList) >= 3:
 				self.log(GC.getTechInfo(iTech).getType()+" obsoletes "+str(len(aBuildingsList))+" regular buildings without replacement: "+str(aBuildingsList))

@@ -8766,9 +8766,10 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
 			<CommerceChanges>
