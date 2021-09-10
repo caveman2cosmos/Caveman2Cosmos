@@ -18280,7 +18280,6 @@ void CvPlayerAI::AI_doDiplo()
 	CLinkList<TradeData> theirList;
 	TradeData item;
 
-	//int64_t iBestValue;
 	int64_t iOurValue;
 	int iLoop;
 
@@ -20311,7 +20310,7 @@ void CvPlayerAI::AI_doDiplo()
 													pDiplo->setOurOfferList(theirList);
 													pDiplo->setTheirOfferList(ourList);
 													AI_beginDiplomacy(pDiplo, (PlayerTypes)iI);
-												}
+													abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()] = true;												}
 											}
 											else
 											{

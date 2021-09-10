@@ -6508,32 +6508,14 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
-
-	for (int i = 0, num = wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); i < num; ++i)
-	{
-		const int newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);
-
-		if (newIndex != -1)
-		{
-			WRAPPER_READ(wrapper, "CvTeam", (char*)&m_paiResearchProgress[newIndex]);
-		}
-		else
-		{
-			//	Consume the values
-			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_paiResearchProgress[i], SAVE_VALUE_ANY);
-		}
-	}
-	// @SAVEBREAK DELETE
+	// @SAVEBREAK
 	int* m_paiResearchProgress = new int[GC.getNumTechInfos()];
-	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
-	{
-		m_paiResearchProgress[i] = 0;
-	}
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
 	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
 	{
-		this->m_paiResearchProgress[i] += m_paiResearchProgress[i];
+		this->m_paiResearchProgress[i] = m_paiResearchProgress[i];
 	}
+	delete[] m_paiResearchProgress;
 	// @SAVEBREAK
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
@@ -6738,11 +6720,15 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
-
+	// @SAVEBREAK
+	int* m_paiResearchProgress = new int[GC.getNumTechInfos()];
 	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
 	{
-		WRAPPER_WRITE(wrapper, "CvTeam", (char*)m_paiResearchProgress[i]);
+		m_paiResearchProgress[i] = (int)std::min<int64_t>(this->m_paiResearchProgress[i], MAX_INT);
 	}
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
+	delete[] m_paiResearchProgress;
+	// @SAVEBREAK
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);

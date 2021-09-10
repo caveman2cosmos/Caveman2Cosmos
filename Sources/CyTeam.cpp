@@ -148,9 +148,9 @@ int CyTeam::countNumCitiesByArea(const CyArea* pArea) const
 	return m_pTeam->countNumCitiesByArea(pArea->getArea());
 }
 
-uint64_t CyTeam::getResearchCost(int /*TechTypes*/ eTech) const
+uint64_t CyTeam::getResearchCost(TechTypes eTech) const
 {
-	return m_pTeam->getResearchCost((TechTypes)eTech);
+	return m_pTeam->getResearchCost(eTech);
 }
 
 bool CyTeam::hasHolyCity(int /*ReligionTypes*/ eReligion) const
@@ -190,6 +190,7 @@ bool CyTeam::isMinorCiv() const
 
 void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 {
+#ifdef _DEBUG
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID())
@@ -197,13 +198,12 @@ void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 			if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 			{
 				FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
-#ifdef _DEBUG
 				throw new std::exception();
-#endif
 			}
 		}
 
 	}
+#endif
 	m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
 }
 
@@ -657,21 +657,21 @@ bool CyTeam::isObsoleteBuilding(int /*BuildingTypes*/ eIndex) const
 	return m_pTeam->isObsoleteBuilding((BuildingTypes)eIndex);
 }
 
-int64_t CyTeam::getResearchProgress(int /*TechTypes*/ eIndex) const
+int64_t CyTeam::getResearchProgress(TechTypes eIndex) const
 {
-	return m_pTeam->getResearchProgress((TechTypes)eIndex);
+	return m_pTeam->getResearchProgress(eIndex);
 }
 
-void CyTeam::setResearchProgress(int /*TechTypes*/ eIndex, int64_t iNewValue, int /*PlayerTypes*/ ePlayer)
+void CyTeam::setResearchProgress(TechTypes eIndex, int64_t iNewValue, PlayerTypes ePlayer)
 {
 	if (eIndex != NO_TECH)
-		m_pTeam->setResearchProgress((TechTypes)eIndex, iNewValue, (PlayerTypes)ePlayer);
+		m_pTeam->setResearchProgress(eIndex, iNewValue, ePlayer);
 }
 
-void CyTeam::changeResearchProgress(int /*TechTypes*/ eIndex, int64_t iChange, int /*PlayerTypes*/ ePlayer)
+void CyTeam::changeResearchProgress(TechTypes eIndex, int64_t iChange, PlayerTypes ePlayer)
 {
 	if (eIndex != NO_TECH)
-		m_pTeam->changeResearchProgress((TechTypes)eIndex, iChange, (PlayerTypes)ePlayer);
+		m_pTeam->changeResearchProgress(eIndex, iChange, ePlayer);
 }
 
 int CyTeam::getTechCount(int /*TechTypes*/ eIndex) const
