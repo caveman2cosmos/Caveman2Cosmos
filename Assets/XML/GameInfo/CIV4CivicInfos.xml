@@ -670,6 +670,10 @@
 					<BuildingType>BUILDING_JAIL</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -6171,6 +6175,10 @@
 					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -10090,6 +10098,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STAR_FORT</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

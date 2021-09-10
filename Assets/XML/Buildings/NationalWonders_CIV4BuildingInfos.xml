@@ -3165,15 +3165,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SERVANTS_QUARTERS</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_OLD_CITY_RELICS</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -3198,6 +3201,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>

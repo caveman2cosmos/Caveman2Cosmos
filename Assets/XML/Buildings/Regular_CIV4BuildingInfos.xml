@@ -6895,7 +6895,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>320</iCost>
 			<UnitCombatExtraStrengths>
 				<UnitCombatExtraStrength>
@@ -10264,7 +10268,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>280</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -19559,6 +19567,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_IRON_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SULPHUR</Bonus>
@@ -20651,10 +20664,11 @@
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ROMANTICISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_STAR_FORT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<BonusProductionModifiers>
@@ -20720,6 +20734,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -33779,7 +33794,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
@@ -36338,6 +36357,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
@@ -51677,7 +51697,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iNoEntryDefenseLevel>30</iNoEntryDefenseLevel>
 			<iAsset>8</iAsset>
@@ -52712,6 +52736,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -60017,7 +60045,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>310</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -71355,8 +71387,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqGameOption>GAMEOPTION_ZONE_OF_CONTROL</PrereqGameOption>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>-1</iHealth>
 			<bZoneOfControl>1</bZoneOfControl>
@@ -71647,6 +71682,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -79512,6 +79551,128 @@
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OLD_CITY_RELICS</Type>
+			<Description>TXT_KEY_BUILDING_OLD_CITY_RELICS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OLD_CITY_RELICS_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_RELICS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_ROMANTICISM</PrereqTech>
+			<iCost>630</iCost>
+			<iTradeRoutes>2</iTradeRoutes>
+			<iTradeRouteModifier>5</iTradeRouteModifier>
+			<iHappiness>1</iHappiness>
+			<iBombardDefense>70</iBombardDefense>
+			<iDefense>175</iDefense>
+			<iMinDefense>25</iMinDefense>
+			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>15</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_NOBLE</SpecialistType>
+					<iSpecialistCount>3</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<BonusHappinessChanges>
+				<BonusHappinessChange>
+					<BonusType>BONUS_INCENSE</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_SILK</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_JADE</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_MARBLE</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_GEMSTONE</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_IVORY</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_ELECTRUM_WARES</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_PLATINUM_WARES</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_OSTRICH_FEATHERS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+			</BonusHappinessChanges>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					<iExperience>5</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
+			<UnitCombatExtraStrengths>
+				<UnitCombatExtraStrength>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iStrength>50</iStrength>
+				</UnitCombatExtraStrength>
+				<UnitCombatExtraStrength>
+					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+					<iStrength>25</iStrength>
+				</UnitCombatExtraStrength>
+			</UnitCombatExtraStrengths>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-21</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<Type>BUILDING_OLIVE_ORCHARD</Type>
 			<Description>TXT_KEY_BUILDING_OLIVE_ORCHARD</Description>
@@ -96353,7 +96514,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -98578,10 +98743,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_ROMANTICISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_CANNON_TURRET</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
@@ -101969,7 +102135,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>310</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -103305,6 +103475,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
@@ -103600,6 +103775,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -109416,7 +109595,11 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<iCost>261</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -111466,6 +111649,10 @@
 					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<Flavors>
 				<Flavor>
@@ -112443,7 +112630,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>

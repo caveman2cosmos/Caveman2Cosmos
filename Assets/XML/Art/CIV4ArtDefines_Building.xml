@@ -47304,5 +47304,15 @@
 			<KFM/>
 			<Button>art/Electricity/art/solarmirrorplant.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OLD_CITY_RELICS</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Castle2.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

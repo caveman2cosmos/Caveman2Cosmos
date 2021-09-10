@@ -43705,6 +43705,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>

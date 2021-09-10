@@ -420,6 +420,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9177,6 +9181,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

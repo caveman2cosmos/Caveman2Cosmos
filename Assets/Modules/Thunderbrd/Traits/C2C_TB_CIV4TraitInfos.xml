@@ -5694,6 +5694,10 @@
 					<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -5874,6 +5878,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -6317,6 +6325,10 @@
 					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -6457,6 +6469,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_STAR_FORT</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -6724,6 +6740,10 @@
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -6788,6 +6808,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -7437,6 +7461,10 @@
 					<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
@@ -7836,6 +7864,10 @@
 					<BuildingType>BUILDING_STAR_FORT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
@@ -8065,6 +8097,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -8498,6 +8534,10 @@
 					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -8840,6 +8880,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -9454,6 +9498,10 @@
 					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
@@ -9756,6 +9804,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -17435,6 +17487,10 @@
 					<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -18189,6 +18245,10 @@
 					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -18560,6 +18620,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -24106,6 +24170,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24210,6 +24278,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -24399,6 +24471,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24503,6 +24579,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -24692,6 +24772,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24796,6 +24880,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -24985,6 +25073,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<CapitalYieldModifiers>
 				<iYield>15</iYield>
@@ -25172,6 +25264,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -25276,6 +25372,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -25465,6 +25565,10 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -25569,6 +25673,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -25758,7 +25866,11 @@
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
-			</BuildingProductionModifierTypes>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+			</BuildingProductionModifierTypes>			
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_MONUMENT</BuildingType>
@@ -25862,6 +25974,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -26049,6 +26165,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -69971,6 +70091,10 @@
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -70753,6 +70877,10 @@
 					<BuildingType>BUILDING_JAIL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -71181,6 +71309,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
