@@ -1536,18 +1536,18 @@ public:
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding
 	{
-		ScoredBuilding(BuildingTypes building = NO_BUILDING, int score = -1) : building(building), score(score) {}
+		ScoredBuilding(BuildingTypes building = NO_BUILDING, int64_t score = -1) : building(building), score(score) {}
 		bool operator<(const ScoredBuilding& other) const { return score < other.score; }
 
 		BuildingTypes building;
-		int score;
+		int64_t score;
 
 		// Get some interesting stats about a set of scored buildings
-		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int& minScore, int& maxScore)
+		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int64_t& minScore, int64_t& maxScore)
 		{
 			averageScore = 0;
-			minScore = MAX_INT;
-			maxScore = -MAX_INT;
+			minScore = LLONG_MAX;
+			maxScore = LLONG_MIN;
 			foreach_(const ScoredBuilding& itr, scores)
 			{
 				averageScore = averageScore + itr.score / scores.size();
