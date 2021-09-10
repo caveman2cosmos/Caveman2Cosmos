@@ -40279,6 +40279,8 @@
 			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -90108,7 +90110,11 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
@@ -90120,16 +90126,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<YieldModifiers>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<iConquestProb>70</iConquestProb>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -94687,7 +94683,11 @@
 			</MapCategoryTypes>
 			<iMaxLatitude>70</iMaxLatitude>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTHING</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>

@@ -12495,14 +12495,16 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCARECROWS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCARECROWS</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SCARECROWS</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -12785,14 +12787,16 @@
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RAT_CATCHER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -12800,16 +12804,6 @@
 				<iYield>-1</iYield>
 				<iYield>-1</iYield>
 			</YieldModifiers>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<YieldModifiers>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
