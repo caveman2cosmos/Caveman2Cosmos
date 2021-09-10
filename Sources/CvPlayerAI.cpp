@@ -4564,14 +4564,7 @@ int CvPlayerAI::techPathValuePerUnitCost(const techPath* path, TechTypes eTech, 
 	iCostFactor = std::max<int64_t>(1, iCostFactor);
 	iValue = std::max<int64_t>(1, (100*iValue)/(bIgnoreCost ? 1 : iCostFactor));
 
-	if ( iValue > MAX_INT/iScaleFactor )
-	{
-		return MAX_INT;
-	}
-	else
-	{
-		return (int)iValue*iScaleFactor;
-	}
+	return (int)std::min<int64_t>(iValue * iScaleFactor, MAX_INT);
 }
 
 const techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
@@ -5396,7 +5389,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		{
 			iValue += 200;
 
-			const CivicTypes eCivic = getCivics((CivicOptionTypes)(GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType()));
+			const CivicTypes eCivic = getCivics((CivicOptionTypes)GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType());
 			if (NO_CIVIC != eCivic)
 			{
 				int iCurrentCivicValue = AI_civicValue(eCivic);
@@ -8046,7 +8039,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 }
 
 
-int64_t CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
+int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
 {
 	CvCity* pCity;
 
@@ -8180,8 +8173,8 @@ int64_t CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* 
 			break;
 		}
 	}
-
-	return iValue;
+	// Matt: Todo - return long long?
+	return (int)std::min<int64_t>(iValue, MAX_INT);
 }
 
 

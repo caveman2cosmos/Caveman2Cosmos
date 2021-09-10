@@ -4816,7 +4816,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, uint64_t iNewValue, PlayerTyp
 		uint64_t researchProgress = getResearchProgress(eIndex);
 		if (researchProgress >= researchCost)
 		{
-			uint64_t iOverflow = 100 * (getResearchProgress(eIndex) - getResearchCost(eIndex)) / GET_PLAYER(ePlayer).calculateResearchModifier(eIndex);
+			int64_t iOverflow = 100 * (getResearchProgress(eIndex) - getResearchCost(eIndex)) / GET_PLAYER(ePlayer).calculateResearchModifier(eIndex);
 
 			// Multiple Research
 			setHasTech(eIndex, true, ePlayer, true, true);

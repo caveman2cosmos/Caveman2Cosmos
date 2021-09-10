@@ -15868,7 +15868,7 @@ void CvPlayer::doResearch()
 	}
 	else
 	{
-		const uint64_t iOverflow = getOverflowResearch();
+		const int64_t iOverflow = getOverflowResearch();
 		changeOverflowResearch(-iOverflow);
 		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + iOverflow * calculateResearchModifier(eCurrentTech) / 100, getID());
 	}
@@ -17581,14 +17581,14 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				if (getAdvancedStartPoints() >= iCost)
 				{
 					GET_TEAM(getTeam()).setHasTech(eTech, true, getID(), false, false);
-					changeAdvancedStartPoints(iCost > MAX_INT ? -MAX_INT : (int)-iCost);
+					changeAdvancedStartPoints(-(int)std::min<int64_t>(iCost, MAX_INT));
 				}
 			}
 			// Remove Tech from the Team
 			else
 			{
 				GET_TEAM(getTeam()).setHasTech(eTech, false, getID(), false, false);
-				changeAdvancedStartPoints(iCost > MAX_INT ? MAX_INT : (int)iCost);
+				changeAdvancedStartPoints((int)std::min<int64_t>(iCost, MAX_INT));
 			}
 
 			if (getID() == GC.getGame().getActivePlayer())
@@ -20116,8 +20116,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 #ifdef BREAK_SAVES
 		WRAPPER_WRITE(wrapper, "CvPlayer", (const char*)m_iOverflowResearch);
 #else
-		m_iOverflowResearch = std::min<int64_t>(m_iOverflowResearch, MAX_INT);
-		WRAPPER_WRITE(wrapper, "CvPlayer", (int)m_iOverflowResearch);
+		{
+			int64_t iCurrentOverflow = m_iOverflowResearch;
+			m_iOverflowResearch = std::min<int64_t>(m_iOverflowResearch, MAX_INT);
+			WRAPPER_WRITE(wrapper, "CvPlayer", (int)m_iOverflowResearch);
+			m_iOverflowResearch = iCurrentOverflow;
+		}
 #endif
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExpInBorderModifier);
@@ -22038,12 +22042,10 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 	{
 		int64_t iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
 		int64_t iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
-		iRandomGold -= iGold;
-		iRandomGold = iRandomGold > MAX_INT ? MAX_INT -1 : iRandomGold;
 		if (iGold > 0)
-			iGold += GC.getGame().getSorenRandNum((int)iRandomGold + 1, "Event random gold");
+			iGold += GC.getGame().getSorenRandNum((int)std::min<int64_t>(iRandomGold - iGold + 1, MAX_INT), "Event random gold");
 		else if (iGold < 0)
-			iGold -= GC.getGame().getSorenRandNum(abs((int)iRandomGold - 1), "Event random gold");
+			iGold -= GC.getGame().getSorenRandNum(abs((int)std::min<int64_t>(iRandomGold - iGold - 1, MAX_INT)), "Event random gold");
 
 		if (iGold != 0)
 		{
@@ -27241,11 +27243,11 @@ void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2
 	}
 }
 
-uint64_t CvPlayer::doMultipleResearch(uint64_t iOverflow)
+int64_t CvPlayer::doMultipleResearch(int64_t iOverflow)
 {
 	TechTypes eCurrentTech = getCurrentResearch();
 
-	FAssertMsg(eCurrentTech < GC.getNumTechInfos(), "eCurrentTech is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), eCurrentTech);
 
 	if (eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech))
 	{
@@ -27261,7 +27263,7 @@ uint64_t CvPlayer::doMultipleResearch(uint64_t iOverflow)
 	}
 
 	while (eCurrentTech != NO_TECH
-	&& 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech) <= iOverflow)
+	&& static_cast<int64_t>(100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech)) <= iOverflow)
 	{
 		//The Future Tech can cause strange infinite loops
 		if (GC.getTechInfo(eCurrentTech).isRepeat()) break;
@@ -27279,7 +27281,7 @@ uint64_t CvPlayer::doMultipleResearch(uint64_t iOverflow)
 		}
 		eCurrentTech = getCurrentResearch();
 	}
-	return std::max<uint64_t>(0, iOverflow);
+	return std::max<int64_t>(0, iOverflow);
 }
 
 int CvPlayer::getCivilizationHealth() const
