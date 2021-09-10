@@ -55,7 +55,6 @@
 #include <set>
 #include <fstream>
 #include <queue>
-#include <limits>
 
 //
 // Google sparsehash

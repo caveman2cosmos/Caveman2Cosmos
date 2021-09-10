@@ -1546,8 +1546,6 @@ public:
 		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int64_t& minScore, int64_t& maxScore)
 		{
 			averageScore = 0;
-			//minScore = std::numeric_limits<int64_t>::max();
-			//maxScore = std::numeric_limits<int64_t>::min();
 			minScore = LLONG_MAX;
 			maxScore = LLONG_MIN;
 			foreach_(const ScoredBuilding& itr, scores)
