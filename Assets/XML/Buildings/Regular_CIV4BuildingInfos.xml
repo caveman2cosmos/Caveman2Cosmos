@@ -3727,9 +3727,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
-			<PrereqOrBuildings>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_GOAT_FARM</BuildingType>
 				<BuildingType>BUILDING_GOAT_HERD</BuildingType>
@@ -3761,7 +3764,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -47830,7 +47837,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
@@ -50873,7 +50884,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
 			<iCost>86</iCost>
 			<iHappiness>1</iHappiness>
@@ -51018,7 +51033,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
@@ -73005,7 +73024,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
@@ -89324,7 +89347,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -90049,7 +90076,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
@@ -106064,7 +106095,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<iHappiness>5</iHappiness>
+			<iHappiness>15</iHappiness>
 			<iHealth>5</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
@@ -106073,7 +106104,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>75</iCommerce>
+				<iCommerce>85</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -106264,19 +106295,19 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
-						<iYield>11</iYield>
+						<iYield>12</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRASS</BonusType>
 					<YieldModifiers>
-						<iYield>5</iYield>
+						<iYield>7</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_STRAW</BonusType>
 					<YieldModifiers>
-						<iYield>5</iYield>
+						<iYield>7</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
@@ -117636,9 +117667,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
-			<PrereqOrBuildings>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ReplacementBuildings>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_PIG_FARM</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
