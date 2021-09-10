@@ -47272,7 +47272,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Transportation/Art/peir.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/oceanadministration.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NANOMORPHIC_REPLICATOR</Type>
