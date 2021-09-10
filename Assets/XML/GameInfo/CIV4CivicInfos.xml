@@ -666,6 +666,10 @@
 					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iProductionModifier>30</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>

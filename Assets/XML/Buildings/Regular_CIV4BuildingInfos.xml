@@ -36324,6 +36324,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
@@ -57320,6 +57324,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -57593,6 +57601,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -57959,6 +57971,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -58526,10 +58542,10 @@
 			</PrereqBonuses>
 			<iCost>535</iCost>
 			<CommerceChanges>
-				<iCommerce>-45</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -58537,6 +58553,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
+			<CommerceAttacks>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>8</iCommerce>
+			</CommerceAttacks>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
@@ -58552,6 +58574,10 @@
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
 					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_INVESTIGATOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -58572,7 +58598,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-25</iAmountPerTurn>
+					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -59445,6 +59471,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -94654,6 +94684,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -109218,6 +109252,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -109426,6 +109464,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -110251,6 +110293,10 @@
 			<PrereqTech>TECH_TORTURE</PrereqTech>
 			<ExtendsBuilding>BUILDING_DUNGEON</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_JAIL</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAIL</BuildingType>
+			</ReplacementBuildings>
 			<iCost>356</iCost>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
