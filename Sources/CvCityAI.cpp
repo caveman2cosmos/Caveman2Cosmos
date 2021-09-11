@@ -6347,7 +6347,25 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 
 	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
 
-	const int iBaseRate = getPlotYield(eYield);
+	int iBaseRate = getPlotYield(eYield);
+
+	int iTerrainChange = 0;
+	foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
+	{
+		if (pair.second[eYield] != 0)
+		{
+			int iCount = 0;
+			foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS))
+			{
+				if (plotX->getTerrainType() == pair.first && canWork(plotX))
+				{
+					iTerrainChange += pair.second[eYield];
+				}
+			}
+		}
+	}
+	iValue += std::min(getPopulation(), 10) * iTerrainChange;
+	iBaseRate += iTerrainChange * 3 / 4;
 
 	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
@@ -15638,12 +15656,12 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				// commerce yield
 				int iCommerceYieldValue =
-					(
-						AI_buildingYieldValue(
-							YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade,
-							iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]
-						)
-						);
+				(
+					AI_buildingYieldValue(
+						YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade,
+						iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]
+					)
+				);
 				valuesCache->Accumulate(
 					BUILDINGFOCUSINDEX_GOLD,
 					kOwner.getCommercePercent(COMMERCE_GOLD) * iCommerceYieldValue
