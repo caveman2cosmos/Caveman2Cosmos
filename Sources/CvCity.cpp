@@ -17422,12 +17422,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	{
 		short iSize;
 		short iType;
-		int yields[NUM_YIELD_TYPES];
+		int* yields = new int[NUM_YIELD_TYPES];
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "TerrainYieldChangesSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "TerrainYieldChangesType");
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvPlot", NUM_YIELD_TYPES, yields, "TerrainYieldChanges");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields, "TerrainYieldChanges");
 			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iType, true));
 
 			if (iType > -1)
