@@ -1727,7 +1727,7 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
 						if aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
-							
+
 				#==============================================================================================================
 				#<TerrainYieldChanges> - base
 				aTerrainYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTerrainInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
@@ -1755,7 +1755,7 @@ class TestCode:
 				for iTerrain in xrange(GC.getNumTerrainInfos()):
 					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
 						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
-							self.log(str(iTechID)+" "+CvTerrainInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" Terrain Yields "+str(aTerrainYieldChanges[FINAL][iTerrain])+" replaced: "+str(aImmediateReplacedNameList))
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" Terrain Yields "+str(aTerrainYieldChanges[FINAL][iTerrain])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base
