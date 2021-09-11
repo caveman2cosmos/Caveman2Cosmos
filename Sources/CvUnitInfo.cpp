@@ -821,11 +821,12 @@ int CvUnitInfo::getInvisibleType() const
 	return m_iInvisibleType;
 }
 
-//InvisibleTypes CvUnitInfo::getSeeInvisibleType(int i) const
-//{
-//	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
-//	return m_aiSeeInvisibleTypes[i];
-//}
+int CvUnitInfo::getSeeInvisibleType(int i) const
+{
+	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
+
+	return m_aiSeeInvisibleTypes[i];
+}
 
 int CvUnitInfo::getNumSeeInvisibleTypes() const
 {
@@ -1255,7 +1256,7 @@ int CvUnitInfo::getSupersedingUnit(int i) const
 }
 short CvUnitInfo::getNumSupersedingUnits() const
 {
-	return (short)m_aiSupersedingUnits.size();
+	return m_aiSupersedingUnits.size();
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
@@ -4127,10 +4128,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	szTextVal.getTokens(",", tokens);
 	for (int i=0;i<(int)tokens.size();i++)
 	{
-		const InvisibleTypes eInvisible = (InvisibleTypes)pXML->GetInfoClass(tokens[i]);
-		if (eInvisible != NO_INVISIBLE)
+		const int iInvisibleType = pXML->GetInfoClass(tokens[i]);
+		if(iInvisibleType != NO_INVISIBLE)
 		{
-			m_aiSeeInvisibleTypes.push_back(eInvisible);
+			m_aiSeeInvisibleTypes.push_back(iInvisibleType);
 		}
 	}
 
@@ -5845,10 +5846,11 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 
 	if (m_aOutcomeMissions.empty())
 	{
-		foreach_(CvOutcomeMission* outcomeMission, pClassInfo->m_aOutcomeMissions)
+		const int num = pClassInfo->getNumActionOutcomes();
+		for (int index = 0; index < num; index++)
 		{
-			m_aOutcomeMissions.push_back(outcomeMission);
-			outcomeMission = NULL;
+			m_aOutcomeMissions.push_back(pClassInfo->m_aOutcomeMissions[index]);
+			pClassInfo->m_aOutcomeMissions[index] = NULL;
 		}
 	}
 

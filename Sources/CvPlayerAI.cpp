@@ -11838,9 +11838,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			else
 			{
-				foreach_(const InvisibleTypes eInvisible, kUnitInfo.getSeeInvisibleTypes())
+				for (iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
 				{
-					if (eInvisible == eVisibilityRequested)
+					if (kUnitInfo.getSeeInvisibleType(iI) == (int)eVisibilityRequested)
 					{
 						iValue *= 100;
 					}

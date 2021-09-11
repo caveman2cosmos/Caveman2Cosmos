@@ -6829,9 +6829,15 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 					iCount++;
 				}
 			}
-			else if (algo::contains(pLoopUnit->getUnitInfo().getSeeInvisibleTypes(), eInvisibleType))
+			else
 			{
-				iCount++;
+				for (int iI = 0; iI < pLoopUnit->getNumSeeInvisibleTypes(); ++iI)
+				{
+					if (pLoopUnit->getSeeInvisibleType(iI) == (int)eInvisibleType)
+					{
+						iCount++;
+					}
+				}
 			}
 		}
 	}

@@ -31751,10 +31751,10 @@ bool CvVoteSourceInfo::read(CvXMLLoadUtility* pXML)
 
 void CvVoteSourceInfo::copyNonDefaults(const CvVoteSourceInfo* pClassInfo)
 {
-	const int iDefault = 0;
-	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	const CvString cDefault = CvString::format("").GetCString();
-	const CvWString wDefault = CvWString::format(L"").GetCString();
+	int iDefault = 0;
+	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
+	CvString cDefault = CvString::format("").GetCString();
+	CvWString wDefault = CvWString::format(L"").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -32480,8 +32480,8 @@ bool CvOutcomeInfo::read(CvXMLLoadUtility* pXML)
 
 void CvOutcomeInfo::copyNonDefaults(const CvOutcomeInfo* pClassInfo)
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	const CvWString wDefault = CvWString::format(L"").GetCString();
+	CvString cDefault = CvString::format("").GetCString();
+	CvWString wDefault = CvWString::format(L"").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -36438,10 +36438,11 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 
 	if (m_aOutcomeMissions.empty())
 	{
-		foreach_(CvOutcomeMission* source, pClassInfo->m_aOutcomeMissions)
+		const int num = (int) pClassInfo->getNumActionOutcomes();
+		for (int index = 0; index < num; index++)
 		{
-			m_aOutcomeMissions.push_back(source);
-			source = NULL;
+			m_aOutcomeMissions.push_back(pClassInfo->m_aOutcomeMissions[index]);
+			pClassInfo->m_aOutcomeMissions[index] = NULL;
 		}
 	}
 

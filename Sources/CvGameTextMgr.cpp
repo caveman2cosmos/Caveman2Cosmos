@@ -3090,12 +3090,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBLE_MOST"));
 					}
 
-					foreach_(const InvisibleTypes eInvisible, pUnit->getUnitInfo().getSeeInvisibleTypes())
+					for (iI = 0; iI < pUnit->getNumSeeInvisibleTypes(); iI++)
 					{
-						if (eInvisible != pUnit->getInvisibleType())
+						if (pUnit->getSeeInvisibleType(iI) != pUnit->getInvisibleType())
 						{
 							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_UNITHELP_SEE_INVISIBLE", GC.getInvisibleInfo(eInvisible).getChar()));
+							szString.append(gDLL->getText("TXT_KEY_UNITHELP_SEE_INVISIBLE", GC.getInvisibleInfo(pUnit->getSeeInvisibleType(iI)).getChar()));
 						}
 					}
 				}
@@ -19475,12 +19475,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBLE_MOST"));
 			}
 
-			foreach_(const InvisibleTypes eInvisible, kUnit.getSeeInvisibleTypes())
+			for (int iI = 0; iI < kUnit.getNumSeeInvisibleTypes(); ++iI)
 			{
-				if (bCivilopediaText || eInvisible != kUnit.getInvisibleType())
+				if (bCivilopediaText || (kUnit.getSeeInvisibleType(iI) != kUnit.getInvisibleType()))
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_SEE_INVISIBLE", GC.getInvisibleInfo(eInvisible).getChar()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_SEE_INVISIBLE", GC.getInvisibleInfo((InvisibleTypes) kUnit.getSeeInvisibleType(iI)).getChar()));
 				}
 			}
 		}

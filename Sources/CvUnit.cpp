@@ -8437,10 +8437,11 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 int CvUnit::healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const
 {
 	int iNumTurns = MAX_INT;
+	int iHealAs = 0;
 
 	if (getHealAsDamage(eHealAsType) > 0)
 	{
-		const int iHealAs = getHealRateAsType(pPlot, false, eHealAsType);
+		iHealAs = getHealRateAsType(pPlot, false, eHealAsType);
 		if (iHealAs > 0)
 		{
 			iNumTurns = (getHealAsDamage(eHealAsType)/ iHealAs);
@@ -12822,7 +12823,17 @@ InvisibleTypes CvUnit::getInvisibleType() const
 	{
 		return NO_INVISIBLE;
 	}
-	return eInvisible;
+	return (eInvisible);
+}
+
+int CvUnit::getNumSeeInvisibleTypes() const
+{
+	return m_pUnitInfo->getNumSeeInvisibleTypes();
+}
+
+InvisibleTypes CvUnit::getSeeInvisibleType(int i) const
+{
+	return (InvisibleTypes)(m_pUnitInfo->getSeeInvisibleType(i));
 }
 
 
@@ -16198,7 +16209,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 
 	if (pSelectionGroup != pOldSelectionGroup && pSelectionGroup != NULL
 	&& pSelectionGroup->getHeadUnit() != NULL
-	&& pSelectionGroup->getHeadUnit()->isWaitingOnUnitAI(AI_getUnitAIType()))
+	&& pSelectionGroup->getHeadUnit()->isWaitingOnUnitAI((int)AI_getUnitAIType()))
 	{
 		pSelectionGroup->getHeadUnit()->setToWaitOnUnitAI(AI_getUnitAIType(), false);
 	}
@@ -16251,7 +16262,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 					{
 						for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 						{
-							if (isWaitingOnUnitAI((UnitAITypes)iI))
+							if (isWaitingOnUnitAI(iI))
 							{
 								setToWaitOnUnitAI((UnitAITypes)iI, false);
 							}
@@ -16272,7 +16283,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 
 			if (pNewSelectionGroup != NULL)
 			{
-				if (pNewSelectionGroup->getHeadUnit() != NULL && pNewSelectionGroup->getHeadUnit()->isWaitingOnUnitAI(AI_getUnitAIType()))
+				if (pNewSelectionGroup->getHeadUnit() != NULL && pNewSelectionGroup->getHeadUnit()->isWaitingOnUnitAI((int)AI_getUnitAIType()))
 				{
 					pNewSelectionGroup->getHeadUnit()->setToWaitOnUnitAI(AI_getUnitAIType(), false);
 				}
@@ -17590,8 +17601,9 @@ void CvUnit::validateCargoUnits()
 				FErrorMsg("Load Volume is incorrect");//If this persists, then the problem is due to having a unit that's not sharing the same plot being loaded onto the transport.
 				std::vector<CvUnit*> aCargoUnits;
 				getCargoUnits(aCargoUnits);
-				foreach_(CvUnit* pCargo, aCargoUnits)
+				for (uint i = 0; i < aCargoUnits.size(); i++)
 				{
+					CvUnit* pCargo = aCargoUnits[i];
 					pCargo->setTransportUnit(NULL);
 					if (pCargo->plot() == plot())
 					{
@@ -17600,8 +17612,9 @@ void CvUnit::validateCargoUnits()
 				}
 				m_iSMCargo = 0;
 				iCount = 0;
-				foreach_(CvUnit* pCargo, aCargoUnits)
+				for (uint i = 0; i < aCargoUnits.size(); i++)
 				{
+					CvUnit* pCargo = aCargoUnits[i];
 					SMchangeCargo(pCargo->SMCargoVolume());
 					iCount++;
 				}
@@ -25932,13 +25945,14 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 	const int iPossibleTargets = std::min(pPlot->getNumVisiblePotentialEnemyDefenders(this), rBombardDamageMaxUnits());
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
+	int iDistanceAttackCommunicability = 0;
 	std::vector<int> m_iAfflictionIndex;
 	bool bAffliction = false;
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 		{
-			const int iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
+			iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
 			if (iDistanceAttackCommunicability > 0)
 			{
 				bAffliction = true;
@@ -30710,7 +30724,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 			//show message
 			{
 
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(),
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(),
 					GC.getPromotionInfo(ptPromotion).getText());
 				AddDLLMessage(
 					pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -31158,8 +31172,11 @@ int CvUnit::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 
 void CvUnit::doOvercomeAttempt(PromotionLineTypes eAfflictionLine)
 {
+	CvWString szBuffer;
 	int iOvercomeChance = getChancetoOvercome(eAfflictionLine);
-	int iOvercomeRollResult = GC.getGame().getSorenRandNum(100, "Overcome");
+	int iOvercomeRollResult;
+
+	iOvercomeRollResult = GC.getGame().getSorenRandNum(100, "Overcome");
 	if (iOvercomeRollResult < iOvercomeChance)
 	{
 		recover(eAfflictionLine);
@@ -37124,7 +37141,7 @@ void CvUnit::doMerge()
 		int iTotalQualityOffset = 0;
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			const PromotionTypes ePromotion = ((PromotionTypes)iI);
+			PromotionTypes ePromotion = ((PromotionTypes)iI);
 			if (GC.getPromotionInfo(ePromotion).getGroupChange() == 0 && GC.getPromotionInfo(ePromotion).getQualityChange() == 0)
 			{
 				if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
@@ -40160,7 +40177,7 @@ bool CvUnit::doAmbush(bool bAssassinate)
 
 void CvUnit::enactAmbush(bool bAssassinate)
 {
-	const CvPlot* pPlot = plot();
+	CvPlot* pPlot = plot();
 	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
 	if (pDefender != NULL)
 	{
