@@ -163,6 +163,13 @@
 	<ElementType name="LocalSpecialistYieldChanges" content="eltOnly">
 		<element type="LocalSpecialistYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="TerrainYieldChange" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="YieldChanges"/>
+	</ElementType>
+	<ElementType name="TerrainYieldChanges" content="eltOnly">
+		<element type="TerrainYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="LocalSpecialistCommerceChange" content="eltOnly">
 		<element type="SpecialistType"/>
 		<element type="CommerceChanges"/>
