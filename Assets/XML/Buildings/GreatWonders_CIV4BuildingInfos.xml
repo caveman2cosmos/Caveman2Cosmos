@@ -3681,6 +3681,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
 			<CommerceChanges>

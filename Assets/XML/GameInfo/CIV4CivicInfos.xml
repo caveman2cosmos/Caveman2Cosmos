@@ -7455,6 +7455,10 @@
 					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>
@@ -7649,6 +7653,10 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -13015,6 +13023,10 @@
 					<BuildingType>BUILDING_ORPHANAGE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -13055,6 +13067,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_ORPHANAGE</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -13756,6 +13772,10 @@
 					<BuildingType>BUILDING_CENTERS_FOR_DISEASE_CONTROL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -13796,6 +13816,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_DENTIST</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -14045,6 +14069,10 @@
 					<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+					<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -14109,6 +14137,10 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_REHABILITATION_CENTER</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>

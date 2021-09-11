@@ -230,7 +230,7 @@ class TestCode:
 			#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
 			for i in xrange(len(aUnlistedRequirementReplacements)):
 				if aUnlistedRequirementReplacements[i] not in aBuildingInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
-					self.log(CvBuildingInfo.getType()+" AND as unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
+					self.log(CvBuildingInfo.getType()+" AND has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 			#<PrereqOrBuildings> - require one building in list
 			aBuildingOrRequirementList = []

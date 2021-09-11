@@ -972,9 +972,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_PYRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
 				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CHIEFDOM</CivicOption>

@@ -989,6 +989,10 @@
 					<BuildingType>BUILDING_BATTLEMECH_ARENA</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
@@ -1360,6 +1364,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -2065,6 +2073,10 @@
 					<BuildingType>BUILDING_BATTLEMECH_ARENA</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
@@ -2434,6 +2446,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -12520,6 +12536,10 @@
 					<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -14132,6 +14152,10 @@
 					<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -15440,6 +15464,10 @@
 					<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -16492,6 +16520,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -24174,6 +24206,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24282,6 +24318,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -24475,6 +24515,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24583,6 +24627,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -24776,6 +24824,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -24884,6 +24936,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -25077,6 +25133,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
 			<CapitalYieldModifiers>
 				<iYield>15</iYield>
@@ -25268,6 +25328,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -25376,6 +25440,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -25569,6 +25637,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -25677,6 +25749,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -25870,6 +25946,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -25978,6 +26058,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -26169,6 +26253,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -38283,6 +38371,10 @@
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -38587,6 +38679,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -39275,6 +39371,10 @@
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -39411,6 +39511,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_CARPET_FACTORY</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -39893,6 +39997,10 @@
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -40029,6 +40137,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -40327,6 +40439,10 @@
 					<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
@@ -40379,6 +40495,10 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DREAMTIME_MACHINE</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
+				<BuildingHappinessModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -40971,6 +41091,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -41672,6 +41796,10 @@
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -42163,6 +42291,10 @@
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -42470,6 +42602,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -46724,6 +46860,10 @@
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -47615,6 +47755,10 @@
 					<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -48390,6 +48534,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -49270,6 +49418,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ANDROID_BROTHEL</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -70131,6 +70283,10 @@
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -71351,6 +71507,10 @@
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -72149,7 +72309,11 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
@@ -72977,6 +73141,10 @@
 					<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -73782,6 +73950,10 @@
 					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -74327,6 +74499,10 @@
 					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -74662,6 +74838,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MEDICAL_PROSTETICS_LAB</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -75557,6 +75737,10 @@
 					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -76137,6 +76321,10 @@
 					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -76475,6 +76663,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MEDICAL_PROSTETICS_LAB</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>

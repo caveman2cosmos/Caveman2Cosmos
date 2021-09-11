@@ -8566,6 +8566,10 @@
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_DAYCARE_CENTER</ID>
 					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
+					</Has>
 				</Or>
 			</ConstructCondition>
 			<PrereqOrBuildings>

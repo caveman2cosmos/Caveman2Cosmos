@@ -2243,10 +2243,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RETIREMENT_HOME</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>1</iHealth>
@@ -3288,6 +3289,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_MODERN_EMBALMER</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>139</iCost>
 			<iHealth>1</iHealth>
@@ -3715,7 +3717,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERSOCIAL_INTEGRATION</PrereqTech>
 			<iCost>4655</iCost>
-			<ObsoleteTech>TECH_PURE_INFORMATION_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -7131,7 +7137,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
-			<ObsoleteTech>TECH_PURE_INFORMATION_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_ANDROIDS</Bonus>
 			<PrereqInCityBuildings>
@@ -8760,7 +8770,11 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_FLASH_MEMORY_DEVICES</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 				<BuildingType>BUILDING_ELECTRONICS_STORE</BuildingType>
@@ -8863,7 +8877,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUGMENTED_REALITY</PrereqTech>
 			<iCost>2505</iCost>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11959,7 +11977,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POP_ART</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -12517,7 +12539,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
-			<ObsoleteTech>TECH_PURE_INFORMATION_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -12956,7 +12982,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MICROGENERATORS</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MICROGENERATORS</Bonus>
 			<PrereqBonuses>
@@ -13257,7 +13287,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REPLACEMENT_ORGANS</PrereqTech>
 			<iCost>2865</iCost>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -13994,6 +14028,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_TATTOO_PARLOR</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -17802,6 +17840,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAVEYARD</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
@@ -17842,7 +17881,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
 			</PrereqOrBuildings>
@@ -17888,6 +17927,7 @@
 			<iConquestProb>95</iConquestProb>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<PropertyManipulators>
@@ -17908,7 +17948,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
@@ -17923,6 +17963,7 @@
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 		</BuildingInfo>
@@ -17936,7 +17977,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
@@ -17957,6 +17998,7 @@
 			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<PropertyManipulators>
@@ -17978,7 +18020,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -17994,6 +18036,7 @@
 			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -18008,7 +18051,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -18024,6 +18067,7 @@
 			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -18038,7 +18082,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>139</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -18054,6 +18098,7 @@
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<BonusYieldChanges>
@@ -18073,12 +18118,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURIAL_TRADITION_SKY</Type>
@@ -18090,7 +18129,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<iCost>56</iCost>
 			<iHealth>1</iHealth>
 			<iConquestProb>70</iConquestProb>
@@ -18109,6 +18148,7 @@
 			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -23072,10 +23112,11 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_DAYCARE_CENTER</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DAYCARE_CENTER</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>25</iCost>
 			<iHealth>1</iHealth>
@@ -24460,6 +24501,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 			</PrereqInCityBuildings>
@@ -26144,11 +26190,13 @@
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1345</iCost>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -30839,7 +30887,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqBonuses>
@@ -30887,7 +30939,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 			<PrereqInCityBuildings>
@@ -31518,7 +31574,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOGENERATORS</Bonus>
 			<PrereqOrBuildings>
@@ -31545,6 +31605,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>800</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -45095,6 +45160,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<TechTypes>
 				<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
 			</TechTypes>
@@ -45102,18 +45173,9 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BURIAL_TRADITION_FIRE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FUNERARY_SERVICES</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
@@ -45156,8 +45218,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>740</iCost>
-			<iHealth>10</iHealth>
+			<iHealth>11</iHealth>
 			<iConquestProb>70</iConquestProb>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -45205,12 +45272,6 @@
 			</SpecialistCounts>
 			<iHealth>5</iHealth>
 			<iHappiness>5</iHappiness>
-			<GlobalBuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
-				</BuildingProductionModifier>
-			</GlobalBuildingProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -47520,7 +47581,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqInCityBuildings>
@@ -47562,7 +47627,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAUTY_SALON</BuildingType>
@@ -49666,7 +49735,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCRIPTURES</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
 			</PrereqOrBuildings>
@@ -49708,6 +49777,7 @@
 			<iConquestProb>95</iConquestProb>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<PropertyManipulators>
@@ -52859,6 +52929,281 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</Type>
+			<Description>TXT_KEY_BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIGHTECH_CULTURAL_ENRICHMENT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
+			<iCost>6155</iCost>
+			<iHappiness>40</iHappiness>
+			<iHealth>25</iHealth>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
+			<iExperience>5</iExperience>
+			<FreePromotion>PROMOTION_TATTOO</FreePromotion>
+			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
+			<iRevIdxLocal>-10</iRevIdxLocal>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>200</iCommerce>
+				<iCommerce>50</iCommerce>
+				<iCommerce>200</iCommerce>
+				<iCommerce>10</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>10</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>15</iCommerce>
+			</CommerceModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<FreeSpecialistCounts>
+				<FreeSpecialistCount>
+					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
+					<iFreeSpecialistCount>6</iFreeSpecialistCount>
+				</FreeSpecialistCount>
+				<FreeSpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</FreeSpecialistCount>
+			</FreeSpecialistCounts>
+			<BonusHappinessChanges>
+				<BonusHappinessChange>
+					<BonusType>BONUS_INCENSE</BonusType>
+					<iHappinessChange>2</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iHappinessChange>4</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_ALCOHOL</BonusType>
+					<iHappinessChange>4</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_BRASS_INSTRUMENTS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_COMPUTERS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_STRING_INSTRUMENTS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_WOODWIND_INSTRUMENTS</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_HIT_MOVIES</BonusType>
+					<iHappinessChange>2</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
+					<iHappinessChange>3</iHappinessChange>
+				</BonusHappinessChange>
+			</BonusHappinessChanges>
+			<BonusHealthChanges>
+				<BonusHealthChange>
+					<BonusType>BONUS_PHARMACEUTICALS</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_SMART_MEDICINE</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_NATRON</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
+			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_NATRON</BonusType>
+					<CommerceModifiers>
+						<iCommerce>3</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_BIONIC_SUITS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_DYE</BonusType>
+					<CommerceModifiers>
+						<iCommerce>2</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_HATS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>6</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_MICROGENERATORS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_NEUROIMPLANTS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_ORGANIC_PHOTONIC_CELLS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_SHOES</BonusType>
+					<CommerceModifiers>
+						<iCommerce>6</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_METAMATERIALS</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+			</BonusCommerceModifiers>
+			<TechHealthChanges>
+				<TechHealthChange>
+					<PrereqTech>TECH_LASER</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+				<TechHealthChange>
+					<PrereqTech>TECH_ANTI_AGING_MEDICINE</PrereqTech>
+					<iHealth>1</iHealth>
+				</TechHealthChange>
+			</TechHealthChanges>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<PrereqTech>TECH_COMMUNITY</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_MEDIA_HIVEMIND</PrereqTech>
+					<TechCommerce>
+						<iCommerce>5</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_BATTLEFIELD_SPORTS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>5</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SAPIENTROIDS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>5</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SAPIENTROIDS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<TechCommerceModifiers>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_EXTREME_SPORTS</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+			</TechCommerceModifiers>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-75</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>50</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_HIGHWAY</Type>
 			<Description>TXT_KEY_BUILDING_HIGHWAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGHWAY_PEDIA</Civilopedia>
@@ -53620,7 +53965,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqBonuses>
@@ -56331,7 +56680,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCRIPTURES</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -56382,10 +56736,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>95</iConquestProb>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -59021,11 +59371,13 @@
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1080</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -60052,11 +60404,13 @@
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1410</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -65829,7 +66183,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_JEWELRY</Bonus>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
@@ -68291,7 +68649,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDIA_HIVEMIND</PrereqTech>
 			<iCost>3665</iCost>
-			<ObsoleteTech>TECH_NOOGENESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -71823,7 +72185,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqInCityBuildings>
@@ -71831,6 +72193,7 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>495</iCost>
 			<iHealth>2</iHealth>
@@ -72550,6 +72913,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STELE</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>30</iCost>
 			<CommerceChanges>
@@ -72847,7 +73211,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
-			<ObsoleteTech>TECH_ANTI_AGING_MEDICINE</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
 				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
@@ -77397,7 +77765,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_3D_PRINTING</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CLOTHING</Bonus>
 			<PrereqBonuses>
@@ -80063,6 +80435,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
 				<BuildingType>BUILDING_DAYCARE_CENTER</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>25</iCost>
 			<YieldChanges>
@@ -81149,7 +81522,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -84432,7 +84809,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
@@ -84574,7 +84955,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
-			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CYBERNETIC_CHLOROPLASTS</Bonus>
 			<PrereqInCityBuildings>
@@ -84902,10 +85287,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_PIERCING_SHOP</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PIERCING_SHOP</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>50</iCost>
 			<iHealth>-1</iHealth>
@@ -84927,6 +85313,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
@@ -85923,7 +86314,11 @@
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -88024,7 +88419,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
 			<iCost>1475</iCost>
-			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -89002,7 +89401,11 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>125</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -91699,6 +92102,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
@@ -95100,7 +95508,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
 			<iCost>1475</iCost>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -101356,7 +101768,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERSOCIAL_INTEGRATION</PrereqTech>
 			<iCost>4655</iCost>
-			<ObsoleteTech>TECH_PURE_INFORMATION_SOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -104045,9 +104461,10 @@
 				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
 				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 			<iCost>56</iCost>
@@ -108014,10 +108431,11 @@
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
-			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_TATTOO_PARLOR</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TATTOO_PARLOR</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>56</iCost>
 			<iHealth>-1</iHealth>
@@ -108058,6 +108476,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<Bonus>BONUS_DYE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
@@ -108376,7 +108799,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<iCost>153</iCost>
 			<iHappiness>1</iHappiness>
@@ -110878,7 +111305,7 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -110905,6 +111332,7 @@
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FUNERARY_SERVICES</ObsoletesToBuilding>
 		</BuildingInfo>
@@ -114770,11 +115198,13 @@
 				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
-			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iCost>1180</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -118301,7 +118731,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
-			<ObsoleteTech>TECH_SIMULATED_REALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</ReplacementBuildings>
 			<iCost>870</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
