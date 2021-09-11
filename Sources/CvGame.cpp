@@ -485,6 +485,11 @@ void CvGame::init(HandicapTypes eHandicap)
 	AI_init();
 
 	doUpdateCacheOnTurn();
+
+	logging::logMsg("UpdateTime.log", "Originl rate: %f", gDLL->getEngineIFace()->GetUpdateRate());
+	const bool bSuccess = gDLL->getEngineIFace()->SetUpdateRate(GC.getDefineFLOAT("UPDATE_RATE"));
+	FAssert(bSuccess);
+	logging::logMsg("UpdateTime.log", "Reset to: %f", gDLL->getEngineIFace()->GetUpdateRate());
 }
 
 //

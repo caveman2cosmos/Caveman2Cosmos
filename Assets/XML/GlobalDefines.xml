@@ -24,6 +24,10 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>UPDATE_RATE</DefineName>
+		<fDefineFloatVal>9.000000</fDefineFloatVal>
+	</Define>
 	<!-- GRAPHICS PAGING OPTIONS -->
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
