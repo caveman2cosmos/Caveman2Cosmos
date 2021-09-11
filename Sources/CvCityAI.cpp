@@ -6348,25 +6348,28 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
 
 	int iBaseRate = getPlotYield(eYield);
-
-	int iTerrainChange = 0;
-	foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 	{
-		if (pair.second[eYield] != 0)
+		int iTerrainChange = 0;
+		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
 		{
-			int iCount = 0;
-			foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS))
+			if (pair.second[eYield] != 0)
 			{
-				if (plotX->getTerrainType() == pair.first && canWork(plotX))
+				int iCount = 0;
+				foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS))
 				{
-					iTerrainChange += pair.second[eYield];
+					if (plotX->getTerrainType() == pair.first && canWork(plotX))
+					{
+						iTerrainChange += pair.second[eYield];
+					}
 				}
 			}
 		}
+		if (iTerrainChange != 0)
+		{
+			iValue += std::min(getPopulation(), 10) * iTerrainChange;
+			iBaseRate += iTerrainChange * 3 / 4;
+		}
 	}
-	iValue += std::min(getPopulation(), 10) * iTerrainChange;
-	iBaseRate += iTerrainChange * 3 / 4;
-
 	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
 	iValue += 8 * (
