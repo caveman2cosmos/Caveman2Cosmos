@@ -1051,14 +1051,16 @@ void CvTeam::doTurn()
 
 	AI_doTurnPre();
 
-	// TB - Keep this valid for barbs only for now.
+	// TB - Keep this valid only for barbs and neanderthals for now.
 	// We may need new rules here for aliens and such, but there's really no need to do anything for animals regarding technology unless we want to represent evolution somehow... lol.
-	// Toffer - Neanderthals get thechs without this, so isHominid() is not necessary. May be a bug that they do, but they do.
-	if (isBarbarian())
+	if (isHominid())
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		// Toffer - if we cached a vector listing all techs currently possible to select for active research per team, we wouldn't have to loop through all techs here.
+		for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
 		{
-			if (!isHasTech((TechTypes)iI))
+			const TechTypes eTechX = static_cast<TechTypes>(iI);
+
+			if (GET_PLAYER(getLeaderID()).canResearch(eTechX))
 			{
 				int iPossibleCount = 0;
 				int iCount = 0;
@@ -1066,7 +1068,7 @@ void CvTeam::doTurn()
 				{
 					if (GET_TEAM((TeamTypes)iJ).isAlive())
 					{
-						if (GET_TEAM((TeamTypes)iJ).isHasTech((TechTypes)iI))
+						if (GET_TEAM((TeamTypes)iJ).isHasTech(eTechX))
 						{
 							iCount++;
 						}
@@ -1075,9 +1077,7 @@ void CvTeam::doTurn()
 				}
 				if (iCount > 0)
 				{
-					FAssertMsg(iPossibleCount > 0, "iPossibleCount is expected to be greater than 0");
-
-					changeResearchProgress((TechTypes)iI, std::max((getResearchCost((TechTypes)iI) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount) / (100 * iPossibleCount), 1), getLeaderID());
+					changeResearchProgress(eTechX, std::max(1, getResearchCost(eTechX) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount / (100 * iPossibleCount)), getLeaderID());
 				}
 			}
 		}
@@ -4820,12 +4820,19 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
 		{
-			int iOverflow = 100 * (getResearchProgress(eIndex) - getResearchCost(eIndex)) / GET_PLAYER(ePlayer).calculateResearchModifier(eIndex);
+			setHasTech(eIndex, true, ePlayer, true, true);
 
 			// Multiple Research
-			setHasTech(eIndex, true, ePlayer, true, true);
-			iOverflow = GET_PLAYER(ePlayer).doMultipleResearch(iOverflow);
-			GET_PLAYER(ePlayer).changeOverflowResearch(iOverflow);
+			if (!isNPC())
+			{
+				GET_PLAYER(ePlayer).changeOverflowResearch(
+					GET_PLAYER(ePlayer).doMultipleResearch(
+						100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))
+						/
+						GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
+					)
+				);
+			}
 		}
 	}
 }
@@ -5370,7 +5377,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			const bool bGlobal = GC.getTechInfo(eIndex).isGlobal();
 
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{

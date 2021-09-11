@@ -45,7 +45,7 @@ class WBCityDataScreen:
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth - 20, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 0, 0, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 1, 1, True)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 2, 2, False)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 2, 2, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_PLAYER_DATA", ()), 3, 3, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_TEAM_DATA", ()), 4, 4, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ()), 8, 8, False)
@@ -168,12 +168,12 @@ class WBCityDataScreen:
 		iX = screen.getXResolution()/4
 		iY = self.iTable_Y - 30
 
-		sText = CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",())
+		sText = CyTranslator().getText("TXT_KEY_WB_BUILDINGS",())
 		screen.setLabel("ModifyHeader", "Background", "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_MODIFY", (sText,)) + "</font>", 1<<2, iX + iTableWidth/2, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
 		screen.addDropDownBoxGFC("BuildingType", iX, iY, 150, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		screen.addPullDownString("BuildingType", CyTranslator().getText("TXT_KEY_CONCEPT_BUILDINGS", ()), 0, 0, not bWonder)
+		screen.addPullDownString("BuildingType", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 0, 0, not bWonder)
 		screen.addPullDownString("BuildingType", CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ()), 1, 1, bWonder)
 
 		screen.addDropDownBoxGFC("YieldType", iX + iTableWidth - 150, iY, 150, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)

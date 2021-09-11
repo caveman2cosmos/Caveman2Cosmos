@@ -500,13 +500,18 @@ void CvPlayerAI::AI_doTurnPre()
 	algo::for_each(cities(), CvCity::fn::ClearYieldValueCache());
 #endif
 
-		AI_doResearch();
+	if (!isNPC() && getCurrentResearch() == NO_TECH)
+	{
+		PROFILE_FUNC()
+		AI_chooseResearch();
+		AI_forceUpdateStrategies(); //to account for current research.
+	}
 
-		AI_doCommerce();
+	AI_doCommerce();
 
-		AI_doMilitary();
+	AI_doMilitary();
 
-		AI_doCivics();
+	AI_doCivics();
 
 	AI_doReligion();
 
@@ -4296,76 +4301,58 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 	DEBUGLOG("AI_bestTech:%S\n", szPlayerName.GetCString());
 #endif
 
-	bool	beeLine = false;
-	int		beeLineThreshold;
+	bool beeLine = false;
+	int beeLineThreshold;
 
 	do
 	{
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			if ((eIgnoreTech == NO_TECH) || (iI != eIgnoreTech))
+			if (eIgnoreTech == NO_TECH || iI != eIgnoreTech)
 			{
-				if ((eIgnoreAdvisor == NO_ADVISOR) || (GC.getTechInfo((TechTypes)iI).getAdvisorType() != eIgnoreAdvisor))
+				const TechTypes eTechX = static_cast<TechTypes>(iI);
+
+				if ((eIgnoreAdvisor == NO_ADVISOR || GC.getTechInfo(eTechX).getAdvisorType() != eIgnoreAdvisor)
+				&& canEverResearch(eTechX) && !kTeam.isHasTech(eTechX)
+				&& GC.getTechInfo(eTechX).getEra() <= getCurrentEra() + 1)
 				{
-					if (canEverResearch((TechTypes)iI))
+					iPathLength = findPathLength(eTechX, false);
+
+					bool bValid = false;
+
+					if (!beeLine)
 					{
-						if (!(kTeam.isHasTech((TechTypes)iI)))
+						bValid = iPathLength <= iMaxPathLength;
+					}
+					else if (iPathLength > iMaxPathLength && iPathLength <= iMaxPathLength * 7)
+					{
+						const int iTempValue = AI_TechValueCached(eTechX, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+
+						bValid = iTempValue * 100 / GC.getTechInfo(eTechX).getResearchCost() > iBestValue;
+
+						if (bValid)
+							logBBAI("  Beelining worth examining tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(), (iTempValue*100)/GC.getTechInfo(eTechX).getResearchCost());
+						else logBBAI("  Beelining rejects examination of tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(),(iTempValue*100)/GC.getTechInfo(eTechX).getResearchCost());
+					}
+
+					if (bValid)
+					{
+
+						techPath* path = findBestPath(eTechX, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+						//iValue = AI_techValue( eTechX, iPathLength, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave );
+
+						/*if( gPlayerLogLevel >= 3 )
 						{
-							if (GC.getTechInfo((TechTypes)iI).getEra() <= (getCurrentEra() + 1))
-							{
-								iPathLength = findPathLength(((TechTypes)iI), false);
+							logBBAI("	  Player %d (%S) consider tech %S with value %d", getID(), getCivilizationDescription(0), GC.getTechInfo(eTechX).getDescription(), iValue );
+						}*/
 
-								bool	bValid;
-
-								if ( beeLine )
-								{
-									if ( iPathLength > iMaxPathLength && iPathLength <= iMaxPathLength*7 )
-									{
-										int iTempValue = AI_TechValueCached((TechTypes)iI, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
-
-										bValid = ((iTempValue*100)/GC.getTechInfo((TechTypes)iI).getResearchCost() > iBestValue);
-
-										if ( bValid )
-										{
-											logBBAI("  Beelining worth examining tech %S (val %d)", GC.getTechInfo((TechTypes)iI).getDescription(), (iTempValue*100)/GC.getTechInfo((TechTypes)iI).getResearchCost() );
-										}
-										else
-										{
-											logBBAI("  Beelining rejects examination of tech %S (val %d)", GC.getTechInfo((TechTypes)iI).getDescription(),(iTempValue*100)/GC.getTechInfo((TechTypes)iI).getResearchCost() );
-										}
-									}
-									else
-									{
-										bValid = false;
-									}
-								}
-								else
-								{
-									bValid = (iPathLength <= iMaxPathLength);
-								}
-
-								if ( bValid )
-								{
-
-									techPath* path = findBestPath((TechTypes)iI, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
-									//iValue = AI_techValue( (TechTypes)iI, iPathLength, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave );
-
-									/*if( gPlayerLogLevel >= 3 )
-									{
-										logBBAI("	  Player %d (%S) consider tech %S with value %d", getID(), getCivilizationDescription(0), GC.getTechInfo((TechTypes)iI).getDescription(), iValue );
-									}*/
-
-									if (iValue > iBestValue)
-									{
-										iBestValue = iValue;
-										eBestTech = ((TechTypes)iI);
-										eFirstTech = findStartTech(path);
-									}
-
-									delete path;
-								}
-							}
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							eBestTech = eTechX;
+							eFirstTech = findStartTech(path);
 						}
+						delete path;
 					}
 				}
 			}
@@ -6617,6 +6604,7 @@ void CvPlayerAI::AI_startGoldenAge()
 
 void CvPlayerAI::AI_chooseResearch()
 {
+	FAssert(!isNPC())
 	clearResearchQueue();
 
 	if (getCurrentResearch() == NO_TECH && !isNPC())
@@ -17242,20 +17230,6 @@ void CvPlayerAI::AI_doMilitary()
 		+ GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #1")
 		+ GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #2")
 	);
-}
-
-
-void CvPlayerAI::AI_doResearch()
-{
-	PROFILE_FUNC();
-
-	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
-
-	if (getCurrentResearch() == NO_TECH)
-	{
-		AI_chooseResearch();
-		AI_forceUpdateStrategies(); //to account for current research.
-	}
 }
 
 

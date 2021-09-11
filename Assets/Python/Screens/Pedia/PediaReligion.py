@@ -113,7 +113,7 @@ class Page:
 			if buildings:
 				Pnl = aName()
 				screen.addPanel(Pnl, "", "", False, True, X_COL_1, Y_BOT_ROW_1, W_REP_1, H_BOT_ROW, ePnlBlue50)
-				szText = szfont3b + TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ())
+				szText = szfont3b + TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
 				screen.setLabelAt(aName(), Pnl, szText, 1<<2, W_REP_1 / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
 				Pnl = aName()
 				screen.addScrollPanel(Pnl, "", X_COL_1 - 2, Y_BOT_ROW_1 + 24, W_REP_1 + 4, H_BOT_ROW - 50, ePnlBlue50)

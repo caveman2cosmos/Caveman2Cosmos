@@ -409,6 +409,7 @@
 			<Description>TXT_KEY_PROJECT_ITER</Description>
 			<Civilopedia>TXT_KEY_PROJECT_ITER_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CONTROLLED_PLASMA</TechPrereq>
+			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_FUSION_PLANT</EveryoneSpecialBuilding>

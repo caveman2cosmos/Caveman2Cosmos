@@ -257,7 +257,7 @@ class CvGameUtils:
 				elif iData2 == 7:
 					return CyTranslator().getText("TXT_KEY_WB_CITY_DATA2",())
 				elif iData2 == 8:
-					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",())
+					return CyTranslator().getText("TXT_KEY_WB_BUILDINGS",())
 				elif iData2 == 9:
 					return "Platy Builder\nVersion: 4.17b"
 				elif iData2 == 10:
@@ -413,7 +413,7 @@ class CvGameUtils:
 								lBuildings.append(GC.getBuildingInfo(i).getDescription())
 					if lBuildings:
 						lBuildings.sort()
-						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + ": </color>"
+						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()) + ": </color>"
 						iRange = len(lBuildings)
 						for i in xrange(iRange):
 							sText += lBuildings[i]

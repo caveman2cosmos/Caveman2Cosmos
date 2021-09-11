@@ -581,6 +581,41 @@ class TestCode:
 				if CvBuildingInfo.getObsoletesToBuilding() != -1 and (len(aImmediateReplacementList) > 1 or len(aImmediateReplacement2List) > 1):
 					self.log("WARNING: "+CvBuildingInfo.getType()+" has multiple first or second level replacements and shouldn't obsolete to building")
 
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			#Ignore Pollution, and Bans
+			if iBuilding not in aSpecialReplacementsList and CvBuildingInfo.getNumReplacedBuilding() != 0:
+				#Get list of replaced buildings
+				aReplacedBuildings = []
+				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
+					aReplacedBuildings.append(CvBuildingInfo.getReplacedBuilding(i))
+
+				#All replaced buildings of replaced ones
+				aBuildingReplaced2List = []
+				for i in xrange(len(aReplacedBuildings)):
+					CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+					for iReplaced2 in xrange(CvBuildingReplacedInfo.getNumReplacedBuilding()):
+						iBuildingReplacd2 = CvBuildingReplacedInfo.getReplacedBuilding(iReplaced2)
+						if iBuildingReplacd2 not in aBuildingReplaced2List:
+							aBuildingReplaced2List.append(iBuildingReplacd2)
+
+				#Get replacements, that don't appear as replaced of replaced.
+				aImmediateReplacedList = []
+				aImmediateReplacedObsoletionList = []
+				aImmediateReplacedNameList = []
+				for i in xrange(len(aReplacedBuildings)):
+					if aReplacedBuildings[i] not in aBuildingReplaced2List:
+						CvBuildingReplacedInfo = GC.getBuildingInfo(aReplacedBuildings[i])
+						aImmediateReplacedList.append(aReplacedBuildings[i])
+						aImmediateReplacedObsoletionList.append(self.HF.checkBuildingTechObsoletionLocation(CvBuildingReplacedInfo)[1])
+						aImmediateReplacedNameList.append(GC.getBuildingInfo(aReplacedBuildings[i]).getType())
+
+				if CvBuildingInfo.getNumReplacementBuilding() == 0 and len(aImmediateReplacedList) > 1: #Checked building is last in line, and replaces multiple buildings
+					for i in xrange(len(aImmediateReplacedList)):
+						if aImmediateReplacedObsoletionList[i] > min(aImmediateReplacedObsoletionList):
+							self.log(CvBuildingInfo.getType()+" replaced building "+aImmediateReplacedNameList[i]+" should obsolete at "+self.HF.getTechName(min(aImmediateReplacedObsoletionList)))
+
 	#Building - Check if we don't have implicit replacements, also ensure that listed ones aren't unlocked before building
 	def checkBuildingImplicitReplacements(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
@@ -3402,8 +3437,10 @@ class TestCode:
 	#Building - list buildings, that obsolete without replacement
 	def listObsoleteingBuildings(self):
 		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
+		aObsoletedBuildingOnTechCountList = [[0 for x in xrange(GC.getNumBuildingInfos())] for y in xrange(GC.getNumTechInfos())]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
 			aBuildingCivicList = []
 			for iCivic in xrange(GC.getNumCivicInfos()):
 				if iCivic not in aBuildingCivicList and (CvBuildingInfo.isPrereqAndCivics(iCivic) or CvBuildingInfo.isPrereqOrCivics(iCivic)):
@@ -3415,11 +3452,16 @@ class TestCode:
 					if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
 						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
 
-				if 0:#len(aReplacementList) == 0:
+				if len(aReplacementList) == 0:
+					aObsoletedBuildingOnTechCountList[CvBuildingInfo.getObsoleteTech()][iBuilding] = 1
 					self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" without valid replacement")
 					if CvBuildingInfo.getNumReplacedBuilding() != 0:
 						self.log(CvBuildingInfo.getType()+" obsoletes at "+GC.getTechInfo(CvBuildingInfo.getObsoleteTech()).getType()+" despite being last in replacement line")
 
-			if GC.getInfoTypeForString("MAPCATEGORY_EARTH") in CvBuildingInfo.getMapCategories() and not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getNumReplacementBuilding() == 0 and CvBuildingInfo.getNumReplacedBuilding() == 0 and len(aBuildingCivicList) == 0: #Earthly regular and standalone building, that doesn't require civics
-				if CvBuildingInfo.getFoodKept() != 0 or CvBuildingInfo.getPopulationgrowthratepercentage() != 0:
-					self.log(CvBuildingInfo.getType()+" can be connected to granaries")
+		for iTech in xrange(GC.getNumTechInfos()):
+			aBuildingsList = []
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				if aObsoletedBuildingOnTechCountList[iTech][iBuilding]:
+					aBuildingsList.append(GC.getBuildingInfo(iBuilding).getType())
+			if len(aBuildingsList) > 0:
+				self.log(str(len(aBuildingsList))+" obsoletions at "+GC.getTechInfo(iTech).getType()+", regular buildings without replacement: "+str(aBuildingsList))

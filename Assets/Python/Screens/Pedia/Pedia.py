@@ -159,7 +159,7 @@ class Pedia:
 		szCatEquipment			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION", ())
 		szCatAffliction			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION", ())
 		szCatPromotionTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE", ())
-		szCatBuildings			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ())
+		szCatBuildings			= TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
 		szCatNationalWonders	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS", ())
 		szCatGreatWonders		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS", ())
 		szCatC2CCutures			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())

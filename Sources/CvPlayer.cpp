@@ -8486,7 +8486,7 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 		return false;
 	}
 
-	if (GC.getTechInfo(eTech).isGlobal() && GC.getGame().countKnownTechNumTeams(eTech) > 0)
+	if (GC.getTechInfo(eTech).isGlobal() && (isNPC() || GC.getGame().countKnownTechNumTeams(eTech) > 0))
 	{
 		return false;
 	}
@@ -15838,6 +15838,7 @@ void CvPlayer::doGold()
 void CvPlayer::doResearch()
 {
 	PROFILE_FUNC();
+	if (isNPC()) return;
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -15849,6 +15850,8 @@ void CvPlayer::doResearch()
 
 	if (getCurrentResearch() == NO_TECH)
 	{
+		FAssert(isHuman())
+
 		if (getID() == GC.getGame().getActivePlayer())
 		{
 			chooseTech();
