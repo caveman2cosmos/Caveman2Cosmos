@@ -838,8 +838,6 @@ public:
 	UnitCombatTypes getUnitCombatType() const;
 	DllExport DomainTypes getDomainType() const;
 	InvisibleTypes getInvisibleType() const;
-	int getNumSeeInvisibleTypes() const;
-	InvisibleTypes getSeeInvisibleType(int i) const;
 
 	int flavorValue(FlavorTypes eFlavor) const;
 
@@ -1808,7 +1806,7 @@ public:
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
-	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
+	virtual bool isWaitingOnUnitAI(UnitAITypes eUnitAI) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }

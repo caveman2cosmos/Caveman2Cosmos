@@ -78,17 +78,16 @@ public:
 	DllExport const wchar_t* getHelp() const;
 	const wchar_t* getStrategy() const;
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
+	virtual void read(FDataStreamBase*) {}
+	virtual void write(FDataStreamBase*) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FErrorMsg("Override this"); return false; }
+	virtual bool readPass2(CvXMLLoadUtility*) { FErrorMsg("Override this"); return false; }
 	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
 	virtual void copyNonDefaults(const CvInfoBase* pClassInfo);
-	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
-	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
-	virtual void getCheckSum(unsigned int& iSum) const { };
-	virtual const wchar_t* getExtraHoverText() const { return L""; };
+	virtual void copyNonDefaultsReadPass2(CvInfoBase*, CvXMLLoadUtility*, bool = false) { }
+	virtual void getCheckSum(uint32_t&) const { }
+	virtual const wchar_t* getExtraHoverText() const { return L""; }
 
 protected:
 
@@ -1745,8 +1744,9 @@ public:
 	int getDomainType() const;
 	int getDefaultUnitAIType() const;
 	int getInvisibleType() const;
-	int getSeeInvisibleType(int i) const;
+	//InvisibleTypes getSeeInvisibleType(int i) const;
 	int getNumSeeInvisibleTypes() const;
+	const std::vector<InvisibleTypes>& getSeeInvisibleTypes() const { return m_aiSeeInvisibleTypes; }
 	int getAdvisorType() const;
 	int getMaxStartEra() const;
 	int getForceObsoleteTech() const;
@@ -2520,7 +2520,7 @@ protected:
 	CvString m_szArtDefineButton;
 	CvWString m_szExtraHoverTextKey;
 
-	std::vector<int> m_aiSeeInvisibleTypes;
+	std::vector<InvisibleTypes> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;

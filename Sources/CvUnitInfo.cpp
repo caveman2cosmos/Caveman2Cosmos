@@ -386,6 +386,11 @@ CvUnitInfo::~CvUnitInfo()
 		SAFE_DELETE(m_aOutcomeMissions[i]);
 	}
 
+	//foreach_(const CvOutcomeMission* mission, m_aOutcomeMissions)
+	//{
+	//	SAFE_DELETE(mission);
+	//}
+
 	//Struct Vector
 	for (int i=0; i<(int)m_aEnabledCivilizationTypes.size(); i++)
 	{
@@ -839,12 +844,11 @@ int CvUnitInfo::getInvisibleType() const
 	return m_iInvisibleType;
 }
 
-int CvUnitInfo::getSeeInvisibleType(int i) const
-{
-	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
-
-	return m_aiSeeInvisibleTypes[i];
-}
+//InvisibleTypes CvUnitInfo::getSeeInvisibleType(int i) const
+//{
+//	FASSERT_BOUNDS(0, getNumSeeInvisibleTypes(), i)
+//	return m_aiSeeInvisibleTypes[i];
+//}
 
 int CvUnitInfo::getNumSeeInvisibleTypes() const
 {
@@ -1265,11 +1269,7 @@ int CvUnitInfo::getPrereqAndBuilding(int i) const
 }
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {
-	if (find(m_aiPrereqAndBuildings.begin(), m_aiPrereqAndBuildings.end(), i) == m_aiPrereqAndBuildings.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiPrereqAndBuildings, i);
 }
 
 //Struct Vector
@@ -1283,11 +1283,7 @@ int CvUnitInfo::getNumTargetUnits() const
 }
 bool CvUnitInfo::isTargetUnit(int i) const
 {
-	if (find(m_aiTargetUnit.begin(), m_aiTargetUnit.end(), i) == m_aiTargetUnit.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiTargetUnit, i);
 }
 
 
@@ -1301,11 +1297,7 @@ int CvUnitInfo::getNumDefendAgainstUnits() const
 }
 bool CvUnitInfo::isDefendAgainstUnit(int i) const
 {
-	if (find(m_aiDefendAgainstUnit.begin(), m_aiDefendAgainstUnit.end(), i) == m_aiDefendAgainstUnit.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiDefendAgainstUnit, i);
 }
 
 
@@ -1315,11 +1307,11 @@ int CvUnitInfo::getSupersedingUnit(int i) const
 }
 short CvUnitInfo::getNumSupersedingUnits() const
 {
-	return (int)m_aiSupersedingUnits.size();
+	return (short)m_aiSupersedingUnits.size();
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
-	return find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) != m_aiSupersedingUnits.end();
+	return algo::contains(m_aiSupersedingUnits, i);
 }
 
 
@@ -1333,11 +1325,7 @@ int CvUnitInfo::getNumUnitUpgrades() const
 }
 bool CvUnitInfo::isUnitUpgrade(int i) const
 {
-	if (find(m_aiUnitUpgrades.begin(), m_aiUnitUpgrades.end(), i) == m_aiUnitUpgrades.end())
-	{
-		return false;
-	}
-	return true;
+	return algo::contains(m_aiUnitUpgrades, i);
 }
 
 
@@ -1347,8 +1335,8 @@ std::vector<int> CvUnitInfo::getUnitUpgradeChain() const
 }
 void CvUnitInfo::addUnitToUpgradeChain(int i)
 {
-	FAssert (i > -1 && i < GC.getNumUnitInfos());
-	if (find(m_aiUnitUpgradeChain.begin(), m_aiUnitUpgradeChain.end(), i) == m_aiUnitUpgradeChain.end())
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), i)
+	if (!algo::contains(m_aiUnitUpgradeChain, i))
 	{
 		m_aiUnitUpgradeChain.push_back(i);
 	}
@@ -1514,7 +1502,7 @@ int CvUnitInfo::getBuildings(int i) const
 bool CvUnitInfo::getHasBuilding(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i)
-	return std::find(m_pbBuildings.begin(), m_pbBuildings.end(), i) != m_pbBuildings.end();
+	return algo::contains(m_pbBuildings, i);
 }
 
 int CvUnitInfo::getNumBuildings() const
@@ -1585,11 +1573,11 @@ const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
 
 const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
-	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
+	foreach_(const CvOutcomeMission* mission, m_aOutcomeMissions)
 	{
-		if (m_aOutcomeMissions[i]->getMission() == eMission)
+		if (mission->getMission() == eMission)
 		{
-			return m_aOutcomeMissions[i]->getOutcomeList();
+			return mission->getOutcomeList();
 		}
 	}
 	return NULL;
@@ -1602,11 +1590,11 @@ const CvOutcomeMission* CvUnitInfo::getOutcomeMission(int index) const
 
 CvOutcomeMission* CvUnitInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
-	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
+	foreach_(CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
-		if (m_aOutcomeMissions[i]->getMission() == eMission)
+		if (outcomeMission->getMission() == eMission)
 		{
-			return m_aOutcomeMissions[i];
+			return outcomeMission;
 		}
 	}
 	return NULL;
@@ -3953,9 +3941,9 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 
 	m_KillOutcomeList.getCheckSum(iSum);
 
-	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
+	foreach_(const CvOutcomeMission* mission, m_aOutcomeMissions)
 	{
-		m_aOutcomeMissions[i]->getCheckSum(iSum);
+		mission->getCheckSum(iSum);
 	}
 
 	m_PropertyManipulators.getCheckSum(iSum);
@@ -4245,7 +4233,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	int j=0;				//loop counter
 	int k=0;				//loop counter
-	int iNumSibs=0;				// the number of siblings the current xml node has
 	int iIndexVal;
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
@@ -4276,10 +4263,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	szTextVal.getTokens(",", tokens);
 	for(int i=0;i<(int)tokens.size();i++)
 	{
-		const int iInvisibleType = pXML->GetInfoClass(tokens[i]);
-		if(iInvisibleType != NO_INVISIBLE)
+		const InvisibleTypes eInvisible = (InvisibleTypes)pXML->GetInfoClass(tokens[i]);
+		if (eInvisible != NO_INVISIBLE)
 		{
-			m_aiSeeInvisibleTypes.push_back(iInvisibleType);
+			m_aiSeeInvisibleTypes.push_back(eInvisible);
 		}
 	}
 
@@ -6169,11 +6156,10 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 
 	if (m_aOutcomeMissions.empty())
 	{
-		int num = (int) pClassInfo->getNumActionOutcomes();
-		for (int index = 0; index < num; index++)
+		foreach_(CvOutcomeMission* outcomeMission, pClassInfo->m_aOutcomeMissions)
 		{
-			m_aOutcomeMissions.push_back(pClassInfo->m_aOutcomeMissions[index]);
-			pClassInfo->m_aOutcomeMissions[index] = NULL;
+			m_aOutcomeMissions.push_back(outcomeMission);
+			outcomeMission = NULL;
 		}
 	}
 

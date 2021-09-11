@@ -17877,17 +17877,7 @@ bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelect
 
 			if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 			{
-				int iVisibilityRequested = (int)criteria->m_eVisibility;
-				bool bFound = false;
-				for (int iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
-				{
-					if (kUnitInfo.getSeeInvisibleType(iI) == iVisibilityRequested)
-					{
-						bFound = true;
-						break;
-					}
-				}
-				if (!bFound)
+				if (!algo::contains(kUnitInfo.getSeeInvisibleTypes(), criteria->m_eVisibility))
 				{
 					return false;
 				}

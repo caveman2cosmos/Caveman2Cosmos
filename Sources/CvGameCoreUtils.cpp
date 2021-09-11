@@ -1182,7 +1182,7 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	int iRepelZero = (iRepelwithUnyielding < 0 ? 0 : iRepelwithUnyielding);
 	int iRepelTotal = (iRepelZero > 100 ? 100 : iRepelZero);
 	int iFortifylessOverrun = iDefenderFortifyTotal - iAttackerOverrun;
-	int iFortifyTotal = (iFortifylessOverrun < 0 ? 0 : iFortifylessOverrun);
+	//int iFortifyTotal = (iFortifylessOverrun < 0 ? 0 : iFortifylessOverrun);
 
 	y = iRepelTotal;
 	z = iRepelTotal;
@@ -2338,7 +2338,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 	const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 	FAssert(pToPlot != NULL);
 
-	const CvSelectionGroup* pSelectionGroup = ((const CvSelectionGroup*)pointer);
 #ifdef USE_OLD_PATH_GENERATOR
 	PROFILE_FUNC();
 
@@ -2990,7 +2989,6 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 	FAssert(pToPlot != NULL);
 
 	int iWorstCost = MAX_INT;
-	int iWorstMovesLeft = MAX_INT;
 	int iWorstMax = MAX_INT;
 
 	int iWorstMovement = MAX_INT;

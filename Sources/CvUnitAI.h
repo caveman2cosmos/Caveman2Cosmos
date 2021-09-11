@@ -98,7 +98,7 @@ protected:
 	mutable int m_iGenericValue;
 	mutable int m_eGenericValueFlagsCached;
 
-	std::vector<int> m_aiWaitingOnUnitAITypes;
+	std::vector<UnitAITypes> m_aiWaitingOnUnitAITypes;
 
 	void doUnitAIMove();
 
@@ -259,7 +259,7 @@ protected:
 
 	bool AI_leadLegend();
 
-	bool AI_lead(std::vector<UnitAITypes>& aeAIUnitTypes);
+	bool AI_lead(const std::vector<UnitAITypes>& aeAIUnitTypes);
 	bool AI_join(int iMaxCount = MAX_INT);
 	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 15, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
 	bool AI_outcomeMission();
@@ -269,7 +269,7 @@ protected:
 	bool AI_hurry(bool bAny = false);
 	bool checkSwitchToConstruct();
 	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
-	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
+	bool enactConstruct(const CvPlot* pBestConstructPlot, const CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
 
 	bool AI_doInquisition();
 
@@ -490,7 +490,7 @@ public:
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
-	bool isWaitingOnUnitAI(int iIndex) const;
+	bool isWaitingOnUnitAI(UnitAITypes eUnitAI) const;
 	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
 	bool AI_isNegativePropertyUnit() const;
