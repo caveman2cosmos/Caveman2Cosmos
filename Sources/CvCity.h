@@ -958,6 +958,11 @@ public:
 	int getRiverPlotYield(YieldTypes eIndex) const;
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
+	int getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const;
+	void changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields);
+
+	int getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) const;
+
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
 	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
@@ -1802,6 +1807,8 @@ protected:
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
+
+	std::map<short, int*> m_terrainYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 

@@ -473,6 +473,8 @@ void CvCity::uninit()
 	m_buildingProductionMod.clear();
 	m_unitProductionMod.clear();
 	m_bonusDefenseChanges.clear();
+
+	m_terrainYieldChanges.clear();
 }
 
 // FUNCTION: reset()
@@ -5392,6 +5394,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 				changeBuildingCommerceTechChange((CommerceTypes)iI, iChange * modifier.second[(CommerceTypes)iI]);
 			}
 		}
+	}
+	foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
+	{
+		changeTerrainYieldChanges(pair.first, pair.second);
 	}
 
 	foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatFreeExperience())
@@ -10992,7 +10998,6 @@ int CvCity::getSeaPlotYield(YieldTypes eIndex) const
 	return m_aiSeaPlotYield[eIndex];
 }
 
-
 void CvCity::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
@@ -11013,7 +11018,6 @@ int CvCity::getRiverPlotYield(YieldTypes eIndex) const
 	return m_aiRiverPlotYield[eIndex];
 }
 
-
 void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
@@ -11024,6 +11028,70 @@ void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 
 		updateYield();
 	}
+}
+
+
+void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields)
+{
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
+
+	std::map<short, int*>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
+
+	if (itr == m_terrainYieldChanges.end())
+	{
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			if (yields[iI] != 0)
+			{
+				m_terrainYieldChanges.insert(std::make_pair((short)eTerrain, yields));
+				updateYield();
+				break;
+			}
+		}
+	}
+	else
+	{
+		bool bEmpty = true;
+
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			m_terrainYieldChanges[itr->first][iI] += yields[iI];
+
+			if (bEmpty && m_terrainYieldChanges[itr->first][iI] != 0)
+			{
+				bEmpty = false;
+			}
+		}
+		if (bEmpty)
+		{
+			m_terrainYieldChanges.erase(itr->first);
+		}
+		else updateYield();
+	}
+}
+
+int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const
+{
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
+	std::map<short, int*>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
+	return itr != m_terrainYieldChanges.end() ? itr->second[eYield] : 0;
+}
+
+
+int CvCity::getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) const
+{
+	int iYield = 0;
+	if (pPlot->isWater())
+	{
+		iYield += getSeaPlotYield(eYield);
+	}
+	else if (pPlot->isRiver())
+	{
+		iYield += getRiverPlotYield(eYield);
+	}
+	iYield += getTerrainYieldChange(pPlot->getTerrainType(), eYield);
+
+	return iYield;
 }
 
 
@@ -17350,6 +17418,24 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBuildingCommerceTechChange);
 
+	// Toffer - Read Maps
+	{
+		short iSize;
+		short iType;
+		int* yields = new int[NUM_YIELD_TYPES];
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "TerrainYieldChangesSize");
+		while (iSize-- > 0)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "TerrainYieldChangesType");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, yields, "TerrainYieldChanges");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TERRAINS, iType, true));
+
+			if (iType > -1)
+			{
+				m_terrainYieldChanges.insert(std::make_pair(iType, yields));
+			}
+		}
+	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -17771,6 +17857,15 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiExtraYield);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBuildingCommerceTechChange);
 
+	// Toffer - Write Maps
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_terrainYieldChanges.size(), "TerrainYieldChangesSize");
+		for (std::map<short, int*>::const_iterator it = m_terrainYieldChanges.begin(), itEnd = m_terrainYieldChanges.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "TerrainYieldChangesType");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvCity", NUM_YIELD_TYPES, it->second, "TerrainYieldChanges");
+		}
+	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -22373,6 +22468,8 @@ void CvCity::clearModifierTotals()
 
 	m_aBuildingCommerceModifier.clear();
 	m_aBuildingYieldModifier.clear();
+
+	m_terrainYieldChanges.clear();
 
 	//m_Properties.clear();
 	m_aPropertySpawns.clear();

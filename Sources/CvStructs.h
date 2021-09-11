@@ -804,6 +804,19 @@ const struct TechCommerceChange
 	const int iChange;
 };
 
+const struct TerrainYieldChange
+{
+	TerrainYieldChange(TerrainTypes eTerrain, YieldTypes eYield, int iChange)
+		: eTerrain(eTerrain)
+		, eYield(eYield)
+		, iChange(iChange)
+	{}
+
+	const TerrainTypes eTerrain;
+	const YieldTypes eYield;
+	const int iChange;
+};
+
 struct DllExport PBGameSetupData
 {
 	PBGameSetupData();

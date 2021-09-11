@@ -565,7 +565,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRAMA</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -22557,7 +22556,18 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>15</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
@@ -26356,11 +26366,32 @@
 			</BonusProductionModifiers>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>3</iYield>
-			</YieldChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -27659,7 +27690,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<ObsoleteTech>TECH_KNOWLEDGE_MERCANTILISM</ObsoleteTech>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -51323,14 +51353,32 @@
 					</Has>
 				</And>
 			</NewCityFree>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -57565,11 +57613,6 @@
 			</BonusProductionModifiers>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
-			<YieldChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -87580,11 +87623,32 @@
 			</NewCityFree>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>2</iYield>
-			</YieldChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -94688,16 +94752,9 @@
 			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<iMaxLatitude>35</iMaxLatitude>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_QUARRY</BuildingType>
-				<BuildingType>BUILDING_SALT_FLAT_QUARRY</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -94730,16 +94787,9 @@
 				<Bonus>BONUS_LEAD_WARES</Bonus>
 			</PrereqBonuses>
 			<iMinLatitude>35</iMinLatitude>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_QUARRY</BuildingType>
-				<BuildingType>BUILDING_SALT_FLAT_QUARRY</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -94774,19 +94824,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_EVAPORATION_PONT</BuildingType>
-				<BuildingType>BUILDING_SALT_EVAPORATION_WORKS</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<FreeBonus>BONUS_SALT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -94810,13 +94858,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_EVAPORATION_PONT</BuildingType>
-				<BuildingType>BUILDING_SALT_EVAPORATION_WORKS</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -95646,7 +95691,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<ObsoleteTech>TECH_KNOWLEDGE_MERCANTILISM</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 				<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
@@ -102823,7 +102867,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPEARFISHING</PrereqTech>
-			<bRiver>1</bRiver>
+			<bWater>1</bWater>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -102834,35 +102878,32 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
 			<iCost>62</iCost>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<VicinityBonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_FISH</BonusType>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_CRAB</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_SHRIMP</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_LOBSTER</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-			</VicinityBonusYieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>

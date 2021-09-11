@@ -910,6 +910,22 @@ const python::list CvBuildingInfo::cyGetTechCommercePercentChanges() const
 	return pyList;
 }
 
+const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
+{
+	python::list pyList = python::list();
+
+	foreach_(const TerrainYieldChanges& pChange, m_aTerrainYieldChanges)
+	{
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
+		{
+			const int iValue = pChange.second[i];
+			if (iValue != 0)
+				pyList.append(TerrainYieldChange(pChange.first, (YieldTypes)i, pChange.second[i]));
+		}
+	}
+	return pyList;
+}
+
 const TCHAR* CvBuildingInfo::getButton() const
 {
 	const CvString cDefault = CvString::format("").GetCString();
@@ -2134,6 +2150,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 	CheckSumC(iSum, m_aTechCommercePercent);
+	CheckSumC(iSum, m_aTerrainYieldChanges);
 }
 
 //
@@ -3595,6 +3612,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
+	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
 	return true;
 }
@@ -4924,6 +4942,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
 	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
+	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
