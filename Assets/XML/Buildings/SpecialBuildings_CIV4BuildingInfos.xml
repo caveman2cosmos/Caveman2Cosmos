@@ -6248,6 +6248,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>

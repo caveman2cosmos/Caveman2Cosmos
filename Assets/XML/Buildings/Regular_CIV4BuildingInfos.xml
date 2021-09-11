@@ -71526,6 +71526,7 @@
 			<bZoneOfControl>1</bZoneOfControl>
 			<iAsset>4</iAsset>
 			<iPower>8</iPower>
+			<iDefense>5</iDefense>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -79695,11 +79696,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ROMANTICISM</PrereqTech>
 			<iCost>630</iCost>
-			<iTradeRoutes>2</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>5</iTradeRouteModifier>
 			<iHappiness>1</iHappiness>
-			<iBombardDefense>70</iBombardDefense>
-			<iDefense>175</iDefense>
+			<iBombardDefense>50</iBombardDefense>
+			<iDefense>130</iDefense>
 			<iMinDefense>25</iMinDefense>
 			<iAdjacentDamagePercent>25</iAdjacentDamagePercent>
 			<YieldChanges>
@@ -79715,7 +79716,7 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>50</iCommerce>
+				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -79777,12 +79778,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-					<iExperience>5</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
 			<UnitCombatExtraStrengths>
 				<UnitCombatExtraStrength>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -102296,10 +102291,6 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
-			</ReplacementBuildings>
 			<iCost>310</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
