@@ -822,8 +822,8 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
-			int iUnitID = pPopupReturn->getButtonClicked();
-			CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
+			const int iUnitID = pPopupReturn->getButtonClicked();
+			const CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
 			bst::optional<CvUnit*> clickedUnit = algo::find_if(pPlot->units(), CvUnit::fn::getID() == iUnitID);
 			if (clickedUnit)
 			{
@@ -1542,7 +1542,7 @@ bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &i
 		return (false);
 	}
 
-	CvPlayer& activePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
+	const CvPlayer& activePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 	if (!activePlayer.canConvert(eReligion))
 	{
 		return (false);
@@ -1582,13 +1582,13 @@ bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &i
 
 bool CvDLLButtonPopup::launchChooseElectionPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	VoteSelectionData* pVoteSelectionData = GC.getGame().getVoteSelection(info.getData1());
+	const VoteSelectionData* pVoteSelectionData = GC.getGame().getVoteSelection(info.getData1());
 	if (NULL == pVoteSelectionData)
 	{
 		return false;
 	}
 
-	VoteSourceTypes eVoteSource = pVoteSelectionData->eVoteSource;
+	const VoteSourceTypes eVoteSource = pVoteSelectionData->eVoteSource;
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, GC.getVoteSourceInfo(eVoteSource).getPopupText());
 
@@ -1605,14 +1605,14 @@ bool CvDLLButtonPopup::launchChooseElectionPopup(CvPopup* pPopup, CvPopupInfo &i
 
 bool CvDLLButtonPopup::launchDiploVotePopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	VoteTriggeredData* pVoteTriggered = GC.getGame().getVoteTriggered(info.getData1());
+	const VoteTriggeredData* pVoteTriggered = GC.getGame().getVoteTriggered(info.getData1());
 	if (NULL == pVoteTriggered)
 	{
 		FAssert(false);
 		return false;
 	}
 
-	VoteTypes eVote = pVoteTriggered->kVoteOption.eVote;
+	const VoteTypes eVote = pVoteTriggered->kVoteOption.eVote;
 	VoteSourceTypes eVoteSource = pVoteTriggered->eVoteSource;
 
 	TeamTypes eVassalOfTeam = NO_TEAM;
@@ -1729,18 +1729,16 @@ bool CvDLLButtonPopup::launchRazeCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 bool CvDLLButtonPopup::launchDisbandCityPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	CvPlayer& player = GET_PLAYER(GC.getGame().getActivePlayer());
+	const CvPlayer& player = GET_PLAYER(GC.getGame().getActivePlayer());
 
-	CvCity* pNewCity = player.getCity(info.getData1());
+	const CvCity* pNewCity = player.getCity(info.getData1());
 	if (NULL == pNewCity)
 	{
 		FAssert(false);
 		return (false);
 	}
 
-	CvWString szBuffer;
-	szBuffer = gDLL->getText("TXT_KEY_POPUP_FLIPPED_CITY_KEEP", pNewCity->getNameKey());
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, szBuffer);
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_FLIPPED_CITY_KEEP", pNewCity->getNameKey()));
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_KEEP_FLIPPED_CITY").c_str(), NULL, 0, WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_DISBAND_FLIPPED_CITY").c_str(), NULL, 1, WIDGET_GENERAL);
 // BUG - Examine Culture Flip - start

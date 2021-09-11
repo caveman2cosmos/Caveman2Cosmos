@@ -2011,7 +2011,7 @@ int CvPlot::seeThroughLevel() const
 
 
 
-void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
+void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, const CvUnit* pUnit, bool bUpdatePlotGroups)
 {
 	const bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
 
@@ -2039,9 +2039,9 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		}
 		else
 		{
-			for (int i=0; i < pUnit->getNumSeeInvisibleTypes(); i++)
+			foreach_(const InvisibleTypes eInvisible, pUnit->getUnitInfo().getSeeInvisibleTypes())
 			{
-				aSeeInvisibleTypes.push_back(pUnit->getSeeInvisibleType(i));
+				aSeeInvisibleTypes.push_back(eInvisible);
 			}
 		}
 	}
@@ -2054,12 +2054,9 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	if (!bAerial) iRange++; // check one extra outer ring
 
 	int iFinalIntensity = 0;
-	const int iNumInvisibleTypes = aSeeInvisibleTypes.size();
 
-	for (int i = 0; i < iNumInvisibleTypes; i++)
+	foreach_(const InvisibleTypes eInvisible, aSeeInvisibleTypes)
 	{
-		const InvisibleTypes eInvisible = aSeeInvisibleTypes[i];
-
 		for (int dx = -iRange; dx <= iRange; dx++)
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
@@ -13576,20 +13573,14 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 			{
 				if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 				{
-					if (GC.getUnitInfo(pLoopUnit->getUnitType()).getVisibilityIntensityType(eVisible) > 0)
+					if (pLoopUnit->getUnitInfo().getVisibilityIntensityType(eVisible) > 0)
 					{
 						iCount += 1;
 					}
 				}
-				else
+				else if (algo::contains(pLoopUnit->getUnitInfo().getSeeInvisibleTypes(), eVisible))
 				{
-					for (int iI = 0; iI < GC.getUnitInfo(pLoopUnit->getUnitType()).getNumSeeInvisibleTypes(); ++iI)
-					{
-						if (GC.getUnitInfo(pLoopUnit->getUnitType()).getSeeInvisibleType(iI) == (int)eVisible)
-						{
-							iCount += 1;
-						}
-					}
+					iCount += 1;
 				}
 			}
 		}

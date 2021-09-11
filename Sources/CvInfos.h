@@ -1706,8 +1706,9 @@ public:
 	DomainTypes getDomainType() const;
 	UnitAITypes getDefaultUnitAIType() const;
 	int getInvisibleType() const;
-	int getSeeInvisibleType(int i) const;
+	//InvisibleTypes getSeeInvisibleType(int i) const;
 	int getNumSeeInvisibleTypes() const;
+	const std::vector<InvisibleTypes>& getSeeInvisibleTypes() const { return m_aiSeeInvisibleTypes; }
 	int getAdvisorType() const;
 	int getMaxStartEra() const;
 	int getObsoleteTech() const;
@@ -2463,7 +2464,7 @@ protected:
 	CvString m_szArtDefineButton;
 	CvWString m_szExtraHoverTextKey;
 
-	std::vector<int> m_aiSeeInvisibleTypes;
+	std::vector<InvisibleTypes> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
