@@ -102820,7 +102820,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPEARFISHING</PrereqTech>
-			<bRiver>1</bRiver>
+			<bWater>1</bWater>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
@@ -102831,35 +102831,32 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
 			<iCost>62</iCost>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<VicinityBonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_FISH</BonusType>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_CRAB</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_SHRIMP</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-				<BonusYieldChange>
-					<BonusType>BONUS_LOBSTER</BonusType>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChange>
-			</VicinityBonusYieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
