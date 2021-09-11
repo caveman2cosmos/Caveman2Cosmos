@@ -4023,7 +4023,7 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "Pangea"
 		if selectionID == 2:
-			return "Earthlike"
+			return "Continents"
 		if selectionID == 3:
 			return "Archipelago"
 		if selectionID == 4:

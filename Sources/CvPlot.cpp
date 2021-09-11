@@ -8056,54 +8056,52 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	}
 	else ePlayer = getOwner();
 
-	int iYield = calculateNatureYield(eYield, ((ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM));
+	int iYield = (
+		calculateNatureYield(eYield, (ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM)
+		+
+		GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield)
+	);
 	bool bCity = false;
 
 	if (ePlayer != NO_PLAYER)
 	{
-		const CvCity* pCity = getPlotCity();
-
-		if (pCity != NULL && (!bDisplay || pCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 		{
-			iYield += GC.getYieldInfo(eYield).getCityChange();
+			const CvCity* pCity = getPlotCity();
 
-			if (GC.getYieldInfo(eYield).getPopulationChangeDivisor() != 0)
+			if (pCity != NULL && (!bDisplay || pCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 			{
-				iYield += pCity->getPopulation() / GC.getYieldInfo(eYield).getPopulationChangeDivisor();
+				iYield += GC.getYieldInfo(eYield).getCityChange();
+
+				if (GC.getYieldInfo(eYield).getPopulationChangeDivisor() != 0)
+				{
+					iYield += pCity->getPopulation() / GC.getYieldInfo(eYield).getPopulationChangeDivisor();
+				}
+				bCity = true;
 			}
-			bCity = true;
 		}
-
-		// Apply sea bonus on water tiles, unless tile is impassable
-		if (isWater())
 		{
-			if (!isImpassable(GET_PLAYER(ePlayer).getTeam()))
+			const bool bReachable = isRoute() || !isImpassable(GET_PLAYER(ePlayer).getTeam());
+			if (bReachable)
 			{
-				iYield += GET_PLAYER(ePlayer).getSeaPlotYield(eYield);
+				iYield += GET_PLAYER(ePlayer).getTerrainYieldChange(getTerrainType(), eYield);
 
+				if (isWater())
+				{
+					iYield += GET_PLAYER(ePlayer).getSeaPlotYield(eYield);
+				}
 				const CvCity* pWorkingCity = getWorkingCity();
 
 				if (pWorkingCity != NULL && (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 				{
-					iYield += pWorkingCity->getSeaPlotYield(eYield);
+					iYield += pWorkingCity->getPlotYieldChange(this, eYield);
 				}
 			}
 		}
-		// Apply river bonus on river tiles, unless tile is impassible and without route
-		else if (isRiver() && (isRoute() || !isImpassable(GET_PLAYER(ePlayer).getTeam())))
+		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
 		{
-			const CvCity* pWorkingCity = getWorkingCity();
-
-			if (NULL != pWorkingCity && (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false)))
-			{
-				iYield += pWorkingCity->getRiverPlotYield(eYield);
-			}
+			iYield += GET_PLAYER(ePlayer).getLandmarkYield(eYield);
 		}
-	}
-	iYield += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
 
-	if (ePlayer != NO_PLAYER)
-	{
 		if (GET_PLAYER(ePlayer).getExtraYieldThreshold(eYield) > 0 && iYield >= GET_PLAYER(ePlayer).getExtraYieldThreshold(eYield))
 		{
 			iYield += GC.getDefineINT("EXTRA_YIELD");
@@ -8117,13 +8115,6 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		if (GET_PLAYER(ePlayer).isGoldenAge() && iYield >= GC.getYieldInfo(eYield).getGoldenAgeYieldThreshold())
 		{
 			iYield += GC.getYieldInfo(eYield).getGoldenAgeYield();
-		}
-
-		iYield += GET_PLAYER(ePlayer).getTerrainYieldChange(getTerrainType(), eYield);
-
-		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
-		{
-			iYield += GET_PLAYER(ePlayer).getLandmarkYield(eYield);
 		}
 	}
 	if (bCity)

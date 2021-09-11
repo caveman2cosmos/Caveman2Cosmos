@@ -969,16 +969,13 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_GAS_STATION</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-				<BuildingType>BUILDING_GAS_STATION</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GAS_STATION</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>7080</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3684,6 +3681,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
 			<CommerceChanges>
@@ -5782,7 +5780,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DJENNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DJENNE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_DJENNE_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DJENNE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DJENNE</MovieDefineTag>
@@ -5796,6 +5793,10 @@
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>2280</iCost>
 			<BonusProductionModifiers>
@@ -5804,6 +5805,24 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<YieldChanges>
+						<iYield>1</iYield>
+						<iYield>2</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6542,6 +6561,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ConstructCondition>
 				<Or>
@@ -8765,9 +8785,10 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<PrereqInCityBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
-			</PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
+			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
 			<CommerceChanges>
@@ -8850,6 +8871,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_TELEPORT_BOOTH</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -10700,6 +10725,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>1800</iCost>
@@ -14985,6 +15011,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1800</iCost>

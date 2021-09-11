@@ -230,7 +230,7 @@ class TestCode:
 			#Check if we have requirement, that is replaced by unlisted requirement replacement, ignore requirement replacement, if it replaces currently checked building
 			for i in xrange(len(aUnlistedRequirementReplacements)):
 				if aUnlistedRequirementReplacements[i] not in aBuildingInCityRequirementList and aUnlistedRequirementReplacements[i] not in aBuildingReplacementList:
-					self.log(CvBuildingInfo.getType()+" AND as unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
+					self.log(CvBuildingInfo.getType()+" AND has unlisted replaced requirement: "+GC.getBuildingInfo(aUnlistedRequirementReplacements[i]).getType())
 
 			#<PrereqOrBuildings> - require one building in list
 			aBuildingOrRequirementList = []
@@ -1726,6 +1726,34 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
 						if aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+
+				#==============================================================================================================
+				#<TerrainYieldChanges> - base
+				aTerrainYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTerrainInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				for pTerrainYieldChanges in CvBuildingInfo.getTerrainYieldChange():
+					iTerrain = pTerrainYieldChanges.eTerrain
+					iYield = pTerrainYieldChanges.eYield
+					aTerrainYieldChanges[BASE][iTerrain][iYield] += pTerrainYieldChanges.value
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<TerrainYieldChanges>
+					for pTerrainYieldChanges in CvReplacedBuildingInfo.getTerrainYieldChange():
+						iTerrain = pTerrainYieldChanges.eTerrain
+						iYield = pTerrainYieldChanges.eYield
+						aTerrainYieldChanges[REPLACED][iTerrain][iYield] += pTerrainYieldChanges.value
+
+				#Keep already existing <TerrainYieldChanges> in base
+				for iTerrain in xrange(GC.getNumTerrainInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aTerrainYieldChanges[FINAL][iTerrain][iYield] = aTerrainYieldChanges[BASE][iTerrain][iYield] + aTerrainYieldChanges[REPLACED][iTerrain][iYield]
+
+				#Terrain shouldn't be worse than replaced one!
+				for iTerrain in xrange(GC.getNumTerrainInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
+							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" Terrain Yields "+str(aTerrainYieldChanges[FINAL][iTerrain])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base
@@ -3441,13 +3469,8 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 
-			aBuildingCivicList = []
-			for iCivic in xrange(GC.getNumCivicInfos()):
-				if iCivic not in aBuildingCivicList and (CvBuildingInfo.isPrereqAndCivics(iCivic) or CvBuildingInfo.isPrereqOrCivics(iCivic)):
-					aBuildingCivicList.append(iCivic)
-
-			aReplacementList = []
-			if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getObsoleteTech() != -1:
+			aReplacementList = [] #Exclude wonders, special and religious buildings
+			if not isNationalWonder(iBuilding) and not isWorldWonder(iBuilding) and CvBuildingInfo.getProductionCost() > 0 and CvBuildingInfo.getObsoleteTech() != -1 and CvBuildingInfo.getReligionType() == -1 and CvBuildingInfo.getPrereqReligion() == -1:
 				for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 					if GC.getBuildingInfo(CvBuildingInfo.getReplacementBuilding(i)).getType() not in aSpecialReplacementsList:
 						aReplacementList.append(CvBuildingInfo.getReplacementBuilding(i))
@@ -3463,5 +3486,5 @@ class TestCode:
 			for iBuilding in xrange(GC.getNumBuildingInfos()):
 				if aObsoletedBuildingOnTechCountList[iTech][iBuilding]:
 					aBuildingsList.append(GC.getBuildingInfo(iBuilding).getType())
-			if len(aBuildingsList) >= 5:
-				self.log(GC.getTechInfo(iTech).getType()+" obsoletes "+str(len(aBuildingsList))+" regular buildings without replacement: "+str(aBuildingsList))
+			if len(aBuildingsList) > 0:
+				self.log(str(len(aBuildingsList))+" obsoletions at "+GC.getTechInfo(iTech).getType()+", regular buildings without replacement: "+str(aBuildingsList))

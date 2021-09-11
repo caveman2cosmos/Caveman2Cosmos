@@ -972,9 +972,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_PYRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
 				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
+				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
+				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CHIEFDOM</CivicOption>
@@ -1425,7 +1429,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -3165,15 +3168,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_SERVANTS_QUARTERS</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_IMPERIAL_FORTRESS</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -3198,6 +3204,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7186,6 +7197,11 @@
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
@@ -7448,6 +7464,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
+					<iProductionModifier>15</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

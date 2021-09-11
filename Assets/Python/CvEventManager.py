@@ -227,7 +227,6 @@ class CvEventManager:
 					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI"),
 					"TAIPEI_101"			: GC.getInfoTypeForString('BUILDING_TAIPEI_101'),
 					"LOTUS_TEMPLE"			: GC.getInfoTypeForString('BUILDING_LOTUS_TEMPLE'),
-					"DJENNE"				: GC.getInfoTypeForString("BUILDING_DJENNE"),
 					"NANITE_DEFUSER"		: GC.getInfoTypeForString("BUILDING_NANITE_DEFUSER"),
 					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLO'),
 					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_APPIAN_WAY'),
@@ -1432,24 +1431,6 @@ class CvEventManager:
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.countNumCitiesByArea(CyArea) > 0:
 						CyTeamX.meet(iTeam, True)
-		# Djenne
-		elif iBuilding == mapBuildingType["DJENNE"]:
-			MAP = GC.getMap()
-			iX = CyCity.getX()
-			iY = CyCity.getY()
-			DESERT	= GC.getTERRAIN_DESERT()
-			DUNES	= GC.getInfoTypeForString('TERRAIN_DUNES')
-			for x in xrange(iX - 2, iX + 3, 1):
-				for y in xrange(iY - 2, iY + 3, 1):
-					CyPlot = MAP.plot(x, y)
-					if CyPlot.isPlayerCityRadius(iPlayer):
-						iTerrain = CyPlot.getTerrainType()
-						if iTerrain == DESERT:
-							GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 2)
-						elif iTerrain == DUNES:
-							GAME.setPlotExtraYield(x, y, YieldTypes.YIELD_COMMERCE, 1)
-			if iPlayer == GAME.getActivePlayer():
-				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_DJENNE_PYTHON",()), iPlayer, 16, 'Art/Interface/Buttons/Great_Wonders/great_mosque_of_djenne.dds', ColorTypes(44), iX, iY, True, True)
 		# Lotus Temple
 		elif iBuilding == mapBuildingType["LOTUS_TEMPLE"]:
 			bHuman = CyPlayer.isHuman()

@@ -1360,26 +1360,26 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		// Work out statistics about the spread of the building scores so we can see if any are highly recommended
 		float average;
-		int minScore, maxScore;
+		int64_t minScore, maxScore;
 		CvCity::ScoredBuilding::averageMinMax(bestBuildings, average, minScore, maxScore);
 
 		bestBuildings.resize(std::min<int>(5, bestBuildings.size()));
 
-		float cutOff = average + (maxScore - average) * 0.75f;
+		const float cutOff = average + (maxScore - average) * 0.75f;
 		for(size_t idx = 0; idx < bestBuildings.size(); ++idx)
 		{
-			BuildingTypes building = bestBuildings[idx].building;
-			AdvisorTypes advisor = (AdvisorTypes)(GC.getBuildingInfo(building).getAdvisorType());
+			const BuildingTypes building = bestBuildings[idx].building;
+			const AdvisorTypes advisor = (AdvisorTypes)GC.getBuildingInfo(building).getAdvisorType();
 			if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}
 			else
 			{
 				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
+				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
 				// CvWString szBuildingText = CvWString::format(L"%s (%d)", GC.getBuildingInfo(building).getDescription(), iTurns);
 				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			}

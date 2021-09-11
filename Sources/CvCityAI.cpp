@@ -4236,7 +4236,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 
 BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
 {
-	std::vector<ScoredBuilding> scoredBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty);
+	const std::vector<ScoredBuilding> scoredBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty);
 	if (!scoredBuildings.empty())
 	{
 		return scoredBuildings[0].building;
@@ -4244,7 +4244,7 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 	return NO_BUILDING;
 }
 
-std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
+const std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
 {
 	std::vector<ScoredBuilding> scoredBuildings;
 
@@ -4338,9 +4338,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// Automated production doesn't look at buildings with prerequisites?
 			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
 		{
-			// Toffer - ToDo - Change iValue type to int64_t,
-			//	or reduce scoring as it gets dangerously close to overflowing as it is.
-			int iValue = 0;
+			int64_t iValue = 0;
 
 			if (!(iFocusFlags & BUILDINGFOCUS_PROPERTY)
 				// If we want to build a building that influences a property (crime/pollution/tourism etc.) then
@@ -4360,7 +4358,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 				if (gCityLogLevel > 3)
 				{
-					logBBAI("City %S base value for %S (flags %08lx)=%d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
+					logBBAI("City %S base value for %S (flags %08lx)=%ll", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 				}
 
 				// If this new building replaces an old one, subtract the old value.
@@ -4380,7 +4378,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 							if (gCityLogLevel > 3)
 							{
-								logBBAI("    replaces %S - reduce value to %d", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
+								logBBAI("    replaces %S - reduce value to %ll", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
 							}
 						}
 					}
@@ -4432,7 +4430,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 						if (gCityLogLevel > 3)
 						{
-							logBBAI("    enables %S - increase value to %d", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
+							logBBAI("    enables %S - increase value to %ll", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
 						}
 					}
 				}
@@ -4457,7 +4455,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 			if (gCityLogLevel > 3)
 			{
-				logBBAI("    final value %d", iValue);
+				logBBAI("    final value %ll", iValue);
 			}
 
 			// If we got here, and the building value is above zero, then it certainly
@@ -4504,7 +4502,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					FAssert(MAX_INT / 100 >= iValue);
 					// Adjust the score based on the turns to complete the building, more turns means lower score
 					// As we got this far we definitely consider this building a candidate so we should give it a score of at least 1
-					iValue = std::max(1, iValue * 100 / (iTurnsLeft + 3));
+					iValue = std::max<int64_t>(1, iValue * 100 / (iTurnsLeft + 3));
 
 					// Add to our list of potential buildings to return later
 					scoredBuildings.push_back(ScoredBuilding(eBuilding, iValue));
@@ -6349,8 +6347,29 @@ int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, 
 
 	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
 
-	const int iBaseRate = getPlotYield(eYield);
-
+	int iBaseRate = getPlotYield(eYield);
+	{
+		int iTerrainChange = 0;
+		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
+		{
+			if (pair.second[eYield] != 0)
+			{
+				int iCount = 0;
+				foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS))
+				{
+					if (plotX->getTerrainType() == pair.first && canWork(plotX))
+					{
+						iTerrainChange += pair.second[eYield];
+					}
+				}
+			}
+		}
+		if (iTerrainChange != 0)
+		{
+			iValue += std::min(getPopulation(), 10) * iTerrainChange;
+			iBaseRate += iTerrainChange * 3 / 4;
+		}
+	}
 	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
 	iValue += 8 * (
@@ -9763,7 +9782,7 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 	m_iBuildPriority = m_iTempBuildPriority;
 #endif
 
-	std::vector<ScoredBuilding> bestBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, false, NO_ADVISOR, bMaximizeFlaggedValue, eProperty);
+	const std::vector<ScoredBuilding> bestBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, false, NO_ADVISOR, bMaximizeFlaggedValue, eProperty);
 
 	const int maxQueueTurnsForSpeed = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 20;
 	const int desiredQueueTurns = std::max(3, std::min(maxQueueTurnsForSpeed, iMaxTurns));
@@ -15640,12 +15659,12 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				// commerce yield
 				int iCommerceYieldValue =
-					(
-						AI_buildingYieldValue(
-							YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade,
-							iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]
-						)
-						);
+				(
+					AI_buildingYieldValue(
+						YIELD_COMMERCE, eBuilding, kBuilding, bForeignTrade,
+						iFoodDifference, aiFreeSpecialistYield[YIELD_COMMERCE]
+					)
+				);
 				valuesCache->Accumulate(
 					BUILDINGFOCUSINDEX_GOLD,
 					kOwner.getCommercePercent(COMMERCE_GOLD) * iCommerceYieldValue

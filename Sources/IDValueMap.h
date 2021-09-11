@@ -51,6 +51,29 @@ struct IDValueMap
 				}
 				pXML->MoveToXmlParent();
 			}
+			else if (pXML->TryMoveToXmlFirstChild(L"TerrainYieldChange"))
+			{
+				for (int j = 0; j < iNumChildren; ++j)
+				{
+					CvString szTextVal;
+					pXML->GetChildXmlValByName(szTextVal, L"TerrainType");
+					const int k = pXML->GetInfoClass(szTextVal);
+					if (k > -1)
+					{
+						pair_t pair = pair_t();
+						pair.first = static_cast<ID_>(k);
+						if (pXML->TryMoveToXmlFirstChild(L"YieldChanges"))
+						{
+							pXML->SetYields(&pair.second);
+							pXML->MoveToXmlParent();
+							m_map.push_back(pair);
+						}
+					}
+					if (!pXML->TryMoveToXmlNextSibling())
+						break;
+				}
+				pXML->MoveToXmlParent();
+			}
 			pXML->MoveToXmlParent();
 		}
 	}
@@ -227,6 +250,7 @@ typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
 typedef std::pair<TechTypes, int*> TechCommerceModifiers;
+typedef std::pair<TerrainTypes, int*> TerrainYieldChanges;
 
 typedef IDValueMap<int, int, 100> IDValueMapPercent;
 typedef IDValueMap<int, int, 0> IDValueMapModifier;

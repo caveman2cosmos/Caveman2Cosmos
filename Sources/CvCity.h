@@ -958,6 +958,11 @@ public:
 	int getRiverPlotYield(YieldTypes eIndex) const;
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
+	int getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const;
+	void changeTerrainYieldChanges(const TerrainTypes eTerrain, int* yields);
+
+	int getPlotYieldChange(const CvPlot* pPlot, const YieldTypes eYield) const;
+
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
 	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
@@ -1536,18 +1541,18 @@ public:
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding
 	{
-		ScoredBuilding(BuildingTypes building = NO_BUILDING, int score = -1) : building(building), score(score) {}
+		ScoredBuilding(BuildingTypes building = NO_BUILDING, int64_t score = -1) : building(building), score(score) {}
 		bool operator<(const ScoredBuilding& other) const { return score < other.score; }
 
 		BuildingTypes building;
-		int score;
+		int64_t score;
 
 		// Get some interesting stats about a set of scored buildings
-		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int& minScore, int& maxScore)
+		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int64_t& minScore, int64_t& maxScore)
 		{
 			averageScore = 0;
-			minScore = MAX_INT;
-			maxScore = -MAX_INT;
+			minScore = LLONG_MAX;
+			maxScore = LLONG_MIN;
 			foreach_(const ScoredBuilding& itr, scores)
 			{
 				averageScore = averageScore + itr.score / scores.size();
@@ -1802,6 +1807,8 @@ protected:
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
+
+	std::map<short, int*> m_terrainYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 

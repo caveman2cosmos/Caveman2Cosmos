@@ -420,6 +420,10 @@
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -702,7 +706,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -719,7 +727,11 @@
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -6236,6 +6248,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMISSION_ACT</Type>
@@ -6251,13 +6264,16 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6272,7 +6288,11 @@
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8546,6 +8566,10 @@
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_DAYCARE_CENTER</ID>
 					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
+					</Has>
 				</Or>
 			</ConstructCondition>
 			<PrereqOrBuildings>
@@ -9177,6 +9201,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
+					<iProductionModifier>10</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -12381,6 +12409,29 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_OLD_CITY_WALLS</Type>
+			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<iConquestProb>80</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_PEST_ANTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12495,14 +12546,16 @@
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_SCARECROWS</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SCARECROWS</BuildingType>
+				<BuildingType>BUILDING_FARMSCRAPER_I</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_SCARECROWS</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -12785,14 +12838,16 @@
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_RAT_CATCHER</ObsoletesToBuilding>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RAT_CATCHER</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -12800,16 +12855,6 @@
 				<iYield>-1</iYield>
 				<iYield>-1</iYield>
 			</YieldModifiers>
-			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<YieldModifiers>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-			</BonusYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14265,7 +14310,11 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
 			<iAIWeight>1</iAIWeight>
@@ -14282,7 +14331,11 @@
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
+			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
