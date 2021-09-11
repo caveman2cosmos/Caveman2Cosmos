@@ -5809,8 +5809,8 @@
 				<TerrainYieldChange>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>2</iYield>
 						<iYield>2</iYield>
 					</YieldChanges>
 				</TerrainYieldChange>
@@ -5818,8 +5818,8 @@
 					<TerrainType>TERRAIN_DUNES</TerrainType>
 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</YieldChanges>
 				</TerrainYieldChange>
 			</TerrainYieldChanges>
