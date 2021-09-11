@@ -36,7 +36,7 @@ public:
 	bool isValidModule(			bool&							bValid,
 								const CvString&					refcstrRootDirectory,
 								const CvString&					refcstrModularDirectory,
-								const CvString&					refcstrExtension,					
+								const CvString&					refcstrExtension,
 								bool							bSearchSubdirectories = false);
 
 	void loadModControlArray(std::vector<CvString>&	aszFiles, const char* szFileRoot);

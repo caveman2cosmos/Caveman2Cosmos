@@ -97,10 +97,8 @@ int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 int CvProperties::getValueByProperty(PropertyTypes eProp) const
 {
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
-		return 0;
-	else
-		return getValue(index);
+
+	return index < 0 ? 0 : getValue(index);
 }
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
@@ -171,17 +169,16 @@ void CvProperties::setValueByProperty(PropertyTypes eProp, int iVal)
 	//szBuffer.format("SetValueByProperty, eProp %i, iValue %i.", eProp, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
 	const int index = getPositionByProperty(eProp);
-	if (index < 0)
+	if (index >= 0)
 	{
-		if (iVal != 0)
-		{
-			m_aiProperty.push_back(PropertyValue(eProp,iVal));
-			if (m_pGameObject)
-				m_pGameObject->eventPropertyChanged(eProp, iVal);
-		}
-	}
-	else
 		setValue(index, iVal);
+	}
+	else if (iVal != 0)
+	{
+		m_aiProperty.push_back(PropertyValue(eProp,iVal));
+		if (m_pGameObject)
+			m_pGameObject->eventPropertyChanged(eProp, iVal);
+	}
 }
 
 void CvProperties::changeValue(int index, int iChange)
@@ -238,7 +235,7 @@ void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 		if (iChangePercent)
 		{
 			const int iPropChange = (iChange * iChangePercent) / 100;
-			m_pGameObject->foreach((GameObjectTypes)iI, bst::bind(callChangeValueByProperty, _1, eProp, iPropChange));
+			m_pGameObject->foreach((GameObjectTypes)iI, bind(callChangeValueByProperty, _1, eProp, iPropChange));
 		}
 	}
 }
@@ -291,7 +288,7 @@ void CvProperties::read(FDataStreamBase *pStream)
 	int num;
 	int eProp;
 	int iVal;
-	
+
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();

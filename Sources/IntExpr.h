@@ -37,11 +37,11 @@ enum IntExprTypes
 class IntExpr
 {
 public:
-	virtual ~IntExpr() = 0;
-	virtual int evaluate(const CvGameObject* pObject) const = 0;
-	static IntExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(uint32_t& iSum) const = 0;
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
+	virtual ~IntExpr();
+	virtual int evaluate(const CvGameObject*) const = 0;
+	static const IntExpr* read(CvXMLLoadUtility* pXML);
+	virtual void getCheckSum(uint32_t&) const = 0;
+	virtual void buildDisplayString(CvWStringBuffer&) const = 0;
 	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
 	virtual bool isConstantZero() const;
 };
@@ -56,7 +56,8 @@ public:
 	virtual int getBindingStrength() const;
 	virtual bool isConstantZero() const;
 protected:
-	int m_iValue;
+	friend void CyIntExprPythonInterface();
+	const int m_iValue;
 };
 
 class IntExprAttribute : public IntExpr
@@ -80,27 +81,27 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	PropertyTypes m_eProperty;
+	const PropertyTypes m_eProperty;
 };
 
 class IntExprOp : public IntExpr
 {
 public:
-	IntExprOp(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
+	IntExprOp(const IntExpr* pExpr1 = NULL, const IntExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~IntExprOp();
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const = 0;
 	virtual IntExprTypes getType() const = 0;
 protected:
-	IntExpr* m_pExpr1;
-	IntExpr* m_pExpr2;
+	const IntExpr* m_pExpr1;
+	const IntExpr* m_pExpr2;
 };
 
 class IntExprPlus : public IntExprOp
 {
 public:
-	IntExprPlus(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
+	IntExprPlus(const IntExpr* pExpr1 = NULL, const IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual IntExprTypes getType() const;
 	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
@@ -110,7 +111,7 @@ public:
 class IntExprMinus : public IntExprOp
 {
 public:
-	IntExprMinus(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
+	IntExprMinus(const IntExpr* pExpr1 = NULL, const IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual IntExprTypes getType() const;
 	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
@@ -120,7 +121,7 @@ public:
 class IntExprMult : public IntExprOp
 {
 public:
-	IntExprMult(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
+	IntExprMult(const IntExpr* pExpr1 = NULL, const IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual IntExprTypes getType() const;
 	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
@@ -130,7 +131,7 @@ public:
 class IntExprDiv : public IntExprOp
 {
 public:
-	IntExprDiv(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
+	IntExprDiv(const IntExpr* pExpr1 = NULL, const IntExpr* pExpr2 = NULL) : IntExprOp(pExpr1, pExpr2) {}
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual IntExprTypes getType() const;
 	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
@@ -140,24 +141,24 @@ public:
 class IntExprIf : public IntExpr
 {
 public:
-	IntExprIf(BoolExpr* pExprIf = NULL, IntExpr* pExprThen = NULL, IntExpr* pExprElse = NULL) : m_pExprIf(pExprIf), m_pExprThen(pExprThen), m_pExprElse(pExprElse) {}
+	IntExprIf(const BoolExpr* pExprIf = NULL, const IntExpr* pExprThen = NULL, const IntExpr* pExprElse = NULL) : m_pExprIf(pExprIf), m_pExprThen(pExprThen), m_pExprElse(pExprElse) {}
 	virtual ~IntExprIf();
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	BoolExpr* m_pExprIf;
-	IntExpr* m_pExprThen;
-	IntExpr* m_pExprElse;
+	const BoolExpr* m_pExprIf;
+	const IntExpr* m_pExprThen;
+	const IntExpr* m_pExprElse;
 };
 
-typedef void (*IntegrateOpFunc)(const CvGameObject*, IntExpr*, int*);
+typedef void (*IntegrateOpFunc)(const CvGameObject*, const IntExpr*, int*);
 
 class IntExprIntegrateOp : public IntExpr
 {
 public:
-	IntExprIntegrateOp(IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
+	IntExprIntegrateOp(const IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
 	virtual ~IntExprIntegrateOp();
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
@@ -166,7 +167,7 @@ public:
 	virtual IntExprTypes getType() const = 0;
 	virtual IntegrateOpFunc getOp() const = 0;
 protected:
-	IntExpr* m_pExpr;
+	const IntExpr* m_pExpr;
 	RelationTypes m_eRelation;
 	int m_iData;
 	GameObjectTypes m_eType;
@@ -175,7 +176,7 @@ protected:
 class IntExprIntegrateSum : public IntExprIntegrateOp
 {
 public:
-	IntExprIntegrateSum(IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : IntExprIntegrateOp(pExpr, eRelation, iData, eType) {}
+	IntExprIntegrateSum(const IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : IntExprIntegrateOp(pExpr, eRelation, iData, eType) {}
 	virtual IntExprTypes getType() const;
 	virtual IntegrateOpFunc getOp() const;
 };
@@ -183,7 +184,7 @@ public:
 class IntExprIntegrateAvg : public IntExprIntegrateOp
 {
 public:
-	IntExprIntegrateAvg(IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : IntExprIntegrateOp(pExpr, eRelation, iData, eType) {}
+	IntExprIntegrateAvg(const IntExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : IntExprIntegrateOp(pExpr, eRelation, iData, eType) {}
 	virtual IntExprTypes getType() const;
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual IntegrateOpFunc getOp() const;
@@ -192,14 +193,14 @@ public:
 class IntExprIntegrateCount : public IntExpr
 {
 public:
-	IntExprIntegrateCount(BoolExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
+	IntExprIntegrateCount(const BoolExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
 	virtual ~IntExprIntegrateCount();
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	BoolExpr* m_pExpr;
+	const BoolExpr* m_pExpr;
 	RelationTypes m_eRelation;
 	int m_iData;
 	GameObjectTypes m_eType;
@@ -208,40 +209,40 @@ protected:
 class IntExprRandom : public IntExpr
 {
 public:
-	IntExprRandom(IntExpr* pExpr = NULL) : m_pExpr(pExpr) {}
+	IntExprRandom(const IntExpr* pExpr = NULL) : m_pExpr(pExpr) {}
 	virtual ~IntExprRandom();
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	IntExpr* m_pExpr;
+	const IntExpr* m_pExpr;
 };
 
 class IntExprPython : public IntExpr
 {
 public:
-	explicit IntExprPython(CvString szPythonCallback) : m_szPythonCallback(szPythonCallback) {}
+	explicit IntExprPython(const CvString szPythonCallback) : m_szPythonCallback(szPythonCallback) {}
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	CvString m_szPythonCallback;
+	const CvString m_szPythonCallback;
 };
 
 class IntExprAdapt : public IntExpr
 {
 public:
-	IntExprAdapt(IntExpr* pExpr = NULL, int iID = 0) : m_pExpr(pExpr), m_iID(iID) {}
+	IntExprAdapt(const IntExpr* pExpr = NULL, int iID = 0) : m_pExpr(pExpr), m_iID(iID) {}
 	virtual ~IntExprAdapt();
 	virtual int evaluate(const CvGameObject* pObject) const;
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	virtual int getBindingStrength() const;
 protected:
-	IntExpr* m_pExpr;
-	int m_iID;
+	const IntExpr* m_pExpr;
+	const int m_iID;
 };
 
 

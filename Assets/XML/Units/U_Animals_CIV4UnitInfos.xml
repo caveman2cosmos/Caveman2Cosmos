@@ -10298,7 +10298,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_HORSE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_HORSE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23543,7 +23543,12 @@
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
 					<UnitType>UNIT_SUBDUED_ZEBRA</UnitType>
-					<bUnitToCity><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SEDENTARY_LIFESTYLE</ID></Has></bUnitToCity>
+					<bUnitToCity>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</bUnitToCity>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>

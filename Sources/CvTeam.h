@@ -35,7 +35,6 @@ public:
 	void doTurn();
 
 	void updateYield();
-	void updatePowerHealth();
 	void updateCommerce();
 
 	bool canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal = false) const;
@@ -109,7 +108,7 @@ public:
 	bool hasBonus(BonusTypes eBonus) const;
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
-	bool isHuman() const;
+	bool isHuman(const bool bCountDisabledHuman = false) const;
 	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;

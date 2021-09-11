@@ -133,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()
@@ -167,7 +167,7 @@ void CvEventReporter::init()
 
 void CvEventReporter::update(float fDeltaTime)
 {
-	m_kPythonEventMgr.reportUpdate(fDeltaTime);
+	// Toffer - Called by exe every frame, might be useful.
 }
 
 void CvEventReporter::unInit()
@@ -381,11 +381,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
 	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
-void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
 }
 
 void CvEventReporter::unitCreated(CvUnit *pUnit)

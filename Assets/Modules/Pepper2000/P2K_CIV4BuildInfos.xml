@@ -10,6 +10,7 @@
 			<Type>BUILD_LUNAR_PATH</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_PATH</Description>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>25</iCost>
 			<bKill>0</bKill>
@@ -814,6 +815,7 @@
 			<Description>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MEGASTRUCTURES</ObsoleteTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -896,6 +898,22 @@
 			<ImprovementType>IMPROVEMENT_TERRAFORMED_PLANET</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_HOT_JUPITER</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MINI_NEPTUNE</FeatureType>
+					<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<bAltDown>0</bAltDown>
@@ -1061,6 +1079,7 @@
 			<Description>TXT_KEY_BUILD_SATELLITE_STATION</Description>
 			<Help/>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_PLANET_ENGINEERING</ObsoleteTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1308,6 +1327,7 @@
 			<Description>TXT_KEY_BUILD_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
@@ -1327,6 +1347,7 @@
 			<Description>TXT_KEY_BUILD_LUNAR_OUTPOST</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>2000</iCost>
 			<bKill>1</bKill>
@@ -1384,6 +1405,7 @@
 			<Description>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
@@ -1403,6 +1425,7 @@
 			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>
@@ -1417,6 +1440,7 @@
 			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>1500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1431,6 +1455,7 @@
 			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_LUNAR_TRADE</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>

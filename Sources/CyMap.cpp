@@ -1,7 +1,3 @@
-//
-// Python wrapper class for CvMap 
-// 
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvInitCore.h"
@@ -14,14 +10,17 @@
 #include "CyMap.h"
 #include "CyPlot.h"
 
-CyMap::CyMap() : m_pMap(NULL)
-{
-	m_pMap = &GC.getMap();
-}
+//
+// Python wrapper class for CvMap
+//
 
-CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
-{
-}
+CyMap::CyMap()
+	: m_pMap(&GC.getMap())
+{ }
+
+CyMap::CyMap(MapTypes eMap)
+	: m_pMap(&GC.getMapByIndex(eMap))
+{ }
 
 int CyMap::getType()
 {
@@ -73,10 +72,15 @@ int	CyMap::getViewportYFromMapY(int iY)
 {
 	return GC.getCurrentViewport()->getViewportYFromMapY(iY);
 }
-	
+
 bool CyMap::isInViewport(int iX, int iY)
 {
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
+}
+
+bool CyMap::isMidSwitch() const
+{
+	return CvMap::m_bSwitchInProgress;
 }
 
 void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)
@@ -167,7 +171,7 @@ int CyMap::plotY(int iIndex)
 	return m_pMap ? m_pMap->plotY(iIndex) : -1;
 }
 
-int CyMap::getGridWidth() 
+int CyMap::getGridWidth()
 {
 	return m_pMap->getGridWidth();
 }
@@ -288,7 +292,7 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 	return NULL;
 }
 
-CyPlot* CyMap::plot(int iX, int iY) 
+CyPlot* CyMap::plot(int iX, int iY)
 {
 	return new CyPlot(m_pMap->plot(iX, iY));
 }
@@ -296,7 +300,7 @@ CyPlot* CyMap::plot(int iX, int iY)
 //
 // static version
 //
-CyPlot* CyMap::sPlot(int iX, int iY) 
+CyPlot* CyMap::sPlot(int iX, int iY)
 {
 	static CyPlot p;
 	p.setPlot(m_pMap->plot(iX, iY));
@@ -430,4 +434,9 @@ void CyMap::calculateCanalAndChokePoints()
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}
+}
+
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+{
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
 }

@@ -81,9 +81,6 @@
 	<load mod="Revolution"/>
 	<load mod="RevDCM"/>
 	<!--RevolutionDCM end-->
-	<!--Mad Nukes Mod-->
-	<events module="MADNukesEventManager"/>
-	<!--Mad Nukes Mod-->
 	<!-- Options Screen -->
 	<screen id="BUGFull">
 		<tab module="BugGeneralOptionsTab"/>
@@ -104,12 +101,10 @@
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
 	<load mod="CaptureSlaves"/>
-	<load mod="MasterModList"/>
 	<load mod="Partisan"/>
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>
-	<events module="DynamicCivNames"/>
 	<events module="ParallelMaps"/>
 	<events module="WoodlandCycle"/>
 </bug>

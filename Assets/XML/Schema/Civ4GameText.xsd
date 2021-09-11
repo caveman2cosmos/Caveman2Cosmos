@@ -12,12 +12,8 @@
               <xs:element name="German" type="Gametext" minOccurs="0"/>
               <xs:element name="Italian" type="Gametext" minOccurs="0"/>
               <xs:element name="Spanish" type="Gametext" minOccurs="0"/>
-              <xs:element name="Finnish" type="Gametext" minOccurs="0"/>
-              <xs:element name="Hungarian" type="Gametext" minOccurs="0"/>
               <xs:element name="Polish" type="Gametext" minOccurs="0"/>
               <xs:element name="Russian" type="Gametext" minOccurs="0"/>
-              <xs:element name="Chinese" type="Gametext" minOccurs="0"/>
-              <xs:element name="Portuguese" type="Gametext" minOccurs="0"/>
             </xs:all>
           </xs:complexType>
         </xs:element>

@@ -157,7 +157,7 @@ class NaturalWonders:
 					break
 		else: bFirst = True
 		if bFirst:
-			iGold = self.iFirstGold * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getUnitTradePercent() /100
+			iGold = self.iFirstGold * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() /100
 
 		import CvUtil
 		TRNSLTR = CyTranslator()

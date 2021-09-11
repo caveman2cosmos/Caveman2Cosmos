@@ -28,9 +28,7 @@
 			<iFlatMovement>100</iFlatMovement>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
-				<PrereqOrBonus>
-					<BonusType>BONUS_PLASTIC</BonusType>
-				</PrereqOrBonus>
+				<BonusType>BONUS_PLASTIC</BonusType>
 			</PrereqOrBonuses>
 			<Yields>
 				<iYield>1</iYield>

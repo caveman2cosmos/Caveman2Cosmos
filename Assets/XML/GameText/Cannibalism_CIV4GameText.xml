@@ -17,42 +17,6 @@
 		<Russian>Ëþäîåäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Tag>
-		<English>Worldview - Cannibalism (down side I)</English>
-		<French>Vision du Monde - Cannibalisme (inconvénient I)</French>
-		<Italian>
-			<Text>Concezione del mondo - Cannibalismo (Inconveniente I)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Swiatopogląd - Kanibalizm (Niekorzyść I)</Polish>
-		<Russian>Ëþäîåäû (ïðîòåñò I)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Tag>
-		<English>Worldview - Cannibalism (down side II)</English>
-		<French>Vision du Monde - Cannibalisme (inconvénient II)</French>
-		<Italian>
-			<Text>Concezione del mondo - Cannibalismo (Inconveniente II)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Swiatopogląd - Kanibalizm (Niekorzyść II)</Polish>
-		<Russian>Ëþäîåäû (ïðîòåñò II)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Tag>
-		<English>Worldview - Cannibalism (down side III)</English>
-		<French>Vision du Monde - Cannibalisme (inconvénient III)</French>
-		<Italian>
-			<Text>Concezione del mondo - Cannibalismo (Inconveniente III)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Swiatopogląd - Kanibalizm (Niekorzyść III)</Polish>
-		<Russian>Ëþäîåäû (ïðîòåñò III)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISEASE_KURU</Tag>
 		<English>Disease (Kuru)</English>
 		<French>
@@ -67,12 +31,6 @@
 		</Italian>
 		<Polish>Choroba (Kuru)</Polish>
 		<Russian>Áîëåçíü (Êóðó)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Tag>
-		<English>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</English>
-		<French>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</French>
-		<Italian>Non abbiamo ancora l'abilità di generare infelicità da un edificio con gli avanzi tecnologici. Questo effetto viene quindi simulato da un edificio fittizio.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM</Tag>

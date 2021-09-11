@@ -9,6 +9,14 @@
 		<English>[COLOR_WARNING_TEXT]Religiously disabled[COLOR_REVERT][NEWLINE]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0</Tag>
+		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3 Total) in any city[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1</Tag>
+		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3/%d4 Total) in any city[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
 		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
@@ -44,6 +52,12 @@
 		<Russian>[SPACE](%s1 [ICON_GOLD])</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
+		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
+		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
+		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
 		<English>[ICON_BULLET]%d1%% civilian unit upkeep cost</English>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für zivile Einheiten</German>
@@ -54,11 +68,5 @@
 		<English>[ICON_BULLET]%d1%% military unit upkeep cost</English>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
 		<Russian>[ICON_BULLET]%d1%% стоимость военного отряда</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
-		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
-		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
-		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
 	</TEXT>
 </Civ4GameText>

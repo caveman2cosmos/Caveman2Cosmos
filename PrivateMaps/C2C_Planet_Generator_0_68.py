@@ -116,7 +116,7 @@ try:
 	import cPickle as pickle
 except:
 	import pickle
-	
+
 
 VERSION = "0_68"
 
@@ -3736,7 +3736,7 @@ def civFilePath():
 		return folder
 	except:
 		return ""
-			
+
 #----------------------------------------------
 """Other functions"""
 #----------------------------------------------

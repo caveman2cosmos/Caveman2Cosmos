@@ -1,6 +1,230 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BOMBARD</Tag>
+		<English>[ICON_BULLET]Can be bombarded</English>
+		<French>[ICON_BULLET]Peut être bombardé</French>
+		<German>[ICON_BULLET]Beschossen werden kann</German>
+		<Italian>[ICON_BULLET]Può essere bombardati</Italian>
+		<Spanish>[ICON_BULLET]Puede ser bombardeado</Spanish>
+		<Polish>[ICON_BULLET]Może być zbombardowany.</Polish>
+		<Russian>[ICON_BULLET]Ìîæåò áûòü îáñòðåëÿí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
+		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
+		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
+		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
+		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
+		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
+		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_CULTURE_RANGE</Tag>
+		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
+		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
+		<German>[ICON_BULLET]Einflüsse Plots innerhalb einer Entfernung von %d1_Num</German>
+		<Italian>[ICON_BULLET]Trame influenze entro una distanza di %d1_Num</Italian>
+		<Spanish>[ICON_BULLET]Se propaga por las casillas situadas en un radio de %d1_Num</Spanish>
+		<Polish>[ICON_BULLET]Wpływa na teren o zasięgu %d1_Num pól</Polish>
+		<Russian>[ICON_BULLET]Ðàñøèðÿåò ó÷àñòêè â ïðåäåëàõ ðàññòîÿíèÿ %d1_Num</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
+		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
+		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
+		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_FORTIFY_TO_UPGRADE</Tag>
+		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
+		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
+		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
+		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
+		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
+		<Polish>[ICON_BULLET]Jednostka musi być trybie obronnym, aby została ulepszona.</Polish>
+		<Russian>[ICON_BULLET]Îòðÿä äîëæåí áûòü óêðåïëåí, äëÿ òîãî ÷òîáû åãî óëó÷øèòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
+		<English>[ICON_BULLET]May only be placed once in a game.</English>
+		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
+		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
+		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
+		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
+		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
+		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
+		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
+		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
+		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_ZOC_SOURCE</Tag>
+		<English>[ICON_BULLET]Provides a zone of control</English>
+		<French>[ICON_BULLET]Procure une zone de contrôle</French>
+		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
+		<Polish>[ICON_BULLET]Wprowadza strefę kontroli</Polish>
+		<Russian>[ICON_BULLET]Èìååò çîíó êîíòðîëÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
+		<English>[ICON_BULLET]May only be placed once by a given player.</English>
+		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_NOT_ON_ANY_BONUS</Tag>
+		<English>[ICON_BULLET]May not be added to a plot that already has a resource, whether visible or not.</English>
+		<Polish>[ICON_BULLET]Nie można dodać do pola, które już posiada surowiec (widoczny lub nie)</Polish>
+		<Russian>[ICON_BULLET]Не может быть добавлен на участок, на котором уже есть видимый или не открытый еще ресурс.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PILLAGE_YIELDS</Tag>
+		<English>[ICON_BULLET]Pillage yields %d1_Num[ICON_GOLD] on average</English>
+		<French>[ICON_BULLET]Le pillage rapporte en moyenne %d1_Num[ICON_GOLD].</French>
+		<German>[ICON_BULLET]Plünderung bringt durchschnittlich %d1_Num[ICON_GOLD]</German>
+		<Italian>[ICON_BULLET]Saccheggia in media %d1_Num[ICON_GOLD] prodotti</Italian>
+		<Spanish>[ICON_BULLET]El saqueo reporta %d1_Num[ICON_GOLD] de media</Spanish>
+		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
+		<Russian>[ICON_BULLET]Ãðàáåæ ïðèíîñèò â ñðåäíåì %d1_Num[ICON_GOLD] </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_PLOT_CULTURE</Tag>
+		<English>[ICON_BULLET]%D1_Change[ICON_CULTURE] for owner in plot</English>
+		<French>[ICON_BULLET]%D1_Change[ICON_CULTURE] pour le propriétaire dans la parcelle</French>
+		<German>[ICON_BULLET]%D1_Change[ICON_CULTURE] für Besitzer in Plot</German>
+		<Italian>[ICON_BULLET]%D1_Change[ICON_CULTURE] per il proprietario di complotto</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change[ICON_CULTURE] para el dueño en la casilla</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change[ICON_CULTURE] dla wlaściciela pola.</Polish>
+		<Russian>[ICON_BULLET]%D1_Change[ICON_CULTURE] äëÿ âëàäåëüöà òåððèòîðèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
+		<English>[ICON_BULLET]Requires peak</English>
+		<French>[ICON_BULLET]Requiert Montagnes</French>
+		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
+		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
+		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
+		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>
+		<Russian>[ICON_BULLET]%D1_Change Âûñîòà âèäèìîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
+		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
+		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
+		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
+		<Italian>[ICON_BULLET]Non è possibile costruire un altro ad una distanza di %d1_Num</Italian>
+		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
+		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
+		<Russian>[ICON_BULLET]Íåâîçìîæíî ñòðîèòü íà ðàññòîÿíèè îò %d1_Num</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
+		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
+		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
+		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
+		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
+		<English>Bother me another time!</English>
+		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
+		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
+		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
+		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
+		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
+		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
+		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate on all improvements</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration des aménagements</French>
+		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di tutti i miglioramenti delle caselle</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator do czasu trwania ulepszania wszystkich ulepszeń</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления всех улучшений</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
+		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
+		<English>Improvements</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
+		<Russian> улучшения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
+		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
+		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
+		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
+		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
+		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
+		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
+		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
+		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change al alcance de la visibilidad</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change Zasięg Widoczności</Polish>
+		<Russian>[ICON_BULLET]%D1_Change Ðàäèóñ îáíàðóæåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Tag>
 		<English>Abatis (Thorn Hedge)</English>
 		<French>Abattis (Haies épineuses)</French>
@@ -144,30 +368,6 @@
 		</Spanish>
 		<Polish>Boja (Rafa)</Polish>
 		<Russian>Áóé(Ðèô)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_BOMBARD</Tag>
-		<English>[ICON_BULLET]Can be bombarded</English>
-		<French>[ICON_BULLET]Peut être bombardé</French>
-		<German>[ICON_BULLET]Beschossen werden kann</German>
-		<Italian>[ICON_BULLET]Può essere bombardati</Italian>
-		<Spanish>[ICON_BULLET]Puede ser bombardeado</Spanish>
-		<Polish>[ICON_BULLET]Może być zbombardowany.</Polish>
-		<Russian>[ICON_BULLET]Ìîæåò áûòü îáñòðåëÿí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
-		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
-		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
-		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
-		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
-		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
-		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
-		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
-		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Tag>
@@ -408,16 +608,6 @@
 		<Russian>В современном использовании коттедж обычно представляет собой скромное, часто уютное жилище, обычно в сельской или полусельской местности. Однако в городах есть жилища в стиле коттеджей, а в таких местах, как Канада, этот термин вообще не имеет коннотации размера (ср. священник или отшельник). В Соединенном Королевстве термин коттедж также имеет тенденцию обозначать сельские жилища традиционной постройки, хотя он также может применяться к жилищам современной постройки, которые спроектированы так, чтобы напоминать традиционные («имитирующие коттеджи»).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_CULTURE_RANGE</Tag>
-		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
-		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
-		<German>[ICON_BULLET]Einflüsse Plots innerhalb einer Entfernung von %d1_Num</German>
-		<Italian>[ICON_BULLET]Trame influenze entro una distanza di %d1_Num</Italian>
-		<Spanish>[ICON_BULLET]Se propaga por las casillas situadas en un radio de %d1_Num</Spanish>
-		<Polish>[ICON_BULLET]Wpływa na teren o zasięgu %d1_Num pól</Polish>
-		<Russian>[ICON_BULLET]Ðàñøèðÿåò ó÷àñòêè â ïðåäåëàõ ðàññòîÿíèÿ %d1_Num</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DESERT_CAMP</Tag>
 		<English>Desert Camp</English>
 		<French>Camp de Desert</French>
@@ -523,12 +713,6 @@
 Ôåðìà - îáëàñòü çåìëè, èëè, äëÿ àêâàêóëüòóðû, îçåðà, ðåêè èëè ìîðÿ, âêëþ÷àÿ ðàçëè÷íûå ñòðóêòóðû, ïîñâÿùåííûå ïðåæäå âñåãî ïðàêòèêå ñîçäàíèÿ è ñáåðåæåíèÿ ïèùè (ñåëüõîçïðîäóêöèÿ, çåðíî, èëè äîìàøíèé ñêîò), âîëîêíà è, âñå â áîëüøåé ñòåïåíè, òîïëèâî. Ýòî - îñíîâíîå ñðåäñòâî ïðîèçâîäñòâà â ïðîèçâîäñòâå ïèùè. Ôåðìû ìîãóò áûòü ïðèíàäëåæàòü è óïðàâëÿòüñÿ îòäåëüíûì ëèöîì, ñåìüåé, îáùèíîé, êîðïîðàöèåé èëè êîìïàíèåé. Ôåðìà ìîæåò âëàäåòü ëþáûì ðàçìåðîì îò äîëè ãåêòàðà äî íåñêîëüêèõ òûñÿ÷ ãåêòàðîâ. - Wikipedia</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
-		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
-		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
-		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Tag>
 		<English>Fishing Boats</English>
 		<French>
@@ -559,6 +743,16 @@
 		<English>A fishing vessel is a boat or ship used to catch fish in the sea, or on a lake or river. Many different kinds of vessels are used in commercial, artisanal and recreational fishing.</English>
 		<Polish>Kuter rybacki - najmniejsza jednostka połowowa, która służy rybakom do połowu ryb w systemie zbliżonym do połowu trawlerami.</Polish>
 		<Russian>Рыболовное судно - это лодка или корабль, используемые для ловли рыбы в море, на озере или реке. Многие виды судов используются для коммерческого, кустарного и любительского рыболовства.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
+		<English>Fishing Camp</English>
+		<Russian>Ðûáàöêèé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
+		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
+		<Russian>Рыболовецкий лагерь - место, где рыбаки, путешественники и старатели упорно трудятся ради добычи морского зверя, рыбы, растений и минералов. В конце концов, они уезжают и позволяют вашим гражданам здесь работать.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Tag>
@@ -640,16 +834,6 @@
 		</Spanish>
 		<Polish>Ufortyfikowana Jaskinia ze Schowkiem</Polish>
 		<Russian>Òàéíàÿ ïåùåðà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_FORTIFY_TO_UPGRADE</Tag>
-		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
-		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
-		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
-		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
-		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
-		<Polish>[ICON_BULLET]Jednostka musi być trybie obronnym, aby została ulepszona.</Polish>
-		<Russian>[ICON_BULLET]Îòðÿä äîëæåí áûòü óêðåïëåí, äëÿ òîãî ÷òîáû åãî óëó÷øèòü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Tag>
@@ -757,11 +941,6 @@
 		<Tag>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY_PEDIA</Tag>
 		<English>Geothermal Borehole penetrates to Planet's mantle and provides significant minerals and energy. Boreholes have a significant negative ecological impact. Borehole Mining (BHM) is a remote operated method of extracting (mining) mineral resources through boreholes by means of high pressure water jets. This process can be carried-out from land surface, open pit floor, underground mine or floating platform or vessel through pre-drilled boreholes.</English>
 		<Russian>Геотермальная скважина проникает в мантию планеты и дает значительные минералы и энергию. Скважины оказывают значительное негативное экологическое воздействие. Бурение - это дистанционно управляемый метод добычи (извлечения) полезных ископаемых через скважины с помощью струй воды под высоким давлением. Этот процесс может осуществляться с поверхности земли, дна карьера, подземной шахты, плавучей платформы или судна через предварительно пробуренные скважины.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
-		<English>[ICON_BULLET]May only be placed once in a game.</English>
-		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GOODY_HUT</Tag>
@@ -1089,28 +1268,6 @@
 		<Russian>Ïðîì. êîìïëåêñ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
-		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
-		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
-		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
-		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
-		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
-		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
-		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
-		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_ZOC_SOURCE</Tag>
-		<English>[ICON_BULLET]Provides a zone of control</English>
-		<French>[ICON_BULLET]Procure une zone de contrôle</French>
-		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
-		<Polish>[ICON_BULLET]Wprowadza strefę kontroli</Polish>
-		<Russian>[ICON_BULLET]Èìååò çîíó êîíòðîëÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP</Tag>
 		<English>Jungle Camp</English>
 		<French>Camp de Jungle</French>
@@ -1404,11 +1561,6 @@
 		<Russian>Охота за грибами, сбор грибов и аналогичные термины описывают деятельность по собирательсттву грибов на дикой природе, чаще всего для употребления в пищу. Она весьма популярна в большинстве стран Европы, включая Северные, Балтийские и Славянские страны и Средиземноморский бассейн, а также в Австралии, Японии, Корее, Канаде, Индийском субконтиненте, а также на северо-западе, северо-востоке, Среднем Западе и Аппалачах США.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
-		<English>[ICON_BULLET]May only be placed once by a given player.</English>
-		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE</Tag>
 		<English>Nature Preserve</English>
 		<French>
@@ -1455,12 +1607,6 @@
 		<Spanish>Los [COLOR_BUILDING_TEXT]Pastizales nómadas[COLOR_REVERT] son más que zonas de recolección y caza de herbívoros...</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Koczownicza Trzoda[COLOR_REVERT] to coś więcej niż polowanie na roślinożerców...</Polish>
 		<Russian>[COLOR_BUILDING_TEXT]Кочевые стада[COLOR_REVERT] - уже более подвинутый способ для пропитания, чем собирательство и охота на дичь...</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_NOT_ON_ANY_BONUS</Tag>
-		<English>[ICON_BULLET]May not be added to a plot that already has a resource, whether visible or not.</English>
-		<Polish>[ICON_BULLET]Nie można dodać do pola, które już posiada surowiec (widoczny lub nie)</Polish>
-		<Russian>[ICON_BULLET]Не может быть добавлен на участок, на котором уже есть видимый или не открытый еще ресурс.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Tag>
@@ -1568,16 +1714,6 @@
 		<Russian>Торф заготавливается как важный источник топлива в некоторых частях мира. По объему в мире насчитывается около 4 триллионов кубометров торфа, покрывающих в общей сложности около 2% общей площади суши (около 3 миллионов квадратных километров), содержащих около 8 миллиардов тераджоулей энергии.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_PILLAGE_YIELDS</Tag>
-		<English>[ICON_BULLET]Pillage yields %d1_Num[ICON_GOLD] on average</English>
-		<French>[ICON_BULLET]Le pillage rapporte en moyenne %d1_Num[ICON_GOLD].</French>
-		<German>[ICON_BULLET]Plünderung bringt durchschnittlich %d1_Num[ICON_GOLD]</German>
-		<Italian>[ICON_BULLET]Saccheggia in media %d1_Num[ICON_GOLD] prodotti</Italian>
-		<Spanish>[ICON_BULLET]El saqueo reporta %d1_Num[ICON_GOLD] de media</Spanish>
-		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
-		<Russian>[ICON_BULLET]Ãðàáåæ ïðèíîñèò â ñðåäíåì %d1_Num[ICON_GOLD] </Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANTATION</Tag>
 		<English>Plantation</English>
 		<French>
@@ -1649,16 +1785,6 @@
 		</Spanish>
 		<Polish>Obóz Zbieraczy Roślin</Polish>
 		<Russian>Îáðàáîòêà òðàâ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_PLOT_CULTURE</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_CULTURE] for owner in plot</English>
-		<French>[ICON_BULLET]%D1_Change[ICON_CULTURE] pour le propriétaire dans la parcelle</French>
-		<German>[ICON_BULLET]%D1_Change[ICON_CULTURE] für Besitzer in Plot</German>
-		<Italian>[ICON_BULLET]%D1_Change[ICON_CULTURE] per il proprietario di complotto</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change[ICON_CULTURE] para el dueño en la casilla</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change[ICON_CULTURE] dla wlaściciela pola.</Polish>
-		<Russian>[ICON_BULLET]%D1_Change[ICON_CULTURE] äëÿ âëàäåëüöà òåððèòîðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PYRAMIDS</Tag>
@@ -1733,12 +1859,6 @@
 		<Russian>Радиовышки излучают и передают радиосигналы.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
-		<English>[ICON_BULLET]Requires peak</English>
-		<French>[ICON_BULLET]Requiert Montagnes</French>
-		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Tag>
 		<English>Make use of marginal terrain to build a Moai, Geoglyph, Stone Circle, Mesoamerican Temple, Asian Temple, Ziggurat or Pyramids according to your regional culture. These sacred sites will generate commerce and culture in the surrounding area, and enable special buildingd in the nearest city.</English>
 		<Polish>Sanktuarium - termin, którym określa się miejsce uznawane za święte, często identyfikowane ze świątynią, budowlą wzniesioną na miejscu uznawanym za święte. Występuje w wielu religiach. Za jedno z najstarszych sanktuariów w Europie uznawana jest monumentalna budowla w Stonehenge. U dawnych Słowian na sanktuaria obierane były zazwyczaj miejsca szczególne pod względem geograficznym i przyrodniczym, wyróżniające się z najbliższego otoczenia - szczyty gór i większych wzniesień, zakola rzek, wyspy i półwyspy. Takie święte miejsca zwane były kapiszczami lub trzebiszczami. W trakcie chrystianizacji powszechne było ich niszczenie lub budowanie na ich miejscu świątyń chrześcijańskich.</Polish>
@@ -1781,7 +1901,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Tag>
 		<English>Scavenging Camp</English>
 		<French>Camp de Récupérateurs</French>
-		<German>Lager der Aasverwerter</German>
+		<German>
+			<Text>Fleischsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Campo degli spazzini</Italian>
 		<Spanish>
 			<Text>Campamento de recolección</Text>
@@ -1794,11 +1918,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Tag>
 		<English>A Scavenging Camp provides extra food. If built on an animal resource (for example [COLOR_HIGHLIGHT_TEXT]cow[COLOR_REVERT]) it also provides the resource.</English>
-		<German>Ein Aasverwerterlager liefert zusätzliche [ICON_FOOD]. Wenn es auf einer Tierressource (z.B. einer [COLOR_HIGHLIGHT_TEXT]Kuh[COLOR_REVERT]) angelegt wird, stellt es auch diese zur Verfügung. Das Lager kann sich nach der Erforschung der [COLOR_TECH_TEXT]Megafaunadomestizierung[COLOR_REVERT] zu einer Nomadenherde weiterentwickeln, wenn es bearbeitet wird.</German>
+		<German>Bevor entsprechende Waffen und Jagdtechniken entwickelt wurden, waren die Menschen gezwungen, sich die tierischen Bestandteile ihrer Nahrung wie Fleisch und Knochenmark zusammenzusuchen. [COLOR_BUILDING_TEXT]Fleischsammler[COLOR_REVERT] gingen auf die Suche nach kleinen Tieren wie Ameisen und Würmern. Wenn sich die Möglichkeit bot, wurden aber auch verwertbare Stücke von toten Tieren eingesammelt. Hierbei musste behutsam vorgegangen werden, denn zu Beginn des Fäulnisprozesses ist das Fleisch für Menschen zwar noch essbar, bereits stärker verwestes Fleisch wird jedoch ungenießbar und führt zu Krankheit oder gar dem Tod. Dies liegt an den enthaltenen Bakterien und den von ihnen produzierten Abbauprodukten wie z.B. Botulinumtoxin, die für den Menschen stark toxisch sind.</German>
 		<Italian>Un campo dei recuperatori fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
 		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
 		<Polish>Padlina - określenie zwierzęcych zwłok. Określenia tego nie używa się w stosunku do zwłok ludzkich. Padlina jest podstawowym pokarmem wielu drapieżników i zwierząt wszystkożernych, takich jak diabły tasmańskie, hieny, kondory i sępy. Padlina to także siedlisko występowania bezkręgowców zaliczanych do nekrofauny. Niektóre rośliny potrafią wytwarzać zapach rozkładającej się padliny, by zwabić zapylające je owady, takie jak muchy.</Polish>
 		<Russian>Лагерь свежевания обеспечивает ваш народ дополнительной пищей на ранних стадиях игры. Если он построен на животном ресурсе (например, на [COLOR_HIGHLIGHT_TEXT]коровах[COLOR_REVERT]) он также предоставит этот ресурс в город.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Tag>
+		<English>Seasonal Camp</English>
+		<German>
+			<Text>Lager</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ñåçîííûé ëàãåðü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
+		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
+		<German>Von einem [COLOR_BUILDING_TEXT]Lager[COLOR_REVERT] aus machen sich Späher, Forscher und Wissenschaftler auf die Suche nach Tieren, Pflanzen und Mineralien. Irgendwann ziehen sie fort und überlassen den Bürgern der Stadt das Gelände.</German>
+		<Russian>Сезонный лагерь - место, где разведчики, исследователи и следопыты упорно трудятся ради добычи ценных растений, дичи и минералов. В конце концов, они уезжают и позволяют гражданам здесь работать.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
@@ -1836,15 +1976,6 @@
 		<German>[COLOR_BUILDING_TEXT]Körnersammler[COLOR_REVERT] gingen auf die Suche nach aus den reifen Ähren von Süßgräsern gefallenen genießbaren Körnern oder den Samen anderer Pflanzen. Im Vergleich zur Jagd war dies eine relativ einfache Arbeit, die auch schon Kinder verrichten konnten. Korn war schon für die frühen Menschen ein Hauptnahrungsmittel, es konnte entweder direkt gegessen oder zu nahrhaften und sättigenden Breien weiterverarbeitet werden.</German>
 		<Polish>[COLOR_BUILDING_TEXT]Obóz Zbieraczy Ziarna[COLOR_REVERT] pojawił się w epoce kamienia. Prehistoryczni ludzie zdobywali pożywienie poprzez polowanie i zbieranie ziarna. Obóz Zbieraczy Ziarna był specjalnym miejscem gdzie [COLOR_UNIT_TEXT]Zbieracze[COLOR_REVERT] przechowywali zgromadzone ziarna, by mogło z nich korzystać całe plemię.</Polish>
 		<Russian>[COLOR_BUILDING_TEXT]Зернохранилища[COLOR_REVERT] впервые появились в каменном веке. Первобытные люди добывали пищу во время охоты и сбора злаков или корнеплодов. Зернохранилища были особыми местами, в которых [COLOR_UNIT_TEXT]Собиратели[COLOR_REVERT] хранили собранные семена, которые использовались для прокорма всего племени.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
-		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
-		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
-		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>
-		<Russian>[ICON_BULLET]%D1_Change Âûñîòà âèäèìîñòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SHAFT_MINE</Tag>
@@ -2129,97 +2260,6 @@
 		<Russian>Древесная ферма - это частный лесопитомник, в котором ведется производство древесины. Термин «древесная ферма» также используется для обозначения плантаций деревьев, питомников деревьев и ферм по выращиванию рождественских елок. Поскольку древофермы управляются для ускорения роста, древесные фермы имеют тенденцию улавливать углерод быстрее, чем неуправляемые леса, учитывая только часть уравнения, связанную с секвестрацией, а не выбросы углерода из-за гниения, пожара или урожая. Тот факт, что управляемые лесные массивы обычно моложе, а молодые деревья растут быстрее и реже умирают, способствует этому различию.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
-		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
-		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
-		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
-		<Italian>[ICON_BULLET]Non è possibile costruire un altro ad una distanza di %d1_Num</Italian>
-		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
-		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
-		<Russian>[ICON_BULLET]Íåâîçìîæíî ñòðîèòü íà ðàññòîÿíèè îò %d1_Num</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
-		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
-		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
-		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
-		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
-		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
-		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
-		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
-		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
-		<English>Bother me another time!</English>
-		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
-		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
-		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
-		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
-		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
-		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
-		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate on all improvements</English>
-		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration des aménagements</French>
-		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di tutti i miglioramenti delle caselle</Italian>
-		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator do czasu trwania ulepszania wszystkich ulepszeń</Polish>
-		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления всех улучшений</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
-		<English>Improvements</English>
-		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
-		<Russian> улучшения</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
-		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
-		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
-		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
-		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
-		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Tag>
 		<English>Vertical Farm</English>
 		<French>
@@ -2263,16 +2303,6 @@
 		<English>A village is a clustered human settlement or community, larger than a hamlet with the population ranging from a few hundred to a few thousands (sometimes tens of thousands), Though often located in rural areas, the term urban village is also applied to certain urban neighbourhoods, such as the West Village in Manhattan, New York City and the Saifi Village in Beirut, Lebanon, as well as Hampstead Village in the London conurbation. Villages are normally permanent, with fixed dwellings; however, transient villages can occur. Further, the dwellings of a village are fairly close to one another, not scattered broadly over the landscape, as a dispersed settlement.</English>
 		<Polish>Wieś (łac. pagus, rus) - jednostka osadnicza o zwartej, skupionej lub rozproszonej zabudowie i istniejących funkcjach rolniczych lub związanych z nimi usługowych lub turystycznych, nieposiadająca praw miejskich lub statusumiasta (art. 2 ustawy z 29 sierpnia 2003 o urzędowych nazwach miejscowości i obiektów fizjograficznych).</Polish>
 		<Russian>Деревня представляет собой сгруппированное человеческое поселение или сообщество, больше, чем деревня, с населением от нескольких сотен до нескольких тысяч (иногда десятков тысяч). Хотя часто она расположена в сельской местности, термин городская деревня также применяется к определенным городским поселениям. районы, такие как Уэст-Виллидж на Манхэттене, Нью-Йорке и Сайфи-Виллидж в Бейруте, Ливан, а также Хэмпстед-Виллидж в пригороде Лондона. Деревни обычно постоянные, с постоянными жилищами; однако временные деревни могут возникать. Кроме того, дома в деревне расположены довольно близко друг к другу, а не разбросаны широко по ландшафту, как рассредоточенное поселение.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
-		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
-		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
-		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change al alcance de la visibilidad</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change Zasięg Widoczności</Polish>
-		<Russian>[ICON_BULLET]%D1_Change Ðàäèóñ îáíàðóæåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WATERMILL</Tag>
@@ -2547,31 +2577,5 @@
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
 		<Russian>Çèêêóðàò</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Tag>
-		<English>Seasonal Camp</English>
-		<German>
-			<Text>Lager</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Russian>Ñåçîííûé ëàãåðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
-		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
-		<German>Von einem [COLOR_BUILDING_TEXT]Lager[COLOR_REVERT] aus machen sich Späher, Forscher und Wissenschaftler auf die Suche nach Tieren, Pflanzen und Mineralien. Irgendwann ziehen sie fort und überlassen den Bürgern der Stadt das Gelände.</German>
-		<Russian>Сезонный лагерь - место, где разведчики, исследователи и следопыты упорно трудятся ради добычи ценных растений, дичи и минералов. В конце концов, они уезжают и позволяют гражданам здесь работать.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
-		<English>Fishing Camp</English>
-		<Russian>Ðûáàöêèé ëàãåðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
-		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
-		<Russian>Рыболовецкий лагерь - место, где рыбаки, путешественники и старатели упорно трудятся ради добычи морского зверя, рыбы, растений и минералов. В конце концов, они уезжают и позволяют вашим гражданам здесь работать.</Russian>
 	</TEXT>
 </Civ4GameText>

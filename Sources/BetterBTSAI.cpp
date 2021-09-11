@@ -25,8 +25,8 @@ void logBBAI(char* format, ... )
 }
 void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWString message)
 {
-	
-	
+
+
 	const std::wstring data = "{ type: \"" + type + "\" name: \""+identifier+ "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";
 	logging::logMsgW("FLB.log", data.c_str());
 }

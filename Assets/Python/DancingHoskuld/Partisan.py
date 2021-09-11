@@ -331,7 +331,7 @@ def onCityAcquired(argsList):
 										iRand = GAME.getSorenRandNum(16, "rand damage") + 15
 
 										# Check to not kill the unit
-										iMaxDamage = ppUnit.currHitPoints() - 1
+										iMaxDamage = ppUnit.getHP() - 1
 										if iMaxDamage:
 											if iRand > iMaxDamage:
 												iRand = iMaxDamage

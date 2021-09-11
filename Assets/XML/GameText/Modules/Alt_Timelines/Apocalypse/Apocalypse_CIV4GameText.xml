@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN</Tag>
-		<English>Urban Crossbowman</English>
+		<English>Post-apocalyptic Urban Crossbowman</English>
 		<French>
 			<Text>Arbalétrier urbain</Text>
 			<Gender>Male</Gender>
@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD</Tag>
-		<English>Crowbar Guard</English>
+		<English>Post-apocalyptic Crowbar Guard</English>
 		<French>
 			<Text>Combattant au pied-de-biche</Text>
 			<Gender>Male</Gender>
@@ -41,7 +41,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN</Tag>
-		<English>Hatchet Warrior</English>
+		<English>Post-apocalyptic Hatchet Warrior</English>
 		<French>
 			<Text>Combattant avec hachette</Text>
 			<Gender>Male</Gender>
@@ -57,7 +57,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR</Tag>
-		<English>Machete Warrior</English>
+		<English>Post-apocalyptic Machete Warrior</English>
 		<French>
 			<Text>Combattant avec machette</Text>
 			<Gender>Male</Gender>
@@ -73,7 +73,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER</Tag>
-		<English>Molotov Cocktail Thrower</English>
+		<English>Post-apocalyptic Molotov Cocktail Thrower</English>
 		<French>
 			<Text>Lanceur de cocktail molotov</Text>
 			<Gender>Male</Gender>
@@ -88,8 +88,25 @@
 		<Russian>Ïèðîìàí</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN</Tag>
+		<English>Post-apocalyptic Urban Horseman</English>
+		<French>Cavalier Urbain</French>
+		<Spanish>
+			<Text>Jinete urbano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Nowoczesna Konnica</Polish>
+		<Russian>Ãîðîäñêîé âñàäíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Tag>
+		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
+		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
-		<English>Wrench Warrior</English>
+		<English>Post-apocalyptic Wrench Warrior</English>
 		<French>
 			<Text>Combattant avec clé à molette</Text>
 			<Gender>Male</Gender>

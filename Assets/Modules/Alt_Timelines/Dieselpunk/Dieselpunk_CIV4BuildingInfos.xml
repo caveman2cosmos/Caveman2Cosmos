@@ -1,36 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<BuildingInfo>
-			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<VicinityBonus>BONUS_OIL</VicinityBonus>
-			<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<bNukeImmune>1</bNukeImmune>
-			<iCost>6480</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iConquestProb>100</iConquestProb>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AERODROME</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
@@ -41,6 +11,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_HYPERSONIC_FLIGHT</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_GRAND_AERODROME</ObsoletesToBuilding>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -65,91 +37,41 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRAND_AERODROME</Type>
+			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
-			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>1230</iCost>
+			<VicinityBonus>BONUS_OIL</VicinityBonus>
+			<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<bNukeImmune>1</bNukeImmune>
+			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAirlift>4</iAirlift>
-			<iAirUnitCapacity>9</iAirUnitCapacity>
-			<HealUnitCombatTypes>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
-					<iHeal>15</iHeal>
-				</HealUnitCombatType>
-			</HealUnitCombatTypes>
-			<iHealth>-5</iHealth>
-			<iTradeRoutes>3</iTradeRoutes>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AIRPORT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-			</PrereqOrBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>20</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ZUSE_COMPUTER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_DIESELPUNK</Bonus>
-			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
-			<iCost>1130</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>15</iCommerce>
-			</CommerceModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>7</iPrereqPopulation>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
@@ -178,6 +100,7 @@
 				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
+			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
@@ -187,6 +110,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -207,40 +131,54 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THEREMIN_FACTORY</Type>
+			<Type>BUILDING_FLIGHT_SCHOOL</Type>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AERODROME</BuildingType>
+				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
+			</PrereqOrBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GRAND_AERODROME</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_THEREMIN_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
+			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Bonus>BONUS_DIESELPUNK</Bonus>
-			<FreeBonus>BONUS_THEREMIN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>1080</iCost>
+			<iCost>1230</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAirlift>4</iAirlift>
+			<iAirUnitCapacity>9</iAirUnitCapacity>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>15</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
+			<iTradeRoutes>3</iTradeRoutes>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>3</iPrereqPopulation>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIOPLEX</Type>
@@ -252,6 +190,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_RADIOS</Bonus>
@@ -292,33 +231,78 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FLIGHT_SCHOOL</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AERODROME</BuildingType>
-				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
-			</PrereqOrBuildings>
+			<Type>BUILDING_THEREMIN_FACTORY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_THEREMIN_FACTORY</ArtDefineTag>
+			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<ObsoleteTech>TECH_NANOELECTRONICS</ObsoleteTech>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
+			</ReplacementBuildings>
+			<ObsoletesToBuilding>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
+			<FreeBonus>BONUS_THEREMIN</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iCost>1080</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHealth>-1</iHealth>
+			<iHappiness>1</iHappiness>
+			<CommerceChanges>
+				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<bPrereqPower>1</bPrereqPower>
+			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AMERICAN_MALL</Type>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
-					<BonusType>BONUS_THEREMIN</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_HYPERMARKET</Type>
-			<BonusCommerceModifiers>
-				<BonusCommerceModifier>
-					<BonusType>BONUS_THEREMIN</BonusType>
-					<CommerceModifiers>
-						<iCommerce>1</iCommerce>
-					</CommerceModifiers>
-				</BonusCommerceModifier>
-			</BonusCommerceModifiers>
+			<Type>BUILDING_ZUSE_COMPUTER</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
+			<ObsoleteTech>TECH_COMMUNICATION_NETWORKS</ObsoleteTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
+			<iCost>1130</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>15</iCommerce>
+			</CommerceModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<bPrereqPower>1</bPrereqPower>
+			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

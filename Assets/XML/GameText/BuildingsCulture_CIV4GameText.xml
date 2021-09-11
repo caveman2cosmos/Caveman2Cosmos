@@ -1,22 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Tag>
-		<English>Culture (Sabbatean)</English>
-		<Russian>Ñàááàòèàíñêàÿ êóëüòóðà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Tag>
-		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Tag>
-		<English>Active Culture</English>
-		<French>Culture active</French>
-		<German>aktive Kultur</German>
-		<Russian>Àêòèâíàÿ êóëüòóðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Tag>
 		<English>C.Ac. African</English>
 		<French>Cult. Act. Africaine</French>
@@ -48,6 +32,13 @@
 			<Plural>0</Plural>
 		</German>
 		<Russian>Европейская (АкК)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Tag>
+		<English>Active Culture</English>
+		<French>Culture active</French>
+		<German>aktive Kultur</German>
+		<Russian>Àêòèâíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Tag>
@@ -111,13 +102,6 @@
 		<Russian>Южноамериканская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Tag>
-		<English>Adopted Culture</English>
-		<French>Culture Adoptée</French>
-		<German>übernommene Kultur</German>
-		<Russian>Ïðèíÿòàÿ êóëüòóðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Tag>
 		<English>C.Ad. African</English>
 		<French>Cult. Adopt. Africaine</French>
@@ -149,6 +133,13 @@
 			<Plural>0</Plural>
 		</German>
 		<Russian>Европейская (ПрК)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Tag>
+		<English>Adopted Culture</English>
+		<French>Culture Adoptée</French>
+		<German>übernommene Kultur</German>
+		<Russian>Ïðèíÿòàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Tag>
@@ -212,13 +203,6 @@
 		<Russian>Южноамериканская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Tag>
-		<English>Local Culture</English>
-		<French>Culture Locale</French>
-		<German>lokale Kultur</German>
-		<Russian>Ìåñòíàÿ êóëüòóðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Tag>
 		<English>C.L. African</English>
 		<French>Cult. Loc. Africaine</French>
@@ -250,6 +234,13 @@
 			<Plural>0</Plural>
 		</German>
 		<Russian>Европейская (МК)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Tag>
+		<English>Local Culture</English>
+		<French>Culture Locale</French>
+		<German>lokale Kultur</German>
+		<Russian>Ìåñòíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Tag>
@@ -313,23 +304,6 @@
 		<Russian>Южноамериканская (МК)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Tag>
-		<English>Native Culture</English>
-		<French>
-			<Text>Culture d'origine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Urkultur</German>
-		<Italian>
-			<Text>Cultura d'origine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Tubylcza Kultura</Polish>
-		<Russian>Ðîäíàÿ êóëüòóðà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Tag>
 		<English>C.N. African</English>
 		<French>Cult. Orig. Africaine</French>
@@ -361,6 +335,23 @@
 			<Plural>0</Plural>
 		</German>
 		<Russian>Европейская (РК)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Tag>
+		<English>Native Culture</English>
+		<French>
+			<Text>Culture d'origine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Urkultur</German>
+		<Italian>
+			<Text>Cultura d'origine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Tubylcza Kultura</Polish>
+		<Russian>Ðîäíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Tag>
@@ -1608,7 +1599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA_PEDIA</Tag>
-		<English>The Ojibwe, Ojibwa, Chippewa, or Saulteaux are an Anishinaabe people of Canada and the northern Midwestern United States. They are one of the most numerous indigenous peoples north of the Rio Grande. In Canada, they are the second-largest First Nations population, surpassed only by the Cree. In the United States, they have the fifth-largest population among Native American peoples, surpassed in number only by the Navajo, Cherokee, Choctaw and Sioux. The Ojibwe people traditionally speak the Ojibwe language, a branch of the Algonquian language family. They are part of the Council of Three Fires and the Anishinaabeg, which include the Algonquin, Nipissing, Oji-Cree, Odawa and the Potawatomi. Historically, through the Saulteaux branch, they were a part of the Iron Confederacy, joining the Cree, Assiniboine, and Metis. The Ojibwe are known for their birch bark canoes, birch bark scrolls, mining and trade in copper, as well as their cultivation of wild rice and maple syrup.[3][failed verification] Their Midewiwin Society is well respected as the keeper of detailed and complex scrolls of events, oral history, songs, maps, memories, stories, geometry, and mathematics.</English>
+		<English>The Ojibwe, Ojibwa, Chippewa, or Saulteaux are an Anishinaabe people of Canada and the northern Midwestern United States. They are one of the most numerous indigenous peoples north of the Rio Grande. In Canada, they are the second-largest First Nations population, surpassed only by the Cree. In the United States, they have the fifth-largest population among Native American peoples, surpassed in number only by the Navajo, Cherokee, Choctaw and Sioux. The Ojibwe people traditionally speak the Ojibwe language, a branch of the Algonquian language family. They are part of the Council of Three Fires and the Anishinaabeg, which include the Algonquin, Nipissing, Oji-Cree, Odawa and the Potawatomi. Historically, through the Saulteaux branch, they were a part of the Iron Confederacy, joining the Cree, Assiniboine, and Metis. The Ojibwe are known for their birch bark canoes, birch bark scrolls, mining and trade in copper, as well as their cultivation of wild rice and maple syrup. Their Midewiwin Society is well respected as the keeper of detailed and complex scrolls of events, oral history, songs, maps, memories, stories, geometry, and mathematics.</English>
 		<Polish>Odżibwejowie lub Czipewejowie (ang. Ojibwa, Ojibwe, Ojibway, Chippewa) - nazwa własna Anishinabe (Anishinaubag, Neshnabek, Mississauga, spotykane inne nazwy spolszczone: Odżibueje, Czipeweje, Odżibwa, Odżibwe, Chipewa, Chipewe, Hakatonwan) - Indianie Ameryki Północnej, najliczniejsze plemię obszaru Wielkich Jezior. Odżibwejowie (sami preferują nazwę Ojibwa) są trzecią co do wielkości grupą Indian amerykańskich. Nazwa "Ojibwa" pochodziła od algonkińskiego"kurczyć przez przypiekanie" i oznaczała charakterystyczne szwy wypalane na mokasynach i odzieży Anishinabe. "Chippewa" jest zniekształconą nazwą "Ojibwa".</Polish>
 	</TEXT>
 	<TEXT>
@@ -4566,6 +4557,15 @@
 		<Polish>Przez terytoria ruskie przebiegały szlaki handlowe łączące kraje Morza Bałtyckiego z Bizancjum i Bliskim Wschodem (tzw. szlak "od Waregów do Greków" i "szlak sarmacki"). Wyprawy handlowe Dnieprem, Wołgą, Donem i innymi rzekami zetknęły podróżujących tędy kupców i Waregów z plemionami słowiańskimi. Pierwszymi historycznymi władcami ruskimi byli prawdopodobnie Waregowie (m.in. Ruryk i Oleg Mądry), którzy zgodnie z istniejącymi przekazami przybyli na ziemie ruskie przed 860 r. Przybycie Ruryka do Nowogrodu Wielkiego w 862 r. uważa się za symboliczny początek historii Rosji. Ruryk zdołał skupić pod swymi rządami część Waregów, plemion wschodniosłowiańskich (Słowienie, Krywicze i Połoczanie) oraz plemion ugrofińskich (Czudź, Weś, Meria, Muroma i Mieszczera) i stworzył fundamenty państwa ruskiego, tzw. Rusi Nowogrodzkiej. Ruryk był także założycielem dynastii Rurykowiczów, która sprawowała rządy w Rosji do 1598 r.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Tag>
+		<English>Culture (Sabbatean)</English>
+		<Russian>Ñàááàòèàíñêàÿ êóëüòóðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Tag>
+		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAFAVID</Tag>
 		<English>Culture (Safavid)</English>
 		<Russian>Ñåôåâèäñêàÿ êóëüòóðà</Russian>
@@ -5819,10 +5819,6 @@
 		<Russian>Êóëüòóðà ñèà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Tag>
-		<English>The Xia dynasty is the first dynasty in traditional Chinese history. It is described in ancient historical chronicles such as the Bamboo Annals, the Classic of History and the Records of the Grand Historian. According to tradition, the dynasty was established by the legendary Yu the Great after Shun, the last of the Five Emperors, gave his throne to him. The Xia was later succeeded by the Shang dynasty (1600-1046 BC). According to the traditional chronology based upon calculations by Liu Xin, the Xia ruled between 2205 and 1766 BC; according to the chronology based upon the Bamboo Annals, it ruled between 1989 and 1558 BC. The Xia-Shang-Zhou Chronology Project concluded that the Xia existed between 2070 and 1600 BC. The tradition of tracing Chinese political history from heroic early emperors to the Xia to succeeding dynasties comes from the idea of the Mandate of Heaven, in which only one legitimate dynasty can exist at any given time, and was promoted by the Confucian school in the Eastern Zhou period, later becoming the basic position of imperial historiography and ideology. Although the Xia is an important element in early Chinese history, reliable information on the history of China before 13th century BC can only come from archaeological evidence since China's first established written system on a durable medium, the oracle bone script, did not exist until then; however, no mention of the Xia, or the supposed conquest of the Xia by the Shang, is found in any oracle bones found to date. The first documentary reference to the Xia dates from more than a thousand years later. Thus, concrete existence for the Xia is unproven, despite efforts by Chinese archaeologists to link the Xia with Bronze Age Erlitou archaeological sites. The Xia dynasty is considered by many modern historians to be legendary.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI</Tag>
 		<English>Culture (Xianbei)</English>
 		<Russian>Ñÿíüáèéñêàÿ êóëüòóðà</Russian>
@@ -5830,6 +5826,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI_PEDIA</Tag>
 		<English>The Xianbei were proto-Mongols residing in what became today's eastern Mongolia, Inner Mongolia, and Northeast China. Chinese historical texts unequivocally state that the Xianbei were descendants of the Donghu, which used to be believed to represent the "Eastern Hu" based on the Chinese record. The Xianbei were a northern or northeastern Asian population according to modern Chinese and Russian anthropologists.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Tag>
+		<English>The Xia dynasty is the first dynasty in traditional Chinese history. It is described in ancient historical chronicles such as the Bamboo Annals, the Classic of History and the Records of the Grand Historian. According to tradition, the dynasty was established by the legendary Yu the Great after Shun, the last of the Five Emperors, gave his throne to him. The Xia was later succeeded by the Shang dynasty (1600-1046 BC). According to the traditional chronology based upon calculations by Liu Xin, the Xia ruled between 2205 and 1766 BC; according to the chronology based upon the Bamboo Annals, it ruled between 1989 and 1558 BC. The Xia-Shang-Zhou Chronology Project concluded that the Xia existed between 2070 and 1600 BC. The tradition of tracing Chinese political history from heroic early emperors to the Xia to succeeding dynasties comes from the idea of the Mandate of Heaven, in which only one legitimate dynasty can exist at any given time, and was promoted by the Confucian school in the Eastern Zhou period, later becoming the basic position of imperial historiography and ideology. Although the Xia is an important element in early Chinese history, reliable information on the history of China before 13th century BC can only come from archaeological evidence since China's first established written system on a durable medium, the oracle bone script, did not exist until then; however, no mention of the Xia, or the supposed conquest of the Xia by the Shang, is found in any oracle bones found to date. The first documentary reference to the Xia dates from more than a thousand years later. Thus, concrete existence for the Xia is unproven, despite efforts by Chinese archaeologists to link the Xia with Bronze Age Erlitou archaeological sites. The Xia dynasty is considered by many modern historians to be legendary.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIONGNU</Tag>

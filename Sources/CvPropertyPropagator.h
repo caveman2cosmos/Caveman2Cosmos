@@ -12,6 +12,7 @@
 #define CV_PROPERTY_PROPAGATOR_H
 
 class CvGameObject;
+class CvXMLLoadUtility;
 
 // Base class of which the actual property propagator classes are derived
 class CvPropertyPropagator
@@ -20,23 +21,17 @@ public:
 	CvPropertyPropagator();
 	CvPropertyPropagator(PropertyTypes eProperty);
 	virtual ~CvPropertyPropagator();
+
 	PropertyTypes getProperty() const;
-	void setProperty(PropertyTypes eProperty);
 	GameObjectTypes getObjectType() const;
-	void setObjectType(GameObjectTypes eObjectType);
 	RelationTypes getRelation() const;
-	void setRelation(RelationTypes eRelation);
 	int getRelationData() const;
-	void setRelationData(int iRelationData);
 	RelationTypes getTargetRelation() const;
-	void setTargetRelation(RelationTypes eTargetRelation);
 	int getTargetRelationData() const;
-	void setTargetRelationData(int iRelationData);
 	GameObjectTypes getTargetObjectType() const;
-	void setTargetObjectType(GameObjectTypes eObjectType);
 
 	bool isActive(const CvGameObject* pObject) const;
-	void getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects);
+	void getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects) const;
 
 	virtual PropertyPropagatorTypes getType() const = 0;
 
@@ -57,8 +52,8 @@ protected:
 	RelationTypes m_eTargetRelation;
 	int m_iTargetRelationData;
 	GameObjectTypes m_eTargetObjectType;
-	BoolExpr* m_pExprActive;
-	BoolExpr* m_pExprTargetCondition;
+	const BoolExpr* m_pExprActive;
+	const BoolExpr* m_pExprTargetCondition;
 };
 
 

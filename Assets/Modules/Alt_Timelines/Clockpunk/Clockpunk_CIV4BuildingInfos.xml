@@ -1,37 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<BuildingInfo>
-			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<bNoLimit>1</bNoLimit>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_EMBASSY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
-			<bNukeImmune>1</bNukeImmune>
-			<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>2280</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAsset>5</iAsset>
-			<iConquestProb>100</iConquestProb>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOMATION_CLOCK</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
@@ -72,13 +41,130 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_CLOCKPUNK</Bonus>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_AIRPORT</ObsoletesToBuilding>
+			<iCost>380</iCost>
+			<iAirUnitCapacity>2</iAirUnitCapacity>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
+					<iHeal>4</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<iTradeRoutes>1</iTradeRoutes>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<iDCMAirbombMission>2</iDCMAirbombMission>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+			</ReplacementBuildings>
+			<iHealth>-1</iHealth>
+			<iAsset>5</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_EMBASSY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
+			<bNukeImmune>1</bNukeImmune>
+			<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<iCost>2280</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAsset>5</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CLOCKWORK_WORKSHOP</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_CLOCKPUNK</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
+				<Bonus>BONUS_IRON_WARES</Bonus>
+				<Bonus>BONUS_TIN_WARES</Bonus>
+				<Bonus>BONUS_BRONZE_WARES</Bonus>
+				<Bonus>BONUS_BRASS_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
+			</PrereqBonuses>
+			<iPrereqPopulation>7</iPrereqPopulation>
+			<iCost>380</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
+					<iHeal>5</iHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<iHealth>-1</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>3</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
+			</PrereqInCityBuildings>
+			<iAsset>2</iAsset>
+			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ORCHESTRION_THEATER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
-			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
+			<ObsoleteTech>TECH_POP_ART</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -138,89 +224,6 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>2</iAsset>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CLOCKWORK_WORKSHOP</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKWORK_WORKSHOP</ArtDefineTag>
-			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_COPPER_WARES</Bonus>
-				<Bonus>BONUS_IRON_WARES</Bonus>
-				<Bonus>BONUS_TIN_WARES</Bonus>
-				<Bonus>BONUS_BRONZE_WARES</Bonus>
-				<Bonus>BONUS_BRASS_WARES</Bonus>
-				<Bonus>BONUS_STEEL_WARES</Bonus>
-			</PrereqBonuses>
-			<iPrereqPopulation>7</iPrereqPopulation>
-			<iCost>380</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<HealUnitCombatTypes>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>5</iHeal>
-				</HealUnitCombatType>
-			</HealUnitCombatTypes>
-			<iHealth>-1</iHealth>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>3</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
-			</PrereqInCityBuildings>
-			<iAsset>2</iAsset>
-			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_CLOCKPUNK</Bonus>
-			<iPrereqPopulation>3</iPrereqPopulation>
-			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
-			<iCost>380</iCost>
-			<iAirUnitCapacity>2</iAirUnitCapacity>
-			<HealUnitCombatTypes>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_AIRCRAFT</UnitCombatType>
-					<iHeal>4</iHeal>
-				</HealUnitCombatType>
-			</HealUnitCombatTypes>
-			<iTradeRoutes>1</iTradeRoutes>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-			</PrereqInCityBuildings>
-			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AIRPORT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-			</ReplacementBuildings>
-			<iAsset>5</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
