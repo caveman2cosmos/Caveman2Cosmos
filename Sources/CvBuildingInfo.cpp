@@ -13,6 +13,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
@@ -307,7 +308,9 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnUnit(NO_UNIT)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
-{ }
+{
+	algo::for_each(static_cast<CvInfoUtil&>(getDataMembers()), bind(&CvInfoUtil::Var::initVar, _1));
+}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -424,6 +427,8 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
+
+	algo::for_each(static_cast<CvInfoUtil&>(getDataMembers()), bind(&CvInfoUtil::Var::uninitVar, _1));
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -1861,7 +1866,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionChange);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piSpecialistCount);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_piFreeSpecialistCount);
-	CheckSumC(iSum, m_piBonusHealthChanges);
+	//CheckSumC(iSum, m_piBonusHealthChanges);
 	CheckSumC(iSum, m_piBonusHappinessChanges);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	CheckSumC(iSum, m_aUnitCombatFreeExperience);
@@ -2134,6 +2139,16 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 	CheckSumC(iSum, m_aTechCommercePercent);
+
+	algo::for_each(const_cast<CvBuildingInfo*>(this)->getDataMembers(), bind(&CvInfoUtil::Var::checkSum, _1, iSum));
+}
+
+CvInfoUtil CvBuildingInfo::getDataMembers()
+{
+	return
+		CvInfoUtil()
+			.addVar(m_piBonusHealthChanges, L"BonusHealthChanges")
+		;
 }
 
 //
@@ -2572,7 +2587,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
-	m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
+	//m_piBonusHealthChanges.read(pXML, L"BonusHealthChanges");
 	m_piBonusHappinessChanges.read(pXML, L"BonusHappinessChanges");
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, L"BonusProductionModifiers", GC.getNumBonusInfos());
 	m_aUnitCombatFreeExperience.read(pXML, L"UnitCombatFreeExperiences");
@@ -3596,6 +3611,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
 
+	algo::for_each(static_cast<CvInfoUtil&>(getDataMembers()), bind(&CvInfoUtil::Var::readXml, _1, *pXML));
+
 	return true;
 }
 
@@ -4077,7 +4094,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getConstructSound() == cDefault) m_szConstructSound = pClassInfo->getConstructSound();
 
-	m_piBonusHealthChanges.copyNonDefaults(pClassInfo->m_piBonusHealthChanges);
+	//m_piBonusHealthChanges.copyNonDefaults(pClassInfo->m_piBonusHealthChanges);
 	m_piBonusHappinessChanges.copyNonDefaults(pClassInfo->m_piBonusHappinessChanges);
 
 	for ( int j = 0; j < GC.getNumBonusInfos(); j++)
@@ -4924,6 +4941,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
 	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
+
+	getDataMembers().copyNonDefaults(pClassInfo->getDataMembers());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

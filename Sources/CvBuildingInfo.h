@@ -21,6 +21,8 @@ class CvHotkeyInfo;
 class CvProperties;
 class CvPropertyManipulators;
 class CvXMLLoadUtility;
+struct CvInfoUtil;
+struct Var;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
@@ -542,6 +544,8 @@ public:
 	void doPostLoadCaching(BuildingTypes eThis);
 
 private:
+	CvInfoUtil getDataMembers();
+
 	void setNotShowInCity();
 
 	bool m_bNoLimit;
