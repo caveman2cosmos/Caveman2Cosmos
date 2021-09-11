@@ -1605,6 +1605,7 @@ class TestCode:
 					iTech = pTechCommerceChange.eTech
 					iCommerce = pTechCommerceChange.eCommerce
 					aTechCommerceChanges[BASE][iTech][iCommerce] += pTechCommerceChange.value
+					self.log(CvBuildingInfo.getType()+" "+str(pTechCommerceChange.value))
 				if CvBuildingInfo.isAnyTechCommerceModifiers():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -1726,6 +1727,35 @@ class TestCode:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Local Specialist Commerce Changes "+str(aLocalSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
 						if aSpecialistCommerceChanges[BASE][iSpecialist][iCommerce] < aSpecialistCommerceChanges[REPLACED][iSpecialist][iCommerce]:
 							self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialist Commerce Changes "+str(aSpecialistCommerceChanges[FINAL][iSpecialist])+" replaced: "+str(aImmediateReplacedNameList))
+							
+				#==============================================================================================================
+				#<TerrainYieldChanges> - base
+				aTerrainYieldChanges = [[[0 for x in xrange(YieldTypes.NUM_YIELD_TYPES)] for y in xrange(GC.getNumTerrainInfos())] for z in xrange(MAIN_ARRAY_SIZE)]
+				for pTerrainYieldChanges in CvBuildingInfo.getTerrainYieldChange():
+					iTerrain = pTerrainYieldChanges.eTerrain
+					iYield = pTerrainYieldChanges.eYield
+					aTerrainYieldChanges[BASE][iTerrain][iYield] += pTerrainYieldChanges.value
+					self.log(CvBuildingInfo.getType()+" "+str(pTerrainYieldChanges.value))
+
+				#Analyze replacements by tag
+				for i in xrange(len(aImmediateReplacedList)):
+					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
+					#<TerrainYieldChanges>
+					for pTerrainYieldChanges in CvReplacedBuildingInfo.getTerrainYieldChange():
+						iTerrain = pTerrainYieldChanges.eTerrain
+						iYield = pTerrainYieldChanges.eYield
+						aTerrainYieldChanges[REPLACED][iTerrain][iYield] += pTerrainYieldChanges.value
+
+				#Keep already existing <TerrainYieldChanges> in base
+				for iTerrain in xrange(GC.getNumTerrainInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						aTerrainYieldChanges[FINAL][iTerrain][iYield] = aTerrainYieldChanges[BASE][iTerrain][iYield] + aTerrainYieldChanges[REPLACED][iTerrain][iYield]
+
+				#Terrain shouldn't be worse than replaced one!
+				for iTerrain in xrange(GC.getNumTerrainInfos()):
+					for iYield in xrange(YieldTypes.NUM_YIELD_TYPES):
+						if aTerrainYieldChanges[BASE][iTerrain][iYield] < aTerrainYieldChanges[REPLACED][iTerrain][iYield]:
+							self.log(str(iTechID)+" "+CvTerrainInfo.getType()+" should have "+GC.getTerrainInfo(iTerrain).getType()+" Terrain Yields "+str(aTerrainYieldChanges[FINAL][iTerrain])+" replaced: "+str(aImmediateReplacedNameList))
 
 				#==============================================================================================================
 				#<GlobalBuildingExtraCommerces> - base

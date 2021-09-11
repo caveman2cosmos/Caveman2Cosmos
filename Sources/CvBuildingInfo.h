@@ -348,6 +348,7 @@ public:
 	const python::list cyGetTechCommercePercentChanges() const;
 
 	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
+	const python::list cyGetTerrainYieldChanges() const;
 
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;

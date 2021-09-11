@@ -910,6 +910,22 @@ const python::list CvBuildingInfo::cyGetTechCommercePercentChanges() const
 	return pyList;
 }
 
+const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
+{
+	python::list pyList = python::list();
+
+	foreach_(const TerrainYieldChanges& pChange, m_aTerrainYieldChanges)
+	{
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
+		{
+			const int iValue = pChange.second[i];
+			if (iValue != 0)
+				pyList.append(TerrainYieldChange(pChange.first, (YieldTypes)i, pChange.second[i]));
+		}
+	}
+	return pyList;
+}
+
 const TCHAR* CvBuildingInfo::getButton() const
 {
 	const CvString cDefault = CvString::format("").GetCString();
