@@ -347,6 +347,8 @@ public:
 	const IDValueMap<TechTypes, int*>& getTechCommercePercentChanges() const { return m_aTechCommercePercent; }
 	const python::list cyGetTechCommercePercentChanges() const;
 
+	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
+
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
@@ -857,6 +859,7 @@ private:
 	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
 
 	IDValueMap<TechTypes, int*> m_aTechCommercePercent;
+	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

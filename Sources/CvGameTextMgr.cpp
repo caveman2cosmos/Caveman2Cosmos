@@ -22617,36 +22617,58 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			}
 		}
 
-		iLast = 0;
-
-		//if (!kBuilding.getTechCommercePercentChanges().empty())
+		foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
 		{
-			foreach_(const TechCommerceModifiers& modifier, kBuilding.getTechCommercePercentChanges())
+			bFirst = true;
+			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 			{
-				bFirst = true;
-				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+				const int iValue = modifier.second[iJ];
+				if (iValue != 0)
 				{
-					const int iValue = modifier.second[iJ];
-					if (iValue != 0)
+					if (bFirst)
 					{
-						if (bFirst)
-						{
-							szBuffer.append(
-								CvWString::format(
-									L"\n%c%s <link=%s>%s</link>: ",
-									gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
-									CvWString(GC.getTechInfo(modifier.first).getType()).GetCString(),
-									GC.getTechInfo(modifier.first).getDescription()
-								)
-							);
-							bFirst = false;
-						}
-						else szBuffer.append(L", ");
-
-						CvWString szValue;
-						makeValueString(szValue, iValue, true);
-						szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+						szBuffer.append(
+							CvWString::format(
+								L"\n%c%s <link=%s>%s</link>: ",
+								gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+								CvWString(GC.getTechInfo(modifier.first).getType()).GetCString(),
+								GC.getTechInfo(modifier.first).getDescription()
+							)
+						);
+						bFirst = false;
 					}
+					else szBuffer.append(L", ");
+
+					CvWString szValue;
+					makeValueString(szValue, iValue, true);
+					szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar()));
+				}
+			}
+		}
+
+		foreach_(const TerrainYieldChanges& pair, kBuilding.getTerrainYieldChanges())
+		{
+			bFirst = true;
+			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+			{
+				const int iValue = pair.second[iI];
+				if (iValue != 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(
+							CvWString::format(
+								L"\n%c<link=%s>%s</link>: ",
+								gDLL->getSymbolID(BULLET_CHAR),
+								CvWString(GC.getTerrainInfo(pair.first).getType()).GetCString(),
+								GC.getTerrainInfo(pair.first).getDescription()
+							)
+						);
+						bFirst = false;
+					}
+					else szBuffer.append(L", ");
+
+					szBuffer.append(CvWString::format(L"%d%c", iValue, GC.getYieldInfo((YieldTypes) iI).getChar()));
 				}
 			}
 		}

@@ -2134,6 +2134,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 	CheckSumC(iSum, m_aTechCommercePercent);
+	CheckSumC(iSum, m_aTerrainYieldChanges);
 }
 
 //
@@ -3595,6 +3596,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 	m_aTechCommercePercent.readPairedArray(pXML, L"TechCommercePercentChanges");
+	m_aTerrainYieldChanges.readPairedArray(pXML, L"TerrainYieldChanges");
 
 	return true;
 }
@@ -4924,6 +4926,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_aPrereqNumOfBuilding.copyNonDefaultDelayedResolution(pClassInfo->getPrereqNumOfBuildings());
 	m_aGlobalBuildingCostModifier.copyNonDefaultDelayedResolution(pClassInfo->getGlobalBuildingCostModifiers());
 	m_aTechCommercePercent.copyNonDefaults(pClassInfo->getTechCommercePercentChanges());
+	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 }
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)

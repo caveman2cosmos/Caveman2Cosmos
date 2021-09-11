@@ -5780,7 +5780,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DJENNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DJENNE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_DJENNE_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DJENNE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DJENNE</MovieDefineTag>
@@ -5794,6 +5793,10 @@
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>2280</iCost>
 			<BonusProductionModifiers>
@@ -5802,6 +5805,24 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
