@@ -6956,9 +6956,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>320</iCost>
 			<UnitCombatExtraStrengths>
@@ -10333,9 +10333,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>280</iCost>
 			<iHappiness>1</iHappiness>
@@ -10977,7 +10977,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_RIFLING</PrereqTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_CEMENT_BARRIER</ObsoletesToBuilding>
 			<ReplacementBuildings>
@@ -10986,18 +10986,17 @@
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
-			<iCost>535</iCost>
+			<iCost>455</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>100</iDefense>
-			<iBombardDefense>40</iBombardDefense>
-			<iEspionageDefense>2</iEspionageDefense>
+			<iDefense>20</iDefense>
+			<iNoEntryDefenseLevel>100</iNoEntryDefenseLevel>
+			<iEspionageDefense>1</iEspionageDefense>
+			<iMinDefense>2</iMinDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iNoEntryDefenseLevel>20</iNoEntryDefenseLevel>
-			<iMinDefense>25</iMinDefense>
 			<iHappiness>1</iHappiness>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -19637,9 +19636,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_IRON_WARES</Bonus>
 			<PrereqBonuses>
@@ -20737,7 +20736,7 @@
 			<ObsoletesToBuilding>BUILDING_STAR_FORT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<BonusProductionModifiers>
@@ -20803,7 +20802,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -21346,12 +21345,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>120</iDefense>
-			<iBombardDefense>40</iBombardDefense>
-			<iEspionageDefense>5</iEspionageDefense>
+			<iDefense>30</iDefense>
+			<iNoEntryDefenseLevel>80</iNoEntryDefenseLevel>
+			<iEspionageDefense>1</iEspionageDefense>
+			<iMinDefense>5</iMinDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iNoEntryDefenseLevel>14</iNoEntryDefenseLevel>
-			<iMinDefense>25</iMinDefense>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -33868,9 +33866,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
@@ -36430,7 +36428,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>356</iCost>
 			<iHealth>-2</iHealth>
@@ -36683,11 +36681,6 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>104</iCost>
 			<BonusProductionModifiers>
@@ -51806,9 +51799,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iNoEntryDefenseLevel>30</iNoEntryDefenseLevel>
@@ -52851,7 +52844,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -53141,15 +53134,8 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_BARRICADES</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
-			</ReplacementBuildings>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_WALLS</ObsoletesToBuilding>
 			<iCost>252</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -60167,9 +60153,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>310</iCost>
 			<CommerceChanges>
@@ -67497,12 +67483,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>180</iDefense>
-			<iBombardDefense>70</iBombardDefense>
-			<iEspionageDefense>50</iEspionageDefense>
+			<iDefense>60</iDefense>
+			<iNoEntryDefenseLevel>50</iNoEntryDefenseLevel>
+			<iEspionageDefense>1</iEspionageDefense>
+			<iMinDefense>20</iMinDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iNoEntryDefenseLevel>2</iNoEntryDefenseLevel>
-			<iMinDefense>25</iMinDefense>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -69047,12 +69032,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>140</iDefense>
-			<iBombardDefense>50</iBombardDefense>
-			<iEspionageDefense>6</iEspionageDefense>
+			<iDefense>40</iDefense>
+			<iNoEntryDefenseLevel>70</iNoEntryDefenseLevel>
+			<iEspionageDefense>1</iEspionageDefense>
+			<iMinDefense>10</iMinDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iNoEntryDefenseLevel>12</iNoEntryDefenseLevel>
-			<iMinDefense>25</iMinDefense>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -71517,9 +71501,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>-1</iHealth>
@@ -71815,7 +71799,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -79686,11 +79670,11 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OLD_CITY_RELICS</Type>
-			<Description>TXT_KEY_BUILDING_OLD_CITY_RELICS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OLD_CITY_RELICS_PEDIA</Civilopedia>
+			<Type>BUILDING_IMPERIAL_FORTRESS</Type>
+			<Description>TXT_KEY_BUILDING_IMPERIAL_FORTRESS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_IMPERIAL_FORTRESS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_RELICS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_IMPERIAL_FORTRESS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -81994,11 +81978,6 @@
 				<BuildingType>BUILDING_EARTHWALL</BuildingType>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>68</iCost>
 			<CommerceChanges>
@@ -96666,9 +96645,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<iHealth>1</iHealth>
@@ -98902,7 +98881,7 @@
 			<ObsoletesToBuilding>BUILDING_CANNON_TURRET</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>300</iCost>
 			<CommerceChanges>
@@ -102289,6 +102268,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>310</iCost>
@@ -103627,9 +103607,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -103929,7 +103909,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -106120,12 +106100,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<iDefense>160</iDefense>
-			<iBombardDefense>60</iBombardDefense>
-			<iEspionageDefense>8</iEspionageDefense>
+			<iDefense>50</iDefense>
+			<iNoEntryDefenseLevel>60</iNoEntryDefenseLevel>
+			<iEspionageDefense>1</iEspionageDefense>
+			<iMinDefense>15</iMinDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<iNoEntryDefenseLevel>8</iNoEntryDefenseLevel>
-			<iMinDefense>25</iMinDefense>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -109824,9 +109803,9 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>261</iCost>
 			<CommerceChanges>
@@ -111889,7 +111868,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -112870,9 +112849,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_OLD_CITY_RELICS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_IMPERIAL_FORTRESS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -115587,15 +115566,10 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HIGH_WALLS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-				<BuildingType>BUILDING_BARRICADES</BuildingType>
-				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

@@ -421,7 +421,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -9200,7 +9200,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -12403,6 +12403,26 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OLD_CITY_WALLS</Type>
+			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<iConquestProb>80</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_ANTS</Type>

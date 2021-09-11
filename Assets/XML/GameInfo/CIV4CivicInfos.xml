@@ -671,7 +671,7 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -6176,7 +6176,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -10105,7 +10105,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLD_CITY_RELICS</BuildingType>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
