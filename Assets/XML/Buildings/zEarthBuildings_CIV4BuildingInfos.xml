@@ -1273,7 +1273,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iCost>2205</iCost>
-			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
 				<iCommerce>0</iCommerce>

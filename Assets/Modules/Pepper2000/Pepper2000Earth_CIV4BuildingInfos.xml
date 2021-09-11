@@ -831,7 +831,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
-			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<iCost>2205</iCost>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
