@@ -22557,6 +22557,11 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+			</YieldModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
@@ -94741,16 +94746,9 @@
 			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<bWater>1</bWater>
 			<iMaxLatitude>35</iMaxLatitude>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_QUARRY</BuildingType>
-				<BuildingType>BUILDING_SALT_FLAT_QUARRY</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -94783,16 +94781,9 @@
 				<Bonus>BONUS_LEAD_WARES</Bonus>
 			</PrereqBonuses>
 			<iMinLatitude>35</iMinLatitude>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_QUARRY</BuildingType>
-				<BuildingType>BUILDING_SALT_FLAT_QUARRY</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -94827,19 +94818,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_EVAPORATION_PONT</BuildingType>
-				<BuildingType>BUILDING_SALT_EVAPORATION_WORKS</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
-			<iHealth>1</iHealth>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
+			<TerrainYieldChanges>
+				<TerrainYieldChange>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</YieldChanges>
+				</TerrainYieldChange>
+			</TerrainYieldChanges>
 			<FreeBonus>BONUS_SALT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -94863,13 +94852,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SALT_EVAPORATION_PONT</BuildingType>
-				<BuildingType>BUILDING_SALT_EVAPORATION_WORKS</BuildingType>
-			</PrereqNotInCityBuildings>
 			<iCost>153</iCost>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
