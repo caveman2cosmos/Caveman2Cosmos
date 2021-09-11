@@ -22,7 +22,6 @@ class CvProperties;
 class CvPropertyManipulators;
 class CvXMLLoadUtility;
 struct CvInfoUtil;
-struct Var;
 
 class CvBuildingInfo : public CvHotkeyInfo
 {
